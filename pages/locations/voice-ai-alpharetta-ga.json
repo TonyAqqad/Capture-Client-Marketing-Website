@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-alpharetta-ga",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Alpharetta",
+    "state": "GA",
+    "state_full": "Georgia",
+    "slug": "alpharetta-ga",
+    "nearby_areas": [
+      "Johns Creek",
+      "Roswell",
+      "Milton",
+      "Cumming"
+    ],
+    "service_area_radius": "20 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Alpharetta, GA | Capture Client",
+    "meta_description": "Voice AI for Alpharetta tech businesses. Automate calls 24/7. Call 865-346-3339\\!",
+    "h1_heading": "Voice AI Agency in Alpharetta, Georgia",
+    "keywords": [
+      "voice ai alpharetta ga",
+      "ai receptionist alpharetta"
+    ],
+    "canonical_url": "/voice-ai-alpharetta-ga"
+  },
+  "hero": {
+    "headline": "Tech-Forward AI Voice for Alpharetta",
+    "subheadline": "Alpharetta Businesses: Never Miss Another Customer Call",
+    "cta_primary": {
+      "text": "Get Started",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1633431305278-eb8c2d0b823b?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Tech professional call",
+      "credit": {
+        "photographer": "Zest Tea",
+        "unsplash_url": "https://unsplash.com/photos/u6tTc5r-fJ4"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "Alpharetta, known as the Technology City of the South, demands cutting-edge solutions. From Windward to Avalon, businesses need 24/7 responsiveness. Our Voice AI helps Alpharetta companies maintain the innovative edge this tech hub is known for, capturing every customer interaction."
+  },
+  "benefits": [
+    {
+      "title": "Tech Hub Ready",
+      "description": "Advanced AI perfect for Alpharetta tech-forward businesses.",
+      "icon": "cpu"
+    },
+    {
+      "title": "Enterprise Integrations",
+      "description": "Seamless connection with Alpharetta business systems and CRMs.",
+      "icon": "link"
+    },
+    {
+      "title": "24/7 North Fulton Coverage",
+      "description": "Answer calls across Alpharetta and North Fulton County.",
+      "icon": "clock"
+    },
+    {
+      "title": "Multilingual Support",
+      "description": "Serve Alpharetta diverse international business community.",
+      "icon": "globe"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Tech Consultation",
+      "description": "Discuss your Alpharetta business tech stack and needs."
+    },
+    {
+      "step": 2,
+      "title": "Enterprise Integration",
+      "description": "Connect AI with your existing Alpharetta systems."
+    },
+    {
+      "step": 3,
+      "title": "Scale Fast",
+      "description": "Launch and scale with Alpharetta growth."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Alpharetta SaaS Company",
+      "scenario": "International customers calling at all hours for support.",
+      "result": "AI handles tier-1 support 24/7, customer satisfaction up 45%."
+    },
+    {
+      "business_type": "Avalon Restaurant Group",
+      "scenario": "Multiple locations overwhelmed with reservation calls.",
+      "result": "Unified AI system across all Alpharetta locations, bookings up 50%."
+    },
+    {
+      "business_type": "Johns Creek Medical Spa",
+      "scenario": "Affluent Alpharetta clients expect immediate response.",
+      "result": "AI answers instantly, booking rate increased 65%."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Alpharetta and North Fulton",
+    "description": "Voice AI for Alpharetta tech corridor.",
+    "areas_list": [
+      "Alpharetta",
+      "Johns Creek",
+      "Milton",
+      "Roswell",
+      "Cumming",
+      "Windward"
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "As an Alpharetta tech company with global clients, AI handles calls 24/7 perfectly.",
+      "author": "Sarah Kim",
+      "business": "TechScale Solutions",
+      "location": "Alpharetta, GA"
+    },
+    {
+      "quote": "Our Avalon location was drowning in calls. AI solved it instantly.",
+      "author": "Michael Roberts",
+      "business": "Avalon Dining Group",
+      "location": "Alpharetta, GA"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does Voice AI integrate with tech platforms?",
+      "answer": "Yes\\! Integrates with Salesforce, HubSpot, Slack, and most SaaS tools Alpharetta businesses use."
+    },
+    {
+      "question": "Can it handle international callers?",
+      "answer": "Absolutely\\! AI supports multiple languages and time zones perfect for Alpharetta global businesses."
+    },
+    {
+      "question": "What is pricing for Alpharetta businesses?",
+      "answer": "Starting at 99/month. Enterprise plans available for larger Alpharetta operations."
+    },
+    {
+      "question": "How quickly can tech companies implement?",
+      "answer": "Tech-forward Alpharetta companies often live within 5-7 days with fast API integrations."
+    },
+    {
+      "question": "Does it scale with growth?",
+      "answer": "Yes\\! Perfect for fast-growing Alpharetta startups and enterprises."
+    }
+  ],
+  "images": {
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1633431305278-eb8c2d0b823b?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Tech professional",
+      "caption": "AI Voice for Alpharetta"
+    },
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1716637644831-e046c73be197?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "AI technology phone",
+        "caption": "Advanced automation for Technology City"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1591696331111-ef9586a5b17a?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "ChatGPT AI technology",
+        "caption": "Next-gen AI for Alpharetta"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Scale Your Alpharetta Business with AI",
+    "subheadline": "Join Alpharetta tech leaders using Voice AI.",
+    "cta_primary": {
+      "text": "Call: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "atlanta-ga",
+      "roswell-ga",
+      "sandy-springs-ga"
+    ],
+    "packages": [
+      "growth-package",
+      "enterprise-package"
+    ]
+  }
+}

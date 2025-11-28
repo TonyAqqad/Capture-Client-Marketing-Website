@@ -1,0 +1,174 @@
+{
+  "page_id": "voice-ai-nashville-tn",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Nashville",
+    "state": "Tennessee",
+    "state_abbr": "TN",
+    "slug": "nashville-tn",
+    "nearby_areas": [
+      "Franklin",
+      "Murfreesboro",
+      "Brentwood"
+    ],
+    "service_area_radius": "35 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Nashville, TN | Capture Client",
+    "meta_description": "Nashville businesses automate calls with Voice AI. Never miss a lead in Music City. 24/7 AI receptionist. Call 865-346-3339\\!",
+    "h1_heading": "Voice AI Services in Nashville, Tennessee",
+    "keywords": [
+      "voice ai nashville",
+      "ai receptionist nashville tn"
+    ],
+    "canonical_url": "/voice-ai-nashville-tn"
+  },
+  "hero": {
+    "headline": "Music City Businesses Never Miss a Beat",
+    "subheadline": "AI Voice Agents Handling Calls 24/7 for Nashville Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Nashville business owner",
+      "credit": {
+        "photographer": "bruce mars",
+        "unsplash_url": "https://unsplash.com/photos/FWVMhUa_wbY"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "Nashville is booming. Whether you run a healthcare practice in Green Hills or a contracting business in Franklin, you cannot afford to miss calls. Our Voice AI ensures you answer every call from Davidson County."
+  },
+  "benefits": [
+    {
+      "title": "24/7 for Nashville",
+      "description": "AI scales to handle 10 or 1,000 calls per day.",
+      "icon": "clock"
+    },
+    {
+      "title": "Beat Competition",
+      "description": "Answer in under 3 seconds, every time.",
+      "icon": "award"
+    },
+    {
+      "title": "Bilingual Support",
+      "description": "Communicate in multiple languages for Nashville customers.",
+      "icon": "globe"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Nashville Analysis",
+      "description": "We analyze your Nashville market and design the perfect AI strategy."
+    },
+    {
+      "step": 2,
+      "title": "AI Customization",
+      "description": "Your AI learns Nashville terminology and local landmarks."
+    },
+    {
+      "step": 3,
+      "title": "Go Live",
+      "description": "Start capturing Nashville leads immediately."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Healthcare in Nashville",
+      "scenario": "Practice overwhelmed with calls",
+      "result": "AI handles 200+ appointments monthly"
+    },
+    {
+      "business_type": "Contractors Nashville",
+      "scenario": "Roofing company losing bids",
+      "result": "30% more jobs, revenue up 120K"
+    },
+    {
+      "business_type": "Legal Downtown",
+      "scenario": "Law firm needed better intake",
+      "result": "40% more clients without staff"
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Nashville and Middle Tennessee",
+    "description": "Voice AI throughout Nashville metro",
+    "areas_list": [
+      "Downtown Nashville",
+      "Green Hills",
+      "Franklin",
+      "Brentwood",
+      "Murfreesboro"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Voice AI added 80K in revenue from captured leads.",
+      "author": "Dr. Sarah Johnson",
+      "business": "Nashville Family Dentistry",
+      "location": "Nashville, TN"
+    },
+    {
+      "quote": "Game changer for our contracting business.",
+      "author": "David Park",
+      "business": "Park Construction",
+      "location": "Franklin, TN"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can Voice AI handle Nashville customers?",
+      "answer": "Yes, our AI communicates in multiple languages for Nashville."
+    },
+    {
+      "question": "Does it understand Nashville locations?",
+      "answer": "Yes, trained with Nashville landmarks and terminology."
+    },
+    {
+      "question": "Pricing for Nashville businesses?",
+      "answer": "Packages start at 999/month, most see ROI in 30 days."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575600397-88e370cb46b8?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Nashville business professional",
+        "caption": "Nashville businesses grow with Voice AI"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1703669020898-428cc4765bbe?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Phone technology",
+        "caption": "Answer every call instantly"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Dominate Nashville Market?",
+    "subheadline": "Join top Nashville businesses using Voice AI.",
+    "cta_primary": {
+      "text": "Call 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-franklin-tn",
+      "voice-ai-murfreesboro-tn"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

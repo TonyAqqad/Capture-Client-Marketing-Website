@@ -1,0 +1,172 @@
+{
+  "page_id": "voice-ai-durham-nc",
+  "page_type": "service-location",
+  "service": {
+    "name": "Voice AI",
+    "slug": "voice-ai",
+    "category": "automation"
+  },
+  "location": {
+    "city": "Durham",
+    "state": "NC",
+    "state_full": "North Carolina"
+  },
+  "seo": {
+    "title": "Voice AI Agency in Durham, NC | Capture Client",
+    "meta_description": "Durham businesses automate phone calls with Voice AI. Answer every lead 24/7, qualify prospects instantly, and book appointments automatically. Start today!",
+    "h1": "Voice AI Technology for Durham Businesses",
+    "keywords": ["voice ai durham", "ai phone system durham nc", "automated calling durham", "ai assistant durham"]
+  },
+  "hero": {
+    "headline": "Durham's Most Advanced Voice AI Solution",
+    "subheadline": "Intelligent Automation That Answers Every Call, Captures Every Lead & Grows Your Business",
+    "cta_primary": "Book Free Demo",
+    "cta_secondary": "See Pricing"
+  },
+  "intro": {
+    "paragraph": "Durham is home to world-class research, healthcare, and technology companies that expect cutting-edge solutions. Our Voice AI technology brings enterprise-level phone automation to Durham businesses of all sizes. From Research Triangle Park to downtown Durham, companies are using AI to revolutionize customer communication - answering every call with professional precision, qualifying leads with intelligent conversation, and scheduling appointments without human intervention. Whether you're a biotech startup or established Durham business, Voice AI ensures you never miss a revenue opportunity."
+  },
+  "benefits": [
+    {
+      "title": "Zero Missed Opportunities",
+      "description": "Every unanswered call is money left on the table. AI ensures 100% of Durham calls are answered professionally, instantly.",
+      "icon": "phone-check"
+    },
+    {
+      "title": "Intelligent Conversation",
+      "description": "Advanced AI understands context, answers complex questions, and conducts natural conversations with your Durham customers.",
+      "icon": "message-circle"
+    },
+    {
+      "title": "Instant Appointment Booking",
+      "description": "AI checks your availability and books appointments in real-time during the call - no follow-up needed.",
+      "icon": "calendar-check"
+    },
+    {
+      "title": "Reduce Labor Costs",
+      "description": "Eliminate answering service fees and reduce receptionist overhead while providing superior service to Durham customers.",
+      "icon": "dollar-sign"
+    },
+    {
+      "title": "Advanced Analytics",
+      "description": "Gain insights into call patterns, lead sources, conversion rates, and customer questions with detailed reporting.",
+      "icon": "bar-chart"
+    }
+  ],
+  "how_it_works": {
+    "headline": "From Setup to Success in Days",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Strategy Session",
+        "description": "We discuss your Durham business objectives, call handling needs, and success metrics to design your AI solution."
+      },
+      {
+        "step": 2,
+        "title": "Custom Training",
+        "description": "Your AI is trained with your services, pricing, Durham market knowledge, and brand voice for authentic interactions."
+      },
+      {
+        "step": 3,
+        "title": "Quality Testing",
+        "description": "Extensive testing with real-world scenarios ensures your AI represents your Durham business perfectly before launch."
+      },
+      {
+        "step": 4,
+        "title": "Launch & Optimize",
+        "description": "Go live and start capturing leads immediately. We continuously optimize based on performance data and feedback."
+      }
+    ]
+  },
+  "use_cases": [
+    {
+      "industry": "Biotech & Research",
+      "description": "Durham biotech companies use Voice AI to handle partnership inquiries, schedule facility tours, and manage vendor communications efficiently."
+    },
+    {
+      "industry": "Healthcare & Medical",
+      "description": "Durham medical practices automate patient scheduling, prescription refill requests, and common health questions with HIPAA-compliant Voice AI."
+    },
+    {
+      "industry": "Education Services",
+      "description": "Tutoring centers, private schools, and educational consultants in Durham use AI to answer parent questions and schedule consultations 24/7."
+    },
+    {
+      "industry": "Professional Services",
+      "description": "Durham law firms, accounting practices, and consultants screen clients, schedule meetings, and provide initial information automatically."
+    },
+    {
+      "industry": "Property Management",
+      "description": "Durham property managers use Voice AI to handle tenant requests, schedule showings, and manage maintenance calls around the clock."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is Voice AI suitable for Durham's research and healthcare sectors?",
+      "answer": "Absolutely! Durham's innovation economy demands sophisticated solutions. Our Voice AI is HIPAA-compliant for healthcare, can handle technical inquiries for research companies, and integrates with enterprise systems. Many Durham biotech and medical facilities already use Voice AI successfully."
+    },
+    {
+      "question": "How natural do the AI conversations sound?",
+      "answer": "Our Voice AI uses advanced natural language processing to conduct fluid, natural conversations. Durham customers won't feel like they're talking to a robot - the AI understands context, handles interruptions, and responds conversationally just like a trained professional."
+    },
+    {
+      "question": "Can Voice AI integrate with our existing Durham systems?",
+      "answer": "Yes! We integrate with popular CRMs (Salesforce, HubSpot), calendar systems (Google, Outlook), and business software. For Durham enterprises with custom systems, we offer API integration to ensure seamless workflow automation."
+    },
+    {
+      "question": "What's the ROI for Durham businesses?",
+      "answer": "Most Durham businesses see positive ROI within 30 days. You'll capture leads that were previously missed (typically 20-40% increase), reduce staffing costs, and free your team to focus on high-value activities. Many Durham companies report 2-3x ROI within 90 days."
+    },
+    {
+      "question": "How does Voice AI handle complex Durham market questions?",
+      "answer": "We train your AI extensively with your business knowledge, including Durham-specific information like service areas (Hope Valley, Woodcroft, Downtown), local competitors, pricing, and common customer questions. The AI becomes an expert on your Durham business."
+    },
+    {
+      "question": "What support do Durham businesses receive?",
+      "answer": "You get dedicated account management, 24/7 technical support, regular performance reviews, ongoing AI optimization, and training for your team. We're invested in your success and provide white-glove service to all Durham clients."
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Dr. Emily Watson",
+      "business": "Durham Family Medicine",
+      "location": "Durham, NC",
+      "quote": "Our Durham practice serves thousands of patients. Voice AI handles appointment scheduling, medication refills, and routine questions, allowing our staff to focus on patient care. It's been a game-changer for efficiency and patient satisfaction.",
+      "rating": 5
+    },
+    {
+      "name": "James Anderson",
+      "business": "TriTech Solutions",
+      "location": "Durham, NC",
+      "quote": "As a Durham tech company, we needed smart phone automation. Voice AI qualifies our enterprise leads perfectly, schedules demos automatically, and integrates seamlessly with our CRM. Our sales team is 50% more productive now.",
+      "rating": 5
+    }
+  ],
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1758626099012-2904337e9c60?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "AI workspace technology on laptop screen",
+      "caption": "Enterprise-grade Voice AI for Durham businesses",
+      "credit": {
+        "photographer": "Jo Lin",
+        "unsplashUrl": "https://unsplash.com/photos/MSg17QHWf5Y"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1758599543129-bec77e427ac6?ixlib=rb-4.0.3&w=1200&q=80",
+      "alt": "Professional on phone call outside modern office",
+      "caption": "Professional communication for Durham's innovative businesses",
+      "credit": {
+        "photographer": "Vitaly Gariev",
+        "unsplashUrl": "https://unsplash.com/photos/LU-hFAv_iOQ"
+      }
+    }
+  ],
+  "cta": {
+    "headline": "Ready to Transform Your Durham Business?",
+    "subheadline": "Join Durham's leading companies using Voice AI for competitive advantage",
+    "button_text": "Schedule Demo",
+    "phone": "865-346-3339",
+    "email": "team@captureclient.net"
+  }
+}

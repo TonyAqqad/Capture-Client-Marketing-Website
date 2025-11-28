@@ -1,0 +1,229 @@
+{
+  "page_id": "voice-ai-columbus-ga",
+  "page_type": "service-location",
+
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+
+  "location": {
+    "city": "Columbus",
+    "state": "GA",
+    "state_abbr": "GA",
+    "state_full": "Georgia",
+    "slug": "columbus-ga",
+    "nearby_areas": ["Phenix City", "Fort Moore", "Midland", "Harris County", "Fortson"],
+    "service_area_radius": "25 miles"
+  },
+
+  "seo": {
+    "page_title": "Voice AI Services in Columbus, GA | Capture Client",
+    "meta_description": "Voice AI for Columbus businesses. Automate call handling 24/7, qualify leads, and book appointments automatically. Serving Columbus and Fort Moore area. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Columbus, Georgia",
+    "keywords": [
+      "voice ai columbus",
+      "ai voice agents columbus ga",
+      "ai phone answering columbus",
+      "automated call handling columbus",
+      "voice ai for business columbus",
+      "ai receptionist columbus georgia"
+    ],
+    "canonical_url": "/voice-ai-columbus-ga",
+    "local_business_schema": {
+      "type": "LocalBusiness",
+      "name": "Capture Client",
+      "service_area": "Columbus, GA and surrounding areas"
+    }
+  },
+
+  "hero": {
+    "headline": "Capture Every Lead in Columbus with Voice AI",
+    "subheadline": "24/7 AI Voice Agents for Columbus Businesses—Professional Call Handling That Never Sleeps",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "cta_secondary": {
+      "text": "See How It Works",
+      "action": "#how-it-works",
+      "type": "link"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1758876202167-f81c995c3fdc?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Young professional in Columbus handling business phone calls",
+      "credit": {
+        "photographer": "Vitaly Gariev",
+        "unsplash_url": "https://unsplash.com/photos/n1yI8oExVns"
+      }
+    }
+  },
+
+  "local_intro": {
+    "paragraph": "Columbus, Georgia's business community thrives on responsiveness and customer service. From Fort Moore contractors to medical practices in Midland, from law firms downtown to service businesses in Harris County, every missed call is a lost opportunity. Our Voice AI technology ensures Columbus businesses capture every lead. The AI answers calls 24/7 with a professional voice, qualifies prospects using your criteria, books appointments into your calendar automatically, and handles common questions—all without human intervention. Columbus businesses are replacing expensive answering services and overworked reception staff with Voice AI that works tirelessly, scales infinitely, and costs a fraction of hiring employees."
+  },
+
+  "benefits": [
+    {
+      "title": "Never Miss a Call",
+      "description": "Columbus customers expect immediate answers. Our Voice AI ensures every call is answered professionally, day or night, weekends and holidays.",
+      "icon": "clock"
+    },
+    {
+      "title": "Qualify Leads Automatically",
+      "description": "AI asks customized questions to identify serious buyers. Your Columbus sales team only spends time with qualified, ready-to-buy prospects.",
+      "icon": "filter"
+    },
+    {
+      "title": "Book Appointments Instantly",
+      "description": "Callers schedule appointments based on your real-time calendar availability. Reduces no-shows with automated confirmations.",
+      "icon": "calendar"
+    },
+    {
+      "title": "Reduce Operating Costs",
+      "description": "Voice AI costs significantly less than hiring staff in Columbus. No salaries, benefits, sick days, or training expenses—just consistent service.",
+      "icon": "dollar-sign"
+    }
+  ],
+
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Strategy Call",
+      "description": "We learn about your Columbus business, call patterns, and specific needs to design the perfect Voice AI solution."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Build",
+      "description": "We create your AI voice agent with your business knowledge, Columbus service areas, and qualification criteria."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Support",
+      "description": "Your AI goes live immediately. We provide real-time analytics, ongoing optimization, and dedicated support."
+    }
+  ],
+
+  "local_use_cases": [
+    {
+      "business_type": "Columbus Medical Practices",
+      "scenario": "A medical practice near Columbus Regional was losing new patients because staff couldn't handle call volume. Many calls went to voicemail, and those patients simply called other Columbus practices.",
+      "result": "Voice AI now handles all routine calls, schedules appointments, verifies insurance, and answers common questions. New patient bookings increased 55% while staff focus on patient care."
+    },
+    {
+      "business_type": "Fort Moore Area Contractors",
+      "scenario": "A roofing contractor serving Columbus and Fort Moore spent hours on the phone with tire-kickers who never hired him. He needed to qualify leads better but didn't have time.",
+      "result": "Voice AI pre-qualifies every lead by asking about roof age, damage type, and timeline. The contractor only talks to serious prospects now and closed 50% more jobs this year."
+    },
+    {
+      "business_type": "Columbus Law Firms",
+      "scenario": "A personal injury attorney downtown Columbus was missing calls from accident victims who needed immediate help. By callback time, many had already hired other attorneys.",
+      "result": "Voice AI answers every call immediately, collects case details, and schedules consultations. The attorney hasn't missed a potential client in months and revenue increased $140,000."
+    }
+  ],
+
+  "service_area": {
+    "heading": "Serving Columbus and the Chattahoochee Valley",
+    "description": "We provide Voice AI services throughout Columbus, Muscogee County, and the surrounding Georgia and Alabama communities.",
+    "areas_list": [
+      "Columbus (Downtown, Midtown, North Columbus)",
+      "Phenix City, AL",
+      "Fort Moore area",
+      "Midland",
+      "Harris County",
+      "Fortson",
+      "Cataula",
+      "Ellerslie"
+    ]
+  },
+
+  "faq": [
+    {
+      "question": "How does Voice AI benefit Columbus businesses?",
+      "answer": "Voice AI gives Columbus businesses 24/7 professional call handling without the cost of hiring staff. The AI answers every call, qualifies leads, books appointments, and provides excellent customer service. It's perfect for Columbus businesses that want to capture more leads, improve responsiveness, and scale without increasing overhead."
+    },
+    {
+      "question": "What Columbus businesses use Voice AI?",
+      "answer": "We work with medical practices, dental offices, law firms, HVAC companies, plumbing services, roofing contractors, real estate agencies, insurance offices, and any service-based business in Columbus that relies on phone leads. If you're missing calls or need better lead qualification, Voice AI can help."
+    },
+    {
+      "question": "Can Voice AI handle calls for businesses serving Fort Moore?",
+      "answer": "Yes! We train your AI with information specific to your Columbus service area including Fort Moore, Phenix City, and surrounding areas. The AI can answer location-specific questions, provide directions, and discuss service availability in different areas."
+    },
+    {
+      "question": "How much does Voice AI cost?",
+      "answer": "Packages start at $999/month including setup, custom training, and 50 calls per month. Most Columbus businesses achieve positive ROI within 30 days. Compare that to hiring a receptionist at $30,000-35,000+ annually plus benefits and training."
+    },
+    {
+      "question": "How long to get started?",
+      "answer": "Most Columbus businesses launch Voice AI within 1-2 weeks. We handle the consultation, AI training, system integration, and launch while you focus on your business."
+    }
+  ],
+
+  "testimonials": [
+    {
+      "quote": "Our Columbus medical practice was overwhelmed with calls. Staff couldn't keep up, and we were losing new patients to voicemail. Capture Client's Voice AI solved the problem. Every call is answered, appointments are booked automatically, and staff can focus on patient care. New patient bookings are up 55%!",
+      "author": "Dr. Sarah Martinez",
+      "business": "Columbus Health Associates",
+      "location": "Columbus, GA"
+    },
+    {
+      "quote": "I serve Columbus and Fort Moore with roofing services. Voice AI changed my business. It qualifies leads automatically so I only talk to serious prospects. I'm closing 50% more jobs and spending way less time on tire-kickers. Best business decision I've made!",
+      "author": "Robert Williams",
+      "business": "Columbus Roofing Pros",
+      "location": "Phenix City, AL"
+    }
+  ],
+
+  "main_content": {
+    "sections": [
+      {
+        "heading": "Voice AI Solutions for Columbus Businesses",
+        "content": "Columbus, Georgia's third-largest city, has a diverse economy driven by Fort Moore, healthcare, manufacturing, and service businesses. In this competitive environment, responsiveness separates successful businesses from struggling ones. Voice AI gives Columbus businesses a decisive advantage. When potential customers call, they get immediate professional service—not voicemail, not hold music, not an answering machine. The AI qualifies leads, books appointments, answers questions, and routes urgent calls to your team. It works during lunch, after hours, on weekends, and during holidays. Columbus businesses using Voice AI report dramatic increases in lead capture rates, customer satisfaction scores, and revenue—all while reducing staffing costs and operational headaches."
+      },
+      {
+        "heading": "Complete Voice AI Platform",
+        "content": "Our Voice AI solution includes comprehensive features: 24/7 professional call answering with natural-sounding voices. Intelligent lead qualification customized for your Columbus business. Automatic appointment scheduling integrated with your calendar. FAQ handling for common questions about services, pricing, and location. Smart call routing based on urgency, value, or other criteria. After-hours support for emergency services. Automated follow-up via text and email. Real-time analytics dashboard showing call volume, lead quality, and conversion rates. Everything is customized for your specific business and continuously optimized."
+      }
+    ]
+  },
+
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1633431305278-eb8c2d0b823b?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Professional handling business phone call in Columbus",
+        "caption": "Voice AI delivers professional service 24/7"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1711397505947-648fc2909627?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Customer service interaction with technology",
+        "caption": "Capture every Columbus customer call with AI"
+      }
+    ]
+  },
+
+  "cta_section": {
+    "headline": "Grow Your Columbus Business with Voice AI",
+    "subheadline": "Join Columbus businesses capturing more leads and improving customer service",
+    "cta_primary": {
+      "text": "Call Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "cta_secondary": {
+      "text": "Email Us",
+      "action": "mailto:team@captureclient.net",
+      "type": "button"
+    },
+    "urgency_text": "Free consultation for Columbus businesses—schedule today"
+  },
+
+  "related_pages": {
+    "other_services_in_location": ["google-ads-columbus-ga", "facebook-ads-columbus-ga"],
+    "nearby_locations": ["atlanta-ga", "macon-ga", "phenix-city-al"],
+    "packages": ["starter-package", "growth-package", "enterprise-package"]
+  }
+}

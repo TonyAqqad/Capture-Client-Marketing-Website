@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CaptureClient - Automate Leads, Capture Clients</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<style>
+        .glitch-text {
+            position: relative;
+            text-shadow:
+                0.05em 0 0 rgba(0, 255, 255, 0.75),
+                -0.025em -0.05em 0 rgba(255, 0, 255, 0.75),
+                0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+            animation: glitch 500ms infinite;
+        }
+        .glitch-text span {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .glitch-text span:first-child {
+            animation: glitch 650ms infinite;
+            clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+            transform: translate(-0.025em, -0.0125em);
+            opacity: 0.8;
+        }
+        .glitch-text span:last-child {
+            animation: glitch 375ms infinite;
+            clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+            transform: translate(0.025em, 0.0125em);
+            opacity: 0.8;
+        }
+        @keyframes glitch {
+            0% {
+                text-shadow: 0.05em 0 0 rgba(0, 255, 255, 0.75), -0.05em -0.025em 0 rgba(255, 0, 255, 0.75), -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+            14% {
+                text-shadow: 0.05em 0 0 rgba(0, 255, 255, 0.75), -0.05em -0.025em 0 rgba(255, 0, 255, 0.75), -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+            15% {
+                text-shadow: -0.05em -0.025em 0 rgba(0, 255, 255, 0.75), 0.025em 0.025em 0 rgba(255, 0, 255, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+            49% {
+                text-shadow: -0.05em -0.025em 0 rgba(0, 255, 255, 0.75), 0.025em 0.025em 0 rgba(255, 0, 255, 0.75), -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+            50% {
+                text-shadow: 0.025em 0.05em 0 rgba(0, 255, 255, 0.75), 0.05em 0 0 rgba(255, 0, 255, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+            99% {
+                text-shadow: 0.025em 0.05em 0 rgba(0, 255, 255, 0.75), 0.05em 0 0 rgba(255, 0, 255, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+            100% {
+                text-shadow: -0.025em 0 0 rgba(0, 255, 255, 0.75), -0.025em -0.025em 0 rgba(255, 0, 255, 0.75), -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+            }
+        }
+        .glowing-button {
+            box-shadow: 0 0 5px theme('colors.primary'), 0 0 10px theme('colors.primary'), 0 0 20px theme('colors.primary');
+        }
+        .glowing-button-secondary {
+            box-shadow: 0 0 5px theme('colors.cyan.400'), 0 0 10px theme('colors.cyan.400');
+        }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#00E0FF",
+              "background-light": "#F0F2F5",
+              "background-dark": "#0A0119",
+            },
+            fontFamily: {
+              display: ["Space Grotesk", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "1rem",
+            },
+            animation: {
+              'float-slow': 'float 6s ease-in-out infinite',
+              'float-medium': 'float 5s ease-in-out infinite',
+              'float-fast': 'float 4s ease-in-out infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          },
+        },
+      };
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-200 antialiased overflow-x-hidden">
+<div class="relative min-h-screen w-full">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<img alt="Abstract swirling background of blue and purple energy" class="h-full w-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD70VubcZHP6x_FyXQbOkNLoJC9d1feIQtzvGSpC8JDixrF6Ms24CRrgamrjBdhyeP8fGRKsX0BdnSlUTO7ebJrNV_bXsbCwORJrmUQvEbimMInJ5NMub5JVoWv8hvEKGndv1f_IZrJ67akJB9ZxQGbGVQKifDs666b0dnHj85Xo7qLEkM5_aDRHeVisNtgZg5EfQpldEj-wJFMGxSqD71ZhQo2_Q25-kIYqmCuDwSGBApcAnzegpY_AzD7qAStyw_G3MS-qOqYoz0"/>
+<div class="absolute inset-0 bg-background-dark opacity-50"></div>
+</div>
+<div class="relative z-10">
+<header class="py-6 px-8 lg:px-16">
+<nav class="container mx-auto flex justify-between items-center">
+<div class="flex items-center gap-3">
+<img alt="CaptureClient logo" class="h-8 w-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAai5AJbXL0A8DFO_NJ4K7ffYev8TEthtK4yAWCrZaPpakTtlx8JgsJRTcT-b5OvSZSzgfn8o-v2acowWCQ9ysw8Dd8Tya-W0ahqtS1qxcRuPFRAdpVByXR49nyc2bGebBq0CIVi26fnuxmQpO2mGO-MDu8LnuMFw9L3NcmDT9phBh1DWTe2_LAxsJobrSqdR8BO_G9rszrGd4PPAngBIwKV44MwnLHmolAusmKgzfyHxTM3LdeMoQLJnrg5H9viQ8PG8TbV-W6IBU"/>
+<span class="text-xl font-bold text-white">CaptureClient</span>
+</div>
+<div class="hidden md:flex items-center gap-8 text-white/80">
+<a class="hover:text-white transition-colors group" href="#">
+                            Services
+                            <span class="material-icons text-base align-middle">expand_more</span>
+</a>
+<a class="hover:text-white transition-colors" href="#">Technology</a>
+<a class="hover:text-white transition-colors" href="#">Pricing</a>
+</div>
+<a class="hidden md:block bg-white/10 border border-white/20 text-white px-6 py-2 rounded-full backdrop-blur-sm hover:bg-white/20 hover:border-white/30 transition-all duration-300 glowing-button-secondary" href="#">
+                        Book a Demo &gt;
+                    </a>
+<button class="md:hidden text-white">
+<span class="material-icons">menu</span>
+</button>
+</nav>
+</header>
+<main class="container mx-auto px-8 lg:px-16 pt-24 pb-32">
+<div class="max-w-4xl">
+<h1 class="text-6xl md:text-8xl lg:text-9xl font-bold text-white leading-tight">
+<span class="glitch-text">Automate Leads.</span><br/>
+<span class="glitch-text text-primary">Capture Clients.</span>
+</h1>
+<div class="grid md:grid-cols-2 gap-8 mt-12 text-lg text-white/90">
+<p>The all-in-one growth hub. AI agents, with and/or management.</p>
+<p>Deploy &amp; manage from a unified dashboard.</p>
+</div>
+</div>
+<div class="mt-16 flex flex-wrap items-center gap-8">
+<div class="flex items-center gap-4">
+<span class="material-icons text-primary text-5xl" style="text-shadow: 0 0 15px currentColor;">settings_suggest</span>
+<div>
+<p class="text-2xl font-bold text-primary" style="text-shadow: 0 0 10px currentColor;">Start Scaling</p>
+<p class="text-2xl font-bold text-white">Now</p>
+</div>
+</div>
+<a class="bg-white/10 border border-white/20 text-white px-8 py-3 rounded-full backdrop-blur-sm hover:bg-white/20 transition-all duration-300 glowing-button-secondary" href="#">
+                        View Demo
+                    </a>
+<div class="flex items-center -space-x-4 ml-auto">
+<div class="flex items-center">
+<img alt="Avatar of a satisfied client" class="w-12 h-12 rounded-full border-2 border-primary object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3Ho3tREqd5iw8YW-xuc46I5vF8nZXMxF9OAQK1crw_8CSajUqzaEBZw2o51dnwijxWX3ycJkeylEbbe5RjQCGIW-lTfbnNPopAz4MZPJ59I306MBJkSZIljqFxo_BB4cTMPXmgiRoWAbro1PWeWbi6V3YwMXl0rZ4dixn-Sl45M2HVQZmAVlh7TaMuK9D3RJg_GtiVPoNo8WUE8ZAYCcf3OH9X7-Srr3b47bBO8zN2b8qtnh6tgoc9i5sXDmtNjQbwxWVhnjMUOE"/>
+<img alt="Avatar of a satisfied client" class="w-12 h-12 rounded-full border-2 border-primary object-cover -ml-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu3RdtgYY0TI176qDCphQOiPsMqYb0vOzN1HOCaT6q2uHcfsrslOH2Nx6hmq6P2baHoePKFUpK5j8qgXxZy98zAr_x3FESt2GLISs6xJ4cfRBKhFd_AieB6ClVeUmezSLzEAZbzqtth6TN9Cepnjbc2wdPuzJy9xw3VGxOyOj-mu2w4a26B6q-iW-ZQzzkjGbJ8ZsBVQUhC_1xWO6U4IWe7JCVlkpQyFAgpGBNzUsL7k5yS1h0pnxrGUia8lFfiY-M4JBI0uHB2WU"/>
+<img alt="Avatar of a satisfied client" class="w-12 h-12 rounded-full border-2 border-primary object-cover -ml-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmLq2DKV0zuA1j9uLR3z9PoBur13mV2XWGZEq5l6tpJnrBhkBcL7U0LkYN9G58G1UE3qCbpjtSWWKMOCexmFiRjf4XU1WTTCK5xIWXzRl5c-WW0xJfOOGrHV9SW_FevmonQVymmWw9GJi1jvDh8yHjdrCpQlUveic7gID9uebI1vjEzQahoTGZeGZuLWd71anx5hyEUGefEJPAncHvFWoyp7Q6md_Vc6muaPuQozV14jUQ3KYe14AuB5CJ24w7H-m8cswJ4JKP-OA"/>
+<img alt="Avatar of a satisfied client" class="w-12 h-12 rounded-full border-2 border-primary object-cover -ml-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzxzHV3fJcDXV59v6g0Kdy6SAG-9tfUrC4x9XyV5C-MUrGeTWd8ACgI6hOKsNjXB9EiUJd2LIAVf5cwVpralhb_ks2Fz7PyhixPR3vbDllqYaachgLZAlODMfkIvohqNtJGUktdcY73rxpDBZTr2tlFEuNClLDDTgr7927RB_WOr2hOhwT1_ZgZzqcwzIHNhJuPVWhZVbKhGdjDz-j2E8vSfqWNVo_5GPtbalzhMMkmQ_juuOlGLNOiVNP2riPU66egNtxt_lR6Ks"/>
+</div>
+<div class="ml-6">
+<p class="text-lg font-semibold text-white">Trusted by</p>
+<p class="text-2xl font-bold text-primary">500+</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+<section class="py-24 px-8 lg:px-16 bg-background-light dark:bg-background-dark relative">
+<div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+<div class="container mx-auto text-center">
+<h2 class="text-sm font-bold uppercase tracking-widest text-primary">Features</h2>
+<p class="mt-4 text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">An Ecosystem Built for Growth</p>
+<p class="mt-4 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">Our platform isn't just a tool; it's a living system designed to adapt and evolve with your business needs.</p>
+</div>
+<div class="container mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+<div class="border border-gray-200 dark:border-gray-800 rounded-lg p-8 bg-white/50 dark:bg-white/5 backdrop-blur-lg transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 animate-float-slow">
+<div class="w-16 h-16 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary text-3xl mb-6">
+<span class="material-icons">smart_toy</span>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Autonomous AI Agents</h3>
+<p class="text-gray-600 dark:text-gray-400">Deploy intelligent agents that handle lead qualification, scheduling, and follow-ups 24/7, without human intervention.</p>
+</div>
+<div class="border border-gray-200 dark:border-gray-800 rounded-lg p-8 bg-white/50 dark:bg-white/5 backdrop-blur-lg transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 animate-float-medium">
+<div class="w-16 h-16 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary text-3xl mb-6">
+<span class="material-icons">hub</span>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Unified Growth Hub</h3>
+<p class="text-gray-600 dark:text-gray-400">Manage all your marketing, sales, and client communication from a single, intuitive dashboard that feels alive.</p>
+</div>
+<div class="border border-gray-200 dark:border-gray-800 rounded-lg p-8 bg-white/50 dark:bg-white/5 backdrop-blur-lg transition-all duration-300 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 animate-float-fast">
+<div class="w-16 h-16 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary text-3xl mb-6">
+<span class="material-icons">insights</span>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3">Predictive Analytics</h3>
+<p class="text-gray-600 dark:text-gray-400">Leverage AI to forecast trends, identify high-value leads, and optimize your strategy with holographic data visualizations.</p>
+</div>
+</div>
+</section>
+<section class="py-24 px-8 lg:px-16 bg-gray-50 dark:bg-black/20">
+<div class="container mx-auto text-center">
+<h2 class="text-sm font-bold uppercase tracking-widest text-primary">How It Works</h2>
+<p class="mt-4 text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">Activate Your Growth Engine in 3 Steps</p>
+</div>
+<div class="container mx-auto mt-20 relative">
+<div class="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent -translate-y-1/2 hidden md:block"></div>
+<div class="grid md:grid-cols-3 gap-16 relative">
+<div class="text-center relative">
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-background-light dark:bg-background-dark border-2 border-primary/50 flex items-center justify-center text-primary text-2xl font-bold glowing-button-secondary">01</div>
+<h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3 mt-8">Connect</h3>
+<p class="text-gray-600 dark:text-gray-400">Integrate your existing tools and data sources in minutes. Our system seamlessly plugs into your workflow.</p>
+</div>
+<div class="text-center relative">
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-background-light dark:bg-background-dark border-2 border-primary/50 flex items-center justify-center text-primary text-2xl font-bold glowing-button-secondary">02</div>
+<h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3 mt-8">Configure</h3>
+<p class="text-gray-600 dark:text-gray-400">Define your goals and set parameters for your AI agents. Tell them what a perfect lead looks like.</p>
+</div>
+<div class="text-center relative">
+<div class="absolute -top-12 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-background-light dark:bg-background-dark border-2 border-primary/50 flex items-center justify-center text-primary text-2xl font-bold glowing-button-secondary">03</div>
+<h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-3 mt-8">Capture</h3>
+<p class="text-gray-600 dark:text-gray-400">Watch as the system automates outreach, qualifies leads, and fills your pipeline with high-intent clients.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-8 lg:px-16 bg-background-light dark:bg-background-dark">
+<div class="container mx-auto text-center">
+<h2 class="text-sm font-bold uppercase tracking-widest text-primary">Client Testimonials</h2>
+<p class="mt-4 text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">Echoes from the Growth Field</p>
+</div>
+<div class="container mx-auto grid md:grid-cols-2 gap-8 mt-16">
+<div class="border border-gray-200 dark:border-gray-800 rounded-lg p-8 bg-white/50 dark:bg-white/5 backdrop-blur-lg">
+<p class="text-lg italic text-gray-700 dark:text-gray-300">"CaptureClient is like having a team of elite strategists working 24/7. Our lead quality has skyrocketed, and our team can focus on closing deals, not chasing them."</p>
+<div class="mt-6 flex items-center gap-4">
+<img alt="Photo of Sarah L., CEO of Innovate Inc." class="w-12 h-12 rounded-full object-cover border-2 border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJK2nPnbdtj9VSD0piGgWDfze8bLqYVwDIpObmuo1QqzwKoL1nvcuK53LXHl3p6dKNUAxXPGxtG7ANMhTTao_leoMUPKHSEPPMcIuoEAPWR93OnBxWACdtqfJzsPwEwGoPlgbp5lAccL20I5tnTJa1-fXuxac6f1eXp6CaXfONLWmlDfA0DAlgi6-Gv4JCWBb08tAZvGBe3vPkk-OmvfxT-tJCfDqLAJMpU2_7ZsXYcgo9wrOYiADZO6nOeYKGHKe_v57nNljmfXg"/>
+<div>
+<p class="font-bold text-gray-900 dark:text-white">Sarah L.</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">CEO, Innovate Inc.</p>
+</div>
+</div>
+</div>
+<div class="border border-gray-200 dark:border-gray-800 rounded-lg p-8 bg-white/50 dark:bg-white/5 backdrop-blur-lg">
+<p class="text-lg italic text-gray-700 dark:text-gray-300">"The unified dashboard is a game-changer. For the first time, we have a complete, real-time view of our entire growth funnel. It feels like stepping into the future."</p>
+<div class="mt-6 flex items-center gap-4">
+<img alt="Photo of Mark Chen, Head of Growth at QuantumLeap" class="w-12 h-12 rounded-full object-cover border-2 border-primary" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6Qg67MHjc4w8ZnpPsMoxlVoJ1mkF5ud-U-3pHveY9xO7nFy_QKFV3D8Lk536UQFGM5wT_cMXC4ry8pkOaxCgXN5pD0tgaTY_1--AKFh2hWSCoYITBkWIq3D3iuh69rrGFt6ev15rka6fkzECcdiSLOGWlMYHs01hQDAGJMw287iCeJHr7ZHIxlkij7hdSYVEQAkg8KHysci_nljjoFrOdZ_YnWeD0F-z-yNXoKi4zOq_Nqswgt2vLBfyNb3DVNoRtX7rWJ5I4dz0"/>
+<div>
+<p class="font-bold text-gray-900 dark:text-white">Mark Chen</p>
+<p class="text-sm text-gray-600 dark:text-gray-400">Head of Growth, QuantumLeap</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-8 lg:px-16 bg-gray-50 dark:bg-black/20">
+<div class="container mx-auto text-center bg-white dark:bg-gray-900/50 rounded-lg p-12 lg:p-16 border border-gray-200 dark:border-gray-800 shadow-xl dark:shadow-2xl dark:shadow-primary/5">
+<h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">Ready to Evolve?</h2>
+<p class="mt-4 max-w-xl mx-auto text-lg text-gray-600 dark:text-gray-400">Connect with our team to see a live demonstration of the CaptureClient growth engine and discover how it can transform your business.</p>
+<div class="mt-8">
+<a class="inline-block bg-primary text-black px-10 py-4 rounded-full font-bold uppercase tracking-wider text-sm transition-all duration-300 hover:scale-105 glowing-button" href="#">
+                    Book Your Live Demo
+                </a>
+</div>
+</div>
+</section>
+<footer class="bg-background-light dark:bg-background-dark border-t border-gray-200 dark:border-gray-800">
+<div class="container mx-auto py-12 px-8 lg:px-16">
+<div class="grid md:grid-cols-4 gap-8">
+<div>
+<div class="flex items-center gap-3">
+<img alt="CaptureClient logo" class="h-8 w-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDij-gzqdnNTGHFAXYY1h9LIBjpArlRFeLnBt0nADxGGW1JnKFk1WFfowxdUcBWRIZ2-M2_LjrJX55AcQyVI2I-vAKbCaPE3uOxAb2EzjbqrpIbO_V3MPNBzr9x7kKIh8QhCbFnKIdRNx4Rt7YqSgZN-1fW5VetMVJwqJXJOdqFSd4CDS1kFsibkuRt2AO2IuNCgq8V_2E3B_OVA6_dKWTD5H18ihIqBoVYGBE30dRMY45BhxCklh3vRrgmqVkQ9uFkLoBiBUpcnA"/>
+<span class="text-xl font-bold text-gray-900 dark:text-white">CaptureClient</span>
+</div>
+<p class="mt-4 text-gray-600 dark:text-gray-400 text-sm">The future of autonomous growth.</p>
+</div>
+<div>
+<h3 class="font-bold text-gray-900 dark:text-white">Product</h3>
+<ul class="mt-4 space-y-2 text-sm">
+<li><a class="text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Features</a></li>
+<li><a class="text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Technology</a></li>
+<li><a class="text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Pricing</a></li>
+<li><a class="text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Demo</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-gray-900 dark:text-white">Company</h3>
+<ul class="mt-4 space-y-2 text-sm">
+<li><a class="text-gray-600 dark:text-gray-400 hover:text-primary" href="#">About Us</a></li>
+<li><a class="text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Careers</a></li>
+<li><a class="text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-gray-900 dark:text-white">Legal</h3>
+<ul class="mt-4 space-y-2 text-sm">
+<li><a class="text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Privacy Policy</a></li>
+<li><a class="text-gray-600 dark:text-gray-400 hover:text-primary" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-12 border-t border-gray-200 dark:border-gray-800 pt-8 flex justify-between items-center text-sm text-gray-500 dark:text-gray-400">
+<p>© 2024 CaptureClient. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="hover:text-primary" href="#">X</a>
+<a class="hover:text-primary" href="#">LinkedIn</a>
+</div>
+</div>
+</div>
+</footer>
+
+</body></html>

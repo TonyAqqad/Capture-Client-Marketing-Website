@@ -1,0 +1,295 @@
+{
+  "page_id": "growth-package",
+  "page_type": "package",
+  "package_info": {
+    "name": "Growth Package",
+    "slug": "growth-package",
+    "price": "$2,195",
+    "period": "per month",
+    "tagline": "Scale your business with AI + paid advertising that actually converts"
+  },
+  "seo": {
+    "title": "Growth Package - $2,195/mo | AI + Google/Facebook Ads | Capture Client",
+    "meta_description": "Scale faster with 2 AI Voice Agents, 200 calls/month, and professional Google or Facebook Ads management. Ad spend $1K-$3K managed. Book more leads automatically.",
+    "keywords": ["ai voice agent growth", "facebook ads with ai", "google ads lead generation", "ai lead generation system"]
+  },
+  "hero": {
+    "headline": "Scale Your Lead Generation with AI + Ads",
+    "subheadline": "2 AI Voice Agents + Google OR Facebook Ads Management + Landing Page Optimization",
+    "price_display": {
+      "amount": "$2,195",
+      "period": "per month",
+      "note": "Ad spend managed: $1,000-$3,000/month"
+    },
+    "badge": "MOST POPULAR",
+    "cta": {
+      "primary": {
+        "text": "Start Growing Today",
+        "action": "/contact?package=growth",
+        "type": "primary"
+      },
+      "secondary": {
+        "text": "Schedule Strategy Call",
+        "action": "/contact?type=strategy",
+        "type": "secondary"
+      }
+    }
+  },
+  "ideal_for": {
+    "headline": "Perfect For:",
+    "audience": [
+      "Growing businesses with 10-50 employees",
+      "Businesses ready to invest in paid advertising",
+      "Companies handling 200+ calls per month",
+      "Service businesses wanting predictable lead flow",
+      "Businesses with $1K-$3K monthly ad budget",
+      "Companies that need multiple AI agents for different services"
+    ]
+  },
+  "features_included": [
+    {
+      "name": "2 Custom AI Voice Agents",
+      "description": "Two fully trained AI agents - one for each service line or location. Perfect for businesses offering multiple services.",
+      "value": "2 agents"
+    },
+    {
+      "name": "200 AI Phone Calls Per Month",
+      "description": "Handle up to 200 calls per month across both AI agents. Scalable for growing businesses.",
+      "value": "200 calls/mo"
+    },
+    {
+      "name": "Google Ads OR Facebook Ads Management",
+      "description": "Choose either Google Ads or Facebook Ads. We create campaigns, write ad copy, design graphics, optimize targeting, and manage your budget daily.",
+      "value": "Full management"
+    },
+    {
+      "name": "Ad Spend: $1,000-$3,000/month",
+      "description": "We manage ad spend between $1K-$3K monthly (ad spend billed separately by Google/Facebook). Optimized for maximum lead generation.",
+      "value": "$1K-$3K managed"
+    },
+    {
+      "name": "Landing Page Optimization",
+      "description": "We'll optimize or create a high-converting landing page designed specifically for your ads. Includes A/B testing and conversion tracking.",
+      "value": "Included"
+    },
+    {
+      "name": "Advanced Lead Qualification",
+      "description": "AI asks detailed qualifying questions, checks budget fit, urgency, and decision-making authority. Only sends hot leads to you.",
+      "value": "Advanced"
+    },
+    {
+      "name": "Weekly Performance Reports",
+      "description": "Detailed reports every week showing ad performance, cost per lead, calls handled, and ROI tracking.",
+      "value": "Weekly"
+    },
+    {
+      "name": "Priority Email Support",
+      "description": "Priority email support with response within 4 hours during business hours.",
+      "value": "4hr response"
+    },
+    {
+      "name": "Multiple CRM Integrations",
+      "description": "Connect to multiple CRMs, email marketing platforms, and business tools. Full integration support.",
+      "value": "Unlimited integrations"
+    }
+  ],
+  "features_not_included": [
+    {
+      "name": "Both Google AND Facebook Ads",
+      "available_in": "Enterprise Package",
+      "note": "Growth includes one platform only"
+    },
+    {
+      "name": "Unlimited Calls",
+      "available_in": "Enterprise Package"
+    },
+    {
+      "name": "Unlimited AI Agents",
+      "available_in": "Enterprise Package"
+    },
+    {
+      "name": "Dedicated Account Manager",
+      "available_in": "Enterprise Package"
+    },
+    {
+      "name": "24/7 Priority Support",
+      "available_in": "Enterprise Package"
+    },
+    {
+      "name": "Custom Landing Pages",
+      "available_in": "Enterprise Package",
+      "note": "Growth includes optimization only"
+    }
+  ],
+  "comparison": {
+    "upgrade_prompt": {
+      "headline": "Need Both Google AND Facebook Ads?",
+      "description": "Enterprise Package includes unlimited calls, unlimited AI agents, both advertising platforms, and a dedicated account manager.",
+      "cta": {
+        "text": "See Enterprise Package",
+        "action": "/packages/enterprise-package"
+      }
+    },
+    "downgrade_prompt": {
+      "headline": "Just Need AI Without Ads?",
+      "description": "Starter Package includes 1 AI agent and 50 calls/month for $999/mo - perfect if you're not ready for paid advertising yet.",
+      "cta": {
+        "text": "See Starter Package",
+        "action": "/packages/starter-package"
+      }
+    },
+    "compare_table": [
+      {
+        "feature": "AI Voice Agents",
+        "starter": "1 agent",
+        "growth": "2 agents",
+        "enterprise": "Unlimited"
+      },
+      {
+        "feature": "Monthly Calls",
+        "starter": "50 calls",
+        "growth": "200 calls",
+        "enterprise": "Unlimited"
+      },
+      {
+        "feature": "Advertising Platforms",
+        "starter": "None",
+        "growth": "Google OR Facebook",
+        "enterprise": "Both + LinkedIn"
+      },
+      {
+        "feature": "Landing Pages",
+        "starter": "None",
+        "growth": "Optimization",
+        "enterprise": "Custom built"
+      },
+      {
+        "feature": "Reports",
+        "starter": "Monthly",
+        "growth": "Weekly",
+        "enterprise": "Real-time dashboard"
+      },
+      {
+        "feature": "Support",
+        "starter": "Email only",
+        "growth": "Priority (4hr)",
+        "enterprise": "24/7 dedicated"
+      }
+    ]
+  },
+  "value_proposition": {
+    "headline": "Why Growth Package is Our Most Popular",
+    "benefits": [
+      {
+        "title": "Predictable Lead Flow",
+        "description": "Stop relying on referrals and word-of-mouth. Paid ads + AI automation = consistent stream of qualified leads every week.",
+        "icon": "trending-up"
+      },
+      {
+        "title": "Lower Cost Per Lead",
+        "description": "AI answers calls instantly and qualifies leads automatically. No wasted ad spend on unqualified prospects.",
+        "icon": "dollar"
+      },
+      {
+        "title": "Scale Without Hiring",
+        "description": "Handle 4x more calls without hiring a receptionist or call center. Your AI agents work 24/7 with no breaks.",
+        "icon": "users"
+      },
+      {
+        "title": "Complete Transparency",
+        "description": "Weekly reports show exactly where your ad dollars are going and which campaigns drive the most leads.",
+        "icon": "chart-line"
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "We went from 15 leads per month to 87 in the first 60 days. The AI handles initial qualification, and we only talk to people ready to buy. Game changer for our business.",
+      "author": "David Chen",
+      "business": "Chen Home Remodeling",
+      "location": "Nashville, TN",
+      "result": "87 leads in 60 days (5.8x increase)"
+    },
+    {
+      "quote": "Best ROI we've ever had on marketing. The Facebook ads bring in calls, and the AI qualifies them before they reach us. We're closing 35% of leads now vs. 12% before.",
+      "author": "Jennifer Rodriguez",
+      "business": "Rodriguez Law Firm",
+      "location": "Chattanooga, TN",
+      "result": "35% close rate (up from 12%)"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Should I choose Google Ads or Facebook Ads?",
+      "answer": "It depends on your business. Google Ads works best for high-intent searches (like 'plumber near me'). Facebook Ads works better for awareness and targeting specific demographics. We'll recommend the best fit during your strategy call."
+    },
+    {
+      "question": "What happens if I exceed 200 calls?",
+      "answer": "We'll notify you before you hit the limit. You can either upgrade to Enterprise for unlimited calls or purchase additional call bundles at $1.50 per call."
+    },
+    {
+      "question": "Who pays for the actual ad spend?",
+      "answer": "The ad spend ($1K-$3K/month) is billed directly from Google or Facebook to your credit card. Our $2,195/mo fee covers the management, optimization, creative, and AI system."
+    },
+    {
+      "question": "Can I switch between Google and Facebook Ads?",
+      "answer": "Yes! You can switch platforms once per quarter. Or upgrade to Enterprise to run both simultaneously."
+    },
+    {
+      "question": "How quickly will I see results?",
+      "answer": "Most clients see qualified leads within the first 7-10 days of ad launch. Full optimization usually takes 30-45 days as we refine targeting and creative."
+    }
+  ],
+  "trust_signals": [
+    {
+      "title": "No Long-Term Contract",
+      "description": "Month-to-month billing. Cancel anytime with 30 days notice."
+    },
+    {
+      "title": "60-Day Money Back Guarantee",
+      "description": "Not getting results? Get a full refund within 60 days."
+    },
+    {
+      "title": "Certified Ad Experts",
+      "description": "Our team is Google Ads and Facebook Blueprint certified."
+    },
+    {
+      "title": "Transparent Reporting",
+      "description": "Full access to all ad accounts and performance data."
+    }
+  ],
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?fm=jpg&w=1200",
+      "alt": "Business analytics and growth charts on laptop",
+      "credit": "Carlos Muza on Unsplash",
+      "placement": "hero"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1557804506-669a67965ba0?fm=jpg&w=1200",
+      "alt": "Team meeting discussing growth strategy",
+      "credit": "Austin Distel on Unsplash",
+      "placement": "value_proposition"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?fm=jpg&w=1200",
+      "alt": "Happy business team celebrating success",
+      "credit": "Brooke Cagle on Unsplash",
+      "placement": "testimonials"
+    }
+  ],
+  "cta_footer": {
+    "headline": "Ready to Scale Your Lead Generation?",
+    "subheadline": "Join 300+ growing businesses using AI + Ads to capture more qualified leads.",
+    "primary_cta": {
+      "text": "Start Growing for $2,195/mo",
+      "action": "/contact?package=growth"
+    },
+    "secondary_cta": {
+      "text": "Schedule Strategy Call",
+      "action": "/contact?type=strategy"
+    },
+    "guarantee": "60-day money back guarantee. No setup fees. Cancel anytime.",
+    "bonus": "BONUS: Get a free landing page audit when you schedule a call this week."
+  }
+}

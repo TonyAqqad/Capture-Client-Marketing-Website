@@ -1,0 +1,32 @@
+{
+  "page_id": "voice-ai-roanoke-va",
+  "page_type": "service-location",
+  "service": {"service_id": "voice-ai", "service_name": "Voice AI Services", "service_slug": "voice-ai"},
+  "location": {"city": "Roanoke", "state": "VA", "state_full": "Virginia", "slug": "roanoke-va", "nearby_areas": ["Salem", "Cave Spring", "Vinton", "Hollins", "Christiansburg"], "service_area_radius": "30 miles"},
+  "seo": {"page_title": "Voice AI Agency in Roanoke, VA | Capture Client", "meta_description": "Roanoke businesses: Never miss a call with AI voice agents. 24/7 lead capture, appointment booking, professional service. Call 865-346-3339", "h1_heading": "Voice AI Services in Roanoke, Virginia", "keywords": ["voice ai roanoke", "roanoke ai receptionist", "roanoke call automation", "ai voice agents roanoke va", "southwest virginia ai"], "canonical_url": "/voice-ai-roanoke-va"},
+  "hero": {"headline": "Roanoke Businesses: Work Smarter with Voice AI", "subheadline": "Capture Every Lead While You Focus on Growing Your Roanoke Business", "cta_primary": {"text": "Get Your Free Consultation", "action": "tel:865-346-3339", "type": "phone"}, "hero_image": {"url": "https://images.unsplash.com/photo-1553775282-20af80779df7?ixlib=rb-4.0.3&w=1920&q=80", "alt": "Customer service headset for Roanoke businesses", "credit": {"photographer": "Petr Machacek", "unsplash_url": "https://unsplash.com/photos/BeVGrXEktIk"}}},
+  "local_intro": {"paragraph": "Roanoke is Southwest Virginia's economic hub, home to thriving healthcare, manufacturing, retail, and service industries. Roanoke businesses need reliable systems to capture leads and serve customers efficiently. Our Voice AI agents help Roanoke companies—from downtown offices to Cave Spring service providers—answer every call, qualify leads, and book appointments automatically, allowing you to focus on what you do best."
+  },
+  "benefits": [
+    {"title": "Southwest Virginia Coverage", "description": "Serve all of Roanoke Valley including Salem, Vinton, Cave Spring, and surrounding communities with one AI system.", "icon": "map-pin"},
+    {"title": "Small Business Friendly", "description": "Affordable solution designed for Roanoke's small and medium businesses. Big-business capabilities at small-business prices.", "icon": "heart"},
+    {"title": "Always Available", "description": "Roanoke customers call evenings and weekends. Our AI is always ready to capture those leads.", "icon": "clock"},
+    {"title": "Cost Effective", "description": "Less than hiring a part-time receptionist. Perfect for growing Roanoke businesses watching overhead.", "icon": "dollar-sign"}
+  ],
+  "how_it_works": [
+    {"step": 1, "title": "Free Roanoke Consultation", "description": "We learn about your Roanoke business, services, and growth goals."},
+    {"step": 2, "title": "AI Training", "description": "We build your AI with Roanoke market knowledge and your business expertise."},
+    {"step": 3, "title": "Launch", "description": "Start capturing Roanoke leads within 1-2 weeks."},
+    {"step": 4, "title": "Grow", "description": "Scale your Roanoke business without scaling your overhead."}
+  ],
+  "service_area": {"heading": "Serving Roanoke Valley", "description": "We proudly serve businesses throughout the Roanoke Valley and Southwest Virginia region.", "areas_list": ["Roanoke", "Salem", "Cave Spring", "Vinton", "Hollins", "Christiansburg", "Blacksburg", "Blue Ridge", "Smith Mountain Lake"]},
+  "faq": [
+    {"question": "Is Voice AI affordable for small Roanoke businesses?", "answer": "Yes! Packages start at $999/month, which is less than a part-time receptionist. Most Roanoke businesses see positive ROI within 30 days by capturing leads they previously missed."},
+    {"question": "What Roanoke businesses benefit most?", "answer": "HVAC, plumbing, electrical, medical practices, law firms, real estate agents, and any Roanoke service business that gets phone leads. If you're missing calls, Voice AI is for you."},
+    {"question": "How quickly can we start?", "answer": "Most Roanoke businesses launch within 1-2 weeks. We handle all setup and training."}
+  ],
+  "main_content": {"sections": [{"heading": "Voice AI for Roanoke's Business Community", "content": "Roanoke's business community values reliability, quality, and personal service. Our Voice AI delivers all three—reliably answering every call, providing quality lead qualification, and delivering personal service that reflects your Roanoke brand. Whether you're a Roanoke HVAC company getting slammed during summer, a law firm screening potential clients, or a medical practice managing appointment requests, Voice AI helps you serve more Roanoke customers without hiring more staff."}]},
+  "images": {"gallery": [{"url": "https://images.unsplash.com/photo-1560264280-88b68371db39?ixlib=rb-4.0.3&w=1200&q=80", "alt": "Roanoke business team collaboration", "caption": "Modern AI solutions for Roanoke Valley businesses"}]},
+  "cta_section": {"headline": "Ready to Grow Your Roanoke Business?", "subheadline": "Join Roanoke businesses already capturing more leads with AI", "cta_primary": {"text": "Call Now: 865-346-3339", "action": "tel:865-346-3339", "type": "phone"}},
+  "related_pages": {"other_services_in_location": ["google-ads", "facebook-ads"], "nearby_locations": ["lynchburg-va", "richmond-va"], "packages": ["starter-package", "growth-package"]}
+}

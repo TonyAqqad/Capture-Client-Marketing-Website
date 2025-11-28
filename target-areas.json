@@ -1,0 +1,958 @@
+{
+  "agency": "Capture Client",
+  "primary_location": "Knoxville, TN",
+  "targeting_strategy": "Southeast Regional Coverage",
+  "regions": [
+    "Tennessee",
+    "Georgia",
+    "North Carolina",
+    "Virginia",
+    "Kentucky"
+  ],
+  "generated_at": "2025-11-27",
+  "local_areas": [
+    {
+      "city": "Knoxville",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "is_primary": true,
+      "type": "city",
+      "population": 198722,
+      "suburbs": ["Maryville", "Oak Ridge", "Sevierville", "Farragut"],
+      "keywords": [
+        "voice ai agency knoxville",
+        "ai lead generation knoxville",
+        "facebook ads agency knoxville",
+        "google ads agency knoxville",
+        "lead generation company knoxville",
+        "marketing agency knoxville tn",
+        "ai voice agents knoxville"
+      ]
+    },
+    {
+      "city": "Nashville",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "is_primary": false,
+      "type": "city",
+      "population": 729505,
+      "suburbs": ["Franklin", "Murfreesboro", "Brentwood", "Hendersonville"],
+      "keywords": [
+        "voice ai agency nashville",
+        "ai lead generation nashville",
+        "facebook ads agency nashville",
+        "google ads agency nashville",
+        "lead generation company nashville",
+        "marketing agency nashville tn"
+      ]
+    },
+    {
+      "city": "Chattanooga",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "is_primary": false,
+      "type": "city",
+      "population": 181099,
+      "suburbs": ["Cleveland", "East Ridge"],
+      "keywords": [
+        "voice ai agency chattanooga",
+        "ai lead generation chattanooga",
+        "facebook ads agency chattanooga",
+        "google ads agency chattanooga",
+        "lead generation company chattanooga"
+      ]
+    },
+    {
+      "city": "Memphis",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "is_primary": false,
+      "type": "city",
+      "population": 610919,
+      "suburbs": ["Germantown", "Collierville", "Bartlett"],
+      "keywords": [
+        "voice ai agency memphis",
+        "ai lead generation memphis",
+        "facebook ads agency memphis",
+        "google ads agency memphis",
+        "lead generation company memphis"
+      ]
+    },
+    {
+      "city": "Maryville",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "is_primary": false,
+      "type": "suburb",
+      "population": 28500,
+      "parent_city": "Knoxville",
+      "keywords": [
+        "voice ai agency maryville tn",
+        "ai lead generation maryville",
+        "facebook ads agency maryville",
+        "marketing agency maryville tn"
+      ]
+    },
+    {
+      "city": "Franklin",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "is_primary": false,
+      "type": "suburb",
+      "population": 83097,
+      "parent_city": "Nashville",
+      "keywords": [
+        "voice ai agency franklin tn",
+        "ai lead generation franklin",
+        "facebook ads agency franklin",
+        "marketing agency franklin tn"
+      ]
+    },
+    {
+      "city": "Murfreesboro",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "is_primary": false,
+      "type": "suburb",
+      "population": 152769,
+      "parent_city": "Nashville",
+      "keywords": [
+        "voice ai agency murfreesboro",
+        "ai lead generation murfreesboro",
+        "facebook ads agency murfreesboro",
+        "marketing agency murfreesboro tn"
+      ]
+    },
+    {
+      "city": "Oak Ridge",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "is_primary": false,
+      "type": "suburb",
+      "population": 31402,
+      "parent_city": "Knoxville",
+      "keywords": [
+        "voice ai agency oak ridge",
+        "ai lead generation oak ridge",
+        "marketing agency oak ridge tn"
+      ]
+    },
+    {
+      "city": "Sevierville",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "is_primary": false,
+      "type": "town",
+      "population": 17889,
+      "parent_city": "Knoxville",
+      "keywords": [
+        "voice ai agency sevierville",
+        "ai lead generation sevierville",
+        "marketing agency sevierville tn"
+      ]
+    },
+    {
+      "city": "Atlanta",
+      "state": "GA",
+      "state_full": "Georgia",
+      "is_primary": false,
+      "type": "city",
+      "population": 520070,
+      "suburbs": ["Sandy Springs", "Roswell", "Alpharetta", "Marietta"],
+      "keywords": [
+        "voice ai agency atlanta",
+        "ai lead generation atlanta",
+        "facebook ads agency atlanta",
+        "google ads agency atlanta",
+        "lead generation company atlanta",
+        "marketing agency atlanta ga"
+      ]
+    },
+    {
+      "city": "Savannah",
+      "state": "GA",
+      "state_full": "Georgia",
+      "is_primary": false,
+      "type": "city",
+      "population": 148808,
+      "suburbs": ["Pooler"],
+      "keywords": [
+        "voice ai agency savannah",
+        "ai lead generation savannah",
+        "facebook ads agency savannah",
+        "marketing agency savannah ga"
+      ]
+    },
+    {
+      "city": "Augusta",
+      "state": "GA",
+      "state_full": "Georgia",
+      "is_primary": false,
+      "type": "city",
+      "population": 206303,
+      "suburbs": ["Evans", "Martinez"],
+      "keywords": [
+        "voice ai agency augusta ga",
+        "ai lead generation augusta",
+        "facebook ads agency augusta",
+        "marketing agency augusta ga"
+      ]
+    },
+    {
+      "city": "Athens",
+      "state": "GA",
+      "state_full": "Georgia",
+      "is_primary": false,
+      "type": "city",
+      "population": 129995,
+      "suburbs": [],
+      "keywords": [
+        "voice ai agency athens ga",
+        "ai lead generation athens",
+        "facebook ads agency athens",
+        "marketing agency athens ga"
+      ]
+    },
+    {
+      "city": "Columbus",
+      "state": "GA",
+      "state_full": "Georgia",
+      "is_primary": false,
+      "type": "city",
+      "population": 201830,
+      "suburbs": [],
+      "keywords": [
+        "voice ai agency columbus ga",
+        "ai lead generation columbus",
+        "facebook ads agency columbus",
+        "marketing agency columbus ga"
+      ]
+    },
+    {
+      "city": "Marietta",
+      "state": "GA",
+      "state_full": "Georgia",
+      "is_primary": false,
+      "type": "suburb",
+      "population": 63122,
+      "parent_city": "Atlanta",
+      "keywords": [
+        "voice ai agency marietta",
+        "ai lead generation marietta",
+        "marketing agency marietta ga"
+      ]
+    },
+    {
+      "city": "Alpharetta",
+      "state": "GA",
+      "state_full": "Georgia",
+      "is_primary": false,
+      "type": "suburb",
+      "population": 67275,
+      "parent_city": "Atlanta",
+      "keywords": [
+        "voice ai agency alpharetta",
+        "ai lead generation alpharetta",
+        "marketing agency alpharetta ga"
+      ]
+    },
+    {
+      "city": "Sandy Springs",
+      "state": "GA",
+      "state_full": "Georgia",
+      "is_primary": false,
+      "type": "suburb",
+      "population": 105505,
+      "parent_city": "Atlanta",
+      "keywords": [
+        "voice ai agency sandy springs",
+        "ai lead generation sandy springs",
+        "marketing agency sandy springs ga"
+      ]
+    },
+    {
+      "city": "Roswell",
+      "state": "GA",
+      "state_full": "Georgia",
+      "is_primary": false,
+      "type": "suburb",
+      "population": 92227,
+      "parent_city": "Atlanta",
+      "keywords": [
+        "voice ai agency roswell ga",
+        "ai lead generation roswell",
+        "marketing agency roswell ga"
+      ]
+    },
+    {
+      "city": "Charlotte",
+      "state": "NC",
+      "state_full": "North Carolina",
+      "is_primary": false,
+      "type": "city",
+      "population": 911311,
+      "suburbs": ["Concord", "Huntersville", "Matthews"],
+      "keywords": [
+        "voice ai agency charlotte",
+        "ai lead generation charlotte",
+        "facebook ads agency charlotte",
+        "google ads agency charlotte",
+        "lead generation company charlotte",
+        "marketing agency charlotte nc"
+      ]
+    },
+    {
+      "city": "Raleigh",
+      "state": "NC",
+      "state_full": "North Carolina",
+      "is_primary": false,
+      "type": "city",
+      "population": 482295,
+      "suburbs": ["Cary", "Apex", "Wake Forest"],
+      "keywords": [
+        "voice ai agency raleigh",
+        "ai lead generation raleigh",
+        "facebook ads agency raleigh",
+        "google ads agency raleigh",
+        "marketing agency raleigh nc"
+      ]
+    },
+    {
+      "city": "Greensboro",
+      "state": "NC",
+      "state_full": "North Carolina",
+      "is_primary": false,
+      "type": "city",
+      "population": 302296,
+      "suburbs": ["High Point"],
+      "keywords": [
+        "voice ai agency greensboro",
+        "ai lead generation greensboro",
+        "facebook ads agency greensboro",
+        "marketing agency greensboro nc"
+      ]
+    },
+    {
+      "city": "Durham",
+      "state": "NC",
+      "state_full": "North Carolina",
+      "is_primary": false,
+      "type": "city",
+      "population": 296186,
+      "suburbs": ["Chapel Hill"],
+      "keywords": [
+        "voice ai agency durham nc",
+        "ai lead generation durham",
+        "facebook ads agency durham",
+        "marketing agency durham nc"
+      ]
+    },
+    {
+      "city": "Winston-Salem",
+      "state": "NC",
+      "state_full": "North Carolina",
+      "is_primary": false,
+      "type": "city",
+      "population": 252975,
+      "suburbs": [],
+      "keywords": [
+        "voice ai agency winston salem",
+        "ai lead generation winston salem",
+        "facebook ads agency winston salem",
+        "marketing agency winston salem nc"
+      ]
+    },
+    {
+      "city": "Asheville",
+      "state": "NC",
+      "state_full": "North Carolina",
+      "is_primary": false,
+      "type": "city",
+      "population": 95056,
+      "suburbs": [],
+      "keywords": [
+        "voice ai agency asheville",
+        "ai lead generation asheville",
+        "facebook ads agency asheville",
+        "marketing agency asheville nc"
+      ]
+    },
+    {
+      "city": "Cary",
+      "state": "NC",
+      "state_full": "North Carolina",
+      "is_primary": false,
+      "type": "suburb",
+      "population": 180010,
+      "parent_city": "Raleigh",
+      "keywords": [
+        "voice ai agency cary nc",
+        "ai lead generation cary",
+        "marketing agency cary nc"
+      ]
+    },
+    {
+      "city": "Concord",
+      "state": "NC",
+      "state_full": "North Carolina",
+      "is_primary": false,
+      "type": "suburb",
+      "population": 110119,
+      "parent_city": "Charlotte",
+      "keywords": [
+        "voice ai agency concord nc",
+        "ai lead generation concord",
+        "marketing agency concord nc"
+      ]
+    },
+    {
+      "city": "Richmond",
+      "state": "VA",
+      "state_full": "Virginia",
+      "is_primary": false,
+      "type": "city",
+      "population": 233655,
+      "suburbs": ["Glen Allen", "Short Pump", "Mechanicsville"],
+      "keywords": [
+        "voice ai agency richmond va",
+        "ai lead generation richmond",
+        "facebook ads agency richmond",
+        "google ads agency richmond",
+        "marketing agency richmond va"
+      ]
+    },
+    {
+      "city": "Virginia Beach",
+      "state": "VA",
+      "state_full": "Virginia",
+      "is_primary": false,
+      "type": "city",
+      "population": 454808,
+      "suburbs": [],
+      "keywords": [
+        "voice ai agency virginia beach",
+        "ai lead generation virginia beach",
+        "facebook ads agency virginia beach",
+        "marketing agency virginia beach"
+      ]
+    },
+    {
+      "city": "Norfolk",
+      "state": "VA",
+      "state_full": "Virginia",
+      "is_primary": false,
+      "type": "city",
+      "population": 231105,
+      "suburbs": ["Chesapeake", "Newport News"],
+      "keywords": [
+        "voice ai agency norfolk",
+        "ai lead generation norfolk",
+        "facebook ads agency norfolk",
+        "marketing agency norfolk va"
+      ]
+    },
+    {
+      "city": "Chesapeake",
+      "state": "VA",
+      "state_full": "Virginia",
+      "is_primary": false,
+      "type": "city",
+      "population": 254997,
+      "suburbs": [],
+      "keywords": [
+        "voice ai agency chesapeake",
+        "ai lead generation chesapeake",
+        "facebook ads agency chesapeake",
+        "marketing agency chesapeake va"
+      ]
+    },
+    {
+      "city": "Arlington",
+      "state": "VA",
+      "state_full": "Virginia",
+      "is_primary": false,
+      "type": "city",
+      "population": 235463,
+      "suburbs": ["Alexandria"],
+      "keywords": [
+        "voice ai agency arlington va",
+        "ai lead generation arlington",
+        "facebook ads agency arlington",
+        "marketing agency arlington va"
+      ]
+    },
+    {
+      "city": "Roanoke",
+      "state": "VA",
+      "state_full": "Virginia",
+      "is_primary": false,
+      "type": "city",
+      "population": 97912,
+      "suburbs": ["Salem"],
+      "keywords": [
+        "voice ai agency roanoke",
+        "ai lead generation roanoke",
+        "facebook ads agency roanoke",
+        "marketing agency roanoke va"
+      ]
+    },
+    {
+      "city": "Alexandria",
+      "state": "VA",
+      "state_full": "Virginia",
+      "is_primary": false,
+      "type": "suburb",
+      "population": 159102,
+      "parent_city": "Arlington",
+      "keywords": [
+        "voice ai agency alexandria va",
+        "ai lead generation alexandria",
+        "marketing agency alexandria va"
+      ]
+    },
+    {
+      "city": "Louisville",
+      "state": "KY",
+      "state_full": "Kentucky",
+      "is_primary": false,
+      "type": "city",
+      "population": 633045,
+      "suburbs": ["Jeffersontown"],
+      "keywords": [
+        "voice ai agency louisville",
+        "ai lead generation louisville",
+        "facebook ads agency louisville",
+        "google ads agency louisville",
+        "marketing agency louisville ky"
+      ]
+    },
+    {
+      "city": "Lexington",
+      "state": "KY",
+      "state_full": "Kentucky",
+      "is_primary": false,
+      "type": "city",
+      "population": 322570,
+      "suburbs": [],
+      "keywords": [
+        "voice ai agency lexington ky",
+        "ai lead generation lexington",
+        "facebook ads agency lexington",
+        "google ads agency lexington",
+        "marketing agency lexington ky"
+      ]
+    },
+    {
+      "city": "Bowling Green",
+      "state": "KY",
+      "state_full": "Kentucky",
+      "is_primary": false,
+      "type": "city",
+      "population": 72294,
+      "suburbs": [],
+      "keywords": [
+        "voice ai agency bowling green",
+        "ai lead generation bowling green",
+        "facebook ads agency bowling green",
+        "marketing agency bowling green ky"
+      ]
+    },
+    {
+      "city": "Owensboro",
+      "state": "KY",
+      "state_full": "Kentucky",
+      "is_primary": false,
+      "type": "city",
+      "population": 60183,
+      "suburbs": [],
+      "keywords": [
+        "voice ai agency owensboro",
+        "ai lead generation owensboro",
+        "facebook ads agency owensboro",
+        "marketing agency owensboro ky"
+      ]
+    },
+    {
+      "city": "Covington",
+      "state": "KY",
+      "state_full": "Kentucky",
+      "is_primary": false,
+      "type": "city",
+      "population": 40181,
+      "suburbs": [],
+      "keywords": [
+        "voice ai agency covington ky",
+        "ai lead generation covington",
+        "marketing agency covington ky"
+      ]
+    },
+    {
+      "city": "Gatlinburg",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "is_primary": false,
+      "type": "town",
+      "population": 3944,
+      "parent_city": "Knoxville",
+      "keywords": [
+        "voice ai agency gatlinburg",
+        "ai lead generation gatlinburg",
+        "marketing agency gatlinburg tn"
+      ]
+    },
+    {
+      "city": "Johnson City",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "is_primary": false,
+      "type": "city",
+      "population": 71046,
+      "suburbs": [],
+      "keywords": [
+        "voice ai agency johnson city tn",
+        "ai lead generation johnson city",
+        "marketing agency johnson city tn"
+      ]
+    },
+    {
+      "city": "Clarksville",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "is_primary": false,
+      "type": "city",
+      "population": 166722,
+      "suburbs": [],
+      "keywords": [
+        "voice ai agency clarksville tn",
+        "ai lead generation clarksville",
+        "marketing agency clarksville tn"
+      ]
+    },
+    {
+      "city": "Fayetteville",
+      "state": "NC",
+      "state_full": "North Carolina",
+      "is_primary": false,
+      "type": "city",
+      "population": 209749,
+      "suburbs": [],
+      "keywords": [
+        "voice ai agency fayetteville nc",
+        "ai lead generation fayetteville",
+        "marketing agency fayetteville nc"
+      ]
+    },
+    {
+      "city": "Wilmington",
+      "state": "NC",
+      "state_full": "North Carolina",
+      "is_primary": false,
+      "type": "city",
+      "population": 122698,
+      "suburbs": [],
+      "keywords": [
+        "voice ai agency wilmington nc",
+        "ai lead generation wilmington",
+        "marketing agency wilmington nc"
+      ]
+    },
+    {
+      "city": "High Point",
+      "state": "NC",
+      "state_full": "North Carolina",
+      "is_primary": false,
+      "type": "suburb",
+      "population": 116926,
+      "parent_city": "Greensboro",
+      "keywords": [
+        "voice ai agency high point",
+        "ai lead generation high point",
+        "marketing agency high point nc"
+      ]
+    },
+    {
+      "city": "Greenville",
+      "state": "NC",
+      "state_full": "North Carolina",
+      "is_primary": false,
+      "type": "city",
+      "population": 90053,
+      "suburbs": [],
+      "keywords": [
+        "voice ai agency greenville nc",
+        "ai lead generation greenville",
+        "marketing agency greenville nc"
+      ]
+    },
+    {
+      "city": "Newport News",
+      "state": "VA",
+      "state_full": "Virginia",
+      "is_primary": false,
+      "type": "suburb",
+      "population": 183056,
+      "parent_city": "Norfolk",
+      "keywords": [
+        "voice ai agency newport news",
+        "ai lead generation newport news",
+        "marketing agency newport news va"
+      ]
+    },
+    {
+      "city": "Hampton",
+      "state": "VA",
+      "state_full": "Virginia",
+      "is_primary": false,
+      "type": "city",
+      "population": 137596,
+      "suburbs": [],
+      "keywords": [
+        "voice ai agency hampton va",
+        "ai lead generation hampton",
+        "marketing agency hampton va"
+      ]
+    },
+    {
+      "city": "Lynchburg",
+      "state": "VA",
+      "state_full": "Virginia",
+      "is_primary": false,
+      "type": "city",
+      "population": 80301,
+      "suburbs": [],
+      "keywords": [
+        "voice ai agency lynchburg",
+        "ai lead generation lynchburg",
+        "marketing agency lynchburg va"
+      ]
+    },
+    {
+      "city": "Suffolk",
+      "state": "VA",
+      "state_full": "Virginia",
+      "is_primary": false,
+      "type": "city",
+      "population": 103105,
+      "suburbs": [],
+      "keywords": [
+        "voice ai agency suffolk va",
+        "ai lead generation suffolk",
+        "marketing agency suffolk va"
+      ]
+    },
+    {
+      "city": "Kingsport",
+      "state": "TN",
+      "state_full": "Tennessee",
+      "is_primary": false,
+      "type": "city",
+      "population": 55442,
+      "suburbs": [],
+      "keywords": [
+        "voice ai agency kingsport tn",
+        "ai lead generation kingsport",
+        "marketing agency kingsport tn"
+      ]
+    }
+  ],
+  "national_keywords": [
+    {
+      "id": "voice-ai-small-business",
+      "keyword": "voice ai for small business",
+      "slug": "voice-ai-small-business",
+      "category": "voice-ai",
+      "search_intent": "commercial",
+      "estimated_volume": "high",
+      "competition": "medium"
+    },
+    {
+      "id": "ai-voice-agents-service-businesses",
+      "keyword": "ai voice agents for service businesses",
+      "slug": "ai-voice-agents-service-businesses",
+      "category": "voice-ai",
+      "search_intent": "commercial",
+      "estimated_volume": "medium",
+      "competition": "medium"
+    },
+    {
+      "id": "lead-generation-agency",
+      "keyword": "lead generation agency",
+      "slug": "lead-generation-agency",
+      "category": "lead-gen",
+      "search_intent": "commercial",
+      "estimated_volume": "high",
+      "competition": "high"
+    },
+    {
+      "id": "facebook-ads-contractors",
+      "keyword": "facebook ads for contractors",
+      "slug": "facebook-ads-contractors",
+      "category": "facebook-ads",
+      "search_intent": "commercial",
+      "estimated_volume": "medium",
+      "competition": "high"
+    },
+    {
+      "id": "google-ads-service-businesses",
+      "keyword": "google ads for service businesses",
+      "slug": "google-ads-service-businesses",
+      "category": "google-ads",
+      "search_intent": "commercial",
+      "estimated_volume": "medium",
+      "competition": "high"
+    },
+    {
+      "id": "ai-lead-qualification",
+      "keyword": "ai lead qualification",
+      "slug": "ai-lead-qualification",
+      "category": "voice-ai",
+      "search_intent": "informational",
+      "estimated_volume": "medium",
+      "competition": "low"
+    },
+    {
+      "id": "automated-lead-generation",
+      "keyword": "automated lead generation",
+      "slug": "automated-lead-generation",
+      "category": "lead-gen",
+      "search_intent": "commercial",
+      "estimated_volume": "high",
+      "competition": "high"
+    },
+    {
+      "id": "voice-ai-home-services",
+      "keyword": "voice ai for home services",
+      "slug": "voice-ai-home-services",
+      "category": "voice-ai",
+      "search_intent": "commercial",
+      "estimated_volume": "medium",
+      "competition": "low"
+    },
+    {
+      "id": "ai-receptionist-small-business",
+      "keyword": "ai receptionist for small business",
+      "slug": "ai-receptionist-small-business",
+      "category": "voice-ai",
+      "search_intent": "commercial",
+      "estimated_volume": "high",
+      "competition": "medium"
+    },
+    {
+      "id": "ai-phone-answering-service",
+      "keyword": "ai phone answering service",
+      "slug": "ai-phone-answering-service",
+      "category": "voice-ai",
+      "search_intent": "commercial",
+      "estimated_volume": "high",
+      "competition": "medium"
+    },
+    {
+      "id": "facebook-ads-lead-generation",
+      "keyword": "facebook ads lead generation",
+      "slug": "facebook-ads-lead-generation",
+      "category": "facebook-ads",
+      "search_intent": "commercial",
+      "estimated_volume": "high",
+      "competition": "high"
+    },
+    {
+      "id": "google-ads-lead-generation",
+      "keyword": "google ads lead generation",
+      "slug": "google-ads-lead-generation",
+      "category": "google-ads",
+      "search_intent": "commercial",
+      "estimated_volume": "high",
+      "competition": "high"
+    },
+    {
+      "id": "ai-call-answering-service",
+      "keyword": "ai call answering service",
+      "slug": "ai-call-answering-service",
+      "category": "voice-ai",
+      "search_intent": "commercial",
+      "estimated_volume": "medium",
+      "competition": "medium"
+    },
+    {
+      "id": "voice-ai-appointment-scheduling",
+      "keyword": "voice ai appointment scheduling",
+      "slug": "voice-ai-appointment-scheduling",
+      "category": "voice-ai",
+      "search_intent": "commercial",
+      "estimated_volume": "medium",
+      "competition": "low"
+    },
+    {
+      "id": "ai-sales-agent-small-business",
+      "keyword": "ai sales agent for small business",
+      "slug": "ai-sales-agent-small-business",
+      "category": "voice-ai",
+      "search_intent": "commercial",
+      "estimated_volume": "medium",
+      "competition": "low"
+    }
+  ],
+  "total_local_areas": 51,
+  "total_national_keywords": 15,
+  "page_generation_estimate": {
+    "local_pages": {
+      "total": 357,
+      "breakdown": {
+        "voice_ai": 51,
+        "facebook_ads": 51,
+        "google_ads": 51,
+        "general_marketing": 51,
+        "service_location_combinations": 153
+      }
+    },
+    "national_pages": {
+      "total": 15,
+      "keywords": [
+        "voice-ai-small-business",
+        "ai-voice-agents-service-businesses",
+        "lead-generation-agency",
+        "facebook-ads-contractors",
+        "google-ads-service-businesses",
+        "ai-lead-qualification",
+        "automated-lead-generation",
+        "voice-ai-home-services",
+        "ai-receptionist-small-business",
+        "ai-phone-answering-service",
+        "facebook-ads-lead-generation",
+        "google-ads-lead-generation",
+        "ai-call-answering-service",
+        "voice-ai-appointment-scheduling",
+        "ai-sales-agent-small-business"
+      ]
+    },
+    "total_content_pages": 372
+  },
+  "seo_title_patterns": {
+    "local_service": "[Service] in [City], [State Abbr] | Capture Client",
+    "national_keyword": "[Keyword] | Capture Client Marketing",
+    "examples": [
+      "Voice AI Agency in Knoxville, TN | Capture Client",
+      "AI Lead Generation in Atlanta, GA | Capture Client",
+      "Facebook Ads Agency in Charlotte, NC | Capture Client",
+      "Voice AI for Small Business | Capture Client Marketing",
+      "AI Receptionist for Small Business | Capture Client Marketing"
+    ]
+  },
+  "meta_description_patterns": {
+    "local": "Looking for [service] in [city]? Capture Client helps service businesses automate calls, generate leads, and grow revenue. Free consultation!",
+    "national": "Capture Client specializes in [keyword]. We help service-based businesses automate lead generation with AI voice agents and proven ad strategies. Get started today!"
+  },
+  "research_summary": {
+    "sources": [
+      "Wikipedia - Tennessee Metro Areas",
+      "Wikipedia - North Carolina Municipalities",
+      "Census Data - Georgia Cities",
+      "Census Data - Virginia Cities",
+      "Wikipedia - Kentucky Cities"
+    ],
+    "jina_searches_performed": 5,
+    "data_quality": "verified",
+    "all_locations_within_region": true,
+    "no_duplicates": true
+  }
+}

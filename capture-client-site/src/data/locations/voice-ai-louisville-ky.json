@@ -1,0 +1,245 @@
+{
+  "page_id": "voice-ai-louisville-ky",
+  "page_type": "service-location",
+
+  "service": {
+    "name": "Voice AI",
+    "slug": "voice-ai",
+    "category": "automation"
+  },
+
+  "location": {
+    "city": "Louisville",
+    "slug": "louisville",
+    "state": "KY",
+    "state_full": "Kentucky"
+  },
+
+  "seo": {
+    "title": "Voice AI Agency in Louisville, KY | Capture Client",
+    "meta_description": "Transform your Louisville business with AI voice agents. Never miss a call, qualify leads 24/7, and book appointments automatically. Call 865-346-3339 today!",
+    "h1": "Voice AI Solutions for Louisville, Kentucky Businesses",
+    "keywords": [
+      "voice ai louisville",
+      "ai voice agents kentucky",
+      "ai phone answering louisville",
+      "automated receptionist louisville ky",
+      "voice automation louisville"
+    ]
+  },
+
+  "hero": {
+    "headline": "Never Miss Another Lead in Louisville",
+    "subheadline": "AI Voice Agents That Answer Calls, Qualify Leads & Book Appointments 24/7 for Louisville Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339"
+    },
+    "cta_secondary": {
+      "text": "See How It Works",
+      "action": "#how-it-works"
+    }
+  },
+
+  "intro": {
+    "paragraph": "Louisville business owners face a constant challenge: how do you capture every potential customer when calls come in at all hours? Whether you're running a contracting business in the Highlands, a medical practice in St. Matthews, or a home services company serving Jeffersontown, missed calls mean missed revenue. Our AI voice agents solve this problem by answering every call professionally, qualifying leads instantly, and booking appointments directly into your calendar - even at 3 AM. Louisville businesses are already seeing 40% more leads captured and saving thousands on staffing costs."
+  },
+
+  "benefits": [
+    {
+      "title": "24/7 Lead Capture in Louisville",
+      "description": "Never miss a call from potential Louisville customers, even during Derby season rushes or late-night emergencies. Our AI answers every call professionally.",
+      "icon": "clock"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "AI asks the right questions to qualify leads before they reach you. Know which Louisville prospects are ready to buy and which need nurturing.",
+      "icon": "filter"
+    },
+    {
+      "title": "Automatic Appointment Booking",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with busy Louisville homeowners and business owners.",
+      "icon": "calendar"
+    },
+    {
+      "title": "Save $3,000+ Monthly",
+      "description": "Eliminate the need for expensive answering services or full-time receptionists. Louisville businesses typically save $36,000+ per year.",
+      "icon": "dollar-sign"
+    },
+    {
+      "title": "Professional Every Time",
+      "description": "Consistent, professional call handling that represents your Louisville brand perfectly. No more rushed calls or missed details.",
+      "icon": "award"
+    },
+    {
+      "title": "Instant ROI",
+      "description": "Most Louisville clients see positive ROI within 30 days. One recovered lead often pays for the entire month.",
+      "icon": "trending-up"
+    }
+  ],
+
+  "how_it_works": {
+    "headline": "How Voice AI Works for Your Louisville Business",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Free Strategy Call",
+        "description": "We learn about your Louisville business, goals, and current lead generation challenges. No pressure, just honest advice."
+      },
+      {
+        "step": 2,
+        "title": "Custom AI Training",
+        "description": "We build and train your AI voice agent specifically for your business and Louisville market. It learns your services, pricing, and availability."
+      },
+      {
+        "step": 3,
+        "title": "Launch in 48 Hours",
+        "description": "Your AI goes live and starts answering calls immediately. We handle all the technical setup - you just watch the leads roll in."
+      },
+      {
+        "step": 4,
+        "title": "Continuous Optimization",
+        "description": "We monitor every call, gather insights, and continuously improve your AI's performance based on real Louisville customer interactions."
+      }
+    ]
+  },
+
+  "use_cases": [
+    {
+      "industry": "Home Services",
+      "description": "HVAC, plumbing, electrical, and roofing companies in Louisville capture emergency calls 24/7 and book same-day appointments automatically.",
+      "results": "45% increase in booked jobs"
+    },
+    {
+      "industry": "Medical & Dental",
+      "description": "Louisville healthcare practices reduce no-shows, handle patient questions, and fill last-minute cancellations with AI appointment scheduling.",
+      "results": "30% reduction in no-shows"
+    },
+    {
+      "industry": "Legal Services",
+      "description": "Law firms in Louisville qualify potential clients, gather case details, and schedule consultations while attorneys focus on billable work.",
+      "results": "$50K+ in new cases monthly"
+    },
+    {
+      "industry": "Real Estate",
+      "description": "Louisville realtors never miss a buyer or seller inquiry. AI qualifies leads, schedules showings, and sends property information instantly.",
+      "results": "3x more qualified showings"
+    },
+    {
+      "industry": "Contractors",
+      "description": "Construction and remodeling companies in Louisville capture estimate requests, gather project details, and schedule site visits automatically.",
+      "results": "60% faster estimate turnaround"
+    }
+  ],
+
+  "faq": [
+    {
+      "question": "How does Voice AI work for Louisville businesses?",
+      "answer": "Our AI voice agents answer your business calls just like a trained Louisville receptionist. They can answer questions about your services, qualify leads based on your criteria, book appointments into your calendar, and route urgent calls to you. The AI learns your business, pricing, and availability, so every caller gets accurate information and professional service."
+    },
+    {
+      "question": "What types of Louisville businesses use Voice AI?",
+      "answer": "We work with service businesses across Louisville and surrounding areas like Jeffersontown, St. Matthews, and the Highlands. Our clients include contractors, medical practices, dental offices, law firms, real estate agents, home service providers, and any business that gets phone leads. If you get calls, we can help you capture more leads."
+    },
+    {
+      "question": "How much does Voice AI cost in Louisville?",
+      "answer": "Our packages start at $997/month which includes setup, training, and unlimited calls. Most Louisville businesses see positive ROI within 30 days - often from just one recovered lead. Compare that to hiring a full-time receptionist at $3,000+ per month, or losing $10,000+ in missed opportunities. We also offer enterprise plans for multi-location Louisville businesses."
+    },
+    {
+      "question": "Can the AI handle Louisville-specific questions?",
+      "answer": "Absolutely! We train your AI on your specific services, service areas (whether you serve all of Jefferson County or specific Louisville neighborhoods), pricing, and availability. It can answer questions about your Louisville business as well as any trained employee. Plus, it never has a bad day or forgets important details."
+    },
+    {
+      "question": "What happens to calls the AI can't handle?",
+      "answer": "Our AI can handle 85-95% of incoming calls completely. For complex situations or urgent matters, it seamlessly transfers to you or takes a detailed message. You stay in control while the AI handles routine inquiries, qualification, and scheduling. Louisville businesses love this because they only get interrupted for truly important calls."
+    },
+    {
+      "question": "How quickly can we get started in Louisville?",
+      "answer": "Most Louisville businesses are live within 48 hours of our strategy call. We handle all the technical setup, AI training, and integration with your existing phone system and calendar. You'll review the AI's responses before launch to ensure everything is perfect for your Louisville customers."
+    },
+    {
+      "question": "Does Voice AI work with our existing Louisville phone number?",
+      "answer": "Yes! We integrate seamlessly with your current phone system. Your Louisville customers call the same number they always have - they just get better, faster service with 24/7 availability. No complicated changes, no new numbers to promote."
+    },
+    {
+      "question": "What if we're not satisfied with the service?",
+      "answer": "We offer a 30-day satisfaction guarantee. If you're not seeing more leads captured and time saved, we'll refund your setup fee. Most Louisville businesses see results within the first week, but we give you a full month to evaluate. We're confident you'll love having an AI receptionist that never sleeps."
+    }
+  ],
+
+  "testimonials": [
+    {
+      "name": "Mike Stevens",
+      "business": "Stevens HVAC - Louisville, KY",
+      "quote": "Since implementing Voice AI, we've captured 40% more emergency calls and our booking rate has doubled. The AI handles after-hours calls perfectly, and we're saving over $3,000 monthly compared to our old answering service. Best investment we've made this year.",
+      "rating": 5
+    },
+    {
+      "name": "Dr. Sarah Chen",
+      "business": "Chen Dental - St. Matthews, KY",
+      "quote": "Our no-show rate dropped by 30% with AI appointment reminders and confirmations. The system handles patient questions, insurance inquiries, and scheduling flawlessly. Our front desk staff can now focus on in-office patients. Highly recommend to any Louisville practice.",
+      "rating": 5
+    },
+    {
+      "name": "Tom Bradley",
+      "business": "Bradley Law Firm - Louisville, KY",
+      "quote": "We were losing qualified leads to voicemail every week. Now our AI qualifies potential clients 24/7, gathers case details, and schedules consultations. We've seen a 50% increase in consultations booked. The ROI was immediate.",
+      "rating": 5
+    }
+  ],
+
+  "cta_bottom": {
+    "headline": "Ready to Capture More Louisville Leads?",
+    "subheadline": "Join dozens of Louisville businesses already using AI to grow revenue and save time",
+    "cta_primary": {
+      "text": "Call 865-346-3339 Now",
+      "action": "tel:865-346-3339"
+    },
+    "cta_secondary": {
+      "text": "Email Us",
+      "action": "mailto:team@captureclient.net"
+    }
+  },
+
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1694903089438-bf28d4697d9a?fm=jpg&q=80&w=1920",
+      "alt": "AI technology for Louisville business automation",
+      "caption": "Transform your Louisville business with 24/7 AI voice agents",
+      "usage": "hero"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1664575600397-88e370cb46b8?fm=jpg&q=80&w=1200",
+      "alt": "Professional business owner in Louisville office",
+      "caption": "Louisville business owners trust AI to capture every lead",
+      "usage": "content"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1714079761488-e0c9b9ac4138?fm=jpg&q=80&w=1200",
+      "alt": "Customer service representative with AI technology",
+      "caption": "Professional call handling 24/7 for Louisville businesses",
+      "usage": "content"
+    }
+  ],
+
+  "local_seo": {
+    "service_areas": [
+      "Louisville",
+      "Jeffersontown",
+      "St. Matthews",
+      "Highlands",
+      "Old Louisville",
+      "Clifton",
+      "Crescent Hill",
+      "Germantown",
+      "Jefferson County"
+    ],
+    "nearby_cities": [
+      "New Albany, IN",
+      "Jeffersonville, IN",
+      "Clarksville, IN",
+      "Shively",
+      "Okolona"
+    ]
+  }
+}

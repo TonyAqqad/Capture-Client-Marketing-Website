@@ -1,0 +1,187 @@
+{
+  "page_id": "voice-ai-alexandria-va",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Alexandria",
+    "state": "VA",
+    "state_full": "Virginia",
+    "slug": "alexandria-va",
+    "nearby_areas": ["Arlington", "Old Town Alexandria", "Del Ray", "Eisenhower Valley"],
+    "service_area_radius": "25 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Alexandria, VA | Capture Client",
+    "meta_description": "Voice AI for Alexandria businesses. Automate calls, qualify leads 24/7, never miss opportunities. Serving Old Town, Del Ray & beyond. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Alexandria, Virginia",
+    "keywords": ["voice ai agency alexandria va", "ai voice agents alexandria", "ai receptionist alexandria virginia", "automated call answering alexandria", "lead qualification ai alexandria", "voice ai old town alexandria"],
+    "canonical_url": "/voice-ai-alexandria-va",
+    "local_business_schema": {
+      "type": "LocalBusiness",
+      "name": "Capture Client",
+      "service_area": "Alexandria, VA and surrounding areas"
+    }
+  },
+  "hero": {
+    "headline": "Never Miss Another Alexandria Lead with Voice AI",
+    "subheadline": "AI-Powered Phone Agents That Answer Calls, Qualify Leads & Book Appointments 24/7 for Alexandria Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "cta_secondary": {
+      "text": "See How It Works",
+      "action": "/demo",
+      "type": "link"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1758599543129-bec77e427ac6?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Professional businesswoman in Alexandria using Voice AI technology",
+      "credit": {
+        "photographer": "Vitaly Gariev",
+        "unsplash_url": "https://unsplash.com/photos/LU-hFAv_iOQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "Alexandria businesses operate in one of Virginia's most competitive markets, right next to the nation's capital. Whether you're running a law firm in Old Town, managing a medical practice near the Eisenhower Metro, or operating a home services company serving Alexandria and Northern Virginia, every missed call is revenue lost to competitors. Our Voice AI technology ensures every call to your Alexandria business gets answered professionally, leads get qualified instantly, and appointments get booked automatically."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Lead Capture for Alexandria",
+      "description": "Alexandria professionals work long hours. Your AI agent captures leads from early morning commuters to late-night searchers across Old Town, Del Ray, and Carlyle.",
+      "icon": "clock"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "Stop wasting billable hours on unqualified leads. Our AI qualifies Alexandria prospects before they reach you, so you only engage with ready-to-buy clients.",
+      "icon": "filter"
+    },
+    {
+      "title": "Automatic Appointment Booking",
+      "description": "AI schedules consultations directly into your calendar. No more scheduling back-and-forth with busy Alexandria professionals.",
+      "icon": "calendar"
+    },
+    {
+      "title": "Cost Savings in High-Rent Market",
+      "description": "Save thousands compared to hiring staff in Alexandria's expensive labor market. No salary, benefits, or overhead costs.",
+      "icon": "dollar-sign"
+    },
+    {
+      "title": "Professional Alexandria Representation",
+      "description": "Consistent, polished call handling that matches Alexandria's professional standards. Perfect for law firms, medical practices, and consulting businesses.",
+      "icon": "award"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We discuss your Alexandria business needs and how AI can help you compete in the Northern Virginia market."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Agent Training",
+      "description": "We build your AI voice agent with knowledge of your Alexandria business and professional service standards."
+    },
+    {
+      "step": 3,
+      "title": "Seamless Integration",
+      "description": "We integrate with your existing systems. Your Alexandria clients experience zero disruption."
+    },
+    {
+      "step": 4,
+      "title": "Launch & Optimize",
+      "description": "Go live and start capturing more Alexandria leads immediately with continuous optimization."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Alexandria Law Firms",
+      "scenario": "A boutique law firm in Old Town Alexandria was losing clients because they couldn't answer calls during meetings and court.",
+      "result": "Voice AI now captures every inquiry 24/7, qualifies cases, and schedules consultations. Result: 52% increase in qualified consultations."
+    },
+    {
+      "business_type": "Medical Practices",
+      "scenario": "A specialty practice near King Street Metro had patients abandoning calls after long hold times.",
+      "result": "Voice AI handles scheduling and routine inquiries instantly. Patient satisfaction increased 45%."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Alexandria and Northern Virginia",
+    "description": "We provide Voice AI services throughout Alexandria and the greater Northern Virginia region.",
+    "areas_list": ["Old Town Alexandria", "Del Ray", "Carlyle", "Eisenhower Valley", "West End Alexandria", "Potomac Yard", "Mount Vernon", "Arlington", "Crystal City", "National Harbor"]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Voice AI ensures we never miss a potential client, even when we're in court. Game-changer for our Alexandria practice.",
+      "author": "David R.",
+      "business": "Alexandria Legal Group",
+      "location": "Alexandria, VA"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Alexandria businesses?",
+      "answer": "Our Voice AI agents answer your business calls using natural conversation, qualifying leads, scheduling appointments, and transferring urgent matters. It works 24/7, perfect for Alexandria's fast-paced business environment."
+    },
+    {
+      "question": "What types of Alexandria businesses use Voice AI?",
+      "answer": "We work with professional services including law firms, medical practices, consulting firms, financial advisors, real estate professionals, and home services companies throughout Alexandria."
+    },
+    {
+      "question": "How much does Voice AI cost for Alexandria businesses?",
+      "answer": "Our Starter package begins at $999/month - significantly less than hiring staff in Alexandria's expensive labor market. Most businesses see positive ROI within 30 days."
+    }
+  ],
+  "main_content": {
+    "sections": [
+      {
+        "heading": "Why Alexandria Businesses Choose Voice AI",
+        "content": "Alexandria's business community operates at the intersection of Virginia and the nation's capital, creating intense competition. Voice AI gives Alexandria businesses perfect availability - your potential clients can reach you 24/7 with professional service. The AI qualifies leads, provides information, and books appointments automatically. For Alexandria law firms, medical practices, and professional services, this means more qualified appointments without increasing overhead in one of Virginia's most expensive labor markets."
+      }
+    ]
+  },
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1758876017967-c023c40c0a53?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Alexandria professional using Voice AI for business calls",
+        "caption": "Professional AI call handling for Alexandria businesses",
+        "credit": {
+          "photographer": "Vitaly Gariev",
+          "unsplash_url": "https://unsplash.com/photos/XJfM78aShbY"
+        }
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1763568258557-515962e11f38?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "AI technology for Alexandria business automation",
+        "caption": "Cutting-edge AI technology for Northern Virginia businesses",
+        "credit": {
+          "photographer": "Daniil Komov",
+          "unsplash_url": "https://unsplash.com/photos/lP8rWtbFFxU"
+        }
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Compete Better in Alexandria's Market?",
+    "subheadline": "Join Alexandria businesses using Voice AI to capture more leads and grow revenue.",
+    "cta_primary": {
+      "text": "Schedule Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "urgency_text": "Limited spots available for Alexandria businesses this month"
+  },
+  "related_pages": {
+    "other_services_in_location": ["google-ads", "facebook-ads"],
+    "nearby_locations": ["arlington", "richmond", "norfolk"],
+    "packages": ["starter-package", "growth-package", "enterprise-package"]
+  }
+}

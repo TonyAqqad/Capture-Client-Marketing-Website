@@ -1,0 +1,172 @@
+{
+  "page_id": "voice-ai-cary-nc",
+  "page_type": "service-location",
+  "service": {
+    "name": "Voice AI",
+    "slug": "voice-ai",
+    "category": "automation"
+  },
+  "location": {
+    "city": "Cary",
+    "state": "NC",
+    "state_full": "North Carolina"
+  },
+  "seo": {
+    "title": "Voice AI Agency in Cary, NC | Capture Client",
+    "meta_description": "Cary businesses leverage Voice AI for 24/7 lead capture. Automate phone calls, qualify prospects, book appointments instantly. Get your free demo today!",
+    "h1": "Voice AI Solutions for Cary, North Carolina",
+    "keywords": ["voice ai cary", "ai phone system cary nc", "automated calling cary", "ai receptionist cary"]
+  },
+  "hero": {
+    "headline": "Cary's Most Advanced Voice AI Technology",
+    "subheadline": "Professional AI Phone Automation for Growing Cary Businesses",
+    "cta_primary": "Get Free Demo",
+    "cta_secondary": "View Pricing"
+  },
+  "intro": {
+    "paragraph": "Cary is one of North Carolina's fastest-growing cities with a thriving business community that demands modern solutions. Our Voice AI technology helps Cary businesses from Town Center to MacGregor Downs capture every opportunity with intelligent automation. Whether you're a professional service firm, medical practice, home services company, or technology business in Cary, Voice AI ensures every phone call is answered professionally and every lead is captured - even when your team is busy, in meetings, or after hours. Stop losing opportunities to voicemail and start growing your Cary business with 24/7 AI-powered phone automation."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Cary Coverage",
+      "description": "Cary residents and businesses expect quick responses. AI ensures every call is answered instantly, day or night.",
+      "icon": "clock"
+    },
+    {
+      "title": "Professional Lead Screening",
+      "description": "AI qualifies leads by asking targeted questions about needs, budget, and timeline before routing to your team.",
+      "icon": "user-check"
+    },
+    {
+      "title": "Seamless Scheduling",
+      "description": "Book consultations, appointments, and service calls automatically while the caller is on the phone - no follow-up needed.",
+      "icon": "calendar"
+    },
+    {
+      "title": "Cost Efficiency",
+      "description": "Eliminate answering service fees and reduce reception costs while providing superior service to Cary customers.",
+      "icon": "dollar-sign"
+    },
+    {
+      "title": "Business Intelligence",
+      "description": "Track call patterns, lead sources, and conversation insights to optimize your Cary marketing and operations.",
+      "icon": "trending-up"
+    }
+  ],
+  "how_it_works": {
+    "headline": "Getting Started with Voice AI in Cary",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Consultation",
+        "description": "We discuss your Cary business goals, call volume, and customer service needs to design your ideal solution."
+      },
+      {
+        "step": 2,
+        "title": "AI Training",
+        "description": "We program your AI with your services, Cary market knowledge, pricing, and brand voice for authentic interactions."
+      },
+      {
+        "step": 3,
+        "title": "Integration & Testing",
+        "description": "Connect with your calendar and CRM, then test thoroughly with realistic Cary customer scenarios."
+      },
+      {
+        "step": 4,
+        "title": "Launch & Refine",
+        "description": "Go live capturing leads immediately, with ongoing optimization based on real performance data."
+      }
+    ]
+  },
+  "use_cases": [
+    {
+      "industry": "Professional Services",
+      "description": "Cary accounting firms, consultants, and financial advisors use Voice AI to screen clients, schedule meetings, and provide service information."
+    },
+    {
+      "industry": "Healthcare",
+      "description": "Medical and dental practices throughout Cary automate appointment scheduling, patient questions, and prescription refill requests."
+    },
+    {
+      "industry": "Home Services",
+      "description": "Contractors, landscapers, and home service companies in Cary capture service requests and schedule estimates automatically."
+    },
+    {
+      "industry": "Technology & Software",
+      "description": "Cary tech companies use AI to qualify leads, schedule product demos, and provide tier-1 customer support 24/7."
+    },
+    {
+      "industry": "Real Estate",
+      "description": "Cary realtors and property managers answer property questions, schedule showings, and qualify buyers with Voice AI."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Why do Cary businesses need Voice AI?",
+      "answer": "Cary's competitive business environment means you can't afford to miss calls. When a potential customer calls and gets voicemail, they're calling your competitor next. Voice AI ensures every Cary caller gets immediate, professional attention - capturing leads your competitors miss."
+    },
+    {
+      "question": "How does Voice AI handle Cary-specific questions?",
+      "answer": "We train your AI with detailed Cary information including service areas (Green Hope, Preston, Regency, etc.), local competitors, directions, and market-specific knowledge. The AI represents your Cary business as a knowledgeable local expert."
+    },
+    {
+      "question": "Can Voice AI integrate with our existing systems?",
+      "answer": "Yes! We integrate with popular CRMs (Salesforce, HubSpot), calendar systems (Google Calendar, Outlook), and other business software. For Cary businesses with custom systems, we offer API integration capabilities."
+    },
+    {
+      "question": "What happens during peak call times?",
+      "answer": "Voice AI handles unlimited simultaneous calls, so during busy periods every Cary caller gets immediate attention. No more hold times, no more voicemail - just instant, professional service even when call volume spikes."
+    },
+    {
+      "question": "How much does Voice AI cost?",
+      "answer": "Our Cary packages start at $997/month including unlimited calls, custom training, calendar integration, analytics, and support. Most businesses find this costs less than a part-time employee while providing 24/7 coverage and better lead capture."
+    },
+    {
+      "question": "Can we try Voice AI before committing?",
+      "answer": "Yes! We offer demos where you can call and interact with Voice AI. We can also provide Cary business case studies and discuss trial options during your free consultation."
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Richard Chen",
+      "business": "Cary Financial Advisors",
+      "location": "Cary, NC",
+      "quote": "Our Cary practice serves high-net-worth clients who expect immediate responses. Voice AI ensures we never miss a call, qualifies prospects before they reach our advisors, and schedules consultations automatically. It's been transformative for our growth - up 45% this year.",
+      "rating": 5
+    },
+    {
+      "name": "Amanda Brooks",
+      "business": "Brooks Home Services",
+      "location": "Cary, NC",
+      "quote": "Serving Cary homeowners means calls come in constantly while our crew is on job sites. Voice AI captures every request, schedules estimates, and even handles emergency calls after hours. We've grown from 3 to 8 crews in 18 months thanks to never missing an opportunity.",
+      "rating": 5
+    }
+  ],
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1738003946582-aabeabf5e009?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Modern AI technology interface",
+      "caption": "Advanced Voice AI for Cary's growing businesses",
+      "credit": {
+        "photographer": "Shubham Dhage",
+        "unsplashUrl": "https://unsplash.com/photos/mM8e42bkqt4"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1758874573348-bb585ae8e0f6?ixlib=rb-4.0.3&w=1200&q=80",
+      "alt": "Professional man on business phone call at desk",
+      "caption": "Professional communication for Cary businesses",
+      "credit": {
+        "photographer": "Vitaly Gariev",
+        "unsplashUrl": "https://unsplash.com/photos/rlaeA80SunU"
+      }
+    }
+  ],
+  "cta": {
+    "headline": "Ready to Grow Your Cary Business with Voice AI?",
+    "subheadline": "Join successful Cary companies capturing more leads with AI automation",
+    "button_text": "Get Free Demo",
+    "phone": "865-346-3339",
+    "email": "team@captureclient.net"
+  }
+}

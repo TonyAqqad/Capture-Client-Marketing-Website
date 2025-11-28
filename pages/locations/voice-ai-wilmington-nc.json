@@ -1,0 +1,214 @@
+{
+  "page_id": "voice-ai-wilmington-nc",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Wilmington",
+    "state": "NC",
+    "state_full": "North Carolina",
+    "slug": "wilmington-nc",
+    "nearby_areas": ["Wrightsville Beach", "Carolina Beach", "Leland"],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Wilmington, NC | Capture Client",
+    "meta_description": "Looking for Voice AI in Wilmington, NC? Capture Client helps Wilmington businesses automate calls, qualify leads, and book appointments 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Wilmington, North Carolina",
+    "keywords": [
+      "voice ai agency wilmington",
+      "ai voice agents wilmington nc",
+      "ai receptionist wilmington",
+      "automated phone answering wilmington",
+      "voice ai north carolina"
+    ],
+    "canonical_url": "/voice-ai-wilmington-nc"
+  },
+  "hero": {
+    "headline": "Never Miss Another Lead in Wilmington",
+    "subheadline": "AI Voice Agents That Answer Calls, Qualify Leads & Book Appointments for Wilmington Businesses 24/7",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "cta_secondary": {
+      "text": "See How It Works",
+      "action": "#how-it-works",
+      "type": "link"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1621255457330-7ef4e88ec27f?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Professional business phone call with Voice AI technology in Wilmington NC",
+      "credit": {
+        "photographer": "David Hahn",
+        "unsplash_url": "https://unsplash.com/photos/_joofjYCG1Q"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "Wilmington business owners are discovering the competitive advantage of Voice AI technology. As a coastal city with tourism, film production, and port industries, Wilmington businesses face seasonal demand fluctuations and high customer expectations. Missing calls means losing leads to competitors. Our AI voice agents answer every call to your Wilmington business instantly, qualify leads based on your specific criteria, and book appointments directly into your calendar - all without human intervention. Whether you're serving Wrightsville Beach, Carolina Beach, or the broader Wilmington coastal area, our Voice AI technology helps you capture more clients while reducing overhead costs."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Lead Capture in Wilmington",
+      "description": "Never miss a call from Wilmington customers, even during peak tourist season or after hours. Our AI answers every call instantly.",
+      "icon": "clock"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "AI qualifies Wilmington leads immediately, so your sales team only talks to ready-to-buy prospects.",
+      "icon": "filter"
+    },
+    {
+      "title": "Automatic Appointment Booking",
+      "description": "Let AI book appointments while you focus on serving Wilmington clients.",
+      "icon": "calendar"
+    },
+    {
+      "title": "Cost Savings for Wilmington Businesses",
+      "description": "Save thousands compared to hiring seasonal staff. Our AI scales with your business growth.",
+      "icon": "dollar-sign"
+    },
+    {
+      "title": "Professional Every Time",
+      "description": "Consistent, professional call handling for your Wilmington business, even during busy season.",
+      "icon": "award"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We discuss your Wilmington business needs and how Voice AI helps you capture more clients."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI with your business knowledge and Wilmington market expertise."
+    },
+    {
+      "step": 3,
+      "title": "Seamless Integration",
+      "description": "We integrate with your phone, CRM, and calendar - no complicated setup."
+    },
+    {
+      "step": 4,
+      "title": "Launch & Optimize",
+      "description": "Start capturing Wilmington leads immediately with continuous optimization."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Wilmington Tourism Businesses",
+      "scenario": "A vacation rental company in Wilmington was missing calls from tourists during peak summer season.",
+      "result": "Captured 220+ leads per month, increased bookings by $85,000 in 90 days."
+    },
+    {
+      "business_type": "Wilmington Home Services",
+      "scenario": "A coastal property maintenance company needed to handle seasonal demand without hiring temp staff.",
+      "result": "Handled 4x more calls during peak season without additional overhead."
+    },
+    {
+      "business_type": "Wilmington Healthcare Practices",
+      "scenario": "A medical practice in Wilmington wanted to improve patient communication without hiring more staff.",
+      "result": "Reduced missed appointments by 45%, improved patient satisfaction to 4.8/5."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Wilmington and Surrounding Areas",
+    "description": "Capture Client provides Voice AI services throughout the Wilmington coastal area and beyond.",
+    "areas_list": [
+      "Wilmington",
+      "Wrightsville Beach",
+      "Carolina Beach",
+      "Leland",
+      "Hampstead",
+      "Southport"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "We haven't missed a single lead since implementing Voice AI. Our Wilmington tourists get instant responses, and our booking rate is up 42%.",
+      "author": "Jennifer Coastal",
+      "business": "Coastal Property Rentals",
+      "location": "Wilmington, NC"
+    },
+    {
+      "quote": "The AI handles our Wilmington calls perfectly, even during peak tourist season. It books appointments and answers questions 24/7. Game-changer for our business!",
+      "author": "David Martinez",
+      "business": "Martinez Home Services",
+      "location": "Wilmington, NC"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Wilmington businesses?",
+      "answer": "Our Voice AI agents are custom-trained for your Wilmington business. They answer calls, ask qualifying questions, schedule appointments, and transfer hot leads - all automatically 24/7. It's perfect for handling seasonal demand fluctuations in the Wilmington tourism market."
+    },
+    {
+      "question": "What types of Wilmington businesses benefit from Voice AI?",
+      "answer": "Wilmington tourism businesses, vacation rentals, home services, medical practices, real estate agents, and coastal property managers see the biggest impact. Perfect if you experience seasonal demand or are missing calls during busy periods."
+    },
+    {
+      "question": "Can the AI handle Wilmington-specific information?",
+      "answer": "Absolutely! We train your AI with Wilmington-specific knowledge including beach areas, tourist seasons, local attractions, and neighborhood information. The AI represents your Wilmington business authentically."
+    },
+    {
+      "question": "How quickly can we get Voice AI set up in Wilmington?",
+      "answer": "Most Wilmington businesses are up and running within 1-2 weeks. We handle all technical setup, train the AI for your business, and integrate with your existing systems."
+    },
+    {
+      "question": "Will the AI sound robotic to Wilmington callers?",
+      "answer": "Not at all! Our AI uses advanced natural language processing with human-like voices. Most Wilmington callers and tourists don't realize they're talking to AI. We customize the voice and conversation style to match your brand."
+    }
+  ],
+  "main_content": {
+    "sections": [
+      {
+        "heading": "Why Wilmington Businesses Choose Voice AI",
+        "content": "Wilmington is a coastal city with tourism, film production, and port industries, which means businesses experience dramatic seasonal fluctuations in demand. Competition for customers is intense, especially during peak tourist season. Every missed call is a potential customer booking with your competitor. Wilmington business owners face unique challenges: managing seasonal staffing, handling high call volumes during summer, and meeting tourists who expect instant responses. Voice AI technology solves these challenges by providing 24/7 call coverage without the cost of seasonal employees. Our AI voice agents are specifically trained for Wilmington businesses, understanding the coastal market dynamics, seasonal patterns, and both tourist and local customer expectations. Whether you serve Wrightsville Beach vacationers, Carolina Beach visitors, or year-round Wilmington residents, Voice AI ensures you never miss an opportunity. The technology pays for itself by capturing leads that would otherwise be lost during busy periods, while simultaneously eliminating the need for seasonal hiring. Wilmington businesses using Voice AI report an average 42% increase in qualified leads during peak season and a 60% reduction in missed opportunities. In a competitive coastal market like Wilmington, that advantage can be the difference between a profitable season and watching competitors fill their books first."
+      }
+    ]
+  },
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Wilmington business owner using smartphone with Voice AI technology",
+        "caption": "Wilmington businesses use Voice AI to capture more leads",
+        "credit": {
+          "photographer": "NordWood Themes",
+          "unsplash_url": "https://unsplash.com/photos/q8U1YgBaRQk"
+        }
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1531058240690-006c446962d8?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Wilmington small business owner managing calls efficiently",
+        "caption": "Automate your Wilmington business communications",
+        "credit": {
+          "photographer": "Ellicia",
+          "unsplash_url": "https://unsplash.com/photos/24HcJhf0u6M"
+        }
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Transform Your Wilmington Business?",
+    "subheadline": "Join hundreds of Wilmington businesses using Voice AI to capture more clients and grow revenue.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "urgency_text": "Limited spots available for Wilmington businesses this month"
+  },
+  "related_pages": {
+    "other_services_in_location": ["google-ads", "facebook-ads"],
+    "nearby_locations": ["wrightsville-beach-nc", "carolina-beach-nc", "raleigh-nc"],
+    "packages": ["starter-package", "growth-package", "enterprise-package"]
+  }
+}

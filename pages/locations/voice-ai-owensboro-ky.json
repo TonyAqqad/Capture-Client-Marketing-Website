@@ -1,0 +1,245 @@
+{
+  "page_id": "voice-ai-owensboro-ky",
+  "page_type": "service-location",
+
+  "service": {
+    "name": "Voice AI",
+    "slug": "voice-ai",
+    "category": "automation"
+  },
+
+  "location": {
+    "city": "Owensboro",
+    "slug": "owensboro",
+    "state": "KY",
+    "state_full": "Kentucky"
+  },
+
+  "seo": {
+    "title": "Voice AI Agency in Owensboro, KY | Capture Client",
+    "meta_description": "Owensboro businesses: Never miss a call again with AI voice agents. Qualify leads, schedule appointments, answer calls 24/7. Call 865-346-3339 for details!",
+    "h1": "Voice AI Solutions for Owensboro, Kentucky Businesses",
+    "keywords": [
+      "voice ai owensboro",
+      "ai receptionist owensboro ky",
+      "automated answering owensboro",
+      "ai phone system kentucky",
+      "business automation owensboro"
+    ]
+  },
+
+  "hero": {
+    "headline": "Owensboro's Premier AI Phone Solution",
+    "subheadline": "Answer Every Call, Qualify Every Lead, Book Every Appointment - Automatically",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339"
+    },
+    "cta_secondary": {
+      "text": "Learn More",
+      "action": "#benefits"
+    }
+  },
+
+  "intro": {
+    "paragraph": "Owensboro businesses know that success in Kentucky's fourth-largest city requires being available when customers need you. Whether you're serving Daviess County families, downtown professionals, or the growing Frederica Street corridor, missed calls mean missed opportunities in this competitive market. Our AI voice agents are designed for Owensboro's service-driven economy - from manufacturing support services to healthcare, home services to professional firms. Local businesses using our AI technology report answering 100% of incoming calls, qualifying leads more effectively, and booking 3x more appointments than before. The best part? It happens automatically, 24/7, without adding staff or increasing overhead."
+  },
+
+  "benefits": [
+    {
+      "title": "Answer Every Owensboro Call",
+      "description": "Day or night, weekday or weekend, your AI answers every call from Owensboro customers instantly. No more voicemail, no more missed opportunities.",
+      "icon": "phone"
+    },
+    {
+      "title": "Intelligent Lead Scoring",
+      "description": "AI qualifies each Owensboro prospect based on your criteria, so you know which leads to prioritize and which need more time to decide.",
+      "icon": "filter"
+    },
+    {
+      "title": "Automatic Appointment Booking",
+      "description": "Prospects book directly into your available time slots. No phone tag, no scheduling conflicts. Owensboro customers love the convenience.",
+      "icon": "calendar"
+    },
+    {
+      "title": "Slash Operating Costs",
+      "description": "Save $3,000+ monthly versus hiring receptionists or using answering services. Owensboro businesses see immediate bottom-line impact.",
+      "icon": "dollar-sign"
+    },
+    {
+      "title": "Consistent Quality",
+      "description": "Every caller experiences the same high-quality service. AI never has off days, forgets information, or delivers inconsistent messaging.",
+      "icon": "award"
+    },
+    {
+      "title": "Scale Effortlessly",
+      "description": "Handle seasonal fluctuations without hiring stress. Perfect for Owensboro businesses with varying call volumes throughout the year.",
+      "icon": "trending-up"
+    }
+  ],
+
+  "how_it_works": {
+    "headline": "Four Steps to AI-Powered Growth in Owensboro",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Strategy Session",
+        "description": "We discuss your Owensboro business model, target customers, and current phone handling challenges. Learn if AI is the right solution for you."
+      },
+      {
+        "step": 2,
+        "title": "AI Configuration",
+        "description": "We build your custom AI voice agent with knowledge of your services, Owensboro service areas, pricing structure, and scheduling preferences."
+      },
+      {
+        "step": 3,
+        "title": "Quick Launch",
+        "description": "Within 48 hours, your AI is live and answering calls. We handle all technical integration with your existing phone and calendar systems."
+      },
+      {
+        "step": 4,
+        "title": "Continuous Improvement",
+        "description": "We analyze call performance monthly and optimize your AI's responses based on real Owensboro customer interactions and feedback."
+      }
+    ]
+  },
+
+  "use_cases": [
+    {
+      "industry": "Manufacturing Services",
+      "description": "B2B service providers supporting Owensboro's manufacturing sector capture inquiries 24/7, even when production runs late or starts early.",
+      "results": "60% increase in quote requests"
+    },
+    {
+      "industry": "Home Services",
+      "description": "HVAC, plumbing, electrical, and roofing companies in Owensboro and Daviess County capture emergency calls instantly and book service appointments automatically.",
+      "results": "48% more booked jobs"
+    },
+    {
+      "industry": "Healthcare",
+      "description": "Medical, dental, and specialty practices in Owensboro improve patient satisfaction, reduce no-shows, and optimize scheduling with AI automation.",
+      "results": "32% decrease in no-shows"
+    },
+    {
+      "industry": "Professional Services",
+      "description": "Legal, accounting, and consulting firms in Owensboro qualify prospects, gather project details, and schedule consultations without staff time.",
+      "results": "45% more qualified consultations"
+    },
+    {
+      "industry": "Home Improvement",
+      "description": "Contractors, remodelers, and landscapers serving Owensboro capture estimate requests, discuss project scopes, and schedule site visits 24/7.",
+      "results": "50% faster estimate scheduling"
+    }
+  ],
+
+  "faq": [
+    {
+      "question": "How does Voice AI work for my Owensboro business?",
+      "answer": "Our AI voice agent acts as your 24/7 virtual receptionist. When Owensboro customers call, the AI answers professionally, discusses your services, answers common questions, qualifies leads based on your criteria, books appointments into your calendar, and transfers urgent calls when needed. It's trained specifically on your business, so it sounds knowledgeable and professional to every caller."
+    },
+    {
+      "question": "What Owensboro businesses benefit from Voice AI?",
+      "answer": "We work with service businesses across Owensboro and Daviess County including home services (HVAC, plumbing, electrical), healthcare practices, professional services (legal, accounting), contractors, manufacturing support services, real estate, and any business that relies on phone leads. If you're an Owensboro business that gets phone inquiries, Voice AI can help."
+    },
+    {
+      "question": "What's the cost for Owensboro businesses?",
+      "answer": "Our standard package is $997/month including unlimited calls, custom AI training, phone system integration, and ongoing optimization. Most Owensboro businesses achieve ROI within 4 weeks. Consider that one captured lead could be worth $3,000-$30,000 depending on your industry. Compare this to hiring a receptionist at $30,000+ annually or losing revenue to missed calls."
+    },
+    {
+      "question": "Can the AI handle Owensboro-specific questions?",
+      "answer": "Yes! We train your AI on your specific Owensboro service areas (downtown, west Owensboro, specific Daviess County regions), your services, pricing, and local nuances. The AI can discuss details specific to your business and the Owensboro market, making every conversation feel personal and informed."
+    },
+    {
+      "question": "What happens when the AI can't handle a call?",
+      "answer": "The AI successfully manages 85-95% of calls independently. For complex situations or emergencies you define, it seamlessly transfers to you with a conversation summary. You control which situations require immediate attention. Most Owensboro businesses configure their AI to handle routine matters completely, freeing them to focus on revenue-generating work."
+    },
+    {
+      "question": "How fast can we launch in Owensboro?",
+      "answer": "Most Owensboro businesses are live within 48 hours. After our strategy call, we build and train your AI, integrate with your phone and calendar systems, and launch. You review everything before going live to ensure it represents your Owensboro business perfectly. Implementation is fast and painless."
+    },
+    {
+      "question": "Will it work with our existing Owensboro phone number?",
+      "answer": "Absolutely. We integrate seamlessly with your current phone system. Your Owensboro customers call the same number they always have - they just get better, faster service with 24/7 availability. No new numbers, no complicated changes, no customer confusion."
+    },
+    {
+      "question": "What if we're not happy with the service?",
+      "answer": "We offer a 30-day satisfaction guarantee. If you're not capturing more leads and saving time, we'll refund your setup investment. However, most Owensboro businesses see measurable improvements within the first week - more calls answered, more appointments booked, and more time freed up for important work."
+    }
+  ],
+
+  "testimonials": [
+    {
+      "name": "Mark Henderson",
+      "business": "Henderson Mechanical - Owensboro, KY",
+      "quote": "As an HVAC company in Owensboro, we get emergency calls at all hours. Before AI, we were missing 30-40% of after-hours calls. Now we capture every single one, and our revenue has increased by $15,000 per month. The system paid for itself in the first week.",
+      "rating": 5
+    },
+    {
+      "name": "Dr. Lisa Roberts",
+      "business": "Roberts Family Dentistry - Owensboro, KY",
+      "quote": "Our Owensboro dental practice was losing patients to practices with better phone availability. The AI has transformed our patient experience - instant answers to questions, easy appointment scheduling, and professional service every time. Our new patient bookings are up 40%.",
+      "rating": 5
+    },
+    {
+      "name": "Steve Mitchell",
+      "business": "Mitchell Roofing - Daviess County, KY",
+      "quote": "In the roofing business, timing is everything. When homeowners in Owensboro need a roof after storm damage, they call multiple contractors. Being first to respond means winning the job. Our AI answers instantly, gathers project details, and schedules estimates. We're winning 3x more bids than before.",
+      "rating": 5
+    }
+  ],
+
+  "cta_bottom": {
+    "headline": "Ready to Transform Your Owensboro Business?",
+    "subheadline": "Join successful Owensboro businesses using AI to capture more leads and grow faster",
+    "cta_primary": {
+      "text": "Call 865-346-3339 Now",
+      "action": "tel:865-346-3339"
+    },
+    "cta_secondary": {
+      "text": "Email Us",
+      "action": "mailto:team@captureclient.net"
+    }
+  },
+
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?fm=jpg&q=80&w=1920",
+      "alt": "AI voice technology for Owensboro businesses",
+      "caption": "Owensboro businesses capture every lead with AI voice agents",
+      "usage": "hero"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1543269664-56d93c1b41a6?fm=jpg&q=80&w=1200",
+      "alt": "Owensboro business team using technology",
+      "caption": "Smart Owensboro businesses leverage AI to grow revenue",
+      "usage": "content"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1758519289714-519a9d9b96e3?fm=jpg&q=80&w=1200",
+      "alt": "Professional customer service technology",
+      "caption": "Deliver exceptional service to every Owensboro customer, 24/7",
+      "usage": "content"
+    }
+  ],
+
+  "local_seo": {
+    "service_areas": [
+      "Owensboro",
+      "Daviess County",
+      "Downtown Owensboro",
+      "Frederica Street",
+      "West Owensboro",
+      "East Owensboro",
+      "Sutherland",
+      "Whitesville",
+      "Philpot"
+    ],
+    "nearby_cities": [
+      "Henderson",
+      "Madisonville",
+      "Hawesville",
+      "Lewisport",
+      "Beaver Dam"
+    ]
+  }
+}

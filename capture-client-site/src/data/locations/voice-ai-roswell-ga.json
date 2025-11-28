@@ -1,0 +1,189 @@
+{
+  "page_id": "voice-ai-roswell-ga",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Roswell",
+    "state": "GA",
+    "state_full": "Georgia",
+    "slug": "roswell-ga",
+    "nearby_areas": [
+      "Alpharetta",
+      "Sandy Springs",
+      "Milton",
+      "Johns Creek"
+    ],
+    "service_area_radius": "20 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Roswell, GA | Capture Client",
+    "meta_description": "Voice AI for Roswell businesses. Automate calls 24/7. Call 865-346-3339\\!",
+    "h1_heading": "Voice AI Agency in Roswell, Georgia",
+    "keywords": [
+      "voice ai roswell ga"
+    ],
+    "canonical_url": "/voice-ai-roswell-ga"
+  },
+  "hero": {
+    "headline": "Roswell AI Voice Solutions",
+    "subheadline": "Historic Roswell Meets Modern AI",
+    "cta_primary": {
+      "text": "Get Started",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1560760253-9de375ab5129?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Professional office",
+      "credit": {
+        "photographer": "Peggy Anke",
+        "unsplash_url": "https://unsplash.com/photos/MPnn435Dr9w"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "Roswell combines historic charm with modern business growth. From Canton Street to East Roswell, businesses need reliable communication. Our Voice AI helps Roswell companies scale operations across this thriving North Fulton community."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Roswell Coverage",
+      "description": "Answer calls day and night for Roswell customers.",
+      "icon": "clock"
+    },
+    {
+      "title": "Historic District Ready",
+      "description": "Perfect for Canton Street shops and services.",
+      "icon": "home"
+    },
+    {
+      "title": "Family Business Friendly",
+      "description": "Help Roswell family businesses scale.",
+      "icon": "users"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Roswell Consultation",
+      "description": "Discuss your Roswell business needs."
+    },
+    {
+      "step": 2,
+      "title": "Local AI Training",
+      "description": "Train AI on Roswell market and your brand."
+    },
+    {
+      "step": 3,
+      "title": "Grow Together",
+      "description": "Scale with Roswell growth."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Canton Street Boutique",
+      "scenario": "Missing calls while helping in-store customers.",
+      "result": "AI handles phone orders, online sales up 45%."
+    },
+    {
+      "business_type": "Roswell Home Services",
+      "scenario": "Growing but cannot afford office staff.",
+      "result": "AI answering, business doubled without overhead."
+    },
+    {
+      "business_type": "East Roswell Pediatrics",
+      "scenario": "Parents calling outside office hours.",
+      "result": "AI books 24/7, patient base grew 30%."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Roswell and North Fulton",
+    "description": "Voice AI for historic and modern Roswell.",
+    "areas_list": [
+      "Roswell",
+      "Alpharetta",
+      "Sandy Springs",
+      "Milton",
+      "Johns Creek"
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "Voice AI captures everything while we help in-store customers.",
+      "author": "Emily Foster",
+      "business": "Roswell Boutique",
+      "location": "Roswell, GA"
+    },
+    {
+      "quote": "AI lets us scale while keeping personal touch.",
+      "author": "David Thompson",
+      "business": "Thompson Home Services",
+      "location": "Roswell, GA"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does Voice AI work for small Roswell businesses?",
+      "answer": "Yes\\! Perfect for Canton Street shops and family businesses."
+    },
+    {
+      "question": "Can it handle historic district customers?",
+      "answer": "Absolutely\\! AI understands local Roswell references."
+    },
+    {
+      "question": "What does it cost?",
+      "answer": "Starting at 99/month with 50 calls."
+    },
+    {
+      "question": "How fast is implementation?",
+      "answer": "7-10 days for most Roswell businesses."
+    },
+    {
+      "question": "Does it work with family values?",
+      "answer": "Yes\\! AI reflects your family business values."
+    }
+  ],
+  "images": {
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1560760253-9de375ab5129?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Professional workspace",
+      "caption": "AI Voice for Roswell"
+    },
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1655393001768-d946c97d6fd1?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "AI server technology",
+        "caption": "Modern AI for Roswell"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "AI robot",
+        "caption": "Smart automation for Roswell"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Grow Your Roswell Business?",
+    "subheadline": "Join Roswell businesses using Voice AI.",
+    "cta_primary": {
+      "text": "Call: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "atlanta-ga",
+      "alpharetta-ga",
+      "sandy-springs-ga",
+      "marietta-ga"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

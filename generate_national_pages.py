@@ -1,0 +1,119 @@
+import json
+import os
+
+# Create national pages directory if it doesn't exist
+os.makedirs(r'C:\Users\eaqqa\capture-client-website-seo\pages\national', exist_ok=True)
+
+# Page 1: voice-ai-small-business
+page1 = {
+  "page_id": "voice-ai-small-business",
+  "page_type": "national-seo",
+  "keyword": {
+    "primary_keyword": "Voice AI for Small Business",
+    "secondary_keywords": ["AI voice agents small business", "small business voice automation", "AI phone answering small business"],
+    "keyword_slug": "voice-ai-small-business"
+  },
+  "industry_focus": {
+    "industries": ["Home Services", "Healthcare", "Professional Services", "Retail", "Real Estate"],
+    "business_types": ["HVAC companies", "Plumbers", "Medical practices", "Law firms", "Retail stores"]
+  },
+  "seo": {
+    "page_title": "Voice AI for Small Business | Never Miss a Call Again",
+    "meta_description": "Voice AI for small businesses automates calls, qualifies leads, and books appointments 24/7. Save time and capture more leads with AI voice agents.",
+    "h1_heading": "Voice AI for Small Business: Automate Calls & Capture Every Lead",
+    "keywords": ["voice AI for small business", "AI phone answering", "small business automation"]
+  },
+  "hero": {
+    "headline": "Stop Missing Calls. Start Capturing Every Lead.",
+    "subheadline": "Voice AI technology that answers calls 24/7, qualifies leads instantly, and books appointments automatically.",
+    "cta_primary": {"text": "Get Your Free Consultation", "action": "tel:865-346-3339", "type": "phone"},
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1633431299600-270e216d365d?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Small business owner using voice AI",
+      "credit": {"photographer": "Zest Tea", "unsplash_url": "https://unsplash.com/photos/HrYyJUsKpTo"}
+    }
+  },
+  "intro": {
+    "paragraph": "Small business owners wear many hats but you should not have to be glued to your phone 24/7 just to capture leads. Voice AI for small business is revolutionizing how companies handle phone calls. The reality is harsh: 85 percent of callers will not leave a voicemail, and 75 percent will call a competitor if you do not answer. Voice AI technology solves this problem by providing 24/7 automated phone answering that sounds natural, asks the right qualifying questions, books appointments directly into your calendar, and routes urgent calls. Most businesses see ROI within 30-60 days."
+  },
+  "benefits": [
+    {"title": "Never Miss a Lead Again", "description": "Your AI voice agent answers every call within 2 rings, 24/7/365. Whether it is 3 AM or Christmas Day, potential customers reach a professional representative immediately.", "icon": "phone-incoming"},
+    {"title": "Instant Lead Qualification", "description": "AI asks the right questions to qualify leads before they reach you. You only spend time with prospects who match your ideal customer profile.", "icon": "filter"},
+    {"title": "Automatic Appointment Booking", "description": "Voice AI checks your calendar in real-time and books appointments directly. No back-and-forth emails or phone tag.", "icon": "calendar-check"},
+    {"title": "Massive Cost Savings", "description": "Replace expensive answering services or full-time receptionists with AI that costs 70 percent less and works 24/7.", "icon": "piggy-bank"},
+    {"title": "Scales With Your Business", "description": "Handle 10 calls or 1,000 calls per day without adding staff. Voice AI scales instantly during busy seasons.", "icon": "trending-up"}
+  ],
+  "how_it_works": [
+    {"step": 1, "title": "Free Strategy Call", "description": "We discuss your business, call volume, and what you want your AI voice agent to accomplish."},
+    {"step": 2, "title": "Custom AI Training", "description": "We build your AI agent with your business knowledge, services, pricing, and conversation flows."},
+    {"step": 3, "title": "Testing & Refinement", "description": "Before going live, we test your AI with real scenarios and refine responses."},
+    {"step": 4, "title": "Launch & Monitor", "description": "Your AI voice agent goes live. You get real-time notifications, call recordings, and analytics."}
+  ],
+  "industry_use_cases": [
+    {
+      "industry": "Home Services (HVAC, Plumbing, Electrical)",
+      "challenge": "Technicians cannot answer phones while on job sites, leading to 50 percent missed call rate.",
+      "solution": "Voice AI answers every call, captures emergency details, books appointments for routine work.",
+      "result": "One HVAC company captured 120+ additional leads per month and increased emergency bookings by 45 percent."
+    },
+    {
+      "industry": "Medical & Dental Practices",
+      "challenge": "Front desk overwhelmed with scheduling, insurance questions, and patient inquiries.",
+      "solution": "AI handles appointment booking, prescription refills, insurance verification 24/7.",
+      "result": "A dental practice reduced front desk call volume by 60 percent and booked 35 percent more appointments."
+    },
+    {
+      "industry": "Professional Services (Law, Accounting)",
+      "challenge": "High-value leads call during meetings or after hours and go to voicemail.",
+      "solution": "AI qualifies leads based on practice area and budget, schedules consultations.",
+      "result": "A law firm captured 40 percent more qualified leads and reduced time-to-first-contact to 30 seconds."
+    },
+    {
+      "industry": "Real Estate",
+      "challenge": "Agents miss calls while showing properties, leading to lost buyer and seller leads.",
+      "solution": "AI captures buyer and seller information, schedules property showings, qualifies leads by budget.",
+      "result": "A realtor captured 90+ additional leads per quarter and booked 50 percent more property showings."
+    }
+  ],
+  "nationwide_coverage": {
+    "heading": "Serving Small Businesses Nationwide",
+    "description": "Voice AI works for any small business, anywhere in the United States. We serve thousands of small businesses across all 50 states.",
+    "regions_highlighted": ["Northeast: NY, NJ, PA, MA", "Southeast: FL, GA, NC, TN", "Midwest: IL, OH, MI", "Southwest: TX, AZ", "West Coast: CA, WA, OR"]
+  },
+  "testimonials": [
+    {"quote": "Voice AI has been a game-changer. We went from missing 40 percent of calls to answering 100 percent. It is like having a receptionist who works 24/7 for a fraction of the cost.", "author": "Mike Rodriguez", "business": "Rodriguez Heating & Cooling", "location": "Phoenix, AZ"},
+    {"quote": "As a solo attorney, I could not afford a full-time receptionist. Now my AI answers every call and books consultations. I have increased my caseload by 35 percent.", "author": "Jennifer Park", "business": "Park Law Group", "location": "Seattle, WA"},
+    {"quote": "Our dental practice was drowning in calls. The AI handles 80 percent of scheduling automatically. Patients love the 24/7 booking option.", "author": "Dr. Marcus Thompson", "business": "Thompson Family Dentistry", "location": "Atlanta, GA"}
+  ],
+  "faq": [
+    {"question": "How does Voice AI for small business actually work?", "answer": "Voice AI uses advanced natural language processing to understand what callers are asking and respond naturally. We custom-train your AI agent with your business information, services, pricing, and common scenarios. When someone calls, the AI answers professionally, asks qualifying questions, books appointments into your calendar, and routes calls just like a trained receptionist would, but 24/7."},
+    {"question": "Does it sound robotic or will customers know it is AI?", "answer": "Our voice AI uses human-like voices with natural intonation, pacing, and conversational flow. Most callers do not realize they are speaking with AI they just appreciate getting immediate helpful service."},
+    {"question": "How much does Voice AI cost for small businesses?", "answer": "Our Voice AI packages start at $999 per month which includes setup, training, and up to 50 calls. Most small businesses spend $2500-4000 per month on receptionist salaries. With Voice AI you get 24/7 coverage for less than a part-time employee."},
+    {"question": "How quickly can I get Voice AI set up?", "answer": "Most small businesses are live with Voice AI within 1-2 weeks. The timeline includes initial consultation, AI training, testing, and launch."},
+    {"question": "Can Voice AI integrate with my existing tools?", "answer": "Yes! Voice AI integrates with popular CRM systems like Salesforce, HubSpot and Zoho, calendar platforms like Google Calendar Outlook and Calendly, and messaging apps."},
+    {"question": "What types of small businesses benefit most from Voice AI?", "answer": "Service-based businesses see the biggest impact including home services like HVAC plumbing and electrical, healthcare including medical and dental, professional services like law and accounting, real estate, and contractors."}
+  ],
+  "images": {
+    "gallery": [
+      {"url": "https://images.unsplash.com/photo-1689848693914-7ba25d9f3334?ixlib=rb-4.1.0&w=1200&q=80", "alt": "Professional making phone call", "caption": "Voice AI helps small businesses capture every lead"},
+      {"url": "https://images.unsplash.com/photo-1744640326166-433469d102f2?ixlib=rb-4.1.0&w=1200&q=80", "alt": "AI technology chip", "caption": "Advanced AI technology for small businesses"},
+      {"url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80", "alt": "Small business owner working", "caption": "Focus on growing while AI handles calls"}
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Stop Missing Calls and Start Capturing Every Lead?",
+    "subheadline": "Join thousands of small businesses using Voice AI to grow faster. Get your free consultation today.",
+    "cta_primary": {"text": "Call Now: 865-346-3339", "action": "tel:865-346-3339", "type": "phone"},
+    "urgency_text": "Limited onboarding slots available this month"
+  },
+  "related_pages": {
+    "related_national_keywords": ["ai-voice-agents-service-businesses", "ai-receptionist-small-business"],
+    "packages": ["starter-package", "growth-package"]
+  }
+}
+
+# Save page 1
+with open(r'C:\Users\eaqqa\capture-client-website-seo\pages\national\voice-ai-small-business.json', 'w') as f:
+    json.dump(page1, f, indent=2)
+
+print("Created 1/15: voice-ai-small-business.json")

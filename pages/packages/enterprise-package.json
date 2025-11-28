@@ -1,0 +1,317 @@
+{
+  "page_id": "enterprise-package",
+  "page_type": "package",
+  "package_info": {
+    "name": "Enterprise Package",
+    "slug": "enterprise-package",
+    "price": "Custom Pricing",
+    "period": "per month",
+    "tagline": "Complete done-for-you lead generation system with unlimited AI and dedicated support"
+  },
+  "seo": {
+    "title": "Enterprise Package - Custom Pricing | Full-Service Lead Generation | Capture Client",
+    "meta_description": "Unlimited AI Voice Agents, unlimited calls, Google + Facebook Ads, custom landing pages, and dedicated account manager. Enterprise-grade lead generation for serious businesses.",
+    "keywords": ["enterprise lead generation", "unlimited ai voice agents", "full-service marketing", "dedicated account manager"]
+  },
+  "hero": {
+    "headline": "Enterprise-Grade Lead Generation System",
+    "subheadline": "Unlimited AI Agents + Both Google & Facebook Ads + Custom Landing Pages + Dedicated Account Manager",
+    "price_display": {
+      "amount": "Custom",
+      "period": "pricing based on your needs",
+      "note": "Typically $3,997-$7,997/month depending on scale"
+    },
+    "badge": "FULL-SERVICE",
+    "cta": {
+      "primary": {
+        "text": "Schedule Enterprise Consultation",
+        "action": "/contact?package=enterprise",
+        "type": "primary"
+      },
+      "secondary": {
+        "text": "Download Enterprise Overview",
+        "action": "/resources/enterprise-package-overview.pdf",
+        "type": "secondary"
+      }
+    }
+  },
+  "ideal_for": {
+    "headline": "Perfect For:",
+    "audience": [
+      "Established businesses with 50+ employees",
+      "Multi-location businesses needing AI for each location",
+      "Companies handling 500+ calls per month",
+      "Businesses with $3K+ monthly advertising budget",
+      "Organizations requiring white-glove service and dedicated support",
+      "Companies wanting a complete done-for-you marketing solution",
+      "Businesses that need both Google AND Facebook advertising"
+    ]
+  },
+  "features_included": [
+    {
+      "name": "Unlimited AI Voice Agents",
+      "description": "As many AI agents as you need - one for each service, location, or campaign. Fully customized for your business.",
+      "value": "Unlimited"
+    },
+    {
+      "name": "Unlimited Phone Calls",
+      "description": "No call limits. Handle as many inbound calls as your business generates. Perfect for high-volume businesses.",
+      "value": "Unlimited"
+    },
+    {
+      "name": "Both Google & Facebook Ads",
+      "description": "Run simultaneous campaigns on Google Ads AND Facebook/Instagram. Dominate search and social media.",
+      "value": "Both platforms"
+    },
+    {
+      "name": "LinkedIn Ads (Optional)",
+      "description": "Add LinkedIn advertising for B2B lead generation. Perfect for professional services and enterprise sales.",
+      "value": "Available"
+    },
+    {
+      "name": "Ad Spend Management: $3,000+/month",
+      "description": "We manage any ad budget size. Most enterprise clients invest $5K-$20K/month in ad spend for maximum lead generation.",
+      "value": "$3K+ managed"
+    },
+    {
+      "name": "Custom Landing Pages",
+      "description": "We build custom, high-converting landing pages from scratch. Designed specifically for your ads and target audience.",
+      "value": "Fully custom"
+    },
+    {
+      "name": "Advanced Lead Qualification + Routing",
+      "description": "Sophisticated AI qualification with intelligent routing. Hot leads go to sales, warm leads get nurture sequences, cold leads filtered out.",
+      "value": "Advanced"
+    },
+    {
+      "name": "Dedicated Account Manager",
+      "description": "Your own account manager who knows your business inside-out. Direct phone and email access - no ticket systems.",
+      "value": "Dedicated"
+    },
+    {
+      "name": "24/7 Priority Support",
+      "description": "Round-the-clock priority support with same-day response guarantee. Direct Slack channel with our team.",
+      "value": "24/7"
+    },
+    {
+      "name": "Real-Time Dashboard",
+      "description": "Custom dashboard showing live ad performance, calls, leads, conversions, and ROI. Access anytime from any device.",
+      "value": "Live data"
+    },
+    {
+      "name": "Bi-Weekly Strategy Calls",
+      "description": "Regular strategy calls with your account manager to review performance, optimize campaigns, and plan growth.",
+      "value": "Bi-weekly"
+    },
+    {
+      "name": "Unlimited Integrations",
+      "description": "Connect to unlimited CRMs, marketing automation platforms, scheduling tools, and business software.",
+      "value": "Unlimited"
+    },
+    {
+      "name": "API Access",
+      "description": "Full API access for custom integrations with your existing systems and workflows.",
+      "value": "Full access"
+    }
+  ],
+  "features_not_included": [
+    {
+      "name": "Nothing",
+      "note": "Enterprise includes everything. This is our complete, all-inclusive package."
+    }
+  ],
+  "comparison": {
+    "downgrade_prompt": {
+      "headline": "Not Ready for Enterprise?",
+      "description": "Growth Package includes 2 AI agents, 200 calls/month, and Google OR Facebook Ads for $2,195/mo.",
+      "cta": {
+        "text": "See Growth Package",
+        "action": "/packages/growth-package"
+      }
+    },
+    "compare_table": [
+      {
+        "feature": "AI Voice Agents",
+        "starter": "1 agent",
+        "growth": "2 agents",
+        "enterprise": "Unlimited"
+      },
+      {
+        "feature": "Monthly Calls",
+        "starter": "50 calls",
+        "growth": "200 calls",
+        "enterprise": "Unlimited"
+      },
+      {
+        "feature": "Advertising Platforms",
+        "starter": "None",
+        "growth": "Google OR Facebook",
+        "enterprise": "Both + LinkedIn"
+      },
+      {
+        "feature": "Landing Pages",
+        "starter": "None",
+        "growth": "Optimization",
+        "enterprise": "Custom built"
+      },
+      {
+        "feature": "Reports",
+        "starter": "Monthly",
+        "growth": "Weekly",
+        "enterprise": "Real-time dashboard"
+      },
+      {
+        "feature": "Account Manager",
+        "starter": "None",
+        "growth": "None",
+        "enterprise": "Dedicated"
+      },
+      {
+        "feature": "Support",
+        "starter": "Email only",
+        "growth": "Priority (4hr)",
+        "enterprise": "24/7 priority"
+      }
+    ]
+  },
+  "value_proposition": {
+    "headline": "Why Enterprise Clients Choose Capture Client",
+    "benefits": [
+      {
+        "title": "Complete Done-For-You System",
+        "description": "We handle everything - AI setup, ad campaigns, landing pages, lead routing, and optimization. You focus on closing deals.",
+        "icon": "automation"
+      },
+      {
+        "title": "Dedicated Partnership",
+        "description": "Your account manager becomes an extension of your team. They understand your business, goals, and growth targets.",
+        "icon": "handshake"
+      },
+      {
+        "title": "Maximum Lead Volume",
+        "description": "No artificial limits on calls or AI agents. Built to scale with high-growth businesses generating hundreds of leads monthly.",
+        "icon": "rocket"
+      },
+      {
+        "title": "Enterprise-Grade Security",
+        "description": "SOC 2 compliant infrastructure, encrypted data, HIPAA available, and enterprise SLAs. Your data is protected.",
+        "icon": "shield"
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "We have 7 locations across Tennessee. Capture Client set up an AI agent for each location, manages our Google and Facebook ads, and we're now generating 400+ qualified leads per month. Our dedicated account manager is fantastic - feels like they work for us.",
+      "author": "Robert Thompson",
+      "business": "Thompson Home Services",
+      "location": "Multi-location (TN)",
+      "result": "400+ leads/month across 7 locations"
+    },
+    {
+      "quote": "The ROI is incredible. We're spending $12K/month on ads and the Enterprise package, but closing $180K+ in new business every month. The real-time dashboard lets me see exactly what's working. Best marketing investment we've ever made.",
+      "author": "Amanda Foster",
+      "business": "Foster Dental Group",
+      "location": "Nashville, TN",
+      "result": "$180K+/month in new business"
+    }
+  ],
+  "faq": [
+    {
+      "question": "What's the typical investment for Enterprise?",
+      "answer": "Most Enterprise clients invest $3,997-$7,997/month for management + their ad spend budget ($3K-$20K/month). Final pricing depends on the number of AI agents, ad platforms, and level of customization needed. We'll create a custom proposal during your consultation."
+    },
+    {
+      "question": "How is Enterprise different from Growth?",
+      "answer": "Enterprise includes: unlimited calls and AI agents, BOTH Google and Facebook ads (vs choosing one), custom landing pages (vs optimization only), dedicated account manager, 24/7 support, and real-time reporting dashboard. It's built for businesses that need white-glove service and maximum lead generation."
+    },
+    {
+      "question": "Do you require a long-term contract?",
+      "answer": "While we prefer 6-month commitments to allow time for optimization, we don't require multi-year contracts. Most enterprise clients stay long-term because the ROI is strong."
+    },
+    {
+      "question": "Can you handle multiple locations?",
+      "answer": "Absolutely! We have multi-location clients with 2-20+ locations. Each location gets its own AI agent, local landing pages, and geo-targeted advertising."
+    },
+    {
+      "question": "What industries do you work with?",
+      "answer": "We specialize in service-based businesses: home services (HVAC, plumbing, roofing), professional services (legal, medical, dental), and B2B services. If you take inbound calls and need more leads, we can help."
+    }
+  ],
+  "trust_signals": [
+    {
+      "title": "White-Glove Onboarding",
+      "description": "Dedicated onboarding specialist for the first 30 days."
+    },
+    {
+      "title": "90-Day Performance Guarantee",
+      "description": "We guarantee measurable improvement in lead quality and volume."
+    },
+    {
+      "title": "SOC 2 Compliant",
+      "description": "Enterprise-grade security and data protection."
+    },
+    {
+      "title": "Direct Communication",
+      "description": "No ticket systems. Direct access to your account manager."
+    }
+  ],
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?fm=jpg&w=1200",
+      "alt": "Modern office buildings representing enterprise business",
+      "credit": "Sean Pollock on Unsplash",
+      "placement": "hero"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?fm=jpg&w=1200",
+      "alt": "Business team collaborating on strategy",
+      "credit": "Dylan Gillis on Unsplash",
+      "placement": "value_proposition"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1549923746-c502d488b3ea?fm=jpg&w=1200",
+      "alt": "Business partnership handshake",
+      "credit": "Sebastian Herrmann on Unsplash",
+      "placement": "testimonials"
+    }
+  ],
+  "cta_footer": {
+    "headline": "Ready for Enterprise-Grade Lead Generation?",
+    "subheadline": "Join Fortune 500 companies and high-growth businesses using Capture Client Enterprise.",
+    "primary_cta": {
+      "text": "Schedule Enterprise Consultation",
+      "action": "/contact?package=enterprise"
+    },
+    "secondary_cta": {
+      "text": "Download Case Studies",
+      "action": "/resources/enterprise-case-studies.pdf"
+    },
+    "guarantee": "90-day performance guarantee. SOC 2 compliant. Dedicated support.",
+    "bonus": "BONUS: Get a free comprehensive marketing audit ($2,500 value) when you schedule a consultation."
+  },
+  "enterprise_addons": {
+    "headline": "Enterprise Add-Ons Available",
+    "addons": [
+      {
+        "name": "HIPAA Compliance",
+        "description": "Full HIPAA compliance for healthcare providers",
+        "pricing": "Contact us"
+      },
+      {
+        "name": "White Label Solution",
+        "description": "Rebrand our platform as your own",
+        "pricing": "Contact us"
+      },
+      {
+        "name": "API Development",
+        "description": "Custom API integrations and development",
+        "pricing": "Custom quote"
+      },
+      {
+        "name": "Multi-Language AI",
+        "description": "AI agents in Spanish, French, or other languages",
+        "pricing": "+$500/language"
+      }
+    ]
+  }
+}

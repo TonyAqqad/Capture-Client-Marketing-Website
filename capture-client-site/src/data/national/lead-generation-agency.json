@@ -1,0 +1,210 @@
+{
+  "page_id": "lead-generation-agency",
+  "page_type": "national-seo",
+  "keyword": {
+    "primary_keyword": "Lead Generation Agency",
+    "secondary_keywords": [
+      "Lead Generation Agency services",
+      "best Lead Generation Agency",
+      "affordable Lead Generation Agency"
+    ],
+    "keyword_slug": "lead-generation-agency"
+  },
+  "industry_focus": {
+    "industries": [
+      "Home Services",
+      "Healthcare",
+      "Professional Services",
+      "B2B Services",
+      "Local Businesses"
+    ],
+    "business_types": [
+      "Home Services companies",
+      "Healthcare companies",
+      "Professional Services companies"
+    ]
+  },
+  "seo": {
+    "page_title": "Lead Generation Agency | Facebook & Google Ads Experts",
+    "meta_description": "Professional lead generation agency specializing in Facebook Ads and Google Ads for small businesses. Generate qualified leads and grow revenue faster.",
+    "h1_heading": "Lead Generation Agency for Small Businesses",
+    "keywords": [
+      "lead generation agency",
+      "capture client",
+      "automation"
+    ]
+  },
+  "hero": {
+    "headline": "Stop Chasing Leads. Start Attracting Qualified Customers.",
+    "subheadline": "Full-service lead generation combining AI automation with expert Facebook and Google Ads management to fill your pipeline with ready-to-buy customers.",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1542744095-291d1f67b221?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Digital marketing on laptop",
+      "credit": {
+        "photographer": "Unsplash Photographer",
+        "unsplash_url": "https://unsplash.com"
+      }
+    }
+  },
+  "intro": {
+    "paragraph": "Small business owners spend countless hours chasing unqualified leads instead of closing deals. Our lead generation agency combines cutting-edge AI voice technology with proven Facebook and Google Ads strategies to generate a consistent flow of qualified leads. We do not just drive traffic we capture leads qualify them automatically and deliver appointment-ready prospects to your sales team. Businesses working with our agency see 3x more qualified leads within 60 days and ROI averaging 400 percent."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability",
+      "description": "Never miss a lead or opportunity with round-the-clock service.",
+      "icon": "clock"
+    },
+    {
+      "title": "Instant Response",
+      "description": "Respond to inquiries within seconds not hours or days.",
+      "icon": "zap"
+    },
+    {
+      "title": "Cost Effective",
+      "description": "Save 60-80 percent compared to traditional methods.",
+      "icon": "dollar-sign"
+    },
+    {
+      "title": "Scalable System",
+      "description": "Handle 10 or 1000 leads without adding staff.",
+      "icon": "trending-up"
+    },
+    {
+      "title": "Full Integration",
+      "description": "Works with your existing CRM calendar and tools.",
+      "icon": "link"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Consultation",
+      "description": "We analyze your business and create a custom strategy."
+    },
+    {
+      "step": 2,
+      "title": "Setup & Training",
+      "description": "We build and train your system with your business knowledge."
+    },
+    {
+      "step": 3,
+      "title": "Testing & Launch",
+      "description": "We test thoroughly then launch your automated system."
+    },
+    {
+      "step": 4,
+      "title": "Optimize & Scale",
+      "description": "We continuously improve performance and scale with your growth."
+    }
+  ],
+  "industry_use_cases": [
+    {
+      "industry": "Home Services",
+      "challenge": "Home Services businesses struggle with inconsistent lead flow and high customer acquisition costs.",
+      "solution": "Our system generates qualified leads 24/7 and converts them automatically.",
+      "result": "Average Home Services business sees 3-5x ROI within 60-90 days."
+    }
+  ],
+  "nationwide_coverage": {
+    "heading": "Serving Businesses Nationwide",
+    "description": "We work with businesses across all 50 states from small local operations to multi-location enterprises.",
+    "regions_highlighted": [
+      "East Coast",
+      "West Coast",
+      "Midwest",
+      "South",
+      "Southwest"
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "This system transformed our business. We went from struggling to find leads to having more than we can handle.",
+      "author": "John Smith",
+      "business": "ABC Services",
+      "location": "Denver CO"
+    },
+    {
+      "quote": "Best investment we have made. The ROI was positive in the first month.",
+      "author": "Sarah Johnson",
+      "business": "XYZ Company",
+      "location": "Miami FL"
+    },
+    {
+      "quote": "Finally a marketing system that actually works. Highly recommend.",
+      "author": "Mike Davis",
+      "business": "123 Solutions",
+      "location": "Portland OR"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Lead Generation Agency work?",
+      "answer": "Lead Generation Agency uses advanced technology to automate and optimize your sales and marketing processes for maximum efficiency and results."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Packages start at $999 per month. Most businesses see 3-5x ROI within 60 days making it a highly profitable investment."
+    },
+    {
+      "question": "How quickly can I get started?",
+      "answer": "Most businesses are fully operational within 1-2 weeks from initial consultation to launch."
+    },
+    {
+      "question": "Do you work with businesses in my industry?",
+      "answer": "Yes we specialize in Home Services Healthcare and Professional Services as well as many other service-based industries."
+    },
+    {
+      "question": "What kind of results can I expect?",
+      "answer": "Most businesses see 2-3x more leads 40-60 percent higher conversion rates and 3-5x ROI within the first 90 days."
+    },
+    {
+      "question": "Is there a contract?",
+      "answer": "No long-term contracts required. Month-to-month service with 30-day cancellation notice."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1542744095-291d1f67b221?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Digital marketing on laptop",
+        "caption": "Data-driven marketing campaigns"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1571677246347-5040036b95cc?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Marketing analytics",
+        "caption": "Real-time performance tracking"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1636645096936-fc8704bc8083?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Marketing team collaboration",
+        "caption": "Expert marketing strategy"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Transform Your Business?",
+    "subheadline": "Get your free consultation and discover how our system can generate more leads and revenue for your business.",
+    "cta_primary": {
+      "text": "Call Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "urgency_text": "Limited slots available for new clients"
+  },
+  "related_pages": {
+    "related_national_keywords": [
+      "voice-ai-small-business",
+      "lead-generation-agency"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

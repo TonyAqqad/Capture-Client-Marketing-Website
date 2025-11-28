@@ -1,0 +1,168 @@
+{
+  "page_id": "voice-ai-knoxville-tn",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Knoxville",
+    "state": "Tennessee",
+    "state_abbr": "TN",
+    "slug": "knoxville-tn",
+    "nearby_areas": ["Maryville", "Oak Ridge", "Sevierville", "Farragut", "Alcoa"],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Knoxville, TN | Capture Client",
+    "meta_description": "Looking for Voice AI in Knoxville? Capture Client helps Knoxville businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Knoxville, Tennessee",
+    "keywords": ["voice ai agency knoxville", "ai voice agents knoxville tn", "ai receptionist knoxville", "automated phone answering knoxville"],
+    "canonical_url": "/voice-ai-knoxville-tn"
+  },
+  "hero": {
+    "headline": "Never Miss Another Call in Knoxville",
+    "subheadline": "AI Voice Agents That Answer, Qualify, and Convert Leads 24/7 for Knoxville Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Professional business owner in Knoxville using phone technology",
+      "credit": {
+        "photographer": "Alev Takil",
+        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "Knoxville small business owners face a common challenge: missed calls mean missed opportunities. Whether you're running an HVAC company in West Knoxville, a law practice downtown, or a home services business in Farragut, every unanswered call could be a lost customer. That's where Capture Client's Voice AI technology comes in."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability for Knoxville Customers",
+      "description": "Your Knoxville customers call at all hours. Our AI voice agents never sleep, ensuring every call from Knox County is answered professionally.",
+      "icon": "clock"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "Stop wasting time on unqualified leads. Our AI asks the right questions upfront so you only talk to serious Knoxville prospects ready to buy.",
+      "icon": "filter"
+    },
+    {
+      "title": "Automatic Appointment Scheduling",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with Knoxville customers.",
+      "icon": "calendar"
+    },
+    {
+      "title": "Cost Savings Over Traditional Staff",
+      "description": "Hiring a receptionist in Knoxville costs $30,000-$40,000/year. Our Voice AI costs a fraction of that.",
+      "icon": "dollar-sign"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your Knoxville business needs and how Voice AI can help you capture more clients."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI voice agent with your business information specific to your Knoxville market."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your AI handle calls instantly based on real Knoxville call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "HVAC Companies in Knoxville",
+      "scenario": "Missing 40% of calls during peak summer season.",
+      "result": "Increased summer revenue by $65,000 in first 90 days."
+    },
+    {
+      "business_type": "Law Firms Downtown Knoxville",
+      "scenario": "Needed to pre-qualify clients before attorney consultations.",
+      "result": "Attorneys spend 70% less time on unqualified calls, closed 5 additional cases."
+    },
+    {
+      "business_type": "Home Services West Knoxville",
+      "scenario": "Wanted to grow but couldn't afford more office staff.",
+      "result": "Handles 3x more calls without hiring. Customer satisfaction increased."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Knoxville and Surrounding Areas",
+    "description": "We provide Voice AI services throughout Knox County and the greater Knoxville area.",
+    "areas_list": ["Downtown Knoxville", "West Knoxville", "Farragut", "Maryville", "Oak Ridge", "Sevierville", "Alcoa", "Powell"]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Capture Client's Voice AI has been a game-changer. We've increased monthly revenue by over $50,000.",
+      "author": "Mike Thompson",
+      "business": "Thompson HVAC",
+      "location": "Knoxville, TN"
+    },
+    {
+      "quote": "The AI receptionist qualifies leads and books consultations automatically. I'm closing more cases.",
+      "author": "Jennifer Martinez",
+      "business": "Martinez Law Group",
+      "location": "Knoxville, TN"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Knoxville businesses?",
+      "answer": "Our Voice AI answers professionally, asks qualifying questions, provides information, schedules appointments, and transfers urgent calls. It works 24/7 for Knoxville customers."
+    },
+    {
+      "question": "What Knoxville businesses benefit most?",
+      "answer": "HVAC, plumbers, electricians, law firms, medical practices, real estate agents, contractors in Knoxville all benefit from Voice AI automation."
+    },
+    {
+      "question": "Does the AI sound robotic?",
+      "answer": "Not at all! Most Knoxville callers don't realize they're talking to AI. We customize voice and tone to match your brand."
+    },
+    {
+      "question": "How quickly can you set up for my Knoxville business?",
+      "answer": "Most Knoxville businesses are running within 1-2 weeks from initial strategy call to launch."
+    },
+    {
+      "question": "Can it integrate with my CRM?",
+      "answer": "Yes! Integrates with HubSpot, Salesforce, ServiceTitan, Jobber and tools used by Knoxville businesses."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Small business owner in Knoxville working with technology",
+        "caption": "Knoxville businesses use Voice AI to automate lead capture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Professional answering phone call for Knoxville business",
+        "caption": "AI answers every call professionally, 24/7"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Clients in Knoxville?",
+    "subheadline": "Join dozens of Knoxville businesses using Voice AI to answer every call.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": ["voice-ai-maryville-tn", "voice-ai-oak-ridge-tn", "voice-ai-farragut-tn"],
+    "packages": ["starter-package", "growth-package"]
+  }
+}

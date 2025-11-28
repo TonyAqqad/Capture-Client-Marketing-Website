@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(for file in voice-ai-knoxville-tn.json voice-ai-nashville-tn.json voice-ai-chattanooga-tn.json voice-ai-memphis-tn.json voice-ai-maryville-tn.json voice-ai-franklin-tn.json voice-ai-murfreesboro-tn.json voice-ai-oak-ridge-tn.json voice-ai-sevierville-tn.json voice-ai-gatlinburg-tn.json voice-ai-johnson-city-tn.json voice-ai-clarksville-tn.json voice-ai-kingsport-tn.json voice-ai-farragut-tn.json)",
+      "Bash(do if python -m json.tool $file)",
+      "Bash(then echo '✓ $file - Valid JSON')",
+      "Bash(else echo '✗ $file - Invalid JSON')",
+      "Bash(fi)",
+      "Bash(done)",
+      "Bash(npx create-next-app@latest capture-client-site --typescript --tailwind --eslint --app --src-dir --import-alias \"@/*\" --no-git)",
+      "Bash(dir:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tailwindcss init -p)",
+      "Bash(npm run build:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(find:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npx playwright install chromium)"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "playwright"
+  ]
+}

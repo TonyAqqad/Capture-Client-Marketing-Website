@@ -1,0 +1,260 @@
+{
+  "page_id": "starter-package",
+  "page_type": "package",
+  "package_info": {
+    "name": "Starter Package",
+    "slug": "starter-package",
+    "price": "$999",
+    "period": "per month",
+    "tagline": "Perfect for small businesses getting started with AI automation"
+  },
+  "seo": {
+    "title": "Starter Package - $999/mo | AI Voice Agent for Small Business | Capture Client",
+    "meta_description": "Get started with AI automation for just $999/month. Includes AI Voice Agent setup, 50 calls/month, lead qualification, and CRM integration. Perfect for small businesses.",
+    "keywords": ["ai voice agent starter", "affordable ai automation", "small business voice ai", "ai phone answering service"]
+  },
+  "hero": {
+    "headline": "Start Capturing More Leads with AI",
+    "subheadline": "AI Voice Agent + Lead Qualification for just $999/month",
+    "price_display": {
+      "amount": "$999",
+      "period": "per month",
+      "note": "No setup fees. Cancel anytime."
+    },
+    "cta": {
+      "primary": {
+        "text": "Get Started Today",
+        "action": "/contact?package=starter",
+        "type": "primary"
+      },
+      "secondary": {
+        "text": "Schedule a Demo",
+        "action": "/contact?type=demo",
+        "type": "secondary"
+      }
+    }
+  },
+  "ideal_for": {
+    "headline": "Perfect For:",
+    "audience": [
+      "Small businesses with 1-10 employees",
+      "Service-based businesses (contractors, consultants, salons)",
+      "Businesses missing calls during busy hours",
+      "Companies wanting to test AI before scaling",
+      "Businesses handling 50-100 inbound calls per month"
+    ]
+  },
+  "features_included": [
+    {
+      "name": "1 Custom AI Voice Agent",
+      "description": "Fully trained AI agent that sounds natural and represents your brand. Handles inbound calls 24/7 with custom greetings and responses.",
+      "value": "Included"
+    },
+    {
+      "name": "50 AI Phone Calls Per Month",
+      "description": "Up to 50 calls handled by your AI agent each month. Perfect for small businesses just getting started.",
+      "value": "50 calls/mo"
+    },
+    {
+      "name": "Basic Lead Qualification",
+      "description": "AI asks qualifying questions to separate serious prospects from tire kickers. Collects name, phone, email, and service interest.",
+      "value": "Included"
+    },
+    {
+      "name": "Email Notifications",
+      "description": "Instant email alerts when your AI captures a qualified lead. Get transcripts of every conversation.",
+      "value": "Instant alerts"
+    },
+    {
+      "name": "1 CRM Integration",
+      "description": "Connect to one CRM system (GoHighLevel, HubSpot, Salesforce, etc). Leads auto-sync in real-time.",
+      "value": "1 integration"
+    },
+    {
+      "name": "Monthly Reports",
+      "description": "Detailed monthly performance reports showing calls answered, leads captured, and conversion rates.",
+      "value": "Monthly"
+    },
+    {
+      "name": "Email Support",
+      "description": "Email support during business hours with response within 24 hours.",
+      "value": "24hr response"
+    }
+  ],
+  "features_not_included": [
+    {
+      "name": "Multiple AI Agents",
+      "available_in": "Growth Package"
+    },
+    {
+      "name": "Advertising Management",
+      "available_in": "Growth Package"
+    },
+    {
+      "name": "Landing Page Optimization",
+      "available_in": "Growth Package"
+    },
+    {
+      "name": "Weekly Reports",
+      "available_in": "Growth Package"
+    },
+    {
+      "name": "Priority Support",
+      "available_in": "Growth Package"
+    },
+    {
+      "name": "Dedicated Account Manager",
+      "available_in": "Enterprise Package"
+    }
+  ],
+  "comparison": {
+    "upgrade_prompt": {
+      "headline": "Need More Calls or Features?",
+      "description": "Upgrade to Growth Package for 200 calls/month, multiple AI agents, and advertising management.",
+      "cta": {
+        "text": "See Growth Package",
+        "action": "/packages/growth-package"
+      }
+    },
+    "compare_table": [
+      {
+        "feature": "AI Voice Agents",
+        "starter": "1 agent",
+        "growth": "2 agents",
+        "enterprise": "Unlimited"
+      },
+      {
+        "feature": "Monthly Calls",
+        "starter": "50 calls",
+        "growth": "200 calls",
+        "enterprise": "Unlimited"
+      },
+      {
+        "feature": "Advertising Management",
+        "starter": "Not included",
+        "growth": "Google OR Facebook",
+        "enterprise": "Both + LinkedIn"
+      },
+      {
+        "feature": "Support",
+        "starter": "Email only",
+        "growth": "Priority email",
+        "enterprise": "24/7 dedicated"
+      }
+    ]
+  },
+  "value_proposition": {
+    "headline": "What Makes This Package Perfect for Starting Out",
+    "benefits": [
+      {
+        "title": "Never Miss a Call Again",
+        "description": "Your AI answers every call instantly, even when you're with another customer. No more lost leads.",
+        "icon": "phone"
+      },
+      {
+        "title": "Qualify Leads Automatically",
+        "description": "AI asks the right questions to determine if callers are serious buyers. Only qualified leads reach your inbox.",
+        "icon": "filter"
+      },
+      {
+        "title": "Save 10+ Hours Per Week",
+        "description": "Stop answering repetitive questions. Let AI handle initial inquiries while you focus on closing deals.",
+        "icon": "clock"
+      },
+      {
+        "title": "Test Before You Scale",
+        "description": "Start small with 50 calls/month. Once you see results, upgrade to Growth or Enterprise packages.",
+        "icon": "chart"
+      }
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "Within the first week, the AI answered 23 calls that came in after hours. We closed 4 of those leads. Already paid for itself!",
+      "author": "Mike Henderson",
+      "business": "Henderson HVAC",
+      "location": "Knoxville, TN",
+      "result": "4 new customers in first week"
+    },
+    {
+      "quote": "I was skeptical about AI, but the Starter Package let me test it without a huge commitment. Now we're capturing leads we used to miss. Upgrading to Growth next month.",
+      "author": "Sarah Martinez",
+      "business": "Martinez Landscaping",
+      "location": "Nashville, TN",
+      "result": "15% increase in qualified leads"
+    }
+  ],
+  "faq": [
+    {
+      "question": "What happens if I go over 50 calls in a month?",
+      "answer": "No problem! We'll notify you when you're approaching your limit. You can either upgrade to the Growth Package or purchase additional call bundles at $2 per call."
+    },
+    {
+      "question": "How long does setup take?",
+      "answer": "Most customers are live within 3-5 business days. We'll train your AI agent on your business, test it thoroughly, and get your approval before going live."
+    },
+    {
+      "question": "Can I upgrade or downgrade later?",
+      "answer": "Absolutely! You can upgrade to Growth or Enterprise anytime. Upgrades take effect immediately. Downgrades take effect at your next billing cycle."
+    },
+    {
+      "question": "What if the AI doesn't understand a caller?",
+      "answer": "Our AI handles 95%+ of calls successfully. For complex questions, it collects contact info and schedules a callback with you."
+    },
+    {
+      "question": "Do I need any special phone equipment?",
+      "answer": "Nope! We integrate with your existing phone system. Works with landlines, VoIP, cell phones - whatever you're using now."
+    }
+  ],
+  "trust_signals": [
+    {
+      "title": "No Long-Term Contract",
+      "description": "Month-to-month billing. Cancel anytime with 30 days notice."
+    },
+    {
+      "title": "30-Day Money Back Guarantee",
+      "description": "Not happy? Get a full refund within the first 30 days."
+    },
+    {
+      "title": "Setup Included",
+      "description": "No setup fees. We handle everything to get you live."
+    },
+    {
+      "title": "Free Training",
+      "description": "We train your AI on your business - no extra charge."
+    }
+  ],
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?fm=jpg&w=1200",
+      "alt": "Small business team collaborating in office",
+      "credit": "krakenimages on Unsplash",
+      "placement": "hero"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?fm=jpg&w=1200",
+      "alt": "Business owner working on laptop planning growth",
+      "credit": "Tyler Franta on Unsplash",
+      "placement": "value_proposition"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1553877522-43269d4ea984?fm=jpg&w=1200",
+      "alt": "Professional using technology for business automation",
+      "credit": "charlesdeluvio on Unsplash",
+      "placement": "testimonials"
+    }
+  ],
+  "cta_footer": {
+    "headline": "Ready to Start Capturing More Leads?",
+    "subheadline": "Join 500+ small businesses using AI to never miss another call.",
+    "primary_cta": {
+      "text": "Get Started for $999/mo",
+      "action": "/contact?package=starter"
+    },
+    "secondary_cta": {
+      "text": "Compare All Packages",
+      "action": "/packages/pricing"
+    },
+    "guarantee": "30-day money back guarantee. No setup fees. Cancel anytime."
+  }
+}

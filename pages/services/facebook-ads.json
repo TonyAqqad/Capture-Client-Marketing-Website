@@ -1,0 +1,230 @@
+{
+  "page_id": "facebook-ads",
+  "page_type": "service",
+  "service": {
+    "service_id": "facebook-ads",
+    "service_name": "Facebook Ads Lead Generation",
+    "service_slug": "facebook-ads"
+  },
+  "seo": {
+    "page_title": "Facebook Ads Lead Generation | Social Media Advertising | Capture Client",
+    "meta_description": "Generate qualified leads with Facebook & Instagram Ads. Expert social media advertising for service businesses. Lead ads, retargeting, lookalike audiences. Free strategy call!",
+    "h1_heading": "Facebook Ads Lead Generation for Service Businesses",
+    "keywords": [
+      "facebook ads management",
+      "facebook lead generation",
+      "instagram ads",
+      "social media advertising",
+      "facebook lead ads",
+      "facebook retargeting",
+      "lookalike audiences",
+      "facebook ads for small business"
+    ],
+    "canonical_url": "/facebook-ads",
+    "og_title": "Facebook Ads Lead Generation | Get Quality Leads from Social Media",
+    "og_description": "Stop wasting money on Facebook Ads that don't convert. Our expert campaigns generate high-quality leads for service businesses through Facebook and Instagram."
+  },
+  "hero": {
+    "headline": "Turn Facebook & Instagram into Your Best Lead Source",
+    "subheadline": "Expert Facebook Ads Management That Generates Qualified Leads for Service Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Strategy Call",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "cta_secondary": {
+      "text": "See Our Work",
+      "action": "#testimonials",
+      "type": "link"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1518734549841-b417d28c22aa?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Facebook and Instagram ads management for small business lead generation",
+      "credit": {
+        "photographer": "Kenny Eliason",
+        "unsplash_url": "https://unsplash.com/photos/Ah4F6g-OmgI"
+      }
+    }
+  },
+  "intro": {
+    "paragraph": "Your ideal customers are scrolling Facebook and Instagram right now. They're browsing between posts from friends, watching videos, and discovering new businesses. With the right Facebook Ads strategy, your service business can capture their attention, build trust, and convert them into paying clients. But here's the reality: most service businesses waste thousands on Facebook Ads that don't generate results. They boost posts randomly, target audiences that will never buy, and wonder why their ads fail. Facebook Ads is not a DIY channel—it's a sophisticated advertising platform that requires expertise in audience targeting, creative strategy, and conversion optimization. At Capture Client, we specialize in Facebook and Instagram advertising exclusively for service-based businesses. We create campaigns that don't just get likes and comments—they generate phone calls, form submissions, and booked appointments. Our approach combines proven direct response tactics with advanced targeting features like lookalike audiences, retargeting pixels, and Facebook Lead Ads. We target your ideal customer based on demographics, interests, behaviors, and even life events. Someone just bought a house? They need HVAC service, plumbing, landscaping, and security systems. Someone just got married? They need legal services for name changes, financial planning, and home buying. Facebook's targeting capabilities are unmatched, and we know exactly how to leverage them for maximum ROI. Our average client generates 50-150 qualified leads per month from Facebook Ads at 1/3 the cost of Google Ads."
+  },
+  "benefits": [
+    {
+      "title": "Precision Audience Targeting",
+      "description": "Target your exact ideal customer by age, location, income, interests, job title, behaviors, and life events. Facebook's targeting is the most sophisticated in digital advertising—we use it to find your perfect prospects.",
+      "icon": "target"
+    },
+    {
+      "title": "Lower Cost Per Lead",
+      "description": "Facebook Ads typically cost 50-70% less than Google Ads for service businesses. Generate more leads with the same budget, or hit your lead goals while spending less. Facebook offers incredible value for smart advertisers.",
+      "icon": "dollar-sign"
+    },
+    {
+      "title": "Visual Storytelling",
+      "description": "Showcase your work with compelling images and videos. Before/after photos, customer testimonials, project showcases, and educational content build trust and drive engagement. People buy from businesses they know and trust.",
+      "icon": "image"
+    },
+    {
+      "title": "Facebook Lead Ads",
+      "description": "Capture leads without users ever leaving Facebook. Lead forms auto-fill with user information, making it effortless to submit. This friction-free experience dramatically increases conversion rates compared to sending traffic to external landing pages.",
+      "icon": "users"
+    },
+    {
+      "title": "Retargeting Website Visitors",
+      "description": "Someone visited your website but didn't call? Retarget them with Facebook ads reminding them why they need your services. Stay top-of-mind and capture leads that would otherwise disappear forever.",
+      "icon": "repeat"
+    },
+    {
+      "title": "Lookalike Audiences",
+      "description": "Upload your best customer list. Facebook finds thousands of people who match your ideal customer profile. This AI-powered targeting identifies prospects you'd never find manually—people most likely to need and buy your services.",
+      "icon": "user-check"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We discuss your target customer, service offerings, unique value proposition, and goals. We audit your current social media presence and identify opportunities for Facebook Ads to drive leads."
+    },
+    {
+      "step": 2,
+      "title": "Audience Research & Campaign Setup",
+      "description": "We build detailed customer avatars and create custom audiences based on demographics, interests, and behaviors. We set up retargeting pixels, lookalike audiences, and Facebook Lead Ads optimized for conversions."
+    },
+    {
+      "step": 3,
+      "title": "Creative Development",
+      "description": "We create scroll-stopping ad creative including images, videos, and ad copy that speaks directly to your target customer's pain points. We A/B test multiple variations to identify top performers."
+    },
+    {
+      "step": 4,
+      "title": "Launch, Optimize & Scale",
+      "description": "Your campaigns go live across Facebook and Instagram. We monitor daily, optimize ad spend toward winning audiences and creatives, and scale successful campaigns to maximize your lead volume and ROI."
+    }
+  ],
+  "use_cases": [
+    {
+      "industry": "HVAC Companies",
+      "scenario": "Target homeowners age 35-65 in your service area who recently bought homes. Hit them with special offers on AC tune-ups before summer or furnace maintenance before winter. Use before/after photos and 5-star reviews.",
+      "result": "Book 40-80 maintenance appointments monthly at $25-35 per lead. Build a consistent maintenance client base that generates recurring revenue."
+    },
+    {
+      "industry": "Law Firms",
+      "scenario": "Family law firms target recently married or divorced individuals. Personal injury firms target people interested in legal rights and compensation. Use video testimonials and case result highlights to build credibility.",
+      "result": "Generate 30-50 legal consultation requests monthly at $40-70 per lead. Pre-qualify leads with Facebook Lead Ads questions about case details."
+    },
+    {
+      "industry": "Home Service Contractors",
+      "scenario": "Roofers target homeowners interested in home improvement during spring. Landscapers target high-income homeowners in premium zip codes. Use stunning before/after project photos and customer video testimonials.",
+      "result": "Generate 50-100 project quote requests monthly. Convert visual storytelling into booked jobs with 20-30% quote-to-customer rates."
+    },
+    {
+      "industry": "Medical & Dental Practices",
+      "scenario": "Cosmetic dentists target appearance-conscious individuals age 25-55. Chiropractors target people interested in wellness and pain relief. Dermatologists target skincare and anti-aging audiences.",
+      "result": "Book 40-70 new patient appointments monthly. Use patient testimonials and treatment result photos to build trust and overcome objections."
+    }
+  ],
+  "social_proof": {
+    "testimonials": [
+      {
+        "quote": "We tried Facebook Ads on our own and got zero results. Capture Client completely transformed our campaigns. Now we generate 60+ roofing leads per month for under $2,000 in ad spend. The ROI is incredible.",
+        "author": "David Martinez",
+        "business": "Martinez Roofing & Construction",
+        "industry": "Home Services"
+      },
+      {
+        "quote": "The Facebook Lead Ads feature is brilliant. People can request consultations without leaving their phone. We book 10-15 legal consultations every week directly from Facebook. Game changer for our practice.",
+        "author": "Jennifer Wu",
+        "business": "Wu Family Law",
+        "industry": "Legal Services"
+      },
+      {
+        "quote": "I was skeptical about Facebook Ads for HVAC. But the targeting works. We're reaching homeowners who just bought houses—exactly when they need HVAC service. Best marketing investment we've made.",
+        "author": "Carlos Rodriguez",
+        "business": "Rodriguez Heating & Air",
+        "industry": "HVAC Services"
+      }
+    ],
+    "stats": {
+      "stat_1": "15,000+ Leads Generated",
+      "stat_2": "$800K+ Ad Spend Managed",
+      "stat_3": "5:1 Average ROAS"
+    }
+  },
+  "faq": [
+    {
+      "question": "Does Facebook Ads really work for service businesses?",
+      "answer": "Absolutely—when done correctly. The key is understanding that Facebook users aren't actively searching for services like on Google. You need to interrupt their scroll with compelling offers, build trust with social proof, and make lead capture effortless with Lead Ads. We've generated thousands of leads for HVAC companies, contractors, law firms, and medical practices using Facebook. The targeting precision and low cost per lead make it one of the best channels for service business growth."
+    },
+    {
+      "question": "How much should I spend on Facebook Ads?",
+      "answer": "We recommend starting with $1,000-$2,000 per month in ad spend to test audiences and gather data. Facebook's algorithm needs volume to optimize, so micro-budgets don't work well. Our Growth package manages $1,000-$3,000/month, while Enterprise handles larger budgets. Most service businesses see profitable results within the first 30-45 days, then scale spending as ROI proves out."
+    },
+    {
+      "question": "What are Facebook Lead Ads and why should I use them?",
+      "answer": "Facebook Lead Ads are special ad formats that capture lead information (name, phone, email) without users leaving Facebook. The forms auto-fill with Facebook profile data, so submitting takes literally 2 taps. This dramatically increases conversion rates compared to sending people to landing pages. For service businesses, Lead Ads typically deliver 2-3x more leads at lower cost. We set these up for all our clients."
+    },
+    {
+      "question": "How is Facebook Ads different from Google Ads?",
+      "answer": "Google captures existing demand—people searching for services. Facebook creates demand by targeting people who match your ideal customer profile but aren't actively searching. Facebook costs less per lead but requires more education and trust-building. We recommend running both channels for maximum lead volume. Google for immediate needs, Facebook for building awareness and nurturing prospects."
+    },
+    {
+      "question": "Can you target specific neighborhoods or zip codes?",
+      "answer": "Yes! Facebook allows hyper-local targeting down to 1-mile radius around an address. We can target specific neighborhoods, zip codes, or even drop pins around affluent areas where your ideal customers live. This is perfect for service businesses with defined service areas who want to focus on high-value neighborhoods."
+    },
+    {
+      "question": "How do you track ROI from Facebook Ads?",
+      "answer": "We implement Facebook Pixel tracking on your website and integrate Lead Ads with your CRM. You see exactly how many leads came from Facebook, cost per lead, and when possible, closed deals attributed to Facebook campaigns. We provide monthly reports with complete transparency on ad spend, leads generated, and ROI. You'll know exactly what's working."
+    }
+  ],
+  "main_content": {
+    "sections": [
+      {
+        "heading": "Why Facebook & Instagram Ads Are Essential in 2024",
+        "content": "Over 2.9 billion people use Facebook monthly. Instagram has 2 billion active users. Your potential customers spend an average of 2.5 hours per day on these platforms. This represents a massive opportunity for service businesses to build awareness, generate leads, and grow their customer base. But Facebook Ads has evolved significantly. The platform now uses sophisticated AI to optimize ad delivery based on your conversion goals. The Facebook algorithm learns which users are most likely to become leads and shows your ads to them more frequently. This machine learning optimization is incredibly powerful when combined with expert campaign management. The key to Facebook Ads success is understanding the customer journey. Someone scrolling their feed isn't necessarily ready to hire a service provider that instant. Your ads need to grab attention, communicate value quickly, and make taking the next step effortless. This is why we focus heavily on creative strategy—compelling visuals, clear value propositions, social proof, and strong calls-to-action. Your ad creative matters more on Facebook than any other platform. We also leverage Facebook's unique targeting capabilities. Want to target homeowners who recently moved? Done. Want to reach people who engage with home improvement content? Easy. Want to find people similar to your best customers? Lookalike audiences do exactly that. This targeting precision means you're not wasting budget on people who will never buy—you're reaching genuine prospects."
+      },
+      {
+        "heading": "The Power of Retargeting for Service Businesses",
+        "content": "Here's a statistic that should concern you: 96% of website visitors leave without contacting you. They found your site through Google, looked around, then disappeared. What if you could bring them back? That's exactly what Facebook retargeting does. We install the Facebook Pixel on your website which tracks every visitor. Then we create retargeting campaigns that show ads to these people as they scroll Facebook and Instagram. These ads remind them why they visited your site, address common objections, and encourage them to call or submit a lead form. Retargeting is one of the highest-ROI tactics in digital marketing. You're advertising to people who already know your brand and showed interest by visiting your website. They're much more likely to convert than cold traffic. We create retargeting campaigns for multiple scenarios: someone who visited your homepage gets general brand ads, someone who visited your services page gets specific service-focused ads, someone who started but didn't submit a contact form gets urgency-based ads with special offers. This segmented approach dramatically increases conversion rates. Many of our clients generate 30-40% of their total Facebook leads from retargeting campaigns alone. These are leads that would have been lost forever without retargeting. For service businesses with any amount of website traffic, retargeting should be a core component of your Facebook Ads strategy."
+      },
+      {
+        "heading": "Creative Strategy That Converts",
+        "content": "On Facebook, your ad creative is everything. Users scroll past dozens of ads per hour. Your ad has maybe 1-2 seconds to grab attention before they scroll past. This means your imagery, headline, and offer need to be immediately compelling. Here's what works for service businesses: Before/After Photos - Show the transformation you provide. HVAC companies showing clean vs dirty air ducts, landscapers showing overgrown vs beautiful yards, contractors showing renovation before/afters. Visual proof is powerful. Video Testimonials - Real customers sharing their experience on camera builds trust faster than anything else. A 30-second testimonial video highlighting the problem they had and how you solved it is gold. Educational Content - Share valuable tips and position yourself as the expert. 'Top 5 Signs Your AC Needs Repair' or '3 Legal Mistakes Homebuyers Make' establishes authority and captures people researching solutions. Special Offers - Limited-time discounts or seasonal promotions create urgency. 'Save $200 on AC Tune-Up This Month Only' gives people a reason to act now instead of someday. We handle all creative development including graphic design, video editing, and copywriting. We test multiple ad variations simultaneously to identify winners, then scale the best-performing creatives while continuously testing new angles. This systematic approach to creative optimization is what separates successful Facebook campaigns from wasted ad spend."
+      }
+    ]
+  },
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Facebook and Instagram social media advertising on mobile devices",
+        "caption": "Reach your ideal customers where they spend their time every day"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1566458383719-239ca2d59a37?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Facebook Lead Ads and social media marketing for businesses",
+        "caption": "Generate high-quality leads with Facebook Lead Ads and retargeting"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1491951931722-5a446214b4e2?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Facebook advertising engagement and social proof",
+        "caption": "Build trust and drive conversions with proven social media strategies"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Generate Leads from Facebook & Instagram?",
+    "subheadline": "Get a free strategy call and see how Facebook Ads can become your best lead source",
+    "cta_primary": {
+      "text": "Call Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "urgency_text": "Free strategy call includes custom audience research and campaign recommendations"
+  },
+  "related_pages": {
+    "services": ["voice-ai", "google-ads"],
+    "packages": ["growth-package", "enterprise-package"]
+  }
+}

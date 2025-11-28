@@ -1,0 +1,186 @@
+{
+  "page_id": "voice-ai-augusta-ga",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Augusta",
+    "state": "GA",
+    "state_full": "Georgia",
+    "slug": "augusta-ga",
+    "nearby_areas": [
+      "Evans",
+      "Martinez",
+      "Grovetown"
+    ],
+    "service_area_radius": "25 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Augusta, GA | Capture Client",
+    "meta_description": "Voice AI for Augusta businesses. Automate calls 24/7. Call 865-346-3339\\!",
+    "h1_heading": "Voice AI Agency in Augusta, Georgia",
+    "keywords": [
+      "voice ai augusta ga"
+    ],
+    "canonical_url": "/voice-ai-augusta-ga"
+  },
+  "hero": {
+    "headline": "Augusta AI Voice Solution",
+    "subheadline": "Never Miss Customer Calls in Augusta - AI Answers 24/7",
+    "cta_primary": {
+      "text": "Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1758876018950-173d111e1d6c?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Business call",
+      "credit": {
+        "photographer": "Vitaly Gariev",
+        "unsplash_url": "https://unsplash.com/photos/DU022PS2wMc"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "Augusta businesses are leveraging AI to compete. From medical offices near Augusta University to contractors in Evans, Voice AI ensures every call is answered. Masters Tournament season brings surge demand - AI scales effortlessly."
+  },
+  "benefits": [
+    {
+      "title": "Masters-Ready Capacity",
+      "description": "Handle call surges during Augusta busy seasons automatically.",
+      "icon": "trending-up"
+    },
+    {
+      "title": "Medical-Grade Quality",
+      "description": "HIPAA-compliant AI for Augusta healthcare businesses.",
+      "icon": "shield"
+    },
+    {
+      "title": "24/7 Augusta Coverage",
+      "description": "Answer every call across Augusta metro.",
+      "icon": "clock"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Augusta Assessment",
+      "description": "Analyze call volume and market needs."
+    },
+    {
+      "step": 2,
+      "title": "Custom Setup",
+      "description": "Configure AI for Augusta businesses."
+    },
+    {
+      "step": 3,
+      "title": "Launch",
+      "description": "Go live and scale with growth."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Augusta Medical",
+      "scenario": "Long hold times losing patients.",
+      "result": "AI handles scheduling, cut hold times 85%."
+    },
+    {
+      "business_type": "Evans Contractor",
+      "scenario": "Missing calls on job sites.",
+      "result": "AI answers every call, revenue up 52%."
+    },
+    {
+      "business_type": "Masters Hospitality",
+      "scenario": "Seasonal surge overwhelms staff.",
+      "result": "AI handled 3x normal call volume."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Augusta and CSRA",
+    "description": "Voice AI throughout Central Savannah River Area.",
+    "areas_list": [
+      "Augusta",
+      "Evans",
+      "Martinez",
+      "Grovetown",
+      "North Augusta"
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "During Masters week, Voice AI handled triple calls perfectly.",
+      "author": "Robert Williams",
+      "business": "Augusta Hospitality",
+      "location": "Augusta, GA"
+    },
+    {
+      "quote": "As medical practice, AI helps HIPAA compliance.",
+      "author": "Dr. Lisa Patterson",
+      "business": "Augusta Family Medicine",
+      "location": "Augusta, GA"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is Voice AI HIPAA compliant?",
+      "answer": "Yes, meets HIPAA requirements for Augusta healthcare."
+    },
+    {
+      "question": "Can it handle Masters Tournament surges?",
+      "answer": "Yes\\! AI scales instantly for any call volume."
+    },
+    {
+      "question": "Cost for Augusta businesses?",
+      "answer": "Starting at 999/month."
+    },
+    {
+      "question": "How quickly launch?",
+      "answer": "7-10 days from consultation to live."
+    },
+    {
+      "question": "Does it integrate with medical systems?",
+      "answer": "Yes, integrates with most EMR systems."
+    }
+  ],
+  "images": {
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1758876018950-173d111e1d6c?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Professional call",
+      "caption": "AI Voice for Augusta"
+    },
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1758876202167-f81c995c3fdc?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Technology workspace",
+        "caption": "Advanced AI for Augusta"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "AI chip",
+        "caption": "Cutting-edge automation"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Capture More Augusta Leads Today",
+    "subheadline": "Join Augusta businesses using AI.",
+    "cta_primary": {
+      "text": "Call: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "savannah-ga",
+      "athens-ga"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

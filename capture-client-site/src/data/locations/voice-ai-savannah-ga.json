@@ -1,0 +1,193 @@
+{
+  "page_id": "voice-ai-savannah-ga",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Savannah",
+    "state": "GA",
+    "state_full": "Georgia",
+    "slug": "savannah-ga",
+    "nearby_areas": [
+      "Pooler",
+      "Richmond Hill",
+      "Port Wentworth"
+    ],
+    "service_area_radius": "25 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Savannah, GA | Capture Client",
+    "meta_description": "Voice AI services for Savannah businesses. Automate calls, qualify leads 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Agency in Savannah, Georgia",
+    "keywords": [
+      "voice ai savannah",
+      "ai receptionist savannah ga"
+    ],
+    "canonical_url": "/voice-ai-savannah-ga"
+  },
+  "hero": {
+    "headline": "Capture Every Lead in Historic Savannah",
+    "subheadline": "AI Voice Agents for Savannah Businesses - Never Miss a Call Again",
+    "cta_primary": {
+      "text": "Get Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1626063240213-c629ae4ef34c?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Professional business call",
+      "credit": {
+        "photographer": "Free Walking Tour Salzburg",
+        "unsplash_url": "https://unsplash.com/photos/y12JuFVWUbA"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "Savannah businesses are embracing AI voice automation to stay competitive. From the Historic District to Pooler's growing business corridor, companies need 24/7 availability. Our Voice AI ensures Savannah businesses never miss calls from tourists, locals, or emergency service requests."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Savannah Availability",
+      "description": "Answer calls around the clock for Savannah customers and tourists.",
+      "icon": "clock"
+    },
+    {
+      "title": "Tourism-Ready AI",
+      "description": "Handle inquiries from tourists and locals with equal professionalism.",
+      "icon": "users"
+    },
+    {
+      "title": "Emergency Call Handling",
+      "description": "Capture urgent service requests instantly, day or night.",
+      "icon": "phone"
+    },
+    {
+      "title": "Bilingual Capability",
+      "description": "Serve Savannah's diverse community with multilingual support.",
+      "icon": "globe"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Strategy Session",
+      "description": "Discuss your Savannah business goals and customer needs."
+    },
+    {
+      "step": 2,
+      "title": "AI Configuration",
+      "description": "Customize AI for Savannah market and your specific services."
+    },
+    {
+      "step": 3,
+      "title": "Go Live",
+      "description": "Start capturing Savannah leads immediately with AI automation."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Savannah Tourism Services",
+      "scenario": "Tour company missing bookings from different time zones.",
+      "result": "AI answers 24/7, bookings increased 65% with international customers."
+    },
+    {
+      "business_type": "Savannah HVAC",
+      "scenario": "Emergency calls going to voicemail during humid Georgia summers.",
+      "result": "AI captures every emergency, revenue up $42,000 in peak season."
+    },
+    {
+      "business_type": "Historic District Restaurant",
+      "scenario": "Phone always ringing during dinner rush, missing reservations.",
+      "result": "AI books reservations automatically, increased covers by 30%."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Savannah and Coastal Georgia",
+    "description": "Voice AI for Savannah metro and surrounding coastal communities.",
+    "areas_list": [
+      "Savannah",
+      "Pooler",
+      "Richmond Hill",
+      "Port Wentworth",
+      "Tybee Island",
+      "Garden City"
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "As a Savannah tour operator, calls come in at all hours from different time zones. Voice AI ensures we never miss a booking.",
+      "author": "David Martinez",
+      "business": "Historic Savannah Tours",
+      "location": "Savannah, GA"
+    },
+    {
+      "quote": "During Savannah summers, our AC business gets slammed. AI handles overflow perfectly while we're on job sites.",
+      "author": "Sarah Chen",
+      "business": "Coastal Comfort HVAC",
+      "location": "Pooler, GA"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does Voice AI work for Savannah tourism businesses?",
+      "answer": "Absolutely! AI handles bookings, questions about tours, and availability 24/7 - perfect for tourists in different time zones."
+    },
+    {
+      "question": "Can it handle Savannah's unique accent?",
+      "answer": "Yes, our AI is trained to understand and respond naturally to Southern accents and local terminology."
+    },
+    {
+      "question": "What's the cost for Savannah businesses?",
+      "answer": "Starting at $999/month with 50 calls. Most Savannah businesses see ROI within 30 days."
+    },
+    {
+      "question": "How fast can we launch in Savannah?",
+      "answer": "Typically 7-10 days from strategy call to going live."
+    },
+    {
+      "question": "Does it work during hurricanes?",
+      "answer": "Yes! AI operates in the cloud, so even during power outages, your calls are answered."
+    }
+  ],
+  "images": {
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1626063240213-c629ae4ef34c?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Business professional",
+      "caption": "AI Voice for Savannah"
+    },
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1694903089438-bf28d4697d9a?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "AI technology hands",
+        "caption": "Advanced automation for Savannah businesses"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1534723328310-e82dad3ee43f?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "AI robot technology",
+        "caption": "Smart AI solutions for coastal Georgia"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready for 24/7 Savannah Lead Capture?",
+    "subheadline": "Join Savannah businesses using Voice AI.",
+    "cta_primary": {
+      "text": "Call: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "augusta-ga",
+      "atlanta-ga"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

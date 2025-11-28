@@ -1,0 +1,181 @@
+{
+  "page_id": "voice-ai-charlotte-nc",
+  "page_type": "service-location",
+  "service": {
+    "name": "Voice AI",
+    "slug": "voice-ai",
+    "category": "automation"
+  },
+  "location": {
+    "city": "Charlotte",
+    "state": "NC",
+    "state_full": "North Carolina"
+  },
+  "seo": {
+    "title": "Voice AI Agency in Charlotte, NC | Capture Client",
+    "meta_description": "Leading Voice AI agency in Charlotte helping businesses automate calls, capture leads 24/7, and never miss opportunities. Get your free consultation today!",
+    "h1": "Voice AI Solutions for Charlotte Businesses",
+    "keywords": ["voice ai charlotte", "ai phone system charlotte nc", "automated answering charlotte", "ai receptionist charlotte"]
+  },
+  "hero": {
+    "headline": "Never Miss Another Lead in Charlotte",
+    "subheadline": "AI Voice Agents That Answer Every Call, Qualify Leads & Book Appointments 24/7",
+    "cta_primary": "Get Free Consultation",
+    "cta_secondary": "See How It Works"
+  },
+  "intro": {
+    "paragraph": "Charlotte businesses are growing fast, and so are customer expectations. In North Carolina's largest city, missing a single call can mean losing a customer to your competitor. Our Voice AI technology ensures your Charlotte business never misses an opportunity - answering every call professionally, qualifying leads instantly, and booking appointments automatically, even at 3 AM. Whether you're in South End, Ballantyne, or Uptown Charlotte, our AI voice agents work around the clock to capture more leads and grow your revenue."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Lead Capture for Charlotte",
+      "description": "Your Charlotte customers call at all hours. Our AI answers every single call professionally, capturing leads even when you're closed.",
+      "icon": "clock"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "AI asks the right questions to qualify leads before they reach you, so you only spend time on serious buyers ready to do business.",
+      "icon": "filter"
+    },
+    {
+      "title": "Automatic Appointment Booking",
+      "description": "Let AI schedule appointments directly into your calendar while you focus on serving Charlotte customers and growing your business.",
+      "icon": "calendar"
+    },
+    {
+      "title": "Save Thousands Monthly",
+      "description": "Eliminate expensive answering services and reduce staffing costs while improving response times and customer satisfaction.",
+      "icon": "dollar-sign"
+    },
+    {
+      "title": "Professional Every Time",
+      "description": "Consistent, friendly, professional call handling that represents your Charlotte brand perfectly on every interaction.",
+      "icon": "award"
+    }
+  ],
+  "how_it_works": {
+    "headline": "How Voice AI Works for Your Charlotte Business",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Free Strategy Call",
+        "description": "We discuss your Charlotte business needs, call volume, and how AI can help you capture more leads and save time."
+      },
+      {
+        "step": 2,
+        "title": "Custom AI Training",
+        "description": "We build your AI agent with your business knowledge, FAQs, pricing, and Charlotte-specific information."
+      },
+      {
+        "step": 3,
+        "title": "Launch & Test",
+        "description": "Go live with your AI voice agent and watch it handle calls professionally while you monitor performance in real-time."
+      },
+      {
+        "step": 4,
+        "title": "Optimize & Scale",
+        "description": "We continuously improve your AI based on real call data to maximize lead capture and customer satisfaction."
+      }
+    ]
+  },
+  "use_cases": [
+    {
+      "industry": "Home Services",
+      "description": "HVAC, plumbing, and electrical companies in Charlotte use our AI to schedule service calls, provide quotes, and handle emergency requests 24/7."
+    },
+    {
+      "industry": "Medical Practices",
+      "description": "Charlotte healthcare providers use Voice AI to schedule appointments, answer common questions, and reduce front desk workload."
+    },
+    {
+      "industry": "Real Estate",
+      "description": "Charlotte realtors never miss a buyer inquiry with AI handling property questions, scheduling showings, and qualifying leads instantly."
+    },
+    {
+      "industry": "Law Firms",
+      "description": "Legal practices in Charlotte use AI to screen potential clients, schedule consultations, and provide initial case information."
+    },
+    {
+      "industry": "Contractors",
+      "description": "Construction and renovation companies capture every project inquiry and schedule estimates automatically, even during business hours when teams are on job sites."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Charlotte businesses?",
+      "answer": "Our AI voice agents answer your business phone calls just like a trained receptionist. They can answer questions about your services, qualify leads by asking specific questions, book appointments directly into your calendar, and route urgent calls to you. The AI works 24/7, so you never miss a call from Charlotte customers, even outside business hours."
+    },
+    {
+      "question": "What types of Charlotte businesses benefit most from Voice AI?",
+      "answer": "Service businesses in Charlotte see the biggest impact: contractors, HVAC companies, plumbers, electricians, medical practices, law firms, real estate agents, and home service providers. Any Charlotte business that gets phone leads and can't afford to miss calls will benefit significantly from Voice AI technology."
+    },
+    {
+      "question": "How much does Voice AI cost for my Charlotte business?",
+      "answer": "Our Voice AI packages start at $997/month, which includes setup, custom training, unlimited calls, and ongoing optimization. Most Charlotte businesses see positive ROI within 30 days as they capture leads they were previously missing and save on staffing costs."
+    },
+    {
+      "question": "Can the AI handle Charlotte-specific questions?",
+      "answer": "Absolutely! We train your AI with your specific business information, including service areas in Charlotte (South End, Myers Park, Ballantyne, University area, etc.), pricing, availability, and common questions your Charlotte customers ask. The AI represents your business accurately."
+    },
+    {
+      "question": "How quickly can we get Voice AI set up?",
+      "answer": "Most Charlotte businesses are live with Voice AI within 5-7 business days. This includes strategy consultation, AI training with your business information, testing, and launch. We handle all the technical setup - you just need to provide your business details."
+    },
+    {
+      "question": "What happens to calls the AI can't handle?",
+      "answer": "If the AI encounters a question it can't answer or the caller requests to speak with a person, the call is immediately transferred to you or your team. You maintain full control and can monitor all calls in real-time through our dashboard."
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Michael Rodriguez",
+      "business": "Rodriguez HVAC Services",
+      "location": "Charlotte, NC",
+      "quote": "Since implementing Voice AI, we've captured 40% more leads in Charlotte. The AI answers calls when we're on job sites, and customers love getting immediate responses. Best investment we've made.",
+      "rating": 5
+    },
+    {
+      "name": "Jennifer Williams",
+      "business": "Williams Law Group",
+      "location": "Charlotte, NC",
+      "quote": "Our Charlotte practice was missing too many potential clients after hours. Now our AI handles initial consultations 24/7. We've seen a 60% increase in qualified leads.",
+      "rating": 5
+    }
+  ],
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1763568258557-515962e11f38?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "AI technology helping Charlotte businesses capture leads",
+      "caption": "Advanced Voice AI technology for Charlotte businesses",
+      "credit": {
+        "photographer": "Daniil Komov",
+        "unsplashUrl": "https://unsplash.com/photos/lP8rWtbFFxU"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1600275669177-176b3c586d22?ixlib=rb-4.0.3&w=1200&q=80",
+      "alt": "Business professional using phone technology in Charlotte",
+      "caption": "Professional call handling for Charlotte businesses",
+      "credit": {
+        "photographer": "Daria Pimkina",
+        "unsplashUrl": "https://unsplash.com/photos/SnfgiYqQKhI"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1712159018726-4564d92f3ec2?ixlib=rb-4.0.3&w=1200&q=80",
+      "alt": "Customer service representative using headset and technology",
+      "caption": "24/7 professional call answering for Charlotte businesses",
+      "credit": {
+        "photographer": "Vagaro",
+        "unsplashUrl": "https://unsplash.com/photos/5skDrjF5EMw"
+      }
+    }
+  ],
+  "cta": {
+    "headline": "Ready to Never Miss Another Charlotte Lead?",
+    "subheadline": "Join Charlotte businesses already using Voice AI to capture more leads and grow revenue",
+    "button_text": "Get Free Consultation",
+    "phone": "865-346-3339",
+    "email": "team@captureclient.net"
+  }
+}

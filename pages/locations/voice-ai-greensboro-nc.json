@@ -1,0 +1,172 @@
+{
+  "page_id": "voice-ai-greensboro-nc",
+  "page_type": "service-location",
+  "service": {
+    "name": "Voice AI",
+    "slug": "voice-ai",
+    "category": "automation"
+  },
+  "location": {
+    "city": "Greensboro",
+    "state": "NC",
+    "state_full": "North Carolina"
+  },
+  "seo": {
+    "title": "Voice AI Agency in Greensboro, NC | Capture Client",
+    "meta_description": "Greensboro businesses trust our Voice AI to answer calls 24/7, qualify leads automatically, and book appointments. Never miss another opportunity!",
+    "h1": "Voice AI Solutions for Greensboro, North Carolina",
+    "keywords": ["voice ai greensboro", "ai answering service greensboro nc", "automated phone system greensboro", "ai receptionist greensboro"]
+  },
+  "hero": {
+    "headline": "Greensboro's Leading Voice AI Solution",
+    "subheadline": "Capture Every Lead with AI That Answers Calls, Qualifies Prospects & Books Appointments Automatically",
+    "cta_primary": "Get Started Today",
+    "cta_secondary": "Learn More"
+  },
+  "intro": {
+    "paragraph": "Greensboro businesses know that every call counts. In North Carolina's third-largest city, competition is fierce and customer service expectations are high. Our Voice AI technology helps Greensboro companies from downtown to Friendly Avenue capture every opportunity with intelligent phone automation. Whether you're in manufacturing, healthcare, professional services, or retail, our AI voice agents ensure no lead slips through the cracks - answering professionally, qualifying intelligently, and scheduling automatically around the clock."
+  },
+  "benefits": [
+    {
+      "title": "Round-the-Clock Availability",
+      "description": "Your Greensboro business is always open to new opportunities. AI answers calls 24/7, including nights, weekends, and holidays.",
+      "icon": "clock"
+    },
+    {
+      "title": "Smart Lead Qualification",
+      "description": "AI asks targeted questions to determine lead quality and intent, so you focus your time on prospects ready to buy.",
+      "icon": "brain"
+    },
+    {
+      "title": "Automated Scheduling",
+      "description": "No more phone tag. AI books appointments, consultations, and estimates directly into your calendar automatically.",
+      "icon": "calendar"
+    },
+    {
+      "title": "Lower Operating Costs",
+      "description": "Reduce overhead by eliminating expensive answering services and minimizing receptionist needs while improving service quality.",
+      "icon": "trending-down"
+    },
+    {
+      "title": "Consistent Professionalism",
+      "description": "Every caller gets the same high-quality, professional experience representing your Greensboro brand perfectly.",
+      "icon": "star"
+    }
+  ],
+  "how_it_works": {
+    "headline": "Simple Process to AI-Powered Growth",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Initial Consultation",
+        "description": "We analyze your Greensboro business needs, call patterns, and goals to design your custom Voice AI solution."
+      },
+      {
+        "step": 2,
+        "title": "AI Training & Setup",
+        "description": "We program your AI with your business details, services, pricing, and Greensboro market knowledge for accurate interactions."
+      },
+      {
+        "step": 3,
+        "title": "Testing & Go-Live",
+        "description": "Thorough testing ensures your AI handles calls perfectly before launch. Then you're live and capturing more leads immediately."
+      },
+      {
+        "step": 4,
+        "title": "Continuous Improvement",
+        "description": "We monitor performance, analyze call data, and continuously optimize your AI to improve results and ROI."
+      }
+    ]
+  },
+  "use_cases": [
+    {
+      "industry": "Manufacturing",
+      "description": "Greensboro manufacturing companies use Voice AI to handle supplier inquiries, schedule facility tours, and capture new business leads efficiently."
+    },
+    {
+      "industry": "Healthcare",
+      "description": "Medical offices throughout Greensboro automate appointment scheduling, answer patient FAQs, and reduce front desk administrative burden."
+    },
+    {
+      "industry": "Legal Services",
+      "description": "Law firms in Greensboro screen potential clients, schedule consultations, and provide initial case information with Voice AI."
+    },
+    {
+      "industry": "Home Services",
+      "description": "HVAC, plumbing, electrical, and contractor businesses capture every service request and schedule estimates automatically."
+    },
+    {
+      "industry": "Financial Services",
+      "description": "Greensboro financial advisors and insurance agents use AI to qualify prospects, schedule meetings, and provide service information 24/7."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI benefit Greensboro businesses specifically?",
+      "answer": "Greensboro has a diverse economy with manufacturing, healthcare, and service businesses. Voice AI helps all these sectors by ensuring every customer call is answered professionally, leads are captured even after hours, and your team can focus on core business activities instead of answering phones. For Greensboro's competitive market, this responsiveness gives you an edge."
+    },
+    {
+      "question": "Can Voice AI handle calls in multiple languages?",
+      "answer": "Yes! Greensboro's growing diversity means many businesses need multilingual support. Our Voice AI can be configured to understand and respond in multiple languages, ensuring you serve all Greensboro customers effectively."
+    },
+    {
+      "question": "What happens during high call volume periods?",
+      "answer": "Unlike human receptionists who can only handle one call at a time, Voice AI can handle unlimited simultaneous calls. During busy periods, every Greensboro caller gets immediate attention without hold times or voicemail."
+    },
+    {
+      "question": "How quickly can my Greensboro business implement Voice AI?",
+      "answer": "Most Greensboro businesses are fully operational with Voice AI within one week. This includes consultation, AI training with your business information, testing, and launch. We handle the technical complexity so you can focus on your business."
+    },
+    {
+      "question": "What's included in the monthly Voice AI service?",
+      "answer": "Our packages include custom AI training, unlimited call handling, appointment scheduling integration, call recording and transcripts, analytics dashboard, ongoing optimization, and technical support. Everything you need to capture more Greensboro leads."
+    },
+    {
+      "question": "Can I customize what the AI says to callers?",
+      "answer": "Absolutely! We work with you to script responses that match your brand voice and Greensboro market positioning. You can review and adjust the AI's responses anytime to ensure perfect alignment with your business."
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Robert Mitchell",
+      "business": "Mitchell & Associates Law Firm",
+      "location": "Greensboro, NC",
+      "quote": "Voice AI has transformed our Greensboro practice. We now capture leads 24/7 and the AI does an excellent job screening potential clients. Our intake process is 10x more efficient and we're closing more cases.",
+      "rating": 5
+    },
+    {
+      "name": "Sandra Martinez",
+      "business": "Greensboro Heating & Air",
+      "location": "Greensboro, NC",
+      "quote": "During peak season, we were missing calls constantly. Voice AI changed everything - it handles all our calls, schedules service appointments, and even handles emergency requests. Our customers love the immediate response and we've grown revenue by 35%.",
+      "rating": 5
+    }
+  ],
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1738003667850-a2fb736e31b3?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Modern AI technology interface for business automation",
+      "caption": "Advanced Voice AI technology for Greensboro businesses",
+      "credit": {
+        "photographer": "Shubham Dhage",
+        "unsplashUrl": "https://unsplash.com/photos/fwbUN8IYvQY"
+      }
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1590649778473-d017b9013d2a?ixlib=rb-4.0.3&w=1200&q=80",
+      "alt": "Professional business woman on phone call",
+      "caption": "Professional call handling for Greensboro companies",
+      "credit": {
+        "photographer": "LinkedIn Sales Solutions",
+        "unsplashUrl": "https://unsplash.com/photos/pMqsNUZlzCY"
+      }
+    }
+  ],
+  "cta": {
+    "headline": "Start Capturing More Greensboro Leads Today",
+    "subheadline": "Join successful Greensboro businesses using Voice AI to grow revenue and save time",
+    "button_text": "Get Free Consultation",
+    "phone": "865-346-3339",
+    "email": "team@captureclient.net"
+  }
+}

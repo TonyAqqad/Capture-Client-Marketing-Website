@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-marietta-ga",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Marietta",
+    "state": "GA",
+    "state_full": "Georgia",
+    "slug": "marietta-ga",
+    "nearby_areas": [
+      "Smyrna",
+      "Kennesaw",
+      "Powder Springs",
+      "Atlanta"
+    ],
+    "service_area_radius": "20 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Marietta, GA | Capture Client",
+    "meta_description": "Voice AI for Marietta businesses. Automate calls 24/7. Call 865-346-3339\\!",
+    "h1_heading": "Voice AI Agency in Marietta, Georgia",
+    "keywords": [
+      "voice ai marietta ga",
+      "ai receptionist marietta"
+    ],
+    "canonical_url": "/voice-ai-marietta-ga"
+  },
+  "hero": {
+    "headline": "Marietta AI Voice Solution",
+    "subheadline": "Capture Every Lead in Marietta with 24/7 AI Automation",
+    "cta_primary": {
+      "text": "Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1633431299600-270e216d365d?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Business professional on call",
+      "credit": {
+        "photographer": "Zest Tea",
+        "unsplash_url": "https://unsplash.com/photos/HrYyJUsKpTo"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "Marietta businesses are embracing AI voice technology to compete in Cobb County. From the Marietta Square to nearby Kennesaw, companies need responsive service. Our Voice AI ensures Marietta businesses never miss calls from customers in this growing Atlanta suburb."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Marietta Availability",
+      "description": "Answer calls around the clock for Marietta customers.",
+      "icon": "clock"
+    },
+    {
+      "title": "Cobb County Coverage",
+      "description": "Serve customers across Marietta and Cobb County.",
+      "icon": "map-pin"
+    },
+    {
+      "title": "Small Business Focused",
+      "description": "Perfect for Marietta SMBs without full-time staff.",
+      "icon": "briefcase"
+    },
+    {
+      "title": "Smart Lead Routing",
+      "description": "AI routes leads based on your availability and priorities.",
+      "icon": "phone-forwarded"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Marietta Consultation",
+      "description": "Discuss your Marietta business needs and goals."
+    },
+    {
+      "step": 2,
+      "title": "Local AI Training",
+      "description": "Train AI on Marietta market and your services."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Grow",
+      "description": "Go live and capture more Marietta leads."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Marietta Square Restaurant",
+      "scenario": "Phone rings constantly during lunch, missing reservations.",
+      "result": "AI handles all reservations, increased covers by 35%."
+    },
+    {
+      "business_type": "Kennesaw Contractor",
+      "scenario": "Missing calls while meeting with Marietta clients.",
+      "result": "AI captures every inquiry, estimates up 60%."
+    },
+    {
+      "business_type": "Marietta Dental Practice",
+      "scenario": "Long hold times frustrating patients.",
+      "result": "AI handles scheduling instantly, patient satisfaction soared."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Marietta and Cobb County",
+    "description": "Voice AI for Marietta metro area.",
+    "areas_list": [
+      "Marietta",
+      "Smyrna",
+      "Kennesaw",
+      "Powder Springs",
+      "Acworth",
+      "Austell"
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "Our Marietta restaurant was drowning in calls. AI answers every one perfectly.",
+      "author": "Tom Anderson",
+      "business": "Square Side Cafe",
+      "location": "Marietta, GA"
+    },
+    {
+      "quote": "As a Marietta contractor, I can focus on jobs while AI handles phones.",
+      "author": "James Mitchell",
+      "business": "Mitchell Home Services",
+      "location": "Marietta, GA"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Does Voice AI work for small Marietta businesses?",
+      "answer": "Yes\\! Perfect for SMBs that cannot afford full-time receptionist."
+    },
+    {
+      "question": "Can it serve customers across Cobb County?",
+      "answer": "Absolutely\\! AI works for Marietta and all surrounding areas."
+    },
+    {
+      "question": "What is the cost?",
+      "answer": "Starting at 99/month with 50 calls included."
+    },
+    {
+      "question": "How quickly can we start?",
+      "answer": "Most Marietta businesses live within 7-10 days."
+    },
+    {
+      "question": "Does it integrate with my calendar?",
+      "answer": "Yes, integrates with Google Calendar, Outlook, and most scheduling tools."
+    }
+  ],
+  "images": {
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1633431299600-270e216d365d?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Professional call",
+      "caption": "AI Voice for Marietta"
+    },
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1600275669177-176b3c586d22?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Business professional",
+        "caption": "AI automation for Marietta businesses"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1661983228411-177afaa8f01c?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Professional communication",
+        "caption": "Never miss Marietta leads"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Marietta Leads?",
+    "subheadline": "Join Marietta businesses using Voice AI.",
+    "cta_primary": {
+      "text": "Call: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "atlanta-ga",
+      "alpharetta-ga",
+      "roswell-ga"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

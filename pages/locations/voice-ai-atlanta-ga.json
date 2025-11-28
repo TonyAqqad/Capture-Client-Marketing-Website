@@ -1,0 +1,199 @@
+{
+  "page_id": "voice-ai-atlanta-ga",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Atlanta",
+    "state": "GA",
+    "state_full": "Georgia",
+    "slug": "atlanta-ga",
+    "nearby_areas": [
+      "Sandy Springs",
+      "Roswell",
+      "Alpharetta",
+      "Marietta",
+      "Decatur"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Atlanta, GA | Capture Client",
+    "meta_description": "Looking for Voice AI in Atlanta? Capture Client helps Georgia businesses automate calls and qualify leads 24/7. Call 865-346-3339\\!",
+    "h1_heading": "Voice AI Agency in Atlanta, Georgia",
+    "keywords": [
+      "voice ai atlanta",
+      "ai voice agents atlanta ga",
+      "ai receptionist atlanta"
+    ],
+    "canonical_url": "/voice-ai-atlanta-ga"
+  },
+  "hero": {
+    "headline": "Never Miss Another Lead in Atlanta",
+    "subheadline": "AI Voice Agents That Answer Calls, Qualify Leads & Book Appointments 24/7",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1758599543129-bec77e427ac6?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Professional on phone call",
+      "credit": {
+        "photographer": "Vitaly Gariev",
+        "unsplash_url": "https://unsplash.com/photos/LU-hFAv_iOQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "Atlanta businesses are discovering AI voice automation. In Georgia's business capital, missing calls means losing to competitors. Whether you're in Buckhead, Sandy Springs, or Midtown, our Voice AI ensures you never miss an opportunity. Atlanta's competitive market demands 24/7 availability."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Atlanta Lead Capture",
+      "description": "Our AI answers every call instantly, day or night, capturing leads even when closed.",
+      "icon": "clock"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "AI asks qualifying questions so you only talk to serious Atlanta customers.",
+      "icon": "filter"
+    },
+    {
+      "title": "Automatic Appointment Booking",
+      "description": "AI schedules appointments directly into your calendar automatically.",
+      "icon": "calendar"
+    },
+    {
+      "title": "Scale Without Hiring",
+      "description": "Handle 1,000 calls per day without additional staff.",
+      "icon": "trending-up"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "Discuss your Atlanta business needs and how Voice AI helps."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI agent with your business knowledge."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch lead capture improve immediately."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "HVAC in Atlanta",
+      "scenario": "Missing 60% of after-hours emergency calls.",
+      "result": "AI captures every call, increased revenue by \\8,000."
+    },
+    {
+      "business_type": "Atlanta Law Firm",
+      "scenario": "Calls went to voicemail during consultations.",
+      "result": "AI pre-qualifies 24/7, signed 23 additional cases in 6 months."
+    },
+    {
+      "business_type": "Atlanta Plumbing",
+      "scenario": "Missing calls daily during job sites.",
+      "result": "AI answered 100%, grew revenue by 45% without staff."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Atlanta and Surrounding Georgia Communities",
+    "description": "Voice AI services throughout Atlanta metro area.",
+    "areas_list": [
+      "Atlanta",
+      "Sandy Springs",
+      "Roswell",
+      "Alpharetta",
+      "Marietta",
+      "Decatur",
+      "Duluth",
+      "Johns Creek"
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "We were missing 20 calls a week. Since Voice AI, booking rate up 40%.",
+      "author": "Marcus Thompson",
+      "business": "Thompson HVAC",
+      "location": "Atlanta, GA"
+    },
+    {
+      "quote": "Like having a \u0000k receptionist for a fraction of the cost.",
+      "author": "Jennifer Park",
+      "business": "Park Law",
+      "location": "Atlanta, GA"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Atlanta businesses?",
+      "answer": "AI answers calls 24/7, qualifies leads, books appointments automatically."
+    },
+    {
+      "question": "What Atlanta businesses benefit?",
+      "answer": "HVAC, plumbers, law firms, medical practices, contractors, and home services."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Packages start at \\99/month with 50 calls. Growth package \\,195/mo with 200 calls."
+    },
+    {
+      "question": "Can AI handle diverse customers?",
+      "answer": "Yes, AI understands various accents, perfect for Atlanta's diverse population."
+    },
+    {
+      "question": "How fast is setup?",
+      "answer": "Most Atlanta businesses live within 7-10 days."
+    }
+  ],
+  "images": {
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1758599543129-bec77e427ac6?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Business call Atlanta",
+      "caption": "24/7 AI Voice for Atlanta"
+    },
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1674027444485-cec3da58eef4?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "AI technology network",
+        "caption": "AI powering Atlanta communications"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1590649778473-d017b9013d2a?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Professional using technology",
+        "caption": "Never miss Atlanta customers"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Leads in Atlanta?",
+    "subheadline": "Join Atlanta businesses using Voice AI.",
+    "cta_primary": {
+      "text": "Call: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "sandy-springs-ga",
+      "roswell-ga",
+      "alpharetta-ga"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

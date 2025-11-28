@@ -1,0 +1,534 @@
+{
+  "page_id": "pricing",
+  "page_type": "pricing-comparison",
+  "seo": {
+    "title": "Pricing & Packages | AI Voice Agent + Lead Generation | Capture Client",
+    "meta_description": "Transparent pricing for Voice AI and lead generation services. Packages from $999-$2,195/month. No setup fees. Cancel anytime. Compare features and find the right fit for your business.",
+    "keywords": ["ai voice agent pricing", "lead generation packages", "ai phone system cost", "voice ai pricing"]
+  },
+  "hero": {
+    "headline": "Simple, Transparent Pricing",
+    "subheadline": "Choose the package that fits your business. No hidden fees. No long-term contracts.",
+    "intro": "Every package includes AI voice agents that answer calls 24/7, qualify leads automatically, and integrate with your CRM. Start with what you need and scale as you grow."
+  },
+  "packages": [
+    {
+      "id": "starter",
+      "name": "Starter",
+      "slug": "starter-package",
+      "price": "$999",
+      "period": "per month",
+      "tagline": "Perfect for small businesses getting started",
+      "popular": false,
+      "ideal_for": "1-10 employees, 50-100 calls/month",
+      "cta": {
+        "text": "Get Started",
+        "action": "/contact?package=starter"
+      },
+      "features": [
+        {
+          "name": "AI Voice Agents",
+          "value": "1 agent",
+          "included": true
+        },
+        {
+          "name": "Monthly Calls",
+          "value": "50 calls",
+          "included": true
+        },
+        {
+          "name": "Lead Qualification",
+          "value": "Basic",
+          "included": true
+        },
+        {
+          "name": "CRM Integration",
+          "value": "1 integration",
+          "included": true
+        },
+        {
+          "name": "Email Notifications",
+          "value": "Instant alerts",
+          "included": true
+        },
+        {
+          "name": "Advertising Management",
+          "value": "Not included",
+          "included": false
+        },
+        {
+          "name": "Landing Pages",
+          "value": "Not included",
+          "included": false
+        },
+        {
+          "name": "Reports",
+          "value": "Monthly",
+          "included": true
+        },
+        {
+          "name": "Support",
+          "value": "Email (24hr)",
+          "included": true
+        },
+        {
+          "name": "Account Manager",
+          "value": "Not included",
+          "included": false
+        }
+      ]
+    },
+    {
+      "id": "growth",
+      "name": "Growth",
+      "slug": "growth-package",
+      "price": "$2,195",
+      "period": "per month",
+      "tagline": "For businesses ready to scale with ads",
+      "popular": true,
+      "badge": "MOST POPULAR",
+      "ideal_for": "10-50 employees, 200+ calls/month",
+      "cta": {
+        "text": "Start Growing",
+        "action": "/contact?package=growth"
+      },
+      "features": [
+        {
+          "name": "AI Voice Agents",
+          "value": "2 agents",
+          "included": true
+        },
+        {
+          "name": "Monthly Calls",
+          "value": "200 calls",
+          "included": true
+        },
+        {
+          "name": "Lead Qualification",
+          "value": "Advanced",
+          "included": true
+        },
+        {
+          "name": "CRM Integration",
+          "value": "Unlimited",
+          "included": true
+        },
+        {
+          "name": "Email Notifications",
+          "value": "Instant alerts",
+          "included": true
+        },
+        {
+          "name": "Advertising Management",
+          "value": "Google OR Facebook",
+          "included": true,
+          "highlight": true
+        },
+        {
+          "name": "Ad Spend Managed",
+          "value": "$1K-$3K/month",
+          "included": true,
+          "highlight": true
+        },
+        {
+          "name": "Landing Pages",
+          "value": "Optimization",
+          "included": true
+        },
+        {
+          "name": "Reports",
+          "value": "Weekly",
+          "included": true
+        },
+        {
+          "name": "Support",
+          "value": "Priority (4hr)",
+          "included": true
+        },
+        {
+          "name": "Account Manager",
+          "value": "Not included",
+          "included": false
+        }
+      ]
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "slug": "enterprise-package",
+      "price": "Custom",
+      "period": "pricing",
+      "tagline": "Complete done-for-you solution",
+      "popular": false,
+      "badge": "FULL-SERVICE",
+      "ideal_for": "50+ employees, 500+ calls/month",
+      "cta": {
+        "text": "Contact Sales",
+        "action": "/contact?package=enterprise"
+      },
+      "features": [
+        {
+          "name": "AI Voice Agents",
+          "value": "Unlimited",
+          "included": true,
+          "highlight": true
+        },
+        {
+          "name": "Monthly Calls",
+          "value": "Unlimited",
+          "included": true,
+          "highlight": true
+        },
+        {
+          "name": "Lead Qualification",
+          "value": "Advanced + Routing",
+          "included": true
+        },
+        {
+          "name": "CRM Integration",
+          "value": "Unlimited + API",
+          "included": true
+        },
+        {
+          "name": "Email Notifications",
+          "value": "Real-time alerts",
+          "included": true
+        },
+        {
+          "name": "Advertising Management",
+          "value": "Google + Facebook + LinkedIn",
+          "included": true,
+          "highlight": true
+        },
+        {
+          "name": "Ad Spend Managed",
+          "value": "$3K+ per month",
+          "included": true
+        },
+        {
+          "name": "Landing Pages",
+          "value": "Custom built",
+          "included": true,
+          "highlight": true
+        },
+        {
+          "name": "Reports",
+          "value": "Real-time dashboard",
+          "included": true
+        },
+        {
+          "name": "Support",
+          "value": "24/7 Priority",
+          "included": true
+        },
+        {
+          "name": "Account Manager",
+          "value": "Dedicated",
+          "included": true,
+          "highlight": true
+        }
+      ]
+    }
+  ],
+  "comparison_table": {
+    "headline": "Compare All Features",
+    "description": "See exactly what's included in each package",
+    "categories": [
+      {
+        "name": "AI Voice System",
+        "features": [
+          {
+            "name": "AI Voice Agents",
+            "starter": "1 agent",
+            "growth": "2 agents",
+            "enterprise": "Unlimited"
+          },
+          {
+            "name": "Monthly Call Volume",
+            "starter": "50 calls",
+            "growth": "200 calls",
+            "enterprise": "Unlimited"
+          },
+          {
+            "name": "Lead Qualification",
+            "starter": "Basic",
+            "growth": "Advanced",
+            "enterprise": "Advanced + Routing"
+          },
+          {
+            "name": "Call Recording & Transcripts",
+            "starter": "✓",
+            "growth": "✓",
+            "enterprise": "✓"
+          },
+          {
+            "name": "Voice Customization",
+            "starter": "Standard",
+            "growth": "Standard",
+            "enterprise": "Custom"
+          }
+        ]
+      },
+      {
+        "name": "Advertising & Marketing",
+        "features": [
+          {
+            "name": "Google Ads Management",
+            "starter": "—",
+            "growth": "OR Facebook",
+            "enterprise": "✓"
+          },
+          {
+            "name": "Facebook/Instagram Ads",
+            "starter": "—",
+            "growth": "OR Google",
+            "enterprise": "✓"
+          },
+          {
+            "name": "LinkedIn Ads",
+            "starter": "—",
+            "growth": "—",
+            "enterprise": "✓"
+          },
+          {
+            "name": "Ad Spend Managed",
+            "starter": "—",
+            "growth": "$1K-$3K/mo",
+            "enterprise": "$3K+/mo"
+          },
+          {
+            "name": "Landing Pages",
+            "starter": "—",
+            "growth": "Optimization",
+            "enterprise": "Custom Built"
+          },
+          {
+            "name": "A/B Testing",
+            "starter": "—",
+            "growth": "✓",
+            "enterprise": "✓"
+          }
+        ]
+      },
+      {
+        "name": "Integrations & Tools",
+        "features": [
+          {
+            "name": "CRM Integrations",
+            "starter": "1 integration",
+            "growth": "Unlimited",
+            "enterprise": "Unlimited + API"
+          },
+          {
+            "name": "Email Notifications",
+            "starter": "✓",
+            "growth": "✓",
+            "enterprise": "✓"
+          },
+          {
+            "name": "SMS Notifications",
+            "starter": "—",
+            "growth": "✓",
+            "enterprise": "✓"
+          },
+          {
+            "name": "Zapier Integration",
+            "starter": "—",
+            "growth": "✓",
+            "enterprise": "✓"
+          },
+          {
+            "name": "API Access",
+            "starter": "—",
+            "growth": "—",
+            "enterprise": "Full Access"
+          }
+        ]
+      },
+      {
+        "name": "Reporting & Support",
+        "features": [
+          {
+            "name": "Performance Reports",
+            "starter": "Monthly",
+            "growth": "Weekly",
+            "enterprise": "Real-time"
+          },
+          {
+            "name": "Analytics Dashboard",
+            "starter": "Basic",
+            "growth": "Advanced",
+            "enterprise": "Custom"
+          },
+          {
+            "name": "Support Hours",
+            "starter": "Business hours",
+            "growth": "Extended hours",
+            "enterprise": "24/7"
+          },
+          {
+            "name": "Response Time",
+            "starter": "24 hours",
+            "growth": "4 hours",
+            "enterprise": "Same day"
+          },
+          {
+            "name": "Account Manager",
+            "starter": "—",
+            "growth": "—",
+            "enterprise": "Dedicated"
+          },
+          {
+            "name": "Strategy Calls",
+            "starter": "—",
+            "growth": "Quarterly",
+            "enterprise": "Bi-weekly"
+          }
+        ]
+      }
+    ]
+  },
+  "guarantees": [
+    {
+      "icon": "calendar",
+      "title": "No Long-Term Contracts",
+      "description": "Month-to-month billing on all packages. Cancel anytime with 30 days notice. We earn your business every month."
+    },
+    {
+      "icon": "shield",
+      "title": "Money Back Guarantee",
+      "description": "Starter: 30 days. Growth: 60 days. Enterprise: 90 days. Not satisfied? Get a full refund, no questions asked."
+    },
+    {
+      "icon": "dollar",
+      "title": "Transparent Pricing",
+      "description": "No hidden fees. No surprise charges. What you see is what you pay. Ad spend is billed separately by Google/Facebook."
+    },
+    {
+      "icon": "tools",
+      "title": "Setup Included",
+      "description": "All packages include complete setup and training at no extra cost. We do the heavy lifting so you can focus on leads."
+    }
+  ],
+  "faq": [
+    {
+      "question": "What's the difference between the packages?",
+      "answer": "Starter is for small businesses just getting started with AI (1 agent, 50 calls/month, no ads). Growth adds advertising management and more capacity (2 agents, 200 calls/month, Google OR Facebook Ads). Enterprise is unlimited everything with white-glove service (unlimited agents/calls, both ad platforms, dedicated manager)."
+    },
+    {
+      "question": "Is the ad spend included in the price?",
+      "answer": "No. The package price covers our management, setup, and AI system. Your actual ad spend ($1K-$3K for Growth, $3K+ for Enterprise) is billed directly to you from Google/Facebook. This gives you full transparency and control over your advertising budget."
+    },
+    {
+      "question": "Can I upgrade or downgrade later?",
+      "answer": "Absolutely! You can change packages anytime. Upgrades take effect immediately. Downgrades take effect at your next billing cycle. Most clients start with Starter or Growth and upgrade as they see results."
+    },
+    {
+      "question": "What happens if I exceed my call limit?",
+      "answer": "We'll notify you when you're approaching your limit. You can either upgrade to the next package or purchase additional call bundles. Overage rates: Starter $2/call, Growth $1.50/call."
+    },
+    {
+      "question": "How long does setup take?",
+      "answer": "Starter: 3-5 business days. Growth: 7-10 business days (includes ad setup). Enterprise: 14-21 business days (custom build). We handle everything - you just need to provide business info and approve before going live."
+    },
+    {
+      "question": "Do you require a contract?",
+      "answer": "No long-term contracts required. All packages are month-to-month. Enterprise clients often commit to 6-12 months for better pricing, but it's not required."
+    },
+    {
+      "question": "What CRMs do you integrate with?",
+      "answer": "We integrate with all major CRMs: GoHighLevel, HubSpot, Salesforce, Zoho, Pipedrive, and 100+ others. Growth and Enterprise packages include unlimited integrations."
+    },
+    {
+      "question": "Can I try it before committing?",
+      "answer": "We offer a money-back guarantee instead of a free trial (30-90 days depending on package). This lets you use the full system with real calls and leads, then get a refund if you're not satisfied."
+    },
+    {
+      "question": "What if I need something custom?",
+      "answer": "Contact us! We regularly create custom packages for businesses with unique needs. Enterprise package is highly customizable."
+    },
+    {
+      "question": "How do I switch between Google and Facebook Ads in the Growth Package?",
+      "answer": "You can switch platforms once per quarter with 30 days notice. Or upgrade to Enterprise to run both platforms simultaneously."
+    }
+  ],
+  "pricing_calculator": {
+    "headline": "Estimate Your ROI",
+    "description": "See how Capture Client can impact your bottom line",
+    "calculator_fields": [
+      {
+        "label": "Current monthly inbound calls",
+        "type": "number",
+        "default": 100
+      },
+      {
+        "label": "Current call answer rate",
+        "type": "percentage",
+        "default": 60
+      },
+      {
+        "label": "Average customer value",
+        "type": "currency",
+        "default": 2500
+      },
+      {
+        "label": "Lead to customer conversion rate",
+        "type": "percentage",
+        "default": 20
+      }
+    ],
+    "output": "With Capture Client answering 95% of calls (vs your current {answer_rate}%), you'd capture {additional_leads} more leads per month = {additional_revenue} in potential revenue."
+  },
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1633158829875-e5316a358c6f?fm=jpg&w=1200",
+      "alt": "Business growth concept with plant growing from coins",
+      "credit": "Towfiqu barbhuiya on Unsplash",
+      "placement": "hero"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?fm=jpg&w=1200",
+      "alt": "Business analytics and data on laptop screen",
+      "credit": "Carlos Muza on Unsplash",
+      "placement": "comparison_table"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1523287562758-66c7fc58967f?fm=jpg&w=1200",
+      "alt": "Professional businessman in modern office",
+      "credit": "Razvan Chisu on Unsplash",
+      "placement": "guarantees"
+    }
+  ],
+  "cta": {
+    "primary": {
+      "headline": "Ready to Capture More Leads?",
+      "subheadline": "Join 800+ businesses using Capture Client to never miss another call.",
+      "button_text": "Schedule Free Consultation",
+      "button_action": "/contact"
+    },
+    "secondary": {
+      "headline": "Not Sure Which Package is Right?",
+      "subheadline": "Schedule a free 15-minute consultation and we'll recommend the best fit for your business.",
+      "button_text": "Talk to an Expert",
+      "button_action": "/contact?type=consultation"
+    }
+  },
+  "trust_badges": [
+    {
+      "name": "800+ Active Clients",
+      "description": "Businesses trust us"
+    },
+    {
+      "name": "95% Answer Rate",
+      "description": "Calls captured by AI"
+    },
+    {
+      "name": "4.9/5 Stars",
+      "description": "Average client rating"
+    },
+    {
+      "name": "2.5M+ Calls",
+      "description": "Handled since 2023"
+    }
+  ]
+}

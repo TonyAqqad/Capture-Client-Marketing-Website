@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-sandy-springs-ga",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Sandy Springs",
+    "state": "GA",
+    "state_full": "Georgia",
+    "slug": "sandy-springs-ga",
+    "nearby_areas": [
+      "Dunwoody",
+      "Roswell",
+      "Brookhaven",
+      "Atlanta"
+    ],
+    "service_area_radius": "15 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Sandy Springs, GA | Capture Client",
+    "meta_description": "Voice AI for Sandy Springs businesses. Never miss a call. Call 865-346-3339\\!",
+    "h1_heading": "Voice AI Agency in Sandy Springs, Georgia",
+    "keywords": [
+      "voice ai sandy springs ga",
+      "ai receptionist sandy springs"
+    ],
+    "canonical_url": "/voice-ai-sandy-springs-ga"
+  },
+  "hero": {
+    "headline": "Sandy Springs AI Voice Automation",
+    "subheadline": "Premium AI Voice Solutions for Sandy Springs Businesses",
+    "cta_primary": {
+      "text": "Free Demo",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1676119451563-0c4a1a37e019?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Business executive on phone",
+      "credit": {
+        "photographer": "Remi Devaux",
+        "unsplash_url": "https://unsplash.com/photos/TdgCYy02i_I"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "Sandy Springs, one of Georgia most affluent cities, demands premium service. From Perimeter Center to Riverside, businesses need professional call handling 24/7. Our Voice AI delivers the white-glove service Sandy Springs clients expect while automating your operations."
+  },
+  "benefits": [
+    {
+      "title": "Premium Call Experience",
+      "description": "White-glove AI service matching Sandy Springs expectations.",
+      "icon": "award"
+    },
+    {
+      "title": "Professional Image",
+      "description": "Never let calls go to voicemail - maintain premium brand image.",
+      "icon": "star"
+    },
+    {
+      "title": "Perimeter Center Ready",
+      "description": "Handle high-volume professional services efficiently.",
+      "icon": "building"
+    },
+    {
+      "title": "Immediate Response",
+      "description": "Affluent Sandy Springs clients expect instant answers - AI delivers.",
+      "icon": "zap"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Premium Consultation",
+      "description": "Understand your Sandy Springs business brand and standards."
+    },
+    {
+      "step": 2,
+      "title": "White-Glove Training",
+      "description": "Train AI to represent your premium Sandy Springs brand."
+    },
+    {
+      "step": 3,
+      "title": "Flawless Execution",
+      "description": "Deliver perfect call handling for every Sandy Springs client."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Sandy Springs Wealth Management",
+      "scenario": "High-net-worth clients expect immediate professional response.",
+      "result": "AI provides instant white-glove service 24/7, client retention up 40%."
+    },
+    {
+      "business_type": "Perimeter Dental Practice",
+      "scenario": "Busy professionals need flexible scheduling outside business hours.",
+      "result": "AI books appointments 24/7, patient base grew 35% in 6 months."
+    },
+    {
+      "business_type": "Sandy Springs Real Estate",
+      "scenario": "Luxury buyers call at all hours viewing properties.",
+      "result": "AI qualifies leads and schedules showings instantly, sales up 50%."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Sandy Springs and North Atlanta",
+    "description": "Premium Voice AI for Sandy Springs metro.",
+    "areas_list": [
+      "Sandy Springs",
+      "Dunwoody",
+      "Brookhaven",
+      "Perimeter Center",
+      "Riverside",
+      "Buckhead"
+    ]
+  },
+  "testimonials": [
+    {
+      "quote": "Our Sandy Springs wealth management clients expect perfection. Voice AI delivers exactly that 24/7.",
+      "author": "Richard Wellington",
+      "business": "Wellington Financial Advisors",
+      "location": "Sandy Springs, GA"
+    },
+    {
+      "quote": "In Sandy Springs luxury real estate, speed matters. AI responds instantly to every buyer inquiry.",
+      "author": "Amanda Pierce",
+      "business": "Pierce Luxury Properties",
+      "location": "Sandy Springs, GA"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can AI match Sandy Springs premium service standards?",
+      "answer": "Yes\\! We train AI to deliver the white-glove experience Sandy Springs clients expect."
+    },
+    {
+      "question": "Does it work for professional services?",
+      "answer": "Absolutely\\! Perfect for law firms, wealth management, medical practices in Sandy Springs."
+    },
+    {
+      "question": "What is the investment?",
+      "answer": "Starting at 99/month. Premium Enterprise packages available for larger Sandy Springs operations."
+    },
+    {
+      "question": "Can AI handle sophisticated clients?",
+      "answer": "Yes\\! AI is trained to communicate professionally with high-net-worth individuals."
+    },
+    {
+      "question": "How quickly can we implement?",
+      "answer": "Sandy Springs businesses typically live within 7-10 days."
+    }
+  ],
+  "images": {
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1676119451563-0c4a1a37e019?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Executive professional",
+      "caption": "Premium AI for Sandy Springs"
+    },
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1580426468365-fa41d36aa1e4?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Professional communication",
+        "caption": "White-glove AI service"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "AI robot premium",
+        "caption": "Advanced automation for Sandy Springs"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Elevate Your Sandy Springs Business",
+    "subheadline": "Join premium Sandy Springs brands using Voice AI.",
+    "cta_primary": {
+      "text": "Call: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "atlanta-ga",
+      "roswell-ga",
+      "alpharetta-ga"
+    ],
+    "packages": [
+      "growth-package",
+      "enterprise-package"
+    ]
+  }
+}

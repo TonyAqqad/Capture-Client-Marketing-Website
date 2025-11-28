@@ -1,0 +1,230 @@
+{
+  "page_id": "google-ads",
+  "page_type": "service",
+  "service": {
+    "service_id": "google-ads",
+    "service_name": "Google Ads Lead Generation",
+    "service_slug": "google-ads"
+  },
+  "seo": {
+    "page_title": "Google Ads Lead Generation | PPC Management for Service Businesses | Capture Client",
+    "meta_description": "ROI-focused Google Ads management for service businesses. Get high-quality leads from Google Search, Local Service Ads & PPC. Stop wasting ad spend. Free audit!",
+    "h1_heading": "Google Ads Lead Generation for Service Businesses",
+    "keywords": [
+      "google ads management",
+      "google ads lead generation",
+      "ppc management",
+      "google local service ads",
+      "google search ads",
+      "pay per click advertising",
+      "google ads for small business",
+      "roi focused google ads"
+    ],
+    "canonical_url": "/google-ads",
+    "og_title": "Google Ads Lead Generation | Get More Leads from Google",
+    "og_description": "Stop wasting money on Google Ads that don't convert. Our ROI-focused campaigns generate high-quality leads for service businesses. See results in 30 days."
+  },
+  "hero": {
+    "headline": "Get More Leads from Google. Spend Less. Grow Faster.",
+    "subheadline": "ROI-Focused Google Ads Management That Delivers High-Quality Leads for Service Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Google Ads Audit",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "cta_secondary": {
+      "text": "View Our Packages",
+      "action": "/packages",
+      "type": "link"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1553895501-af9e282e7fc1?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Google Ads management and PPC advertising for service businesses",
+      "credit": {
+        "photographer": "Christian Wiediger",
+        "unsplash_url": "https://unsplash.com/photos/zhZydTyNMPg"
+      }
+    }
+  },
+  "intro": {
+    "paragraph": "Your potential customers are searching for your services on Google right now. The question is: are they finding you, or are they finding your competitors? Google Ads puts your business at the top of search results when people are actively looking for what you offer. But here's the problem most service businesses face—they waste thousands on Google Ads that don't convert. Clicks are expensive, keywords are competitive, and if you don't know what you're doing, you'll burn through budget fast with nothing to show for it. That's where we come in. At Capture Client, we specialize in Google Ads management exclusively for service-based businesses. We don't work with e-commerce stores or SaaS companies—we focus 100% on businesses like HVAC companies, plumbers, electricians, law firms, and medical practices that need high-quality local leads. Our campaigns are built around one goal: maximum ROI. We optimize every dollar of ad spend to generate qualified leads that turn into paying customers. We use Google Search Ads to capture high-intent buyers, Local Service Ads to dominate local search with the Google Guaranteed badge, and remarketing to bring back visitors who didn't convert the first time. Our average client sees a 4:1 return on ad spend within 60 days. That means for every $1,000 you invest in Google Ads, you get $4,000 back in revenue."
+  },
+  "benefits": [
+    {
+      "title": "Instant Visibility on Google",
+      "description": "Appear at the very top of Google search results when customers search for your services. Skip the wait of SEO and start getting leads immediately with paid search advertising.",
+      "icon": "search"
+    },
+    {
+      "title": "High-Intent Leads Only",
+      "description": "Target people actively searching for your exact services right now. Google Ads captures demand—people who need what you offer today, not someday. These are the highest-quality leads you'll find.",
+      "icon": "target"
+    },
+    {
+      "title": "Complete Budget Control",
+      "description": "Set your exact monthly ad spend. Scale up during busy season, scale down when you're fully booked. Pay only when someone clicks your ad. No wasted impressions, no long-term contracts.",
+      "icon": "dollar-sign"
+    },
+    {
+      "title": "Google Guaranteed Badge",
+      "description": "Get the coveted Google Guaranteed badge with Local Service Ads. Stand out from competitors, build instant trust, and appear in the premium placement above all other search results.",
+      "icon": "award"
+    },
+    {
+      "title": "Data-Driven Optimization",
+      "description": "Track every click, call, and conversion. See exactly which keywords and ads drive leads. We continuously optimize based on performance data to maximize your ROI every single month.",
+      "icon": "trending-up"
+    },
+    {
+      "title": "Expert Campaign Management",
+      "description": "No guesswork. Our team has managed millions in Google Ads spend. We handle keyword research, ad creation, bid management, A/B testing, and monthly reporting so you can focus on running your business.",
+      "icon": "users"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Google Ads Audit",
+      "description": "We analyze your current Google Ads performance (or competitors if you're new to ads) and identify opportunities to capture more leads. We'll show you exactly where you're losing money and how to fix it."
+    },
+    {
+      "step": 2,
+      "title": "Custom Campaign Strategy",
+      "description": "We build a tailored Google Ads strategy for your business goals, service area, and budget. We research high-intent keywords, craft compelling ad copy, and design landing pages optimized for conversions."
+    },
+    {
+      "step": 3,
+      "title": "Campaign Launch & Optimization",
+      "description": "Your campaigns go live across Google Search, Local Service Ads, and Display Network. We monitor performance daily, adjust bids for maximum ROI, and A/B test ads to improve click-through rates."
+    },
+    {
+      "step": 4,
+      "title": "Monthly Reporting & Scaling",
+      "description": "Get transparent monthly reports showing exactly where your ad spend went and what results you got. As campaigns prove their ROI, we scale winning strategies to drive even more leads."
+    }
+  ],
+  "use_cases": [
+    {
+      "industry": "HVAC Companies",
+      "scenario": "Your HVAC business needs consistent leads for AC repair, furnace installation, and maintenance services. Google Search Ads target customers searching 'emergency AC repair near me' and similar high-intent keywords.",
+      "result": "Generate 50-100 qualified HVAC leads per month with cost per lead under $50. Fill your schedule year-round."
+    },
+    {
+      "industry": "Law Firms",
+      "scenario": "Personal injury, family law, and criminal defense firms compete for expensive legal keywords. We use smart bidding strategies and negative keywords to capture qualified leads at sustainable costs.",
+      "result": "Reduce cost per case from $800 to $350 while increasing lead volume by 40%. Only pay for serious inquiries."
+    },
+    {
+      "industry": "Medical Practices",
+      "scenario": "Attract new patients for specific services like cosmetic dentistry, dermatology treatments, or chiropractic care. Target specific procedures with high-converting search ads.",
+      "result": "Book 30+ new patient appointments monthly. Track ROI down to the individual procedure and scale what works."
+    },
+    {
+      "industry": "Home Service Contractors",
+      "scenario": "Plumbers, electricians, and roofers need emergency calls and project quotes. Local Service Ads with Google Guaranteed badge build trust and capture local demand immediately.",
+      "result": "Dominate your service area with 5-star reviews and guaranteed badge. Convert 30-40% of ad clicks into booked jobs."
+    }
+  ],
+  "social_proof": {
+    "testimonials": [
+      {
+        "quote": "We were spending $3,000/month on Google Ads and barely breaking even. Capture Client rebuilt our campaigns from scratch. Now we spend $4,500 and generate $22,000 in revenue monthly. Best decision we made.",
+        "author": "Robert Chen",
+        "business": "Chen & Associates Law",
+        "industry": "Legal Services"
+      },
+      {
+        "quote": "Our phones started ringing within 48 hours of launching Google Local Service Ads. The Google Guaranteed badge gives customers confidence to call us first. We book 3-4 jobs per day directly from ads.",
+        "author": "Lisa Rodriguez",
+        "business": "Rodriguez Plumbing",
+        "industry": "Home Services"
+      },
+      {
+        "quote": "I tried managing Google Ads myself and lost $2,000 learning the hard way. These guys know exactly what they're doing. My cost per lead dropped 60% and lead quality improved dramatically.",
+        "author": "Tom Bradford",
+        "business": "Bradford HVAC & Heating",
+        "industry": "HVAC Services"
+      }
+    ],
+    "stats": {
+      "stat_1": "$2M+ Ad Spend Managed",
+      "stat_2": "10,000+ Leads Generated",
+      "stat_3": "4:1 Average ROAS"
+    }
+  },
+  "faq": [
+    {
+      "question": "How much should I spend on Google Ads?",
+      "answer": "We recommend starting with at least $1,000-$1,500 per month in ad spend to generate meaningful data and results. This budget allows us to test keywords, optimize campaigns, and drive consistent leads. Our Growth package manages $1,000-$3,000 in monthly ad spend. For larger budgets or competitive markets, our Enterprise package handles $3,000+ per month. The key is that your ad spend is separate from our management fee—you control the budget."
+    },
+    {
+      "question": "How quickly will I see results from Google Ads?",
+      "answer": "You'll start seeing traffic and leads within 24-48 hours of launching your campaigns. However, optimal performance takes 30-60 days as we gather data, identify winning keywords, and optimize bids. The beauty of Google Ads is that you can pause or adjust spending at any time. Unlike SEO which takes 6-12 months, paid search delivers immediate results that improve rapidly with expert management."
+    },
+    {
+      "question": "What's the difference between Google Search Ads and Local Service Ads?",
+      "answer": "Google Search Ads appear at the top of search results with 'Ad' labels and charge per click. Local Service Ads appear above Search Ads with the Google Guaranteed badge and charge per lead (calls or messages). LSAs are only available for certain home service businesses and require Google screening. We recommend running both for maximum visibility and lead volume."
+    },
+    {
+      "question": "Do you require long-term contracts?",
+      "answer": "No. We don't lock you into long-term contracts because we believe in earning your business every month through results. You can cancel with 30 days' notice. That said, Google Ads is most effective as a long-term strategy—the longer campaigns run, the more data we collect and the better we can optimize for your specific business."
+    },
+    {
+      "question": "How do you track ROI from Google Ads?",
+      "answer": "We implement comprehensive conversion tracking that monitors every call, form submission, and chat from your ads. You'll see exactly how many leads each campaign generates, cost per lead, and which keywords drive the most conversions. We connect this data to your CRM when possible to track leads all the way to closed deals. Full transparency on every dollar spent."
+    },
+    {
+      "question": "Can you help if I've tried Google Ads before and failed?",
+      "answer": "Absolutely—this is our specialty. Most service businesses fail at Google Ads because they target the wrong keywords, write weak ad copy, send traffic to poor landing pages, or don't optimize based on data. We'll audit your previous campaigns, identify what went wrong, and build a new strategy focused on ROI. Many of our best clients came to us after wasting money on DIY or poorly managed campaigns."
+    }
+  ],
+  "main_content": {
+    "sections": [
+      {
+        "heading": "Why Google Ads is Essential for Service Business Growth",
+        "content": "Google processes over 8.5 billion searches per day. A significant percentage of those searches are people looking for local services—'plumber near me,' 'emergency HVAC repair,' 'personal injury lawyer,' 'dentist accepting new patients.' These are high-intent searches from people ready to hire someone TODAY. If your business isn't showing up in these search results, you're invisibly to a massive stream of potential customers. Organic SEO is great, but it takes 6-12 months to rank on page one. Google Ads puts you at the very top immediately. You control your visibility and lead flow. Need more leads this week? Increase your budget. Fully booked? Pause campaigns. This level of control is impossible with any other marketing channel. For service businesses, Google Ads consistently delivers the highest quality leads at the most predictable costs. Unlike social media where you're interrupting people, search ads capture existing demand. People searching Google are actively looking for solutions right now. Your job is simply to be there when they search. The businesses winning in their local markets are the ones investing in Google Ads with expert management. DIY Google Ads rarely work because the platform is complex and expensive to learn through trial and error. That's why our managed service focuses exclusively on maximizing your ROI from day one."
+      },
+      {
+        "heading": "The Power of Google Local Service Ads",
+        "content": "If you run a home service business, Local Service Ads (LSAs) are a game-changer. LSAs appear at the very top of Google search results—above traditional search ads, above everything. They feature your business name, star rating, phone number, and the coveted Google Guaranteed badge. This badge tells customers that Google has screened and verified your business. If a customer isn't satisfied with your work, Google may cover the cost up to the job invoice amount. This builds instant trust. LSAs use a pay-per-lead model instead of pay-per-click. You only pay when someone calls or messages you directly from the ad. No more paying for accidental clicks or people just browsing. You pay for actual leads. The cost per lead varies by market and service type but typically runs $15-$75 per lead depending on competition. For high-value services, this is incredibly cost-effective. To qualify for LSAs, Google requires background checks, license verification, and insurance documentation. This screening process actually works in your favor—it keeps out low-quality competitors and positions you as a trusted, verified service provider. We handle the entire LSA setup process including Google screening, profile optimization, review management, and bid optimization. Most clients see LSAs become their #1 lead source within 60 days."
+      },
+      {
+        "heading": "Our Google Ads Management Process",
+        "content": "Successful Google Ads campaigns require constant attention and optimization. This isn't a set-it-and-forget-it marketing channel. Our team actively manages your campaigns daily, making bid adjustments, testing new ad copy, refining targeting, and identifying opportunities for improvement. Here's what we do: Keyword Research - We identify high-intent keywords that indicate buying readiness. We also implement negative keywords to avoid wasting budget on irrelevant searches. Ad Creation - We write compelling ad copy with clear value propositions and strong calls-to-action. We A/B test multiple ad variations to identify winners. Landing Page Optimization - We ensure your landing pages are conversion-optimized with fast load times, clear messaging, and easy contact forms. Bid Management - We use advanced bidding strategies to maximize conversions while controlling cost per lead. We adjust bids based on device, location, time of day, and audience. Conversion Tracking - We implement comprehensive tracking to monitor every lead source and calculate exact ROI. Monthly Reporting - You receive detailed reports showing ad spend, impressions, clicks, leads, cost per lead, and ROI. Full transparency. This hands-on management is why our clients consistently outperform competitors running DIY or automated campaigns."
+      }
+    ]
+  },
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Google Ads management dashboard showing campaign performance",
+        "caption": "Real-time tracking and optimization of your Google Ads campaigns"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1616469829718-0faf16324280?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Digital marketing analytics and Google Ads ROI tracking",
+        "caption": "Complete transparency with detailed monthly reporting"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1626022361995-92655d9de5a7?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Google search results and paid advertising placement",
+        "caption": "Dominate search results and capture high-intent leads"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Get More Leads from Google?",
+    "subheadline": "Get a free Google Ads audit and see exactly how much opportunity you're missing",
+    "cta_primary": {
+      "text": "Call Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "urgency_text": "Free audit includes competitor analysis and custom keyword research for your business"
+  },
+  "related_pages": {
+    "services": ["voice-ai", "facebook-ads"],
+    "packages": ["growth-package", "enterprise-package"]
+  }
+}

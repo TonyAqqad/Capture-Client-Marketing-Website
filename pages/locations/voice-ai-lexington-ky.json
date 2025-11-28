@@ -1,0 +1,245 @@
+{
+  "page_id": "voice-ai-lexington-ky",
+  "page_type": "service-location",
+
+  "service": {
+    "name": "Voice AI",
+    "slug": "voice-ai",
+    "category": "automation"
+  },
+
+  "location": {
+    "city": "Lexington",
+    "slug": "lexington",
+    "state": "KY",
+    "state_full": "Kentucky"
+  },
+
+  "seo": {
+    "title": "Voice AI Agency in Lexington, KY | Capture Client",
+    "meta_description": "Lexington businesses: Never miss another call with AI voice agents. Qualify leads, book appointments, answer calls 24/7. Call 865-346-3339 for a free demo!",
+    "h1": "Voice AI Solutions for Lexington, Kentucky Businesses",
+    "keywords": [
+      "voice ai lexington",
+      "ai voice agents lexington ky",
+      "automated answering lexington",
+      "ai receptionist lexington kentucky",
+      "voice automation lexington"
+    ]
+  },
+
+  "hero": {
+    "headline": "Capture Every Lead in Lexington",
+    "subheadline": "AI Voice Agents That Never Miss a Call - Perfect for Busy Lexington Service Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339"
+    },
+    "cta_secondary": {
+      "text": "Watch Demo",
+      "action": "#demo"
+    }
+  },
+
+  "intro": {
+    "paragraph": "In Kentucky's Horse Capital, business moves fast - and so do your potential customers. Lexington business owners know that missed calls equal missed revenue, whether you're serving downtown professionals, Fayette County homeowners, or the growing Beaumont area. Our AI voice technology ensures you never lose another lead to voicemail. From equine veterinary practices to home service contractors, Lexington businesses are using AI to answer every call professionally, qualify leads instantly, and book appointments automatically - 24 hours a day, 7 days a week. The result? An average 50% increase in captured leads and dramatic reductions in staffing costs."
+  },
+
+  "benefits": [
+    {
+      "title": "Never Miss a Lexington Lead",
+      "description": "Whether it's Keeneland race day or a Tuesday at 2 AM, our AI answers every call from potential Lexington customers with professionalism and accuracy.",
+      "icon": "phone"
+    },
+    {
+      "title": "Smart Lead Qualification",
+      "description": "AI intelligently qualifies each Lexington prospect, asking the right questions to determine if they're ready to buy or need more nurturing.",
+      "icon": "filter"
+    },
+    {
+      "title": "Seamless Scheduling",
+      "description": "Appointments book directly into your calendar without phone tag. Lexington customers appreciate the instant response and easy booking.",
+      "icon": "calendar"
+    },
+    {
+      "title": "Massive Cost Savings",
+      "description": "Save $3,500+ monthly compared to hiring receptionists or answering services. Lexington businesses see ROI within weeks, not months.",
+      "icon": "dollar-sign"
+    },
+    {
+      "title": "Brand Consistency",
+      "description": "Every caller experiences your brand the way you intended - professional, knowledgeable, and helpful. No more variation in call quality.",
+      "icon": "award"
+    },
+    {
+      "title": "Scale Without Hiring",
+      "description": "Handle 10 calls or 1,000 calls with the same quality. Perfect for growing Lexington businesses that don't want staffing headaches.",
+      "icon": "trending-up"
+    }
+  ],
+
+  "how_it_works": {
+    "headline": "Getting Started With Voice AI in Lexington",
+    "steps": [
+      {
+        "step": 1,
+        "title": "Discovery Call",
+        "description": "We discuss your Lexington business, target customers, and current challenges. Learn exactly how AI can help you capture more leads."
+      },
+      {
+        "step": 2,
+        "title": "AI Development",
+        "description": "We custom-build your AI agent with knowledge of your services, Lexington service areas, pricing, and availability. You approve everything before launch."
+      },
+      {
+        "step": 3,
+        "title": "Rapid Deployment",
+        "description": "Most Lexington businesses go live within 48 hours. We handle all technical setup and integration with your existing systems."
+      },
+      {
+        "step": 4,
+        "title": "Ongoing Enhancement",
+        "description": "We analyze call data monthly and refine your AI's responses. Your system gets smarter and more effective over time."
+      }
+    ]
+  },
+
+  "use_cases": [
+    {
+      "industry": "Equine Services",
+      "description": "Veterinary practices and equine services in Lexington handle emergency calls, schedule appointments, and provide service information 24/7 during foaling season and beyond.",
+      "results": "70% reduction in missed emergency calls"
+    },
+    {
+      "industry": "Home Services",
+      "description": "HVAC, plumbing, and electrical companies serving Lexington and Fayette County capture emergency calls instantly and book service appointments automatically.",
+      "results": "50% more booked appointments"
+    },
+    {
+      "industry": "Medical Practices",
+      "description": "Lexington healthcare providers reduce administrative burden, handle patient inquiries, and fill appointment slots more efficiently with AI scheduling.",
+      "results": "35% increase in appointment bookings"
+    },
+    {
+      "industry": "Legal Services",
+      "description": "Law firms in Lexington's professional corridor qualify potential clients, gather case details, and schedule consultations without attorney time.",
+      "results": "40% more qualified consultations"
+    },
+    {
+      "industry": "Real Estate",
+      "description": "Lexington realtors respond instantly to buyer inquiries, schedule showings, and never miss a hot lead in this competitive market.",
+      "results": "4x faster response time"
+    }
+  ],
+
+  "faq": [
+    {
+      "question": "How does Voice AI work for Lexington businesses?",
+      "answer": "Our AI voice agents function as your virtual receptionist, answering calls 24/7 with the knowledge and professionalism of a trained Lexington employee. The AI can discuss your services, answer common questions, qualify leads based on your criteria, book appointments, and transfer urgent calls when needed. It's trained specifically on your business and the Lexington market."
+    },
+    {
+      "question": "What Lexington industries benefit most from Voice AI?",
+      "answer": "We serve service-based businesses across Lexington including home services (HVAC, plumbing, electrical), medical and dental practices, legal services, real estate, equine services, contractors, and any business that relies on phone leads. If you're in Lexington or serve Fayette County and get phone inquiries, Voice AI can help you capture more leads."
+    },
+    {
+      "question": "What's the investment for Lexington businesses?",
+      "answer": "Plans start at $997/month with no setup fees, including unlimited calls and ongoing optimization. Most Lexington businesses achieve ROI within 30 days. Consider that a single missed lead could be worth $5,000-$50,000 depending on your industry. Compare our pricing to hiring a receptionist at $35,000+ annually, plus benefits, training, and management time."
+    },
+    {
+      "question": "Can the AI understand Lexington-specific needs?",
+      "answer": "Yes! We train your AI on your specific service offerings, the Lexington areas you serve (downtown, Hamburg, Beaumont, etc.), local nuances, and your business processes. It can even discuss Lexington-specific topics like Derby prep, horse farm services, or UK game day scheduling adjustments."
+    },
+    {
+      "question": "How does call routing work?",
+      "answer": "You decide the rules. The AI can handle routine calls completely, transfer urgent matters immediately, or take detailed messages for you to review. Most Lexington businesses configure their AI to handle 90% of calls independently, only transferring true emergencies or highly complex situations. This frees you to focus on revenue-generating activities."
+    },
+    {
+      "question": "What if our call volume is unpredictable?",
+      "answer": "That's where AI shines. Whether you get 5 calls or 500 calls per day, the quality and speed of response stays consistent. Lexington businesses with seasonal fluctuations (like HVAC companies) love that they don't need to hire and train seasonal staff. The AI scales instantly."
+    },
+    {
+      "question": "How long does implementation take in Lexington?",
+      "answer": "Most Lexington businesses are fully operational within 48 hours. We schedule a strategy call, build and train your AI, integrate with your phone and calendar systems, and launch. You review everything before we go live to ensure it represents your brand perfectly. No lengthy contracts or complicated implementations."
+    },
+    {
+      "question": "What kind of support do Lexington clients receive?",
+      "answer": "Every client gets dedicated support via phone, email, and text. We monitor your AI's performance, provide monthly analytics reports, and make optimization recommendations. Think of us as an extension of your Lexington team. Our average client response time is under 2 hours during business hours."
+    }
+  ],
+
+  "testimonials": [
+    {
+      "name": "Jennifer Walsh",
+      "business": "Walsh Equine Veterinary - Lexington, KY",
+      "quote": "In equine medicine, emergencies happen at any hour. Our AI has been a game-changer for capturing after-hours calls and triaging urgency. We haven't missed an emergency call since implementing it three months ago. Worth every penny.",
+      "rating": 5
+    },
+    {
+      "name": "David Morrison",
+      "business": "Morrison HVAC - Fayette County, KY",
+      "quote": "As a growing Lexington HVAC company, we were missing 30-40% of incoming calls during busy season. Our AI now captures every lead, books appointments, and even handles common service questions. Our revenue is up 35% with the same team size.",
+      "rating": 5
+    },
+    {
+      "name": "Amanda Taylor",
+      "business": "Taylor Realty Group - Lexington, KY",
+      "quote": "The Lexington real estate market moves fast. Before Voice AI, we were losing buyers to faster-responding agents. Now we respond in seconds, 24/7. We've closed four additional deals in the past two months that we would have missed. The ROI is incredible.",
+      "rating": 5
+    }
+  ],
+
+  "cta_bottom": {
+    "headline": "Ready to Transform Your Lexington Business?",
+    "subheadline": "Join the Lexington businesses already using AI to capture more leads and save time",
+    "cta_primary": {
+      "text": "Call 865-346-3339 Now",
+      "action": "tel:865-346-3339"
+    },
+    "cta_secondary": {
+      "text": "Email team@captureclient.net",
+      "action": "mailto:team@captureclient.net"
+    }
+  },
+
+  "images": [
+    {
+      "url": "https://images.unsplash.com/photo-1525338078858-d762b5e32f2c?fm=jpg&q=80&w=1920",
+      "alt": "AI voice technology for Lexington businesses",
+      "caption": "Lexington businesses capture more leads with 24/7 AI voice agents",
+      "usage": "hero"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1520333789090-1afc82db536a?fm=jpg&q=80&w=1200",
+      "alt": "Lexington business owner using AI technology",
+      "caption": "Smart Lexington business owners leverage AI to grow revenue",
+      "usage": "content"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1712159018726-4564d92f3ec2?fm=jpg&q=80&w=1200",
+      "alt": "Professional customer service with AI technology",
+      "caption": "Deliver exceptional service to every Lexington caller, 24/7",
+      "usage": "content"
+    }
+  ],
+
+  "local_seo": {
+    "service_areas": [
+      "Lexington",
+      "Fayette County",
+      "Hamburg",
+      "Beaumont",
+      "Downtown Lexington",
+      "Chevy Chase",
+      "Lansdowne",
+      "Hartland",
+      "Palomar"
+    ],
+    "nearby_cities": [
+      "Georgetown",
+      "Versailles",
+      "Richmond",
+      "Winchester",
+      "Nicholasville"
+    ]
+  }
+}

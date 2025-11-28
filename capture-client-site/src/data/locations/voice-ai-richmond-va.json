@@ -1,0 +1,221 @@
+{
+  "page_id": "voice-ai-richmond-va",
+  "page_type": "service-location",
+
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+
+  "location": {
+    "city": "Richmond",
+    "state": "VA",
+    "state_full": "Virginia",
+    "slug": "richmond-va",
+    "nearby_areas": ["Henrico", "Chesterfield", "Mechanicsville", "Glen Allen", "Short Pump"],
+    "service_area_radius": "30 miles"
+  },
+
+  "seo": {
+    "page_title": "Voice AI Agency in Richmond, VA | Capture Client",
+    "meta_description": "Looking for a voice AI agency in Richmond? Capture Client helps Richmond businesses automate calls and capture more leads 24/7. Free consultation!",
+    "h1_heading": "Voice AI Services in Richmond, Virginia",
+    "keywords": ["voice ai richmond", "ai voice agents richmond va", "richmond voice automation", "ai receptionist richmond", "richmond call automation"],
+    "canonical_url": "/voice-ai-richmond-va",
+    "local_business_schema": {
+      "type": "LocalBusiness",
+      "name": "Capture Client",
+      "service_area": "Richmond, VA and surrounding areas"
+    }
+  },
+
+  "hero": {
+    "headline": "Never Miss Another Richmond Lead",
+    "subheadline": "AI Voice Agents That Answer Calls, Qualify Leads & Book Appointments 24/7",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "cta_secondary": {
+      "text": "See How It Works",
+      "action": "/demo",
+      "type": "button"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1694903110330-cc64b7e1d21d?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "AI voice technology for Richmond business automation",
+      "credit": {
+        "photographer": "Igor Omilaev",
+        "unsplash_url": "https://unsplash.com/photos/gVQLAbGVB6Q"
+      }
+    }
+  },
+
+  "local_intro": {
+    "paragraph": "Richmond small business owners are discovering the power of AI voice agents. If you're tired of missing calls from potential customers, losing leads to voicemail, or paying for expensive answering services, our AI voice technology is the solution you've been looking for. Whether you run an HVAC company in Henrico, a law firm downtown, or a medical practice in Chesterfield, our Voice AI agents work 24/7 to capture every lead, qualify prospects, and book appointments automatically—all while you focus on growing your Richmond business."
+  },
+
+  "benefits": [
+    {
+      "title": "24/7 Lead Capture in Richmond",
+      "description": "Never miss a call from potential Richmond customers, even at 3 AM. Our AI voice agents answer every call professionally, capture contact information, and qualify leads instantly.",
+      "icon": "clock"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "AI asks the right questions to qualify leads before they reach you. Only spend time talking to prospects who are ready to buy your Richmond services.",
+      "icon": "filter"
+    },
+    {
+      "title": "Automatic Appointment Booking",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag or scheduling back-and-forth with Richmond clients.",
+      "icon": "calendar"
+    },
+    {
+      "title": "Cost Savings for Richmond Businesses",
+      "description": "Save thousands compared to hiring full-time staff or expensive answering services. Our Voice AI costs less than a part-time receptionist.",
+      "icon": "dollar-sign"
+    },
+    {
+      "title": "Professional Every Time",
+      "description": "Consistent, professional call handling that represents your Richmond brand perfectly. No sick days, no bad moods, just excellent service.",
+      "icon": "award"
+    }
+  ],
+
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your Richmond business needs, current lead generation challenges, and how AI voice agents can help you capture more clients."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We build and train your AI agent with your Richmond business knowledge, services, pricing, and common customer questions."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your lead capture rate improve immediately. We monitor every call and continuously optimize performance."
+    },
+    {
+      "step": 4,
+      "title": "Ongoing Optimization",
+      "description": "We continuously improve your AI based on real call data from your Richmond customers, ensuring better results every month."
+    }
+  ],
+
+  "local_use_cases": [
+    {
+      "business_type": "Richmond HVAC Companies",
+      "scenario": "HVAC companies in Richmond lose leads during peak season when phones ring non-stop. Our AI handles overflow calls and after-hours emergencies.",
+      "result": "Capture 100% of inbound calls, even during the busiest summer days in Richmond."
+    },
+    {
+      "business_type": "Richmond Law Firms",
+      "scenario": "Law firms need to screen potential clients before attorneys spend time on consultations. Our AI qualifies leads based on case type and urgency.",
+      "result": "Attorneys only speak with pre-qualified prospects, saving hours each week."
+    },
+    {
+      "business_type": "Richmond Medical Practices",
+      "scenario": "Medical offices struggle with appointment scheduling, insurance verification, and after-hours calls. Our AI handles routine tasks automatically.",
+      "result": "Staff focuses on patient care while AI manages scheduling and basic inquiries."
+    }
+  ],
+
+  "service_area": {
+    "heading": "Serving Richmond and Surrounding Areas",
+    "description": "We proudly serve businesses throughout the greater Richmond metropolitan area, including all surrounding communities.",
+    "areas_list": ["Richmond", "Henrico", "Chesterfield", "Mechanicsville", "Glen Allen", "Short Pump", "Midlothian", "Bon Air", "Tuckahoe", "West End"]
+  },
+
+  "local_testimonials": [
+    {
+      "quote": "Since implementing Capture Client's Voice AI, we haven't missed a single lead. The AI handles after-hours calls perfectly and books appointments automatically. Game-changer for our Richmond HVAC business!",
+      "author": "Mike Johnson",
+      "business": "Johnson HVAC Services",
+      "location": "Richmond, VA"
+    },
+    {
+      "quote": "As a Richmond attorney, my time is valuable. The AI agent qualifies leads before they reach me, so I only talk to serious prospects. It's like having a full-time receptionist for a fraction of the cost.",
+      "author": "Sarah Mitchell",
+      "business": "Mitchell Law Firm",
+      "location": "Richmond, VA"
+    }
+  ],
+
+  "faq": [
+    {
+      "question": "How does Voice AI work for Richmond businesses?",
+      "answer": "Our AI voice agents answer your business calls just like a trained receptionist. They can answer questions about your Richmond services, qualify leads based on your criteria, book appointments into your calendar, and route urgent calls to you. The AI works 24/7, never takes breaks, and handles multiple calls simultaneously during busy periods."
+    },
+    {
+      "question": "What types of Richmond businesses benefit from Voice AI?",
+      "answer": "Service businesses across Richmond see the biggest impact—HVAC companies, law firms, medical practices, home services (plumbing, electrical, roofing), real estate agents, and any Richmond business that gets phone leads. If you're missing calls or spending too much time on unqualified leads, Voice AI is perfect for you."
+    },
+    {
+      "question": "How much does Voice AI cost for Richmond businesses?",
+      "answer": "Our packages start at $999/month, which includes setup, training, and 50 AI phone calls. Most Richmond businesses see positive ROI within the first 30 days by capturing leads they would have otherwise missed. We also offer growth packages with unlimited calls for high-volume businesses."
+    },
+    {
+      "question": "Can the AI handle Richmond-specific questions?",
+      "answer": "Absolutely! We train your AI with Richmond-specific information—your service areas, local expertise, pricing for the Richmond market, and common questions from Richmond customers. The AI can even reference local landmarks and neighborhoods to build rapport with callers."
+    },
+    {
+      "question": "What happens if the AI can't answer a question?",
+      "answer": "If the AI encounters a question it can't answer confidently, it will capture the caller's information and either transfer the call to you immediately (if you're available) or schedule a callback at a convenient time. You never lose a lead."
+    },
+    {
+      "question": "How quickly can we get Voice AI set up?",
+      "answer": "Most Richmond businesses are up and running within 1-2 weeks. We handle all the technical setup, AI training, and integration with your existing systems. You'll be capturing more leads before the month is out."
+    }
+  ],
+
+  "main_content": {
+    "sections": [
+      {
+        "heading": "Why Richmond Businesses Need Voice AI",
+        "content": "Richmond's growing business landscape demands innovative solutions to stay competitive. With over 15,000 small businesses in the Richmond metro area, standing out requires exceptional customer service and lead capture. Voice AI technology gives Richmond businesses an unfair advantage by ensuring every phone call is answered professionally, every lead is captured, and every opportunity is maximized. Whether you serve downtown Richmond, the West End, or surrounding counties like Henrico and Chesterfield, our AI voice agents work tirelessly to grow your business. The Richmond market is competitive, but businesses using Voice AI consistently outperform competitors who still rely on traditional phone systems and voicemail. Don't let another Richmond lead slip through the cracks—automate your phone system with AI."
+      },
+      {
+        "heading": "Voice AI Features for Richmond Businesses",
+        "content": "Our Voice AI platform includes everything Richmond businesses need to automate lead capture: 24/7 call answering, intelligent lead qualification, automatic appointment scheduling, CRM integration, real-time notifications, call recording and transcription, multi-language support, and custom conversation flows. Richmond businesses can customize their AI agent to match their brand voice, ask specific qualifying questions, handle objections, provide pricing information, and even process payments over the phone. The AI integrates seamlessly with popular Richmond business tools like Google Calendar, Salesforce, HubSpot, and local CRM systems. Setup takes just 1-2 weeks, and our Richmond-based support team ensures your AI performs flawlessly from day one."
+      }
+    ]
+  },
+
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1553775282-20af80779df7?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Professional customer service with headset for Richmond businesses",
+        "caption": "AI voice agents provide professional call handling 24/7"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1560264280-88b68371db39?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Richmond business team collaboration",
+        "caption": "Free your team to focus on growth while AI handles calls"
+      }
+    ]
+  },
+
+  "cta_section": {
+    "headline": "Ready to Capture More Richmond Leads?",
+    "subheadline": "Join dozens of Richmond businesses already using Voice AI to grow",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "urgency_text": "Limited spots available for Richmond businesses this month"
+  },
+
+  "related_pages": {
+    "other_services_in_location": ["google-ads", "facebook-ads", "local-seo"],
+    "nearby_locations": ["virginia-beach-va", "norfolk-va", "chesapeake-va"],
+    "packages": ["starter-package", "growth-package", "enterprise-package"]
+  }
+}

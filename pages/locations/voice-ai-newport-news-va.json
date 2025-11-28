@@ -1,0 +1,187 @@
+{
+  "page_id": "voice-ai-newport-news-va",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Newport News",
+    "state": "VA",
+    "state_full": "Virginia",
+    "slug": "newport-news-va",
+    "nearby_areas": ["Hampton", "Norfolk", "Chesapeake", "Yorktown"],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Newport News, VA | Capture Client",
+    "meta_description": "Voice AI for Newport News businesses. Automate calls 24/7, qualify leads, book appointments. Serving Hampton Roads metro area. Call 865-346-3339 today!",
+    "h1_heading": "Voice AI Services in Newport News, Virginia",
+    "keywords": ["voice ai agency newport news va", "ai voice agents newport news", "ai receptionist newport news", "automated call answering newport news", "lead qualification ai newport news", "voice ai hampton roads"],
+    "canonical_url": "/voice-ai-newport-news-va",
+    "local_business_schema": {
+      "type": "LocalBusiness",
+      "name": "Capture Client",
+      "service_area": "Newport News, VA and Hampton Roads"
+    }
+  },
+  "hero": {
+    "headline": "Never Miss Another Newport News Lead with Voice AI",
+    "subheadline": "AI-Powered Phone Agents That Answer Calls, Qualify Leads & Book Appointments 24/7 for Hampton Roads Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "cta_secondary": {
+      "text": "See How It Works",
+      "action": "/demo",
+      "type": "link"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1758599543146-f263d3b3321e?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Professional in Newport News using Voice AI for business calls",
+      "credit": {
+        "photographer": "Vitaly Gariev",
+        "unsplash_url": "https://unsplash.com/photos/bGKYEGhAFW4"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "Newport News businesses serve a diverse community across the Peninsula and Hampton Roads. Whether you're running a medical practice near Riverside Hospital, managing a law firm in City Center, or operating a home services company covering Newport News to Norfolk, missing phone calls means missing revenue. Our Voice AI technology ensures every call to your Newport News business gets answered professionally, leads get qualified instantly, and appointments get booked automatically - even when you're busy with current customers or outside business hours."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Lead Capture for Newport News",
+      "description": "Your Newport News business never sleeps with AI. Capture leads from shipyard workers calling during shift changes to late-night searchers across Hampton Roads.",
+      "icon": "clock"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "Stop wasting time on unqualified leads. Our AI pre-qualifies Newport News prospects, so your team only talks to ready-to-buy customers.",
+      "icon": "filter"
+    },
+    {
+      "title": "Automatic Appointment Booking",
+      "description": "Let AI schedule appointments directly into your calendar while you focus on serving Newport News clients. No more phone tag.",
+      "icon": "calendar"
+    },
+    {
+      "title": "Cost-Effective Staffing Solution",
+      "description": "Save thousands compared to hiring receptionist staff. No salary, benefits, or training costs - just reliable 24/7 service.",
+      "icon": "dollar-sign"
+    },
+    {
+      "title": "Professional Call Handling",
+      "description": "Consistent, friendly service that represents your Newport News brand perfectly on every call. No bad days, just excellence.",
+      "icon": "award"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We discuss your Newport News business needs, call volume, and how AI can help you capture more Hampton Roads leads."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Agent Training",
+      "description": "We build your AI voice agent with your business knowledge and train it for Newport News customer expectations."
+    },
+    {
+      "step": 3,
+      "title": "Seamless Integration",
+      "description": "We integrate with your phone system, CRM, and calendar. Your Newport News customers won't notice any disruption."
+    },
+    {
+      "step": 4,
+      "title": "Launch & Optimize",
+      "description": "Go live immediately and start capturing more leads. We continuously improve based on real Newport News call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Newport News Medical Practices",
+      "scenario": "A medical practice near Riverside was missing 30% of appointment scheduling calls during peak patient hours.",
+      "result": "Voice AI now handles scheduling, insurance verification, and routine questions 24/7. Staff focus on patient care, and missed appointments decreased 40%."
+    },
+    {
+      "business_type": "Hampton Roads Home Services",
+      "scenario": "An HVAC company serving Newport News to Norfolk was losing after-hours emergency calls worth $10,000+ monthly.",
+      "result": "Voice AI captures every emergency call, qualifies urgency, and dispatches technicians automatically. Monthly revenue increased $12,000 from after-hours work alone."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Newport News and Hampton Roads",
+    "description": "We provide Voice AI services throughout Newport News and the greater Hampton Roads metropolitan area.",
+    "areas_list": ["Newport News", "Hampton", "Norfolk", "Virginia Beach", "Chesapeake", "Portsmouth", "Suffolk", "Yorktown", "Poquoson", "Smithfield"]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Voice AI transformed how we handle patient calls. Our Newport News patients love the instant response, and our staff can focus on in-office care instead of phones.",
+      "author": "Dr. Michelle K.",
+      "business": "Peninsula Medical Group",
+      "location": "Newport News, VA"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Newport News businesses?",
+      "answer": "Our Voice AI agents answer your business calls with natural conversation, qualifying leads, scheduling appointments, answering routine questions, and transferring urgent calls. It works 24/7, ensuring your Newport News business never misses opportunities."
+    },
+    {
+      "question": "What types of Newport News businesses benefit from Voice AI?",
+      "answer": "We work with service businesses across Newport News and Hampton Roads including medical practices, dental offices, law firms, HVAC companies, plumbing services, contractors, real estate agents, and any business that relies on phone inquiries."
+    },
+    {
+      "question": "How much does Voice AI cost for Newport News businesses?",
+      "answer": "Our Starter package begins at $999/month including setup, training, and 50 AI calls. Most Newport News businesses see positive ROI within 30 days from captured leads. Growth and Enterprise packages available for higher call volumes."
+    }
+  ],
+  "main_content": {
+    "sections": [
+      {
+        "heading": "Why Newport News Businesses Choose Voice AI",
+        "content": "Newport News businesses face unique challenges serving the diverse Hampton Roads community. From shipyard workers with irregular schedules to military families and growing residential areas, your customers call at all hours. Voice AI ensures your Newport News business provides instant professional service 24/7. The AI qualifies leads, provides detailed information, schedules appointments, and routes urgent calls to your team. For Newport News service businesses, this means capturing more opportunities without hiring additional staff, especially valuable for businesses serving the broader Hampton Roads metro area where competition is fierce."
+      }
+    ]
+  },
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1758876202167-f81c995c3fdc?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Newport News business professional using Voice AI",
+        "caption": "Automate your Newport News business calls with AI",
+        "credit": {
+          "photographer": "Vitaly Gariev",
+          "unsplash_url": "https://unsplash.com/photos/n1yI8oExVns"
+        }
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1679403766669-17890714e491?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "AI technology for Newport News businesses",
+        "caption": "Advanced AI technology for Hampton Roads businesses",
+        "credit": {
+          "photographer": "Andrew Neel",
+          "unsplash_url": "https://unsplash.com/photos/eLEGvHbtBB4"
+        }
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Stop Missing Newport News Leads?",
+    "subheadline": "Join Hampton Roads businesses using Voice AI to capture more leads, save time, and grow revenue.",
+    "cta_primary": {
+      "text": "Schedule Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "urgency_text": "Limited spots available for Newport News businesses this month"
+  },
+  "related_pages": {
+    "other_services_in_location": ["google-ads", "facebook-ads"],
+    "nearby_locations": ["hampton", "norfolk", "virginia-beach"],
+    "packages": ["starter-package", "growth-package", "enterprise-package"]
+  }
+}

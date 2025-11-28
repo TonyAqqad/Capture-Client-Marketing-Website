@@ -1,0 +1,855 @@
+{
+  "schema_version": "1.0",
+  "last_updated": "2025-11-27",
+  "data_source": "Jina AI research + user requirements",
+
+  "agency": {
+    "name": "Capture Client",
+    "tagline": "Automate Leads. Capture Clients.",
+    "phone": "865-346-3339",
+    "email": "team@captureclient.net",
+    "location": "Knoxville, TN",
+    "location_type": "virtual",
+    "target_audience": "Service-based small businesses"
+  },
+
+  "services": [
+    {
+      "id": "voice-ai",
+      "name": "Voice AI Services",
+      "slug": "voice-ai",
+      "category": "automation",
+      "description": "AI-powered voice agents that automate phone calls, qualify leads, and capture clients 24/7",
+      "sub_services": [
+        {
+          "id": "ai-voice-agents",
+          "name": "AI Voice Agents",
+          "slug": "ai-voice-agents",
+          "short_description": "24/7 AI-powered phone agents that handle customer calls like a real receptionist",
+          "icon": "phone-call"
+        },
+        {
+          "id": "ai-receptionist",
+          "name": "AI Receptionist",
+          "slug": "ai-receptionist",
+          "short_description": "Never miss a call with an AI receptionist that answers, schedules, and qualifies leads",
+          "icon": "user-headset"
+        },
+        {
+          "id": "lead-qualification-ai",
+          "name": "Lead Qualification AI",
+          "slug": "lead-qualification-ai",
+          "short_description": "Automatically qualify leads based on your criteria before routing to sales",
+          "icon": "filter"
+        },
+        {
+          "id": "appointment-scheduling-ai",
+          "name": "Appointment Scheduling AI",
+          "slug": "appointment-scheduling-ai",
+          "short_description": "AI that books appointments directly into your calendar without human intervention",
+          "icon": "calendar"
+        },
+        {
+          "id": "call-automation",
+          "name": "Call Automation",
+          "slug": "call-automation",
+          "short_description": "Automate routine business calls to save time and reduce overhead",
+          "icon": "automation"
+        }
+      ]
+    },
+    {
+      "id": "google-ads",
+      "name": "Google Ads Lead Generation",
+      "slug": "google-ads",
+      "category": "lead-gen",
+      "description": "ROI-focused Google Ads campaigns that drive high-quality leads to service businesses",
+      "sub_services": [
+        {
+          "id": "google-search-ads",
+          "name": "Google Search Ads",
+          "slug": "google-search-ads",
+          "short_description": "Appear at the top of Google when customers search for your services",
+          "icon": "search"
+        },
+        {
+          "id": "local-service-ads",
+          "name": "Local Service Ads",
+          "slug": "local-service-ads",
+          "short_description": "Get leads directly from Google with 'Google Guaranteed' badge",
+          "icon": "map-pin"
+        },
+        {
+          "id": "ppc-management",
+          "name": "PPC Management",
+          "slug": "ppc-management",
+          "short_description": "Expert pay-per-click campaign management focused on maximum ROI",
+          "icon": "trending-up"
+        },
+        {
+          "id": "google-display-ads",
+          "name": "Google Display Ads",
+          "slug": "google-display-ads",
+          "short_description": "Build brand awareness with targeted display advertising across the web",
+          "icon": "monitor"
+        },
+        {
+          "id": "remarketing-campaigns",
+          "name": "Remarketing Campaigns",
+          "slug": "remarketing-campaigns",
+          "short_description": "Re-engage website visitors who didn't convert the first time",
+          "icon": "repeat"
+        }
+      ]
+    },
+    {
+      "id": "facebook-ads",
+      "name": "Facebook Ads Lead Generation",
+      "slug": "facebook-ads",
+      "category": "lead-gen",
+      "description": "Targeted Facebook advertising campaigns that generate qualified leads for local service businesses",
+      "sub_services": [
+        {
+          "id": "facebook-lead-ads",
+          "name": "Facebook Lead Ads",
+          "slug": "facebook-lead-ads",
+          "short_description": "Capture leads directly on Facebook without users leaving the platform",
+          "icon": "users"
+        },
+        {
+          "id": "instagram-ads",
+          "name": "Instagram Ads",
+          "slug": "instagram-ads",
+          "short_description": "Visual advertising on Instagram to reach younger demographics",
+          "icon": "instagram"
+        },
+        {
+          "id": "facebook-retargeting",
+          "name": "Facebook Retargeting",
+          "slug": "facebook-retargeting",
+          "short_description": "Show ads to people who visited your website but didn't convert",
+          "icon": "target"
+        },
+        {
+          "id": "lookalike-audiences",
+          "name": "Lookalike Audiences",
+          "slug": "lookalike-audiences",
+          "short_description": "Find new customers similar to your best existing clients",
+          "icon": "user-check"
+        },
+        {
+          "id": "messenger-ads",
+          "name": "Messenger Ads",
+          "slug": "messenger-ads",
+          "short_description": "Start conversations with potential customers directly in Messenger",
+          "icon": "message-circle"
+        }
+      ]
+    }
+  ],
+
+  "packages": [
+    {
+      "id": "starter",
+      "name": "Starter Package",
+      "slug": "starter-package",
+      "price": "$999",
+      "period": "per month",
+      "tagline": "Perfect for small businesses getting started with automation",
+      "ideal_for": "Service businesses looking to automate lead capture and start generating consistent leads",
+      "features_included": [
+        "AI Voice Agent Setup (1 agent)",
+        "50 AI phone calls per month",
+        "Basic lead qualification",
+        "Email notifications for new leads",
+        "CRM integration (1 platform)",
+        "Monthly performance report"
+      ],
+      "features_not_included": [
+        "Google Ads management",
+        "Facebook Ads management",
+        "Advanced AI customization",
+        "Priority support",
+        "Dedicated account manager"
+      ]
+    },
+    {
+      "id": "growth",
+      "name": "Growth Package",
+      "slug": "growth-package",
+      "price": "$2,195",
+      "period": "per month",
+      "tagline": "Scale your business with AI + Paid Ads",
+      "ideal_for": "Growing businesses ready to scale with multi-channel lead generation",
+      "features_included": [
+        "AI Voice Agent Setup (2 agents)",
+        "200 AI phone calls per month",
+        "Advanced lead qualification",
+        "Google Ads OR Facebook Ads management",
+        "$1,000 - $3,000 ad spend managed",
+        "Landing page optimization",
+        "CRM integration (unlimited platforms)",
+        "Weekly performance reports",
+        "Priority support"
+      ],
+      "features_not_included": [
+        "Both Google AND Facebook Ads (choose one)",
+        "Custom AI voice development",
+        "Dedicated account manager"
+      ]
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise Package",
+      "slug": "enterprise-package",
+      "price": "Custom",
+      "period": "per month",
+      "tagline": "Full-service automation and lead generation",
+      "ideal_for": "Established businesses needing comprehensive marketing automation and high-volume lead generation",
+      "features_included": [
+        "Unlimited AI Voice Agents",
+        "Unlimited AI phone calls",
+        "Advanced AI customization",
+        "Both Google Ads AND Facebook Ads management",
+        "$3,000+ ad spend managed",
+        "Custom landing pages",
+        "A/B testing and optimization",
+        "Advanced analytics dashboard",
+        "CRM integration (unlimited platforms)",
+        "API access",
+        "Daily performance reports",
+        "Dedicated account manager",
+        "24/7 priority support"
+      ],
+      "features_not_included": []
+    }
+  ],
+
+  "page_types": {
+    "service_page": {
+      "description": "Main service overview page (e.g., /voice-ai, /google-ads)",
+      "url_pattern": "/{service-slug}"
+    },
+    "service_location_page": {
+      "description": "Service + location for local SEO (e.g., /voice-ai-knoxville-tn)",
+      "url_pattern": "/{service-slug}-{location-slug}"
+    },
+    "national_seo_page": {
+      "description": "National keyword targeting (e.g., /ai-voice-agents-small-business)",
+      "url_pattern": "/{national-keyword-slug}"
+    },
+    "package_page": {
+      "description": "Package/pricing detail page (e.g., /starter-package)",
+      "url_pattern": "/{package-slug}"
+    }
+  },
+
+  "page_schemas": {
+    "service_page": {
+      "page_id": "string (unique identifier)",
+      "page_type": "service",
+      "service": {
+        "service_id": "string (from services array)",
+        "service_name": "string",
+        "service_slug": "string"
+      },
+      "seo": {
+        "page_title": "string (50-60 characters, includes service + benefit)",
+        "meta_description": "string (150-160 characters, includes location if applicable + CTA)",
+        "h1_heading": "string (primary heading with keyword)",
+        "keywords": ["array", "of", "target", "keywords"],
+        "canonical_url": "string",
+        "og_title": "string (for social sharing)",
+        "og_description": "string (for social sharing)"
+      },
+      "hero": {
+        "headline": "string (attention-grabbing, benefit-focused)",
+        "subheadline": "string (supporting detail, pain point or solution)",
+        "cta_primary": {
+          "text": "string (e.g., 'Get Your Free Consultation')",
+          "action": "string (URL or phone number)",
+          "type": "button | phone"
+        },
+        "cta_secondary": {
+          "text": "string (e.g., 'See How It Works')",
+          "action": "string (URL)",
+          "type": "button | link"
+        },
+        "hero_image": {
+          "url": "string (Unsplash image URL)",
+          "alt": "string",
+          "credit": {
+            "photographer": "string",
+            "unsplash_url": "string"
+          }
+        }
+      },
+      "intro": {
+        "paragraph": "string (200-300 words introducing the service and its value)"
+      },
+      "benefits": [
+        {
+          "title": "string (benefit title)",
+          "description": "string (2-3 sentences explaining benefit)",
+          "icon": "string (icon identifier)"
+        }
+      ],
+      "how_it_works": [
+        {
+          "step": "number",
+          "title": "string (step title)",
+          "description": "string (detailed explanation of step)"
+        }
+      ],
+      "features": [
+        {
+          "feature_name": "string",
+          "description": "string",
+          "included_in": ["array of package IDs"]
+        }
+      ],
+      "use_cases": [
+        {
+          "industry": "string (e.g., 'HVAC Companies', 'Law Firms')",
+          "scenario": "string (how this service helps this industry)",
+          "result": "string (expected outcome)"
+        }
+      ],
+      "social_proof": {
+        "testimonials": [
+          {
+            "quote": "string",
+            "author": "string",
+            "business": "string",
+            "industry": "string"
+          }
+        ],
+        "stats": {
+          "stat_1": "string (e.g., '500+ Businesses Served')",
+          "stat_2": "string (e.g., '10,000+ Leads Generated')",
+          "stat_3": "string (e.g., '4.9/5 Average Rating')"
+        }
+      },
+      "faq": [
+        {
+          "question": "string",
+          "answer": "string (detailed answer with keywords)"
+        }
+      ],
+      "main_content": {
+        "sections": [
+          {
+            "heading": "string",
+            "content": "string (800-1200 words of detailed service information)"
+          }
+        ]
+      },
+      "images": {
+        "gallery": [
+          {
+            "url": "string (Unsplash URL)",
+            "alt": "string",
+            "caption": "string",
+            "credit": {
+              "photographer": "string",
+              "unsplash_url": "string"
+            }
+          }
+        ]
+      },
+      "cta_section": {
+        "headline": "string",
+        "subheadline": "string",
+        "cta_primary": {
+          "text": "string",
+          "action": "string",
+          "type": "button | phone"
+        },
+        "urgency_text": "string (optional, e.g., 'Limited spots available')"
+      },
+      "related_pages": {
+        "services": ["array of related service slugs"],
+        "packages": ["array of relevant package slugs"]
+      }
+    },
+
+    "location_page": {
+      "page_id": "string (unique identifier)",
+      "page_type": "service-location",
+      "service": {
+        "service_id": "string",
+        "service_name": "string",
+        "service_slug": "string"
+      },
+      "location": {
+        "city": "string",
+        "state": "string",
+        "state_abbr": "string",
+        "slug": "string",
+        "nearby_areas": ["array of nearby cities/neighborhoods"],
+        "service_area_radius": "string (e.g., '25 miles')"
+      },
+      "seo": {
+        "page_title": "string (includes service + location + benefit)",
+        "meta_description": "string (location-specific, includes CTA)",
+        "h1_heading": "string (service + location)",
+        "keywords": ["array", "including", "location-specific", "terms"],
+        "canonical_url": "string",
+        "local_business_schema": {
+          "type": "LocalBusiness",
+          "name": "Capture Client",
+          "service_area": "string"
+        }
+      },
+      "hero": {
+        "headline": "string (includes location)",
+        "subheadline": "string (local relevance)",
+        "cta_primary": {
+          "text": "string",
+          "action": "string",
+          "type": "button | phone"
+        },
+        "hero_image": {
+          "url": "string (location-relevant Unsplash image)",
+          "alt": "string",
+          "credit": {
+            "photographer": "string",
+            "unsplash_url": "string"
+          }
+        }
+      },
+      "local_intro": {
+        "paragraph": "string (mentions location, local businesses, local needs)"
+      },
+      "benefits": "array (same structure as service_page)",
+      "how_it_works": "array (same structure as service_page)",
+      "local_use_cases": [
+        {
+          "business_type": "string (local business type)",
+          "scenario": "string (local-specific scenario)",
+          "result": "string"
+        }
+      ],
+      "service_area": {
+        "heading": "string (e.g., 'Serving [City] and Surrounding Areas')",
+        "description": "string (areas covered)",
+        "areas_list": ["array of cities/neighborhoods served"]
+      },
+      "local_testimonials": [
+        {
+          "quote": "string",
+          "author": "string",
+          "business": "string",
+          "location": "string (city, state)"
+        }
+      ],
+      "faq": "array (location-specific FAQs)",
+      "main_content": {
+        "sections": [
+          {
+            "heading": "string (location-focused)",
+            "content": "string (800-1200 words, local keywords)"
+          }
+        ]
+      },
+      "images": {
+        "gallery": "array (location-relevant images from Unsplash)"
+      },
+      "cta_section": "object (same structure as service_page)",
+      "related_pages": {
+        "other_services_in_location": ["array of service slugs"],
+        "nearby_locations": ["array of location slugs"],
+        "packages": ["array of package slugs"]
+      }
+    },
+
+    "national_seo_page": {
+      "page_id": "string (unique identifier)",
+      "page_type": "national-seo",
+      "keyword": {
+        "primary_keyword": "string (main national keyword)",
+        "secondary_keywords": ["array of related keywords"],
+        "keyword_slug": "string"
+      },
+      "industry_focus": {
+        "industries": ["array of target industries"],
+        "business_types": ["array of business types"]
+      },
+      "seo": {
+        "page_title": "string (keyword-focused, national scope)",
+        "meta_description": "string (national reach, benefit-focused)",
+        "h1_heading": "string (primary keyword)",
+        "keywords": ["array of national keywords"],
+        "canonical_url": "string",
+        "og_title": "string",
+        "og_description": "string"
+      },
+      "hero": {
+        "headline": "string (addresses national pain point)",
+        "subheadline": "string (nationwide service capability)",
+        "cta_primary": {
+          "text": "string",
+          "action": "string",
+          "type": "button | phone"
+        },
+        "hero_image": {
+          "url": "string (industry-relevant Unsplash image)",
+          "alt": "string",
+          "credit": {
+            "photographer": "string",
+            "unsplash_url": "string"
+          }
+        }
+      },
+      "intro": {
+        "paragraph": "string (national context, industry challenges)"
+      },
+      "benefits": "array (national-scale benefits)",
+      "how_it_works": "array (process overview)",
+      "industry_use_cases": [
+        {
+          "industry": "string",
+          "challenge": "string (common industry challenge)",
+          "solution": "string (how service solves it)",
+          "result": "string (expected outcome)"
+        }
+      ],
+      "nationwide_coverage": {
+        "heading": "string (e.g., 'Serving Businesses Nationwide')",
+        "description": "string",
+        "regions_highlighted": ["array of major regions or states"]
+      },
+      "testimonials": [
+        {
+          "quote": "string",
+          "author": "string",
+          "business": "string",
+          "location": "string (to show national reach)"
+        }
+      ],
+      "faq": "array (industry-specific, national scope FAQs)",
+      "main_content": {
+        "sections": [
+          {
+            "heading": "string",
+            "content": "string (1000-1500 words, authoritative, keyword-rich)"
+          }
+        ]
+      },
+      "images": {
+        "gallery": "array (industry and keyword-relevant Unsplash images)"
+      },
+      "cta_section": "object",
+      "related_pages": {
+        "related_national_keywords": ["array of keyword page slugs"],
+        "location_examples": ["array of location page slugs"],
+        "packages": ["array of package slugs"]
+      }
+    },
+
+    "package_page": {
+      "page_id": "string (unique identifier)",
+      "page_type": "package",
+      "package": {
+        "package_id": "string",
+        "package_name": "string",
+        "package_slug": "string",
+        "price": "string",
+        "period": "string",
+        "tagline": "string"
+      },
+      "seo": {
+        "page_title": "string (package name + price + benefit)",
+        "meta_description": "string (what's included, who it's for)",
+        "h1_heading": "string (package name)",
+        "keywords": ["array of pricing and package keywords"],
+        "canonical_url": "string"
+      },
+      "hero": {
+        "headline": "string (package name + value prop)",
+        "subheadline": "string (who this is for)",
+        "price_display": {
+          "price": "string",
+          "period": "string",
+          "savings": "string (optional)"
+        },
+        "cta_primary": {
+          "text": "string (e.g., 'Get Started Today')",
+          "action": "string",
+          "type": "button"
+        }
+      },
+      "ideal_for": {
+        "heading": "string (e.g., 'Perfect For:')",
+        "description": "string",
+        "business_types": ["array of ideal business types"]
+      },
+      "features_included": {
+        "heading": "string (e.g., 'What's Included')",
+        "features": [
+          {
+            "feature": "string",
+            "description": "string (detailed explanation)",
+            "icon": "string"
+          }
+        ]
+      },
+      "features_not_included": {
+        "heading": "string (e.g., 'Not Included')",
+        "features": ["array of features not in this package"]
+      },
+      "comparison": {
+        "heading": "string (e.g., 'Compare Packages')",
+        "packages": [
+          {
+            "package_id": "string",
+            "package_name": "string",
+            "price": "string",
+            "is_current": "boolean",
+            "highlight_differences": ["array of key differences"]
+          }
+        ],
+        "cta": {
+          "text": "string (e.g., 'See All Packages')",
+          "action": "/packages"
+        }
+      },
+      "value_proposition": {
+        "heading": "string",
+        "content": "string (why this package delivers value)",
+        "benefits": [
+          {
+            "title": "string",
+            "description": "string"
+          }
+        ]
+      },
+      "testimonials": [
+        {
+          "quote": "string",
+          "author": "string",
+          "business": "string",
+          "package_used": "string (this package)"
+        }
+      ],
+      "faq": "array (package-specific FAQs)",
+      "images": {
+        "feature_images": [
+          {
+            "url": "string (Unsplash)",
+            "alt": "string",
+            "caption": "string",
+            "credit": {
+              "photographer": "string",
+              "unsplash_url": "string"
+            }
+          }
+        ]
+      },
+      "cta_section": {
+        "headline": "string",
+        "subheadline": "string",
+        "cta_primary": {
+          "text": "string",
+          "action": "string",
+          "type": "button"
+        },
+        "trust_signals": ["array of trust elements like '30-day guarantee', 'No setup fees']"
+      },
+      "related_pages": {
+        "services_included": ["array of service slugs included in this package"],
+        "upgrade_options": ["array of higher-tier package slugs"]
+      }
+    }
+  },
+
+  "content_templates": {
+    "benefit_examples": [
+      {
+        "title": "24/7 Availability",
+        "description": "Never miss a lead again. Our AI agents answer calls around the clock, even when your team is off the clock.",
+        "icon": "clock"
+      },
+      {
+        "title": "Instant Lead Qualification",
+        "description": "AI agents ask the right questions to qualify leads immediately, so your sales team only talks to ready-to-buy prospects.",
+        "icon": "filter"
+      },
+      {
+        "title": "Lower Cost Per Lead",
+        "description": "Reduce your customer acquisition costs with highly targeted ads that reach only your ideal customers.",
+        "icon": "dollar-sign"
+      },
+      {
+        "title": "Scalable Growth",
+        "description": "Handle 10 calls or 1,000 calls per day without hiring additional staff. Our AI scales with your business.",
+        "icon": "trending-up"
+      },
+      {
+        "title": "Real-Time Analytics",
+        "description": "See exactly where your leads come from, which ads perform best, and your ROI in real-time dashboards.",
+        "icon": "bar-chart"
+      },
+      {
+        "title": "Seamless Integration",
+        "description": "Works with your existing CRM, calendar, and tools. No complicated setup or tech headaches.",
+        "icon": "link"
+      }
+    ],
+    "faq_examples": [
+      {
+        "question": "How does Voice AI work for my business?",
+        "answer": "Our Voice AI agents are trained specifically for your business. They answer calls using natural conversation, ask qualifying questions, schedule appointments, and even transfer hot leads to your sales team—all automatically. It's like having a professional receptionist working 24/7 without the overhead."
+      },
+      {
+        "question": "What kind of businesses benefit most from Voice AI?",
+        "answer": "Service-based businesses see the biggest impact—HVAC companies, law firms, medical practices, home services, real estate, and any business that gets phone inquiries. If you're missing calls or spending too much time on the phone with unqualified leads, Voice AI is perfect for you."
+      },
+      {
+        "question": "How much do I need to spend on Google Ads?",
+        "answer": "We recommend starting with at least $1,000/month in ad spend to test and optimize campaigns. Our Growth package includes management for $1,000-$3,000/month ad spend. For larger budgets, our Enterprise package offers custom solutions."
+      },
+      {
+        "question": "Can I cancel anytime?",
+        "answer": "Yes! We don't lock you into long-term contracts. You can cancel anytime with 30 days' notice. We believe in earning your business every month by delivering results."
+      },
+      {
+        "question": "How quickly will I see results?",
+        "answer": "Voice AI can be set up and answering calls within 1-2 weeks. For paid ads (Google/Facebook), you'll start seeing traffic immediately, but it typically takes 30-60 days to fully optimize campaigns for best ROI."
+      },
+      {
+        "question": "Do you work with businesses outside of Tennessee?",
+        "answer": "Absolutely! While we're based in Knoxville, TN, we work with service businesses nationwide. Our Voice AI and advertising services are 100% virtual and work for any location."
+      },
+      {
+        "question": "What makes you different from other marketing agencies?",
+        "answer": "We focus exclusively on automation and lead generation for service businesses. We combine cutting-edge Voice AI with proven paid advertising strategies to help you capture more clients with less effort. Plus, we're transparent, no-contracts, and results-focused."
+      },
+      {
+        "question": "Will the AI sound robotic?",
+        "answer": "Not at all! Our AI voice agents use advanced natural language processing and human-like voices. Most callers don't even realize they're talking to AI. We can also customize the voice, tone, and conversation style to match your brand."
+      }
+    ],
+    "use_case_examples": [
+      {
+        "industry": "HVAC Companies",
+        "scenario": "An HVAC company was missing 40% of calls during peak season because their receptionist was overwhelmed. They implemented our AI Voice Agent to handle after-hours and overflow calls.",
+        "result": "They captured 150+ additional leads per month and increased revenue by $45,000 in the first 90 days."
+      },
+      {
+        "industry": "Law Firms",
+        "scenario": "A personal injury law firm was spending $8,000/month on Google Ads but had no way to track which leads came from ads versus other sources. We implemented tracking and Voice AI lead qualification.",
+        "result": "They reduced cost per qualified lead by 52% and now only pay for ads that generate real cases."
+      },
+      {
+        "industry": "Home Services",
+        "scenario": "A plumbing company wanted to grow but couldn't afford to hire more office staff. They automated their appointment scheduling with our AI Receptionist.",
+        "result": "They now handle 3x more calls without additional overhead, and customer satisfaction scores increased because calls are answered instantly."
+      },
+      {
+        "industry": "Real Estate",
+        "scenario": "A real estate agent was wasting time on unqualified buyer leads. We set up Facebook Lead Ads with AI voice follow-up to pre-qualify before the agent even got on the phone.",
+        "result": "The agent now spends 70% less time on unqualified leads and closed 5 additional deals in the first quarter."
+      }
+    ],
+    "cta_variations": [
+      {
+        "text": "Get Your Free Consultation",
+        "context": "For service pages and general inquiries"
+      },
+      {
+        "text": "See How It Works",
+        "context": "For educational/demo content"
+      },
+      {
+        "text": "Start Your Free Trial",
+        "context": "For package pages and high-intent visitors"
+      },
+      {
+        "text": "Call Us Now: 865-346-3339",
+        "context": "For urgent needs or high-intent visitors"
+      },
+      {
+        "text": "Get Pricing",
+        "context": "For comparison shoppers"
+      },
+      {
+        "text": "Schedule a Demo",
+        "context": "For Voice AI services specifically"
+      }
+    ]
+  },
+
+  "seo_title_patterns": {
+    "service_location": [
+      "{Service} in {City}, {State} | Capture Client",
+      "{Service} Agency in {City}, {State} | Automate Leads",
+      "Best {Service} for {City} Businesses | Capture Client",
+      "{City} {Service} | Generate More Leads on Autopilot"
+    ],
+    "service_national": [
+      "{Service} for Small Businesses | Capture Client",
+      "Best {Service} Agency | Automate Your Lead Generation",
+      "{Service} That Actually Works | Capture Client",
+      "Affordable {Service} for Service-Based Businesses"
+    ],
+    "package": [
+      "{Package Name} - ${Price}/mo | Capture Client",
+      "{Package Name}: {Main Feature} + More | Capture Client",
+      "Pricing: {Package Name} | Capture Client",
+      "{Package Name} - Perfect for {Ideal Business Type}"
+    ]
+  },
+
+  "meta_description_patterns": {
+    "service_location": "Looking for {service} in {city}? Capture Client helps {city} businesses {main benefit}. {Feature 1}, {Feature 2}, and more. Call 865-346-3339!",
+    "service_national": "{Service} for small businesses nationwide. {Main benefit} with {feature 1} and {feature 2}. No contracts. Proven results. Get started today!",
+    "package": "Our {package name} includes {top 3 features} for just ${price}/month. Perfect for {ideal customer}. No setup fees. Cancel anytime. Get started today!"
+  },
+
+  "image_search_queries": {
+    "voice_ai": [
+      "professional phone call business",
+      "customer service representative headset",
+      "business automation technology",
+      "AI artificial intelligence business",
+      "receptionist answering phone"
+    ],
+    "google_ads": [
+      "google search results laptop",
+      "digital marketing analytics dashboard",
+      "online advertising laptop",
+      "marketing ROI graph",
+      "PPC advertising business"
+    ],
+    "facebook_ads": [
+      "social media marketing phone",
+      "facebook advertising laptop",
+      "social media engagement",
+      "digital marketing team",
+      "online advertising agency"
+    ],
+    "service_businesses": [
+      "HVAC technician at work",
+      "law firm attorney office",
+      "plumber fixing pipe",
+      "electrician working",
+      "home service professional"
+    ],
+    "small_business": [
+      "small business owner",
+      "entrepreneur working laptop",
+      "business growth success",
+      "team collaboration office",
+      "startup business meeting"
+    ]
+  },
+
+  "notes": {
+    "usage": "This schema template is used by page generator agents to create consistent, SEO-optimized marketing pages for Capture Client.",
+    "customization": "Each page generator should customize content based on specific service, location, or national keyword while maintaining this structure.",
+    "images": "All image URLs should be populated during page generation using Unsplash via Jina AI scraping.",
+    "seo_focus": "Every page must be optimized for conversions with clear CTAs, trust signals, and lead capture forms.",
+    "content_length": "Service pages: 1500-2000 words | Location pages: 1200-1800 words | National SEO pages: 2000-2500 words | Package pages: 1000-1500 words"
+  }
+}

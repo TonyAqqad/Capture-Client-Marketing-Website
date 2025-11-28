@@ -1,0 +1,31 @@
+{
+  "page_id": "voice-ai-chesapeake-va",
+  "page_type": "service-location",
+  "service": {"service_id": "voice-ai", "service_name": "Voice AI Services", "service_slug": "voice-ai"},
+  "location": {"city": "Chesapeake", "state": "VA", "state_full": "Virginia", "slug": "chesapeake-va", "nearby_areas": ["Norfolk", "Virginia Beach", "Portsmouth", "Suffolk"], "service_area_radius": "25 miles"},
+  "seo": {"page_title": "Voice AI Agency in Chesapeake, VA | Capture Client", "meta_description": "Chesapeake businesses: Automate your calls with AI. Capture leads 24/7, qualify prospects, book appointments. Free consultation: 865-346-3339", "h1_heading": "Voice AI Services in Chesapeake, Virginia", "keywords": ["voice ai chesapeake", "chesapeake ai receptionist", "chesapeake call automation", "ai voice agents chesapeake va"], "canonical_url": "/voice-ai-chesapeake-va"},
+  "hero": {"headline": "Chesapeake Businesses: Automate Your Lead Capture", "subheadline": "AI Voice Agents That Work 24/7 While You Focus on Growth", "cta_primary": {"text": "Get Your Free Consultation", "action": "tel:865-346-3339", "type": "phone"}, "hero_image": {"url": "https://images.unsplash.com/photo-1525338078858-d762b5e32f2c?ixlib=rb-4.0.3&w=1920&q=80", "alt": "AI robot technology for Chesapeake business automation", "credit": {"photographer": "Lukas", "unsplash_url": "https://unsplash.com/photos/hND1OG3q67k"}}},
+  "local_intro": {"paragraph": "Chesapeake is Virginia's third-largest city with a thriving business community spanning retail, healthcare, home services, and professional sectors. Chesapeake businesses need modern solutions to capture leads efficiently. Our Voice AI agents help Chesapeake companies from Greenbrier to Great Bridge capture every call, qualify leads instantly, and schedule appointments automatically—all without hiring additional staff."
+  },
+  "benefits": [
+    {"title": "Serve All Chesapeake Areas", "description": "From Greenbrier to Great Bridge, our AI understands Chesapeake neighborhoods and serves customers across the entire city.", "icon": "map-pin"},
+    {"title": "24/7 Availability", "description": "Chesapeake customers call at all hours. Our AI answers every call professionally, day or night.", "icon": "clock"},
+    {"title": "Lead Qualification", "description": "Filter out unqualified leads automatically. Only talk to prospects ready to buy your Chesapeake services.", "icon": "filter"},
+    {"title": "Automated Booking", "description": "AI schedules appointments instantly into your calendar. No more phone tag with Chesapeake customers.", "icon": "calendar"}
+  ],
+  "how_it_works": [
+    {"step": 1, "title": "Free Strategy Session", "description": "We discuss your Chesapeake business goals and how AI can help you grow."},
+    {"step": 2, "title": "AI Customization", "description": "We train your AI with Chesapeake market knowledge and your business expertise."},
+    {"step": 3, "title": "Launch", "description": "Go live and start capturing Chesapeake leads immediately."},
+    {"step": 4, "title": "Optimize", "description": "We continuously improve performance based on real Chesapeake call data."}
+  ],
+  "service_area": {"heading": "Serving Chesapeake and Hampton Roads", "description": "We serve businesses throughout Chesapeake and surrounding Hampton Roads communities.", "areas_list": ["Chesapeake", "Greenbrier", "Great Bridge", "Western Branch", "Deep Creek", "Norfolk", "Virginia Beach", "Portsmouth", "Suffolk"]},
+  "faq": [
+    {"question": "How does Voice AI work for Chesapeake businesses?", "answer": "Our AI answers calls like a trained receptionist, qualifies leads, books appointments, and handles customer inquiries 24/7. Perfect for Chesapeake service businesses, medical practices, and professional firms."},
+    {"question": "What's the cost?", "answer": "Chesapeake packages start at $999/month including setup and training. Most businesses see ROI within 30 days."}
+  ],
+  "main_content": {"sections": [{"heading": "Voice AI for Growing Chesapeake Businesses", "content": "Chesapeake's business community is growing rapidly, with new opportunities emerging across retail, healthcare, and professional services. Voice AI helps Chesapeake businesses capture more leads, improve customer service, and scale without increasing overhead. Whether you operate in Greenbrier's commercial district or serve residential areas like Great Bridge, our AI ensures you never miss a Chesapeake customer call."}]},
+  "images": {"gallery": [{"url": "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?ixlib=rb-4.0.3&w=1200&q=80", "alt": "Modern technology and automation for business", "caption": "Advanced AI technology for Chesapeake businesses"}]},
+  "cta_section": {"headline": "Ready to Grow Your Chesapeake Business?", "subheadline": "Join Chesapeake businesses capturing 100% of leads with AI", "cta_primary": {"text": "Call Now: 865-346-3339", "action": "tel:865-346-3339", "type": "phone"}},
+  "related_pages": {"other_services_in_location": ["google-ads", "facebook-ads"], "nearby_locations": ["norfolk-va", "virginia-beach-va", "suffolk-va"], "packages": ["starter-package", "growth-package"]}
+}
