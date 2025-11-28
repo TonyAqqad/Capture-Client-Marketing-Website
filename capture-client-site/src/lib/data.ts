@@ -1,6 +1,41 @@
 import { promises as fs } from 'fs';
 import path from 'path';
 
+// Generic types for dynamic JSON data
+export interface HeroSection {
+  headline?: string;
+  subheadline?: string;
+  cta_primary?: { text: string; action: string; type?: string };
+  cta_secondary?: { text: string; action: string; type?: string };
+  hero_image?: { url: string; alt: string };
+}
+
+export interface IntroSection {
+  paragraph?: string;
+}
+
+export interface BenefitItem {
+  title: string;
+  description: string;
+  icon?: string;
+}
+
+export interface ProcessStep {
+  step?: number;
+  title: string;
+  description: string;
+}
+
+export interface SeoData {
+  page_title: string;
+  meta_description: string;
+  h1_heading: string;
+  keywords: string[];
+  canonical_url?: string;
+  og_title?: string;
+  og_description?: string;
+}
+
 export interface ServiceData {
   page_id: string;
   page_type: string;
@@ -9,19 +44,11 @@ export interface ServiceData {
     service_name: string;
     service_slug: string;
   };
-  seo: {
-    page_title: string;
-    meta_description: string;
-    h1_heading: string;
-    keywords: string[];
-    canonical_url: string;
-    og_title?: string;
-    og_description?: string;
-  };
-  hero: any;
-  intro: any;
-  benefits: any[];
-  how_it_works: any[];
+  seo: SeoData;
+  hero: HeroSection;
+  intro: IntroSection;
+  benefits: BenefitItem[];
+  how_it_works: ProcessStep[];
   [key: string]: any;
 }
 
@@ -34,7 +61,7 @@ export interface LocationData extends ServiceData {
     nearby_areas: string[];
     service_area_radius: string;
   };
-  local_intro: any;
+  local_intro: IntroSection;
 }
 
 export interface NationalData extends ServiceData {
@@ -56,8 +83,14 @@ export interface PackageData {
     period: string;
     tagline: string;
   };
-  seo: any;
-  hero: any;
+  seo: SeoData;
+  hero: HeroSection;
+  [key: string]: any;
+}
+
+export interface PricingData {
+  page_id: string;
+  packages?: PackageData[];
   [key: string]: any;
 }
 
@@ -201,11 +234,11 @@ export async function getPackageBySlug(slug: string): Promise<PackageData | null
   }
 }
 
-export async function getPricingData(): Promise<any> {
+export async function getPricingData(): Promise<PricingData | null> {
   try {
     const filePath = path.join(dataDir, 'packages', 'pricing.json');
     const content = await fs.readFile(filePath, 'utf-8');
-    return JSON.parse(content);
+    return JSON.parse(content) as PricingData;
   } catch {
     return null;
   }
