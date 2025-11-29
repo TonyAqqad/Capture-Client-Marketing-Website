@@ -15,7 +15,20 @@
       "Bash(npm uninstall:*)",
       "Bash(find:*)",
       "Bash(npm run dev:*)",
-      "Bash(npx playwright install chromium)"
+      "Bash(npx playwright install chromium)",
+      "Bash(taskkill:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(npm run lint)",
+      "Bash(cat:*)",
+      "Bash(npx eslint:*)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_console_messages",
+      "mcp__playwright__browser_evaluate",
+      "mcp__playwright__browser_close",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)"
     ],
     "deny": [],
     "ask": []

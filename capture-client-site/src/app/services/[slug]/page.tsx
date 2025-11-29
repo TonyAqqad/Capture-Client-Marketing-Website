@@ -4,6 +4,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import Link from "next/link";
+import JsonLd from "@/components/seo/JsonLd";
+import {
+  SITE_CONFIG,
+  generateServiceSchema,
+  generateBreadcrumbSchema,
+  generateWebPageSchema,
+} from "@/lib/seo-config";
 
 export async function generateStaticParams() {
   const services = await getAllServices();
@@ -26,13 +33,52 @@ export async function generateMetadata({
     };
   }
 
+  const pageUrl = `${SITE_CONFIG.url}/services/${service.service.service_slug}`;
+  const ogImageUrl = service.hero?.hero_image?.url || `${SITE_CONFIG.url}/og-image.jpg`;
+
   return {
     title: service.seo.page_title,
     description: service.seo.meta_description,
     keywords: service.seo.keywords,
+
+    // Canonical URL
+    alternates: {
+      canonical: pageUrl,
+    },
+
+    // Enhanced Open Graph
     openGraph: {
       title: service.seo.og_title || service.seo.page_title,
       description: service.seo.og_description || service.seo.meta_description,
+      url: pageUrl,
+      type: 'website',
+      locale: 'en_US',
+      siteName: SITE_CONFIG.name,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: service.service.service_name,
+        },
+      ],
+    },
+
+    // Twitter Card
+    twitter: {
+      card: 'summary_large_image',
+      title: service.seo.page_title,
+      description: service.seo.meta_description,
+      images: [ogImageUrl],
+    },
+
+    // Robots
+    robots: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
     },
   };
 }
@@ -49,8 +95,27 @@ export default async function ServicePage({
     notFound();
   }
 
+  // Generate JSON-LD schemas for service SEO
+  const serviceSchema = generateServiceSchema(service);
+
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: SITE_CONFIG.url },
+    { name: 'Services', url: `${SITE_CONFIG.url}/services` },
+    { name: service.service.service_name, url: `${SITE_CONFIG.url}/services/${service.service.service_slug}` },
+  ]);
+
+  const webPageSchema = generateWebPageSchema({
+    title: service.seo.page_title,
+    description: service.seo.meta_description,
+    url: `${SITE_CONFIG.url}/services/${service.service.service_slug}`,
+  });
+
+  const schemas = [serviceSchema, breadcrumbSchema, webPageSchema];
+
   return (
     <div className="min-h-screen bg-background-light dark:bg-background-dark">
+      {/* Inject JSON-LD structured data */}
+      <JsonLd schema={schemas} />
       {/* Hero Section */}
       <div className="relative py-24 px-8 lg:px-16 bg-gradient-to-br from-background-dark via-background-dark to-primary/10">
         {service.hero?.hero_image && (

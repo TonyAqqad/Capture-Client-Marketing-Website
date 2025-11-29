@@ -3,6 +3,15 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import JsonLd from "@/components/seo/JsonLd";
+import {
+  SITE_CONFIG,
+  generateLocalBusinessSchema,
+  generateServiceSchema,
+  generateFAQSchema,
+  generateBreadcrumbSchema,
+  generateWebPageSchema,
+} from "@/lib/seo-config";
 
 export async function generateStaticParams() {
   const locations = await getAllLocations();
@@ -25,10 +34,59 @@ export async function generateMetadata({
     };
   }
 
+  const pageUrl = `${SITE_CONFIG.url}/locations/${location.page_id}`;
+  const ogImageUrl = location.hero?.hero_image?.url || `${SITE_CONFIG.url}/og-image.jpg`;
+
   return {
     title: location.seo.page_title,
     description: location.seo.meta_description,
     keywords: location.seo.keywords,
+
+    // Canonical URL (critical for SEO)
+    alternates: {
+      canonical: pageUrl,
+    },
+
+    // Enhanced Open Graph for social sharing
+    openGraph: {
+      title: location.seo.og_title || location.seo.page_title,
+      description: location.seo.og_description || location.seo.meta_description,
+      url: pageUrl,
+      type: 'website',
+      locale: 'en_US',
+      siteName: SITE_CONFIG.name,
+      images: [
+        {
+          url: ogImageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${location.service.service_name} in ${location.location.city}, ${location.location.state_abbr}`,
+        },
+      ],
+    },
+
+    // Twitter Card optimization
+    twitter: {
+      card: 'summary_large_image',
+      title: location.seo.page_title,
+      description: location.seo.meta_description,
+      images: [ogImageUrl],
+    },
+
+    // Robots directives
+    robots: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+      'max-video-preview': -1,
+    },
+
+    // Geographic targeting for local SEO
+    other: {
+      'geo.region': `US-${location.location.state_abbr}`,
+      'geo.placename': location.location.city,
+    },
   };
 }
 
@@ -44,8 +102,47 @@ export default async function LocationPage({
     notFound();
   }
 
+  // Generate JSON-LD schemas for enhanced SEO
+  const localBusinessSchema = generateLocalBusinessSchema(location);
+  const serviceSchema = generateServiceSchema(location);
+
+  // Generate FAQ schema if FAQs exist
+  const faqSchema = location.faq && location.faq.length > 0
+    ? generateFAQSchema(
+        location.faq.map((item: any) => ({
+          question: item.question,
+          answer: item.answer,
+        }))
+      )
+    : null;
+
+  // Generate breadcrumb schema for better SERP display
+  const breadcrumbSchema = generateBreadcrumbSchema([
+    { name: 'Home', url: SITE_CONFIG.url },
+    { name: 'Locations', url: `${SITE_CONFIG.url}/locations` },
+    { name: `${location.location.city}, ${location.location.state_abbr}`, url: `${SITE_CONFIG.url}/locations/${location.page_id}` },
+  ]);
+
+  // Generate WebPage schema
+  const webPageSchema = generateWebPageSchema({
+    title: location.seo.page_title,
+    description: location.seo.meta_description,
+    url: `${SITE_CONFIG.url}/locations/${location.page_id}`,
+  });
+
+  // Combine all schemas (filter out nulls)
+  const schemas = [
+    localBusinessSchema,
+    serviceSchema,
+    breadcrumbSchema,
+    webPageSchema,
+    faqSchema,
+  ].filter(Boolean) as Array<Record<string, any>>;
+
   return (
     <div className="min-h-screen bg-background-light dark:bg-background-dark">
+      {/* Inject JSON-LD structured data for local SEO */}
+      <JsonLd schema={schemas} />
       {/* Hero Section */}
       <div className="relative py-24 px-8 lg:px-16 bg-gradient-to-br from-background-dark via-background-dark to-primary/10">
         {location.hero?.hero_image && (

@@ -1,0 +1,162 @@
+{
+  "page_id": "lead-generation",
+  "page_type": "service",
+  "service": {
+    "service_id": "lead-generation",
+    "service_name": "Lead Generation Services",
+    "service_slug": "lead-generation"
+  },
+  "seo": {
+    "page_title": "Lead Generation Services | Google & Facebook Ads | Capture Client",
+    "meta_description": "Professional lead generation services for small businesses. Expert Google Ads and Facebook Ads management to drive high-quality leads. Proven strategies that convert.",
+    "h1_heading": "Lead Generation Services for Small Business",
+    "keywords": [
+      "lead generation",
+      "lead generation services",
+      "google ads lead generation",
+      "facebook ads lead generation",
+      "small business lead generation",
+      "qualified leads",
+      "b2b lead generation",
+      "local lead generation",
+      "lead generation agency"
+    ],
+    "canonical_url": "/lead-generation",
+    "og_title": "Lead Generation Services | Capture More Qualified Leads",
+    "og_description": "Generate high-quality leads for your small business with professionally managed Google Ads and Facebook Ads campaigns. Stop chasing leads and let them come to you."
+  },
+  "hero": {
+    "headline": "Stop Chasing Leads. Let Them Come to You.",
+    "subheadline": "Professional Google & Facebook Ads Management That Drives High-Quality Leads to Your Business",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "cta_secondary": {
+      "text": "See Our Strategy",
+      "action": "#how-it-works",
+      "type": "link"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Lead generation dashboard showing successful marketing campaigns",
+      "credit": {
+        "photographer": "Carlos Muza",
+        "unsplash_url": "https://unsplash.com/photos/hpjSkU2UYSU"
+      }
+    }
+  },
+  "intro": {
+    "paragraph": "Running a small business means you need a constant stream of qualified leads to grow. But effective lead generation is time-consuming, expensive, and requires expertise most small business owners don't have. DIY marketing wastes money on unqualified clicks. Hiring an in-house team is too expensive. That's where Capture Client's Lead Generation Services come in. We combine expert Google Ads management, Facebook Ads strategy, and conversion-optimized landing pages to drive high-quality leads directly to your business. Our team handles everything—keyword research, ad creation, audience targeting, budget optimization, A/B testing, and continuous refinement. You get a predictable flow of qualified prospects without lifting a finger. We specialize in service-based businesses (HVAC, plumbing, legal, medical, home services) and understand exactly how to attract the right customers. Unlike traditional agencies that charge hourly or take a percentage, we offer transparent monthly pricing with full campaign ownership. Track every lead, every dollar spent, and every conversion in real-time. Whether you need 10 leads or 100 per month, our proven system scales with your business. Stop guessing with your marketing budget. Let our lead generation experts put your business in front of motivated buyers ready to purchase your services."
+  },
+  "benefits": [
+    {
+      "title": "Predictable Lead Flow",
+      "description": "Get a steady stream of qualified leads every month. No more feast-or-famine cycles. Our campaigns are optimized to deliver consistent, reliable results you can count on.",
+      "icon": "trending_up"
+    },
+    {
+      "title": "Highly Qualified Leads",
+      "description": "We target prospects who are actively searching for your services. Advanced audience targeting and qualification ensures you only pay for leads that match your ideal customer profile.",
+      "icon": "verified"
+    },
+    {
+      "title": "Multi-Channel Strategy",
+      "description": "Reach customers everywhere they spend time online. We combine Google Search Ads, Google Display, Facebook Ads, and Instagram campaigns for maximum visibility and conversions.",
+      "icon": "hub"
+    },
+    {
+      "title": "Expert Campaign Management",
+      "description": "Our certified Google Ads and Facebook Ads specialists handle everything. From keyword research to ad creative to landing page optimization—we're your full-service lead generation team.",
+      "icon": "workspace_premium"
+    },
+    {
+      "title": "Transparent ROI Tracking",
+      "description": "See exactly where every dollar goes. Real-time dashboards show campaign performance, cost per lead, conversion rates, and ROI. Complete transparency with every campaign.",
+      "icon": "insights"
+    },
+    {
+      "title": "Conversion-Optimized Landing Pages",
+      "description": "High-converting landing pages designed to turn clicks into customers. Mobile-optimized, fast-loading pages with compelling copy and clear calls-to-action.",
+      "icon": "web"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Discovery & Strategy",
+      "description": "We analyze your business, target audience, competitors, and goals. We create a custom lead generation strategy tailored to your market, budget, and objectives."
+    },
+    {
+      "step": 2,
+      "title": "Campaign Setup & Launch",
+      "description": "Our team builds your Google Ads and Facebook Ads campaigns from scratch. Keyword research, ad copywriting, audience targeting, tracking pixels—everything is configured for optimal performance."
+    },
+    {
+      "step": 3,
+      "title": "Landing Page Creation",
+      "description": "We design and build conversion-optimized landing pages specific to your campaigns. Fast-loading, mobile-friendly pages with lead capture forms integrated with your CRM."
+    },
+    {
+      "step": 4,
+      "title": "Continuous Optimization",
+      "description": "We don't set it and forget it. Our team continuously monitors performance, tests ad variations, adjusts bids, refines targeting, and optimizes for better results every week."
+    },
+    {
+      "step": 5,
+      "title": "Lead Delivery & Reporting",
+      "description": "Leads flow directly into your CRM with full tracking. Monthly reports show campaign performance, cost per lead, conversions, and ROI. Full transparency into your marketing investment."
+    }
+  ],
+  "faq": [
+    {
+      "question": "How much do I need to spend on ads?",
+      "answer": "Ad budgets vary based on your industry, location, and competition. Most of our clients invest between $1,000-$5,000 per month in ad spend, plus our management fee. We'll recommend a budget during your strategy call based on your goals and market."
+    },
+    {
+      "question": "What's the difference between Google Ads and Facebook Ads?",
+      "answer": "Google Ads targets people actively searching for your services (high intent). Facebook Ads targets people based on interests and demographics (awareness and nurturing). We typically recommend both for maximum reach and conversions."
+    },
+    {
+      "question": "How many leads can I expect?",
+      "answer": "Lead volume depends on your budget, industry, location, and competition. Most clients see 10-50 qualified leads per month with a $2,000-$3,000 ad spend. We'll provide projections during your strategy call."
+    },
+    {
+      "question": "Do you create the ads and landing pages?",
+      "answer": "Yes! Our team handles everything—ad copy, creative design, landing page development, and conversion optimization. You approve the strategy and messaging, we execute everything."
+    },
+    {
+      "question": "How long does it take to see results?",
+      "answer": "Most campaigns start generating leads within 7-14 days. Optimal performance typically develops over 30-60 days as we gather data and continuously optimize targeting, messaging, and bidding."
+    },
+    {
+      "question": "What industries do you specialize in?",
+      "answer": "We specialize in service-based businesses including HVAC, plumbing, electrical, legal services, medical/dental practices, home services, real estate, and B2B professional services. If you serve local customers, we can help."
+    },
+    {
+      "question": "Can I cancel anytime?",
+      "answer": "Yes. We offer month-to-month contracts with 30 days notice. No long-term commitments required. However, we recommend at least 90 days to allow proper optimization and data gathering."
+    },
+    {
+      "question": "Do you provide the ad spend or do I?",
+      "answer": "You provide the ad spend budget. Google and Facebook bill you directly for ad costs. We manage the campaigns and charge a separate management fee for our services."
+    }
+  ],
+  "cta_section": {
+    "headline": "Ready to Generate More Qualified Leads?",
+    "subheadline": "Book a free strategy call and discover how our lead generation services can fill your pipeline with high-quality prospects ready to buy.",
+    "cta_primary": {
+      "text": "Book Free Strategy Call",
+      "action": "#contact",
+      "type": "link"
+    }
+  },
+  "related_pages": {
+    "services": [
+      "google-ads",
+      "facebook-ads",
+      "voice-ai"
+    ]
+  }
+}

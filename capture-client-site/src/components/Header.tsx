@@ -1,94 +1,170 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <header className="py-6 px-8 lg:px-16 relative z-50">
-      <nav className="container mx-auto flex justify-between items-center">
-        <Link href="/" className="flex items-center gap-3">
-          <span className="material-icons text-primary text-4xl">settings_suggest</span>
-          <span className="text-xl font-bold text-white">Capture Client</span>
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-[#0F172A]/95 backdrop-blur-xl border-b border-white/5 shadow-xl"
+          : "bg-[#0F172A]/80 backdrop-blur-md"
+      }`}
+    >
+      <nav className="container mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <Link
+          href="/"
+          className="flex items-center gap-3 group transition-transform hover:scale-105"
+        >
+          <div className="relative w-8 h-8 flex-shrink-0">
+            <Image
+              src="/logo-secondary.png"
+              alt="Capture Client Logo"
+              fill
+              className="object-contain transition-all group-hover:brightness-110 duration-500"
+              priority
+            />
+            <div className="absolute inset-0 bg-[#4A69E2] opacity-10 blur-xl rounded-full group-hover:bg-[#00C9FF] transition-all duration-500"></div>
+          </div>
+          <span className="hidden sm:inline text-xl font-heading font-bold text-[#F8FAFC] tracking-tight">
+            Capture Client
+          </span>
         </Link>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-8 text-white/80">
-          <Link href="/services" className="hover:text-white transition-colors">
-            Services
-          </Link>
-          <Link href="/pricing" className="hover:text-white transition-colors">
-            Pricing
-          </Link>
-          <Link href="/about" className="hover:text-white transition-colors">
-            About
-          </Link>
-          <Link href="/contact" className="hover:text-white transition-colors">
-            Contact
+        {/* Desktop Navigation */}
+        <div className="hidden lg:flex items-center gap-1">
+          <NavLink href="/services">Services</NavLink>
+          <NavLink href="/features">Features</NavLink>
+          <NavLink href="/pricing">Pricing</NavLink>
+          <NavLink href="/contact">Contact</NavLink>
+        </div>
+
+        {/* Desktop CTA Buttons */}
+        <div className="hidden lg:flex items-center gap-4">
+          <a
+            href="tel:8653463339"
+            className="text-[#F8FAFC]/80 hover:text-[#F8FAFC] transition-colors text-sm font-medium flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-white/5"
+          >
+            <span className="material-icons text-lg">phone</span>
+            (865) 346-3339
+          </a>
+          <Link
+            href="/contact"
+            className="relative group overflow-hidden bg-gradient-to-r from-[#4A69E2] to-[#00C9FF] text-white px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#00C9FF]/30 hover:-translate-y-0.5"
+          >
+            <span className="relative z-10 flex items-center gap-2">
+              Book a Demo
+              <span className="material-icons text-sm transition-transform group-hover:translate-x-1">
+                arrow_forward
+              </span>
+            </span>
+            <div className="absolute inset-0 bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </Link>
         </div>
 
-        <a
-          href="tel:865-346-3339"
-          className="hidden md:block bg-white/10 border border-white/20 text-white px-6 py-2 rounded-full backdrop-blur-sm hover:bg-white/20 hover:border-white/30 transition-all duration-300 glowing-button-secondary"
-        >
-          Call Now: (865) 346-3339
-        </a>
-
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white"
+          className="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white/5 transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
         >
-          <span className="material-icons">
+          <span className="material-icons text-[#F8FAFC]">
             {mobileMenuOpen ? "close" : "menu"}
           </span>
         </button>
       </nav>
 
       {/* Mobile Menu */}
-      {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-background-dark border-t border-gray-800 py-4">
-          <div className="container mx-auto px-8 flex flex-col gap-4">
-            <Link
-              href="/services"
-              className="text-white/80 hover:text-white transition-colors py-2"
-              onClick={() => setMobileMenuOpen(false)}
-            >
+      <div
+        className={`lg:hidden overflow-hidden transition-all duration-300 ${
+          mobileMenuOpen ? "max-h-screen border-t border-white/5" : "max-h-0"
+        }`}
+      >
+        <div className="container mx-auto px-6 py-6 bg-[#0F172A]/98 backdrop-blur-xl">
+          <div className="flex flex-col gap-1 mb-6">
+            <MobileNavLink href="/services" onClick={() => setMobileMenuOpen(false)}>
               Services
-            </Link>
-            <Link
-              href="/pricing"
-              className="text-white/80 hover:text-white transition-colors py-2"
-              onClick={() => setMobileMenuOpen(false)}
-            >
+            </MobileNavLink>
+            <MobileNavLink href="/features" onClick={() => setMobileMenuOpen(false)}>
+              Features
+            </MobileNavLink>
+            <MobileNavLink href="/pricing" onClick={() => setMobileMenuOpen(false)}>
               Pricing
-            </Link>
-            <Link
-              href="/about"
-              className="text-white/80 hover:text-white transition-colors py-2"
-              onClick={() => setMobileMenuOpen(false)}
+            </MobileNavLink>
+            <MobileNavLink href="/contact" onClick={() => setMobileMenuOpen(false)}>
+              Contact
+            </MobileNavLink>
+          </div>
+
+          <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
+            <a
+              href="tel:8653463339"
+              className="flex items-center justify-center gap-2 text-[#F8FAFC] bg-white/5 px-6 py-3 rounded-lg hover:bg-white/10 transition-all font-medium"
             >
-              About
-            </Link>
+              <span className="material-icons text-lg">phone</span>
+              (865) 346-3339
+            </a>
             <Link
               href="/contact"
-              className="text-white/80 hover:text-white transition-colors py-2"
+              className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#4A69E2] to-[#00C9FF] text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#00C9FF]/30 transition-all"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Contact
+              Book a Demo
+              <span className="material-icons text-sm">arrow_forward</span>
             </Link>
-            <a
-              href="tel:865-346-3339"
-              className="bg-primary text-black px-6 py-2 rounded-full font-bold text-center"
-            >
-              Call Now
-            </a>
           </div>
         </div>
-      )}
+      </div>
     </header>
+  );
+}
+
+function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
+  return (
+    <Link
+      href={href}
+      className="relative px-4 py-2 text-[#F8FAFC]/80 hover:text-[#F8FAFC] font-body text-sm font-medium transition-colors group"
+    >
+      {children}
+      <span className="absolute inset-x-4 -bottom-px h-px bg-gradient-to-r from-[#4A69E2] to-[#00C9FF] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+    </Link>
+  );
+}
+
+function MobileNavLink({
+  href,
+  children,
+  onClick,
+}: {
+  href: string;
+  children: React.ReactNode;
+  onClick: () => void;
+}) {
+  return (
+    <Link
+      href={href}
+      className="flex items-center justify-between px-4 py-3 text-[#F8FAFC]/80 hover:text-[#F8FAFC] hover:bg-white/5 rounded-lg transition-all font-medium group"
+      onClick={onClick}
+    >
+      {children}
+      <span className="material-icons text-sm opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all">
+        arrow_forward
+      </span>
+    </Link>
   );
 }
