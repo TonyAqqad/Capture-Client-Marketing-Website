@@ -1,26 +1,29 @@
 {
   "page_id": "voice-ai-athens-ga",
   "page_type": "service-location",
-
   "service": {
     "service_id": "voice-ai",
     "service_name": "Voice AI Services",
     "service_slug": "voice-ai"
   },
-
   "location": {
     "city": "Athens",
     "state": "GA",
     "state_abbr": "GA",
     "state_full": "Georgia",
     "slug": "athens-ga",
-    "nearby_areas": ["Watkinsville", "Bogart", "Winterville", "Jefferson", "Commerce"],
+    "nearby_areas": [
+      "Watkinsville",
+      "Bogart",
+      "Winterville",
+      "Jefferson",
+      "Commerce"
+    ],
     "service_area_radius": "25 miles"
   },
-
   "seo": {
     "page_title": "Voice AI Services in Athens, GA | Capture Client",
-    "meta_description": "Voice AI for Athens businesses. Automate calls 24/7, qualify leads instantly, and book appointments automatically. Perfect for Athens service businesses. Call 865-346-3339!",
+    "meta_description": "Voice AI for Athens businesses near UGA, Five Points, and St. Mary's Hospital. Automate calls 24/7 across Clarke County. Call 865-346-3339!",
     "h1_heading": "Voice AI Services in Athens, Georgia",
     "keywords": [
       "voice ai athens",
@@ -37,7 +40,6 @@
       "service_area": "Athens, GA and surrounding areas"
     }
   },
-
   "hero": {
     "headline": "Voice AI for Athens Businesses",
     "subheadline": "Never Miss Another Call—AI Voice Agents That Work 24/7 for Athens Companies",
@@ -60,34 +62,31 @@
       }
     }
   },
-
   "local_intro": {
-    "paragraph": "Athens, Georgia is more than just home to UGA—it's a thriving community with a diverse economy of healthcare providers, legal professionals, home services companies, and small businesses. Whether you're a medical practice near St. Mary's Hospital, a law firm downtown, or a contractor serving Clarke County, your business lives and dies by phone calls. Miss a call, and that potential customer goes to your competitor. Our Voice AI ensures Athens businesses never miss an opportunity. The AI answers calls 24/7 with a professional, natural-sounding voice, qualifies leads based on your criteria, and books appointments directly into your calendar. Athens businesses are discovering that Voice AI is the most cost-effective way to capture more leads and grow revenue without hiring expensive staff."
+    "paragraph": "Athens, Georgia is more than just home to UGA—it's a thriving community with a diverse economy. From the medical practices near St. Mary's Hospital and Piedmont Athens Regional, to law firms in the downtown business district, from home services companies serving Clarke County to the bustling restaurants and shops in Five Points and Normaltown, your business lives and dies by phone calls. Miss a call, and that potential customer goes to your competitor. Our Voice AI ensures Athens businesses never miss an opportunity, whether you're on Lumpkin Street, near the Georgia Center, or anywhere in the Classic City."
   },
-
   "benefits": [
     {
       "title": "24/7 Availability",
       "description": "Athens customers don't just call 9-5. Our Voice AI ensures every call is answered professionally, whether it's 3 PM or 3 AM.",
-      "icon": "clock"
+      "icon": "schedule"
     },
     {
       "title": "Smart Lead Qualification",
       "description": "The AI asks qualifying questions customized for your Athens business so you only talk to prospects ready to buy.",
-      "icon": "filter"
+      "icon": "filter_alt"
     },
     {
       "title": "Appointment Booking",
       "description": "Callers schedule appointments instantly based on your real-time availability. No more phone tag with busy Athens professionals.",
-      "icon": "calendar"
+      "icon": "event"
     },
     {
       "title": "Lower Costs",
       "description": "Voice AI costs far less than hiring reception staff in Athens. Predictable monthly pricing with no salaries, benefits, or training costs.",
-      "icon": "dollar-sign"
+      "icon": "attach_money"
     }
   ],
-
   "how_it_works": [
     {
       "step": 1,
@@ -105,28 +104,26 @@
       "description": "Your AI launches and starts answering calls immediately. We provide analytics and ongoing optimization."
     }
   ],
-
   "local_use_cases": [
     {
-      "business_type": "Athens Healthcare Providers",
+      "business_type": "Downtown Athens Healthcare",
       "scenario": "A dental practice near UGA campus had staff overwhelmed with appointment scheduling, insurance questions, and patient inquiries. During busy times, calls went to voicemail and patients booked with other Athens dentists.",
       "result": "Voice AI now handles routine calls, schedules appointments 24/7, and answers common questions. The practice books 60% more new patient appointments and staff focus on patient care instead of phones."
     },
     {
-      "business_type": "Athens Home Services",
+      "business_type": "Clarke County Home Services",
       "scenario": "A roofing company serving Athens and Clarke County was missing calls while crews were on job sites. They estimated losing 20-30% of potential business to competitors who answered faster.",
       "result": "Voice AI captures every call, qualifies leads by asking about roof age and damage, and schedules free estimates. The company now captures 100% of leads and added two crews to handle increased demand."
     },
     {
-      "business_type": "Athens Legal Practices",
+      "business_type": "Five Points Legal Practice",
       "scenario": "A family law attorney in downtown Athens spent too much time on initial consultations with people who couldn't afford legal services or weren't serious about hiring an attorney.",
       "result": "Voice AI pre-qualifies potential clients by asking about case type, budget, and timeline. The attorney now only meets with qualified prospects and closed 40% more cases this year."
     }
   ],
-
   "service_area": {
     "heading": "Serving Athens and Clarke County",
-    "description": "We provide Voice AI services to businesses throughout Athens, Clarke County, and surrounding Northeast Georgia communities.",
+    "description": "We provide Voice AI services to businesses throughout Athens, Clarke County, and surrounding Northeast Georgia communities including Five Points, Normaltown, and the UGA campus area.",
     "areas_list": [
       "Athens (Downtown, Five Points, Normaltown)",
       "Watkinsville",
@@ -138,7 +135,6 @@
       "UGA Campus area"
     ]
   },
-
   "faq": [
     {
       "question": "How does Voice AI work for Athens businesses?",
@@ -161,7 +157,6 @@
       "answer": "Most Athens businesses are live with Voice AI within 1-2 weeks from initial consultation to launch. We handle all technical setup while you continue running your business."
     }
   ],
-
   "testimonials": [
     {
       "quote": "Our dental practice near UGA was losing new patients because we couldn't answer calls during busy times. Capture Client's Voice AI solved that problem immediately. Now every call is answered, appointments are booked 24/7, and we've increased new patient bookings by 60%. Best investment we've made.",
@@ -176,7 +171,6 @@
       "location": "Watkinsville, GA"
     }
   ],
-
   "main_content": {
     "sections": [
       {
@@ -189,7 +183,6 @@
       }
     ]
   },
-
   "images": {
     "gallery": [
       {
@@ -204,7 +197,6 @@
       }
     ]
   },
-
   "cta_section": {
     "headline": "Start Capturing More Athens Leads Today",
     "subheadline": "Join Athens businesses growing revenue with Voice AI",
@@ -220,10 +212,20 @@
     },
     "urgency_text": "Free consultation available—limited spots for Athens businesses"
   },
-
   "related_pages": {
-    "other_services_in_location": ["google-ads-athens-ga", "facebook-ads-athens-ga"],
-    "nearby_locations": ["atlanta-ga", "augusta-ga", "watkinsville-ga"],
-    "packages": ["starter-package", "growth-package", "enterprise-package"]
+    "other_services_in_location": [
+      "google-ads-athens-ga",
+      "facebook-ads-athens-ga"
+    ],
+    "nearby_locations": [
+      "atlanta-ga",
+      "augusta-ga",
+      "watkinsville-ga"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package",
+      "enterprise-package"
+    ]
   }
 }

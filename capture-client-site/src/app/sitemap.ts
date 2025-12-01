@@ -1,5 +1,5 @@
-import { MetadataRoute } from 'next';
-import { getAllServices, getAllLocations, getAllNationalPages, getAllPackages } from '@/lib/data';
+import { MetadataRoute } from "next";
+import { getAllServices, getAllLocations, getAllNationalPages, getAllPackages } from "@/lib/data";
 
 /**
  * Enhanced XML Sitemap following 2025 SEO best practices
@@ -15,7 +15,7 @@ import { getAllServices, getAllLocations, getAllNationalPages, getAllPackages } 
  * - Next.js Sitemap API: https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap
  */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://captureclient.net';
+  const baseUrl = "https://captureclient.net";
   const currentDate = new Date();
 
   // Fetch all dynamic content
@@ -31,19 +31,19 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: baseUrl,
       lastModified: currentDate,
-      changeFrequency: 'daily',
+      changeFrequency: "daily",
       priority: 1.0, // Homepage - highest priority
     },
     {
       url: `${baseUrl}/contact`,
       lastModified: currentDate,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.9, // Contact page - high conversion
     },
     {
       url: `${baseUrl}/pricing`,
       lastModified: currentDate,
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 0.95, // Pricing page - high conversion
     },
   ];
@@ -53,13 +53,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: `${baseUrl}/services`,
       lastModified: currentDate,
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 0.9,
     },
     ...services.map((service) => ({
       url: `${baseUrl}/services/${service.service.service_slug}`,
       lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
+      changeFrequency: "weekly" as const,
       priority: 0.85, // Service pages - important for SEO
     })),
   ];
@@ -69,13 +69,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: `${baseUrl}/locations`,
       lastModified: currentDate,
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 0.9,
     },
     ...locations.map((location) => ({
       url: `${baseUrl}/locations/${location.page_id}`,
       lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
+      changeFrequency: "weekly" as const,
       priority: 0.95, // Location pages - CRITICAL for local SEO
     })),
   ];
@@ -84,7 +84,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const nationalSeoPages: MetadataRoute.Sitemap = nationalPages.map((page) => ({
     url: `${baseUrl}/${page.keyword.keyword_slug}`,
     lastModified: currentDate,
-    changeFrequency: 'weekly' as const,
+    changeFrequency: "weekly" as const,
     priority: 0.85, // National keyword pages - important for organic traffic
   }));
 
@@ -92,7 +92,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const packagePages: MetadataRoute.Sitemap = packages.map((pkg) => ({
     url: `${baseUrl}/pricing/${pkg.package.package_slug}`,
     lastModified: currentDate,
-    changeFrequency: 'monthly' as const,
+    changeFrequency: "monthly" as const,
     priority: 0.8, // Package pages - good for conversion
   }));
 
@@ -101,25 +101,25 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: `${baseUrl}/about`,
       lastModified: currentDate,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.6,
     },
     {
       url: `${baseUrl}/features`,
       lastModified: currentDate,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/blog`,
       lastModified: currentDate,
-      changeFrequency: 'weekly',
+      changeFrequency: "weekly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/faq`,
       lastModified: currentDate,
-      changeFrequency: 'monthly',
+      changeFrequency: "monthly",
       priority: 0.6,
     },
   ];
@@ -129,13 +129,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: `${baseUrl}/privacy-policy`,
       lastModified: currentDate,
-      changeFrequency: 'yearly',
+      changeFrequency: "yearly",
       priority: 0.3,
     },
     {
       url: `${baseUrl}/terms-of-service`,
       lastModified: currentDate,
-      changeFrequency: 'yearly',
+      changeFrequency: "yearly",
       priority: 0.3,
     },
   ];
@@ -143,12 +143,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Combine all pages in priority order
   return [
     ...corePages,
-    ...locationPages,      // Location pages first (local SEO focus)
-    ...servicePages,       // Then service pages
-    ...nationalSeoPages,   // Then national SEO pages
-    ...packagePages,       // Then packages
-    ...supportPages,       // Then supporting content
-    ...legalPages,         // Legal pages last
+    ...locationPages, // Location pages first (local SEO focus)
+    ...servicePages, // Then service pages
+    ...nationalSeoPages, // Then national SEO pages
+    ...packagePages, // Then packages
+    ...supportPages, // Then supporting content
+    ...legalPages, // Legal pages last
   ];
 }
 

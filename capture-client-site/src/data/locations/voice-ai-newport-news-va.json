@@ -11,14 +11,26 @@
     "state": "VA",
     "state_full": "Virginia",
     "slug": "newport-news-va",
-    "nearby_areas": ["Hampton", "Norfolk", "Chesapeake", "Yorktown"],
+    "nearby_areas": [
+      "Hampton",
+      "Norfolk",
+      "Chesapeake",
+      "Yorktown"
+    ],
     "service_area_radius": "30 miles"
   },
   "seo": {
     "page_title": "Voice AI Agency in Newport News, VA | Capture Client",
     "meta_description": "Voice AI for Newport News businesses. Automate calls 24/7, qualify leads, book appointments. Serving Hampton Roads metro area. Call 865-346-3339 today!",
     "h1_heading": "Voice AI Services in Newport News, Virginia",
-    "keywords": ["voice ai agency newport news va", "ai voice agents newport news", "ai receptionist newport news", "automated call answering newport news", "lead qualification ai newport news", "voice ai hampton roads"],
+    "keywords": [
+      "voice ai agency newport news va",
+      "ai voice agents newport news",
+      "ai receptionist newport news",
+      "automated call answering newport news",
+      "lead qualification ai newport news",
+      "voice ai hampton roads"
+    ],
     "canonical_url": "/voice-ai-newport-news-va",
     "local_business_schema": {
       "type": "LocalBusiness",
@@ -55,27 +67,27 @@
     {
       "title": "24/7 Lead Capture for Newport News",
       "description": "Your Newport News business never sleeps with AI. Capture leads from shipyard workers calling during shift changes to late-night searchers across Hampton Roads.",
-      "icon": "clock"
+      "icon": "schedule"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "Stop wasting time on unqualified leads. Our AI pre-qualifies Newport News prospects, so your team only talks to ready-to-buy customers.",
-      "icon": "filter"
+      "icon": "filter_alt"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "Let AI schedule appointments directly into your calendar while you focus on serving Newport News clients. No more phone tag.",
-      "icon": "calendar"
+      "icon": "event"
     },
     {
       "title": "Cost-Effective Staffing Solution",
       "description": "Save thousands compared to hiring receptionist staff. No salary, benefits, or training costs - just reliable 24/7 service.",
-      "icon": "dollar-sign"
+      "icon": "attach_money"
     },
     {
       "title": "Professional Call Handling",
       "description": "Consistent, friendly service that represents your Newport News brand perfectly on every call. No bad days, just excellence.",
-      "icon": "award"
+      "icon": "workspace_premium"
     }
   ],
   "how_it_works": [
@@ -115,7 +127,18 @@
   "service_area": {
     "heading": "Serving Newport News and Hampton Roads",
     "description": "We provide Voice AI services throughout Newport News and the greater Hampton Roads metropolitan area.",
-    "areas_list": ["Newport News", "Hampton", "Norfolk", "Virginia Beach", "Chesapeake", "Portsmouth", "Suffolk", "Yorktown", "Poquoson", "Smithfield"]
+    "areas_list": [
+      "Newport News",
+      "Hampton",
+      "Norfolk",
+      "Virginia Beach",
+      "Chesapeake",
+      "Portsmouth",
+      "Suffolk",
+      "Yorktown",
+      "Poquoson",
+      "Smithfield"
+    ]
   },
   "local_testimonials": [
     {
@@ -180,8 +203,19 @@
     "urgency_text": "Limited spots available for Newport News businesses this month"
   },
   "related_pages": {
-    "other_services_in_location": ["google-ads", "facebook-ads"],
-    "nearby_locations": ["hampton", "norfolk", "virginia-beach"],
-    "packages": ["starter-package", "growth-package", "enterprise-package"]
+    "other_services_in_location": [
+      "google-ads",
+      "facebook-ads"
+    ],
+    "nearby_locations": [
+      "hampton",
+      "norfolk",
+      "virginia-beach"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package",
+      "enterprise-package"
+    ]
   }
 }

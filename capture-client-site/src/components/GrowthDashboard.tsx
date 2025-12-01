@@ -1,23 +1,23 @@
-'use client';
+"use client";
 
-import { useRef, useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from '@/hooks/useInView';
-import { useCountUp } from '@/hooks/useCountUp';
+import { useRef, useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "@/hooks/useInView";
+import { useCountUp } from "@/hooks/useCountUp";
 
 interface Activity {
   id: number;
-  icon: 'accent' | 'primary';
+  icon: "accent" | "primary";
   text: string;
   time: string;
 }
 
 const activities: Activity[] = [
-  { id: 1, icon: 'accent', text: 'New lead from Google Ads', time: '2m ago' },
-  { id: 2, icon: 'primary', text: 'AI scheduled appointment', time: '8m ago' },
-  { id: 3, icon: 'accent', text: 'Call completed & transcribed', time: '15m ago' },
-  { id: 4, icon: 'primary', text: 'Facebook campaign optimized', time: '23m ago' },
-  { id: 5, icon: 'accent', text: 'Lead converted to client', time: '1h ago' },
+  { id: 1, icon: "accent", text: "New lead from Google Ads", time: "2m ago" },
+  { id: 2, icon: "primary", text: "AI scheduled appointment", time: "8m ago" },
+  { id: 3, icon: "accent", text: "Call completed & transcribed", time: "15m ago" },
+  { id: 4, icon: "primary", text: "Facebook campaign optimized", time: "23m ago" },
+  { id: 5, icon: "accent", text: "Lead converted to client", time: "1h ago" },
 ];
 
 export default function GrowthDashboard() {
@@ -53,7 +53,7 @@ export default function GrowthDashboard() {
         initial={{ opacity: 0, x: -30 }}
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
         transition={{ duration: 0.6 }}
-        className="glass p-8 rounded-2xl shadow-glow-primary relative overflow-hidden"
+        className="glass p-4 sm:p-6 lg:p-8 rounded-2xl shadow-glow-primary relative overflow-hidden"
       >
         {/* Animated background gradient */}
         <motion.div
@@ -64,16 +64,16 @@ export default function GrowthDashboard() {
           transition={{
             duration: 4,
             repeat: Infinity,
-            repeatType: 'reverse',
+            repeatType: "reverse",
           }}
           className="absolute inset-0 bg-gradient-radial from-accent/20 via-primary/10 to-transparent"
         />
 
         <div className="relative z-10">
           {/* Header */}
-          <div className="flex items-center justify-between mb-6">
-            <h4 className="text-foreground font-semibold text-lg">Growth Dashboard</h4>
-            <div className="flex items-center gap-2 text-sm text-foreground-muted">
+          <div className="flex items-center justify-between mb-4 sm:mb-6">
+            <h4 className="text-foreground font-semibold text-base sm:text-lg">Growth Dashboard</h4>
+            <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-foreground-muted">
               <motion.span
                 animate={{
                   scale: [1, 1.2, 1],
@@ -92,7 +92,7 @@ export default function GrowthDashboard() {
           </div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-2 gap-4 mb-6">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
             <StatCard
               label="Lead Growth"
               value={`+${leadGrowth}%`}
@@ -146,10 +146,10 @@ export default function GrowthDashboard() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="bg-surface/50 border border-surface-border rounded-xl p-4"
+            className="bg-surface/50 border border-surface-border rounded-xl p-3 sm:p-4"
           >
-            <p className="text-foreground-muted text-sm mb-3">Recent Activity</p>
-            <div className="space-y-2 h-[90px] relative overflow-hidden">
+            <p className="text-foreground-muted text-xs sm:text-sm mb-2 sm:mb-3">Recent Activity</p>
+            <div className="space-y-1.5 sm:space-y-2 h-[70px] sm:h-[90px] relative overflow-hidden">
               {visibleActivities.map((activity, index) => (
                 <motion.div
                   key={`${activity.id}-${currentActivityIndex}`}
@@ -157,7 +157,7 @@ export default function GrowthDashboard() {
                   animate={{ opacity: index === 0 ? 1 : 0.5, x: 0 }}
                   exit={{ opacity: 0, x: 20 }}
                   transition={{ duration: 0.5 }}
-                  className="flex items-center gap-2 text-sm"
+                  className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm"
                 >
                   <motion.div
                     animate={{
@@ -167,12 +167,12 @@ export default function GrowthDashboard() {
                       duration: 1,
                       repeat: index === 0 ? Infinity : 0,
                     }}
-                    className={`w-2 h-2 rounded-full ${
-                      activity.icon === 'accent' ? 'bg-accent' : 'bg-primary'
+                    className={`w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full flex-shrink-0 ${
+                      activity.icon === "accent" ? "bg-accent" : "bg-primary"
                     }`}
                   />
-                  <span className="text-foreground flex-1">{activity.text}</span>
-                  <span className="text-foreground-muted text-xs">{activity.time}</span>
+                  <span className="text-foreground flex-1 truncate">{activity.text}</span>
+                  <span className="text-foreground-muted text-[10px] sm:text-xs flex-shrink-0">{activity.time}</span>
                 </motion.div>
               ))}
             </div>
@@ -215,19 +215,19 @@ function StatCard({
       animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.9, y: 20 }}
       transition={{ delay, duration: 0.5 }}
       whileHover={{ scale: 1.05, y: -5 }}
-      className={`bg-gradient-to-br ${gradient} border ${borderColor} rounded-xl p-4 cursor-default`}
+      className={`bg-gradient-to-br ${gradient} border ${borderColor} rounded-xl p-3 sm:p-4 cursor-default`}
     >
-      <p className="text-foreground-muted text-sm mb-1">{label}</p>
+      <p className="text-foreground-muted text-xs sm:text-sm mb-1">{label}</p>
       <motion.p
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ delay: delay + 0.5, duration: 0.3 }}
-        className={`text-3xl font-bold ${textColor}`}
+        className={`text-2xl sm:text-3xl font-bold ${textColor}`}
       >
         {value}
       </motion.p>
       {subtext && (
-        <div className={`flex items-center gap-1 mt-2 ${textColor} text-xs`}>
+        <div className={`flex items-center gap-1 mt-1.5 sm:mt-2 ${textColor} text-[10px] sm:text-xs`}>
           <span className="material-icons text-sm">{icon}</span>
           <span>{subtext}</span>
         </div>
@@ -250,7 +250,7 @@ function ChartVisualization({ isInView }: { isInView: boolean }) {
             transition={{
               delay: 0.6 + i * 0.1,
               duration: 0.5,
-              type: 'spring',
+              type: "spring",
             }}
             style={{ height: `${height}%` }}
             className="w-2 bg-accent rounded-t origin-bottom"

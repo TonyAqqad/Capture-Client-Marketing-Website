@@ -67,7 +67,8 @@ export default function ROICalculator() {
             Calculate Your Lost Revenue
           </p>
           <p className="text-lg text-foreground-muted max-w-2xl mx-auto">
-            See exactly how much money you're losing to missed calls—and how much you could save with AI.
+            See exactly how much money you're losing to missed calls—and how much you could save
+            with AI.
           </p>
         </div>
 
@@ -79,9 +80,7 @@ export default function ROICalculator() {
               {/* Missed calls slider */}
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <label className="text-foreground font-semibold">
-                    Missed Calls Per Month
-                  </label>
+                  <label className="text-foreground font-semibold">Missed Calls Per Month</label>
                   <motion.span
                     key={missedCalls}
                     initial={{ scale: 1.2, color: "rgb(34, 211, 238)" }}
@@ -97,7 +96,8 @@ export default function ROICalculator() {
                   max="100"
                   value={missedCalls}
                   onChange={(e) => setMissedCalls(Number(e.target.value))}
-                  className="w-full h-2 bg-surface-border rounded-lg appearance-none cursor-pointer slider"
+                  className="w-full h-3 sm:h-2 bg-surface-border rounded-lg appearance-none cursor-pointer slider"
+                  style={{ touchAction: 'manipulation' }}
                 />
                 <div className="flex justify-between text-xs text-foreground-muted mt-2">
                   <span>5 calls</span>
@@ -108,9 +108,7 @@ export default function ROICalculator() {
               {/* Job value slider */}
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <label className="text-foreground font-semibold">
-                    Average Job Value
-                  </label>
+                  <label className="text-foreground font-semibold">Average Job Value</label>
                   <motion.span
                     key={jobValue}
                     initial={{ scale: 1.2, color: "rgb(34, 211, 238)" }}
@@ -127,7 +125,8 @@ export default function ROICalculator() {
                   step="100"
                   value={jobValue}
                   onChange={(e) => setJobValue(Number(e.target.value))}
-                  className="w-full h-2 bg-surface-border rounded-lg appearance-none cursor-pointer slider"
+                  className="w-full h-3 sm:h-2 bg-surface-border rounded-lg appearance-none cursor-pointer slider"
+                  style={{ touchAction: 'manipulation' }}
                 />
                 <div className="flex justify-between text-xs text-foreground-muted mt-2">
                   <span>$100</span>
@@ -138,9 +137,7 @@ export default function ROICalculator() {
               {/* Close rate slider */}
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <label className="text-foreground font-semibold">
-                    Close Rate
-                  </label>
+                  <label className="text-foreground font-semibold">Close Rate</label>
                   <motion.span
                     key={closeRate}
                     initial={{ scale: 1.2, color: "rgb(34, 211, 238)" }}
@@ -156,7 +153,8 @@ export default function ROICalculator() {
                   max="80"
                   value={closeRate}
                   onChange={(e) => setCloseRate(Number(e.target.value))}
-                  className="w-full h-2 bg-surface-border rounded-lg appearance-none cursor-pointer slider"
+                  className="w-full h-3 sm:h-2 bg-surface-border rounded-lg appearance-none cursor-pointer slider"
+                  style={{ touchAction: 'manipulation' }}
                 />
                 <div className="flex justify-between text-xs text-foreground-muted mt-2">
                   <span>10%</span>
@@ -185,9 +183,7 @@ export default function ROICalculator() {
                       suffix="/month"
                       color="text-red-400"
                     />
-                    <p className="text-foreground-muted text-sm mt-2">
-                      from missed opportunities
-                    </p>
+                    <p className="text-foreground-muted text-sm mt-2">from missed opportunities</p>
                   </div>
 
                   {/* Gain highlight */}
@@ -199,9 +195,7 @@ export default function ROICalculator() {
                       suffix="/month"
                       color="text-accent"
                     />
-                    <p className="text-accent text-sm mt-2 font-semibold">
-                      {calculation.roi}% ROI
-                    </p>
+                    <p className="text-accent text-sm mt-2 font-semibold">{calculation.roi}% ROI</p>
                   </div>
 
                   {/* Yearly impact */}
@@ -217,10 +211,7 @@ export default function ROICalculator() {
 
                   {/* CTA */}
                   <div className="text-center">
-                    <a
-                      href="#contact"
-                      className="btn-primary inline-flex items-center gap-2"
-                    >
+                    <a href="#contact" className="btn-primary inline-flex items-center gap-2">
                       <span className="material-icons">rocket_launch</span>
                       Start Capturing These Leads
                     </a>
@@ -235,12 +226,12 @@ export default function ROICalculator() {
         </div>
       </div>
 
-      {/* Custom slider styles */}
+      {/* Custom slider styles - Mobile optimized */}
       <style jsx>{`
         .slider::-webkit-slider-thumb {
           appearance: none;
-          width: 20px;
-          height: 20px;
+          width: 24px;
+          height: 24px;
           border-radius: 50%;
           background: linear-gradient(135deg, rgb(34, 211, 238), rgb(99, 102, 241));
           cursor: pointer;
@@ -251,9 +242,12 @@ export default function ROICalculator() {
           transform: scale(1.2);
           box-shadow: 0 0 20px rgba(34, 211, 238, 0.8);
         }
+        .slider::-webkit-slider-thumb:active {
+          transform: scale(1.3);
+        }
         .slider::-moz-range-thumb {
-          width: 20px;
-          height: 20px;
+          width: 24px;
+          height: 24px;
           border-radius: 50%;
           background: linear-gradient(135deg, rgb(34, 211, 238), rgb(99, 102, 241));
           cursor: pointer;
@@ -264,6 +258,19 @@ export default function ROICalculator() {
         .slider::-moz-range-thumb:hover {
           transform: scale(1.2);
           box-shadow: 0 0 20px rgba(34, 211, 238, 0.8);
+        }
+        .slider::-moz-range-thumb:active {
+          transform: scale(1.3);
+        }
+        @media (max-width: 640px) {
+          .slider::-webkit-slider-thumb {
+            width: 28px;
+            height: 28px;
+          }
+          .slider::-moz-range-thumb {
+            width: 28px;
+            height: 28px;
+          }
         }
       `}</style>
     </section>

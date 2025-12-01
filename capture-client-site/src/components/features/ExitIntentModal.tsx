@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useExitIntent } from "@/hooks/useExitIntent";
+import { trackFormStart, trackFormSubmission } from "@/lib/analytics";
 
 // ============================================================================
 // MAIN COMPONENT
@@ -18,13 +19,44 @@ export default function ExitIntentModal() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [formStarted, setFormStarted] = useState(false);
+
+  // Track form start on first interaction
+  const handleFormStart = () => {
+    if (!formStarted) {
+      trackFormStart("exit_intent_modal");
+      setFormStarted(true);
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      // Send to server-side API route (avoids CORS issues)
+      // Include source for lead tracking in GoHighLevel
+      await fetch("/api/submit-lead", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: email.split("@")[0],
+          email: email,
+          phone: "",
+          company: "",
+          source: "exit_intent_modal",
+        }),
+      });
+    } catch {
+      // Graceful degradation
+    }
+
+    // Track successful form submission
+    trackFormSubmission("exit_intent_modal", {
+      source: "exit_intent_modal",
+    });
 
     setSubmitted(true);
     setLoading(false);
@@ -49,15 +81,16 @@ export default function ExitIntentModal() {
             transition={{ duration: 0.3 }}
             onClick={closeModal}
             className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
+            style={{ margin: 0, padding: '1rem' }}
           >
             {/* Modal */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.9, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
               onClick={(e) => e.stopPropagation()}
-              className="relative max-w-lg w-full bg-surface border border-surface-border rounded-2xl p-8 lg:p-10 shadow-2xl"
+              className="relative max-w-lg w-full bg-surface border border-surface-border rounded-2xl p-8 lg:p-10 shadow-2xl mx-auto"
             >
               {/* Close button */}
               <button
@@ -84,9 +117,7 @@ export default function ExitIntentModal() {
                       transition={{ type: "spring", stiffness: 200, damping: 15 }}
                       className="w-16 h-16 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center mb-6"
                     >
-                      <span className="material-icons text-accent text-3xl">
-                        auto_awesome
-                      </span>
+                      <span className="material-icons text-accent text-3xl">auto_awesome</span>
                     </motion.div>
 
                     {/* Headline */}
@@ -132,7 +163,10 @@ export default function ExitIntentModal() {
                         <input
                           type="email"
                           value={email}
-                          onChange={(e) => setEmail(e.target.value)}
+                          onChange={(e) => {
+                            handleFormStart();
+                            setEmail(e.target.value);
+                          }}
                           placeholder="Enter your email"
                           required
                           className="w-full px-4 py-3 rounded-xl bg-background border border-surface-border text-foreground placeholder-foreground-muted focus:outline-none focus:border-accent transition-colors"
@@ -183,9 +217,7 @@ export default function ExitIntentModal() {
                       transition={{ type: "spring", stiffness: 200, damping: 15 }}
                       className="w-20 h-20 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center mx-auto mb-6"
                     >
-                      <span className="material-icons text-accent text-5xl">
-                        check_circle
-                      </span>
+                      <span className="material-icons text-accent text-5xl">check_circle</span>
                     </motion.div>
 
                     <h3 className="text-3xl font-heading font-bold text-foreground mb-3">

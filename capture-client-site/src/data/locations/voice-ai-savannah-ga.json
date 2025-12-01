@@ -20,7 +20,7 @@
   },
   "seo": {
     "page_title": "Voice AI Agency in Savannah, GA | Capture Client",
-    "meta_description": "Voice AI services for Savannah businesses. Automate calls, qualify leads 24/7. Call 865-346-3339!",
+    "meta_description": "Voice AI for Savannah businesses in the Historic District, Pooler Parkway, and Tybee Island. AI receptionist for coastal Georgia tourism and services. Call 865-346-3339!",
     "h1_heading": "Voice AI Agency in Savannah, Georgia",
     "keywords": [
       "voice ai savannah",
@@ -46,28 +46,28 @@
     }
   },
   "local_intro": {
-    "paragraph": "Savannah businesses are embracing AI voice automation to stay competitive. From the Historic District to Pooler's growing business corridor, companies need 24/7 availability. Our Voice AI ensures Savannah businesses never miss calls from tourists, locals, or emergency service requests."
+    "paragraph": "Savannah businesses are embracing AI voice automation to stay competitive in Georgia's premier coastal destination. From the hospitality businesses serving tourists in the Historic District to the booming commercial corridor along Pooler Parkway, from River Street restaurants to Tybee Island attractions, companies need 24/7 availability. Our Voice AI ensures Savannah businesses never miss calls from tourists across different time zones, locals seeking services, or emergency requests. Trusted by businesses across the Savannah Area Chamber network, from Broughton Street shops to the Port of Savannah industrial area."
   },
   "benefits": [
     {
       "title": "24/7 Savannah Availability",
       "description": "Answer calls around the clock for Savannah customers and tourists.",
-      "icon": "clock"
+      "icon": "schedule"
     },
     {
       "title": "Tourism-Ready AI",
       "description": "Handle inquiries from tourists and locals with equal professionalism.",
-      "icon": "users"
+      "icon": "group"
     },
     {
       "title": "Emergency Call Handling",
       "description": "Capture urgent service requests instantly, day or night.",
-      "icon": "phone"
+      "icon": "phone_in_talk"
     },
     {
       "title": "Bilingual Capability",
       "description": "Serve Savannah's diverse community with multilingual support.",
-      "icon": "globe"
+      "icon": "public"
     }
   ],
   "how_it_works": [
@@ -89,24 +89,24 @@
   ],
   "local_use_cases": [
     {
-      "business_type": "Savannah Tourism Services",
-      "scenario": "Tour company missing bookings from different time zones.",
-      "result": "AI answers 24/7, bookings increased 65% with international customers."
+      "business_type": "Historic District Tourism Services",
+      "scenario": "Tour company missing bookings from international tourists calling at all hours from different time zones.",
+      "result": "AI answers 24/7 in multiple languages, bookings increased 65% with international customers."
     },
     {
-      "business_type": "Savannah HVAC",
-      "scenario": "Emergency calls going to voicemail during humid Georgia summers.",
-      "result": "AI captures every emergency, revenue up $42,000 in peak season."
+      "business_type": "Pooler HVAC & Coastal Services",
+      "scenario": "Emergency calls going to voicemail during humid Georgia coastal summers while technicians on service calls.",
+      "result": "AI captures every emergency instantly, seasonal revenue up $42,000 in peak season."
     },
     {
-      "business_type": "Historic District Restaurant",
-      "scenario": "Phone always ringing during dinner rush, missing reservations.",
-      "result": "AI books reservations automatically, increased covers by 30%."
+      "business_type": "River Street Restaurant",
+      "scenario": "Phone always ringing during dinner rush with tourists requesting reservations, missing valuable bookings.",
+      "result": "AI books reservations automatically 24/7, increased covers by 30% and reduced no-shows."
     }
   ],
   "service_area": {
     "heading": "Serving Savannah and Coastal Georgia",
-    "description": "Voice AI for Savannah metro and surrounding coastal communities.",
+    "description": "Voice AI for Savannah metro and surrounding coastal communities, including Historic District, Pooler Parkway, River Street, and Tybee Island.",
     "areas_list": [
       "Savannah",
       "Pooler",

@@ -11,14 +11,26 @@
     "state": "VA",
     "state_full": "Virginia",
     "slug": "hampton-va",
-    "nearby_areas": ["Newport News", "Norfolk", "Poquoson", "Yorktown"],
+    "nearby_areas": [
+      "Newport News",
+      "Norfolk",
+      "Poquoson",
+      "Yorktown"
+    ],
     "service_area_radius": "25 miles"
   },
   "seo": {
     "page_title": "Voice AI Agency in Hampton, VA | Capture Client",
     "meta_description": "Voice AI for Hampton businesses. Capture leads 24/7, automate appointment scheduling, never miss calls. Serving Hampton Roads area. Call 865-346-3339!",
     "h1_heading": "Voice AI Services in Hampton, Virginia",
-    "keywords": ["voice ai agency hampton va", "ai voice agents hampton", "ai receptionist hampton virginia", "automated call answering hampton", "lead qualification ai hampton", "voice ai hampton roads"],
+    "keywords": [
+      "voice ai agency hampton va",
+      "ai voice agents hampton",
+      "ai receptionist hampton virginia",
+      "automated call answering hampton",
+      "lead qualification ai hampton",
+      "voice ai hampton roads"
+    ],
     "canonical_url": "/voice-ai-hampton-va",
     "local_business_schema": {
       "type": "LocalBusiness",
@@ -55,27 +67,27 @@
     {
       "title": "24/7 Lead Capture for Hampton",
       "description": "Hampton never sleeps with military operations and shift workers. Your AI agent captures leads around the clock from Langley AFB personnel to downtown businesses.",
-      "icon": "clock"
+      "icon": "schedule"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "Our AI asks the right questions to qualify Hampton leads before they reach your sales team, saving time and increasing conversion rates.",
-      "icon": "filter"
+      "icon": "filter_alt"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "AI schedules directly into your calendar while you focus on serving Hampton clients. No more back-and-forth scheduling hassles.",
-      "icon": "calendar"
+      "icon": "event"
     },
     {
       "title": "Affordable Staffing Alternative",
       "description": "Save thousands compared to hiring receptionist staff in Hampton. No salary, benefits, vacation days, or training costs.",
-      "icon": "dollar-sign"
+      "icon": "attach_money"
     },
     {
       "title": "Consistent Professional Service",
       "description": "Every Hampton caller receives friendly, professional service that represents your brand perfectly. No human error or bad days.",
-      "icon": "award"
+      "icon": "workspace_premium"
     }
   ],
   "how_it_works": [
@@ -115,7 +127,18 @@
   "service_area": {
     "heading": "Serving Hampton and the Peninsula",
     "description": "We provide Voice AI services throughout Hampton and the greater Hampton Roads Peninsula area.",
-    "areas_list": ["Hampton", "Newport News", "Poquoson", "Yorktown", "Norfolk", "Virginia Beach", "Chesapeake", "Suffolk", "Portsmouth", "Williamsburg"]
+    "areas_list": [
+      "Hampton",
+      "Newport News",
+      "Poquoson",
+      "Yorktown",
+      "Norfolk",
+      "Virginia Beach",
+      "Chesapeake",
+      "Suffolk",
+      "Portsmouth",
+      "Williamsburg"
+    ]
   },
   "local_testimonials": [
     {
@@ -180,8 +203,19 @@
     "urgency_text": "Limited spots available for Hampton businesses this month"
   },
   "related_pages": {
-    "other_services_in_location": ["google-ads", "facebook-ads"],
-    "nearby_locations": ["newport-news", "norfolk", "virginia-beach"],
-    "packages": ["starter-package", "growth-package", "enterprise-package"]
+    "other_services_in_location": [
+      "google-ads",
+      "facebook-ads"
+    ],
+    "nearby_locations": [
+      "newport-news",
+      "norfolk",
+      "virginia-beach"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package",
+      "enterprise-package"
+    ]
   }
 }

@@ -11,14 +11,22 @@
     "state": "Tennessee",
     "state_abbr": "TN",
     "slug": "maryville-tn",
-    "nearby_areas": ["Alcoa", "Knoxville", "Sevierville"],
+    "nearby_areas": [
+      "Alcoa",
+      "Knoxville",
+      "Sevierville"
+    ],
     "service_area_radius": "20 miles"
   },
   "seo": {
     "page_title": "Voice AI Agency in Maryville, TN | Capture Client",
     "meta_description": "Maryville businesses automate calls with Voice AI. Never miss Blount County leads. 24/7 AI receptionist. Call 865-346-3339!",
     "h1_heading": "Voice AI Services in Maryville, Tennessee",
-    "keywords": ["voice ai maryville", "ai receptionist maryville tn", "automated answering maryville"],
+    "keywords": [
+      "voice ai maryville",
+      "ai receptionist maryville tn",
+      "automated answering maryville"
+    ],
     "canonical_url": "/voice-ai-maryville-tn"
   },
   "hero": {
@@ -39,49 +47,131 @@
     }
   },
   "local_intro": {
-    "paragraph": "Maryville and Blount County businesses need efficient operations. From downtown Maryville to businesses serving the Smoky Mountain tourism market, Voice AI helps you capture every lead without adding staff. Our AI handles calls 24/7 for Maryville businesses."
+    "paragraph": "From businesses near the Blount County Chamber of Commerce on S Washington Street to companies in the Foothills Mall Business District and Alcoa-Maryville Industrial Park, Maryville and Blount County businesses need efficient operations. Whether you're in Downtown Maryville's historic business district or serving the Smoky Mountain tourism market, Voice AI helps you capture every lead without adding staff. Our AI handles calls 24/7 for Maryville businesses."
   },
   "benefits": [
-    {"title": "24/7 for Maryville", "description": "AI never sleeps for Blount County customers.", "icon": "clock"},
-    {"title": "Lead Qualification", "description": "AI asks right questions for Maryville prospects.", "icon": "filter"},
-    {"title": "Auto Scheduling", "description": "Books appointments directly for Maryville customers.", "icon": "calendar"},
-    {"title": "Cost Savings", "description": "Fraction of hiring Maryville staff.", "icon": "dollar-sign"}
+    {
+      "title": "24/7 for Maryville",
+      "description": "AI never sleeps for Blount County customers.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Lead Qualification",
+      "description": "AI asks right questions for Maryville prospects.",
+      "icon": "filter_alt"
+    },
+    {
+      "title": "Auto Scheduling",
+      "description": "Books appointments directly for Maryville customers.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings",
+      "description": "Fraction of hiring Maryville staff.",
+      "icon": "attach_money"
+    }
   ],
   "how_it_works": [
-    {"step": 1, "title": "Strategy Call", "description": "Discuss your Maryville business needs."},
-    {"step": 2, "title": "Training", "description": "Train AI with Maryville-specific info."},
-    {"step": 3, "title": "Launch", "description": "Start capturing Maryville leads immediately."}
+    {
+      "step": 1,
+      "title": "Strategy Call",
+      "description": "Discuss your Maryville business needs."
+    },
+    {
+      "step": 2,
+      "title": "Training",
+      "description": "Train AI with Maryville-specific info."
+    },
+    {
+      "step": 3,
+      "title": "Launch",
+      "description": "Start capturing Maryville leads immediately."
+    }
   ],
   "local_use_cases": [
-    {"business_type": "Tourism Services", "scenario": "Cabin rental missing bookings", "result": "Occupancy up 40%, revenue $85K"},
-    {"business_type": "Contractors", "scenario": "Builder missing calls", "result": "Handles 3x volume, no missed bids"},
-    {"business_type": "Retail", "scenario": "Store needed after-hours support", "result": "24/7 service, sales up 25%"}
+    {
+      "business_type": "Tourism Services",
+      "scenario": "Cabin rental missing bookings",
+      "result": "Occupancy up 40%, revenue $85K"
+    },
+    {
+      "business_type": "Contractors",
+      "scenario": "Builder missing calls",
+      "result": "Handles 3x volume, no missed bids"
+    },
+    {
+      "business_type": "Retail",
+      "scenario": "Store needed after-hours support",
+      "result": "24/7 service, sales up 25%"
+    }
   ],
   "service_area": {
     "heading": "Serving Maryville and Blount County",
-    "areas_list": ["Maryville", "Alcoa", "Knoxville", "Sevierville"]
+    "areas_list": [
+      "Maryville",
+      "Alcoa",
+      "Knoxville",
+      "Sevierville"
+    ]
   },
   "local_testimonials": [
-    {"quote": "Voice AI transformed our Maryville business. Revenue up significantly.", "author": "Owner", "business": "Maryville Services", "location": "Maryville, TN"},
-    {"quote": "Best investment. Customers love instant response.", "author": "Provider", "business": "Blount Co Professional", "location": "Maryville, TN"}
+    {
+      "quote": "Voice AI transformed our Maryville business. Revenue up significantly.",
+      "author": "Owner",
+      "business": "Maryville Services",
+      "location": "Maryville, TN"
+    },
+    {
+      "quote": "Best investment. Customers love instant response.",
+      "author": "Provider",
+      "business": "Blount Co Professional",
+      "location": "Maryville, TN"
+    }
   ],
   "faq": [
-    {"question": "How does Voice AI work for Maryville businesses?", "answer": "AI answers calls, qualifies leads, schedules appointments for Maryville customers 24/7."},
-    {"question": "What Maryville businesses benefit?", "answer": "Tourism, contractors, retail, home services in Maryville all benefit."},
-    {"question": "Setup time?", "answer": "Most Maryville businesses live within 1-2 weeks."}
+    {
+      "question": "How does Voice AI work for Maryville businesses?",
+      "answer": "AI answers calls, qualifies leads, schedules appointments for Maryville customers 24/7."
+    },
+    {
+      "question": "What Maryville businesses benefit?",
+      "answer": "Tourism, contractors, retail, home services in Maryville all benefit."
+    },
+    {
+      "question": "Setup time?",
+      "answer": "Most Maryville businesses live within 1-2 weeks."
+    }
   ],
   "images": {
     "gallery": [
-      {"url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80", "alt": "Maryville business", "caption": "Maryville uses Voice AI"},
-      {"url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80", "alt": "Phone service", "caption": "AI answers 24/7"}
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Maryville business",
+        "caption": "Maryville uses Voice AI"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Phone service",
+        "caption": "AI answers 24/7"
+      }
     ]
   },
   "cta_section": {
     "headline": "Ready to Capture More Maryville Clients?",
-    "cta_primary": {"text": "Call 865-346-3339", "action": "tel:865-346-3339", "type": "phone"}
+    "cta_primary": {
+      "text": "Call 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
   },
   "related_pages": {
-    "nearby_locations": ["voice-ai-alcoa-tn", "voice-ai-knoxville-tn"],
-    "packages": ["starter-package", "growth-package"]
+    "nearby_locations": [
+      "voice-ai-alcoa-tn",
+      "voice-ai-knoxville-tn"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
   }
 }

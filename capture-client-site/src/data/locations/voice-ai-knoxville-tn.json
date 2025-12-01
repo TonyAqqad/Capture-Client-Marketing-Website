@@ -11,14 +11,25 @@
     "state": "Tennessee",
     "state_abbr": "TN",
     "slug": "knoxville-tn",
-    "nearby_areas": ["Maryville", "Oak Ridge", "Sevierville", "Farragut", "Alcoa"],
+    "nearby_areas": [
+      "Maryville",
+      "Oak Ridge",
+      "Sevierville",
+      "Farragut",
+      "Alcoa"
+    ],
     "service_area_radius": "30 miles"
   },
   "seo": {
     "page_title": "Voice AI Agency in Knoxville, TN | Capture Client",
     "meta_description": "Looking for Voice AI in Knoxville? Capture Client helps Knoxville businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
     "h1_heading": "Voice AI Services in Knoxville, Tennessee",
-    "keywords": ["voice ai agency knoxville", "ai voice agents knoxville tn", "ai receptionist knoxville", "automated phone answering knoxville"],
+    "keywords": [
+      "voice ai agency knoxville",
+      "ai voice agents knoxville tn",
+      "ai receptionist knoxville",
+      "automated phone answering knoxville"
+    ],
     "canonical_url": "/voice-ai-knoxville-tn"
   },
   "hero": {
@@ -39,28 +50,28 @@
     }
   },
   "local_intro": {
-    "paragraph": "Knoxville small business owners face a common challenge: missed calls mean missed opportunities. Whether you're running an HVAC company in West Knoxville, a law practice downtown, or a home services business in Farragut, every unanswered call could be a lost customer. That's where Capture Client's Voice AI technology comes in."
+    "paragraph": "From the bustling businesses near the Knoxville Chamber of Commerce on Market Square to the growing companies in the Cedar Bluff Business Corridor and Third Creek Industrial Park, Knoxville small business owners face a common challenge: missed calls mean missed opportunities. Whether you're running an HVAC company in West Knoxville, a law practice near the Downtown Knoxville Central Business District, or a home services business in Farragut, every unanswered call could be a lost customer. That's where Capture Client's Voice AI technology comes in."
   },
   "benefits": [
     {
       "title": "24/7 Availability for Knoxville Customers",
       "description": "Your Knoxville customers call at all hours. Our AI voice agents never sleep, ensuring every call from Knox County is answered professionally.",
-      "icon": "clock"
+      "icon": "schedule"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "Stop wasting time on unqualified leads. Our AI asks the right questions upfront so you only talk to serious Knoxville prospects ready to buy.",
-      "icon": "filter"
+      "icon": "filter_alt"
     },
     {
       "title": "Automatic Appointment Scheduling",
       "description": "Let AI book appointments directly into your calendar. No more phone tag with Knoxville customers.",
-      "icon": "calendar"
+      "icon": "event"
     },
     {
       "title": "Cost Savings Over Traditional Staff",
       "description": "Hiring a receptionist in Knoxville costs $30,000-$40,000/year. Our Voice AI costs a fraction of that.",
-      "icon": "dollar-sign"
+      "icon": "attach_money"
     }
   ],
   "how_it_works": [
@@ -100,7 +111,16 @@
   "service_area": {
     "heading": "Serving Knoxville and Surrounding Areas",
     "description": "We provide Voice AI services throughout Knox County and the greater Knoxville area.",
-    "areas_list": ["Downtown Knoxville", "West Knoxville", "Farragut", "Maryville", "Oak Ridge", "Sevierville", "Alcoa", "Powell"]
+    "areas_list": [
+      "Downtown Knoxville",
+      "West Knoxville",
+      "Farragut",
+      "Maryville",
+      "Oak Ridge",
+      "Sevierville",
+      "Alcoa",
+      "Powell"
+    ]
   },
   "local_testimonials": [
     {
@@ -162,7 +182,14 @@
     }
   },
   "related_pages": {
-    "nearby_locations": ["voice-ai-maryville-tn", "voice-ai-oak-ridge-tn", "voice-ai-farragut-tn"],
-    "packages": ["starter-package", "growth-package"]
+    "nearby_locations": [
+      "voice-ai-maryville-tn",
+      "voice-ai-oak-ridge-tn",
+      "voice-ai-farragut-tn"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
   }
 }

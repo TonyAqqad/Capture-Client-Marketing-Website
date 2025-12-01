@@ -1,1 +1,124 @@
-{"page_id":"voice-ai-gatlinburg-tn","page_type":"service-location","service":{"service_id":"voice-ai","service_name":"Voice AI Services"},"location":{"city":"Gatlinburg","state":"Tennessee","state_abbr":"TN","slug":"gatlinburg-tn","nearby_areas":["Knoxville"],"service_area_radius":"20 miles"},"seo":{"page_title":"Voice AI in Gatlinburg, TN | Capture Client","meta_description":"Gatlinburg businesses automate calls with Voice AI. Call 865-346-3339!","h1_heading":"Voice AI in Gatlinburg, Tennessee","keywords":["voice ai gatlinburg"],"canonical_url":"/voice-ai-gatlinburg-tn"},"hero":{"headline":"Gatlinburg Businesses Powered by AI","subheadline":"AI Voice Agents for Gatlinburg Companies","cta_primary":{"text":"Get Free Consultation","action":"tel:865-346-3339","type":"phone"},"hero_image":{"url":"https://images.unsplash.com/photo-1531058240690-006c446962d8?w=1920&q=80","alt":"Gatlinburg business"}},"local_intro":{"paragraph":"Gatlinburg businesses need efficient call handling. Voice AI ensures you capture every lead from Gatlinburg customers 24/7."},"benefits":[{"title":"24/7 for Gatlinburg","description":"Never miss Gatlinburg calls.","icon":"clock"},{"title":"Qualification","description":"Qualify Gatlinburg leads.","icon":"filter"}],"how_it_works":[{"step":1,"title":"Strategy","description":"Discuss Gatlinburg needs."},{"step":2,"title":"Training","description":"Train AI."},{"step":3,"title":"Launch","description":"Capture leads."}],"local_use_cases":[{"business_type":"Services","scenario":"Missing calls","result":"Revenue up"}],"service_area":{"heading":"Serving Gatlinburg","areas_list":["Gatlinburg","Knoxville"]},"local_testimonials":[{"quote":"Voice AI works great for our Gatlinburg business.","author":"Owner","business":"Gatlinburg Co","location":"Gatlinburg, TN"}],"faq":[{"question":"Voice AI for Gatlinburg?","answer":"Yes, AI answers Gatlinburg calls 24/7."}],"images":{"gallery":[{"url":"https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200","alt":"Gatlinburg"}]},"cta_section":{"headline":"Capture Gatlinburg Clients","cta_primary":{"text":"Call 865-346-3339","action":"tel:865-346-3339","type":"phone"}},"related_pages":{"nearby_locations":["voice-ai-knoxville-tn"],"packages":["starter-package"]}}
+{
+  "page_id": "voice-ai-gatlinburg-tn",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services"
+  },
+  "location": {
+    "city": "Gatlinburg",
+    "state": "Tennessee",
+    "state_abbr": "TN",
+    "slug": "gatlinburg-tn",
+    "nearby_areas": [
+      "Knoxville"
+    ],
+    "service_area_radius": "20 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI in Gatlinburg, TN | Capture Client",
+    "meta_description": "Gatlinburg businesses automate calls with Voice AI. Call 865-346-3339!",
+    "h1_heading": "Voice AI in Gatlinburg, Tennessee",
+    "keywords": [
+      "voice ai gatlinburg"
+    ],
+    "canonical_url": "/voice-ai-gatlinburg-tn"
+  },
+  "hero": {
+    "headline": "Gatlinburg Businesses Powered by AI",
+    "subheadline": "AI Voice Agents for Gatlinburg Companies",
+    "cta_primary": {
+      "text": "Get Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1531058240690-006c446962d8?w=1920&q=80",
+      "alt": "Gatlinburg business"
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the Gatlinburg Chamber of Commerce on E Parkway to businesses in Downtown Gatlinburg Parkway and the Great Smoky Arts & Crafts Community, Gatlinburg businesses serving the most visited national park in the USA need efficient call handling. Whether you're near the Gatlinburg Convention Center or in the 8-mile arts and crafts loop, Voice AI ensures you capture every lead from Gatlinburg's 14 million annual visitors and local customers 24/7."
+  },
+  "benefits": [
+    {
+      "title": "24/7 for Gatlinburg",
+      "description": "Never miss Gatlinburg calls.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Qualification",
+      "description": "Qualify Gatlinburg leads.",
+      "icon": "filter_alt"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Strategy",
+      "description": "Discuss Gatlinburg needs."
+    },
+    {
+      "step": 2,
+      "title": "Training",
+      "description": "Train AI."
+    },
+    {
+      "step": 3,
+      "title": "Launch",
+      "description": "Capture leads."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Services",
+      "scenario": "Missing calls",
+      "result": "Revenue up"
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Gatlinburg",
+    "areas_list": [
+      "Gatlinburg",
+      "Knoxville"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Voice AI works great for our Gatlinburg business.",
+      "author": "Owner",
+      "business": "Gatlinburg Co",
+      "location": "Gatlinburg, TN"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Voice AI for Gatlinburg?",
+      "answer": "Yes, AI answers Gatlinburg calls 24/7."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200",
+        "alt": "Gatlinburg"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Capture Gatlinburg Clients",
+    "cta_primary": {
+      "text": "Call 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-knoxville-tn"
+    ],
+    "packages": [
+      "starter-package"
+    ]
+  }
+}

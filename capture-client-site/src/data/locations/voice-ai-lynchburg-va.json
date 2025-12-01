@@ -11,14 +11,26 @@
     "state": "VA",
     "state_full": "Virginia",
     "slug": "lynchburg-va",
-    "nearby_areas": ["Forest", "Madison Heights", "Amherst", "Bedford"],
+    "nearby_areas": [
+      "Forest",
+      "Madison Heights",
+      "Amherst",
+      "Bedford"
+    ],
     "service_area_radius": "30 miles"
   },
   "seo": {
     "page_title": "Voice AI Agency in Lynchburg, VA | Capture Client",
     "meta_description": "Voice AI for Lynchburg businesses. Automate calls, qualify leads 24/7, book appointments automatically. Serving Central Virginia. Call 865-346-3339!",
     "h1_heading": "Voice AI Services in Lynchburg, Virginia",
-    "keywords": ["voice ai agency lynchburg va", "ai voice agents lynchburg", "ai receptionist lynchburg virginia", "automated call answering lynchburg", "lead qualification ai lynchburg", "voice ai central virginia"],
+    "keywords": [
+      "voice ai agency lynchburg va",
+      "ai voice agents lynchburg",
+      "ai receptionist lynchburg virginia",
+      "automated call answering lynchburg",
+      "lead qualification ai lynchburg",
+      "voice ai central virginia"
+    ],
     "canonical_url": "/voice-ai-lynchburg-va",
     "local_business_schema": {
       "type": "LocalBusiness",
@@ -55,27 +67,27 @@
     {
       "title": "24/7 Lead Capture for Lynchburg",
       "description": "Your Lynchburg business never closes with AI. Capture leads from early morning calls to late-night searchers across Central Virginia.",
-      "icon": "clock"
+      "icon": "schedule"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "Stop wasting time on tire-kickers. Our AI qualifies Lynchburg leads instantly, so your team only engages with serious prospects.",
-      "icon": "filter"
+      "icon": "filter_alt"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "Let AI schedule appointments directly into your calendar while you focus on serving Lynchburg customers. Eliminate phone tag.",
-      "icon": "calendar"
+      "icon": "event"
     },
     {
       "title": "Cost-Effective Operations",
       "description": "Save thousands compared to hiring staff. No salary, benefits, training, or turnover costs - just reliable 24/7 service.",
-      "icon": "dollar-sign"
+      "icon": "attach_money"
     },
     {
       "title": "Professional Lynchburg Representation",
       "description": "Consistent, friendly call handling that represents your Lynchburg brand perfectly on every interaction.",
-      "icon": "award"
+      "icon": "workspace_premium"
     }
   ],
   "how_it_works": [
@@ -115,7 +127,18 @@
   "service_area": {
     "heading": "Serving Lynchburg and Central Virginia",
     "description": "We provide Voice AI services throughout Lynchburg and the greater Central Virginia region.",
-    "areas_list": ["Lynchburg", "Forest", "Madison Heights", "Amherst", "Bedford", "Appomattox", "Campbell County", "Rustburg", "Altavista", "Concord"]
+    "areas_list": [
+      "Lynchburg",
+      "Forest",
+      "Madison Heights",
+      "Amherst",
+      "Bedford",
+      "Appomattox",
+      "Campbell County",
+      "Rustburg",
+      "Altavista",
+      "Concord"
+    ]
   },
   "local_testimonials": [
     {
@@ -180,8 +203,19 @@
     "urgency_text": "Limited spots available for Lynchburg businesses this month"
   },
   "related_pages": {
-    "other_services_in_location": ["google-ads", "facebook-ads"],
-    "nearby_locations": ["roanoke", "richmond", "charlottesville"],
-    "packages": ["starter-package", "growth-package", "enterprise-package"]
+    "other_services_in_location": [
+      "google-ads",
+      "facebook-ads"
+    ],
+    "nearby_locations": [
+      "roanoke",
+      "richmond",
+      "charlottesville"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package",
+      "enterprise-package"
+    ]
   }
 }

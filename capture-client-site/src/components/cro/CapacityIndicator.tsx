@@ -33,28 +33,29 @@ export default function CapacityIndicator({
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
       }`}
     >
-      <div className="bg-gradient-to-r from-orange-500/20 to-amber-500/20 border-2 border-orange-500/40 rounded-xl p-4 shadow-lg">
-        <div className="flex items-center justify-center gap-3">
+      <div className="bg-gradient-to-r from-orange-500/20 to-amber-500/20 border-2 border-orange-500/40 rounded-xl p-4 sm:p-4 shadow-lg">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-3">
           {/* Pulse indicator */}
-          <div className="relative">
+          <div className="relative flex-shrink-0">
             <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse"></div>
             <div className="absolute inset-0 w-3 h-3 bg-orange-500 rounded-full animate-ping opacity-75"></div>
           </div>
 
           {/* Text */}
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center justify-center gap-2 text-center">
             <span className="material-icons text-orange-400 text-xl">schedule</span>
-            <p className="text-sm md:text-base font-bold text-foreground">
-              <span className="text-orange-400">{spotsLeft} spots left</span> for December onboarding
+            <p className="text-base sm:text-sm md:text-base font-bold text-foreground">
+              <span className="text-orange-400">{spotsLeft} spots left</span> for December
+              onboarding
             </p>
           </div>
 
           {/* Warning icon */}
-          <span className="material-icons text-orange-400 text-xl">warning</span>
+          <span className="material-icons text-orange-400 text-xl flex-shrink-0">warning</span>
         </div>
 
         {/* Sub-text */}
-        <p className="text-xs text-gray-400 text-center mt-2">
+        <p className="text-sm sm:text-xs text-gray-400 text-center mt-2">
           High demand this month. Book now to secure your spot.
         </p>
       </div>

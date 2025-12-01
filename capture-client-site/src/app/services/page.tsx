@@ -1,75 +1,61 @@
-import Link from "next/link";
 import { getAllServices } from "@/lib/data";
 import type { Metadata } from "next";
+import ServicesPageClient from "./ServicesPageClient";
 
 export const metadata: Metadata = {
-  title: "Our Services | Voice AI, Google Ads & Facebook Ads | Capture Client",
-  description: "Explore our marketing services: Voice AI agents, Google Ads management, and Facebook Ads campaigns designed to capture more clients for your business.",
+  title: "Marketing Services for Small Business | Voice AI, Ads & Lead Gen | Capture Client",
+  description:
+    "Never miss a lead again. 24/7 AI voice agents, ROI-focused Google Ads, Facebook Ads, and lead generation services for small businesses. Trusted by 500+ companies. Free consultation: (865) 346-3339",
+  keywords: [
+    "marketing services small business",
+    "voice ai for business",
+    "google ads management",
+    "facebook ads agency",
+    "lead generation services",
+    "ai voice agents",
+    "small business marketing",
+    "24/7 call answering",
+    "automated lead generation"
+  ],
+  openGraph: {
+    title: "Marketing Services for Small Business | Never Miss a Lead",
+    description:
+      "Voice AI agents that answer every call, Google Ads & Facebook Ads that generate qualified leads. Trusted by 500+ small businesses. Book your free consultation today.",
+    url: "https://captureclient.net/services",
+    type: "website",
+    images: [
+      {
+        url: "https://captureclient.net/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Capture Client Marketing Services"
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Marketing Services for Small Business | Voice AI & Lead Generation",
+    description:
+      "24/7 AI voice agents, professional Google Ads & Facebook Ads management. Trusted by 500+ businesses.",
+  },
+  alternates: {
+    canonical: "https://captureclient.net/services",
+  },
 };
 
 export default async function ServicesPage() {
   const services = await getAllServices();
 
-  return (
-    <div className="min-h-screen bg-background-light dark:bg-background-dark">
-      <div className="relative py-24 px-8 lg:px-16 bg-gradient-to-br from-background-dark via-background-dark to-primary/10">
-        <div className="container mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Our Services
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive marketing solutions designed to automate leads and capture clients for your business.
-          </p>
-        </div>
-      </div>
+  // Transform to the shape expected by client component
+  const servicesData = services.map((service) => ({
+    service: {
+      service_id: service.service.service_id,
+      service_name: service.service.service_name,
+      service_slug: service.service.service_slug,
+    },
+    intro: service.intro,
+    benefits: service.benefits,
+  }));
 
-      <div className="container mx-auto px-8 lg:px-16 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service) => (
-            <Link
-              key={service.service.service_id}
-              href={`/services/${service.service.service_slug}`}
-              className="group border border-gray-200 dark:border-gray-800 rounded-lg p-8 bg-white dark:bg-gray-900/50 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/10 transition-all duration-300"
-            >
-              <div className="w-16 h-16 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary text-3xl mb-6 group-hover:scale-110 transition-transform">
-                <span className="material-icons">smart_toy</span>
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-primary transition-colors">
-                {service.service.service_name}
-              </h2>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                {service.intro?.paragraph?.substring(0, 150)}...
-              </p>
-              <div className="flex items-center text-primary font-semibold">
-                Learn More
-                <span className="material-icons ml-2 group-hover:translate-x-2 transition-transform">
-                  arrow_forward
-                </span>
-              </div>
-            </Link>
-          ))}
-        </div>
-
-        <div className="mt-16 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-            Not sure which service is right for you?
-          </h2>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:865-346-3339"
-              className="inline-block bg-primary text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm transition-all duration-300 hover:scale-105 glowing-button"
-            >
-              Call Us: (865) 346-3339
-            </a>
-            <Link
-              href="/contact"
-              className="inline-block bg-white/10 border border-white/20 text-white px-8 py-4 rounded-full backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
-            >
-              Contact Us
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+  return <ServicesPageClient services={servicesData} />;
 }

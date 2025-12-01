@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { trackPhoneClick, trackCTAClick } from "@/lib/analytics";
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -22,28 +23,38 @@ export default function Header() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-[#0F172A]/95 backdrop-blur-xl border-b border-white/5 shadow-xl"
-          : "bg-[#0F172A]/80 backdrop-blur-md"
+          : "bg-[#0F172A]/80 backdrop-blur-sm"
       }`}
     >
-      <nav className="container mx-auto px-6 lg:px-8 py-4 flex items-center justify-between">
-        {/* Logo */}
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4 flex items-center justify-between">
+        {/* Logo - SVG logos for best quality */}
         <Link
           href="/"
-          className="flex items-center gap-3 group transition-transform hover:scale-105"
+          className="flex items-center group transition-transform hover:scale-105"
         >
-          <div className="relative w-8 h-8 flex-shrink-0">
+          {/* Desktop: Full logo with text */}
+          <div className="hidden sm:block relative h-12 w-auto">
             <Image
-              src="/logo-secondary.png"
-              alt="Capture Client Logo"
-              fill
-              className="object-contain transition-all group-hover:brightness-110 duration-500"
+              src="/logo-desktop.svg"
+              alt="Capture Client"
+              width={220}
+              height={48}
+              className="h-12 w-auto object-contain transition-all group-hover:brightness-110 duration-500"
               priority
             />
-            <div className="absolute inset-0 bg-[#4A69E2] opacity-10 blur-xl rounded-full group-hover:bg-[#00C9FF] transition-all duration-500"></div>
           </div>
-          <span className="hidden sm:inline text-xl font-heading font-bold text-[#F8FAFC] tracking-tight">
-            Capture Client
-          </span>
+
+          {/* Mobile: Icon/compact logo */}
+          <div className="sm:hidden relative h-10 w-auto">
+            <Image
+              src="/logo-mobile.svg"
+              alt="Capture Client"
+              width={40}
+              height={40}
+              className="h-10 w-auto object-contain transition-all group-hover:brightness-110 duration-500"
+              priority
+            />
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
@@ -59,6 +70,7 @@ export default function Header() {
           <a
             href="tel:8653463339"
             className="text-[#F8FAFC]/80 hover:text-[#F8FAFC] transition-colors text-sm font-medium flex items-center gap-2 px-4 py-2 rounded-lg hover:bg-white/5"
+            onClick={() => trackPhoneClick("865-346-3339", "header")}
           >
             <span className="material-icons text-lg">phone</span>
             (865) 346-3339
@@ -66,6 +78,7 @@ export default function Header() {
           <Link
             href="/contact"
             className="relative group overflow-hidden bg-gradient-to-r from-[#4A69E2] to-[#00C9FF] text-white px-6 py-2.5 rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:shadow-[#00C9FF]/30 hover:-translate-y-0.5"
+            onClick={() => trackCTAClick("Book a Demo", "header", "/contact")}
           >
             <span className="relative z-10 flex items-center gap-2">
               Book a Demo
@@ -79,24 +92,22 @@ export default function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="lg:hidden relative w-10 h-10 flex items-center justify-center rounded-lg hover:bg-white/5 transition-colors"
+          className="lg:hidden relative w-11 h-11 flex items-center justify-center rounded-lg hover:bg-white/5 transition-all active:scale-95"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
         >
-          <span className="material-icons text-[#F8FAFC]">
-            {mobileMenuOpen ? "close" : "menu"}
-          </span>
+          <span className="material-icons text-[#F8FAFC] text-2xl">{mobileMenuOpen ? "close" : "menu"}</span>
         </button>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu - Enhanced smooth animation */}
       <div
-        className={`lg:hidden overflow-hidden transition-all duration-300 ${
-          mobileMenuOpen ? "max-h-screen border-t border-white/5" : "max-h-0"
+        className={`lg:hidden overflow-hidden transition-all duration-500 ease-out ${
+          mobileMenuOpen ? "max-h-[600px] border-t border-white/5" : "max-h-0"
         }`}
       >
-        <div className="container mx-auto px-6 py-6 bg-[#0F172A]/98 backdrop-blur-xl">
-          <div className="flex flex-col gap-1 mb-6">
+        <div className="container mx-auto px-4 sm:px-6 py-6 bg-[#0F172A]/98 backdrop-blur-xl">
+          <div className="flex flex-col gap-2 mb-6">
             <MobileNavLink href="/services" onClick={() => setMobileMenuOpen(false)}>
               Services
             </MobileNavLink>
@@ -114,18 +125,22 @@ export default function Header() {
           <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
             <a
               href="tel:8653463339"
-              className="flex items-center justify-center gap-2 text-[#F8FAFC] bg-white/5 px-6 py-3 rounded-lg hover:bg-white/10 transition-all font-medium"
+              className="flex items-center justify-center gap-2 text-[#F8FAFC] bg-white/5 px-6 py-4 rounded-xl hover:bg-white/10 transition-all font-medium text-base min-h-[56px] active:scale-95"
+              onClick={() => trackPhoneClick("865-346-3339", "mobile_menu")}
             >
-              <span className="material-icons text-lg">phone</span>
+              <span className="material-icons text-xl">phone</span>
               (865) 346-3339
             </a>
             <Link
               href="/contact"
-              className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#4A69E2] to-[#00C9FF] text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg hover:shadow-[#00C9FF]/30 transition-all"
-              onClick={() => setMobileMenuOpen(false)}
+              className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#4A69E2] to-[#00C9FF] text-white px-6 py-4 rounded-xl font-bold hover:shadow-lg hover:shadow-[#00C9FF]/30 transition-all text-base min-h-[56px] active:scale-95"
+              onClick={() => {
+                trackCTAClick("Book a Demo", "mobile_menu", "/contact");
+                setMobileMenuOpen(false);
+              }}
             >
               Book a Demo
-              <span className="material-icons text-sm">arrow_forward</span>
+              <span className="material-icons text-base">arrow_forward</span>
             </Link>
           </div>
         </div>
@@ -158,11 +173,11 @@ function MobileNavLink({
   return (
     <Link
       href={href}
-      className="flex items-center justify-between px-4 py-3 text-[#F8FAFC]/80 hover:text-[#F8FAFC] hover:bg-white/5 rounded-lg transition-all font-medium group"
+      className="flex items-center justify-between px-4 py-4 text-[#F8FAFC]/80 hover:text-[#F8FAFC] hover:bg-white/5 rounded-xl transition-all font-medium text-base min-h-[56px] group active:scale-95"
       onClick={onClick}
     >
       {children}
-      <span className="material-icons text-sm opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all">
+      <span className="material-icons text-base opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all">
         arrow_forward
       </span>
     </Link>

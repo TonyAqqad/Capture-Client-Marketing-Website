@@ -1,0 +1,100 @@
+{
+  "analysis_date": "2025-11-30",
+  "total_agencies_analyzed": 18,
+  "cities_covered": ["New York City", "Los Angeles", "Chicago", "Dallas", "Miami", "Houston"],
+
+  "pricing_summary": {
+    "entry_level_packages": {
+      "range": "$599 - $1,500/mo",
+      "typical": "$997/mo",
+      "includes": ["Single channel (FB or Google)", "Basic reporting", "Limited support"],
+      "source_agencies": ["Comrade (Web Design $599)", "Industry average"]
+    },
+    "growth_packages": {
+      "range": "$1,450 - $2,500/mo",
+      "typical": "$1,997/mo",
+      "includes": ["PPC Management", "SEO basics", "Account manager", "Weekly reporting"],
+      "source_agencies": ["Comrade PPC $1,450", "SEO packages $2,500"]
+    },
+    "professional_packages": {
+      "range": "$2,500 - $5,000/mo",
+      "typical": "$3,997/mo",
+      "includes": ["Multi-channel campaigns", "Full SEO", "CRO", "Dedicated support"],
+      "source_agencies": ["Industry standard mid-tier"]
+    },
+    "enterprise_packages": {
+      "range": "$4,299 - $10,000+/mo",
+      "typical": "$5,000+/mo",
+      "includes": ["All-in-one marketing", "Full team", "Custom strategy", "Priority support"],
+      "source_agencies": ["Comrade All-in-One $4,299"]
+    }
+  },
+
+  "competitor_pricing_details": {
+    "comrade_digital_chicago": {
+      "all_in_one": "$4,299/mo",
+      "seo_only": "$2,500/mo",
+      "ppc_only": "$1,450/mo",
+      "web_design": "$599/mo"
+    },
+    "industry_benchmarks_2025": {
+      "small_business_retainer": "$500 - $5,000/mo",
+      "mid_market_retainer": "$5,000 - $20,000/mo",
+      "enterprise_retainer": "$10,000 - $50,000+/mo",
+      "hourly_rates": {
+        "standard": "$70 - $190/hr",
+        "premium_nyc": "Up to $320/hr"
+      }
+    }
+  },
+
+  "key_competitive_insights": {
+    "voice_ai_gap": "NONE of the 18 agencies researched offer Voice AI or AI agents for small businesses - this is our KEY DIFFERENTIATOR",
+    "pricing_transparency": "Only 1 of 18 agencies (Comrade) shows public pricing - transparent pricing is a competitive advantage",
+    "common_services": ["Facebook Ads", "Google Ads", "SEO", "Web Design", "Social Media Marketing"],
+    "missing_from_competitors": ["Voice AI", "24/7 AI Receptionist", "Automated Lead Qualification", "AI Call Handling"],
+    "average_rating": "4.9 stars across all agencies",
+    "bilingual_trend": "Miami/Houston agencies emphasize Spanish-speaking support"
+  },
+
+  "recommended_capture_client_pricing": {
+    "starter_package": {
+      "price": "$997/mo",
+      "rationale": "Below Comrade's PPC package ($1,450) but above basic web design ($599). Competitive entry point that includes VOICE AI which no competitor offers.",
+      "competitive_position": "Best value in market - includes AI technology competitors don't have"
+    },
+    "growth_package": {
+      "price": "$1,997/mo",
+      "rationale": "Below SEO-only packages ($2,500) but includes Voice AI + multi-channel. Sweet spot for serious small businesses.",
+      "competitive_position": "Premium value - Voice AI + lead gen at SEO-only prices"
+    },
+    "enterprise_package": {
+      "price": "$3,997/mo",
+      "rationale": "Below Comrade's all-in-one ($4,299) but includes full Voice AI suite. Premium without enterprise pricing.",
+      "competitive_position": "Full service + AI at competitors' basic all-in-one price"
+    }
+  },
+
+  "value_proposition_vs_competitors": {
+    "vs_traditional_agencies": "We include Voice AI technology that handles calls 24/7 - something NO traditional agency offers at any price",
+    "vs_ai_competitors": "We combine AI with proven lead generation (FB/Google Ads) - not just chatbots",
+    "unique_features": [
+      "24/7 AI Voice Agent (competitors charge $30k+/yr for human receptionists)",
+      "Automated lead qualification (saves 10+ hours/week)",
+      "Instant appointment scheduling",
+      "CRM integration included"
+    ]
+  },
+
+  "cost_per_lead_benchmarks": {
+    "low_ticket": "$50 - $100/lead",
+    "mid_range_saas": "$100 - $250/lead",
+    "high_ticket_legal_finance": "$400 - $650+/lead"
+  },
+
+  "ad_spend_recommendations": {
+    "starter_clients": "$1,000 - $3,000/mo ad budget",
+    "growth_clients": "$3,000 - $10,000/mo ad budget",
+    "enterprise_clients": "$10,000+/mo ad budget"
+  }
+}

@@ -10,7 +10,6 @@ interface GlowCardProps {
 export function GlowCard({ children, className = "" }: GlowCardProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [isHovered, setIsHovered] = useState(false);
 
   const handleMouseMove = (e: MouseEvent) => {
     if (!ref.current) return;
@@ -25,8 +24,6 @@ export function GlowCard({ children, className = "" }: GlowCardProps) {
     <motion.div
       ref={ref}
       onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
       className={`relative group overflow-hidden ${className}`}
     >
       {/* Radial glow following cursor */}
@@ -35,6 +32,7 @@ export function GlowCard({ children, className = "" }: GlowCardProps) {
         style={{
           background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(0, 201, 255, 0.1), transparent 40%)`,
         }}
+        suppressHydrationWarning
       />
 
       {/* Subtle border glow on hover */}
@@ -43,6 +41,7 @@ export function GlowCard({ children, className = "" }: GlowCardProps) {
         style={{
           background: `radial-gradient(800px circle at ${position.x}px ${position.y}px, rgba(74, 105, 226, 0.15), transparent 50%)`,
         }}
+        suppressHydrationWarning
       />
 
       {children}

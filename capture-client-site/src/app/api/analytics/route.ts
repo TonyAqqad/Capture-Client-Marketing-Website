@@ -32,19 +32,7 @@ export async function POST(request: NextRequest) {
 
     // Basic validation
     if (!metric.name || !metric.value || !metric.rating) {
-      return NextResponse.json(
-        { error: "Invalid metric data" },
-        { status: 400 }
-      );
-    }
-
-    // Log to console in development
-    if (process.env.NODE_ENV === "development") {
-      console.log(`[Web Vitals API] ${metric.name}:`, {
-        value: metric.value.toFixed(2),
-        rating: metric.rating,
-        url: metric.url,
-      });
+      return NextResponse.json({ error: "Invalid metric data" }, { status: 400 });
     }
 
     // ==========================================
@@ -73,12 +61,8 @@ export async function POST(request: NextRequest) {
     // await sendToSentry(metric);
 
     return NextResponse.json({ success: true }, { status: 200 });
-  } catch (error) {
-    console.error("[Web Vitals API] Error:", error);
-    return NextResponse.json(
-      { error: "Internal server error" },
-      { status: 500 }
-    );
+  } catch {
+    return NextResponse.json({ error: "Internal server error" }, { status: 500 });
   }
 }
 
@@ -119,57 +103,60 @@ async function sendToGoogleAnalytics(metric: WebVitalMetric) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     });
-  } catch (error) {
-    console.error("[GA4] Failed to send metric:", error);
+  } catch {
+    // Failed to send metric - silent failure
   }
 }
 
 /**
  * Save metric to database (example)
+ * Uncomment and implement when ready to use
  */
-async function saveToDatabase(metric: WebVitalMetric) {
-  // Example with Prisma:
-  // await prisma.webVitals.create({
-  //   data: {
-  //     name: metric.name,
-  //     value: metric.value,
-  //     rating: metric.rating,
-  //     url: metric.url,
-  //     timestamp: new Date(metric.timestamp),
-  //     userAgent: metric.userAgent,
-  //   },
-  // });
+// async function _saveToDatabase(metric: WebVitalMetric) {
+//   // Example with Prisma:
+//   // await prisma.webVitals.create({
+//   //   data: {
+//   //     name: metric.name,
+//   //     value: metric.value,
+//   //     rating: metric.rating,
+//   //     url: metric.url,
+//   //     timestamp: new Date(metric.timestamp),
+//   //     userAgent: metric.userAgent,
+//   //   },
+//   // });
 
-  // Example with Supabase:
-  // await supabase.from('web_vitals').insert({
-  //   name: metric.name,
-  //   value: metric.value,
-  //   rating: metric.rating,
-  //   url: metric.url,
-  //   timestamp: new Date(metric.timestamp).toISOString(),
-  // });
+//   // Example with Supabase:
+//   // await supabase.from('web_vitals').insert({
+//   //   name: metric.name,
+//   //   value: metric.value,
+//   //   rating: metric.rating,
+//   //   url: metric.url,
+//   //   timestamp: new Date(metric.timestamp).toISOString(),
+//   // });
 
-  console.log("[Database] Would save metric:", metric.name);
-}
+//   console.log("[Database] Would save metric:", metric.name);
+// }
 
 /**
  * Send to DataDog
+ * Uncomment and implement when ready to use
  */
-async function sendToDataDog(metric: WebVitalMetric) {
-  const apiKey = process.env.DATADOG_API_KEY;
-  if (!apiKey) return;
+// async function _sendToDataDog(_metric: WebVitalMetric) {
+//   const apiKey = process.env.DATADOG_API_KEY;
+//   if (!apiKey) return;
 
-  // DataDog metrics API example
-  // See: https://docs.datadoghq.com/api/latest/metrics/
-}
+//   // DataDog metrics API example
+//   // See: https://docs.datadoghq.com/api/latest/metrics/
+// }
 
 /**
  * Send to Sentry Performance Monitoring
+ * Uncomment and implement when ready to use
  */
-async function sendToSentry(metric: WebVitalMetric) {
-  // Sentry automatically captures Web Vitals if configured
-  // See: https://docs.sentry.io/platforms/javascript/performance/
-}
+// async function _sendToSentry(_metric: WebVitalMetric) {
+//   // Sentry automatically captures Web Vitals if configured
+//   // See: https://docs.sentry.io/platforms/javascript/performance/
+// }
 
 /**
  * Setup Instructions:

@@ -1,0 +1,267 @@
+{
+  "research_date": "2025-11-30",
+  "cities": ["Chicago, IL", "Dallas, TX"],
+  "total_agencies_found": 6,
+  "agencies": [
+    {
+      "name": "Comrade Digital Marketing Agency",
+      "city": "Chicago",
+      "state": "IL",
+      "website": "https://comradeweb.com",
+      "rating": 4.9,
+      "review_count": 95,
+      "phone": "(312) 535-9325",
+      "address": "332 S Michigan Ave #900, Chicago, IL 60604",
+      "services": [
+        "SEO Services",
+        "PPC Management (Google Ads, Facebook Ads)",
+        "Web Design & Development",
+        "Content Marketing",
+        "Social Media Marketing",
+        "Branding & Identity",
+        "Local SEO",
+        "Email Marketing",
+        "Conversion Rate Optimization (CRO)",
+        "Search Engine Marketing (SEM)",
+        "Digital Marketing Strategy"
+      ],
+      "industries_served": [
+        "Law Firms",
+        "Healthcare",
+        "Home Improvement & Construction",
+        "Small Businesses",
+        "Ecommerce",
+        "Manufacturing",
+        "Real Estate",
+        "B2B Services & SaaS"
+      ],
+      "packages": [
+        {
+          "name": "All-in-One Marketing Growth Plans",
+          "starting_price": "$4,299/mo",
+          "description": "Full-service digital marketing including SEO, PPC, content creation, and analytics"
+        },
+        {
+          "name": "SEO Growth Plans",
+          "starting_price": "$2,500/mo",
+          "description": "SEO packages for local exposure, rapid growth, or highly competitive markets"
+        },
+        {
+          "name": "Web Design Growth Plans",
+          "starting_price": "$599/mo",
+          "description": "Custom website design and development with varying complexity levels"
+        },
+        {
+          "name": "PPC Growth Plans",
+          "starting_price": "$1,450/mo",
+          "description": "Multi-channel PPC advertising management for maximum ROI"
+        }
+      ],
+      "key_results": [
+        "SimVisa: 1,483% increase in qualified leads, 98% decrease in cost per lead, 2,287% increase in organic traffic",
+        "Kraff Eye Institute: 272% increase in conversion rate, 5,828% increase in organic traffic",
+        "Granite Selection: 780% increase in qualified leads, 1,615% increase in organic traffic"
+      ],
+      "unique_selling_points": [
+        "ROI-driven approach with typically 4.5x ROI",
+        "Dedicated teams with niche experts, account manager, and veteran CMO",
+        "Free digital marketing assessment and audit",
+        "Custom strategy planning with competitive research",
+        "Award-winning agency (Clutch, Hermes, Davey, FWA, Awwwards)"
+      ]
+    },
+    {
+      "name": "222 Digital Marketing Agency Chicago",
+      "city": "Chicago",
+      "state": "IL",
+      "website": "https://222digitalmarketing.com",
+      "rating": 5.0,
+      "review_count": 25,
+      "phone": "(312) 896-3005",
+      "address": "222 W Merchandise Mart Plaza #1212, Chicago, IL",
+      "services": [
+        "Internet Marketing Services",
+        "Digital Marketing",
+        "SEO",
+        "PPC"
+      ],
+      "packages": [],
+      "unique_selling_points": [
+        "5.0 star rating on Google",
+        "24/7 availability",
+        "Highly recommended for online marketing needs"
+      ]
+    },
+    {
+      "name": "Digital Third Coast",
+      "city": "Chicago",
+      "state": "IL",
+      "website": "https://www.digitalthirdcoast.com",
+      "rating": 4.8,
+      "review_count": 29,
+      "phone": "(773) 904-2700",
+      "address": "2540 W North Ave, Chicago, IL",
+      "services": [
+        "Digital Marketing",
+        "Marketing Agency Services"
+      ],
+      "packages": [],
+      "unique_selling_points": [
+        "Delivers on promised ROI",
+        "Focus on measurable results"
+      ]
+    },
+    {
+      "name": "Agency Creative",
+      "city": "Dallas",
+      "state": "TX",
+      "website": "https://www.agencycreative.com",
+      "rating": 5.0,
+      "review_count": 68,
+      "phone": "(972) 488-1660",
+      "address": "14875 Landmark Blvd #230, Dallas, TX",
+      "services": [
+        "Brand Strategy & Positioning",
+        "Creative Advertising",
+        "Restaurant Marketing",
+        "E-commerce Marketing",
+        "Digital Marketing",
+        "Traditional Advertising",
+        "Marketing Campaigns",
+        "Brand Development"
+      ],
+      "industries_served": [
+        "Restaurants & Food Service",
+        "Consumer Products",
+        "Retail & E-commerce",
+        "Non-Profits"
+      ],
+      "packages": [],
+      "case_studies": [
+        "Banh Shop - Vietnamese street food restaurant brand awareness campaign",
+        "ECO Clog Preventer - Eco-friendly product launch at Lowe's, Walmart, Amazon",
+        "Ferrini Boots - E-commerce launch for 100-year boot brand",
+        "LIFT - Non-profit literacy program city-wide marketing campaign",
+        "TGI Fridays - Award-winning restaurant marketing campaign"
+      ],
+      "unique_selling_points": [
+        "Full-service advertising agency transforming challenger brands into market leaders",
+        "Strategic insight and innovative execution",
+        "Deep business ecosystem immersion",
+        "Stunning work delivered faster than expected",
+        "Focus on 'Accelerating Brand Momentum'"
+      ]
+    },
+    {
+      "name": "Miller Ad Agency",
+      "city": "Dallas",
+      "state": "TX",
+      "website": "https://milleradagency.com",
+      "rating": 5.0,
+      "review_count": 113,
+      "phone": "(972) 243-2211",
+      "address": "2711 Valley View Ln, Dallas, TX",
+      "services": [
+        "Marketing Agency Services",
+        "Advertising"
+      ],
+      "packages": [],
+      "unique_selling_points": [
+        "Quick response times",
+        "Quality work delivered in timely manner",
+        "High review count (113 5-star reviews)"
+      ]
+    },
+    {
+      "name": "Thrive Internet Marketing Agency",
+      "city": "Dallas",
+      "state": "TX",
+      "website": "https://thriveagency.com/dallas-digital-marketing-agency/",
+      "rating": 4.8,
+      "review_count": 74,
+      "phone": "(972) 362-9333",
+      "address": "2626 Cole Ave #488, Dallas, TX",
+      "services": [
+        "Internet Marketing Services",
+        "Digital Marketing",
+        "SEO",
+        "PPC",
+        "Web Design"
+      ],
+      "packages": [],
+      "unique_selling_points": [
+        "White-glove service",
+        "Seamless process",
+        "Currently open (closes 6 PM)"
+      ]
+    }
+  ],
+  "pricing_insights": {
+    "chicago": {
+      "all_in_one_marketing": {
+        "min": "$4,299/mo",
+        "provider": "Comrade Digital Marketing"
+      },
+      "seo_only": {
+        "min": "$2,500/mo",
+        "provider": "Comrade Digital Marketing"
+      },
+      "ppc_management": {
+        "min": "$1,450/mo",
+        "provider": "Comrade Digital Marketing"
+      },
+      "web_design": {
+        "min": "$599/mo",
+        "provider": "Comrade Digital Marketing"
+      }
+    },
+    "dallas": {
+      "note": "Most Dallas agencies do not publicly display pricing on their websites or Google Maps listings. Custom quotes required."
+    }
+  },
+  "common_services_offered": [
+    "SEO (Search Engine Optimization)",
+    "PPC (Pay-Per-Click) Management",
+    "Social Media Marketing",
+    "Content Marketing",
+    "Web Design & Development",
+    "Branding & Identity",
+    "Digital Strategy",
+    "Email Marketing",
+    "Conversion Rate Optimization"
+  ],
+  "key_findings": {
+    "pricing_transparency": "Chicago agencies (especially Comrade) are more transparent with pricing. Dallas agencies prefer custom quotes.",
+    "service_similarity": "All agencies offer core digital marketing services (SEO, PPC, Web Design, Social Media)",
+    "average_rating": "4.9 stars across all agencies researched",
+    "package_structures": "Monthly retainer models are standard, ranging from $599/mo to $4,299/mo for comprehensive services",
+    "roi_focus": "Agencies emphasize ROI and measurable results in their messaging",
+    "industry_specialization": "Common focus areas include home services, healthcare, legal, restaurants, and small businesses"
+  },
+  "competitive_advantages_observed": {
+    "comrade": [
+      "Transparent pricing structure",
+      "Proven case studies with specific metrics",
+      "Free assessments and audits",
+      "Dedicated team structure (niche experts + account manager + CMO)",
+      "Multiple award recognitions"
+    ],
+    "agency_creative": [
+      "Creative excellence and fast delivery",
+      "Strong restaurant and food industry expertise",
+      "Full-service advertising capabilities",
+      "Strategic brand positioning"
+    ],
+    "miller_ad_agency": [
+      "Highest review count in Dallas (113 reviews)",
+      "Perfect 5.0 rating",
+      "Fast turnaround times"
+    ]
+  },
+  "recommended_pricing_strategy": {
+    "voice_ai_starter": "$997/mo - Competitive entry point below Comrade's PPC package",
+    "voice_ai_growth": "$1,997/mo - Competitive with mid-tier marketing packages",
+    "voice_ai_enterprise": "$3,997/mo - Competitive with Comrade's all-in-one package while offering specialized Voice AI value",
+    "rationale": "These prices position competitively against established Chicago/Dallas agencies while emphasizing the unique value of Voice AI automation, which most competitors don't offer"
+  }
+}

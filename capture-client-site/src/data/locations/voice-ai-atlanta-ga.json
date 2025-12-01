@@ -22,7 +22,7 @@
   },
   "seo": {
     "page_title": "Voice AI Agency in Atlanta, GA | Capture Client",
-    "meta_description": "Looking for Voice AI in Atlanta? Capture Client helps Georgia businesses automate calls and qualify leads 24/7. Call 865-346-3339\\!",
+    "meta_description": "Voice AI for Atlanta businesses from Buckhead to Midtown. Automate calls 24/7 at Perimeter Center, Atlantic Station, and throughout Metro Atlanta. Call 865-346-3339!",
     "h1_heading": "Voice AI Agency in Atlanta, Georgia",
     "keywords": [
       "voice ai atlanta",
@@ -49,28 +49,28 @@
     }
   },
   "local_intro": {
-    "paragraph": "Atlanta businesses are discovering AI voice automation. In Georgia's business capital, missing calls means losing to competitors. Whether you're in Buckhead, Sandy Springs, or Midtown, our Voice AI ensures you never miss an opportunity. Atlanta's competitive market demands 24/7 availability."
+    "paragraph": "From the bustling offices at Perimeter Center to the thriving startups in Atlantic Station, Atlanta businesses are discovering the power of AI voice agents. Whether you're serving clients near Buckhead's financial district, managing calls from your Midtown office, or running a home services company along the Fulton Industrial corridor, our 24/7 AI receptionist ensures you never miss a lead. Trusted by businesses across the Metro Atlanta Chamber network, from the corporate towers of Colony Square to the historic shops in Virginia-Highland."
   },
   "benefits": [
     {
       "title": "24/7 Atlanta Lead Capture",
       "description": "Our AI answers every call instantly, day or night, capturing leads even when closed.",
-      "icon": "clock"
+      "icon": "schedule"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "AI asks qualifying questions so you only talk to serious Atlanta customers.",
-      "icon": "filter"
+      "icon": "filter_alt"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "AI schedules appointments directly into your calendar automatically.",
-      "icon": "calendar"
+      "icon": "event"
     },
     {
       "title": "Scale Without Hiring",
       "description": "Handle 1,000 calls per day without additional staff.",
-      "icon": "trending-up"
+      "icon": "trending_up"
     }
   ],
   "how_it_works": [
@@ -92,24 +92,24 @@
   ],
   "local_use_cases": [
     {
-      "business_type": "HVAC in Atlanta",
-      "scenario": "Missing 60% of after-hours emergency calls.",
-      "result": "AI captures every call, increased revenue by \\8,000."
+      "business_type": "Buckhead HVAC Company",
+      "scenario": "Missing 60% of after-hours emergency calls from Buckhead and Midtown high-rises.",
+      "result": "AI captures every call, increased revenue by $18,000 serving luxury condos."
     },
     {
-      "business_type": "Atlanta Law Firm",
-      "scenario": "Calls went to voicemail during consultations.",
+      "business_type": "Midtown Atlanta Law Firm",
+      "scenario": "Calls went to voicemail during consultations near Georgia Tech.",
       "result": "AI pre-qualifies 24/7, signed 23 additional cases in 6 months."
     },
     {
-      "business_type": "Atlanta Plumbing",
-      "scenario": "Missing calls daily during job sites.",
-      "result": "AI answered 100%, grew revenue by 45% without staff."
+      "business_type": "Perimeter Center Medical Practice",
+      "scenario": "Patients calling from across North Fulton couldn't reach front desk.",
+      "result": "AI answered 100%, patient bookings grew 45% without hiring staff."
     }
   ],
   "service_area": {
     "heading": "Serving Atlanta and Surrounding Georgia Communities",
-    "description": "Voice AI services throughout Atlanta metro area.",
+    "description": "Voice AI services throughout Atlanta metro area, including Perimeter Center, Buckhead, Midtown, Atlantic Station, and beyond.",
     "areas_list": [
       "Atlanta",
       "Sandy Springs",
@@ -123,13 +123,13 @@
   },
   "testimonials": [
     {
-      "quote": "We were missing 20 calls a week. Since Voice AI, booking rate up 40%.",
+      "quote": "We were missing 20 calls a week from Buckhead and Midtown. Since Voice AI, booking rate up 40%.",
       "author": "Marcus Thompson",
       "business": "Thompson HVAC",
       "location": "Atlanta, GA"
     },
     {
-      "quote": "Like having a \u0000k receptionist for a fraction of the cost.",
+      "quote": "Like having a $40k receptionist for a fraction of the cost.",
       "author": "Jennifer Park",
       "business": "Park Law",
       "location": "Atlanta, GA"
@@ -146,7 +146,7 @@
     },
     {
       "question": "How much does it cost?",
-      "answer": "Packages start at \\99/month with 50 calls. Growth package \\,195/mo with 200 calls."
+      "answer": "Packages start at $999/month with 50 calls. Growth package $2,195/mo with 200 calls."
     },
     {
       "question": "Can AI handle diverse customers?",

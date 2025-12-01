@@ -1,1 +1,124 @@
-{"page_id":"voice-ai-sevierville-tn","page_type":"service-location","service":{"service_id":"voice-ai","service_name":"Voice AI Services"},"location":{"city":"Sevierville","state":"Tennessee","state_abbr":"TN","slug":"sevierville-tn","nearby_areas":["Knoxville"],"service_area_radius":"20 miles"},"seo":{"page_title":"Voice AI in Sevierville, TN | Capture Client","meta_description":"Sevierville businesses automate calls with Voice AI. Call 865-346-3339!","h1_heading":"Voice AI in Sevierville, Tennessee","keywords":["voice ai sevierville"],"canonical_url":"/voice-ai-sevierville-tn"},"hero":{"headline":"Sevierville Businesses Powered by AI","subheadline":"AI Voice Agents for Sevierville Companies","cta_primary":{"text":"Get Free Consultation","action":"tel:865-346-3339","type":"phone"},"hero_image":{"url":"https://images.unsplash.com/photo-1531058240690-006c446962d8?w=1920&q=80","alt":"Sevierville business"}},"local_intro":{"paragraph":"Sevierville businesses need efficient call handling. Voice AI ensures you capture every lead from Sevierville customers 24/7."},"benefits":[{"title":"24/7 for Sevierville","description":"Never miss Sevierville calls.","icon":"clock"},{"title":"Qualification","description":"Qualify Sevierville leads.","icon":"filter"}],"how_it_works":[{"step":1,"title":"Strategy","description":"Discuss Sevierville needs."},{"step":2,"title":"Training","description":"Train AI."},{"step":3,"title":"Launch","description":"Capture leads."}],"local_use_cases":[{"business_type":"Services","scenario":"Missing calls","result":"Revenue up"}],"service_area":{"heading":"Serving Sevierville","areas_list":["Sevierville","Knoxville"]},"local_testimonials":[{"quote":"Voice AI works great for our Sevierville business.","author":"Owner","business":"Sevierville Co","location":"Sevierville, TN"}],"faq":[{"question":"Voice AI for Sevierville?","answer":"Yes, AI answers Sevierville calls 24/7."}],"images":{"gallery":[{"url":"https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200","alt":"Sevierville"}]},"cta_section":{"headline":"Capture Sevierville Clients","cta_primary":{"text":"Call 865-346-3339","action":"tel:865-346-3339","type":"phone"}},"related_pages":{"nearby_locations":["voice-ai-knoxville-tn"],"packages":["starter-package"]}}
+{
+  "page_id": "voice-ai-sevierville-tn",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services"
+  },
+  "location": {
+    "city": "Sevierville",
+    "state": "Tennessee",
+    "state_abbr": "TN",
+    "slug": "sevierville-tn",
+    "nearby_areas": [
+      "Knoxville"
+    ],
+    "service_area_radius": "20 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI in Sevierville, TN | Capture Client",
+    "meta_description": "Sevierville businesses automate calls with Voice AI. Call 865-346-3339!",
+    "h1_heading": "Voice AI in Sevierville, Tennessee",
+    "keywords": [
+      "voice ai sevierville"
+    ],
+    "canonical_url": "/voice-ai-sevierville-tn"
+  },
+  "hero": {
+    "headline": "Sevierville Businesses Powered by AI",
+    "subheadline": "AI Voice Agents for Sevierville Companies",
+    "cta_primary": {
+      "text": "Get Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1531058240690-006c446962d8?w=1920&q=80",
+      "alt": "Sevierville business"
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the Sevierville Chamber of Commerce on Gary Wade Blvd to businesses along the Winfield Dunn Parkway (Highway 66) Commercial Corridor and Dolly Parton Parkway, Sevierville businesses serving the gateway to the Great Smoky Mountains need efficient call handling. Whether you're near the Sevierville Convention Center or in Downtown Sevierville Historic District, Voice AI ensures you capture every lead from Sevierville's 10+ million annual visitors and local customers 24/7."
+  },
+  "benefits": [
+    {
+      "title": "24/7 for Sevierville",
+      "description": "Never miss Sevierville calls.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Qualification",
+      "description": "Qualify Sevierville leads.",
+      "icon": "filter_alt"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Strategy",
+      "description": "Discuss Sevierville needs."
+    },
+    {
+      "step": 2,
+      "title": "Training",
+      "description": "Train AI."
+    },
+    {
+      "step": 3,
+      "title": "Launch",
+      "description": "Capture leads."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Services",
+      "scenario": "Missing calls",
+      "result": "Revenue up"
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Sevierville",
+    "areas_list": [
+      "Sevierville",
+      "Knoxville"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Voice AI works great for our Sevierville business.",
+      "author": "Owner",
+      "business": "Sevierville Co",
+      "location": "Sevierville, TN"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Voice AI for Sevierville?",
+      "answer": "Yes, AI answers Sevierville calls 24/7."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200",
+        "alt": "Sevierville"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Capture Sevierville Clients",
+    "cta_primary": {
+      "text": "Call 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-knoxville-tn"
+    ],
+    "packages": [
+      "starter-package"
+    ]
+  }
+}

@@ -11,14 +11,26 @@
     "state": "VA",
     "state_full": "Virginia",
     "slug": "alexandria-va",
-    "nearby_areas": ["Arlington", "Old Town Alexandria", "Del Ray", "Eisenhower Valley"],
+    "nearby_areas": [
+      "Arlington",
+      "Old Town Alexandria",
+      "Del Ray",
+      "Eisenhower Valley"
+    ],
     "service_area_radius": "25 miles"
   },
   "seo": {
     "page_title": "Voice AI Agency in Alexandria, VA | Capture Client",
     "meta_description": "Voice AI for Alexandria businesses. Automate calls, qualify leads 24/7, never miss opportunities. Serving Old Town, Del Ray & beyond. Call 865-346-3339!",
     "h1_heading": "Voice AI Services in Alexandria, Virginia",
-    "keywords": ["voice ai agency alexandria va", "ai voice agents alexandria", "ai receptionist alexandria virginia", "automated call answering alexandria", "lead qualification ai alexandria", "voice ai old town alexandria"],
+    "keywords": [
+      "voice ai agency alexandria va",
+      "ai voice agents alexandria",
+      "ai receptionist alexandria virginia",
+      "automated call answering alexandria",
+      "lead qualification ai alexandria",
+      "voice ai old town alexandria"
+    ],
     "canonical_url": "/voice-ai-alexandria-va",
     "local_business_schema": {
       "type": "LocalBusiness",
@@ -55,27 +67,27 @@
     {
       "title": "24/7 Lead Capture for Alexandria",
       "description": "Alexandria professionals work long hours. Your AI agent captures leads from early morning commuters to late-night searchers across Old Town, Del Ray, and Carlyle.",
-      "icon": "clock"
+      "icon": "schedule"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "Stop wasting billable hours on unqualified leads. Our AI qualifies Alexandria prospects before they reach you, so you only engage with ready-to-buy clients.",
-      "icon": "filter"
+      "icon": "filter_alt"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "AI schedules consultations directly into your calendar. No more scheduling back-and-forth with busy Alexandria professionals.",
-      "icon": "calendar"
+      "icon": "event"
     },
     {
       "title": "Cost Savings in High-Rent Market",
       "description": "Save thousands compared to hiring staff in Alexandria's expensive labor market. No salary, benefits, or overhead costs.",
-      "icon": "dollar-sign"
+      "icon": "attach_money"
     },
     {
       "title": "Professional Alexandria Representation",
       "description": "Consistent, polished call handling that matches Alexandria's professional standards. Perfect for law firms, medical practices, and consulting businesses.",
-      "icon": "award"
+      "icon": "workspace_premium"
     }
   ],
   "how_it_works": [
@@ -115,7 +127,18 @@
   "service_area": {
     "heading": "Serving Alexandria and Northern Virginia",
     "description": "We provide Voice AI services throughout Alexandria and the greater Northern Virginia region.",
-    "areas_list": ["Old Town Alexandria", "Del Ray", "Carlyle", "Eisenhower Valley", "West End Alexandria", "Potomac Yard", "Mount Vernon", "Arlington", "Crystal City", "National Harbor"]
+    "areas_list": [
+      "Old Town Alexandria",
+      "Del Ray",
+      "Carlyle",
+      "Eisenhower Valley",
+      "West End Alexandria",
+      "Potomac Yard",
+      "Mount Vernon",
+      "Arlington",
+      "Crystal City",
+      "National Harbor"
+    ]
   },
   "local_testimonials": [
     {
@@ -180,8 +203,19 @@
     "urgency_text": "Limited spots available for Alexandria businesses this month"
   },
   "related_pages": {
-    "other_services_in_location": ["google-ads", "facebook-ads"],
-    "nearby_locations": ["arlington", "richmond", "norfolk"],
-    "packages": ["starter-package", "growth-package", "enterprise-package"]
+    "other_services_in_location": [
+      "google-ads",
+      "facebook-ads"
+    ],
+    "nearby_locations": [
+      "arlington",
+      "richmond",
+      "norfolk"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package",
+      "enterprise-package"
+    ]
   }
 }

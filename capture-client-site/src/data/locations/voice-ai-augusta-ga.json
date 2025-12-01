@@ -20,7 +20,7 @@
   },
   "seo": {
     "page_title": "Voice AI Agency in Augusta, GA | Capture Client",
-    "meta_description": "Voice AI for Augusta businesses. Automate calls 24/7. Call 865-346-3339\\!",
+    "meta_description": "Voice AI for Augusta businesses near Augusta University, Fort Eisenhower, and the Cyber District. HIPAA-compliant AI for CSRA. Call 865-346-3339!",
     "h1_heading": "Voice AI Agency in Augusta, Georgia",
     "keywords": [
       "voice ai augusta ga"
@@ -45,13 +45,13 @@
     }
   },
   "local_intro": {
-    "paragraph": "Augusta businesses are leveraging AI to compete. From medical offices near Augusta University to contractors in Evans, Voice AI ensures every call is answered. Masters Tournament season brings surge demand - AI scales effortlessly."
+    "paragraph": "Augusta businesses are leveraging AI to compete in Georgia's second-largest metro area. From medical offices near Augusta University Medical Center to contractors serving Fort Eisenhower (formerly Fort Gordon), from the growing Cyber Innovation and Training Center corridor to hospitality businesses preparing for Masters Tournament season, Voice AI ensures every call is answered. Whether you're in downtown Augusta, Evans, Martinez, or the bustling Washington Road corridor, our AI scales effortlessly to handle seasonal demand and emergency calls across the Central Savannah River Area."
   },
   "benefits": [
     {
       "title": "Masters-Ready Capacity",
       "description": "Handle call surges during Augusta busy seasons automatically.",
-      "icon": "trending-up"
+      "icon": "trending_up"
     },
     {
       "title": "Medical-Grade Quality",
@@ -61,7 +61,7 @@
     {
       "title": "24/7 Augusta Coverage",
       "description": "Answer every call across Augusta metro.",
-      "icon": "clock"
+      "icon": "schedule"
     }
   ],
   "how_it_works": [
@@ -83,24 +83,24 @@
   ],
   "local_use_cases": [
     {
-      "business_type": "Augusta Medical",
-      "scenario": "Long hold times losing patients.",
-      "result": "AI handles scheduling, cut hold times 85%."
+      "business_type": "Augusta University Area Medical",
+      "scenario": "Long hold times at medical practice near Augusta University losing patients to competitors.",
+      "result": "AI handles scheduling and insurance verification, cut hold times 85% and patient satisfaction soared."
     },
     {
       "business_type": "Evans Contractor",
-      "scenario": "Missing calls on job sites.",
-      "result": "AI answers every call, revenue up 52%."
+      "scenario": "Missing emergency calls on job sites throughout Columbia County.",
+      "result": "AI answers every call instantly, emergency response revenue up 52% this year."
     },
     {
-      "business_type": "Masters Hospitality",
-      "scenario": "Seasonal surge overwhelms staff.",
-      "result": "AI handled 3x normal call volume."
+      "business_type": "Washington Road Hospitality",
+      "scenario": "Masters Tournament week seasonal surge overwhelms front desk staff.",
+      "result": "AI handled 3x normal call volume flawlessly, zero missed reservations during tournament."
     }
   ],
   "service_area": {
     "heading": "Serving Augusta and CSRA",
-    "description": "Voice AI throughout Central Savannah River Area.",
+    "description": "Voice AI throughout Central Savannah River Area, including Fort Eisenhower, Cyber District, and Washington Road corridor.",
     "areas_list": [
       "Augusta",
       "Evans",
@@ -130,11 +130,11 @@
     },
     {
       "question": "Can it handle Masters Tournament surges?",
-      "answer": "Yes\\! AI scales instantly for any call volume."
+      "answer": "Yes! AI scales instantly for any call volume."
     },
     {
       "question": "Cost for Augusta businesses?",
-      "answer": "Starting at 999/month."
+      "answer": "Starting at $999/month."
     },
     {
       "question": "How quickly launch?",

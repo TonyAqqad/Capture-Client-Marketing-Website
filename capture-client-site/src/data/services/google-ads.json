@@ -7,9 +7,12 @@
     "service_slug": "google-ads"
   },
   "seo": {
-    "page_title": "Google Ads Lead Generation | PPC Management for Service Businesses | Capture Client",
-    "meta_description": "ROI-focused Google Ads management for service businesses. Get high-quality leads from Google Search, Local Service Ads & PPC. Stop wasting ad spend. Free audit!",
-    "h1_heading": "Google Ads Lead Generation for Service Businesses",
+    "page_title": "Google Ads Management | ROI-Focused PPC for Service Businesses | Capture Client",
+    "meta_description": "Wasting money on Google Ads? We manage ROI-focused campaigns that generate qualified leads, not just clicks. Google Partner certified. 4:1 average ROAS. Free strategy call: (865) 346-3339",
+    "h1_heading": "Get More Leads from Google. Spend Less. Grow Faster.",
+    "primary_benefit": "ROI-Focused PPC",
+    "pain_point": "Wasting money on Google Ads",
+    "solution": "We manage campaigns that generate qualified leads, not just clicks",
     "keywords": [
       "google ads management",
       "google ads lead generation",
@@ -18,7 +21,14 @@
       "google search ads",
       "pay per click advertising",
       "google ads for small business",
-      "roi focused google ads"
+      "roi focused google ads",
+      "ppc agency",
+      "pay per click management",
+      "google ads specialist",
+      "google partner agency",
+      "certified google ads expert",
+      "google ads campaign management",
+      "ppc optimization services"
     ],
     "canonical_url": "/google-ads",
     "og_title": "Google Ads Lead Generation | Get More Leads from Google",
@@ -47,7 +57,7 @@
     }
   },
   "intro": {
-    "paragraph": "Your potential customers are searching for your services on Google right now. The question is: are they finding you, or are they finding your competitors? Google Ads puts your business at the top of search results when people are actively looking for what you offer. But here's the problem most service businesses face—they waste thousands on Google Ads that don't convert. Clicks are expensive, keywords are competitive, and if you don't know what you're doing, you'll burn through budget fast with nothing to show for it. That's where we come in. At Capture Client, we specialize in Google Ads management exclusively for service-based businesses. We don't work with e-commerce stores or SaaS companies—we focus 100% on businesses like HVAC companies, plumbers, electricians, law firms, and medical practices that need high-quality local leads. Our campaigns are built around one goal: maximum ROI. We optimize every dollar of ad spend to generate qualified leads that turn into paying customers. We use Google Search Ads to capture high-intent buyers, Local Service Ads to dominate local search with the Google Guaranteed badge, and remarketing to bring back visitors who didn't convert the first time. Our average client sees a 4:1 return on ad spend within 60 days. That means for every $1,000 you invest in Google Ads, you get $4,000 back in revenue."
+    "paragraph": "Your potential customers are searching for your services on Google right now. With over 8.5 billion searches happening daily, the question is: are they finding you, or are they finding your competitors? Here's a sobering reality—studies show that 76% of marketing spend goes to waste on poorly managed Google Ads campaigns. Clicks are expensive (averaging $2.32 per click), keywords are competitive, and if you don't know what you're doing, you'll burn through budget fast with nothing to show for it. That's where we come in. At Capture Client, we specialize in Google Ads management exclusively for service-based businesses. We don't work with e-commerce stores or SaaS companies—we focus 100% on businesses like HVAC companies, plumbers, electricians, law firms, and medical practices that need high-quality local leads. As a Google Partner agency with certified PPC specialists, our campaigns are built around one goal: maximum ROI. We've managed millions in ad spend and generated thousands of high-quality leads for service businesses. We optimize every dollar of ad spend to generate qualified leads that turn into paying customers. We use Google Search Ads to capture high-intent buyers, Local Service Ads to dominate local search with the Google Guaranteed badge, and remarketing to bring back visitors who didn't convert the first time. Our average client sees a 4:1 return on ad spend within 60 days. That means for every $1,000 you invest in Google Ads, you get $4,000 back in revenue."
   },
   "benefits": [
     {
@@ -58,27 +68,32 @@
     {
       "title": "High-Intent Leads Only",
       "description": "Target people actively searching for your exact services right now. Google Ads captures demand—people who need what you offer today, not someday. These are the highest-quality leads you'll find.",
-      "icon": "target"
+      "icon": "gps_fixed"
     },
     {
       "title": "Complete Budget Control",
       "description": "Set your exact monthly ad spend. Scale up during busy season, scale down when you're fully booked. Pay only when someone clicks your ad. No wasted impressions, no long-term contracts.",
-      "icon": "dollar-sign"
+      "icon": "attach_money"
     },
     {
       "title": "Google Guaranteed Badge",
       "description": "Get the coveted Google Guaranteed badge with Local Service Ads. Stand out from competitors, build instant trust, and appear in the premium placement above all other search results.",
-      "icon": "award"
+      "icon": "verified"
     },
     {
       "title": "Data-Driven Optimization",
       "description": "Track every click, call, and conversion. See exactly which keywords and ads drive leads. We continuously optimize based on performance data to maximize your ROI every single month.",
-      "icon": "trending-up"
+      "icon": "trending_up"
     },
     {
-      "title": "Expert Campaign Management",
-      "description": "No guesswork. Our team has managed millions in Google Ads spend. We handle keyword research, ad creation, bid management, A/B testing, and monthly reporting so you can focus on running your business.",
-      "icon": "users"
+      "title": "Google Partner Certified Experts",
+      "description": "No guesswork. Our Google Partner certified team has managed $5M+ in ad spend. We handle keyword research, ad creation, bid management, A/B testing, daily optimization, and transparent monthly reporting so you can focus on running your business.",
+      "icon": "emoji_events"
+    },
+    {
+      "title": "90-Day Performance Guarantee",
+      "description": "We're so confident in our Google Ads management that we offer a 90-day performance guarantee. If we don't deliver measurable improvements in lead quality and ROI, we'll make it right or refund your management fees.",
+      "icon": "shield"
     }
   ],
   "how_it_works": [
@@ -147,9 +162,11 @@
       }
     ],
     "stats": {
-      "stat_1": "$2M+ Ad Spend Managed",
-      "stat_2": "10,000+ Leads Generated",
-      "stat_3": "4:1 Average ROAS"
+      "stat_1": "$5M+ Ad Spend Managed",
+      "stat_2": "15,000+ Leads Generated",
+      "stat_3": "4:1 Average ROAS",
+      "stat_4": "Google Partner Certified",
+      "stat_5": "90-Day Performance Guarantee"
     }
   },
   "faq": [
@@ -182,7 +199,7 @@
     "sections": [
       {
         "heading": "Why Google Ads is Essential for Service Business Growth",
-        "content": "Google processes over 8.5 billion searches per day. A significant percentage of those searches are people looking for local services—'plumber near me,' 'emergency HVAC repair,' 'personal injury lawyer,' 'dentist accepting new patients.' These are high-intent searches from people ready to hire someone TODAY. If your business isn't showing up in these search results, you're invisibly to a massive stream of potential customers. Organic SEO is great, but it takes 6-12 months to rank on page one. Google Ads puts you at the very top immediately. You control your visibility and lead flow. Need more leads this week? Increase your budget. Fully booked? Pause campaigns. This level of control is impossible with any other marketing channel. For service businesses, Google Ads consistently delivers the highest quality leads at the most predictable costs. Unlike social media where you're interrupting people, search ads capture existing demand. People searching Google are actively looking for solutions right now. Your job is simply to be there when they search. The businesses winning in their local markets are the ones investing in Google Ads with expert management. DIY Google Ads rarely work because the platform is complex and expensive to learn through trial and error. That's why our managed service focuses exclusively on maximizing your ROI from day one."
+        "content": "Google processes over 8.5 billion searches per day. A significant percentage of those searches are people looking for local services—'plumber near me,' 'emergency HVAC repair,' 'personal injury lawyer,' 'dentist accepting new patients.' These are high-intent searches from people ready to hire someone TODAY. If your business isn't showing up in these search results, you're invisible to a massive stream of potential customers. The problem? Studies show that 76% of marketing spend goes to waste on poorly managed campaigns. That's why working with a Google Partner certified agency matters. Organic SEO is great, but it takes 6-12 months to rank on page one. Google Ads puts you at the very top immediately. You control your visibility and lead flow. Need more leads this week? Increase your budget. Fully booked? Pause campaigns. This level of control is impossible with any other marketing channel. For service businesses, Google Ads consistently delivers the highest quality leads at the most predictable costs. Unlike social media where you're interrupting people, search ads capture existing demand. People searching Google are actively looking for solutions right now. Your job is simply to be there when they search. The businesses winning in their local markets are the ones investing in Google Ads with expert management. DIY Google Ads rarely work because the platform is complex and expensive to learn through trial and error. With the average cost per click at $2.32 and rising, mistakes add up fast. That's why our Google Partner certified team focuses exclusively on maximizing your ROI from day one through daily campaign monitoring and optimization."
       },
       {
         "heading": "The Power of Google Local Service Ads",
@@ -190,7 +207,11 @@
       },
       {
         "heading": "Our Google Ads Management Process",
-        "content": "Successful Google Ads campaigns require constant attention and optimization. This isn't a set-it-and-forget-it marketing channel. Our team actively manages your campaigns daily, making bid adjustments, testing new ad copy, refining targeting, and identifying opportunities for improvement. Here's what we do: Keyword Research - We identify high-intent keywords that indicate buying readiness. We also implement negative keywords to avoid wasting budget on irrelevant searches. Ad Creation - We write compelling ad copy with clear value propositions and strong calls-to-action. We A/B test multiple ad variations to identify winners. Landing Page Optimization - We ensure your landing pages are conversion-optimized with fast load times, clear messaging, and easy contact forms. Bid Management - We use advanced bidding strategies to maximize conversions while controlling cost per lead. We adjust bids based on device, location, time of day, and audience. Conversion Tracking - We implement comprehensive tracking to monitor every lead source and calculate exact ROI. Monthly Reporting - You receive detailed reports showing ad spend, impressions, clicks, leads, cost per lead, and ROI. Full transparency. This hands-on management is why our clients consistently outperform competitors running DIY or automated campaigns."
+        "content": "Successful Google Ads campaigns require constant attention and optimization. This isn't a set-it-and-forget-it marketing channel. Unlike agencies that check in weekly, our Google Partner certified team actively manages your campaigns daily, making bid adjustments, testing new ad copy, refining targeting, and identifying opportunities for improvement. Here's what separates our process from competitors: Keyword Research - We identify high-intent keywords that indicate buying readiness. We also implement negative keywords to avoid wasting budget on irrelevant searches, improving your Quality Score for lower costs and higher ad positions. Ad Creation - We write compelling ad copy with clear value propositions and strong calls-to-action. We A/B test multiple ad variations to identify winners and continuously improve click-through rates. Landing Page Optimization - We ensure your landing pages are conversion-optimized with fast load times, clear messaging, and easy contact forms that reduce friction and increase lead conversions. Bid Management - We use advanced bidding strategies to maximize conversions while controlling cost per lead. We adjust bids based on device, location, time of day, and audience performance data. Conversion Tracking - We implement comprehensive tracking to monitor every lead source and calculate exact ROI down to the keyword level. Monthly Reporting - You receive detailed reports showing ad spend, impressions, clicks, leads, cost per lead, and ROI. Full transparency with no hidden metrics. This hands-on daily management approach is why our clients consistently achieve 4:1+ ROAS while competitors running DIY or automated campaigns struggle to break even. Our 90-day performance guarantee ensures you see measurable results or we make it right."
+      },
+      {
+        "heading": "Quality Score Optimization for Lower Costs",
+        "content": "One of the biggest advantages of working with a Google Partner certified agency is our expertise in Quality Score optimization. Quality Score is Google's rating of the quality and relevance of your keywords, ads, and landing pages. Higher Quality Scores result in lower costs per click and better ad positions—meaning you pay less and get more visibility than competitors. We optimize Quality Score through several proven strategies: creating tightly themed ad groups with highly relevant keywords, writing ad copy that directly matches search intent, designing landing pages that deliver on the promise of your ads, and improving expected click-through rate through compelling ad creative. Most DIY campaigns and inexperienced agencies ignore Quality Score, resulting in unnecessarily high costs. Our clients often see 20-40% reduction in cost per click simply through Quality Score improvements. This means your budget goes further, generating more leads at a lower cost. Combined with our daily bid management and ongoing optimization, these savings compound month after month, dramatically improving your overall return on ad spend. This is the difference between a Google Partner certified agency and everyone else."
       }
     ]
   },

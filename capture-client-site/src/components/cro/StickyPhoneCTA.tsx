@@ -1,0 +1,117 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+export default function StickyPhoneCTA() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+
+    const handleScroll = () => {
+      // Show after scrolling 800px
+      if (window.scrollY > 800) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+          initial={{ y: -100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: -100, opacity: 0 }}
+          transition={{ type: "spring", stiffness: 100 }}
+          className="fixed top-0 left-0 right-0 z-50 hidden md:block"
+        >
+          <div className="bg-gradient-to-r from-background-dark/98 via-background-dark/95 to-background-dark/98 backdrop-blur-2xl border-b-2 border-accent/30 shadow-glow">
+            <div className="container-custom px-6 py-3">
+              <div className="flex items-center justify-between">
+                {/* Left: Trust indicator */}
+                <div className="flex items-center gap-6">
+                  <div className="flex items-center gap-2">
+                    <div className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+                    </div>
+                    <span className="text-sm font-semibold text-foreground">
+                      <span className="text-accent">Live:</span> 500+ businesses using Capture
+                      Client
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-1.5">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <span key={star} className="material-icons text-yellow-400 text-sm">
+                        star
+                      </span>
+                    ))}
+                    <span className="text-sm text-foreground-muted ml-1">4.9/5 (1,200 reviews)</span>
+                  </div>
+                </div>
+
+                {/* Right: CTA buttons */}
+                <div className="flex items-center gap-3">
+                  {/* Phone button - 48px minimum tap target */}
+                  <motion.a
+                    href="tel:865-346-3339"
+                    onMouseEnter={() => setIsExpanded(true)}
+                    onMouseLeave={() => setIsExpanded(false)}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="relative group flex items-center gap-2 min-h-[48px] bg-gradient-to-r from-accent to-primary text-white font-bold px-6 py-3 rounded-xl shadow-glow hover:shadow-glow-lg transition-all duration-300 overflow-hidden"
+                  >
+                    {/* Animated background */}
+                    <motion.div
+                      className="absolute inset-0 bg-gradient-to-r from-primary to-accent"
+                      initial={{ x: "-100%" }}
+                      whileHover={{ x: "0%" }}
+                      transition={{ duration: 0.3 }}
+                    />
+
+                    <span className="material-icons text-xl relative z-10">phone</span>
+                    <AnimatePresence>
+                      {isExpanded && (
+                        <motion.span
+                          initial={{ width: 0, opacity: 0 }}
+                          animate={{ width: "auto", opacity: 1 }}
+                          exit={{ width: 0, opacity: 0 }}
+                          className="relative z-10 overflow-hidden whitespace-nowrap"
+                        >
+                          (865) 346-3339
+                        </motion.span>
+                      )}
+                    </AnimatePresence>
+                    {!isExpanded && (
+                      <span className="text-sm relative z-10">Call Now</span>
+                    )}
+                  </motion.a>
+
+                  {/* Demo button - 48px minimum tap target */}
+                  <motion.a
+                    href="#contact"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="flex items-center gap-2 min-h-[48px] border-2 border-accent/50 text-foreground font-bold px-6 py-3 rounded-xl hover:bg-accent/10 transition-all duration-300"
+                  >
+                    <span className="material-icons text-accent text-xl">rocket_launch</span>
+                    <span className="text-sm">Book Demo</span>
+                  </motion.a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
+}

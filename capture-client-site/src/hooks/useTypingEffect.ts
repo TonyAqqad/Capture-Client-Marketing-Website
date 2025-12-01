@@ -14,24 +14,32 @@ export function useTypingEffect({
   const [displayedText, setDisplayedText] = useState('');
 
   useEffect(() => {
+    if (!text) {
+      setDisplayedText('');
+      return;
+    }
+
     if (!isActive) {
       setDisplayedText(text);
       return;
     }
 
-    let currentIndex = 0;
+    // Reset to empty when text changes
     setDisplayedText('');
+    let currentIndex = 0;
 
-    const timer = setInterval(() => {
-      if (currentIndex < text.length) {
-        setDisplayedText((prev) => prev + text[currentIndex]);
-        currentIndex++;
+    const intervalId = setInterval(() => {
+      currentIndex += 1;
+      if (currentIndex <= text.length) {
+        setDisplayedText(text.substring(0, currentIndex));
       } else {
-        clearInterval(timer);
+        clearInterval(intervalId);
       }
     }, speed);
 
-    return () => clearInterval(timer);
+    return () => {
+      clearInterval(intervalId);
+    };
   }, [text, speed, isActive]);
 
   return displayedText;

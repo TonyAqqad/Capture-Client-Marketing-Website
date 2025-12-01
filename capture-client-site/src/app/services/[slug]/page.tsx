@@ -1,15 +1,16 @@
-import { getAllServices, getServiceBySlug } from "@/lib/data";
+import { getAllServices, getServiceBySlug, BenefitItem, ProcessStep } from "@/lib/data";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import Image from "next/image";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import Link from "next/link";
 import JsonLd from "@/components/seo/JsonLd";
+import ServiceHero from "@/components/ServiceHero";
 import {
   SITE_CONFIG,
   generateServiceSchema,
   generateBreadcrumbSchema,
   generateWebPageSchema,
+  generateFAQSchema,
 } from "@/lib/seo-config";
 
 export async function generateStaticParams() {
@@ -51,8 +52,8 @@ export async function generateMetadata({
       title: service.seo.og_title || service.seo.page_title,
       description: service.seo.og_description || service.seo.meta_description,
       url: pageUrl,
-      type: 'website',
-      locale: 'en_US',
+      type: "website",
+      locale: "en_US",
       siteName: SITE_CONFIG.name,
       images: [
         {
@@ -66,7 +67,7 @@ export async function generateMetadata({
 
     // Twitter Card
     twitter: {
-      card: 'summary_large_image',
+      card: "summary_large_image",
       title: service.seo.page_title,
       description: service.seo.meta_description,
       images: [ogImageUrl],
@@ -76,18 +77,14 @@ export async function generateMetadata({
     robots: {
       index: true,
       follow: true,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
-      'max-video-preview': -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
     },
   };
 }
 
-export default async function ServicePage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
   const service = await getServiceBySlug(resolvedParams.slug);
 
@@ -99,9 +96,12 @@ export default async function ServicePage({
   const serviceSchema = generateServiceSchema(service);
 
   const breadcrumbSchema = generateBreadcrumbSchema([
-    { name: 'Home', url: SITE_CONFIG.url },
-    { name: 'Services', url: `${SITE_CONFIG.url}/services` },
-    { name: service.service.service_name, url: `${SITE_CONFIG.url}/services/${service.service.service_slug}` },
+    { name: "Home", url: SITE_CONFIG.url },
+    { name: "Services", url: `${SITE_CONFIG.url}/services` },
+    {
+      name: service.service.service_name,
+      url: `${SITE_CONFIG.url}/services/${service.service.service_slug}`,
+    },
   ]);
 
   const webPageSchema = generateWebPageSchema({
@@ -110,83 +110,62 @@ export default async function ServicePage({
     url: `${SITE_CONFIG.url}/services/${service.service.service_slug}`,
   });
 
-  const schemas = [serviceSchema, breadcrumbSchema, webPageSchema];
+  // Generate FAQ schema if FAQs exist
+  const faqSchema =
+    service.faq && service.faq.length > 0
+      ? generateFAQSchema(
+          service.faq.map((item: { question: string; answer: string }) => ({
+            question: item.question,
+            answer: item.answer,
+          }))
+        )
+      : null;
+
+  const schemas = [serviceSchema, breadcrumbSchema, webPageSchema, faqSchema].filter(Boolean) as Array<Record<string, any>>;
 
   return (
     <div className="min-h-screen bg-background-light dark:bg-background-dark">
       {/* Inject JSON-LD structured data */}
       <JsonLd schema={schemas} />
-      {/* Hero Section */}
-      <div className="relative py-24 px-8 lg:px-16 bg-gradient-to-br from-background-dark via-background-dark to-primary/10">
-        {service.hero?.hero_image && (
-          <div className="absolute inset-0 opacity-20">
-            <Image
-              src={service.hero.hero_image.url}
-              alt={service.hero.hero_image.alt}
-              fill
-              className="object-cover"
-            />
-          </div>
-        )}
-        <div className="container mx-auto relative z-10">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            {service.hero?.headline || service.seo.h1_heading}
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mb-8">
-            {service.hero?.subheadline}
-          </p>
-          <div className="flex flex-wrap gap-4">
-            {service.hero?.cta_primary && (
-              <a
-                href={service.hero.cta_primary.action}
-                className="bg-primary text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm transition-all duration-300 hover:scale-105 glowing-button"
-              >
-                {service.hero.cta_primary.text}
-              </a>
-            )}
-            {service.hero?.cta_secondary && (
-              <a
-                href={service.hero.cta_secondary.action}
-                className="bg-white/10 border border-white/20 text-white px-8 py-4 rounded-full backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
-              >
-                {service.hero.cta_secondary.text}
-              </a>
-            )}
-          </div>
-        </div>
-      </div>
 
-      {/* Intro Section */}
+      {/* Premium Service Hero Section */}
+      <ServiceHero
+        service={service.service}
+        hero={service.hero}
+        stats={service.social_proof?.stats}
+      />
+
+      {/* Intro Section - Mobile-optimized padding */}
       {service.intro && (
-        <div className="container mx-auto px-8 lg:px-16 py-16">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16 py-12 sm:py-16">
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               {service.intro.paragraph}
             </p>
           </div>
         </div>
       )}
 
-      {/* Benefits Section */}
+      {/* Benefits Section - Mobile-first grid */}
       {service.benefits && service.benefits.length > 0 && (
-        <section className="py-16 px-8 lg:px-16 bg-gray-50 dark:bg-black/20">
+        <section className="py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-16 bg-gray-50 dark:bg-black/20">
           <div className="container mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white text-center mb-8 sm:mb-12 px-4">
               Key Benefits
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {service.benefits.map((benefit: any, index: number) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+              {service.benefits.map((benefit: BenefitItem, index: number) => (
                 <div
                   key={index}
-                  className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50 hover:border-primary/50 transition-all"
+                  className="border border-gray-200 dark:border-gray-800 rounded-lg p-5 sm:p-6 bg-white dark:bg-gray-900/50 hover:border-primary/50 transition-all"
                 >
-                  <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary text-2xl mb-4">
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary text-2xl mb-4">
                     <span className="material-icons">{benefit.icon || "check_circle"}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">
                     {benefit.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400">{benefit.description}</p>
+                  <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">{benefit.description}</p>
                 </div>
               ))}
             </div>
@@ -194,27 +173,27 @@ export default async function ServicePage({
         </section>
       )}
 
-      {/* How It Works Section */}
+      {/* How It Works Section - Mobile-optimized steps */}
       {service.how_it_works && service.how_it_works.length > 0 && (
-        <section className="py-16 px-8 lg:px-16">
+        <section className="py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-16">
           <div className="container mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white text-center mb-8 sm:mb-12 px-4">
               How It Works
             </h2>
-            <div className="max-w-3xl mx-auto space-y-8">
-              {service.how_it_works.map((step: any) => (
+            <div className="max-w-3xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8">
+              {service.how_it_works.map((step: ProcessStep) => (
                 <div
                   key={step.step}
-                  className="flex gap-6 border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50"
+                  className="flex gap-4 sm:gap-6 border border-gray-200 dark:border-gray-800 rounded-lg p-4 sm:p-6 bg-white dark:bg-gray-900/50"
                 >
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/10 border-2 border-primary flex items-center justify-center text-primary text-xl font-bold">
+                  <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-primary/10 border-2 border-primary flex items-center justify-center text-primary text-lg sm:text-xl font-bold">
                     {step.step}
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-2">
                       {step.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-400">{step.description}</p>
+                    <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">{step.description}</p>
                   </div>
                 </div>
               ))}
@@ -223,23 +202,26 @@ export default async function ServicePage({
         </section>
       )}
 
-      {/* FAQ Section */}
+      {/* FAQ Section - Mobile-optimized accordion */}
       {service.faq && service.faq.length > 0 && (
-        <section className="py-16 px-8 lg:px-16 bg-gray-50 dark:bg-black/20">
+        <section className="py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-16 bg-gray-50 dark:bg-black/20">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white text-center mb-8 sm:mb-12 px-4">
               Frequently Asked Questions
             </h2>
-            <div className="space-y-4">
-              {service.faq.map((item: any, index: number) => (
+            <div className="space-y-3 sm:space-y-4">
+              {service.faq.map((item: { question: string; answer: string }, index: number) => (
                 <details
                   key={index}
-                  className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50"
+                  className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 sm:p-6 bg-white dark:bg-gray-900/50 group"
                 >
-                  <summary className="font-bold text-gray-900 dark:text-white cursor-pointer">
-                    {item.question}
+                  <summary className="font-bold text-base sm:text-lg text-gray-900 dark:text-white cursor-pointer min-h-[44px] flex items-center list-none">
+                    <span className="flex-1">{item.question}</span>
+                    <span className="material-icons text-primary ml-4 group-open:rotate-180 transition-transform">
+                      expand_more
+                    </span>
                   </summary>
-                  <p className="mt-4 text-gray-600 dark:text-gray-400">{item.answer}</p>
+                  <p className="mt-3 sm:mt-4 text-base text-gray-600 dark:text-gray-400 leading-relaxed">{item.answer}</p>
                 </details>
               ))}
             </div>
@@ -247,14 +229,14 @@ export default async function ServicePage({
         </section>
       )}
 
-      {/* CTA Section with Lead Form */}
-      <section className="py-16 px-8 lg:px-16">
+      {/* CTA Section with Lead Form - Mobile-optimized */}
+      <section className="py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-16">
         <div className="container mx-auto max-w-4xl">
-          <div className="bg-white dark:bg-gray-900/50 rounded-lg p-12 border border-gray-200 dark:border-gray-800 shadow-xl">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-4">
+          <div className="bg-white dark:bg-gray-900/50 rounded-lg p-6 sm:p-8 md:p-12 border border-gray-200 dark:border-gray-800 shadow-xl">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white text-center mb-3 sm:mb-4">
               {service.cta_section?.headline || "Ready to Get Started?"}
             </h2>
-            <p className="text-center text-lg text-gray-600 dark:text-gray-400 mb-8">
+            <p className="text-center text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
               {service.cta_section?.subheadline ||
                 "Contact us today for a free consultation and see how we can help grow your business."}
             </p>
@@ -263,19 +245,19 @@ export default async function ServicePage({
         </div>
       </section>
 
-      {/* Related Services */}
+      {/* Related Services - Mobile-optimized */}
       {service.related_pages?.services && service.related_pages.services.length > 0 && (
-        <section className="py-16 px-8 lg:px-16 bg-gray-50 dark:bg-black/20">
+        <section className="py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-16 bg-gray-50 dark:bg-black/20">
           <div className="container mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white text-center mb-6 sm:mb-8 px-4">
               Related Services
             </h2>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
               {service.related_pages.services.map((relatedSlug: string) => (
                 <Link
                   key={relatedSlug}
                   href={`/services/${relatedSlug}`}
-                  className="px-6 py-3 bg-white/10 border border-white/20 text-white rounded-full hover:bg-white/20 transition-all"
+                  className="px-5 sm:px-6 py-3 min-h-[44px] bg-white/10 border border-white/20 text-white text-sm sm:text-base rounded-full hover:bg-white/20 transition-all flex items-center justify-center"
                 >
                   {relatedSlug.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}
                 </Link>

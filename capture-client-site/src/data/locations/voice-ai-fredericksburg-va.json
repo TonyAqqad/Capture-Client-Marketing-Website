@@ -11,14 +11,26 @@
     "state": "VA",
     "state_full": "Virginia",
     "slug": "fredericksburg-va",
-    "nearby_areas": ["Stafford", "Spotsylvania", "King George", "Caroline County"],
+    "nearby_areas": [
+      "Stafford",
+      "Spotsylvania",
+      "King George",
+      "Caroline County"
+    ],
     "service_area_radius": "30 miles"
   },
   "seo": {
     "page_title": "Voice AI Agency in Fredericksburg, VA | Capture Client",
     "meta_description": "Voice AI for Fredericksburg businesses. Automate calls 24/7, qualify leads, book appointments automatically. Serving I-95 corridor. Call 865-346-3339!",
     "h1_heading": "Voice AI Services in Fredericksburg, Virginia",
-    "keywords": ["voice ai agency fredericksburg va", "ai voice agents fredericksburg", "ai receptionist fredericksburg virginia", "automated call answering fredericksburg", "lead qualification ai fredericksburg", "voice ai stafford va"],
+    "keywords": [
+      "voice ai agency fredericksburg va",
+      "ai voice agents fredericksburg",
+      "ai receptionist fredericksburg virginia",
+      "automated call answering fredericksburg",
+      "lead qualification ai fredericksburg",
+      "voice ai stafford va"
+    ],
     "canonical_url": "/voice-ai-fredericksburg-va",
     "local_business_schema": {
       "type": "LocalBusiness",
@@ -55,27 +67,27 @@
     {
       "title": "24/7 Lead Capture for Fredericksburg",
       "description": "Your Fredericksburg business never sleeps. Capture leads from DC commuters, military families, and local residents calling at any hour.",
-      "icon": "clock"
+      "icon": "schedule"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "Stop wasting time on unqualified leads. Our AI qualifies Fredericksburg prospects instantly before they reach your team.",
-      "icon": "filter"
+      "icon": "filter_alt"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "AI schedules appointments directly into your calendar while you focus on serving Fredericksburg and Stafford customers.",
-      "icon": "calendar"
+      "icon": "event"
     },
     {
       "title": "Cost-Effective Growth",
       "description": "Save thousands compared to hiring staff in Fredericksburg's growing market. No salary, benefits, or overhead expansion.",
-      "icon": "dollar-sign"
+      "icon": "attach_money"
     },
     {
       "title": "Professional Fredericksburg Service",
       "description": "Consistent, professional call handling that represents your Fredericksburg business perfectly on every interaction.",
-      "icon": "award"
+      "icon": "workspace_premium"
     }
   ],
   "how_it_works": [
@@ -115,7 +127,18 @@
   "service_area": {
     "heading": "Serving Fredericksburg and the I-95 Corridor",
     "description": "We provide Voice AI services throughout Fredericksburg and the greater I-95 corridor region.",
-    "areas_list": ["Fredericksburg", "Stafford", "Spotsylvania", "Massaponax", "King George", "Caroline County", "Falmouth", "Thornburg", "Quantico", "Lake of the Woods"]
+    "areas_list": [
+      "Fredericksburg",
+      "Stafford",
+      "Spotsylvania",
+      "Massaponax",
+      "King George",
+      "Caroline County",
+      "Falmouth",
+      "Thornburg",
+      "Quantico",
+      "Lake of the Woods"
+    ]
   },
   "local_testimonials": [
     {
@@ -180,8 +203,19 @@
     "urgency_text": "Limited spots available for Fredericksburg businesses this month"
   },
   "related_pages": {
-    "other_services_in_location": ["google-ads", "facebook-ads"],
-    "nearby_locations": ["richmond", "alexandria", "stafford"],
-    "packages": ["starter-package", "growth-package", "enterprise-package"]
+    "other_services_in_location": [
+      "google-ads",
+      "facebook-ads"
+    ],
+    "nearby_locations": [
+      "richmond",
+      "alexandria",
+      "stafford"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package",
+      "enterprise-package"
+    ]
   }
 }

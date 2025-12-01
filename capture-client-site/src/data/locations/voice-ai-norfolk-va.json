@@ -11,14 +11,26 @@
     "state": "VA",
     "state_full": "Virginia",
     "slug": "norfolk-va",
-    "nearby_areas": ["Virginia Beach", "Chesapeake", "Portsmouth", "Suffolk", "Hampton"],
+    "nearby_areas": [
+      "Virginia Beach",
+      "Chesapeake",
+      "Portsmouth",
+      "Suffolk",
+      "Hampton"
+    ],
     "service_area_radius": "25 miles"
   },
   "seo": {
     "page_title": "Voice AI Agency in Norfolk, VA | Capture Client",
     "meta_description": "Norfolk businesses: Automate calls with AI voice agents. Answer 24/7, qualify leads, book appointments automatically. Free consultation: 865-346-3339",
     "h1_heading": "Voice AI Services in Norfolk, Virginia",
-    "keywords": ["voice ai norfolk", "norfolk ai receptionist", "norfolk call automation", "ai voice agents norfolk va", "norfolk business automation"],
+    "keywords": [
+      "voice ai norfolk",
+      "norfolk ai receptionist",
+      "norfolk call automation",
+      "ai voice agents norfolk va",
+      "norfolk business automation"
+    ],
     "canonical_url": "/voice-ai-norfolk-va"
   },
   "hero": {
@@ -50,22 +62,22 @@
     {
       "title": "24/7 Lead Capture",
       "description": "Norfolk operates around the clock with military and port activities. Our AI works every shift to capture your leads.",
-      "icon": "clock"
+      "icon": "schedule"
     },
     {
       "title": "Instant Qualification",
       "description": "Pre-qualify Norfolk leads based on your criteria before they reach your sales team. Save time and close more deals.",
-      "icon": "filter"
+      "icon": "filter_alt"
     },
     {
       "title": "Automated Scheduling",
       "description": "Let AI book appointments directly into your Norfolk office calendar. No more scheduling hassles.",
-      "icon": "calendar"
+      "icon": "event"
     },
     {
       "title": "Cost Savings",
       "description": "More affordable than hiring Norfolk receptionists. Scale your business without increasing overhead.",
-      "icon": "dollar-sign"
+      "icon": "attach_money"
     }
   ],
   "how_it_works": [
@@ -105,7 +117,18 @@
   "service_area": {
     "heading": "Serving Norfolk and Hampton Roads",
     "description": "We serve businesses throughout Norfolk and the greater Hampton Roads metropolitan area.",
-    "areas_list": ["Norfolk", "Virginia Beach", "Chesapeake", "Portsmouth", "Suffolk", "Hampton", "Newport News", "Downtown Norfolk", "Ghent", "Ocean View"]
+    "areas_list": [
+      "Norfolk",
+      "Virginia Beach",
+      "Chesapeake",
+      "Portsmouth",
+      "Suffolk",
+      "Hampton",
+      "Newport News",
+      "Downtown Norfolk",
+      "Ghent",
+      "Ocean View"
+    ]
   },
   "local_testimonials": [
     {
@@ -160,8 +183,18 @@
     }
   },
   "related_pages": {
-    "other_services_in_location": ["google-ads", "facebook-ads"],
-    "nearby_locations": ["virginia-beach-va", "chesapeake-va", "portsmouth-va"],
-    "packages": ["starter-package", "growth-package"]
+    "other_services_in_location": [
+      "google-ads",
+      "facebook-ads"
+    ],
+    "nearby_locations": [
+      "virginia-beach-va",
+      "chesapeake-va",
+      "portsmouth-va"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
   }
 }

@@ -11,7 +11,11 @@
     "state": "NC",
     "state_full": "North Carolina",
     "slug": "wilmington-nc",
-    "nearby_areas": ["Wrightsville Beach", "Carolina Beach", "Leland"],
+    "nearby_areas": [
+      "Wrightsville Beach",
+      "Carolina Beach",
+      "Leland"
+    ],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -56,27 +60,27 @@
     {
       "title": "24/7 Lead Capture in Wilmington",
       "description": "Never miss a call from Wilmington customers, even during peak tourist season or after hours. Our AI answers every call instantly.",
-      "icon": "clock"
+      "icon": "schedule"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "AI qualifies Wilmington leads immediately, so your sales team only talks to ready-to-buy prospects.",
-      "icon": "filter"
+      "icon": "filter_alt"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "Let AI book appointments while you focus on serving Wilmington clients.",
-      "icon": "calendar"
+      "icon": "event"
     },
     {
       "title": "Cost Savings for Wilmington Businesses",
       "description": "Save thousands compared to hiring seasonal staff. Our AI scales with your business growth.",
-      "icon": "dollar-sign"
+      "icon": "attach_money"
     },
     {
       "title": "Professional Every Time",
       "description": "Consistent, professional call handling for your Wilmington business, even during busy season.",
-      "icon": "award"
+      "icon": "workspace_premium"
     }
   ],
   "how_it_works": [
@@ -207,8 +211,19 @@
     "urgency_text": "Limited spots available for Wilmington businesses this month"
   },
   "related_pages": {
-    "other_services_in_location": ["google-ads", "facebook-ads"],
-    "nearby_locations": ["wrightsville-beach-nc", "carolina-beach-nc", "raleigh-nc"],
-    "packages": ["starter-package", "growth-package", "enterprise-package"]
+    "other_services_in_location": [
+      "google-ads",
+      "facebook-ads"
+    ],
+    "nearby_locations": [
+      "wrightsville-beach-nc",
+      "carolina-beach-nc",
+      "raleigh-nc"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package",
+      "enterprise-package"
+    ]
   }
 }

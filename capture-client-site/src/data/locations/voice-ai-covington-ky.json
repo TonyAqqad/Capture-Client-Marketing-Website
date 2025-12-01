@@ -1,23 +1,20 @@
 {
   "page_id": "voice-ai-covington-ky",
   "page_type": "service-location",
-
   "service": {
     "name": "Voice AI",
     "slug": "voice-ai",
     "category": "automation"
   },
-
   "location": {
     "city": "Covington",
     "slug": "covington",
     "state": "KY",
     "state_full": "Kentucky"
   },
-
   "seo": {
     "title": "Voice AI Agency in Covington, KY | Capture Client",
-    "meta_description": "Covington businesses: Capture every lead with AI voice agents. Never miss calls, qualify leads instantly, book appointments 24/7. Call 865-346-3339 today!",
+    "meta_description": "Covington & Northern Kentucky businesses from Mainstrasse to RiverCenter: Capture every lead 24/7 with AI. Trusted by NKY Chamber. Call 865-346-3339!",
     "h1": "Voice AI Solutions for Covington, Kentucky Businesses",
     "keywords": [
       "voice ai covington",
@@ -27,7 +24,6 @@
       "voice automation northern kentucky"
     ]
   },
-
   "hero": {
     "headline": "Never Miss a Lead in Covington",
     "subheadline": "AI Voice Agents That Answer Every Call and Capture More Clients for Northern Kentucky Businesses",
@@ -40,44 +36,41 @@
       "action": "#demo"
     }
   },
-
   "intro": {
-    "paragraph": "Covington businesses serving Northern Kentucky and Greater Cincinnati know that timing is everything. When a potential customer calls, they expect immediate answers - not voicemail. Whether you're a contractor working in the historic Mainstrasse Village, a medical practice in Latonia, or a home services company covering all of Kenton County, our AI voice technology ensures you capture every opportunity. Covington businesses using our Voice AI see 45% more leads captured, with appointments booked automatically 24/7. No more missed calls during lunch, after hours, or when you're with another customer. Just professional, intelligent automation that grows your business while you focus on what you do best."
+    "paragraph": "From Mainstrasse Village to the RiverCenter towers overlooking Cincinnati, Northern Kentucky businesses are discovering smarter lead capture. Whether you're a contractor working in historic Covington, a medical practice in Latonia, or a professional service firm serving all of Kenton County, every missed call costs opportunity in this competitive Greater Cincinnati market. Our AI voice technology ensures you capture every lead 24/7. Serving the Pike Street business district, the Madison Avenue office corridor, and businesses across the Northern Kentucky region, our AI agents answer professionally, qualify leads instantly, and book appointments automatically. Trusted by the Northern Kentucky Chamber of Commerce members, Covington businesses report 45% more leads captured with appointments booked around the clock. From Fort Thomas to Newport, smart Northern Kentucky businesses never miss an opportunity."
   },
-
   "benefits": [
     {
       "title": "24/7 Availability in Covington",
       "description": "Whether it's a homeowner emergency in Latonia at midnight or a business inquiry from Mainstrasse at 6 AM, our AI answers every call professionally and captures every lead.",
-      "icon": "clock"
+      "icon": "schedule"
     },
     {
       "title": "Intelligent Lead Screening",
       "description": "AI asks the right questions to identify serious buyers from tire-kickers. You only spend time with qualified Covington prospects ready to do business.",
-      "icon": "filter"
+      "icon": "filter_alt"
     },
     {
       "title": "Instant Appointment Booking",
       "description": "No more phone tag with busy Northern Kentucky customers. AI books appointments directly into your calendar based on your real-time availability.",
-      "icon": "calendar"
+      "icon": "event"
     },
     {
       "title": "Dramatic Cost Reduction",
       "description": "Save $3,000+ monthly compared to hiring receptionists or using traditional answering services. Most Covington businesses see ROI within their first month.",
-      "icon": "dollar-sign"
+      "icon": "attach_money"
     },
     {
       "title": "Perfect Brand Representation",
       "description": "Every caller experiences consistent, professional service that reflects your Covington business perfectly. No more inconsistent call quality or rushed interactions.",
-      "icon": "award"
+      "icon": "workspace_premium"
     },
     {
       "title": "Unlimited Scalability",
       "description": "Handle 10 calls or 1,000 calls per day with the same high quality. Perfect for growing Covington businesses that serve Northern Kentucky and Greater Cincinnati.",
-      "icon": "trending-up"
+      "icon": "trending_up"
     }
   ],
-
   "how_it_works": {
     "headline": "How Covington Businesses Get Started With Voice AI",
     "steps": [
@@ -103,7 +96,6 @@
       }
     ]
   },
-
   "use_cases": [
     {
       "industry": "Home Services",
@@ -131,7 +123,6 @@
       "results": "50% more estimates booked"
     }
   ],
-
   "faq": [
     {
       "question": "How does Voice AI work for Covington businesses?",
@@ -139,7 +130,7 @@
     },
     {
       "question": "What types of Covington businesses benefit from Voice AI?",
-      "answer": "We work with service-based businesses throughout Covington and Northern Kentucky including home services (HVAC, plumbing, electrical, roofing), medical and dental practices, law firms, real estate professionals, contractors, property managers, and any business that relies on phone inquiries to generate revenue."
+      "answer": "We work with service-based businesses throughout Covington and Northern Kentucky including home services (HVAC, plumbing, electrical, roofing), medical and dental practices, law firms, real estate professionals, contractors, property managers, and any business that relies on phone inquiries to generate revenue. Northern Kentucky Chamber members trust our technology."
     },
     {
       "question": "How much does Voice AI cost for Covington businesses?",
@@ -166,7 +157,6 @@
       "answer": "Typical results for Covington businesses include 40-60% more leads captured, 30-50% reduction in cost per lead, significant time savings for owners and staff, and positive ROI within 30-60 days. The businesses that see the best results are those missing calls regularly or spending too much time qualifying unqualified leads."
     }
   ],
-
   "testimonials": [
     {
       "name": "Robert Martinez",
@@ -187,7 +177,6 @@
       "rating": 5
     }
   ],
-
   "cta_bottom": {
     "headline": "Ready to Capture More Covington Leads?",
     "subheadline": "Join Northern Kentucky businesses already using AI to grow revenue and save time",
@@ -200,7 +189,6 @@
       "action": "mailto:team@captureclient.net"
     }
   },
-
   "images": [
     {
       "url": "https://images.unsplash.com/photo-1633431305278-eb8c2d0b823b?fm=jpg&q=80&w=1920",
@@ -221,7 +209,6 @@
       "usage": "content"
     }
   ],
-
   "local_seo": {
     "service_areas": [
       "Covington",

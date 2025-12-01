@@ -1,0 +1,221 @@
+{
+  "research_date": "2025-11-30",
+  "purpose": "Local business landmarks for authentic location-based content",
+  "knoxville": {
+    "landmarks": [
+      {
+        "name": "Knoxville Entrepreneur Center",
+        "type": "business_development",
+        "area": "Downtown Knoxville",
+        "description": "Collaborative community supporting entrepreneurs since 2013"
+      },
+      {
+        "name": "Tennessee Small Business Development Center",
+        "type": "business_development",
+        "area": "9721 Sherrill Blvd",
+        "description": "Provides no-cost consulting and training solutions for small businesses"
+      },
+      {
+        "name": "Knoxville Chamber of Commerce",
+        "type": "chamber",
+        "area": "17 Market Square",
+        "description": "Serves 2,200+ member businesses driving regional economic prosperity"
+      },
+      {
+        "name": "Farragut West Knox Chamber of Commerce",
+        "type": "chamber",
+        "area": "11826 Kingston Pike",
+        "description": "Strengthens business opportunities through relationships and education"
+      },
+      {
+        "name": "Downtown Knoxville Central Business District",
+        "type": "business_district",
+        "area": "Downtown",
+        "description": "0.67 square mile area with Plaza Tower and Riverview Tower"
+      },
+      {
+        "name": "Downtown Knoxville Alliance",
+        "type": "business_improvement",
+        "area": "Downtown",
+        "description": "Central Business Improvement District formed in 1993"
+      },
+      {
+        "name": "The Old City",
+        "type": "business_district",
+        "area": "Downtown Knoxville",
+        "description": "Historic business district with locally-owned businesses"
+      },
+      {
+        "name": "3 Creek Industrial Park",
+        "type": "industrial_park",
+        "area": "Near I-640",
+        "description": "Light industrial park with easy access to I-40 and I-75"
+      },
+      {
+        "name": "Third Creek Industrial Park",
+        "type": "industrial_park",
+        "area": "Middlebrook Pike",
+        "description": "Located at intersection of I-75 and I-40"
+      },
+      {
+        "name": "Sherlake Industrial Park",
+        "type": "industrial_park",
+        "area": "Along I-40",
+        "description": "Preeminent warehouse location between Parkside Drive and Kingston Pike"
+      },
+      {
+        "name": "Forks of the River Industrial Park",
+        "type": "industrial_park",
+        "area": "Knox County",
+        "description": "Major industrial park in the 37914 ZIP code area"
+      },
+      {
+        "name": "Cedar Bluff Business Corridor",
+        "type": "business_area",
+        "area": "West Knoxville",
+        "description": "Primary retail and business corridor along Kingston Pike near I-40/I-75"
+      },
+      {
+        "name": "World's Fair Park",
+        "type": "landmark",
+        "area": "Downtown",
+        "description": "Home to Knoxville Convention Center and the iconic Sunsphere"
+      }
+    ]
+  },
+  "nashville": {
+    "landmarks": [
+      {
+        "name": "Nashville Entrepreneur Center",
+        "type": "business_development",
+        "area": "Downtown Nashville",
+        "description": "Fosters innovation by turning ideas into reality"
+      },
+      {
+        "name": "Tennessee Small Business Development Center",
+        "type": "business_development",
+        "area": "315 10th Avenue North",
+        "description": "Provides high-quality consulting and training for businesses"
+      },
+      {
+        "name": "TSU Business Incubation Center",
+        "type": "business_incubator",
+        "area": "315 10th Ave North, Downtown",
+        "description": "28 office spaces offering unique business ecosystem for startups"
+      },
+      {
+        "name": "Nashville Area Chamber of Commerce",
+        "type": "chamber",
+        "area": "500 11th Ave N, Suite 200",
+        "description": "Middle Tennessee's largest business federation serving 2,000+ businesses since 1847"
+      },
+      {
+        "name": "Tennessee Chamber of Commerce & Industry",
+        "type": "chamber",
+        "area": "511 Union Street, Suite 1550",
+        "description": "Unified voice of business and premier advocacy organization"
+      },
+      {
+        "name": "Donelson-Hermitage Chamber of Commerce",
+        "type": "chamber",
+        "area": "2900 Lebanon Pike",
+        "description": "Connects diverse businesses in family-oriented neighborhoods"
+      },
+      {
+        "name": "Central Business Improvement District",
+        "type": "business_district",
+        "area": "Downtown Nashville",
+        "description": "424-acre district initiated in 1999, recently expanded in 2025"
+      },
+      {
+        "name": "The Gulch Business Improvement District",
+        "type": "business_district",
+        "area": "The Gulch",
+        "description": "Mixed-use district south of downtown Nashville"
+      },
+      {
+        "name": "The District (Broadway/2nd Ave)",
+        "type": "business_district",
+        "area": "Downtown Entertainment Area",
+        "description": "Historic downtown district including Broadway and Riverfront"
+      },
+      {
+        "name": "Historic Black Business District",
+        "type": "business_district",
+        "area": "Downtown Nashville",
+        "description": "Home to Citizens Bank, the oldest continuously operating minority-owned bank in the US"
+      },
+      {
+        "name": "MetroCenter",
+        "type": "business_area",
+        "area": "North of Downtown",
+        "description": "Mixed-use district with industrial parks and commercial developments"
+      },
+      {
+        "name": "Wedgewood-Houston",
+        "type": "business_area",
+        "area": "South of Downtown",
+        "description": "Emerging neighborhood with industrial and creative spaces"
+      },
+      {
+        "name": "Speedway Industrial Park",
+        "type": "industrial_park",
+        "area": "Wilson County",
+        "description": "1,400-acre logistics and bulk distribution park, former Nashville Superspeedway site"
+      },
+      {
+        "name": "Commerce Farms Industrial Park",
+        "type": "industrial_park",
+        "area": "Outside Nashville",
+        "description": "145-acre development with 2.5 million sq ft, home to Bridgestone Firestone Distribution"
+      },
+      {
+        "name": "Cherry Glen Industrial Park",
+        "type": "industrial_park",
+        "area": "Nashville Area",
+        "description": "215 acres ready for development with lots from 10-150 acres"
+      },
+      {
+        "name": "Center 615",
+        "type": "coworking",
+        "area": "East Nashville, Main Street",
+        "description": "3-building campus offering 24/7 coworking space minutes from downtown"
+      }
+    ]
+  },
+  "sources": [
+    "https://knoxec.com/",
+    "https://tsbdc.org/center/knoxville/",
+    "https://www.knoxvillechamber.com/",
+    "https://www.farragutchamber.com/",
+    "https://www.downtownknoxville.org/",
+    "https://en.wikipedia.org/wiki/Downtown_Knoxville",
+    "https://www.knoxvillechamber.com/knox-county-business-parks/",
+    "https://turleyco.com/project/3-creek/",
+    "https://fiserinc.com/listings/third-creek-industrial-park/",
+    "https://fiserinc.com/listings/sherlake-industrial-park/",
+    "https://tsbdc.org/center/nashville/",
+    "https://ec.co/",
+    "https://www.tnstate.edu/bic/",
+    "https://nashvillechamber.com/",
+    "https://tnchamber.org/",
+    "https://www.donelsonhermitagechamber.com/",
+    "https://nashvilledowntown.com/about/central-business-improvement-district",
+    "https://nashvilledowntown.com/about/gulch-business-improvement-district",
+    "https://www.visitmusiccity.com/local-business/district",
+    "https://nashvilledowntown.com/go/historic-black-business-district",
+    "https://www.speedwayindustrial.com/",
+    "https://www.dunavantenterprises.com/development/commerce-farms-industrial-park",
+    "https://tnecd.com/certifiedsite/cherry-glen-industrial-park/",
+    "https://c615.co/center-615/"
+  ],
+  "usage_notes": {
+    "purpose": "Inject these landmarks into location-based pages to make content feel locally written",
+    "examples": [
+      "For Knoxville pages: 'Serving businesses near the Knoxville Chamber of Commerce and throughout the Cedar Bluff Business Corridor'",
+      "For Nashville pages: 'We work with companies in MetroCenter, The Gulch, and throughout the Central Business Improvement District'",
+      "For industrial clients: 'Supporting businesses in Third Creek Industrial Park, Sherlake Industrial Park, and Speedway Industrial Park'",
+      "For entrepreneurship content: 'Partner with startups at the Nashville Entrepreneur Center and TSU Business Incubation Center'"
+    ]
+  }
+}

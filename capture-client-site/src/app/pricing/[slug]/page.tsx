@@ -3,6 +3,14 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import Link from "next/link";
+import {
+  Benefit,
+  FAQItem,
+  Testimonial,
+  TrustSignal,
+  ComparisonRow,
+  PackageFeature,
+} from "@/types/content";
 
 export async function generateStaticParams() {
   const packages = await getAllPackages();
@@ -45,177 +53,439 @@ export default async function PackagePage({
   }
 
   return (
-    <div className="min-h-screen bg-background-light dark:bg-background-dark">
-      {/* Hero Section */}
-      <div className="relative py-24 px-8 lg:px-16 bg-gradient-to-br from-background-dark via-background-dark to-primary/10">
-        <div className="container mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            {pkg.hero?.headline || pkg.package.package_name}
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            {pkg.hero?.subheadline || pkg.package.tagline}
-          </p>
-          <div className="inline-block">
-            <div className="text-6xl font-bold text-primary mb-2">
-              {pkg.package.price}
-            </div>
-            <div className="text-gray-400">per {pkg.package.period}</div>
-          </div>
+    <div className="min-h-screen bg-slate-950">
+      {/* Premium Hero Section */}
+      <section className="relative overflow-hidden">
+        {/* Animated gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-950/30 via-slate-950 to-blue-950/30">
+          <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+          {/* Glow effects */}
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
         </div>
-      </div>
 
-      {/* Ideal For Section */}
-      {pkg.ideal_for && (
-        <section className="py-16 px-8 lg:px-16 bg-gray-50 dark:bg-black/20">
-          <div className="container mx-auto max-w-4xl text-center">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-              {pkg.ideal_for.heading || "Perfect For:"}
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-              {pkg.ideal_for.description}
-            </p>
-            {pkg.ideal_for.business_types && (
-              <div className="flex flex-wrap justify-center gap-3">
-                {pkg.ideal_for.business_types.map((type: string, index: number) => (
-                  <span
-                    key={index}
-                    className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary"
-                  >
-                    {type}
-                  </span>
-                ))}
+        <div className="relative container mx-auto px-6 py-20 lg:py-32">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Badge */}
+            {pkg.hero?.badge && (
+              <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 backdrop-blur-sm">
+                <span className="material-icons text-cyan-400 text-sm">star</span>
+                <span className="text-cyan-400 font-semibold text-sm tracking-wider">
+                  {pkg.hero.badge}
+                </span>
               </div>
             )}
-          </div>
-        </section>
-      )}
 
-      {/* Features Included */}
-      {pkg.features_included && (
-        <section className="py-16 px-8 lg:px-16">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-12">
-              {pkg.features_included.heading || "What's Included"}
-            </h2>
-            <div className="space-y-4">
-              {pkg.features_included.features &&
-                pkg.features_included.features.map((feature: any, index: number) => (
-                  <div
-                    key={index}
-                    className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50 flex items-start gap-4"
-                  >
-                    <span className="material-icons text-primary text-3xl flex-shrink-0">
-                      check_circle
-                    </span>
-                    <div>
-                      <h3 className="font-bold text-gray-900 dark:text-white mb-1">
-                        {feature.feature || feature}
-                      </h3>
-                      {feature.description && (
-                        <p className="text-gray-600 dark:text-gray-400">
-                          {feature.description}
-                        </p>
-                      )}
-                    </div>
+            {/* Headline */}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-100 to-blue-200 bg-clip-text text-transparent leading-tight px-4 sm:px-0">
+              {pkg.hero?.headline || pkg.package.package_name}
+            </h1>
+
+            {/* Subheadline */}
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 mb-12 leading-relaxed max-w-3xl mx-auto px-4 sm:px-6 md:px-0">
+              {pkg.hero?.subheadline || pkg.package.tagline}
+            </p>
+
+            {/* Price Display */}
+            <div className="mb-12 px-4 sm:px-0">
+              <div className="inline-block relative w-full max-w-md mx-auto">
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl blur-xl opacity-30"></div>
+                <div className="relative bg-slate-900/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl px-6 sm:px-8 md:px-12 py-6 sm:py-8">
+                  <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">
+                    {pkg.package.price}
                   </div>
-                ))}
+                  <div className="text-slate-400 text-base sm:text-lg">{pkg.package.period}</div>
+                  {pkg.hero?.price_display?.note && (
+                    <div className="text-slate-500 text-xs sm:text-sm mt-2">
+                      {pkg.hero.price_display.note}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 px-4 sm:px-0 max-w-2xl mx-auto">
+              {pkg.hero?.cta?.primary && (
+                <Link
+                  href={pkg.hero.cta.primary.action}
+                  className="group relative px-6 sm:px-8 py-4 min-h-[56px] bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full font-bold text-white text-base sm:text-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/50 hover:scale-105 touch-manipulation w-full sm:w-auto"
+                >
+                  <span className="relative z-10 flex items-center justify-center gap-2">
+                    {pkg.hero.cta.primary.text}
+                    <span className="material-icons group-hover:translate-x-1 transition-transform text-lg">
+                      arrow_forward
+                    </span>
+                  </span>
+                </Link>
+              )}
+              {pkg.hero?.cta?.secondary && (
+                <Link
+                  href={pkg.hero.cta.secondary.action}
+                  className="px-6 sm:px-8 py-4 min-h-[56px] bg-white/5 border border-white/10 rounded-full font-bold text-white text-base sm:text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm touch-manipulation w-full sm:w-auto"
+                >
+                  {pkg.hero.cta.secondary.text}
+                </Link>
+              )}
+            </div>
+
+            {/* Trust Signals */}
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-6 text-sm sm:text-base text-slate-400 px-4 sm:px-0">
+              <div className="flex items-center gap-3 py-1">
+                <span className="material-icons text-green-400 text-lg flex-shrink-0">check_circle</span>
+                <span>No setup fees</span>
+              </div>
+              <div className="flex items-center gap-3 py-1">
+                <span className="material-icons text-green-400 text-lg flex-shrink-0">check_circle</span>
+                <span>Cancel anytime</span>
+              </div>
+              <div className="flex items-center gap-3 py-1">
+                <span className="material-icons text-green-400 text-lg flex-shrink-0">check_circle</span>
+                <span>Money-back guarantee</span>
+              </div>
             </div>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
-      {/* Features Not Included */}
-      {pkg.features_not_included && pkg.features_not_included.features && pkg.features_not_included.features.length > 0 && (
-        <section className="py-16 px-8 lg:px-16 bg-gray-50 dark:bg-black/20">
-          <div className="container mx-auto max-w-4xl">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white text-center mb-6">
-              {pkg.features_not_included.heading || "Not Included"}
-            </h3>
-            <div className="space-y-2">
-              {pkg.features_not_included.features.map((feature: any, index: number) => (
+      {/* Perfect For Section */}
+      {pkg.ideal_for && (
+        <section className="py-20 px-6 bg-gradient-to-b from-slate-950 to-slate-900">
+          <div className="container mx-auto max-w-6xl">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+              {pkg.ideal_for.headline || "Perfect For:"}
+            </h2>
+            {pkg.ideal_for.description && (
+              <p className="text-xl text-slate-400 text-center mb-12 max-w-3xl mx-auto">
+                {pkg.ideal_for.description}
+              </p>
+            )}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+              {pkg.ideal_for.audience?.map((item: string, index: number) => (
                 <div
                   key={index}
-                  className="flex items-center gap-3 text-gray-600 dark:text-gray-400"
+                  className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-cyan-500/10 p-5 sm:p-6 hover:border-cyan-500/30 transition-all duration-300"
                 >
-                  <span className="material-icons text-gray-400">cancel</span>
-                  <span>{feature}</span>
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <div className="relative flex items-start gap-3 sm:gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center border border-cyan-500/30">
+                      <span className="material-icons text-cyan-400 text-lg sm:text-xl">
+                        verified
+                      </span>
+                    </div>
+                    <p className="text-slate-200 text-sm sm:text-base leading-relaxed">{item}</p>
+                  </div>
                 </div>
               ))}
             </div>
-            <p className="text-center text-sm text-gray-500 dark:text-gray-500 mt-4">
-              Consider upgrading to access these features
-            </p>
           </div>
         </section>
       )}
 
-      {/* Value Proposition */}
-      {pkg.value_proposition && (
-        <section className="py-16 px-8 lg:px-16">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center mb-6">
-              {pkg.value_proposition.heading}
-            </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 text-center mb-8">
-              {pkg.value_proposition.content}
-            </p>
-            {pkg.value_proposition.benefits && (
-              <div className="grid md:grid-cols-2 gap-6">
-                {pkg.value_proposition.benefits.map((benefit: any, index: number) => (
+      {/* What's Included Section */}
+      {pkg.features_included && pkg.features_included.length > 0 && (
+        <section className="py-20 px-6 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950"></div>
+          <div className="absolute top-1/2 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
+
+          <div className="relative container mx-auto max-w-6xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+                What&apos;s Included
+              </h2>
+              <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+                Everything you need to capture, qualify, and convert more leads
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+              {pkg.features_included.map((feature: PackageFeature, index: number) => (
+                <div
+                  key={index}
+                  className="group relative rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-cyan-500/10 p-6 sm:p-8 hover:border-cyan-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/5 group-hover:to-blue-500/5 rounded-2xl transition-all duration-300"></div>
+
+                  <div className="relative">
+                    <div className="flex flex-col sm:flex-row items-start justify-between mb-4 gap-3">
+                      <div className="flex items-center gap-3 sm:gap-4">
+                        <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center border border-cyan-500/30">
+                          <span className="material-icons text-cyan-400 text-xl sm:text-2xl">
+                            check_circle
+                          </span>
+                        </div>
+                        <h3 className="font-bold text-lg sm:text-xl text-white">
+                          {feature.name}
+                        </h3>
+                      </div>
+                      {feature.value && (
+                        <span className="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs sm:text-sm font-semibold whitespace-nowrap self-start sm:self-auto">
+                          {feature.value}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Not Included Section */}
+      {pkg.features_not_included &&
+        pkg.features_not_included.length > 0 &&
+        pkg.features_not_included[0].name !== "Nothing" && (
+          <section className="py-20 px-6 bg-slate-900/50">
+            <div className="container mx-auto max-w-4xl">
+              <h3 className="text-3xl font-bold text-center mb-12 text-white">
+                Available in Higher Tiers
+              </h3>
+              <div className="grid md:grid-cols-2 gap-4">
+                {pkg.features_not_included.map((feature: PackageFeature, index: number) => (
                   <div
                     key={index}
-                    className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50"
+                    className="rounded-xl bg-slate-800/30 border border-slate-700/50 p-6"
                   >
-                    <h3 className="font-bold text-gray-900 dark:text-white mb-2">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400">
-                      {benefit.description}
-                    </p>
+                    <div className="flex items-start gap-4">
+                      <span className="material-icons text-slate-500 flex-shrink-0">
+                        cancel
+                      </span>
+                      <div className="flex-1">
+                        <p className="text-slate-400 mb-1">{feature.name}</p>
+                        {feature.available_in && (
+                          <Link
+                            href={`/pricing/${feature.available_in
+                              .toLowerCase()
+                              .replace(" ", "-")}`}
+                            className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold inline-flex items-center gap-1"
+                          >
+                            Available in {feature.available_in}
+                            <span className="material-icons text-sm">arrow_forward</span>
+                          </Link>
+                        )}
+                        {feature.note && (
+                          <p className="text-slate-500 text-sm mt-1">{feature.note}</p>
+                        )}
+                      </div>
+                    </div>
                   </div>
                 ))}
               </div>
-            )}
+              <p className="text-center text-slate-500 mt-8">
+                Upgrade anytime to access these features
+              </p>
+            </div>
+          </section>
+        )}
+
+      {/* Value Proposition Section */}
+      {pkg.value_proposition && pkg.value_proposition.benefits && (
+        <section className="py-20 px-6 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"></div>
+          <div className="absolute top-1/3 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+
+          <div className="relative container mx-auto max-w-6xl">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+                {pkg.value_proposition.heading}
+              </h2>
+              {pkg.value_proposition.content && (
+                <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+                  {pkg.value_proposition.content}
+                </p>
+              )}
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {pkg.value_proposition.benefits.map((benefit: Benefit, index: number) => (
+                <div
+                  key={index}
+                  className="group relative rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-cyan-500/10 p-8 hover:border-cyan-500/30 transition-all duration-300"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/5 group-hover:to-blue-500/5 rounded-2xl transition-all duration-300"></div>
+
+                  <div className="relative">
+                    <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center border border-cyan-500/30 mb-6">
+                      <span className="material-icons text-cyan-400 text-3xl">
+                        {benefit.icon || "star"}
+                      </span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-slate-400 leading-relaxed text-lg">
+                      {benefit.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       )}
 
-      {/* Package Comparison */}
-      {pkg.comparison && (
-        <section className="py-16 px-8 lg:px-16 bg-gray-50 dark:bg-black/20">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center mb-8">
-              {pkg.comparison.heading || "Compare Packages"}
+      {/* Comparison Table Section */}
+      {pkg.comparison?.compare_table && pkg.comparison.compare_table.length > 0 && (
+        <section className="py-20 px-6 bg-slate-900/50">
+          <div className="container mx-auto max-w-6xl">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+              Compare All Packages
             </h2>
-            <div className="text-center">
+            <p className="text-xl text-slate-400 text-center mb-12">
+              See how this package stacks up against our other offerings
+            </p>
+
+            {/* Mobile: Show scroll hint */}
+            <div className="md:hidden text-center text-slate-400 text-sm mb-3">
+              ← Swipe to see all packages →
+            </div>
+
+            <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-thin scrollbar-thumb-cyan-500/20 scrollbar-track-transparent">
+              <table className="w-full min-w-[600px]">
+                <thead>
+                  <tr className="border-b border-slate-700">
+                    <th className="text-left py-3 sm:py-4 px-3 sm:px-6 text-slate-400 font-semibold text-sm sm:text-base sticky left-0 bg-slate-900/50 backdrop-blur-sm z-10">
+                      Feature
+                    </th>
+                    <th className="text-center py-3 sm:py-4 px-3 sm:px-6 text-slate-400 font-semibold text-sm sm:text-base">
+                      Starter
+                    </th>
+                    <th className="text-center py-3 sm:py-4 px-3 sm:px-6">
+                      <div className="inline-block px-3 sm:px-4 py-1 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-400 font-semibold text-xs sm:text-sm">
+                        Growth
+                      </div>
+                    </th>
+                    <th className="text-center py-3 sm:py-4 px-3 sm:px-6 text-slate-400 font-semibold text-sm sm:text-base">
+                      Enterprise
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {pkg.comparison.compare_table.map((row: ComparisonRow, index: number) => (
+                    <tr
+                      key={index}
+                      className="border-b border-slate-800 hover:bg-slate-800/30 transition-colors"
+                    >
+                      <td className="py-3 sm:py-4 px-3 sm:px-6 text-white font-medium text-sm sm:text-base sticky left-0 bg-slate-900/50 backdrop-blur-sm z-10">
+                        {row.feature}
+                      </td>
+                      <td className="py-3 sm:py-4 px-3 sm:px-6 text-center text-slate-400 text-sm sm:text-base">
+                        {row.starter}
+                      </td>
+                      <td className="py-3 sm:py-4 px-3 sm:px-6 text-center">
+                        <span className="text-cyan-400 font-semibold text-sm sm:text-base">{row.growth}</span>
+                      </td>
+                      <td className="py-3 sm:py-4 px-3 sm:px-6 text-center text-slate-400 text-sm sm:text-base">
+                        {row.enterprise}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="text-center mt-8">
               <Link
                 href="/pricing"
-                className="inline-block bg-white/10 border border-white/20 text-white px-8 py-4 rounded-full backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 min-h-[48px] bg-white/5 border border-white/10 rounded-full text-white font-semibold hover:bg-white/10 transition-all duration-300 backdrop-blur-sm touch-manipulation text-sm sm:text-base"
               >
-                View All Packages
+                View Full Comparison
+                <span className="material-icons text-base sm:text-lg">arrow_forward</span>
               </Link>
             </div>
           </div>
         </section>
       )}
 
-      {/* FAQ */}
-      {pkg.faq && pkg.faq.length > 0 && (
-        <section className="py-16 px-8 lg:px-16">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-12">
-              Common Questions
+      {/* Testimonials Section */}
+      {pkg.testimonials && pkg.testimonials.length > 0 && (
+        <section className="py-20 px-6 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"></div>
+
+          <div className="relative container mx-auto max-w-6xl">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+              Success Stories
             </h2>
+            <p className="text-xl text-slate-400 text-center mb-16">
+              Real results from real businesses
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {pkg.testimonials.map((testimonial: Testimonial, index: number) => (
+                <div
+                  key={index}
+                  className="relative rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-cyan-500/10 p-8 hover:border-cyan-500/30 transition-all duration-300"
+                >
+                  {/* Rating stars */}
+                  <div className="flex gap-1 mb-6">
+                    {[...Array(5)].map((_, i) => (
+                      <span key={i} className="material-icons text-yellow-400 text-xl">
+                        star
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Quote */}
+                  <blockquote className="text-slate-300 text-lg leading-relaxed mb-6">
+                    &quot;{testimonial.quote}&quot;
+                  </blockquote>
+
+                  {/* Author info */}
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="font-bold text-white">{testimonial.author}</div>
+                      <div className="text-slate-400 text-sm">
+                        {testimonial.business}
+                      </div>
+                      <div className="text-slate-500 text-sm">
+                        {testimonial.location}
+                      </div>
+                    </div>
+                    {testimonial.result && (
+                      <div className="px-4 py-2 rounded-lg bg-green-500/10 border border-green-500/20">
+                        <div className="text-green-400 font-semibold text-sm text-right">
+                          {testimonial.result}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* FAQ Section */}
+      {pkg.faq && pkg.faq.length > 0 && (
+        <section className="py-20 px-6 bg-slate-900/50">
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-slate-400 text-center mb-12">
+              Everything you need to know about this package
+            </p>
+
             <div className="space-y-4">
-              {pkg.faq.map((item: any, index: number) => (
+              {pkg.faq.map((item: FAQItem, index: number) => (
                 <details
                   key={index}
-                  className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50"
+                  className="group rounded-xl bg-slate-800/50 border border-slate-700/50 overflow-hidden hover:border-cyan-500/30 transition-all duration-300"
                 >
-                  <summary className="font-bold text-gray-900 dark:text-white cursor-pointer">
-                    {item.question}
+                  <summary className="flex items-center justify-between cursor-pointer p-6 text-white font-bold text-lg">
+                    <span>{item.question}</span>
+                    <span className="material-icons text-cyan-400 group-open:rotate-180 transition-transform">
+                      expand_more
+                    </span>
                   </summary>
-                  <p className="mt-4 text-gray-600 dark:text-gray-400">{item.answer}</p>
+                  <div className="px-6 pb-6 text-slate-400 leading-relaxed border-t border-slate-700/50 pt-4">
+                    {item.answer}
+                  </div>
                 </details>
               ))}
             </div>
@@ -223,17 +493,89 @@ export default async function PackagePage({
         </section>
       )}
 
-      {/* CTA Section */}
-      <section className="py-16 px-8 lg:px-16 bg-gray-50 dark:bg-black/20">
-        <div className="container mx-auto max-w-4xl">
-          <div className="bg-white dark:bg-gray-900/50 rounded-lg p-12 border border-gray-200 dark:border-gray-800 shadow-xl">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-4">
-              Ready to Get Started with {pkg.package.package_name}?
-            </h2>
-            <p className="text-center text-lg text-gray-600 dark:text-gray-400 mb-8">
-              Contact us today to activate your package and start automating your leads.
-            </p>
-            <LeadCaptureForm source={pkg.package.package_slug} />
+      {/* Trust Signals Grid */}
+      {pkg.trust_signals && pkg.trust_signals.length > 0 && (
+        <section className="py-20 px-6">
+          <div className="container mx-auto max-w-6xl">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+              {pkg.trust_signals.map((signal: TrustSignal, index: number) => (
+                <div
+                  key={index}
+                  className="text-center p-5 sm:p-6 rounded-xl bg-slate-800/30 border border-slate-700/50"
+                >
+                  <div className="w-12 h-12 rounded-full bg-green-500/10 border border-green-500/20 flex items-center justify-center mx-auto mb-4">
+                    <span className="material-icons text-green-400 text-xl">verified</span>
+                  </div>
+                  <h4 className="font-bold text-white mb-2 text-base sm:text-lg">{signal.title}</h4>
+                  <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">{signal.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Final CTA Section */}
+      <section className="py-20 px-6 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-950/30 via-slate-950 to-blue-950/30">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-3xl"></div>
+        </div>
+
+        <div className="relative container mx-auto max-w-5xl">
+          <div className="rounded-3xl bg-gradient-to-br from-slate-800/80 to-slate-900/80 border border-cyan-500/20 p-12 backdrop-blur-sm">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+                {pkg.cta_footer?.headline || `Ready to Get Started with ${pkg.package.package_name}?`}
+              </h2>
+              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+                {pkg.cta_footer?.subheadline || "Contact us today to activate your package and start automating your leads."}
+              </p>
+            </div>
+
+            {/* CTA Buttons */}
+            {pkg.cta_footer && (
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                {pkg.cta_footer.primary_cta && (
+                  <Link
+                    href={pkg.cta_footer.primary_cta.action}
+                    className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full font-bold text-white text-lg overflow-hidden transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/50 hover:scale-105"
+                  >
+                    <span className="relative z-10 flex items-center justify-center gap-2">
+                      {pkg.cta_footer.primary_cta.text}
+                      <span className="material-icons group-hover:translate-x-1 transition-transform">
+                        arrow_forward
+                      </span>
+                    </span>
+                  </Link>
+                )}
+                {pkg.cta_footer.secondary_cta && (
+                  <Link
+                    href={pkg.cta_footer.secondary_cta.action}
+                    className="px-8 py-4 bg-white/5 border border-white/10 rounded-full font-bold text-white text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
+                  >
+                    {pkg.cta_footer.secondary_cta.text}
+                  </Link>
+                )}
+              </div>
+            )}
+
+            {/* Guarantee */}
+            {pkg.cta_footer?.guarantee && (
+              <p className="text-center text-slate-400 mb-4">{pkg.cta_footer.guarantee}</p>
+            )}
+
+            {/* Bonus */}
+            {pkg.cta_footer?.bonus && (
+              <div className="inline-flex items-center gap-2 px-6 py-3 mx-auto rounded-full bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border border-yellow-500/20">
+                <span className="material-icons text-yellow-400">card_giftcard</span>
+                <span className="text-yellow-300 font-semibold">{pkg.cta_footer.bonus}</span>
+              </div>
+            )}
+
+            {/* Lead Form */}
+            <div className="mt-12">
+              <LeadCaptureForm source={pkg.package.package_slug} />
+            </div>
           </div>
         </div>
       </section>

@@ -1,0 +1,184 @@
+{
+  "research_date": "2025-11-30",
+  "research_method": "Web search via Google (Bright Data Browser connection issues)",
+  "oak_ridge": {
+    "city": "Oak Ridge",
+    "state": "TN",
+    "landmarks": [
+      {
+        "name": "Oak Ridge Chamber of Commerce",
+        "type": "Chamber of Commerce",
+        "address": "1400 Oak Ridge Turnpike, Oak Ridge, TN 37830",
+        "phone": "(865) 483-1321",
+        "description": "Four-star Accredited Chamber of Commerce serving over 500 members since 1949. Winner of ACCE 2010 Chamber of the Year designation.",
+        "website": "https://www.oakridgechamber.org/",
+        "significance": "Voice of business for Oak Ridge community"
+      },
+      {
+        "name": "Jackson Square",
+        "type": "Historic Business District",
+        "address": "Jackson Square, Oak Ridge, TN 37830",
+        "description": "Historic business center with eclectic shops, restaurants, Oak Ridge Playhouse, and lush gardens. Part of Oak Ridge Historic District on National Register of Historic Places since 1991.",
+        "history": "Served as primary commercial center and social hub since 1945 (originally Town Center No. 1)",
+        "significance": "Used as model for planned communities like Reston, Virginia"
+      },
+      {
+        "name": "Main Street Oak Ridge",
+        "type": "Commercial Center",
+        "address": "Main Street Oak Ridge, Oak Ridge, TN 37830",
+        "description": "Mixed-use development featuring national retailers including Dick's Sporting Goods, T.J. Maxx, Belk, JCPenney, Electronic Express, PetSmart, and Rack Room Shoes.",
+        "history": "Formerly Oak Ridge Mall, redeveloped in 2016-2017"
+      },
+      {
+        "name": "Oak Ridge Economic Development Initiative",
+        "type": "Economic Development Organization",
+        "description": "Leading economic development for Oak Ridge's tech sector. City experienced 308% growth in housing units permitted in 2022, with over $28M in capital investments in 2021.",
+        "website": "https://www.oakridgeedi.org/",
+        "significance": "International success story since DOE's reindustrialization program launched in 1996"
+      },
+      {
+        "name": "Tennessee Small Business Development Center - Oak Ridge",
+        "type": "Business Resource Center",
+        "address": "1400 Oak Ridge Turnpike, Oak Ridge, TN 37830",
+        "description": "Provides high-quality consulting and training solutions to start, grow and sustain businesses.",
+        "website": "https://tsbdc.org/center/oakridge/"
+      }
+    ],
+    "strategic_advantages": [
+      "Over 70% of US marketplace within a day's drive",
+      "Convergence of three major interstate highways (I-40, I-75, I-81)",
+      "International hub for technological innovation",
+      "Home to Department of Energy facilities"
+    ]
+  },
+  "sevierville": {
+    "city": "Sevierville",
+    "state": "TN",
+    "landmarks": [
+      {
+        "name": "Sevierville Chamber of Commerce",
+        "type": "Chamber of Commerce",
+        "address": "110 Gary Wade Blvd, Sevierville, TN 37862-3844",
+        "phone": "(865) 453-6411",
+        "description": "Chamber and Convention and Visitors Bureau serving Sevierville since 1963. Promotes tourism and business networking for 5,540 businesses.",
+        "website": "https://www.seviervillechamber.com/",
+        "significance": "Tourism marketing arm for City of Sevierville"
+      },
+      {
+        "name": "Sevierville Convention Center",
+        "type": "Convention Center",
+        "address": "202 Gists Creek Road, Sevierville, TN 37876",
+        "phone": "(865) 453-0001",
+        "description": "108,245 sq ft exhibit hall with 1,571 parking spaces. ConventionSouth's Annual Readers' Choice Award winner. Adjacent to Wilderness at the Smokies Waterpark Resort.",
+        "website": "https://www.seviervilleconventioncenter.com/",
+        "capacity": "1,500 people in ballroom",
+        "significance": "Perfect for sporting events, trade shows, conventions"
+      },
+      {
+        "name": "Downtown Sevierville Historic District",
+        "type": "Historic Downtown",
+        "description": "Downtown historic district centered around Sevier County Courthouse. Hosts annual Bloomin' BBQ Music & Food Festival.",
+        "significance": "County seat and birthplace of Dolly Parton"
+      },
+      {
+        "name": "Winfield Dunn Parkway (Highway 66) Commercial Corridor",
+        "type": "Commercial District",
+        "description": "Major commercial corridor with in-season average daily traffic of 70,000+ vehicles. Gateway to Great Smoky Mountains National Park.",
+        "traffic_count": "48,000-70,000 vehicles daily",
+        "significance": "Attracts tourists and local customers, serves 10+ million annual park visitors"
+      },
+      {
+        "name": "Dolly Parton Parkway (Highway 441)",
+        "type": "Commercial Corridor",
+        "description": "Major commercial development corridor connecting Sevierville to Pigeon Forge and Gatlinburg.",
+        "significance": "Primary tourist route to the Smokies"
+      }
+    ],
+    "population": "17,000 residents",
+    "businesses": "5,540 businesses",
+    "employment": "15,100 people employed",
+    "strategic_advantages": [
+      "Gateway to Great Smoky Mountains National Park",
+      "Tourism-based economy",
+      "Within day's drive of over half the nation's population",
+      "Birthplace of Dolly Parton"
+    ]
+  },
+  "gatlinburg": {
+    "city": "Gatlinburg",
+    "state": "TN",
+    "landmarks": [
+      {
+        "name": "Gatlinburg Chamber of Commerce",
+        "type": "Chamber of Commerce",
+        "address": "811 E Parkway, Gatlinburg, TN 37738-4913",
+        "phone": "(865) 436-4178",
+        "description": "Chamber and CVB serving Gatlinburg since 1940. Officially chartered as non-profit in June 1957. Manages Gatlinburg Vacation Guide and visitor inquiries.",
+        "website": "https://www.gatlinburg.com/",
+        "history": "Began as tourist bureau in late 1930s, chartered by U.S. Chamber of Commerce in 1940",
+        "significance": "Gateway to Great Smoky Mountains National Park (14 million annual visitors)"
+      },
+      {
+        "name": "Gatlinburg Convention Center",
+        "type": "Convention Center",
+        "address": "234 Historic Nature Trail, Gatlinburg, TN 37738",
+        "description": "148,000 sq ft of flexible meeting and exhibit space in downtown Gatlinburg. Features Great Hall (67,000 sq ft), Tennessee Ballroom (17,064 sq ft), and Mills Auditorium (8,800 sq ft).",
+        "capacity": "Up to 3,000 people",
+        "significance": "Within walking distance to downtown attractions, restaurants, and 16,000+ sleeping rooms"
+      },
+      {
+        "name": "Downtown Gatlinburg Parkway",
+        "type": "Downtown District",
+        "description": "Central downtown district with shops, restaurants, attractions, and hotels. Main corridor through Gatlinburg.",
+        "significance": "Heart of Gatlinburg's tourism industry"
+      },
+      {
+        "name": "Great Smoky Arts & Crafts Community",
+        "type": "Arts & Crafts District",
+        "address": "Off Highway 321 North, Glades Road/Buckhorn Road, Gatlinburg, TN",
+        "description": "Largest independent organization of artisans in the United States. 8-mile loop featuring 120+ shops with traditional Appalachian crafts. Established in 1937.",
+        "founded": "1937",
+        "size": "8-mile loop",
+        "shops": "120+ artisan shops",
+        "significance": "Preserves traditional Appalachian craftsmanship, hosts Gatlinburg Craftsmen's Fair and Winterfest light displays"
+      },
+      {
+        "name": "Arrowmont School of Arts and Crafts",
+        "type": "Arts Education Center",
+        "address": "Historic campus in downtown Gatlinburg on edge of Great Smoky Mountains National Park",
+        "description": "Immersive arts experience on historic campus offering art classes, workshops, and cultural experiences.",
+        "website": "https://arrowmont.org/",
+        "significance": "Preserves and promotes traditional and contemporary crafts"
+      }
+    ],
+    "accommodations": "16,000+ sleeping rooms",
+    "park_visitors": "14 million annual visitors to Great Smoky Mountains National Park",
+    "strategic_advantages": [
+      "Gateway to most visited national park in USA",
+      "Within walking distance of downtown attractions",
+      "Largest independent arts and crafts community in USA",
+      "Over 80 years of tourism history",
+      "Prime location at base of Great Smoky Mountains"
+    ]
+  },
+  "regional_context": {
+    "region": "East Tennessee",
+    "proximity_to_knoxville": "30 miles southeast",
+    "major_highways": ["I-40", "I-75", "I-81", "Highway 66", "Highway 321", "Highway 441"],
+    "tourism_significance": "Great Smoky Mountains National Park gateway region with 10-14 million annual visitors",
+    "business_environment": "Tourism-based economy with strong small business presence across all three cities"
+  },
+  "sources": [
+    "https://www.oakridgechamber.org/",
+    "https://exploreoakridge.com/attractions/jackson-square/",
+    "https://www.oakridgeedi.org/",
+    "https://tsbdc.org/center/oakridge/",
+    "https://www.seviervillechamber.com/",
+    "https://www.seviervilleconventioncenter.com/",
+    "https://visitsevierville.com/",
+    "https://www.gatlinburg.com/",
+    "https://www.gatlinburg.com/meetings/the-convention-center/",
+    "https://greatsmokyartsandcrafts.com/",
+    "https://arrowmont.org/"
+  ]
+}

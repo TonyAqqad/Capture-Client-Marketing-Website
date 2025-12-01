@@ -7,7 +7,13 @@ export interface HeroSection {
   subheadline?: string;
   cta_primary?: { text: string; action: string; type?: string };
   cta_secondary?: { text: string; action: string; type?: string };
+  cta?: {
+    primary?: { text: string; action: string; type?: string };
+    secondary?: { text: string; action: string; type?: string };
+  };
   hero_image?: { url: string; alt: string };
+  badge?: string;
+  price_display?: { amount: string; period: string; note?: string };
 }
 
 export interface IntroSection {
@@ -92,6 +98,34 @@ export interface PricingData {
   page_id: string;
   packages?: PackageData[];
   [key: string]: any;
+}
+
+export interface BlogPost {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  category: string;
+  author: {
+    name: string;
+    role: string;
+    avatar?: string;
+  };
+  featuredImage: string;
+  publishedAt: string;
+  updatedAt?: string;
+  readTime: string;
+  tags: string[];
+  seo: {
+    title: string;
+    description: string;
+    keywords: string[];
+  };
+  faq?: Array<{
+    question: string;
+    answer: string;
+  }>;
 }
 
 const dataDir = path.join(process.cwd(), 'src', 'data');
@@ -198,16 +232,14 @@ export async function getAllPackages(): Promise<PackageData[]> {
               };
             }
             return data as PackageData;
-          } catch (e) {
-            console.error(`Error reading package file ${file}:`, e);
+          } catch {
             return null;
           }
         })
     );
 
     return packages.filter((p): p is PackageData => p !== null);
-  } catch (e) {
-    console.error('Error reading packages directory:', e);
+  } catch {
     return [];
   }
 }
@@ -239,6 +271,43 @@ export async function getPricingData(): Promise<PricingData | null> {
     const filePath = path.join(dataDir, 'packages', 'pricing.json');
     const content = await fs.readFile(filePath, 'utf-8');
     return JSON.parse(content) as PricingData;
+  } catch {
+    return null;
+  }
+}
+
+export async function getAllBlogPosts(): Promise<BlogPost[]> {
+  const blogDir = path.join(dataDir, 'blog');
+  try {
+    const files = await fs.readdir(blogDir);
+
+    const posts = await Promise.all(
+      files
+        .filter(file => file.endsWith('.json'))
+        .map(async (file) => {
+          try {
+            const content = await fs.readFile(path.join(blogDir, file), 'utf-8');
+            return JSON.parse(content) as BlogPost;
+          } catch {
+            return null;
+          }
+        })
+    );
+
+    // Filter out null values and sort by date (newest first)
+    return posts
+      .filter((p): p is BlogPost => p !== null)
+      .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime());
+  } catch {
+    return [];
+  }
+}
+
+export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
+  try {
+    const filePath = path.join(dataDir, 'blog', `${slug}.json`);
+    const content = await fs.readFile(filePath, 'utf-8');
+    return JSON.parse(content) as BlogPost;
   } catch {
     return null;
   }

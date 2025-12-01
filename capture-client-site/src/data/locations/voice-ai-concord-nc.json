@@ -15,7 +15,12 @@
     "title": "Voice AI Agency in Concord, NC | Capture Client",
     "meta_description": "Concord businesses use Voice AI to capture leads 24/7. Automated phone answering, instant lead qualification, and appointment booking. Start your free trial!",
     "h1": "Voice AI Technology for Concord Businesses",
-    "keywords": ["voice ai concord", "ai phone concord nc", "automated answering concord", "ai receptionist concord nc"]
+    "keywords": [
+      "voice ai concord",
+      "ai phone concord nc",
+      "automated answering concord",
+      "ai receptionist concord nc"
+    ]
   },
   "hero": {
     "headline": "Concord's Smart Voice AI Solution",
@@ -30,27 +35,27 @@
     {
       "title": "Capture Race Weekend Leads",
       "description": "During busy race weekends at Charlotte Motor Speedway, handle unlimited calls simultaneously while competitors miss opportunities.",
-      "icon": "zap"
+      "icon": "bolt"
     },
     {
       "title": "Instant Lead Response",
       "description": "Concord customers expect fast responses. AI answers every call in seconds, capturing leads before they move on.",
-      "icon": "phone"
+      "icon": "phone_in_talk"
     },
     {
       "title": "Automated Booking",
       "description": "Schedule appointments, service calls, and consultations automatically without phone tag or back-and-forth.",
-      "icon": "calendar"
+      "icon": "event"
     },
     {
       "title": "Reduce Overhead",
       "description": "Save thousands monthly by eliminating answering services and reducing reception staffing needs.",
-      "icon": "dollar-sign"
+      "icon": "attach_money"
     },
     {
       "title": "Consistent Excellence",
       "description": "Every Concord caller gets the same professional, accurate service representing your brand perfectly every time.",
-      "icon": "award"
+      "icon": "workspace_premium"
     }
   ],
   "how_it_works": {

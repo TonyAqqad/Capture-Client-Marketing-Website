@@ -1,4 +1,4 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next";
 
 /**
  * Enhanced robots.txt configuration following 2025 SEO best practices
@@ -10,34 +10,34 @@ import { MetadataRoute } from 'next';
  * - Support multiple search engines (Google, Bing, etc.)
  */
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://captureclient.net';
+  const baseUrl = "https://captureclient.net";
 
   return {
     rules: [
       {
-        userAgent: '*',
-        allow: '/',
+        userAgent: "*",
+        allow: "/",
         disallow: [
-          '/api/',           // API routes
-          '/admin/',         // Admin pages (if any)
-          '/_next/',         // Next.js internals
-          '/private/',       // Private content
-          '/*.json$',        // Raw data files
-          '/search',         // Search result pages (prevent duplicate content)
+          "/api/", // API routes
+          "/admin/", // Admin pages (if any)
+          "/_next/", // Next.js internals
+          "/private/", // Private content
+          "/*.json$", // Raw data files
+          "/search", // Search result pages (prevent duplicate content)
         ],
-        crawlDelay: 0,       // Allow fast crawling
+        crawlDelay: 0, // Allow fast crawling
       },
       {
         // Specific rules for Google bot
-        userAgent: 'Googlebot',
-        allow: '/',
-        disallow: ['/api/', '/admin/', '/_next/', '/private/'],
+        userAgent: "Googlebot",
+        allow: "/",
+        disallow: ["/api/", "/admin/", "/_next/", "/private/"],
       },
       {
         // Specific rules for Bing bot
-        userAgent: 'Bingbot',
-        allow: '/',
-        disallow: ['/api/', '/admin/', '/_next/', '/private/'],
+        userAgent: "Bingbot",
+        allow: "/",
+        disallow: ["/api/", "/admin/", "/_next/", "/private/"],
       },
     ],
     sitemap: [

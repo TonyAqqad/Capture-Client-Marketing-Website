@@ -227,33 +227,29 @@ export default function IndustryDemo() {
         </div>
 
         {/* Industry selector */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 mb-12 max-w-5xl mx-auto">
           {INDUSTRIES.map((industry) => (
             <motion.button
               key={industry.id}
               onClick={() => setSelectedIndustry(industry)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`p-6 rounded-xl border-2 transition-all duration-300 ${
+              className={`p-4 sm:p-6 rounded-xl border-2 transition-all duration-300 min-h-[100px] sm:min-h-[120px] flex flex-col items-center justify-center ${
                 selectedIndustry.id === industry.id
                   ? `${industry.bgColor} ${industry.borderColor}`
                   : "bg-surface border-surface-border hover:bg-surface-hover"
               }`}
             >
               <span
-                className={`material-icons text-4xl mb-2 block ${
-                  selectedIndustry.id === industry.id
-                    ? industry.color
-                    : "text-foreground-muted"
+                className={`material-icons text-3xl sm:text-4xl mb-2 block ${
+                  selectedIndustry.id === industry.id ? industry.color : "text-foreground-muted"
                 }`}
               >
                 {industry.icon}
               </span>
               <p
-                className={`font-semibold text-sm ${
-                  selectedIndustry.id === industry.id
-                    ? "text-foreground"
-                    : "text-foreground-muted"
+                className={`font-semibold text-xs sm:text-sm text-center ${
+                  selectedIndustry.id === industry.id ? "text-foreground" : "text-foreground-muted"
                 }`}
               >
                 {industry.name}

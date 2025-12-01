@@ -15,7 +15,12 @@
     "title": "Voice AI Agency in Asheville, NC | Capture Client",
     "meta_description": "Asheville businesses use Voice AI to answer calls 24/7, capture tourism and local leads automatically. Perfect for hospitality, tourism & local services!",
     "h1": "Voice AI Technology for Asheville, NC Businesses",
-    "keywords": ["voice ai asheville", "ai phone asheville nc", "automated receptionist asheville", "ai answering service asheville"]
+    "keywords": [
+      "voice ai asheville",
+      "ai phone asheville nc",
+      "automated receptionist asheville",
+      "ai answering service asheville"
+    ]
   },
   "hero": {
     "headline": "Asheville's Premier Voice AI Solution",
@@ -30,27 +35,27 @@
     {
       "title": "Never Miss Tourist Calls",
       "description": "Tourists call from different time zones and outside business hours. AI captures every inquiry 24/7, maximizing your Asheville revenue.",
-      "icon": "globe"
+      "icon": "public"
     },
     {
       "title": "Smart Reservation Handling",
       "description": "AI checks availability, answers common questions, and books reservations automatically for restaurants, tours, and lodging.",
-      "icon": "calendar-check"
+      "icon": "event_available"
     },
     {
       "title": "Multilingual Support",
       "description": "Serve Asheville's international visitors with AI that understands and responds in multiple languages fluently.",
-      "icon": "languages"
+      "icon": "translate"
     },
     {
       "title": "Peak Season Scalability",
       "description": "Handle unlimited simultaneous calls during busy Asheville tourist seasons without hiring temporary staff.",
-      "icon": "trending-up"
+      "icon": "trending_up"
     },
     {
       "title": "Local Knowledge Built-In",
       "description": "AI answers questions about Asheville attractions, directions, hours, and recommendations like a knowledgeable local.",
-      "icon": "map-pin"
+      "icon": "location_on"
     }
   ],
   "how_it_works": {

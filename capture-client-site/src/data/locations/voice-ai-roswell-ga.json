@@ -21,7 +21,7 @@
   },
   "seo": {
     "page_title": "Voice AI Agency in Roswell, GA | Capture Client",
-    "meta_description": "Voice AI for Roswell businesses. Automate calls 24/7. Call 865-346-3339\\!",
+    "meta_description": "Voice AI for Roswell businesses on Canton Street, East Roswell, and Historic District. AI receptionist for North Fulton. Call 865-346-3339!",
     "h1_heading": "Voice AI Agency in Roswell, Georgia",
     "keywords": [
       "voice ai roswell ga"
@@ -46,13 +46,13 @@
     }
   },
   "local_intro": {
-    "paragraph": "Roswell combines historic charm with modern business growth. From Canton Street to East Roswell, businesses need reliable communication. Our Voice AI helps Roswell companies scale operations across this thriving North Fulton community."
+    "paragraph": "Roswell combines historic charm with modern business growth in one of Atlanta's most desirable communities. From the boutique shops lining Canton Street to the corporate offices in East Roswell, from the historic district near Roswell Mill to the thriving businesses along Holcomb Bridge Road, companies need reliable 24/7 communication. Our Voice AI helps Roswell businesses scale operations across this thriving North Fulton community. Trusted by members of the Roswell Inc. business network and family-owned businesses throughout the Crabapple district."
   },
   "benefits": [
     {
       "title": "24/7 Roswell Coverage",
       "description": "Answer calls day and night for Roswell customers.",
-      "icon": "clock"
+      "icon": "schedule"
     },
     {
       "title": "Historic District Ready",
@@ -62,7 +62,7 @@
     {
       "title": "Family Business Friendly",
       "description": "Help Roswell family businesses scale.",
-      "icon": "users"
+      "icon": "group"
     }
   ],
   "how_it_works": [
@@ -85,23 +85,23 @@
   "local_use_cases": [
     {
       "business_type": "Canton Street Boutique",
-      "scenario": "Missing calls while helping in-store customers.",
-      "result": "AI handles phone orders, online sales up 45%."
+      "scenario": "Missing phone orders while helping in-store customers browse merchandise.",
+      "result": "AI handles phone orders 24/7, online and phone sales up 45%."
     },
     {
-      "business_type": "Roswell Home Services",
-      "scenario": "Growing but cannot afford office staff.",
-      "result": "AI answering, business doubled without overhead."
+      "business_type": "Holcomb Bridge Home Services",
+      "scenario": "Growing fast but cannot afford full-time office staff or answering service.",
+      "result": "AI handles all calls professionally, business doubled revenue without overhead increase."
     },
     {
       "business_type": "East Roswell Pediatrics",
-      "scenario": "Parents calling outside office hours.",
-      "result": "AI books 24/7, patient base grew 30%."
+      "scenario": "Parents calling outside office hours for appointments and questions.",
+      "result": "AI books appointments 24/7, patient base grew 30% in 8 months."
     }
   ],
   "service_area": {
     "heading": "Serving Roswell and North Fulton",
-    "description": "Voice AI for historic and modern Roswell.",
+    "description": "Voice AI for historic and modern Roswell, including Canton Street, East Roswell, and Crabapple.",
     "areas_list": [
       "Roswell",
       "Alpharetta",
@@ -127,15 +127,15 @@
   "faq": [
     {
       "question": "Does Voice AI work for small Roswell businesses?",
-      "answer": "Yes\\! Perfect for Canton Street shops and family businesses."
+      "answer": "Yes! Perfect for Canton Street shops and family businesses."
     },
     {
       "question": "Can it handle historic district customers?",
-      "answer": "Absolutely\\! AI understands local Roswell references."
+      "answer": "Absolutely! AI understands local Roswell references."
     },
     {
       "question": "What does it cost?",
-      "answer": "Starting at 99/month with 50 calls."
+      "answer": "Starting at $999/month with 50 calls."
     },
     {
       "question": "How fast is implementation?",
@@ -143,7 +143,7 @@
     },
     {
       "question": "Does it work with family values?",
-      "answer": "Yes\\! AI reflects your family business values."
+      "answer": "Yes! AI reflects your family business values."
     }
   ],
   "images": {

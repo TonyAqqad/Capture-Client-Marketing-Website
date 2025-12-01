@@ -11,7 +11,11 @@
     "state": "NC",
     "state_full": "North Carolina",
     "slug": "fayetteville-nc",
-    "nearby_areas": ["Fort Bragg", "Hope Mills", "Spring Lake"],
+    "nearby_areas": [
+      "Fort Bragg",
+      "Hope Mills",
+      "Spring Lake"
+    ],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -56,27 +60,27 @@
     {
       "title": "24/7 Lead Capture in Fayetteville",
       "description": "Never miss a call from Fayetteville customers, even during peak business hours or after hours. Our AI answers every call instantly.",
-      "icon": "clock"
+      "icon": "schedule"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "AI qualifies Fayetteville leads immediately, so your sales team only talks to ready-to-buy prospects.",
-      "icon": "filter"
+      "icon": "filter_alt"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "Let AI book appointments while you focus on serving Fayetteville clients.",
-      "icon": "calendar"
+      "icon": "event"
     },
     {
       "title": "Cost Savings for Fayetteville Businesses",
       "description": "Save thousands compared to hiring staff. Our AI scales with your growth.",
-      "icon": "dollar-sign"
+      "icon": "attach_money"
     },
     {
       "title": "Professional Every Time",
       "description": "Consistent, professional call handling for your Fayetteville business.",
-      "icon": "award"
+      "icon": "workspace_premium"
     }
   ],
   "how_it_works": [
@@ -207,8 +211,19 @@
     "urgency_text": "Limited spots available for Fayetteville businesses this month"
   },
   "related_pages": {
-    "other_services_in_location": ["google-ads", "facebook-ads"],
-    "nearby_locations": ["fort-bragg-nc", "hope-mills-nc", "raleigh-nc"],
-    "packages": ["starter-package", "growth-package", "enterprise-package"]
+    "other_services_in_location": [
+      "google-ads",
+      "facebook-ads"
+    ],
+    "nearby_locations": [
+      "fort-bragg-nc",
+      "hope-mills-nc",
+      "raleigh-nc"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package",
+      "enterprise-package"
+    ]
   }
 }

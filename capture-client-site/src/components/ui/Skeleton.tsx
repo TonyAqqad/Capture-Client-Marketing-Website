@@ -156,7 +156,7 @@ export function SkeletonText({
             width:
               lastLineShort && i === lines - 1
                 ? "60%"
-                : `${95 - Math.random() * 10}%`,
+                : `${95 - (i % 3) * 5}%`,
           }}
         />
       ))}

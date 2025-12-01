@@ -1,0 +1,299 @@
+"use client";
+
+import { useState, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useInView } from "@/hooks/useInView";
+
+interface FAQ {
+  question: string;
+  answer: string;
+  icon: string;
+  category: "technical" | "business" | "pricing";
+}
+
+const faqs: FAQ[] = [
+  {
+    question: "Will the AI voice agent sound robotic?",
+    answer:
+      "Not at all! Our AI uses cutting-edge natural language processing that sounds remarkably human. It understands context, speaks naturally with appropriate emotion, and even handles interruptions gracefully. Most callers don't realize they're speaking with AI until we tell them. You can listen to sample calls during your demo.",
+    icon: "support_agent",
+    category: "technical"
+  },
+  {
+    question: "What if the AI can't answer a specific question?",
+    answer:
+      "Great question! Our AI is trained on your business specifics, but if it encounters something unusual, it seamlessly transfers to your team with full context. You'll get a notification with the call transcript so you know exactly what was discussed. Plus, the AI learns from every interaction to handle similar questions next time.",
+    icon: "psychology",
+    category: "technical"
+  },
+  {
+    question: "How long does setup take?",
+    answer:
+      "We can have you up and running in as little as 48 hours. Our team handles the heavy lifting: we'll set up your AI agent, configure your ad campaigns, import your existing contacts to the CRM, and train you on the dashboard. Most clients are fully operational within a week with zero technical knowledge required.",
+    icon: "schedule",
+    category: "business"
+  },
+  {
+    question: "What if I want to cancel?",
+    answer:
+      "Zero hassle. We offer month-to-month contracts with no long-term commitment required. If you decide to cancel, we'll help export all your data, and you'll keep full access until the end of your billing period. We're confident you'll see results quickly, but there's no pressure to stay if it's not working for you.",
+    icon: "logout",
+    category: "pricing"
+  },
+  {
+    question: "Is this really worth the investment?",
+    answer:
+      "Let's do the math: if our system captures just 5 extra leads per month that convert at 20%, that's 1 new client. For most businesses, one new client pays for the entire system multiple times over. Plus, you're saving 20+ hours per month on manual tasks. Our average client sees 3x ROI within 90 days, and many see payback in the first month.",
+    icon: "calculate",
+    category: "pricing"
+  },
+  {
+    question: "Do I need technical knowledge to use this?",
+    answer:
+      "Absolutely not! Our platform is designed for busy business owners, not tech experts. Everything is visual and intuitive. We provide personalized training, video tutorials, and our support team is always one call away. If you can use a smartphone, you can use Capture Client. We handle all the technical complexity behind the scenes.",
+    icon: "devices",
+    category: "technical"
+  },
+  {
+    question: "How do you ensure data security and privacy?",
+    answer:
+      "Security is our top priority. We use enterprise-grade encryption, comply with GDPR and CCPA regulations, and undergo regular third-party security audits. Your data is stored in secure, redundant data centers with 99.99% uptime. We'll never sell your data or use it for anything other than providing you service. You own your data 100%.",
+    icon: "security",
+    category: "technical"
+  },
+  {
+    question: "Can I integrate with my existing tools?",
+    answer:
+      "Yes! Capture Client integrates with 1000+ popular business tools including Calendly, Stripe, QuickBooks, Zapier, and most major CRMs. If you have a specific integration need, let us know—we can usually set it up within days. Our goal is to work seamlessly with your existing workflow, not disrupt it.",
+    icon: "integration_instructions",
+    category: "technical"
+  }
+];
+
+export function PremiumFAQ() {
+  const containerRef = useRef<HTMLElement>(null);
+  const isInView = useInView(containerRef, { threshold: 0.2 });
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
+
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  return (
+    <section
+      ref={containerRef}
+      className="section bg-background relative overflow-hidden w-full max-w-full"
+    >
+      {/* Background effects */}
+      <div className="absolute inset-0 bg-mesh-premium opacity-30" />
+
+      <motion.div
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.08, 0.15, 0.08],
+        }}
+        transition={{
+          duration: 12,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+        className="absolute top-0 left-0 w-full max-w-[500px] sm:max-w-[1000px] h-[500px] sm:h-[1000px] rounded-full bg-gradient-radial from-accent/10 to-transparent blur-3xl -translate-x-1/4 -translate-y-1/4"
+      />
+
+      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
+        {/* Section header */}
+        <div className="text-center mb-12 sm:mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent mb-3 sm:mb-4">
+              Common Questions
+            </h2>
+            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-4 sm:mb-6 text-depth px-4">
+              Got Questions?{" "}
+              <span className="text-gradient bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
+                We've Got Answers
+              </span>
+            </h3>
+            <p className="text-base sm:text-lg md:text-xl text-foreground-muted max-w-3xl mx-auto leading-relaxed px-4">
+              We've helped hundreds of businesses overcome these exact objections. Here's the truth.
+            </p>
+          </motion.div>
+        </div>
+
+        {/* FAQ Accordion - mobile optimized */}
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-0">
+          <div className="space-y-3 sm:space-y-4">
+            {faqs.map((faq, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.05,
+                }}
+              >
+                <FAQItem
+                  faq={faq}
+                  index={index}
+                  isOpen={openIndex === index}
+                  onClick={() => toggleFAQ(index)}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA after FAQ - mobile optimized */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="text-center mt-12 sm:mt-16 mx-4 sm:mx-6 lg:mx-auto p-6 sm:p-8 glass rounded-xl sm:rounded-2xl border-2 border-accent/20 max-w-2xl"
+        >
+          <div className="mb-6">
+            <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-accent to-primary mb-4 shadow-glow">
+              <span className="material-icons text-white text-2xl sm:text-3xl">phone</span>
+            </div>
+            <h4 className="text-xl sm:text-2xl font-heading font-bold text-foreground mb-2">
+              Still have questions?
+            </h4>
+            <p className="text-sm sm:text-base text-foreground-muted">
+              Our team is here to help. Talk to a real human.
+            </p>
+          </div>
+          <a
+            href="tel:865-346-3339"
+            className="inline-flex items-center gap-2 text-base sm:text-lg font-bold text-accent hover:text-accent/80 transition-colors group touch-manipulation"
+          >
+            <span className="material-icons group-hover:animate-pulse text-xl sm:text-2xl">phone_in_talk</span>
+            Call (865) 346-3339
+          </a>
+          <p className="text-xs sm:text-sm text-foreground-subtle mt-3">
+            Monday-Friday, 9am-6pm EST
+          </p>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+interface FAQItemProps {
+  faq: FAQ;
+  index: number;
+  isOpen: boolean;
+  onClick: () => void;
+}
+
+function FAQItem({ faq, isOpen, onClick }: FAQItemProps) {
+  const getCategoryColor = (category: string) => {
+    switch (category) {
+      case "technical":
+        return "accent";
+      case "business":
+        return "primary";
+      case "pricing":
+        return "accent";
+      default:
+        return "accent";
+    }
+  };
+
+  const color = getCategoryColor(faq.category);
+  const isAccent = color === "accent";
+
+  return (
+    <motion.div
+      whileHover={{ scale: 1.01 }}
+      className={`glass rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-300 ${
+        isOpen
+          ? `border-2 ${isAccent ? "border-accent/50" : "border-primary/50"} shadow-glow`
+          : "border-2 border-surface-border hover:border-surface-border/50"
+      }`}
+    >
+      {/* Question button - full width tap target on mobile */}
+      <button
+        onClick={onClick}
+        className="w-full px-4 sm:px-6 lg:px-8 py-5 sm:py-6 flex items-center justify-between text-left transition-all duration-200 hover:bg-white/5 group touch-manipulation"
+      >
+        <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
+          {/* Icon - responsive sizing */}
+          <motion.div
+            animate={{
+              scale: isOpen ? 1.1 : 1,
+              rotate: isOpen ? [0, -10, 10, 0] : 0,
+            }}
+            transition={{ duration: 0.3 }}
+            className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl transition-all duration-300 flex-shrink-0 ${
+              isOpen
+                ? `bg-gradient-to-br ${
+                    isAccent
+                      ? "from-accent/30 to-accent/10"
+                      : "from-primary/30 to-primary/10"
+                  } border-2 ${isAccent ? "border-accent/40" : "border-primary/40"}`
+                : "bg-white/5 border-2 border-white/10"
+            }`}
+          >
+            <span
+              className={`material-icons text-xl sm:text-2xl transition-colors duration-300 ${
+                isOpen ? (isAccent ? "text-accent" : "text-primary") : "text-foreground-muted"
+              }`}
+            >
+              {faq.icon}
+            </span>
+          </motion.div>
+
+          {/* Question - responsive text size */}
+          <h4
+            className={`text-sm sm:text-base lg:text-lg font-semibold transition-colors duration-300 pr-2 ${
+              isOpen ? "text-foreground" : "text-foreground group-hover:text-foreground"
+            }`}
+          >
+            {faq.question}
+          </h4>
+        </div>
+
+        {/* Expand icon - responsive sizing */}
+        <motion.span
+          animate={{ rotate: isOpen ? 180 : 0 }}
+          transition={{ duration: 0.3 }}
+          className={`material-icons text-xl sm:text-2xl transition-colors duration-300 ml-2 sm:ml-4 flex-shrink-0 ${
+            isOpen ? (isAccent ? "text-accent" : "text-primary") : "text-foreground-muted"
+          }`}
+        >
+          expand_more
+        </motion.span>
+      </button>
+
+      {/* Answer - responsive padding and text */}
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            <motion.div
+              initial={{ y: -10 }}
+              animate={{ y: 0 }}
+              exit={{ y: -10 }}
+              transition={{ duration: 0.2 }}
+              className={`px-4 sm:px-6 lg:px-8 pb-5 sm:pb-6 sm:pl-16 lg:pl-24 border-t ${
+                isAccent ? "border-accent/20" : "border-primary/20"
+              }`}
+            >
+              <p className="text-foreground-muted text-sm sm:text-base leading-relaxed pt-4 sm:pt-4">
+                {faq.answer}
+              </p>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  );
+}

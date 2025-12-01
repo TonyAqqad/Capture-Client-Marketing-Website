@@ -15,7 +15,12 @@
     "title": "Voice AI Agency in Winston-Salem, NC | Capture Client",
     "meta_description": "Winston-Salem's trusted Voice AI solution. Automate phone calls, capture leads 24/7, qualify prospects instantly. Free consultation - call now!",
     "h1": "Voice AI Solutions for Winston-Salem Businesses",
-    "keywords": ["voice ai winston salem", "ai phone winston salem nc", "automated answering winston salem", "ai receptionist winston salem"]
+    "keywords": [
+      "voice ai winston salem",
+      "ai phone winston salem nc",
+      "automated answering winston salem",
+      "ai receptionist winston salem"
+    ]
   },
   "hero": {
     "headline": "Winston-Salem's Smart Choice for Voice AI",
@@ -30,27 +35,27 @@
     {
       "title": "Always-On for Winston-Salem",
       "description": "Your business never closes with Voice AI answering calls 24/7, capturing Winston-Salem leads around the clock.",
-      "icon": "clock"
+      "icon": "schedule"
     },
     {
       "title": "Qualify Leads Instantly",
       "description": "AI asks the right questions to determine lead quality, budget, and timeline so you prioritize the best opportunities.",
-      "icon": "check-circle"
+      "icon": "check_circle"
     },
     {
       "title": "Schedule Automatically",
       "description": "Voice AI books appointments, consultations, and service calls directly into your calendar without back-and-forth.",
-      "icon": "calendar"
+      "icon": "event"
     },
     {
       "title": "Slash Costs",
       "description": "Replace expensive answering services and reduce reception staffing while improving response quality and speed.",
-      "icon": "trending-down"
+      "icon": "trending_down"
     },
     {
       "title": "Perfect Consistency",
       "description": "Every Winston-Salem caller receives the same professional, accurate, friendly service representing your brand.",
-      "icon": "award"
+      "icon": "workspace_premium"
     }
   ],
   "how_it_works": {

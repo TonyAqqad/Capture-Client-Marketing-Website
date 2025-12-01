@@ -15,7 +15,12 @@
     "title": "Voice AI Agency in Greensboro, NC | Capture Client",
     "meta_description": "Greensboro businesses trust our Voice AI to answer calls 24/7, qualify leads automatically, and book appointments. Never miss another opportunity!",
     "h1": "Voice AI Solutions for Greensboro, North Carolina",
-    "keywords": ["voice ai greensboro", "ai answering service greensboro nc", "automated phone system greensboro", "ai receptionist greensboro"]
+    "keywords": [
+      "voice ai greensboro",
+      "ai answering service greensboro nc",
+      "automated phone system greensboro",
+      "ai receptionist greensboro"
+    ]
   },
   "hero": {
     "headline": "Greensboro's Leading Voice AI Solution",
@@ -30,22 +35,22 @@
     {
       "title": "Round-the-Clock Availability",
       "description": "Your Greensboro business is always open to new opportunities. AI answers calls 24/7, including nights, weekends, and holidays.",
-      "icon": "clock"
+      "icon": "schedule"
     },
     {
       "title": "Smart Lead Qualification",
       "description": "AI asks targeted questions to determine lead quality and intent, so you focus your time on prospects ready to buy.",
-      "icon": "brain"
+      "icon": "psychology"
     },
     {
       "title": "Automated Scheduling",
       "description": "No more phone tag. AI books appointments, consultations, and estimates directly into your calendar automatically.",
-      "icon": "calendar"
+      "icon": "event"
     },
     {
       "title": "Lower Operating Costs",
       "description": "Reduce overhead by eliminating expensive answering services and minimizing receptionist needs while improving service quality.",
-      "icon": "trending-down"
+      "icon": "trending_down"
     },
     {
       "title": "Consistent Professionalism",

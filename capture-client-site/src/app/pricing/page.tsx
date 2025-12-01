@@ -1,159 +1,246 @@
-import Link from "next/link";
-import { getAllPackages } from "@/lib/data";
-import type { Metadata } from "next";
+import type { Metadata } from 'next';
+import PricingPageClient from './PricingPageClient';
 
+// SEO Metadata for Pricing Page
 export const metadata: Metadata = {
-  title: "Pricing & Packages | Voice AI & Marketing Services | Capture Client",
-  description: "Transparent pricing for Voice AI, Google Ads, and Facebook Ads services. From starter to enterprise packages, find the perfect fit for your business.",
+  title: 'Pricing & Packages | AI Voice Agents & Lead Generation | Capture Client',
+  description: 'Transparent pricing for AI voice agents, Google Ads, and Facebook Ads management. Plans from $997/mo. No setup fees, 30-day money-back guarantee. See which package fits your business.',
+  keywords: [
+    'marketing agency pricing',
+    'AI voice agent cost',
+    'lead generation pricing',
+    'Google Ads management cost',
+    'Facebook Ads pricing',
+    'small business marketing packages',
+    'AI receptionist pricing',
+    'marketing automation cost',
+    'voice AI pricing',
+    '24/7 call answering service cost',
+  ],
+  openGraph: {
+    title: 'Pricing & Packages | AI Voice Agents & Lead Generation | Capture Client',
+    description: 'Transparent pricing for AI voice agents and lead generation. Plans from $997/mo with 30-day money-back guarantee. No setup fees.',
+    url: 'https://captureclient.net/pricing',
+    type: 'website',
+    images: [
+      {
+        url: 'https://captureclient.net/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Capture Client Pricing - AI Voice Agents & Lead Generation',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Marketing Agency Pricing | AI Voice Agents from $997/mo',
+    description: 'AI voice agents & lead generation from $997/mo. No setup fees, 30-day guarantee.',
+  },
+  alternates: {
+    canonical: 'https://captureclient.net/pricing',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
-export default async function PricingPage() {
-  const packages = await getAllPackages();
-
+export default function PricingPage() {
   return (
-    <div className="min-h-screen bg-background-light dark:bg-background-dark">
-      <div className="relative py-24 px-8 lg:px-16 bg-gradient-to-br from-background-dark via-background-dark to-primary/10">
-        <div className="container mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Transparent Pricing
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Choose the package that fits your business. No hidden fees. Cancel anytime.
-          </p>
-        </div>
-      </div>
+    <>
+      {/* JSON-LD Structured Data for Pricing */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'ItemList',
+            name: 'Capture Client Pricing Packages',
+            description: 'AI Voice Agents and Lead Generation pricing packages for small businesses',
+            itemListElement: [
+              {
+                '@type': 'Product',
+                position: 1,
+                name: 'Starter Package',
+                description: 'Perfect for small businesses getting started with AI automation. Includes 1 AI Voice Agent, 50 calls/month, basic lead qualification.',
+                brand: {
+                  '@type': 'Brand',
+                  name: 'Capture Client',
+                },
+                offers: {
+                  '@type': 'Offer',
+                  price: '997',
+                  priceCurrency: 'USD',
+                  priceValidUntil: '2025-12-31',
+                  availability: 'https://schema.org/InStock',
+                  url: 'https://captureclient.net/pricing/starter-package',
+                  priceSpecification: {
+                    '@type': 'UnitPriceSpecification',
+                    price: '997',
+                    priceCurrency: 'USD',
+                    unitText: 'MONTH',
+                  },
+                },
+                aggregateRating: {
+                  '@type': 'AggregateRating',
+                  ratingValue: '4.9',
+                  reviewCount: '127',
+                  bestRating: '5',
+                  worstRating: '1',
+                },
+              },
+              {
+                '@type': 'Product',
+                position: 2,
+                name: 'Growth Package',
+                description: 'Multi-channel marketing automation for growing businesses. 2 AI Voice Agents, 200+ calls/month, Google or Facebook Ads management, full CRM integration.',
+                brand: {
+                  '@type': 'Brand',
+                  name: 'Capture Client',
+                },
+                offers: {
+                  '@type': 'Offer',
+                  price: '1997',
+                  priceCurrency: 'USD',
+                  priceValidUntil: '2025-12-31',
+                  availability: 'https://schema.org/InStock',
+                  url: 'https://captureclient.net/pricing/growth-package',
+                  priceSpecification: {
+                    '@type': 'UnitPriceSpecification',
+                    price: '1997',
+                    priceCurrency: 'USD',
+                    unitText: 'MONTH',
+                  },
+                },
+                aggregateRating: {
+                  '@type': 'AggregateRating',
+                  ratingValue: '4.9',
+                  reviewCount: '127',
+                  bestRating: '5',
+                  worstRating: '1',
+                },
+              },
+              {
+                '@type': 'Product',
+                position: 3,
+                name: 'Enterprise Package',
+                description: 'Complete done-for-you lead generation system. Unlimited AI agents, unlimited calls, both Google & Facebook Ads, dedicated account manager, 24/7 priority support.',
+                brand: {
+                  '@type': 'Brand',
+                  name: 'Capture Client',
+                },
+                offers: {
+                  '@type': 'AggregateOffer',
+                  lowPrice: '3997',
+                  priceCurrency: 'USD',
+                  availability: 'https://schema.org/InStock',
+                  url: 'https://captureclient.net/pricing/enterprise-package',
+                  priceSpecification: {
+                    '@type': 'UnitPriceSpecification',
+                    price: '3997',
+                    priceCurrency: 'USD',
+                    unitText: 'MONTH',
+                  },
+                },
+                aggregateRating: {
+                  '@type': 'AggregateRating',
+                  ratingValue: '4.9',
+                  reviewCount: '127',
+                  bestRating: '5',
+                  worstRating: '1',
+                },
+              },
+            ],
+          }),
+        }}
+      />
 
-      <div className="container mx-auto px-8 lg:px-16 py-16">
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {packages.map((pkg, index) => (
-            <div
-              key={pkg.package.package_id}
-              className={`border rounded-lg p-8 bg-white dark:bg-gray-900/50 ${
-                index === 1
-                  ? "border-primary shadow-2xl shadow-primary/20 transform scale-105"
-                  : "border-gray-200 dark:border-gray-800"
-              }`}
-            >
-              {index === 1 && (
-                <div className="bg-primary text-black text-sm font-bold uppercase tracking-wider px-4 py-1 rounded-full inline-block mb-4">
-                  Most Popular
-                </div>
-              )}
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-                {pkg.package.package_name}
-              </h2>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                {pkg.package.tagline}
-              </p>
-              <div className="mb-6">
-                <span className="text-5xl font-bold text-primary">
-                  {pkg.package.price}
-                </span>
-                <span className="text-gray-600 dark:text-gray-400">
-                  /{pkg.package.period}
-                </span>
-              </div>
+      {/* FAQ Schema for Pricing Page */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'Can I switch packages later?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Absolutely! Upgrade or downgrade anytime. Changes take effect at your next billing cycle. Most clients start with Starter, see results, then upgrade to Growth.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Are there any setup fees or hidden costs?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Zero setup fees. The price you see is what you pay. Your only additional cost is ad spend if you choose Growth or Enterprise packages (billed directly by Google/Facebook).',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What if I go over my call limit?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: "We'll notify you before you hit your limit. You can upgrade to the next tier or purchase additional call bundles. Starter: $2/call, Growth: $1.50/call, Enterprise: unlimited.",
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How quickly will I see ROI?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Most clients see their first qualified lead within 24-48 hours of going live. Full ROI typically happens within the first 30-60 days as the AI learns and optimizes.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Do you require a long-term contract?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'No! All packages are month-to-month. Cancel anytime with 30 days notice. We earn your business every month through results, not contracts.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
 
-              {pkg.ideal_for && (
-                <div className="mb-6">
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
-                    {pkg.ideal_for.description}
-                  </p>
-                </div>
-              )}
+      {/* BreadcrumbList Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://captureclient.net',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Pricing',
+                item: 'https://captureclient.net/pricing',
+              },
+            ],
+          }),
+        }}
+      />
 
-              <Link
-                href={`/pricing/${pkg.package.package_slug}`}
-                className={`block text-center px-6 py-3 rounded-full font-bold uppercase tracking-wider text-sm transition-all duration-300 hover:scale-105 mb-6 ${
-                  index === 1
-                    ? "bg-primary text-black glowing-button"
-                    : "bg-white/10 border border-white/20 text-white hover:bg-white/20"
-                }`}
-              >
-                View Details
-              </Link>
-
-              {pkg.features_included && pkg.features_included.features && (
-                <div>
-                  <p className="font-bold text-gray-900 dark:text-white mb-3">
-                    What's Included:
-                  </p>
-                  <ul className="space-y-2">
-                    {pkg.features_included.features.slice(0, 6).map((feature: any, i: number) => (
-                      <li
-                        key={i}
-                        className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400"
-                      >
-                        <span className="material-icons text-primary text-lg flex-shrink-0">
-                          check_circle
-                        </span>
-                        <span>{feature.feature || feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-
-        <div className="mt-16 text-center bg-white dark:bg-gray-900/50 rounded-lg p-12 border border-gray-200 dark:border-gray-800 max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-            Need a Custom Solution?
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-            Have specific requirements? We can create a custom package tailored to your business needs and budget.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="tel:865-346-3339"
-              className="inline-block bg-primary text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm transition-all duration-300 hover:scale-105 glowing-button"
-            >
-              Call Us: (865) 346-3339
-            </a>
-            <Link
-              href="/contact"
-              className="inline-block bg-white/10 border border-white/20 text-white px-8 py-4 rounded-full backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
-            >
-              Contact Us
-            </Link>
-          </div>
-        </div>
-
-        <div className="mt-16 max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center mb-8">
-            Common Questions
-          </h2>
-          <div className="space-y-4">
-            <details className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50">
-              <summary className="font-bold text-gray-900 dark:text-white cursor-pointer">
-                Can I switch packages later?
-              </summary>
-              <p className="mt-4 text-gray-600 dark:text-gray-400">
-                Yes! You can upgrade or downgrade your package at any time. Changes take effect at the start of your next billing cycle.
-              </p>
-            </details>
-
-            <details className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50">
-              <summary className="font-bold text-gray-900 dark:text-white cursor-pointer">
-                Are there any setup fees?
-              </summary>
-              <p className="mt-4 text-gray-600 dark:text-gray-400">
-                No setup fees. The price you see is what you pay each month.
-              </p>
-            </details>
-
-            <details className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50">
-              <summary className="font-bold text-gray-900 dark:text-white cursor-pointer">
-                Do you offer month-to-month billing?
-              </summary>
-              <p className="mt-4 text-gray-600 dark:text-gray-400">
-                Yes, all our packages are month-to-month with no long-term contracts. Cancel anytime with 30 days' notice.
-              </p>
-            </details>
-          </div>
-        </div>
-      </div>
-    </div>
+      <PricingPageClient />
+    </>
   );
 }

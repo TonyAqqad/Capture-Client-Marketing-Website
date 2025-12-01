@@ -1,1 +1,145 @@
-{"page_id":"voice-ai-franklin-tn","page_type":"service-location","service":{"service_id":"voice-ai","service_name":"Voice AI Services","service_slug":"voice-ai"},"location":{"city":"Franklin","state":"Tennessee","state_abbr":"TN","slug":"franklin-tn","nearby_areas":["Brentwood","Nashville","Spring Hill"],"service_area_radius":"25 miles"},"seo":{"page_title":"Voice AI Agency in Franklin, TN | Capture Client","meta_description":"Franklin businesses automate calls with Voice AI. Premium service for Williamson County. Call 865-346-3339!","h1_heading":"Voice AI Services in Franklin, Tennessee","keywords":["voice ai franklin","ai receptionist franklin tn"],"canonical_url":"/voice-ai-franklin-tn"},"hero":{"headline":"Franklin Businesses Thrive with Voice AI","subheadline":"Premium AI Service for Williamson County Growing Market","cta_primary":{"text":"Get Your Free Consultation","action":"tel:865-346-3339","type":"phone"},"hero_image":{"url":"https://images.unsplash.com/photo-1531058240690-006c446962d8?ixlib=rb-4.1.0&w=1920&q=80","alt":"Franklin business owner"}},"local_intro":{"paragraph":"Franklin is one of Tennessees fastest-growing cities. Businesses in historic downtown and Cool Springs face intense competition. Voice AI gives you the edge by answering every call instantly."},"benefits":[{"title":"24/7 for Franklin","description":"AI handles all Franklin customer calls.","icon":"clock"},{"title":"Lead Qualification","description":"AI qualifies Franklin prospects instantly.","icon":"filter"},{"title":"Auto Scheduling","description":"Books appointments for Franklin customers.","icon":"calendar"}],"how_it_works":[{"step":1,"title":"Strategy Call","description":"Discuss Franklin business needs."},{"step":2,"title":"Training","description":"Train AI for Franklin market."},{"step":3,"title":"Launch","description":"Capture Franklin leads immediately."}],"local_use_cases":[{"business_type":"Medical Practices","scenario":"Missing appointment calls","result":"No-shows down 50%, revenue up"},{"business_type":"Professional Services","scenario":"Needed intake automation","result":"30% more consultations booked"}],"service_area":{"heading":"Serving Franklin and Williamson County","areas_list":["Franklin","Brentwood","Nashville","Spring Hill"]},"local_testimonials":[{"quote":"Voice AI transformed our Franklin practice. Revenue is up.","author":"Dr. Smith","business":"Franklin Medical","location":"Franklin, TN"}],"faq":[{"question":"How does Voice AI work for Franklin?","answer":"AI answers calls, qualifies leads, schedules appointments 24/7."},{"question":"Setup time?","answer":"Franklin businesses live within 1-2 weeks."}],"images":{"gallery":[{"url":"https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200","alt":"Franklin business"}]},"cta_section":{"headline":"Capture More Franklin Clients","cta_primary":{"text":"Call 865-346-3339","action":"tel:865-346-3339","type":"phone"}},"related_pages":{"nearby_locations":["voice-ai-brentwood-tn","voice-ai-nashville-tn"],"packages":["starter-package"]}}
+{
+  "page_id": "voice-ai-franklin-tn",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Franklin",
+    "state": "Tennessee",
+    "state_abbr": "TN",
+    "slug": "franklin-tn",
+    "nearby_areas": [
+      "Brentwood",
+      "Nashville",
+      "Spring Hill"
+    ],
+    "service_area_radius": "25 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Franklin, TN | Capture Client",
+    "meta_description": "Franklin businesses automate calls with Voice AI. Premium service for Williamson County. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Franklin, Tennessee",
+    "keywords": [
+      "voice ai franklin",
+      "ai receptionist franklin tn"
+    ],
+    "canonical_url": "/voice-ai-franklin-tn"
+  },
+  "hero": {
+    "headline": "Franklin Businesses Thrive with Voice AI",
+    "subheadline": "Premium AI Service for Williamson County Growing Market",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1531058240690-006c446962d8?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Franklin business owner"
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the Williamson County Chamber of Commerce to businesses in the Cool Springs Business District and McEwen Business Center, Franklin is one of Tennessee's fastest-growing cities. Whether you're in Historic Downtown Franklin on Main Street, along the Carothers Parkway Business Corridor, or in Franklin Industrial Park, Voice AI gives you the competitive edge by answering every call instantly and capturing every opportunity."
+  },
+  "benefits": [
+    {
+      "title": "24/7 for Franklin",
+      "description": "AI handles all Franklin customer calls.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Lead Qualification",
+      "description": "AI qualifies Franklin prospects instantly.",
+      "icon": "filter_alt"
+    },
+    {
+      "title": "Auto Scheduling",
+      "description": "Books appointments for Franklin customers.",
+      "icon": "event"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Strategy Call",
+      "description": "Discuss Franklin business needs."
+    },
+    {
+      "step": 2,
+      "title": "Training",
+      "description": "Train AI for Franklin market."
+    },
+    {
+      "step": 3,
+      "title": "Launch",
+      "description": "Capture Franklin leads immediately."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Medical Practices",
+      "scenario": "Missing appointment calls",
+      "result": "No-shows down 50%, revenue up"
+    },
+    {
+      "business_type": "Professional Services",
+      "scenario": "Needed intake automation",
+      "result": "30% more consultations booked"
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Franklin and Williamson County",
+    "areas_list": [
+      "Franklin",
+      "Brentwood",
+      "Nashville",
+      "Spring Hill"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Voice AI transformed our Franklin practice. Revenue is up.",
+      "author": "Dr. Smith",
+      "business": "Franklin Medical",
+      "location": "Franklin, TN"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Franklin?",
+      "answer": "AI answers calls, qualifies leads, schedules appointments 24/7."
+    },
+    {
+      "question": "Setup time?",
+      "answer": "Franklin businesses live within 1-2 weeks."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200",
+        "alt": "Franklin business"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Capture More Franklin Clients",
+    "cta_primary": {
+      "text": "Call 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-brentwood-tn",
+      "voice-ai-nashville-tn"
+    ],
+    "packages": [
+      "starter-package"
+    ]
+  }
+}

@@ -4,7 +4,14 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/seo/JsonLd";
-import { getDefaultMetadata, generateOrganizationSchema, generateWebSiteSchema } from "@/lib/seo-config";
+import { WebVitals } from "@/components/analytics/WebVitals";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import ScrollDepthTracker from "@/components/analytics/ScrollDepthTracker";
+import {
+  getDefaultMetadata,
+  generateOrganizationSchema,
+  generateWebSiteSchema,
+} from "@/lib/seo-config";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,6 +30,15 @@ const inter = Inter({
 // Enhanced metadata following Next.js 16 and 2025 SEO best practices
 export const metadata: Metadata = getDefaultMetadata();
 
+// Viewport configuration for optimal mobile rendering
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: '#0F172A',
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -35,14 +51,16 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth">
       <head>
-        <link
-          href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet"
-        />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
         {/* Global JSON-LD structured data for E-E-A-T and entity recognition */}
         <JsonLd schema={[organizationSchema, websiteSchema]} />
       </head>
-      <body className={`${poppins.variable} ${inter.variable} font-body bg-background text-foreground antialiased`}>
+      <body
+        className={`${poppins.variable} ${inter.variable} font-body bg-background text-foreground antialiased`}
+      >
+        <GoogleAnalytics />
+        <WebVitals />
+        <ScrollDepthTracker />
         <Header />
         <main>{children}</main>
         <Footer />

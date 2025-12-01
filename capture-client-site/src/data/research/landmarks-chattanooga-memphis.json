@@ -1,0 +1,292 @@
+{
+  "research_date": "2025-11-30",
+  "methodology": "Google Maps research via Bright Data Browser for business centers, industrial parks, chambers of commerce, business districts, and office parks",
+  "chattanooga": {
+    "landmarks": [
+      {
+        "name": "Business Development Center",
+        "type": "business_center",
+        "area": "Cherokee Blvd",
+        "address": "100 Cherokee Blvd.",
+        "rating": "4.2",
+        "notes": "Hamilton County business incubator and development center"
+      },
+      {
+        "name": "Shallowford Business Center",
+        "type": "business_center",
+        "area": "Shallowford Road",
+        "address": "627 Shallowford Rd",
+        "notes": "Professional business management center"
+      },
+      {
+        "name": "Executive Business Park",
+        "type": "business_park",
+        "area": "Lee Highway",
+        "address": "6025 Lee Hwy",
+        "rating": "4.1",
+        "notes": "Business center with ample parking"
+      },
+      {
+        "name": "University Tower",
+        "type": "business_center",
+        "area": "Downtown",
+        "address": "651 E 4th St",
+        "rating": "4.2",
+        "notes": "Conveniently located with free guest parking"
+      },
+      {
+        "name": "UBS Building",
+        "type": "business_center",
+        "area": "Downtown",
+        "address": "100 W M.L.K. Blvd",
+        "rating": "4.4",
+        "notes": "Professional building with good security"
+      },
+      {
+        "name": "Eastgate Town Center",
+        "type": "business_center",
+        "area": "Brainerd Road",
+        "address": "5600 Brainerd Rd",
+        "rating": "4.2",
+        "notes": "Former mall converted to business center"
+      },
+      {
+        "name": "Northgate Park",
+        "type": "business_park",
+        "area": "North Chattanooga",
+        "address": "2173 Northgate Park",
+        "rating": "4.6",
+        "notes": "Clean business park with lots of parking"
+      },
+      {
+        "name": "Shallowford Business Park",
+        "type": "business_park",
+        "area": "Shallowford Road",
+        "address": "5959 Shallowford Rd",
+        "rating": "4.4",
+        "notes": "Safe and clean business park"
+      },
+      {
+        "name": "Chattanooga Area Chamber of Commerce",
+        "type": "chamber",
+        "area": "Downtown",
+        "address": "811 Broad St #200",
+        "rating": "4.6",
+        "phone": "(423) 756-2121",
+        "website": "chattanoogachamber.com",
+        "notes": "Main chamber serving Chattanooga business community"
+      },
+      {
+        "name": "INCubator at Hamilton County Business Development Center",
+        "type": "incubator",
+        "area": "Cherokee Blvd",
+        "address": "100 Cherokee Blvd. Suite 100",
+        "rating": "3.7",
+        "notes": "Startup incubator and entrepreneur launchpad"
+      },
+      {
+        "name": "River City Company",
+        "type": "economic_development",
+        "area": "Downtown",
+        "address": "Miller Plaza, 850 Market St 2nd floor",
+        "rating": "5.0",
+        "notes": "Non-profit focused on downtown development"
+      },
+      {
+        "name": "Republic Centre",
+        "type": "corporate_campus",
+        "area": "Downtown",
+        "address": "633 Chestnut St",
+        "rating": "4.6",
+        "notes": "Major corporate campus downtown"
+      },
+      {
+        "name": "James Building",
+        "type": "business_center",
+        "area": "Downtown",
+        "address": "735 Broad St",
+        "rating": "4.5",
+        "notes": "Elegant and professional business center"
+      },
+      {
+        "name": "TSBDC Chattanooga",
+        "type": "business_development",
+        "area": "Cherokee Blvd",
+        "address": "100 Cherokee Blvd. #202",
+        "rating": "5.0",
+        "phone": "(423) 756-8668",
+        "website": "tsbdc.org/chattanooga",
+        "notes": "Tennessee Small Business Development Center"
+      }
+    ],
+    "business_districts": [
+      "Downtown Chattanooga",
+      "Southside District",
+      "Cherokee Blvd Business Corridor",
+      "Shallowford Road Commercial District",
+      "Lee Highway Business Corridor"
+    ]
+  },
+  "memphis": {
+    "landmarks": [
+      {
+        "name": "Memphis Depot Industrial Park",
+        "type": "industrial_park",
+        "area": "Dunn Ave",
+        "address": "Dunn Ave",
+        "rating": "4.0",
+        "notes": "Major industrial park in Memphis"
+      },
+      {
+        "name": "Holmes Road Industrial Park",
+        "type": "industrial_park",
+        "area": "East Memphis",
+        "address": "5900 E Holmes Rd",
+        "rating": "4.1",
+        "phone": "(901) 260-7486",
+        "notes": "Well-maintained industrial park"
+      },
+      {
+        "name": "Rivergate Industrial Park",
+        "type": "industrial_park",
+        "area": "Rivergate",
+        "address": "490 Rivergate Dr",
+        "rating": "5.0",
+        "notes": "Open 24 hours, manufacturing hub"
+      },
+      {
+        "name": "Gateway Industrial Park",
+        "type": "industrial_park",
+        "area": "North Memphis",
+        "address": "3202 Gateway Pl",
+        "rating": "3.0",
+        "notes": "Industrial park in north Memphis"
+      },
+      {
+        "name": "Belz Industrial Park",
+        "type": "industrial_park",
+        "area": "Latham",
+        "address": "2000 Latham St",
+        "rating": "3.8",
+        "notes": "Open 24 hours"
+      },
+      {
+        "name": "Shelby Oaks Corporate Park",
+        "type": "business_park",
+        "area": "Bartlett",
+        "address": "1657 Shelby Oaks Dr",
+        "rating": "4.3",
+        "notes": "Outstanding corporate park"
+      },
+      {
+        "name": "Greater Memphis Chamber",
+        "type": "chamber",
+        "area": "Downtown",
+        "address": "100 Peabody Pl #1000",
+        "rating": "4.4",
+        "phone": "(901) 543-3500",
+        "website": "memphischamber.com",
+        "notes": "Main chamber serving Memphis business community"
+      },
+      {
+        "name": "City of Memphis Business Development Center",
+        "type": "business_development",
+        "area": "Beale Street",
+        "address": "555 Beale St",
+        "rating": "5.0",
+        "phone": "(901) 526-9300",
+        "notes": "City government business development office"
+      },
+      {
+        "name": "Bartlett Towne Center",
+        "type": "business_center",
+        "area": "Bartlett",
+        "address": "5985 Stage Rd",
+        "rating": "4.3",
+        "notes": "Safe and clean with easy access parking"
+      },
+      {
+        "name": "Center City Shopping Center",
+        "type": "business_center",
+        "area": "Midtown",
+        "address": "Center City area",
+        "rating": "4.2",
+        "notes": "Plenty of parking, multiple businesses"
+      },
+      {
+        "name": "One Commerce Square",
+        "type": "business_center",
+        "area": "Downtown",
+        "address": "40 S Main St",
+        "rating": "4.3",
+        "phone": "(901) 683-0808",
+        "notes": "Open 24 hours, downtown business hub"
+      },
+      {
+        "name": "Broad Avenue Arts District",
+        "type": "arts_district",
+        "area": "Binghampton",
+        "address": "2542 Broad Ave",
+        "rating": "4.6",
+        "website": "broadavearts.com",
+        "notes": "Creative district with businesses and galleries"
+      },
+      {
+        "name": "Park Place Centre",
+        "type": "business_center",
+        "area": "East Memphis",
+        "address": "Park Place area",
+        "rating": "4.3",
+        "notes": "Great shops and restaurants"
+      },
+      {
+        "name": "Millennium Business Center",
+        "type": "business_center",
+        "area": "Getwell Road",
+        "address": "3675 New Getwell Rd #7",
+        "rating": "5.0",
+        "phone": "(901) 362-1116",
+        "website": "amsynergyproperties.com",
+        "notes": "Helpful staff, professional center"
+      },
+      {
+        "name": "Thousand Oaks Business Center",
+        "type": "business_center",
+        "area": "Thousand Oaks",
+        "address": "2650 Thousand Oaks Blvd",
+        "rating": "4.5",
+        "phone": "(901) 362-0707",
+        "notes": "Well-located business center"
+      }
+    ],
+    "business_districts": [
+      "Downtown Memphis",
+      "Beale Street Entertainment District",
+      "Broad Avenue Arts District",
+      "East Memphis Commercial Corridor",
+      "Bartlett Business District",
+      "Germantown Business District"
+    ],
+    "suburban_chambers": [
+      {
+        "name": "Germantown Area Chamber of Commerce",
+        "rating": "5.0",
+        "notes": "Serving Germantown business community"
+      },
+      {
+        "name": "Bartlett Area Chamber of Commerce",
+        "rating": "4.9",
+        "notes": "Serving Bartlett business community"
+      },
+      {
+        "name": "Millington Chamber of Commerce",
+        "rating": "5.0",
+        "notes": "Serving Millington business community"
+      }
+    ]
+  },
+  "usage_recommendations": {
+    "chattanooga": "Use these landmarks in location page content to demonstrate local knowledge. Reference Cherokee Blvd business corridor, Shallowford area, and downtown Chattanooga business district. Mention proximity to Chamber of Commerce and business development resources.",
+    "memphis": "Reference specific business districts like Broad Avenue Arts District, Beale Street area, and East Memphis commercial corridor. Mention proximity to Greater Memphis Chamber and suburban chambers in Germantown, Bartlett, and Millington. Use industrial park names for manufacturing and logistics clients."
+  }
+}

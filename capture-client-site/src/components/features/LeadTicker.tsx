@@ -67,14 +67,19 @@ function generateRandomLead(): Lead {
 // ============================================================================
 
 export default function LeadTicker() {
-  const [leads, setLeads] = useState<Lead[]>([
-    generateRandomLead(),
-    generateRandomLead(),
-    generateRandomLead(),
-  ]);
+  const [isClient, setIsClient] = useState(false);
+  const [leads, setLeads] = useState<Lead[]>([]);
+
+  // Initialize leads on client-side only to prevent hydration mismatch
+  useEffect(() => {
+    setIsClient(true);
+    setLeads([generateRandomLead(), generateRandomLead(), generateRandomLead()]);
+  }, []);
 
   // Add new lead every 8-15 seconds
   useEffect(() => {
+    if (!isClient) return;
+
     const addLead = () => {
       const newLead = generateRandomLead();
       setLeads((prev) => [newLead, ...prev.slice(0, 4)]); // Keep max 5 leads
@@ -82,7 +87,7 @@ export default function LeadTicker() {
 
     const interval = setInterval(addLead, 8000 + Math.random() * 7000);
     return () => clearInterval(interval);
-  }, []);
+  }, [isClient]);
 
   return (
     <section className="section bg-background-dark relative overflow-hidden">
@@ -150,9 +155,7 @@ export default function LeadTicker() {
                     className="absolute inset-0 rounded-full bg-accent"
                   />
                   <div className="relative w-10 h-10 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center">
-                    <span className="material-icons text-accent text-lg">
-                      person_add
-                    </span>
+                    <span className="material-icons text-accent text-lg">person_add</span>
                   </div>
                 </div>
 
@@ -161,23 +164,17 @@ export default function LeadTicker() {
                   <p className="text-foreground font-semibold truncate">
                     New lead from <span className="text-accent">{lead.city}</span>
                   </p>
-                  <p className="text-foreground-muted text-sm truncate">
-                    {lead.service}
-                  </p>
+                  <p className="text-foreground-muted text-sm truncate">{lead.service}</p>
                 </div>
 
                 {/* Time */}
                 <div className="flex-shrink-0 text-right">
-                  <p className="text-foreground-muted text-xs font-mono">
-                    {lead.timeAgo}
-                  </p>
+                  <p className="text-foreground-muted text-xs font-mono">{lead.timeAgo}</p>
                 </div>
 
                 {/* Checkmark icon */}
                 <div className="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center">
-                  <span className="material-icons text-accent text-sm">
-                    check
-                  </span>
+                  <span className="material-icons text-accent text-sm">check</span>
                 </div>
               </motion.div>
             ))}

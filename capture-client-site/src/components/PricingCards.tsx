@@ -27,7 +27,7 @@ const plans: PricingPlan[] = [
       'Analytics dashboard',
     ],
     ctaText: 'Get Started',
-    ctaLink: '#contact',
+    ctaLink: '/pricing/starter-package',
   },
   {
     name: 'Growth',
@@ -42,7 +42,7 @@ const plans: PricingPlan[] = [
     ],
     isPopular: true,
     ctaText: 'Get Started',
-    ctaLink: '#contact',
+    ctaLink: '/pricing/growth-package',
   },
   {
     name: 'Enterprise',
@@ -57,7 +57,7 @@ const plans: PricingPlan[] = [
       'White-label options',
     ],
     ctaText: 'Contact Sales',
-    ctaLink: '#contact',
+    ctaLink: '/pricing/enterprise-package',
   },
 ];
 
@@ -66,7 +66,7 @@ export default function PricingCards() {
   const isInView = useInView(containerRef, { threshold: 0.2 });
 
   return (
-    <div ref={containerRef} className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <div ref={containerRef} className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full overflow-hidden">
       {plans.map((plan, index) => (
         <PricingCard key={plan.name} plan={plan} index={index} isInView={isInView} />
       ))}
@@ -148,7 +148,7 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
             initial={{ opacity: 0, y: -10 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -10 }}
             transition={{ delay: 0.5 }}
-            className="absolute -top-4 left-1/2 -translate-x-1/2 z-10"
+            className="absolute -top-4 left-1/2 -translate-x-1/2 z-10 w-max max-w-[90%]"
           >
             <motion.div
               animate={{
@@ -159,7 +159,7 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
                 repeat: Infinity,
                 repeatType: 'reverse',
               }}
-              className="bg-gradient-to-r from-accent via-primary to-accent bg-[length:200%_100%] text-background-dark px-4 py-1 rounded-full text-sm font-bold"
+              className="bg-gradient-to-r from-accent via-primary to-accent bg-[length:200%_100%] text-background-dark px-4 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg whitespace-nowrap"
             >
               <motion.div
                 animate={{
@@ -197,8 +197,8 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
 
         <div className="relative z-10">
           {/* Header */}
-          <div className="mb-6">
-            <h3 className="text-2xl font-heading font-bold text-foreground mb-2">
+          <div className="mb-6 sm:mb-8">
+            <h3 className="text-xl sm:text-2xl font-heading font-bold text-foreground mb-3">
               {plan.name}
             </h3>
             <div className="flex items-baseline gap-2">
@@ -206,30 +206,30 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
                 initial={{ opacity: 0, scale: 0.5 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.5 }}
                 transition={{ delay: index * 0.1 + 0.3, duration: 0.5 }}
-                className={`text-5xl font-bold ${
+                className={`text-3xl sm:text-4xl lg:text-5xl font-bold ${
                   plan.isPopular ? 'text-accent' : 'text-foreground'
                 }`}
               >
                 {plan.price}
               </motion.span>
               {plan.price !== 'Custom' && (
-                <span className="text-foreground-muted">/month</span>
+                <span className="text-foreground-muted text-sm sm:text-base">/month</span>
               )}
             </div>
             {plan.subtitle && (
-              <p className="text-foreground-muted text-sm mt-1">{plan.subtitle}</p>
+              <p className="text-foreground-muted text-sm sm:text-base mt-2">{plan.subtitle}</p>
             )}
           </div>
 
           {/* Features */}
-          <ul className="space-y-3 mb-8">
+          <ul className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
             {plan.features.map((feature, i) => (
               <motion.li
                 key={i}
                 initial={{ opacity: 0, x: -20 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                 transition={{ delay: index * 0.1 + 0.4 + i * 0.05, duration: 0.4 }}
-                className="flex items-start gap-2"
+                className="flex items-start gap-3 py-1"
               >
                 <motion.span
                   animate={
@@ -244,12 +244,12 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
                     delay: i * 0.1,
                     duration: 0.5,
                   }}
-                  className="material-icons text-accent text-xl mt-0.5"
+                  className="material-icons text-accent text-lg sm:text-xl mt-0.5 flex-shrink-0"
                 >
                   check
                 </motion.span>
                 <span
-                  className={plan.isPopular ? 'text-foreground' : 'text-foreground-muted'}
+                  className={`text-sm sm:text-base leading-relaxed ${plan.isPopular ? 'text-foreground' : 'text-foreground-muted'}`}
                 >
                   {feature}
                 </span>
@@ -260,7 +260,7 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
           {/* CTA Button */}
           <Link
             href={plan.ctaLink}
-            className={`block w-full text-center ${
+            className={`block w-full text-center py-3 sm:py-4 min-h-[56px] flex items-center justify-center text-base sm:text-lg font-bold rounded-xl touch-manipulation ${
               plan.isPopular ? 'btn-primary' : 'btn-secondary'
             }`}
           >

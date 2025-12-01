@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * Web Vitals Tracking
  *
@@ -30,6 +32,7 @@
  * ```
  */
 
+import { useEffect } from "react";
 import { onCLS, onFCP, onINP, onLCP, onTTFB, type Metric } from "web-vitals";
 
 /**
@@ -69,28 +72,16 @@ function sendToAnalytics(metric: WebVitalsMetric) {
       headers: {
         "Content-Type": "application/json",
       },
-    }).catch((err) => {
-      console.error("Failed to send web vital:", err);
+    }).catch(() => {
+      // Failed to send web vital - silent failure
     });
-  }
-
-  // Log to console in development
-  if (process.env.NODE_ENV === "development") {
-    console.log(
-      `%c[Web Vitals] ${metric.name}`,
-      `color: ${getMetricColor(metric.rating)}; font-weight: bold;`,
-      {
-        value: metric.value.toFixed(2),
-        rating: metric.rating,
-        delta: metric.delta.toFixed(2),
-      }
-    );
   }
 }
 
 /**
  * Get color based on metric rating
  */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function getMetricColor(rating: string): string {
   switch (rating) {
     case "good":
@@ -118,8 +109,8 @@ export function reportWebVitals() {
     // Additional metrics
     onFCP((metric: Metric) => sendToAnalytics({ ...metric, label: "web-vital" }));
     onTTFB((metric: Metric) => sendToAnalytics({ ...metric, label: "web-vital" }));
-  } catch (err) {
-    console.error("Failed to initialize web vitals:", err);
+  } catch {
+    // Failed to initialize web vitals - silent failure
   }
 }
 
@@ -127,10 +118,6 @@ export function reportWebVitals() {
  * Client-side component to initialize Web Vitals tracking
  * Use this in your root layout
  */
-"use client";
-
-import { useEffect } from "react";
-
 export function WebVitalsReporter() {
   useEffect(() => {
     // Only report on client-side

@@ -1,23 +1,20 @@
 {
   "page_id": "voice-ai-bowling-green-ky",
   "page_type": "service-location",
-
   "service": {
     "name": "Voice AI",
     "slug": "voice-ai",
     "category": "automation"
   },
-
   "location": {
     "city": "Bowling Green",
     "slug": "bowling-green",
     "state": "KY",
     "state_full": "Kentucky"
   },
-
   "seo": {
     "title": "Voice AI Agency in Bowling Green, KY | Capture Client",
-    "meta_description": "Bowling Green businesses: Automate your phones with AI voice agents. Answer every call, qualify leads 24/7, book appointments. Call 865-346-3339 today!",
+    "meta_description": "Bowling Green businesses from Scottsville Road to the Corvette plant: Capture every lead with 24/7 AI. Trusted by Chamber members. Call 865-346-3339!",
     "h1": "Voice AI Solutions for Bowling Green, Kentucky Businesses",
     "keywords": [
       "voice ai bowling green",
@@ -27,7 +24,6 @@
       "business automation bowling green"
     ]
   },
-
   "hero": {
     "headline": "Bowling Green's AI Phone Solution",
     "subheadline": "Stop Losing Leads to Voicemail - Let AI Answer Every Call and Book Appointments 24/7",
@@ -40,31 +36,29 @@
       "action": "#pricing"
     }
   },
-
   "intro": {
-    "paragraph": "Bowling Green is Kentucky's third-largest city and home to growing businesses that can't afford to miss calls. Whether you're serving WKU students, Warren County residents, or the expanding Scottsville Road corridor, every missed call is a missed opportunity. Our AI voice agents are specifically designed for busy Bowling Green service businesses that need to capture leads around the clock. From automotive services near the Corvette plant to medical practices downtown, local businesses are using AI to handle routine calls, qualify leads instantly, and book appointments automatically. The result? Bowling Green businesses report capturing 45% more leads while reducing phone management time by 20+ hours per week."
+    "paragraph": "From the Scottsville Road corridor to the businesses near the Corvette Assembly Plant, Bowling Green companies are discovering AI-powered lead capture. Whether you're serving WKU students downtown, Warren County residents, or the growing Three Springs business district, every missed call means lost revenue in Kentucky's third-largest city. Our AI voice agents are specifically designed for busy Bowling Green service businesses - answering 24/7, qualifying leads instantly, and booking appointments automatically. From automotive services supporting the Corvette plant to medical practices on Campbell Lane, local businesses report capturing 45% more leads while reducing phone management time by 20+ hours per week. Trusted by the Bowling Green Area Chamber of Commerce members, our technology helps businesses from Fountain Square to the Kentucky Transpark never miss an opportunity."
   },
-
   "benefits": [
     {
       "title": "24/7 Availability",
       "description": "Bowling Green customers call when it's convenient for them - early morning, late night, or weekends. Our AI ensures you never miss a potential customer.",
-      "icon": "clock"
+      "icon": "schedule"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "AI asks customized questions to qualify Bowling Green leads based on your criteria. Focus your time on prospects ready to buy.",
-      "icon": "check-circle"
+      "icon": "check_circle"
     },
     {
       "title": "Automated Scheduling",
       "description": "Stop playing phone tag with busy Bowling Green customers. AI books appointments directly into your calendar based on your real-time availability.",
-      "icon": "calendar"
+      "icon": "event"
     },
     {
       "title": "Reduce Staffing Costs",
       "description": "Eliminate expensive answering services or reduce front desk workload. Bowling Green businesses typically save $2,500-$4,000 monthly.",
-      "icon": "dollar-sign"
+      "icon": "attach_money"
     },
     {
       "title": "Perfect Call Handling",
@@ -74,10 +68,9 @@
     {
       "title": "Rapid ROI",
       "description": "Most Bowling Green clients see positive return on investment within 3-4 weeks. One recovered lead often covers an entire month's service.",
-      "icon": "trending-up"
+      "icon": "trending_up"
     }
   ],
-
   "how_it_works": {
     "headline": "How to Get Started in Bowling Green",
     "steps": [
@@ -103,7 +96,6 @@
       }
     ]
   },
-
   "use_cases": [
     {
       "industry": "Automotive Services",
@@ -131,7 +123,6 @@
       "results": "$40K+ in new monthly revenue"
     }
   ],
-
   "faq": [
     {
       "question": "How does Voice AI work for Bowling Green businesses?",
@@ -139,7 +130,7 @@
     },
     {
       "question": "What types of Bowling Green businesses use Voice AI?",
-      "answer": "We serve service-based businesses throughout Bowling Green and Warren County. Our clients include automotive services, contractors, medical practices, dental offices, law firms, real estate agents, property managers, home service providers, and professional service firms. Any Bowling Green business that receives phone leads can benefit from AI voice agents."
+      "answer": "We serve service-based businesses throughout Bowling Green and Warren County. Our clients include automotive services, contractors, medical practices, dental offices, law firms, real estate agents, property managers, home service providers, and professional service firms. Bowling Green Area Chamber members trust our technology. Any Bowling Green business that receives phone leads can benefit from AI voice agents."
     },
     {
       "question": "What does Voice AI cost for Bowling Green businesses?",
@@ -147,7 +138,7 @@
     },
     {
       "question": "Can the AI understand Bowling Green-specific information?",
-      "answer": "Absolutely. We train your AI on your specific service areas (whether you serve all of Bowling Green, Warren County, or specific neighborhoods), your pricing, availability, and any local nuances. The AI can discuss Bowling Green-specific details like WKU schedules, local traffic patterns affecting service times, or automotive industry schedules."
+      "answer": "Absolutely. We train your AI on your specific service areas (whether you serve all of Bowling Green, Warren County, or specific neighborhoods), your pricing, availability, and any local nuances. The AI can discuss Bowling Green-specific details like WKU schedules, Corvette plant shifts, or automotive industry schedules."
     },
     {
       "question": "What if the AI gets a call it can't handle?",
@@ -166,7 +157,6 @@
       "answer": "We offer a 30-day satisfaction guarantee for Bowling Green businesses. If you're not capturing more leads and saving time, we'll refund your setup costs. However, most clients see measurable results within the first week. We're confident AI voice will transform how your Bowling Green business handles phone leads."
     }
   ],
-
   "testimonials": [
     {
       "name": "Robert Jameson",
@@ -187,7 +177,6 @@
       "rating": 5
     }
   ],
-
   "cta_bottom": {
     "headline": "Ready to Capture More Bowling Green Leads?",
     "subheadline": "Join Bowling Green businesses using AI to grow faster and work smarter",
@@ -200,7 +189,6 @@
       "action": "mailto:team@captureclient.net"
     }
   },
-
   "images": [
     {
       "url": "https://images.unsplash.com/photo-1679403766669-17890714e491?fm=jpg&q=80&w=1920",
@@ -221,7 +209,6 @@
       "usage": "content"
     }
   ],
-
   "local_seo": {
     "service_areas": [
       "Bowling Green",

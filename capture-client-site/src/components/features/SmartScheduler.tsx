@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { presets } from "@/lib/simulator-animations";
+import { trackFormStart, trackFormSubmission } from "@/lib/analytics";
 
 // ============================================================================
 // TYPE DEFINITIONS
@@ -58,15 +59,59 @@ export default function SmartScheduler() {
     phone: "",
     service: SERVICES[0],
   });
+  const [formStarted, setFormStarted] = useState(false);
+
+  // Track form start on first interaction
+  const handleFormStart = () => {
+    if (!formStarted) {
+      trackFormStart("smart_scheduler");
+      setFormStarted(true);
+    }
+  };
 
   const handleTimeSelect = (time: string) => {
+    handleFormStart();
     setSelectedTime(time);
   };
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if (step === "time" && selectedTime) {
+      // Track step progression
+      trackFormSubmission("smart_scheduler_step1", {
+        step: 1,
+        selected_time: selectedTime,
+      });
       setStep("info");
     } else if (step === "info") {
+      // Submit to server-side API route (avoids CORS issues)
+      // Include service selection for better lead context in GoHighLevel
+      try {
+        await fetch("/api/submit-lead", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            company: "",
+            source: "smart_scheduler",
+            service: formData.service,
+            message: `Appointment request for ${selectedTime}`,
+          }),
+        });
+      } catch {
+        // Graceful degradation
+      }
+
+      // Track successful form submission
+      trackFormSubmission("smart_scheduler_complete", {
+        step: 2,
+        service: formData.service,
+        selected_time: selectedTime,
+      });
+
       setStep("confirm");
     }
   };
@@ -81,8 +126,7 @@ export default function SmartScheduler() {
 
   const canProceed = () => {
     if (step === "time") return selectedTime !== null;
-    if (step === "info")
-      return formData.name && formData.email && formData.phone;
+    if (step === "info") return formData.name && formData.email && formData.phone;
     return false;
   };
 
@@ -174,12 +218,12 @@ export default function SmartScheduler() {
                         key={slot.time}
                         disabled={!slot.available}
                         onClick={() => handleTimeSelect(slot.time)}
-                        className={`p-4 rounded-xl border-2 font-semibold transition-all duration-300 ${
+                        className={`p-4 rounded-xl border-2 font-semibold transition-all duration-300 min-h-[56px] flex items-center justify-center ${
                           !slot.available
                             ? "bg-surface border-surface-border text-foreground-muted cursor-not-allowed opacity-50"
                             : selectedTime === slot.time
-                            ? "bg-accent/10 border-accent text-accent"
-                            : "bg-surface border-surface-border text-foreground hover:border-accent/50"
+                              ? "bg-accent/10 border-accent text-accent"
+                              : "bg-surface border-surface-border text-foreground hover:border-accent/50"
                         }`}
                       >
                         {slot.time}
@@ -208,11 +252,9 @@ export default function SmartScheduler() {
                       <input
                         type="text"
                         value={formData.name}
-                        onChange={(e) =>
-                          setFormData({ ...formData, name: e.target.value })
-                        }
+                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="John Smith"
-                        className="w-full px-4 py-3 rounded-xl bg-background border border-surface-border text-foreground placeholder-foreground-muted focus:outline-none focus:border-accent transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-background border border-surface-border text-foreground placeholder-foreground-muted focus:outline-none focus:border-accent transition-colors min-h-[48px] text-base"
                       />
                     </div>
                     <div>
@@ -222,11 +264,10 @@ export default function SmartScheduler() {
                       <input
                         type="email"
                         value={formData.email}
-                        onChange={(e) =>
-                          setFormData({ ...formData, email: e.target.value })
-                        }
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="john@example.com"
-                        className="w-full px-4 py-3 rounded-xl bg-background border border-surface-border text-foreground placeholder-foreground-muted focus:outline-none focus:border-accent transition-colors"
+                        inputMode="email"
+                        className="w-full px-4 py-3 rounded-xl bg-background border border-surface-border text-foreground placeholder-foreground-muted focus:outline-none focus:border-accent transition-colors min-h-[48px] text-base"
                       />
                     </div>
                     <div>
@@ -236,11 +277,10 @@ export default function SmartScheduler() {
                       <input
                         type="tel"
                         value={formData.phone}
-                        onChange={(e) =>
-                          setFormData({ ...formData, phone: e.target.value })
-                        }
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="(555) 123-4567"
-                        className="w-full px-4 py-3 rounded-xl bg-background border border-surface-border text-foreground placeholder-foreground-muted focus:outline-none focus:border-accent transition-colors"
+                        inputMode="tel"
+                        className="w-full px-4 py-3 rounded-xl bg-background border border-surface-border text-foreground placeholder-foreground-muted focus:outline-none focus:border-accent transition-colors min-h-[48px] text-base"
                       />
                     </div>
                     <div>
@@ -249,13 +289,11 @@ export default function SmartScheduler() {
                       </label>
                       <select
                         value={formData.service}
-                        onChange={(e) =>
-                          setFormData({ ...formData, service: e.target.value })
-                        }
-                        className="w-full px-4 py-3 rounded-xl bg-background border border-surface-border text-foreground focus:outline-none focus:border-accent transition-colors"
+                        onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                        className="w-full px-4 py-3 rounded-xl bg-white border border-surface-border text-black focus:outline-none focus:border-accent transition-colors min-h-[48px] text-base"
                       >
                         {SERVICES.map((service) => (
-                          <option key={service} value={service}>
+                          <option key={service} value={service} className="text-black bg-white">
                             {service}
                           </option>
                         ))}
@@ -280,9 +318,7 @@ export default function SmartScheduler() {
                       transition={{ type: "spring", stiffness: 200, damping: 15 }}
                       className="w-20 h-20 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center mx-auto mb-6"
                     >
-                      <span className="material-icons text-accent text-5xl">
-                        event_available
-                      </span>
+                      <span className="material-icons text-accent text-5xl">event_available</span>
                     </motion.div>
                     <h3 className="text-3xl font-heading font-bold text-foreground mb-3">
                       You're All Set!
@@ -385,15 +421,11 @@ function ProgressStep({ number, label, active, completed }: ProgressStepProps) {
           completed
             ? "bg-accent border-accent text-white"
             : active
-            ? "bg-accent/10 border-accent text-accent"
-            : "bg-surface border-surface-border text-foreground-muted"
+              ? "bg-accent/10 border-accent text-accent"
+              : "bg-surface border-surface-border text-foreground-muted"
         }`}
       >
-        {completed ? (
-          <span className="material-icons text-lg">check</span>
-        ) : (
-          number
-        )}
+        {completed ? <span className="material-icons text-lg">check</span> : number}
       </motion.div>
       <p
         className={`text-xs font-medium transition-colors duration-300 ${

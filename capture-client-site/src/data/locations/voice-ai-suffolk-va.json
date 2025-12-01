@@ -11,14 +11,26 @@
     "state": "VA",
     "state_full": "Virginia",
     "slug": "suffolk-va",
-    "nearby_areas": ["Chesapeake", "Portsmouth", "Smithfield", "Isle of Wight"],
+    "nearby_areas": [
+      "Chesapeake",
+      "Portsmouth",
+      "Smithfield",
+      "Isle of Wight"
+    ],
     "service_area_radius": "30 miles"
   },
   "seo": {
     "page_title": "Voice AI Agency in Suffolk, VA | Capture Client",
     "meta_description": "Voice AI for Suffolk businesses. Never miss calls, automate lead qualification, book appointments 24/7. Serving Hampton Roads. Call 865-346-3339!",
     "h1_heading": "Voice AI Services in Suffolk, Virginia",
-    "keywords": ["voice ai agency suffolk va", "ai voice agents suffolk", "ai receptionist suffolk virginia", "automated call answering suffolk", "lead qualification ai suffolk", "voice ai hampton roads"],
+    "keywords": [
+      "voice ai agency suffolk va",
+      "ai voice agents suffolk",
+      "ai receptionist suffolk virginia",
+      "automated call answering suffolk",
+      "lead qualification ai suffolk",
+      "voice ai hampton roads"
+    ],
     "canonical_url": "/voice-ai-suffolk-va",
     "local_business_schema": {
       "type": "LocalBusiness",
@@ -55,27 +67,27 @@
     {
       "title": "24/7 Lead Capture for Suffolk",
       "description": "Suffolk spans 400+ square miles. Your AI agent captures leads from downtown businesses to rural customers calling at any hour of the day.",
-      "icon": "clock"
+      "icon": "schedule"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "Stop wasting time driving to unqualified prospects. Our AI pre-qualifies Suffolk leads before scheduling appointments or estimates.",
-      "icon": "filter"
+      "icon": "filter_alt"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "Let AI schedule appointments directly into your calendar while you focus on serving Suffolk's diverse customer base.",
-      "icon": "calendar"
+      "icon": "event"
     },
     {
       "title": "Cost-Effective Business Growth",
       "description": "Save thousands compared to hiring staff. Perfect for Suffolk businesses looking to grow without overhead expansion.",
-      "icon": "dollar-sign"
+      "icon": "attach_money"
     },
     {
       "title": "Professional Call Handling",
       "description": "Consistent, friendly service that represents your Suffolk business perfectly across all customer interactions.",
-      "icon": "award"
+      "icon": "workspace_premium"
     }
   ],
   "how_it_works": [
@@ -115,7 +127,18 @@
   "service_area": {
     "heading": "Serving Suffolk and Hampton Roads",
     "description": "We provide Voice AI services throughout Suffolk's 400+ square miles and the greater Hampton Roads area.",
-    "areas_list": ["Suffolk", "Harbour View", "North Suffolk", "Chesapeake", "Portsmouth", "Smithfield", "Isle of Wight County", "Hampton Roads", "Virginia Beach", "Norfolk"]
+    "areas_list": [
+      "Suffolk",
+      "Harbour View",
+      "North Suffolk",
+      "Chesapeake",
+      "Portsmouth",
+      "Smithfield",
+      "Isle of Wight County",
+      "Hampton Roads",
+      "Virginia Beach",
+      "Norfolk"
+    ]
   },
   "local_testimonials": [
     {
@@ -180,8 +203,19 @@
     "urgency_text": "Limited spots available for Suffolk businesses this month"
   },
   "related_pages": {
-    "other_services_in_location": ["google-ads", "facebook-ads"],
-    "nearby_locations": ["chesapeake", "portsmouth", "norfolk"],
-    "packages": ["starter-package", "growth-package", "enterprise-package"]
+    "other_services_in_location": [
+      "google-ads",
+      "facebook-ads"
+    ],
+    "nearby_locations": [
+      "chesapeake",
+      "portsmouth",
+      "norfolk"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package",
+      "enterprise-package"
+    ]
   }
 }

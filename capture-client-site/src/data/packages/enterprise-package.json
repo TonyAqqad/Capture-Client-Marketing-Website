@@ -4,9 +4,10 @@
   "package_info": {
     "name": "Enterprise Package",
     "slug": "enterprise-package",
-    "price": "Custom Pricing",
-    "period": "per month",
-    "tagline": "Complete done-for-you lead generation system with unlimited AI and dedicated support"
+    "price": "$3,997+",
+    "period": "per month (plus ad spend)",
+    "tagline": "Complete done-for-you lead generation system with unlimited AI and dedicated support",
+    "value_claim": "Enterprise capabilities at small business prices. Replaces $100k+/year in agency fees + staff."
   },
   "seo": {
     "title": "Enterprise Package - Custom Pricing | Full-Service Lead Generation | Capture Client",

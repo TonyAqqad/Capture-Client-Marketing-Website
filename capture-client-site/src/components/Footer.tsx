@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { trackPhoneClick, trackEmailClick } from "@/lib/analytics";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,51 +12,57 @@ export default function Footer() {
       {/* Gradient border at top */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#4A69E2] to-transparent opacity-50" />
 
-      <div className="container mx-auto px-6 sm:px-8 lg:px-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-16">
         {/* Main footer content */}
-        <div className="py-16 lg:py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
+        <div className="py-12 sm:py-16 lg:py-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 sm:gap-12 lg:gap-8">
             {/* Column 1: Logo, tagline, and contact - spans 3 columns on large screens */}
             <div className="lg:col-span-3">
               <Link href="/" className="inline-flex items-center gap-3 group">
                 <div className="relative w-8 h-8 flex-shrink-0">
-                  <Image src="/logo-secondary.png" alt="Capture Client Logo" fill className="object-contain group-hover:brightness-110 transition-all duration-300" />
+                  <Image
+                    src="/logo-icon.svg"
+                    alt="Capture Client Logo"
+                    fill
+                    className="object-contain group-hover:brightness-110 transition-all duration-300"
+                  />
                 </div>
                 <span className="text-xl font-heading font-bold text-[#F8FAFC]">
                   Capture Client
                 </span>
               </Link>
 
-              <p className="mt-6 text-[#94A3B8] font-body text-sm leading-relaxed max-w-xs">
+              <p className="mt-4 sm:mt-6 text-[#94A3B8] font-body text-sm leading-relaxed max-w-xs">
                 Automate Leads. Capture Clients.
               </p>
 
-              <div className="mt-8 space-y-3">
-                <div className="flex items-center gap-3 group">
-                  <span className="material-icons text-[#4A69E2] text-lg">phone</span>
-                  <a
-                    href="tel:8653463339"
-                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-colors duration-200"
-                  >
+              {/* Mobile-optimized contact info with larger tap targets */}
+              <div className="mt-6 sm:mt-8 space-y-4">
+                <a
+                  href="tel:8653463339"
+                  className="flex items-center gap-3 group min-h-[48px] -mx-2 px-2 rounded-lg hover:bg-[#1A202E] transition-all duration-200 active:scale-95"
+                  onClick={() => trackPhoneClick("865-346-3339", "footer")}
+                >
+                  <span className="material-icons text-[#4A69E2] text-xl">phone</span>
+                  <span className="text-[#94A3B8] group-hover:text-[#00C9FF] font-body text-base sm:text-sm transition-colors duration-200">
                     (865) 346-3339
-                  </a>
-                </div>
-
-                <div className="flex items-center gap-3 group">
-                  <span className="material-icons text-[#4A69E2] text-lg">email</span>
-                  <a
-                    href="mailto:team@captureclient.net"
-                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-colors duration-200"
-                  >
-                    team@captureclient.net
-                  </a>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <span className="material-icons text-[#4A69E2] text-lg">location_on</span>
-                  <span className="text-[#94A3B8] font-body text-sm">
-                    Knoxville, TN
                   </span>
+                </a>
+
+                <a
+                  href="mailto:team@captureclient.net"
+                  className="flex items-center gap-3 group min-h-[48px] -mx-2 px-2 rounded-lg hover:bg-[#1A202E] transition-all duration-200 active:scale-95"
+                  onClick={() => trackEmailClick("footer")}
+                >
+                  <span className="material-icons text-[#4A69E2] text-xl">email</span>
+                  <span className="text-[#94A3B8] group-hover:text-[#00C9FF] font-body text-base sm:text-sm transition-colors duration-200 break-all">
+                    team@captureclient.net
+                  </span>
+                </a>
+
+                <div className="flex items-center gap-3 min-h-[48px] -mx-2 px-2">
+                  <span className="material-icons text-[#4A69E2] text-xl">location_on</span>
+                  <span className="text-[#94A3B8] font-body text-base sm:text-sm">Knoxville, TN</span>
                 </div>
               </div>
             </div>
@@ -69,7 +78,9 @@ export default function Footer() {
                     href="/services/voice-ai"
                     className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
                   >
-                    <span className="group-hover:translate-x-1 transition-transform duration-200">Voice AI Agents</span>
+                    <span className="group-hover:translate-x-1 transition-transform duration-200">
+                      Voice AI Agents
+                    </span>
                   </Link>
                 </li>
                 <li>
@@ -77,7 +88,9 @@ export default function Footer() {
                     href="/services/google-ads"
                     className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
                   >
-                    <span className="group-hover:translate-x-1 transition-transform duration-200">Google Ads</span>
+                    <span className="group-hover:translate-x-1 transition-transform duration-200">
+                      Google Ads
+                    </span>
                   </Link>
                 </li>
                 <li>
@@ -85,7 +98,9 @@ export default function Footer() {
                     href="/services/facebook-ads"
                     className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
                   >
-                    <span className="group-hover:translate-x-1 transition-transform duration-200">Facebook Ads</span>
+                    <span className="group-hover:translate-x-1 transition-transform duration-200">
+                      Facebook Ads
+                    </span>
                   </Link>
                 </li>
                 <li>
@@ -93,7 +108,9 @@ export default function Footer() {
                     href="/services/lead-generation"
                     className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
                   >
-                    <span className="group-hover:translate-x-1 transition-transform duration-200">Lead Generation</span>
+                    <span className="group-hover:translate-x-1 transition-transform duration-200">
+                      Lead Generation
+                    </span>
                   </Link>
                 </li>
               </ul>
@@ -110,7 +127,9 @@ export default function Footer() {
                     href="/about"
                     className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
                   >
-                    <span className="group-hover:translate-x-1 transition-transform duration-200">About</span>
+                    <span className="group-hover:translate-x-1 transition-transform duration-200">
+                      About
+                    </span>
                   </Link>
                 </li>
                 <li>
@@ -118,7 +137,9 @@ export default function Footer() {
                     href="/pricing"
                     className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
                   >
-                    <span className="group-hover:translate-x-1 transition-transform duration-200">Pricing</span>
+                    <span className="group-hover:translate-x-1 transition-transform duration-200">
+                      Pricing
+                    </span>
                   </Link>
                 </li>
                 <li>
@@ -126,7 +147,9 @@ export default function Footer() {
                     href="/contact"
                     className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
                   >
-                    <span className="group-hover:translate-x-1 transition-transform duration-200">Contact</span>
+                    <span className="group-hover:translate-x-1 transition-transform duration-200">
+                      Contact
+                    </span>
                   </Link>
                 </li>
                 <li>
@@ -134,7 +157,9 @@ export default function Footer() {
                     href="/blog"
                     className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
                   >
-                    <span className="group-hover:translate-x-1 transition-transform duration-200">Blog</span>
+                    <span className="group-hover:translate-x-1 transition-transform duration-200">
+                      Blog
+                    </span>
                   </Link>
                 </li>
               </ul>
@@ -151,7 +176,9 @@ export default function Footer() {
                     href="/privacy-policy"
                     className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
                   >
-                    <span className="group-hover:translate-x-1 transition-transform duration-200">Privacy Policy</span>
+                    <span className="group-hover:translate-x-1 transition-transform duration-200">
+                      Privacy Policy
+                    </span>
                   </Link>
                 </li>
                 <li>
@@ -159,7 +186,9 @@ export default function Footer() {
                     href="/terms-of-service"
                     className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
                   >
-                    <span className="group-hover:translate-x-1 transition-transform duration-200">Terms of Service</span>
+                    <span className="group-hover:translate-x-1 transition-transform duration-200">
+                      Terms of Service
+                    </span>
                   </Link>
                 </li>
                 <li>
@@ -167,31 +196,36 @@ export default function Footer() {
                     href="/faq"
                     className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-colors duration-200 inline-flex items-center gap-2 group"
                   >
-                    <span className="group-hover:translate-x-1 transition-transform duration-200">FAQ</span>
+                    <span className="group-hover:translate-x-1 transition-transform duration-200">
+                      FAQ
+                    </span>
                   </Link>
                 </li>
               </ul>
             </div>
           </div>
 
-          {/* Newsletter signup section */}
-          <div className="mt-16 pt-12 border-t border-[#334155]">
+          {/* Newsletter signup section - mobile optimized */}
+          <div className="mt-12 sm:mt-16 pt-8 sm:pt-12 border-t border-[#334155]">
             <div className="max-w-2xl">
-              <h3 className="text-[#F8FAFC] font-heading font-semibold text-lg mb-3">
+              <h3 className="text-[#F8FAFC] font-heading font-semibold text-base sm:text-lg mb-2 sm:mb-3">
                 Stay updated with our latest insights
               </h3>
-              <p className="text-[#94A3B8] font-body text-sm mb-6">
-                Get expert tips on lead generation, Voice AI, and digital marketing delivered to your inbox.
+              <p className="text-[#94A3B8] font-body text-sm mb-4 sm:mb-6">
+                Get expert tips on lead generation, Voice AI, and digital marketing delivered to
+                your inbox.
               </p>
               <form className="flex flex-col sm:flex-row gap-3">
+                <label htmlFor="footer-email" className="sr-only">Email address</label>
                 <input
+                  id="footer-email"
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1 px-4 py-3 bg-[#1A202E] border border-[#334155] rounded-lg text-[#F8FAFC] placeholder:text-[#94A3B8] font-body text-sm focus:outline-none focus:ring-2 focus:ring-[#4A69E2] focus:border-transparent transition-all duration-200"
+                  className="flex-1 w-full min-h-[48px] px-4 py-3 bg-[#1A202E] border border-[#334155] rounded-lg text-[#F8FAFC] placeholder:text-[#94A3B8] font-body text-base focus:outline-none focus:ring-2 focus:ring-[#4A69E2] focus:border-transparent transition-all duration-200"
                 />
                 <button
                   type="submit"
-                  className="px-6 py-3 bg-gradient-to-r from-[#4A69E2] to-[#00C9FF] text-white font-heading font-semibold text-sm rounded-lg hover:shadow-lg hover:shadow-[#4A69E2]/20 transition-all duration-300 whitespace-nowrap"
+                  className="w-full sm:w-auto min-h-[48px] px-6 py-3 bg-gradient-to-r from-[#4A69E2] to-[#00C9FF] text-white font-heading font-semibold text-sm rounded-lg hover:shadow-lg hover:shadow-[#4A69E2]/20 transition-all duration-300 active:scale-95 whitespace-nowrap"
                 >
                   Subscribe
                 </button>
@@ -217,20 +251,20 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom section with copyright and social links */}
-        <div className="border-t border-[#334155] py-8">
+        {/* Bottom section with copyright and social links - mobile optimized */}
+        <div className="border-t border-[#334155] py-6 sm:py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <p className="text-[#94A3B8] font-body text-sm">
+            <p className="text-[#94A3B8] font-body text-xs sm:text-sm text-center md:text-left" suppressHydrationWarning>
               &copy; {currentYear} Capture Client. All rights reserved.
             </p>
 
-            {/* Social media icons */}
-            <div className="flex items-center gap-5">
+            {/* Social media icons - mobile optimized with 48px tap targets */}
+            <div className="flex items-center gap-2">
               <a
                 href="https://twitter.com/captureclient"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#94A3B8] hover:text-[#00C9FF] transition-colors duration-200"
+                className="flex items-center justify-center min-w-[48px] min-h-[48px] text-[#94A3B8] hover:text-[#00C9FF] transition-colors duration-200 active:scale-95 rounded-lg hover:bg-[#1A202E]"
                 aria-label="Twitter"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -242,7 +276,7 @@ export default function Footer() {
                 href="https://linkedin.com/company/captureclient"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#94A3B8] hover:text-[#00C9FF] transition-colors duration-200"
+                className="flex items-center justify-center min-w-[48px] min-h-[48px] text-[#94A3B8] hover:text-[#00C9FF] transition-colors duration-200 active:scale-95 rounded-lg hover:bg-[#1A202E]"
                 aria-label="LinkedIn"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -254,11 +288,15 @@ export default function Footer() {
                 href="https://facebook.com/captureclient"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#94A3B8] hover:text-[#00C9FF] transition-colors duration-200"
+                className="flex items-center justify-center min-w-[48px] min-h-[48px] text-[#94A3B8] hover:text-[#00C9FF] transition-colors duration-200 active:scale-95 rounded-lg hover:bg-[#1A202E]"
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
+                  <path
+                    fillRule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    clipRule="evenodd"
+                  />
                 </svg>
               </a>
             </div>

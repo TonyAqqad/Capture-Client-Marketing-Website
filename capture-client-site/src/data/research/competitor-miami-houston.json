@@ -1,0 +1,150 @@
+{
+  "timestamp": "2025-11-30T00:00:00.000Z",
+  "totalAgencies": 6,
+  "cities": {
+    "miami": 3,
+    "houston": 3
+  },
+  "agencies": [
+    {
+      "name": "Jives Media",
+      "website": "https://www.jivesmedia.com",
+      "phone": "(650) 420-7455",
+      "address": "78 SW 7th St, Miami, FL 33130",
+      "rating": "5.0 stars (100 reviews)",
+      "city": "Miami",
+      "state": "FL",
+      "services": [
+        "SEO",
+        "Google Ads",
+        "Facebook Ads",
+        "Social Media Marketing",
+        "Web Design",
+        "Email Marketing",
+        "Video Marketing Production",
+        "1v1 Marketing Consulting",
+        "Paid Advertising",
+        "Branding"
+      ],
+      "packages": [],
+      "pricing": [],
+      "foundVia": "Google Maps - Marketing Agency",
+      "notes": "Award-winning team, full-service digital marketing agency, open 24 hours"
+    },
+    {
+      "name": "1111 Media Group",
+      "website": "https://1111mediagroup.com",
+      "phone": "(305) 351-3103",
+      "address": "1250 SW 27th Ave, Miami, FL 33135",
+      "rating": "4.9 stars (108 reviews)",
+      "city": "Miami",
+      "state": "FL",
+      "services": [
+        "Web Design and Development",
+        "Next-Gen SEO & AI Search",
+        "Paid Search Advertising (Google & Microsoft Ads)",
+        "Paid Social Advertising (Meta, TikTok, LinkedIn)",
+        "Content Creation",
+        "Social Media Marketing",
+        "Digital PR",
+        "AI-Powered Email Marketing",
+        "Social Proofing / Reputation Management",
+        "GEO (Generative Engine Optimization)",
+        "Branding"
+      ],
+      "packages": [],
+      "pricing": [],
+      "foundVia": "Google Maps - Marketing Agency",
+      "notes": "Family-owned agency, no contracts (month-to-month), bilingual team (Spanish), full-service marketing, premium partner support with major platforms"
+    },
+    {
+      "name": "Solved Puzzle",
+      "website": "https://solvedpuzzle.com",
+      "phone": "(305) 487-7477",
+      "address": "990 Biscayne Blvd #503, Miami, FL 33132",
+      "rating": "5.0 stars (220 reviews)",
+      "city": "Miami",
+      "state": "FL",
+      "services": [
+        "Web Design and Development",
+        "eCommerce Website Design",
+        "Conversion Rate Optimization",
+        "Google Ads Management",
+        "Meta Ads Management (FB & IG)",
+        "TikTok Ads Management",
+        "Email Marketing & SMS",
+        "Content Creation (Photography & Videography)",
+        "SEO Services",
+        "Local Business Marketing",
+        "Ecommerce Marketing",
+        "B2B Lead Generation"
+      ],
+      "packages": [],
+      "pricing": [],
+      "foundVia": "Google Maps - Marketing Agency",
+      "notes": "Over $200M in sales generated, 1000+ websites designed, bilingual (Spanish), made in Miami since 2014"
+    },
+    {
+      "name": "INFINI Marketing",
+      "website": "https://www.infinimarketing.com",
+      "phone": "(713) 597-2131",
+      "address": "5718 Westheimer Rd Suite 1103, Houston, TX 77057",
+      "rating": "5.0 stars (200 reviews)",
+      "city": "Houston",
+      "state": "TX",
+      "services": [
+        "Website Design",
+        "SEO",
+        "Google Ads",
+        "Facebook Ads",
+        "Branding",
+        "Logo Design",
+        "Social Media Setup & Management",
+        "Google Business Profile",
+        "LIT System (Lead Intelligence Tracking)",
+        "Graphic Design",
+        "Branded Content Writing",
+        "Photography",
+        "Videography",
+        "Email Newsletter",
+        "Blogs",
+        "Reputation Management"
+      ],
+      "packages": [],
+      "pricing": [
+        "20% off custom website design",
+        "Free 24 months of website hosting & management ($9600+ value)"
+      ],
+      "foundVia": "Google Maps - Marketing Agency",
+      "notes": "Google Partner, bilingual (Spanish), 65+ years combined experience, $500M+ revenue generated for clients, Goldman Sachs 10,000 Small Businesses Alumni, brand-first approach, proprietary B.A.S.I.C.S marketing system"
+    },
+    {
+      "name": "EWR Digital",
+      "website": "https://www.ewrdigital.com",
+      "phone": "(713) 592-6724",
+      "address": "5999 W 34th St #106B, Houston, TX 77092",
+      "rating": "4.9 stars (143 reviews)",
+      "city": "Houston",
+      "state": "TX",
+      "services": [],
+      "packages": [],
+      "pricing": [],
+      "foundVia": "Google Maps - Marketing Agency",
+      "notes": "Internet marketing service, fast and reliable service"
+    },
+    {
+      "name": "Revolve Marketing Executives",
+      "website": "http://revolvemarketingexecutives.com",
+      "phone": "(832) 248-8979",
+      "address": "5444 Westheimer Way 10th Floor, Suite 1088, Houston, TX",
+      "rating": "5.0 stars (1,127 reviews)",
+      "city": "Houston",
+      "state": "TX",
+      "services": [],
+      "packages": [],
+      "pricing": [],
+      "foundVia": "Google Maps - Marketing Agency",
+      "notes": "Highest review count in Houston, strong customer service"
+    }
+  ]
+}

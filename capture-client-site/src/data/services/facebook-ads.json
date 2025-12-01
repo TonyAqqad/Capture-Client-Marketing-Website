@@ -7,18 +7,28 @@
     "service_slug": "facebook-ads"
   },
   "seo": {
-    "page_title": "Facebook Ads Lead Generation | Social Media Advertising | Capture Client",
-    "meta_description": "Generate qualified leads with Facebook & Instagram Ads. Expert social media advertising for service businesses. Lead ads, retargeting, lookalike audiences. Free strategy call!",
-    "h1_heading": "Facebook Ads Lead Generation for Service Businesses",
+    "page_title": "Facebook Ads Agency | Lower Cost Leads for Contractors | Capture Client",
+    "meta_description": "Wasting budget on Facebook Ads that don't convert? Expert Meta advertising generates high-quality leads 50-70% cheaper than Google Ads. Lookalike audiences, retargeting. Free strategy: (865) 346-3339",
+    "h1_heading": "Turn Facebook & Instagram into Your Best Lead Source",
+    "primary_benefit": "Lower Cost Leads",
+    "pain_point": "Wasting budget on Facebook Ads that don't convert",
+    "solution": "Expert campaigns generate leads 50-70% cheaper than Google Ads",
     "keywords": [
       "facebook ads management",
+      "facebook advertising agency",
+      "meta ads agency",
       "facebook lead generation",
       "instagram ads",
       "social media advertising",
       "facebook lead ads",
       "facebook retargeting",
       "lookalike audiences",
-      "facebook ads for small business"
+      "facebook ads for small business",
+      "meta advertising",
+      "facebook marketing company",
+      "social media marketing agency",
+      "geotargeting facebook ads",
+      "custom audience targeting"
     ],
     "canonical_url": "/facebook-ads",
     "og_title": "Facebook Ads Lead Generation | Get Quality Leads from Social Media",
@@ -26,7 +36,7 @@
   },
   "hero": {
     "headline": "Turn Facebook & Instagram into Your Best Lead Source",
-    "subheadline": "Expert Facebook Ads Management That Generates Qualified Leads for Service Businesses",
+    "subheadline": "Expert Meta Ads Management That Generates Qualified Leads for Service Businesses Using Advanced Targeting",
     "cta_primary": {
       "text": "Get Your Free Strategy Call",
       "action": "tel:865-346-3339",
@@ -47,18 +57,18 @@
     }
   },
   "intro": {
-    "paragraph": "Your ideal customers are scrolling Facebook and Instagram right now. They're browsing between posts from friends, watching videos, and discovering new businesses. With the right Facebook Ads strategy, your service business can capture their attention, build trust, and convert them into paying clients. But here's the reality: most service businesses waste thousands on Facebook Ads that don't generate results. They boost posts randomly, target audiences that will never buy, and wonder why their ads fail. Facebook Ads is not a DIY channel—it's a sophisticated advertising platform that requires expertise in audience targeting, creative strategy, and conversion optimization. At Capture Client, we specialize in Facebook and Instagram advertising exclusively for service-based businesses. We create campaigns that don't just get likes and comments—they generate phone calls, form submissions, and booked appointments. Our approach combines proven direct response tactics with advanced targeting features like lookalike audiences, retargeting pixels, and Facebook Lead Ads. We target your ideal customer based on demographics, interests, behaviors, and even life events. Someone just bought a house? They need HVAC service, plumbing, landscaping, and security systems. Someone just got married? They need legal services for name changes, financial planning, and home buying. Facebook's targeting capabilities are unmatched, and we know exactly how to leverage them for maximum ROI. Our average client generates 50-150 qualified leads per month from Facebook Ads at 1/3 the cost of Google Ads."
+    "paragraph": "Your ideal customers are scrolling Facebook and Instagram right now. They're browsing between posts from friends, watching videos, and discovering new businesses. With the right Meta advertising strategy, your service business can capture their attention, build trust, and convert them into paying clients. But here's the reality: most service businesses waste thousands on Facebook Ads that don't generate results. They boost posts randomly, target audiences that will never buy, and wonder why their ads fail. Facebook Ads is not a DIY channel—it's a sophisticated advertising platform that requires expertise in audience targeting, creative strategy, and conversion optimization. At Capture Client, we are a Facebook advertising agency specializing in Meta ads exclusively for service-based businesses. We create campaigns that don't just get likes and comments—they generate phone calls, form submissions, and booked appointments. Our approach combines proven direct response tactics with advanced targeting features like lookalike audiences, custom audience segmentation, full-funnel targeting, geotargeting with location exclusions, retargeting pixels, and Facebook Lead Ads. We target your ideal customer based on demographics, interests, behaviors, income levels, and even life events. Someone just bought a house? They need HVAC service, plumbing, landscaping, and security systems. Someone just got married? They need legal services for name changes, financial planning, and home buying. Meta's targeting capabilities are unmatched, and we know exactly how to leverage them for maximum ROI. Our average client generates 50-150 qualified leads per month from Facebook and Instagram Ads at 1/3 the cost of Google Ads."
   },
   "benefits": [
     {
       "title": "Precision Audience Targeting",
-      "description": "Target your exact ideal customer by age, location, income, interests, job title, behaviors, and life events. Facebook's targeting is the most sophisticated in digital advertising—we use it to find your perfect prospects.",
-      "icon": "target"
+      "description": "Target your exact ideal customer by age, location, income, interests, job title, behaviors, and life events. Use advanced geotargeting with custom radius and location exclusions. Meta's targeting is the most sophisticated in digital advertising—we use it to find your perfect prospects.",
+      "icon": "gps_fixed"
     },
     {
       "title": "Lower Cost Per Lead",
       "description": "Facebook Ads typically cost 50-70% less than Google Ads for service businesses. Generate more leads with the same budget, or hit your lead goals while spending less. Facebook offers incredible value for smart advertisers.",
-      "icon": "dollar-sign"
+      "icon": "attach_money"
     },
     {
       "title": "Visual Storytelling",
@@ -68,17 +78,22 @@
     {
       "title": "Facebook Lead Ads",
       "description": "Capture leads without users ever leaving Facebook. Lead forms auto-fill with user information, making it effortless to submit. This friction-free experience dramatically increases conversion rates compared to sending traffic to external landing pages.",
-      "icon": "users"
+      "icon": "group"
     },
     {
       "title": "Retargeting Website Visitors",
       "description": "Someone visited your website but didn't call? Retarget them with Facebook ads reminding them why they need your services. Stay top-of-mind and capture leads that would otherwise disappear forever.",
-      "icon": "repeat"
+      "icon": "replay"
     },
     {
       "title": "Lookalike Audiences",
-      "description": "Upload your best customer list. Facebook finds thousands of people who match your ideal customer profile. This AI-powered targeting identifies prospects you'd never find manually—people most likely to need and buy your services.",
-      "icon": "user-check"
+      "description": "Upload your best customer list. Meta's AI finds thousands of people who match your ideal customer profile using machine learning and decades of behavioral data. This AI-powered targeting identifies prospects you'd never find manually—people most likely to need and buy your services.",
+      "icon": "verified_user"
+    },
+    {
+      "title": "Instagram Ads Integration",
+      "description": "Reach customers across both Facebook and Instagram with unified campaigns. Instagram's visual-first platform is perfect for showcasing before/after projects, video testimonials, and engaging reels that build trust and drive conversions.",
+      "icon": "photo_camera"
     }
   ],
   "how_it_works": [
@@ -90,12 +105,12 @@
     {
       "step": 2,
       "title": "Audience Research & Campaign Setup",
-      "description": "We build detailed customer avatars and create custom audiences based on demographics, interests, and behaviors. We set up retargeting pixels, lookalike audiences, and Facebook Lead Ads optimized for conversions."
+      "description": "We build detailed customer avatars and create custom audiences based on demographics, interests, behaviors, and income levels. We set up advanced geotargeting with location exclusions, retargeting pixels, lookalike audiences with custom rule-based bidding, and Facebook Lead Ads optimized for conversions across both Facebook and Instagram."
     },
     {
       "step": 3,
       "title": "Creative Development",
-      "description": "We create scroll-stopping ad creative including images, videos, and ad copy that speaks directly to your target customer's pain points. We A/B test multiple variations to identify top performers."
+      "description": "We create scroll-stopping ad creative including images, videos, carousel ads, Instagram reels, and ad copy that speaks directly to your target customer's pain points. We A/B test multiple ad formats and variations to identify top performers for maximum engagement and conversions."
     },
     {
       "step": 4,
@@ -144,6 +159,12 @@
         "author": "Carlos Rodriguez",
         "business": "Rodriguez Heating & Air",
         "industry": "HVAC Services"
+      },
+      {
+        "quote": "The Instagram Reels ads are bringing in younger homeowners who want modern landscaping. We're booking $15K-$25K projects from social media now. Never thought it was possible.",
+        "author": "Amanda Chen",
+        "business": "Green Horizons Landscaping",
+        "industry": "Landscaping"
       }
     ],
     "stats": {
@@ -176,6 +197,14 @@
     {
       "question": "How do you track ROI from Facebook Ads?",
       "answer": "We implement Facebook Pixel tracking on your website and integrate Lead Ads with your CRM. You see exactly how many leads came from Facebook, cost per lead, and when possible, closed deals attributed to Facebook campaigns. We provide monthly reports with complete transparency on ad spend, leads generated, and ROI. You'll know exactly what's working."
+    },
+    {
+      "question": "What's the difference between Facebook Ads and Meta Ads?",
+      "answer": "Meta is the parent company that owns Facebook, Instagram, WhatsApp, and Messenger. Meta Ads refer to advertising across all these platforms managed through Meta Ads Manager (formerly Facebook Ads Manager). When we say 'Facebook Ads,' we typically mean campaigns running across both Facebook and Instagram, which are the two primary advertising platforms under Meta. Our campaigns leverage both platforms for maximum reach and results."
+    },
+    {
+      "question": "Should I advertise on Instagram too?",
+      "answer": "Absolutely! Instagram ads are managed through the same Meta Ads Manager as Facebook, so running on both platforms is seamless. Instagram's 2 billion users and visual-first format make it perfect for service businesses that have visual results to showcase. We typically see 30-50% more leads when running campaigns across both Facebook and Instagram versus Facebook alone. The unified campaign approach ensures consistent messaging while reaching customers wherever they engage on Meta's platforms."
     }
   ],
   "main_content": {
@@ -191,6 +220,14 @@
       {
         "heading": "Creative Strategy That Converts",
         "content": "On Facebook, your ad creative is everything. Users scroll past dozens of ads per hour. Your ad has maybe 1-2 seconds to grab attention before they scroll past. This means your imagery, headline, and offer need to be immediately compelling. Here's what works for service businesses: Before/After Photos - Show the transformation you provide. HVAC companies showing clean vs dirty air ducts, landscapers showing overgrown vs beautiful yards, contractors showing renovation before/afters. Visual proof is powerful. Video Testimonials - Real customers sharing their experience on camera builds trust faster than anything else. A 30-second testimonial video highlighting the problem they had and how you solved it is gold. Educational Content - Share valuable tips and position yourself as the expert. 'Top 5 Signs Your AC Needs Repair' or '3 Legal Mistakes Homebuyers Make' establishes authority and captures people researching solutions. Special Offers - Limited-time discounts or seasonal promotions create urgency. 'Save $200 on AC Tune-Up This Month Only' gives people a reason to act now instead of someday. We handle all creative development including graphic design, video editing, and copywriting. We test multiple ad variations simultaneously to identify winners, then scale the best-performing creatives while continuously testing new angles. This systematic approach to creative optimization is what separates successful Facebook campaigns from wasted ad spend."
+      },
+      {
+        "heading": "Advanced Meta Targeting Capabilities",
+        "content": "As a Facebook advertising agency, we leverage Meta's most advanced targeting capabilities to ensure your ads reach the right people at the right time. Our targeting strategy includes: Demographic Targeting - Age, gender, education, job title, income level, and household composition. Behavioral Targeting - Purchase behaviors, device usage, travel patterns, and engagement with business content. Interest Targeting - Target people based on hobbies, favorite brands, activities they engage with, and pages they follow. Life Event Targeting - Reach people during major life transitions like moving, getting married, having a baby, or starting a new job—exactly when they need your services. Geotargeting with Precision - Target by city, zip code, radius around a location, or exclude specific areas. Perfect for service businesses with defined territories. Lookalike Audiences - Upload your customer list and Meta's AI finds thousands of similar prospects using machine learning algorithms trained on billions of data points. Custom Audiences - Retarget website visitors, email subscribers, past customers, or people who engaged with your content. Full-Funnel Targeting - Create different campaigns for awareness, consideration, and conversion stages of the customer journey. We combine these targeting options strategically to build audiences that convert at the highest rates while maintaining low cost per lead. This sophisticated approach to audience segmentation is what drives our clients' 5:1 average ROAS (Return on Ad Spend)."
+      },
+      {
+        "heading": "Instagram Ads: Expanding Your Reach on Meta",
+        "content": "Instagram is owned by Meta and integrates seamlessly with Facebook Ads Manager, allowing us to run unified campaigns across both platforms. With 2 billion active users, Instagram provides massive reach, especially for visually-driven service businesses. Instagram's audience skews younger and more mobile-first, making it perfect for reaching homeowners, business owners, and decision-makers on the go. Instagram Ads formats we use: Feed Ads - Traditional photo and video ads in the main feed. Stories Ads - Full-screen vertical ads between user stories, perfect for before/after showcases. Reels Ads - Short-form video ads in the highly-engaging Reels feed. Carousel Ads - Multiple images or videos users can swipe through, ideal for showcasing portfolios. The visual nature of Instagram makes it ideal for contractors, landscapers, medical practices, dental offices, and any business where visual results matter. Before/after transformations perform exceptionally well. We also leverage Instagram's shopping features and call-to-action buttons to drive direct lead generation. By running campaigns across both Facebook and Instagram, we typically increase lead volume by 30-50% compared to Facebook-only campaigns. This cross-platform strategy ensures maximum visibility and engagement with your target audience wherever they spend time on Meta's platforms."
       }
     ]
   },

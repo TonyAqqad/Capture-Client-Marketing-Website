@@ -79,8 +79,8 @@ export function useTypewriter({
   // ============================================================================
 
   useEffect(() => {
-    // If not active, stop typing
-    if (!isActive) {
+    // If not active or no text, stop typing
+    if (!isActive || !text) {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
         timeoutRef.current = null;
@@ -88,53 +88,50 @@ export function useTypewriter({
       return;
     }
 
-    // If just activated, reset and start from beginning
-    if (isActive && displayText === '' && currentIndex === 0) {
-      // Initial delay before typing starts
-      if (delay > 0) {
-        timeoutRef.current = setTimeout(() => {
-          startTyping();
-        }, delay);
-        return;
-      } else {
-        startTyping();
-      }
+    // If we've already completed typing this text, don't restart
+    if (isComplete && displayText === text) {
+      return;
     }
 
-    function startTyping() {
+    function typeNextChar() {
       if (!isActiveRef.current) return;
 
-      // If we've reached the end of the text
-      if (currentIndex >= text.length) {
-        setIsComplete(true);
-        if (onComplete) {
-          onComplete();
+      setCurrentIndex((prevIndex) => {
+        // If we've reached the end of the text
+        if (prevIndex >= text.length) {
+          setIsComplete(true);
+          if (onComplete) {
+            onComplete();
+          }
+          return prevIndex;
         }
-        return;
-      }
 
-      // Get the next character
-      const nextChar = text[currentIndex];
-      setDisplayText(prev => prev + nextChar);
-      setCurrentIndex(prev => prev + 1);
+        // Get the next character and update display
+        const nextChar = text[prevIndex];
+        setDisplayText(text.substring(0, prevIndex + 1));
 
-      // Calculate delay for next character
-      let nextDelay = speed;
+        // Calculate delay for next character
+        let nextDelay = speed;
 
-      // Add pause if character is punctuation
-      const pauseTime = TYPEWRITER_CONFIG.PAUSE_ON_PUNCTUATION[
-        nextChar as keyof typeof TYPEWRITER_CONFIG.PAUSE_ON_PUNCTUATION
-      ];
+        // Add pause if character is punctuation
+        const pauseTime = TYPEWRITER_CONFIG.PAUSE_ON_PUNCTUATION[
+          nextChar as keyof typeof TYPEWRITER_CONFIG.PAUSE_ON_PUNCTUATION
+        ];
 
-      if (pauseTime) {
-        nextDelay += pauseTime;
-      }
+        if (pauseTime) {
+          nextDelay += pauseTime;
+        }
 
-      // Schedule next character
-      timeoutRef.current = setTimeout(() => {
-        startTyping();
-      }, nextDelay);
+        // Schedule next character
+        timeoutRef.current = setTimeout(typeNextChar, nextDelay);
+
+        return prevIndex + 1;
+      });
     }
+
+    // Start typing after initial delay
+    const startDelay = currentIndex === 0 ? delay : 0;
+    timeoutRef.current = setTimeout(typeNextChar, startDelay);
 
     // Cleanup function
     return () => {
@@ -143,7 +140,7 @@ export function useTypewriter({
         timeoutRef.current = null;
       }
     };
-  }, [isActive, currentIndex, text, speed, delay, onComplete, displayText]);
+  }, [isActive, text, speed, delay, onComplete, isComplete, displayText, currentIndex]);
 
   // ============================================================================
   // RESET WHEN TEXT CHANGES

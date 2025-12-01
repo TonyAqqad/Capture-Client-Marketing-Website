@@ -7,11 +7,16 @@
     "category": "automation"
   },
   "location": {
-    "name": "Chattanooga",
+    "city": "Chattanooga",
     "slug": "chattanooga",
     "state": "Tennessee",
     "state_abbr": "TN",
-    "nearby_areas": ["Cleveland", "East Ridge", "Red Bank", "Signal Mountain"]
+    "nearby_areas": [
+      "Cleveland",
+      "East Ridge",
+      "Red Bank",
+      "Signal Mountain"
+    ]
   },
   "seo": {
     "page_title": "Voice AI Agency in Chattanooga, TN | Capture Client",
@@ -32,33 +37,33 @@
     "cta_secondary": "See Pricing"
   },
   "intro": {
-    "paragraph": "Chattanooga's tech-forward business community knows the value of innovation. As the Gig City continues to attract entrepreneurs and growing companies, having cutting-edge Voice AI gives you a competitive edge. From businesses along the Tennessee River to contractors serving Hamilton County, Capture Client helps Chattanooga companies automate phone operations, qualify leads intelligently, and provide exceptional customer service around the clock - all while you focus on what matters most."
+    "paragraph": "Business owners throughout Chattanooga - from members of the Chattanooga Area Chamber of Commerce to companies in Northgate Park and the Shallowford Business Corridor - know that missed calls cost real money. Whether your business is near the INCubator downtown, along the Cherokee Blvd Business Corridor, or in Eastgate Town Center, Capture Client's Voice AI makes sure you never miss another lead. As the Gig City continues to attract entrepreneurs and growing companies, having cutting-edge Voice AI gives you a competitive edge across Hamilton County."
   },
   "benefits": [
     {
       "title": "Never Miss a Chattanooga Lead",
       "description": "Every call is answered instantly, whether it's a customer in Lookout Mountain or downtown. No more voicemails, no more lost opportunities.",
-      "icon": "phone"
+      "icon": "phone_in_talk"
     },
     {
       "title": "Smart Lead Qualification",
       "description": "AI asks qualifying questions specific to your Chattanooga business, filtering out tire-kickers and routing serious buyers directly to you.",
-      "icon": "target"
+      "icon": "gps_fixed"
     },
     {
       "title": "Appointment Scheduling That Works",
       "description": "Customers book instantly while interest is high. No phone tag, no scheduling conflicts - just more appointments on your calendar.",
-      "icon": "calendar-check"
+      "icon": "event_available"
     },
     {
       "title": "Cost-Effective Scalability",
       "description": "Handle unlimited calls for one flat rate. Perfect for growing Chattanooga businesses that need enterprise capabilities on a small business budget.",
-      "icon": "wallet"
+      "icon": "account_balance_wallet"
     },
     {
       "title": "Gig City-Speed Implementation",
       "description": "Launch in less than a week. Chattanooga businesses expect speed - we deliver AI solutions at the pace of the Gig City.",
-      "icon": "zap"
+      "icon": "bolt"
     }
   ],
   "how_it_works": [
@@ -109,7 +114,12 @@
       "Ooltewah",
       "Harrison"
     ],
-    "counties_served": ["Hamilton County", "Bradley County", "Marion County", "Sequatchie County"]
+    "counties_served": [
+      "Hamilton County",
+      "Bradley County",
+      "Marion County",
+      "Sequatchie County"
+    ]
   },
   "faq": [
     {
@@ -183,7 +193,15 @@
     "primary_location": "Knoxville, TN"
   },
   "related_pages": {
-    "services": ["facebook-ads", "google-ads", "local-seo"],
-    "locations": ["knoxville", "nashville", "cleveland"]
+    "services": [
+      "facebook-ads",
+      "google-ads",
+      "local-seo"
+    ],
+    "locations": [
+      "knoxville",
+      "nashville",
+      "cleveland"
+    ]
   }
 }

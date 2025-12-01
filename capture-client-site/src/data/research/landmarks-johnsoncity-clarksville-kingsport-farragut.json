@@ -1,0 +1,184 @@
+{
+  "research_date": "2025-11-30",
+  "johnson_city": {
+    "landmarks": [
+      {
+        "name": "Commerce Center West",
+        "type": "Business Center",
+        "address": "926 W Oakland Ave, Johnson City, TN",
+        "rating": "4.3",
+        "description": "Business center with accessible facilities"
+      },
+      {
+        "name": "Johnson City Chamber of Commerce",
+        "type": "Chamber of Commerce",
+        "address": "602 Sevier St #101, Johnson City, TN 37604",
+        "rating": "4.7",
+        "phone": "(423) 461-8000",
+        "website": "johnsoncitytnchamber.com",
+        "description": "Premier chamber of commerce serving Johnson City business community"
+      },
+      {
+        "name": "Spark Plaza",
+        "type": "Business Center / Coworking Space",
+        "address": "404 S Roan St, Johnson City, TN",
+        "rating": "5.0",
+        "phone": "(423) 302-0530",
+        "website": "sparkplaza.com",
+        "description": "Coworking space and business center in downtown Johnson City"
+      },
+      {
+        "name": "Princeton Commons",
+        "type": "Business Center",
+        "address": "508 Princeton Rd, Johnson City, TN",
+        "rating": "4.5",
+        "description": "Business center with easy parking and accessibility"
+      },
+      {
+        "name": "TSBDC Johnson City Center",
+        "type": "Business Development Center",
+        "address": "112 E Mountcastle Dr, Johnson City, TN",
+        "rating": "5.0",
+        "phone": "(423) 439-8505",
+        "website": "tsbdc.org",
+        "description": "Tennessee Small Business Development Center"
+      }
+    ]
+  },
+  "clarksville": {
+    "landmarks": [
+      {
+        "name": "Clarksville Area Chamber of Commerce",
+        "type": "Chamber of Commerce",
+        "address": "25 Jefferson St # 300, Clarksville, TN 37040",
+        "rating": "4.5",
+        "phone": "(931) 647-2331",
+        "website": "clarksvillechamber.com",
+        "description": "Leading chamber of commerce serving Clarksville business community"
+      },
+      {
+        "name": "officeNOW",
+        "type": "Coworking Space",
+        "address": "1860 Wilma Rudolph Blvd, Clarksville, TN",
+        "rating": "4.9",
+        "phone": "(931) 218-6368",
+        "website": "clarksvilleofficenow.com",
+        "description": "Premier coworking space with modern facilities"
+      },
+      {
+        "name": "TSBDC Clarksville Center",
+        "type": "Business Development Center",
+        "address": "211 S 2nd St suite 215, Clarksville, TN",
+        "rating": "4.8",
+        "phone": "(931) 221-1370",
+        "website": "tsbdc.org",
+        "description": "Tennessee Small Business Development Center providing business support"
+      },
+      {
+        "name": "Clarksville Shopping Center",
+        "type": "Business Center",
+        "address": "1058 S Riverside Dr, Clarksville, TN",
+        "rating": "4.3",
+        "description": "Major business center with multiple commercial facilities"
+      },
+      {
+        "name": "CFD Services Inc DBA Hub 931",
+        "type": "Business Consultant",
+        "address": "919 B Tiny Town Rd, Clarksville, TN",
+        "rating": "5.0",
+        "phone": "(931) 933-8266",
+        "website": "cfdservicesinc.com",
+        "description": "Business management consulting and support services"
+      }
+    ]
+  },
+  "kingsport": {
+    "landmarks": [
+      {
+        "name": "Kingsport Chamber of Commerce",
+        "type": "Chamber of Commerce",
+        "address": "400 Clinchfield St #100, Kingsport, TN 37660",
+        "rating": "5.0",
+        "phone": "(423) 392-8800",
+        "website": "kingsportchamber.org",
+        "description": "Premier chamber of commerce serving Kingsport business community"
+      },
+      {
+        "name": "The Press Building",
+        "type": "Business Center",
+        "address": "464 Clinchfield St, Kingsport, TN",
+        "rating": "4.6",
+        "description": "Historic business center with modern amenities"
+      },
+      {
+        "name": "Sync Space",
+        "type": "Coworking Space",
+        "address": "227 E Sullivan St, Kingsport, TN",
+        "rating": "4.8",
+        "phone": "(423) 430-9675",
+        "website": "syncspace.org",
+        "description": "Modern coworking space for entrepreneurs and businesses"
+      },
+      {
+        "name": "North Eastman Centre",
+        "type": "Business Center",
+        "address": "1567 N Eastman Rd, Kingsport, TN",
+        "rating": "4.2",
+        "description": "Large business complex serving the Kingsport area"
+      },
+      {
+        "name": "TSBDC Kingsport Center",
+        "type": "Business Development Center",
+        "address": "400 Clinchfield St #100, Kingsport, TN",
+        "rating": "5.0",
+        "phone": "(423) 392-8825",
+        "website": "tsbdc.org",
+        "description": "Tennessee Small Business Development Center"
+      }
+    ]
+  },
+  "farragut": {
+    "landmarks": [
+      {
+        "name": "Farragut West Knox Chamber of Commerce",
+        "type": "Chamber of Commerce",
+        "address": "11826 Kingston Pike # 110, Farragut, TN",
+        "rating": "5.0",
+        "phone": "(865) 675-7057",
+        "website": "farragutchamber.com",
+        "description": "Chamber of commerce serving Farragut and West Knox County"
+      },
+      {
+        "name": "Cross Park Center",
+        "type": "Business Center",
+        "address": "9123-9131 Cross Park Dr, Farragut, TN",
+        "rating": "4.9",
+        "description": "Modern business center with excellent facilities"
+      },
+      {
+        "name": "Corporate Square",
+        "type": "Business Center",
+        "address": "9000 Executive Park Dr, Farragut, TN",
+        "rating": "4.4",
+        "description": "Executive business park with professional office spaces"
+      },
+      {
+        "name": "MyNextSuite",
+        "type": "Office Space Rental",
+        "address": "123 Center Park Dr #109, Farragut, TN",
+        "rating": "4.7",
+        "phone": "(865) 392-9040",
+        "website": "mynextsuite.com",
+        "description": "Flexible office space rental with modern amenities"
+      },
+      {
+        "name": "PATRIOTS CORNER",
+        "type": "Business Center",
+        "address": "10841-10899 Kingston Pike, Farragut, TN",
+        "rating": "4.5",
+        "phone": "(865) 240-2252",
+        "description": "Business center on Kingston Pike corridor"
+      }
+    ]
+  }
+}

@@ -1,222 +1,285 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import LeadCaptureForm from "@/components/LeadCaptureForm";
 import LeadRescueSimulator from "@/components/LeadRescueSimulator";
+import InteractiveAIDemo from "@/components/features/InteractiveAIDemo";
 import AIVoiceVisual from "@/components/AIVoiceVisual";
 import GrowthDashboard from "@/components/GrowthDashboard";
 import PricingCards from "@/components/PricingCards";
-import TestimonialsCarousel from "@/components/TestimonialsCarousel";
-import AnimatedStats from "@/components/AnimatedStats";
-import OptimizedLeadForm from "@/components/forms/OptimizedLeadForm";
 import SocialProofBanner from "@/components/cro/SocialProofBanner";
-import TrustSignals from "@/components/cro/TrustSignals";
 import RiskReversal from "@/components/cro/RiskReversal";
 import MobileCTABar from "@/components/cro/MobileCTABar";
-import ObjectionHandler from "@/components/cro/ObjectionHandler";
 import CapacityIndicator from "@/components/cro/CapacityIndicator";
+import ClientLogos from "@/components/cro/ClientLogos";
+import AsSeenIn from "@/components/cro/AsSeenIn";
+import ComparisonTable from "@/components/cro/ComparisonTable";
+import ExitIntentPopup from "@/components/cro/ExitIntentPopup";
+import UrgencyTimer from "@/components/cro/UrgencyTimer";
+import StickyPhoneCTA from "@/components/cro/StickyPhoneCTA";
+import ScrollProgress from "@/components/cro/ScrollProgress";
+import { PremiumHero } from "@/components/sections/PremiumHero";
+import { PremiumServices } from "@/components/sections/PremiumServices";
+import { HowItWorks } from "@/components/sections/HowItWorks";
+import { PremiumTestimonials } from "@/components/sections/PremiumTestimonials";
+import { PremiumStats } from "@/components/sections/PremiumStats";
+import { CaseStudiesPreview } from "@/components/sections/CaseStudiesPreview";
+import { PremiumFAQ } from "@/components/sections/PremiumFAQ";
+import { PremiumFinalCTA } from "@/components/sections/PremiumFinalCTA";
+
+// SEO Metadata for Homepage
+export const metadata: Metadata = {
+  title: "Capture Client | AI Voice Agents & Lead Generation for Small Business",
+  description:
+    "Never miss a lead again. AI voice agents answer calls 24/7, qualify leads, and book appointments. Plus Google & Facebook Ads management. Trusted by 500+ businesses. Book your free demo today.",
+  keywords: [
+    "AI voice agents",
+    "lead generation",
+    "small business marketing",
+    "Google Ads management",
+    "Facebook Ads agency",
+    "CRM",
+    "automated lead capture",
+    "Knoxville marketing agency",
+    "AI receptionist",
+    "24/7 call answering",
+    "virtual receptionist",
+    "conversational AI",
+    "appointment scheduling ai",
+    "lead qualification",
+  ],
+  openGraph: {
+    title: "Capture Client | AI Voice Agents & Lead Generation for Small Business",
+    description:
+      "Never miss a lead again. AI voice agents answer calls 24/7, qualify leads, and book appointments automatically.",
+    url: "https://captureclient.net",
+    siteName: "Capture Client",
+    type: "website",
+    images: [
+      {
+        url: "https://captureclient.net/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Capture Client - AI Voice Agents for Small Business",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Capture Client | AI Voice Agents & Lead Generation",
+    description:
+      "Never miss a lead again. AI voice agents answer calls 24/7, qualify leads, and book appointments.",
+    images: ["https://captureclient.net/og-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://captureclient.net",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+// JSON-LD Structured Data
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Capture Client",
+  url: "https://captureclient.net",
+  logo: "https://captureclient.net/logo-full.png",
+  description: "AI-powered lead generation and voice agents for small businesses",
+  telephone: "+1-865-346-3339",
+  email: "team@captureclient.net",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Knoxville",
+    addressRegion: "TN",
+    addressCountry: "US",
+  },
+  sameAs: [
+    "https://twitter.com/captureclient",
+    "https://linkedin.com/company/captureclient",
+    "https://facebook.com/captureclient",
+  ],
+  areaServed: [
+    { "@type": "State", name: "Tennessee" },
+    { "@type": "State", name: "Georgia" },
+    { "@type": "State", name: "North Carolina" },
+    { "@type": "State", name: "Kentucky" },
+    { "@type": "State", name: "Virginia" },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Marketing Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "AI Voice Agents",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Lead Generation",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Google Ads Management",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Facebook Ads Management",
+        },
+      },
+    ],
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "127",
+    bestRating: "5",
+    worstRating: "1",
+  },
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  url: "https://captureclient.net",
+  name: "Capture Client",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: {
+      "@type": "EntryPoint",
+      urlTemplate: "https://captureclient.net/search?q={search_term_string}",
+    },
+    "query-input": "required name=search_term_string",
+  },
+};
 
 export default function HomePage() {
   return (
-    <div className="relative min-h-screen w-full">
-      {/* ==================== SECTION 1: HERO ==================== */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-background-dark">
-        {/* Animated mesh gradient background */}
-        <div className="absolute inset-0 bg-mesh">
-          {/* Orbital ring animation */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] orbital-ring opacity-30"></div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] orbital-ring opacity-20" style={{ animationDelay: "-10s" }}></div>
+    <div className="relative min-h-screen w-full overflow-x-hidden">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
 
-          {/* Floating particles */}
-          <div className="particles">
-            <div className="particle" style={{ left: "20%", top: "30%", animationDelay: "0s" }}></div>
-            <div className="particle" style={{ left: "80%", top: "60%", animationDelay: "2s" }}></div>
-            <div className="particle" style={{ left: "50%", top: "80%", animationDelay: "4s" }}></div>
-            <div className="particle" style={{ left: "10%", top: "70%", animationDelay: "6s" }}></div>
-            <div className="particle" style={{ left: "90%", top: "20%", animationDelay: "3s" }}></div>
-          </div>
-        </div>
+      {/* ==================== STICKY PHONE CTA (Top Bar) ==================== */}
+      <StickyPhoneCTA />
 
-        <div className="container-custom relative z-10 px-6 lg:px-8">
-          <div className="max-w-5xl mx-auto text-center">
-            {/* Headline */}
-            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-foreground leading-tight mb-6 animate-fade-in">
-              The All-in-One Growth Hub for{" "}
-              <span className="text-gradient">Small Business.</span>
-            </h1>
+      {/* ==================== EXIT INTENT POPUP ==================== */}
+      <ExitIntentPopup />
 
-            {/* Subheadline */}
-            <p className="text-2xl md:text-3xl font-semibold text-accent mb-6 animate-slide-up">
-              Automate Leads. Capture Clients. Scale Effortlessly.
-            </p>
+      {/* ==================== SCROLL PROGRESS & QUICK CTA ==================== */}
+      <ScrollProgress />
 
-            {/* Description */}
-            <p className="text-lg md:text-xl text-foreground-muted max-w-3xl mx-auto mb-10 animate-slide-up" style={{ animationDelay: "0.1s" }}>
-              The complete platform combining AI Voice Agents, Google & Facebook Ads, built-in CRM,
-              and real-time analytics—everything you need to capture more clients and grow your business.
-            </p>
-
-            {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-              <Link href="#contact" className="btn-primary">
-                Book a Demo
-              </Link>
-              <Link href="#services" className="btn-ghost">
-                Learn More
-              </Link>
-            </div>
-
-            {/* Trust signal */}
-            <div className="flex items-center justify-center gap-2 text-foreground-muted animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              <span className="material-icons text-accent">verified</span>
-              <p className="text-sm font-medium">Trusted by 500+ Small Businesses</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-          <span className="material-icons text-accent/50 text-4xl">keyboard_arrow_down</span>
-        </div>
-      </section>
+      {/* ==================== SECTION 1: PREMIUM HERO ==================== */}
+      <PremiumHero />
 
       {/* ==================== SOCIAL PROOF BANNER ==================== */}
-      <section className="bg-background-dark py-8">
-        <div className="container-custom px-6 lg:px-8">
+      <section className="bg-background-dark py-6 sm:py-8">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
           <SocialProofBanner />
         </div>
       </section>
 
-      {/* ==================== SECTION 2: SERVICES ==================== */}
-      <section id="services" className="section bg-background relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-background-dark via-background to-background-dark opacity-50"></div>
+      {/* ==================== AS SEEN IN / MEDIA MENTIONS ==================== */}
+      <section className="bg-background py-6 sm:py-8">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
+          <AsSeenIn />
+        </div>
+      </section>
 
-        <div className="container-custom relative z-10">
-          {/* Section header */}
-          <div className="text-center mb-16">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-accent mb-4">
-              The Integrated Solution
-            </h2>
-            <p className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
-              Everything You Need in One Platform
-            </p>
-            <p className="text-lg text-foreground-muted max-w-2xl mx-auto">
-              Stop juggling multiple tools. Capture Client brings AI, ads, CRM, and analytics together
-              in one seamless growth engine.
-            </p>
-          </div>
+      {/* ==================== SECTION 2: PREMIUM SERVICES ==================== */}
+      <PremiumServices />
 
-          {/* Feature cards grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {/* Card 1: Voice AI Agents */}
-            <div className="card group">
-              <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 border border-primary/20 mb-6 group-hover:bg-primary/20 transition-colors duration-300">
-                <span className="material-icons text-primary text-3xl">support_agent</span>
-              </div>
-              <h3 className="text-xl font-heading font-bold text-foreground mb-3">
-                Voice AI Agents
-              </h3>
-              <p className="text-foreground-muted leading-relaxed">
-                AI-powered voice agents handle calls 24/7, qualify leads, book appointments,
-                and answer questions—so you never miss an opportunity.
-              </p>
-            </div>
-
-            {/* Card 2: Lead Generation */}
-            <div className="card group">
-              <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-accent/10 border border-accent/20 mb-6 group-hover:bg-accent/20 transition-colors duration-300">
-                <span className="material-icons text-accent text-3xl">trending_up</span>
-              </div>
-              <h3 className="text-xl font-heading font-bold text-foreground mb-3">
-                Lead Generation
-              </h3>
-              <p className="text-foreground-muted leading-relaxed">
-                Professionally managed Google and Facebook Ads campaigns designed to drive
-                high-quality leads directly to your business.
-              </p>
-            </div>
-
-            {/* Card 3: Built-in CRM */}
-            <div className="card group">
-              <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-primary/10 border border-primary/20 mb-6 group-hover:bg-primary/20 transition-colors duration-300">
-                <span className="material-icons text-primary text-3xl">contacts</span>
-              </div>
-              <h3 className="text-xl font-heading font-bold text-foreground mb-3">
-                Built-in CRM
-              </h3>
-              <p className="text-foreground-muted leading-relaxed">
-                Manage all client interactions, track conversations, and organize your pipeline
-                in one unified inbox—no more scattered tools.
-              </p>
-            </div>
-
-            {/* Card 4: Marketing Dashboard */}
-            <div className="card group">
-              <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-accent/10 border border-accent/20 mb-6 group-hover:bg-accent/20 transition-colors duration-300">
-                <span className="material-icons text-accent text-3xl">insights</span>
-              </div>
-              <h3 className="text-xl font-heading font-bold text-foreground mb-3">
-                Marketing Dashboard
-              </h3>
-              <p className="text-foreground-muted leading-relaxed">
-                Real-time analytics and reporting give you complete visibility into campaign
-                performance, ROI, and growth metrics.
-              </p>
-            </div>
-          </div>
-
-          {/* Trust Signals */}
-          <div className="mt-16">
-            <TrustSignals />
-          </div>
+      {/* ==================== CLIENT LOGOS / SOCIAL PROOF ==================== */}
+      <section className="section bg-background-dark">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
+          <ClientLogos />
         </div>
       </section>
 
       {/* ==================== SECTION 2.5: LEAD RESCUE SIMULATOR ==================== */}
       <LeadRescueSimulator />
 
-      {/* ==================== SECTION 3: TECHNOLOGY DEEP DIVE ==================== */}
+      {/* ==================== SECTION 2.75: INTERACTIVE AI DEMO ==================== */}
+      {/* Try our AI - Let visitors experience the technology firsthand */}
+      <InteractiveAIDemo />
+
+      {/* ==================== SECTION 3: HOW IT WORKS ==================== */}
+      <HowItWorks />
+
+      {/* ==================== SECTION 3.5: TECHNOLOGY DEEP DIVE ==================== */}
       {/* Part A: AI Voice Technology */}
-      <section className="section bg-background-dark relative overflow-hidden">
-        <div className="container-custom relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <section className="section bg-background relative overflow-hidden">
+        <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             {/* Text content - Left */}
             <div>
-              <h2 className="text-sm font-bold uppercase tracking-widest text-accent mb-4">
+              <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent mb-3 sm:mb-4">
                 AI Voice Technology
               </h2>
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-6">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-4 sm:mb-6">
                 Never Miss a Call. Never Lose a Lead.
               </h3>
-              <p className="text-lg text-foreground-muted mb-6 leading-relaxed">
-                Our advanced AI voice agents don't just answer calls—they understand context,
-                respond naturally, and take action. Every conversation is transcribed, analyzed,
-                and logged automatically.
+              <p className="text-base sm:text-lg text-foreground-muted mb-6 sm:mb-8 leading-relaxed">
+                Our enterprise-grade AI voice agents powered by conversational AI don't just answer calls—they understand context with natural language processing,
+                respond naturally with real-time sentiment analysis, and take action. Every conversation is transcribed with 99% accuracy, analyzed, and
+                logged automatically in your CRM with complete call intelligence.
               </p>
 
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start gap-3">
-                  <span className="material-icons text-accent mt-1">check_circle</span>
+              <ul className="space-y-4 sm:space-y-5 mb-6 sm:mb-8">
+                <li className="flex items-start gap-3 sm:gap-4">
+                  <span className="material-icons text-accent mt-0.5 sm:mt-1 flex-shrink-0 text-xl sm:text-2xl">check_circle</span>
                   <div>
-                    <p className="font-semibold text-foreground">24/7 Availability</p>
-                    <p className="text-foreground-muted">Handle unlimited calls simultaneously, any time of day</p>
+                    <p className="font-semibold text-foreground text-base sm:text-lg mb-1">24/7 Availability</p>
+                    <p className="text-sm sm:text-base text-foreground-muted leading-relaxed">
+                      Handle unlimited calls simultaneously, any time of day
+                    </p>
                   </div>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="material-icons text-accent mt-1">check_circle</span>
+                <li className="flex items-start gap-3 sm:gap-4">
+                  <span className="material-icons text-accent mt-0.5 sm:mt-1 flex-shrink-0 text-xl sm:text-2xl">check_circle</span>
                   <div>
-                    <p className="font-semibold text-foreground">Natural Conversations</p>
-                    <p className="text-foreground-muted">Context-aware responses that feel human and professional</p>
+                    <p className="font-semibold text-foreground text-base sm:text-lg mb-1">Natural Conversations</p>
+                    <p className="text-sm sm:text-base text-foreground-muted leading-relaxed">
+                      Context-aware responses that feel human and professional
+                    </p>
                   </div>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="material-icons text-accent mt-1">check_circle</span>
+                <li className="flex items-start gap-3 sm:gap-4">
+                  <span className="material-icons text-accent mt-0.5 sm:mt-1 flex-shrink-0 text-xl sm:text-2xl">check_circle</span>
                   <div>
-                    <p className="font-semibold text-foreground">Automatic Transcription</p>
-                    <p className="text-foreground-muted">Every call is recorded, transcribed, and searchable</p>
+                    <p className="font-semibold text-foreground text-base sm:text-lg mb-1">Automatic Transcription</p>
+                    <p className="text-sm sm:text-base text-foreground-muted leading-relaxed">
+                      Every call is recorded, transcribed, and searchable
+                    </p>
                   </div>
                 </li>
               </ul>
 
-              <Link href="/services/voice-ai" className="btn-secondary">
+              <Link href="/services/voice-ai" className="btn-secondary inline-block w-full sm:w-auto text-center">
                 Explore Voice AI
               </Link>
             </div>
@@ -228,50 +291,58 @@ export default function HomePage() {
       </section>
 
       {/* Part B: Dashboard & CRM */}
-      <section className="section bg-background relative overflow-hidden">
-        <div className="container-custom relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <section className="section bg-background-dark relative overflow-hidden">
+        <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             {/* Visual mockup - Left */}
-            <GrowthDashboard />
+            <div className="order-2 lg:order-1">
+              <GrowthDashboard />
+            </div>
 
             {/* Text content - Right */}
             <div className="order-1 lg:order-2">
-              <h2 className="text-sm font-bold uppercase tracking-widest text-primary mb-4">
+              <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-primary mb-3 sm:mb-4">
                 Unified Platform
               </h2>
-              <h3 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-6">
+              <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-4 sm:mb-6">
                 See Everything. Control Everything.
               </h3>
-              <p className="text-lg text-foreground-muted mb-6 leading-relaxed">
-                Our dashboard gives you complete visibility into your entire growth engine.
-                Track campaigns, manage leads, and analyze performance—all from one beautiful interface.
+              <p className="text-base sm:text-lg text-foreground-muted mb-6 sm:mb-8 leading-relaxed">
+                Our dashboard gives you complete visibility into your entire growth engine. Track
+                campaigns, manage leads, and analyze performance—all from one beautiful interface.
               </p>
 
-              <ul className="space-y-4 mb-8">
-                <li className="flex items-start gap-3">
-                  <span className="material-icons text-primary mt-1">check_circle</span>
+              <ul className="space-y-4 sm:space-y-5 mb-6 sm:mb-8">
+                <li className="flex items-start gap-3 sm:gap-4">
+                  <span className="material-icons text-primary mt-0.5 sm:mt-1 flex-shrink-0 text-xl sm:text-2xl">check_circle</span>
                   <div>
-                    <p className="font-semibold text-foreground">Real-Time Analytics</p>
-                    <p className="text-foreground-muted">Live updates on campaign performance and lead activity</p>
+                    <p className="font-semibold text-foreground text-base sm:text-lg mb-1">Real-Time Analytics</p>
+                    <p className="text-sm sm:text-base text-foreground-muted leading-relaxed">
+                      Live updates on campaign performance and lead activity
+                    </p>
                   </div>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="material-icons text-primary mt-1">check_circle</span>
+                <li className="flex items-start gap-3 sm:gap-4">
+                  <span className="material-icons text-primary mt-0.5 sm:mt-1 flex-shrink-0 text-xl sm:text-2xl">check_circle</span>
                   <div>
-                    <p className="font-semibold text-foreground">Unified Inbox</p>
-                    <p className="text-foreground-muted">Manage calls, texts, emails, and form submissions in one place</p>
+                    <p className="font-semibold text-foreground text-base sm:text-lg mb-1">Unified Inbox</p>
+                    <p className="text-sm sm:text-base text-foreground-muted leading-relaxed">
+                      Manage calls, texts, emails, and form submissions in one place
+                    </p>
                   </div>
                 </li>
-                <li className="flex items-start gap-3">
-                  <span className="material-icons text-primary mt-1">check_circle</span>
+                <li className="flex items-start gap-3 sm:gap-4">
+                  <span className="material-icons text-primary mt-0.5 sm:mt-1 flex-shrink-0 text-xl sm:text-2xl">check_circle</span>
                   <div>
-                    <p className="font-semibold text-foreground">Growth Tracking</p>
-                    <p className="text-foreground-muted">Visualize your growth trajectory with beautiful, actionable insights</p>
+                    <p className="font-semibold text-foreground text-base sm:text-lg mb-1">Growth Tracking</p>
+                    <p className="text-sm sm:text-base text-foreground-muted leading-relaxed">
+                      Visualize your growth trajectory with beautiful, actionable insights
+                    </p>
                   </div>
                 </li>
               </ul>
 
-              <Link href="/features" className="btn-secondary">
+              <Link href="/features" className="btn-secondary inline-block w-full sm:w-auto text-center">
                 Explore CRM & Dashboard
               </Link>
             </div>
@@ -279,20 +350,30 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ==================== CASE STUDIES PREVIEW ==================== */}
+      <CaseStudiesPreview />
+
+      {/* ==================== COMPARISON TABLE ==================== */}
+      <section className="section bg-background relative">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
+          <ComparisonTable />
+        </div>
+      </section>
+
       {/* ==================== SECTION 4: PRICING ==================== */}
       <section id="pricing" className="section bg-background-dark relative overflow-hidden">
         <div className="absolute inset-0 bg-mesh opacity-30"></div>
 
-        <div className="container-custom relative z-10">
+        <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           {/* Section header */}
-          <div className="text-center mb-16">
-            <h2 className="text-sm font-bold uppercase tracking-widest text-accent mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent mb-3 sm:mb-4">
               Pricing
             </h2>
-            <p className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
+            <p className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-foreground mb-3 sm:mb-4 px-4">
               Simple Pricing for Scalable Growth
             </p>
-            <p className="text-lg text-foreground-muted max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-foreground-muted max-w-2xl mx-auto px-4">
               Choose the plan that fits your business. All plans include our core platform features.
             </p>
           </div>
@@ -301,94 +382,37 @@ export default function HomePage() {
           <PricingCards />
 
           {/* Risk Reversal Guarantee */}
-          <div className="mt-16">
+          <div className="mt-12 sm:mt-16">
             <RiskReversal />
           </div>
 
           {/* Capacity indicator */}
-          <div className="mt-8">
+          <div className="mt-6 sm:mt-8">
             <CapacityIndicator spotsLeft={7} />
           </div>
-        </div>
-      </section>
 
-      {/* ==================== SECTION 4.5: OBJECTION HANDLER ==================== */}
-      <section className="section bg-background relative">
-        <div className="container-custom">
-          <ObjectionHandler />
-        </div>
-      </section>
-
-      {/* ==================== SECTION 5: SOCIAL PROOF ==================== */}
-      <section className="section bg-background relative">
-        <div className="container-custom">
-          {/* Testimonials */}
-          <TestimonialsCarousel />
-
-          {/* Trust badges */}
-          <div className="border-t border-surface-border pt-12">
-            <p className="text-center text-foreground-muted text-sm uppercase tracking-wider mb-8">
-              Trusted Partners
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-12 opacity-50">
-              <div className="text-foreground-muted font-semibold text-lg">
-                Google Ads Partner
-              </div>
-              <div className="text-foreground-muted font-semibold text-lg">
-                Meta Business Partner
-              </div>
-              <div className="text-foreground-muted font-semibold text-lg">
-                BBB Accredited
-              </div>
-            </div>
-          </div>
-
-          {/* Stats row */}
-          <AnimatedStats />
-        </div>
-      </section>
-
-      {/* ==================== SECTION 6: FINAL CTA ==================== */}
-      <section id="contact" className="section bg-background-dark relative overflow-hidden">
-        {/* Background effects */}
-        <div className="absolute inset-0 bg-mesh">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px]">
-            <div className="absolute inset-0 bg-gradient-radial from-accent/10 via-primary/5 to-transparent opacity-50 animate-pulse-glow"></div>
-          </div>
-        </div>
-
-        <div className="container-custom relative z-10">
-          <div className="max-w-4xl mx-auto">
-            {/* Header */}
-            <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-4">
-                Ready to <span className="text-gradient">Capture Your Market?</span>
-              </h2>
-              <p className="text-xl text-foreground-muted max-w-2xl mx-auto">
-                Start automating leads and capturing more clients today. Book a free demo
-                to see the platform in action.
-              </p>
-            </div>
-
-            {/* Lead capture form - Optimized 2-step form */}
-            <div className="glass p-8 lg:p-12 rounded-2xl shadow-glow max-w-2xl mx-auto mb-12">
-              <OptimizedLeadForm source="homepage-final-cta" />
-            </div>
-
-            {/* Alternative CTA */}
-            <div className="text-center">
-              <p className="text-foreground-muted mb-4">Prefer to talk? We're here to help.</p>
-              <a
-                href="tel:865-346-3339"
-                className="inline-flex items-center gap-2 text-2xl font-bold text-accent hover:text-accent/80 transition-colors"
-              >
-                <span className="material-icons text-3xl">phone</span>
-                (865) 346-3339
-              </a>
-            </div>
+          {/* Urgency Timer */}
+          <div className="mt-8 sm:mt-12">
+            <UrgencyTimer />
           </div>
         </div>
       </section>
+
+      {/* ==================== PREMIUM FAQ / OBJECTION HANDLER ==================== */}
+      <PremiumFAQ />
+
+      {/* ==================== SECTION 5: TESTIMONIALS & SOCIAL PROOF ==================== */}
+      <PremiumTestimonials />
+
+      {/* ==================== STATS SECTION ==================== */}
+      <section className="section bg-background-dark relative">
+        <div className="container-custom px-4 sm:px-6 lg:px-8">
+          <PremiumStats />
+        </div>
+      </section>
+
+      {/* ==================== SECTION 6: PREMIUM FINAL CTA ==================== */}
+      <PremiumFinalCTA />
 
       {/* Mobile CTA Bar - Always present on mobile */}
       <MobileCTABar />

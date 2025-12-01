@@ -4,22 +4,23 @@
   "package_info": {
     "name": "Growth Package",
     "slug": "growth-package",
-    "price": "$2,195",
+    "price": "$1,997",
     "period": "per month",
-    "tagline": "Scale your business with AI + paid advertising that actually converts"
+    "tagline": "Multi-channel marketing automation for ambitious growing businesses",
+    "value_comparison": "Get AI voice agents + professional paid advertising management for what agencies charge for ads alone"
   },
   "seo": {
-    "title": "Growth Package - $2,195/mo | AI + Google/Facebook Ads | Capture Client",
-    "meta_description": "Scale faster with 2 AI Voice Agents, 200 calls/month, and professional Google or Facebook Ads management. Ad spend $1K-$3K managed. Book more leads automatically.",
-    "keywords": ["ai voice agent growth", "facebook ads with ai", "google ads lead generation", "ai lead generation system"]
+    "title": "Growth Package - $1,997/mo | AI Voice Agents + Multi-Channel Ads | Capture Client",
+    "meta_description": "Scale faster with 2 AI Voice Agents (200 calls/month), dedicated account manager, and professional Google or Facebook Ads management ($3K-$10K/month budget). Advanced lead qualification included.",
+    "keywords": ["ai voice agent growth", "facebook ads with ai", "google ads lead generation", "ai lead generation system", "dedicated account manager", "advanced lead qualification"]
   },
   "hero": {
-    "headline": "Scale Your Lead Generation with AI + Ads",
-    "subheadline": "2 AI Voice Agents + Google OR Facebook Ads Management + Landing Page Optimization",
+    "headline": "Scale Your Lead Generation with AI + Multi-Channel Advertising",
+    "subheadline": "2 Custom AI Voice Agents + Professional Google or Facebook Ads + Dedicated Account Manager + Advanced Lead Qualification",
     "price_display": {
-      "amount": "$2,195",
+      "amount": "$1,997",
       "period": "per month",
-      "note": "Ad spend managed: $1,000-$3,000/month"
+      "note": "Ad spend managed: $3,000-$10,000/month"
     },
     "badge": "MOST POPULAR",
     "cta": {

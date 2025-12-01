@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle2, UserPlus, Target, Calendar } from 'lucide-react';
+import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { CheckCircle2, UserPlus, Target, Calendar } from "lucide-react";
 
 interface CRMField {
   label: string;
@@ -42,36 +42,27 @@ const CRMCard: React.FC<CRMCardProps> = ({ fields }) => {
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 pointer-events-none" />
 
         {/* Card Header */}
-        <div className="relative px-6 py-5 border-b border-white/10">
-          <div className="flex items-center gap-3">
+        <div className="relative px-4 sm:px-6 py-4 sm:py-5 border-b border-white/10">
+          <div className="flex items-center gap-2 sm:gap-3">
             <motion.div
               initial={{ scale: 0, rotate: -180 }}
               animate={{ scale: 1, rotate: 0 }}
-              transition={{ delay: 0.2, duration: 0.5, ease: 'backOut' }}
-              className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 flex items-center justify-center"
+              transition={{ delay: 0.2, duration: 0.5, ease: "backOut" }}
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 flex items-center justify-center flex-shrink-0"
             >
-              <UserPlus className="w-5 h-5 text-cyan-400" />
+              <UserPlus className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400" />
             </motion.div>
-            <div>
-              <h3 className="text-lg font-semibold text-white tracking-tight">
-                New Lead Captured
-              </h3>
-              <p className="text-xs text-white/40 font-mono">
-                AI Voice Agent → CRM
-              </p>
+            <div className="min-w-0">
+              <h3 className="text-base sm:text-lg font-semibold text-white tracking-tight truncate">New Lead Captured</h3>
+              <p className="text-[10px] sm:text-xs text-white/40 font-mono truncate">AI Voice Agent → CRM</p>
             </div>
           </div>
         </div>
 
         {/* Card Body - Fields */}
-        <div className="relative px-6 py-5 space-y-4">
+        <div className="relative px-4 sm:px-6 py-4 sm:py-5 space-y-3 sm:space-y-4">
           {fields.map((field, index) => (
-            <CRMField
-              key={field.label}
-              field={field}
-              index={index}
-              icon={getFieldIcon(index)}
-            />
+            <CRMField key={field.label} field={field} index={index} icon={getFieldIcon(index)} />
           ))}
         </div>
 
@@ -105,18 +96,18 @@ const CRMField: React.FC<CRMFieldProps> = ({ field, index, icon }) => {
   // Color scheme based on urgency
   const colors = urgent
     ? {
-        border: 'border-red-500/30',
-        bg: 'bg-red-500/5',
-        text: 'text-red-400',
-        glow: 'shadow-red-500/20',
-        flash: 'from-red-500/30',
+        border: "border-red-500/30",
+        bg: "bg-red-500/5",
+        text: "text-red-400",
+        glow: "shadow-red-500/20",
+        flash: "from-red-500/30",
       }
     : {
-        border: 'border-cyan-500/30',
-        bg: 'bg-cyan-500/5',
-        text: 'text-cyan-400',
-        glow: 'shadow-cyan-500/20',
-        flash: 'from-cyan-500/30',
+        border: "border-cyan-500/30",
+        bg: "bg-cyan-500/5",
+        text: "text-cyan-400",
+        glow: "shadow-cyan-500/20",
+        flash: "from-cyan-500/30",
       };
 
   return (
@@ -130,27 +121,28 @@ const CRMField: React.FC<CRMFieldProps> = ({ field, index, icon }) => {
       <div
         className={`
           relative rounded-xl backdrop-blur-md transition-all duration-500
-          ${filled
-            ? `${colors.bg} border ${colors.border} shadow-lg ${colors.glow}`
-            : 'bg-white/[0.02] border border-white/5'
+          ${
+            filled
+              ? `${colors.bg} border ${colors.border} shadow-lg ${colors.glow}`
+              : "bg-white/[0.02] border border-white/5"
           }
         `}
       >
-        <div className="px-4 py-3.5">
+        <div className="px-3 sm:px-4 py-3 sm:py-3.5">
           {/* Label */}
-          <div className="flex items-center gap-2 mb-2">
+          <div className="flex items-center gap-1.5 sm:gap-2 mb-2">
             <div
               className={`
-                transition-colors duration-300
-                ${filled ? colors.text : 'text-white/30'}
+                transition-colors duration-300 w-3.5 h-3.5 sm:w-4 sm:h-4 flex items-center justify-center
+                ${filled ? colors.text : "text-white/30"}
               `}
             >
               {icon}
             </div>
             <span
               className={`
-                text-[10px] font-bold uppercase tracking-wider transition-colors duration-300
-                ${filled ? colors.text : 'text-white/30'}
+                text-[9px] sm:text-[10px] font-bold uppercase tracking-wider transition-colors duration-300
+                ${filled ? colors.text : "text-white/30"}
               `}
             >
               {label}
@@ -158,7 +150,7 @@ const CRMField: React.FC<CRMFieldProps> = ({ field, index, icon }) => {
           </div>
 
           {/* Value Container */}
-          <div className="relative min-h-[32px] flex items-center">
+          <div className="relative min-h-[28px] sm:min-h-[32px] flex items-center">
             <AnimatePresence mode="wait">
               {!filled ? (
                 // Empty State
@@ -185,9 +177,7 @@ const CRMField: React.FC<CRMFieldProps> = ({ field, index, icon }) => {
                       />
                     ))}
                   </div>
-                  <span className="text-sm text-white/20 font-mono">
-                    Waiting...
-                  </span>
+                  <span className="text-xs sm:text-sm text-white/20 font-mono">Waiting...</span>
                 </motion.div>
               ) : (
                 // Filled State with Flash Animation
@@ -195,7 +185,7 @@ const CRMField: React.FC<CRMFieldProps> = ({ field, index, icon }) => {
                   key="filled"
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
-                  className="flex items-center justify-between w-full"
+                  className="flex items-center justify-between w-full gap-2"
                 >
                   {/* Flash Effect */}
                   <motion.div
@@ -214,8 +204,8 @@ const CRMField: React.FC<CRMFieldProps> = ({ field, index, icon }) => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
                     className={`
-                      text-base font-mono font-medium tracking-tight relative z-10
-                      ${urgent ? 'text-red-100' : 'text-white'}
+                      text-sm sm:text-base font-mono font-medium tracking-tight relative z-10 truncate
+                      ${urgent ? "text-red-100" : "text-white"}
                     `}
                   >
                     {value}
@@ -225,11 +215,11 @@ const CRMField: React.FC<CRMFieldProps> = ({ field, index, icon }) => {
                   <motion.div
                     initial={{ scale: 0, rotate: -180 }}
                     animate={{ scale: 1, rotate: 0 }}
-                    transition={{ delay: 0.3, type: 'spring', stiffness: 200 }}
-                    className="relative z-10"
+                    transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
+                    className="relative z-10 flex-shrink-0"
                   >
                     <CheckCircle2
-                      className={`w-5 h-5 ${urgent ? 'text-red-400' : 'text-cyan-400'}`}
+                      className={`w-4 h-4 sm:w-5 sm:h-5 ${urgent ? "text-red-400" : "text-cyan-400"}`}
                     />
                   </motion.div>
                 </motion.div>
@@ -246,7 +236,7 @@ const CRMField: React.FC<CRMFieldProps> = ({ field, index, icon }) => {
             transition={{ delay: 0.4 }}
             className={`
               absolute inset-0 rounded-xl opacity-20 pointer-events-none
-              bg-gradient-to-br ${urgent ? 'from-red-500/10' : 'from-cyan-500/10'} to-transparent
+              bg-gradient-to-br ${urgent ? "from-red-500/10" : "from-cyan-500/10"} to-transparent
             `}
           />
         )}
@@ -260,7 +250,7 @@ const CRMField: React.FC<CRMFieldProps> = ({ field, index, icon }) => {
           transition={{ duration: 0.8 }}
           className={`
             absolute inset-0 rounded-xl border-2 pointer-events-none
-            ${urgent ? 'border-red-500/50' : 'border-cyan-500/50'}
+            ${urgent ? "border-red-500/50" : "border-cyan-500/50"}
           `}
         />
       )}

@@ -1,0 +1,285 @@
+{
+  "research_date": "2025-11-30",
+  "cities_researched": ["New York City", "Los Angeles"],
+  "methodology": "Google Maps search + website scraping + industry pricing research",
+  "competitors": [
+    {
+      "name": "Jives Media",
+      "city": "NYC",
+      "website": "https://www.jivesmedia.com/digital-marketing-agency-in-manhattan-ny/",
+      "address": "800 6th Ave Suite 36C, New York, NY 10001",
+      "phone": "(929) 265-5595",
+      "rating": "4.9 stars (199 reviews)",
+      "hours": "Open 24 hours",
+      "services": [
+        "SEO (Local SEO, Content SEO, Ecommerce SEO, Video SEO, Enterprise SEO)",
+        "Paid Advertising (Google Ads, LinkedIn Ads, Meta/Facebook Ads, Bing Ads, Programmatic)",
+        "Web Design & Branding",
+        "Email Marketing",
+        "Marketing Consulting",
+        "Analytics",
+        "CRO (Conversion Rate Optimization)",
+        "Reputation Management",
+        "Social Media Marketing (LinkedIn, Meta, Social Media Management)"
+      ],
+      "pricing": {
+        "model": "Custom quotes - no public pricing",
+        "packages": [],
+        "notes": "Uses custom quotes rather than transparent, tiered pricing models. Contact required for pricing."
+      }
+    },
+    {
+      "name": "Voy Media",
+      "city": "NYC",
+      "website": "https://voymedia.com/advertising-agency-new-york/",
+      "address": "143 W 29th St Suite 204, New York, NY",
+      "phone": "Not listed",
+      "rating": "4.7 stars (34 reviews)",
+      "hours": "Open 24 hours",
+      "services": [
+        "Full-Service Facebook & Instagram Ads",
+        "Retargeting",
+        "Custom Audiences and Dynamic Product Ads",
+        "Creative Studio (video design, photoshoots, copywriting, graphic design, illustration, video editing, video production, UGC)",
+        "Growth Marketing",
+        "Google Ads",
+        "1 on 1 Strategy Consultations",
+        "Real Time Analytics"
+      ],
+      "pricing": {
+        "model": "Custom quotes - pricing page exists but not disclosed in scrape",
+        "packages": [],
+        "notes": "Performance-based, full-service agency model. Claims 92% of clients doubled revenue in first year."
+      }
+    },
+    {
+      "name": "Leadige Media Group",
+      "city": "NYC",
+      "website": "https://leadige.agency/",
+      "address": "1501 Broadway 12th floor, New York, NY",
+      "phone": "(646) 303-7851",
+      "rating": "4.9 stars (44 reviews)",
+      "hours": "Open, closes 6 PM",
+      "services": [
+        "Digital Marketing (website content heavily CSS/framework - full service list not extracted)"
+      ],
+      "pricing": {
+        "model": "Unknown - content not accessible via scrape",
+        "packages": [],
+        "notes": "Website scrape showed mostly CSS/framework code. Need manual review for full details."
+      }
+    },
+    {
+      "name": "Branding Los Angeles",
+      "city": "Los Angeles",
+      "website": "https://brandinglosangeles.com/",
+      "address": "11040 Santa Monica Blvd #310, Los Angeles, CA",
+      "phone": "(310) 479-6444",
+      "rating": "4.9 stars (79 reviews)",
+      "hours": "Open 24 hours",
+      "services": [
+        "Strategic Branding",
+        "Marketing & Communications",
+        "Public Affairs",
+        "Digital Marketing",
+        "Social Media Marketing (Facebook, Instagram, LinkedIn, Pinterest)",
+        "Content Creation",
+        "Photography & Videography",
+        "SEO Services",
+        "Email Marketing",
+        "Logo Design",
+        "Print Design",
+        "Web Design"
+      ],
+      "pricing": {
+        "model": "Custom quotes - no public pricing",
+        "packages": [],
+        "notes": "Service-based agency offering custom solutions. Pricing requires direct consultation."
+      }
+    },
+    {
+      "name": "inBeat Agency",
+      "city": "Los Angeles",
+      "website": "https://inbeat.agency/",
+      "address": "700 Flower St Suite 1000, Los Angeles, CA",
+      "phone": "(323) 689-5089",
+      "rating": "5.0 stars (203 reviews)",
+      "hours": "Open 24 hours",
+      "services": [
+        "UGC (User-Generated Content) Marketing",
+        "TikTok Marketing & Advertising",
+        "Micro-Influencer Marketing",
+        "Nano-Influencer Marketing",
+        "Instagram Influencer Marketing",
+        "Performance Creative Services",
+        "Paid Media Management",
+        "Panel Recruitment",
+        "Product Sampling",
+        "B2B Influencer Marketing",
+        "Meta Advertising",
+        "Snapchat Advertising"
+      ],
+      "pricing": {
+        "model": "Custom quotes - no public pricing",
+        "packages": [],
+        "notes": "Influencer-focused agency. Custom quotes based on client needs."
+      }
+    },
+    {
+      "name": "Kobe Digital",
+      "city": "Los Angeles",
+      "website": "http://www.kobedigital.com/",
+      "address": "7083 Hollywood Blvd, Los Angeles, CA",
+      "phone": "(310) 734-4030",
+      "rating": "4.7 stars (36 reviews)",
+      "hours": "Open, closes 6 PM",
+      "services": [
+        "Performance Marketing (Social Media Advertising, Search Engine Marketing, Display & Video Advertising, Programmatic Advertising, Email Marketing)",
+        "Web Design & Development (Brand Identity & Strategy, Brand Websites, E-Commerce Websites, Web Applications, Mobile Applications)",
+        "Video Production (Brand Videos, Commercials, Testimonial Videos, Explainer & How-To Videos, Product Videos)"
+      ],
+      "pricing": {
+        "model": "Project/custom-quote basis",
+        "packages": [],
+        "notes": "Operates on custom quotes. No standardized tiered packages."
+      }
+    }
+  ],
+  "industry_pricing_benchmarks": {
+    "source_note": "Based on web research of 2025 industry pricing data",
+    "monthly_retainer_ranges": {
+      "small_business": {
+        "min": "$500",
+        "max": "$5,000",
+        "typical": "$1,000 - $2,500",
+        "description": "Basic services, limited channels, light outreach"
+      },
+      "mid_sized_business": {
+        "min": "$5,000",
+        "max": "$20,000",
+        "typical": "$5,000 - $10,000",
+        "description": "Comprehensive packages with SEO, content creation, analytics, multi-channel campaigns"
+      },
+      "enterprise": {
+        "min": "$10,000",
+        "max": "$50,000+",
+        "typical": "$20,000+",
+        "description": "Full outsourced SDR teams, multi-region campaigns, extensive multi-channel strategies"
+      }
+    },
+    "pricing_models": {
+      "monthly_retainer": {
+        "low_end": "$500 - $1,000/mo (productized LinkedIn/email outreach)",
+        "mid_tier": "$1,500 - $5,000/mo (serious outbound programs, mixed-channel)",
+        "high_end": "$10,000+/mo (full SDR teams, enterprise campaigns)"
+      },
+      "cost_per_lead": {
+        "low_ticket_industries": "$50 - $100 (eCommerce, education, non-profit)",
+        "mid_range_industries": "$100 - $250 (SaaS, agencies)",
+        "high_ticket_industries": "$400 - $650+ (legal, financial services)"
+      },
+      "facebook_google_ads_agency_fees": {
+        "basic": "$500 - $2,500/mo",
+        "standard": "$2,500 - $5,000/mo",
+        "enterprise": "$5,000 - $20,000+/mo",
+        "hourly_rate": "$70 - $190/hr (NYC average), up to $320/hr for top agencies"
+      },
+      "percentage_of_ad_spend": {
+        "typical": "10% - 15% of monthly ad spend",
+        "example": "£2,500/mo for budgets under £20,000/mo, or 10% of ad spend for budgets over £20,000/mo"
+      }
+    },
+    "common_package_structures": {
+      "starter": {
+        "typical_price": "$997 - $1,500/mo",
+        "features": [
+          "Single channel focus (Facebook OR Google Ads)",
+          "Basic reporting",
+          "Limited ad creative",
+          "Email support",
+          "Monthly strategy calls"
+        ]
+      },
+      "growth": {
+        "typical_price": "$2,500 - $5,000/mo",
+        "features": [
+          "Multi-channel campaigns (Facebook + Google Ads)",
+          "Advanced targeting and retargeting",
+          "A/B testing",
+          "Dedicated account manager",
+          "Weekly reporting",
+          "Landing page optimization",
+          "CRO implementation"
+        ]
+      },
+      "professional": {
+        "typical_price": "$5,000 - $10,000/mo",
+        "features": [
+          "Full-funnel marketing strategy",
+          "Multi-platform campaigns",
+          "Advanced analytics and attribution",
+          "Custom creative production",
+          "Bi-weekly strategy sessions",
+          "Priority support",
+          "Marketing automation integration"
+        ]
+      },
+      "enterprise": {
+        "typical_price": "$10,000 - $50,000+/mo",
+        "features": [
+          "Dedicated SDR team",
+          "Multi-region campaigns",
+          "Custom tech stack integration",
+          "Advanced AI-powered optimization",
+          "White-glove service",
+          "24/7 support",
+          "C-suite level reporting"
+        ]
+      }
+    },
+    "ad_spend_benchmarks": {
+      "facebook_google_platform_costs": {
+        "facebook_cpc": "$0.26 - $0.30 per click",
+        "facebook_cpm": "$1.01 - $3.00 per 1000 impressions",
+        "facebook_cost_per_reaction": "$0.00 - $0.25",
+        "facebook_cost_per_install": "$0.00 - $5.00"
+      },
+      "monthly_ad_budgets_by_business_size": {
+        "small_business": "$1,000 - $5,000/mo for testing",
+        "medium_business": "$5,000 - $50,000/mo for broader reach",
+        "large_business": "$50,000+/mo"
+      }
+    },
+    "nyc_specific_rates": {
+      "hourly_rates": "$70 - $190/hr for social media campaigns",
+      "top_tier_hourly": "Up to $320/hr",
+      "minimum_monthly_retainers": "$10,000+ for mid-market to enterprise clients (agencies like NoGood, Disruptive Advertising)"
+    }
+  },
+  "key_findings": {
+    "voice_ai_services": "NOT commonly offered by traditional marketing agencies in NYC/LA. This is a differentiator opportunity.",
+    "lead_generation_focus": "Most agencies offer lead gen as part of broader digital marketing, not as standalone Voice AI-powered service.",
+    "pricing_transparency": "Very few agencies display public pricing. Most use custom quotes.",
+    "typical_services": "Facebook Ads, Google Ads, SEO, Social Media Marketing, Web Design, Content Marketing are standard.",
+    "competitive_pricing_sweet_spots": {
+      "starter_package": "$997 - $1,500/mo (matches industry low-mid tier)",
+      "growth_package": "$2,500 - $3,500/mo (competitive mid-tier)",
+      "enterprise_package": "$5,000 - $10,000/mo (high-tier small business to mid-market)"
+    }
+  },
+  "recommendations": {
+    "pricing_strategy": "Position Voice AI + Lead Gen packages at $997 (Starter), $1,997 (Growth), $3,997 (Enterprise) to be competitive yet premium.",
+    "differentiation": "Emphasize Voice AI, 24/7 lead qualification, and automated follow-up as unique selling points not offered by competitors.",
+    "transparency": "Use transparent pricing to stand out from agencies requiring custom quotes.",
+    "target_market": "Small to mid-sized businesses ($1K-$10K/mo budget) looking for comprehensive lead gen with modern AI technology."
+  },
+  "sources": [
+    "https://clutch.co/call-centers/lead-generation/new-york",
+    "https://www.semrush.com/agencies/list/lead-generation/los-angeles/",
+    "https://expandi.io/blog/how-much-to-charge-for-lead-generation/",
+    "https://www.lyfemarketing.com/services/facebook-advertising-services/costs/",
+    "https://www.lyfemarketing.com/blog/how-much-do-ad-agencies-charge-for-social-media/",
+    "https://thesocialshepherd.com/blog/how-much-do-facebook-advertising-agencies-charge",
+    "https://www.singlegrain.com/pay-per-click/the-10-best-ppc-agencies-in-nyc-for-high-impact-ad-campaigns-2025/"
+  ]
+}

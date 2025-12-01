@@ -46,23 +46,23 @@
     }
   },
   "local_intro": {
-    "paragraph": "Nashville is booming. Whether you run a healthcare practice in Green Hills or a contracting business in Franklin, you cannot afford to miss calls. Our Voice AI ensures you answer every call from Davidson County."
+    "paragraph": "Nashville's thriving business community - from startups at the Nashville Entrepreneur Center to established companies in The Gulch and MetroCenter - all share a common problem: they can't afford to miss calls. Whether you're part of the Nashville Area Chamber of Commerce network, operate near the Central Business Improvement District, or serve customers throughout Wedgewood-Houston, Capture Client's Voice AI ensures you capture every lead, 24/7."
   },
   "benefits": [
     {
       "title": "24/7 for Nashville",
       "description": "AI scales to handle 10 or 1,000 calls per day.",
-      "icon": "clock"
+      "icon": "schedule"
     },
     {
       "title": "Beat Competition",
       "description": "Answer in under 3 seconds, every time.",
-      "icon": "award"
+      "icon": "workspace_premium"
     },
     {
       "title": "Bilingual Support",
       "description": "Communicate in multiple languages for Nashville customers.",
-      "icon": "globe"
+      "icon": "public"
     }
   ],
   "how_it_works": [

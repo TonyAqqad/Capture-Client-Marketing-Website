@@ -15,7 +15,12 @@
     "title": "Voice AI Agency in Cary, NC | Capture Client",
     "meta_description": "Cary businesses leverage Voice AI for 24/7 lead capture. Automate phone calls, qualify prospects, book appointments instantly. Get your free demo today!",
     "h1": "Voice AI Solutions for Cary, North Carolina",
-    "keywords": ["voice ai cary", "ai phone system cary nc", "automated calling cary", "ai receptionist cary"]
+    "keywords": [
+      "voice ai cary",
+      "ai phone system cary nc",
+      "automated calling cary",
+      "ai receptionist cary"
+    ]
   },
   "hero": {
     "headline": "Cary's Most Advanced Voice AI Technology",
@@ -30,27 +35,27 @@
     {
       "title": "24/7 Cary Coverage",
       "description": "Cary residents and businesses expect quick responses. AI ensures every call is answered instantly, day or night.",
-      "icon": "clock"
+      "icon": "schedule"
     },
     {
       "title": "Professional Lead Screening",
       "description": "AI qualifies leads by asking targeted questions about needs, budget, and timeline before routing to your team.",
-      "icon": "user-check"
+      "icon": "how_to_reg"
     },
     {
       "title": "Seamless Scheduling",
       "description": "Book consultations, appointments, and service calls automatically while the caller is on the phone - no follow-up needed.",
-      "icon": "calendar"
+      "icon": "event"
     },
     {
       "title": "Cost Efficiency",
       "description": "Eliminate answering service fees and reduce reception costs while providing superior service to Cary customers.",
-      "icon": "dollar-sign"
+      "icon": "attach_money"
     },
     {
       "title": "Business Intelligence",
       "description": "Track call patterns, lead sources, and conversation insights to optimize your Cary marketing and operations.",
-      "icon": "trending-up"
+      "icon": "trending_up"
     }
   ],
   "how_it_works": {

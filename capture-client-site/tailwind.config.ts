@@ -38,6 +38,18 @@ const config: Config = {
           800: "#005066",
           900: "#002833",
         },
+        // Cyan accent colors (matching reference design)
+        cyan: {
+          400: "#22d3ee",
+          500: "#06b6d4",
+          900: "#164e63",
+        },
+        // Slate backgrounds (matching reference design)
+        slate: {
+          850: "#151e2e",
+          900: "#0f172a",
+          950: "#020617",
+        },
         // Background colors
         background: {
           DEFAULT: "#0F172A",

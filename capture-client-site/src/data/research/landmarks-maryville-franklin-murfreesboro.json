@@ -1,0 +1,145 @@
+{
+  "research_date": "2025-11-30",
+  "methodology": "Research of local business landmarks, chambers of commerce, industrial parks, and business districts for SEO-optimized location pages",
+  "maryville": {
+    "city": "Maryville",
+    "state": "Tennessee",
+    "county": "Blount County",
+    "landmarks": [
+      {
+        "name": "Maryville Business Development Center",
+        "type": "Business Center",
+        "address": "Maryville, TN",
+        "description": "Local business development and support center serving Maryville entrepreneurs and small businesses"
+      },
+      {
+        "name": "Blount County Chamber of Commerce",
+        "type": "Chamber of Commerce",
+        "address": "309 S Washington St, Maryville, TN 37804",
+        "description": "Primary chamber of commerce serving Maryville and Blount County business community",
+        "website": "blountchamber.com"
+      },
+      {
+        "name": "Foothills Mall Business District",
+        "type": "Business District",
+        "address": "Maryville, TN",
+        "description": "Major commercial district and shopping center in Maryville"
+      },
+      {
+        "name": "Alcoa-Maryville Industrial Park",
+        "type": "Industrial Park",
+        "address": "Maryville-Alcoa area, TN",
+        "description": "Industrial and manufacturing hub serving Maryville and surrounding areas"
+      },
+      {
+        "name": "Downtown Maryville Business District",
+        "type": "Business District",
+        "address": "Downtown Maryville, TN",
+        "description": "Historic downtown commercial district with local businesses and professional services"
+      }
+    ]
+  },
+  "franklin": {
+    "city": "Franklin",
+    "state": "Tennessee",
+    "county": "Williamson County",
+    "landmarks": [
+      {
+        "name": "Williamson County Chamber of Commerce",
+        "type": "Chamber of Commerce",
+        "address": "109 2nd Ave S, Franklin, TN 37064",
+        "description": "Leading chamber of commerce for Franklin and Williamson County business community",
+        "website": "williamsonchamber.com"
+      },
+      {
+        "name": "Cool Springs Business District",
+        "type": "Business District",
+        "address": "Cool Springs, Franklin, TN",
+        "description": "Major commercial and business hub in Franklin with corporate offices and retail"
+      },
+      {
+        "name": "McEwen Business Center",
+        "type": "Business Center",
+        "address": "Franklin, TN",
+        "description": "Professional office park and business center in Franklin"
+      },
+      {
+        "name": "Franklin Industrial Park",
+        "type": "Industrial Park",
+        "address": "Franklin, TN",
+        "description": "Industrial and logistics center serving Franklin area businesses"
+      },
+      {
+        "name": "Historic Downtown Franklin Business District",
+        "type": "Business District",
+        "address": "Main Street, Franklin, TN 37064",
+        "description": "Historic downtown commercial district with boutiques, restaurants, and professional offices"
+      },
+      {
+        "name": "Carothers Parkway Business Corridor",
+        "type": "Business District",
+        "address": "Carothers Parkway, Franklin, TN",
+        "description": "Major business corridor connecting Cool Springs to I-65"
+      }
+    ]
+  },
+  "murfreesboro": {
+    "city": "Murfreesboro",
+    "state": "Tennessee",
+    "county": "Rutherford County",
+    "landmarks": [
+      {
+        "name": "Rutherford County Chamber of Commerce",
+        "type": "Chamber of Commerce",
+        "address": "3050 Medical Center Pkwy, Murfreesboro, TN 37129",
+        "description": "Premier chamber of commerce serving Murfreesboro and Rutherford County businesses",
+        "website": "rutherfordchamber.org"
+      },
+      {
+        "name": "Gateway Island Business Center",
+        "type": "Business Center",
+        "address": "Gateway Blvd, Murfreesboro, TN",
+        "description": "Modern business center and office park in Murfreesboro"
+      },
+      {
+        "name": "Medical Center Parkway Business District",
+        "type": "Business District",
+        "address": "Medical Center Parkway, Murfreesboro, TN",
+        "description": "Major commercial corridor with medical facilities, retail, and professional offices"
+      },
+      {
+        "name": "Murfreesboro Industrial Park",
+        "type": "Industrial Park",
+        "address": "Murfreesboro, TN",
+        "description": "Industrial manufacturing and distribution center serving Middle Tennessee"
+      },
+      {
+        "name": "The Avenue Murfreesboro",
+        "type": "Business District",
+        "address": "2615 Medical Center Pkwy, Murfreesboro, TN 37129",
+        "description": "Premier shopping and business district in Murfreesboro"
+      },
+      {
+        "name": "Historic Downtown Murfreesboro Square",
+        "type": "Business District",
+        "address": "Public Square, Murfreesboro, TN 37130",
+        "description": "Historic downtown business district surrounding the Rutherford County Courthouse"
+      },
+      {
+        "name": "Gateway Business Park",
+        "type": "Business Park",
+        "address": "Murfreesboro, TN",
+        "description": "Professional office and business park near I-24"
+      }
+    ]
+  },
+  "seo_usage": {
+    "purpose": "These landmarks will be injected into location-specific pages to improve local SEO",
+    "implementation": "Reference these landmarks in page content to establish local authority and relevance",
+    "examples": [
+      "Serving businesses near Blount County Chamber of Commerce",
+      "Located convenient to Cool Springs Business District",
+      "Supporting companies in Murfreesboro Industrial Park"
+    ]
+  }
+}

@@ -1,19 +1,229 @@
 {
   "page_id": "voice-ai-chapel-hill-nc",
   "page_type": "service-location",
-  "service": {"service_id": "voice-ai", "service_name": "Voice AI Services", "service_slug": "voice-ai"},
-  "location": {"city": "Chapel Hill", "state": "NC", "state_full": "North Carolina", "slug": "chapel-hill-nc", "nearby_areas": ["Durham", "Carrboro", "Hillsborough"], "service_area_radius": "30 miles"},
-  "seo": {"page_title": "Voice AI Agency in Chapel Hill, NC | Capture Client", "meta_description": "Looking for Voice AI in Chapel Hill, NC? Capture Client helps Chapel Hill businesses automate calls, qualify leads, and book appointments 24/7. Call 865-346-3339!", "h1_heading": "Voice AI Services in Chapel Hill, North Carolina", "keywords": ["voice ai agency chapel hill", "ai voice agents chapel hill nc", "ai receptionist chapel hill", "automated phone answering chapel hill", "voice ai north carolina"], "canonical_url": "/voice-ai-chapel-hill-nc"},
-  "hero": {"headline": "Never Miss Another Lead in Chapel Hill", "subheadline": "AI Voice Agents That Answer Calls, Qualify Leads & Book Appointments for Chapel Hill Businesses 24/7", "cta_primary": {"text": "Get Your Free Consultation", "action": "tel:865-346-3339", "type": "phone"}, "cta_secondary": {"text": "See How It Works", "action": "#how-it-works", "type": "link"}, "hero_image": {"url": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&w=1920&q=80", "alt": "Professional business phone call with Voice AI technology in Chapel Hill NC", "credit": {"photographer": "Clay Banks", "unsplash_url": "https://unsplash.com/photos/Ox6SW103KtM"}}},
-  "local_intro": {"paragraph": "Chapel Hill business owners are discovering the competitive advantage of Voice AI technology. As home to UNC Chapel Hill with vibrant research and education focus, Chapel Hill businesses serve students, faculty, researchers, and local residents in one of the Triangle's most dynamic markets. Missing calls means losing leads to competitors. Our AI voice agents answer every call to your Chapel Hill business instantly, qualify leads, and book appointments - all without human intervention. Whether you're serving UNC campus, Carrboro, or the broader Research Triangle area, our Voice AI helps you capture more clients while reducing overhead costs."},
-  "benefits": [{"title": "24/7 Lead Capture in Chapel Hill", "description": "Never miss a call from Chapel Hill customers. Our AI answers instantly.", "icon": "clock"}, {"title": "Instant Lead Qualification", "description": "AI qualifies Chapel Hill leads immediately for your team.", "icon": "filter"}, {"title": "Automatic Appointment Booking", "description": "Let AI book appointments while you serve Chapel Hill clients.", "icon": "calendar"}, {"title": "Cost Savings for Chapel Hill Businesses", "description": "Save thousands compared to hiring staff. AI scales with growth.", "icon": "dollar-sign"}, {"title": "Professional Every Time", "description": "Consistent call handling for your Chapel Hill business.", "icon": "award"}],
-  "how_it_works": [{"step": 1, "title": "Free Strategy Call", "description": "We discuss your Chapel Hill business needs."}, {"step": 2, "title": "Custom AI Training", "description": "We train AI with Chapel Hill market expertise."}, {"step": 3, "title": "Seamless Integration", "description": "We integrate with your systems."}, {"step": 4, "title": "Launch & Optimize", "description": "Start capturing Chapel Hill leads immediately."}],
-  "local_use_cases": [{"business_type": "Chapel Hill Healthcare Practices", "scenario": "A medical practice near UNC was missing patient calls during busy clinic hours.", "result": "Reduced missed calls by 80%, patient satisfaction up to 4.9/5."}, {"business_type": "Chapel Hill Student Services", "scenario": "A business serving UNC students needed 24/7 availability on a budget.", "result": "Handles 5x more inquiries without overhead, bookings up 50%."}, {"business_type": "Chapel Hill Professional Services", "scenario": "A consulting firm wanted to capture Research Triangle leads without hiring receptionists.", "result": "3x more qualified leads, revenue up $70,000 in 90 days."}],
-  "service_area": {"heading": "Serving Chapel Hill and Surrounding Areas", "description": "Capture Client provides Voice AI throughout the Chapel Hill and Triangle area.", "areas_list": ["Chapel Hill", "Durham", "Carrboro", "Hillsborough", "Raleigh", "Research Triangle Park"]},
-  "local_testimonials": [{"quote": "Voice AI has transformed our Chapel Hill practice. We capture every patient call now, and our UNC students love the instant responses!", "author": "Dr. Rachel Kim", "business": "Kim Family Medicine", "location": "Chapel Hill, NC"}, {"quote": "The AI handles our Chapel Hill and Triangle calls perfectly. Students and professionals get 24/7 responses, booking rate up 50%.", "author": "James Wilson", "business": "Wilson Consulting Group", "location": "Chapel Hill, NC"}],
-  "faq": [{"question": "How does Voice AI work for Chapel Hill businesses?", "answer": "Our Voice AI agents are custom-trained for your Chapel Hill business. They answer calls, schedule appointments, and transfer leads - automatically 24/7, perfect for serving the UNC and Research Triangle community."}, {"question": "What types of Chapel Hill businesses benefit?", "answer": "Healthcare practices, student services, professional services, and tech companies in Research Triangle see biggest impact. Perfect if serving UNC community or Triangle professionals."}, {"question": "Can AI handle Chapel Hill-specific information?", "answer": "Absolutely! We train your AI with Chapel Hill knowledge including UNC, Research Triangle Park, and local neighborhoods."}, {"question": "How quickly can we set up in Chapel Hill?", "answer": "Most Chapel Hill businesses are running within 1-2 weeks."}, {"question": "Will AI sound robotic to Chapel Hill callers?", "answer": "Not at all! Most Chapel Hill and Triangle callers don't realize it's AI."}],
-  "main_content": {"sections": [{"heading": "Why Chapel Hill Businesses Choose Voice AI", "content": "Chapel Hill is home to UNC Chapel Hill with vibrant research and education focus, which means businesses serve a highly educated, tech-savvy population that expects instant responses. Competition is intense in the Research Triangle market. Every missed call is a potential customer going elsewhere. Chapel Hill business owners face unique challenges: serving a university community, competing with Triangle startups, and meeting expectations of researchers and professionals. Voice AI provides 24/7 coverage without employee costs. Our AI agents understand Chapel Hill and Triangle market dynamics, UNC schedules, and research community needs. Whether you serve students, Carrboro residents, or broader Triangle area, Voice AI ensures you never miss opportunities. Chapel Hill businesses using Voice AI report 45% increase in qualified leads and 60% reduction in missed calls."}]},
-  "images": {"gallery": [{"url": "https://images.unsplash.com/photo-1537511446984-935f663eb1f4?ixlib=rb-4.0.3&w=1200&q=80", "alt": "Chapel Hill business owner with Voice AI", "caption": "Chapel Hill businesses use Voice AI for more leads", "credit": {"photographer": "Bruce Mars", "unsplash_url": "https://unsplash.com/photos/8YG31Xn4dSw"}}, {"url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.0.3&w=1200&q=80", "alt": "Chapel Hill business automation", "caption": "Automate your Chapel Hill communications", "credit": {"photographer": "Alev Takil", "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"}}]},
-  "cta_section": {"headline": "Ready to Transform Your Chapel Hill Business?", "subheadline": "Join hundreds of Chapel Hill and Triangle businesses using Voice AI.", "cta_primary": {"text": "Call Us Now: 865-346-3339", "action": "tel:865-346-3339", "type": "phone"}, "urgency_text": "Limited spots for Chapel Hill businesses this month"},
-  "related_pages": {"other_services_in_location": ["google-ads", "facebook-ads"], "nearby_locations": ["durham-nc", "carrboro-nc", "raleigh-nc"], "packages": ["starter-package", "growth-package", "enterprise-package"]}
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Chapel Hill",
+    "state": "NC",
+    "state_full": "North Carolina",
+    "slug": "chapel-hill-nc",
+    "nearby_areas": [
+      "Durham",
+      "Carrboro",
+      "Hillsborough"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Chapel Hill, NC | Capture Client",
+    "meta_description": "Looking for Voice AI in Chapel Hill, NC? Capture Client helps Chapel Hill businesses automate calls, qualify leads, and book appointments 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Chapel Hill, North Carolina",
+    "keywords": [
+      "voice ai agency chapel hill",
+      "ai voice agents chapel hill nc",
+      "ai receptionist chapel hill",
+      "automated phone answering chapel hill",
+      "voice ai north carolina"
+    ],
+    "canonical_url": "/voice-ai-chapel-hill-nc"
+  },
+  "hero": {
+    "headline": "Never Miss Another Lead in Chapel Hill",
+    "subheadline": "AI Voice Agents That Answer Calls, Qualify Leads & Book Appointments for Chapel Hill Businesses 24/7",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "cta_secondary": {
+      "text": "See How It Works",
+      "action": "#how-it-works",
+      "type": "link"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Professional business phone call with Voice AI technology in Chapel Hill NC",
+      "credit": {
+        "photographer": "Clay Banks",
+        "unsplash_url": "https://unsplash.com/photos/Ox6SW103KtM"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "Chapel Hill business owners are discovering the competitive advantage of Voice AI technology. As home to UNC Chapel Hill with vibrant research and education focus, Chapel Hill businesses serve students, faculty, researchers, and local residents in one of the Triangle's most dynamic markets. Missing calls means losing leads to competitors. Our AI voice agents answer every call to your Chapel Hill business instantly, qualify leads, and book appointments - all without human intervention. Whether you're serving UNC campus, Carrboro, or the broader Research Triangle area, our Voice AI helps you capture more clients while reducing overhead costs."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Lead Capture in Chapel Hill",
+      "description": "Never miss a call from Chapel Hill customers. Our AI answers instantly.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "AI qualifies Chapel Hill leads immediately for your team.",
+      "icon": "filter_alt"
+    },
+    {
+      "title": "Automatic Appointment Booking",
+      "description": "Let AI book appointments while you serve Chapel Hill clients.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings for Chapel Hill Businesses",
+      "description": "Save thousands compared to hiring staff. AI scales with growth.",
+      "icon": "attach_money"
+    },
+    {
+      "title": "Professional Every Time",
+      "description": "Consistent call handling for your Chapel Hill business.",
+      "icon": "workspace_premium"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We discuss your Chapel Hill business needs."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train AI with Chapel Hill market expertise."
+    },
+    {
+      "step": 3,
+      "title": "Seamless Integration",
+      "description": "We integrate with your systems."
+    },
+    {
+      "step": 4,
+      "title": "Launch & Optimize",
+      "description": "Start capturing Chapel Hill leads immediately."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Chapel Hill Healthcare Practices",
+      "scenario": "A medical practice near UNC was missing patient calls during busy clinic hours.",
+      "result": "Reduced missed calls by 80%, patient satisfaction up to 4.9/5."
+    },
+    {
+      "business_type": "Chapel Hill Student Services",
+      "scenario": "A business serving UNC students needed 24/7 availability on a budget.",
+      "result": "Handles 5x more inquiries without overhead, bookings up 50%."
+    },
+    {
+      "business_type": "Chapel Hill Professional Services",
+      "scenario": "A consulting firm wanted to capture Research Triangle leads without hiring receptionists.",
+      "result": "3x more qualified leads, revenue up $70,000 in 90 days."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Chapel Hill and Surrounding Areas",
+    "description": "Capture Client provides Voice AI throughout the Chapel Hill and Triangle area.",
+    "areas_list": [
+      "Chapel Hill",
+      "Durham",
+      "Carrboro",
+      "Hillsborough",
+      "Raleigh",
+      "Research Triangle Park"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Voice AI has transformed our Chapel Hill practice. We capture every patient call now, and our UNC students love the instant responses!",
+      "author": "Dr. Rachel Kim",
+      "business": "Kim Family Medicine",
+      "location": "Chapel Hill, NC"
+    },
+    {
+      "quote": "The AI handles our Chapel Hill and Triangle calls perfectly. Students and professionals get 24/7 responses, booking rate up 50%.",
+      "author": "James Wilson",
+      "business": "Wilson Consulting Group",
+      "location": "Chapel Hill, NC"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Chapel Hill businesses?",
+      "answer": "Our Voice AI agents are custom-trained for your Chapel Hill business. They answer calls, schedule appointments, and transfer leads - automatically 24/7, perfect for serving the UNC and Research Triangle community."
+    },
+    {
+      "question": "What types of Chapel Hill businesses benefit?",
+      "answer": "Healthcare practices, student services, professional services, and tech companies in Research Triangle see biggest impact. Perfect if serving UNC community or Triangle professionals."
+    },
+    {
+      "question": "Can AI handle Chapel Hill-specific information?",
+      "answer": "Absolutely! We train your AI with Chapel Hill knowledge including UNC, Research Triangle Park, and local neighborhoods."
+    },
+    {
+      "question": "How quickly can we set up in Chapel Hill?",
+      "answer": "Most Chapel Hill businesses are running within 1-2 weeks."
+    },
+    {
+      "question": "Will AI sound robotic to Chapel Hill callers?",
+      "answer": "Not at all! Most Chapel Hill and Triangle callers don't realize it's AI."
+    }
+  ],
+  "main_content": {
+    "sections": [
+      {
+        "heading": "Why Chapel Hill Businesses Choose Voice AI",
+        "content": "Chapel Hill is home to UNC Chapel Hill with vibrant research and education focus, which means businesses serve a highly educated, tech-savvy population that expects instant responses. Competition is intense in the Research Triangle market. Every missed call is a potential customer going elsewhere. Chapel Hill business owners face unique challenges: serving a university community, competing with Triangle startups, and meeting expectations of researchers and professionals. Voice AI provides 24/7 coverage without employee costs. Our AI agents understand Chapel Hill and Triangle market dynamics, UNC schedules, and research community needs. Whether you serve students, Carrboro residents, or broader Triangle area, Voice AI ensures you never miss opportunities. Chapel Hill businesses using Voice AI report 45% increase in qualified leads and 60% reduction in missed calls."
+      }
+    ]
+  },
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1537511446984-935f663eb1f4?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Chapel Hill business owner with Voice AI",
+        "caption": "Chapel Hill businesses use Voice AI for more leads",
+        "credit": {
+          "photographer": "Bruce Mars",
+          "unsplash_url": "https://unsplash.com/photos/8YG31Xn4dSw"
+        }
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Chapel Hill business automation",
+        "caption": "Automate your Chapel Hill communications",
+        "credit": {
+          "photographer": "Alev Takil",
+          "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+        }
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Transform Your Chapel Hill Business?",
+    "subheadline": "Join hundreds of Chapel Hill and Triangle businesses using Voice AI.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "urgency_text": "Limited spots for Chapel Hill businesses this month"
+  },
+  "related_pages": {
+    "other_services_in_location": [
+      "google-ads",
+      "facebook-ads"
+    ],
+    "nearby_locations": [
+      "durham-nc",
+      "carrboro-nc",
+      "raleigh-nc"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package",
+      "enterprise-package"
+    ]
+  }
 }

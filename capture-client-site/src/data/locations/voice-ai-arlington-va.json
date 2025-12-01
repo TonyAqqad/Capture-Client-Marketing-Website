@@ -1,32 +1,179 @@
 {
   "page_id": "voice-ai-arlington-va",
   "page_type": "service-location",
-  "service": {"service_id": "voice-ai", "service_name": "Voice AI Services", "service_slug": "voice-ai"},
-  "location": {"city": "Arlington", "state": "VA", "state_full": "Virginia", "slug": "arlington-va", "nearby_areas": ["Alexandria", "Falls Church", "McLean", "Washington DC", "Fairfax"], "service_area_radius": "20 miles"},
-  "seo": {"page_title": "Voice AI Agency in Arlington, VA | Capture Client", "meta_description": "Arlington businesses: Automate calls with AI voice agents. Never miss a DC-area lead. 24/7 answering, lead qualification. Call 865-346-3339", "h1_heading": "Voice AI Services in Arlington, Virginia", "keywords": ["voice ai arlington", "arlington ai receptionist", "dc area voice automation", "ai voice agents arlington va", "northern virginia ai"], "canonical_url": "/voice-ai-arlington-va"},
-  "hero": {"headline": "Arlington Businesses: Capture Every DC-Area Lead", "subheadline": "AI Voice Agents for Northern Virginia's Most Competitive Market", "cta_primary": {"text": "Get Your Free Consultation", "action": "tel:865-346-3339", "type": "phone"}, "hero_image": {"url": "https://images.unsplash.com/photo-1593937505566-64f33d148915?ixlib=rb-4.0.3&w=1920&q=80", "alt": "Professional using AI technology in Arlington office", "credit": {"photographer": "Dmitriy Suponnikov", "unsplash_url": "https://unsplash.com/photos/_-1zQPK8tMc"}}},
-  "local_intro": {"paragraph": "Arlington is one of America's most competitive business markets, located in the heart of the DC metro area. Arlington businesses—from Rosslyn high-rises to Clarendon boutiques—face intense competition for customers. Our Voice AI agents give Arlington companies an edge by capturing every lead instantly, qualifying prospects professionally, and scheduling meetings automatically. Whether you serve government contractors, tech startups, or professional services firms, our AI ensures you never miss an Arlington opportunity."
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Arlington",
+    "state": "VA",
+    "state_full": "Virginia",
+    "slug": "arlington-va",
+    "nearby_areas": [
+      "Alexandria",
+      "Falls Church",
+      "McLean",
+      "Washington DC",
+      "Fairfax"
+    ],
+    "service_area_radius": "20 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Arlington, VA | Capture Client",
+    "meta_description": "In the shadow of DC, Arlington businesses from Rosslyn to Crystal City demand enterprise-grade Voice AI. Serving Northern Virginia government contractors 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Arlington, Virginia",
+    "keywords": [
+      "voice ai arlington",
+      "arlington ai receptionist",
+      "dc area voice automation",
+      "ai voice agents arlington va",
+      "northern virginia ai"
+    ],
+    "canonical_url": "/voice-ai-arlington-va"
+  },
+  "hero": {
+    "headline": "Arlington Businesses: Capture Every DC-Area Lead",
+    "subheadline": "AI Voice Agents for Northern Virginia's Most Competitive Market—From Rosslyn to Pentagon City",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1593937505566-64f33d148915?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Professional using AI technology in Arlington office",
+      "credit": {
+        "photographer": "Dmitriy Suponnikov",
+        "unsplash_url": "https://unsplash.com/photos/_-1zQPK8tMc"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "In the shadow of the nation's capital, Arlington businesses demand enterprise-grade solutions. From the high-rises of Rosslyn and the tech corridor along Crystal City to the boutique firms in Clarendon and the professional services hub at Ballston, Northern Virginia's most ambitious companies trust our AI voice agents to capture every lead. Whether you serve government contractors along the Metro corridor, tech startups in the Pentagon City innovation district, or consulting firms near Arlington National Cemetery, our AI ensures you never miss an opportunity. Proudly serving Arlington Chamber of Commerce members and the thriving Northern Virginia business community."
   },
   "benefits": [
-    {"title": "DC Metro Market Edge", "description": "Stand out in Arlington's competitive DC market with 24/7 professional call handling that never misses a lead.", "icon": "trending-up"},
-    {"title": "Government Contractor Ready", "description": "Perfect for Arlington businesses serving government clients. Handle inquiries professionally and securely.", "icon": "shield"},
-    {"title": "Professional Image", "description": "Project enterprise credibility with AI that represents your Arlington brand flawlessly every time.", "icon": "award"},
-    {"title": "Instant Response", "description": "Arlington customers expect fast responses. Our AI answers in seconds, qualifying leads before competitors even pick up.", "icon": "zap"}
+    {
+      "title": "DC Metro Market Edge",
+      "description": "Stand out in Arlington's hyper-competitive DC market with 24/7 professional call handling from Rosslyn to National Landing. Never lose a lead to slower competitors along the Orange Line corridor.",
+      "icon": "trending_up"
+    },
+    {
+      "title": "Government Contractor Ready",
+      "description": "Perfect for Arlington businesses serving government clients near the Pentagon. Handle inquiries professionally and securely with enterprise-grade AI that understands the Defense and consulting sectors.",
+      "icon": "shield"
+    },
+    {
+      "title": "Professional Image",
+      "description": "Project enterprise credibility across Clarendon, Ballston, and Crystal City with AI that represents your Arlington brand flawlessly—crucial in a market serving federal agencies and Fortune 500 companies.",
+      "icon": "workspace_premium"
+    },
+    {
+      "title": "Instant Response",
+      "description": "Arlington customers expect immediate responses. Our AI answers in seconds from Rosslyn offices to Pentagon City firms, qualifying leads before competitors serving Tysons Corner and DC even pick up.",
+      "icon": "bolt"
+    }
   ],
   "how_it_works": [
-    {"step": 1, "title": "Arlington Market Analysis", "description": "We analyze your Arlington market position and competitive landscape."},
-    {"step": 2, "title": "Enterprise AI Setup", "description": "We build your AI with Arlington business sophistication and DC-area expertise."},
-    {"step": 3, "title": "Launch & Scale", "description": "Go live and start capturing Arlington leads immediately."},
-    {"step": 4, "title": "Continuous Optimization", "description": "We refine your AI monthly based on Arlington call data."}
+    {
+      "step": 1,
+      "title": "Arlington Market Analysis",
+      "description": "We analyze your Arlington market position—whether you serve Rosslyn, Ballston, Clarendon, Crystal City, or the broader Northern Virginia corridor."
+    },
+    {
+      "step": 2,
+      "title": "Enterprise AI Setup",
+      "description": "We build your AI with Arlington business sophistication and DC-area expertise, understanding government contracting, consulting, and professional services nuances."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Scale",
+      "description": "Go live across Arlington's competitive landscape and start capturing leads from Pentagon City to Rosslyn immediately."
+    },
+    {
+      "step": 4,
+      "title": "Continuous Optimization",
+      "description": "We refine your AI monthly based on Arlington call data from all corridors—Orange Line, Silver Line, and beyond."
+    }
   ],
-  "service_area": {"heading": "Serving Arlington and Northern Virginia", "description": "We serve businesses throughout Arlington and the greater Northern Virginia / DC metro area.", "areas_list": ["Arlington", "Rosslyn", "Clarendon", "Ballston", "Pentagon City", "Crystal City", "Alexandria", "Falls Church", "McLean", "Tysons"]},
+  "service_area": {
+    "heading": "Serving Arlington and Northern Virginia",
+    "description": "We serve businesses throughout Arlington's urban corridors and the greater Northern Virginia / DC metro area.",
+    "areas_list": [
+      "Arlington",
+      "Rosslyn",
+      "Clarendon",
+      "Ballston",
+      "Pentagon City",
+      "Crystal City",
+      "National Landing",
+      "Courthouse",
+      "Virginia Square",
+      "Shirlington",
+      "Columbia Pike",
+      "Alexandria",
+      "Falls Church",
+      "McLean",
+      "Tysons"
+    ]
+  },
   "faq": [
-    {"question": "Can AI handle Arlington's professional market?", "answer": "Absolutely! We train your AI to communicate with the sophistication Arlington clients expect. Perfect for consulting firms, tech companies, law firms, and professional services."},
-    {"question": "What about government contractors?", "answer": "Our AI is ideal for Arlington businesses serving government clients. We ensure professional, secure communication that meets your compliance needs."},
-    {"question": "How much does it cost?", "answer": "Arlington packages start at $999/month. Given Arlington's high cost of labor, AI provides exceptional ROI compared to hiring receptionists."}
+    {
+      "question": "Can AI handle Arlington's professional market?",
+      "answer": "Absolutely! We train your AI to communicate with the sophistication Arlington clients expect. Perfect for consulting firms in Rosslyn, tech companies in Crystal City, law firms near Courthouse, and professional services across Ballston and Clarendon. Your AI understands government contracting, federal compliance, and Northern Virginia business culture."
+    },
+    {
+      "question": "What about government contractors?",
+      "answer": "Our AI is ideal for Arlington businesses serving government clients near the Pentagon, Defense contractors along the Metro corridors, and consulting firms throughout Northern Virginia. We ensure professional, secure communication that meets your compliance needs while serving federal agencies."
+    },
+    {
+      "question": "How much does it cost?",
+      "answer": "Arlington packages start at $999/month. Given Arlington's high cost of labor (averaging $25-35/hour for receptionists) and premium office rents in Rosslyn and Ballston, AI provides exceptional ROI compared to hiring staff in Northern Virginia's expensive market."
+    },
+    {
+      "question": "Can it serve multiple Arlington corridors?",
+      "answer": "Yes! Whether your Arlington business operates from Rosslyn, serves clients in Pentagon City, has satellite offices in Clarendon and Ballston, or covers all of Northern Virginia, our AI handles calls intelligently based on location and service areas."
+    }
   ],
-  "main_content": {"sections": [{"heading": "Voice AI for Arlington's Competitive Market", "content": "Arlington businesses operate in one of America's most competitive markets. With high operating costs, demanding clients, and fierce competition, Arlington companies need every advantage. Voice AI provides that edge—capturing leads 24/7, qualifying prospects instantly, and presenting a professional image that matches Arlington's high standards. Whether you're in Rosslyn's business district, Clarendon's tech hub, or serving government contractors across Arlington, our AI ensures you never lose a lead to slower competitors."}]},
-  "images": {"gallery": [{"url": "https://images.unsplash.com/photo-1560264280-88b68371db39?ixlib=rb-4.0.3&w=1200&q=80", "alt": "Professional Arlington business team", "caption": "Enterprise-grade AI for Arlington's professional market"}]},
-  "cta_section": {"headline": "Compete at Arlington's Level", "subheadline": "Join Arlington's leading businesses using AI to capture more leads", "cta_primary": {"text": "Call Now: 865-346-3339", "action": "tel:865-346-3339", "type": "phone"}},
-  "related_pages": {"other_services_in_location": ["google-ads"], "nearby_locations": ["alexandria-va", "fredericksburg-va", "richmond-va"], "packages": ["growth-package", "enterprise-package"]}
+  "main_content": {
+    "sections": [
+      {
+        "heading": "Voice AI for Arlington's Competitive Market",
+        "content": "Arlington businesses operate in one of America's most competitive markets. With high operating costs in Rosslyn's premium towers, demanding government contractor clients near the Pentagon, and fierce competition along the Clarendon-Ballston corridor, Arlington companies need every advantage. Voice AI provides that edge—capturing leads 24/7, qualifying prospects instantly, and presenting a professional image that matches Arlington's high standards. Whether you're in Rosslyn's business district serving Defense contractors, Clarendon's tech hub building government solutions, Crystal City's innovation corridor (National Landing), or Ballston's professional services cluster, our AI ensures you never lose a lead to slower competitors across Tysons, Alexandria, or DC. Serving proud members of the Arlington Chamber of Commerce and the Northern Virginia Technology Council. From the Metro-accessible offices along Orange and Silver Lines to the Pentagon City skyline, Arlington businesses trust Voice AI to compete at the highest level."
+      }
+    ]
+  },
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1560264280-88b68371db39?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Professional Arlington business team",
+        "caption": "Enterprise-grade AI for Arlington's professional market from Rosslyn to National Landing"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Compete at Arlington's Level",
+    "subheadline": "Join Arlington's leading businesses from Rosslyn to Pentagon City using AI to capture more leads",
+    "cta_primary": {
+      "text": "Call Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "other_services_in_location": [
+      "google-ads"
+    ],
+    "nearby_locations": [
+      "alexandria-va",
+      "fredericksburg-va",
+      "richmond-va"
+    ],
+    "packages": [
+      "growth-package",
+      "enterprise-package"
+    ]
+  }
 }

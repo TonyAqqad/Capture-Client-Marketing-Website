@@ -25,13 +25,21 @@
     ]
   },
   "seo": {
-    "page_title": "Automated Lead Generation | AI + Paid Ads System",
-    "meta_description": "Automated lead generation combines AI voice technology with Facebook and Google Ads. Generate and qualify leads automatically 24/7.",
-    "h1_heading": "Automated Lead Generation for Small Business",
+    "page_title": "Automated Lead Generation | 10x More Leads, 60% Less Work | AI + Ads",
+    "meta_description": "Automated lead generation system that works 24/7. AI voice agents + Facebook/Google Ads = qualified leads on autopilot. 3-5x ROI within 90 days. Generate, qualify & book appointments automatically.",
+    "h1_heading": "Automated Lead Generation That Runs on Autopilot While You Sleep",
     "keywords": [
       "automated lead generation",
       "capture client",
-      "automation"
+      "automation",
+      "lead generation automation",
+      "automated lead capture",
+      "marketing automation",
+      "sales automation",
+      "lead qualification automation",
+      "automated outbound",
+      "ai lead generation",
+      "automated sales funnel"
     ]
   },
   "hero": {
@@ -52,33 +60,38 @@
     }
   },
   "intro": {
-    "paragraph": "Manual lead generation is slow expensive and inconsistent. Our automated lead generation system combines Facebook and Google Ads with AI voice agents to create a 24/7 lead machine. Ads drive traffic AI answers calls and qualifies leads appointments book automatically. Small businesses using automated lead generation see 10x more leads with 60 percent less manual work and 3-5x ROI within 90 days."
+    "paragraph": "Manual lead generation is slow, expensive, and inconsistent—costing businesses 40% more per lead than automated alternatives. Our automated lead generation system combines Facebook and Google Ads with AI voice agents to create a 24/7 lead-generating machine that never sleeps, never takes breaks, and never misses an opportunity. Here's how it works: Ads drive targeted traffic from high-intent prospects. AI voice agents answer calls instantly (within seconds, not hours). Leads are automatically qualified based on your exact criteria. Appointments book directly into your calendar without human intervention. Follow-up sequences nurture leads automatically. Small businesses using our automated lead generation system see 10x more leads with 60% less manual work, 15-25% conversion rates, and 3-5x ROI within 90 days. Our clients report generating 50-200+ qualified leads monthly while reducing labor costs by $3,000-$5,000/month. The system handles everything from initial contact to appointment booking, freeing your team to focus on closing deals instead of chasing leads. Scale from 10 to 1,000 leads monthly without adding staff. Launch in 1-2 weeks and start seeing results within 7-14 days."
   },
   "benefits": [
     {
-      "title": "24/7 Availability",
-      "description": "Never miss a lead or opportunity with round-the-clock service.",
+      "title": "Generate Leads 24/7 Automatically",
+      "description": "Your automated system works around the clock, capturing and qualifying leads even while you sleep. Never miss an opportunity again.",
       "icon": "clock"
     },
     {
-      "title": "Instant Response",
-      "description": "Respond to inquiries within seconds not hours or days.",
+      "title": "Instant Lead Response (Under 60 Seconds)",
+      "description": "AI voice agents respond to inquiries within seconds, not hours or days. Speed-to-lead increases conversion rates by 391%.",
       "icon": "zap"
     },
     {
-      "title": "Cost Effective",
-      "description": "Save 60-80 percent compared to traditional methods.",
+      "title": "60-80% Lower Costs",
+      "description": "Save $3,000-$5,000/month in labor costs compared to hiring staff. Automated lead gen costs 40% less than manual methods.",
       "icon": "dollar-sign"
     },
     {
-      "title": "Scalable System",
-      "description": "Handle 10 or 1000 leads without adding staff.",
+      "title": "Scale Infinitely Without Hiring",
+      "description": "Handle 10 or 10,000 leads monthly without adding staff. System scales automatically as your business grows.",
       "icon": "trending-up"
     },
     {
-      "title": "Full Integration",
-      "description": "Works with your existing CRM calendar and tools.",
+      "title": "Complete CRM Integration",
+      "description": "Seamlessly integrates with Salesforce, HubSpot, Zoho, Google Calendar, and 100+ popular CRMs.",
       "icon": "link"
+    },
+    {
+      "title": "Automated Qualification & Nurturing",
+      "description": "AI qualifies every lead based on your criteria, books appointments automatically, and nurtures prospects with follow-up sequences.",
+      "icon": "verified"
     }
   ],
   "how_it_works": [

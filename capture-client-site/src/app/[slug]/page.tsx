@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Image from "next/image";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
+import { Benefit, FAQItem, HowItWorksStep, UseCase } from "@/types/content";
 
 export async function generateStaticParams() {
   const nationalPages = await getAllNationalPages();
@@ -36,11 +37,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function NationalPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export default async function NationalPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
   const page = await getNationalBySlug(resolvedParams.slug);
 
@@ -66,9 +63,7 @@ export default async function NationalPage({
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             {page.hero?.headline || page.seo.h1_heading}
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mb-8">
-            {page.hero?.subheadline}
-          </p>
+          <p className="text-xl text-gray-300 max-w-3xl mb-8">{page.hero?.subheadline}</p>
           <div className="flex flex-wrap gap-4">
             {page.hero?.cta_primary && (
               <a
@@ -101,7 +96,7 @@ export default async function NationalPage({
               Key Benefits
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {page.benefits.map((benefit: any, index: number) => (
+              {page.benefits.map((benefit: Benefit, index: number) => (
                 <div
                   key={index}
                   className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50 hover:border-primary/50 transition-all"
@@ -128,7 +123,7 @@ export default async function NationalPage({
               How It Works
             </h2>
             <div className="max-w-3xl mx-auto space-y-8">
-              {page.how_it_works.map((step: any) => (
+              {page.how_it_works.map((step: HowItWorksStep) => (
                 <div
                   key={step.step}
                   className="flex gap-6 border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50"
@@ -157,14 +152,12 @@ export default async function NationalPage({
               Industry Success Stories
             </h2>
             <div className="space-y-6">
-              {page.industry_use_cases.map((useCase: any, index: number) => (
+              {page.industry_use_cases.map((useCase: UseCase, index: number) => (
                 <div
                   key={index}
                   className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50"
                 >
-                  <h3 className="text-xl font-bold text-primary mb-2">
-                    {useCase.industry}
-                  </h3>
+                  <h3 className="text-xl font-bold text-primary mb-2">{useCase.industry}</h3>
                   <p className="text-gray-700 dark:text-gray-300 mb-2">
                     <strong>Challenge:</strong> {useCase.challenge}
                   </p>
@@ -193,14 +186,16 @@ export default async function NationalPage({
             </p>
             {page.nationwide_coverage.regions_highlighted && (
               <div className="flex flex-wrap justify-center gap-3">
-                {page.nationwide_coverage.regions_highlighted.map((region: string, index: number) => (
-                  <span
-                    key={index}
-                    className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary"
-                  >
-                    {region}
-                  </span>
-                ))}
+                {page.nationwide_coverage.regions_highlighted.map(
+                  (region: string, index: number) => (
+                    <span
+                      key={index}
+                      className="px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-primary"
+                    >
+                      {region}
+                    </span>
+                  )
+                )}
               </div>
             )}
           </div>
@@ -215,7 +210,7 @@ export default async function NationalPage({
               Frequently Asked Questions
             </h2>
             <div className="space-y-4">
-              {page.faq.map((item: any, index: number) => (
+              {page.faq.map((item: FAQItem, index: number) => (
                 <details
                   key={index}
                   className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50"
@@ -239,7 +234,8 @@ export default async function NationalPage({
               Ready to Get Started?
             </h2>
             <p className="text-center text-lg text-gray-600 dark:text-gray-400 mb-8">
-              Contact us today for a free consultation and discover how we can help your business grow.
+              Contact us today for a free consultation and discover how we can help your business
+              grow.
             </p>
             <LeadCaptureForm source={page.keyword.keyword_slug} />
           </div>

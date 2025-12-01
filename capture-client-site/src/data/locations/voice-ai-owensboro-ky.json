@@ -1,23 +1,20 @@
 {
   "page_id": "voice-ai-owensboro-ky",
   "page_type": "service-location",
-
   "service": {
     "name": "Voice AI",
     "slug": "voice-ai",
     "category": "automation"
   },
-
   "location": {
     "city": "Owensboro",
     "slug": "owensboro",
     "state": "KY",
     "state_full": "Kentucky"
   },
-
   "seo": {
     "title": "Voice AI Agency in Owensboro, KY | Capture Client",
-    "meta_description": "Owensboro businesses: Never miss a call again with AI voice agents. Qualify leads, schedule appointments, answer calls 24/7. Call 865-346-3339 for details!",
+    "meta_description": "Owensboro businesses from Frederica Street to the riverfront: Never miss a call with 24/7 AI voice agents. Trusted by Chamber members. Call 865-346-3339!",
     "h1": "Voice AI Solutions for Owensboro, Kentucky Businesses",
     "keywords": [
       "voice ai owensboro",
@@ -27,7 +24,6 @@
       "business automation owensboro"
     ]
   },
-
   "hero": {
     "headline": "Owensboro's Premier AI Phone Solution",
     "subheadline": "Answer Every Call, Qualify Every Lead, Book Every Appointment - Automatically",
@@ -40,44 +36,41 @@
       "action": "#benefits"
     }
   },
-
   "intro": {
-    "paragraph": "Owensboro businesses know that success in Kentucky's fourth-largest city requires being available when customers need you. Whether you're serving Daviess County families, downtown professionals, or the growing Frederica Street corridor, missed calls mean missed opportunities in this competitive market. Our AI voice agents are designed for Owensboro's service-driven economy - from manufacturing support services to healthcare, home services to professional firms. Local businesses using our AI technology report answering 100% of incoming calls, qualifying leads more effectively, and booking 3x more appointments than before. The best part? It happens automatically, 24/7, without adding staff or increasing overhead."
+    "paragraph": "Whether you're serving the Frederica Street commercial district or the downtown riverfront, Owensboro businesses can't afford to miss calls in Kentucky's fourth-largest city. From the Daviess County business parks to the growing Ohio River commerce sector, every missed opportunity costs revenue. Our AI voice agents are designed for Owensboro's service-driven economy - manufacturing support, healthcare, home services, and professional firms. Local businesses using our AI technology report answering 100% of incoming calls, qualifying leads more effectively, and booking 3x more appointments than before. Trusted by the Greater Owensboro Chamber of Commerce members, our system works automatically 24/7 without adding staff or increasing overhead. From the Highway 60 West corridor to Parrish Avenue medical district, smart Owensboro businesses capture every lead."
   },
-
   "benefits": [
     {
       "title": "Answer Every Owensboro Call",
       "description": "Day or night, weekday or weekend, your AI answers every call from Owensboro customers instantly. No more voicemail, no more missed opportunities.",
-      "icon": "phone"
+      "icon": "phone_in_talk"
     },
     {
       "title": "Intelligent Lead Scoring",
       "description": "AI qualifies each Owensboro prospect based on your criteria, so you know which leads to prioritize and which need more time to decide.",
-      "icon": "filter"
+      "icon": "filter_alt"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "Prospects book directly into your available time slots. No phone tag, no scheduling conflicts. Owensboro customers love the convenience.",
-      "icon": "calendar"
+      "icon": "event"
     },
     {
       "title": "Slash Operating Costs",
       "description": "Save $3,000+ monthly versus hiring receptionists or using answering services. Owensboro businesses see immediate bottom-line impact.",
-      "icon": "dollar-sign"
+      "icon": "attach_money"
     },
     {
       "title": "Consistent Quality",
       "description": "Every caller experiences the same high-quality service. AI never has off days, forgets information, or delivers inconsistent messaging.",
-      "icon": "award"
+      "icon": "workspace_premium"
     },
     {
       "title": "Scale Effortlessly",
       "description": "Handle seasonal fluctuations without hiring stress. Perfect for Owensboro businesses with varying call volumes throughout the year.",
-      "icon": "trending-up"
+      "icon": "trending_up"
     }
   ],
-
   "how_it_works": {
     "headline": "Four Steps to AI-Powered Growth in Owensboro",
     "steps": [
@@ -103,7 +96,6 @@
       }
     ]
   },
-
   "use_cases": [
     {
       "industry": "Manufacturing Services",
@@ -131,7 +123,6 @@
       "results": "50% faster estimate scheduling"
     }
   ],
-
   "faq": [
     {
       "question": "How does Voice AI work for my Owensboro business?",
@@ -166,7 +157,6 @@
       "answer": "We offer a 30-day satisfaction guarantee. If you're not capturing more leads and saving time, we'll refund your setup investment. However, most Owensboro businesses see measurable improvements within the first week - more calls answered, more appointments booked, and more time freed up for important work."
     }
   ],
-
   "testimonials": [
     {
       "name": "Mark Henderson",
@@ -187,7 +177,6 @@
       "rating": 5
     }
   ],
-
   "cta_bottom": {
     "headline": "Ready to Transform Your Owensboro Business?",
     "subheadline": "Join successful Owensboro businesses using AI to capture more leads and grow faster",
@@ -200,7 +189,6 @@
       "action": "mailto:team@captureclient.net"
     }
   },
-
   "images": [
     {
       "url": "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?fm=jpg&q=80&w=1920",
@@ -221,7 +209,6 @@
       "usage": "content"
     }
   ],
-
   "local_seo": {
     "service_areas": [
       "Owensboro",

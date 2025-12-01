@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { GlowCard } from "./GlowCard";
-import { ReactNode } from "react";
 
 interface FeatureCardProps {
   icon: string;
@@ -34,23 +33,23 @@ export function FeatureCard({
       }}
       viewport={{ once: true, margin: "-50px" }}
     >
-      <GlowCard className="group bg-surface/50 border border-surface-border rounded-2xl p-8 backdrop-blur-lg transition-all duration-500 hover:border-primary/30 hover:shadow-card-hover hover:-translate-y-1">
+      <GlowCard className="group bg-surface/50 border border-surface-border rounded-2xl p-6 sm:p-8 backdrop-blur-lg transition-all duration-500 hover:border-primary/30 hover:shadow-card-hover hover:-translate-y-1 active:scale-[0.98]">
         {/* Icon container */}
         <motion.div
           whileHover={{ scale: 1.05, rotate: 5 }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
-          className={`flex items-center justify-center w-16 h-16 rounded-xl mb-6 transition-all duration-300 ${iconColorClasses}`}
+          className={`flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-xl mb-5 sm:mb-6 transition-all duration-300 ${iconColorClasses}`}
         >
-          <span className="material-icons text-3xl">{icon}</span>
+          <span className="material-icons text-2xl sm:text-3xl">{icon}</span>
         </motion.div>
 
         {/* Title */}
-        <h3 className="text-xl font-heading font-bold text-foreground mb-3 group-hover:text-gradient transition-all duration-300">
+        <h3 className="text-lg sm:text-xl font-heading font-bold text-foreground mb-2 sm:mb-3 group-hover:text-gradient transition-all duration-300">
           {title}
         </h3>
 
         {/* Description */}
-        <p className="text-foreground-muted leading-relaxed">
+        <p className="text-sm sm:text-base text-foreground-muted leading-relaxed">
           {description}
         </p>
 
@@ -58,7 +57,7 @@ export function FeatureCard({
         <motion.div
           initial={{ opacity: 0, x: -10 }}
           whileHover={{ opacity: 1, x: 0 }}
-          className="flex items-center gap-2 mt-6 text-sm font-semibold text-accent"
+          className="flex items-center gap-2 mt-5 sm:mt-6 text-sm font-semibold text-accent"
         >
           <span>Learn more</span>
           <span className="material-icons text-sm">arrow_forward</span>
