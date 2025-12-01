@@ -163,7 +163,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       <MobileCTABar />
 
       {/* Hero Section - Innovative Asymmetric Design */}
-      <div className="relative overflow-hidden bg-slate-950">
+      <div className="relative overflow-hidden bg-slate-950 pt-16 sm:pt-20 lg:pt-24">
         {/* Layered Background Effects - More Visible */}
         <div className="absolute inset-0">
           {/* Base gradient with rich depth */}

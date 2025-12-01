@@ -112,6 +112,9 @@ const config: Config = {
         "shimmer": "shimmer 2s linear infinite",
         "rotate-slow": "rotateSlow 30s linear infinite",
         "scale-pulse": "scalePulse 3s ease-in-out infinite",
+        "glow-pulse": "glowPulse 2s ease-in-out infinite",
+        "glass-shimmer": "glassShimmer 3s ease-in-out infinite",
+        "bounce-subtle": "bounceSubtle 2s ease-in-out infinite",
       },
       keyframes: {
         float: {
@@ -157,6 +160,31 @@ const config: Config = {
         scalePulse: {
           "0%, 100%": { transform: "scale(1)", opacity: "0.5" },
           "50%": { transform: "scale(1.05)", opacity: "0.8" },
+        },
+        glowPulse: {
+          "0%, 100%": {
+            boxShadow: "0 0 20px rgba(0, 201, 255, 0.3), 0 0 40px rgba(0, 201, 255, 0.1)"
+          },
+          "50%": {
+            boxShadow: "0 0 30px rgba(0, 201, 255, 0.5), 0 0 60px rgba(0, 201, 255, 0.2)"
+          }
+        },
+        glassShimmer: {
+          "0%": {
+            backgroundPosition: "-200% center",
+            opacity: "0"
+          },
+          "50%": {
+            opacity: "0.5"
+          },
+          "100%": {
+            backgroundPosition: "200% center",
+            opacity: "0"
+          }
+        },
+        bounceSubtle: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-5px)" }
         },
       },
       spacing: {

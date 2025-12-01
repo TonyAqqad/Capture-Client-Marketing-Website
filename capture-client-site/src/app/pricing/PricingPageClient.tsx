@@ -137,7 +137,7 @@ export default function PricingPageClient() {
 
       {/* Hero Section - Asymmetric Layout */}
       <motion.div
-        className="relative py-12 sm:py-16 md:py-24 px-4 md:px-8 lg:px-16"
+        className="relative pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-24 px-4 md:px-8 lg:px-16"
         style={{ opacity }}
       >
         <div className="container mx-auto">

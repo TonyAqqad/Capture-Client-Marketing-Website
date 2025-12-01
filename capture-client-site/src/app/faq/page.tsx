@@ -208,7 +208,7 @@ export default function FAQPage() {
       />
       <div className="min-h-screen bg-background-light dark:bg-background-dark">
         {/* Hero Section */}
-        <section className="relative py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-16 bg-gradient-to-br from-background-dark via-background-dark to-primary/10">
+        <section className="relative pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 md:pb-24 px-4 sm:px-6 lg:px-16 bg-gradient-to-br from-background-dark via-background-dark to-primary/10">
           <div className="container mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
               Frequently Asked Questions
