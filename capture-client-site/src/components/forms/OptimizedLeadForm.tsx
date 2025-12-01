@@ -129,6 +129,7 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                   setFormData({ ...formData, name: e.target.value });
                 }}
                 required
+                autoComplete="name"
                 className="w-full min-h-[48px] px-5 py-4 text-base bg-white/5 border-2 border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300"
               />
             </div>
@@ -140,10 +141,12 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
               <input
                 id="phone"
                 type="tel"
+                inputMode="numeric"
                 placeholder="(865) 555-1234"
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                 required
+                autoComplete="tel"
                 pattern="[0-9\s\(\)\-\+]+"
                 className="w-full min-h-[48px] px-5 py-4 text-base bg-white/5 border-2 border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300"
               />
@@ -176,15 +179,15 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
               value={formData.challenge}
               onChange={(e) => setFormData({ ...formData, challenge: e.target.value })}
               required
-              className="w-full min-h-[48px] px-5 py-4 text-base bg-white border-2 border-gray-700 rounded-xl text-black focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300"
+              className="w-full min-h-[48px] px-5 py-4 text-base bg-white/5 border-2 border-gray-700 rounded-xl text-white focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300 [&>option]:bg-gray-800 [&>option]:text-white"
             >
-              <option value="" className="text-black bg-white">Select your main challenge...</option>
-              <option value="missing-calls" className="text-black bg-white">Missing too many customer calls</option>
-              <option value="not-enough-leads" className="text-black bg-white">Not getting enough leads</option>
-              <option value="poor-roi" className="text-black bg-white">Ad campaigns not profitable</option>
-              <option value="no-system" className="text-black bg-white">No system to track leads</option>
-              <option value="overwhelmed" className="text-black bg-white">Too much to manage manually</option>
-              <option value="other" className="text-black bg-white">Something else</option>
+              <option value="">Select your main challenge...</option>
+              <option value="missing-calls">Missing too many customer calls</option>
+              <option value="not-enough-leads">Not getting enough leads</option>
+              <option value="poor-roi">Ad campaigns not profitable</option>
+              <option value="no-system">No system to track leads</option>
+              <option value="overwhelmed">Too much to manage manually</option>
+              <option value="other">Something else</option>
             </select>
           </div>
 
@@ -250,7 +253,7 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
             Or call:{" "}
             <a
               href="tel:865-346-3339"
-              className="text-accent hover:underline font-semibold"
+              className="text-accent hover:underline font-semibold inline-flex items-center min-h-[44px]"
               onClick={() => trackPhoneClick("865-346-3339", `optimized_form_${source}`)}
             >
               (865) 346-3339

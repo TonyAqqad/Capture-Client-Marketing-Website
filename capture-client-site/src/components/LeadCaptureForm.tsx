@@ -104,6 +104,7 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
             setFormData({ ...formData, name: e.target.value });
           }}
           required
+          autoComplete="name"
           className="w-full min-h-[48px] px-4 py-3 text-base bg-white/5 border-2 border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200"
         />
       </div>
@@ -120,6 +121,7 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
           value={formData.email}
           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           required
+          autoComplete="email"
           className="w-full min-h-[48px] px-4 py-3 text-base bg-white/5 border-2 border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200"
         />
       </div>
@@ -132,10 +134,12 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
         <input
           id="phone"
           type="tel"
+          inputMode="numeric"
           placeholder="(865) 555-1234"
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           required
+          autoComplete="tel"
           className="w-full min-h-[48px] px-4 py-3 text-base bg-white/5 border-2 border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200"
         />
       </div>
@@ -150,13 +154,13 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
           value={formData.service}
           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
           required
-          className="w-full min-h-[48px] px-4 py-3 text-base bg-white border-2 border-gray-700 rounded-lg text-black focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200"
+          className="w-full min-h-[48px] px-4 py-3 text-base bg-white/5 border-2 border-gray-700 rounded-lg text-white focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 [&>option]:bg-gray-800 [&>option]:text-white"
         >
-          <option value="" className="text-black bg-white">Select a Service</option>
-          <option value="voice-ai" className="text-black bg-white">Voice AI</option>
-          <option value="google-ads" className="text-black bg-white">Google Ads</option>
-          <option value="facebook-ads" className="text-black bg-white">Facebook Ads</option>
-          <option value="all" className="text-black bg-white">All Services</option>
+          <option value="">Select a Service</option>
+          <option value="voice-ai">Voice AI</option>
+          <option value="google-ads">Google Ads</option>
+          <option value="facebook-ads">Facebook Ads</option>
+          <option value="all">All Services</option>
         </select>
       </div>
 
@@ -199,7 +203,7 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
         Or call us directly:{" "}
         <a
           href="tel:865-346-3339"
-          className="text-primary hover:underline font-semibold min-h-[44px] inline-block"
+          className="text-primary hover:underline font-semibold inline-flex items-center min-h-[44px]"
           onClick={() => trackPhoneClick("865-346-3339", `lead_form_${source}`)}
         >
           (865) 346-3339
