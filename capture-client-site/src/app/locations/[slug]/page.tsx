@@ -9,6 +9,8 @@ import SocialProofBanner from "@/components/cro/SocialProofBanner";
 import RiskReversal from "@/components/cro/RiskReversal";
 import ObjectionHandler from "@/components/cro/ObjectionHandler";
 import MobileCTABar from "@/components/cro/MobileCTABar";
+import PremiumLocationFAQ from "@/components/sections/PremiumLocationFAQ";
+import PremiumLocationTestimonials from "@/components/sections/PremiumLocationTestimonials";
 import { Benefit, FAQItem } from "@/types/content";
 import {
   SITE_CONFIG,
@@ -384,30 +386,85 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         </div>
       )}
 
-      {/* Benefits Section */}
+      {/* Benefits Section - Premium Glass Cards */}
       {location.benefits && location.benefits.length > 0 && (
-        <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16 bg-slate-900/50">
-          <div className="container mx-auto">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center mb-8 sm:mb-12">
-              Why {location.location.city} Businesses Choose Us
-            </h2>
+        <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16 bg-slate-900/50 relative overflow-hidden">
+          {/* Background Effects */}
+          <div className="absolute inset-0">
+            <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-400/5 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
+          </div>
+
+          <div className="container mx-auto relative z-10">
+            {/* Section Header */}
+            <div className="text-center mb-8 sm:mb-12 max-w-3xl mx-auto">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-400/10 border border-cyan-400/30 mb-6">
+                <span className="material-icons text-cyan-400 text-sm">workspace_premium</span>
+                <span className="text-xs font-bold text-cyan-300 uppercase tracking-wider">
+                  Why Choose Us
+                </span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-4">
+                Why{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-cyan-400">
+                  {location.location.city}
+                </span>{" "}
+                Businesses Choose Us
+              </h2>
+              <p className="text-slate-400 text-base sm:text-lg">
+                Proven results for local businesses like yours
+              </p>
+            </div>
+
+            {/* Benefits Grid with Staggered Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {location.benefits.slice(0, 6).map((benefit: Benefit, index: number) => (
                 <div
                   key={index}
-                  className="group border border-slate-800 rounded-xl p-5 sm:p-6 bg-slate-900/50 backdrop-blur-sm hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-400/10 transition-all duration-300"
+                  className="group relative"
+                  style={{
+                    animationDelay: `${index * 80}ms`,
+                  }}
                 >
-                  <div className="flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-400 text-2xl mb-4 group-hover:bg-cyan-400/20 transition-all shrink-0">
-                    <span className="material-icons">{benefit.icon || "check_circle"}</span>
+                  {/* Glow effect on hover */}
+                  <div className="absolute -inset-px bg-gradient-to-br from-cyan-400/0 via-cyan-400/40 to-cyan-400/0 rounded-2xl opacity-0 group-hover:opacity-100 blur-md transition-all duration-500" />
+
+                  {/* Card */}
+                  <div className="relative h-full p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.15)] group-hover:border-cyan-400/30 group-hover:shadow-[0_8px_32px_rgba(6,182,212,0.2)] transition-all duration-500 group-hover:translate-y-[-4px]">
+                    {/* Mesh gradient on hover */}
+                    <div className="absolute inset-0 bg-mesh-premium rounded-2xl opacity-0 group-hover:opacity-40 transition-opacity duration-500 pointer-events-none" />
+
+                    {/* Icon with Gradient Background */}
+                    <div className="relative mb-5">
+                      <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl blur-lg opacity-30 group-hover:opacity-60 transition-opacity" />
+                      <div className="relative flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-400/20 via-cyan-500/10 to-blue-500/20 border border-cyan-400/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                        <span className="material-icons text-cyan-300 text-2xl group-hover:scale-110 transition-transform">
+                          {benefit.icon || "check_circle"}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Content */}
+                    <div className="relative z-10">
+                      <h3 className="text-lg sm:text-xl font-black text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-300 group-hover:to-cyan-400 transition-all">
+                        {benefit.title}
+                      </h3>
+                      <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+                        {benefit.description}
+                      </p>
+                    </div>
+
+                    {/* Number badge */}
+                    <div className="absolute top-4 right-4 flex items-center justify-center w-8 h-8 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-400 text-xs font-black">
+                      {index + 1}
+                    </div>
                   </div>
-                  <h3 className="text-lg sm:text-xl font-semibold text-white mb-2">{benefit.title}</h3>
-                  <p className="text-sm sm:text-base text-slate-400">{benefit.description}</p>
                 </div>
               ))}
             </div>
 
             {/* CRO: Trust Signals - Authority principle */}
-            <div className="max-w-5xl mx-auto mt-16">
+            <div className="max-w-5xl mx-auto mt-12 sm:mt-16">
               <TrustSignals />
             </div>
           </div>
@@ -457,31 +514,82 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         </section>
       )}
 
-      {/* Service Area */}
+      {/* Service Area - Premium Design */}
       {location.service_area && (
-        <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16 bg-slate-900/50">
-          <div className="container mx-auto max-w-4xl">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-4 sm:mb-6">
-              {location.service_area.heading}
-            </h2>
-            <p className="text-center text-slate-400 text-sm sm:text-base mb-6 sm:mb-8 px-4">{location.service_area.description}</p>
+        <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16 bg-slate-900/50 relative overflow-hidden">
+          {/* Background Effects */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-400/5 rounded-full blur-3xl" />
+          </div>
+
+          <div className="container mx-auto max-w-4xl relative z-10">
+            {/* Section Header */}
+            <div className="text-center mb-8 sm:mb-10">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-400/10 border border-cyan-400/30 mb-6">
+                <span className="material-icons text-cyan-400 text-sm">explore</span>
+                <span className="text-xs font-bold text-cyan-300 uppercase tracking-wider">
+                  Coverage Area
+                </span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">
+                {location.service_area.heading}
+              </h2>
+              <p className="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto px-4">
+                {location.service_area.description}
+              </p>
+            </div>
+
+            {/* Areas Grid */}
             {location.service_area.areas_list && (
-              <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
+              <div className="flex flex-wrap justify-center gap-2.5 sm:gap-3">
                 {location.service_area.areas_list.map((area: string, index: number) => (
                   <span
                     key={index}
-                    className="px-3 sm:px-4 py-2 bg-cyan-400/10 border border-cyan-400/30 rounded-full text-cyan-400 text-xs sm:text-sm font-medium hover:bg-cyan-400/20 transition-colors"
+                    className="group relative inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-full text-cyan-300 text-xs sm:text-sm font-bold hover:border-cyan-400/40 hover:shadow-[0_4px_16px_rgba(6,182,212,0.15)] transition-all duration-300 touch-target"
                   >
+                    <span className="material-icons text-xs">location_on</span>
                     {area}
+                    {/* Glow on hover */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/20 to-cyan-400/0 rounded-full opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-300" />
                   </span>
                 ))}
               </div>
             )}
+
+            {/* Coverage Indicator */}
+            <div className="mt-8 sm:mt-10 text-center">
+              <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-br from-green-400/10 to-green-500/10 border border-green-400/30 rounded-xl">
+                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-green-400/20">
+                  <span className="material-icons text-green-400" style={{ fontSize: '18px' }}>
+                    verified
+                  </span>
+                </div>
+                <span className="text-sm font-bold text-green-300">
+                  Full Service Coverage Available
+                </span>
+              </div>
+            </div>
           </div>
         </section>
       )}
 
-      {/* CRO: Objection Handler - Replaces basic FAQ with psychology-driven version */}
+      {/* Premium Testimonials Section */}
+      {location.local_testimonials && location.local_testimonials.length > 0 && (
+        <PremiumLocationTestimonials
+          testimonials={location.local_testimonials}
+          cityName={location.location.city}
+        />
+      )}
+
+      {/* Premium FAQ Section - Collapsible */}
+      {location.faq && location.faq.length > 0 && (
+        <PremiumLocationFAQ
+          faqs={location.faq}
+          cityName={location.location.city}
+        />
+      )}
+
+      {/* CRO: Objection Handler - Psychology-driven objection handling */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16">
         <div className="container mx-auto">
           <ObjectionHandler />

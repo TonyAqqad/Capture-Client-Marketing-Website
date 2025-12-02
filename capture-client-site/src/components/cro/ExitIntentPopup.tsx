@@ -65,42 +65,38 @@ export default function ExitIntentPopup() {
               className="w-full max-w-2xl max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
-            <div className="relative bg-gradient-to-br from-surface/95 to-background-dark/95 backdrop-blur-2xl border-2 border-accent/40 rounded-2xl sm:rounded-3xl shadow-glow-lg overflow-hidden">
-              {/* Close button - larger tap target on mobile */}
+            <div className="relative bg-gradient-to-br from-surface/95 to-background-dark/95 backdrop-blur-2xl border border-accent/25 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden">
+              {/* Close button - subtle and refined */}
               <button
                 onClick={handleClose}
-                className="absolute top-3 right-3 sm:top-4 sm:right-4 z-10 w-11 h-11 sm:w-10 sm:h-10 flex items-center justify-center rounded-full bg-surface border border-surface-border hover:border-accent/50 transition-all duration-300 hover:rotate-90 active:scale-95"
+                className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-surface/40 border border-surface-border/40 hover:border-surface-border hover:bg-surface/60 transition-all duration-300 backdrop-blur-sm active:scale-95"
                 aria-label="Close popup"
               >
-                <span className="material-icons text-foreground-muted hover:text-accent text-xl sm:text-base">
+                <span className="material-icons text-foreground-muted hover:text-foreground text-lg">
                   close
                 </span>
               </button>
 
               {/* Content */}
               <div className="p-6 sm:p-8 md:p-12">
-                {/* Icon */}
+                {/* Icon - more refined */}
                 <div className="flex justify-center mb-6">
                   <div className="relative">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 border-2 border-accent/40 flex items-center justify-center">
-                      <span className="material-icons text-accent text-4xl">priority_high</span>
-                    </div>
-                    <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-gradient-to-r from-accent to-primary flex items-center justify-center animate-pulse">
-                      <span className="material-icons text-white text-sm">local_fire_department</span>
+                    <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-accent/15 to-primary/15 border border-accent/30 flex items-center justify-center backdrop-blur-sm">
+                      <span className="material-icons text-accent text-4xl">lightbulb</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Headline */}
+                {/* Headline - less desperate */}
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-center text-foreground mb-3 sm:mb-4">
-                  Wait! Don't Miss Out
+                  Before You Go...
                 </h3>
 
-                {/* Subheadline */}
+                {/* Subheadline - value-focused */}
                 <p className="text-base sm:text-lg text-center text-foreground-muted mb-6 max-w-lg mx-auto">
-                  Join 500+ businesses that are capturing{" "}
-                  <span className="text-accent font-bold">10x more leads</span> with AI-powered
-                  automation.
+                  See how 500+ businesses are capturing{" "}
+                  <span className="text-accent font-semibold">10x more leads</span> with AI-powered automation.
                 </p>
 
                 {/* Benefits list */}
@@ -125,14 +121,14 @@ export default function ExitIntentPopup() {
                   ))}
                 </div>
 
-                {/* Urgency element */}
-                <div className="bg-gradient-to-r from-orange-500/20 to-amber-500/20 border border-orange-500/30 rounded-xl p-4 mb-6">
-                  <div className="flex items-center justify-center gap-2">
-                    <span className="material-icons text-orange-400 text-xl animate-pulse">
+                {/* Urgency element - softer approach */}
+                <div className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/25 rounded-xl p-4 mb-6 backdrop-blur-sm">
+                  <div className="flex items-center justify-center gap-2.5">
+                    <span className="material-icons text-amber-400/80 text-lg">
                       schedule
                     </span>
-                    <p className="text-sm font-bold text-foreground">
-                      <span className="text-orange-400">7 spots left</span> for December onboarding
+                    <p className="text-sm font-semibold text-foreground/90">
+                      <span className="text-amber-400">Limited spots</span> available for December onboarding
                     </p>
                   </div>
                 </div>

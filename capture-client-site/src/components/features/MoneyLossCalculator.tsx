@@ -552,23 +552,32 @@ function DrainCounter({
   size = "normal",
 }: DrainCounterProps) {
   const [displayValue, setDisplayValue] = useState(0);
+  const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
-    const duration = 1200;
-    const steps = 40;
-    const increment = value / steps;
+    setIsComplete(false);
+    const duration = 1500;
+    const steps = 60;
     let current = 0;
     let step = 0;
 
     const timer = setInterval(() => {
       step++;
-      current += increment;
+      const progress = step / steps;
+
+      // Dramatic ease-out with bounce
+      const eased = progress < 0.7
+        ? Math.pow(progress / 0.7, 2) * 0.9
+        : 0.9 + (progress - 0.7) / 0.3 * 0.1;
+
+      current = Math.floor(value * eased);
 
       if (step >= steps) {
         setDisplayValue(value);
+        setIsComplete(true);
         clearInterval(timer);
       } else {
-        setDisplayValue(Math.floor(current));
+        setDisplayValue(current);
       }
     }, duration / steps);
 
@@ -585,14 +594,47 @@ function DrainCounter({
 
   return (
     <motion.div
-      initial={{ scale: 0.8, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 0.4, type: "spring" }}
-      className={`font-bold ${color} ${sizeClasses[size]} tabular-nums`}
+      initial={{ scale: 0.8, opacity: 0, y: 20 }}
+      animate={{
+        scale: 1,
+        opacity: 1,
+        y: 0,
+      }}
+      transition={{
+        duration: 0.6,
+        type: "spring",
+        stiffness: 150,
+        damping: 20
+      }}
+      className={`font-bold ${color} ${sizeClasses[size]} tabular-nums relative`}
     >
-      {prefix}
-      {displayValue.toLocaleString()}
-      {suffix}
+      <motion.span
+        animate={isComplete ? {
+          scale: [1, 1.1, 1],
+          textShadow: [
+            "0 0 0px rgba(239, 68, 68, 0)",
+            "0 0 20px rgba(239, 68, 68, 0.6)",
+            "0 0 0px rgba(239, 68, 68, 0)"
+          ]
+        } : {}}
+        transition={{ duration: 0.5 }}
+        className="inline-block"
+      >
+        {prefix}
+        {displayValue.toLocaleString()}
+        {suffix}
+      </motion.span>
+
+      {/* Dramatic flash effect */}
+      {isComplete && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: [0, 0.3, 0] }}
+          transition={{ duration: 0.6, times: [0, 0.3, 1] }}
+          className="absolute inset-0 bg-gradient-radial from-red-500/40 via-red-500/20 to-transparent blur-xl"
+          style={{ pointerEvents: "none" }}
+        />
+      )}
     </motion.div>
   );
 }

@@ -82,86 +82,161 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
 
   if (submitted) {
     return (
-      <div className="bg-primary/10 border border-primary/20 rounded-2xl p-8 text-center animate-fade-in">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-accent/20 mb-4">
-          <span className="material-icons text-accent text-4xl">check_circle</span>
+      <div className="relative group animate-fade-in">
+        {/* Success glow effect */}
+        <div className="absolute -inset-6 bg-gradient-to-r from-accent/40 via-primary/40 to-accent/40 rounded-3xl blur-3xl opacity-60 animate-pulse" />
+
+        <div className="relative glass-premium p-10 text-center rounded-2xl border border-accent/40">
+          {/* Animated checkmark */}
+          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-accent/20 border-2 border-accent mb-6 relative">
+            <div className="absolute inset-0 rounded-full bg-accent/20 animate-ping" />
+            <span className="material-icons text-accent text-6xl relative z-10">check_circle</span>
+          </div>
+
+          <h3 className="text-3xl font-black text-white mb-3">
+            We Got Your Request!
+          </h3>
+          <p className="text-lg text-white/80 mb-4">
+            A growth specialist will call you within <span className="text-accent font-bold">15 minutes</span>.
+          </p>
+          <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-5 py-2.5">
+            <span className="material-icons text-accent text-lg">phone</span>
+            <p className="text-sm text-white/70">
+              Check your phone: <span className="text-accent font-bold text-base">{formData.phone}</span>
+            </p>
+          </div>
         </div>
-        <h3 className="text-2xl font-bold text-white mb-2">We Got Your Request!</h3>
-        <p className="text-gray-300 mb-4">A growth specialist will call you within 15 minutes.</p>
-        <p className="text-sm text-gray-400">
-          Check your phone: <span className="text-accent font-semibold">{formData.phone}</span>
-        </p>
       </div>
     );
   }
 
   return (
     <div className="space-y-6">
-      {/* Progress indicator */}
-      <div className="flex items-center justify-center gap-2 mb-6">
-        <div
-          className={`h-2 w-16 rounded-full transition-all duration-300 ${
-            step === 1 ? "bg-accent" : "bg-accent/50"
-          }`}
-        />
-        <div
-          className={`h-2 w-16 rounded-full transition-all duration-300 ${
-            step === 2 ? "bg-accent" : "bg-gray-700"
-          }`}
-        />
+      {/* Progress indicator with glow */}
+      <div className="flex items-center justify-center gap-3 mb-8">
+        <div className="relative">
+          <div
+            className={`h-2 w-20 rounded-full transition-all duration-500 ${
+              step === 1
+                ? "bg-gradient-to-r from-accent to-primary shadow-[0_0_12px_rgba(0,201,255,0.5)]"
+                : "bg-accent/50"
+            }`}
+          />
+          {step === 1 && (
+            <div className="absolute inset-0 rounded-full bg-accent/30 animate-pulse" />
+          )}
+        </div>
+        <div className="relative">
+          <div
+            className={`h-2 w-20 rounded-full transition-all duration-500 ${
+              step === 2
+                ? "bg-gradient-to-r from-primary to-accent shadow-[0_0_12px_rgba(74,105,226,0.5)]"
+                : "bg-white/10"
+            }`}
+          />
+          {step === 2 && (
+            <div className="absolute inset-0 rounded-full bg-primary/30 animate-pulse" />
+          )}
+        </div>
       </div>
 
       {/* Step 1: Name + Phone */}
       {step === 1 && (
-        <form onSubmit={handleStepOne} className="space-y-4 animate-slide-up">
-          <div className="space-y-4">
-            <div>
-              <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+        <form onSubmit={handleStepOne} className="space-y-5 animate-slide-up">
+          <div className="space-y-5">
+            {/* Name field */}
+            <div className="group">
+              <label
+                htmlFor="name"
+                className="block text-sm font-semibold text-white/90 mb-2.5 transition-colors group-focus-within:text-accent"
+              >
                 Your Name <span className="text-accent">*</span>
               </label>
-              <input
-                id="name"
-                type="text"
-                placeholder="John Smith"
-                value={formData.name}
-                onChange={(e) => {
-                  handleFormStart();
-                  setFormData({ ...formData, name: e.target.value });
-                }}
-                required
-                autoComplete="name"
-                className="w-full min-h-[48px] px-5 py-4 text-base bg-white/5 border-2 border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300"
-              />
+              <div className="relative">
+                <input
+                  id="name"
+                  type="text"
+                  placeholder="John Smith"
+                  value={formData.name}
+                  onChange={(e) => {
+                    handleFormStart();
+                    setFormData({ ...formData, name: e.target.value });
+                  }}
+                  required
+                  autoComplete="name"
+                  className="w-full min-h-[52px] px-5 py-4 text-base
+                             bg-white/[0.03] backdrop-blur-xl
+                             border-2 border-white/10 rounded-xl
+                             text-white placeholder-white/40
+                             transition-all duration-300
+                             hover:bg-white/[0.05] hover:border-white/20
+                             focus:outline-none focus:bg-white/[0.08]
+                             focus:border-accent focus:ring-4 focus:ring-accent/20
+                             focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]"
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
+              </div>
             </div>
 
-            <div>
-              <label htmlFor="phone" className="block text-sm font-medium text-gray-300 mb-2">
+            {/* Phone field */}
+            <div className="group">
+              <label
+                htmlFor="phone"
+                className="block text-sm font-semibold text-white/90 mb-2.5 transition-colors group-focus-within:text-accent"
+              >
                 Phone Number <span className="text-accent">*</span>
               </label>
-              <input
-                id="phone"
-                type="tel"
-                inputMode="numeric"
-                placeholder="(865) 555-1234"
-                value={formData.phone}
-                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                required
-                autoComplete="tel"
-                pattern="[0-9\s\(\)\-\+]+"
-                className="w-full min-h-[48px] px-5 py-4 text-base bg-white/5 border-2 border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300"
-              />
+              <div className="relative">
+                <input
+                  id="phone"
+                  type="tel"
+                  inputMode="numeric"
+                  placeholder="(865) 555-1234"
+                  value={formData.phone}
+                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  required
+                  autoComplete="tel"
+                  pattern="[0-9\s\(\)\-\+]+"
+                  className="w-full min-h-[52px] px-5 py-4 text-base
+                             bg-white/[0.03] backdrop-blur-xl
+                             border-2 border-white/10 rounded-xl
+                             text-white placeholder-white/40
+                             transition-all duration-300
+                             hover:bg-white/[0.05] hover:border-white/20
+                             focus:outline-none focus:bg-white/[0.08]
+                             focus:border-accent focus:ring-4 focus:ring-accent/20
+                             focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]"
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
+              </div>
             </div>
           </div>
 
+          {/* Premium continue button */}
           <button
             type="submit"
-            className="w-full min-h-[52px] bg-accent text-background-dark font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-glow-lg hover:scale-[1.02] active:scale-95 uppercase tracking-wide text-sm sm:text-base"
+            className="group relative w-full min-h-[56px] overflow-hidden rounded-xl
+                       transition-all duration-300
+                       hover:scale-[1.02] active:scale-[0.98]"
           >
-            Continue
-            <span className="material-icons ml-2 text-lg align-middle">arrow_forward</span>
+            {/* Animated gradient background */}
+            <div className="absolute inset-0 bg-gradient-to-r from-accent via-primary to-accent bg-[length:200%_100%] animate-gradient-shift" />
+
+            {/* Hover glow */}
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/10" />
+
+            {/* Button content */}
+            <span className="relative z-10 flex items-center justify-center gap-3 px-8 py-4 text-base sm:text-lg font-bold text-background-dark uppercase tracking-wider">
+              Continue
+              <span className="material-icons text-xl transition-transform duration-300 group-hover:translate-x-1">
+                arrow_forward
+              </span>
+            </span>
           </button>
 
-          <p className="text-xs text-gray-400 text-center">
+          {/* Trust badge */}
+          <p className="flex items-center justify-center gap-2 text-xs text-white/50">
+            <span className="material-icons text-accent text-sm">lock</span>
             We respect your privacy. No spam, ever.
           </p>
         </form>
@@ -169,96 +244,140 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
 
       {/* Step 2: Challenge dropdown */}
       {step === 2 && (
-        <form onSubmit={handleFinalSubmit} className="space-y-4 animate-slide-up">
-          <div>
-            <label htmlFor="challenge" className="block text-sm font-medium text-gray-300 mb-2">
-              What's your biggest challenge right now?
-            </label>
-            <select
-              id="challenge"
-              value={formData.challenge}
-              onChange={(e) => setFormData({ ...formData, challenge: e.target.value })}
-              required
-              className="w-full min-h-[48px] px-5 py-4 text-base bg-white/5 border-2 border-gray-700 rounded-xl text-white focus:outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition-all duration-300 [&>option]:bg-gray-800 [&>option]:text-white"
+        <form onSubmit={handleFinalSubmit} className="space-y-5 animate-slide-up">
+          <div className="group">
+            <label
+              htmlFor="challenge"
+              className="block text-sm font-semibold text-white/90 mb-2.5 transition-colors group-focus-within:text-accent"
             >
-              <option value="">Select your main challenge...</option>
-              <option value="missing-calls">Missing too many customer calls</option>
-              <option value="not-enough-leads">Not getting enough leads</option>
-              <option value="poor-roi">Ad campaigns not profitable</option>
-              <option value="no-system">No system to track leads</option>
-              <option value="overwhelmed">Too much to manage manually</option>
-              <option value="other">Something else</option>
-            </select>
+              What's your biggest challenge right now? <span className="text-accent">*</span>
+            </label>
+            <div className="relative">
+              <select
+                id="challenge"
+                value={formData.challenge}
+                onChange={(e) => setFormData({ ...formData, challenge: e.target.value })}
+                required
+                className="w-full min-h-[52px] px-5 py-4 text-base appearance-none
+                           bg-white/[0.03] backdrop-blur-xl
+                           border-2 border-white/10 rounded-xl
+                           text-white
+                           transition-all duration-300
+                           hover:bg-white/[0.05] hover:border-white/20
+                           focus:outline-none focus:bg-white/[0.08]
+                           focus:border-accent focus:ring-4 focus:ring-accent/20
+                           focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]
+                           [&>option]:bg-background-dark [&>option]:text-white"
+              >
+                <option value="">Select your main challenge...</option>
+                <option value="missing-calls">Missing too many customer calls</option>
+                <option value="not-enough-leads">Not getting enough leads</option>
+                <option value="poor-roi">Ad campaigns not profitable</option>
+                <option value="no-system">No system to track leads</option>
+                <option value="overwhelmed">Too much to manage manually</option>
+                <option value="other">Something else</option>
+              </select>
+              {/* Custom dropdown icon */}
+              <span className="material-icons absolute right-4 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none text-xl">
+                expand_more
+              </span>
+              <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
+            </div>
           </div>
 
           <div className="flex gap-3">
+            {/* Back button */}
             <button
               type="button"
               onClick={() => setStep(1)}
-              className="min-w-[52px] min-h-[52px] px-6 py-4 bg-white/5 border border-gray-700 text-gray-300 rounded-xl hover:bg-white/10 active:scale-95 transition-all duration-300"
+              className="min-w-[56px] min-h-[56px] px-4 rounded-xl
+                         bg-white/[0.03] border-2 border-white/10
+                         text-white/80
+                         transition-all duration-300
+                         hover:bg-white/[0.08] hover:border-white/20
+                         active:scale-95"
             >
-              <span className="material-icons text-lg">arrow_back</span>
+              <span className="material-icons text-xl">arrow_back</span>
             </button>
+
+            {/* Submit button */}
             <button
               type="submit"
               disabled={isSubmitting}
-              className="flex-1 min-h-[52px] bg-accent text-background-dark font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-glow-lg hover:scale-[1.02] active:scale-95 uppercase tracking-wide text-sm sm:text-base disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+              className="group relative flex-1 min-h-[56px] overflow-hidden rounded-xl
+                         transition-all duration-300
+                         hover:scale-[1.02] active:scale-[0.98]
+                         disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
             >
-              {isSubmitting ? (
-                <span className="flex items-center justify-center gap-2">
-                  <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
-                    <circle
-                      className="opacity-25"
-                      cx="12"
-                      cy="12"
-                      r="10"
-                      stroke="currentColor"
-                      strokeWidth="4"
-                      fill="none"
-                    />
-                    <path
-                      className="opacity-75"
-                      fill="currentColor"
-                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                    />
-                  </svg>
-                  Submitting...
-                </span>
-              ) : (
-                <>
-                  Get My Free Demo
-                  <span className="material-icons ml-2 text-lg align-middle">rocket_launch</span>
-                </>
-              )}
+              {/* Animated gradient background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-accent via-primary to-accent bg-[length:200%_100%] animate-gradient-shift" />
+
+              {/* Hover glow */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/10" />
+
+              {/* Button content */}
+              <span className="relative z-10 flex items-center justify-center gap-3 px-8 py-4 text-base sm:text-lg font-bold text-background-dark uppercase tracking-wider">
+                {isSubmitting ? (
+                  <>
+                    <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                        fill="none"
+                      />
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      />
+                    </svg>
+                    Submitting...
+                  </>
+                ) : (
+                  <>
+                    Get My Free Demo
+                    <span className="material-icons text-xl transition-transform duration-300 group-hover:translate-x-1">
+                      rocket_launch
+                    </span>
+                  </>
+                )}
+              </span>
             </button>
           </div>
 
           {/* Trust signals near submit */}
-          <div className="flex items-center justify-center gap-4 pt-2">
-            <div className="flex items-center gap-1 text-xs text-gray-400">
-              <span className="material-icons text-green-500 text-sm">verified</span>
-              <span>No Credit Card</span>
+          <div className="grid grid-cols-3 gap-2 pt-2">
+            <div className="flex flex-col items-center gap-1 text-center">
+              <span className="material-icons text-accent text-lg">verified</span>
+              <span className="text-[10px] sm:text-xs text-white/60">No Credit Card</span>
             </div>
-            <div className="flex items-center gap-1 text-xs text-gray-400">
-              <span className="material-icons text-green-500 text-sm">schedule</span>
-              <span>15-min Setup</span>
+            <div className="flex flex-col items-center gap-1 text-center">
+              <span className="material-icons text-accent text-lg">schedule</span>
+              <span className="text-[10px] sm:text-xs text-white/60">15-min Setup</span>
             </div>
-            <div className="flex items-center gap-1 text-xs text-gray-400">
-              <span className="material-icons text-green-500 text-sm">support_agent</span>
-              <span>Live Support</span>
+            <div className="flex flex-col items-center gap-1 text-center">
+              <span className="material-icons text-accent text-lg">support_agent</span>
+              <span className="text-[10px] sm:text-xs text-white/60">Live Support</span>
             </div>
           </div>
 
-          <p className="text-xs text-gray-400 text-center">
-            Or call:{" "}
-            <a
-              href="tel:865-346-3339"
-              className="text-accent hover:underline font-semibold inline-flex items-center min-h-[44px]"
-              onClick={() => trackPhoneClick("865-346-3339", `optimized_form_${source}`)}
-            >
-              (865) 346-3339
-            </a>
-          </p>
+          {/* Call option */}
+          <div className="flex flex-col items-center gap-3 pt-2 border-t border-white/10">
+            <p className="text-xs text-white/50">
+              Or call:{" "}
+              <a
+                href="tel:865-346-3339"
+                className="text-accent hover:underline font-bold inline-flex items-center min-h-[44px]"
+                onClick={() => trackPhoneClick("865-346-3339", `optimized_form_${source}`)}
+              >
+                (865) 346-3339
+              </a>
+            </p>
+          </div>
         </form>
       )}
     </div>

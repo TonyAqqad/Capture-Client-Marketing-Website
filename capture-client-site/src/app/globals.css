@@ -7,6 +7,13 @@
     scroll-behavior: smooth;
   }
 
+  /* Disable smooth scroll on mobile for better performance */
+  @media (max-width: 768px) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
   body {
     @apply font-body bg-background text-foreground antialiased overflow-x-hidden;
   }
@@ -31,6 +38,8 @@
     background: linear-gradient(135deg, #00c9ff 0%, #4a69e2 100%);
     background-size: 200% 200%;
     animation: gradientShift 8s ease infinite;
+    will-change: transform;
+    transform: translateZ(0);
   }
 
   .btn-secondary {
@@ -53,6 +62,8 @@
            backdrop-blur-lg transition-all duration-500
            hover:border-primary/30 hover:shadow-card-hover hover:-translate-y-1
            active:scale-[0.99];
+    will-change: transform;
+    transform: translateZ(0);
   }
 
   .card-glow {
@@ -103,6 +114,8 @@
   /* Section container */
   .section {
     @apply py-16 sm:py-20 md:py-24 lg:py-32;
+    content-visibility: auto;
+    contain-intrinsic-size: auto 500px;
   }
 
   .container-custom {
@@ -194,6 +207,8 @@
     border: 1px solid rgba(74, 105, 226, 0.2);
     border-radius: 50%;
     animation: orbit 20s linear infinite;
+    will-change: transform;
+    transform: translateZ(0);
   }
 
   .orbital-ring::before {
@@ -233,6 +248,8 @@
     background: rgba(0, 201, 255, 0.5);
     border-radius: 50%;
     animation: float 10s ease-in-out infinite;
+    will-change: transform;
+    transform: translateZ(0);
   }
 
   @keyframes float {
@@ -600,4 +617,48 @@
 .ripple-effect:active::after {
   width: 300px;
   height: 300px;
+}
+
+/* Subtle bounce animation for success states */
+@keyframes bounce-subtle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-bounce-subtle {
+  animation: bounce-subtle 1s ease-in-out infinite;
+}
+
+/* Slide up animation for form steps */
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s ease-out;
+}
+
+/* Fade in animation */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.5s ease-out;
 }

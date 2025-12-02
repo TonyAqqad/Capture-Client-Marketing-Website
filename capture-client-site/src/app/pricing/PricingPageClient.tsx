@@ -203,40 +203,149 @@ export default function PricingPageClient() {
               </motion.div>
             </div>
 
-            {/* Right side - 5 columns - Floating ROI teaser */}
+            {/* Right side - 5 columns - Floating ROI teaser - PREMIUM STYLING */}
             <motion.div
               className="col-span-12 lg:col-span-5 mt-8 lg:mt-0"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              initial={{ opacity: 0, scale: 0.9, y: 30 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.4, type: 'spring', stiffness: 100 }}
             >
               <div className="relative">
-                {/* Layered card effect - hidden on mobile for simplicity */}
-                <div className="hidden md:block absolute inset-0 bg-white/5 backdrop-blur-xl rounded-2xl translate-x-4 translate-y-4" />
-                <div className="hidden md:block absolute inset-0 bg-white/10 backdrop-blur-xl rounded-2xl translate-x-2 translate-y-2" />
-                <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl border border-white/20 p-6 md:p-8">
-                  <div className="text-center">
-                    <div className="text-accent text-xs sm:text-sm font-medium tracking-wider uppercase mb-3 sm:mb-4">
-                      Average ROI
-                    </div>
-                    <div className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-2">
-                      <span data-counter="580">0</span>%
-                    </div>
-                    <div className="text-white/60 text-sm sm:text-base mb-4 sm:mb-6 px-2">
-                      Our clients see an average return of 5.8x their investment
-                    </div>
-                    <div className="grid grid-cols-2 gap-4 sm:gap-6 pt-4 sm:pt-6 border-t border-white/10">
-                      <div>
-                        <div className="text-xl sm:text-2xl font-bold text-white mb-1">
-                          <span data-counter="500">0</span>+
+                {/* Layered card effect - ENHANCED */}
+                <motion.div
+                  className="hidden lg:block absolute inset-0 bg-gradient-to-br from-accent/10 to-primary/10 backdrop-blur-xl rounded-3xl translate-x-6 translate-y-6"
+                  animate={{
+                    scale: [1, 1.02, 1],
+                  }}
+                  transition={{
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                  }}
+                />
+                <motion.div
+                  className="hidden md:block absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/15 backdrop-blur-xl rounded-3xl translate-x-3 translate-y-3"
+                  animate={{
+                    scale: [1, 1.01, 1],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: 'easeInOut',
+                    delay: 0.5,
+                  }}
+                />
+
+                {/* Main card with premium glass effect */}
+                <div className="relative overflow-hidden rounded-3xl">
+                  {/* Animated gradient background */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-br from-accent/20 via-primary/20 to-accent/20"
+                    animate={{
+                      backgroundPosition: ['0% 0%', '100% 100%', '0% 0%'],
+                    }}
+                    transition={{
+                      duration: 8,
+                      repeat: Infinity,
+                      ease: 'linear',
+                    }}
+                    style={{ backgroundSize: '200% 200%' }}
+                  />
+
+                  {/* Floating orbs */}
+                  <motion.div
+                    className="absolute top-0 right-0 w-40 h-40 bg-accent/30 rounded-full blur-3xl"
+                    animate={{
+                      scale: [1, 1.4, 1],
+                      opacity: [0.3, 0.5, 0.3],
+                    }}
+                    transition={{
+                      duration: 5,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    }}
+                  />
+                  <motion.div
+                    className="absolute bottom-0 left-0 w-32 h-32 bg-primary/30 rounded-full blur-3xl"
+                    animate={{
+                      scale: [1, 1.3, 1],
+                      opacity: [0.3, 0.5, 0.3],
+                    }}
+                    transition={{
+                      duration: 6,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                      delay: 1,
+                    }}
+                  />
+
+                  {/* Content */}
+                  <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl rounded-3xl border-2 border-accent/30 p-8 md:p-10">
+                    <div className="text-center">
+                      {/* Badge */}
+                      <motion.div
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 to-primary/20 border border-accent/40 mb-6"
+                        animate={{
+                          boxShadow: [
+                            '0 0 20px rgba(0, 201, 255, 0.3)',
+                            '0 0 30px rgba(0, 201, 255, 0.5)',
+                            '0 0 20px rgba(0, 201, 255, 0.3)',
+                          ],
+                        }}
+                        transition={{
+                          duration: 2,
+                          repeat: Infinity,
+                        }}
+                      >
+                        <span className="material-icons text-accent text-sm">trending_up</span>
+                        <span className="text-accent text-xs sm:text-sm font-bold tracking-wider uppercase">
+                          Average ROI
+                        </span>
+                      </motion.div>
+
+                      {/* Big number - ULTRA BOLD */}
+                      <motion.div
+                        className="mb-4"
+                        animate={{
+                          scale: [1, 1.02, 1],
+                        }}
+                        transition={{
+                          duration: 3,
+                          repeat: Infinity,
+                          ease: 'easeInOut',
+                        }}
+                      >
+                        <div className="text-6xl sm:text-7xl md:text-8xl font-bold bg-gradient-to-br from-accent via-white to-primary bg-clip-text text-transparent leading-none mb-2">
+                          <span data-counter="580">0</span>%
                         </div>
-                        <div className="text-xs sm:text-sm text-white/60">Active Clients</div>
-                      </div>
-                      <div>
-                        <div className="text-xl sm:text-2xl font-bold text-white mb-1">
-                          <span data-counter="24">0</span>/7
-                        </div>
-                        <div className="text-xs sm:text-sm text-white/60">AI Availability</div>
+                      </motion.div>
+
+                      <p className="text-white/80 text-sm sm:text-base mb-6 px-2 font-medium">
+                        Our clients see an average return of <span className="text-accent font-bold">5.8x</span> their investment
+                      </p>
+
+                      {/* Stats grid - Enhanced */}
+                      <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/20">
+                        <motion.div
+                          className="relative p-4 rounded-2xl bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20"
+                          whileHover={{ scale: 1.05 }}
+                          transition={{ type: 'spring', stiffness: 400 }}
+                        >
+                          <div className="text-2xl sm:text-3xl font-bold text-white mb-1">
+                            <span data-counter="500">0</span>+
+                          </div>
+                          <div className="text-xs sm:text-sm text-white/70 font-medium">Active Clients</div>
+                        </motion.div>
+                        <motion.div
+                          className="relative p-4 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20"
+                          whileHover={{ scale: 1.05 }}
+                          transition={{ type: 'spring', stiffness: 400 }}
+                        >
+                          <div className="text-2xl sm:text-3xl font-bold text-white mb-1">
+                            <span data-counter="24">0</span>/7
+                          </div>
+                          <div className="text-xs sm:text-sm text-white/70 font-medium">AI Availability</div>
+                        </motion.div>
                       </div>
                     </div>
                   </div>
@@ -540,7 +649,7 @@ export default function PricingPageClient() {
           </button>
         </motion.div>
 
-        {/* Feature Comparison Table */}
+        {/* Feature Comparison Table - PREMIUM STYLING */}
         {showComparison && (
           <motion.div
             className="mt-8 md:mt-12 max-w-7xl mx-auto"
@@ -550,49 +659,86 @@ export default function PricingPageClient() {
             transition={{ duration: 0.5 }}
           >
             {/* Mobile: Show scrollable hint */}
-            <div className="md:hidden text-center text-white/60 text-sm mb-3">
-              ← Swipe to see all features →
+            <div className="md:hidden text-center text-white/60 text-sm mb-3 flex items-center justify-center gap-2">
+              <span className="material-icons text-accent text-lg animate-pulse">swipe_horizontal</span>
+              <span>Swipe to see all features</span>
             </div>
 
             {/* Scrollable wrapper for mobile */}
-            <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0 scrollbar-thin scrollbar-thumb-white/20 scrollbar-track-transparent">
-              <div className="min-w-[600px] md:min-w-full">
-                <div className="bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 overflow-hidden">
-                  <table className="w-full">
-                    <thead>
-                      <tr className="border-b border-white/10">
-                        <th className="text-left p-3 md:p-6 text-white/60 font-medium text-sm md:text-base sticky left-0 bg-white/5 backdrop-blur-xl z-10">Feature</th>
-                        <th className="text-center p-3 md:p-6 text-white font-medium text-sm md:text-base">Starter</th>
-                        <th className="text-center p-3 md:p-6 text-accent font-medium text-sm md:text-base">Growth</th>
-                        <th className="text-center p-3 md:p-6 text-amber-400 font-medium text-sm md:text-base">Enterprise</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {[
-                        { feature: "AI Voice Agents", starter: "1 agent", growth: "2 agents", enterprise: "Unlimited" },
-                        { feature: "Monthly Calls", starter: "50 calls", growth: "200 calls", enterprise: "Unlimited" },
-                        { feature: "Advertising Platforms", starter: "None", growth: "Google OR Facebook", enterprise: "Both + LinkedIn" },
-                        { feature: "Landing Pages", starter: "None", growth: "Optimization", enterprise: "Custom built" },
-                        { feature: "Reports", starter: "Monthly", growth: "Weekly", enterprise: "Real-time" },
-                        { feature: "Account Manager", starter: "—", growth: "—", enterprise: "Dedicated" },
-                        { feature: "Support", starter: "Email", growth: "Priority (4hr)", enterprise: "24/7" }
-                      ].map((row, i) => (
-                        <motion.tr
-                          key={i}
-                          className="border-b border-white/5 hover:bg-white/5 transition-colors"
-                          initial={{ opacity: 0, x: -20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: i * 0.05 }}
-                        >
-                          <td className="p-3 md:p-6 text-white/80 text-sm md:text-base sticky left-0 bg-white/5 backdrop-blur-xl z-10">{row.feature}</td>
-                          <td className="p-3 md:p-6 text-center text-white/60 text-sm md:text-base">{row.starter}</td>
-                          <td className="p-3 md:p-6 text-center text-white font-medium text-sm md:text-base">{row.growth}</td>
-                          <td className="p-3 md:p-6 text-center text-white/80 text-sm md:text-base">{row.enterprise}</td>
-                        </motion.tr>
-                      ))}
-                    </tbody>
-                  </table>
+            <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0 scrollbar-thin scrollbar-thumb-accent/30 scrollbar-track-white/5">
+              <div className="min-w-[700px] md:min-w-full">
+                {/* Premium glass container */}
+                <div className="relative rounded-3xl overflow-hidden">
+                  {/* Background effects */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#1e293b]/80 via-[#0f172a]/90 to-[#0a0f1c]/95 backdrop-blur-2xl" />
+                  <div className="absolute inset-0 bg-mesh-premium opacity-30" />
+
+                  {/* Border gradient */}
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-accent/20 via-primary/20 to-accent/20 p-[1px]">
+                    <div className="absolute inset-[1px] rounded-3xl bg-gradient-to-br from-[#1e293b]/95 via-[#0f172a]/98 to-[#0a0f1c]" />
+                  </div>
+
+                  <div className="relative">
+                    <table className="w-full">
+                      <thead>
+                        <tr className="border-b border-white/10">
+                          <th className="text-left p-4 md:p-6 text-white/60 font-semibold text-sm md:text-base sticky left-0 bg-gradient-to-r from-[#1e293b]/95 to-[#1e293b]/80 backdrop-blur-xl z-10">
+                            Feature
+                          </th>
+                          <th className="text-center p-4 md:p-6">
+                            <span className="text-white font-semibold text-sm md:text-base">Starter</span>
+                          </th>
+                          <th className="text-center p-4 md:p-6">
+                            <div className="inline-flex flex-col items-center gap-1">
+                              <div className="px-3 py-1 rounded-full bg-gradient-to-r from-accent/20 to-primary/20 border border-accent/30">
+                                <span className="text-accent font-bold text-sm md:text-base">Growth</span>
+                              </div>
+                              <span className="text-xs text-accent/60">Recommended</span>
+                            </div>
+                          </th>
+                          <th className="text-center p-4 md:p-6">
+                            <span className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent font-semibold text-sm md:text-base">Enterprise</span>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {[
+                          { feature: "AI Voice Agents", starter: "1 agent", growth: "2 agents", enterprise: "Unlimited", icon: "smart_toy" },
+                          { feature: "Monthly Calls", starter: "50 calls", growth: "200 calls", enterprise: "Unlimited", icon: "call" },
+                          { feature: "Advertising Platforms", starter: "None", growth: "Google OR Facebook", enterprise: "Both + LinkedIn", icon: "campaign" },
+                          { feature: "Landing Pages", starter: "None", growth: "Optimization", enterprise: "Custom built", icon: "web" },
+                          { feature: "Reports", starter: "Monthly", growth: "Weekly", enterprise: "Real-time", icon: "assessment" },
+                          { feature: "Account Manager", starter: "—", growth: "—", enterprise: "Dedicated", icon: "person" },
+                          { feature: "Support", starter: "Email", growth: "Priority (4hr)", enterprise: "24/7", icon: "support_agent" }
+                        ].map((row, i) => (
+                          <motion.tr
+                            key={i}
+                            className="border-b border-white/5 hover:bg-white/5 transition-all duration-300 group"
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: i * 0.05 }}
+                          >
+                            <td className="p-4 md:p-6 sticky left-0 bg-gradient-to-r from-[#1e293b]/95 to-[#1e293b]/80 backdrop-blur-xl z-10">
+                              <div className="flex items-center gap-3">
+                                <span className="material-icons text-accent/60 text-lg group-hover:text-accent transition-colors">{row.icon}</span>
+                                <span className="text-white font-medium text-sm md:text-base">{row.feature}</span>
+                              </div>
+                            </td>
+                            <td className="p-4 md:p-6 text-center">
+                              <span className="text-white/60 text-sm md:text-base">{row.starter}</span>
+                            </td>
+                            <td className="p-4 md:p-6 text-center bg-accent/5">
+                              <span className="text-white font-semibold text-sm md:text-base">{row.growth}</span>
+                            </td>
+                            <td className="p-4 md:p-6 text-center">
+                              <span className="text-white/70 text-sm md:text-base">{row.enterprise}</span>
+                            </td>
+                          </motion.tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </div>

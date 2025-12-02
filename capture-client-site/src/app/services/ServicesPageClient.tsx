@@ -340,23 +340,29 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
                 >
                   <Link href={`/services/${service.service.service_slug}`} className="block h-full">
                     <GlowCard className="h-full">
-                      <div className="group relative flex flex-col h-full min-h-[500px] bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl md:rounded-3xl p-8 lg:p-10 overflow-hidden transition-all duration-500 hover:border-accent/50 hover:shadow-2xl hover:shadow-accent/20">
+                      <div className="group relative flex flex-col h-full min-h-[500px] bg-gradient-to-br from-white/[0.08] via-white/[0.04] to-white/[0.01] backdrop-blur-2xl border border-white/10 rounded-2xl md:rounded-3xl p-8 lg:p-10 overflow-hidden transition-all duration-500 hover:border-accent/50 hover:shadow-[0_20px_60px_rgba(0,201,255,0.25)] hover:-translate-y-1">
                         {/* Animated background visual */}
                         <Visual />
 
-                        {/* Service number badge */}
-                        <div className="absolute -top-6 -left-6 w-20 h-20 bg-gradient-to-br from-primary to-accent rounded-full border-4 border-background-dark flex items-center justify-center">
-                          <span className="text-2xl font-black text-white">
+                        {/* Inner glow on hover */}
+                        <div className="absolute inset-0 rounded-2xl md:rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-accent/5 via-transparent to-primary/5" />
+
+                        {/* Mesh gradient overlay */}
+                        <div className="absolute inset-0 opacity-40 bg-mesh-premium pointer-events-none rounded-2xl md:rounded-3xl" />
+
+                        {/* Service number badge - enhanced with glass effect */}
+                        <div className="absolute -top-6 -left-6 w-20 h-20 bg-gradient-to-br from-primary/90 to-accent/90 backdrop-blur-xl rounded-full border-4 border-background-dark shadow-[0_8px_24px_rgba(74,105,226,0.4)] flex items-center justify-center group-hover:shadow-[0_12px_32px_rgba(0,201,255,0.6)] transition-shadow duration-500">
+                          <span className="text-2xl font-black text-white drop-shadow-lg">
                             {String(index + 1).padStart(2, "0")}
                           </span>
                         </div>
 
                         {/* Content */}
                         <div className="relative z-10 flex flex-col h-full">
-                          {/* Icon with animated background */}
+                          {/* Icon with animated background - enhanced */}
                           <div className="relative w-20 h-20 mb-6">
                             <motion.div
-                              className="absolute inset-0 bg-accent/20 rounded-2xl"
+                              className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/20 rounded-2xl blur-md"
                               animate={{ rotate: [0, 90, 180, 270, 360] }}
                               transition={{
                                 duration: 20,
@@ -364,8 +370,8 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
                                 ease: "linear",
                               }}
                             />
-                            <div className="relative w-full h-full bg-gradient-to-br from-white/10 to-white/5 rounded-2xl flex items-center justify-center border border-white/10">
-                              <span className="material-icons text-4xl text-accent">
+                            <div className="relative w-full h-full bg-gradient-to-br from-white/[0.15] to-white/[0.05] backdrop-blur-sm rounded-2xl flex items-center justify-center border border-white/20 shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] group-hover:border-accent/40 transition-colors duration-500">
+                              <span className="material-icons text-4xl text-accent drop-shadow-[0_4px_8px_rgba(0,201,255,0.5)]">
                                 {service.service.service_slug === "voice-ai"
                                   ? "settings_voice"
                                   : service.service.service_slug === "google-ads"
@@ -377,25 +383,25 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
                             </div>
                           </div>
 
-                          {/* Service name - consistent sizing */}
-                          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-black text-white mb-4 leading-tight">
+                          {/* Service name - consistent sizing with gradient on hover */}
+                          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-black text-white mb-4 leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:via-accent group-hover:to-white transition-all duration-500">
                             {service.service.service_name}
                           </h2>
 
-                          {/* Description - fixed height container */}
-                          <p className="text-base lg:text-lg text-white/60 mb-6 leading-relaxed line-clamp-4">
+                          {/* Description - fixed height container with better readability */}
+                          <p className="text-base lg:text-lg text-white/70 mb-6 leading-relaxed line-clamp-4 group-hover:text-white/80 transition-colors duration-300">
                             {service.intro?.paragraph?.substring(0, 200)}...
                           </p>
 
-                          {/* Key benefits - consistent spacing */}
+                          {/* Key benefits - enhanced with glassy checkmarks */}
                           {service.benefits && (
                             <div className="mb-6 space-y-3 flex-grow">
                               {service.benefits.slice(0, 3).map((benefit, i) => (
                                 <div key={i} className="flex items-start gap-3">
-                                  <div className="w-5 h-5 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center flex-shrink-0 mt-0.5">
-                                    <div className="w-2 h-2 rounded-full bg-accent" />
+                                  <div className="w-5 h-5 rounded-full bg-gradient-to-br from-accent/30 to-primary/20 backdrop-blur-sm border border-accent/50 flex items-center justify-center flex-shrink-0 mt-0.5 shadow-[0_2px_8px_rgba(0,201,255,0.3)] group-hover:shadow-[0_4px_12px_rgba(0,201,255,0.5)] transition-shadow duration-300">
+                                    <div className="w-2 h-2 rounded-full bg-accent shadow-[0_0_6px_rgba(0,201,255,0.8)]" />
                                   </div>
-                                  <span className="text-sm text-white/80 line-clamp-2">{benefit.title}</span>
+                                  <span className="text-sm text-white/80 line-clamp-2 group-hover:text-white/90 transition-colors duration-300">{benefit.title}</span>
                                 </div>
                               ))}
                             </div>

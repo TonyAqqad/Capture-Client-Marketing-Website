@@ -13,7 +13,7 @@
  */
 
 // Base URL for the website
-export const SITE_URL = "https://captureclient.com";
+export const SITE_URL = "https://captureclient.net";
 
 // Business Information
 export const BUSINESS_INFO = {
@@ -110,13 +110,8 @@ export const localBusinessSchema = {
       closes: "18:00",
     },
   ],
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "127",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  // aggregateRating removed until real reviews exist
+  // TODO: Add real reviews from Google Business Profile once established
 };
 
 // WebSite Schema - Site-wide definition

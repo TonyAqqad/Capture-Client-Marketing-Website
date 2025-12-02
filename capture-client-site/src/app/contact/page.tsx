@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://captureclient.com/#localbusiness",
+  "@id": "https://captureclient.net/#localbusiness",
   name: "Capture Client",
-  image: "https://captureclient.com/logo-full.png",
+  image: "https://captureclient.net/logo-full.png",
   telephone: "+1-865-346-3339",
   email: "team@captureclient.net",
-  url: "https://captureclient.com",
+  url: "https://captureclient.net",
   address: {
     "@type": "PostalAddress",
     streetAddress: "",
@@ -91,32 +91,27 @@ const localBusinessSchema = {
       },
     ],
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "127",
-    bestRating: "5",
-    worstRating: "1",
-  },
+  // aggregateRating removed until real reviews exist
+  // TODO: Add real reviews from Google Business Profile once established
 };
 
 // ContactPage Schema
 const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  "@id": "https://captureclient.com/contact/#webpage",
-  url: "https://captureclient.com/contact",
+  "@id": "https://captureclient.net/contact/#webpage",
+  url: "https://captureclient.net/contact",
   name: "Contact Us | Get Your Free Consultation | Capture Client",
   description:
     "Contact Capture Client for Voice AI, Google Ads, and Facebook Ads services. Call (865) 346-3339 or fill out our form for a free consultation.",
   isPartOf: {
-    "@id": "https://captureclient.com/#website",
+    "@id": "https://captureclient.net/#website",
   },
   about: {
-    "@id": "https://captureclient.com/#organization",
+    "@id": "https://captureclient.net/#organization",
   },
   mainEntity: {
-    "@id": "https://captureclient.com/#localbusiness",
+    "@id": "https://captureclient.net/#localbusiness",
   },
   datePublished: "2023-01-01",
   dateModified: new Date().toISOString().split("T")[0],
@@ -127,10 +122,10 @@ const contactPageSchema = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://captureclient.com/#organization",
+  "@id": "https://captureclient.net/#organization",
   name: "Capture Client",
-  url: "https://captureclient.com",
-  logo: "https://captureclient.com/logo-full.png",
+  url: "https://captureclient.net",
+  logo: "https://captureclient.net/logo-full.png",
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+1-865-346-3339",

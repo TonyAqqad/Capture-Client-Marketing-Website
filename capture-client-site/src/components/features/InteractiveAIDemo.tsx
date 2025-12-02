@@ -539,10 +539,15 @@ function ChatMessage({ message, isLatest, typedText, isTyping }: ChatMessageProp
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 10 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.95 }}
-      transition={{ duration: 0.3 }}
+      initial={{ opacity: 0, y: 20, scale: 0.95 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      exit={{ opacity: 0, x: -20, scale: 0.95 }}
+      transition={{
+        duration: 0.4,
+        type: "spring",
+        stiffness: 300,
+        damping: 25
+      }}
       className={`flex items-start gap-3 ${isAI ? "" : "flex-row-reverse"}`}
     >
       {/* Avatar */}
@@ -578,9 +583,9 @@ function ChatMessage({ message, isLatest, typedText, isTyping }: ChatMessageProp
           {displayText}
           {showCursor && (
             <motion.span
-              animate={{ opacity: [1, 0] }}
-              transition={{ duration: 0.5, repeat: Infinity }}
-              className="inline-block w-1.5 h-4 bg-cyan-400 ml-1 align-middle"
+              animate={{ opacity: [1, 0.3, 1] }}
+              transition={{ duration: 0.8, repeat: Infinity, ease: "easeInOut" }}
+              className="inline-block w-0.5 h-4 bg-cyan-400 ml-1 align-middle rounded-full"
             />
           )}
         </p>

@@ -378,7 +378,7 @@ export default function FeaturesPageClient() {
         </svg>
       </div>
 
-      {/* SECONDARY FEATURES - Card Grid */}
+      {/* SECONDARY FEATURES - Staggered Card Grid */}
       <section className="relative py-16 sm:py-24 md:py-32 bg-[#1a1a3e]">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16">
           <div className="text-center mb-12 sm:mb-16 md:mb-20">
@@ -401,33 +401,43 @@ export default function FeaturesPageClient() {
             </p>
           </div>
 
+          {/* Staggered grid - cards offset for visual interest */}
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
-            {/* Google Ads */}
-            <SecondaryFeatureCard
-              icon={<Target className="w-10 h-10" />}
-              title="Google Ads"
-              description="Professional campaign management with conversion tracking and optimization for maximum ROI."
-              color="cyan"
-              delay={0}
-            />
+            {/* Google Ads - Base position */}
+            <div className="md:mt-0">
+              <SecondaryFeatureCard
+                icon={<Target className="w-10 h-10" />}
+                title="Google Ads"
+                description="Professional campaign management with conversion tracking and optimization for maximum ROI."
+                color="cyan"
+                delay={0}
+                number="04"
+              />
+            </div>
 
-            {/* Facebook Ads */}
-            <SecondaryFeatureCard
-              icon={<ThumbsUp className="w-10 h-10" />}
-              title="Facebook Ads"
-              description="Targeted social advertising that generates qualified leads from your ideal customers."
-              color="blue"
-              delay={0.1}
-            />
+            {/* Facebook Ads - Offset down */}
+            <div className="md:mt-12">
+              <SecondaryFeatureCard
+                icon={<ThumbsUp className="w-10 h-10" />}
+                title="Facebook Ads"
+                description="Targeted social advertising that generates qualified leads from your ideal customers."
+                color="blue"
+                delay={0.1}
+                number="05"
+              />
+            </div>
 
-            {/* Unified Inbox */}
-            <SecondaryFeatureCard
-              icon={<Inbox className="w-10 h-10" />}
-              title="Unified Inbox"
-              description="All communications in one place—calls, texts, emails, forms. Never miss a message."
-              color="cyan"
-              delay={0.2}
-            />
+            {/* Unified Inbox - Offset medium */}
+            <div className="md:mt-6">
+              <SecondaryFeatureCard
+                icon={<Inbox className="w-10 h-10" />}
+                title="Unified Inbox"
+                description="All communications in one place—calls, texts, emails, forms. Never miss a message."
+                color="cyan"
+                delay={0.2}
+                number="06"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -455,40 +465,110 @@ export default function FeaturesPageClient() {
         </div>
       </section>
 
-      {/* INTEGRATIONS - Animated Carousel */}
+      {/* INTEGRATIONS - Premium Animated Carousel */}
       <section className="relative py-16 sm:py-24 md:py-32 bg-gradient-to-b from-[#0F172A] to-[#1a1a3e] overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16">
+        {/* Background mesh gradient */}
+        <div
+          className="absolute inset-0 opacity-30"
+          style={{
+            background: `
+              radial-gradient(at 20% 50%, rgba(0, 201, 255, 0.1) 0%, transparent 50%),
+              radial-gradient(at 80% 50%, rgba(74, 105, 226, 0.08) 0%, transparent 50%)
+            `
+          }}
+        />
+
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16 relative z-10">
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl font-black text-white mb-3 sm:mb-4 px-4">
-              Seamless Integrations
-            </h2>
-            <p className="text-white/60 text-base sm:text-lg px-4">
-              Connect with the tools you already use
-            </p>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-3xl sm:text-4xl font-black text-white mb-3 sm:mb-4 px-4">
+                Seamless <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00C9FF] to-[#4A69E2]">Integrations</span>
+              </h2>
+              <p className="text-white/60 text-base sm:text-lg px-4">
+                Connect with the tools you already use
+              </p>
+            </motion.div>
           </div>
 
-          {/* Animated logo carousel */}
-          <motion.div
-            animate={{ x: [0, -1000] }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            className="flex gap-6 sm:gap-8 md:gap-12 items-center"
-          >
-            {[...Array(12)].map((_, i) => (
-              <div
-                key={i}
-                className="flex-shrink-0 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-xl sm:rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center backdrop-blur-sm"
-              >
-                <span className="text-white/20 text-xs sm:text-sm font-bold">Integration</span>
-              </div>
-            ))}
-          </motion.div>
+          {/* Premium animated logo carousel with glass cards */}
+          <div className="relative">
+            {/* Gradient fade edges */}
+            <div className="absolute left-0 top-0 bottom-0 w-32 sm:w-40 bg-gradient-to-r from-[#1a1a3e] to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-32 sm:w-40 bg-gradient-to-l from-[#1a1a3e] to-transparent z-10 pointer-events-none" />
+
+            <motion.div
+              animate={{ x: [0, -1000] }}
+              transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+              className="flex gap-6 sm:gap-8 md:gap-12 items-center"
+            >
+              {[...Array(12)].map((_, i) => (
+                <motion.div
+                  key={i}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  className="flex-shrink-0 w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-xl sm:rounded-2xl bg-gradient-to-br from-white/[0.08] via-white/[0.03] to-white/[0.01] border border-white/10 flex items-center justify-center backdrop-blur-lg hover:border-[#00C9FF]/30 transition-all group relative overflow-hidden"
+                >
+                  {/* Shimmer effect */}
+                  <motion.div
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100"
+                    animate={{
+                      backgroundPosition: ['0% 0%', '100% 100%']
+                    }}
+                    transition={{
+                      duration: 1.5,
+                      repeat: Infinity,
+                      ease: "linear"
+                    }}
+                    style={{
+                      background: 'linear-gradient(135deg, transparent 0%, rgba(0, 201, 255, 0.2) 50%, transparent 100%)',
+                      backgroundSize: '200% 200%'
+                    }}
+                  />
+
+                  {/* Integration icon placeholder */}
+                  <div className="relative z-10 w-12 h-12 sm:w-14 sm:h-14 rounded-lg bg-white/5 flex items-center justify-center">
+                    <span className="text-white/40 text-xs sm:text-sm font-bold">API</span>
+                  </div>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
         </div>
       </section>
 
-      {/* FINAL CTA */}
+      {/* FINAL CTA - Premium with layered effects */}
       <section className="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 lg:px-16 overflow-hidden">
+        {/* Multi-layer background */}
         <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-[#0F172A]" />
           <div className="absolute inset-0 bg-gradient-to-br from-[#00C9FF]/10 via-[#4A69E2]/10 to-transparent" />
+
+          {/* Animated gradient orbs */}
+          <motion.div
+            animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
+            transition={{ duration: 8, repeat: Infinity }}
+            className="absolute top-20 left-20 w-96 h-96 bg-[#00C9FF]/20 rounded-full blur-3xl"
+          />
+          <motion.div
+            animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
+            transition={{ duration: 10, repeat: Infinity, delay: 1 }}
+            className="absolute bottom-20 right-20 w-[500px] h-[500px] bg-[#4A69E2]/20 rounded-full blur-3xl"
+          />
+
+          {/* Grid overlay */}
+          <div
+            className="absolute inset-0 opacity-[0.02]"
+            style={{
+              backgroundImage: `
+                linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
+              `,
+              backgroundSize: '60px 60px'
+            }}
+          />
         </div>
 
         <div className="container mx-auto max-w-4xl text-center relative z-10">
@@ -496,36 +576,67 @@ export default function FeaturesPageClient() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white mb-4 sm:mb-6 px-4">
-              Ready to Experience
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00C9FF] to-[#4A69E2]">
+            {/* Premium headline with extreme weight contrast */}
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-[1.1] font-black text-white mb-4 sm:mb-6 px-4">
+              <span className="font-extralight text-white/60 block mb-2">Ready to Experience</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00C9FF] via-white to-[#4A69E2] block">
                 All These Features?
               </span>
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-white/60 mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
+
+            <p className="text-base sm:text-lg md:text-xl text-white/60 mb-8 sm:mb-12 max-w-2xl mx-auto px-4 leading-relaxed">
               Book a free demo and see how Capture Client can transform your business with AI-powered growth tools.
             </p>
 
+            {/* Premium CTA buttons with enhanced effects */}
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-stretch sm:items-center px-4">
-              <Link
-                href="/contact"
-                className="group relative px-8 sm:px-10 py-4 sm:py-5 bg-[#00C9FF] text-[#0F172A] font-bold text-base sm:text-lg rounded-full overflow-hidden transition-all hover:shadow-[0_0_40px_rgba(0,201,255,0.5)] min-h-[56px] flex items-center justify-center"
-              >
-                <span className="relative z-10 flex items-center justify-center gap-2">
-                  Book a Demo
-                  <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
-                </span>
-              </Link>
+              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                <Link
+                  href="/contact"
+                  className="group relative px-8 sm:px-10 py-4 sm:py-5 bg-[#00C9FF] text-[#0F172A] font-bold text-base sm:text-lg rounded-full overflow-hidden transition-all hover:shadow-[0_0_40px_rgba(0,201,255,0.6)] min-h-[56px] flex items-center justify-center"
+                >
+                  {/* Shine effect on hover */}
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                    initial={{ x: "-100%" }}
+                    whileHover={{ x: "100%" }}
+                    transition={{ duration: 0.6 }}
+                  />
 
-              <a
-                href="tel:8653463339"
-                className="px-8 sm:px-10 py-4 sm:py-5 bg-white/10 border-2 border-white/20 text-white font-bold text-base sm:text-lg rounded-full backdrop-blur-sm hover:bg-white/20 transition-all min-h-[56px] flex items-center justify-center"
-              >
-                Call Us: (865) 346-3339
-              </a>
+                  <span className="relative z-10 flex items-center justify-center gap-2">
+                    Book a Demo
+                    <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </Link>
+              </motion.div>
+
+              <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                <a
+                  href="tel:8653463339"
+                  className="group relative px-8 sm:px-10 py-4 sm:py-5 bg-white/[0.05] border-2 border-white/20 text-white font-bold text-base sm:text-lg rounded-full backdrop-blur-lg hover:bg-white/10 hover:border-[#00C9FF]/50 transition-all min-h-[56px] flex items-center justify-center overflow-hidden"
+                >
+                  {/* Glass shimmer effect */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                  <span className="relative z-10">
+                    Call Us: (865) 346-3339
+                  </span>
+                </a>
+              </motion.div>
             </div>
+
+            {/* Trust signal */}
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5 }}
+              className="mt-8 text-white/40 text-sm"
+            >
+              Join hundreds of businesses growing with AI
+            </motion.p>
           </motion.div>
         </div>
       </section>
@@ -540,21 +651,24 @@ interface SecondaryFeatureCardProps {
   description: string;
   color: "cyan" | "blue";
   delay: number;
+  number: string;
 }
 
-function SecondaryFeatureCard({ icon, title, description, color, delay }: SecondaryFeatureCardProps) {
+function SecondaryFeatureCard({ icon, title, description, color, delay, number }: SecondaryFeatureCardProps) {
   const colorClasses = {
     cyan: {
       border: "border-[#00C9FF]/30",
       bg: "from-[#00C9FF]/10 to-transparent",
       glow: "group-hover:shadow-[0_0_30px_rgba(0,201,255,0.2)]",
-      icon: "text-[#00C9FF]"
+      icon: "text-[#00C9FF]",
+      badge: "bg-[#00C9FF]/10 border-[#00C9FF]/20 text-[#00C9FF]"
     },
     blue: {
       border: "border-[#4A69E2]/30",
       bg: "from-[#4A69E2]/10 to-transparent",
       glow: "group-hover:shadow-[0_0_30px_rgba(74,105,226,0.2)]",
-      icon: "text-[#4A69E2]"
+      icon: "text-[#4A69E2]",
+      badge: "bg-[#4A69E2]/10 border-[#4A69E2]/20 text-[#4A69E2]"
     }
   };
 
@@ -568,17 +682,36 @@ function SecondaryFeatureCard({ icon, title, description, color, delay }: Second
       transition={{ delay, duration: 0.6 }}
       className="group relative"
     >
+      {/* Layered frame effect for premium look */}
+      <div className="absolute inset-0 border border-white/5 translate-x-3 translate-y-3 rounded-xl sm:rounded-2xl" />
+      <div className="absolute inset-0 border border-white/10 translate-x-1.5 translate-y-1.5 rounded-xl sm:rounded-2xl" />
+
       {/* Glow effect on hover */}
       <div className={`absolute -inset-px bg-gradient-to-r ${colors.border} rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500`} />
 
       <div className="relative bg-[#0F172A]/80 backdrop-blur-xl border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 h-full transition-all duration-300 group-hover:-translate-y-2">
-        {/* Icon with animated background */}
+        {/* Number badge - positioned top-left */}
+        <div className={`absolute -top-3 -left-3 w-10 h-10 sm:w-12 sm:h-12 ${colors.badge} border rounded-full flex items-center justify-center font-black text-sm sm:text-base shadow-lg`}>
+          {number}
+        </div>
+
+        {/* Icon with animated background and rotating glow */}
         <div className="relative w-16 h-16 sm:w-20 sm:h-20 mb-4 sm:mb-6">
+          {/* Rotating glow ring */}
           <motion.div
-            className={`absolute inset-0 bg-gradient-to-br ${colors.bg} rounded-xl sm:rounded-2xl`}
-            whileHover={{ rotate: 180 }}
-            transition={{ duration: 0.6 }}
+            className={`absolute inset-0 bg-gradient-to-br ${colors.bg} rounded-xl sm:rounded-2xl blur-md opacity-50`}
+            animate={{ rotate: 360 }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
           />
+
+          {/* Main icon background - rotates on hover */}
+          <motion.div
+            className={`absolute inset-0 bg-gradient-to-br ${colors.bg} rounded-xl sm:rounded-2xl border border-white/10`}
+            whileHover={{ rotate: 90 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+          />
+
+          {/* Icon */}
           <div className={`relative w-full h-full flex items-center justify-center ${colors.icon}`}>
             {icon}
           </div>
@@ -597,6 +730,9 @@ function SecondaryFeatureCard({ icon, title, description, color, delay }: Second
           Learn more
           <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
         </div>
+
+        {/* Bottom edge highlight */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
       </div>
     </motion.div>
   );
@@ -615,15 +751,44 @@ function SupportingFeature({ icon, title, description }: SupportingFeatureProps)
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="flex items-start gap-3 sm:gap-4 p-4 sm:p-6 rounded-lg sm:rounded-xl bg-white/5 border border-white/10 hover:border-[#00C9FF]/30 transition-all group min-h-[72px]"
+      className="group relative flex items-start gap-3 sm:gap-4 p-4 sm:p-6 rounded-lg sm:rounded-xl bg-white/[0.02] backdrop-blur-lg border border-white/10 hover:border-[#00C9FF]/30 transition-all min-h-[72px] overflow-hidden"
     >
-      <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-[#00C9FF]/10 flex items-center justify-center text-[#00C9FF] flex-shrink-0 group-hover:scale-110 transition-transform">
-        {icon}
+      {/* Glass effect */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/[0.08] via-white/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+      {/* Shimmer effect on hover */}
+      <motion.div
+        className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none"
+        initial={false}
+        animate={{
+          backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          ease: "linear"
+        }}
+        style={{
+          background: 'linear-gradient(90deg, transparent 0%, rgba(0, 201, 255, 0.1) 50%, transparent 100%)',
+          backgroundSize: '200% 100%'
+        }}
+      />
+
+      <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-[#00C9FF]/10 flex items-center justify-center text-[#00C9FF] flex-shrink-0 group-hover:scale-110 transition-transform border border-[#00C9FF]/20">
+        {/* Inner glow */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#00C9FF]/20 to-transparent rounded-lg sm:rounded-xl" />
+        <div className="relative z-10">
+          {icon}
+        </div>
       </div>
-      <div className="flex-1">
-        <h4 className="text-white font-bold mb-1 text-sm sm:text-base">{title}</h4>
+
+      <div className="flex-1 relative z-10">
+        <h4 className="text-white font-bold mb-1 text-sm sm:text-base group-hover:text-[#00C9FF] transition-colors">{title}</h4>
         <p className="text-white/60 text-xs sm:text-sm leading-relaxed">{description}</p>
       </div>
+
+      {/* Bottom edge highlight */}
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00C9FF]/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     </motion.div>
   );
 }

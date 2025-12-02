@@ -16,21 +16,34 @@ export function PremiumHero() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
-  // Mouse tracking for interactive elements
+  // Mouse tracking for interactive elements - THROTTLED for performance
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const springX = useSpring(mouseX, { stiffness: 50, damping: 30 });
   const springY = useSpring(mouseY, { stiffness: 50, damping: 30 });
 
   useEffect(() => {
+    // Disable mouse tracking on mobile for performance
+    if (typeof window !== 'undefined' && window.innerWidth < 1024) {
+      return;
+    }
+
+    let ticking = false;
+
     const handleMouseMove = (e: MouseEvent) => {
-      const { clientX, clientY } = e;
-      const { innerWidth, innerHeight } = window;
-      mouseX.set((clientX - innerWidth / 2) / 50);
-      mouseY.set((clientY - innerHeight / 2) / 50);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const { clientX, clientY } = e;
+          const { innerWidth, innerHeight } = window;
+          mouseX.set((clientX - innerWidth / 2) / 50);
+          mouseY.set((clientY - innerHeight / 2) / 50);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove, { passive: true });
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [mouseX, mouseY]);
 
@@ -64,31 +77,31 @@ export function PremiumHero() {
     >
       {/* Premium layered mesh gradient background */}
       <motion.div
-        style={{ y }}
+        style={{ y, willChange: 'transform', transform: 'translateZ(0)' }}
         className="absolute inset-0"
       >
-        {/* Animated gradient orbs with mouse parallax */}
+        {/* Animated gradient orbs with mouse parallax - GPU accelerated */}
         <motion.div
-          style={{ x: springX, y: springY }}
+          style={{ x: springX, y: springY, willChange: 'transform, opacity', transform: 'translateZ(0)' }}
           animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
+            scale: [1, 1.1, 1],
+            opacity: [0.3, 0.4, 0.3],
           }}
           transition={{
-            duration: 8,
+            duration: 10,
             repeat: Infinity,
             ease: "easeInOut"
           }}
           className="absolute top-1/4 left-0 w-full max-w-[600px] sm:max-w-[1000px] h-[600px] sm:h-[1000px] rounded-full bg-gradient-radial from-primary/20 via-primary/10 to-transparent blur-3xl -translate-x-1/3"
         />
         <motion.div
-          style={{ x: springX, y: springY }}
+          style={{ x: springX, y: springY, willChange: 'transform, opacity', transform: 'translateZ(0)' }}
           animate={{
-            scale: [1.2, 1, 1.2],
-            opacity: [0.4, 0.6, 0.4],
+            scale: [1.1, 1, 1.1],
+            opacity: [0.3, 0.4, 0.3],
           }}
           transition={{
-            duration: 10,
+            duration: 12,
             repeat: Infinity,
             ease: "easeInOut",
             delay: 1
@@ -99,42 +112,46 @@ export function PremiumHero() {
         {/* Mesh gradient base */}
         <div className="absolute inset-0 bg-mesh-premium" />
 
-        {/* Floating angular shapes with 3D effect */}
+        {/* Floating angular shapes with 3D effect - GPU accelerated - Hidden on mobile for performance */}
         <motion.div
           style={{
             x: useTransform(springX, [-10, 10], [-30, 30]),
             y: useTransform(springY, [-10, 10], [-30, 30]),
             clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
-            boxShadow: "0 0 60px rgba(0, 201, 255, 0.1)"
+            boxShadow: "0 0 60px rgba(0, 201, 255, 0.1)",
+            willChange: 'transform',
+            transform: 'translateZ(0)'
           }}
           animate={{
             rotate: [0, 360],
-            scale: [1, 1.1, 1],
+            scale: [1, 1.05, 1],
           }}
           transition={{
-            duration: 30,
+            duration: 40,
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute top-1/3 right-1/4 w-40 h-40 border-2 border-accent/10 rotate-45 backdrop-blur-sm"
+          className="absolute top-1/3 right-1/4 w-40 h-40 border-2 border-accent/10 rotate-45 backdrop-blur-sm hidden lg:block"
         />
         <motion.div
           style={{
             x: useTransform(springX, [-10, 10], [20, -20]),
             y: useTransform(springY, [-10, 10], [20, -20]),
             clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
-            boxShadow: "0 0 60px rgba(74, 105, 226, 0.1)"
+            boxShadow: "0 0 60px rgba(74, 105, 226, 0.1)",
+            willChange: 'transform',
+            transform: 'translateZ(0)'
           }}
           animate={{
             rotate: [360, 0],
-            scale: [1, 1.15, 1],
+            scale: [1, 1.08, 1],
           }}
           transition={{
-            duration: 25,
+            duration: 35,
             repeat: Infinity,
             ease: "linear"
           }}
-          className="absolute bottom-1/3 left-1/5 w-32 h-32 border-2 border-primary/10 rotate-12 backdrop-blur-sm"
+          className="absolute bottom-1/3 left-1/5 w-32 h-32 border-2 border-primary/10 rotate-12 backdrop-blur-sm hidden lg:block"
         />
 
         {/* Animated grid pattern */}

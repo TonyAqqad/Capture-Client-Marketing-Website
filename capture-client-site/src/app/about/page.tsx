@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://captureclient.com/#organization",
+  "@id": "https://captureclient.net/#organization",
   name: "Capture Client",
-  url: "https://captureclient.com",
+  url: "https://captureclient.net",
   logo: {
     "@type": "ImageObject",
-    url: "https://captureclient.com/logo-full.png",
+    url: "https://captureclient.net/logo-full.png",
     width: 512,
     height: 512,
   },
@@ -60,23 +60,23 @@ const organizationSchema = {
 const aboutPageSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  "@id": "https://captureclient.com/about/#webpage",
-  url: "https://captureclient.com/about",
+  "@id": "https://captureclient.net/about/#webpage",
+  url: "https://captureclient.net/about",
   name: "About Capture Client | Voice AI & Marketing Automation",
   description:
     "Learn about Capture Client, the marketing automation platform helping small businesses capture more leads with AI voice agents and paid advertising.",
   isPartOf: {
-    "@id": "https://captureclient.com/#website",
+    "@id": "https://captureclient.net/#website",
   },
   about: {
-    "@id": "https://captureclient.com/#organization",
+    "@id": "https://captureclient.net/#organization",
   },
   mainEntity: {
-    "@id": "https://captureclient.com/#organization",
+    "@id": "https://captureclient.net/#organization",
   },
   primaryImageOfPage: {
     "@type": "ImageObject",
-    url: "https://captureclient.com/logo-full.png",
+    url: "https://captureclient.net/logo-full.png",
   },
   datePublished: "2023-01-01",
   dateModified: new Date().toISOString().split("T")[0],
@@ -87,19 +87,19 @@ const aboutPageSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://captureclient.com/#website",
-  url: "https://captureclient.com",
+  "@id": "https://captureclient.net/#website",
+  url: "https://captureclient.net",
   name: "Capture Client",
   description:
     "AI-powered marketing automation platform for small businesses",
   publisher: {
-    "@id": "https://captureclient.com/#organization",
+    "@id": "https://captureclient.net/#organization",
   },
   potentialAction: {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://captureclient.com/search?q={search_term_string}",
+      urlTemplate: "https://captureclient.net/search?q={search_term_string}",
     },
     "query-input": "required name=search_term_string",
   },

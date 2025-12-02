@@ -138,25 +138,58 @@ export default function LeadTicker() {
             {leads.map((lead) => (
               <motion.div
                 key={lead.id}
-                initial={{ opacity: 0, y: -20, scale: 0.95 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                exit={{ opacity: 0, x: 100, scale: 0.95 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
-                className="card p-5 flex items-center gap-4 group hover:bg-accent/5 transition-colors duration-300"
+                initial={{ opacity: 0, y: -30, scale: 0.92, rotateX: -10 }}
+                animate={{
+                  opacity: 1,
+                  y: 0,
+                  scale: 1,
+                  rotateX: 0
+                }}
+                exit={{
+                  opacity: 0,
+                  x: 100,
+                  scale: 0.9,
+                  transition: { duration: 0.3 }
+                }}
+                transition={{
+                  duration: 0.5,
+                  type: "spring",
+                  stiffness: 300,
+                  damping: 25
+                }}
+                whileHover={{
+                  scale: 1.02,
+                  transition: { duration: 0.2 }
+                }}
+                className="card p-5 flex items-center gap-4 group hover:bg-accent/5 transition-colors duration-300 cursor-pointer"
               >
                 {/* Pulse indicator */}
                 <div className="relative flex-shrink-0">
                   <motion.div
                     animate={{
-                      scale: [1, 1.5, 1],
-                      opacity: [0.5, 0, 0.5],
+                      scale: [1, 1.8, 1],
+                      opacity: [0.6, 0, 0.6],
                     }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="absolute inset-0 rounded-full bg-accent"
+                    transition={{
+                      duration: 2.5,
+                      repeat: Infinity,
+                      ease: "easeOut"
+                    }}
+                    className="absolute inset-0 rounded-full bg-accent blur-sm"
                   />
-                  <div className="relative w-10 h-10 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center">
+                  <motion.div
+                    initial={{ scale: 0, rotate: -180 }}
+                    animate={{ scale: 1, rotate: 0 }}
+                    transition={{
+                      type: "spring",
+                      stiffness: 200,
+                      damping: 15,
+                      delay: 0.2
+                    }}
+                    className="relative w-10 h-10 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center"
+                  >
                     <span className="material-icons text-accent text-lg">person_add</span>
-                  </div>
+                  </motion.div>
                 </div>
 
                 {/* Lead info */}

@@ -133,8 +133,8 @@ const faqData = [
 const faqPageSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://captureclient.com/faq/#faqpage",
-  url: "https://captureclient.com/faq",
+  "@id": "https://captureclient.net/faq/#faqpage",
+  url: "https://captureclient.net/faq",
   name: "FAQ | Frequently Asked Questions | Capture Client",
   description:
     "Find answers to common questions about Capture Client's AI voice agents, lead generation services, pricing, and platform features.",
@@ -149,7 +149,7 @@ const faqPageSchema = {
     }))
   ),
   isPartOf: {
-    "@id": "https://captureclient.com/#website",
+    "@id": "https://captureclient.net/#website",
   },
   datePublished: "2023-01-01",
   dateModified: new Date().toISOString().split("T")[0],
@@ -160,16 +160,16 @@ const faqPageSchema = {
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://captureclient.com/faq/#webpage",
-  url: "https://captureclient.com/faq",
+  "@id": "https://captureclient.net/faq/#webpage",
+  url: "https://captureclient.net/faq",
   name: "FAQ | Frequently Asked Questions | Capture Client",
   description:
     "Find answers to common questions about Capture Client's AI voice agents, lead generation services, pricing, and platform features.",
   isPartOf: {
-    "@id": "https://captureclient.com/#website",
+    "@id": "https://captureclient.net/#website",
   },
   about: {
-    "@id": "https://captureclient.com/#organization",
+    "@id": "https://captureclient.net/#organization",
   },
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -178,13 +178,13 @@ const webPageSchema = {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://captureclient.com",
+        item: "https://captureclient.net",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "FAQ",
-        item: "https://captureclient.com/faq",
+        item: "https://captureclient.net/faq",
       },
     ],
   },

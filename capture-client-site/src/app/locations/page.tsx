@@ -50,68 +50,110 @@ export default async function LocationsPage() {
         </div>
       </div>
 
-      {/* Locations Grid */}
+      {/* Locations Grid - Premium Glass Cards */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-16 py-12 sm:py-16">
         {Object.entries(locationsByState).map(([state, stateLocations]) => (
           <div key={state} className="mb-12 sm:mb-16 last:mb-0">
-            {/* State Header */}
-            <div className="flex items-center gap-2 sm:gap-3 mb-6 sm:mb-8">
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white px-2 sm:px-4">
-                {state}
-              </h2>
-              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
+            {/* State Header - More Prominent */}
+            <div className="relative flex items-center gap-2 sm:gap-4 mb-8 sm:mb-12">
+              {/* Animated gradient line */}
+              <div className="h-px flex-1 bg-gradient-to-r from-transparent via-cyan-400/40 to-cyan-400/20" />
+
+              {/* State name with glowing background */}
+              <div className="relative group">
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+                <h2 className="relative text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-white px-4 sm:px-8 py-2 sm:py-3">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-cyan-400 to-blue-400">
+                    {state}
+                  </span>
+                </h2>
+              </div>
+
+              <div className="h-px flex-1 bg-gradient-to-l from-transparent via-cyan-400/40 to-cyan-400/20" />
             </div>
 
-            {/* Location Cards Grid */}
+            {/* Location Cards Grid - Staggered Layout */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-              {stateLocations.map((location) => (
+              {stateLocations.map((location, index) => (
                 <Link
                   key={location.page_id}
                   href={`/locations/${location.page_id}`}
                   className="group block h-full"
+                  style={{
+                    animationDelay: `${index * 50}ms`
+                  }}
                 >
-                  <div className="h-full p-5 sm:p-6 rounded-xl bg-[#0A1628] border border-white/10 hover:border-primary/50 transition-all duration-300 hover:shadow-[0_0_30px_rgba(0,255,163,0.15)] hover:transform hover:scale-[1.02]">
-                    {/* Card Header with Icon */}
-                    <div className="flex items-start gap-3 mb-4">
-                      <div className="flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-primary/10 shrink-0 group-hover:bg-primary/20 transition-colors">
-                        <span className="material-icons text-primary text-xl sm:text-2xl">location_on</span>
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-lg sm:text-xl font-bold text-white mb-1 group-hover:text-primary transition-colors">
-                          {location.location.city}
-                        </h3>
-                        <p className="text-sm text-gray-400">
-                          {location.location.state_abbr}
-                        </p>
-                      </div>
-                    </div>
+                  {/* Glass Card with Layered Frame Effect */}
+                  <div className="relative h-full">
+                    {/* Glow effect on hover */}
+                    <div className="absolute -inset-px bg-gradient-to-r from-cyan-400/0 via-cyan-400/50 to-cyan-400/0 rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-all duration-500" />
 
-                    {/* Service Area Badge */}
-                    {location.location.service_area_radius && (
-                      <div className="mb-4">
-                        <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary/5 border border-primary/20 text-xs text-primary">
-                          <span className="material-icons text-xs">adjust</span>
-                          {location.location.service_area_radius} radius
-                        </span>
-                      </div>
-                    )}
+                    {/* Layered frame (desktop only) */}
+                    <div className="hidden sm:block absolute inset-0 border border-white/5 rounded-2xl translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform duration-300" />
 
-                    {/* Nearby Areas */}
-                    {location.location.nearby_areas && location.location.nearby_areas.length > 0 && (
-                      <div className="mb-4">
-                        <p className="text-xs text-gray-500 mb-2">Also serving:</p>
-                        <p className="text-xs text-gray-400 line-clamp-2">
-                          {location.location.nearby_areas.slice(0, 3).join(", ")}
-                          {location.location.nearby_areas.length > 3 && "..."}
-                        </p>
-                      </div>
-                    )}
+                    {/* Main card */}
+                    <div className="relative h-full p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] group-hover:border-cyan-400/30 group-hover:shadow-[0_8px_32px_rgba(6,182,212,0.2)] transition-all duration-500 group-hover:translate-y-[-4px] touch-target">
+                      {/* Mesh gradient background */}
+                      <div className="absolute inset-0 bg-mesh-premium rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                    {/* CTA */}
-                    <div className="flex items-center text-primary font-medium text-sm group-hover:translate-x-1 transition-transform pt-4 border-t border-white/5">
-                      <span>View Services</span>
-                      <span className="material-icons ml-1 text-base">arrow_forward</span>
+                      {/* Content */}
+                      <div className="relative z-10">
+                        {/* Card Header with Animated Icon */}
+                        <div className="flex items-start gap-4 mb-5">
+                          {/* Icon with gradient background */}
+                          <div className="relative flex-shrink-0">
+                            <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl blur-md opacity-50 group-hover:opacity-80 transition-opacity duration-300" />
+                            <div className="relative flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-400/20 via-cyan-500/10 to-blue-500/20 border border-cyan-400/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                              <span className="material-icons text-cyan-300 text-2xl group-hover:scale-110 transition-transform">
+                                location_on
+                              </span>
+                            </div>
+                          </div>
+
+                          <div className="flex-1 min-w-0">
+                            <h3 className="text-xl sm:text-2xl font-black text-white mb-1.5 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-300 group-hover:to-cyan-400 transition-all duration-300 tracking-tight">
+                              {location.location.city}
+                            </h3>
+                            <p className="text-sm font-bold text-cyan-400/80 uppercase tracking-wider">
+                              {location.location.state_abbr}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* Service Area Badge */}
+                        {location.location.service_area_radius && (
+                          <div className="mb-4">
+                            <span className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-gradient-to-r from-cyan-400/15 to-blue-500/15 border border-cyan-400/30 text-xs font-bold text-cyan-300 group-hover:border-cyan-400/50 transition-colors">
+                              <span className="material-icons text-xs">adjust</span>
+                              {location.location.service_area_radius} radius
+                            </span>
+                          </div>
+                        )}
+
+                        {/* Nearby Areas */}
+                        {location.location.nearby_areas && location.location.nearby_areas.length > 0 && (
+                          <div className="mb-5">
+                            <p className="text-xs font-bold text-cyan-400/60 uppercase tracking-wider mb-2">
+                              Also Serving:
+                            </p>
+                            <p className="text-sm text-slate-300 line-clamp-2 leading-relaxed">
+                              {location.location.nearby_areas.slice(0, 3).join(", ")}
+                              {location.location.nearby_areas.length > 3 && "..."}
+                            </p>
+                          </div>
+                        )}
+
+                        {/* Divider with gradient */}
+                        <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-5" />
+
+                        {/* CTA with Arrow Animation */}
+                        <div className="flex items-center justify-between text-cyan-300 font-bold text-sm group-hover:text-cyan-200 transition-colors">
+                          <span>View Services</span>
+                          <div className="flex items-center justify-center w-8 h-8 rounded-full bg-cyan-400/10 border border-cyan-400/20 group-hover:bg-cyan-400/20 group-hover:border-cyan-400/40 group-hover:translate-x-1 transition-all duration-300">
+                            <span className="material-icons text-base">arrow_forward</span>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </Link>

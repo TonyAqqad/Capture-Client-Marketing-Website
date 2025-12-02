@@ -213,21 +213,38 @@ export default function SmartScheduler() {
                     Pick Your Preferred Time
                   </h3>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
-                    {TIME_SLOTS.map((slot) => (
-                      <button
+                    {TIME_SLOTS.map((slot, index) => (
+                      <motion.button
                         key={slot.time}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.05 }}
                         disabled={!slot.available}
                         onClick={() => handleTimeSelect(slot.time)}
-                        className={`p-4 rounded-xl border-2 font-semibold transition-all duration-300 min-h-[56px] flex items-center justify-center ${
+                        whileHover={slot.available ? { scale: 1.05, y: -2 } : {}}
+                        whileTap={slot.available ? { scale: 0.98 } : {}}
+                        className={`p-4 rounded-xl border-2 font-semibold transition-all duration-300 min-h-[56px] flex items-center justify-center relative overflow-hidden ${
                           !slot.available
                             ? "bg-surface border-surface-border text-foreground-muted cursor-not-allowed opacity-50"
                             : selectedTime === slot.time
-                              ? "bg-accent/10 border-accent text-accent"
-                              : "bg-surface border-surface-border text-foreground hover:border-accent/50"
+                              ? "bg-accent/10 border-accent text-accent shadow-lg shadow-accent/20"
+                              : "bg-surface border-surface-border text-foreground hover:border-accent/50 hover:shadow-md"
                         }`}
                       >
-                        {slot.time}
-                      </button>
+                        {selectedTime === slot.time && (
+                          <motion.div
+                            layoutId="timeSlotHighlight"
+                            className="absolute inset-0 bg-accent/5 rounded-xl"
+                            transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                          />
+                        )}
+                        <span className="relative z-10">{slot.time}</span>
+                        {!slot.available && (
+                          <span className="absolute bottom-1 right-1 text-[10px] text-foreground-muted opacity-50">
+                            Taken
+                          </span>
+                        )}
+                      </motion.button>
                     ))}
                   </div>
                 </motion.div>
@@ -245,7 +262,11 @@ export default function SmartScheduler() {
                     Tell Us About Yourself
                   </h3>
                   <div className="space-y-4 mb-8">
-                    <div>
+                    <motion.div
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.1 }}
+                    >
                       <label className="block text-foreground font-semibold mb-2">
                         Full Name *
                       </label>
@@ -254,10 +275,14 @@ export default function SmartScheduler() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="John Smith"
-                        className="w-full px-4 py-3 rounded-xl bg-background border border-surface-border text-foreground placeholder-foreground-muted focus:outline-none focus:border-accent transition-colors min-h-[48px] text-base"
+                        className="w-full px-4 py-3 rounded-xl bg-background border-2 border-surface-border text-foreground placeholder-foreground-muted focus:outline-none focus:border-accent focus:shadow-lg focus:shadow-accent/10 transition-all duration-300 min-h-[48px] text-base"
                       />
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.2 }}
+                    >
                       <label className="block text-foreground font-semibold mb-2">
                         Email Address *
                       </label>
@@ -267,10 +292,14 @@ export default function SmartScheduler() {
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="john@example.com"
                         inputMode="email"
-                        className="w-full px-4 py-3 rounded-xl bg-background border border-surface-border text-foreground placeholder-foreground-muted focus:outline-none focus:border-accent transition-colors min-h-[48px] text-base"
+                        className="w-full px-4 py-3 rounded-xl bg-background border-2 border-surface-border text-foreground placeholder-foreground-muted focus:outline-none focus:border-accent focus:shadow-lg focus:shadow-accent/10 transition-all duration-300 min-h-[48px] text-base"
                       />
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.3 }}
+                    >
                       <label className="block text-foreground font-semibold mb-2">
                         Phone Number *
                       </label>
@@ -280,17 +309,21 @@ export default function SmartScheduler() {
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="(555) 123-4567"
                         inputMode="tel"
-                        className="w-full px-4 py-3 rounded-xl bg-background border border-surface-border text-foreground placeholder-foreground-muted focus:outline-none focus:border-accent transition-colors min-h-[48px] text-base"
+                        className="w-full px-4 py-3 rounded-xl bg-background border-2 border-surface-border text-foreground placeholder-foreground-muted focus:outline-none focus:border-accent focus:shadow-lg focus:shadow-accent/10 transition-all duration-300 min-h-[48px] text-base"
                       />
-                    </div>
-                    <div>
+                    </motion.div>
+                    <motion.div
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.4 }}
+                    >
                       <label className="block text-foreground font-semibold mb-2">
                         What are you interested in? *
                       </label>
                       <select
                         value={formData.service}
                         onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl bg-white border border-surface-border text-black focus:outline-none focus:border-accent transition-colors min-h-[48px] text-base"
+                        className="w-full px-4 py-3 rounded-xl bg-white border-2 border-surface-border text-black focus:outline-none focus:border-accent focus:shadow-lg focus:shadow-accent/10 transition-all duration-300 min-h-[48px] text-base cursor-pointer"
                       >
                         {SERVICES.map((service) => (
                           <option key={service} value={service} className="text-black bg-white">
@@ -298,7 +331,7 @@ export default function SmartScheduler() {
                           </option>
                         ))}
                       </select>
-                    </div>
+                    </motion.div>
                   </div>
                 </motion.div>
               )}
@@ -417,15 +450,50 @@ function ProgressStep({ number, label, active, completed }: ProgressStepProps) {
         animate={{
           scale: active ? 1.1 : 1,
         }}
-        className={`w-10 h-10 rounded-full border-2 flex items-center justify-center font-bold transition-colors duration-300 ${
+        whileHover={{ scale: 1.15 }}
+        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+        className={`w-10 h-10 rounded-full border-2 flex items-center justify-center font-bold transition-all duration-300 relative overflow-hidden ${
           completed
-            ? "bg-accent border-accent text-white"
+            ? "bg-accent border-accent text-white shadow-lg shadow-accent/30"
             : active
-              ? "bg-accent/10 border-accent text-accent"
+              ? "bg-accent/10 border-accent text-accent shadow-md shadow-accent/20"
               : "bg-surface border-surface-border text-foreground-muted"
         }`}
       >
-        {completed ? <span className="material-icons text-lg">check</span> : number}
+        {completed && (
+          <motion.div
+            initial={{ scale: 0, rotate: -180 }}
+            animate={{ scale: 1, rotate: 0 }}
+            transition={{ type: "spring", stiffness: 300, damping: 15 }}
+          >
+            <span className="material-icons text-lg">check</span>
+          </motion.div>
+        )}
+        {!completed && (
+          <motion.span
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.3 }}
+          >
+            {number}
+          </motion.span>
+        )}
+
+        {/* Pulse effect for active step */}
+        {active && !completed && (
+          <motion.div
+            animate={{
+              scale: [1, 1.5],
+              opacity: [0.5, 0],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeOut"
+            }}
+            className="absolute inset-0 rounded-full border-2 border-accent"
+          />
+        )}
       </motion.div>
       <p
         className={`text-xs font-medium transition-colors duration-300 ${

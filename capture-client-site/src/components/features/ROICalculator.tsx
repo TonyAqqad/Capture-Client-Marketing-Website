@@ -226,50 +226,80 @@ export default function ROICalculator() {
         </div>
       </div>
 
-      {/* Custom slider styles - Mobile optimized */}
+      {/* Custom slider styles - Premium design */}
       <style jsx>{`
+        .slider {
+          background: linear-gradient(to right,
+            rgba(34, 211, 238, 0.3) 0%,
+            rgba(34, 211, 238, 0.3) var(--slider-progress, 0%),
+            rgba(255, 255, 255, 0.05) var(--slider-progress, 0%),
+            rgba(255, 255, 255, 0.05) 100%);
+        }
         .slider::-webkit-slider-thumb {
           appearance: none;
-          width: 24px;
-          height: 24px;
+          width: 28px;
+          height: 28px;
           border-radius: 50%;
           background: linear-gradient(135deg, rgb(34, 211, 238), rgb(99, 102, 241));
-          cursor: pointer;
-          box-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
-          transition: all 0.2s ease;
+          cursor: grab;
+          box-shadow:
+            0 0 0 4px rgba(34, 211, 238, 0.1),
+            0 0 15px rgba(34, 211, 238, 0.4),
+            0 4px 12px rgba(0, 0, 0, 0.3);
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+          position: relative;
         }
         .slider::-webkit-slider-thumb:hover {
-          transform: scale(1.2);
-          box-shadow: 0 0 20px rgba(34, 211, 238, 0.8);
+          transform: scale(1.15);
+          box-shadow:
+            0 0 0 6px rgba(34, 211, 238, 0.15),
+            0 0 25px rgba(34, 211, 238, 0.6),
+            0 6px 16px rgba(0, 0, 0, 0.4);
         }
         .slider::-webkit-slider-thumb:active {
-          transform: scale(1.3);
+          cursor: grabbing;
+          transform: scale(1.05);
+          box-shadow:
+            0 0 0 8px rgba(34, 211, 238, 0.2),
+            0 0 35px rgba(34, 211, 238, 0.8),
+            0 2px 8px rgba(0, 0, 0, 0.5);
         }
         .slider::-moz-range-thumb {
-          width: 24px;
-          height: 24px;
+          width: 28px;
+          height: 28px;
           border-radius: 50%;
           background: linear-gradient(135deg, rgb(34, 211, 238), rgb(99, 102, 241));
-          cursor: pointer;
+          cursor: grab;
           border: none;
-          box-shadow: 0 0 10px rgba(34, 211, 238, 0.5);
-          transition: all 0.2s ease;
+          box-shadow:
+            0 0 0 4px rgba(34, 211, 238, 0.1),
+            0 0 15px rgba(34, 211, 238, 0.4),
+            0 4px 12px rgba(0, 0, 0, 0.3);
+          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .slider::-moz-range-thumb:hover {
-          transform: scale(1.2);
-          box-shadow: 0 0 20px rgba(34, 211, 238, 0.8);
+          transform: scale(1.15);
+          box-shadow:
+            0 0 0 6px rgba(34, 211, 238, 0.15),
+            0 0 25px rgba(34, 211, 238, 0.6),
+            0 6px 16px rgba(0, 0, 0, 0.4);
         }
         .slider::-moz-range-thumb:active {
-          transform: scale(1.3);
+          cursor: grabbing;
+          transform: scale(1.05);
+          box-shadow:
+            0 0 0 8px rgba(34, 211, 238, 0.2),
+            0 0 35px rgba(34, 211, 238, 0.8),
+            0 2px 8px rgba(0, 0, 0, 0.5);
         }
         @media (max-width: 640px) {
           .slider::-webkit-slider-thumb {
-            width: 28px;
-            height: 28px;
+            width: 32px;
+            height: 32px;
           }
           .slider::-moz-range-thumb {
-            width: 28px;
-            height: 28px;
+            width: 32px;
+            height: 32px;
           }
         }
       `}</style>
@@ -297,10 +327,12 @@ function AnimatedCounter({
   size = "normal",
 }: AnimatedCounterProps) {
   const [displayValue, setDisplayValue] = useState(0);
+  const [isComplete, setIsComplete] = useState(false);
 
   useEffect(() => {
-    const duration = 800;
-    const steps = 30;
+    setIsComplete(false);
+    const duration = 1000;
+    const steps = 50;
     const increment = value / steps;
     let current = 0;
     let step = 0;
@@ -311,9 +343,13 @@ function AnimatedCounter({
 
       if (step >= steps) {
         setDisplayValue(value);
+        setIsComplete(true);
         clearInterval(timer);
       } else {
-        setDisplayValue(Math.floor(current));
+        // Easing function for smoother acceleration
+        const progress = step / steps;
+        const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+        setDisplayValue(Math.floor(value * eased));
       }
     }, duration / steps);
 
@@ -324,14 +360,40 @@ function AnimatedCounter({
 
   return (
     <motion.div
-      initial={{ scale: 0.9, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 0.3 }}
-      className={`font-bold ${color} ${fontSize}`}
+      initial={{ scale: 0.9, opacity: 0, y: 10 }}
+      animate={{
+        scale: 1,
+        opacity: 1,
+        y: 0,
+      }}
+      transition={{
+        duration: 0.4,
+        type: "spring",
+        stiffness: 200
+      }}
+      className={`font-bold ${color} ${fontSize} relative`}
     >
-      {prefix}
-      {displayValue.toLocaleString()}
-      {suffix}
+      <motion.span
+        animate={isComplete ? {
+          scale: [1, 1.08, 1],
+        } : {}}
+        transition={{ duration: 0.3 }}
+      >
+        {prefix}
+        {displayValue.toLocaleString()}
+        {suffix}
+      </motion.span>
+
+      {/* Shimmer effect on completion */}
+      {isComplete && (
+        <motion.div
+          initial={{ x: "-100%" }}
+          animate={{ x: "200%" }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+          style={{ pointerEvents: "none" }}
+        />
+      )}
     </motion.div>
   );
 }
