@@ -105,7 +105,7 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
       {/* Name field with premium glass styling */}
       <div className="group">
         <label

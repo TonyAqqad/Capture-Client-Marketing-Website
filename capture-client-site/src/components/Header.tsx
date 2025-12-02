@@ -111,6 +111,8 @@ export default function Header() {
           className="lg:hidden relative w-11 h-11 flex items-center justify-center rounded-lg hover:bg-white/5 border border-white/5 hover:border-white/10 transition-all active:scale-95 group"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle menu"
+          aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-menu"
         >
           <span className="material-icons text-[#F8FAFC] text-2xl transition-transform duration-300 group-hover:text-[#00C9FF]">
             {mobileMenuOpen ? "close" : "menu"}
@@ -120,6 +122,8 @@ export default function Header() {
 
       {/* Mobile Menu - Premium slide-down with fade */}
       <div
+        id="mobile-menu"
+        aria-hidden={!mobileMenuOpen}
         className={`lg:hidden overflow-hidden transition-all duration-500 ease-out ${
           mobileMenuOpen ? "max-h-[600px] border-t border-white/10" : "max-h-0"
         }`}

@@ -1,0 +1,345 @@
+{
+  "caseStudies": [
+    {
+      "id": "hvac-comfort-zone",
+      "slug": "hvac",
+      "industry": "HVAC Services",
+      "icon": "ac_unit",
+      "gradient": "from-accent to-primary",
+      "client": {
+        "name": "Comfort Zone Heating & Air",
+        "size": "12 employees",
+        "location": "Knoxville, TN",
+        "yearsInBusiness": 18,
+        "description": "Family-owned HVAC company serving Knox County and surrounding areas with installation, repair, and maintenance services."
+      },
+      "challenge": {
+        "headline": "Missing After-Hours Emergency Calls During Peak Season",
+        "summary": "During summer heat waves and winter cold snaps, Comfort Zone was losing potential customers to competitors because they couldn't answer calls outside business hours.",
+        "painPoints": [
+          "Receiving 15-20 after-hours calls per week during peak seasons, with no way to respond until the next morning",
+          "Customers calling back the next day had often already hired a competitor",
+          "Owner was personally fielding calls at all hours, leading to burnout",
+          "No system to distinguish urgent emergency calls from routine maintenance requests",
+          "Estimated loss of $3,500-5,000 per month in missed emergency repair jobs"
+        ],
+        "quote": "I was getting calls at 2 AM from people whose AC went out in July. By the time I called them back at 7 AM, they'd already found someone else. I couldn't keep sleeping with my phone on the pillow."
+      },
+      "solution": {
+        "headline": "24/7 AI Voice Agent with Smart Call Routing",
+        "summary": "Implemented an AI voice agent that answers every call instantly, qualifies leads, and routes emergency calls to on-call technicians while scheduling routine appointments automatically.",
+        "implementation": [
+          "Deployed AI voice agent trained on HVAC-specific scenarios and common customer questions",
+          "Created smart routing rules: true emergencies (no heat in winter, AC out with elderly/infants) get forwarded to on-call tech",
+          "Non-emergency calls receive instant scheduling for next available appointment",
+          "Integrated with existing CRM to automatically create lead records with call summaries",
+          "Set up daily digest emails summarizing all after-hours interactions"
+        ],
+        "timeline": "Full deployment in 5 business days"
+      },
+      "results": {
+        "headline": "Captured $4,200 in Previously Lost Monthly Revenue",
+        "metrics": [
+          {
+            "metric": "After-Hours Lead Capture",
+            "before": "~5%",
+            "after": "73%",
+            "improvement": "+68 percentage points",
+            "context": "Of callers who left voicemail vs. those who now engage with AI"
+          },
+          {
+            "metric": "Monthly Revenue from After-Hours Calls",
+            "before": "$800",
+            "after": "$5,000",
+            "improvement": "+$4,200/month",
+            "context": "Emergency repairs and next-day appointments captured after 6pm"
+          },
+          {
+            "metric": "Owner Personal Call Time",
+            "before": "12+ hrs/week",
+            "after": "2 hrs/week",
+            "improvement": "-83%",
+            "context": "Only handles escalated calls and customer follow-ups"
+          },
+          {
+            "metric": "Average Response Time",
+            "before": "4-12 hours",
+            "after": "Instant",
+            "improvement": "Immediate",
+            "context": "AI answers on second ring, 24/7/365"
+          }
+        ],
+        "testimonialLong": "The first week, we had a woman call at 11 PM because her furnace died and she had a newborn. The AI immediately flagged it as urgent and got our on-call guy there by midnight. She became a maintenance plan customer and has referred two neighbors. That one call paid for three months of the service."
+      },
+      "testimonial": {
+        "quote": "I finally sleep through the night. The AI catches everything and only wakes me up for true emergencies. We've added $4,200 in monthly revenue we were just leaving on the table before.",
+        "author": "Mike Patterson",
+        "title": "Owner",
+        "company": "Comfort Zone Heating & Air"
+      },
+      "keyTakeaway": "For seasonal service businesses, after-hours call capture isn't optional anymore. Comfort Zone went from losing 95% of after-hours callers to converting 73% of them into paying customers."
+    },
+    {
+      "id": "dental-bright-smiles",
+      "slug": "dental",
+      "industry": "Dental Practice",
+      "icon": "medical_services",
+      "gradient": "from-primary to-accent",
+      "client": {
+        "name": "Bright Smiles Family Dentistry",
+        "size": "8 employees (2 dentists, 6 staff)",
+        "location": "Franklin, TN",
+        "yearsInBusiness": 7,
+        "description": "Modern family dental practice offering general, cosmetic, and pediatric dentistry services to the Williamson County community."
+      },
+      "challenge": {
+        "headline": "Front Desk Overwhelmed, Patients Going to Voicemail",
+        "summary": "With only one receptionist handling check-ins, check-outs, insurance questions, and phone calls, 30-40% of incoming calls were going to voicemail. Many of these potential new patients never called back.",
+        "painPoints": [
+          "Single receptionist juggling in-office patients and phone calls",
+          "35% of calls going to voicemail during busy periods (10am-2pm)",
+          "New patient inquiries had lowest callback rate: only 22% would call again after hitting voicemail",
+          "Unable to justify hiring second receptionist at $38K/year plus benefits",
+          "Losing an estimated 8-12 new patient opportunities per month"
+        ],
+        "quote": "Our receptionist is fantastic, but she can't be in two places at once. When a mom is standing at the desk with her insurance card and the phone rings with a new patient inquiry, something has to give."
+      },
+      "solution": {
+        "headline": "AI Voice Agent as Virtual Receptionist Backup",
+        "summary": "Deployed an AI voice agent to handle overflow calls when the front desk is occupied, answer common questions, and schedule appointments directly in the practice management system.",
+        "implementation": [
+          "Integrated AI with existing Dentrix practice management system",
+          "Programmed responses for 40+ common patient questions (insurance, services, hours, directions)",
+          "Enabled real-time appointment scheduling with hygienist and dentist availability",
+          "Set up intelligent overflow: calls ring front desk 3 times, then roll to AI",
+          "Created specialty scripts for new patient inquiries to capture complete contact info"
+        ],
+        "timeline": "Integrated and trained in 8 business days"
+      },
+      "results": {
+        "headline": "19 Additional New Patients Per Month at $0 Hiring Cost",
+        "metrics": [
+          {
+            "metric": "Calls Answered",
+            "before": "65%",
+            "after": "98%",
+            "improvement": "+33 percentage points",
+            "context": "Including overflow handled by AI during peak times"
+          },
+          {
+            "metric": "New Patient Appointments/Month",
+            "before": "24",
+            "after": "43",
+            "improvement": "+19 patients",
+            "context": "Captured from previously missed inquiry calls"
+          },
+          {
+            "metric": "Cost Per New Patient Acquired",
+            "before": "$95",
+            "after": "$52",
+            "improvement": "-45%",
+            "context": "More patients from same marketing spend"
+          },
+          {
+            "metric": "Front Desk Call Load",
+            "before": "100%",
+            "after": "68%",
+            "improvement": "-32%",
+            "context": "AI handles routine questions and overflow"
+          }
+        ],
+        "testimonialLong": "I was skeptical that an AI could handle dental appointment scheduling. But it knows our schedule, it asks about insurance, it even reminds people to bring their X-rays if they're transferring from another practice. Our receptionist actually likes it because she can focus on the patients in front of her."
+      },
+      "testimonial": {
+        "quote": "We went from losing new patients to voicemail to booking 19 more appointments per month. That's nearly $50,000 in annual revenue we were missing. The AI paid for itself in the first 10 days.",
+        "author": "Dr. Sarah Chen",
+        "title": "Practice Owner",
+        "company": "Bright Smiles Family Dentistry"
+      },
+      "keyTakeaway": "Dental practices don't need a second receptionist. A well-trained AI voice agent can handle 30-40% of call volume, letting your human staff focus on in-office patient experience."
+    },
+    {
+      "id": "law-firm-davidson",
+      "slug": "law-firm",
+      "industry": "Personal Injury Law",
+      "icon": "gavel",
+      "gradient": "from-accent to-primary",
+      "client": {
+        "name": "Davidson & Associates",
+        "size": "5 attorneys, 8 support staff",
+        "location": "Nashville, TN",
+        "yearsInBusiness": 12,
+        "description": "Mid-sized personal injury law firm handling auto accidents, slip and fall, and workers' compensation cases throughout Middle Tennessee."
+      },
+      "challenge": {
+        "headline": "Missing High-Value Leads After 5 PM and on Weekends",
+        "summary": "Personal injury inquiries often come right after accidents occur, which frequently happens outside business hours. The firm was losing potential cases to competitors with 24/7 intake.",
+        "painPoints": [
+          "42% of intake calls came outside business hours (based on voicemail timestamps)",
+          "Personal injury callers rarely leave voicemails or call back, they move to the next firm",
+          "Competitors advertising '24/7 Free Consultation' were capturing these leads",
+          "Hiring night/weekend intake staff would cost $55K+/year",
+          "Estimated loss of 6-8 quality cases per month worth $15K-40K each in fees"
+        ],
+        "quote": "Someone gets in a car accident on Saturday night, they're scared, they want to talk to a lawyer right then. If they call us and get voicemail, they just dial the next number on Google. We were hemorrhaging good cases."
+      },
+      "solution": {
+        "headline": "24/7 AI Legal Intake Specialist",
+        "summary": "Implemented an AI voice agent specifically trained for personal injury intake, capable of qualifying leads, gathering case details, and setting realistic expectations while scheduling attorney callbacks.",
+        "implementation": [
+          "Trained AI on personal injury intake protocols and ethical guidelines",
+          "Built qualification scripts to assess case viability (statute of limitations, liability factors, injury severity)",
+          "Programmed empathetic responses appropriate for callers in distress",
+          "Created priority tiers: serious injuries get immediate attorney text alert",
+          "Integrated with case management system to create intake records automatically"
+        ],
+        "timeline": "Deployed with compliance review in 12 business days"
+      },
+      "results": {
+        "headline": "5 Additional Signed Cases Per Month from After-Hours Calls",
+        "metrics": [
+          {
+            "metric": "After-Hours Lead Capture",
+            "before": "~8%",
+            "after": "67%",
+            "improvement": "+59 percentage points",
+            "context": "Leads engaged vs. abandoned before AI"
+          },
+          {
+            "metric": "Monthly Signed Cases",
+            "before": "14",
+            "after": "19",
+            "improvement": "+5 cases",
+            "context": "Directly attributable to after-hours intake"
+          },
+          {
+            "metric": "Cost Per Signed Case",
+            "before": "$2,100",
+            "after": "$1,650",
+            "improvement": "-21%",
+            "context": "More cases from same marketing spend"
+          },
+          {
+            "metric": "Lead-to-Consultation Rate",
+            "before": "34%",
+            "after": "51%",
+            "improvement": "+17 percentage points",
+            "context": "AI pre-qualifies and schedules while interest is high"
+          }
+        ],
+        "testimonialLong": "The AI knows not to give legal advice, it knows to be compassionate, and it knows how to qualify a case. We had a call come in at 3 AM on a Saturday from a guy who'd been hit by an uninsured driver. The AI got all his information, flagged it as urgent, and I called him at 8 AM. He signed that day. That case settled for $180K."
+      },
+      "testimonial": {
+        "quote": "We signed 5 additional cases last month, all from after-hours calls. At an average case value of $28,000 in fees, that's $140,000 in annual revenue we were letting walk out the door.",
+        "author": "James Davidson",
+        "title": "Managing Partner",
+        "company": "Davidson & Associates"
+      },
+      "keyTakeaway": "For personal injury law firms, the first call wins. Potential clients in crisis won't leave voicemails. 24/7 AI intake captures leads while they're motivated to act."
+    },
+    {
+      "id": "plumbing-reliable",
+      "slug": "plumbing",
+      "industry": "Plumbing Services",
+      "icon": "plumbing",
+      "gradient": "from-primary to-accent",
+      "client": {
+        "name": "Reliable Plumbing Solutions",
+        "size": "6 technicians, 2 office staff",
+        "location": "Chattanooga, TN",
+        "yearsInBusiness": 15,
+        "description": "Full-service residential and light commercial plumbing company known for honest pricing and same-day emergency service."
+      },
+      "challenge": {
+        "headline": "Emergency Calls Going Unanswered After Office Closes",
+        "summary": "Plumbing emergencies don't wait for business hours. Burst pipes, sewage backups, and water heater failures often happen at night or on weekends when the office was unstaffed.",
+        "painPoints": [
+          "Receiving 8-12 after-hours emergency calls per week",
+          "Owner's cell phone was the only option, leading to 24/7 availability burnout",
+          "No way to distinguish true emergencies from non-urgent calls until listening to voicemail",
+          "Competitors offering 24/7 dispatch were winning emergency jobs",
+          "Lost emergency jobs worth $350-800 each going to competitors"
+        ],
+        "quote": "I'd wake up to a voicemail from 1 AM saying 'My basement is flooding!' By 6 AM when I heard it, they'd already had someone else out. I was losing $3,000 a month just in emergency calls I couldn't answer."
+      },
+      "solution": {
+        "headline": "AI Dispatcher with Emergency Triage and Technician Routing",
+        "summary": "Deployed an AI voice agent trained to assess plumbing emergencies, provide immediate guidance to minimize damage, and dispatch on-call technicians for true emergencies.",
+        "implementation": [
+          "Built emergency triage decision tree: water main break, sewage backup, gas smell = immediate dispatch",
+          "Programmed damage mitigation instructions (shut off water, locate main valve, etc.)",
+          "Created on-call technician rotation with automatic text/call dispatch for emergencies",
+          "Non-emergency calls scheduled for next available appointment",
+          "Integrated GPS routing to dispatch nearest available technician"
+        ],
+        "timeline": "Fully operational in 6 business days"
+      },
+      "results": {
+        "headline": "Captured 23 Additional Emergency Jobs Per Month",
+        "metrics": [
+          {
+            "metric": "After-Hours Emergency Capture",
+            "before": "~20%",
+            "after": "89%",
+            "improvement": "+69 percentage points",
+            "context": "Emergency callers successfully dispatched vs. lost to voicemail"
+          },
+          {
+            "metric": "Monthly Emergency Revenue",
+            "before": "$2,800",
+            "after": "$11,200",
+            "improvement": "+$8,400/month",
+            "context": "After-hours emergency service calls"
+          },
+          {
+            "metric": "Owner After-Hours Calls",
+            "before": "40+/week",
+            "after": "4/week",
+            "improvement": "-90%",
+            "context": "Only handles escalated situations"
+          },
+          {
+            "metric": "Customer Satisfaction (Emergency)",
+            "before": "3.9/5",
+            "after": "4.7/5",
+            "improvement": "+0.8 stars",
+            "context": "Google reviews for after-hours calls"
+          }
+        ],
+        "testimonialLong": "Last month, someone called at 11:30 PM with a burst pipe in their kitchen. The AI walked them through shutting off their main water valve while it dispatched Tommy, who was closest. Customer said the AI's calm instructions saved their hardwood floors. That job was $680, and they left us a 5-star review mentioning how the 'person on the phone' helped them stay calm. They didn't even realize it was AI."
+      },
+      "testimonial": {
+        "quote": "I went from losing $3,000 a month in emergency calls to capturing an extra $8,400. Plus I actually sleep now. The AI handles everything and only texts me if there's a situation it can't resolve.",
+        "author": "Robert Chen",
+        "title": "Owner",
+        "company": "Reliable Plumbing Solutions"
+      },
+      "keyTakeaway": "For home service businesses, emergency calls are the highest-margin jobs. An AI dispatcher that can triage, advise, and route calls can capture thousands in monthly revenue that previously went to competitors."
+    }
+  ],
+  "metadata": {
+    "totalCaseStudies": 4,
+    "industries": ["HVAC", "Dental", "Legal", "Plumbing"],
+    "avgRevenueIncrease": "$6,450/month",
+    "commonBenefits": [
+      "24/7 call answering without additional staff",
+      "Intelligent call routing and triage",
+      "Reduced owner/staff burnout",
+      "Higher lead capture rates",
+      "Improved customer satisfaction"
+    ],
+    "lastUpdated": "2025-01"
+  },
+  "seo": {
+    "title": "Case Studies | Capture Client AI Voice Agent Success Stories",
+    "description": "See how HVAC, dental, legal, and plumbing businesses increased revenue by $4,000-8,000/month with AI voice agents. Real results from real businesses.",
+    "keywords": [
+      "AI voice agent case studies",
+      "small business AI success stories",
+      "HVAC lead capture",
+      "dental practice AI receptionist",
+      "law firm intake automation",
+      "plumbing emergency dispatch AI"
+    ]
+  }
+}

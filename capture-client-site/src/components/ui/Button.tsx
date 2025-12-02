@@ -36,9 +36,9 @@ export function Button({
   };
 
   const sizeClasses = {
-    sm: "px-5 py-2.5 text-sm rounded-lg",
-    md: "px-6 py-3.5 text-base rounded-xl",
-    lg: "px-8 py-4 text-lg rounded-2xl"
+    sm: "px-5 py-3 text-sm rounded-lg min-h-[48px]",
+    md: "px-6 py-3.5 text-base rounded-xl min-h-[48px]",
+    lg: "px-8 py-4 text-lg rounded-2xl min-h-[52px]"
   };
 
   const widthClass = fullWidth ? "w-full" : "";
