@@ -5,26 +5,46 @@ import { motion, useScroll, useTransform, useMotionValue, useSpring } from "fram
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { TextReveal } from "@/components/ui/TextReveal";
 import { useRef, useEffect, useState } from "react";
-import { useMobileOptimization } from "@/hooks/useMobileOptimization";
 
 export function PremiumHero() {
   const containerRef = useRef<HTMLElement>(null);
-  const { isMobile, disableAnimations } = useMobileOptimization();
+
+  // Simple mobile detection without hook to avoid hydration issues
+  const [isMobile, setIsMobile] = useState(false);
+  const [disableAnimations, setDisableAnimations] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      const mobile = window.innerWidth < 768;
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      setIsMobile(mobile);
+      setDisableAnimations(mobile || reducedMotion);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"]
   });
 
-  // Disable parallax on mobile
-  const y = useTransform(scrollYProgress, [0, 1], isMobile ? ["0%", "0%"] : ["0%", "50%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, isMobile ? 1 : 0]);
+  // Always call useTransform - just use static values on mobile
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   // Mouse tracking for interactive elements - DISABLED ON MOBILE
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
   const springX = useSpring(mouseX, { stiffness: 50, damping: 30 });
   const springY = useSpring(mouseY, { stiffness: 50, damping: 30 });
+
+  // Move useTransform hooks to top level (must not be called conditionally)
+  const shapeX1 = useTransform(springX, [-10, 10], [-30, 30]);
+  const shapeY1 = useTransform(springY, [-10, 10], [-30, 30]);
+  const shapeX2 = useTransform(springX, [-10, 10], [20, -20]);
+  const shapeY2 = useTransform(springY, [-10, 10], [20, -20]);
 
   useEffect(() => {
     // Disable mouse tracking on mobile for performance
@@ -131,8 +151,8 @@ export function PremiumHero() {
           <>
             <motion.div
               style={{
-                x: useTransform(springX, [-10, 10], [-30, 30]),
-                y: useTransform(springY, [-10, 10], [-30, 30]),
+                x: shapeX1,
+                y: shapeY1,
                 clipPath: "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
                 boxShadow: "0 0 60px rgba(0, 201, 255, 0.1)",
                 willChange: 'transform',
@@ -151,8 +171,8 @@ export function PremiumHero() {
             />
             <motion.div
               style={{
-                x: useTransform(springX, [-10, 10], [20, -20]),
-                y: useTransform(springY, [-10, 10], [20, -20]),
+                x: shapeX2,
+                y: shapeY2,
                 clipPath: "polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%)",
                 boxShadow: "0 0 60px rgba(74, 105, 226, 0.1)",
                 willChange: 'transform',

@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useMobileOptimization } from "@/hooks/useMobileOptimization";
 
 interface Lead {
   id: number;
@@ -13,9 +12,16 @@ interface Lead {
 }
 
 export default function LiveLeadTicker() {
-  const { disableAnimations } = useMobileOptimization();
+  const [disableAnimations, setDisableAnimations] = useState(false);
   const [currentLead, setCurrentLead] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+
+  // Check for mobile/reduced motion after mount to avoid hydration issues
+  useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    setDisableAnimations(isMobile || reducedMotion);
+  }, []);
 
   const recentLeads: Lead[] = [
     { id: 1, business: "Elite HVAC", location: "Knoxville, TN", action: "Captured 3 new leads", time: "2 min ago" },
