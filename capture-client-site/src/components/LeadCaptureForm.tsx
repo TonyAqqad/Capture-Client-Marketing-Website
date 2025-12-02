@@ -134,7 +134,8 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
                        hover:bg-white/[0.05] hover:border-white/20
                        focus:outline-none focus:bg-white/[0.08]
                        focus:border-accent focus:ring-4 focus:ring-accent/20
-                       focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]"
+                       focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]
+                       touch-manipulation"
           />
           {/* Decorative accent line */}
           <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
@@ -166,7 +167,8 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
                        hover:bg-white/[0.05] hover:border-white/20
                        focus:outline-none focus:bg-white/[0.08]
                        focus:border-accent focus:ring-4 focus:ring-accent/20
-                       focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]"
+                       focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]
+                       touch-manipulation"
           />
           <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
         </div>
@@ -198,7 +200,8 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
                        hover:bg-white/[0.05] hover:border-white/20
                        focus:outline-none focus:bg-white/[0.08]
                        focus:border-accent focus:ring-4 focus:ring-accent/20
-                       focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]"
+                       focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]
+                       touch-manipulation"
           />
           <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
         </div>
@@ -227,6 +230,7 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
                        focus:outline-none focus:bg-white/[0.08]
                        focus:border-accent focus:ring-4 focus:ring-accent/20
                        focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]
+                       touch-manipulation
                        [&>option]:bg-background-dark [&>option]:text-white"
           >
             <option value="">Select a Service</option>
@@ -267,6 +271,7 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
                        focus:outline-none focus:bg-white/[0.08]
                        focus:border-accent focus:ring-4 focus:ring-accent/20
                        focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]
+                       touch-manipulation
                        resize-none"
           />
           <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
@@ -328,7 +333,8 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
                      bg-white/[0.03] border border-white/10
                      hover:bg-white/[0.08] hover:border-accent/30
                      transition-all duration-300
-                     min-h-[48px]"
+                     touch-manipulation active:scale-95
+                     min-h-[56px]"
           onClick={() => trackPhoneClick("865-346-3339", `lead_form_${source}`)}
         >
           <span className="material-icons text-accent text-lg">phone</span>

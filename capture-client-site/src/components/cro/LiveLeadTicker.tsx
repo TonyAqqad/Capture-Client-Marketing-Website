@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { createVisibilityAwareInterval, isIOSDevice } from "@/lib/ios-performance";
 
 interface Lead {
   id: number;
@@ -13,6 +14,7 @@ interface Lead {
 
 export default function LiveLeadTicker() {
   const [disableAnimations, setDisableAnimations] = useState(false);
+  const [isIOS, setIsIOS] = useState(false);
   const [currentLead, setCurrentLead] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
@@ -21,6 +23,7 @@ export default function LiveLeadTicker() {
     const isMobile = window.innerWidth < 768;
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     setDisableAnimations(isMobile || reducedMotion);
+    setIsIOS(isIOSDevice());
   }, []);
 
   const recentLeads: Lead[] = [
@@ -34,16 +37,20 @@ export default function LiveLeadTicker() {
     { id: 8, business: "Alpine Construction", location: "Brentwood, TN", action: "New client onboarded", time: "25 min ago" },
   ];
 
-  // Disable auto-rotation on mobile for performance
+  // iOS OPTIMIZATION: Use visibility-aware interval that pauses when tab is hidden
+  // This saves battery life on iOS devices
   useEffect(() => {
     if (disableAnimations) return;
 
-    const interval = setInterval(() => {
-      setCurrentLead((prev) => (prev + 1) % recentLeads.length);
-    }, 4000); // Change every 4 seconds
+    // iOS uses longer interval (6s instead of 4s) to reduce CPU usage
+    const intervalDelay = isIOS ? 6000 : 4000;
 
-    return () => clearInterval(interval);
-  }, [recentLeads.length, disableAnimations]);
+    const cleanup = createVisibilityAwareInterval(() => {
+      setCurrentLead((prev) => (prev + 1) % recentLeads.length);
+    }, intervalDelay);
+
+    return cleanup;
+  }, [recentLeads.length, disableAnimations, isIOS]);
 
   if (!isVisible) return null;
 

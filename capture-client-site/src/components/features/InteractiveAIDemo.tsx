@@ -156,13 +156,16 @@ export default function InteractiveAIDemo() {
   }, [businessType]);
 
   // Auto-scroll to bottom on new messages (within container only, not page)
-  // Uses requestAnimationFrame to prevent layout thrashing on mobile
+  // iOS OPTIMIZATION: Uses double-RAF for iOS Safari rendering pipeline
   useEffect(() => {
     if (messagesContainerRef.current) {
       requestAnimationFrame(() => {
-        if (messagesContainerRef.current) {
-          messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
-        }
+        requestAnimationFrame(() => {
+          if (messagesContainerRef.current) {
+            // iOS OPTIMIZATION: Instant scrolling on iOS (no smooth behavior)
+            messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+          }
+        });
       });
     }
   }, [messages]);
@@ -366,12 +369,12 @@ export default function InteractiveAIDemo() {
           </div>
         </motion.div>
 
-        {/* Main Demo Area */}
+        {/* Main Demo Area - MOBILE FIX: Proper container with overflow protection */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8"
+          className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 w-full"
         >
           {/* Left: Chat Interface */}
           <div className="lg:col-span-2">
@@ -403,10 +406,10 @@ export default function InteractiveAIDemo() {
                 </div>
               </div>
 
-              {/* Messages Area */}
+              {/* Messages Area - MOBILE FIX: Flexible height with max-height */}
               <div
                 ref={messagesContainerRef}
-                className="h-[350px] sm:h-[400px] lg:h-[450px] overflow-y-auto p-4 sm:p-6 space-y-4 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent"
+                className="min-h-[300px] max-h-[400px] sm:max-h-[450px] lg:max-h-[500px] overflow-y-auto p-4 sm:p-6 space-y-4 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent"
               >
                 <AnimatePresence mode="popLayout">
                   {messages.map((message, index) => (
@@ -573,10 +576,10 @@ function ChatMessage({ message, isLatest, typedText, isTyping }: ChatMessageProp
         )}
       </div>
 
-      {/* Message Bubble */}
+      {/* Message Bubble - MOBILE FIX: Better text wrapping */}
       <div
         className={`
-          max-w-[90%] sm:max-w-[80%] px-4 py-3 rounded-2xl
+          max-w-[90%] sm:max-w-[80%] px-4 py-3 rounded-2xl overflow-hidden
           ${
             isAI
               ? "bg-white/5 border border-white/10"
@@ -584,7 +587,7 @@ function ChatMessage({ message, isLatest, typedText, isTyping }: ChatMessageProp
           }
         `}
       >
-        <p className="text-base text-white leading-relaxed break-words">
+        <p className="text-sm sm:text-base text-white leading-relaxed break-words overflow-wrap-anywhere">
           {displayText}
           {showCursor && (
             <motion.span

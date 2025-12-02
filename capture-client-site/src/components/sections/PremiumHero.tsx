@@ -98,6 +98,9 @@ export function PremiumHero() {
     <section
       ref={containerRef}
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background-dark w-full max-w-full"
+      style={{
+        minHeight: isMobile ? '-webkit-fill-available' : '100vh',
+      }}
     >
       {/* Premium layered mesh gradient background */}
       <motion.div

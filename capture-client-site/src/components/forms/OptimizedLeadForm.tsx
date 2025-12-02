@@ -172,7 +172,8 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                              hover:bg-white/[0.05] hover:border-white/20
                              focus:outline-none focus:bg-white/[0.08]
                              focus:border-accent focus:ring-4 focus:ring-accent/20
-                             focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]"
+                             focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]
+                             touch-manipulation"
                 />
                 <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
               </div>
@@ -205,7 +206,8 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                              hover:bg-white/[0.05] hover:border-white/20
                              focus:outline-none focus:bg-white/[0.08]
                              focus:border-accent focus:ring-4 focus:ring-accent/20
-                             focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]"
+                             focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]
+                             touch-manipulation"
                 />
                 <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
               </div>
@@ -267,6 +269,7 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                            focus:outline-none focus:bg-white/[0.08]
                            focus:border-accent focus:ring-4 focus:ring-accent/20
                            focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]
+                           touch-manipulation
                            [&>option]:bg-background-dark [&>option]:text-white"
               >
                 <option value="">Select your main challenge...</option>
@@ -295,7 +298,7 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                          text-white/80
                          transition-all duration-300
                          hover:bg-white/[0.08] hover:border-white/20
-                         active:scale-95"
+                         touch-manipulation active:scale-95"
             >
               <span className="material-icons text-xl">arrow_back</span>
             </button>
@@ -371,7 +374,9 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
               Or call:{" "}
               <a
                 href="tel:865-346-3339"
-                className="text-accent hover:underline font-bold inline-flex items-center min-h-[44px]"
+                className="text-accent hover:underline font-bold inline-flex items-center
+                           touch-manipulation active:scale-95 transition-transform duration-100
+                           min-h-[48px]"
                 onClick={() => trackPhoneClick("865-346-3339", `optimized_form_${source}`)}
               >
                 (865) 346-3339

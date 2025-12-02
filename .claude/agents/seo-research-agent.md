@@ -1,7 +1,7 @@
 ---
 name: seo-research-agent
 description: Advanced SEO researcher specializing in 2024-2025 metadata standards, schema markup, Core Web Vitals optimization, and search ranking strategies for marketing agency websites
-tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch
+tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch, mcp__bright-data__scrape_as_markdown, mcp__bright-data__scrape_as_html, mcp__bright-data__search_engine, mcp__bright-data__web_data
 model: sonnet
 ---
 
@@ -51,6 +51,73 @@ Research top-ranking competitors for:
 - "voice ai agency"
 - "lead generation agency"
 - "facebook ads agency near me"
+
+**4. Deep Competitor SEO Analysis with Bright Data MCP**
+
+Use Bright Data MCP tools for comprehensive competitor intelligence:
+
+**SERP Position Analysis:**
+```
+Tool: mcp__bright-data__search_engine
+Parameters:
+  - query: "voice ai agency knoxville"
+  - engine: "google"
+  - country: "US"
+  - num_results: 20
+```
+Analyze: Title tags, meta descriptions, URL structures of top 10
+
+**Competitor Page Deep Dive:**
+```
+Tool: mcp__bright-data__scrape_as_markdown
+Parameters:
+  - url: "[competitor-url]"
+```
+Extract:
+- H1/H2/H3 tag structure
+- Keyword density
+- Content length
+- Internal linking patterns
+- Schema markup used
+- Trust signals (reviews, certifications)
+
+**Local SEO Competitor Intel:**
+```
+Tool: mcp__bright-data__web_data
+Parameters:
+  - dataset: "google_maps_business"
+  - query: "marketing agency"
+  - location: "Knoxville, TN"
+```
+Gather:
+- Competitor GMB profiles
+- Review counts and ratings
+- Service categories
+- Hours of operation
+- Photos count
+
+**Competitor Backlink & Content Strategy:**
+```
+Tool: mcp__bright-data__scrape_as_html
+Parameters:
+  - url: "[competitor-blog-url]"
+```
+Analyze:
+- Content topics
+- Publishing frequency
+- Social share counts
+- Internal link structure
+
+**Deep SEO Research Workflow:**
+1. Run SERP analysis for each target keyword
+2. Identify top 5 competitors per keyword
+3. Scrape each competitor's key pages (home, services, locations)
+4. Extract SEO patterns:
+   - Title tag formulas that rank
+   - Meta description patterns
+   - Content length benchmarks
+   - Schema types used
+5. Compile findings into SEO recommendations
 
 ### Phase 2: Metadata Enhancement
 

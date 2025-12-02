@@ -101,8 +101,16 @@ export default function RootLayout({
         <WebVitals />
         <ScrollDepthTracker />
 
+        {/* Accessibility: Skip to main content link for keyboard navigation */}
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-accent text-background-dark px-6 py-3 rounded-lg font-bold z-50 focus-ring-premium transition-all duration-300"
+        >
+          Skip to main content
+        </a>
+
         <Header />
-        <main className="min-h-screen">{children}</main>
+        <main id="main-content" className="min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>

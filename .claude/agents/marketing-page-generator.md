@@ -22,6 +22,7 @@ You receive:
 4. **Jina API Key** - For Unsplash image scraping
 5. **Agency Context** - Agency name, USPs, contact info
 6. **Output Directory** - Where to save JSON files (usually `/pages/`)
+7. **Bright Data Browser WS** - For scraping protected sites and competitor verification
 
 ## Your Workflow
 
@@ -240,6 +241,96 @@ https://images.unsplash.com/photo-[ID]?ixlib=rb-4.0.3&w=1920&q=80
   }
 }
 ```
+
+#### C. Use Bright Data Browser for Protected Sites (Optional)
+
+**When to use Bright Data Browser instead of Jina:**
+- Verifying competitor websites that may block bots
+- Scraping Google Maps for local business data to enhance page content
+- Scraping Yelp for competitor analysis in a specific location
+- Taking screenshots of competitor sites for visual reference
+
+**1. Verify competitor websites exist**
+```typescript
+import { verifyWebsiteExists, analyzeCompetitor } from '@/lib/bright-data-browser';
+
+// Quick check if a competitor site exists
+const exists = await verifyWebsiteExists("https://competitor-agency.com");
+// Returns: { exists: boolean, title?: string, error?: string }
+
+// Full competitor analysis for content research
+const analysis = await analyzeCompetitor("https://competitor-agency.com");
+// Returns: {
+//   exists, title, description, hasContactForm,
+//   hasPhoneNumber, socialLinks, screenshot (base64)
+// }
+```
+
+**2. Scrape Google Maps for local business context**
+```typescript
+import { searchGoogleMaps } from '@/lib/bright-data-browser';
+
+// Get local businesses to understand the market
+const results = await searchGoogleMaps({
+  query: "marketing agency",
+  location: "Knoxville, TN",
+  maxResults: 10
+});
+// Use this data to:
+// - Understand local competition
+// - Add local context to page content
+// - Reference market size in content
+```
+
+**3. Scrape Yelp for market research**
+```typescript
+import { searchYelp } from '@/lib/bright-data-browser';
+
+const results = await searchYelp({
+  query: "marketing agency",
+  location: "Knoxville, TN",
+  maxResults: 10
+});
+// Use for:
+// - Competitor analysis
+// - Understanding local market needs
+// - Adding credibility stats to content
+```
+
+**4. Take screenshot of any URL**
+```typescript
+import { takeScreenshot } from '@/lib/bright-data-browser';
+
+const screenshot = await takeScreenshot("https://competitor.com", {
+  fullPage: false,
+  width: 1920,
+  height: 1080
+});
+// Returns: { success, screenshot: "base64-encoded-image" }
+// Use for visual verification and research
+```
+
+**5. Generic scraping for protected content**
+```typescript
+import { runBrightBrowserTask } from '@/lib/bright-data-browser';
+
+const result = await runBrightBrowserTask({
+  url: "https://protected-site.com/pricing",
+  waitForSelector: ".pricing-table",
+  takeScreenshot: true,
+  extractSelectors: {
+    price: ".price",
+    features: ".features-list"
+  }
+});
+// Use for competitive pricing research
+```
+
+**Use Cases for Page Generation:**
+- Research competitor pricing for comparison content
+- Verify competitor sites are active before mentioning
+- Get local market data to enhance location-specific content
+- Screenshot competitor sites for internal reference
 
 ### Step 3: Create Complete JSON File
 

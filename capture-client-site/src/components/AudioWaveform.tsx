@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useMemo } from "react";
+import { useMemo, useEffect, useState } from "react";
+import { isIOSDevice, isLowPowerDevice } from "@/lib/ios-performance";
 
 interface AudioWaveformProps {
   isActive: boolean;
@@ -18,14 +19,29 @@ const generateBarHeights = (index: number) => {
 };
 
 const AudioWaveform: React.FC<AudioWaveformProps> = ({ isActive, color }) => {
+  const [isIOS, setIsIOS] = useState(false);
+  const [isLowPower, setIsLowPower] = useState(false);
+
+  useEffect(() => {
+    setIsIOS(isIOSDevice());
+    setIsLowPower(isLowPowerDevice());
+  }, []);
+
+  // iOS OPTIMIZATION: Reduce number of bars on iOS devices
+  const barCount = useMemo(() => {
+    if (isLowPower) return 8; // Very few bars on low-power devices
+    if (isIOS) return 12; // Half the bars on iOS
+    return 24; // Full experience on desktop
+  }, [isIOS, isLowPower]);
+
   // Memoize bars array and heights for performance
   const barsWithHeights = useMemo(
     () =>
-      Array.from({ length: 24 }, (_, i) => ({
+      Array.from({ length: barCount }, (_, i) => ({
         index: i,
         heights: generateBarHeights(i),
       })),
-    []
+    [barCount]
   );
 
   const colorClasses = {
@@ -43,34 +59,71 @@ const AudioWaveform: React.FC<AudioWaveformProps> = ({ isActive, color }) => {
 
   const currentColor = colorClasses[color];
 
+  // iOS OPTIMIZATION: Use simpler animation timing
+  const getAnimationConfig = (index: number) => {
+    const delay = index * 0.02;
+
+    if (isLowPower) {
+      // Minimal animation on low-power devices
+      return {
+        duration: 1.5,
+        delay,
+        ease: "linear" as const,
+      };
+    }
+
+    if (isIOS) {
+      // Simplified animation on iOS
+      return {
+        duration: isActive ? 0.4 : 1.5,
+        delay,
+        ease: "easeInOut" as const,
+      };
+    }
+
+    // Full animation on desktop
+    return {
+      duration: isActive
+        ? 0.15 + (index % 3) * 0.05 // Faster, varied for speech
+        : 1.2 + (index % 4) * 0.2, // Slower, gentle for ringing
+      delay,
+      ease: "easeInOut" as const,
+    };
+  };
+
   return (
     <div className="flex items-center justify-center gap-[3px] h-20 px-4">
       {barsWithHeights.map(({ index, heights }) => {
-        // Create varied animation delays for natural effect
-        const delay = index * 0.02;
-        const duration = isActive
-          ? 0.15 + (index % 3) * 0.05 // Faster, varied for speech
-          : 1.2 + (index % 4) * 0.2; // Slower, gentle for ringing
+        const animConfig = getAnimationConfig(index);
 
         return (
           <motion.div
             key={index}
-            className={`w-1 rounded-full ${currentColor.bar} ${currentColor.glow}`}
+            className={`w-1 rounded-full ${currentColor.bar} ${
+              // iOS OPTIMIZATION: Remove glow/filter on low-power devices
+              isLowPower ? "" : currentColor.glow
+            }`}
             style={{
-              filter: currentColor.filter,
+              // iOS OPTIMIZATION: Disable filter on low-power devices
+              filter: isLowPower ? "none" : currentColor.filter,
+              // iOS OPTIMIZATION: Use GPU acceleration hint
+              transform: "translate3d(0, 0, 0)",
+              willChange: isIOS ? "auto" : "height",
             }}
             initial={{ height: "20%" }}
             animate={{
               height: isActive
-                ? ["20%", heights[0], heights[1], heights[2], "20%"]
+                ? isLowPower
+                  ? ["20%", "50%", "20%"] // Simple animation on low-power
+                  : ["20%", heights[0], heights[1], heights[2], "20%"]
                 : ["15%", `${20 + (index % 5) * 5}%`, "15%"],
             }}
             transition={{
-              duration,
-              delay,
+              duration: animConfig.duration,
+              delay: animConfig.delay,
               repeat: Infinity,
-              ease: "easeInOut",
-              times: isActive ? [0, 0.2, 0.5, 0.8, 1] : [0, 0.5, 1],
+              ease: animConfig.ease,
+              times: isActive && !isLowPower ? [0, 0.2, 0.5, 0.8, 1] : [0, 0.5, 1],
             }}
           />
         );

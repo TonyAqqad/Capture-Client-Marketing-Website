@@ -1,4 +1,5 @@
 import { useEffect, useState, RefObject } from 'react';
+import { createIOSOptimizedObserver, isIOSDevice } from '@/lib/ios-performance';
 
 interface UseInViewOptions {
   threshold?: number;
@@ -11,12 +12,20 @@ export function useInView(
 ): boolean {
   const { threshold = 0.1, triggerOnce = true } = options;
   const [isInView, setIsInView] = useState(false);
+  const [isIOS, setIsIOS] = useState(false);
+
+  // Detect iOS on mount
+  useEffect(() => {
+    setIsIOS(isIOSDevice());
+  }, []);
 
   useEffect(() => {
     const element = ref.current;
     if (!element) return;
 
-    const observer = new IntersectionObserver(
+    // iOS OPTIMIZATION: Use createIOSOptimizedObserver for better iOS performance
+    // This uses lower threshold and larger root margin on iOS
+    const observer = createIOSOptimizedObserver(
       ([entry]) => {
         const inView = entry.isIntersecting;
 
@@ -29,7 +38,7 @@ export function useInView(
           setIsInView(false);
         }
       },
-      { threshold }
+      isIOS
     );
 
     observer.observe(element);
@@ -37,7 +46,7 @@ export function useInView(
     return () => {
       observer.unobserve(element);
     };
-  }, [ref, threshold, triggerOnce]);
+  }, [ref, threshold, triggerOnce, isIOS]);
 
   return isInView;
 }

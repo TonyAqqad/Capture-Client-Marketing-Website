@@ -97,7 +97,7 @@ export function PremiumServices() {
         className="absolute inset-0 bg-gradient-to-b from-background-dark via-background to-background-dark opacity-50"
       />
 
-      {/* Floating orbs */}
+      {/* Floating orbs - MOBILE FIX: Prevent horizontal overflow */}
       <motion.div
         animate={{
           scale: [1, 1.2, 1],
@@ -108,7 +108,8 @@ export function PremiumServices() {
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="absolute top-1/4 right-0 w-full max-w-[400px] sm:max-w-[800px] h-[400px] sm:h-[800px] rounded-full bg-gradient-radial from-accent/10 to-transparent blur-3xl translate-x-1/4"
+        className="absolute top-1/4 right-0 w-[300px] sm:w-[400px] md:w-[600px] lg:w-[800px] h-[300px] sm:h-[400px] md:h-[600px] lg:h-[800px] rounded-full bg-gradient-radial from-accent/10 to-transparent blur-3xl translate-x-1/4 overflow-hidden"
+        style={{ maxWidth: '100vw' }}
       />
       <motion.div
         animate={{
@@ -121,7 +122,8 @@ export function PremiumServices() {
           ease: "easeInOut",
           delay: 2
         }}
-        className="absolute bottom-1/4 left-0 w-full max-w-[450px] sm:max-w-[900px] h-[450px] sm:h-[900px] rounded-full bg-gradient-radial from-primary/10 to-transparent blur-3xl -translate-x-1/4"
+        className="absolute bottom-1/4 left-0 w-[350px] sm:w-[450px] md:w-[700px] lg:w-[900px] h-[350px] sm:h-[450px] md:h-[700px] lg:h-[900px] rounded-full bg-gradient-radial from-primary/10 to-transparent blur-3xl -translate-x-1/4 overflow-hidden"
+        style={{ maxWidth: '100vw' }}
       />
 
       <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">

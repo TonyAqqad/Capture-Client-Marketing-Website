@@ -40,7 +40,10 @@ export default function MobileCTABar() {
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: 100, opacity: 0 }}
           transition={{ type: "spring", stiffness: 300, damping: 30 }}
-          className="fixed bottom-0 left-0 right-0 z-40 md:hidden safe-area-bottom"
+          className="fixed bottom-0 left-0 right-0 z-40 md:hidden"
+          style={{
+            paddingBottom: 'env(safe-area-inset-bottom, 12px)',
+          }}
         >
           {/* Premium glass-morphism container */}
           <div className="relative">
@@ -51,19 +54,21 @@ export default function MobileCTABar() {
             <div className="relative bg-background-dark/95 border-t border-surface-border/50 shadow-2xl">
               <div className="max-w-screen-xl mx-auto px-4 py-3">
                 <div className="flex items-center gap-3">
-                  {/* Call button - premium treatment */}
+                  {/* Call button - premium treatment with iOS touch optimization */}
                   <a
                     href="tel:865-346-3339"
                     className="flex-1 flex items-center justify-center gap-2 bg-surface/40 hover:bg-surface/60 border border-surface-border/50 rounded-xl py-3.5 font-semibold text-foreground transition-all duration-300 active:scale-95 min-h-[52px]"
+                    style={{ touchAction: 'manipulation', WebkitTapHighlightColor: 'transparent' }}
                   >
                     <span className="material-icons text-accent text-lg">phone</span>
                     <span className="text-sm">Call Now</span>
                   </a>
 
-                  {/* Demo button - primary action */}
+                  {/* Demo button - primary action with iOS touch optimization */}
                   <a
                     href="/contact"
                     className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-accent to-primary rounded-xl py-3.5 font-bold text-white transition-all duration-300 active:scale-95 min-h-[52px]"
+                    style={{ touchAction: 'manipulation', WebkitTapHighlightColor: 'transparent' }}
                   >
                     <span className="text-sm">Get Demo</span>
                     <span className="material-icons text-base">arrow_forward</span>

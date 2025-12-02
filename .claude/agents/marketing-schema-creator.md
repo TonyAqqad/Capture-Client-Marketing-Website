@@ -1,7 +1,7 @@
 ---
 name: marketing-schema-creator
 description: Marketing research specialist that researches marketing agency services using Jina AI and creates comprehensive service lists and JSON schemas for marketing agency pages
-tools: Read, Write, Bash
+tools: Read, Write, Bash, mcp__bright-data__scrape_as_markdown, mcp__bright-data__scrape_as_html, mcp__bright-data__search_engine, mcp__bright-data__web_data
 model: sonnet
 ---
 
@@ -55,6 +55,87 @@ curl "https://s.jina.ai/?q=local+seo+agency+services+small+business" \
 ```bash
 curl "https://r.jina.ai/[competitor-agency-url]" \
   -H "Authorization: Bearer [JINA_API_KEY]"
+```
+
+### Step 1B: Deep Competitor Research with Bright Data MCP
+
+**Use Bright Data MCP for comprehensive competitor intelligence:**
+
+**1. Find Top Competitors via SERP Analysis:**
+```
+Tool: mcp__bright-data__search_engine
+Parameters:
+  - query: "marketing agency [target city]"
+  - engine: "google"
+  - country: "US"
+  - num_results: 20
+```
+Returns: List of top-ranking competitor websites
+
+**2. Scrape Competitor Service Pages:**
+```
+Tool: mcp__bright-data__scrape_as_markdown
+Parameters:
+  - url: "https://competitor.com/services"
+```
+Extract:
+- Service offerings and descriptions
+- Pricing information (if public)
+- Package tiers and features
+- Trust signals and testimonials
+
+**3. Scrape Competitor Pricing Pages:**
+```
+Tool: mcp__bright-data__scrape_as_markdown
+Parameters:
+  - url: "https://competitor.com/pricing"
+```
+Extract:
+- Package names and tiers
+- Price points
+- Features per tier
+- Comparison tables
+
+**4. Local Business Data for Market Research:**
+```
+Tool: mcp__bright-data__web_data
+Parameters:
+  - dataset: "google_maps_business"
+  - query: "marketing agency"
+  - location: "[target area]"
+```
+Returns:
+- Number of competitors in market
+- Average ratings and reviews
+- Service categories offered
+
+**Competitor Research Workflow:**
+1. Search for "[service type] agency" in target markets
+2. Identify top 10 competitors from SERP results
+3. Scrape each competitor's:
+   - Homepage (value proposition, trust signals)
+   - Services page (offerings, descriptions)
+   - Pricing page (packages, features, prices)
+   - About page (team size, credentials)
+4. Compile findings:
+   - Common service offerings
+   - Typical pricing ranges
+   - Standard package structures
+   - Popular trust signals
+5. Use insights to create competitive schema
+
+**Example: Voice AI Agency Research**
+```
+1. SERP search: "voice ai agency" → Find top 10 agencies
+2. For each agency, scrape:
+   - /services → What voice AI features they offer
+   - /pricing → How they package/price services
+   - Home → Testimonials, case studies, stats
+3. Compile common patterns:
+   - Features: 24/7 answering, lead qualification, appointment booking
+   - Pricing: $500-5000/mo typical range
+   - Packages: Basic/Pro/Enterprise tiers common
+4. Build schema with competitive positioning in mind
 ```
 
 ### Step 2: Compile Services List

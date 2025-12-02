@@ -195,7 +195,7 @@ const websiteSchema = {
 
 export default function HomePage() {
   return (
-    <div className="relative min-h-screen w-full overflow-x-hidden bg-background-dark">
+    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-background-dark">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -248,15 +248,15 @@ export default function HomePage() {
       </section>
 
       {/* ==================== SECTION 2: PREMIUM SERVICES ==================== */}
-      <section className="relative overflow-hidden">
-        {/* Layered glass background */}
-        <div className="absolute inset-0">
+      <section className="relative overflow-hidden max-w-full">
+        {/* Layered glass background - MOBILE FIX: Contained orbs */}
+        <div className="absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-mesh-premium opacity-40" />
           <div className="absolute inset-0 bg-gradient-to-b from-background-dark via-background to-background-dark" />
 
-          {/* Floating geometric shapes */}
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-accent/10 to-transparent rounded-full blur-3xl animate-float-slow" />
-          <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-radial from-primary/10 to-transparent rounded-full blur-3xl animate-float-medium" />
+          {/* Floating geometric shapes - MOBILE FIX: Smaller on mobile */}
+          <div className="absolute top-1/4 left-1/4 w-48 sm:w-64 md:w-80 lg:w-96 h-48 sm:h-64 md:h-80 lg:h-96 bg-gradient-radial from-accent/10 to-transparent rounded-full blur-3xl animate-float-slow" />
+          <div className="absolute bottom-1/3 right-1/4 w-40 sm:w-56 md:w-72 lg:w-80 h-40 sm:h-56 md:h-72 lg:h-80 bg-gradient-radial from-primary/10 to-transparent rounded-full blur-3xl animate-float-medium" />
         </div>
 
         <div className="relative z-10">
@@ -328,15 +328,15 @@ export default function HomePage() {
       </section>
 
       {/* ==================== SECTION 3: HOW IT WORKS ==================== */}
-      <section className="relative overflow-hidden">
-        {/* Layered glass sections */}
-        <div className="absolute inset-0">
+      <section className="relative overflow-hidden max-w-full">
+        {/* Layered glass sections - MOBILE FIX: Contained orbs */}
+        <div className="absolute inset-0 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-background to-background-dark" />
           <div className="absolute inset-0 bg-mesh-premium opacity-30" />
 
-          {/* Floating light orbs */}
-          <div className="absolute top-1/4 right-1/3 w-72 h-72 bg-gradient-radial from-accent/15 via-accent/5 to-transparent rounded-full blur-3xl animate-pulse-glow" />
-          <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-gradient-radial from-primary/15 via-primary/5 to-transparent rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
+          {/* Floating light orbs - MOBILE FIX: Smaller on mobile */}
+          <div className="absolute top-1/4 right-1/3 w-36 sm:w-48 md:w-60 lg:w-72 h-36 sm:h-48 md:h-60 lg:h-72 bg-gradient-radial from-accent/15 via-accent/5 to-transparent rounded-full blur-3xl animate-pulse-glow" />
+          <div className="absolute bottom-1/4 left-1/3 w-32 sm:w-40 md:w-52 lg:w-64 h-32 sm:h-40 md:h-52 lg:h-64 bg-gradient-radial from-primary/15 via-primary/5 to-transparent rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
         </div>
 
         <div className="relative z-10">
@@ -352,11 +352,11 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-br from-background-dark via-background to-background-dark" />
           <div className="absolute inset-0 bg-mesh opacity-25" />
 
-          {/* Geometric accent */}
-          <div className="absolute top-20 right-20 w-64 h-64 border border-accent/10 rounded-3xl rotate-12 backdrop-blur-sm animate-float-slow" />
+          {/* Geometric accent - MOBILE FIX: Hidden on mobile */}
+          <div className="absolute top-20 right-20 w-32 sm:w-40 md:w-52 lg:w-64 h-32 sm:h-40 md:h-52 lg:h-64 border border-accent/10 rounded-3xl rotate-12 backdrop-blur-sm animate-float-slow hidden sm:block" />
 
-          {/* Radial glow */}
-          <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-accent/10 to-transparent blur-3xl" />
+          {/* Radial glow - MOBILE FIX: Smaller on mobile */}
+          <div className="absolute bottom-1/4 left-1/4 w-48 sm:w-64 md:w-80 lg:w-96 h-48 sm:h-64 md:h-80 lg:h-96 bg-gradient-radial from-accent/10 to-transparent blur-3xl" />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -448,11 +448,11 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-br from-background-dark via-background to-background-dark" />
           <div className="absolute inset-0 bg-mesh-premium opacity-30" />
 
-          {/* Geometric accent (opposite side) */}
-          <div className="absolute bottom-20 left-20 w-56 h-56 border border-primary/10 rounded-3xl -rotate-12 backdrop-blur-sm animate-float-medium" />
+          {/* Geometric accent (opposite side) - MOBILE FIX: Hidden on mobile */}
+          <div className="absolute bottom-20 left-20 w-28 sm:w-36 md:w-44 lg:w-56 h-28 sm:h-36 md:h-44 lg:h-56 border border-primary/10 rounded-3xl -rotate-12 backdrop-blur-sm animate-float-medium hidden sm:block" />
 
-          {/* Radial glow */}
-          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-radial from-primary/10 to-transparent blur-3xl" />
+          {/* Radial glow - MOBILE FIX: Smaller on mobile */}
+          <div className="absolute top-1/4 right-1/4 w-48 sm:w-64 md:w-80 lg:w-96 h-48 sm:h-64 md:h-80 lg:h-96 bg-gradient-radial from-primary/10 to-transparent blur-3xl" />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -585,9 +585,9 @@ export default function HomePage() {
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-radial from-primary/10 to-transparent blur-3xl" />
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-radial from-accent/10 to-transparent blur-3xl" />
 
-          {/* Geometric accents */}
-          <div className="absolute top-20 right-20 w-48 h-48 border border-accent/10 rounded-3xl rotate-45 backdrop-blur-sm animate-float-slow" />
-          <div className="absolute bottom-20 left-20 w-40 h-40 border border-primary/10 rounded-3xl -rotate-12 backdrop-blur-sm animate-float-medium" />
+          {/* Geometric accents - MOBILE FIX: Hidden on mobile */}
+          <div className="absolute top-20 right-20 w-24 sm:w-32 md:w-40 lg:w-48 h-24 sm:h-32 md:h-40 lg:h-48 border border-accent/10 rounded-3xl rotate-45 backdrop-blur-sm animate-float-slow hidden md:block" />
+          <div className="absolute bottom-20 left-20 w-20 sm:w-24 md:w-32 lg:w-40 h-20 sm:h-24 md:h-32 lg:h-40 border border-primary/10 rounded-3xl -rotate-12 backdrop-blur-sm animate-float-medium hidden md:block" />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -715,9 +715,9 @@ export default function HomePage() {
           <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-radial from-primary/15 to-transparent blur-3xl" />
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-radial from-accent/15 to-transparent blur-3xl" />
 
-          {/* Floating geometric shapes */}
-          <div className="absolute top-20 right-1/4 w-64 h-64 border-2 border-accent/10 rounded-3xl rotate-12 backdrop-blur-sm animate-float-slow" />
-          <div className="absolute bottom-20 left-1/4 w-56 h-56 border-2 border-primary/10 rounded-3xl -rotate-12 backdrop-blur-sm animate-float-medium" />
+          {/* Floating geometric shapes - MOBILE FIX: Hidden on mobile */}
+          <div className="absolute top-20 right-1/4 w-32 sm:w-40 md:w-52 lg:w-64 h-32 sm:h-40 md:h-52 lg:h-64 border-2 border-accent/10 rounded-3xl rotate-12 backdrop-blur-sm animate-float-slow hidden lg:block" />
+          <div className="absolute bottom-20 left-1/4 w-28 sm:w-36 md:w-44 lg:w-56 h-28 sm:h-36 md:h-44 lg:h-56 border-2 border-primary/10 rounded-3xl -rotate-12 backdrop-blur-sm animate-float-medium hidden lg:block" />
         </div>
 
         <div className="relative z-10">

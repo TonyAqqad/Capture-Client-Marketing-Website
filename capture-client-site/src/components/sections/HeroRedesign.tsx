@@ -19,14 +19,14 @@ export function HeroRedesign() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background-dark"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background-dark max-w-full"
     >
       {/* Premium layered mesh gradient background */}
       <motion.div
         style={{ y }}
         className="absolute inset-0 bg-mesh-premium"
       >
-        {/* Animated gradient orbs */}
+        {/* Animated gradient orbs - MOBILE FIX: Contained within viewport */}
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
@@ -37,7 +37,7 @@ export function HeroRedesign() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute top-1/4 -left-1/4 w-[800px] h-[800px] rounded-full bg-gradient-radial from-primary/20 to-transparent blur-3xl"
+          className="absolute top-1/4 -left-1/4 w-[400px] sm:w-[800px] h-[400px] sm:h-[800px] rounded-full bg-gradient-radial from-primary/20 to-transparent blur-3xl"
         />
         <motion.div
           animate={{
@@ -50,7 +50,7 @@ export function HeroRedesign() {
             ease: "easeInOut",
             delay: 1
           }}
-          className="absolute bottom-1/4 -right-1/4 w-[900px] h-[900px] rounded-full bg-gradient-radial from-accent/15 to-transparent blur-3xl"
+          className="absolute bottom-1/4 -right-1/4 w-[450px] sm:w-[900px] h-[450px] sm:h-[900px] rounded-full bg-gradient-radial from-accent/15 to-transparent blur-3xl"
         />
 
         {/* Floating angular shapes */}
@@ -91,7 +91,7 @@ export function HeroRedesign() {
 
       <motion.div
         style={{ opacity }}
-        className="container-custom relative z-10 px-6 lg:px-8"
+        className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 w-full max-w-full"
       >
         {/* Asymmetric layout with offset content */}
         <div className="grid lg:grid-cols-12 gap-12 items-center">
@@ -113,22 +113,22 @@ export function HeroRedesign() {
               </span>
             </motion.div>
 
-            {/* Main headline with text reveal */}
+            {/* Main headline with text reveal - MOBILE FIX: Better text sizing and wrapping */}
             <TextReveal delay={0.3}>
-              <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black text-foreground leading-[0.95] mb-6 text-depth">
+              <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-black text-foreground leading-[1.05] sm:leading-[0.95] mb-6 text-depth break-words">
                 Capture More
                 <br />
-                <span className="text-gradient relative inline-block">
+                <span className="text-gradient relative inline-block break-words">
                   Clients
                   <motion.div
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
-                    className="absolute bottom-2 left-0 right-0 h-3 bg-accent/20 -z-10 origin-left"
+                    className="absolute bottom-2 left-0 right-0 h-2 sm:h-3 bg-accent/20 -z-10 origin-left"
                   />
                 </span>
                 <br />
-                <span className="text-foreground/80 text-6xl lg:text-7xl">
+                <span className="text-foreground/80 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl break-words">
                   Automatically
                 </span>
               </h1>
