@@ -31,7 +31,7 @@ const plans: PricingPlan[] = [
   },
   {
     name: 'Growth',
-    price: '$2,195',
+    price: '$1,997',
     features: [
       '2 AI Voice Agents',
       'Up to 200+ calls/month',

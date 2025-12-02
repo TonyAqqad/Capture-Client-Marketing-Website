@@ -3,7 +3,7 @@
   "page_type": "pricing-comparison",
   "seo": {
     "title": "Pricing & Packages | AI Voice Agent + Lead Generation | Capture Client",
-    "meta_description": "Transparent pricing for Voice AI and lead generation services. Packages from $999-$2,195/month. No setup fees. Cancel anytime. Compare features and find the right fit for your business.",
+    "meta_description": "Transparent pricing for Voice AI and lead generation services. Packages from $999-$1,997/month. No setup fees. Cancel anytime. Compare features and find the right fit for your business.",
     "keywords": ["ai voice agent pricing", "lead generation packages", "ai phone system cost", "voice ai pricing"]
   },
   "hero": {
@@ -82,7 +82,7 @@
       "id": "growth",
       "name": "Growth",
       "slug": "growth-package",
-      "price": "$2,195",
+      "price": "$1,997",
       "period": "per month",
       "tagline": "For businesses ready to scale with ads",
       "popular": true,
