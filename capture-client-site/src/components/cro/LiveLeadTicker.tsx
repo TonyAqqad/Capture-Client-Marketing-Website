@@ -61,7 +61,7 @@ export default function LiveLeadTicker() {
       initial={disableAnimations ? {} : { opacity: 0, y: 50 }}
       animate={disableAnimations ? {} : { opacity: 1, y: 0 }}
       transition={disableAnimations ? { duration: 0 } : { duration: 0.5 }}
-      className="fixed bottom-20 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-auto z-40 max-w-sm"
+      className="fixed bottom-20 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-auto z-40 max-w-sm hidden md:block"
     >
       <AnimatePresence mode="wait">
         <motion.div

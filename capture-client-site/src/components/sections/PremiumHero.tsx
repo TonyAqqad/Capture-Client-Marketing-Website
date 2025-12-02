@@ -37,14 +37,21 @@ export function PremiumHero() {
   // Mouse tracking for interactive elements - DISABLED ON MOBILE
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
-  const springX = useSpring(mouseX, { stiffness: 50, damping: 30 });
-  const springY = useSpring(mouseY, { stiffness: 50, damping: 30 });
+
+  // CRITICAL MOBILE FIX: Zero out spring physics on mobile to prevent calculations
+  const springConfig = disableAnimations
+    ? { stiffness: 0, damping: 0 }  // No physics = no calculations
+    : { stiffness: 50, damping: 30 };
+
+  const springX = useSpring(mouseX, springConfig);
+  const springY = useSpring(mouseY, springConfig);
 
   // Move useTransform hooks to top level (must not be called conditionally)
-  const shapeX1 = useTransform(springX, [-10, 10], [-30, 30]);
-  const shapeY1 = useTransform(springY, [-10, 10], [-30, 30]);
-  const shapeX2 = useTransform(springX, [-10, 10], [20, -20]);
-  const shapeY2 = useTransform(springY, [-10, 10], [20, -20]);
+  // CRITICAL MOBILE FIX: Use static [0,0] range on mobile to skip transform calculations
+  const shapeX1 = useTransform(springX, [-10, 10], disableAnimations ? [0, 0] : [-30, 30]);
+  const shapeY1 = useTransform(springY, [-10, 10], disableAnimations ? [0, 0] : [-30, 30]);
+  const shapeX2 = useTransform(springX, [-10, 10], disableAnimations ? [0, 0] : [20, -20]);
+  const shapeY2 = useTransform(springY, [-10, 10], disableAnimations ? [0, 0] : [20, -20]);
 
   useEffect(() => {
     // Disable mouse tracking on mobile for performance

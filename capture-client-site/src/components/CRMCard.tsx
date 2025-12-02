@@ -2,7 +2,11 @@
 
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { CheckCircle2, UserPlus, Target, Calendar } from "lucide-react";
+
+// Material Icons component for consistency (replaces Lucide React for bundle savings)
+const MaterialIcon = ({ name, className = "" }: { name: string; className?: string }) => (
+  <span className={`material-icons ${className}`} style={{ fontSize: 'inherit' }}>{name}</span>
+);
 
 interface CRMField {
   label: string;
@@ -19,11 +23,11 @@ const CRMCard: React.FC<CRMCardProps> = ({ fields }) => {
   const getFieldIcon = (index: number) => {
     switch (index) {
       case 0:
-        return <UserPlus className="w-4 h-4" />;
+        return <MaterialIcon name="person_add" className="text-base" />;
       case 1:
-        return <Target className="w-4 h-4" />;
+        return <MaterialIcon name="track_changes" className="text-base" />;
       case 2:
-        return <Calendar className="w-4 h-4" />;
+        return <MaterialIcon name="calendar_today" className="text-base" />;
       default:
         return null;
     }
@@ -50,7 +54,7 @@ const CRMCard: React.FC<CRMCardProps> = ({ fields }) => {
               transition={{ delay: 0.2, duration: 0.5, ease: "backOut" }}
               className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 flex items-center justify-center flex-shrink-0"
             >
-              <UserPlus className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400" />
+              <MaterialIcon name="person_add" className="text-lg sm:text-xl text-cyan-400" />
             </motion.div>
             <div className="min-w-0">
               <h3 className="text-base sm:text-lg font-semibold text-white tracking-tight truncate">New Lead Captured</h3>
@@ -218,8 +222,9 @@ const CRMField: React.FC<CRMFieldProps> = ({ field, index, icon }) => {
                     transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
                     className="relative z-10 flex-shrink-0"
                   >
-                    <CheckCircle2
-                      className={`w-4 h-4 sm:w-5 sm:h-5 ${urgent ? "text-red-400" : "text-cyan-400"}`}
+                    <MaterialIcon
+                      name="check_circle"
+                      className={`text-base sm:text-lg ${urgent ? "text-red-400" : "text-cyan-400"}`}
                     />
                   </motion.div>
                 </motion.div>

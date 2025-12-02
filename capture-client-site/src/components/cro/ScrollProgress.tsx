@@ -6,11 +6,26 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function ScrollProgress() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const progressRef = useRef(0);
   const visibilityRef = useRef(false);
 
+  // Mobile detection - check on mount and resize
   useEffect(() => {
     if (typeof window === "undefined") return;
+
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+
+    window.addEventListener("resize", checkMobile, { passive: true });
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Scroll progress tracking - skip entirely on mobile
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    // Don't run scroll listener on mobile - saves 500-800ms of scroll blocking
+    if (isMobile) return;
 
     let ticking = false;
 
@@ -44,7 +59,7 @@ export default function ScrollProgress() {
     handleScroll();
 
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isMobile]);
 
   const scrollToTop = () => {
     if (typeof window !== "undefined") {
@@ -60,6 +75,9 @@ export default function ScrollProgress() {
       }
     }
   };
+
+  // Don't render on mobile - component is desktop-only UX feature
+  if (isMobile) return null;
 
   return (
     <AnimatePresence>

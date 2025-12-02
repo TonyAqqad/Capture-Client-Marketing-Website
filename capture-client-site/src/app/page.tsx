@@ -11,7 +11,6 @@ import CapacityIndicator from "@/components/cro/CapacityIndicator";
 import ClientLogos from "@/components/cro/ClientLogos";
 import AsSeenIn from "@/components/cro/AsSeenIn";
 import ComparisonTable from "@/components/cro/ComparisonTable";
-import ExitIntentPopup from "@/components/cro/ExitIntentPopup";
 import UrgencyTimer from "@/components/cro/UrgencyTimer";
 import StickyPhoneCTA from "@/components/cro/StickyPhoneCTA";
 import ScrollProgress from "@/components/cro/ScrollProgress";
@@ -46,6 +45,15 @@ const InteractiveAIDemo = dynamic(
     ),
   }
 );
+
+// Lazy load ExitIntentPopup for code splitting (component has early-return optimization)
+const ExitIntentPopup = dynamic(
+  () => import("@/components/cro/ExitIntentPopup"),
+  {
+    loading: () => null, // Don't show anything while loading
+  }
+);
+
 
 // SEO Metadata for Homepage
 export const metadata: Metadata = {

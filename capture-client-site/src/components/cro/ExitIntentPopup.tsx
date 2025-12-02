@@ -6,9 +6,16 @@ import { motion, AnimatePresence } from "framer-motion";
 export default function ExitIntentPopup() {
   const [isVisible, setIsVisible] = useState(false);
   const [hasShown, setHasShown] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
+
+    // Detect mobile on mount
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
 
     const handleMouseLeave = (e: MouseEvent) => {
       // Trigger when mouse leaves from the top of the viewport
@@ -43,6 +50,30 @@ export default function ExitIntentPopup() {
       }
     }
   };
+  // CRITICAL FIX #1: Early return - Don't render anything until triggered
+  // This prevents AnimatePresence from reconciling the component tree unnecessarily
+  if (!isVisible && !hasShown) {
+    return null;
+  }
+
+  // CRITICAL FIX #2: Mobile-friendly animation (simple opacity fade)
+  const mobileAnimation = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
+    transition: { duration: 0.2 }
+  };
+
+  // Desktop animation (spring physics only on desktop)
+  const desktopAnimation = {
+    initial: { opacity: 0, scale: 0.8, y: 20 },
+    animate: { opacity: 1, scale: 1, y: 0 },
+    exit: { opacity: 0, scale: 0.8, y: 20 },
+    transition: { type: "spring", duration: 0.5 }
+  };
+
+  // CRITICAL FIX #3: Conditional animations based on device
+  const popupAnimation = isMobile ? mobileAnimation : desktopAnimation;
 
   return (
     <AnimatePresence>
@@ -53,15 +84,13 @@ export default function ExitIntentPopup() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
             className="fixed inset-0 bg-background-dark/90 md:backdrop-blur-sm z-[100] flex items-center justify-center p-4 sm:p-6"
             onClick={handleClose}
           >
             {/* Popup */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.8, y: 20 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, scale: 0.8, y: 20 }}
-              transition={{ type: "spring", duration: 0.5 }}
+              {...popupAnimation}
               className="w-full max-w-2xl max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -99,7 +128,7 @@ export default function ExitIntentPopup() {
                   <span className="text-accent font-semibold">10x more leads</span> with AI-powered automation.
                 </p>
 
-                {/* Benefits list */}
+                {/* Benefits list - SIMPLIFIED: Remove stagger animations on mobile */}
                 <div className="space-y-3 mb-8 max-w-md mx-auto">
                   {[
                     { icon: "rocket_launch", text: "Get started in 48 hours" },
@@ -108,9 +137,9 @@ export default function ExitIntentPopup() {
                   ].map((benefit, index) => (
                     <motion.div
                       key={index}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.2 + index * 0.1 }}
+                      initial={isMobile ? false : { opacity: 0, x: -20 }}
+                      animate={isMobile ? false : { opacity: 1, x: 0 }}
+                      transition={isMobile ? undefined : { delay: 0.2 + index * 0.1 }}
                       className="flex items-center gap-3 text-foreground"
                     >
                       <div className="w-8 h-8 rounded-lg bg-accent/20 border border-accent/30 flex items-center justify-center flex-shrink-0">
@@ -133,11 +162,11 @@ export default function ExitIntentPopup() {
                   </div>
                 </div>
 
-                {/* CTA Buttons */}
+                {/* CTA Buttons - SIMPLIFIED: Remove hover animations on mobile */}
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                   <motion.button
                     onClick={handleCTA}
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={isMobile ? undefined : { scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex-1 sm:flex-initial bg-gradient-to-r from-accent to-primary text-white font-bold px-6 sm:px-8 py-4 rounded-xl shadow-glow-lg hover:shadow-glow transition-all duration-300 flex items-center justify-center gap-2 min-h-[52px]"
                   >
@@ -147,7 +176,7 @@ export default function ExitIntentPopup() {
 
                   <motion.a
                     href="tel:865-346-3339"
-                    whileHover={{ scale: 1.05 }}
+                    whileHover={isMobile ? undefined : { scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex-1 sm:flex-initial border-2 border-accent/50 text-foreground font-bold px-6 sm:px-8 py-4 rounded-xl hover:bg-accent/10 transition-all duration-300 flex items-center justify-center gap-2 min-h-[52px]"
                   >

@@ -2,19 +2,11 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import {
-  Send,
-  Phone,
-  User,
-  MapPin,
-  Star,
-  Sparkles,
-  MessageCircle,
-  Clock,
-  CheckCircle2,
-  AlertCircle,
-  RotateCcw
-} from "lucide-react";
+
+// Material Icon component for consistency (replaces Lucide React for bundle savings)
+const MaterialIcon = ({ name, className = "" }: { name: string; className?: string }) => (
+  <span className={`material-icons ${className}`} style={{ fontSize: 'inherit' }}>{name}</span>
+);
 import { useTypewriter, TYPEWRITER_CONFIG } from "@/hooks/useTypewriter";
 import { presets, EASING } from "@/lib/simulator-animations";
 
@@ -308,7 +300,7 @@ export default function InteractiveAIDemo() {
               animate={{ rotate: [0, 360] }}
               transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
             >
-              <Sparkles className="w-4 h-4 text-cyan-400" />
+              <MaterialIcon name="auto_awesome" className="text-base text-cyan-400" />
             </motion.div>
             <span className="text-cyan-400 text-sm font-medium tracking-wide">
               Live AI Demo
@@ -333,7 +325,7 @@ export default function InteractiveAIDemo() {
             transition={{ delay: 0.5 }}
             className="mt-6 flex items-center justify-center gap-2 text-sm text-slate-500"
           >
-            <CheckCircle2 className="w-4 h-4 text-cyan-500" />
+            <MaterialIcon name="check_circle" className="text-base text-cyan-500" />
             <span>This is a live demo of our AI technology</span>
           </motion.div>
         </motion.div>
@@ -401,7 +393,7 @@ export default function InteractiveAIDemo() {
                     className="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
                     aria-label="Reset conversation"
                   >
-                    <RotateCcw className="w-4 h-4 text-slate-400" />
+                    <MaterialIcon name="refresh" className="text-base text-slate-400" />
                   </button>
                 </div>
               </div>
@@ -454,7 +446,7 @@ export default function InteractiveAIDemo() {
                     animate={{ opacity: 1, y: 0 }}
                     className="flex items-center gap-2 p-3 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 text-sm"
                   >
-                    <AlertCircle className="w-4 h-4" />
+                    <MaterialIcon name="error_outline" className="text-base" />
                     <span>Connection issue. Try the example questions below.</span>
                   </motion.div>
                 )}
@@ -486,7 +478,7 @@ export default function InteractiveAIDemo() {
                     className="px-4 sm:px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-primary text-white font-semibold hover:shadow-glow transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 min-h-[48px] min-w-[48px]"
                     aria-label="Send message"
                   >
-                    <Send className="w-5 h-5" />
+                    <MaterialIcon name="send" className="text-xl" />
                     <span className="hidden sm:inline">Send</span>
                   </button>
                 </form>
@@ -570,9 +562,9 @@ function ChatMessage({ message, isLatest, typedText, isTyping }: ChatMessageProp
         `}
       >
         {isAI ? (
-          <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-cyan-400" />
+          <MaterialIcon name="auto_awesome" className="text-sm sm:text-base text-cyan-400" />
         ) : (
-          <User className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary" />
+          <MaterialIcon name="person" className="text-sm sm:text-base text-primary" />
         )}
       </div>
 
@@ -618,10 +610,10 @@ interface CRMPanelProps {
 
 function CRMPanel({ crmData }: CRMPanelProps) {
   const fields = [
-    { label: "Name", value: crmData.name, icon: User, filled: !!crmData.name },
-    { label: "Phone", value: crmData.phone, icon: Phone, filled: !!crmData.phone },
-    { label: "Service", value: crmData.service, icon: MapPin, filled: !!crmData.service },
-    { label: "Intent", value: crmData.intent, icon: MessageCircle, filled: !!crmData.intent },
+    { label: "Name", value: crmData.name, icon: "person", filled: !!crmData.name },
+    { label: "Phone", value: crmData.phone, icon: "phone", filled: !!crmData.phone },
+    { label: "Service", value: crmData.service, icon: "location_on", filled: !!crmData.service },
+    { label: "Intent", value: crmData.intent, icon: "chat_bubble", filled: !!crmData.intent },
   ];
 
   return (
@@ -634,8 +626,8 @@ function CRMPanel({ crmData }: CRMPanelProps) {
       {/* Header */}
       <div className="px-4 sm:px-6 py-3 sm:py-4 border-b border-white/10 bg-gradient-to-r from-cyan-500/10 to-primary/10">
         <div className="flex items-center gap-2 sm:gap-3">
-          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-cyan-500/20 to-primary/20 border border-cyan-500/30 flex items-center justify-center">
-            <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400" />
+          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-cyan-500/20 to-primary/20 border border-cyan-500/30 flex items-center justify-center text-base sm:text-lg">
+            <MaterialIcon name="check_circle" className="text-cyan-400" />
           </div>
           <div>
             <h3 className="text-white font-semibold text-sm sm:text-base">Lead Data</h3>
@@ -662,7 +654,7 @@ function CRMPanel({ crmData }: CRMPanelProps) {
               Lead Score
             </span>
             <div className="flex items-center gap-1">
-              <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
+              <span className="material-icons text-base text-yellow-400" style={{ WebkitTextFillColor: '#facc15' }}>star</span>
               <AnimatePresence mode="wait">
                 <motion.span
                   key={crmData.leadScore}
@@ -689,12 +681,12 @@ function CRMPanel({ crmData }: CRMPanelProps) {
 
         {/* Integration Badges */}
         <div className="pt-4 flex items-center justify-center gap-4 text-slate-500 text-xs">
-          <span className="flex items-center gap-1">
-            <Clock className="w-3 h-3 text-cyan-500/50" />
+          <span className="flex items-center gap-1 text-xs">
+            <span className="material-icons text-xs text-cyan-500/50">schedule</span>
             Real-time
           </span>
-          <span className="flex items-center gap-1">
-            <CheckCircle2 className="w-3 h-3 text-cyan-500/50" />
+          <span className="flex items-center gap-1 text-xs">
+            <span className="material-icons text-xs text-cyan-500/50">check_circle</span>
             Auto-saved
           </span>
         </div>
@@ -711,14 +703,14 @@ interface CRMFieldComponentProps {
   field: {
     label: string;
     value: string;
-    icon: React.ComponentType<{ className?: string }>;
+    icon: string;
     filled: boolean;
   };
   index: number;
 }
 
 function CRMField({ field, index }: CRMFieldComponentProps) {
-  const Icon = field.icon;
+  const iconName = field.icon;
 
   return (
     <motion.div
@@ -736,12 +728,12 @@ function CRMField({ field, index }: CRMFieldComponentProps) {
     >
       {/* Label */}
       <div className="flex items-center gap-1.5 sm:gap-2 mb-1.5 sm:mb-2">
-        <Icon
+        <span
           className={`
-            w-3.5 h-3.5 sm:w-4 sm:h-4 transition-colors duration-300
+            material-icons text-sm sm:text-base transition-colors duration-300
             ${field.filled ? "text-cyan-400" : "text-white/30"}
           `}
-        />
+        >{iconName}</span>
         <span
           className={`
             text-xs font-bold uppercase tracking-wider transition-colors duration-300
@@ -811,9 +803,9 @@ function CRMField({ field, index }: CRMFieldComponentProps) {
                 initial={{ scale: 0, rotate: -180 }}
                 animate={{ scale: 1, rotate: 0 }}
                 transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
-                className="relative z-10"
+                className="relative z-10 text-base"
               >
-                <CheckCircle2 className="w-4 h-4 text-cyan-400" />
+                <span className="material-icons text-cyan-400">check_circle</span>
               </motion.div>
             </motion.div>
           )}

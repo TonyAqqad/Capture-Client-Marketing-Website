@@ -5,18 +5,11 @@ import { motion } from "framer-motion";
 import AudioWaveform from "@/components/AudioWaveform";
 import CRMCard from "@/components/CRMCard";
 import GrowthDashboard from "@/components/GrowthDashboard";
-import {
-  Phone,
-  Calendar,
-  FormInput,
-  Zap,
-  Target,
-  ThumbsUp,
-  Inbox,
-  ArrowRight,
-  Sparkles,
-  CheckCircle2
-} from "lucide-react";
+
+// Material Icon component for consistency (replaces Lucide React for bundle savings)
+const MaterialIcon = ({ name, className = "" }: { name: string; className?: string }) => (
+  <span className={`material-icons ${className}`} style={{ fontSize: 'inherit' }}>{name}</span>
+);
 
 export default function FeaturesPageClient() {
   return (
@@ -90,7 +83,7 @@ export default function FeaturesPageClient() {
                 >
                   <span className="relative z-10 flex items-center gap-2">
                     Start Free Trial
-                    <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
+                    <span className="material-icons text-xl sm:text-2xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
                   </span>
                   <motion.div
                     className="absolute inset-0 bg-white"
@@ -105,7 +98,7 @@ export default function FeaturesPageClient() {
                   className="flex items-center gap-3 sm:gap-4 text-white/80 hover:text-white group min-h-[56px] p-2"
                 >
                   <span className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-white/20 flex items-center justify-center group-hover:border-[#00C9FF] group-hover:bg-[#00C9FF]/10 transition-all flex-shrink-0">
-                    <Phone className="w-6 h-6 sm:w-7 sm:h-7" />
+                    <span className="material-icons text-2xl sm:text-3xl">phone</span>
                   </span>
                   <span className="text-sm sm:text-base">
                     <span className="block font-bold text-base sm:text-lg">(865) 346-3339</span>
@@ -182,7 +175,7 @@ export default function FeaturesPageClient() {
                     transition={{ delay: i * 0.1 }}
                     className="flex items-start gap-3 min-h-[44px]"
                   >
-                    <CheckCircle2 className="w-6 h-6 sm:w-7 sm:h-7 text-[#00C9FF] flex-shrink-0 mt-1" />
+                    <span className="material-icons text-2xl sm:text-3xl text-[#00C9FF] flex-shrink-0 mt-1">check_circle</span>
                     <span className="text-white/80 text-sm sm:text-base leading-relaxed">{feature}</span>
                   </motion.div>
                 ))}
@@ -273,7 +266,7 @@ export default function FeaturesPageClient() {
                     transition={{ delay: i * 0.1 }}
                     className="flex items-start gap-3 min-h-[44px]"
                   >
-                    <CheckCircle2 className="w-6 h-6 sm:w-7 sm:h-7 text-[#4A69E2] flex-shrink-0 mt-1" />
+                    <span className="material-icons text-2xl sm:text-3xl text-[#4A69E2] flex-shrink-0 mt-1">check_circle</span>
                     <span className="text-white/80 text-sm sm:text-base leading-relaxed">{feature}</span>
                   </motion.div>
                 ))}
@@ -320,7 +313,7 @@ export default function FeaturesPageClient() {
                     transition={{ delay: i * 0.1 }}
                     className="flex items-start gap-3 min-h-[44px]"
                   >
-                    <CheckCircle2 className="w-6 h-6 sm:w-7 sm:h-7 text-[#00C9FF] flex-shrink-0 mt-1" />
+                    <span className="material-icons text-2xl sm:text-3xl text-[#00C9FF] flex-shrink-0 mt-1">check_circle</span>
                     <span className="text-white/80 text-sm sm:text-base leading-relaxed">{feature}</span>
                   </motion.div>
                 ))}
@@ -388,7 +381,7 @@ export default function FeaturesPageClient() {
               viewport={{ once: true }}
               className="inline-flex items-center gap-2 sm:gap-3 mb-4 sm:mb-6"
             >
-              <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-[#00C9FF]" />
+              <span className="material-icons text-base sm:text-lg text-[#00C9FF]">auto_awesome</span>
               <span className="text-[#00C9FF] text-xs sm:text-sm font-bold tracking-[0.15em] sm:tracking-[0.2em] uppercase">
                 Power Features
               </span>
@@ -406,7 +399,7 @@ export default function FeaturesPageClient() {
             {/* Google Ads - Base position */}
             <div className="md:mt-0">
               <SecondaryFeatureCard
-                icon={<Target className="w-10 h-10" />}
+                icon={<span className="material-icons text-4xl">track_changes</span>}
                 title="Google Ads"
                 description="Professional campaign management with conversion tracking and optimization for maximum ROI."
                 color="cyan"
@@ -418,7 +411,7 @@ export default function FeaturesPageClient() {
             {/* Facebook Ads - Offset down */}
             <div className="md:mt-12">
               <SecondaryFeatureCard
-                icon={<ThumbsUp className="w-10 h-10" />}
+                icon={<span className="material-icons text-4xl">thumb_up</span>}
                 title="Facebook Ads"
                 description="Targeted social advertising that generates qualified leads from your ideal customers."
                 color="blue"
@@ -430,7 +423,7 @@ export default function FeaturesPageClient() {
             {/* Unified Inbox - Offset medium */}
             <div className="md:mt-6">
               <SecondaryFeatureCard
-                icon={<Inbox className="w-10 h-10" />}
+                icon={<span className="material-icons text-4xl">inbox</span>}
                 title="Unified Inbox"
                 description="All communications in one place—calls, texts, emails, forms. Never miss a message."
                 color="cyan"
@@ -447,17 +440,17 @@ export default function FeaturesPageClient() {
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16">
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             <SupportingFeature
-              icon={<Calendar className="w-6 h-6" />}
+              icon={<span className="material-icons text-2xl">calendar_today</span>}
               title="Smart Scheduling"
               description="Automated booking with reminders"
             />
             <SupportingFeature
-              icon={<FormInput className="w-6 h-6" />}
+              icon={<span className="material-icons text-2xl">article</span>}
               title="Lead Forms"
               description="Custom forms with CRM integration"
             />
             <SupportingFeature
-              icon={<Zap className="w-6 h-6" />}
+              icon={<span className="material-icons text-2xl">bolt</span>}
               title="Automation"
               description="Trigger-based workflows"
             />
@@ -607,7 +600,7 @@ export default function FeaturesPageClient() {
 
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     Book a Demo
-                    <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
+                    <span className="material-icons text-xl sm:text-2xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
                   </span>
                 </Link>
               </motion.div>
@@ -728,7 +721,7 @@ function SecondaryFeatureCard({ icon, title, description, color, delay, number }
         {/* Animated arrow link - touch-friendly */}
         <div className={`inline-flex items-center gap-2 mt-2 sm:mt-4 ${colors.icon} font-medium group-hover:gap-4 transition-all min-h-[44px]`}>
           Learn more
-          <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+          <span className="material-icons text-base sm:text-lg">arrow_forward</span>
         </div>
 
         {/* Bottom edge highlight */}
