@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import LeadRescueSimulator from "@/components/LeadRescueSimulator";
-import InteractiveAIDemo from "@/components/features/InteractiveAIDemo";
+import dynamic from "next/dynamic";
 import AIVoiceVisual from "@/components/AIVoiceVisual";
 import GrowthDashboard from "@/components/GrowthDashboard";
 import PricingCards from "@/components/PricingCards";
@@ -24,6 +23,29 @@ import { PremiumStats } from "@/components/sections/PremiumStats";
 import { CaseStudiesPreview } from "@/components/sections/CaseStudiesPreview";
 import { PremiumFAQ } from "@/components/sections/PremiumFAQ";
 import { PremiumFinalCTA } from "@/components/sections/PremiumFinalCTA";
+
+// Dynamic imports for heavy components to reduce initial bundle size
+const LeadRescueSimulator = dynamic(
+  () => import("@/components/LeadRescueSimulator"),
+  {
+    loading: () => (
+      <div className="animate-pulse bg-surface/50 rounded-xl h-96 flex items-center justify-center">
+        <div className="w-16 h-16 border-4 border-accent/30 border-t-accent rounded-full animate-spin" />
+      </div>
+    ),
+  }
+);
+
+const InteractiveAIDemo = dynamic(
+  () => import("@/components/features/InteractiveAIDemo"),
+  {
+    loading: () => (
+      <div className="animate-pulse bg-surface/50 rounded-xl h-96 flex items-center justify-center">
+        <div className="w-16 h-16 border-4 border-primary/30 border-t-primary rounded-full animate-spin" />
+      </div>
+    ),
+  }
+);
 
 // SEO Metadata for Homepage
 export const metadata: Metadata = {

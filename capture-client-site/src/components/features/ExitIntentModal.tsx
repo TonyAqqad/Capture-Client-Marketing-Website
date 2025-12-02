@@ -80,8 +80,7 @@ export default function ExitIntentModal() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
             onClick={closeModal}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
-            style={{ margin: 0, padding: '1rem' }}
+            className="fixed inset-0 bg-black/80 md:backdrop-blur-sm z-50 flex items-center justify-center p-4"
           >
             {/* Modal */}
             <motion.div

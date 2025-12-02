@@ -10,16 +10,24 @@ export default function StickyPhoneCTA() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
+    let ticking = false;
+
     const handleScroll = () => {
-      // Show after scrolling 800px
-      if (window.scrollY > 800) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          // Show after scrolling 800px
+          if (window.scrollY > 800) {
+            setIsVisible(true);
+          } else {
+            setIsVisible(false);
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 

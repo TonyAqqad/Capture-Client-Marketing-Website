@@ -156,9 +156,14 @@ export default function InteractiveAIDemo() {
   }, [businessType]);
 
   // Auto-scroll to bottom on new messages (within container only, not page)
+  // Uses requestAnimationFrame to prevent layout thrashing on mobile
   useEffect(() => {
     if (messagesContainerRef.current) {
-      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+      requestAnimationFrame(() => {
+        if (messagesContainerRef.current) {
+          messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+        }
+      });
     }
   }, [messages]);
 

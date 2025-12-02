@@ -38,8 +38,12 @@
     background: linear-gradient(135deg, #00c9ff 0%, #4a69e2 100%);
     background-size: 200% 200%;
     animation: gradientShift 8s ease infinite;
-    will-change: transform;
     transform: translateZ(0);
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus {
+    will-change: transform;
   }
 
   .btn-secondary {
@@ -62,8 +66,12 @@
            backdrop-blur-lg transition-all duration-500
            hover:border-primary/30 hover:shadow-card-hover hover:-translate-y-1
            active:scale-[0.99];
-    will-change: transform;
     transform: translateZ(0);
+  }
+
+  .card:hover,
+  .card:focus-within {
+    will-change: transform;
   }
 
   .card-glow {
@@ -206,8 +214,14 @@
     border: 1px solid rgba(74, 105, 226, 0.2);
     border-radius: 50%;
     animation: orbit 20s linear infinite;
-    will-change: transform;
     transform: translateZ(0);
+  }
+
+  /* Only hint will-change during animation for performance */
+  @media (prefers-reduced-motion: no-preference) and (min-width: 769px) {
+    .orbital-ring {
+      will-change: transform;
+    }
   }
 
   .orbital-ring::before {
@@ -247,8 +261,14 @@
     background: rgba(0, 201, 255, 0.5);
     border-radius: 50%;
     animation: float 10s ease-in-out infinite;
-    will-change: transform;
     transform: translateZ(0);
+  }
+
+  /* Only hint will-change during animation for performance */
+  @media (prefers-reduced-motion: no-preference) and (min-width: 769px) {
+    .particle {
+      will-change: transform;
+    }
   }
 
   @keyframes float {

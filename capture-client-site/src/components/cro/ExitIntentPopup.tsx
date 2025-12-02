@@ -53,7 +53,7 @@ export default function ExitIntentPopup() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-background-dark/90 backdrop-blur-sm z-[100] flex items-center justify-center p-4 sm:p-6"
+            className="fixed inset-0 bg-background-dark/90 md:backdrop-blur-sm z-[100] flex items-center justify-center p-4 sm:p-6"
             onClick={handleClose}
           >
             {/* Popup */}

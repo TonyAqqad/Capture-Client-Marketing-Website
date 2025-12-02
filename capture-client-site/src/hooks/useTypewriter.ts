@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 // ============================================================================
 // TYPE DEFINITIONS
@@ -64,7 +64,7 @@ export function useTypewriter({
   // RESET FUNCTION
   // ============================================================================
 
-  const reset = () => {
+  const reset = useCallback(() => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
@@ -72,7 +72,7 @@ export function useTypewriter({
     setDisplayText('');
     setCurrentIndex(0);
     setIsComplete(false);
-  };
+  }, []);
 
   // ============================================================================
   // MAIN TYPEWRITER EFFECT
@@ -148,7 +148,7 @@ export function useTypewriter({
 
   useEffect(() => {
     reset();
-  }, [text]);
+  }, [text, reset]);
 
   // ============================================================================
   // CLEANUP ON UNMOUNT
@@ -173,61 +173,5 @@ export function useTypewriter({
     isComplete,
     progress,
     reset,
-  };
-}
-
-// ============================================================================
-// UTILITY: useMultipleTypewriters
-// For managing multiple typewriter instances with sequential activation
-// ============================================================================
-
-export interface MultiTypewriterLine {
-  text: string;
-  speed?: number;
-  delay?: number;
-}
-
-export function useMultipleTypewriters(
-  lines: MultiTypewriterLine[],
-  isActive: boolean,
-  sequentialDelay: number = 0 // Delay between lines
-) {
-  const [activeLineIndex, setActiveLineIndex] = useState(0);
-  const [allComplete, setAllComplete] = useState(false);
-
-  // Reset when isActive changes to true
-  useEffect(() => {
-    if (isActive) {
-      setActiveLineIndex(0);
-      setAllComplete(false);
-    }
-  }, [isActive]);
-
-  // Create typewriter results for all lines
-  const results = lines.map((line, index) => {
-    const isLineActive = isActive && index === activeLineIndex;
-
-    return useTypewriter({
-      text: line.text,
-      isActive: isLineActive,
-      speed: line.speed,
-      delay: line.delay,
-      onComplete: () => {
-        // Move to next line after sequential delay
-        if (index < lines.length - 1) {
-          setTimeout(() => {
-            setActiveLineIndex(index + 1);
-          }, sequentialDelay);
-        } else {
-          setAllComplete(true);
-        }
-      },
-    });
-  });
-
-  return {
-    results,
-    allComplete,
-    currentLineIndex: activeLineIndex,
   };
 }

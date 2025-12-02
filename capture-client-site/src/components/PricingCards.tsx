@@ -129,8 +129,8 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
       onMouseLeave={handleMouseLeave}
       onMouseEnter={handleMouseEnter}
       style={{
-        transformStyle: 'preserve-3d',
-        perspective: '1000px',
+        transformStyle: isMobile ? 'flat' : 'preserve-3d',
+        perspective: isMobile ? 'none' : '1000px',
       }}
       className={`${plan.isPopular ? 'lg:-mt-6 lg:mb-6' : ''}`}
     >

@@ -31,7 +31,7 @@ export default function Footer() {
 
                 <div className="relative w-8 h-8 flex-shrink-0">
                   <Image
-                    src="/logo-icon.svg"
+                    src="/favicon.svg"
                     alt="Capture Client Logo"
                     fill
                     sizes="32px"
