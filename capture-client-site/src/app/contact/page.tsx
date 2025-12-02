@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://captureclient.net/#localbusiness",
+  "@id": "https://captureclientai.net/#localbusiness",
   name: "Capture Client",
-  image: "https://captureclient.net/logo-full.png",
+  image: "https://captureclientai.net/logo-full.png",
   telephone: "+1-865-346-3339",
-  email: "team@captureclient.net",
-  url: "https://captureclient.net",
+  email: "team@captureclientai.net",
+  url: "https://captureclientai.net",
   address: {
     "@type": "PostalAddress",
     streetAddress: "",
@@ -99,19 +99,19 @@ const localBusinessSchema = {
 const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  "@id": "https://captureclient.net/contact/#webpage",
-  url: "https://captureclient.net/contact",
+  "@id": "https://captureclientai.net/contact/#webpage",
+  url: "https://captureclientai.net/contact",
   name: "Contact Us | Get Your Free Consultation | Capture Client",
   description:
     "Contact Capture Client for Voice AI, Google Ads, and Facebook Ads services. Call (865) 346-3339 or fill out our form for a free consultation.",
   isPartOf: {
-    "@id": "https://captureclient.net/#website",
+    "@id": "https://captureclientai.net/#website",
   },
   about: {
-    "@id": "https://captureclient.net/#organization",
+    "@id": "https://captureclientai.net/#organization",
   },
   mainEntity: {
-    "@id": "https://captureclient.net/#localbusiness",
+    "@id": "https://captureclientai.net/#localbusiness",
   },
   datePublished: "2023-01-01",
   dateModified: new Date().toISOString().split("T")[0],
@@ -122,15 +122,15 @@ const contactPageSchema = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://captureclient.net/#organization",
+  "@id": "https://captureclientai.net/#organization",
   name: "Capture Client",
-  url: "https://captureclient.net",
-  logo: "https://captureclient.net/logo-full.png",
+  url: "https://captureclientai.net",
+  logo: "https://captureclientai.net/logo-full.png",
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+1-865-346-3339",
     contactType: "sales",
-    email: "team@captureclient.net",
+    email: "team@captureclientai.net",
     areaServed: "US",
     availableLanguage: ["English"],
     contactOption: ["TollFree"],

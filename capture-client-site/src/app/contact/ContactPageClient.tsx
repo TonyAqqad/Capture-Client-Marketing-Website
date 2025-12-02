@@ -125,7 +125,7 @@ export default function ContactPageClient() {
 
                 {/* Email Card */}
                 <div className="group relative overflow-hidden w-full">
-                  <a href="mailto:team@captureclient.net" className="relative glass rounded-xl p-5 sm:p-6 border border-white/10 hover:border-primary/30 transition-all duration-300 block min-h-[80px] active:scale-[0.98]">
+                  <a href="mailto:team@captureclientai.net" className="relative glass rounded-xl p-5 sm:p-6 border border-white/10 hover:border-primary/30 transition-all duration-300 block min-h-[80px] active:scale-[0.98]">
                     <div className="flex items-start gap-3 sm:gap-4">
                       <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-full flex items-center justify-center border border-primary/30 flex-shrink-0">
                         <span className="material-icons text-primary text-2xl sm:text-3xl">email</span>
@@ -136,7 +136,7 @@ export default function ContactPageClient() {
                           Email Us
                         </h3>
                         <span className="text-base sm:text-lg lg:text-xl font-bold text-white group-hover:text-primary transition-colors duration-300 block mb-1 break-words">
-                          team@captureclient.net
+                          team@captureclientai.net
                         </span>
                         <p className="text-xs sm:text-sm text-white/50">
                           24-hour response time

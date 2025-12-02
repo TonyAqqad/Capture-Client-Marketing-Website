@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     title: "Marketing Services for Small Business | Never Miss a Lead",
     description:
       "Voice AI agents that answer every call, Google Ads & Facebook Ads that generate qualified leads. Trusted by 500+ small businesses. Book your free consultation today.",
-    url: "https://captureclient.net/services",
+    url: "https://captureclientai.net/services",
     type: "website",
     images: [
       {
-        url: "https://captureclient.net/og-image.jpg",
+        url: "https://captureclientai.net/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Capture Client Marketing Services"
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       "24/7 AI voice agents, professional Google Ads & Facebook Ads management. Trusted by 500+ businesses.",
   },
   alternates: {
-    canonical: "https://captureclient.net/services",
+    canonical: "https://captureclientai.net/services",
   },
 };
 

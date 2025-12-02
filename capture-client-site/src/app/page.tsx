@@ -72,12 +72,12 @@ export const metadata: Metadata = {
     title: "Capture Client | AI Voice Agents & Lead Generation for Small Business",
     description:
       "Never miss a lead again. AI voice agents answer calls 24/7, qualify leads, and book appointments automatically.",
-    url: "https://captureclient.net",
+    url: "https://captureclientai.net",
     siteName: "Capture Client",
     type: "website",
     images: [
       {
-        url: "https://captureclient.net/og-image.jpg",
+        url: "https://captureclientai.net/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Capture Client - AI Voice Agents for Small Business",
@@ -89,10 +89,10 @@ export const metadata: Metadata = {
     title: "Capture Client | AI Voice Agents & Lead Generation",
     description:
       "Never miss a lead again. AI voice agents answer calls 24/7, qualify leads, and book appointments.",
-    images: ["https://captureclient.net/og-image.jpg"],
+    images: ["https://captureclientai.net/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://captureclient.net",
+    canonical: "https://captureclientai.net",
   },
   robots: {
     index: true,
@@ -112,11 +112,11 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Capture Client",
-  url: "https://captureclient.net",
-  logo: "https://captureclient.net/logo-full.png",
+  url: "https://captureclientai.net",
+  logo: "https://captureclientai.net/logo-full.png",
   description: "AI-powered lead generation and voice agents for small businesses",
   telephone: "+1-865-346-3339",
-  email: "team@captureclient.net",
+  email: "team@captureclientai.net",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Knoxville",
@@ -181,13 +181,13 @@ const organizationSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  url: "https://captureclient.net",
+  url: "https://captureclientai.net",
   name: "Capture Client",
   potentialAction: {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://captureclient.net/search?q={search_term_string}",
+      urlTemplate: "https://captureclientai.net/search?q={search_term_string}",
     },
     "query-input": "required name=search_term_string",
   },

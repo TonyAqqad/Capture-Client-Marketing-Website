@@ -220,7 +220,7 @@ export default function TermsOfServicePage() {
                 <li>Replying &quot;STOP&quot;, &quot;QUIT&quot;, &quot;END&quot;, &quot;CANCEL&quot;, &quot;UNSUBSCRIBE&quot;, or &quot;OPT OUT&quot; to any text message</li>
                 <li>Saying &quot;stop&quot;, &quot;opt out&quot;, or &quot;do not call&quot; during an AI voice call</li>
                 <li>Calling (865) 346-3339 and requesting to be added to our Do Not Call list</li>
-                <li>Emailing team@captureclient.net with &quot;OPT OUT&quot; in the subject line</li>
+                <li>Emailing team@captureclientai.net with &quot;OPT OUT&quot; in the subject line</li>
               </ul>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-4">
                 <strong>Processing Time:</strong> We will honor opt-out requests within 10 business days as required by FCC rules effective April 11, 2025.
@@ -468,7 +468,7 @@ export default function TermsOfServicePage() {
               </p>
               <div className="bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
                 <p className="text-gray-900 dark:text-white font-semibold mb-2">Capture Client</p>
-                <p className="text-gray-600 dark:text-gray-400">Email: team@captureclient.net</p>
+                <p className="text-gray-600 dark:text-gray-400">Email: team@captureclientai.net</p>
                 <p className="text-gray-600 dark:text-gray-400">Phone: (865) 346-3339</p>
                 <p className="text-gray-600 dark:text-gray-400">Address: Knoxville, TN</p>
               </div>

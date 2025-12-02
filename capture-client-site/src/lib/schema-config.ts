@@ -13,14 +13,14 @@
  */
 
 // Base URL for the website
-export const SITE_URL = "https://captureclient.net";
+export const SITE_URL = "https://captureclientai.net";
 
 // Business Information
 export const BUSINESS_INFO = {
   name: "Capture Client",
   legalName: "Capture Client LLC",
   telephone: "+1-865-346-3339",
-  email: "team@captureclient.net",
+  email: "team@captureclientai.net",
   foundingDate: "2023",
   priceRange: "$$",
   address: {

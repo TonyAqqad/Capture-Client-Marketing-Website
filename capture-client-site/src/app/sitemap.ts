@@ -15,7 +15,7 @@ import { getAllServices, getAllLocations, getAllNationalPages, getAllPackages } 
  * - Next.js Sitemap API: https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap
  */
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://captureclient.net";
+  const baseUrl = "https://captureclientai.net";
   const currentDate = new Date();
 
   // Fetch all dynamic content

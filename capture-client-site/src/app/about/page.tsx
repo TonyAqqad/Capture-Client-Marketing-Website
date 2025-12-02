@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://captureclient.net/#organization",
+  "@id": "https://captureclientai.net/#organization",
   name: "Capture Client",
-  url: "https://captureclient.net",
+  url: "https://captureclientai.net",
   logo: {
     "@type": "ImageObject",
-    url: "https://captureclient.net/logo-full.png",
+    url: "https://captureclientai.net/logo-full.png",
     width: 512,
     height: 512,
   },
@@ -24,7 +24,7 @@ const organizationSchema = {
     "AI-powered marketing automation platform helping small businesses capture more leads with voice AI agents, Google Ads, and Facebook Ads management.",
   foundingDate: "2023",
   telephone: "+1-865-346-3339",
-  email: "team@captureclient.net",
+  email: "team@captureclientai.net",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Knoxville",
@@ -60,23 +60,23 @@ const organizationSchema = {
 const aboutPageSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  "@id": "https://captureclient.net/about/#webpage",
-  url: "https://captureclient.net/about",
+  "@id": "https://captureclientai.net/about/#webpage",
+  url: "https://captureclientai.net/about",
   name: "About Capture Client | Voice AI & Marketing Automation",
   description:
     "Learn about Capture Client, the marketing automation platform helping small businesses capture more leads with AI voice agents and paid advertising.",
   isPartOf: {
-    "@id": "https://captureclient.net/#website",
+    "@id": "https://captureclientai.net/#website",
   },
   about: {
-    "@id": "https://captureclient.net/#organization",
+    "@id": "https://captureclientai.net/#organization",
   },
   mainEntity: {
-    "@id": "https://captureclient.net/#organization",
+    "@id": "https://captureclientai.net/#organization",
   },
   primaryImageOfPage: {
     "@type": "ImageObject",
-    url: "https://captureclient.net/logo-full.png",
+    url: "https://captureclientai.net/logo-full.png",
   },
   datePublished: "2023-01-01",
   dateModified: new Date().toISOString().split("T")[0],
@@ -87,19 +87,19 @@ const aboutPageSchema = {
 const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "@id": "https://captureclient.net/#website",
-  url: "https://captureclient.net",
+  "@id": "https://captureclientai.net/#website",
+  url: "https://captureclientai.net",
   name: "Capture Client",
   description:
     "AI-powered marketing automation platform for small businesses",
   publisher: {
-    "@id": "https://captureclient.net/#organization",
+    "@id": "https://captureclientai.net/#organization",
   },
   potentialAction: {
     "@type": "SearchAction",
     target: {
       "@type": "EntryPoint",
-      urlTemplate: "https://captureclient.net/search?q={search_term_string}",
+      urlTemplate: "https://captureclientai.net/search?q={search_term_string}",
     },
     "query-input": "required name=search_term_string",
   },

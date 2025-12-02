@@ -64,7 +64,7 @@ export default function Footer() {
                 </a>
 
                 <a
-                  href="mailto:team@captureclient.net"
+                  href="mailto:team@captureclientai.net"
                   className="flex items-center gap-3 group min-h-[48px] -mx-2 px-2 rounded-lg hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300 active:scale-95 relative overflow-hidden"
                   onClick={() => trackEmailClick("footer")}
                 >
@@ -73,7 +73,7 @@ export default function Footer() {
 
                   <span className="material-icons text-[#4A69E2] group-hover:text-[#00C9FF] text-xl transition-colors duration-300 relative z-10">email</span>
                   <span className="text-[#94A3B8] group-hover:text-[#00C9FF] font-body text-base sm:text-sm transition-colors duration-300 break-all relative z-10">
-                    team@captureclient.net
+                    team@captureclientai.net
                   </span>
                 </a>
 

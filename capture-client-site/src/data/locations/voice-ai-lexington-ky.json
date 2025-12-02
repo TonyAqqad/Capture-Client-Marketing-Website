@@ -185,8 +185,8 @@
       "action": "tel:865-346-3339"
     },
     "cta_secondary": {
-      "text": "Email team@captureclient.net",
-      "action": "mailto:team@captureclient.net"
+      "text": "Email team@captureclientai.net",
+      "action": "mailto:team@captureclientai.net"
     }
   },
   "images": [

@@ -253,7 +253,7 @@ export default function PrivacyPolicyPage() {
                 <li>Private right of action to sue for BIPA violations</li>
               </ul>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-4">
-                To exercise voiceprint rights: Email team@captureclient.net with subject &quot;BIPA Voiceprint Request&quot; or call (865) 346-3339.
+                To exercise voiceprint rights: Email team@captureclientai.net with subject &quot;BIPA Voiceprint Request&quot; or call (865) 346-3339.
               </p>
             </div>
 
@@ -311,7 +311,7 @@ export default function PrivacyPolicyPage() {
                 <li><strong>Text:</strong> Reply STOP, QUIT, END, CANCEL, UNSUBSCRIBE, or OPT OUT to any message</li>
                 <li><strong>Voice:</strong> Say &quot;stop,&quot; &quot;opt out,&quot; or &quot;do not call&quot; during an AI call</li>
                 <li><strong>Phone:</strong> Call (865) 346-3339 to request removal</li>
-                <li><strong>Email:</strong> Email team@captureclient.net with your opt-out request</li>
+                <li><strong>Email:</strong> Email team@captureclientai.net with your opt-out request</li>
               </ul>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed mt-4">
                 We will honor opt-out requests within 10 business days. You will receive one confirmation message after opting out.
@@ -324,7 +324,7 @@ export default function PrivacyPolicyPage() {
                 Submit privacy requests via:
               </p>
               <ul className="list-disc list-inside space-y-2 sm:space-y-3 text-sm sm:text-base text-gray-600 dark:text-gray-400" style={{lineHeight: '1.8', paddingLeft: '0.5rem'}}>
-                <li><strong>Email:</strong> team@captureclient.net (Subject: &quot;Privacy Request - [Type]&quot;)</li>
+                <li><strong>Email:</strong> team@captureclientai.net (Subject: &quot;Privacy Request - [Type]&quot;)</li>
                 <li><strong>Phone:</strong> (865) 346-3339 (Ask for Privacy Officer)</li>
                 <li><strong>Mail:</strong> Capture Client, Attn: Privacy Officer, Knoxville, TN</li>
               </ul>
@@ -398,7 +398,7 @@ export default function PrivacyPolicyPage() {
               </p>
               <div className="bg-gray-50 dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700 rounded-lg p-6">
                 <p className="text-gray-900 dark:text-white font-semibold mb-2">Capture Client</p>
-                <p className="text-gray-600 dark:text-gray-400">Email: team@captureclient.net</p>
+                <p className="text-gray-600 dark:text-gray-400">Email: team@captureclientai.net</p>
                 <p className="text-gray-600 dark:text-gray-400">Phone: (865) 346-3339</p>
                 <p className="text-gray-600 dark:text-gray-400">Address: Knoxville, TN</p>
               </div>
