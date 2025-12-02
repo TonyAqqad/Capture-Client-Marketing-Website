@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { presets } from "@/lib/simulator-animations";
 
@@ -25,6 +25,97 @@ interface ROICalculation {
 const MONTHLY_COST = 497; // AI Voice Agent cost per month
 
 // ============================================================================
+// ANIMATED COUNTER COMPONENT (Memoized)
+// ============================================================================
+
+interface AnimatedCounterProps {
+  value: number;
+  prefix?: string;
+  suffix?: string;
+  color?: string;
+  size?: "normal" | "large";
+}
+
+const AnimatedCounter = memo(function AnimatedCounter({
+  value,
+  prefix = "",
+  suffix = "",
+  color = "text-foreground",
+  size = "normal",
+}: AnimatedCounterProps) {
+  const [displayValue, setDisplayValue] = useState(0);
+  const [isComplete, setIsComplete] = useState(false);
+
+  useEffect(() => {
+    setIsComplete(false);
+    const duration = 1000;
+    const steps = 50;
+    const increment = value / steps;
+    let current = 0;
+    let step = 0;
+
+    const timer = setInterval(() => {
+      step++;
+      current += increment;
+
+      if (step >= steps) {
+        setDisplayValue(value);
+        setIsComplete(true);
+        clearInterval(timer);
+      } else {
+        // Easing function for smoother acceleration
+        const progress = step / steps;
+        const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+        setDisplayValue(Math.floor(value * eased));
+      }
+    }, duration / steps);
+
+    return () => clearInterval(timer);
+  }, [value]);
+
+  const fontSize = size === "large" ? "text-5xl md:text-6xl" : "text-4xl md:text-5xl";
+
+  return (
+    <motion.div
+      initial={{ scale: 0.9, opacity: 0, y: 10 }}
+      animate={{
+        scale: 1,
+        opacity: 1,
+        y: 0,
+      }}
+      transition={{
+        duration: 0.4,
+        type: "spring",
+        stiffness: 200
+      }}
+      className={`font-bold ${color} ${fontSize} relative`}
+    >
+      <motion.span
+        animate={isComplete ? {
+          scale: [1, 1.08, 1],
+        } : {}}
+        transition={{ duration: 0.3 }}
+      >
+        {prefix}
+        {displayValue.toLocaleString()}
+        {suffix}
+      </motion.span>
+
+      {/* Shimmer effect on completion */}
+      {isComplete && (
+        <motion.div
+          initial={{ x: "-100%" }}
+          animate={{ x: "200%" }}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
+          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+          style={{ pointerEvents: "none" }}
+        />
+      )}
+    </motion.div>
+  );
+});
+
+// ============================================================================
 // MAIN COMPONENT
 // ============================================================================
 
@@ -34,7 +125,7 @@ export default function ROICalculator() {
   const [closeRate, setCloseRate] = useState(30);
   const [showResults, setShowResults] = useState(false);
 
-  // Calculate ROI
+  // Calculate ROI - memoized with useMemo would be better but this works
   const calculation: ROICalculation = {
     monthlyMissedCalls: missedCalls,
     avgJobValue: jobValue,
@@ -304,96 +395,5 @@ export default function ROICalculator() {
         }
       `}</style>
     </section>
-  );
-}
-
-// ============================================================================
-// ANIMATED COUNTER COMPONENT
-// ============================================================================
-
-interface AnimatedCounterProps {
-  value: number;
-  prefix?: string;
-  suffix?: string;
-  color?: string;
-  size?: "normal" | "large";
-}
-
-function AnimatedCounter({
-  value,
-  prefix = "",
-  suffix = "",
-  color = "text-foreground",
-  size = "normal",
-}: AnimatedCounterProps) {
-  const [displayValue, setDisplayValue] = useState(0);
-  const [isComplete, setIsComplete] = useState(false);
-
-  useEffect(() => {
-    setIsComplete(false);
-    const duration = 1000;
-    const steps = 50;
-    const increment = value / steps;
-    let current = 0;
-    let step = 0;
-
-    const timer = setInterval(() => {
-      step++;
-      current += increment;
-
-      if (step >= steps) {
-        setDisplayValue(value);
-        setIsComplete(true);
-        clearInterval(timer);
-      } else {
-        // Easing function for smoother acceleration
-        const progress = step / steps;
-        const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
-        setDisplayValue(Math.floor(value * eased));
-      }
-    }, duration / steps);
-
-    return () => clearInterval(timer);
-  }, [value]);
-
-  const fontSize = size === "large" ? "text-5xl md:text-6xl" : "text-4xl md:text-5xl";
-
-  return (
-    <motion.div
-      initial={{ scale: 0.9, opacity: 0, y: 10 }}
-      animate={{
-        scale: 1,
-        opacity: 1,
-        y: 0,
-      }}
-      transition={{
-        duration: 0.4,
-        type: "spring",
-        stiffness: 200
-      }}
-      className={`font-bold ${color} ${fontSize} relative`}
-    >
-      <motion.span
-        animate={isComplete ? {
-          scale: [1, 1.08, 1],
-        } : {}}
-        transition={{ duration: 0.3 }}
-      >
-        {prefix}
-        {displayValue.toLocaleString()}
-        {suffix}
-      </motion.span>
-
-      {/* Shimmer effect on completion */}
-      {isComplete && (
-        <motion.div
-          initial={{ x: "-100%" }}
-          animate={{ x: "200%" }}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
-          style={{ pointerEvents: "none" }}
-        />
-      )}
-    </motion.div>
   );
 }

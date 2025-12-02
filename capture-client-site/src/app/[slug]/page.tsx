@@ -55,6 +55,8 @@ export default async function NationalPage({ params }: { params: Promise<{ slug:
               src={page.hero.hero_image.url}
               alt={page.hero.hero_image.alt}
               fill
+              sizes="100vw"
+              priority
               className="object-cover"
             />
           </div>

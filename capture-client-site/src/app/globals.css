@@ -111,11 +111,10 @@
     min-height: 48px; /* Touch-friendly */
   }
 
-  /* Section container */
+  /* Section container - NO content-visibility to prevent blank sections on mobile */
   .section {
     @apply py-16 sm:py-20 md:py-24 lg:py-32;
-    content-visibility: auto;
-    contain-intrinsic-size: auto 500px;
+    /* NEVER use content-visibility - it causes blank sections on mobile scroll */
   }
 
   .container-custom {
@@ -273,18 +272,27 @@
       radial-gradient(at 80% 80%, rgba(0, 201, 255, 0.08) 0px, transparent 50%);
   }
 
-  /* Scroll-triggered animations */
+  /* Scroll-triggered animations - DISABLED on mobile to prevent blank content */
   .animate-on-scroll {
-    opacity: 0;
-    transform: translateY(20px);
-    transition:
-      opacity 0.6s ease-out,
-      transform 0.6s ease-out;
-  }
-
-  .animate-on-scroll.in-view {
+    /* On mobile: content visible by default */
     opacity: 1;
     transform: translateY(0);
+  }
+
+  /* Only animate on larger screens where IntersectionObserver is reliable */
+  @media (min-width: 768px) {
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(20px);
+      transition:
+        opacity 0.6s ease-out,
+        transform 0.6s ease-out;
+    }
+
+    .animate-on-scroll.in-view {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   /* Stagger animation delays */
@@ -661,4 +669,18 @@
 
 .animate-fade-in {
   animation: fade-in 0.5s ease-out;
+}
+
+/* MOBILE FIX: Force all content to be visible on mobile */
+@media (max-width: 768px) {
+  /* Remove any content-visibility that could hide sections */
+  section, article, div {
+    content-visibility: visible !important;
+    contain-intrinsic-size: auto !important;
+  }
+
+  /* Ensure Framer Motion animations don't hide content on mobile */
+  [style*="opacity: 0"] {
+    opacity: 1 !important;
+  }
 }

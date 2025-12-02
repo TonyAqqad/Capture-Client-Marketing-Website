@@ -187,6 +187,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                 src={location.hero.hero_image.url}
                 alt={location.hero.hero_image.alt}
                 fill
+                sizes="100vw"
                 className="object-cover mix-blend-overlay"
                 priority
               />

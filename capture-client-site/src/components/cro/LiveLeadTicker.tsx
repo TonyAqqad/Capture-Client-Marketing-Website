@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useMobileOptimization } from "@/hooks/useMobileOptimization";
 
 interface Lead {
   id: number;
@@ -12,6 +13,7 @@ interface Lead {
 }
 
 export default function LiveLeadTicker() {
+  const { disableAnimations } = useMobileOptimization();
   const [currentLead, setCurrentLead] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
 
@@ -26,13 +28,16 @@ export default function LiveLeadTicker() {
     { id: 8, business: "Alpine Construction", location: "Brentwood, TN", action: "New client onboarded", time: "25 min ago" },
   ];
 
+  // Disable auto-rotation on mobile for performance
   useEffect(() => {
+    if (disableAnimations) return;
+
     const interval = setInterval(() => {
       setCurrentLead((prev) => (prev + 1) % recentLeads.length);
     }, 4000); // Change every 4 seconds
 
     return () => clearInterval(interval);
-  }, [recentLeads.length]);
+  }, [recentLeads.length, disableAnimations]);
 
   if (!isVisible) return null;
 
@@ -40,18 +45,18 @@ export default function LiveLeadTicker() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
+      initial={disableAnimations ? {} : { opacity: 0, y: 50 }}
+      animate={disableAnimations ? {} : { opacity: 1, y: 0 }}
+      transition={disableAnimations ? { duration: 0 } : { duration: 0.5 }}
       className="fixed bottom-20 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-auto z-40 max-w-sm"
     >
       <AnimatePresence mode="wait">
         <motion.div
           key={lead.id}
-          initial={{ opacity: 0, x: -100, scale: 0.8 }}
-          animate={{ opacity: 1, x: 0, scale: 1 }}
-          exit={{ opacity: 0, x: 100, scale: 0.8 }}
-          transition={{ duration: 0.4 }}
+          initial={disableAnimations ? {} : { opacity: 0, x: -100, scale: 0.8 }}
+          animate={disableAnimations ? {} : { opacity: 1, x: 0, scale: 1 }}
+          exit={disableAnimations ? {} : { opacity: 0, x: 100, scale: 0.8 }}
+          transition={disableAnimations ? { duration: 0 } : { duration: 0.4 }}
           className="relative bg-gradient-to-br from-surface/95 to-surface/80 backdrop-blur-2xl border-2 border-accent/30 rounded-2xl p-3 sm:p-4 shadow-glow-lg w-full"
         >
           {/* Close button */}
@@ -64,10 +69,10 @@ export default function LiveLeadTicker() {
           </button>
 
           <div className="flex items-start gap-2 sm:gap-3">
-            {/* Live indicator */}
+            {/* Live indicator - NO ANIMATION ON MOBILE */}
             <div className="relative flex-shrink-0 mt-1">
               <div className="relative flex h-2.5 w-2.5 sm:h-3 sm:w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                {!disableAnimations && <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>}
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 sm:h-3 sm:w-3 bg-accent shadow-glow"></span>
               </div>
             </div>
@@ -100,22 +105,24 @@ export default function LiveLeadTicker() {
             </div>
           </div>
 
-          {/* Progress bar */}
-          <motion.div
-            className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-accent to-primary rounded-b-2xl"
-            initial={{ width: "0%" }}
-            animate={{ width: "100%" }}
-            transition={{ duration: 4, ease: "linear" }}
-            key={`progress-${lead.id}`}
-          />
+          {/* Progress bar - STATIC ON MOBILE */}
+          {!disableAnimations && (
+            <motion.div
+              className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-accent to-primary rounded-b-2xl"
+              initial={{ width: "0%" }}
+              animate={{ width: "100%" }}
+              transition={{ duration: 4, ease: "linear" }}
+              key={`progress-${lead.id}`}
+            />
+          )}
         </motion.div>
       </AnimatePresence>
 
-      {/* Counter badge */}
+      {/* Counter badge - STATIC ON MOBILE */}
       <motion.div
-        initial={{ scale: 0 }}
-        animate={{ scale: 1 }}
-        transition={{ delay: 0.3, type: "spring" }}
+        initial={disableAnimations ? {} : { scale: 0 }}
+        animate={disableAnimations ? {} : { scale: 1 }}
+        transition={disableAnimations ? { duration: 0 } : { delay: 0.3, type: "spring" }}
         className="absolute -top-3 -right-3 bg-gradient-to-r from-accent to-primary text-white text-xs font-bold px-3 py-1 rounded-full shadow-glow border-2 border-background-dark"
       >
         Live Activity

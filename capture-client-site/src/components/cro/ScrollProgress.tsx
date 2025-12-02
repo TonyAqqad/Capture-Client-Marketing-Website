@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function ScrollProgress() {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const progressRef = useRef(0);
+  const visibilityRef = useRef(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -19,9 +21,19 @@ export default function ScrollProgress() {
           const documentHeight = document.documentElement.scrollHeight - windowHeight;
           const scrolled = window.scrollY;
           const progress = (scrolled / documentHeight) * 100;
+          const visible = scrolled > 300;
 
-          setScrollProgress(progress);
-          setIsVisible(scrolled > 300);
+          // Only update state if values actually changed significantly
+          if (Math.abs(progressRef.current - progress) > 1) {
+            progressRef.current = progress;
+            setScrollProgress(progress);
+          }
+
+          if (visibilityRef.current !== visible) {
+            visibilityRef.current = visible;
+            setIsVisible(visible);
+          }
+
           ticking = false;
         });
         ticking = true;

@@ -35,25 +35,27 @@ export default function Header() {
           {/* Subtle glow on hover */}
           <div className="absolute -inset-2 bg-gradient-to-r from-[#4A69E2]/0 via-[#00C9FF]/10 to-[#4A69E2]/0 rounded-lg opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500" />
 
-          {/* Desktop: Full logo with text */}
+          {/* Desktop: Full logo with text - FIXED: Added sizes prop */}
           <div className="hidden sm:block relative h-12 w-auto">
             <Image
               src="/logo-desktop.svg"
               alt="Capture Client"
               width={220}
               height={48}
+              sizes="(max-width: 640px) 0px, 220px"
               className="h-12 w-auto object-contain transition-all group-hover:brightness-110 group-hover:drop-shadow-[0_0_8px_rgba(0,201,255,0.3)] duration-500"
               priority
             />
           </div>
 
-          {/* Mobile: Icon/compact logo */}
+          {/* Mobile: Icon/compact logo - FIXED: Added sizes prop */}
           <div className="sm:hidden relative h-10 w-auto">
             <Image
               src="/logo-mobile.svg"
               alt="Capture Client"
               width={40}
               height={40}
+              sizes="(min-width: 640px) 0px, 40px"
               className="h-10 w-auto object-contain transition-all group-hover:brightness-110 group-hover:drop-shadow-[0_0_8px_rgba(0,201,255,0.3)] duration-500"
               priority
             />

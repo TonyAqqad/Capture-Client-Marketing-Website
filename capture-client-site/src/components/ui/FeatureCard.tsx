@@ -24,14 +24,14 @@ export function FeatureCard({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 1, y: 0 }} // Changed: visible by default for mobile
       whileInView={{ opacity: 1, y: 0 }}
       transition={{
         duration: 0.5,
         delay: index * 0.1,
         ease: [0.21, 0.47, 0.32, 0.98]
       }}
-      viewport={{ once: true, margin: "-50px" }}
+      viewport={{ once: true, margin: "0px" }} // Changed: removed negative margin
     >
       <GlowCard
         className="group border border-surface-border rounded-2xl backdrop-blur-lg transition-all duration-500 hover:border-primary/40 active:scale-[0.98] shadow-[0_4px_24px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_32px_rgba(0,201,255,0.2)] hover:-translate-y-2"

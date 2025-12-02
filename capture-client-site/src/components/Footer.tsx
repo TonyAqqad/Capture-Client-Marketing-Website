@@ -34,6 +34,7 @@ export default function Footer() {
                     src="/logo-icon.svg"
                     alt="Capture Client Logo"
                     fill
+                    sizes="32px"
                     className="object-contain group-hover:brightness-110 group-hover:drop-shadow-[0_0_8px_rgba(0,201,255,0.3)] transition-all duration-300"
                   />
                 </div>

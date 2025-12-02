@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, memo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // ============================================================================
@@ -63,6 +63,93 @@ function generateRandomLead(): Lead {
 }
 
 // ============================================================================
+// LEAD CARD COMPONENT (Memoized)
+// ============================================================================
+
+interface LeadCardProps {
+  lead: Lead;
+}
+
+const LeadCard = memo(({ lead }: LeadCardProps) => (
+  <motion.div
+    key={lead.id}
+    initial={{ opacity: 0, y: -30, scale: 0.92, rotateX: -10 }}
+    animate={{
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      rotateX: 0
+    }}
+    exit={{
+      opacity: 0,
+      x: 100,
+      scale: 0.9,
+      transition: { duration: 0.3 }
+    }}
+    transition={{
+      duration: 0.5,
+      type: "spring",
+      stiffness: 300,
+      damping: 25
+    }}
+    whileHover={{
+      scale: 1.02,
+      transition: { duration: 0.2 }
+    }}
+    className="card p-5 flex items-center gap-4 group hover:bg-accent/5 transition-colors duration-300 cursor-pointer"
+  >
+    {/* Pulse indicator */}
+    <div className="relative flex-shrink-0">
+      <motion.div
+        animate={{
+          scale: [1, 1.8, 1],
+          opacity: [0.6, 0, 0.6],
+        }}
+        transition={{
+          duration: 2.5,
+          repeat: Infinity,
+          ease: "easeOut"
+        }}
+        className="absolute inset-0 rounded-full bg-accent blur-sm"
+      />
+      <motion.div
+        initial={{ scale: 0, rotate: -180 }}
+        animate={{ scale: 1, rotate: 0 }}
+        transition={{
+          type: "spring",
+          stiffness: 200,
+          damping: 15,
+          delay: 0.2
+        }}
+        className="relative w-10 h-10 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center"
+      >
+        <span className="material-icons text-accent text-lg">person_add</span>
+      </motion.div>
+    </div>
+
+    {/* Lead info */}
+    <div className="flex-1 min-w-0">
+      <p className="text-foreground font-semibold truncate">
+        New lead from <span className="text-accent">{lead.city}</span>
+      </p>
+      <p className="text-foreground-muted text-sm truncate">{lead.service}</p>
+    </div>
+
+    {/* Time */}
+    <div className="flex-shrink-0 text-right">
+      <p className="text-foreground-muted text-xs font-mono">{lead.timeAgo}</p>
+    </div>
+
+    {/* Checkmark icon */}
+    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center">
+      <span className="material-icons text-accent text-sm">check</span>
+    </div>
+  </motion.div>
+));
+
+LeadCard.displayName = 'LeadCard';
+
+// ============================================================================
 // MAIN COMPONENT
 // ============================================================================
 
@@ -76,18 +163,18 @@ export default function LeadTicker() {
     setLeads([generateRandomLead(), generateRandomLead(), generateRandomLead()]);
   }, []);
 
-  // Add new lead every 8-15 seconds
+  // Add new lead every 8-15 seconds - useCallback to prevent recreation
+  const addLead = useCallback(() => {
+    const newLead = generateRandomLead();
+    setLeads((prev) => [newLead, ...prev.slice(0, 4)]); // Keep max 5 leads
+  }, []);
+
   useEffect(() => {
     if (!isClient) return;
 
-    const addLead = () => {
-      const newLead = generateRandomLead();
-      setLeads((prev) => [newLead, ...prev.slice(0, 4)]); // Keep max 5 leads
-    };
-
     const interval = setInterval(addLead, 8000 + Math.random() * 7000);
     return () => clearInterval(interval);
-  }, [isClient]);
+  }, [isClient, addLead]);
 
   return (
     <section className="section bg-background-dark relative overflow-hidden">
@@ -136,80 +223,7 @@ export default function LeadTicker() {
         <div className="max-w-3xl mx-auto space-y-4">
           <AnimatePresence mode="popLayout">
             {leads.map((lead) => (
-              <motion.div
-                key={lead.id}
-                initial={{ opacity: 0, y: -30, scale: 0.92, rotateX: -10 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                  scale: 1,
-                  rotateX: 0
-                }}
-                exit={{
-                  opacity: 0,
-                  x: 100,
-                  scale: 0.9,
-                  transition: { duration: 0.3 }
-                }}
-                transition={{
-                  duration: 0.5,
-                  type: "spring",
-                  stiffness: 300,
-                  damping: 25
-                }}
-                whileHover={{
-                  scale: 1.02,
-                  transition: { duration: 0.2 }
-                }}
-                className="card p-5 flex items-center gap-4 group hover:bg-accent/5 transition-colors duration-300 cursor-pointer"
-              >
-                {/* Pulse indicator */}
-                <div className="relative flex-shrink-0">
-                  <motion.div
-                    animate={{
-                      scale: [1, 1.8, 1],
-                      opacity: [0.6, 0, 0.6],
-                    }}
-                    transition={{
-                      duration: 2.5,
-                      repeat: Infinity,
-                      ease: "easeOut"
-                    }}
-                    className="absolute inset-0 rounded-full bg-accent blur-sm"
-                  />
-                  <motion.div
-                    initial={{ scale: 0, rotate: -180 }}
-                    animate={{ scale: 1, rotate: 0 }}
-                    transition={{
-                      type: "spring",
-                      stiffness: 200,
-                      damping: 15,
-                      delay: 0.2
-                    }}
-                    className="relative w-10 h-10 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center"
-                  >
-                    <span className="material-icons text-accent text-lg">person_add</span>
-                  </motion.div>
-                </div>
-
-                {/* Lead info */}
-                <div className="flex-1 min-w-0">
-                  <p className="text-foreground font-semibold truncate">
-                    New lead from <span className="text-accent">{lead.city}</span>
-                  </p>
-                  <p className="text-foreground-muted text-sm truncate">{lead.service}</p>
-                </div>
-
-                {/* Time */}
-                <div className="flex-shrink-0 text-right">
-                  <p className="text-foreground-muted text-xs font-mono">{lead.timeAgo}</p>
-                </div>
-
-                {/* Checkmark icon */}
-                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center">
-                  <span className="material-icons text-accent text-sm">check</span>
-                </div>
-              </motion.div>
+              <LeadCard key={lead.id} lead={lead} />
             ))}
           </AnimatePresence>
         </div>

@@ -21,12 +21,22 @@ const nextConfig = {
   // Enable compression for all responses
   compress: true,
 
-  // Experimental optimizations for better performance
+  // CRITICAL: Experimental optimizations for better FCP
   experimental: {
     optimizePackageImports: ["lucide-react", "framer-motion"],
+    // Enable optimized font loading
+    optimizeCss: true,
   },
 
-  // Caching headers for static assets
+  // CRITICAL: Compiler optimizations for faster builds and smaller bundles
+  compiler: {
+    // Remove console logs in production for smaller bundle
+    removeConsole: process.env.NODE_ENV === "production" ? {
+      exclude: ["error", "warn"],
+    } : false,
+  },
+
+  // CRITICAL: Caching headers for static assets
   async headers() {
     return [
       {
@@ -42,6 +52,16 @@ const nextConfig = {
       {
         // Cache JS and CSS with immutable flag
         source: "/:all*(js|css)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        // Preload fonts
+        source: "/_next/static/media/(.*)",
         headers: [
           {
             key: "Cache-Control",

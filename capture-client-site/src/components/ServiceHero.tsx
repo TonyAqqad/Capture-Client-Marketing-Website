@@ -164,13 +164,14 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
         />
       </div>
 
-      {/* Hero Image with Overlay */}
+      {/* Hero Image with Overlay - FIXED: Added sizes prop */}
       {hero.hero_image && (
         <div className="absolute inset-0">
           <Image
             src={hero.hero_image.url}
             alt={hero.hero_image.alt}
             fill
+            sizes="100vw"
             className="object-cover opacity-10"
             priority
           />
