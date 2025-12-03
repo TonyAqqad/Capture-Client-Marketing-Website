@@ -187,15 +187,17 @@ export default function AIVoiceVisual() {
           </div>
         </div>
 
-        {/* Status Badge */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={currentStatus}
-            initial={{ opacity: 0, y: -10, scale: 0.9 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 10, scale: 0.9 }}
-            className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-accent/10 border border-accent/30 mb-4 sm:mb-6"
-          >
+        {/* Status Badge - FIXED: Wrapper with fixed height to prevent layout shift */}
+        <div className="h-10 sm:h-11 mb-4 sm:mb-6">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentStatus}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.2 }}
+              className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-accent/10 border border-accent/30"
+            >
             <motion.div
               animate={{
                 scale: [1, 1.2, 1],
@@ -209,10 +211,11 @@ export default function AIVoiceVisual() {
             <span className="text-accent font-semibold text-xs sm:text-sm">{currentStatus}</span>
           </motion.div>
         </AnimatePresence>
+        </div>
 
-        {/* Conversation */}
-        <div className="space-y-3 sm:space-y-4 min-h-[220px] sm:min-h-[280px]">
-          <AnimatePresence mode="sync">
+        {/* Conversation - FIXED: Use fixed height to prevent layout shift/jumping */}
+        <div className="space-y-3 sm:space-y-4 h-[220px] sm:h-[280px] overflow-y-auto overscroll-contain scrollbar-thin scrollbar-thumb-accent/20 scrollbar-track-transparent">
+          <AnimatePresence mode="popLayout">
             {currentScenario.messages.slice(0, currentMessageIndex + 1).map((msg, index) => (
               <motion.div
                 key={`${currentScenarioIndex}-${msg.id}`}
