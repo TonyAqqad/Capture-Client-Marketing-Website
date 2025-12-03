@@ -1,4 +1,131 @@
 /* CRITICAL MOBILE PERFORMANCE OPTIMIZATIONS */
+/* FULL PERFORMANCE MODE - Maximum scrolling smoothness on mobile */
+
+/* =============================================================================
+   PHASE 1: DISABLE ALL BACKDROP-BLUR ON MOBILE
+   Root cause: 188 backdrop-blur instances cause GPU memory thrashing
+   ============================================================================= */
+
+@media (max-width: 768px) {
+  /* NUCLEAR OPTION: Remove ALL backdrop-blur on mobile for smooth scrolling */
+  /* This catches every Tailwind backdrop-blur class */
+  .backdrop-blur-none,
+  .backdrop-blur-sm,
+  .backdrop-blur,
+  .backdrop-blur-md,
+  .backdrop-blur-lg,
+  .backdrop-blur-xl,
+  .backdrop-blur-2xl,
+  .backdrop-blur-3xl,
+  [class*="backdrop-blur"] {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Replace blur with solid semi-transparent backgrounds for visibility */
+  .glass,
+  .glass-premium,
+  .glass-card,
+  .glass-surface {
+    background: rgba(15, 23, 42, 0.95) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Header and fixed elements - solid background instead of blur */
+  header,
+  .fixed-header,
+  nav[class*="fixed"] {
+    background: rgba(15, 23, 42, 0.98) !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
+
+/* =============================================================================
+   PHASE 1: FORCE ALL CONTENT VISIBLE ON MOBILE
+   Root cause: Components with initial={{ opacity: 0 }} stay invisible during fast scroll
+   ============================================================================= */
+
+@media (max-width: 768px) {
+  /* Force all motion/animated elements to be visible immediately */
+  /* This prevents black screen during fast scroll */
+  [style*="opacity: 0"],
+  [style*="opacity:0"] {
+    opacity: 1 !important;
+  }
+
+  /* Force visibility on all sections and containers */
+  section,
+  section > div,
+  main > div,
+  .animate-on-scroll,
+  .fade-in,
+  .slide-up,
+  .slide-in {
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  /* Remove all transforms that could be mid-animation */
+  /* Keep translateZ for GPU acceleration but remove translateY/X delays */
+  .animate-on-scroll {
+    transform: translateZ(0) !important;
+  }
+
+  /* Disable Framer Motion animation delays on mobile */
+  [style*="transform: translateY"],
+  [style*="transform:translateY"] {
+    transform: translateY(0) translateZ(0) !important;
+  }
+}
+
+/* =============================================================================
+   PHASE 1: REDUCE ANIMATION COMPLEXITY
+   ============================================================================= */
+
+@media (max-width: 768px) {
+  /* Disable infinite animations that cause constant repaints */
+  .animate-pulse,
+  .animate-bounce,
+  .animate-spin,
+  .animate-ping,
+  [class*="animate-"] {
+    animation: none !important;
+  }
+
+  /* Exception: Keep essential loading spinners */
+  .loading-spinner {
+    animation: spin 1s linear infinite !important;
+  }
+
+  /* Remove will-change to free GPU memory */
+  * {
+    will-change: auto !important;
+  }
+
+  /* Simplify all transitions to basic opacity/transform */
+  * {
+    transition-property: opacity, transform !important;
+    transition-duration: 0.2s !important;
+    transition-timing-function: ease-out !important;
+  }
+}
+
+/* =============================================================================
+   RESPECT REDUCED MOTION PREFERENCE
+   ============================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 /* iOS Safari Specific Fixes */
 @supports (-webkit-touch-callout: none) {

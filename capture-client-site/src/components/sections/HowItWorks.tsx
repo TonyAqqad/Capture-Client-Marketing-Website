@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "@/hooks/useInView";
 
@@ -67,6 +67,18 @@ const steps: Step[] = [
 export function HowItWorks() {
   const containerRef = useRef<HTMLElement>(null);
   const isInView = useInView(containerRef, { threshold: 0.2 });
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   return (
     <section
@@ -94,9 +106,9 @@ export function HowItWorks() {
         {/* Section header */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6 }}
+            initial={{ opacity: 0, y: isMobile ? 0 : 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: isMobile ? 0 : 30 }}
+            transition={{ duration: isMobile ? 0.3 : 0.6 }}
           >
             <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent mb-3 sm:mb-4">
               Simple Process
@@ -132,6 +144,7 @@ export function HowItWorks() {
                   step={step}
                   index={index}
                   isInView={isInView}
+                  isMobile={isMobile}
                 />
               ))}
             </div>
@@ -146,15 +159,16 @@ export function HowItWorks() {
               step={step}
               index={index}
               isInView={isInView}
+              isMobile={isMobile}
             />
           ))}
         </div>
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 1.2 }}
+          initial={{ opacity: 0, y: isMobile ? 0 : 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: isMobile ? 0 : 30 }}
+          transition={{ duration: isMobile ? 0.3 : 0.6, delay: isMobile ? 0 : 1.2 }}
           className="text-center mt-12 sm:mt-16 lg:mt-20"
         >
           <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-accent/10 border border-accent/20 mb-4 sm:mb-6 max-w-full">
@@ -166,8 +180,8 @@ export function HowItWorks() {
           </p>
           <motion.a
             href="#contact"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+            whileHover={isMobile ? {} : { scale: 1.05 }}
+            whileTap={isMobile ? {} : { scale: 0.95 }}
             className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-accent via-primary to-accent text-white font-bold text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 rounded-2xl shadow-glow-lg hover:shadow-glow border-2 border-transparent hover:border-accent/30 transition-all duration-300 w-full sm:w-auto max-w-md mx-4 sm:mx-0 min-h-[56px]"
           >
             Book Your Strategy Call
@@ -183,31 +197,32 @@ interface StepCardProps {
   step: Step;
   index: number;
   isInView: boolean;
+  isMobile: boolean;
 }
 
-function StepCardDesktop({ step, index, isInView }: StepCardProps) {
+function StepCardDesktop({ step, index, isInView, isMobile }: StepCardProps) {
   const isAccent = step.color === "accent";
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      initial={{ opacity: 0, y: isMobile ? 0 : 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: isMobile ? 0 : 50 }}
       transition={{
-        duration: 0.6,
-        delay: index * 0.2,
-        type: "spring",
+        duration: isMobile ? 0.3 : 0.6,
+        delay: isMobile ? 0 : index * 0.2,
+        type: isMobile ? "tween" : "spring",
         stiffness: 100,
       }}
       className="relative"
     >
       {/* Number badge on timeline */}
       <motion.div
-        initial={{ scale: 0 }}
-        animate={isInView ? { scale: 1 } : { scale: 0 }}
+        initial={{ scale: isMobile ? 1 : 0 }}
+        animate={isInView ? { scale: 1 } : { scale: isMobile ? 1 : 0 }}
         transition={{
-          duration: 0.5,
-          delay: index * 0.2 + 0.3,
-          type: "spring",
+          duration: isMobile ? 0.2 : 0.5,
+          delay: isMobile ? 0 : index * 0.2 + 0.3,
+          type: isMobile ? "tween" : "spring",
           stiffness: 200,
         }}
         className={`absolute -top-2 left-1/2 -translate-x-1/2 w-24 h-24 rounded-full bg-gradient-to-br ${
@@ -222,7 +237,7 @@ function StepCardDesktop({ step, index, isInView }: StepCardProps) {
       {/* Card */}
       <div className="mt-32 group">
         <motion.div
-          whileHover={{ y: -8 }}
+          whileHover={isMobile ? {} : { y: -8 }}
           className={`relative bg-surface/50 backdrop-blur-lg border-2 ${
             isAccent ? "border-accent/30" : "border-primary/30"
           } rounded-2xl p-8 transition-all duration-500 hover:shadow-glow hover:border-opacity-100`}
@@ -261,13 +276,13 @@ function StepCardDesktop({ step, index, isInView }: StepCardProps) {
             {step.features.map((feature, idx) => (
               <motion.li
                 key={idx}
-                initial={{ opacity: 0, x: -10 }}
+                initial={{ opacity: 0, x: isMobile ? 0 : -10 }}
                 animate={
-                  isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }
+                  isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: isMobile ? 0 : -10 }
                 }
                 transition={{
-                  duration: 0.4,
-                  delay: index * 0.2 + idx * 0.05 + 0.6,
+                  duration: isMobile ? 0.2 : 0.4,
+                  delay: isMobile ? 0 : index * 0.2 + idx * 0.05 + 0.6,
                 }}
                 className="flex items-center gap-2 text-sm text-foreground-subtle"
               >
@@ -299,25 +314,25 @@ function StepCardDesktop({ step, index, isInView }: StepCardProps) {
   );
 }
 
-function StepCardMobile({ step, index, isInView }: StepCardProps) {
+function StepCardMobile({ step, index, isInView, isMobile }: StepCardProps) {
   const isAccent = step.color === "accent";
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: -30 }}
-      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+      initial={{ opacity: 0, x: isMobile ? 0 : -30 }}
+      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: isMobile ? 0 : -30 }}
       transition={{
-        duration: 0.6,
-        delay: index * 0.15,
+        duration: isMobile ? 0.3 : 0.6,
+        delay: isMobile ? 0 : index * 0.15,
       }}
       className="relative pl-16 sm:pl-20"
     >
       {/* Timeline line */}
       {index < steps.length - 1 && (
         <motion.div
-          initial={{ scaleY: 0 }}
-          animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
-          transition={{ duration: 0.8, delay: index * 0.15 + 0.3 }}
+          initial={{ scaleY: isMobile ? 1 : 0 }}
+          animate={isInView ? { scaleY: 1 } : { scaleY: isMobile ? 1 : 0 }}
+          transition={{ duration: isMobile ? 0.2 : 0.8, delay: isMobile ? 0 : index * 0.15 + 0.3 }}
           className={`absolute left-7 sm:left-9 top-14 sm:top-16 bottom-0 w-1 bg-gradient-to-b ${
             isAccent
               ? "from-accent to-primary"
@@ -328,12 +343,12 @@ function StepCardMobile({ step, index, isInView }: StepCardProps) {
 
       {/* Number badge */}
       <motion.div
-        initial={{ scale: 0 }}
-        animate={isInView ? { scale: 1 } : { scale: 0 }}
+        initial={{ scale: isMobile ? 1 : 0 }}
+        animate={isInView ? { scale: 1 } : { scale: isMobile ? 1 : 0 }}
         transition={{
-          duration: 0.5,
-          delay: index * 0.15 + 0.2,
-          type: "spring",
+          duration: isMobile ? 0.2 : 0.5,
+          delay: isMobile ? 0 : index * 0.15 + 0.2,
+          type: isMobile ? "tween" : "spring",
           stiffness: 200,
         }}
         className={`absolute left-0 top-0 w-14 h-14 sm:w-18 sm:h-18 rounded-full bg-gradient-to-br ${

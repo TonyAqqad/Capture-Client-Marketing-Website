@@ -241,17 +241,21 @@ export function addPassiveEventListener(
 
 /**
  * Creates an iOS-optimized IntersectionObserver
- * Uses lower threshold and root margin for better iOS performance
+ * FIXED: Increased threshold to prevent black screen during fast scroll
+ * Previous: 5%/10% threshold caused elements to stay invisible during rapid scrolling
+ * New: 25%/20% threshold + larger rootMargin ensures content is visible faster
  */
 export function createIOSOptimizedObserver(
   callback: IntersectionObserverCallback,
   isIOS: boolean
 ): IntersectionObserver {
   const options: IntersectionObserverInit = {
-    // Use larger root margin on iOS to trigger earlier
-    rootMargin: isIOS ? '100px' : '50px',
-    // Lower threshold on iOS (less precise but more performant)
-    threshold: isIOS ? 0.05 : 0.1,
+    // INCREASED: Use larger root margin to trigger animations earlier
+    // This gives the observer more time to fire before element is fully in view
+    rootMargin: isIOS ? '200px' : '150px',
+    // INCREASED: Higher threshold (25%) so fast scroll doesn't miss elements
+    // Previous 5% was too low - elements would scroll past before observer fired
+    threshold: isIOS ? 0.25 : 0.2,
   };
 
   return new IntersectionObserver(callback, options);

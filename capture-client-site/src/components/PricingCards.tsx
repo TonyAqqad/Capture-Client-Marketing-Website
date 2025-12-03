@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useInView } from '@/hooks/useInView';
@@ -85,9 +85,19 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
   const [rotateX, setRotateX] = useState(0);
   const [rotateY, setRotateY] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(true); // Default to true for SSR
 
-  // Disable 3D effects on mobile/tablet
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 1024;
+  // Disable 3D effects on mobile/tablet to prevent GPU memory issues
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!cardRef.current || isMobile) return;
@@ -128,23 +138,22 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       onMouseEnter={handleMouseEnter}
-      style={{
-        transformStyle: isMobile ? 'flat' : 'preserve-3d',
-        perspective: isMobile ? 'none' : '1000px',
-      }}
       className={`${plan.isPopular ? 'lg:-mt-6 lg:mb-6' : ''}`}
     >
       <motion.div
         animate={{
-          rotateX: isMobile ? 0 : rotateX,
-          rotateY: isMobile ? 0 : rotateY,
           scale: isHovered && !isMobile ? 1.03 : 1,
+          ...(isMobile ? {} : { rotateX, rotateY }),
         }}
         transition={{ type: 'spring', stiffness: 300, damping: 25 }}
         className={`relative group h-full min-h-[580px] rounded-3xl overflow-hidden`}
-        style={{
-          transformStyle: isMobile ? 'flat' : 'preserve-3d',
-        }}
+        style={
+          isMobile
+            ? {}
+            : {
+                transformStyle: 'preserve-3d',
+              }
+        }
       >
         {/* Popular badge - GLOWING */}
         {plan.isPopular && (
@@ -456,9 +465,13 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
             x: { duration: 1.5, repeat: Infinity, repeatDelay: 0.5 },
           }}
           className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none"
-          style={{
-            transform: isMobile ? 'none' : 'translateZ(40px) skewX(-15deg)',
-          }}
+          style={
+            isMobile
+              ? {}
+              : {
+                  transform: 'translateZ(40px) skewX(-15deg)',
+                }
+          }
         />
       </motion.div>
     </motion.div>

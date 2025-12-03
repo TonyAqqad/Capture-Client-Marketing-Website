@@ -67,10 +67,16 @@ export function PremiumTestimonials() {
   const isInView = useInView(containerRef, { threshold: 0.2 });
   const [currentIndex, setCurrentIndex] = useState(0);
   const [direction, setDirection] = useState(1);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Auto-rotate testimonials
+  // Detect mobile on mount
   useEffect(() => {
-    if (!isInView) return;
+    setIsMobile(window.innerWidth < 768);
+  }, []);
+
+  // Auto-rotate testimonials (disabled on mobile for performance)
+  useEffect(() => {
+    if (!isInView || isMobile) return;
 
     const interval = setInterval(() => {
       setDirection(1);
@@ -78,7 +84,7 @@ export function PremiumTestimonials() {
     }, 6000);
 
     return () => clearInterval(interval);
-  }, [isInView]);
+  }, [isInView, isMobile]);
 
   const handlePrevious = () => {
     setDirection(-1);
