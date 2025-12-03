@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Inter } from "next/font/google";
+import { Poppins, Inter, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import "./globals-mobile-optimized.css";
 import Header from "@/components/Header";
@@ -30,6 +30,15 @@ const inter = Inter({
   weight: ["400", "500", "600"],
   display: "swap", // Already set - good!
   preload: true, // Ensure preloading
+});
+
+// PREMIUM: Space Grotesk - Distinctive headline font for non-AI-slop look
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  weight: ["500", "600", "700"],
+  display: "swap",
+  preload: true,
 });
 
 // Enhanced metadata following Next.js 16 and 2025 SEO best practices
@@ -80,7 +89,7 @@ export default function RootLayout({
         <JsonLd schema={[organizationSchema, websiteSchema]} />
       </head>
       <body
-        className={`${poppins.variable} ${inter.variable} font-body bg-background text-foreground antialiased overflow-x-hidden`}
+        className={`${poppins.variable} ${inter.variable} ${spaceGrotesk.variable} font-body bg-background text-foreground antialiased overflow-x-hidden`}
       >
         {/* CRITICAL: Defer Material Icons loading until after initial render */}
         <Script

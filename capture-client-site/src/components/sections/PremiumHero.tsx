@@ -246,22 +246,22 @@ export function PremiumHero() {
               </span>
             </motion.div>
 
-            {/* Main headline with advanced typography - Mobile optimized */}
+            {/* Main headline with advanced typography - Mobile optimized - PREMIUM SPACE GROTESK */}
             <TextReveal delay={disableAnimations ? 0 : 0.3}>
-              <h1 className="font-heading text-4xl leading-[1.1] sm:text-5xl sm:leading-[1.05] lg:text-7xl xl:text-8xl lg:leading-[0.95] font-black mb-6 sm:mb-8 text-depth">
+              <h1 className="text-display-xl mb-6 sm:mb-8 text-depth">
                 <span className="text-foreground">
                   Never Miss a
                 </span>
                 <br />
                 <span className="relative inline-block">
-                  <span className="text-gradient bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent" style={{ backgroundSize: "200% 200%" }}>
+                  <span className="text-gradient-gold-cyan">
                     Lead Again
                   </span>
                   <motion.div
                     initial={disableAnimations ? {} : { scaleX: 0 }}
                     animate={disableAnimations ? {} : { scaleX: 1 }}
                     transition={disableAnimations ? { duration: 0 } : { duration: 1.2, delay: 0.8, ease: [0.76, 0, 0.24, 1] }}
-                    className="absolute -bottom-1 sm:-bottom-2 left-0 right-0 h-2 sm:h-4 bg-gradient-to-r from-accent/30 to-primary/30 blur-sm -z-10 origin-left"
+                    className="absolute -bottom-1 sm:-bottom-2 left-0 right-0 h-2 sm:h-4 bg-gradient-to-r from-gold/30 to-accent/30 blur-sm -z-10 origin-left"
                   />
                 </span>
               </h1>
@@ -297,7 +297,8 @@ export function PremiumHero() {
               transition={disableAnimations ? { duration: 0 } : { duration: 0.6, delay: 0.9 }}
               className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-8 sm:mb-12"
             >
-              <MagneticButton className="group relative overflow-hidden bg-gradient-to-r from-accent via-primary to-accent text-white font-bold text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 rounded-xl sm:rounded-2xl shadow-glow-lg transition-all duration-500 hover:shadow-glow border-2 border-transparent hover:border-accent/30 min-h-[56px] w-full sm:w-auto">
+              {/* PREMIUM GOLD CTA - Distinctive non-AI-slop look */}
+              <MagneticButton className="group relative overflow-hidden bg-gradient-to-r from-gold via-gold-300 to-gold text-background-dark font-bold text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 rounded-xl sm:rounded-2xl shadow-glow-gold-lg transition-all duration-500 hover:shadow-glow-gold-intense border-2 border-gold-400/50 hover:border-gold-300 min-h-[56px] w-full sm:w-auto hover-glow-gold">
                 <Link href="#contact" className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
                   Book Your Free Demo
                   <motion.span
@@ -310,7 +311,7 @@ export function PremiumHero() {
                 </Link>
                 {!disableAnimations && (
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+                    className="absolute inset-0 bg-gradient-to-r from-gold-400 via-gold-200 to-gold-400 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
                     style={{ backgroundSize: "200% 200%" }}
                     animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
                     transition={{ duration: 3, repeat: Infinity }}

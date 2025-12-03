@@ -24,7 +24,7 @@ const config: Config = {
           800: "#101D54",
           900: "#080E2A",
         },
-        // Vibrant Accent (Electric Cyan/Teal)
+        // Vibrant Accent (Electric Cyan/Teal) - Secondary accent
         accent: {
           DEFAULT: "#00C9FF",
           50: "#E5FAFF",
@@ -37,6 +37,34 @@ const config: Config = {
           700: "#007999",
           800: "#005066",
           900: "#002833",
+        },
+        // PREMIUM: Luxe Gold - Primary accent for CTAs and highlights
+        gold: {
+          DEFAULT: "#D4AF37",
+          50: "#FBF6E7",
+          100: "#F7EDCF",
+          200: "#EFDB9F",
+          300: "#E7C96F",
+          400: "#DFB73F",
+          500: "#D4AF37",
+          600: "#B8942C",
+          700: "#8B7021",
+          800: "#5E4C16",
+          900: "#31280B",
+        },
+        // PREMIUM: Warm Mocha - Subtle tertiary accent
+        mocha: {
+          DEFAULT: "#8B7355",
+          50: "#F5F2EF",
+          100: "#EBE5DF",
+          200: "#D7CBBF",
+          300: "#C3B19F",
+          400: "#AF977F",
+          500: "#8B7355",
+          600: "#6F5C44",
+          700: "#534533",
+          800: "#372E22",
+          900: "#1B1711",
         },
         // Cyan accent colors (matching reference design)
         cyan: {
@@ -72,8 +100,10 @@ const config: Config = {
         },
       },
       fontFamily: {
-        heading: ["var(--font-poppins)", "sans-serif"],
+        heading: ["var(--font-space-grotesk)", "var(--font-poppins)", "sans-serif"],
         body: ["var(--font-inter)", "sans-serif"],
+        // PREMIUM: Space Grotesk for distinctive headlines
+        display: ["var(--font-space-grotesk)", "system-ui", "sans-serif"],
       },
       borderRadius: {
         DEFAULT: "0.75rem",
@@ -85,8 +115,15 @@ const config: Config = {
         glow: "0 0 20px rgba(0, 201, 255, 0.3)",
         "glow-lg": "0 0 40px rgba(0, 201, 255, 0.4)",
         "glow-primary": "0 0 20px rgba(74, 105, 226, 0.3)",
+        // PREMIUM: Gold glow shadows for CTAs and highlights
+        "glow-gold": "0 0 20px rgba(212, 175, 55, 0.3)",
+        "glow-gold-lg": "0 0 40px rgba(212, 175, 55, 0.4)",
+        "glow-gold-intense": "0 0 30px rgba(212, 175, 55, 0.5), 0 0 60px rgba(212, 175, 55, 0.2)",
         card: "0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2)",
         "card-hover": "0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2)",
+        // PREMIUM: Clean single shadow for mobile (GPU-friendly)
+        "card-mobile": "0 4px 12px rgba(0, 0, 0, 0.15)",
+        "glass-mobile": "0 8px 32px rgba(0, 0, 0, 0.2)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

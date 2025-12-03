@@ -1,6 +1,39 @@
+/* ============================================ */
+/* PREMIUM DESIGN SYSTEM - Gold + Cyan Palette  */
+/* Space Grotesk Typography for Distinctive Look */
+/* NOTE: Font loaded via next/font in layout.tsx */
+/* ============================================ */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  /* PREMIUM: Primary Color Palette */
+  --color-background: #0F1419;
+  --color-surface: #1A1F26;
+  --color-surface-elevated: #242B35;
+
+  /* PREMIUM: Gold + Cyan Accent System */
+  --color-gold: #D4AF37;
+  --color-gold-light: #E7C96F;
+  --color-gold-dark: #B8942C;
+  --color-cyan: #00C9FF;
+  --color-mocha: #8B7355;
+
+  /* Glass Effect Variables (GPU-friendly) */
+  --glass-bg: rgba(26, 31, 38, 0.85);
+  --glass-border: rgba(212, 175, 55, 0.15);
+  --glass-highlight: rgba(255, 255, 255, 0.1);
+
+  /* Text Hierarchy */
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-muted: #64748B;
+
+  /* Space Grotesk font variable */
+  --font-space-grotesk: 'Space Grotesk', system-ui, sans-serif;
+}
 
 @layer base {
   html {
@@ -215,6 +248,59 @@
 }
 
 @layer utilities {
+  /* ============================================ */
+  /* PREMIUM TYPOGRAPHY - Space Grotesk + Clamp  */
+  /* ============================================ */
+
+  /* Fluid typography for premium feel */
+  .text-display-xl {
+    font-family: var(--font-space-grotesk);
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+
+  .text-display-lg {
+    font-family: var(--font-space-grotesk);
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  .text-display-md {
+    font-family: var(--font-space-grotesk);
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+
+  .text-display-sm {
+    font-family: var(--font-space-grotesk);
+    font-size: clamp(1.25rem, 4vw, 1.75rem);
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+  }
+
+  /* ============================================ */
+  /* PREMIUM GOLD GRADIENTS & ACCENTS            */
+  /* ============================================ */
+
+  /* Gold gradient text - Premium CTAs */
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #D4AF37 0%, #E7C96F 50%, #D4AF37 100%);
+  }
+
+  /* Gold + Cyan gradient - Distinctive brand feel */
+  .text-gradient-gold-cyan {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #D4AF37 0%, #00C9FF 100%);
+  }
+
   /* Gradient text */
   .text-gradient {
     @apply bg-clip-text text-transparent;
@@ -713,6 +799,170 @@
 
   .link-desktop-premium:hover::after {
     @apply scale-x-100;
+  }
+
+  /* ============================================ */
+  /* PREMIUM MOBILE GLASS - GPU-FRIENDLY 60FPS   */
+  /* NO backdrop-filter = smooth scrolling       */
+  /* ============================================ */
+
+  /* Premium Glass Card - Mobile-first, GPU-optimized */
+  .glass-premium-mobile {
+    /* Semi-transparent base - NO backdrop-filter! */
+    background: var(--glass-bg);
+
+    /* Gradient overlay for depth (GPU-friendly) */
+    background-image: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0.02) 100%
+    );
+
+    /* Gold-tinted border for premium feel */
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+
+    /* Single clean shadow (GPU-friendly) */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+
+    /* GPU acceleration */
+    transform: translateZ(0);
+  }
+
+  /* Optional frosted texture using SVG noise (static, not animated) */
+  .glass-frosted::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    border-radius: inherit;
+    pointer-events: none;
+  }
+
+  /* Gold accent card variant */
+  .glass-gold-accent {
+    background: var(--glass-bg);
+    background-image: linear-gradient(
+      135deg,
+      rgba(212, 175, 55, 0.08) 0%,
+      rgba(255, 255, 255, 0.02) 100%
+    );
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    transform: translateZ(0);
+  }
+
+  /* ============================================ */
+  /* PREMIUM GOLD BUTTONS                        */
+  /* ============================================ */
+
+  .btn-gold {
+    @apply relative overflow-hidden font-semibold px-6 py-3 rounded-xl;
+    background: linear-gradient(135deg, #D4AF37 0%, #E7C96F 50%, #D4AF37 100%);
+    background-size: 200% 200%;
+    color: #0F1419;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+    transition: all 0.3s ease;
+    transform: translateZ(0);
+  }
+
+  .btn-gold:hover {
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
+    transform: translateY(-2px) translateZ(0);
+  }
+
+  .btn-gold:active {
+    transform: scale(0.98) translateZ(0);
+  }
+
+  /* Gold outline button variant */
+  .btn-gold-outline {
+    @apply relative font-semibold px-6 py-3 rounded-xl;
+    background: transparent;
+    border: 2px solid #D4AF37;
+    color: #D4AF37;
+    transition: all 0.3s ease;
+    transform: translateZ(0);
+  }
+
+  .btn-gold-outline:hover {
+    background: rgba(212, 175, 55, 0.1);
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.2);
+  }
+
+  /* ============================================ */
+  /* BENTO GRID LAYOUT UTILITIES                 */
+  /* ============================================ */
+
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+  }
+
+  @media (max-width: 1024px) {
+    .bento-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .bento-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Featured bento item - spans 2 columns */
+  .bento-featured {
+    grid-column: span 2;
+  }
+
+  @media (max-width: 640px) {
+    .bento-featured {
+      grid-column: span 1;
+    }
+  }
+
+  /* Tall bento item - spans 2 rows */
+  .bento-tall {
+    grid-row: span 2;
+  }
+
+  /* ============================================ */
+  /* PREMIUM MICRO-INTERACTIONS                  */
+  /* Only animate transform & opacity for 60fps  */
+  /* ============================================ */
+
+  .premium-hover {
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  .premium-hover:hover {
+    transform: translateY(-4px) translateZ(0);
+  }
+
+  .premium-hover:active {
+    transform: scale(0.97) translateZ(0);
+  }
+
+  /* Premium card lift */
+  .card-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card-lift:hover {
+    transform: translateY(-8px) translateZ(0);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Gold glow on hover */
+  .hover-glow-gold {
+    transition: box-shadow 0.3s ease;
+  }
+
+  .hover-glow-gold:hover {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
   }
 }
 
