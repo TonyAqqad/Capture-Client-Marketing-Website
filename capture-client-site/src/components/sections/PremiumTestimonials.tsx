@@ -251,7 +251,7 @@ export function PremiumTestimonials() {
           </div>
         </div>
 
-        {/* Trust badges - mobile optimized */}
+        {/* Platform capabilities - mobile optimized */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -259,20 +259,20 @@ export function PremiumTestimonials() {
           className="mt-12 sm:mt-16 lg:mt-20 pt-8 sm:pt-12 border-t border-surface-border px-4 sm:px-6 lg:px-0"
         >
           <p className="text-center text-foreground-muted text-xs sm:text-sm uppercase tracking-wider mb-6 sm:mb-8">
-            Trusted By Industry Leaders
+            Platform Capabilities
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-8 lg:gap-12 opacity-60 hover:opacity-100 transition-opacity duration-500">
             <div className="text-foreground-muted font-semibold text-sm sm:text-base lg:text-lg flex items-center gap-2">
-              <span className="material-icons text-accent text-lg sm:text-xl">verified</span>
-              Google Ads Partner
+              <span className="material-icons text-accent text-lg sm:text-xl">security</span>
+              Enterprise-Grade Security
             </div>
             <div className="text-foreground-muted font-semibold text-sm sm:text-base lg:text-lg flex items-center gap-2">
-              <span className="material-icons text-accent text-lg sm:text-xl">verified</span>
-              Meta Business Partner
+              <span className="material-icons text-accent text-lg sm:text-xl">support_agent</span>
+              24/7 AI Support
             </div>
             <div className="text-foreground-muted font-semibold text-sm sm:text-base lg:text-lg flex items-center gap-2">
-              <span className="material-icons text-accent text-lg sm:text-xl">verified</span>
-              BBB Accredited
+              <span className="material-icons text-accent text-lg sm:text-xl">cloud_done</span>
+              Cloud-Based Platform
             </div>
           </div>
         </motion.div>
