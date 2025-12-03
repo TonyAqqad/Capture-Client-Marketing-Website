@@ -235,6 +235,21 @@
     -webkit-overflow-scrolling: touch;
   }
 
+  /* CRITICAL: Prevent scroll traps in nested scrollable elements */
+  /* This allows scrolling to "escape" from nested containers back to body */
+  [class*="overflow-y-auto"],
+  [class*="overflow-scroll"],
+  [class*="max-h-"] {
+    overscroll-behavior: contain;
+    -webkit-overscroll-behavior: contain;
+  }
+
+  /* When nested scroll container reaches boundary, allow parent scroll */
+  .scroll-container,
+  [class*="overflow-y-auto"]:not(body) {
+    overscroll-behavior-y: contain;
+  }
+
   /* iOS Safari: Remove 300ms tap delay on all interactive elements */
   a,
   button,

@@ -11,7 +11,7 @@ export default function FeaturesPageClient() {
   return (
     <div className="min-h-screen bg-[#0F172A] overflow-hidden">
       {/* HERO SECTION - Diagonal Split */}
-      <section className="relative min-h-[90vh] flex items-center">
+      <section className="relative min-h-[90vh] flex items-center pt-20 sm:pt-24">
         {/* Diagonal background division */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[#0F172A]" />

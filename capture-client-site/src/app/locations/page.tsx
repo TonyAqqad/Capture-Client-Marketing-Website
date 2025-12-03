@@ -120,7 +120,7 @@ export default async function LocationsPage() {
 
       <div className="min-h-screen bg-gradient-to-b from-[#0A1628] via-[#0F1B2E] to-[#0A1628]">
         {/* Hero Section */}
-        <div className="relative py-16 sm:py-24 px-4 sm:px-6 lg:px-16 overflow-hidden">
+        <div className="relative pt-24 sm:pt-28 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-16 overflow-hidden">
           {/* Background gradient effects */}
           <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 pointer-events-none" />
           <div className="absolute top-20 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" />

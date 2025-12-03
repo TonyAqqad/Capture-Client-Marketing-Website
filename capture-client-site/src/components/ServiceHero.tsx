@@ -147,7 +147,7 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
   };
 
   return (
-    <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-16 sm:pt-20 md:pt-0">
+    <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-20 sm:pt-24 md:pt-20">
       {/* Animated Gradient Background */}
       <div className={`absolute inset-0 bg-gradient-to-br ${theme.gradient}`}>
         <motion.div

@@ -104,7 +104,7 @@ export function PremiumHero() {
   return (
     <section
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background-dark w-full max-w-full"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background-dark w-full max-w-full pt-20 sm:pt-24"
       style={{
         minHeight: isMobile ? '-webkit-fill-available' : '100vh',
       }}
