@@ -48,7 +48,7 @@ export function FeatureCard({
         glassEffect={true}
         interactiveGlow={!isMobile}
       >
-        <div className="relative p-6 sm:p-8">
+        <div className="relative p-6 sm:p-8 flex flex-col items-center sm:items-start text-center sm:text-left">
           {/* Glass overlay for depth */}
           <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
@@ -81,12 +81,12 @@ export function FeatureCard({
           </motion.div>
 
           {/* Title with gradient on hover */}
-          <h3 className="text-lg sm:text-xl font-heading font-bold text-foreground mb-3 sm:mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-accent group-hover:to-primary transition-all duration-300">
+          <h3 className="text-lg sm:text-xl font-heading font-bold text-foreground mb-3 sm:mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-accent group-hover:to-primary transition-all duration-300 w-full">
             {title}
           </h3>
 
           {/* Description */}
-          <p className="text-sm sm:text-base text-foreground-muted leading-relaxed mb-4">
+          <p className="text-sm sm:text-base text-foreground-muted leading-relaxed mb-4 w-full">
             {description}
           </p>
 
@@ -96,7 +96,7 @@ export function FeatureCard({
             whileInView={{ opacity: 1, x: 0 }}
             whileHover={{ x: 5 }}
             transition={{ duration: 0.3 }}
-            className="flex items-center gap-2 mt-5 sm:mt-6 text-sm font-semibold text-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            className="flex items-center justify-center sm:justify-start gap-2 mt-5 sm:mt-6 text-sm font-semibold text-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-full"
           >
             <span>Learn more</span>
             <motion.span

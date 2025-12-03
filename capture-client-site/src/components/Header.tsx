@@ -136,11 +136,11 @@ export default function Header() {
           mobileMenuOpen ? "max-h-[600px] border-t border-white/10" : "max-h-0"
         }`}
       >
-        <div className="container mx-auto px-4 sm:px-6 py-6 bg-gradient-to-b from-[#0F172A] to-[#0F172A]/95 backdrop-blur-2xl border-b border-white/5">
+        <div className="container mx-auto px-6 py-8 bg-[#0F172A]/98 border-b border-white/10">
           {/* Subtle top gradient line */}
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00C9FF]/50 to-transparent" />
 
-          <div className="flex flex-col gap-2 mb-6">
+          <div className="flex flex-col gap-1 mb-8">
             <MobileNavLink href="/services" onClick={() => setMobileMenuOpen(false)}>
               Services
             </MobileNavLink>
@@ -155,7 +155,7 @@ export default function Header() {
             </MobileNavLink>
           </div>
 
-          <div className="flex flex-col gap-3 pt-4 border-t border-white/10">
+          <div className="flex flex-col gap-4 pt-6 border-t border-white/15">
             <a
               href="tel:8653463339"
               className="flex items-center justify-center gap-2 text-[#F8FAFC] bg-white/5 border border-white/10 px-6 py-4 rounded-xl hover:bg-white/10 hover:border-white/20 transition-all font-medium text-base min-h-[56px] active:scale-95 group"
@@ -208,16 +208,10 @@ function MobileNavLink({
   return (
     <Link
       href={href}
-      className="relative flex items-center justify-between px-4 py-4 text-[#F8FAFC]/80 hover:text-[#00C9FF] hover:bg-white/5 border border-transparent hover:border-white/10 rounded-xl transition-all font-medium text-base min-h-[56px] group active:scale-95 overflow-hidden"
+      className="relative flex items-center justify-center px-4 py-4 text-[#F8FAFC] hover:text-[#00C9FF] hover:bg-white/5 rounded-xl transition-all font-semibold text-lg min-h-[56px] group active:scale-[0.98]"
       onClick={onClick}
     >
-      {/* Subtle gradient on hover */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#4A69E2]/5 to-[#00C9FF]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
       <span className="relative z-10">{children}</span>
-      <span className="relative z-10 material-icons text-base opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-        arrow_forward
-      </span>
     </Link>
   );
 }

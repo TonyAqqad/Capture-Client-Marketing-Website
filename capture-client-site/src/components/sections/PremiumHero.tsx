@@ -229,7 +229,7 @@ export function PremiumHero() {
         {/* Asymmetric layout with offset content */}
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left side: Text content (spans 7 columns) */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 text-center lg:text-left flex flex-col items-center lg:items-start">
             {/* Eyebrow badge with live indicator - Mobile optimized - NO ANIMATION ON MOBILE */}
             <motion.div
               initial={disableAnimations ? {} : { opacity: 0, y: 20 }}
@@ -248,7 +248,7 @@ export function PremiumHero() {
 
             {/* Main headline with advanced typography - Mobile optimized - PREMIUM SPACE GROTESK */}
             <TextReveal delay={disableAnimations ? 0 : 0.3}>
-              <h1 className="text-display-xl mb-6 sm:mb-8 text-depth">
+              <h1 className="text-display-xl mb-6 sm:mb-8 text-depth text-center lg:text-left">
                 <span className="text-foreground">
                   Never Miss a
                 </span>
@@ -272,7 +272,7 @@ export function PremiumHero() {
               initial={disableAnimations ? {} : { opacity: 0, y: 20 }}
               animate={disableAnimations ? {} : { opacity: 1, y: 0 }}
               transition={disableAnimations ? { duration: 0 } : { duration: 0.6, delay: 0.6 }}
-              className="text-lg leading-[1.6] sm:text-xl sm:leading-relaxed lg:text-2xl xl:text-3xl text-foreground-muted max-w-2xl mb-4 sm:mb-6 font-medium"
+              className="text-lg leading-[1.6] sm:text-xl sm:leading-relaxed lg:text-2xl xl:text-3xl text-foreground-muted max-w-2xl mb-4 sm:mb-6 font-medium text-center lg:text-left"
             >
               AI Voice Agents answer calls 24/7
               <span className="text-accent font-bold"> + </span>
@@ -285,7 +285,7 @@ export function PremiumHero() {
               initial={disableAnimations ? {} : { opacity: 0, y: 20 }}
               animate={disableAnimations ? {} : { opacity: 1, y: 0 }}
               transition={disableAnimations ? { duration: 0 } : { duration: 0.6, delay: 0.7 }}
-              className="text-base sm:text-lg text-foreground-subtle max-w-xl mb-8 sm:mb-10 leading-relaxed"
+              className="text-base sm:text-lg text-foreground-subtle max-w-xl mb-8 sm:mb-10 leading-relaxed text-center lg:text-left"
             >
               The all-in-one growth platform small businesses use to <span className="text-foreground font-semibold">capture 10x more leads</span> without hiring more staff.
             </motion.p>
@@ -295,7 +295,7 @@ export function PremiumHero() {
               initial={disableAnimations ? {} : { opacity: 0, y: 20 }}
               animate={disableAnimations ? {} : { opacity: 1, y: 0 }}
               transition={disableAnimations ? { duration: 0 } : { duration: 0.6, delay: 0.9 }}
-              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-8 sm:mb-12"
+              className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mb-8 sm:mb-12 w-full lg:w-auto"
             >
               {/* PREMIUM GOLD CTA - Distinctive non-AI-slop look */}
               <MagneticButton className="group relative overflow-hidden bg-gradient-to-r from-gold via-gold-300 to-gold text-background-dark font-bold text-base sm:text-lg px-8 sm:px-12 py-4 sm:py-6 rounded-xl sm:rounded-2xl shadow-glow-gold-lg transition-all duration-500 hover:shadow-glow-gold-intense border-2 border-gold-400/50 hover:border-gold-300 min-h-[56px] w-full sm:w-auto hover-glow-gold">
@@ -339,7 +339,7 @@ export function PremiumHero() {
               initial={disableAnimations ? {} : { opacity: 0 }}
               animate={disableAnimations ? {} : { opacity: 1 }}
               transition={disableAnimations ? { duration: 0 } : { duration: 0.6, delay: 1.1 }}
-              className="flex items-center gap-4 sm:gap-8 text-foreground-subtle overflow-x-auto pb-2 scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0"
+              className="flex items-center justify-center lg:justify-start gap-4 sm:gap-8 text-foreground-subtle overflow-x-auto pb-2 scrollbar-hide -mx-4 px-4 sm:mx-0 sm:px-0"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               <div className="flex items-center gap-2 flex-shrink-0">

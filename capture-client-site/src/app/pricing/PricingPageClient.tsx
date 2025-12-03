@@ -143,7 +143,7 @@ export default function PricingPageClient() {
         <div className="container mx-auto">
           <div className="grid grid-cols-12 gap-6 md:gap-8 items-center">
             {/* Left side - 7 columns */}
-            <div className="col-span-12 lg:col-span-7">
+            <div className="col-span-12 lg:col-span-7 text-center lg:text-left">
               {/* Eyebrow */}
               <motion.div
                 className="inline-flex items-center gap-3 mb-4 md:mb-6"
@@ -172,7 +172,7 @@ export default function PricingPageClient() {
 
               {/* Subheadline */}
               <motion.p
-                className="text-base md:text-xl text-white/60 max-w-xl mb-6 md:mb-8 leading-relaxed"
+                className="text-base md:text-xl text-white/60 max-w-xl mx-auto lg:mx-0 mb-6 md:mb-8 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -183,7 +183,7 @@ export default function PricingPageClient() {
 
               {/* Trust signals */}
               <motion.div
-                className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 md:gap-6"
+                className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 md:gap-6 justify-center lg:justify-start"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
@@ -367,7 +367,7 @@ export default function PricingPageClient() {
             return (
               <motion.div
                 key={pkg.id}
-                className={`relative ${isGrowth ? 'lg:-mt-4 lg:mb-4' : ''}`}
+                className={`relative max-w-sm mx-auto lg:max-w-none ${isGrowth ? 'lg:-mt-4 lg:mb-4' : ''}`}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -786,7 +786,7 @@ export default function PricingPageClient() {
           ].map((option, i) => (
             <motion.div
               key={i}
-              className={`relative p-6 rounded-2xl border ${
+              className={`relative p-6 rounded-2xl border max-w-sm mx-auto md:max-w-none ${
                 option.highlight
                   ? 'bg-gradient-to-br from-accent/10 to-primary/10 border-accent/50'
                   : 'bg-white/5 border-white/10'
@@ -832,7 +832,7 @@ export default function PricingPageClient() {
           ].map((signal, i) => (
             <motion.div
               key={i}
-              className="text-center p-6"
+              className="text-center p-6 max-w-sm mx-auto md:max-w-none"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}

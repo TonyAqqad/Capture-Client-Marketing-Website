@@ -110,6 +110,15 @@
     transition-duration: 0.2s !important;
     transition-timing-function: ease-out !important;
   }
+
+  /* Exception: Allow mobile menu to animate max-height */
+  #mobile-menu,
+  [id="mobile-menu"],
+  header [aria-controls="mobile-menu"] + div {
+    transition-property: max-height, opacity !important;
+    transition-duration: 0.3s !important;
+    transition-timing-function: ease-out !important;
+  }
 }
 
 /* =============================================================================

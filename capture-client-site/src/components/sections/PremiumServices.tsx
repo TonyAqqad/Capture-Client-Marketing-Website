@@ -238,7 +238,7 @@ function ServiceCard({ service, index, isInView, isMobile }: ServiceCardProps) {
 
       {/* Card content */}
       <div
-        className={`relative h-full bg-surface/50 backdrop-blur-lg border-2 ${service.borderColor} rounded-2xl p-6 sm:p-8 transition-all duration-500 group-hover:border-opacity-100 group-hover:shadow-glow`}
+        className={`relative h-full bg-surface/50 backdrop-blur-lg border-2 ${service.borderColor} rounded-2xl p-6 sm:p-8 transition-all duration-500 group-hover:border-opacity-100 group-hover:shadow-glow flex flex-col items-center sm:items-start text-center sm:text-left`}
       >
         {/* Icon container */}
         <motion.div
@@ -252,17 +252,17 @@ function ServiceCard({ service, index, isInView, isMobile }: ServiceCardProps) {
         </motion.div>
 
         {/* Title */}
-        <h3 className="text-lg sm:text-xl font-heading font-bold text-foreground mb-2 sm:mb-3 group-hover:text-gradient transition-all duration-300">
+        <h3 className="text-lg sm:text-xl font-heading font-bold text-foreground mb-2 sm:mb-3 group-hover:text-gradient transition-all duration-300 w-full">
           {service.title}
         </h3>
 
         {/* Description */}
-        <p className="text-sm sm:text-base text-foreground-muted leading-relaxed mb-5 sm:mb-6">
+        <p className="text-sm sm:text-base text-foreground-muted leading-relaxed mb-5 sm:mb-6 w-full">
           {service.description}
         </p>
 
         {/* Benefits list */}
-        <ul className="space-y-2.5 sm:space-y-2">
+        <ul className="space-y-2.5 sm:space-y-2 w-full flex flex-col items-center sm:items-start">
           {service.benefits.map((benefit, idx) => (
             <motion.li
               key={idx}
@@ -281,7 +281,7 @@ function ServiceCard({ service, index, isInView, isMobile }: ServiceCardProps) {
               <span className={`material-icons text-base sm:text-sm flex-shrink-0 ${service.id === "voice-ai" || service.id === "crm" ? "text-accent" : "text-primary"}`}>
                 check_circle
               </span>
-              <span className="leading-tight">{benefit}</span>
+              <span className="leading-tight text-left">{benefit}</span>
             </motion.li>
           ))}
         </ul>
