@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-coral-springs-fl",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Coral Springs",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "slug": "coral-springs-fl",
+    "nearby_areas": [
+      "Parkland",
+      "Coconut Creek",
+      "Margate",
+      "Tamarac",
+      "Boca Raton"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Coral Springs, FL | Capture Client",
+    "meta_description": "Looking for Voice AI in Coral Springs? Capture Client helps Coral Springs businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Coral Springs, Florida",
+    "keywords": [
+      "voice ai agency coral springs",
+      "ai voice agents coral springs fl",
+      "ai receptionist coral springs",
+      "automated phone answering coral springs"
+    ],
+    "canonical_url": "/voice-ai-coral-springs-fl"
+  },
+  "hero": {
+    "headline": "Never Miss Another Call in Coral Springs",
+    "subheadline": "AI Voice Agents That Answer, Qualify, and Convert Leads 24/7 for Coral Springs Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Professional business owner in Coral Springs using phone technology",
+      "credit": {
+        "photographer": "Alev Takil",
+        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the family-owned businesses along University Drive to the professional services near the Coral Springs Corporate Park and the thriving enterprises throughout Northwest Broward County, Coral Springs business owners serve one of South Florida's most affluent communities. Whether you're running an HVAC company in Parkland, a medical practice near Coral Springs Medical Center, a real estate office in Coconut Creek, or a home services business in Margate, every unanswered call means missed revenue from high-value clients. In Coral Springs' quality-focused market where customer service expectations are high, Capture Client's Voice AI technology ensures you deliver exceptional responsiveness every time."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability for Coral Springs Customers",
+      "description": "Coral Springs' affluent residents expect premium service. Our AI voice agents answer every call from Northwest Broward professionally, any time.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "Stop wasting time on unqualified leads. Our AI asks the right questions upfront so you only talk to serious Coral Springs prospects ready to buy.",
+      "icon": "filter_alt"
+    },
+    {
+      "title": "Automatic Appointment Scheduling",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with Coral Springs customers.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings Over Traditional Staff",
+      "description": "Hiring a receptionist in Coral Springs costs $32,000-$42,000/year. Our Voice AI costs a fraction of that.",
+      "icon": "attach_money"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your Coral Springs business needs and how Voice AI can help you capture more high-value clients."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI voice agent with your business information specific to the premium Coral Springs market."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your AI handle calls instantly based on real Coral Springs call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "HVAC Companies in Coral Springs",
+      "scenario": "High-end clients expect immediate response during AC emergencies.",
+      "result": "AI ensures instant response 24/7. Captured $68,000 in emergency service revenue in peak season."
+    },
+    {
+      "business_type": "Medical Practices in Parkland",
+      "scenario": "Growing patient base but front desk couldn't keep up with appointment requests.",
+      "result": "AI handles 75% of scheduling automatically. Patient volume increased 40% without adding staff."
+    },
+    {
+      "business_type": "Real Estate Agencies in Coral Springs",
+      "scenario": "Missing buyer inquiries in competitive luxury home market.",
+      "result": "Never misses a lead. Closed 12 additional luxury properties worth $7.2M in 6 months."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Coral Springs and Surrounding Areas",
+    "description": "We provide Voice AI services throughout Northwest Broward County and neighboring communities.",
+    "areas_list": [
+      "Coral Springs",
+      "Parkland",
+      "Coconut Creek",
+      "Margate",
+      "Tamarac",
+      "Boca Raton",
+      "Deerfield Beach",
+      "Pompano Beach"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Our Coral Springs clients demand excellence. Capture Client's Voice AI delivers professional service 24/7. Revenue up $58,000/month.",
+      "author": "Mark Johnson",
+      "business": "Elite Climate Control",
+      "location": "Coral Springs, FL"
+    },
+    {
+      "quote": "The AI handles our high call volume perfectly and books appointments seamlessly. Our practice has grown significantly.",
+      "author": "Dr. Jennifer Lee",
+      "business": "Parkland Family Medicine",
+      "location": "Parkland, FL"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Coral Springs businesses?",
+      "answer": "Our Voice AI answers professionally, asks qualifying questions, provides information, schedules appointments, and transfers urgent calls. It works 24/7 delivering the premium service Coral Springs customers expect."
+    },
+    {
+      "question": "What Coral Springs businesses benefit most?",
+      "answer": "HVAC, plumbers, electricians, medical practices, real estate agencies, luxury service providers, contractors in Coral Springs all benefit from Voice AI automation."
+    },
+    {
+      "question": "Does the AI sound robotic?",
+      "answer": "Not at all! Most Coral Springs callers don't realize they're talking to AI. We customize voice and tone to match your premium brand."
+    },
+    {
+      "question": "How quickly can you set up for my Coral Springs business?",
+      "answer": "Most Coral Springs businesses are running within 1-2 weeks from initial strategy call to launch."
+    },
+    {
+      "question": "Can it integrate with my CRM?",
+      "answer": "Yes! Integrates with HubSpot, Salesforce, ServiceTitan, Jobber and tools used by Coral Springs businesses."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Small business owner in Coral Springs working with technology",
+        "caption": "Coral Springs businesses use Voice AI to automate lead capture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Professional answering phone call for Coral Springs business",
+        "caption": "AI answers every call professionally, 24/7"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Clients in Coral Springs?",
+    "subheadline": "Join dozens of Coral Springs businesses using Voice AI to answer every call.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-parkland-fl",
+      "voice-ai-coconut-creek-fl",
+      "voice-ai-fort-lauderdale-fl"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

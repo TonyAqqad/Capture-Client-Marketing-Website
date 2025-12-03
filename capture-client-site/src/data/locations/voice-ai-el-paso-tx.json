@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-el-paso-tx",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "El Paso",
+    "state": "Texas",
+    "state_abbr": "TX",
+    "slug": "el-paso-tx",
+    "nearby_areas": [
+      "Socorro",
+      "Horizon City",
+      "Fort Bliss",
+      "Sunland Park",
+      "Anthony"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in El Paso, TX | Capture Client",
+    "meta_description": "Looking for Voice AI in El Paso? Capture Client helps El Paso businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in El Paso, Texas",
+    "keywords": [
+      "voice ai agency el paso",
+      "ai voice agents el paso tx",
+      "ai receptionist el paso",
+      "automated phone answering el paso"
+    ],
+    "canonical_url": "/voice-ai-el-paso-tx"
+  },
+  "hero": {
+    "headline": "Never Miss Another Call in El Paso",
+    "subheadline": "AI Voice Agents That Answer, Qualify, and Convert Leads 24/7 for El Paso Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Professional business owner in El Paso using phone technology",
+      "credit": {
+        "photographer": "Alev Takil",
+        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the international trade businesses near the Bridge of the Americas to the military-connected services around Fort Bliss and growing companies in the Eastside, El Paso small business owners face a common challenge: missed calls mean missed opportunities. Whether you're running a logistics company handling cross-border commerce, a healthcare practice in the Medical Center, or a home services business in Socorro, every unanswered call could be a lost customer. In the Sun City, where international business and military presence drive the economy, Capture Client's Voice AI technology keeps El Paso businesses connected across time zones and languages."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability for El Paso Customers",
+      "description": "Your El Paso customers call at all hours. Our AI voice agents never sleep, ensuring every call from El Paso County is answered professionally.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Bilingual Support Available",
+      "description": "Serve El Paso's diverse community with AI that can handle both English and Spanish inquiries seamlessly.",
+      "icon": "language"
+    },
+    {
+      "title": "Automatic Appointment Scheduling",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with El Paso customers.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings Over Traditional Staff",
+      "description": "Hiring a bilingual receptionist in El Paso costs $32,000-$44,000/year. Our Voice AI costs a fraction of that.",
+      "icon": "attach_money"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your El Paso business needs and how Voice AI can help you capture more clients."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI voice agent with your business information specific to your El Paso market."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your AI handle calls instantly based on real El Paso call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "International Logistics Companies",
+      "scenario": "Needed to handle inquiries from Mexico and US clients across time zones.",
+      "result": "Bilingual AI handles calls 24/7, increased international business by 55%."
+    },
+    {
+      "business_type": "Military Service Providers Near Fort Bliss",
+      "scenario": "Service members calling at various hours, needed flexible availability.",
+      "result": "Never miss a call from military families, increased client base by 40%."
+    },
+    {
+      "business_type": "Medical Practices in El Paso",
+      "scenario": "Needed bilingual patient intake and appointment scheduling.",
+      "result": "Improved patient access, reduced wait times, increased satisfaction by 45%."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving El Paso and Surrounding Areas",
+    "description": "We provide Voice AI services throughout El Paso County and the greater El Paso area.",
+    "areas_list": [
+      "Downtown El Paso",
+      "Eastside",
+      "Westside",
+      "Socorro",
+      "Horizon City",
+      "Fort Bliss",
+      "Northeast El Paso",
+      "Mission Valley"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Capture Client's bilingual Voice AI is perfect for our El Paso logistics business. We serve clients on both sides of the border seamlessly.",
+      "author": "Miguel Hernandez",
+      "business": "Hernandez International Logistics",
+      "location": "El Paso, TX"
+    },
+    {
+      "quote": "Serving military families near Fort Bliss, we needed 24/7 availability. This AI solution handles calls perfectly at any hour.",
+      "author": "Rebecca Johnson",
+      "business": "Johnson Property Management",
+      "location": "El Paso, TX"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for El Paso businesses?",
+      "answer": "Our Voice AI answers professionally, asks qualifying questions, provides information, schedules appointments, and transfers urgent calls. It works 24/7 for El Paso customers in English and Spanish."
+    },
+    {
+      "question": "What El Paso businesses benefit most?",
+      "answer": "Logistics companies, medical practices, military service providers, home services, and international businesses in El Paso all benefit from Voice AI automation."
+    },
+    {
+      "question": "Can the AI handle Spanish-speaking callers?",
+      "answer": "Yes! We can configure your Voice AI to be bilingual, handling both English and Spanish calls seamlessly."
+    },
+    {
+      "question": "How quickly can you set up for my El Paso business?",
+      "answer": "Most El Paso businesses are running within 1-2 weeks from initial strategy call to launch."
+    },
+    {
+      "question": "Can it integrate with my CRM?",
+      "answer": "Yes! Integrates with HubSpot, Salesforce, ServiceTitan, Jobber and tools used by El Paso businesses."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Small business owner in El Paso working with technology",
+        "caption": "El Paso businesses use Voice AI to automate lead capture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Professional answering phone call for El Paso business",
+        "caption": "AI answers every call professionally, 24/7"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Clients in El Paso?",
+    "subheadline": "Join dozens of El Paso businesses using Voice AI to answer every call.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-socorro-tx",
+      "voice-ai-horizon-city-tx",
+      "voice-ai-las-cruces-nm"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

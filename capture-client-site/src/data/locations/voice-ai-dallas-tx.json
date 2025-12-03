@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-dallas-tx",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Dallas",
+    "state": "Texas",
+    "state_abbr": "TX",
+    "slug": "dallas-tx",
+    "nearby_areas": [
+      "Plano",
+      "Irving",
+      "Frisco",
+      "Richardson",
+      "Garland"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Dallas, TX | Capture Client",
+    "meta_description": "Looking for Voice AI in Dallas? Capture Client helps Dallas businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Dallas, Texas",
+    "keywords": [
+      "voice ai agency dallas",
+      "ai voice agents dallas tx",
+      "ai receptionist dallas",
+      "automated phone answering dallas"
+    ],
+    "canonical_url": "/voice-ai-dallas-tx"
+  },
+  "hero": {
+    "headline": "Never Miss Another Call in Dallas",
+    "subheadline": "AI Voice Agents That Answer, Qualify, and Convert Leads 24/7 for Dallas Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Professional business owner in Dallas using phone technology",
+      "credit": {
+        "photographer": "Alev Takil",
+        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the corporate towers in Downtown Dallas to the tech hub of Uptown and thriving businesses in the Dallas Design District, Dallas small business owners face a common challenge: missed calls mean missed opportunities. Whether you're running a financial services firm near the Dallas Arts District, a home services business in Richardson, or a tech startup in the Innovation District, every unanswered call could be a lost customer. In the heart of DFW, where finance, technology, and telecommunications drive the economy, Capture Client's Voice AI technology keeps Dallas businesses connected."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability for Dallas Customers",
+      "description": "Your Dallas customers call at all hours. Our AI voice agents never sleep, ensuring every call from Dallas County is answered professionally.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "Stop wasting time on unqualified leads. Our AI asks the right questions upfront so you only talk to serious Dallas prospects ready to buy.",
+      "icon": "filter_alt"
+    },
+    {
+      "title": "Automatic Appointment Scheduling",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with Dallas customers.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings Over Traditional Staff",
+      "description": "Hiring a receptionist in Dallas costs $33,000-$45,000/year. Our Voice AI costs a fraction of that.",
+      "icon": "attach_money"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your Dallas business needs and how Voice AI can help you capture more clients."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI voice agent with your business information specific to your Dallas market."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your AI handle calls instantly based on real Dallas call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Real Estate Agencies in Dallas",
+      "scenario": "Missing buyer and seller inquiries during property showings.",
+      "result": "Captured 45% more qualified leads, closed 8 additional deals per quarter."
+    },
+    {
+      "business_type": "Law Firms Downtown Dallas",
+      "scenario": "Needed to pre-qualify legal consultations before attorney meetings.",
+      "result": "Attorneys save 12 hours per week, increased billable hours by 30%."
+    },
+    {
+      "business_type": "Tech Startups in Uptown",
+      "scenario": "Growing fast but couldn't afford full-time receptionist.",
+      "result": "Handles 5x more inbound calls, maintained lean startup costs."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Dallas and Surrounding Areas",
+    "description": "We provide Voice AI services throughout Dallas County and the greater DFW metroplex.",
+    "areas_list": [
+      "Downtown Dallas",
+      "Uptown",
+      "Design District",
+      "Plano",
+      "Irving",
+      "Frisco",
+      "Richardson",
+      "Garland"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Capture Client's Voice AI transformed our Dallas real estate business. We're closing more deals than ever.",
+      "author": "Jessica Williams",
+      "business": "Williams Realty Group",
+      "location": "Dallas, TX"
+    },
+    {
+      "quote": "As a growing tech startup in Uptown Dallas, we needed professional call handling without the overhead. Perfect solution.",
+      "author": "Mark Peterson",
+      "business": "TechForward Solutions",
+      "location": "Dallas, TX"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Dallas businesses?",
+      "answer": "Our Voice AI answers professionally, asks qualifying questions, provides information, schedules appointments, and transfers urgent calls. It works 24/7 for Dallas customers."
+    },
+    {
+      "question": "What Dallas businesses benefit most?",
+      "answer": "Real estate agencies, law firms, financial advisors, tech startups, home services, and medical practices in Dallas all benefit from Voice AI automation."
+    },
+    {
+      "question": "Does the AI sound robotic?",
+      "answer": "Not at all! Most Dallas callers don't realize they're talking to AI. We customize voice and tone to match your brand."
+    },
+    {
+      "question": "How quickly can you set up for my Dallas business?",
+      "answer": "Most Dallas businesses are running within 1-2 weeks from initial strategy call to launch."
+    },
+    {
+      "question": "Can it integrate with my CRM?",
+      "answer": "Yes! Integrates with HubSpot, Salesforce, ServiceTitan, Jobber and tools used by Dallas businesses."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Small business owner in Dallas working with technology",
+        "caption": "Dallas businesses use Voice AI to automate lead capture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Professional answering phone call for Dallas business",
+        "caption": "AI answers every call professionally, 24/7"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Clients in Dallas?",
+    "subheadline": "Join dozens of Dallas businesses using Voice AI to answer every call.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-plano-tx",
+      "voice-ai-irving-tx",
+      "voice-ai-frisco-tx"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

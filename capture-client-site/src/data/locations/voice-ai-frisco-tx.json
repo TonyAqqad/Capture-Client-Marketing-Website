@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-frisco-tx",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Frisco",
+    "state": "Texas",
+    "state_abbr": "TX",
+    "slug": "frisco-tx",
+    "nearby_areas": [
+      "Little Elm",
+      "Prosper",
+      "McKinney",
+      "The Colony",
+      "Plano"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Frisco, TX | Capture Client",
+    "meta_description": "Looking for Voice AI in Frisco? Capture Client helps Frisco businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Frisco, Texas",
+    "keywords": [
+      "voice ai agency frisco",
+      "ai voice agents frisco tx",
+      "ai receptionist frisco",
+      "automated phone answering frisco"
+    ],
+    "canonical_url": "/voice-ai-frisco-tx"
+  },
+  "hero": {
+    "headline": "Never Miss Another Call in Frisco",
+    "subheadline": "AI Voice Agents That Answer, Qualify, and Convert Leads 24/7 for Frisco Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Professional business owner in Frisco using phone technology",
+      "credit": {
+        "photographer": "Alev Takil",
+        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the sports and entertainment venues at The Star to the retail businesses along the Dallas North Tollway and family enterprises in West Frisco, Frisco small business owners face a common challenge: missed calls mean missed opportunities. Whether you're running a real estate agency near Frisco Square, a sports-related business at The Star, or a home services company in Prosper, every unanswered call could be a lost customer. In one of America's fastest-growing cities, where innovation meets family-friendly living and the Dallas Cowboys practice, Capture Client's Voice AI technology helps Frisco businesses grow as fast as the city itself."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability for Frisco Customers",
+      "description": "Your Frisco customers call at all hours. Our AI voice agents never sleep, ensuring every call from Collin County is answered professionally.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Scale with Frisco's Growth",
+      "description": "As Frisco grows, handle more calls without adding staff. Perfect for businesses in America's fastest-growing city.",
+      "icon": "trending_up"
+    },
+    {
+      "title": "Automatic Appointment Scheduling",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with Frisco customers.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings Over Traditional Staff",
+      "description": "Hiring a receptionist in Frisco costs $35,000-$50,000/year. Our Voice AI costs a fraction of that.",
+      "icon": "attach_money"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your Frisco business needs and how Voice AI can help you capture more clients."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI voice agent with your business information specific to your Frisco market."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your AI handle calls instantly based on real Frisco call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Real Estate Agencies in Frisco",
+      "scenario": "Explosive growth meant 3x more buyer inquiries, couldn't hire fast enough.",
+      "result": "AI handles unlimited calls, closed 50+ additional homes in first year."
+    },
+    {
+      "business_type": "Sports Training Centers Near The Star",
+      "scenario": "Parents calling during sessions, after hours, and weekends for program info.",
+      "result": "Captured every inquiry, increased enrollment by 85%, freed coaches to coach."
+    },
+    {
+      "business_type": "Home Builders in West Frisco",
+      "scenario": "New development phase, needed to qualify homebuyers 24/7.",
+      "result": "AI pre-qualifies buyers, increased sales appointments by 60%, faster closings."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Frisco and Surrounding Areas",
+    "description": "We provide Voice AI services throughout Collin and Denton Counties and northern DFW suburbs.",
+    "areas_list": [
+      "The Star",
+      "Frisco Square",
+      "West Frisco",
+      "East Frisco",
+      "Little Elm",
+      "Prosper",
+      "McKinney",
+      "The Colony"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Capture Client's Voice AI helped our Frisco real estate team keep up with explosive growth. We're closing more deals than ever.",
+      "author": "Jennifer Adams",
+      "business": "Adams Realty Group",
+      "location": "Frisco, TX"
+    },
+    {
+      "quote": "Running a sports training center near The Star, weekends are busy. The AI handles parent inquiries while we focus on athletes.",
+      "author": "Coach Marcus Williams",
+      "business": "Williams Sports Performance",
+      "location": "Frisco, TX"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Frisco businesses?",
+      "answer": "Our Voice AI answers professionally, asks qualifying questions, provides information, schedules appointments, and transfers urgent calls. It works 24/7 for Frisco customers."
+    },
+    {
+      "question": "What Frisco businesses benefit most?",
+      "answer": "Real estate agencies, sports training centers, home builders, medical practices, retail businesses, and professional services in Frisco all benefit from Voice AI automation."
+    },
+    {
+      "question": "Can it handle rapid growth?",
+      "answer": "Absolutely! As Frisco grows, your Voice AI scales instantly to handle unlimited calls without adding overhead."
+    },
+    {
+      "question": "How quickly can you set up for my Frisco business?",
+      "answer": "Most Frisco businesses are running within 1-2 weeks from initial strategy call to launch."
+    },
+    {
+      "question": "Can it integrate with my CRM?",
+      "answer": "Yes! Integrates with HubSpot, Salesforce, ServiceTitan, Jobber and tools used by Frisco businesses."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Small business owner in Frisco working with technology",
+        "caption": "Frisco businesses use Voice AI to automate lead capture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Professional answering phone call for Frisco business",
+        "caption": "AI answers every call professionally, 24/7"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Clients in Frisco?",
+    "subheadline": "Join dozens of Frisco businesses using Voice AI to answer every call.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-plano-tx",
+      "voice-ai-mckinney-tx",
+      "voice-ai-prosper-tx"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

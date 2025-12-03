@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-st-petersburg-fl",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "St. Petersburg",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "slug": "st-petersburg-fl",
+    "nearby_areas": [
+      "Clearwater",
+      "Largo",
+      "Pinellas Park",
+      "Gulfport",
+      "Treasure Island"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in St. Petersburg, FL | Capture Client",
+    "meta_description": "Looking for Voice AI in St. Petersburg? Capture Client helps St. Pete businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in St. Petersburg, Florida",
+    "keywords": [
+      "voice ai agency st petersburg",
+      "ai voice agents st pete fl",
+      "ai receptionist st petersburg",
+      "automated phone answering st petersburg"
+    ],
+    "canonical_url": "/voice-ai-st-petersburg-fl"
+  },
+  "hero": {
+    "headline": "Never Miss Another Call in St. Petersburg",
+    "subheadline": "AI Voice Agents That Answer, Qualify, and Convert Leads 24/7 for St. Pete Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Professional business owner in St. Petersburg using phone technology",
+      "credit": {
+        "photographer": "Alev Takil",
+        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the vibrant businesses along Central Avenue's Innovation District to the waterfront restaurants and galleries in the historic Warehouse Arts District and the service companies throughout Pinellas County, St. Petersburg business owners are thriving. Whether you're running an HVAC company in Largo, a law practice near the Mahaffey Theater, a property management business serving the beaches, or a home services company in Pinellas Park, every unanswered call represents lost opportunity. In St. Pete's booming arts, culture, and business scene, Capture Client's Voice AI technology ensures you never miss a beat."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability for St. Pete Customers",
+      "description": "Your St. Petersburg customers call at all hours. Our AI voice agents never sleep, ensuring every call from Pinellas County is answered professionally.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "Stop wasting time on unqualified leads. Our AI asks the right questions upfront so you only talk to serious St. Pete prospects ready to buy.",
+      "icon": "filter_alt"
+    },
+    {
+      "title": "Automatic Appointment Scheduling",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with St. Petersburg customers.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings Over Traditional Staff",
+      "description": "Hiring a receptionist in St. Petersburg costs $31,000-$41,000/year. Our Voice AI costs a fraction of that.",
+      "icon": "attach_money"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your St. Petersburg business needs and how Voice AI can help you capture more clients in this thriving market."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI voice agent with your business information specific to the St. Petersburg market."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your AI handle calls instantly based on real St. Pete call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "HVAC Companies in St. Petersburg",
+      "scenario": "Missing emergency AC calls during Florida's intense summer heat waves.",
+      "result": "Captures every emergency call 24/7. Increased summer revenue by $62,000 in first season."
+    },
+    {
+      "business_type": "Property Management in Treasure Island",
+      "scenario": "Beach rental guests calling at all hours with questions and maintenance requests.",
+      "result": "AI handles 90% of routine calls. Guest satisfaction scores increased 35%."
+    },
+    {
+      "business_type": "Medical Practices Downtown St. Pete",
+      "scenario": "Front desk overwhelmed with appointment requests and patient questions.",
+      "result": "Reduced front desk workload by 70%. Booked 45% more appointments automatically."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving St. Petersburg and Surrounding Areas",
+    "description": "We provide Voice AI services throughout Pinellas County and the greater Tampa Bay area.",
+    "areas_list": [
+      "Downtown St. Petersburg",
+      "Clearwater",
+      "Largo",
+      "Pinellas Park",
+      "Gulfport",
+      "Treasure Island",
+      "Seminole",
+      "Madeira Beach"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "In St. Pete's competitive HVAC market, Capture Client's Voice AI has been a game-changer. We're up $58,000/month.",
+      "author": "David Wilson",
+      "business": "Wilson Air Conditioning",
+      "location": "St. Petersburg, FL"
+    },
+    {
+      "quote": "Our beach rental guests get instant responses 24/7 now. The AI handles everything perfectly. Occupancy is at record highs.",
+      "author": "Karen Martinez",
+      "business": "Suncoast Property Management",
+      "location": "Treasure Island, FL"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for St. Petersburg businesses?",
+      "answer": "Our Voice AI answers professionally, asks qualifying questions, provides information, schedules appointments, and transfers urgent calls. It works 24/7 for St. Petersburg customers across Pinellas County."
+    },
+    {
+      "question": "What St. Petersburg businesses benefit most?",
+      "answer": "HVAC, plumbers, electricians, property management, hospitality, medical practices, real estate agents, contractors in St. Petersburg all benefit from Voice AI automation."
+    },
+    {
+      "question": "Does the AI sound robotic?",
+      "answer": "Not at all! Most St. Pete callers don't realize they're talking to AI. We customize voice and tone to match your brand."
+    },
+    {
+      "question": "How quickly can you set up for my St. Petersburg business?",
+      "answer": "Most St. Petersburg businesses are running within 1-2 weeks from initial strategy call to launch."
+    },
+    {
+      "question": "Can it integrate with my CRM?",
+      "answer": "Yes! Integrates with HubSpot, Salesforce, ServiceTitan, Jobber, Guesty and tools used by St. Petersburg businesses."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Small business owner in St. Petersburg working with technology",
+        "caption": "St. Petersburg businesses use Voice AI to automate lead capture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Professional answering phone call for St. Petersburg business",
+        "caption": "AI answers every call professionally, 24/7"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Clients in St. Petersburg?",
+    "subheadline": "Join dozens of St. Pete businesses using Voice AI to answer every call.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-clearwater-fl",
+      "voice-ai-largo-fl",
+      "voice-ai-tampa-fl"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-miami-fl",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Miami",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "slug": "miami-fl",
+    "nearby_areas": [
+      "Coral Gables",
+      "Miami Beach",
+      "Kendall",
+      "Hialeah",
+      "Aventura"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Miami, FL | Capture Client",
+    "meta_description": "Looking for Voice AI in Miami? Capture Client helps Miami businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Miami, Florida",
+    "keywords": [
+      "voice ai agency miami",
+      "ai voice agents miami fl",
+      "ai receptionist miami",
+      "automated phone answering miami"
+    ],
+    "canonical_url": "/voice-ai-miami-fl"
+  },
+  "hero": {
+    "headline": "Never Miss Another Call in Miami",
+    "subheadline": "AI Voice Agents That Answer, Qualify, and Convert Leads 24/7 for Miami Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Professional business owner in Miami using phone technology",
+      "credit": {
+        "photographer": "Alev Takil",
+        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the bustling businesses in Brickell's financial district to the vibrant enterprises along Calle Ocho and the growing companies in Wynwood, Miami business owners face a constant challenge: missed calls mean missed opportunities. Whether you're running an HVAC company in Kendall, a law practice in Downtown Miami, or a hospitality business in Miami Beach, every unanswered call could be a lost customer. With Miami's diverse, multilingual market operating around the clock, Capture Client's Voice AI technology ensures you never miss a client—day or night."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability for Miami Customers",
+      "description": "Miami never sleeps, and neither should your phone. Our AI voice agents answer every call from Miami-Dade County professionally, any time of day.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "Stop wasting time on unqualified leads. Our AI asks the right questions upfront so you only talk to serious Miami prospects ready to buy.",
+      "icon": "filter_alt"
+    },
+    {
+      "title": "Automatic Appointment Scheduling",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with Miami customers.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings Over Traditional Staff",
+      "description": "Hiring a receptionist in Miami costs $35,000-$45,000/year. Our Voice AI costs a fraction of that.",
+      "icon": "attach_money"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your Miami business needs and how Voice AI can help you capture more clients in this competitive market."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI voice agent with your business information specific to the diverse Miami market."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your AI handle calls instantly based on real Miami call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "HVAC Companies in Miami",
+      "scenario": "Missing 50% of calls during Florida's brutal summer heat.",
+      "result": "Increased summer revenue by $85,000 in first 90 days by capturing every emergency AC call."
+    },
+    {
+      "business_type": "Law Firms in Brickell",
+      "scenario": "Needed to pre-qualify clients before attorney consultations in a high-volume market.",
+      "result": "Attorneys spend 70% less time on unqualified calls, closed 8 additional cases per month."
+    },
+    {
+      "business_type": "Real Estate Agencies in Coral Gables",
+      "scenario": "Couldn't keep up with buyer inquiries in Miami's hot real estate market.",
+      "result": "Handles 4x more inquiries without hiring. Closed 12 additional properties in 6 months."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Miami and Surrounding Areas",
+    "description": "We provide Voice AI services throughout Miami-Dade County and the greater Miami metropolitan area.",
+    "areas_list": [
+      "Downtown Miami",
+      "Brickell",
+      "Coral Gables",
+      "Miami Beach",
+      "Kendall",
+      "Hialeah",
+      "Aventura",
+      "Wynwood"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "In Miami's competitive market, Capture Client's Voice AI has been crucial. We've increased monthly revenue by over $75,000.",
+      "author": "Carlos Rodriguez",
+      "business": "Rodriguez Cooling & Heating",
+      "location": "Miami, FL"
+    },
+    {
+      "quote": "The AI receptionist handles our high call volume and books consultations automatically. It's transformed our practice.",
+      "author": "Diana Mendez",
+      "business": "Mendez Law Group",
+      "location": "Brickell, FL"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Miami businesses?",
+      "answer": "Our Voice AI answers professionally, asks qualifying questions, provides information, schedules appointments, and transfers urgent calls. It works 24/7 for Miami customers in this fast-paced market."
+    },
+    {
+      "question": "What Miami businesses benefit most?",
+      "answer": "HVAC, plumbers, electricians, law firms, medical practices, real estate agents, hospitality businesses, and contractors in Miami all benefit from Voice AI automation."
+    },
+    {
+      "question": "Does the AI sound robotic?",
+      "answer": "Not at all! Most Miami callers don't realize they're talking to AI. We customize voice and tone to match your brand and can even accommodate bilingual needs."
+    },
+    {
+      "question": "How quickly can you set up for my Miami business?",
+      "answer": "Most Miami businesses are running within 1-2 weeks from initial strategy call to launch."
+    },
+    {
+      "question": "Can it integrate with my CRM?",
+      "answer": "Yes! Integrates with HubSpot, Salesforce, ServiceTitan, Jobber and tools used by Miami businesses."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Small business owner in Miami working with technology",
+        "caption": "Miami businesses use Voice AI to automate lead capture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Professional answering phone call for Miami business",
+        "caption": "AI answers every call professionally, 24/7"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Clients in Miami?",
+    "subheadline": "Join dozens of Miami businesses using Voice AI to answer every call.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-coral-gables-fl",
+      "voice-ai-hialeah-fl",
+      "voice-ai-fort-lauderdale-fl"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

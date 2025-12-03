@@ -82,7 +82,7 @@ export function PremiumFAQ() {
   return (
     <section
       ref={containerRef}
-      className="section bg-background relative overflow-hidden w-full max-w-full"
+      className="section bg-background relative overflow-hidden w-full max-w-full py-16 sm:py-20 lg:py-24"
     >
       {/* Background effects */}
       <div className="absolute inset-0 bg-mesh-premium opacity-30" />
@@ -100,32 +100,32 @@ export function PremiumFAQ() {
         className="absolute top-0 left-0 w-full max-w-[500px] sm:max-w-[1000px] h-[500px] sm:h-[1000px] rounded-full bg-gradient-radial from-accent/10 to-transparent blur-3xl -translate-x-1/4 -translate-y-1/4"
       />
 
-      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
+      <div className="container-custom relative z-10 px-6 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className="text-center mb-12 sm:mb-16">
+        <div className="text-center mb-16 sm:mb-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent mb-3 sm:mb-4">
+            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-accent mb-4 sm:mb-5">
               Common Questions
             </h2>
-            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-4 sm:mb-6 text-depth px-4">
-              Got Questions?{" "}
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground mb-6 sm:mb-8 text-depth px-4 leading-[1.1] tracking-tight" style={{ hyphens: 'none' }}>
+              <span className="whitespace-nowrap">Got Questions?</span>{" "}
               <span className="text-gradient bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
                 We've Got Answers
               </span>
             </h3>
-            <p className="text-base sm:text-lg md:text-xl text-foreground-muted max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-foreground-muted max-w-2xl mx-auto leading-[1.6] px-6">
               We've helped hundreds of businesses overcome these exact objections. Here's the truth.
             </p>
           </motion.div>
         </div>
 
         {/* FAQ Accordion - mobile optimized */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-0">
-          <div className="space-y-3 sm:space-y-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-4 sm:space-y-5">
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
@@ -217,9 +217,9 @@ function FAQItem({ faq, isOpen, onClick }: FAQItemProps) {
       {/* Question button - full width tap target on mobile */}
       <button
         onClick={onClick}
-        className="w-full px-4 sm:px-6 lg:px-8 py-5 sm:py-6 flex items-center justify-between text-left transition-all duration-200 hover:bg-white/5 group touch-manipulation"
+        className="w-full px-6 sm:px-8 py-6 sm:py-7 flex items-center justify-between text-left transition-all duration-200 hover:bg-white/5 group touch-manipulation min-h-[72px]"
       >
-        <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
+        <div className="flex items-center gap-4 sm:gap-5 flex-1 min-w-0">
           {/* Icon - responsive sizing */}
           <motion.div
             animate={{
@@ -227,7 +227,7 @@ function FAQItem({ faq, isOpen, onClick }: FAQItemProps) {
               rotate: isOpen ? [0, -10, 10, 0] : 0,
             }}
             transition={{ duration: 0.3 }}
-            className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl transition-all duration-300 flex-shrink-0 ${
+            className={`flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-xl transition-all duration-300 flex-shrink-0 ${
               isOpen
                 ? `bg-gradient-to-br ${
                     isAccent
@@ -238,7 +238,7 @@ function FAQItem({ faq, isOpen, onClick }: FAQItemProps) {
             }`}
           >
             <span
-              className={`material-icons text-xl sm:text-2xl transition-colors duration-300 ${
+              className={`material-icons text-2xl sm:text-3xl transition-colors duration-300 ${
                 isOpen ? (isAccent ? "text-accent" : "text-primary") : "text-foreground-muted"
               }`}
             >
@@ -248,9 +248,10 @@ function FAQItem({ faq, isOpen, onClick }: FAQItemProps) {
 
           {/* Question - responsive text size */}
           <h4
-            className={`text-sm sm:text-base lg:text-lg font-semibold transition-colors duration-300 pr-2 ${
+            className={`text-base sm:text-lg lg:text-xl font-semibold transition-colors duration-300 pr-2 leading-tight ${
               isOpen ? "text-foreground" : "text-foreground group-hover:text-foreground"
             }`}
+            style={{ hyphens: 'none' }}
           >
             {faq.question}
           </h4>
@@ -260,7 +261,7 @@ function FAQItem({ faq, isOpen, onClick }: FAQItemProps) {
         <motion.span
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
-          className={`material-icons text-xl sm:text-2xl transition-colors duration-300 ml-2 sm:ml-4 flex-shrink-0 ${
+          className={`material-icons text-2xl sm:text-3xl transition-colors duration-300 ml-3 sm:ml-4 flex-shrink-0 ${
             isOpen ? (isAccent ? "text-accent" : "text-primary") : "text-foreground-muted"
           }`}
         >
@@ -283,11 +284,11 @@ function FAQItem({ faq, isOpen, onClick }: FAQItemProps) {
               animate={{ y: 0 }}
               exit={{ y: -10 }}
               transition={{ duration: 0.2 }}
-              className={`px-4 sm:px-6 lg:px-8 pb-5 sm:pb-6 sm:pl-16 lg:pl-24 border-t ${
+              className={`px-6 sm:px-8 pb-6 sm:pb-7 sm:pl-20 lg:pl-28 border-t ${
                 isAccent ? "border-accent/20" : "border-primary/20"
               }`}
             >
-              <p className="text-foreground-muted text-sm sm:text-base leading-relaxed pt-4 sm:pt-4">
+              <p className="text-foreground-muted text-base sm:text-lg leading-[1.7] pt-5 sm:pt-6">
                 {faq.answer}
               </p>
             </motion.div>

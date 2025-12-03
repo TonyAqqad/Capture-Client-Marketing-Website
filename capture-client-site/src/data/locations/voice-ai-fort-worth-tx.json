@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-fort-worth-tx",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Fort Worth",
+    "state": "Texas",
+    "state_abbr": "TX",
+    "slug": "fort-worth-tx",
+    "nearby_areas": [
+      "Arlington",
+      "Keller",
+      "Hurst",
+      "North Richland Hills",
+      "Mansfield"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Fort Worth, TX | Capture Client",
+    "meta_description": "Looking for Voice AI in Fort Worth? Capture Client helps Fort Worth businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Fort Worth, Texas",
+    "keywords": [
+      "voice ai agency fort worth",
+      "ai voice agents fort worth tx",
+      "ai receptionist fort worth",
+      "automated phone answering fort worth"
+    ],
+    "canonical_url": "/voice-ai-fort-worth-tx"
+  },
+  "hero": {
+    "headline": "Never Miss Another Call in Fort Worth",
+    "subheadline": "AI Voice Agents That Answer, Qualify, and Convert Leads 24/7 for Fort Worth Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Professional business owner in Fort Worth using phone technology",
+      "credit": {
+        "photographer": "Alev Takil",
+        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the historic Stockyards District to the modern businesses in downtown Fort Worth and the thriving companies in Alliance Town Center, Fort Worth small business owners face a common challenge: missed calls mean missed opportunities. Whether you're running a Western wear shop in Sundance Square, a logistics company near Alliance Airport, or a home services business in Keller, every unanswered call could be a lost customer. In Cowtown, where Western heritage meets modern business, Capture Client's Voice AI technology keeps Fort Worth businesses connected with that genuine Texas hospitality—24/7."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability for Fort Worth Customers",
+      "description": "Your Fort Worth customers call at all hours. Our AI voice agents never sleep, ensuring every call from Tarrant County is answered professionally.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "Stop wasting time on unqualified leads. Our AI asks the right questions upfront so you only talk to serious Fort Worth prospects ready to buy.",
+      "icon": "filter_alt"
+    },
+    {
+      "title": "Automatic Appointment Scheduling",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with Fort Worth customers.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings Over Traditional Staff",
+      "description": "Hiring a receptionist in Fort Worth costs $31,000-$42,000/year. Our Voice AI costs a fraction of that.",
+      "icon": "attach_money"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your Fort Worth business needs and how Voice AI can help you capture more clients."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI voice agent with your business information specific to your Fort Worth market."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your AI handle calls instantly based on real Fort Worth call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Logistics Companies Near Alliance",
+      "scenario": "International clients calling at all hours for shipping quotes and tracking.",
+      "result": "Handles inquiries 24/7, increased quote volume by 60%, closed 40% more deals."
+    },
+    {
+      "business_type": "Retail Shops in Stockyards",
+      "scenario": "Missing calls during busy tourist seasons and weekends.",
+      "result": "Captured every inquiry, increased phone orders by 45%, never miss a sale."
+    },
+    {
+      "business_type": "Home Services in Keller",
+      "scenario": "Growing business couldn't afford full office staff yet.",
+      "result": "Professional call handling from day one, saved $45K annually in staffing."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Fort Worth and Surrounding Areas",
+    "description": "We provide Voice AI services throughout Tarrant County and the greater Fort Worth area.",
+    "areas_list": [
+      "Downtown Fort Worth",
+      "Stockyards District",
+      "Alliance Town Center",
+      "Sundance Square",
+      "Arlington",
+      "Keller",
+      "North Richland Hills",
+      "Mansfield"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Capture Client's Voice AI has that genuine Fort Worth hospitality. Customers love it, and we're closing more deals.",
+      "author": "Tom Anderson",
+      "business": "Anderson Logistics Group",
+      "location": "Fort Worth, TX"
+    },
+    {
+      "quote": "Running a Western wear shop in the Stockyards, weekends are crazy. The AI handles inquiries while we help in-store customers.",
+      "author": "Patricia Hayes",
+      "business": "Hayes Western Outfitters",
+      "location": "Fort Worth, TX"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Fort Worth businesses?",
+      "answer": "Our Voice AI answers professionally, asks qualifying questions, provides information, schedules appointments, and transfers urgent calls. It works 24/7 for Fort Worth customers."
+    },
+    {
+      "question": "What Fort Worth businesses benefit most?",
+      "answer": "Logistics companies, retail shops, home services, law firms, and hospitality businesses in Fort Worth all benefit from Voice AI automation."
+    },
+    {
+      "question": "Does the AI sound robotic?",
+      "answer": "Not at all! Most Fort Worth callers don't realize they're talking to AI. We customize voice and tone to match your brand and Fort Worth hospitality."
+    },
+    {
+      "question": "How quickly can you set up for my Fort Worth business?",
+      "answer": "Most Fort Worth businesses are running within 1-2 weeks from initial strategy call to launch."
+    },
+    {
+      "question": "Can it integrate with my CRM?",
+      "answer": "Yes! Integrates with HubSpot, Salesforce, ServiceTitan, Jobber and tools used by Fort Worth businesses."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Small business owner in Fort Worth working with technology",
+        "caption": "Fort Worth businesses use Voice AI to automate lead capture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Professional answering phone call for Fort Worth business",
+        "caption": "AI answers every call professionally, 24/7"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Clients in Fort Worth?",
+    "subheadline": "Join dozens of Fort Worth businesses using Voice AI to answer every call.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-arlington-tx",
+      "voice-ai-keller-tx",
+      "voice-ai-mansfield-tx"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

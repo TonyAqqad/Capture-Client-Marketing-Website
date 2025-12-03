@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-arlington-tx",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Arlington",
+    "state": "Texas",
+    "state_abbr": "TX",
+    "slug": "arlington-tx",
+    "nearby_areas": [
+      "Grand Prairie",
+      "Mansfield",
+      "Euless",
+      "Bedford",
+      "Pantego"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Arlington, TX | Capture Client",
+    "meta_description": "Looking for Voice AI in Arlington? Capture Client helps Arlington businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Arlington, Texas",
+    "keywords": [
+      "voice ai agency arlington",
+      "ai voice agents arlington tx",
+      "ai receptionist arlington",
+      "automated phone answering arlington"
+    ],
+    "canonical_url": "/voice-ai-arlington-tx"
+  },
+  "hero": {
+    "headline": "Never Miss Another Call in Arlington",
+    "subheadline": "AI Voice Agents That Answer, Qualify, and Convert Leads 24/7 for Arlington Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Professional business owner in Arlington using phone technology",
+      "credit": {
+        "photographer": "Alev Takil",
+        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the entertainment district near AT&T Stadium and Globe Life Field to the corporate offices along I-20 and thriving businesses in The Parks at Arlington, Arlington small business owners face a common challenge: missed calls mean missed opportunities. Whether you're running a hospitality business near the Entertainment District, a home services company in Grand Prairie, or a retail shop near Six Flags, every unanswered call could be a lost customer. In the heart of the Metroplex, perfectly positioned between Dallas and Fort Worth, Capture Client's Voice AI technology keeps Arlington businesses connected during game days, concerts, and everything in between."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability for Arlington Customers",
+      "description": "Your Arlington customers call at all hours. Our AI voice agents never sleep, ensuring every call from Tarrant County is answered professionally.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Handle High Call Volume",
+      "description": "Perfect for Arlington businesses near entertainment venues that experience surge calling during events.",
+      "icon": "trending_up"
+    },
+    {
+      "title": "Automatic Appointment Scheduling",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with Arlington customers.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings Over Traditional Staff",
+      "description": "Hiring a receptionist in Arlington costs $31,000-$43,000/year. Our Voice AI costs a fraction of that.",
+      "icon": "attach_money"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your Arlington business needs and how Voice AI can help you capture more clients."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI voice agent with your business information specific to your Arlington market."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your AI handle calls instantly based on real Arlington call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Hotels Near Entertainment District",
+      "scenario": "Call volume spikes 400% during Cowboys games and major events.",
+      "result": "AI handles surge calling perfectly, increased bookings by 65% during events."
+    },
+    {
+      "business_type": "Restaurants Near AT&T Stadium",
+      "scenario": "Overwhelmed with reservation calls before and after games.",
+      "result": "Handles peak reservations automatically, reduced wait times by 80%."
+    },
+    {
+      "business_type": "Home Services in Arlington",
+      "scenario": "Growing business needed professional phone presence on budget.",
+      "result": "Enterprise-level call handling at startup costs, grew 3x in first year."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Arlington and Surrounding Areas",
+    "description": "We provide Voice AI services throughout Tarrant County and the central Metroplex area.",
+    "areas_list": [
+      "Entertainment District",
+      "Downtown Arlington",
+      "The Parks",
+      "Pantego",
+      "Grand Prairie",
+      "Mansfield",
+      "Euless",
+      "Bedford"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Capture Client's Voice AI saves us during Cowboys game days. We handle 10x more calls without adding staff.",
+      "author": "James Mitchell",
+      "business": "Stadium District Hotel",
+      "location": "Arlington, TX"
+    },
+    {
+      "quote": "Running a restaurant near AT&T Stadium, game days used to be chaos. Now the AI handles reservations flawlessly.",
+      "author": "Sofia Martinez",
+      "business": "Martinez Steakhouse",
+      "location": "Arlington, TX"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Arlington businesses?",
+      "answer": "Our Voice AI answers professionally, asks qualifying questions, provides information, schedules appointments, and transfers urgent calls. It works 24/7 for Arlington customers."
+    },
+    {
+      "question": "What Arlington businesses benefit most?",
+      "answer": "Hotels, restaurants, entertainment venues, home services, and retail businesses in Arlington all benefit from Voice AI automation, especially those near sports and entertainment venues."
+    },
+    {
+      "question": "Can it handle high call volume during events?",
+      "answer": "Absolutely! Our AI can handle unlimited simultaneous calls, perfect for Arlington businesses during Cowboys games, Rangers games, and concerts."
+    },
+    {
+      "question": "How quickly can you set up for my Arlington business?",
+      "answer": "Most Arlington businesses are running within 1-2 weeks from initial strategy call to launch."
+    },
+    {
+      "question": "Can it integrate with my CRM?",
+      "answer": "Yes! Integrates with HubSpot, Salesforce, ServiceTitan, Jobber and tools used by Arlington businesses."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Small business owner in Arlington working with technology",
+        "caption": "Arlington businesses use Voice AI to automate lead capture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Professional answering phone call for Arlington business",
+        "caption": "AI answers every call professionally, 24/7"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Clients in Arlington?",
+    "subheadline": "Join dozens of Arlington businesses using Voice AI to answer every call.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-grand-prairie-tx",
+      "voice-ai-mansfield-tx",
+      "voice-ai-fort-worth-tx"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-canton-oh",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Canton",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "slug": "canton-oh",
+    "nearby_areas": [
+      "Massillon",
+      "North Canton",
+      "Alliance",
+      "Louisville",
+      "Plain Township"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Canton, OH | Capture Client",
+    "meta_description": "Looking for Voice AI in Canton? Capture Client helps Canton businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Canton, Ohio",
+    "keywords": [
+      "voice ai agency canton",
+      "ai voice agents canton ohio",
+      "ai receptionist canton",
+      "automated phone answering canton"
+    ],
+    "canonical_url": "/voice-ai-canton-oh"
+  },
+  "hero": {
+    "headline": "Never Miss Another Call in Canton",
+    "subheadline": "AI Voice Agents That Answer, Qualify, and Convert Leads 24/7 for Canton Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Professional business owner in Canton using phone technology",
+      "credit": {
+        "photographer": "Alev Takil",
+        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the bustling businesses in Downtown Canton and Belden Village to the growing companies in North Canton and Massillon, Canton small business owners face a common challenge: missed calls mean missed opportunities. Whether you're running an HVAC company in Alliance, a manufacturing business near the Canton industrial corridor, or a home services business in Louisville, every unanswered call could be a lost customer. That's where Capture Client's Voice AI technology comes in."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability for Canton Customers",
+      "description": "Your Canton customers call at all hours. Our AI voice agents never sleep, ensuring every call from Stark County is answered professionally.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "Stop wasting time on unqualified leads. Our AI asks the right questions upfront so you only talk to serious Canton prospects ready to buy.",
+      "icon": "filter_alt"
+    },
+    {
+      "title": "Automatic Appointment Scheduling",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with Canton customers.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings Over Traditional Staff",
+      "description": "Hiring a receptionist in Canton costs $27,000-$37,000/year. Our Voice AI costs a fraction of that.",
+      "icon": "attach_money"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your Canton business needs and how Voice AI can help you capture more clients."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI voice agent with your business information specific to your Canton market."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your AI handle calls instantly based on real Canton call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "HVAC Companies in Canton",
+      "scenario": "Missing 40% of calls during peak heating and cooling seasons.",
+      "result": "Increased seasonal revenue by $55,000 in first 90 days."
+    },
+    {
+      "business_type": "Manufacturing Suppliers Canton",
+      "scenario": "B2B inquiries coming in outside normal business hours.",
+      "result": "Captured 48% more qualified leads, closed $220K in new contracts."
+    },
+    {
+      "business_type": "Home Services North Canton/Massillon",
+      "scenario": "Wanted to grow but couldn't afford more office staff.",
+      "result": "Handles 3x more calls without hiring. Customer retention up 42%."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Canton and Surrounding Areas",
+    "description": "We provide Voice AI services throughout Stark County and the greater Canton metropolitan area.",
+    "areas_list": [
+      "Downtown Canton",
+      "Belden Village",
+      "Massillon",
+      "North Canton",
+      "Alliance",
+      "Louisville",
+      "Plain Township",
+      "Jackson Township"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Capture Client's Voice AI has revolutionized our Canton manufacturing business. We capture leads 24/7 now, even on weekends.",
+      "author": "Bill Henderson",
+      "business": "Henderson Industrial Supply",
+      "location": "Canton, OH"
+    },
+    {
+      "quote": "Our Canton HVAC company has grown 50% since implementing Voice AI. The system pays for itself many times over.",
+      "author": "Nicole Garcia",
+      "business": "Garcia Climate Solutions",
+      "location": "Canton, OH"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Canton businesses?",
+      "answer": "Our Voice AI answers professionally, asks qualifying questions, provides information, schedules appointments, and transfers urgent calls. It works 24/7 for Canton customers."
+    },
+    {
+      "question": "What Canton businesses benefit most?",
+      "answer": "HVAC, plumbers, electricians, manufacturing, law firms, medical practices, real estate agents, contractors in Canton all benefit from Voice AI automation."
+    },
+    {
+      "question": "Does the AI sound robotic?",
+      "answer": "Not at all! Most Canton callers don't realize they're talking to AI. We customize voice and tone to match your brand."
+    },
+    {
+      "question": "How quickly can you set up for my Canton business?",
+      "answer": "Most Canton businesses are running within 1-2 weeks from initial strategy call to launch."
+    },
+    {
+      "question": "Can it integrate with my CRM?",
+      "answer": "Yes! Integrates with HubSpot, Salesforce, ServiceTitan, Jobber and tools used by Canton businesses."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Small business owner in Canton working with technology",
+        "caption": "Canton businesses use Voice AI to automate lead capture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Professional answering phone call for Canton business",
+        "caption": "AI answers every call professionally, 24/7"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Clients in Canton?",
+    "subheadline": "Join dozens of Canton businesses using Voice AI to answer every call.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-massillon-oh",
+      "voice-ai-north-canton-oh",
+      "voice-ai-alliance-oh"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

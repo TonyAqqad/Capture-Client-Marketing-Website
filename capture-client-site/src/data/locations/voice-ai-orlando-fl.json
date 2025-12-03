@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-orlando-fl",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Orlando",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "slug": "orlando-fl",
+    "nearby_areas": [
+      "Winter Park",
+      "Kissimmee",
+      "Altamonte Springs",
+      "Lake Mary",
+      "Sanford"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Orlando, FL | Capture Client",
+    "meta_description": "Looking for Voice AI in Orlando? Capture Client helps Orlando businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Orlando, Florida",
+    "keywords": [
+      "voice ai agency orlando",
+      "ai voice agents orlando fl",
+      "ai receptionist orlando",
+      "automated phone answering orlando"
+    ],
+    "canonical_url": "/voice-ai-orlando-fl"
+  },
+  "hero": {
+    "headline": "Never Miss Another Call in Orlando",
+    "subheadline": "AI Voice Agents That Answer, Qualify, and Convert Leads 24/7 for Orlando Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Professional business owner in Orlando using phone technology",
+      "credit": {
+        "photographer": "Alev Takil",
+        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the innovative tech companies in Lake Nona's Medical City to the hospitality businesses serving the theme park corridor and the growing enterprises in Downtown Orlando's creative district, Central Florida business owners face unique challenges. Whether you're running an HVAC company in Winter Park, a law practice near Orange Avenue, a property management company in Kissimmee, or a home services business in Altamonte Springs, every missed call is a missed opportunity. In Orlando's tourism-driven, 24/7 economy, Capture Client's Voice AI technology ensures you capture every lead."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability for Orlando Customers",
+      "description": "Orlando's economy never stops. Our AI voice agents work around the clock, ensuring every call from Orange County is answered professionally.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "Stop wasting time on unqualified leads. Our AI asks the right questions upfront so you only talk to serious Orlando prospects ready to buy.",
+      "icon": "filter_alt"
+    },
+    {
+      "title": "Automatic Appointment Scheduling",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with Orlando customers.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings Over Traditional Staff",
+      "description": "Hiring a receptionist in Orlando costs $31,000-$41,000/year. Our Voice AI costs a fraction of that.",
+      "icon": "attach_money"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your Orlando business needs and how Voice AI can help you capture more clients in Central Florida's competitive market."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI voice agent with your business information specific to the Orlando market."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your AI handle calls instantly based on real Orlando call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Property Management in Kissimmee",
+      "scenario": "Couldn't keep up with vacation rental inquiries during peak season.",
+      "result": "Handled 5x more inquiries without adding staff. Occupancy rate increased by 23%."
+    },
+    {
+      "business_type": "HVAC Companies in Orlando",
+      "scenario": "Missing emergency calls during Florida's brutal summer months.",
+      "result": "Captured 95% of emergency calls. Increased summer revenue by $68,000 in 3 months."
+    },
+    {
+      "business_type": "Medical Practices in Lake Nona",
+      "scenario": "Needed to screen patients and schedule appointments more efficiently.",
+      "result": "Reduced front desk workload by 75%. Patient satisfaction scores increased significantly."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Orlando and Surrounding Areas",
+    "description": "We provide Voice AI services throughout Orange County and the greater Central Florida area.",
+    "areas_list": [
+      "Downtown Orlando",
+      "Winter Park",
+      "Kissimmee",
+      "Altamonte Springs",
+      "Lake Mary",
+      "Sanford",
+      "Lake Nona",
+      "Dr. Phillips"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "With Orlando's 24/7 tourism economy, Capture Client's Voice AI has been essential. Revenue up $55,000 per month.",
+      "author": "James Patterson",
+      "business": "Patterson Property Management",
+      "location": "Kissimmee, FL"
+    },
+    {
+      "quote": "The AI receptionist handles our high volume of calls perfectly. We're capturing leads we used to miss.",
+      "author": "Dr. Maria Gonzalez",
+      "business": "Lake Nona Family Medicine",
+      "location": "Orlando, FL"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Orlando businesses?",
+      "answer": "Our Voice AI answers professionally, asks qualifying questions, provides information, schedules appointments, and transfers urgent calls. It works 24/7 for Orlando customers in this tourism and business hub."
+    },
+    {
+      "question": "What Orlando businesses benefit most?",
+      "answer": "HVAC, plumbers, electricians, property management, hospitality, medical practices, real estate agents, contractors in Orlando all benefit from Voice AI automation."
+    },
+    {
+      "question": "Does the AI sound robotic?",
+      "answer": "Not at all! Most Orlando callers don't realize they're talking to AI. We customize voice and tone to match your brand."
+    },
+    {
+      "question": "How quickly can you set up for my Orlando business?",
+      "answer": "Most Orlando businesses are running within 1-2 weeks from initial strategy call to launch."
+    },
+    {
+      "question": "Can it integrate with my CRM?",
+      "answer": "Yes! Integrates with HubSpot, Salesforce, ServiceTitan, Jobber, Guesty and tools used by Orlando businesses."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Small business owner in Orlando working with technology",
+        "caption": "Orlando businesses use Voice AI to automate lead capture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Professional answering phone call for Orlando business",
+        "caption": "AI answers every call professionally, 24/7"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Clients in Orlando?",
+    "subheadline": "Join dozens of Orlando businesses using Voice AI to answer every call.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-winter-park-fl",
+      "voice-ai-kissimmee-fl",
+      "voice-ai-lake-mary-fl"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

@@ -83,7 +83,7 @@ export function HowItWorks() {
   return (
     <section
       ref={containerRef}
-      className="section bg-background-dark relative overflow-hidden w-full max-w-full"
+      className="section bg-background-dark relative overflow-hidden w-full max-w-full py-16 sm:py-20 lg:py-24"
     >
       {/* Background effects */}
       <div className="absolute inset-0 bg-mesh-premium opacity-50" />
@@ -102,24 +102,24 @@ export function HowItWorks() {
         />
       </div>
 
-      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
+      <div className="container-custom relative z-10 px-6 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+        <div className="text-center mb-16 sm:mb-20 lg:mb-24">
           <motion.div
             initial={{ opacity: 0, y: isMobile ? 0 : 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: isMobile ? 0 : 30 }}
             transition={{ duration: isMobile ? 0.3 : 0.6 }}
           >
-            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent mb-3 sm:mb-4">
+            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-accent mb-4 sm:mb-5">
               Simple Process
             </h2>
-            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-4 sm:mb-6 text-depth px-4">
-              How It Works:{" "}
-              <span className="text-gradient bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground mb-6 sm:mb-8 text-depth px-4 leading-[1.1] tracking-tight" style={{ hyphens: 'none' }}>
+              <span className="whitespace-nowrap">How It Works:</span>{" "}
+              <span className="text-gradient bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent whitespace-nowrap">
                 4 Simple Steps
               </span>
             </h3>
-            <p className="text-base sm:text-lg md:text-xl text-foreground-muted max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-foreground-muted max-w-2xl mx-auto leading-[1.6] px-6">
               From strategy to scale—we make growth simple, automated, and profitable.
             </p>
           </motion.div>
@@ -152,7 +152,7 @@ export function HowItWorks() {
         </div>
 
         {/* Steps - Mobile vertical */}
-        <div className="lg:hidden space-y-6 sm:space-y-8">
+        <div className="lg:hidden space-y-10 sm:space-y-12">
           {steps.map((step, index) => (
             <StepCardMobile
               key={step.number}
@@ -364,20 +364,20 @@ function StepCardMobile({ step, index, isInView, isMobile }: StepCardProps) {
       <div
         className={`bg-surface/50 backdrop-blur-lg border-2 ${
           isAccent ? "border-accent/30" : "border-primary/30"
-        } rounded-xl sm:rounded-2xl p-5 sm:p-6`}
+        } rounded-2xl sm:rounded-3xl p-7 sm:p-8`}
       >
         {/* Icon */}
         <div
-          className={`w-12 h-12 rounded-xl bg-gradient-to-br ${
+          className={`w-14 h-14 rounded-xl bg-gradient-to-br ${
             isAccent
               ? "from-accent/20 to-accent/10"
               : "from-primary/20 to-primary/10"
           } border ${
             isAccent ? "border-accent/30" : "border-primary/30"
-          } flex items-center justify-center mb-4`}
+          } flex items-center justify-center mb-5`}
         >
           <span
-            className={`material-icons text-xl ${
+            className={`material-icons text-2xl ${
               isAccent ? "text-accent" : "text-primary"
             }`}
           >
@@ -386,30 +386,30 @@ function StepCardMobile({ step, index, isInView, isMobile }: StepCardProps) {
         </div>
 
         {/* Title */}
-        <h4 className="text-lg font-heading font-bold text-foreground mb-3">
+        <h4 className="text-xl font-heading font-bold text-foreground mb-4 leading-tight" style={{ hyphens: 'none' }}>
           {step.title}
         </h4>
 
         {/* Description */}
-        <p className="text-foreground-muted leading-relaxed text-sm mb-4">
+        <p className="text-foreground-muted leading-[1.6] text-base mb-6">
           {step.description}
         </p>
 
         {/* Features */}
-        <ul className="space-y-2">
+        <ul className="space-y-3">
           {step.features.map((feature, idx) => (
             <li
               key={idx}
-              className="flex items-center gap-2 text-sm text-foreground-subtle"
+              className="flex items-center gap-3 text-base text-foreground-subtle"
             >
               <span
-                className={`material-icons text-xs ${
+                className={`material-icons text-base ${
                   isAccent ? "text-accent" : "text-primary"
                 }`}
               >
                 check_circle
               </span>
-              {feature}
+              <span className="leading-[1.5]">{feature}</span>
             </li>
           ))}
         </ul>

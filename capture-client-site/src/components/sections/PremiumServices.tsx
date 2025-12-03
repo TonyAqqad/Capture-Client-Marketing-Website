@@ -97,7 +97,7 @@ export function PremiumServices() {
     <section
       id="services"
       ref={containerRef}
-      className="section bg-background relative overflow-hidden w-full max-w-full"
+      className="section bg-background relative overflow-hidden w-full max-w-full py-16 sm:py-20 lg:py-24"
     >
       {/* Animated background elements */}
       <motion.div
@@ -138,24 +138,24 @@ export function PremiumServices() {
         </>
       )}
 
-      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
+      <div className="container-custom relative z-10 px-6 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+        <div className="text-center mb-16 sm:mb-20 lg:mb-24">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent mb-3 sm:mb-4">
+            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-accent mb-4 sm:mb-5">
               The Integrated Solution
             </h2>
-            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-4 sm:mb-6 text-depth px-4">
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground mb-6 sm:mb-8 text-depth px-4 leading-[1.1] tracking-tight" style={{ hyphens: 'none' }}>
               Everything You Need in{" "}
-              <span className="text-gradient bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
+              <span className="text-gradient bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent whitespace-nowrap">
                 One Platform
               </span>
             </h3>
-            <p className="text-base sm:text-lg md:text-xl text-foreground-muted max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-foreground-muted max-w-2xl mx-auto leading-[1.6] px-6">
               Stop juggling multiple tools. Capture Client brings AI, ads, CRM, and analytics
               together in one seamless growth engine.
             </p>
@@ -163,7 +163,7 @@ export function PremiumServices() {
         </div>
 
         {/* Feature cards grid - Single column on mobile, responsive grid on larger screens */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-6 lg:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-8 lg:gap-8">
           {services.map((service, index) => (
             <ServiceCard
               key={service.id}
@@ -238,31 +238,31 @@ function ServiceCard({ service, index, isInView, isMobile }: ServiceCardProps) {
 
       {/* Card content */}
       <div
-        className={`relative h-full bg-surface/50 backdrop-blur-lg border-2 ${service.borderColor} rounded-2xl p-6 sm:p-8 transition-all duration-500 group-hover:border-opacity-100 group-hover:shadow-glow flex flex-col items-center sm:items-start text-center sm:text-left`}
+        className={`relative h-full bg-surface/50 backdrop-blur-lg border-2 ${service.borderColor} rounded-2xl sm:rounded-3xl p-8 sm:p-10 transition-all duration-500 group-hover:border-opacity-100 group-hover:shadow-glow flex flex-col items-center sm:items-start text-center sm:text-left`}
       >
         {/* Icon container */}
         <motion.div
           whileHover={isMobile ? {} : { rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
           transition={{ duration: 0.5 }}
-          className={`flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br ${service.gradient} border ${service.borderColor} mb-5 sm:mb-6 shadow-lg group-hover:shadow-glow transition-all duration-300`}
+          className={`flex items-center justify-center w-16 h-16 sm:w-18 sm:h-18 rounded-xl bg-gradient-to-br ${service.gradient} border ${service.borderColor} mb-6 sm:mb-8 shadow-lg group-hover:shadow-glow transition-all duration-300`}
         >
-          <span className={`material-icons ${service.id === "voice-ai" || service.id === "crm" ? "text-accent" : "text-primary"} text-2xl sm:text-3xl`}>
+          <span className={`material-icons ${service.id === "voice-ai" || service.id === "crm" ? "text-accent" : "text-primary"} text-3xl sm:text-4xl`}>
             {service.icon}
           </span>
         </motion.div>
 
         {/* Title */}
-        <h3 className="text-lg sm:text-xl font-heading font-bold text-foreground mb-2 sm:mb-3 group-hover:text-gradient transition-all duration-300 w-full">
+        <h3 className="text-xl sm:text-2xl font-heading font-bold text-foreground mb-3 sm:mb-4 group-hover:text-gradient transition-all duration-300 w-full leading-tight" style={{ hyphens: 'none' }}>
           {service.title}
         </h3>
 
         {/* Description */}
-        <p className="text-sm sm:text-base text-foreground-muted leading-relaxed mb-5 sm:mb-6 w-full">
+        <p className="text-base sm:text-lg text-foreground-muted leading-[1.6] mb-6 sm:mb-8 w-full">
           {service.description}
         </p>
 
         {/* Benefits list */}
-        <ul className="space-y-2.5 sm:space-y-2 w-full flex flex-col items-center sm:items-start">
+        <ul className="space-y-3 sm:space-y-3 w-full flex flex-col items-center sm:items-start">
           {service.benefits.map((benefit, idx) => (
             <motion.li
               key={idx}
@@ -276,12 +276,12 @@ function ServiceCard({ service, index, isInView, isMobile }: ServiceCardProps) {
                 duration: isMobile ? 0 : 0.4,
                 delay: isMobile ? 0 : index * 0.1 + idx * 0.05 + 0.3,
               }}
-              className="flex items-center gap-2.5 sm:gap-2 text-sm text-foreground-subtle group-hover:text-foreground transition-colors duration-300"
+              className="flex items-center gap-3 text-base text-foreground-subtle group-hover:text-foreground transition-colors duration-300"
             >
-              <span className={`material-icons text-base sm:text-sm flex-shrink-0 ${service.id === "voice-ai" || service.id === "crm" ? "text-accent" : "text-primary"}`}>
+              <span className={`material-icons text-lg flex-shrink-0 ${service.id === "voice-ai" || service.id === "crm" ? "text-accent" : "text-primary"}`}>
                 check_circle
               </span>
-              <span className="leading-tight text-left">{benefit}</span>
+              <span className="leading-[1.5] text-left">{benefit}</span>
             </motion.li>
           ))}
         </ul>

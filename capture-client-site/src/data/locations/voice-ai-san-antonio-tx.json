@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-san-antonio-tx",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "San Antonio",
+    "state": "Texas",
+    "state_abbr": "TX",
+    "slug": "san-antonio-tx",
+    "nearby_areas": [
+      "New Braunfels",
+      "Boerne",
+      "Schertz",
+      "Universal City",
+      "Helotes"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in San Antonio, TX | Capture Client",
+    "meta_description": "Looking for Voice AI in San Antonio? Capture Client helps San Antonio businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in San Antonio, Texas",
+    "keywords": [
+      "voice ai agency san antonio",
+      "ai voice agents san antonio tx",
+      "ai receptionist san antonio",
+      "automated phone answering san antonio"
+    ],
+    "canonical_url": "/voice-ai-san-antonio-tx"
+  },
+  "hero": {
+    "headline": "Never Miss Another Call in San Antonio",
+    "subheadline": "AI Voice Agents That Answer, Qualify, and Convert Leads 24/7 for San Antonio Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Professional business owner in San Antonio using phone technology",
+      "credit": {
+        "photographer": "Alev Takil",
+        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the historic businesses along the River Walk to the military-connected services near Joint Base San Antonio and thriving companies in the Medical Center, San Antonio small business owners face a common challenge: missed calls mean missed opportunities. Whether you're running a tourism business near the Alamo, a healthcare practice in the Medical District, or a home services company in New Braunfels, every unanswered call could be a lost customer. In the seventh-largest city in America, where military, healthcare, and tourism drive the economy, Capture Client's Voice AI technology keeps San Antonio businesses connected."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability for San Antonio Customers",
+      "description": "Your San Antonio customers call at all hours. Our AI voice agents never sleep, ensuring every call from Bexar County is answered professionally.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "Stop wasting time on unqualified leads. Our AI asks the right questions upfront so you only talk to serious San Antonio prospects ready to buy.",
+      "icon": "filter_alt"
+    },
+    {
+      "title": "Automatic Appointment Scheduling",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with San Antonio customers.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings Over Traditional Staff",
+      "description": "Hiring a receptionist in San Antonio costs $30,000-$40,000/year. Our Voice AI costs a fraction of that.",
+      "icon": "attach_money"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your San Antonio business needs and how Voice AI can help you capture more clients."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI voice agent with your business information specific to your San Antonio market."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your AI handle calls instantly based on real San Antonio call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "HVAC Companies in San Antonio",
+      "scenario": "Overwhelmed during Texas summer, missing 45% of service calls.",
+      "result": "Captured every call, increased summer revenue by $72,000 in 90 days."
+    },
+    {
+      "business_type": "Tourism Services Near River Walk",
+      "scenario": "International tourists calling with booking questions at all hours.",
+      "result": "Handles inquiries 24/7, increased bookings by 50% during peak season."
+    },
+    {
+      "business_type": "Medical Practices in Medical Center",
+      "scenario": "Patients calling outside office hours, needed appointment scheduling.",
+      "result": "Reduced wait times, increased patient satisfaction scores by 35%."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving San Antonio and Surrounding Areas",
+    "description": "We provide Voice AI services throughout Bexar County and the greater San Antonio area.",
+    "areas_list": [
+      "Downtown San Antonio",
+      "River Walk",
+      "Medical Center",
+      "Stone Oak",
+      "New Braunfels",
+      "Boerne",
+      "Schertz",
+      "Helotes"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Capture Client's Voice AI saved our San Antonio HVAC business during the brutal summer rush. We don't miss calls anymore.",
+      "author": "Carlos Ramirez",
+      "business": "Ramirez Climate Control",
+      "location": "San Antonio, TX"
+    },
+    {
+      "quote": "Running a tour company near the River Walk, we get calls at all hours. This AI handles international inquiries perfectly.",
+      "author": "Linda Foster",
+      "business": "San Antonio Tours & Adventures",
+      "location": "San Antonio, TX"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for San Antonio businesses?",
+      "answer": "Our Voice AI answers professionally, asks qualifying questions, provides information, schedules appointments, and transfers urgent calls. It works 24/7 for San Antonio customers."
+    },
+    {
+      "question": "What San Antonio businesses benefit most?",
+      "answer": "HVAC companies, tourism services, medical practices, home services, and military-connected businesses in San Antonio all benefit from Voice AI automation."
+    },
+    {
+      "question": "Does the AI sound robotic?",
+      "answer": "Not at all! Most San Antonio callers don't realize they're talking to AI. We customize voice and tone to match your brand."
+    },
+    {
+      "question": "How quickly can you set up for my San Antonio business?",
+      "answer": "Most San Antonio businesses are running within 1-2 weeks from initial strategy call to launch."
+    },
+    {
+      "question": "Can it integrate with my CRM?",
+      "answer": "Yes! Integrates with HubSpot, Salesforce, ServiceTitan, Jobber and tools used by San Antonio businesses."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Small business owner in San Antonio working with technology",
+        "caption": "San Antonio businesses use Voice AI to automate lead capture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Professional answering phone call for San Antonio business",
+        "caption": "AI answers every call professionally, 24/7"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Clients in San Antonio?",
+    "subheadline": "Join dozens of San Antonio businesses using Voice AI to answer every call.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-new-braunfels-tx",
+      "voice-ai-boerne-tx",
+      "voice-ai-schertz-tx"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

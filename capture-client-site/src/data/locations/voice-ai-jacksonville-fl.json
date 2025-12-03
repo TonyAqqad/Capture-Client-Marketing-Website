@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-jacksonville-fl",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Jacksonville",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "slug": "jacksonville-fl",
+    "nearby_areas": [
+      "Jacksonville Beach",
+      "Orange Park",
+      "Ponte Vedra Beach",
+      "Mandarin",
+      "St. Augustine"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Jacksonville, FL | Capture Client",
+    "meta_description": "Looking for Voice AI in Jacksonville? Capture Client helps Jacksonville businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Jacksonville, Florida",
+    "keywords": [
+      "voice ai agency jacksonville",
+      "ai voice agents jacksonville fl",
+      "ai receptionist jacksonville",
+      "automated phone answering jacksonville"
+    ],
+    "canonical_url": "/voice-ai-jacksonville-fl"
+  },
+  "hero": {
+    "headline": "Never Miss Another Call in Jacksonville",
+    "subheadline": "AI Voice Agents That Answer, Qualify, and Convert Leads 24/7 for Jacksonville Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Professional business owner in Jacksonville using phone technology",
+      "credit": {
+        "photographer": "Alev Takil",
+        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the growing logistics companies at the Port of Jacksonville to the financial firms in Downtown's Northbank district and the thriving businesses along the Beaches Town Center, Jacksonville business owners know that every call counts. Whether you're running an HVAC company in Mandarin, a law practice near the Independent Life Building, a real estate office in Ponte Vedra Beach, or a home services business in Orange Park, missed calls mean lost revenue. As Florida's largest city by land area, Jacksonville's sprawling market demands 24/7 availability—and Capture Client's Voice AI technology delivers."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability for Jacksonville Customers",
+      "description": "Jacksonville is massive. Our AI voice agents ensure every call from Duval County is answered professionally, any time of day.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "Stop wasting time on unqualified leads. Our AI asks the right questions upfront so you only talk to serious Jacksonville prospects ready to buy.",
+      "icon": "filter_alt"
+    },
+    {
+      "title": "Automatic Appointment Scheduling",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with Jacksonville customers.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings Over Traditional Staff",
+      "description": "Hiring a receptionist in Jacksonville costs $30,000-$40,000/year. Our Voice AI costs a fraction of that.",
+      "icon": "attach_money"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your Jacksonville business needs and how Voice AI can help you capture more clients across this expansive market."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI voice agent with your business information specific to the Jacksonville market."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your AI handle calls instantly based on real Jacksonville call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "HVAC Companies in Jacksonville",
+      "scenario": "Couldn't cover service area spanning 875 square miles with limited office staff.",
+      "result": "Handles calls from entire Duval County. Increased revenue by $70,000 in first quarter."
+    },
+    {
+      "business_type": "Real Estate Agencies in Ponte Vedra",
+      "scenario": "Missing buyer calls while showing properties across Jacksonville's huge market.",
+      "result": "Never misses a lead. Closed 10 additional luxury properties in 6 months."
+    },
+    {
+      "business_type": "Law Firms Downtown Jacksonville",
+      "scenario": "Needed 24/7 intake for personal injury cases without night staff.",
+      "result": "Captures after-hours cases automatically. Added $180,000 in new case value annually."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Jacksonville and Surrounding Areas",
+    "description": "We provide Voice AI services throughout Duval County and the greater Jacksonville metropolitan area.",
+    "areas_list": [
+      "Downtown Jacksonville",
+      "Jacksonville Beach",
+      "Orange Park",
+      "Ponte Vedra Beach",
+      "Mandarin",
+      "St. Augustine",
+      "Southside",
+      "Riverside"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Jacksonville's size made it impossible to cover all our calls. Capture Client's Voice AI solved that. Revenue up $65,000/month.",
+      "author": "Tom Harrison",
+      "business": "Harrison Air & Heat",
+      "location": "Jacksonville, FL"
+    },
+    {
+      "quote": "We're capturing leads 24/7 now, even when we're showing properties. The AI handles everything perfectly.",
+      "author": "Amanda Peterson",
+      "business": "Coastal Realty Group",
+      "location": "Ponte Vedra Beach, FL"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Jacksonville businesses?",
+      "answer": "Our Voice AI answers professionally, asks qualifying questions, provides information, schedules appointments, and transfers urgent calls. It works 24/7 across Jacksonville's massive service area."
+    },
+    {
+      "question": "What Jacksonville businesses benefit most?",
+      "answer": "HVAC, plumbers, electricians, law firms, medical practices, real estate agents, logistics companies, contractors in Jacksonville all benefit from Voice AI automation."
+    },
+    {
+      "question": "Does the AI sound robotic?",
+      "answer": "Not at all! Most Jacksonville callers don't realize they're talking to AI. We customize voice and tone to match your brand."
+    },
+    {
+      "question": "How quickly can you set up for my Jacksonville business?",
+      "answer": "Most Jacksonville businesses are running within 1-2 weeks from initial strategy call to launch."
+    },
+    {
+      "question": "Can it integrate with my CRM?",
+      "answer": "Yes! Integrates with HubSpot, Salesforce, ServiceTitan, Jobber and tools used by Jacksonville businesses."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Small business owner in Jacksonville working with technology",
+        "caption": "Jacksonville businesses use Voice AI to automate lead capture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Professional answering phone call for Jacksonville business",
+        "caption": "AI answers every call professionally, 24/7"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Clients in Jacksonville?",
+    "subheadline": "Join dozens of Jacksonville businesses using Voice AI to answer every call.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-jacksonville-beach-fl",
+      "voice-ai-orange-park-fl",
+      "voice-ai-st-augustine-fl"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

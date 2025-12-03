@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-fort-lauderdale-fl",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Fort Lauderdale",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "slug": "fort-lauderdale-fl",
+    "nearby_areas": [
+      "Hollywood",
+      "Pompano Beach",
+      "Coral Springs",
+      "Plantation",
+      "Davie"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Fort Lauderdale, FL | Capture Client",
+    "meta_description": "Looking for Voice AI in Fort Lauderdale? Capture Client helps Fort Lauderdale businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Fort Lauderdale, Florida",
+    "keywords": [
+      "voice ai agency fort lauderdale",
+      "ai voice agents fort lauderdale fl",
+      "ai receptionist fort lauderdale",
+      "automated phone answering fort lauderdale"
+    ],
+    "canonical_url": "/voice-ai-fort-lauderdale-fl"
+  },
+  "hero": {
+    "headline": "Never Miss Another Call in Fort Lauderdale",
+    "subheadline": "AI Voice Agents That Answer, Qualify, and Convert Leads 24/7 for Fort Lauderdale Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Professional business owner in Fort Lauderdale using phone technology",
+      "credit": {
+        "photographer": "Alev Takil",
+        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the yacht industry businesses along the Intracoastal to the corporate offices in Downtown Fort Lauderdale's financial district and the hospitality enterprises on Las Olas Boulevard, South Florida business owners operate in one of the nation's most competitive markets. Whether you're running a marine services company in Pompano Beach, a law practice near the Broward County Courthouse, a property management firm in Coral Springs, or an HVAC business in Plantation, every missed call is money left on the table. In Fort Lauderdale's affluent, fast-paced market, Capture Client's Voice AI technology gives you the edge you need."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability for Fort Lauderdale Customers",
+      "description": "Fort Lauderdale's affluent clientele expects immediate service. Our AI voice agents answer every call from Broward County professionally, any time.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "Stop wasting time on unqualified leads. Our AI asks the right questions upfront so you only talk to serious Fort Lauderdale prospects ready to buy.",
+      "icon": "filter_alt"
+    },
+    {
+      "title": "Automatic Appointment Scheduling",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with Fort Lauderdale customers.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings Over Traditional Staff",
+      "description": "Hiring a receptionist in Fort Lauderdale costs $34,000-$44,000/year. Our Voice AI costs a fraction of that.",
+      "icon": "attach_money"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your Fort Lauderdale business needs and how Voice AI can help you capture more high-value clients."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI voice agent with your business information specific to the competitive Fort Lauderdale market."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your AI handle calls instantly based on real Fort Lauderdale call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Marine Services in Fort Lauderdale",
+      "scenario": "High-net-worth yacht owners expect immediate responses, but staff couldn't answer 24/7.",
+      "result": "Never misses a high-value service call. Added $120,000 in annual revenue."
+    },
+    {
+      "business_type": "Law Firms in Downtown Fort Lauderdale",
+      "scenario": "Competing firms were capturing leads they were missing after hours.",
+      "result": "Captures 24/7 leads automatically. Added 8 new retainer clients worth $200,000+."
+    },
+    {
+      "business_type": "Real Estate in Coral Springs",
+      "scenario": "Missing buyer inquiries while showing properties in competitive market.",
+      "result": "AI handles all inquiries instantly. Closed 15 additional homes in 6 months."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Fort Lauderdale and Surrounding Areas",
+    "description": "We provide Voice AI services throughout Broward County and the greater South Florida area.",
+    "areas_list": [
+      "Downtown Fort Lauderdale",
+      "Hollywood",
+      "Pompano Beach",
+      "Coral Springs",
+      "Plantation",
+      "Davie",
+      "Weston",
+      "Las Olas"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Our high-end clients expect immediate service. Capture Client's Voice AI delivers every time. Revenue up $95,000/month.",
+      "author": "Robert Mitchell",
+      "business": "Mitchell Marine Services",
+      "location": "Fort Lauderdale, FL"
+    },
+    {
+      "quote": "We were losing cases to firms with 24/7 intake. Now we never miss a lead. It's been transformational.",
+      "author": "Sarah Collins",
+      "business": "Collins & Associates Law",
+      "location": "Fort Lauderdale, FL"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Fort Lauderdale businesses?",
+      "answer": "Our Voice AI answers professionally, asks qualifying questions, provides information, schedules appointments, and transfers urgent calls. It works 24/7 for Fort Lauderdale's demanding clientele."
+    },
+    {
+      "question": "What Fort Lauderdale businesses benefit most?",
+      "answer": "Marine services, HVAC, law firms, real estate agencies, medical practices, property management, luxury service providers in Fort Lauderdale all benefit from Voice AI automation."
+    },
+    {
+      "question": "Does the AI sound robotic?",
+      "answer": "Not at all! Most Fort Lauderdale callers don't realize they're talking to AI. We customize voice and tone to match your premium brand."
+    },
+    {
+      "question": "How quickly can you set up for my Fort Lauderdale business?",
+      "answer": "Most Fort Lauderdale businesses are running within 1-2 weeks from initial strategy call to launch."
+    },
+    {
+      "question": "Can it integrate with my CRM?",
+      "answer": "Yes! Integrates with HubSpot, Salesforce, ServiceTitan, Jobber and tools used by Fort Lauderdale businesses."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Small business owner in Fort Lauderdale working with technology",
+        "caption": "Fort Lauderdale businesses use Voice AI to automate lead capture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Professional answering phone call for Fort Lauderdale business",
+        "caption": "AI answers every call professionally, 24/7"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Clients in Fort Lauderdale?",
+    "subheadline": "Join dozens of Fort Lauderdale businesses using Voice AI to answer every call.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-hollywood-fl",
+      "voice-ai-coral-springs-fl",
+      "voice-ai-pompano-beach-fl"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

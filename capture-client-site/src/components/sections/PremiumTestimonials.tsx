@@ -118,41 +118,44 @@ export function PremiumTestimonials() {
   };
 
   return (
-    <section className="section bg-background relative overflow-hidden w-full max-w-full">
+    <section className="section bg-background relative overflow-hidden w-full max-w-full py-16 sm:py-20 lg:py-24">
       {/* Background effects */}
       <div className="absolute inset-0 bg-mesh-premium opacity-30" />
 
-      <motion.div
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.1, 0.2, 0.1],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px] sm:max-w-[1000px] h-[500px] sm:h-[1000px] rounded-full bg-gradient-radial from-primary/10 to-transparent blur-3xl"
-      />
+      {/* Disable blur animations on mobile for performance */}
+      {!isMobile && (
+        <motion.div
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.1, 0.2, 0.1],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px] sm:max-w-[1000px] h-[500px] sm:h-[1000px] rounded-full bg-gradient-radial from-primary/10 to-transparent blur-3xl"
+        />
+      )}
 
-      <div ref={containerRef} className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
+      <div ref={containerRef} className="container-custom relative z-10 px-6 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className="text-center mb-12 sm:mb-16">
+        <div className="text-center mb-16 sm:mb-20 lg:mb-24">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent mb-3 sm:mb-4">
+            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-accent mb-4 sm:mb-5">
               Client Success Stories
             </h2>
-            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-4 sm:mb-6 text-depth px-4">
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground mb-6 sm:mb-8 text-depth px-4 leading-[1.1] tracking-tight" style={{ hyphens: 'none' }}>
               Trusted by{" "}
-              <span className="text-gradient bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
+              <span className="text-gradient bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent whitespace-nowrap">
                 Growing Businesses
               </span>
             </h3>
-            <p className="text-base sm:text-lg md:text-xl text-foreground-muted max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-foreground-muted max-w-2xl mx-auto leading-[1.6] px-6">
               Real businesses. Real results. See how Capture Client helps companies like yours capture more leads and grow faster.
             </p>
           </motion.div>
@@ -161,7 +164,7 @@ export function PremiumTestimonials() {
         {/* Main testimonial carousel */}
         <div className="relative max-w-5xl mx-auto">
           {/* Testimonial card */}
-          <div className="relative h-auto min-h-[520px] sm:min-h-[480px] md:min-h-[420px] mb-8 sm:mb-12">
+          <div className="relative h-auto min-h-[580px] sm:min-h-[480px] md:min-h-[420px] mb-12 sm:mb-16">
             <AnimatePresence initial={false} custom={direction} mode="wait">
               <motion.div
                 key={currentIndex}
@@ -193,7 +196,7 @@ export function PremiumTestimonials() {
               whileHover={{ scale: 1.1, backgroundColor: "rgba(0, 201, 255, 0.1)" }}
               whileTap={{ scale: 0.9 }}
               onClick={handlePrevious}
-              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full glass border-2 border-surface-border flex items-center justify-center text-foreground hover:border-accent transition-colors group touch-manipulation"
+              className="w-14 h-14 sm:w-16 sm:h-16 rounded-full glass border-2 border-surface-border flex items-center justify-center text-foreground hover:border-accent transition-colors group touch-manipulation min-w-[56px] min-h-[56px]"
               aria-label="Previous testimonial"
             >
               <span className="material-icons text-xl sm:text-2xl group-hover:text-accent transition-colors">
@@ -238,7 +241,7 @@ export function PremiumTestimonials() {
               whileHover={{ scale: 1.1, backgroundColor: "rgba(0, 201, 255, 0.1)" }}
               whileTap={{ scale: 0.9 }}
               onClick={handleNext}
-              className="w-12 h-12 sm:w-14 sm:h-14 rounded-full glass border-2 border-surface-border flex items-center justify-center text-foreground hover:border-accent transition-colors group touch-manipulation"
+              className="w-14 h-14 sm:w-16 sm:h-16 rounded-full glass border-2 border-surface-border flex items-center justify-center text-foreground hover:border-accent transition-colors group touch-manipulation min-w-[56px] min-h-[56px]"
               aria-label="Next testimonial"
             >
               <span className="material-icons text-xl sm:text-2xl group-hover:text-accent transition-colors">
@@ -285,8 +288,8 @@ interface TestimonialCardProps {
 
 function TestimonialCard({ testimonial, isInView }: TestimonialCardProps) {
   return (
-    <div className="h-full flex flex-col">
-      <div className="relative glass p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl shadow-glow-lg border-2 border-accent/20 h-full flex flex-col hover:border-accent/40 transition-colors duration-500">
+    <div className="h-full flex flex-col max-w-4xl mx-auto">
+      <div className="relative glass p-8 sm:p-10 md:p-12 rounded-3xl shadow-glow-lg border-2 border-accent/20 h-full flex flex-col hover:border-accent/40 transition-colors duration-500">
         {/* Large quote mark - smaller on mobile */}
         <motion.div
           initial={{ opacity: 0, scale: 0 }}
@@ -340,7 +343,7 @@ function TestimonialCard({ testimonial, isInView }: TestimonialCardProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ delay: 0.5, duration: 0.6 }}
-          className="text-foreground text-base sm:text-lg md:text-xl mb-6 sm:mb-8 leading-relaxed flex-1 relative z-10"
+          className="text-foreground text-lg sm:text-xl md:text-2xl mb-8 sm:mb-10 leading-[1.7] flex-1 relative z-10"
         >
           {testimonial.content}
         </motion.p>

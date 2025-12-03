@@ -1,8 +1,16 @@
 /**
- * Web Vitals Analytics API Endpoint
+ * Enhanced Web Vitals Analytics API Endpoint
  *
- * Receives Core Web Vitals metrics from the client and logs them.
- * Extend this to send metrics to your analytics service.
+ * Receives Core Web Vitals metrics from the client and processes them.
+ * Supports multiple analytics integrations and provides detailed logging.
+ *
+ * Performance Budget Enforcement:
+ * - LCP: < 2.5s (Target: 2.0s)
+ * - FID: < 100ms (Target: 50ms)
+ * - INP: < 200ms (Target: 100ms)
+ * - CLS: < 0.1 (Target: 0.05)
+ * - FCP: < 1.8s (Target: 1.2s)
+ * - TTFB: < 600ms (Target: 400ms)
  *
  * Supported Analytics Services:
  * - Google Analytics 4 (Measurement Protocol)
@@ -13,11 +21,12 @@
  */
 
 import { NextRequest, NextResponse } from "next/server";
+import { PERFORMANCE_THRESHOLDS, getMetricRating, formatMetricValue } from "@/lib/performance";
 
 interface WebVitalMetric {
   name: "CLS" | "FID" | "FCP" | "LCP" | "TTFB" | "INP";
   value: number;
-  rating: "good" | "needs-improvement" | "poor";
+  rating: "good" | "needs-improvement" | "poor" | "excellent";
   delta: number;
   id: string;
   navigationType: string;
@@ -26,14 +35,51 @@ interface WebVitalMetric {
   userAgent: string;
 }
 
+interface PerformanceSummary {
+  metric: string;
+  value: string;
+  rating: string;
+  thresholds: {
+    target: string;
+    good: string;
+    poor: string;
+  };
+  percentOfTarget: string;
+  status: string;
+}
+
 export async function POST(request: NextRequest) {
   try {
     const metric: WebVitalMetric = await request.json();
 
     // Basic validation
-    if (!metric.name || !metric.value || !metric.rating) {
+    if (!metric.name || metric.value === undefined || !metric.rating) {
       return NextResponse.json({ error: "Invalid metric data" }, { status: 400 });
     }
+
+    // Enhanced metric analysis
+    const threshold = PERFORMANCE_THRESHOLDS[metric.name];
+    const enhancedRating = getMetricRating(metric.name, metric.value);
+    const formattedValue = formatMetricValue(metric.name, metric.value);
+    const percentOfTarget = ((metric.value / threshold.target) * 100).toFixed(0);
+    const percentOfGood = ((metric.value / threshold.good) * 100).toFixed(0);
+
+    // Create performance summary
+    const summary: PerformanceSummary = {
+      metric: metric.name,
+      value: formattedValue,
+      rating: enhancedRating,
+      thresholds: {
+        target: formatMetricValue(metric.name, threshold.target),
+        good: formatMetricValue(metric.name, threshold.good),
+        poor: formatMetricValue(metric.name, threshold.poor),
+      },
+      percentOfTarget: `${percentOfTarget}%`,
+      status: getStatusMessage(enhancedRating),
+    };
+
+    // Log metrics with detailed analysis
+    logMetricToConsole(metric, summary);
 
     // ==========================================
     // OPTION 1: Google Analytics 4 (GA4)
@@ -51,18 +97,84 @@ export async function POST(request: NextRequest) {
     // ==========================================
     // OPTION 3: Custom Database
     // ==========================================
-    // await saveToDatabase(metric);
+    // await saveToDatabase(metric, summary);
 
     // ==========================================
     // OPTION 4: Log Aggregation Service
     // ==========================================
-    // await sendToDataDog(metric);
-    // await sendToNewRelic(metric);
-    // await sendToSentry(metric);
+    // await sendToDataDog(metric, summary);
+    // await sendToNewRelic(metric, summary);
+    // await sendToSentry(metric, summary);
 
-    return NextResponse.json({ success: true }, { status: 200 });
-  } catch {
+    // ==========================================
+    // OPTION 5: Alert System (for poor metrics)
+    // ==========================================
+    if (enhancedRating === 'poor') {
+      // TODO: Send alert email/Slack notification
+      console.error(`🚨 ALERT: Poor ${metric.name} detected: ${formattedValue}`);
+    }
+
+    return NextResponse.json({
+      success: true,
+      summary,
+      received: {
+        metric: metric.name,
+        value: metric.value,
+        rating: enhancedRating,
+      },
+    }, { status: 200 });
+  } catch (error) {
+    console.error("[Analytics API] Error processing metric:", error);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
+  }
+}
+
+/**
+ * Get status message based on rating
+ */
+function getStatusMessage(rating: string): string {
+  switch (rating) {
+    case 'excellent':
+      return 'Exceeds target - excellent performance';
+    case 'good':
+      return 'Within good range - acceptable performance';
+    case 'needs-improvement':
+      return 'Needs improvement - optimization recommended';
+    case 'poor':
+      return 'Poor performance - immediate action required';
+    default:
+      return 'Unknown status';
+  }
+}
+
+/**
+ * Log metric to console with detailed analysis
+ */
+function logMetricToConsole(metric: WebVitalMetric, summary: PerformanceSummary): void {
+  const emoji = summary.rating === 'excellent' ? '🚀' :
+                summary.rating === 'good' ? '✅' :
+                summary.rating === 'needs-improvement' ? '⚡' : '⚠️';
+
+  console.log(`${emoji} [Analytics API] Web Vitals Report:`, {
+    metric: summary.metric,
+    value: summary.value,
+    rating: summary.rating,
+    status: summary.status,
+    percentOfTarget: summary.percentOfTarget,
+    url: new URL(metric.url).pathname,
+    navigationType: metric.navigationType,
+    timestamp: new Date(metric.timestamp).toISOString(),
+  });
+
+  // Additional context for poor metrics
+  if (summary.rating === 'poor') {
+    console.error(`\n🚨 CRITICAL PERFORMANCE ISSUE:`, {
+      metric: metric.name,
+      value: summary.value,
+      poorThreshold: summary.thresholds.poor,
+      url: metric.url,
+      userAgent: metric.userAgent,
+    });
   }
 }
 

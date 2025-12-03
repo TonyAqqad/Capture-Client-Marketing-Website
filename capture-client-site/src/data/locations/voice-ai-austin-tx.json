@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-austin-tx",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Austin",
+    "state": "Texas",
+    "state_abbr": "TX",
+    "slug": "austin-tx",
+    "nearby_areas": [
+      "Round Rock",
+      "Cedar Park",
+      "Georgetown",
+      "Pflugerville",
+      "Leander"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Austin, TX | Capture Client",
+    "meta_description": "Looking for Voice AI in Austin? Capture Client helps Austin businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Austin, Texas",
+    "keywords": [
+      "voice ai agency austin",
+      "ai voice agents austin tx",
+      "ai receptionist austin",
+      "automated phone answering austin"
+    ],
+    "canonical_url": "/voice-ai-austin-tx"
+  },
+  "hero": {
+    "headline": "Never Miss Another Call in Austin",
+    "subheadline": "AI Voice Agents That Answer, Qualify, and Convert Leads 24/7 for Austin Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Professional business owner in Austin using phone technology",
+      "credit": {
+        "photographer": "Alev Takil",
+        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the innovative tech startups on South Congress to the creative agencies in East Austin and established businesses in the Domain, Austin small business owners face a common challenge: missed calls mean missed opportunities. Whether you're running a music venue downtown, a tech company near the University of Texas, or a home services business in Round Rock, every unanswered call could be a lost customer. In the Live Music Capital of the World, where technology, creativity, and entrepreneurship collide, Capture Client's Voice AI technology helps Austin businesses Keep Austin Weird—and profitable."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability for Austin Customers",
+      "description": "Your Austin customers call at all hours. Our AI voice agents never sleep, ensuring every call from Travis County is answered professionally.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "Stop wasting time on unqualified leads. Our AI asks the right questions upfront so you only talk to serious Austin prospects ready to buy.",
+      "icon": "filter_alt"
+    },
+    {
+      "title": "Automatic Appointment Scheduling",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with Austin customers.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings Over Traditional Staff",
+      "description": "Hiring a receptionist in Austin costs $34,000-$46,000/year. Our Voice AI costs a fraction of that.",
+      "icon": "attach_money"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your Austin business needs and how Voice AI can help you capture more clients."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI voice agent with your business information specific to your Austin market."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your AI handle calls instantly based on real Austin call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Tech Startups in Austin",
+      "scenario": "Scaling fast, needed enterprise-level call handling on startup budget.",
+      "result": "Professional call handling from day one, saved $60K in first year."
+    },
+    {
+      "business_type": "Creative Agencies in East Austin",
+      "scenario": "Team in meetings all day, missing new client inquiries.",
+      "result": "Captured 55% more inbound leads, never miss a creative brief request."
+    },
+    {
+      "business_type": "Music Venues Downtown",
+      "scenario": "Needed to handle event inquiries, bookings, and general questions 24/7.",
+      "result": "Increased event bookings by 40%, reduced admin workload by 70%."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Austin and Surrounding Areas",
+    "description": "We provide Voice AI services throughout Travis County and the greater Austin metropolitan area.",
+    "areas_list": [
+      "Downtown Austin",
+      "South Congress",
+      "East Austin",
+      "The Domain",
+      "Round Rock",
+      "Cedar Park",
+      "Georgetown",
+      "Pflugerville"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Capture Client's Voice AI is perfect for our fast-growing Austin tech startup. Professional call handling without breaking the bank.",
+      "author": "Alex Turner",
+      "business": "CodeWave Technologies",
+      "location": "Austin, TX"
+    },
+    {
+      "quote": "As a creative agency in East Austin, we're always in brainstorm sessions. The AI captures every lead while we create.",
+      "author": "Maria Gonzalez",
+      "business": "Gonzalez Creative Studio",
+      "location": "Austin, TX"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Austin businesses?",
+      "answer": "Our Voice AI answers professionally, asks qualifying questions, provides information, schedules appointments, and transfers urgent calls. It works 24/7 for Austin customers."
+    },
+    {
+      "question": "What Austin businesses benefit most?",
+      "answer": "Tech startups, creative agencies, music venues, restaurants, home services, and medical practices in Austin all benefit from Voice AI automation."
+    },
+    {
+      "question": "Does the AI sound robotic?",
+      "answer": "Not at all! Most Austin callers don't realize they're talking to AI. We customize voice and tone to match your brand—keep it weird if you want!"
+    },
+    {
+      "question": "How quickly can you set up for my Austin business?",
+      "answer": "Most Austin businesses are running within 1-2 weeks from initial strategy call to launch."
+    },
+    {
+      "question": "Can it integrate with my CRM?",
+      "answer": "Yes! Integrates with HubSpot, Salesforce, ServiceTitan, Jobber and tools used by Austin businesses."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Small business owner in Austin working with technology",
+        "caption": "Austin businesses use Voice AI to automate lead capture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Professional answering phone call for Austin business",
+        "caption": "AI answers every call professionally, 24/7"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Clients in Austin?",
+    "subheadline": "Join dozens of Austin businesses using Voice AI to answer every call.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-round-rock-tx",
+      "voice-ai-cedar-park-tx",
+      "voice-ai-georgetown-tx"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

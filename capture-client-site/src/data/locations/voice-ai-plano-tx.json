@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-plano-tx",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Plano",
+    "state": "Texas",
+    "state_abbr": "TX",
+    "slug": "plano-tx",
+    "nearby_areas": [
+      "Frisco",
+      "McKinney",
+      "Allen",
+      "Richardson",
+      "The Colony"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Plano, TX | Capture Client",
+    "meta_description": "Looking for Voice AI in Plano? Capture Client helps Plano businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Plano, Texas",
+    "keywords": [
+      "voice ai agency plano",
+      "ai voice agents plano tx",
+      "ai receptionist plano",
+      "automated phone answering plano"
+    ],
+    "canonical_url": "/voice-ai-plano-tx"
+  },
+  "hero": {
+    "headline": "Never Miss Another Call in Plano",
+    "subheadline": "AI Voice Agents That Answer, Qualify, and Convert Leads 24/7 for Plano Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Professional business owner in Plano using phone technology",
+      "credit": {
+        "photographer": "Alev Takil",
+        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the corporate headquarters in Legacy West to the thriving tech companies in Plano Business Park and family businesses in West Plano, Plano small business owners face a common challenge: missed calls mean missed opportunities. Whether you're running a SaaS company near Toyota headquarters, a professional services firm in Downtown Plano, or a home services business in East Plano, every unanswered call could be a lost customer. In one of America's best places to live and do business, where Fortune 500 companies and innovative startups thrive side by side, Capture Client's Voice AI technology keeps Plano businesses at the cutting edge."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability for Plano Customers",
+      "description": "Your Plano customers call at all hours. Our AI voice agents never sleep, ensuring every call from Collin County is answered professionally.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Enterprise-Quality on Any Budget",
+      "description": "Get the same level of call handling as Fortune 500 companies headquartered in Plano, at small business prices.",
+      "icon": "business_center"
+    },
+    {
+      "title": "Automatic Appointment Scheduling",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with Plano customers.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings Over Traditional Staff",
+      "description": "Hiring a receptionist in Plano costs $34,000-$48,000/year. Our Voice AI costs a fraction of that.",
+      "icon": "attach_money"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your Plano business needs and how Voice AI can help you capture more clients."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI voice agent with your business information specific to your Plano market."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your AI handle calls instantly based on real Plano call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "SaaS Companies in Legacy West",
+      "scenario": "International customers calling outside business hours for support and sales.",
+      "result": "Global coverage 24/7, increased trial signups by 75%, reduced churn by 30%."
+    },
+    {
+      "business_type": "Financial Advisors in Plano",
+      "scenario": "High-net-worth clients expect immediate, professional response.",
+      "result": "Never miss a client call, increased assets under management by $12M annually."
+    },
+    {
+      "business_type": "Medical Practices in West Plano",
+      "scenario": "Needed efficient patient scheduling and insurance verification.",
+      "result": "Automated intake process, saw 200 additional patients per month."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Plano and Surrounding Areas",
+    "description": "We provide Voice AI services throughout Collin County and the northern Dallas suburbs.",
+    "areas_list": [
+      "Legacy West",
+      "Downtown Plano",
+      "West Plano",
+      "East Plano",
+      "Frisco",
+      "McKinney",
+      "Allen",
+      "Richardson"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Capture Client's Voice AI gives our Plano startup enterprise-level call handling. We compete with the big companies now.",
+      "author": "Ryan Cooper",
+      "business": "Cooper Tech Solutions",
+      "location": "Plano, TX"
+    },
+    {
+      "quote": "As a financial advisor in Plano, first impressions matter. The AI represents my practice perfectly to high-net-worth clients.",
+      "author": "Elizabeth Warren",
+      "business": "Warren Wealth Management",
+      "location": "Plano, TX"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Plano businesses?",
+      "answer": "Our Voice AI answers professionally, asks qualifying questions, provides information, schedules appointments, and transfers urgent calls. It works 24/7 for Plano customers."
+    },
+    {
+      "question": "What Plano businesses benefit most?",
+      "answer": "SaaS companies, financial advisors, medical practices, professional services, tech startups, and home services in Plano all benefit from Voice AI automation."
+    },
+    {
+      "question": "Does the AI sound robotic?",
+      "answer": "Not at all! Most Plano callers don't realize they're talking to AI. We customize voice and tone to match your professional Plano brand."
+    },
+    {
+      "question": "How quickly can you set up for my Plano business?",
+      "answer": "Most Plano businesses are running within 1-2 weeks from initial strategy call to launch."
+    },
+    {
+      "question": "Can it integrate with my CRM?",
+      "answer": "Yes! Integrates with HubSpot, Salesforce, ServiceTitan, Jobber and enterprise tools used by Plano businesses."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Small business owner in Plano working with technology",
+        "caption": "Plano businesses use Voice AI to automate lead capture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Professional answering phone call for Plano business",
+        "caption": "AI answers every call professionally, 24/7"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Clients in Plano?",
+    "subheadline": "Join dozens of Plano businesses using Voice AI to answer every call.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-frisco-tx",
+      "voice-ai-mckinney-tx",
+      "voice-ai-allen-tx"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

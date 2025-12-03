@@ -369,11 +369,18 @@
     height: auto;
   }
 
-  /* Text should wrap, not overflow */
-  h1, h2, h3, h4, h5, h6, p, span, a, button {
+  /* Text should wrap, not overflow - but NEVER hyphenate headings */
+  p, span, a, button {
     word-wrap: break-word;
     overflow-wrap: break-word;
-    hyphens: auto;
+  }
+
+  /* Headings: NEVER hyphenate - scale down instead */
+  h1, h2, h3, h4, h5, h6 {
+    hyphens: none !important;
+    -webkit-hyphens: none !important;
+    word-break: normal;
+    overflow-wrap: normal;
   }
 
   /* Prevent long words/URLs from breaking layout */

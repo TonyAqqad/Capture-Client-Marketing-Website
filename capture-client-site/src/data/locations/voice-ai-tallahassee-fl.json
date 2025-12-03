@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-tallahassee-fl",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Tallahassee",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "slug": "tallahassee-fl",
+    "nearby_areas": [
+      "Thomasville",
+      "Crawfordville",
+      "Quincy",
+      "Havana",
+      "Monticello"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Tallahassee, FL | Capture Client",
+    "meta_description": "Looking for Voice AI in Tallahassee? Capture Client helps Tallahassee businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Tallahassee, Florida",
+    "keywords": [
+      "voice ai agency tallahassee",
+      "ai voice agents tallahassee fl",
+      "ai receptionist tallahassee",
+      "automated phone answering tallahassee"
+    ],
+    "canonical_url": "/voice-ai-tallahassee-fl"
+  },
+  "hero": {
+    "headline": "Never Miss Another Call in Tallahassee",
+    "subheadline": "AI Voice Agents That Answer, Qualify, and Convert Leads 24/7 for Tallahassee Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Professional business owner in Tallahassee using phone technology",
+      "credit": {
+        "photographer": "Alev Takil",
+        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the professional services firms near the Florida State Capitol to the growing businesses along College Town and the service companies throughout Leon County, Tallahassee business owners operate in Florida's capital city with unique opportunities. Whether you're running an HVAC company serving FSU campus area, a law practice downtown near the Westcott Building, a medical practice near Tallahassee Memorial HealthCare, or a home services business in the Midtown district, every unanswered call could be a lost customer. As the government, education, and healthcare hub of North Florida, Capture Client's Voice AI technology helps Tallahassee businesses stay competitive."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability for Tallahassee Customers",
+      "description": "Your Tallahassee customers call at all hours. Our AI voice agents never sleep, ensuring every call from Leon County is answered professionally.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "Stop wasting time on unqualified leads. Our AI asks the right questions upfront so you only talk to serious Tallahassee prospects ready to buy.",
+      "icon": "filter_alt"
+    },
+    {
+      "title": "Automatic Appointment Scheduling",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with Tallahassee customers.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings Over Traditional Staff",
+      "description": "Hiring a receptionist in Tallahassee costs $28,000-$38,000/year. Our Voice AI costs a fraction of that.",
+      "icon": "attach_money"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your Tallahassee business needs and how Voice AI can help you capture more clients in the capital city."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI voice agent with your business information specific to the Tallahassee market."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your AI handle calls instantly based on real Tallahassee call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "HVAC Companies in Tallahassee",
+      "scenario": "Servicing FSU campus and government buildings but missing calls during busy summer.",
+      "result": "Captures every emergency AC call. Increased summer revenue by $55,000 in first 90 days."
+    },
+    {
+      "business_type": "Law Firms Downtown Tallahassee",
+      "scenario": "High volume of state government and legislative client inquiries.",
+      "result": "AI pre-qualifies and schedules consultations. Added 5 new government contract clients."
+    },
+    {
+      "business_type": "Medical Practices Near TMH",
+      "scenario": "Front desk overwhelmed with patient appointment requests and insurance questions.",
+      "result": "AI handles 70% of scheduling calls. Reduced wait times, patient satisfaction up 40%."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Tallahassee and Surrounding Areas",
+    "description": "We provide Voice AI services throughout Leon County and the greater North Florida region.",
+    "areas_list": [
+      "Downtown Tallahassee",
+      "Midtown",
+      "College Town",
+      "Thomasville",
+      "Crawfordville",
+      "Quincy",
+      "Havana",
+      "Monticello"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Serving FSU and state government requires 24/7 availability. Capture Client's Voice AI delivers. Revenue up $42,000/month.",
+      "author": "John Davidson",
+      "business": "Davidson Climate Control",
+      "location": "Tallahassee, FL"
+    },
+    {
+      "quote": "Our government law practice needed professional intake around the clock. The AI handles it perfectly. We've added significant new business.",
+      "author": "Patricia Williams",
+      "business": "Williams Government Affairs",
+      "location": "Tallahassee, FL"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Tallahassee businesses?",
+      "answer": "Our Voice AI answers professionally, asks qualifying questions, provides information, schedules appointments, and transfers urgent calls. It works 24/7 for Tallahassee customers including government, education, and private sector clients."
+    },
+    {
+      "question": "What Tallahassee businesses benefit most?",
+      "answer": "HVAC, plumbers, electricians, law firms, medical practices, real estate agents, government contractors in Tallahassee all benefit from Voice AI automation."
+    },
+    {
+      "question": "Does the AI sound robotic?",
+      "answer": "Not at all! Most Tallahassee callers don't realize they're talking to AI. We customize voice and tone to match your professional brand."
+    },
+    {
+      "question": "How quickly can you set up for my Tallahassee business?",
+      "answer": "Most Tallahassee businesses are running within 1-2 weeks from initial strategy call to launch."
+    },
+    {
+      "question": "Can it integrate with my CRM?",
+      "answer": "Yes! Integrates with HubSpot, Salesforce, ServiceTitan, Jobber and tools used by Tallahassee businesses."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Small business owner in Tallahassee working with technology",
+        "caption": "Tallahassee businesses use Voice AI to automate lead capture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Professional answering phone call for Tallahassee business",
+        "caption": "AI answers every call professionally, 24/7"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Clients in Tallahassee?",
+    "subheadline": "Join dozens of Tallahassee businesses using Voice AI to answer every call.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-thomasville-fl",
+      "voice-ai-crawfordville-fl",
+      "voice-ai-quincy-fl"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

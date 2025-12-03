@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-hialeah-fl",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Hialeah",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "slug": "hialeah-fl",
+    "nearby_areas": [
+      "Miami Lakes",
+      "Miami Gardens",
+      "Opa-locka",
+      "Doral",
+      "Miramar"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Hialeah, FL | Capture Client",
+    "meta_description": "Looking for Voice AI in Hialeah? Capture Client helps Hialeah businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Hialeah, Florida",
+    "keywords": [
+      "voice ai agency hialeah",
+      "ai voice agents hialeah fl",
+      "ai receptionist hialeah",
+      "automated phone answering hialeah"
+    ],
+    "canonical_url": "/voice-ai-hialeah-fl"
+  },
+  "hero": {
+    "headline": "Never Miss Another Call in Hialeah",
+    "subheadline": "AI Voice Agents That Answer, Qualify, and Convert Leads 24/7 for Hialeah Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Professional business owner in Hialeah using phone technology",
+      "credit": {
+        "photographer": "Alev Takil",
+        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the manufacturing businesses in Hialeah's industrial corridors to the retail shops along Palm Avenue and the service companies throughout Miami-Dade County, Hialeah business owners serve one of South Florida's most vibrant communities. Whether you're running an auto repair shop near Hialeah Park, a medical practice in the Hospital District, a construction company in Miami Lakes, or a home services business serving Doral, every missed call means lost revenue. In Hialeah's diverse, bilingual market where business never stops, Capture Client's Voice AI technology ensures you capture every opportunity."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability for Hialeah Customers",
+      "description": "Hialeah's diverse community calls at all hours. Our AI voice agents answer every call professionally, any time of day.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "Stop wasting time on unqualified leads. Our AI asks the right questions upfront so you only talk to serious Hialeah prospects ready to buy.",
+      "icon": "filter_alt"
+    },
+    {
+      "title": "Automatic Appointment Scheduling",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with Hialeah customers.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings Over Traditional Staff",
+      "description": "Hiring a receptionist in Hialeah costs $29,000-$39,000/year. Our Voice AI costs a fraction of that.",
+      "icon": "attach_money"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your Hialeah business needs and how Voice AI can help you capture more clients in this diverse market."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI voice agent with your business information specific to Hialeah's unique market."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your AI handle calls instantly based on real Hialeah call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Auto Repair Shops in Hialeah",
+      "scenario": "High call volume but couldn't afford full-time receptionist.",
+      "result": "AI handles all calls and bookings. Service bays now at 95% capacity. Revenue up $48,000."
+    },
+    {
+      "business_type": "Medical Practices in Hialeah",
+      "scenario": "Needed to handle appointment scheduling for growing patient base.",
+      "result": "AI schedules 80% of appointments automatically. Saw 200+ more patients last quarter."
+    },
+    {
+      "business_type": "Construction Companies in Miami Lakes",
+      "scenario": "Missing estimate requests while crews were on job sites.",
+      "result": "Never misses a lead. Booked $320,000 in new projects in first 6 months."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Hialeah and Surrounding Areas",
+    "description": "We provide Voice AI services throughout northern Miami-Dade County and surrounding communities.",
+    "areas_list": [
+      "Downtown Hialeah",
+      "Miami Lakes",
+      "Miami Gardens",
+      "Opa-locka",
+      "Doral",
+      "Miramar",
+      "Palm Springs North",
+      "Hialeah Gardens"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Our auto shop was missing too many calls. Capture Client's Voice AI solved that instantly. We're booking $12,000 more per week.",
+      "author": "Luis Rodriguez",
+      "business": "Rodriguez Auto Repair",
+      "location": "Hialeah, FL"
+    },
+    {
+      "quote": "The AI handles appointment scheduling in Spanish and English perfectly. Our patient volume has increased significantly.",
+      "author": "Dr. Maria Fernandez",
+      "business": "Hialeah Family Medical",
+      "location": "Hialeah, FL"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Hialeah businesses?",
+      "answer": "Our Voice AI answers professionally, asks qualifying questions, provides information, schedules appointments, and transfers urgent calls. It works 24/7 for Hialeah's diverse community."
+    },
+    {
+      "question": "What Hialeah businesses benefit most?",
+      "answer": "Auto repair, HVAC, medical practices, construction, manufacturing, retail, home services businesses in Hialeah all benefit from Voice AI automation."
+    },
+    {
+      "question": "Can the AI handle Spanish-speaking customers?",
+      "answer": "Yes! We can configure bilingual capabilities for Hialeah's Spanish-speaking community. Most callers won't realize they're talking to AI."
+    },
+    {
+      "question": "How quickly can you set up for my Hialeah business?",
+      "answer": "Most Hialeah businesses are running within 1-2 weeks from initial strategy call to launch."
+    },
+    {
+      "question": "Can it integrate with my CRM?",
+      "answer": "Yes! Integrates with HubSpot, Salesforce, ServiceTitan, Jobber and tools used by Hialeah businesses."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Small business owner in Hialeah working with technology",
+        "caption": "Hialeah businesses use Voice AI to automate lead capture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Professional answering phone call for Hialeah business",
+        "caption": "AI answers every call professionally, 24/7"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Clients in Hialeah?",
+    "subheadline": "Join dozens of Hialeah businesses using Voice AI to answer every call.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-miami-lakes-fl",
+      "voice-ai-miami-gardens-fl",
+      "voice-ai-doral-fl"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

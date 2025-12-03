@@ -118,36 +118,36 @@ export function CaseStudiesPreview() {
   return (
     <section
       ref={containerRef}
-      className="section bg-background-dark relative overflow-hidden w-full max-w-full"
+      className="section bg-background-dark relative overflow-hidden w-full max-w-full py-16 sm:py-20 lg:py-24"
     >
       {/* Background effects */}
       <div className="absolute inset-0 bg-mesh-premium opacity-40" />
 
-      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
+      <div className="container-custom relative z-10 px-6 sm:px-6 lg:px-8">
         {/* Section header */}
-        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
+        <div className="text-center mb-16 sm:mb-20 lg:mb-24">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent mb-3 sm:mb-4">
+            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-accent mb-4 sm:mb-5">
               Real Results
             </h2>
-            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-4 sm:mb-6 text-depth px-4">
-              Success Stories:{" "}
-              <span className="text-gradient bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
+            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground mb-6 sm:mb-8 text-depth px-4 leading-[1.1] tracking-tight" style={{ hyphens: 'none' }}>
+              <span className="whitespace-nowrap">Success Stories:</span>{" "}
+              <span className="text-gradient bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent whitespace-nowrap">
                 Before & After
               </span>
             </h3>
-            <p className="text-base sm:text-lg md:text-xl text-foreground-muted max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-lg sm:text-xl md:text-2xl text-foreground-muted max-w-2xl mx-auto leading-[1.6] px-6">
               See exactly how Capture Client transforms businesses like yours with measurable, dramatic results.
             </p>
           </motion.div>
         </div>
 
         {/* Case studies grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 mb-16 sm:mb-20">
           {caseStudies.map((study, index) => (
             <CaseStudyCard
               key={study.id}
@@ -208,30 +208,30 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
       whileHover={{ y: -12, transition: { duration: 0.3 } }}
       className="group"
     >
-      <div className="relative h-full glass p-6 sm:p-8 rounded-xl sm:rounded-2xl border-2 border-accent/20 transition-all duration-500 group-hover:border-accent/50 group-hover:shadow-glow">
+      <div className="relative h-full glass p-8 sm:p-10 rounded-2xl sm:rounded-3xl border-2 border-accent/20 transition-all duration-500 group-hover:border-accent/50 group-hover:shadow-glow">
         {/* Industry badge */}
-        <div className={`inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-gradient-to-r ${study.gradient} mb-4 sm:mb-6`}>
-          <span className="material-icons text-white text-base sm:text-lg">{study.icon}</span>
-          <span className="text-xs sm:text-sm font-bold text-white">{study.industry}</span>
+        <div className={`inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-gradient-to-r ${study.gradient} mb-6 sm:mb-8`}>
+          <span className="material-icons text-white text-lg sm:text-xl">{study.icon}</span>
+          <span className="text-sm sm:text-base font-bold text-white">{study.industry}</span>
         </div>
 
         {/* Company */}
-        <h4 className="text-xl sm:text-2xl font-heading font-bold text-foreground mb-3 sm:mb-4">
+        <h4 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-4 sm:mb-5 leading-tight" style={{ hyphens: 'none' }}>
           {study.company}
         </h4>
 
         {/* Problem */}
-        <div className="mb-6">
-          <p className="text-xs uppercase tracking-wider text-foreground-muted font-semibold mb-2">
+        <div className="mb-8">
+          <p className="text-xs uppercase tracking-[0.15em] text-foreground-muted font-semibold mb-3">
             The Challenge
           </p>
-          <p className="text-foreground-muted leading-relaxed text-sm">
+          <p className="text-foreground-muted leading-[1.6] text-base">
             {study.problem}
           </p>
         </div>
 
         {/* Results - Before/After */}
-        <div className="space-y-4 mb-6">
+        <div className="space-y-5 mb-8">
           {study.results.map((result, idx) => (
             <motion.div
               key={idx}

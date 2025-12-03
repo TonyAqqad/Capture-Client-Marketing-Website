@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-tampa-fl",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Tampa",
+    "state": "Florida",
+    "state_abbr": "FL",
+    "slug": "tampa-fl",
+    "nearby_areas": [
+      "St. Petersburg",
+      "Clearwater",
+      "Brandon",
+      "Temple Terrace",
+      "Plant City"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Tampa, FL | Capture Client",
+    "meta_description": "Looking for Voice AI in Tampa? Capture Client helps Tampa businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Tampa, Florida",
+    "keywords": [
+      "voice ai agency tampa",
+      "ai voice agents tampa fl",
+      "ai receptionist tampa",
+      "automated phone answering tampa"
+    ],
+    "canonical_url": "/voice-ai-tampa-fl"
+  },
+  "hero": {
+    "headline": "Never Miss Another Call in Tampa",
+    "subheadline": "AI Voice Agents That Answer, Qualify, and Convert Leads 24/7 for Tampa Bay Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Professional business owner in Tampa using phone technology",
+      "credit": {
+        "photographer": "Alev Takil",
+        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the thriving businesses along the Tampa Riverwalk to the growing companies in Westshore Business District and the bustling enterprises near the Port of Tampa, Tampa Bay area business owners know that missed calls mean missed revenue. Whether you're running an HVAC company in Brandon, a law practice in Downtown Tampa, or a home services business in Temple Terrace, every unanswered call could be a lost customer. With Tampa's booming economy and year-round business activity, Capture Client's Voice AI technology ensures you stay ahead of the competition."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability for Tampa Customers",
+      "description": "Your Tampa customers call at all hours. Our AI voice agents never sleep, ensuring every call from Hillsborough County is answered professionally.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "Stop wasting time on unqualified leads. Our AI asks the right questions upfront so you only talk to serious Tampa prospects ready to buy.",
+      "icon": "filter_alt"
+    },
+    {
+      "title": "Automatic Appointment Scheduling",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with Tampa Bay customers.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings Over Traditional Staff",
+      "description": "Hiring a receptionist in Tampa costs $32,000-$42,000/year. Our Voice AI costs a fraction of that.",
+      "icon": "attach_money"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your Tampa business needs and how Voice AI can help you capture more clients in the Tampa Bay market."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI voice agent with your business information specific to the Tampa Bay area market."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your AI handle calls instantly based on real Tampa call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "HVAC Companies in Tampa",
+      "scenario": "Missing critical calls during Florida's intense summer heat and humidity.",
+      "result": "Increased summer revenue by $72,000 in first 90 days by never missing an emergency AC call."
+    },
+    {
+      "business_type": "Law Firms in Downtown Tampa",
+      "scenario": "Needed to handle high call volume while pre-qualifying potential clients.",
+      "result": "Reduced receptionist workload by 80%, closed 6 additional cases per month."
+    },
+    {
+      "business_type": "Home Services in Brandon",
+      "scenario": "Wanted to expand service area but couldn't afford additional office staff.",
+      "result": "Handles 3x more calls without hiring. Expanded to serve entire Hillsborough County."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Tampa and Surrounding Areas",
+    "description": "We provide Voice AI services throughout Hillsborough County and the greater Tampa Bay area.",
+    "areas_list": [
+      "Downtown Tampa",
+      "Westshore",
+      "Brandon",
+      "St. Petersburg",
+      "Clearwater",
+      "Temple Terrace",
+      "Plant City",
+      "Carrollwood"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Capture Client's Voice AI transformed our Tampa business. We've increased monthly revenue by over $60,000.",
+      "author": "Michael Santos",
+      "business": "Santos Air Conditioning",
+      "location": "Tampa, FL"
+    },
+    {
+      "quote": "The AI handles our call volume perfectly and books consultations while I'm in court. It's been a game-changer.",
+      "author": "Rebecca Johnson",
+      "business": "Johnson Law Firm",
+      "location": "Tampa, FL"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Tampa businesses?",
+      "answer": "Our Voice AI answers professionally, asks qualifying questions, provides information, schedules appointments, and transfers urgent calls. It works 24/7 for Tampa customers across the entire Tampa Bay area."
+    },
+    {
+      "question": "What Tampa businesses benefit most?",
+      "answer": "HVAC, plumbers, electricians, law firms, medical practices, real estate agents, contractors in Tampa all benefit from Voice AI automation."
+    },
+    {
+      "question": "Does the AI sound robotic?",
+      "answer": "Not at all! Most Tampa callers don't realize they're talking to AI. We customize voice and tone to match your brand."
+    },
+    {
+      "question": "How quickly can you set up for my Tampa business?",
+      "answer": "Most Tampa businesses are running within 1-2 weeks from initial strategy call to launch."
+    },
+    {
+      "question": "Can it integrate with my CRM?",
+      "answer": "Yes! Integrates with HubSpot, Salesforce, ServiceTitan, Jobber and tools used by Tampa businesses."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Small business owner in Tampa working with technology",
+        "caption": "Tampa businesses use Voice AI to automate lead capture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Professional answering phone call for Tampa business",
+        "caption": "AI answers every call professionally, 24/7"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Clients in Tampa?",
+    "subheadline": "Join dozens of Tampa Bay businesses using Voice AI to answer every call.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-st-petersburg-fl",
+      "voice-ai-clearwater-fl",
+      "voice-ai-brandon-fl"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}

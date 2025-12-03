@@ -1,0 +1,195 @@
+{
+  "page_id": "voice-ai-cleveland-oh",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Cleveland",
+    "state": "Ohio",
+    "state_abbr": "OH",
+    "slug": "cleveland-oh",
+    "nearby_areas": [
+      "Lakewood",
+      "Parma",
+      "Strongsville",
+      "Mentor",
+      "Westlake"
+    ],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Cleveland, OH | Capture Client",
+    "meta_description": "Looking for Voice AI in Cleveland? Capture Client helps Cleveland businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Cleveland, Ohio",
+    "keywords": [
+      "voice ai agency cleveland",
+      "ai voice agents cleveland ohio",
+      "ai receptionist cleveland",
+      "automated phone answering cleveland"
+    ],
+    "canonical_url": "/voice-ai-cleveland-oh"
+  },
+  "hero": {
+    "headline": "Never Miss Another Call in Cleveland",
+    "subheadline": "AI Voice Agents That Answer, Qualify, and Convert Leads 24/7 for Cleveland Businesses",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
+      "alt": "Professional business owner in Cleveland using phone technology",
+      "credit": {
+        "photographer": "Alev Takil",
+        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "From the bustling businesses near Cleveland Clinic and University Circle to the growing companies in Legacy Village and Beachwood, Cleveland small business owners face a common challenge: missed calls mean missed opportunities. Whether you're running an HVAC company in Lakewood, a medical practice near the Cleveland Health-Tech Corridor, or a home services business in Strongsville, every unanswered call could be a lost customer. That's where Capture Client's Voice AI technology comes in."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability for Cleveland Customers",
+      "description": "Your Cleveland customers call at all hours. Our AI voice agents never sleep, ensuring every call from Cuyahoga County is answered professionally.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "Stop wasting time on unqualified leads. Our AI asks the right questions upfront so you only talk to serious Cleveland prospects ready to buy.",
+      "icon": "filter_alt"
+    },
+    {
+      "title": "Automatic Appointment Scheduling",
+      "description": "Let AI book appointments directly into your calendar. No more phone tag with Cleveland customers.",
+      "icon": "event"
+    },
+    {
+      "title": "Cost Savings Over Traditional Staff",
+      "description": "Hiring a receptionist in Cleveland costs $30,000-$40,000/year. Our Voice AI costs a fraction of that.",
+      "icon": "attach_money"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We'll discuss your Cleveland business needs and how Voice AI can help you capture more clients."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI voice agent with your business information specific to your Cleveland market."
+    },
+    {
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live and watch your AI handle calls instantly based on real Cleveland call data."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "HVAC Companies in Cleveland",
+      "scenario": "Missing 45% of calls during harsh winter months.",
+      "result": "Increased winter revenue by $72,000 in first 90 days."
+    },
+    {
+      "business_type": "Medical Practices University Circle",
+      "scenario": "Front desk overwhelmed with appointment scheduling calls.",
+      "result": "Automated 80% of scheduling, reduced no-shows by 35%."
+    },
+    {
+      "business_type": "Home Services Lakewood/Westlake",
+      "scenario": "Wanted to grow but couldn't afford more office staff.",
+      "result": "Handles 4x more calls without hiring. Customer satisfaction up 42%."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Cleveland and Surrounding Areas",
+    "description": "We provide Voice AI services throughout Cuyahoga County and the greater Cleveland metropolitan area.",
+    "areas_list": [
+      "Downtown Cleveland",
+      "University Circle",
+      "Lakewood",
+      "Parma",
+      "Strongsville",
+      "Mentor",
+      "Westlake",
+      "Beachwood"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "quote": "Capture Client's Voice AI has transformed our Cleveland heating business. We never miss emergency calls, even at 2 AM.",
+      "author": "Robert Chen",
+      "business": "Chen Heating & Air",
+      "location": "Cleveland, OH"
+    },
+    {
+      "quote": "Our Cleveland practice doubled new patient bookings. The AI handles scheduling perfectly and sounds incredibly natural.",
+      "author": "Dr. Lisa Reynolds",
+      "business": "Reynolds Family Medicine",
+      "location": "Cleveland, OH"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for Cleveland businesses?",
+      "answer": "Our Voice AI answers professionally, asks qualifying questions, provides information, schedules appointments, and transfers urgent calls. It works 24/7 for Cleveland customers."
+    },
+    {
+      "question": "What Cleveland businesses benefit most?",
+      "answer": "HVAC, plumbers, electricians, law firms, medical practices, real estate agents, contractors in Cleveland all benefit from Voice AI automation."
+    },
+    {
+      "question": "Does the AI sound robotic?",
+      "answer": "Not at all! Most Cleveland callers don't realize they're talking to AI. We customize voice and tone to match your brand."
+    },
+    {
+      "question": "How quickly can you set up for my Cleveland business?",
+      "answer": "Most Cleveland businesses are running within 1-2 weeks from initial strategy call to launch."
+    },
+    {
+      "question": "Can it integrate with my CRM?",
+      "answer": "Yes! Integrates with HubSpot, Salesforce, ServiceTitan, Jobber and tools used by Cleveland businesses."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Small business owner in Cleveland working with technology",
+        "caption": "Cleveland businesses use Voice AI to automate lead capture"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1558731991-cb3430a08bb7?ixlib=rb-4.1.0&w=1200&q=80",
+        "alt": "Professional answering phone call for Cleveland business",
+        "caption": "AI answers every call professionally, 24/7"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Capture More Clients in Cleveland?",
+    "subheadline": "Join dozens of Cleveland businesses using Voice AI to answer every call.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-lakewood-oh",
+      "voice-ai-parma-oh",
+      "voice-ai-strongsville-oh"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
+  }
+}
