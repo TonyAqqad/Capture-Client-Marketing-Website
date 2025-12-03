@@ -13,6 +13,7 @@ interface ButtonProps {
   icon?: string; // Material icon name
   iconPosition?: "left" | "right";
   fullWidth?: boolean;
+  ariaLabel?: string; // Accessible label for links without visible text
 }
 
 export function Button({
@@ -24,7 +25,8 @@ export function Button({
   href,
   icon,
   iconPosition = "right",
-  fullWidth = false
+  fullWidth = false,
+  ariaLabel
 }: ButtonProps) {
   const baseClasses = "relative inline-flex items-center justify-center gap-2 font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:ring-offset-2 focus:ring-offset-background overflow-hidden touch-target";
 
@@ -44,6 +46,13 @@ export function Button({
   const widthClass = fullWidth ? "w-full" : "";
 
   const buttonClasses = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${widthClass} ${className}`;
+
+  // Extract text content for default aria-label
+  const getTextContent = (node: ReactNode): string => {
+    if (typeof node === 'string') return node;
+    if (typeof node === 'number') return node.toString();
+    return '';
+  };
 
   const content = (
     <>
@@ -68,12 +77,13 @@ export function Button({
       {/* Content */}
       <span className="relative z-10 flex items-center gap-2">
         {icon && iconPosition === "left" && (
-          <span className="material-icons text-current">{icon}</span>
+          <span className="material-icons text-current" aria-hidden="true">{icon}</span>
         )}
         {children}
         {icon && iconPosition === "right" && (
           <motion.span
             className="material-icons text-current"
+            aria-hidden="true"
             animate={{ x: [0, 4, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
           >
@@ -89,6 +99,7 @@ export function Button({
       <motion.a
         href={href}
         className={buttonClasses}
+        aria-label={ariaLabel || getTextContent(children)}
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
       >
@@ -101,6 +112,7 @@ export function Button({
     <motion.button
       onClick={onClick}
       className={buttonClasses}
+      aria-label={ariaLabel}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
     >

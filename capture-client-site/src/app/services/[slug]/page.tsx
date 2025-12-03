@@ -12,6 +12,7 @@ import {
   generateWebPageSchema,
   generateFAQSchema,
 } from "@/lib/seo-config";
+import { generateHowToSchema } from "@/lib/advanced-schemas";
 
 export async function generateStaticParams() {
   const services = await getAllServices();
@@ -121,7 +122,23 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         )
       : null;
 
-  const schemas = [serviceSchema, breadcrumbSchema, webPageSchema, faqSchema].filter(Boolean) as Array<Record<string, any>>;
+  // Generate HowTo schema if process steps exist
+  const howToSchema =
+    service.process && service.process.steps && service.process.steps.length > 0
+      ? generateHowToSchema({
+          name: `How to Get Started with ${service.service.service_name}`,
+          description: `Step-by-step guide to implementing ${service.service.service_name} for your business with Capture Client.`,
+          totalTime: 'P2W', // 2 weeks typical setup
+          steps: service.process.steps.map((step: ProcessStep, index: number) => ({
+            step: index + 1,
+            title: step.title,
+            description: step.description,
+          })),
+          url: `${SITE_CONFIG.url}/services/${service.service.service_slug}`,
+        })
+      : null;
+
+  const schemas = [serviceSchema, breadcrumbSchema, webPageSchema, faqSchema, howToSchema].filter(Boolean) as Array<Record<string, unknown>>;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background-dark via-[#1a1a3e] to-background-dark">

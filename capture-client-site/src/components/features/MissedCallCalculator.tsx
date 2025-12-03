@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { presets, EASING, TIMING } from "@/lib/simulator-animations";
+import { presets } from "@/lib/simulator-animations";
 
 // ============================================================================
 // TYPE DEFINITIONS
@@ -414,12 +414,8 @@ function SliderInput({
   prefix = false,
   ariaLabel,
   color = "accent",
+  
 }: SliderInputProps) {
-  const colorClasses = {
-    accent: "from-accent to-primary",
-    primary: "from-primary to-accent",
-    red: "from-red-500 to-red-600",
-  };
 
   return (
     <div className="space-y-3 sm:space-y-4">

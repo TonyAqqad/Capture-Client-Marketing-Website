@@ -201,6 +201,93 @@ const websiteSchema = {
   },
 };
 
+// FAQ Schema for rich snippets
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Will the AI voice agent sound robotic?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Not at all! Our AI uses cutting-edge natural language processing that sounds remarkably human. It understands context, speaks naturally with appropriate emotion, and even handles interruptions gracefully. Most callers don't realize they're speaking with AI until we tell them.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How long does setup take?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "We can have you up and running in as little as 48 hours. Our team handles the heavy lifting: we'll set up your AI agent, configure your ad campaigns, import your existing contacts to the CRM, and train you on the dashboard. Most clients are fully operational within a week with zero technical knowledge required.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What if I want to cancel?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Zero hassle. We offer month-to-month contracts with no long-term commitment required. If you decide to cancel, we'll help export all your data, and you'll keep full access until the end of your billing period.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is this really worth the investment?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Let's do the math: if our system captures just 5 extra leads per month that convert at 20%, that's 1 new client. For most businesses, one new client pays for the entire system multiple times over. Our average client sees 3x ROI within 90 days.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I need technical knowledge to use this?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely not! Our platform is designed for busy business owners, not tech experts. Everything is visual and intuitive. We provide personalized training, video tutorials, and our support team is always one call away.",
+      },
+    },
+  ],
+};
+
+// LocalBusiness Schema for local SEO
+const localBusinessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://captureclientai.net/#localbusiness",
+  name: "Capture Client",
+  image: "https://captureclientai.net/logo-full.png",
+  telephone: "+1-865-346-3339",
+  email: "team@captureclientai.net",
+  url: "https://captureclientai.net",
+  priceRange: "$$",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Knoxville",
+    addressRegion: "TN",
+    addressCountry: "US",
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: 35.9606,
+    longitude: -83.9207,
+  },
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+  ],
+  areaServed: [
+    { "@type": "State", name: "Tennessee" },
+    { "@type": "State", name: "Georgia" },
+    { "@type": "State", name: "North Carolina" },
+    { "@type": "State", name: "Kentucky" },
+    { "@type": "State", name: "Virginia" },
+  ],
+};
+
 export default function HomePage() {
   return (
     <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-background-dark">
@@ -212,6 +299,14 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
 
       {/* ==================== STICKY PHONE CTA (Top Bar) ==================== */}

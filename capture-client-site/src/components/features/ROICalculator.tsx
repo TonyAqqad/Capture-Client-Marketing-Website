@@ -50,13 +50,13 @@ const AnimatedCounter = memo(function AnimatedCounter({
     setIsComplete(false);
     const duration = 1000;
     const steps = 50;
-    const increment = value / steps;
-    let current = 0;
+    
+    
     let step = 0;
 
     const timer = setInterval(() => {
       step++;
-      current += increment;
+      
 
       if (step >= steps) {
         setDisplayValue(value);

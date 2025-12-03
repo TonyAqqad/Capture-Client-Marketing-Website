@@ -61,7 +61,7 @@ export function FeatureCard({
           >
             {/* Inner glow */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-xl opacity-50" />
-            <span className="material-icons text-2xl sm:text-3xl relative z-10">{icon}</span>
+            <span className="material-icons text-2xl sm:text-3xl relative z-10" aria-hidden="true">{icon}</span>
 
             {/* Animated ring on hover */}
             {!isMobile && (
@@ -101,6 +101,7 @@ export function FeatureCard({
             <span>Learn more</span>
             <motion.span
               className="material-icons text-sm"
+              aria-hidden="true"
               animate={isMobile ? {} : { x: [0, 4, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
             >

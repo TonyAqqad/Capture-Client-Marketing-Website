@@ -6,10 +6,6 @@ import AudioWaveform from "@/components/AudioWaveform";
 import CRMCard from "@/components/CRMCard";
 import GrowthDashboard from "@/components/GrowthDashboard";
 
-// Material Icon component for consistency (replaces Lucide React for bundle savings)
-const MaterialIcon = ({ name, className = "" }: { name: string; className?: string }) => (
-  <span className={`material-icons ${className}`} style={{ fontSize: 'inherit' }}>{name}</span>
-);
 
 export default function FeaturesPageClient() {
   return (

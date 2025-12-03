@@ -1,6 +1,8 @@
 import { getAllServices } from "@/lib/data";
 import type { Metadata } from "next";
 import ServicesPageClient from "./ServicesPageClient";
+import { SITE_CONFIG } from "@/lib/seo-config";
+import { generateCollectionPageSchema } from "@/lib/advanced-schemas";
 
 export const metadata: Metadata = {
   title: "Marketing Services for Small Business | Voice AI, Ads & Lead Gen | Capture Client",
@@ -46,6 +48,27 @@ export const metadata: Metadata = {
 export default async function ServicesPage() {
   const services = await getAllServices();
 
+  // Generate CollectionPage schema for SEO
+  const collectionSchema = generateCollectionPageSchema({
+    name: "Marketing Services for Small Business",
+    description: "24/7 AI voice agents, Google Ads, Facebook Ads, and lead generation services for small businesses.",
+    url: `${SITE_CONFIG.url}/services`,
+    items: services.map((service) => ({
+      name: service.service.service_name,
+      url: `${SITE_CONFIG.url}/services/${service.service.service_slug}`,
+    })),
+  });
+
+  // Breadcrumb schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_CONFIG.url },
+      { "@type": "ListItem", position: 2, name: "Services", item: `${SITE_CONFIG.url}/services` },
+    ],
+  };
+
   // Transform to the shape expected by client component
   const servicesData = services.map((service) => ({
     service: {
@@ -57,5 +80,16 @@ export default async function ServicesPage() {
     benefits: service.benefits,
   }));
 
-  return <ServicesPageClient services={servicesData} />;
+  return (
+    <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([collectionSchema, breadcrumbSchema]),
+        }}
+      />
+      <ServicesPageClient services={servicesData} />
+    </>
+  );
 }

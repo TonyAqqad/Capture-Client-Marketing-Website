@@ -51,7 +51,7 @@ export function Badge({
       )}
 
       {icon && (
-        <span className="material-icons text-current" style={{ fontSize: size === "sm" ? "14px" : size === "md" ? "16px" : "18px" }}>
+        <span className="material-icons text-current" aria-hidden="true" style={{ fontSize: size === "sm" ? "14px" : size === "md" ? "16px" : "18px" }}>
           {icon}
         </span>
       )}

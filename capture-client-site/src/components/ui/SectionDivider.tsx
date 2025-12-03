@@ -54,14 +54,14 @@ export function SectionDivider({ variant = "gradient-line", className = "" }: Se
           />
           <defs>
             <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#4A69E2" stopOpacity="0.1" />
-              <stop offset="50%" stopColor="#00C9FF" stopOpacity="0.15" />
-              <stop offset="100%" stopColor="#4A69E2" stopOpacity="0.1" />
+              <stop offset="0%" stopColor="rgb(74, 105, 226)" stopOpacity="0.1" />
+              <stop offset="50%" stopColor="rgb(0, 201, 255)" stopOpacity="0.15" />
+              <stop offset="100%" stopColor="rgb(74, 105, 226)" stopOpacity="0.1" />
             </linearGradient>
             <linearGradient id="strokeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#4A69E2" stopOpacity="0.3" />
-              <stop offset="50%" stopColor="#00C9FF" stopOpacity="0.5" />
-              <stop offset="100%" stopColor="#4A69E2" stopOpacity="0.3" />
+              <stop offset="0%" stopColor="rgb(74, 105, 226)" stopOpacity="0.3" />
+              <stop offset="50%" stopColor="rgb(0, 201, 255)" stopOpacity="0.5" />
+              <stop offset="100%" stopColor="rgb(74, 105, 226)" stopOpacity="0.3" />
             </linearGradient>
           </defs>
         </svg>

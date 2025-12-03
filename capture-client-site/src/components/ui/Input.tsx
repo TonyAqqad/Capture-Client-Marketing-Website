@@ -40,25 +40,26 @@ export function Input({
   return (
     <div className="w-full">
       {label && (
-        <motion.label
-          className="block text-sm font-semibold text-foreground mb-2"
-          animate={{ color: isFocused ? "#00C9FF" : "#F8FAFC" }}
-          transition={{ duration: 0.2 }}
+        <label
+          className={`block text-sm font-semibold mb-2 transition-colors duration-200 ${
+            isFocused ? "text-accent" : "text-foreground"
+          }`}
         >
           {label}
-        </motion.label>
+        </label>
       )}
 
       <div className="relative">
         {icon && (
           <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
-            <motion.span
-              className="material-icons text-foreground-muted"
-              animate={{ color: isFocused ? "#00C9FF" : "#94A3B8" }}
-              transition={{ duration: 0.2 }}
+            <span
+              className={`material-icons transition-colors duration-200 ${
+                isFocused ? "text-accent" : "text-foreground-muted"
+              }`}
+              aria-hidden="true"
             >
               {icon}
-            </motion.span>
+            </span>
           </div>
         )}
 
@@ -95,7 +96,7 @@ export function Input({
           animate={{ opacity: 1, y: 0 }}
           className="text-sm text-red-400 mt-2 flex items-center gap-1"
         >
-          <span className="material-icons text-sm">error</span>
+          <span className="material-icons text-sm" aria-hidden="true">error</span>
           {error}
         </motion.p>
       )}

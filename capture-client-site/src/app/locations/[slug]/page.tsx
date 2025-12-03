@@ -20,6 +20,7 @@ import {
   generateBreadcrumbSchema,
   generateWebPageSchema,
 } from "@/lib/seo-config";
+import { generateHowToSchema, generateLocationServiceSchema } from "@/lib/advanced-schemas";
 
 // Local use case can have two structures
 interface LocalUseCase {
@@ -147,13 +148,41 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
     url: `${SITE_CONFIG.url}/locations/${location.page_id}`,
   });
 
+  // Generate HowTo schema from how_it_works data if available
+  const howToSchema = location.how_it_works && location.how_it_works.length > 0
+    ? generateHowToSchema({
+        name: `How to Get Started with ${location.service.service_name} in ${location.location.city}`,
+        description: `Step-by-step guide to implementing ${location.service.service_name} for your ${location.location.city} business. Quick setup, immediate results.`,
+        totalTime: 'P2W',
+        steps: location.how_it_works.map((step: { step?: number; title: string; description: string }, index: number) => ({
+          step: step.step || index + 1,
+          title: step.title,
+          description: step.description,
+        })),
+        url: `${SITE_CONFIG.url}/locations/${location.page_id}`,
+      })
+    : null;
+
+  // Generate enhanced Location-Service schema
+  const locationServiceSchema = generateLocationServiceSchema({
+    serviceName: location.service.service_name,
+    serviceDescription: location.seo.meta_description,
+    city: location.location.city,
+    state: location.location.state,
+    stateAbbr: location.location.state_abbr,
+    pageUrl: `${SITE_CONFIG.url}/locations/${location.page_id}`,
+    benefits: location.benefits?.map((b: Benefit) => ({ title: b.title, description: b.description })),
+  });
+
   // Combine all schemas (filter out nulls)
   const schemas = [
     localBusinessSchema,
     serviceSchema,
+    locationServiceSchema,
     breadcrumbSchema,
     webPageSchema,
     faqSchema,
+    howToSchema,
   ].filter(Boolean) as Array<Record<string, unknown>>;
 
   return (
