@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 import { GlowCard } from "./GlowCard";
 
 interface FeatureCardProps {
@@ -18,6 +19,15 @@ export function FeatureCard({
   iconColor = "primary",
   index = 0
 }: FeatureCardProps) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const iconColorClasses = iconColor === "primary"
     ? "bg-primary/10 border-primary/20 text-primary group-hover:bg-primary/20"
     : "bg-accent/10 border-accent/20 text-accent group-hover:bg-accent/20";
@@ -36,7 +46,7 @@ export function FeatureCard({
       <GlowCard
         className="group border border-surface-border rounded-2xl backdrop-blur-lg transition-all duration-500 hover:border-primary/40 active:scale-[0.98] shadow-[0_4px_24px_rgba(0,0,0,0.2)] hover:shadow-[0_8px_32px_rgba(0,201,255,0.2)] hover:-translate-y-2"
         glassEffect={true}
-        interactiveGlow={true}
+        interactiveGlow={!isMobile}
       >
         <div className="relative p-6 sm:p-8">
           {/* Glass overlay for depth */}
@@ -54,18 +64,20 @@ export function FeatureCard({
             <span className="material-icons text-2xl sm:text-3xl relative z-10">{icon}</span>
 
             {/* Animated ring on hover */}
-            <motion.div
-              className={`absolute inset-0 rounded-xl border-2 ${iconColor === "primary" ? "border-primary" : "border-accent"} opacity-0 group-hover:opacity-50`}
-              animate={{
-                scale: [1, 1.3],
-                opacity: [0.5, 0]
-              }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                repeatDelay: 0.5
-              }}
-            />
+            {!isMobile && (
+              <motion.div
+                className={`absolute inset-0 rounded-xl border-2 ${iconColor === "primary" ? "border-primary" : "border-accent"} opacity-0 group-hover:opacity-50`}
+                animate={{
+                  scale: [1, 1.3],
+                  opacity: [0.5, 0]
+                }}
+                transition={{
+                  duration: 1.5,
+                  repeat: Infinity,
+                  repeatDelay: 0.5
+                }}
+              />
+            )}
           </motion.div>
 
           {/* Title with gradient on hover */}
@@ -89,7 +101,7 @@ export function FeatureCard({
             <span>Learn more</span>
             <motion.span
               className="material-icons text-sm"
-              animate={{ x: [0, 4, 0] }}
+              animate={isMobile ? {} : { x: [0, 4, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
             >
               arrow_forward

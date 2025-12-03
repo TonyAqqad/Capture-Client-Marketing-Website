@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { useRef, useState, MouseEvent, TouchEvent } from "react";
+import { useRef, useState, useEffect, MouseEvent, TouchEvent } from "react";
 
 interface GlowCardProps {
   children: React.ReactNode;
@@ -18,6 +18,14 @@ export function GlowCard({
   const ref = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isPressed, setIsPressed] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const updatePosition = (clientX: number, clientY: number) => {
     if (!ref.current) return;
@@ -34,7 +42,7 @@ export function GlowCard({
   };
 
   const handleTouchMove = (e: TouchEvent) => {
-    if (!interactiveGlow || e.touches.length === 0) return;
+    if (!interactiveGlow || e.touches.length === 0 || isMobile) return;
     const touch = e.touches[0];
     updatePosition(touch.clientX, touch.clientY);
   };
@@ -62,7 +70,7 @@ export function GlowCard({
       )}
 
       {/* Interactive radial glow following cursor/touch */}
-      {interactiveGlow && (
+      {interactiveGlow && !isMobile && (
         <motion.div
           className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
           style={{
@@ -74,7 +82,7 @@ export function GlowCard({
       )}
 
       {/* Secondary glow layer (primary color) */}
-      {interactiveGlow && (
+      {interactiveGlow && !isMobile && (
         <div
           className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"
           style={{
@@ -85,22 +93,24 @@ export function GlowCard({
       )}
 
       {/* Shimmer effect on hover */}
-      <motion.div
-        className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none"
-        initial={false}
-        animate={{
-          backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
-        }}
-        transition={{
-          duration: 3,
-          repeat: Infinity,
-          ease: "linear"
-        }}
-        style={{
-          background: 'linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.08) 50%, transparent 100%)',
-          backgroundSize: '200% 100%'
-        }}
-      />
+      {!isMobile && (
+        <motion.div
+          className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none"
+          initial={false}
+          animate={{
+            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+          style={{
+            background: 'linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.08) 50%, transparent 100%)',
+            backgroundSize: '200% 100%'
+          }}
+        />
+      )}
 
       {/* Content */}
       <div className="relative z-10">

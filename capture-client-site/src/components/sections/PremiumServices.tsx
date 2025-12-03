@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useInView } from "@/hooks/useInView";
 
@@ -76,6 +76,14 @@ const services: Service[] = [
 export function PremiumServices() {
   const containerRef = useRef<HTMLElement>(null);
   const isInView = useInView(containerRef, { threshold: 0.2 });
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -97,34 +105,38 @@ export function PremiumServices() {
         className="absolute inset-0 bg-gradient-to-b from-background-dark via-background to-background-dark opacity-50"
       />
 
-      {/* Floating orbs - MOBILE FIX: Prevent horizontal overflow */}
-      <motion.div
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.1, 0.2, 0.1],
-        }}
-        transition={{
-          duration: 8,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-        className="absolute top-1/4 right-0 w-[300px] sm:w-[400px] md:w-[600px] lg:w-[800px] h-[300px] sm:h-[400px] md:h-[600px] lg:h-[800px] rounded-full bg-gradient-radial from-accent/10 to-transparent blur-3xl translate-x-1/4 overflow-hidden"
-        style={{ maxWidth: '100vw' }}
-      />
-      <motion.div
-        animate={{
-          scale: [1.2, 1, 1.2],
-          opacity: [0.1, 0.2, 0.1],
-        }}
-        transition={{
-          duration: 10,
-          repeat: Infinity,
-          ease: "easeInOut",
-          delay: 2
-        }}
-        className="absolute bottom-1/4 left-0 w-[350px] sm:w-[450px] md:w-[700px] lg:w-[900px] h-[350px] sm:h-[450px] md:h-[700px] lg:h-[900px] rounded-full bg-gradient-radial from-primary/10 to-transparent blur-3xl -translate-x-1/4 overflow-hidden"
-        style={{ maxWidth: '100vw' }}
-      />
+      {/* Floating orbs - DISABLED ON MOBILE to prevent GPU lag */}
+      {!isMobile && (
+        <>
+          <motion.div
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.1, 0.2, 0.1],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute top-1/4 right-0 w-[300px] sm:w-[400px] md:w-[600px] lg:w-[800px] h-[300px] sm:h-[400px] md:h-[600px] lg:h-[800px] rounded-full bg-gradient-radial from-accent/10 to-transparent blur-3xl translate-x-1/4 overflow-hidden"
+            style={{ maxWidth: '100vw' }}
+          />
+          <motion.div
+            animate={{
+              scale: [1.2, 1, 1.2],
+              opacity: [0.1, 0.2, 0.1],
+            }}
+            transition={{
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 2
+            }}
+            className="absolute bottom-1/4 left-0 w-[350px] sm:w-[450px] md:w-[700px] lg:w-[900px] h-[350px] sm:h-[450px] md:h-[700px] lg:h-[900px] rounded-full bg-gradient-radial from-primary/10 to-transparent blur-3xl -translate-x-1/4 overflow-hidden"
+            style={{ maxWidth: '100vw' }}
+          />
+        </>
+      )}
 
       <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -158,6 +170,7 @@ export function PremiumServices() {
               service={service}
               index={index}
               isInView={isInView}
+              isMobile={isMobile}
             />
           ))}
         </div>
@@ -191,9 +204,10 @@ interface ServiceCardProps {
   service: Service;
   index: number;
   isInView: boolean;
+  isMobile: boolean;
 }
 
-function ServiceCard({ service, index, isInView }: ServiceCardProps) {
+function ServiceCard({ service, index, isInView, isMobile }: ServiceCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
 
   return (
@@ -228,7 +242,7 @@ function ServiceCard({ service, index, isInView }: ServiceCardProps) {
       >
         {/* Icon container */}
         <motion.div
-          whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
+          whileHover={isMobile ? {} : { rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
           transition={{ duration: 0.5 }}
           className={`flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-xl bg-gradient-to-br ${service.gradient} border ${service.borderColor} mb-5 sm:mb-6 shadow-lg group-hover:shadow-glow transition-all duration-300`}
         >
@@ -259,8 +273,8 @@ function ServiceCard({ service, index, isInView }: ServiceCardProps) {
                   : { opacity: 0, x: -10 }
               }
               transition={{
-                duration: 0.4,
-                delay: index * 0.1 + idx * 0.05 + 0.3,
+                duration: isMobile ? 0 : 0.4,
+                delay: isMobile ? 0 : index * 0.1 + idx * 0.05 + 0.3,
               }}
               className="flex items-center gap-2.5 sm:gap-2 text-sm text-foreground-subtle group-hover:text-foreground transition-colors duration-300"
             >

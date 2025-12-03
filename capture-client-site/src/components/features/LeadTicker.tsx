@@ -68,13 +68,14 @@ function generateRandomLead(): Lead {
 
 interface LeadCardProps {
   lead: Lead;
+  isMobile: boolean;
 }
 
-const LeadCard = memo(({ lead }: LeadCardProps) => (
+const LeadCard = memo(({ lead, isMobile }: LeadCardProps) => (
   <motion.div
     key={lead.id}
-    initial={{ opacity: 0, y: -30, scale: 0.92, rotateX: -10 }}
-    animate={{
+    initial={isMobile ? { opacity: 0, y: -20 } : { opacity: 0, y: -30, scale: 0.92, rotateX: -10 }}
+    animate={isMobile ? { opacity: 1, y: 0 } : {
       opacity: 1,
       y: 0,
       scale: 1,
@@ -86,13 +87,15 @@ const LeadCard = memo(({ lead }: LeadCardProps) => (
       scale: 0.9,
       transition: { duration: 0.3 }
     }}
-    transition={{
+    transition={isMobile ? {
+      duration: 0.3
+    } : {
       duration: 0.5,
       type: "spring",
       stiffness: 300,
       damping: 25
     }}
-    whileHover={{
+    whileHover={isMobile ? {} : {
       scale: 1.02,
       transition: { duration: 0.2 }
     }}
@@ -100,22 +103,26 @@ const LeadCard = memo(({ lead }: LeadCardProps) => (
   >
     {/* Pulse indicator */}
     <div className="relative flex-shrink-0">
+      {!isMobile && (
+        <motion.div
+          animate={{
+            scale: [1, 1.8, 1],
+            opacity: [0.6, 0, 0.6],
+          }}
+          transition={{
+            duration: 2.5,
+            repeat: Infinity,
+            ease: "easeOut"
+          }}
+          className="absolute inset-0 rounded-full bg-accent blur-sm"
+        />
+      )}
       <motion.div
-        animate={{
-          scale: [1, 1.8, 1],
-          opacity: [0.6, 0, 0.6],
-        }}
-        transition={{
-          duration: 2.5,
-          repeat: Infinity,
-          ease: "easeOut"
-        }}
-        className="absolute inset-0 rounded-full bg-accent blur-sm"
-      />
-      <motion.div
-        initial={{ scale: 0, rotate: -180 }}
-        animate={{ scale: 1, rotate: 0 }}
-        transition={{
+        initial={isMobile ? { opacity: 0 } : { scale: 0, rotate: -180 }}
+        animate={isMobile ? { opacity: 1 } : { scale: 1, rotate: 0 }}
+        transition={isMobile ? {
+          duration: 0.2
+        } : {
           type: "spring",
           stiffness: 200,
           damping: 15,
@@ -156,11 +163,17 @@ LeadCard.displayName = 'LeadCard';
 export default function LeadTicker() {
   const [isClient, setIsClient] = useState(false);
   const [leads, setLeads] = useState<Lead[]>([]);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Initialize leads on client-side only to prevent hydration mismatch
+  // Initialize leads and mobile detection on client-side only to prevent hydration mismatch
   useEffect(() => {
     setIsClient(true);
     setLeads([generateRandomLead(), generateRandomLead(), generateRandomLead()]);
+
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   // Add new lead every 8-15 seconds - useCallback to prevent recreation
@@ -189,11 +202,11 @@ export default function LeadTicker() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/10 border border-accent/20 mb-6"
           >
             <motion.span
-              animate={{
+              animate={isMobile ? {} : {
                 scale: [1, 1.3, 1],
                 opacity: [0.7, 1, 0.7],
               }}
-              transition={{ duration: 2, repeat: Infinity }}
+              transition={isMobile ? {} : { duration: 2, repeat: Infinity }}
               className="w-2.5 h-2.5 rounded-full bg-accent"
             />
             <span className="text-accent text-sm font-semibold">Live Activity</span>
@@ -223,7 +236,7 @@ export default function LeadTicker() {
         <div className="max-w-3xl mx-auto space-y-4">
           <AnimatePresence mode="popLayout">
             {leads.map((lead) => (
-              <LeadCard key={lead.id} lead={lead} />
+              <LeadCard key={lead.id} lead={lead} isMobile={isMobile} />
             ))}
           </AnimatePresence>
         </div>
