@@ -1732,3 +1732,104 @@ select:focus-visible {
     }
   }
 }
+
+/* ============================================ */
+/* MOBILE PERFORMANCE: BACKDROP-BLUR DISABLE  */
+/* Backdrop-blur kills 60fps on mobile devices */
+/* Disables ALL backdrop-blur on mobile        */
+/* ============================================ */
+
+/**
+ * MOBILE PERFORMANCE OPTIMIZATION
+ *
+ * Problem: Backdrop-blur is GPU-intensive and causes:
+ * - Janky scrolling on iOS Safari (drops to 30fps)
+ * - Battery drain on all mobile devices
+ * - Poor performance on older Android devices
+ *
+ * Solution: Disable ALL backdrop-blur effects on mobile (<=768px)
+ * while maintaining visual hierarchy through increased opacity.
+ *
+ * Note: This affects 259 instances across 71 files without
+ * needing to edit each file individually.
+ */
+
+@media (max-width: 768px) {
+  /* Disable all Tailwind backdrop-blur utilities */
+  .backdrop-blur-none,
+  .backdrop-blur-sm,
+  .backdrop-blur,
+  .backdrop-blur-md,
+  .backdrop-blur-lg,
+  .backdrop-blur-xl,
+  .backdrop-blur-2xl,
+  .backdrop-blur-3xl,
+  [class*="backdrop-blur"] {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Compensate for loss of blur with slightly higher opacity */
+  .backdrop-blur-sm,
+  .backdrop-blur,
+  .backdrop-blur-md {
+    background-color: rgba(15, 20, 25, 0.95) !important;
+  }
+
+  .backdrop-blur-lg,
+  .backdrop-blur-xl,
+  .backdrop-blur-2xl,
+  .backdrop-blur-3xl {
+    background-color: rgba(15, 20, 25, 0.97) !important;
+  }
+}
+
+/**
+ * ACCESSIBILITY: Disable backdrop-blur for users who prefer reduced motion
+ *
+ * Users with vestibular disorders may experience discomfort from
+ * translucent layers and blurred motion.
+ */
+@media (prefers-reduced-motion: reduce) {
+  .backdrop-blur-none,
+  .backdrop-blur-sm,
+  .backdrop-blur,
+  .backdrop-blur-md,
+  .backdrop-blur-lg,
+  .backdrop-blur-xl,
+  .backdrop-blur-2xl,
+  .backdrop-blur-3xl,
+  [class*="backdrop-blur"] {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+}
+
+/**
+ * OPTIONAL: Force blur utility for elements that MUST have blur on mobile
+ *
+ * Usage: Add .force-blur class to override mobile blur disable
+ * Example: <div class="backdrop-blur-lg force-blur">
+ *
+ * WARNING: Use sparingly! Excessive blur causes performance issues.
+ */
+.force-blur {
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+}
+
+/* Force blur variants for different strengths */
+.force-blur-sm {
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+}
+
+.force-blur-lg {
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+}
+
+.force-blur-xl {
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}

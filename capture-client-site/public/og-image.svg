@@ -1,0 +1,59 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="navyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F172A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E293B;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F4D03F;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="cyanGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00C9FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00E5FF;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#navyGradient)"/>
+  
+  <!-- Decorative Circles -->
+  <circle cx="900" cy="150" r="200" fill="#00C9FF" opacity="0.1"/>
+  <circle cx="300" cy="480" r="180" fill="#D4AF37" opacity="0.08"/>
+  
+  <!-- Top Gold Accent Line -->
+  <rect x="0" y="0" width="1200" height="4" fill="url(#goldGradient)"/>
+  
+  <!-- Logo Area / Brand Name -->
+  <text x="100" y="180" font-family="Arial, sans-serif" font-size="80" font-weight="bold" fill="#F8FAFC">
+    Capture Client
+  </text>
+  
+  <!-- Tagline -->
+  <text x="100" y="260" font-family="Arial, sans-serif" font-size="36" fill="#94A3B8">
+    AI Voice Agents for Small Business
+  </text>
+  
+  <!-- Cyan Accent Bar -->
+  <rect x="100" y="300" width="400" height="6" fill="url(#cyanGradient)" rx="3"/>
+  
+  <!-- Key Features -->
+  <text x="100" y="380" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#00C9FF">
+    ✓ 24/7 Call Answering
+  </text>
+  <text x="100" y="430" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#00C9FF">
+    ✓ Lead Capture & CRM
+  </text>
+  <text x="100" y="480" font-family="Arial, sans-serif" font-size="28" font-weight="600" fill="#00C9FF">
+    ✓ Real-Time Analytics
+  </text>
+  
+  <!-- Call to Action Badge -->
+  <rect x="100" y="530" width="280" height="60" fill="#D4AF37" rx="30"/>
+  <text x="240" y="568" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#0F172A" text-anchor="middle">
+    Start Free Trial
+  </text>
+  
+  <!-- Bottom Accent Line -->
+  <rect x="0" y="626" width="1200" height="4" fill="url(#cyanGradient)"/>
+</svg>

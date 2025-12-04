@@ -41,9 +41,9 @@ interface ServiceHeroProps {
 // Service-specific color schemes and icons (using Material Icon names)
 const serviceThemes = {
   "voice-ai": {
-    gradient: "from-indigo-600 via-purple-600 to-pink-600",
-    accentColor: "bg-indigo-500",
-    iconColor: "text-indigo-400",
+    gradient: "from-[#4A69E2] via-[#D4AF37]/80 to-[#00C9FF]",
+    accentColor: "bg-[#4A69E2]",
+    iconColor: "text-[#D4AF37]",
     icon: "bolt",
     floatingIcons: [
       { icon: "phone", delay: 0, position: "top-20 right-20" },
@@ -63,9 +63,9 @@ const serviceThemes = {
     ],
   },
   "facebook-ads": {
-    gradient: "from-violet-600 via-fuchsia-600 to-pink-600",
-    accentColor: "bg-violet-500",
-    iconColor: "text-violet-400",
+    gradient: "from-[#4A69E2] via-[#D4AF37] to-[#00C9FF]",
+    accentColor: "bg-[#D4AF37]",
+    iconColor: "text-[#D4AF37]",
     icon: "group",
     floatingIcons: [
       { icon: "group", delay: 0, position: "top-16 right-28" },

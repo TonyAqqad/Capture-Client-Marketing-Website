@@ -43,7 +43,7 @@ const CRMCard: React.FC<CRMCardProps> = ({ fields }) => {
       {/* Card Container with Glassmorphism */}
       <div className="relative rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl overflow-hidden">
         {/* Subtle Inner Glow */}
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-[#D4AF37]/5 pointer-events-none" />
 
         {/* Card Header */}
         <div className="relative px-4 sm:px-6 py-4 sm:py-5 border-b border-white/10">
@@ -82,7 +82,7 @@ const CRMCard: React.FC<CRMCardProps> = ({ fields }) => {
       {/* Outer Glow Effect */}
       <div className="absolute inset-0 -z-10 blur-3xl opacity-30">
         <div className="absolute top-0 left-1/4 w-32 h-32 bg-cyan-500/30 rounded-full" />
-        <div className="absolute bottom-0 right-1/4 w-32 h-32 bg-purple-500/30 rounded-full" />
+        <div className="absolute bottom-0 right-1/4 w-32 h-32 bg-[#D4AF37]/30 rounded-full" />
       </div>
     </motion.div>
   );

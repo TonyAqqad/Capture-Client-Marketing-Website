@@ -15,7 +15,7 @@ export default function AsSeenIn() {
     { name: "Google APIs", icon: "api", category: "Analytics & Ads", color: "text-blue-400" },
     { name: "Meta Business", icon: "ads_click", category: "Facebook Ads", color: "text-blue-500" },
     { name: "Zapier", icon: "sync_alt", category: "Automation", color: "text-orange-400" },
-    { name: "Stripe", icon: "payment", category: "Payments", color: "text-purple-400" },
+    { name: "Stripe", icon: "payment", category: "Payments", color: "text-[#D4AF37]" },
     { name: "Calendly", icon: "event", category: "Scheduling", color: "text-cyan-400" },
   ];
 
@@ -25,7 +25,7 @@ export default function AsSeenIn() {
     { name: "Salesforce", icon: "cloud", category: "Enterprise CRM", color: "text-blue-400" },
     { name: "Mailchimp", icon: "mail", category: "Email Marketing", color: "text-yellow-400" },
     { name: "GoHighLevel", icon: "trending_up", category: "Marketing Automation", color: "text-green-400" },
-    { name: "Slack", icon: "chat", category: "Team Communication", color: "text-purple-500" },
+    { name: "Slack", icon: "chat", category: "Team Communication", color: "text-[#D4AF37]" },
   ];
 
   return (

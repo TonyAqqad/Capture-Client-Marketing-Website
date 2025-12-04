@@ -87,9 +87,9 @@ const INDUSTRIES: Industry[] = [
     id: "dental",
     name: "Dental",
     icon: "sentiment_satisfied",
-    color: "text-purple-400",
-    bgColor: "bg-purple-500/10",
-    borderColor: "border-purple-500/30",
+    color: "text-[#D4AF37]",
+    bgColor: "bg-[#D4AF37]/10",
+    borderColor: "border-[#D4AF37]/30",
     demo: {
       title: "Dental Practice Patient Concierge",
       description:

@@ -446,7 +446,7 @@ function HeroIllustration() {
       <motion.div
         animate={{ scale: [1, 1.15, 1] }}
         transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-        className="w-24 h-24 sm:w-32 sm:h-32 rounded-3xl bg-gradient-to-br from-gold/30 to-purple-500/30 border-2 border-gold/40 backdrop-blur-xl flex items-center justify-center relative"
+        className="w-24 h-24 sm:w-32 sm:h-32 rounded-3xl bg-gradient-to-br from-gold/30 to-[#D4AF37]/30 border-2 border-gold/40 backdrop-blur-xl flex items-center justify-center relative"
       >
         <span className="material-icons text-5xl sm:text-6xl text-gold">auto_awesome</span>
         {/* Pulsing rings */}

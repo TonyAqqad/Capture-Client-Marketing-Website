@@ -23,10 +23,10 @@ export default function SocialProofBanner() {
         {/* Avatar stack - more refined */}
         <div className="flex items-center flex-shrink-0">
           <div className="flex -space-x-2.5 sm:-space-x-3">
-            <div className="w-11 h-11 rounded-full bg-gradient-to-br from-blue-500/80 to-purple-500/80 border-2 border-background-dark/80 shadow-lg flex items-center justify-center text-white font-semibold text-xs backdrop-blur-sm">
+            <div className="w-11 h-11 rounded-full bg-gradient-to-br from-blue-500/80 to-[#D4AF37]/80 border-2 border-background-dark/80 shadow-lg flex items-center justify-center text-white font-semibold text-xs backdrop-blur-sm">
               JD
             </div>
-            <div className="w-11 h-11 rounded-full bg-gradient-to-br from-purple-500/80 to-pink-500/80 border-2 border-background-dark/80 shadow-lg flex items-center justify-center text-white font-semibold text-xs backdrop-blur-sm">
+            <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#D4AF37]/80 to-[#00C9FF]/80 border-2 border-background-dark/80 shadow-lg flex items-center justify-center text-white font-semibold text-xs backdrop-blur-sm">
               SM
             </div>
             <div className="w-11 h-11 rounded-full bg-gradient-to-br from-pink-500/80 to-orange-500/80 border-2 border-background-dark/80 shadow-lg flex items-center justify-center text-white font-semibold text-xs backdrop-blur-sm">

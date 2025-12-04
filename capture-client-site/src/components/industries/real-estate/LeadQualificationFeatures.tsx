@@ -78,9 +78,9 @@ export function LeadQualificationFeatures() {
       glow: "group-hover:shadow-[0_0_40px_rgba(0,201,255,0.3)]"
     },
     purple: {
-      icon: "from-purple-500 to-pink-500",
-      text: "text-purple-400",
-      border: "border-purple-500/30",
+      icon: "from-[#D4AF37] to-[#00C9FF]",
+      text: "text-[#D4AF37]",
+      border: "border-[#D4AF37]/30",
       glow: "group-hover:shadow-[0_0_40px_rgba(168,85,247,0.3)]"
     }
   };

@@ -386,7 +386,7 @@ export default function AutomotivePageClient() {
               {[
                 { name: "CDK Global", color: "text-blue-400" },
                 { name: "Reynolds & Reynolds", color: "text-green-400" },
-                { name: "DealerSocket", color: "text-purple-400" },
+                { name: "DealerSocket", color: "text-[#D4AF37]" },
                 { name: "Tekion", color: "text-orange-400" }
               ].map((dms) => (
                 <motion.div

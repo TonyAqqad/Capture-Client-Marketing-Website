@@ -346,7 +346,7 @@ export default function IntegrationPartners() {
         />
         {/* Glow orbs */}
         <div className="absolute top-1/2 left-1/4 w-[400px] h-[400px] bg-cyan-500/5 rounded-full blur-[120px] -translate-y-1/2" />
-        <div className="absolute top-1/2 right-1/4 w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-[120px] -translate-y-1/2" />
+        <div className="absolute top-1/2 right-1/4 w-[400px] h-[400px] bg-[#D4AF37]/5 rounded-full blur-[120px] -translate-y-1/2" />
       </div>
 
       <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -368,7 +368,7 @@ export default function IntegrationPartners() {
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
             Connects With Your
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-cyan-300 to-purple-400">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-cyan-300 to-[#D4AF37]">
               Favorite Platforms
             </span>
           </h2>
@@ -420,7 +420,7 @@ export default function IntegrationPartners() {
               <div className="relative h-full bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl p-6 transition-all duration-300 hover:border-cyan-500/30 hover:bg-white/[0.05] overflow-hidden">
                 {/* Hover glow effect */}
                 <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-purple-500/5" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-[#D4AF37]/5" />
                 </div>
 
                 {/* Category badge */}
@@ -475,19 +475,19 @@ export default function IntegrationPartners() {
           className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto"
         >
           <div className="text-center p-6 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl">
-            <div className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-2">
+            <div className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-[#D4AF37] mb-2">
               50+
             </div>
             <div className="text-slate-400 text-sm">Native Integrations</div>
           </div>
           <div className="text-center p-6 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl">
-            <div className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-2">
+            <div className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-[#D4AF37] mb-2">
               5,000+
             </div>
             <div className="text-slate-400 text-sm">Via Zapier & Make</div>
           </div>
           <div className="text-center p-6 bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl">
-            <div className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 mb-2">
+            <div className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-[#D4AF37] mb-2">
               API
             </div>
             <div className="text-slate-400 text-sm">Custom Integrations</div>

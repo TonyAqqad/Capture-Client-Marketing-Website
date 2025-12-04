@@ -54,9 +54,9 @@ export function AfterHoursSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-purple-500/10 border border-purple-500/20 backdrop-blur-xl mb-6">
-            <span className="material-icons text-purple-400 text-xl">bedtime</span>
-            <span className="text-sm font-semibold text-purple-400 uppercase tracking-wide">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 backdrop-blur-xl mb-6">
+            <span className="material-icons text-[#D4AF37] text-xl">bedtime</span>
+            <span className="text-sm font-semibold text-[#D4AF37] uppercase tracking-wide">
               After Hours = Prime Time
             </span>
           </div>
@@ -80,15 +80,15 @@ export function AfterHoursSection() {
             >
               <GlassCard
                 variant="premium"
-                className="p-8 border-2 border-purple-500/20 bg-gradient-to-br from-purple-500/10 to-pink-500/5 hover:shadow-[0_0_40px_rgba(168,85,247,0.3)] transition-all duration-500"
+                className="p-8 border-2 border-[#D4AF37]/20 bg-gradient-to-br from-[#D4AF37]/10 to-[#00C9FF]/5 hover:shadow-[0_0_40px_rgba(168,85,247,0.3)] transition-all duration-500"
               >
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-[#D4AF37] to-[#00C9FF] flex items-center justify-center">
                     <span className="material-icons text-black text-3xl">
                       {stat.icon}
                     </span>
                   </div>
-                  <p className="text-5xl font-black text-purple-400 mb-2">
+                  <p className="text-5xl font-black text-[#D4AF37] mb-2">
                     {stat.value}
                   </p>
                   <p className="text-white/80 font-medium">
@@ -202,7 +202,7 @@ export function AfterHoursSection() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-12"
         >
-          <div className="inline-flex items-center gap-4 p-8 rounded-2xl bg-gradient-to-br from-gold/10 via-purple-500/5 to-gold/10 border-2 border-gold/20 backdrop-blur-xl">
+          <div className="inline-flex items-center gap-4 p-8 rounded-2xl bg-gradient-to-br from-gold/10 via-[#D4AF37]/5 to-gold/10 border-2 border-gold/20 backdrop-blur-xl">
             <span className="material-icons text-gold text-5xl">schedule</span>
             <div className="text-left">
               <p className="text-3xl font-black text-white mb-1">

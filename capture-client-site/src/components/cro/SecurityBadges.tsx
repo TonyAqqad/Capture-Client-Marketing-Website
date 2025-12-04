@@ -24,9 +24,9 @@ export default function SecurityBadges() {
       icon: "verified_user",
       label: "SOC 2 Certified",
       description: "Audited security",
-      color: "text-purple-400",
-      bgColor: "bg-purple-400/10",
-      borderColor: "border-purple-400/20",
+      color: "text-[#D4AF37]",
+      bgColor: "bg-[#D4AF37]/10",
+      borderColor: "border-[#D4AF37]/20",
     },
     {
       icon: "shield",

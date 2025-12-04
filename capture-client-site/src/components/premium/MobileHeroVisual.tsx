@@ -51,7 +51,7 @@ export function MobileHeroVisual() {
                 </div>
 
                 {/* Avatar */}
-                <div className="relative w-28 h-28 rounded-full bg-gradient-to-br from-cyan-500 via-purple-500 to-purple-600 flex items-center justify-center shadow-[0_8px_32px_rgba(0,201,255,0.4)]">
+                <div className="relative w-28 h-28 rounded-full bg-gradient-to-br from-cyan-500 via-[#D4AF37] to-[#D4AF37]/80 flex items-center justify-center shadow-[0_8px_32px_rgba(0,201,255,0.4)]">
                   <span className="material-icons text-white text-5xl">person</span>
                 </div>
               </div>
@@ -67,7 +67,7 @@ export function MobileHeroVisual() {
             <div className="absolute bottom-32 left-4 right-4 z-10">
               <div className="glass-premium-mobile p-4 border-cyan-500/20 slide-up-fade">
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-cyan-500 to-purple-500 flex items-center justify-center flex-shrink-0">
+                  <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-cyan-500 to-[#D4AF37] flex items-center justify-center flex-shrink-0">
                     <span className="material-icons text-white" style={{ fontSize: '16px' }}>smart_toy</span>
                   </div>
                   <div className="flex-1 min-w-0">
@@ -85,10 +85,10 @@ export function MobileHeroVisual() {
               <div className="flex items-end justify-center gap-1.5 h-12">
                 <div className="w-1 bg-gradient-to-t from-cyan-400 to-cyan-500 rounded-full waveform-bar" style={{ animationDelay: '0ms' }} />
                 <div className="w-1 bg-gradient-to-t from-cyan-400 to-cyan-500 rounded-full waveform-bar" style={{ animationDelay: '100ms' }} />
-                <div className="w-1 bg-gradient-to-t from-purple-400 to-purple-500 rounded-full waveform-bar" style={{ animationDelay: '200ms' }} />
-                <div className="w-1 bg-gradient-to-t from-purple-400 to-purple-500 rounded-full waveform-bar" style={{ animationDelay: '300ms' }} />
+                <div className="w-1 bg-gradient-to-t from-[#D4AF37] to-[#D4AF37] rounded-full waveform-bar" style={{ animationDelay: '200ms' }} />
+                <div className="w-1 bg-gradient-to-t from-[#D4AF37] to-[#D4AF37] rounded-full waveform-bar" style={{ animationDelay: '300ms' }} />
                 <div className="w-1 bg-gradient-to-t from-cyan-400 to-cyan-500 rounded-full waveform-bar" style={{ animationDelay: '400ms' }} />
-                <div className="w-1 bg-gradient-to-t from-purple-400 to-purple-500 rounded-full waveform-bar" style={{ animationDelay: '500ms' }} />
+                <div className="w-1 bg-gradient-to-t from-[#D4AF37] to-[#D4AF37] rounded-full waveform-bar" style={{ animationDelay: '500ms' }} />
                 <div className="w-1 bg-gradient-to-t from-cyan-400 to-cyan-500 rounded-full waveform-bar" style={{ animationDelay: '600ms' }} />
               </div>
             </div>
@@ -110,7 +110,7 @@ export function MobileHeroVisual() {
 
         {/* Decorative floating elements */}
         <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-gradient-radial from-cyan-500/20 to-transparent blur-2xl float-slow" />
-        <div className="absolute -bottom-4 -left-4 w-24 h-24 rounded-full bg-gradient-radial from-purple-500/20 to-transparent blur-2xl float-slow-delayed" />
+        <div className="absolute -bottom-4 -left-4 w-24 h-24 rounded-full bg-gradient-radial from-[#D4AF37]/20 to-transparent blur-2xl float-slow-delayed" />
       </div>
 
       {/* Trust stats bar */}
@@ -118,7 +118,7 @@ export function MobileHeroVisual() {
         <div className="text-center">
           <div className="flex items-center justify-center gap-1 mb-1">
             <span className="text-2xl">📞</span>
-            <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">4,273</span>
+            <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-[#D4AF37] bg-clip-text text-transparent">4,273</span>
           </div>
           <p className="text-xs text-white/60 font-medium">Calls Today</p>
         </div>

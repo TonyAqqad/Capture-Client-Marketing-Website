@@ -56,7 +56,7 @@ export function RealEstateUseCases() {
   return (
     <section ref={containerRef} className="py-16 sm:py-20 lg:py-28 relative">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-500/5 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#D4AF37]/5 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -66,9 +66,9 @@ export function RealEstateUseCases() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-purple-500/10 border border-purple-500/20 backdrop-blur-xl mb-6">
-            <span className="material-icons text-purple-400 text-xl">theater_comedy</span>
-            <span className="text-sm font-semibold text-purple-400 uppercase tracking-wide">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 backdrop-blur-xl mb-6">
+            <span className="material-icons text-[#D4AF37] text-xl">theater_comedy</span>
+            <span className="text-sm font-semibold text-[#D4AF37] uppercase tracking-wide">
               Real Scenarios
             </span>
           </div>
@@ -195,7 +195,7 @@ export function RealEstateUseCases() {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="text-center mt-12"
         >
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-8 rounded-2xl bg-gradient-to-br from-gold/10 via-accent/5 to-purple-500/10 border-2 border-gold/20 backdrop-blur-xl">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-8 rounded-2xl bg-gradient-to-br from-gold/10 via-accent/5 to-[#D4AF37]/10 border-2 border-gold/20 backdrop-blur-xl">
             <div className="flex items-center gap-4">
               <span className="material-icons text-gold text-4xl">auto_awesome</span>
               <div className="text-left">

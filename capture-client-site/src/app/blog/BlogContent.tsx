@@ -7,8 +7,8 @@ import { useState } from "react";
 const getCategoryStyle = (category: string) => {
   const styles: { [key: string]: { gradient: string; categoryColor: string } } = {
     "Voice AI": {
-      gradient: "from-purple-500/20 to-blue-500/20",
-      categoryColor: "bg-purple-500/10 text-purple-400 border-purple-500/20",
+      gradient: "from-[#D4AF37]/20 to-blue-500/20",
+      categoryColor: "bg-[#D4AF37]/10 text-[#D4AF37] border-[#D4AF37]/20",
     },
     "Google Ads": {
       gradient: "from-emerald-500/20 to-teal-500/20",
@@ -19,12 +19,12 @@ const getCategoryStyle = (category: string) => {
       categoryColor: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
     },
     "Business Growth": {
-      gradient: "from-orange-500/20 to-pink-500/20",
+      gradient: "from-orange-500/20 to-[#00C9FF]/20",
       categoryColor: "bg-orange-500/10 text-orange-400 border-orange-500/20",
     },
     "Automation": {
-      gradient: "from-indigo-500/20 to-purple-500/20",
-      categoryColor: "bg-indigo-500/10 text-indigo-400 border-indigo-500/20",
+      gradient: "from-[#4A69E2]/20 to-[#D4AF37]/20",
+      categoryColor: "bg-[#4A69E2]/10 text-[#D4AF37] border-indigo-500/20",
     },
   };
   return styles[category] || styles["Lead Generation"];
@@ -73,7 +73,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#4A69E2]/20 rounded-full blur-3xl animate-pulse" />
         <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-[#00C9FF]/20 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-2000" />
+        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-[#D4AF37]/20 rounded-full blur-3xl animate-pulse delay-2000" />
       </div>
 
       {/* Hero Section with Glass Card */}
@@ -282,7 +282,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
           {/* Coming Soon Glass Card */}
           <div className="mt-16 animate-fade-in-up delay-1000">
             <div className="relative backdrop-blur-md bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-3xl p-12 text-center shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-3xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/10 to-[#00C9FF]/10 rounded-3xl" />
 
               <div className="relative z-10">
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#4A69E2]/20 to-[#00C9FF]/20 border border-white/20 mb-6">

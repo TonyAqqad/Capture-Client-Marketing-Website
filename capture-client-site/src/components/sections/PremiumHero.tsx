@@ -94,7 +94,7 @@ export function PremiumHero() {
         animate={disableAnimations ? {} : { scale: [1.1, 1, 1.1] }}
         transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
       >
-        <div className="w-full h-full bg-gradient-radial from-purple-500/25 via-purple-500/10 to-transparent blur-3xl" />
+        <div className="w-full h-full bg-gradient-radial from-[#D4AF37]/25 via-[#D4AF37]/10 to-transparent blur-3xl" />
       </motion.div>
 
       {/* Gold accent orb */}
@@ -141,7 +141,7 @@ export function PremiumHero() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="inline-flex items-center gap-3 mb-6 sm:mb-8"
               >
-                <div className="flex items-center gap-3 px-4 py-2.5 rounded-full bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-gold/10 border border-white/10 backdrop-blur-xl">
+                <div className="flex items-center gap-3 px-4 py-2.5 rounded-full bg-gradient-to-r from-cyan-500/10 via-[#D4AF37]/10 to-gold/10 border border-white/10 backdrop-blur-xl">
                   <span className="relative flex h-3 w-3">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-400 shadow-[0_0_10px_rgba(0,201,255,0.8)]" />
@@ -163,7 +163,7 @@ export function PremiumHero() {
                   Never Miss
                 </span>
                 <span className="block relative">
-                  <span className="bg-gradient-to-r from-gold via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-gold via-cyan-400 to-[#D4AF37] bg-clip-text text-transparent">
                     Another Lead
                   </span>
                   {/* Animated underline */}
@@ -171,7 +171,7 @@ export function PremiumHero() {
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ duration: 1, delay: 1, ease: [0.22, 1, 0.36, 1] }}
-                    className="absolute -bottom-2 left-0 right-0 h-1.5 sm:h-2 bg-gradient-to-r from-gold/50 via-cyan-400/50 to-purple-400/50 origin-left rounded-full"
+                    className="absolute -bottom-2 left-0 right-0 h-1.5 sm:h-2 bg-gradient-to-r from-gold/50 via-cyan-400/50 to-[#D4AF37]/50 origin-left rounded-full"
                   />
                 </span>
               </motion.h1>
@@ -292,7 +292,7 @@ export function PremiumHero() {
 
                     {/* Caller info */}
                     <div className="flex items-center gap-4 mb-5 p-4 bg-white/[0.03] rounded-xl border border-white/[0.05]">
-                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-purple-500 flex items-center justify-center shadow-lg">
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-[#D4AF37] flex items-center justify-center shadow-lg">
                         <span className="material-icons text-white text-2xl">person</span>
                       </div>
                       <div>
@@ -302,9 +302,9 @@ export function PremiumHero() {
                     </div>
 
                     {/* AI Response */}
-                    <div className="mb-5 p-4 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-xl border border-cyan-500/20">
+                    <div className="mb-5 p-4 bg-gradient-to-br from-cyan-500/10 to-[#D4AF37]/10 rounded-xl border border-cyan-500/20">
                       <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-purple-500 flex items-center justify-center flex-shrink-0">
+                        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-[#D4AF37] flex items-center justify-center flex-shrink-0">
                           <span className="material-icons text-white text-sm">smart_toy</span>
                         </div>
                         <div>
@@ -326,7 +326,7 @@ export function PremiumHero() {
                         <span className="material-icons text-xs">event</span>
                         Booking
                       </div>
-                      <div className="px-3 py-1.5 bg-purple-500/10 border border-purple-500/20 rounded-lg text-xs font-semibold text-purple-400 flex items-center gap-1.5">
+                      <div className="px-3 py-1.5 bg-[#D4AF37]/10 border border-[#D4AF37]/20 rounded-lg text-xs font-semibold text-[#D4AF37] flex items-center gap-1.5">
                         <span className="material-icons text-xs">psychology</span>
                         NLP Active
                       </div>
@@ -372,7 +372,7 @@ export function PremiumHero() {
                           initial={{ width: 0 }}
                           animate={{ width: "87%" }}
                           transition={{ duration: 1.5, delay: 1.2 }}
-                          className="h-full bg-gradient-to-r from-gold via-cyan-400 to-purple-400 rounded-full"
+                          className="h-full bg-gradient-to-r from-gold via-cyan-400 to-[#D4AF37] rounded-full"
                         />
                       </div>
                       <div className="flex justify-between items-center pt-1">

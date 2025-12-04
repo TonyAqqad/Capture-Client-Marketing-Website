@@ -21,7 +21,7 @@ const industries: Industry[] = [
     id: "healthcare",
     name: "Healthcare & Medical",
     icon: "medical_services",
-    gradient: "from-cyan-500/20 via-blue-500/20 to-purple-500/20",
+    gradient: "from-cyan-500/20 via-blue-500/20 to-[#D4AF37]/20",
     iconBg: "from-cyan-500 to-blue-500",
     color: "cyan",
     useCases: [
@@ -49,8 +49,8 @@ const industries: Industry[] = [
     id: "legal",
     name: "Legal Services",
     icon: "gavel",
-    gradient: "from-purple-500/20 via-indigo-500/20 to-blue-500/20",
-    iconBg: "from-purple-500 to-indigo-500",
+    gradient: "from-[#D4AF37]/20 via-[#4A69E2]/20 to-blue-500/20",
+    iconBg: "from-[#D4AF37] to-[#4A69E2]",
     color: "purple",
     useCases: [
       "Initial case intake & client qualification",
@@ -234,7 +234,7 @@ export default function UseCasesPage() {
           <motion.div
             animate={{ scale: [1.2, 1, 1.2], x: [0, -50, 0] }}
             transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-gradient-radial from-purple-500/20 to-transparent blur-3xl"
+            className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-gradient-radial from-[#D4AF37]/20 to-transparent blur-3xl"
           />
           <motion.div
             animate={{ scale: [1, 1.3, 1], rotate: [0, 90, 0] }}
@@ -268,7 +268,7 @@ export default function UseCasesPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-gold/10 border border-white/10 backdrop-blur-xl mb-8"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500/10 via-[#D4AF37]/10 to-gold/10 border border-white/10 backdrop-blur-xl mb-8"
           >
             <span className="material-icons text-cyan-400 text-lg">business_center</span>
             <span className="text-sm font-bold text-white/90 uppercase tracking-wider">Industry Solutions</span>
@@ -284,7 +284,7 @@ export default function UseCasesPage() {
             <span className="block text-white mb-4">
               One AI.
             </span>
-            <span className="block bg-gradient-to-r from-gold via-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-gold via-cyan-400 to-[#D4AF37] bg-clip-text text-transparent">
               Endless Possibilities.
             </span>
           </motion.h1>
@@ -772,7 +772,7 @@ export default function UseCasesPage() {
             transition={{ delay: 0.1 }}
             className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold text-white mb-8 leading-tight"
           >
-            Find Your <span className="bg-gradient-to-r from-gold via-cyan-400 to-purple-400 bg-clip-text text-transparent">Perfect Solution</span>
+            Find Your <span className="bg-gradient-to-r from-gold via-cyan-400 to-[#D4AF37] bg-clip-text text-transparent">Perfect Solution</span>
           </motion.h2>
 
           {/* Description */}

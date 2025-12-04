@@ -53,7 +53,7 @@ export default function LeadRescueSimulator() {
           }}
         />
         {/* Gradient orbs - mobile optimized */}
-        <div className="absolute top-1/4 -left-32 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-indigo-500/8 rounded-full blur-[120px]" />
+        <div className="absolute top-1/4 -left-32 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-[#4A69E2]/8 rounded-full blur-[120px]" />
         <div className="absolute bottom-1/4 -right-32 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-cyan-500/8 rounded-full blur-[120px]" />
       </div>
 
@@ -99,7 +99,7 @@ export default function LeadRescueSimulator() {
               >
                 Stop Losing New Members
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-cyan-300 to-indigo-400">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-cyan-300 to-[#D4AF37]">
                   to Voicemail.
                 </span>
               </motion.h2>
@@ -133,7 +133,7 @@ export default function LeadRescueSimulator() {
                 className="group relative inline-flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-10 py-4 sm:py-5 rounded-2xl font-semibold text-white text-base sm:text-lg overflow-hidden w-full max-w-md mx-auto min-h-[56px] touch-manipulation"
               >
                 {/* Gradient background */}
-                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-cyan-400 to-indigo-500" />
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-cyan-400 to-[#4A69E2]" />
 
                 {/* Animated shimmer overlay */}
                 <motion.div
@@ -272,7 +272,7 @@ export default function LeadRescueSimulator() {
                   {/* Transcript */}
                   <div className="backdrop-blur-sm bg-white/[0.02] border border-white/10 rounded-2xl p-4 sm:p-5">
                     <div className="flex items-start gap-2 sm:gap-3">
-                      <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-br from-cyan-500/20 to-indigo-500/20 border border-cyan-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-br from-cyan-500/20 to-[#4A69E2]/20 border border-cyan-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <span className="material-icons text-cyan-400 text-xs sm:text-sm">smart_toy</span>
                       </div>
                       <div className="flex-1 min-h-[60px] sm:min-h-[70px]">
@@ -354,10 +354,10 @@ export default function LeadRescueSimulator() {
                     opacity: [0.3, 0.5, 0.3],
                   }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-500/30 to-indigo-500/30 blur-xl"
+                  className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-500/30 to-[#4A69E2]/30 blur-xl"
                 />
                 {/* Icon container */}
-                <div className="relative w-full h-full rounded-full bg-gradient-to-br from-cyan-500/20 to-indigo-500/20 border border-cyan-500/40 flex items-center justify-center">
+                <div className="relative w-full h-full rounded-full bg-gradient-to-br from-cyan-500/20 to-[#4A69E2]/20 border border-cyan-500/40 flex items-center justify-center">
                   <motion.span
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
@@ -395,7 +395,7 @@ export default function LeadRescueSimulator() {
                   transition={{ delay: 0.7, type: "spring", stiffness: 150 }}
                   className="px-2"
                 >
-                  <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-cyan-300 to-indigo-400">
+                  <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-cyan-300 to-[#D4AF37]">
                     $1,200
                   </span>
                   <span className="text-2xl sm:text-3xl md:text-4xl text-slate-400 font-medium">/yr</span>
@@ -416,7 +416,7 @@ export default function LeadRescueSimulator() {
                     </p>
                   </div>
                   <div>
-                    <p className="text-2xl sm:text-3xl font-bold text-indigo-400">100%</p>
+                    <p className="text-2xl sm:text-3xl font-bold text-[#D4AF37]">100%</p>
                     <p className="text-slate-500 text-[10px] sm:text-xs uppercase tracking-wider mt-1">
                       Data Captured
                     </p>
@@ -439,7 +439,7 @@ export default function LeadRescueSimulator() {
               >
                 <a
                   href="/contact"
-                  className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-cyan-500 to-indigo-500 hover:from-cyan-400 hover:to-indigo-400 transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan-500/25 overflow-hidden min-h-[56px] touch-manipulation"
+                  className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-cyan-500 to-[#4A69E2] hover:from-cyan-400 hover:to-[#D4AF37] transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan-500/25 overflow-hidden min-h-[56px] touch-manipulation"
                 >
                   <motion.div
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity"
