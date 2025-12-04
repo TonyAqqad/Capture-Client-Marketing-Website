@@ -1,0 +1,150 @@
+import type { Metadata } from "next";
+import { IntegrationsHero } from "@/components/integrations/IntegrationsHero";
+import { IntegrationsGrid } from "@/components/integrations/IntegrationsGrid";
+import { IntegrationsCTA } from "@/components/integrations/IntegrationsCTA";
+
+// SEO Metadata for Integrations Page
+export const metadata: Metadata = {
+  title: "50+ Seamless Integrations | Connect Your Tech Stack | Capture Client",
+  description:
+    "Capture Client integrates with 50+ platforms including Stripe, Twilio, Zapier, Salesforce, Google Calendar, and more. Connect your entire tech stack in minutes with our native integrations or 5,000+ apps via Zapier.",
+  keywords: [
+    "integrations",
+    "API integrations",
+    "CRM integrations",
+    "payment integrations",
+    "marketing automation integrations",
+    "Zapier integrations",
+    "Stripe integration",
+    "Twilio integration",
+    "Salesforce integration",
+    "HubSpot integration",
+    "Google Calendar integration",
+    "email marketing integrations",
+    "SMS integrations",
+    "voice AI integrations",
+    "business automation",
+    "workflow automation",
+  ],
+  openGraph: {
+    title: "50+ Seamless Integrations | Connect Your Tech Stack",
+    description:
+      "Connect Capture Client with your favorite platforms. 50+ native integrations plus 5,000+ apps via Zapier. Stripe, Twilio, Salesforce, and more.",
+    url: "https://captureclientai.net/integrations",
+    siteName: "Capture Client",
+    type: "website",
+    images: [
+      {
+        url: "https://captureclientai.net/og-integrations.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Capture Client - 50+ Seamless Integrations",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "50+ Seamless Integrations | Capture Client",
+    description:
+      "Connect Capture Client with your favorite platforms. 50+ native integrations plus 5,000+ apps via Zapier.",
+    images: ["https://captureclientai.net/og-integrations.jpg"],
+  },
+  alternates: {
+    canonical: "https://captureclientai.net/integrations",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+// JSON-LD Structured Data for Integrations Page
+const integrationsSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  name: "Integrations",
+  description:
+    "Capture Client integrates with 50+ platforms including Stripe, Twilio, Zapier, Salesforce, and more to connect your entire tech stack.",
+  url: "https://captureclientai.net/integrations",
+  isPartOf: {
+    "@type": "WebSite",
+    url: "https://captureclientai.net",
+    name: "Capture Client",
+  },
+  about: {
+    "@type": "SoftwareApplication",
+    name: "Capture Client",
+    applicationCategory: "BusinessApplication",
+    offers: {
+      "@type": "AggregateOffer",
+      priceCurrency: "USD",
+      lowPrice: "497",
+      highPrice: "1497",
+      offerCount: "3",
+    },
+  },
+};
+
+const softwareApplicationSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Capture Client",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  offers: {
+    "@type": "Offer",
+    price: "497",
+    priceCurrency: "USD",
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "4.9",
+    reviewCount: "127",
+  },
+  featureList: [
+    "Stripe Payment Integration",
+    "Twilio SMS & Voice Integration",
+    "Zapier Automation (5,000+ apps)",
+    "Salesforce CRM Integration",
+    "HubSpot Marketing Integration",
+    "Google Calendar Sync",
+    "Mailchimp Email Marketing",
+    "Facebook Ads Integration",
+    "Google Ads Integration",
+    "QuickBooks Accounting Integration",
+  ],
+};
+
+export default function IntegrationsPage() {
+  return (
+    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-background-dark">
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(integrationsSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(softwareApplicationSchema),
+        }}
+      />
+
+      {/* Hero Section */}
+      <IntegrationsHero />
+
+      {/* Integrations Grid with Filter */}
+      <IntegrationsGrid />
+
+      {/* Bottom CTA Section */}
+      <IntegrationsCTA />
+    </div>
+  );
+}

@@ -1,0 +1,201 @@
+"use client";
+
+import { useRef } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "@/hooks/useInView";
+import { GlassCard } from "@/components/ui/GlassCard";
+
+interface CRMPlatform {
+  name: string;
+  description: string;
+  logo: string; // Material icon name as placeholder
+  features: string[];
+  popular?: boolean;
+}
+
+const crmPlatforms: CRMPlatform[] = [
+  {
+    name: "Follow Up Boss",
+    description: "Most popular real estate CRM with 200+ integrations",
+    logo: "supervisor_account",
+    features: ["Instant lead sync", "Auto-tagging", "Smart routing"],
+    popular: true
+  },
+  {
+    name: "kvCORE / BoldTrail",
+    description: "5x conversion rates with smart automation",
+    logo: "rocket_launch",
+    features: ["Behavior tracking", "Lead scoring", "Drip campaigns"],
+    popular: true
+  },
+  {
+    name: "Sierra Interactive",
+    description: "$499/mo platform with 90+ integrations",
+    logo: "terrain",
+    features: ["IDX websites", "Market reports", "Text automation"]
+  },
+  {
+    name: "BoomTown",
+    description: "Enterprise-grade for top-producing teams",
+    logo: "business",
+    features: ["Predictive AI", "Team management", "ROI tracking"]
+  },
+  {
+    name: "Zillow Premier Agent",
+    description: "Direct integration with Zillow leads",
+    logo: "home_work",
+    features: ["Instant response", "Lead prioritization", "Call tracking"]
+  },
+  {
+    name: "Realtor.com",
+    description: "Seamless connection to your listings",
+    logo: "real_estate_agent",
+    features: ["Auto-sync", "Lead capture", "Performance analytics"]
+  }
+];
+
+export function CRMIntegrations() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(containerRef, { threshold: 0.2 });
+
+  return (
+    <section ref={containerRef} className="py-16 sm:py-20 lg:py-28 relative overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-gold/10" />
+
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent/10 border border-accent/20 backdrop-blur-xl mb-6">
+            <span className="material-icons text-accent text-xl">sync</span>
+            <span className="text-sm font-semibold text-accent uppercase tracking-wide">
+              Seamless Integration
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-hero font-bold text-white mb-6">
+            Works With Your <span className="text-gold">Existing CRM</span>
+          </h2>
+          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
+            Leads flow directly into your workflow. Automatic lead scoring. Zero manual entry.
+          </p>
+        </motion.div>
+
+        {/* CRM Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {crmPlatforms.map((crm, index) => (
+            <motion.div
+              key={crm.name}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="group"
+            >
+              <GlassCard
+                variant="premium"
+                className={`h-full p-6 border-2 transition-all duration-500 ${
+                  crm.popular
+                    ? "border-gold/40 bg-gradient-to-br from-gold/10 to-accent/5"
+                    : "border-white/10"
+                } group-hover:border-accent/40 group-hover:shadow-[0_0_40px_rgba(0,201,255,0.2)]`}
+              >
+                {/* Popular badge */}
+                {crm.popular && (
+                  <div className="absolute top-4 right-4">
+                    <div className="px-3 py-1 bg-gold rounded-full">
+                      <span className="text-xs font-bold text-black uppercase tracking-wider">
+                        Popular
+                      </span>
+                    </div>
+                  </div>
+                )}
+
+                {/* Logo placeholder */}
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/20 to-gold/20 border-2 border-accent/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="material-icons text-accent text-3xl">
+                    {crm.logo}
+                  </span>
+                </div>
+
+                {/* Name */}
+                <h3 className="text-xl font-bold text-white mb-2">
+                  {crm.name}
+                </h3>
+
+                {/* Description */}
+                <p className="text-white/60 text-sm mb-4 leading-relaxed">
+                  {crm.description}
+                </p>
+
+                {/* Features */}
+                <div className="space-y-2">
+                  {crm.features.map((feature, fIndex) => (
+                    <div
+                      key={fIndex}
+                      className="flex items-center gap-2 text-sm"
+                    >
+                      <span className="material-icons text-accent text-sm">
+                        check_circle
+                      </span>
+                      <span className="text-white/70">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom line */}
+                <motion.div
+                  initial={{ scaleX: 0 }}
+                  animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 + 0.3 }}
+                  className="h-1 bg-gradient-to-r from-accent to-gold mt-4 rounded-full origin-left"
+                />
+              </GlassCard>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Bottom benefits */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+        >
+          <div className="flex items-center gap-4 p-6 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center flex-shrink-0">
+              <span className="material-icons text-black text-2xl">sync_alt</span>
+            </div>
+            <div>
+              <p className="font-bold text-white text-lg">Instant Sync</p>
+              <p className="text-white/60 text-sm">Real-time lead updates</p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-4 p-6 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold to-gold-light flex items-center justify-center flex-shrink-0">
+              <span className="material-icons text-black text-2xl">auto_awesome</span>
+            </div>
+            <div>
+              <p className="font-bold text-white text-lg">Auto-Scoring</p>
+              <p className="text-white/60 text-sm">AI prioritizes hot leads</p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-4 p-6 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-cyan-400 flex items-center justify-center flex-shrink-0">
+              <span className="material-icons text-black text-2xl">edit_off</span>
+            </div>
+            <div>
+              <p className="font-bold text-white text-lg">Zero Data Entry</p>
+              <p className="text-white/60 text-sm">Fully automated workflow</p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
