@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { navigationData } from "./navData";
@@ -12,6 +12,7 @@ export default function MegaMenu() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   React.useEffect(() => {
     let ticking = false;
@@ -31,13 +32,38 @@ export default function MegaMenu() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleDropdownOpen = (key: string) => {
-    setOpenDropdown(key);
-  };
+  // Cleanup timeout on unmount
+  React.useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+      }
+    };
+  }, []);
 
-  const handleDropdownClose = () => {
-    setOpenDropdown(null);
-  };
+  const handleDropdownOpen = useCallback((key: string) => {
+    // Clear any pending close timeout
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+    setOpenDropdown(key);
+  }, []);
+
+  const handleDropdownClose = useCallback(() => {
+    // Add a small delay to allow mouse to move to dropdown
+    closeTimeoutRef.current = setTimeout(() => {
+      setOpenDropdown(null);
+    }, 100);
+  }, []);
+
+  const handleDropdownEnter = useCallback(() => {
+    // Cancel the close timeout when entering dropdown
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current);
+      closeTimeoutRef.current = null;
+    }
+  }, []);
 
   const scrolledClass = isScrolled
     ? "bg-[#0F172A]/98 backdrop-blur-2xl border-b border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
@@ -118,11 +144,18 @@ export default function MegaMenu() {
                   <span className="absolute inset-x-4 -bottom-px h-px bg-gradient-to-r from-[#D4AF37] to-[#00C9FF] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
                 </button>
 
+                {/* Invisible hover bridge to prevent gap issues */}
+                {openDropdown === key && (
+                  <div className="absolute left-0 right-0 h-4 top-full" />
+                )}
+
                 {/* Dropdown Panel */}
                 <MegaMenuDropdown
                   section={section}
                   isOpen={openDropdown === key}
                   onClose={handleDropdownClose}
+                  onMouseEnter={handleDropdownEnter}
+                  onMouseLeave={handleDropdownClose}
                 />
               </div>
             ))}
