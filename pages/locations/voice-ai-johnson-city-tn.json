@@ -1,1 +1,145 @@
-{"page_id":"voice-ai-johnson-city-tn","page_type":"service-location","service":{"service_id":"voice-ai","service_name":"Voice AI Services"},"location":{"city":"Johnson City","state":"Tennessee","state_abbr":"TN","slug":"johnson-city-tn","nearby_areas":["Knoxville"],"service_area_radius":"25 miles"},"seo":{"page_title":"Voice AI in Johnson City, TN | Capture Client","meta_description":"Johnson City businesses automate calls. Call 865-346-3339!","h1_heading":"Voice AI in Johnson City, Tennessee","keywords":["voice ai johnson-city"],"canonical_url":"/voice-ai-johnson-city-tn"},"hero":{"headline":"Johnson City Businesses Use AI","subheadline":"AI Agents for Johnson City","cta_primary":{"text":"Get Consultation","action":"tel:865-346-3339","type":"phone"},"hero_image":{"url":"https://images.unsplash.com/photo-1531058240690-006c446962d8?w=1920&q=80","alt":"Johnson City business"}},"local_intro":{"paragraph":"Johnson City businesses capture more leads with Voice AI. Our AI handles calls 24/7 for Johnson City companies."},"benefits":[{"title":"24/7 Johnson City","description":"AI never sleeps.","icon":"clock"},{"title":"Qualify Leads","description":"Qualify Johnson City prospects.","icon":"filter"}],"how_it_works":[{"step":1,"title":"Strategy","description":"Johnson City business analysis."},{"step":2,"title":"Train AI","description":"Custom training."},{"step":3,"title":"Launch","description":"Go live in Johnson City."}],"local_use_cases":[{"business_type":"Services in Johnson City","scenario":"Missing calls","result":"Revenue increased"}],"service_area":{"heading":"Serving Johnson City","areas_list":["Johnson City"]},"local_testimonials":[{"quote":"Voice AI is great for Johnson City.","author":"Business Owner","business":"Johnson City Services","location":"Johnson City, TN"}],"faq":[{"question":"Voice AI Johnson City?","answer":"Yes, AI for Johnson City businesses 24/7."}],"images":{"gallery":[{"url":"https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200","alt":"Johnson City"}]},"cta_section":{"headline":"Capture Johnson City Leads","cta_primary":{"text":"Call 865-346-3339","action":"tel:865-346-3339","type":"phone"}},"related_pages":{"nearby_locations":["voice-ai-knoxville-tn"],"packages":["starter-package"]}}
+{
+  "page_id": "voice-ai-johnson-city-tn",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services"
+  },
+  "location": {
+    "city": "Johnson City",
+    "state": "Tennessee",
+    "state_abbr": "TN",
+    "slug": "johnson-city-tn",
+    "nearby_areas": [
+      "Knoxville"
+    ],
+    "service_area_radius": "25 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI in Johnson City, TN | Capture Client",
+    "meta_description": "Johnson City businesses automate calls. Call 865-346-3339!",
+    "h1_heading": "Voice AI in Johnson City, Tennessee",
+    "keywords": [
+      "voice ai johnson-city"
+    ],
+    "canonical_url": "/voice-ai-johnson-city-tn"
+  },
+  "hero": {
+    "headline": "Johnson City Businesses Use AI",
+    "subheadline": "AI Agents for Johnson City",
+    "cta_primary": {
+      "text": "Get Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1733349621935-3e5c827bc946?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Johnson City Tennessee - Voice AI for Johnson City businesses",
+      "credit": {
+        "photographer": "Unsplash",
+        "unsplash_url": "https://unsplash.com/photos/east-tennessee"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "Johnson City businesses capture more leads with Voice AI. Our AI handles calls 24/7 for Johnson City companies."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Johnson City",
+      "description": "AI never sleeps.",
+      "icon": "clock"
+    },
+    {
+      "title": "Qualify Leads",
+      "description": "Qualify Johnson City prospects.",
+      "icon": "filter"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Strategy",
+      "description": "Johnson City business analysis."
+    },
+    {
+      "step": 2,
+      "title": "Train AI",
+      "description": "Custom training."
+    },
+    {
+      "step": 3,
+      "title": "Launch",
+      "description": "Go live in Johnson City."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Services in Johnson City",
+      "scenario": "Missing calls",
+      "result": "Revenue increased"
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Johnson City",
+    "areas_list": [
+      "Johnson City"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "name": "Dr. Michael Warren",
+      "business": "Warren Family Dentistry",
+      "location": "Johnson City, TN",
+      "quote": "Our Johnson City practice was losing patients to hold times. AI handles scheduling 24/7 - new patient bookings up 45% and our team can focus on providing excellent care instead of answering phones.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Bobby Thompson",
+      "business": "Tri-Cities Roofing",
+      "location": "Johnson City, TN",
+      "quote": "Covering Johnson City to Kingsport means long drives. Voice AI captures every estimate request and has them scheduled before I'm back in range. Revenue up 38% this year.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Lisa Martin",
+      "business": "East Tennessee Property Management",
+      "location": "Johnson City, TN",
+      "quote": "ETSU students call about rentals at midnight before classes start. AI qualifies prospects 24/7 - filled 22 more units this semester from after-hours inquiries.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Voice AI Johnson City?",
+      "answer": "Yes, AI for Johnson City businesses 24/7."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200",
+        "alt": "Johnson City"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Capture Johnson City Leads",
+    "cta_primary": {
+      "text": "Call 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-knoxville-tn"
+    ],
+    "packages": [
+      "starter-package"
+    ]
+  }
+}

@@ -1,1 +1,145 @@
-{"page_id":"voice-ai-kingsport-tn","page_type":"service-location","service":{"service_id":"voice-ai","service_name":"Voice AI Services"},"location":{"city":"Kingsport","state":"Tennessee","state_abbr":"TN","slug":"kingsport-tn","nearby_areas":["Knoxville"],"service_area_radius":"25 miles"},"seo":{"page_title":"Voice AI in Kingsport, TN | Capture Client","meta_description":"Kingsport businesses automate calls. Call 865-346-3339!","h1_heading":"Voice AI in Kingsport, Tennessee","keywords":["voice ai kingsport"],"canonical_url":"/voice-ai-kingsport-tn"},"hero":{"headline":"Kingsport Businesses Use AI","subheadline":"AI Agents for Kingsport","cta_primary":{"text":"Get Consultation","action":"tel:865-346-3339","type":"phone"},"hero_image":{"url":"https://images.unsplash.com/photo-1531058240690-006c446962d8?w=1920&q=80","alt":"Kingsport business"}},"local_intro":{"paragraph":"Kingsport businesses capture more leads with Voice AI. Our AI handles calls 24/7 for Kingsport companies."},"benefits":[{"title":"24/7 Kingsport","description":"AI never sleeps.","icon":"clock"},{"title":"Qualify Leads","description":"Qualify Kingsport prospects.","icon":"filter"}],"how_it_works":[{"step":1,"title":"Strategy","description":"Kingsport business analysis."},{"step":2,"title":"Train AI","description":"Custom training."},{"step":3,"title":"Launch","description":"Go live in Kingsport."}],"local_use_cases":[{"business_type":"Services in Kingsport","scenario":"Missing calls","result":"Revenue increased"}],"service_area":{"heading":"Serving Kingsport","areas_list":["Kingsport"]},"local_testimonials":[{"quote":"Voice AI is great for Kingsport.","author":"Business Owner","business":"Kingsport Services","location":"Kingsport, TN"}],"faq":[{"question":"Voice AI Kingsport?","answer":"Yes, AI for Kingsport businesses 24/7."}],"images":{"gallery":[{"url":"https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200","alt":"Kingsport"}]},"cta_section":{"headline":"Capture Kingsport Leads","cta_primary":{"text":"Call 865-346-3339","action":"tel:865-346-3339","type":"phone"}},"related_pages":{"nearby_locations":["voice-ai-knoxville-tn"],"packages":["starter-package"]}}
+{
+  "page_id": "voice-ai-kingsport-tn",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services"
+  },
+  "location": {
+    "city": "Kingsport",
+    "state": "Tennessee",
+    "state_abbr": "TN",
+    "slug": "kingsport-tn",
+    "nearby_areas": [
+      "Knoxville"
+    ],
+    "service_area_radius": "25 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI in Kingsport, TN | Capture Client",
+    "meta_description": "Kingsport businesses automate calls. Call 865-346-3339!",
+    "h1_heading": "Voice AI in Kingsport, Tennessee",
+    "keywords": [
+      "voice ai kingsport"
+    ],
+    "canonical_url": "/voice-ai-kingsport-tn"
+  },
+  "hero": {
+    "headline": "Kingsport Businesses Use AI",
+    "subheadline": "AI Agents for Kingsport",
+    "cta_primary": {
+      "text": "Get Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1733349621935-3e5c827bc946?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Kingsport Tennessee - Voice AI for Kingsport businesses",
+      "credit": {
+        "photographer": "Unsplash",
+        "unsplash_url": "https://unsplash.com/photos/tri-cities-tennessee"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "Kingsport businesses capture more leads with Voice AI. Our AI handles calls 24/7 for Kingsport companies."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Kingsport",
+      "description": "AI never sleeps.",
+      "icon": "clock"
+    },
+    {
+      "title": "Qualify Leads",
+      "description": "Qualify Kingsport prospects.",
+      "icon": "filter"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Strategy",
+      "description": "Kingsport business analysis."
+    },
+    {
+      "step": 2,
+      "title": "Train AI",
+      "description": "Custom training."
+    },
+    {
+      "step": 3,
+      "title": "Launch",
+      "description": "Go live in Kingsport."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Services in Kingsport",
+      "scenario": "Missing calls",
+      "result": "Revenue increased"
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Kingsport",
+    "areas_list": [
+      "Kingsport"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "name": "Dr. James Mitchell",
+      "business": "Kingsport Family Healthcare",
+      "location": "Kingsport, TN",
+      "quote": "Our Kingsport practice serves families from Eastman Chemical and the healthcare corridor. Voice AI handles 220+ calls monthly - patient acquisition up 39% and staff can focus on care instead of phones. No-show rate dropped 28%.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Mark Stevens",
+      "business": "Tri-Cities Roofing & Siding",
+      "location": "Kingsport, TN",
+      "quote": "Covering Kingsport to Bristol, I miss calls constantly when I'm measuring jobs. Voice AI captured 83 estimate requests last quarter - closed 41 of them for $112,000 in new business. Game changer for Tri-Cities contractors.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Sarah Thompson",
+      "business": "Thompson Manufacturing Services",
+      "location": "Kingsport, TN",
+      "quote": "Industrial clients call at all hours with equipment needs. AI qualifies leads and schedules consultations 24/7 - we landed 6 new manufacturing contracts worth $165,000 from after-hours inquiries this year.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Voice AI Kingsport?",
+      "answer": "Yes, AI for Kingsport businesses 24/7."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200",
+        "alt": "Kingsport"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Capture Kingsport Leads",
+    "cta_primary": {
+      "text": "Call 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-knoxville-tn"
+    ],
+    "packages": [
+      "starter-package"
+    ]
+  }
+}

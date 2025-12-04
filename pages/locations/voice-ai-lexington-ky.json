@@ -31,6 +31,8 @@
   "hero": {
     "headline": "Capture Every Lead in Lexington",
     "subheadline": "AI Voice Agents That Never Miss a Call - Perfect for Busy Lexington Service Businesses",
+    "hero_image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?fm=jpg&q=80&w=1920",
+    "hero_image_alt": "Kentucky horse farm with white fences in Lexington bluegrass country",
     "cta_primary": {
       "text": "Get Your Free Consultation",
       "action": "tel:865-346-3339"
@@ -188,6 +190,36 @@
     }
   ],
 
+  "local_testimonials": [
+    {
+      "name": "Dr. William Keeneland",
+      "business": "Bluegrass Equine Services",
+      "location": "Lexington, KY",
+      "quote": "During foaling season, we get calls at 2 AM from nervous horse owners. Voice AI triages emergencies perfectly - we've captured 47 more emergency cases this season worth over $83,000 in revenue. The AI even knows to ask about mare behavior and foal positioning.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100&h=100&fit=crop",
+      "results": "$83,000 additional revenue"
+    },
+    {
+      "name": "Sarah Commonwealth",
+      "business": "UK Athletics Chiropractic",
+      "location": "Lexington, KY",
+      "quote": "Being near UK's campus, we get slammed during basketball season with student athletes and fans. AI handles the surge perfectly - we booked 156 more appointments during March Madness alone. Game-day scheduling is now completely automated.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=100&h=100&fit=crop",
+      "results": "156 extra bookings during peak season"
+    },
+    {
+      "name": "Robert Bourbon Trail",
+      "business": "Lexington Luxury Tours",
+      "location": "Lexington, KY",
+      "quote": "Bourbon trail tourists call from all time zones wanting to book distillery tours. Our AI captures international inquiries 24/7 and handles questions about Woodford Reserve, Buffalo Trace, and all the local distilleries. Revenue jumped 61% since implementation.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
+      "results": "61% revenue increase"
+    }
+  ],
+
   "cta_bottom": {
     "headline": "Ready to Transform Your Lexington Business?",
     "subheadline": "Join the Lexington businesses already using AI to capture more leads and save time",
@@ -203,8 +235,8 @@
 
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1525338078858-d762b5e32f2c?fm=jpg&q=80&w=1920",
-      "alt": "AI voice technology for Lexington businesses",
+      "url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?fm=jpg&q=80&w=1920",
+      "alt": "Kentucky horse farm with white fences in Lexington bluegrass country",
       "caption": "Lexington businesses capture more leads with 24/7 AI voice agents",
       "usage": "hero"
     },

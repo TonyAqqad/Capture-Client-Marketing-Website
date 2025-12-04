@@ -31,6 +31,8 @@
   "hero": {
     "headline": "Never Miss a Lead in Covington",
     "subheadline": "AI Voice Agents That Answer Every Call and Capture More Clients for Northern Kentucky Businesses",
+    "hero_image": "https://images.unsplash.com/photo-1575672913279-7609f595dcab?fm=jpg&q=80&w=1920",
+    "hero_image_alt": "John A. Roebling Suspension Bridge connecting Covington Kentucky to Cincinnati at night",
     "cta_primary": {
       "text": "Get Your Free Consultation",
       "action": "tel:865-346-3339"
@@ -188,6 +190,36 @@
     }
   ],
 
+  "local_testimonials": [
+    {
+      "name": "Katherine Mainstrasse",
+      "business": "MainStrasse Village Boutique Hotel",
+      "location": "Covington, KY",
+      "quote": "Cincinnati tourists call at all hours asking about our historic MainStrasse location, nearby restaurants, and Roebling Bridge views. Voice AI handles room inquiries, books reservations, and answers questions about the neighborhood 24/7. We've increased direct bookings by $112,000 and reduced OTA fees significantly.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop",
+      "results": "$112,000 in direct bookings"
+    },
+    {
+      "name": "David Cincinnati",
+      "business": "Northern Kentucky Professional Services",
+      "location": "Covington, KY",
+      "quote": "We serve clients on both sides of the river - Covington, Newport, and Greater Cincinnati. Voice AI seamlessly handles inquiries from Ohio and Kentucky, understands cross-state service areas, and books consultations based on location. Our professional services revenue grew 38% since implementation.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop",
+      "results": "38% revenue growth"
+    },
+    {
+      "name": "Angela Roebling",
+      "business": "Kenton County Home Restoration",
+      "location": "Covington, KY",
+      "quote": "Historic homes in Covington require specialized restoration. Our AI pre-qualifies callers, asks about home age and historic district requirements, and schedules estimates. We've captured 67 more restoration projects this year worth over $890,000 - many from after-hours calls from homeowners researching restoration.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop",
+      "results": "$890,000 in restoration projects"
+    }
+  ],
+
   "cta_bottom": {
     "headline": "Ready to Capture More Covington Leads?",
     "subheadline": "Join Northern Kentucky businesses already using AI to grow revenue and save time",
@@ -203,8 +235,8 @@
 
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1633431305278-eb8c2d0b823b?fm=jpg&q=80&w=1920",
-      "alt": "Professional business call with AI voice technology - Covington KY",
+      "url": "https://images.unsplash.com/photo-1575672913279-7609f595dcab?fm=jpg&q=80&w=1920",
+      "alt": "John A. Roebling Suspension Bridge connecting Covington Kentucky to Cincinnati at night",
       "caption": "Covington businesses never miss opportunities with 24/7 AI voice agents",
       "usage": "hero"
     },

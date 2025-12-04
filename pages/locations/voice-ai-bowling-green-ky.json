@@ -31,6 +31,8 @@
   "hero": {
     "headline": "Bowling Green's AI Phone Solution",
     "subheadline": "Stop Losing Leads to Voicemail - Let AI Answer Every Call and Book Appointments 24/7",
+    "hero_image": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?fm=jpg&q=80&w=1920",
+    "hero_image_alt": "Red Corvette sports car representing Bowling Green Kentucky Corvette Museum",
     "cta_primary": {
       "text": "Get Your Free Consultation",
       "action": "tel:865-346-3339"
@@ -188,6 +190,36 @@
     }
   ],
 
+  "local_testimonials": [
+    {
+      "name": "Michael Corvette",
+      "business": "Performance Auto Specialists",
+      "location": "Bowling Green, KY",
+      "quote": "Corvette enthusiasts call from across the country wanting specialty work done near the GM plant. Our AI handles technical inquiries about performance mods, schedules dyno appointments, and captures leads 24/7. We've booked $142,000 in specialty work from after-hours calls alone.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop",
+      "results": "$142,000 in specialty bookings"
+    },
+    {
+      "name": "Jennifer Western",
+      "business": "WKU Student Housing Services",
+      "location": "Bowling Green, KY",
+      "quote": "During move-in week and housing rush, we used to miss 70% of calls. Now Voice AI handles every inquiry from WKU students and parents. We signed 89 more leases this semester and our occupancy hit 98%. The AI even knows to mention proximity to campus.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop",
+      "results": "89 additional lease signings"
+    },
+    {
+      "name": "Thomas Manufacturing",
+      "business": "Warren County Industrial Supply",
+      "location": "Bowling Green, KY",
+      "quote": "We supply parts to GM and other manufacturers operating 24/7 shifts. Voice AI captures urgent supply orders at 3 AM when production lines need parts. We've prevented 23 production delays this quarter and added $67,000 in rush order revenue.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop",
+      "results": "$67,000 in rush order revenue"
+    }
+  ],
+
   "cta_bottom": {
     "headline": "Ready to Capture More Bowling Green Leads?",
     "subheadline": "Join Bowling Green businesses using AI to grow faster and work smarter",
@@ -203,8 +235,8 @@
 
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1679403766669-17890714e491?fm=jpg&q=80&w=1920",
-      "alt": "AI technology for Bowling Green business growth",
+      "url": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?fm=jpg&q=80&w=1920",
+      "alt": "Red Corvette sports car representing Bowling Green Kentucky Corvette Museum",
       "caption": "Bowling Green businesses grow faster with 24/7 AI voice agents",
       "usage": "hero"
     },

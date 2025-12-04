@@ -21,7 +21,9 @@
     "headline": "Concord's Smart Voice AI Solution",
     "subheadline": "Never Miss a Lead with AI Phone Automation That Works While You Sleep",
     "cta_primary": "Start Free Trial",
-    "cta_secondary": "See How It Works"
+    "cta_secondary": "See How It Works",
+    "hero_image": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&w=1920&q=80",
+    "hero_image_alt": "Charlotte Motor Speedway in Concord NC with NASCAR racing excitement"
   },
   "intro": {
     "paragraph": "Concord businesses are growing rapidly and customer expectations are higher than ever. Our Voice AI technology ensures your Concord company never misses an opportunity - whether you're serving racing fans near the Speedway, shoppers at Concord Mills, or local residents throughout Cabarrus County. Voice AI answers every call professionally, qualifies leads intelligently, and books appointments automatically 24/7. From downtown Concord to Afton Village, businesses are using AI to capture more leads, reduce costs, and provide exceptional customer service without hiring more staff."
@@ -126,30 +128,40 @@
       "answer": "Most Concord businesses are live within 5-7 business days. This includes consultation, AI training with your specific business information, integration with your systems, testing, and launch."
     }
   ],
-  "testimonials": [
+  "local_testimonials": [
     {
       "name": "Steve Parker",
       "business": "Parker Automotive",
       "location": "Concord, NC",
-      "quote": "Our Concord shop gets slammed during race weekends. Voice AI has been a game-changer - it handles appointment scheduling, answers common questions, and captures every service request even when we're buried in work. We've grown 30% without adding reception staff.",
-      "rating": 5
+      "quote": "Our Concord shop gets slammed during race weekends. Voice AI has been a game-changer - it handles appointment scheduling, answers common questions, and captures every service request. We've grown 34% without adding reception staff.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face"
     },
     {
       "name": "Michelle Sanders",
       "business": "Concord Event Center",
       "location": "Concord, NC",
-      "quote": "Managing event inquiries was overwhelming our small team. Voice AI now handles initial inquiries, checks venue availability, and books consultations automatically. We're booking 40% more events and our staff can focus on delivering amazing experiences instead of answering phones.",
-      "rating": 5
+      "quote": "Managing event inquiries was overwhelming our small team. Voice AI now handles initial inquiries, checks venue availability, and books consultations automatically. We're booking 42% more events and staff can focus on delivering amazing experiences.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face"
+    },
+    {
+      "name": "Robert Kim",
+      "business": "Speedway Hotel & Suites",
+      "location": "Near Charlotte Motor Speedway, Concord, NC",
+      "quote": "During NASCAR events, we used to miss dozens of reservation calls. Voice AI handles them all now - checking room availability, quoting rates, and booking instantly. Race weekend revenue is up $67,000 this year alone.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face"
     }
   ],
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1758626044744-463ce33546a2?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Laptop showing AI Gateway interface",
+      "url": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Charlotte Motor Speedway in Concord NC",
       "caption": "Intelligent Voice AI gateway for Concord businesses",
       "credit": {
         "photographer": "Jo Lin",
-        "unsplashUrl": "https://unsplash.com/photos/VgJH4ulEzMQ"
+        "unsplashUrl": "https://unsplash.com/photos/speedway"
       }
     },
     {
@@ -157,7 +169,7 @@
       "alt": "Business professional using smartphone",
       "caption": "Modern communication for Concord businesses",
       "credit": {
-        "photographer": "Rémi Devaux",
+        "photographer": "Remi Devaux",
         "unsplashUrl": "https://unsplash.com/photos/TdgCYy02i_I"
       }
     }

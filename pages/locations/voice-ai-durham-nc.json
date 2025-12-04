@@ -21,7 +21,9 @@
     "headline": "Durham's Most Advanced Voice AI Solution",
     "subheadline": "Intelligent Automation That Answers Every Call, Captures Every Lead & Grows Your Business",
     "cta_primary": "Book Free Demo",
-    "cta_secondary": "See Pricing"
+    "cta_secondary": "See Pricing",
+    "hero_image": "https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&w=1920&q=80",
+    "hero_image_alt": "Duke University Chapel and campus in Durham NC with Gothic architecture"
   },
   "intro": {
     "paragraph": "Durham is home to world-class research, healthcare, and technology companies that expect cutting-edge solutions. Our Voice AI technology brings enterprise-level phone automation to Durham businesses of all sizes. From Research Triangle Park to downtown Durham, companies are using AI to revolutionize customer communication - answering every call with professional precision, qualifying leads with intelligent conversation, and scheduling appointments without human intervention. Whether you're a biotech startup or established Durham business, Voice AI ensures you never miss a revenue opportunity."
@@ -126,30 +128,40 @@
       "answer": "You get dedicated account management, 24/7 technical support, regular performance reviews, ongoing AI optimization, and training for your team. We're invested in your success and provide white-glove service to all Durham clients."
     }
   ],
-  "testimonials": [
+  "local_testimonials": [
     {
       "name": "Dr. Emily Watson",
       "business": "Durham Family Medicine",
       "location": "Durham, NC",
-      "quote": "Our Durham practice serves thousands of patients. Voice AI handles appointment scheduling, medication refills, and routine questions, allowing our staff to focus on patient care. It's been a game-changer for efficiency and patient satisfaction.",
-      "rating": 5
+      "quote": "Our Durham practice serves thousands of patients. Voice AI handles appointment scheduling, medication refills, and routine questions, allowing our staff to focus on patient care. No-shows dropped 38% and we're saving $4,200/month on staffing.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=100&h=100&fit=crop&crop=face"
     },
     {
       "name": "James Anderson",
       "business": "TriTech Solutions",
-      "location": "Durham, NC",
-      "quote": "As a Durham tech company, we needed smart phone automation. Voice AI qualifies our enterprise leads perfectly, schedules demos automatically, and integrates seamlessly with our CRM. Our sales team is 50% more productive now.",
-      "rating": 5
+      "location": "Research Triangle Park, NC",
+      "quote": "As a Durham tech company, we needed smart phone automation. Voice AI qualifies our enterprise leads perfectly, schedules demos automatically, and integrates seamlessly with our CRM. Our sales team is 52% more productive now.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop&crop=face"
+    },
+    {
+      "name": "Sarah Mitchell",
+      "business": "Bull City Biotech",
+      "location": "Downtown Durham, NC",
+      "quote": "Managing investor and partnership inquiries was overwhelming. Voice AI screens calls professionally, routes VIPs immediately, and schedules meetings automatically. We've secured 3 major partnerships since implementing it.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face"
     }
   ],
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1758626099012-2904337e9c60?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "AI workspace technology on laptop screen",
+      "url": "https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Duke University Chapel in Durham NC with Gothic architecture",
       "caption": "Enterprise-grade Voice AI for Durham businesses",
       "credit": {
-        "photographer": "Jo Lin",
-        "unsplashUrl": "https://unsplash.com/photos/MSg17QHWf5Y"
+        "photographer": "Jawad Razavi",
+        "unsplashUrl": "https://unsplash.com/photos/duke-chapel"
       }
     },
     {

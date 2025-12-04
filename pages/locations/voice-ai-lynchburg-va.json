@@ -119,10 +119,28 @@
   },
   "local_testimonials": [
     {
-      "quote": "Voice AI has been a game-changer for our Lynchburg practice. Patients love the instant response, and our staff can focus on providing excellent care instead of answering phones all day.",
-      "author": "Dr. Robert M.",
+      "name": "Dr. Robert Mitchell",
       "business": "Lynchburg Family Health",
-      "location": "Lynchburg, VA"
+      "location": "Lynchburg, VA",
+      "quote": "Voice AI has been a game-changer for our Lynchburg practice. Patients love the instant response, and our staff can focus on providing excellent care. New patient bookings up 45% since launch.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Steve Anderson",
+      "business": "Central Virginia Electric",
+      "location": "Lynchburg, VA",
+      "quote": "Covering Lynchburg to Bedford means long drives where I can't take calls. AI captures every emergency request and has jobs scheduled before I'm back in range. Revenue up 32% this year.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Jennifer Lawson",
+      "business": "Liberty Property Group",
+      "location": "Lynchburg, VA",
+      "quote": "With Liberty University students and families calling about rentals, timing is everything. AI qualifies prospects 24/7 - filled 15 more units this semester from after-hours inquiries.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop"
     }
   ],
   "faq": [

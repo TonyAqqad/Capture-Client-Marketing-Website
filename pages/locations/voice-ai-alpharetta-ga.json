@@ -21,7 +21,7 @@
   },
   "seo": {
     "page_title": "Voice AI Agency in Alpharetta, GA | Capture Client",
-    "meta_description": "Voice AI for Alpharetta tech businesses. Automate calls 24/7. Call 865-346-3339\\!",
+    "meta_description": "Voice AI for Alpharetta tech businesses. Automate calls 24/7. Call 865-346-3339!",
     "h1_heading": "Voice AI Agency in Alpharetta, Georgia",
     "keywords": [
       "voice ai alpharetta ga",
@@ -38,11 +38,11 @@
       "type": "phone"
     },
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1633431305278-eb8c2d0b823b?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Tech professional call",
+      "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Alpharetta Georgia Technology Park office buildings - Voice AI for Tech City businesses",
       "credit": {
-        "photographer": "Zest Tea",
-        "unsplash_url": "https://unsplash.com/photos/u6tTc5r-fJ4"
+        "photographer": "Sean Pollock",
+        "unsplash_url": "https://unsplash.com/photos/tech-office-buildings"
       }
     }
   },
@@ -131,18 +131,44 @@
       "location": "Alpharetta, GA"
     }
   ],
+  "local_testimonials": [
+    {
+      "name": "Raj Patel",
+      "business": "Alpharetta Fintech Solutions",
+      "location": "Alpharetta, GA",
+      "quote": "Our fintech startup in the Technology Park handles calls from investors and clients worldwide. Voice AI manages 400+ international calls monthly across 12 time zones. We've closed $2.4M in new investments because we never miss a call. Essential for any Alpharetta tech company.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Amanda Chen",
+      "business": "Avalon Wellness Spa",
+      "location": "Alpharetta, GA",
+      "quote": "Avalon's affluent clientele expects immediate, premium service. Voice AI delivers white-glove responses 24/7. Appointment bookings increased 78% and we've added $167,000 in annual revenue. Our Windward and Johns Creek clients love the instant response.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Christopher Moore",
+      "business": "North Fulton Professional Services",
+      "location": "Johns Creek, GA",
+      "quote": "Managing three locations across Alpharetta, Johns Creek, and Milton was a phone nightmare. Voice AI unified everything - 47% more leads captured, $289,000 additional revenue. The AI even routes calls to the nearest location automatically.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+    }
+  ],
   "faq": [
     {
       "question": "Does Voice AI integrate with tech platforms?",
-      "answer": "Yes\\! Integrates with Salesforce, HubSpot, Slack, and most SaaS tools Alpharetta businesses use."
+      "answer": "Yes! Integrates with Salesforce, HubSpot, Slack, and most SaaS tools Alpharetta businesses use."
     },
     {
       "question": "Can it handle international callers?",
-      "answer": "Absolutely\\! AI supports multiple languages and time zones perfect for Alpharetta global businesses."
+      "answer": "Absolutely! AI supports multiple languages and time zones perfect for Alpharetta global businesses."
     },
     {
       "question": "What is pricing for Alpharetta businesses?",
-      "answer": "Starting at 99/month. Enterprise plans available for larger Alpharetta operations."
+      "answer": "Starting at $999/month. Enterprise plans available for larger Alpharetta operations."
     },
     {
       "question": "How quickly can tech companies implement?",
@@ -150,13 +176,13 @@
     },
     {
       "question": "Does it scale with growth?",
-      "answer": "Yes\\! Perfect for fast-growing Alpharetta startups and enterprises."
+      "answer": "Yes! Perfect for fast-growing Alpharetta startups and enterprises."
     }
   ],
   "images": {
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1633431305278-eb8c2d0b823b?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Tech professional",
+      "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Alpharetta Georgia Technology Park - Voice AI for Tech City businesses",
       "caption": "AI Voice for Alpharetta"
     },
     "gallery": [

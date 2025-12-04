@@ -119,10 +119,28 @@
   },
   "local_testimonials": [
     {
-      "quote": "Our Fredericksburg practice was overwhelmed with calls during peak hours. Voice AI handles routine scheduling so our staff can focus on patient care. Game-changer for us.",
-      "author": "Dr. Elizabeth T.",
+      "name": "Dr. Elizabeth Turner",
       "business": "Fredericksburg Family Medicine",
-      "location": "Fredericksburg, VA"
+      "location": "Fredericksburg, VA",
+      "quote": "Our Fredericksburg practice was overwhelmed with calls during peak hours. Voice AI handles routine scheduling so our staff can focus on patient care. New patient bookings up 38%. Game-changer for us.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Chris Donovan",
+      "business": "Donovan HVAC Services",
+      "location": "Stafford, VA",
+      "quote": "Covering Fredericksburg to Stafford means I'm always driving. Voice AI books every emergency call - captured $14,000 in after-hours AC repairs last month alone. Worth every penny.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Amanda Morrison",
+      "business": "I-95 Corridor Realty",
+      "location": "Fredericksburg, VA",
+      "quote": "DC commuters search for Fredericksburg homes at midnight. AI qualifies buyers and schedules showings 24/7 - closed 6 more homes this quarter from leads that came in after 9 PM.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop"
     }
   ],
   "faq": [

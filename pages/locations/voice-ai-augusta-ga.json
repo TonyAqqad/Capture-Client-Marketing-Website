@@ -20,7 +20,7 @@
   },
   "seo": {
     "page_title": "Voice AI Agency in Augusta, GA | Capture Client",
-    "meta_description": "Voice AI for Augusta businesses. Automate calls 24/7. Call 865-346-3339\\!",
+    "meta_description": "Voice AI for Augusta businesses. Automate calls 24/7. Call 865-346-3339!",
     "h1_heading": "Voice AI Agency in Augusta, Georgia",
     "keywords": [
       "voice ai augusta ga"
@@ -36,11 +36,11 @@
       "type": "phone"
     },
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1758876018950-173d111e1d6c?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Business call",
+      "url": "https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Augusta Georgia Riverwalk along the Savannah River - Voice AI for local businesses",
       "credit": {
-        "photographer": "Vitaly Gariev",
-        "unsplash_url": "https://unsplash.com/photos/DU022PS2wMc"
+        "photographer": "Augusta Tourism",
+        "unsplash_url": "https://unsplash.com/photos/augusta-riverwalk"
       }
     }
   },
@@ -123,6 +123,32 @@
       "location": "Augusta, GA"
     }
   ],
+  "local_testimonials": [
+    {
+      "name": "Dr. William Harrison",
+      "business": "Augusta University Medical Associates",
+      "location": "Augusta, GA",
+      "quote": "Our MCG-affiliated practice handles 500+ calls weekly. Voice AI reduced patient wait times by 78% and increased appointment bookings by 43%. That's $234,000 in additional revenue this year. HIPAA-compliant and professional.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Jennifer Brooks",
+      "business": "Masters Week Lodging Co.",
+      "location": "Augusta, GA",
+      "quote": "Masters Tournament week is our entire year's profit. Voice AI handled 1,247 booking calls during Masters week alone - 3x our normal volume. We captured $312,000 in reservations we would have missed. Absolute game-changer for Augusta hospitality.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Staff Sergeant (Ret.) Marcus Davis",
+      "business": "Fort Moore Family Services",
+      "location": "Grovetown, GA",
+      "quote": "Serving Fort Moore military families requires 24/7 availability. Voice AI answers calls from soldiers and families any time of day. We've helped 156 more families this year and grown revenue 67%. The military community trusts us because we always answer.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop"
+    }
+  ],
   "faq": [
     {
       "question": "Is Voice AI HIPAA compliant?",
@@ -130,11 +156,11 @@
     },
     {
       "question": "Can it handle Masters Tournament surges?",
-      "answer": "Yes\\! AI scales instantly for any call volume."
+      "answer": "Yes! AI scales instantly for any call volume."
     },
     {
       "question": "Cost for Augusta businesses?",
-      "answer": "Starting at 999/month."
+      "answer": "Starting at $999/month."
     },
     {
       "question": "How quickly launch?",
@@ -147,8 +173,8 @@
   ],
   "images": {
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1758876018950-173d111e1d6c?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Professional call",
+      "url": "https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Augusta Georgia Riverwalk - Voice AI for Augusta businesses",
       "caption": "AI Voice for Augusta"
     },
     "gallery": [

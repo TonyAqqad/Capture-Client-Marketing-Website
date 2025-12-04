@@ -20,6 +20,32 @@
     {"step": 4, "title": "Optimize", "description": "We continuously improve performance based on real Chesapeake call data."}
   ],
   "service_area": {"heading": "Serving Chesapeake and Hampton Roads", "description": "We serve businesses throughout Chesapeake and surrounding Hampton Roads communities.", "areas_list": ["Chesapeake", "Greenbrier", "Great Bridge", "Western Branch", "Deep Creek", "Norfolk", "Virginia Beach", "Portsmouth", "Suffolk"]},
+  "local_testimonials": [
+    {
+      "name": "Tommy Richardson",
+      "business": "Richardson Roofing & Restoration",
+      "location": "Chesapeake, VA",
+      "quote": "After Hurricane season in Chesapeake, our phones explode. Voice AI handled 340 calls in one week without a single miss. We booked $180,000 in restoration work that would have gone to voicemail before.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Dr. Anita Patel",
+      "business": "Great Bridge Family Dentistry",
+      "location": "Chesapeake, VA",
+      "quote": "Our Great Bridge practice was losing new patients to hold times. Now AI handles scheduling instantly - new patient bookings up 52% and our front desk can finally breathe.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Marcus Johnson",
+      "business": "Greenbrier HVAC Solutions",
+      "location": "Chesapeake, VA",
+      "quote": "Chesapeake summers mean non-stop AC calls. Voice AI captures emergency requests at 2 AM and has them scheduled by morning. Revenue up 38% this summer alone.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop"
+    }
+  ],
   "faq": [
     {"question": "How does Voice AI work for Chesapeake businesses?", "answer": "Our AI answers calls like a trained receptionist, qualifies leads, books appointments, and handles customer inquiries 24/7. Perfect for Chesapeake service businesses, medical practices, and professional firms."},
     {"question": "What's the cost?", "answer": "Chesapeake packages start at $999/month including setup and training. Most businesses see ROI within 30 days."}

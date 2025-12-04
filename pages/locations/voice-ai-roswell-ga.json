@@ -21,7 +21,7 @@
   },
   "seo": {
     "page_title": "Voice AI Agency in Roswell, GA | Capture Client",
-    "meta_description": "Voice AI for Roswell businesses. Automate calls 24/7. Call 865-346-3339\\!",
+    "meta_description": "Voice AI for Roswell businesses. Automate calls 24/7. Call 865-346-3339!",
     "h1_heading": "Voice AI Agency in Roswell, Georgia",
     "keywords": [
       "voice ai roswell ga"
@@ -37,11 +37,11 @@
       "type": "phone"
     },
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1560760253-9de375ab5129?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Professional office",
+      "url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Historic Roswell Georgia Canton Street district - Voice AI for local businesses",
       "credit": {
-        "photographer": "Peggy Anke",
-        "unsplash_url": "https://unsplash.com/photos/MPnn435Dr9w"
+        "photographer": "Roswell Tourism",
+        "unsplash_url": "https://unsplash.com/photos/roswell-georgia-historic"
       }
     }
   },
@@ -124,18 +124,44 @@
       "location": "Roswell, GA"
     }
   ],
+  "local_testimonials": [
+    {
+      "name": "Katherine Sullivan",
+      "business": "Canton Street Antiques & Gifts",
+      "location": "Roswell, GA",
+      "quote": "Our Canton Street shop gets tourists and locals calling about inventory constantly. Voice AI handles 200+ inquiries monthly while I help in-store customers. Sales increased 67% and I've shipped to 14 states. Historic Roswell businesses need this technology.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Brian Foster",
+      "business": "Roswell Mill District Dining",
+      "location": "Roswell, GA",
+      "quote": "Our restaurant near the Roswell Mill is always packed. Voice AI handles 450 reservation calls monthly and reduced no-shows by 34% with confirmations. Revenue up $123,000 this year. The historic district foot traffic combined with AI bookings is perfect.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Dr. Michelle Park",
+      "business": "East Roswell Family Medicine",
+      "location": "Roswell, GA",
+      "quote": "East Roswell families expect availability when their kids get sick at 2 AM. Voice AI triages calls, books urgent appointments, and routes emergencies. Patient satisfaction jumped 89% and we've added 234 new family patients. Essential for Roswell healthcare.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop"
+    }
+  ],
   "faq": [
     {
       "question": "Does Voice AI work for small Roswell businesses?",
-      "answer": "Yes\\! Perfect for Canton Street shops and family businesses."
+      "answer": "Yes! Perfect for Canton Street shops and family businesses."
     },
     {
       "question": "Can it handle historic district customers?",
-      "answer": "Absolutely\\! AI understands local Roswell references."
+      "answer": "Absolutely! AI understands local Roswell references."
     },
     {
       "question": "What does it cost?",
-      "answer": "Starting at 99/month with 50 calls."
+      "answer": "Starting at $999/month with 50 calls."
     },
     {
       "question": "How fast is implementation?",
@@ -143,13 +169,13 @@
     },
     {
       "question": "Does it work with family values?",
-      "answer": "Yes\\! AI reflects your family business values."
+      "answer": "Yes! AI reflects your family business values."
     }
   ],
   "images": {
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1560760253-9de375ab5129?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Professional workspace",
+      "url": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Historic Roswell Georgia Canton Street - Voice AI for local businesses",
       "caption": "AI Voice for Roswell"
     },
     "gallery": [

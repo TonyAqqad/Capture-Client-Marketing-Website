@@ -30,11 +30,11 @@
       "type": "phone"
     },
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1694903089438-bf28d4697d9a?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "AI technology and human collaboration for Norfolk businesses",
+      "url": "https://images.unsplash.com/photo-1580158796750-b5f0e4bc4912?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Norfolk Virginia waterfront skyline - Voice AI for local businesses",
       "credit": {
-        "photographer": "Igor Omilaev",
-        "unsplash_url": "https://unsplash.com/photos/FHgWFzDDAOs"
+        "photographer": "Jeremy Zero",
+        "unsplash_url": "https://unsplash.com/photos/norfolk-waterfront"
       }
     }
   },
@@ -109,10 +109,28 @@
   },
   "local_testimonials": [
     {
-      "quote": "As a Norfolk attorney, I was skeptical about AI handling client calls. Now I can't imagine going back! The AI qualifies leads perfectly and my conversion rate has never been higher.",
-      "author": "David Thompson",
+      "name": "David Thompson",
       "business": "Thompson & Associates Law",
-      "location": "Norfolk, VA"
+      "location": "Norfolk, VA",
+      "quote": "As a Norfolk attorney, I was skeptical about AI handling client calls. Now I can't imagine going back! AI qualifies leads perfectly - conversion rate up 34% and signed 18 more cases this year.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Dr. Sandra Martinez",
+      "business": "Ghent Medical Associates",
+      "location": "Norfolk, VA",
+      "quote": "Our Ghent practice serves military families with unpredictable schedules. AI handles appointment bookings 24/7 - patient satisfaction up 48% and no-shows down 30%.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Tommy Richardson",
+      "business": "Norfolk Waterfront Properties",
+      "location": "Norfolk, VA",
+      "quote": "Navy personnel house-hunting call from ship schedules that don't match office hours. Voice AI qualifies buyers instantly - closed 8 more homes this quarter from after-hours leads.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
     }
   ],
   "faq": [

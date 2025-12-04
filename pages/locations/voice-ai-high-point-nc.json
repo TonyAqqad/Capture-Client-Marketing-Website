@@ -1,19 +1,220 @@
 {
   "page_id": "voice-ai-high-point-nc",
   "page_type": "service-location",
-  "service": {"service_id": "voice-ai", "service_name": "Voice AI Services", "service_slug": "voice-ai"},
-  "location": {"city": "High Point", "state": "NC", "state_full": "North Carolina", "slug": "high-point-nc", "nearby_areas": ["Greensboro", "Winston-Salem", "Archdale"], "service_area_radius": "30 miles"},
-  "seo": {"page_title": "Voice AI Agency in High Point, NC | Capture Client", "meta_description": "Looking for Voice AI in High Point, NC? Capture Client helps High Point businesses automate calls, qualify leads, and book appointments 24/7. Call 865-346-3339!", "h1_heading": "Voice AI Services in High Point, North Carolina", "keywords": ["voice ai agency high point", "ai voice agents high point nc", "ai receptionist high point", "automated phone answering high point", "voice ai north carolina"], "canonical_url": "/voice-ai-high-point-nc"},
-  "hero": {"headline": "Never Miss Another Lead in High Point", "subheadline": "AI Voice Agents That Answer Calls, Qualify Leads & Book Appointments for High Point Businesses 24/7", "cta_primary": {"text": "Get Your Free Consultation", "action": "tel:865-346-3339", "type": "phone"}, "cta_secondary": {"text": "See How It Works", "action": "#how-it-works", "type": "link"}, "hero_image": {"url": "https://images.unsplash.com/photo-1537511446984-935f663eb1f4?ixlib=rb-4.0.3&w=1920&q=80", "alt": "Professional business phone call with Voice AI technology in High Point NC", "credit": {"photographer": "Bruce Mars", "unsplash_url": "https://unsplash.com/photos/8YG31Xn4dSw"}}},
-  "local_intro": {"paragraph": "High Point business owners are discovering the competitive advantage of Voice AI technology. Known as the Furniture Capital of the World, High Point businesses in furniture, manufacturing, and retail face intense competition. Missing calls means losing leads to competitors. Our AI voice agents answer every call to your High Point business instantly, qualify leads, and book appointments - all without human intervention. Whether you're in downtown High Point, serving Greensboro, or the broader Piedmont Triad area, our Voice AI technology helps you capture more clients while reducing overhead costs."},
-  "benefits": [{"title": "24/7 Lead Capture in High Point", "description": "Never miss a call from High Point customers. Our AI answers every call instantly.", "icon": "clock"}, {"title": "Instant Lead Qualification", "description": "AI qualifies High Point leads immediately, so your team only talks to ready-to-buy prospects.", "icon": "filter"}, {"title": "Automatic Appointment Booking", "description": "Let AI book appointments while you focus on serving High Point clients.", "icon": "calendar"}, {"title": "Cost Savings for High Point Businesses", "description": "Save thousands compared to hiring staff. Our AI scales with your growth.", "icon": "dollar-sign"}, {"title": "Professional Every Time", "description": "Consistent call handling for your High Point business.", "icon": "award"}],
-  "how_it_works": [{"step": 1, "title": "Free Strategy Call", "description": "We discuss your High Point business needs and how Voice AI helps."}, {"step": 2, "title": "Custom AI Training", "description": "We train your AI with High Point market expertise."}, {"step": 3, "title": "Seamless Integration", "description": "We integrate with your phone, CRM, and calendar."}, {"step": 4, "title": "Launch & Optimize", "description": "Start capturing High Point leads immediately."}],
-  "local_use_cases": [{"business_type": "High Point Furniture Businesses", "scenario": "A furniture showroom in High Point was missing calls from buyers during Market weeks.", "result": "Captured 200+ leads per month, increased sales by $75,000 in 90 days."}, {"business_type": "High Point Manufacturing", "scenario": "A manufacturer needed to qualify leads before expensive sales time was invested.", "result": "Reduced unqualified consultations by 70%, increased conversion by 35%."}, {"business_type": "High Point Home Services", "scenario": "A home services company wanted to grow without hiring more staff.", "result": "Handles 3x more calls without overhead, 4.8/5 customer satisfaction."}],
-  "service_area": {"heading": "Serving High Point and Surrounding Areas", "description": "Capture Client provides Voice AI services throughout the High Point area.", "areas_list": ["High Point", "Greensboro", "Winston-Salem", "Archdale", "Jamestown", "Trinity"]},
-  "local_testimonials": [{"quote": "We haven't missed a single lead since Voice AI. Our High Point buyers get instant responses, and our booking rate is up 40%.", "author": "Robert Johnson", "business": "Johnson Furniture Group", "location": "High Point, NC"}, {"quote": "The AI handles our High Point calls perfectly. It qualifies leads and books appointments 24/7. Game-changer!", "author": "Lisa Chang", "business": "Chang Manufacturing", "location": "High Point, NC"}],
-  "faq": [{"question": "How does Voice AI work for High Point businesses?", "answer": "Our Voice AI agents are custom-trained for your High Point business. They answer calls, ask questions, schedule appointments, and transfer hot leads - automatically 24/7."}, {"question": "What types of High Point businesses benefit?", "answer": "Furniture businesses, manufacturers, showrooms, home services, and retailers see the biggest impact. Perfect if you're missing calls."}, {"question": "Can AI handle High Point-specific information?", "answer": "Absolutely! We train your AI with High Point knowledge including Market weeks, local industries, and pricing."}, {"question": "How quickly can we set up in High Point?", "answer": "Most High Point businesses are running within 1-2 weeks. We handle setup and training."}, {"question": "Will AI sound robotic to High Point callers?", "answer": "Not at all! Most High Point callers don't realize they're talking to AI."}],
-  "main_content": {"sections": [{"heading": "Why High Point Businesses Choose Voice AI", "content": "High Point is known as the Furniture Capital of the World, which means competition for customers is fierce, especially during Market weeks. Every missed call is a potential customer going to your competitor. High Point business owners face unique challenges: managing seasonal demand during Markets, handling high call volumes, and meeting buyers who expect instant responses. Voice AI technology solves these challenges by providing 24/7 call coverage. Our AI agents are trained for High Point businesses, understanding the furniture industry, Market cycles, and customer expectations. Whether you serve showroom visitors, Greensboro buyers, or the broader Triad area, Voice AI ensures you never miss an opportunity. High Point businesses using Voice AI report a 40% increase in qualified leads during Market weeks and a 60% reduction in missed opportunities year-round."}]},
-  "images": {"gallery": [{"url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.0.3&w=1200&q=80", "alt": "High Point business owner with Voice AI", "caption": "High Point businesses use Voice AI for more leads", "credit": {"photographer": "Alev Takil", "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"}}, {"url": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&w=1200&q=80", "alt": "High Point business automation", "caption": "Automate your High Point communications", "credit": {"photographer": "Clay Banks", "unsplash_url": "https://unsplash.com/photos/Ox6SW103KtM"}}]},
-  "cta_section": {"headline": "Ready to Transform Your High Point Business?", "subheadline": "Join hundreds of High Point businesses using Voice AI.", "cta_primary": {"text": "Call Us Now: 865-346-3339", "action": "tel:865-346-3339", "type": "phone"}, "urgency_text": "Limited spots for High Point businesses this month"},
-  "related_pages": {"other_services_in_location": ["google-ads", "facebook-ads"], "nearby_locations": ["greensboro-nc", "winston-salem-nc", "raleigh-nc"], "packages": ["starter-package", "growth-package", "enterprise-package"]}
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "High Point",
+    "state": "NC",
+    "state_full": "North Carolina",
+    "slug": "high-point-nc",
+    "nearby_areas": ["Greensboro", "Winston-Salem", "Archdale"],
+    "service_area_radius": "30 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in High Point, NC | Capture Client",
+    "meta_description": "Looking for Voice AI in High Point, NC? Capture Client helps High Point businesses automate calls, qualify leads, and book appointments 24/7. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in High Point, North Carolina",
+    "keywords": [
+      "voice ai agency high point",
+      "ai voice agents high point nc",
+      "ai receptionist high point",
+      "automated phone answering high point",
+      "voice ai north carolina"
+    ],
+    "canonical_url": "/voice-ai-high-point-nc"
+  },
+  "hero": {
+    "headline": "Never Miss Another Lead in High Point",
+    "subheadline": "AI Voice Agents That Answer Calls, Qualify Leads & Book Appointments for High Point Businesses 24/7",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "cta_secondary": {
+      "text": "See How It Works",
+      "action": "#how-it-works",
+      "type": "link"
+    },
+    "hero_image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&w=1920&q=80",
+    "hero_image_alt": "High Point NC Furniture Market showroom representing the Furniture Capital of the World"
+  },
+  "local_intro": {
+    "paragraph": "High Point business owners are discovering the competitive advantage of Voice AI technology. Known as the Furniture Capital of the World, High Point businesses in furniture, manufacturing, and retail face intense competition, especially during Market weeks. Missing calls means losing leads to competitors. Our AI voice agents answer every call to your High Point business instantly, qualify leads, and book appointments - all without human intervention. Whether you're in downtown High Point, serving Greensboro buyers, or the broader Piedmont Triad area, our Voice AI technology helps you capture more clients while reducing overhead costs."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Lead Capture in High Point",
+      "description": "Never miss a call from High Point customers or international buyers during Market weeks. Our AI answers every call instantly.",
+      "icon": "clock"
+    },
+    {
+      "title": "Instant Lead Qualification",
+      "description": "AI qualifies High Point leads immediately, so your team only talks to ready-to-buy furniture buyers and serious prospects.",
+      "icon": "filter"
+    },
+    {
+      "title": "Automatic Appointment Booking",
+      "description": "Let AI book showroom appointments and buyer meetings while you focus on serving High Point clients.",
+      "icon": "calendar"
+    },
+    {
+      "title": "Cost Savings for High Point Businesses",
+      "description": "Save thousands compared to hiring Market Week temp staff. Our AI scales with your growth.",
+      "icon": "dollar-sign"
+    },
+    {
+      "title": "Professional Every Time",
+      "description": "Consistent call handling for your High Point business, impressing buyers from around the world.",
+      "icon": "award"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We discuss your High Point business needs and how Voice AI helps during Market weeks and year-round."
+    },
+    {
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We train your AI with High Point market expertise, furniture industry knowledge, and buyer qualification criteria."
+    },
+    {
+      "step": 3,
+      "title": "Seamless Integration",
+      "description": "We integrate with your phone, CRM, and calendar."
+    },
+    {
+      "step": 4,
+      "title": "Launch & Optimize",
+      "description": "Start capturing High Point leads immediately with continuous optimization."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "High Point Furniture Showrooms",
+      "scenario": "A furniture showroom in High Point was missing calls from international buyers during Market weeks who called outside US business hours.",
+      "result": "Captured 280+ buyer leads per Market, increased wholesale orders by $340,000."
+    },
+    {
+      "business_type": "High Point Manufacturing",
+      "scenario": "A furniture manufacturer needed to qualify dealer leads before expensive sales time was invested.",
+      "result": "Reduced unqualified consultations by 72%, increased dealer conversion by 38%."
+    },
+    {
+      "business_type": "High Point Trade Services",
+      "scenario": "A logistics company serving furniture businesses wanted to capture after-hours shipping inquiries.",
+      "result": "Handles 4x more quotes without staff overtime, new accounts up 45%."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving High Point and Surrounding Areas",
+    "description": "Capture Client provides Voice AI services throughout the High Point and Piedmont Triad area.",
+    "areas_list": [
+      "High Point",
+      "Greensboro",
+      "Winston-Salem",
+      "Archdale",
+      "Jamestown",
+      "Trinity"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "name": "Robert Johnson",
+      "business": "Johnson Furniture Group",
+      "location": "High Point, NC",
+      "quote": "We haven't missed a single buyer lead since Voice AI. International buyers calling at 3 AM get instant responses, and our showroom booking rate is up 52% during Market. Sales increased $420,000 this year.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face"
+    },
+    {
+      "name": "Lisa Chang",
+      "business": "Chang Manufacturing",
+      "location": "High Point, NC",
+      "quote": "Voice AI perfectly qualifies our dealer leads before they reach our sales team. We're spending time on serious buyers only, and our close rate is up 41%. Best investment for our High Point operation.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face"
+    },
+    {
+      "name": "William Hayes",
+      "business": "Piedmont Furniture Logistics",
+      "location": "High Point, NC",
+      "quote": "During Market weeks, shipping inquiries pour in around the clock. Voice AI handles quotes, schedules pickups, and captures every lead. We've grown 38% without adding night shift staff.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How does Voice AI work for High Point businesses?",
+      "answer": "Our Voice AI agents are custom-trained for your High Point business. They answer calls from furniture buyers, ask qualifying questions, schedule showroom appointments, and transfer hot leads - automatically 24/7, including during Market weeks."
+    },
+    {
+      "question": "What types of High Point businesses benefit?",
+      "answer": "Furniture showrooms, manufacturers, wholesale distributors, trade show services, and retailers see the biggest impact. Perfect if you're missing calls during Market weeks or from international buyers in different time zones."
+    },
+    {
+      "question": "Can AI handle High Point-specific information?",
+      "answer": "Absolutely! We train your AI with High Point knowledge including Market week schedules, furniture industry terminology, showroom locations, and buyer qualification criteria."
+    },
+    {
+      "question": "How quickly can we set up before Market?",
+      "answer": "Most High Point businesses are running within 1-2 weeks. We can expedite setup before major Market events to ensure you're capturing every buyer lead."
+    },
+    {
+      "question": "Will AI sound robotic to international buyers?",
+      "answer": "Not at all! Our AI uses natural language processing that sounds human. Most High Point callers and international buyers don't realize it's AI."
+    }
+  ],
+  "main_content": {
+    "sections": [
+      {
+        "heading": "Why High Point Businesses Choose Voice AI",
+        "content": "High Point is known as the Furniture Capital of the World, which means competition for customers is fierce, especially during Market weeks when international buyers flood the city. Every missed call is a potential dealer or buyer going to your competitor. High Point business owners face unique challenges: managing seasonal demand during Markets, handling high call volumes from multiple time zones, and meeting buyers who expect instant responses. Voice AI technology solves these challenges by providing 24/7 call coverage without hiring temporary Market staff. Our AI agents are trained specifically for High Point businesses, understanding the furniture industry, Market cycles, and buyer qualification needs. Whether you serve showroom visitors, international dealers, or the broader Triad area, Voice AI ensures you never miss an opportunity. High Point businesses using Voice AI report a 52% increase in qualified leads during Market weeks and a 67% reduction in missed opportunities year-round."
+      }
+    ]
+  },
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "High Point NC Furniture Market showroom",
+        "caption": "High Point businesses use Voice AI for more leads during Market",
+        "credit": {
+          "photographer": "Phillip Goldsberry",
+          "unsplash_url": "https://unsplash.com/photos/furniture-showroom"
+        }
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "High Point business automation",
+        "caption": "Automate your High Point communications",
+        "credit": {
+          "photographer": "Clay Banks",
+          "unsplash_url": "https://unsplash.com/photos/Ox6SW103KtM"
+        }
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Ready to Transform Your High Point Business?",
+    "subheadline": "Join hundreds of High Point businesses using Voice AI to capture more buyers.",
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "urgency_text": "Get set up before the next Market - limited spots available"
+  },
+  "related_pages": {
+    "other_services_in_location": ["google-ads", "facebook-ads"],
+    "nearby_locations": ["greensboro-nc", "winston-salem-nc", "raleigh-nc"],
+    "packages": ["starter-package", "growth-package", "enterprise-package"]
+  }
 }

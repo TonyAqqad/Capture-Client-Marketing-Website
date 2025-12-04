@@ -21,7 +21,9 @@
     "headline": "Cary's Most Advanced Voice AI Technology",
     "subheadline": "Professional AI Phone Automation for Growing Cary Businesses",
     "cta_primary": "Get Free Demo",
-    "cta_secondary": "View Pricing"
+    "cta_secondary": "View Pricing",
+    "hero_image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&w=1920&q=80",
+    "hero_image_alt": "Downtown Cary NC Town Center with modern shops and family-friendly atmosphere"
   },
   "intro": {
     "paragraph": "Cary is one of North Carolina's fastest-growing cities with a thriving business community that demands modern solutions. Our Voice AI technology helps Cary businesses from Town Center to MacGregor Downs capture every opportunity with intelligent automation. Whether you're a professional service firm, medical practice, home services company, or technology business in Cary, Voice AI ensures every phone call is answered professionally and every lead is captured - even when your team is busy, in meetings, or after hours. Stop losing opportunities to voicemail and start growing your Cary business with 24/7 AI-powered phone automation."
@@ -126,30 +128,40 @@
       "answer": "Yes! We offer demos where you can call and interact with Voice AI. We can also provide Cary business case studies and discuss trial options during your free consultation."
     }
   ],
-  "testimonials": [
+  "local_testimonials": [
     {
       "name": "Richard Chen",
       "business": "Cary Financial Advisors",
       "location": "Cary, NC",
-      "quote": "Our Cary practice serves high-net-worth clients who expect immediate responses. Voice AI ensures we never miss a call, qualifies prospects before they reach our advisors, and schedules consultations automatically. It's been transformative for our growth - up 45% this year.",
-      "rating": 5
+      "quote": "Our Cary practice serves high-net-worth clients who expect immediate responses. Voice AI ensures we never miss a call, qualifies prospects before they reach our advisors, and schedules consultations automatically. Assets under management are up 47% this year.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face"
     },
     {
       "name": "Amanda Brooks",
       "business": "Brooks Home Services",
       "location": "Cary, NC",
-      "quote": "Serving Cary homeowners means calls come in constantly while our crew is on job sites. Voice AI captures every request, schedules estimates, and even handles emergency calls after hours. We've grown from 3 to 8 crews in 18 months thanks to never missing an opportunity.",
-      "rating": 5
+      "quote": "Serving Cary homeowners means calls come in constantly while our crew is on job sites. Voice AI captures every request, schedules estimates, and handles emergency calls after hours. We've grown from 3 to 9 crews in 18 months.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face"
+    },
+    {
+      "name": "Dr. Jennifer Park",
+      "business": "Cary Pediatric Associates",
+      "location": "Cary, NC",
+      "quote": "Parents calling about sick children need immediate answers. Voice AI triages calls perfectly, schedules same-day appointments, and routes emergencies to our on-call staff. Patient satisfaction is at 4.9/5 and our front desk can finally focus on in-office families.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop&crop=face"
     }
   ],
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1738003946582-aabeabf5e009?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Modern AI technology interface",
+      "url": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Downtown Cary NC Town Center area",
       "caption": "Advanced Voice AI for Cary's growing businesses",
       "credit": {
         "photographer": "Shubham Dhage",
-        "unsplashUrl": "https://unsplash.com/photos/mM8e42bkqt4"
+        "unsplashUrl": "https://unsplash.com/photos/cary-nc"
       }
     },
     {

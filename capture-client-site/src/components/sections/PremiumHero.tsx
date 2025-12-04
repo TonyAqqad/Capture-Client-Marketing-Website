@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
+import { MobileHeroVisual } from "@/components/premium/MobileHeroVisual";
 
 export function PremiumHero() {
   const containerRef = useRef<HTMLElement>(null);
@@ -259,7 +260,7 @@ export function PremiumHero() {
               </motion.div>
             </div>
 
-            {/* RIGHT: Visual Elements (5 columns) - Desktop only */}
+            {/* RIGHT: Visual Elements - Desktop (5 columns) */}
             <div className="lg:col-span-5 relative hidden lg:block">
               <div className="relative w-full h-[650px]">
                 {/* Main floating card - AI Voice Call */}
@@ -394,6 +395,11 @@ export function PremiumHero() {
                   className="absolute bottom-1/4 right-1/3 w-20 h-20 border border-cyan-500/10 rounded-full"
                 />
               </div>
+            </div>
+
+            {/* MOBILE: Premium AI Call Visual */}
+            <div className="lg:hidden mt-12">
+              <MobileHeroVisual />
             </div>
           </div>
         </div>

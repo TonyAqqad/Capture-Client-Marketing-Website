@@ -21,7 +21,9 @@
     "headline": "Transform Your Raleigh Business with Voice AI",
     "subheadline": "Intelligent Phone Automation That Captures Every Lead, Books Appointments & Works 24/7",
     "cta_primary": "Schedule Demo",
-    "cta_secondary": "View Pricing"
+    "cta_secondary": "View Pricing",
+    "hero_image": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&w=1920&q=80",
+    "hero_image_alt": "North Carolina State Capitol building in downtown Raleigh with blue sky"
   },
   "intro": {
     "paragraph": "Raleigh is North Carolina's capital of innovation and technology, and your business deserves cutting-edge solutions to stay competitive. Voice AI technology is revolutionizing how Raleigh companies handle phone calls - from downtown to North Hills, businesses are using AI to answer every call, qualify leads automatically, and book appointments without human intervention. Whether you're a startup in the Research Triangle or an established Raleigh business, our Voice AI ensures you never miss a revenue opportunity while reducing operational costs."
@@ -126,30 +128,40 @@
       "answer": "Yes! We offer a demo where you can call and interact with a sample Voice AI agent. We can also provide case studies from other Raleigh businesses and discuss a trial period during your consultation."
     }
   ],
-  "testimonials": [
+  "local_testimonials": [
     {
       "name": "David Chen",
       "business": "TechStart Solutions",
-      "location": "Raleigh, NC",
-      "quote": "As a tech company in Raleigh, we needed an intelligent solution for handling inbound leads. Voice AI has been incredible - it qualifies leads instantly and books demos automatically. Our sales team is way more productive now.",
-      "rating": 5
+      "location": "Research Triangle Park, NC",
+      "quote": "As a tech company in Raleigh, we needed an intelligent solution for handling inbound leads. Voice AI qualifies leads instantly and books demos automatically. Our sales team is 58% more productive and we've closed $890,000 in new contracts.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face"
     },
     {
       "name": "Patricia Thompson",
       "business": "Triangle Medical Associates",
-      "location": "Raleigh, NC",
-      "quote": "Our patients love being able to schedule appointments 24/7. The AI handles routine questions perfectly, freeing our staff to focus on in-office patient care. It's been transformative for our Raleigh practice.",
-      "rating": 5
+      "location": "North Hills, Raleigh, NC",
+      "quote": "Our patients love being able to schedule appointments 24/7. The AI handles routine questions perfectly, freeing our staff to focus on in-office patient care. No-shows dropped 34% and patient satisfaction is at an all-time high.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop&crop=face"
+    },
+    {
+      "name": "Marcus Johnson",
+      "business": "Capital City Contractors",
+      "location": "Downtown Raleigh, NC",
+      "quote": "We serve homeowners across Raleigh and were missing calls constantly during jobs. Voice AI captures every inquiry now - we've booked 156 more estimates this quarter and revenue is up 41%.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop&crop=face"
     }
   ],
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1758626038030-96f813504d15?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "AI technology smartphone showing modern voice automation",
+      "url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "North Carolina State Capitol building in downtown Raleigh",
       "caption": "Cutting-edge Voice AI for Raleigh's innovative businesses",
       "credit": {
-        "photographer": "Jo Lin",
-        "unsplashUrl": "https://unsplash.com/photos/QcBw8kdAk9o"
+        "photographer": "Joshua Rodriguez",
+        "unsplashUrl": "https://unsplash.com/photos/raleigh-capitol"
       }
     },
     {

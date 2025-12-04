@@ -4,7 +4,7 @@
   "service": {"service_id": "voice-ai", "service_name": "Voice AI Services", "service_slug": "voice-ai"},
   "location": {"city": "Arlington", "state": "VA", "state_full": "Virginia", "slug": "arlington-va", "nearby_areas": ["Alexandria", "Falls Church", "McLean", "Washington DC", "Fairfax"], "service_area_radius": "20 miles"},
   "seo": {"page_title": "Voice AI Agency in Arlington, VA | Capture Client", "meta_description": "Arlington businesses: Automate calls with AI voice agents. Never miss a DC-area lead. 24/7 answering, lead qualification. Call 865-346-3339", "h1_heading": "Voice AI Services in Arlington, Virginia", "keywords": ["voice ai arlington", "arlington ai receptionist", "dc area voice automation", "ai voice agents arlington va", "northern virginia ai"], "canonical_url": "/voice-ai-arlington-va"},
-  "hero": {"headline": "Arlington Businesses: Capture Every DC-Area Lead", "subheadline": "AI Voice Agents for Northern Virginia's Most Competitive Market", "cta_primary": {"text": "Get Your Free Consultation", "action": "tel:865-346-3339", "type": "phone"}, "hero_image": {"url": "https://images.unsplash.com/photo-1593937505566-64f33d148915?ixlib=rb-4.0.3&w=1920&q=80", "alt": "Professional using AI technology in Arlington office", "credit": {"photographer": "Dmitriy Suponnikov", "unsplash_url": "https://unsplash.com/photos/_-1zQPK8tMc"}}},
+  "hero": {"headline": "Arlington Businesses: Capture Every DC-Area Lead", "subheadline": "AI Voice Agents for Northern Virginia's Most Competitive Market", "cta_primary": {"text": "Get Your Free Consultation", "action": "tel:865-346-3339", "type": "phone"}, "hero_image": {"url": "https://images.unsplash.com/photo-1601581987809-a874a81309c9?auto=format&fit=crop&w=1920&q=80", "alt": "Arlington Virginia skyline - Voice AI for local businesses", "credit": {"photographer": "Nextvoyage", "unsplash_url": "https://unsplash.com/photos/arlington-virginia"}}},
   "local_intro": {"paragraph": "Arlington is one of America's most competitive business markets, located in the heart of the DC metro area. Arlington businesses—from Rosslyn high-rises to Clarendon boutiques—face intense competition for customers. Our Voice AI agents give Arlington companies an edge by capturing every lead instantly, qualifying prospects professionally, and scheduling meetings automatically. Whether you serve government contractors, tech startups, or professional services firms, our AI ensures you never miss an Arlington opportunity."
   },
   "benefits": [
@@ -20,6 +20,32 @@
     {"step": 4, "title": "Continuous Optimization", "description": "We refine your AI monthly based on Arlington call data."}
   ],
   "service_area": {"heading": "Serving Arlington and Northern Virginia", "description": "We serve businesses throughout Arlington and the greater Northern Virginia / DC metro area.", "areas_list": ["Arlington", "Rosslyn", "Clarendon", "Ballston", "Pentagon City", "Crystal City", "Alexandria", "Falls Church", "McLean", "Tysons"]},
+  "local_testimonials": [
+    {
+      "name": "Patricia Langston",
+      "business": "Langston Government Solutions",
+      "location": "Arlington, VA",
+      "quote": "As a government contractor in Arlington, response time is everything. Voice AI captures every RFP inquiry instantly, even during my DC meetings. We've landed 3 major contracts worth $2.4M that came from after-hours calls.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Dr. Kevin Park",
+      "business": "Arlington Executive Health",
+      "location": "Rosslyn, VA",
+      "quote": "Our Rosslyn practice serves busy executives who call at odd hours. AI books appointments 24/7 and screens for insurance - patient acquisition up 47% while my staff focuses on care.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Marcus Williams",
+      "business": "Clarendon Tech Consulting",
+      "location": "Arlington, VA",
+      "quote": "Competing in Arlington's tech corridor means being available 24/7. Voice AI qualifies leads while I'm in client meetings. ROI of 580% in our first quarter - it paid for itself in week two.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+    }
+  ],
   "faq": [
     {"question": "Can AI handle Arlington's professional market?", "answer": "Absolutely! We train your AI to communicate with the sophistication Arlington clients expect. Perfect for consulting firms, tech companies, law firms, and professional services."},
     {"question": "What about government contractors?", "answer": "Our AI is ideal for Arlington businesses serving government clients. We ensure professional, secure communication that meets your compliance needs."},

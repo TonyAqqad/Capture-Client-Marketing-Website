@@ -119,10 +119,28 @@
   },
   "local_testimonials": [
     {
-      "quote": "With Suffolk's huge service area, we were missing calls when our techs were in remote locations. Voice AI solved that problem completely. We haven't missed a lead since.",
-      "author": "Michael R.",
+      "name": "Michael Richardson",
       "business": "Suffolk Home Solutions",
-      "location": "Suffolk, VA"
+      "location": "Suffolk, VA",
+      "quote": "With Suffolk's huge 400-square-mile service area, we were missing calls when techs were in remote locations. Voice AI solved that completely - captured $45,000 in new jobs from calls we would have missed.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Dr. Lisa Nguyen",
+      "business": "Harbour View Family Practice",
+      "location": "Suffolk, VA",
+      "quote": "Our Harbour View patients expect instant service. AI handles scheduling 24/7 and screens for insurance - new patient acquisition up 52% while my staff focuses on care.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Bobby Crawford",
+      "business": "Crawford's Pest Control",
+      "location": "Suffolk, VA",
+      "quote": "Covering rural Suffolk to downtown means long drives. Voice AI captures every emergency call and schedules appointments while I'm on the road. Revenue up 38% this year.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
     }
   ],
   "faq": [

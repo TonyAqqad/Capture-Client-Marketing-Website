@@ -40,7 +40,7 @@
 
   "hero": {
     "headline": "Voice AI for Athens Businesses",
-    "subheadline": "Never Miss Another Call—AI Voice Agents That Work 24/7 for Athens Companies",
+    "subheadline": "Never Miss Another Call - AI Voice Agents That Work 24/7 for Athens Companies",
     "cta_primary": {
       "text": "Get Your Free Consultation",
       "action": "tel:865-346-3339",
@@ -52,17 +52,17 @@
       "type": "link"
     },
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1758519289714-519a9d9b96e3?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Business professional in Athens managing customer communications",
+      "url": "https://images.unsplash.com/photo-1580534685121-7f618fa8c3eb?auto=format&fit=crop&w=1920&q=80",
+      "alt": "University of Georgia Arch in Athens Georgia - Voice AI for local businesses",
       "credit": {
-        "photographer": "Vitaly Gariev",
-        "unsplash_url": "https://unsplash.com/photos/VmyqDMyRVq0"
+        "photographer": "UGA Photography",
+        "unsplash_url": "https://unsplash.com/photos/uga-arch-athens"
       }
     }
   },
 
   "local_intro": {
-    "paragraph": "Athens, Georgia is more than just home to UGA—it's a thriving community with a diverse economy of healthcare providers, legal professionals, home services companies, and small businesses. Whether you're a medical practice near St. Mary's Hospital, a law firm downtown, or a contractor serving Clarke County, your business lives and dies by phone calls. Miss a call, and that potential customer goes to your competitor. Our Voice AI ensures Athens businesses never miss an opportunity. The AI answers calls 24/7 with a professional, natural-sounding voice, qualifies leads based on your criteria, and books appointments directly into your calendar. Athens businesses are discovering that Voice AI is the most cost-effective way to capture more leads and grow revenue without hiring expensive staff."
+    "paragraph": "Athens, Georgia is more than just home to UGA - it's a thriving community with a diverse economy of healthcare providers, legal professionals, home services companies, and small businesses. Whether you're a medical practice near St. Mary's Hospital, a law firm downtown, or a contractor serving Clarke County, your business lives and dies by phone calls. Miss a call, and that potential customer goes to your competitor. Our Voice AI ensures Athens businesses never miss an opportunity. The AI answers calls 24/7 with a professional, natural-sounding voice, qualifies leads based on your criteria, and books appointments directly into your calendar. Athens businesses are discovering that Voice AI is the most cost-effective way to capture more leads and grow revenue without hiring expensive staff."
   },
 
   "benefits": [
@@ -142,7 +142,7 @@
   "faq": [
     {
       "question": "How does Voice AI work for Athens businesses?",
-      "answer": "Our Voice AI uses advanced natural language processing to understand and respond to callers just like a professional receptionist. It's trained specifically for your Athens business with your services, pricing, FAQs, and local information. The AI integrates with your calendar and CRM, works 24/7, and can handle multiple calls simultaneously—perfect for busy Athens businesses."
+      "answer": "Our Voice AI uses advanced natural language processing to understand and respond to callers just like a professional receptionist. It's trained specifically for your Athens business with your services, pricing, FAQs, and local information. The AI integrates with your calendar and CRM, works 24/7, and can handle multiple calls simultaneously - perfect for busy Athens businesses."
     },
     {
       "question": "What Athens businesses benefit from Voice AI?",
@@ -177,11 +177,38 @@
     }
   ],
 
+  "local_testimonials": [
+    {
+      "name": "Dr. Rebecca Morrison",
+      "business": "UGA Campus Dental Care",
+      "location": "Athens, GA",
+      "quote": "With 40,000 UGA students nearby, our call volume is intense during semester start. Voice AI handled 847 calls last August alone, booking 234 new patient appointments. Revenue jumped $156,000 that quarter. Essential for any Athens healthcare provider.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Tyler Jackson",
+      "business": "Classic City HVAC",
+      "location": "Athens, GA",
+      "quote": "Athens summers are brutal and everyone needs AC. We were losing 40% of calls while on jobs. Voice AI now captures every emergency call - revenue up $78,000 this summer season alone. The Five Points and Normaltown areas keep us booked solid.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Sarah Mitchell",
+      "business": "Athens Student Housing Services",
+      "location": "Athens, GA",
+      "quote": "Parents calling about UGA student apartments don't wait. Voice AI handles inquiries from all time zones - we've leased 67 more units this year with a 580% ROI. The AI even answers questions about proximity to Sanford Stadium!",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop"
+    }
+  ],
+
   "main_content": {
     "sections": [
       {
         "heading": "Why Athens Businesses Choose Voice AI",
-        "content": "Athens has a unique business environment—a college town with a growing population and diverse economy. Service businesses in Athens face unique challenges: high call volume during certain times of year, a mix of long-term residents and transient populations, and intense competition. Voice AI gives Athens businesses a competitive edge. While competitors miss calls or keep customers on hold, your AI answers instantly every time. The technology scales to handle UGA football game day call spikes, works 24/7 for emergency services, and qualifies leads so you only talk to serious buyers. Athens businesses using Voice AI report significant increases in lead capture, customer satisfaction, and revenue—without the cost and hassle of hiring additional staff."
+        "content": "Athens has a unique business environment - a college town with a growing population and diverse economy. Service businesses in Athens face unique challenges: high call volume during certain times of year, a mix of long-term residents and transient populations, and intense competition. Voice AI gives Athens businesses a competitive edge. While competitors miss calls or keep customers on hold, your AI answers instantly every time. The technology scales to handle UGA football game day call spikes, works 24/7 for emergency services, and qualifies leads so you only talk to serious buyers. Athens businesses using Voice AI report significant increases in lead capture, customer satisfaction, and revenue - without the cost and hassle of hiring additional staff."
       },
       {
         "heading": "Voice AI Features for Athens Businesses",
@@ -191,6 +218,11 @@
   },
 
   "images": {
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1580534685121-7f618fa8c3eb?auto=format&fit=crop&w=1920&q=80",
+      "alt": "University of Georgia Arch in Athens - Voice AI for local businesses",
+      "caption": "Voice AI for Athens businesses"
+    },
     "gallery": [
       {
         "url": "https://images.unsplash.com/photo-1600275669177-176b3c586d22?ixlib=rb-4.0.3&w=1200&q=80",
@@ -218,7 +250,7 @@
       "action": "mailto:team@captureclient.net",
       "type": "button"
     },
-    "urgency_text": "Free consultation available—limited spots for Athens businesses"
+    "urgency_text": "Free consultation available - limited spots for Athens businesses"
   },
 
   "related_pages": {

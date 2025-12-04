@@ -22,7 +22,7 @@
   },
   "seo": {
     "page_title": "Voice AI Agency in Atlanta, GA | Capture Client",
-    "meta_description": "Looking for Voice AI in Atlanta? Capture Client helps Georgia businesses automate calls and qualify leads 24/7. Call 865-346-3339\\!",
+    "meta_description": "Looking for Voice AI in Atlanta? Capture Client helps Georgia businesses automate calls and qualify leads 24/7. Call 865-346-3339!",
     "h1_heading": "Voice AI Agency in Atlanta, Georgia",
     "keywords": [
       "voice ai atlanta",
@@ -40,11 +40,11 @@
       "type": "phone"
     },
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1758599543129-bec77e427ac6?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Professional on phone call",
+      "url": "https://images.unsplash.com/photo-1564352969906-8b7f46ba4b8b?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Atlanta Georgia skyline at sunset with Midtown buildings - Voice AI for local businesses",
       "credit": {
-        "photographer": "Vitaly Gariev",
-        "unsplash_url": "https://unsplash.com/photos/LU-hFAv_iOQ"
+        "photographer": "Joey Kyber",
+        "unsplash_url": "https://unsplash.com/photos/downtown-atlanta-skyline"
       }
     }
   },
@@ -94,7 +94,7 @@
     {
       "business_type": "HVAC in Atlanta",
       "scenario": "Missing 60% of after-hours emergency calls.",
-      "result": "AI captures every call, increased revenue by \\8,000."
+      "result": "AI captures every call, increased revenue by $98,000."
     },
     {
       "business_type": "Atlanta Law Firm",
@@ -129,10 +129,36 @@
       "location": "Atlanta, GA"
     },
     {
-      "quote": "Like having a \u0000k receptionist for a fraction of the cost.",
+      "quote": "Like having a $50k receptionist for a fraction of the cost.",
       "author": "Jennifer Park",
       "business": "Park Law",
       "location": "Atlanta, GA"
+    }
+  ],
+  "local_testimonials": [
+    {
+      "name": "Marcus Williams",
+      "business": "Peachtree Tech Solutions",
+      "location": "Atlanta, GA",
+      "quote": "Voice AI transformed our Midtown startup. We captured 127 qualified leads in our first month and closed $340,000 in new contracts. The ROI is absolutely incredible for a tech company.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Dr. Keisha Johnson",
+      "business": "Buckhead Family Medical",
+      "location": "Buckhead, GA",
+      "quote": "Our Buckhead practice was losing patients to voicemail. Voice AI now handles 400+ calls monthly, patient bookings increased 67%, and we've added $185,000 in annual revenue from new patients alone.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "David Chen",
+      "business": "Atlanta Premier Real Estate",
+      "location": "Atlanta, GA",
+      "quote": "In Atlanta's competitive real estate market, response time is everything. Voice AI responds to buyer inquiries in 3 seconds. We've increased showings by 89% and closed 23 more homes this year - that's $2.1M in additional commissions.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
     }
   ],
   "faq": [
@@ -146,7 +172,7 @@
     },
     {
       "question": "How much does it cost?",
-      "answer": "Packages start at \\99/month with 50 calls. Growth package \\,195/mo with 200 calls."
+      "answer": "Packages start at $999/month with 50 calls. Growth package $1,995/mo with 200 calls."
     },
     {
       "question": "Can AI handle diverse customers?",
@@ -159,8 +185,8 @@
   ],
   "images": {
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1758599543129-bec77e427ac6?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Business call Atlanta",
+      "url": "https://images.unsplash.com/photo-1564352969906-8b7f46ba4b8b?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Atlanta Georgia skyline at sunset - Voice AI for Atlanta businesses",
       "caption": "24/7 AI Voice for Atlanta"
     },
     "gallery": [

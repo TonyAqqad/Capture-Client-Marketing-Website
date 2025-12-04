@@ -21,7 +21,9 @@
     "headline": "Asheville's Premier Voice AI Solution",
     "subheadline": "Capture Every Tourist & Local Lead with AI That Never Sleeps, Never Misses a Call",
     "cta_primary": "Start Free Trial",
-    "cta_secondary": "Learn More"
+    "cta_secondary": "Learn More",
+    "hero_image": "https://images.unsplash.com/photo-1570636297281-a4f2c7f13c2c?ixlib=rb-4.0.3&w=1920&q=80",
+    "hero_image_alt": "Biltmore Estate mansion in Asheville NC with Blue Ridge Mountains in background"
   },
   "intro": {
     "paragraph": "Asheville's vibrant tourism economy and growing business community demand exceptional customer service. Our Voice AI technology helps Asheville businesses from downtown to the River Arts District capture every opportunity with intelligent phone automation. Whether you're a brewery taking reservations, a boutique hotel booking rooms, a tour company scheduling adventures, or a local service business serving residents, Voice AI ensures you never miss a call from tourists or locals. Answer every inquiry instantly, qualify leads intelligently, and book appointments automatically while you focus on delivering the exceptional Asheville experience."
@@ -126,30 +128,40 @@
       "answer": "Packages start at $997/month with unlimited calls, custom training, reservation handling, and analytics. For most Asheville tourism businesses, capturing even one additional booking per day more than pays for the entire service."
     }
   ],
-  "testimonials": [
+  "local_testimonials": [
     {
       "name": "Lisa Morrison",
       "business": "Mountain View Inn",
       "location": "Asheville, NC",
-      "quote": "Our Asheville inn gets calls from all over the world at all hours. Voice AI has been a lifesaver - it handles room inquiries, bookings, and common tourist questions perfectly. Our occupancy is up 25% and we're not missing late-night calls anymore.",
-      "rating": 5
+      "quote": "Our Asheville inn gets calls from all over the world at all hours. Voice AI has been a lifesaver - it handles room inquiries, bookings, and tourist questions perfectly. Occupancy is up 27% and we're not missing late-night calls anymore.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face"
     },
     {
       "name": "Tom Brewster",
       "business": "Asheville Adventure Tours",
       "location": "Asheville, NC",
-      "quote": "Running zipline and rafting tours means we're often unreachable during the day. Voice AI books our tours 24/7, handles group inquiries, and even processes deposits. It's like having a dedicated reservation specialist for a fraction of the cost. Revenue is up 40% this season!",
-      "rating": 5
+      "quote": "Running zipline and rafting tours means we're often unreachable during the day. Voice AI books our tours 24/7, handles group inquiries, and processes deposits. Revenue is up 43% this season - best investment we've made!",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+    },
+    {
+      "name": "Sarah Chen",
+      "business": "Blue Ridge Wellness Spa",
+      "location": "River Arts District, Asheville, NC",
+      "quote": "Our spa serves both tourists and Asheville locals. Voice AI handles appointment bookings seamlessly, describes our services beautifully, and even manages our waitlist during busy weekends. Client bookings are up 38%.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face"
     }
   ],
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1746608943132-065d1d4b3c5d?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Smartphone showing AI assistant interface",
+      "url": "https://images.unsplash.com/photo-1570636297281-a4f2c7f13c2c?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Biltmore Estate mansion in Asheville NC with Blue Ridge Mountains",
       "caption": "AI-powered communication for Asheville businesses",
       "credit": {
         "photographer": "Zulfugar Karimov",
-        "unsplashUrl": "https://unsplash.com/photos/L_ABvr0KxgU"
+        "unsplashUrl": "https://unsplash.com/photos/biltmore-estate"
       }
     },
     {

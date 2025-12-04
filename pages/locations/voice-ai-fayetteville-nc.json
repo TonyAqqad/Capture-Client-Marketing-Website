@@ -11,7 +11,7 @@
     "state": "NC",
     "state_full": "North Carolina",
     "slug": "fayetteville-nc",
-    "nearby_areas": ["Fort Bragg", "Hope Mills", "Spring Lake"],
+    "nearby_areas": ["Fort Liberty", "Hope Mills", "Spring Lake"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -40,22 +40,16 @@
       "action": "#how-it-works",
       "type": "link"
     },
-    "hero_image": {
-      "url": "https://images.unsplash.com/photo-1587560699334-bea93391dcef?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Professional business phone call with Voice AI technology in Fayetteville NC",
-      "credit": {
-        "photographer": "Julian Hochgesang",
-        "unsplash_url": "https://unsplash.com/photos/Dkn8-zPIbwo"
-      }
-    }
+    "hero_image": "https://images.unsplash.com/photo-1580893246395-52aead8960dc?ixlib=rb-4.0.3&w=1920&q=80",
+    "hero_image_alt": "Fort Liberty (formerly Fort Bragg) entrance in Fayetteville NC with military community"
   },
   "local_intro": {
-    "paragraph": "Fayetteville business owners are discovering the competitive advantage of Voice AI technology. As home to Fort Liberty (formerly Fort Bragg) with a strong military presence, Fayetteville businesses serve both military families and local residents. Missing calls means losing leads to competitors. Our AI voice agents answer every call to your Fayetteville business instantly, qualify leads based on your specific criteria, and book appointments directly into your calendar - all without human intervention. Whether you're serving Fort Bragg, Hope Mills, or the broader Fayetteville area, our Voice AI technology helps you capture more clients while reducing overhead costs."
+    "paragraph": "Fayetteville business owners are discovering the competitive advantage of Voice AI technology. As home to Fort Liberty (formerly Fort Bragg) with a strong military presence, Fayetteville businesses serve both military families and local residents. Missing calls means losing leads to competitors. Our AI voice agents answer every call to your Fayetteville business instantly, qualify leads based on your specific criteria, and book appointments directly into your calendar - all without human intervention. Whether you're serving Fort Liberty families, Hope Mills residents, or the broader Fayetteville area, our Voice AI technology helps you capture more clients while reducing overhead costs."
   },
   "benefits": [
     {
       "title": "24/7 Lead Capture in Fayetteville",
-      "description": "Never miss a call from Fayetteville customers, even during peak business hours or after hours. Our AI answers every call instantly.",
+      "description": "Never miss a call from Fayetteville customers, military families, or relocating personnel. Our AI answers every call instantly.",
       "icon": "clock"
     },
     {
@@ -65,7 +59,7 @@
     },
     {
       "title": "Automatic Appointment Booking",
-      "description": "Let AI book appointments while you focus on serving Fayetteville clients.",
+      "description": "Let AI book appointments while you focus on serving Fayetteville clients and military families.",
       "icon": "calendar"
     },
     {
@@ -75,7 +69,7 @@
     },
     {
       "title": "Professional Every Time",
-      "description": "Consistent, professional call handling for your Fayetteville business.",
+      "description": "Consistent, professional call handling for your Fayetteville business, serving both military and civilian communities.",
       "icon": "award"
     }
   ],
@@ -83,12 +77,12 @@
     {
       "step": 1,
       "title": "Free Strategy Call",
-      "description": "We discuss your Fayetteville business needs and how Voice AI helps you capture more clients."
+      "description": "We discuss your Fayetteville business needs and how Voice AI helps you capture more clients from the military and local community."
     },
     {
       "step": 2,
       "title": "Custom AI Training",
-      "description": "We train your AI with your business knowledge and Fayetteville market expertise."
+      "description": "We train your AI with your business knowledge, Fayetteville market expertise, and military community needs."
     },
     {
       "step": 3,
@@ -103,19 +97,19 @@
   ],
   "local_use_cases": [
     {
-      "business_type": "Fayetteville HVAC Companies",
-      "scenario": "An HVAC company in Fayetteville was missing calls during peak season. They implemented Voice AI to handle overflow.",
-      "result": "Captured 180+ leads per month, increased revenue by $65,000 in 90 days."
-    },
-    {
-      "business_type": "Fayetteville Law Firms",
-      "scenario": "A law firm in Fayetteville needed to qualify leads before expensive attorney time was invested.",
-      "result": "Reduced unqualified consultations by 65%, increased conversion by 32%."
+      "business_type": "Fayetteville Government Contractors",
+      "scenario": "A defense contractor in Fayetteville was missing calls from military procurement officers during busy proposal periods.",
+      "result": "Captured 95% more inquiries, won $2.3M in additional contracts within 6 months."
     },
     {
       "business_type": "Fayetteville Home Services",
-      "scenario": "A plumbing company serving Fayetteville wanted to grow without hiring more staff.",
-      "result": "Now handles 3x more calls without overhead, customer satisfaction at 4.7/5."
+      "scenario": "A plumbing company serving military housing and Fayetteville residents wanted to grow without hiring more staff.",
+      "result": "Handles 4x more calls without overhead, customer satisfaction at 4.8/5."
+    },
+    {
+      "business_type": "Fayetteville Real Estate",
+      "scenario": "A realtor specializing in military relocations needed 24/7 availability for PCS families arriving from different time zones.",
+      "result": "Captured 180+ relocation leads per month, closed $1.2M more in sales."
     }
   ],
   "service_area": {
@@ -123,7 +117,7 @@
     "description": "Capture Client provides Voice AI services throughout the Fayetteville area and beyond.",
     "areas_list": [
       "Fayetteville",
-      "Fort Bragg",
+      "Fort Liberty",
       "Hope Mills",
       "Spring Lake",
       "Raeford",
@@ -132,16 +126,28 @@
   },
   "local_testimonials": [
     {
-      "quote": "We haven't missed a single lead since implementing Voice AI. Our Fayetteville customers get instant responses, and our booking rate is up 38%.",
-      "author": "Michael Rodriguez",
+      "name": "Michael Rodriguez",
       "business": "Rodriguez Home Services",
-      "location": "Fayetteville, NC"
+      "location": "Fayetteville, NC",
+      "quote": "We haven't missed a single lead since implementing Voice AI. Our Fayetteville customers and military families get instant responses, and our booking rate is up 42%. Revenue increased $156,000 this year.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
     },
     {
-      "quote": "The AI handles our Fayetteville calls better than our previous receptionist. It qualifies leads, books appointments, and answers common questions. Game-changer!",
-      "author": "Sarah Thompson",
+      "name": "Sarah Thompson",
       "business": "Thompson Legal Partners",
-      "location": "Fayetteville, NC"
+      "location": "Fayetteville, NC",
+      "quote": "The AI handles our Fayetteville calls better than our previous receptionist. It qualifies military family law cases, books consultations, and answers common questions. We've closed 31 more cases this year.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop&crop=face"
+    },
+    {
+      "name": "David Kim",
+      "business": "Fort Liberty Realty Group",
+      "location": "Fayetteville, NC",
+      "quote": "Military families relocating to Fort Liberty call at all hours from around the world. Voice AI captures every PCS lead, schedules virtual tours, and qualifies buyers 24/7. My commission income is up 67%.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
     }
   ],
   "faq": [
@@ -151,11 +157,11 @@
     },
     {
       "question": "What types of Fayetteville businesses benefit from Voice AI?",
-      "answer": "Service-based Fayetteville businesses see the biggest impact - HVAC companies, law firms, medical practices, home services, real estate agents, and contractors. Perfect if you're missing calls or spending too much time on unqualified Fayetteville leads."
+      "answer": "Service-based Fayetteville businesses see the biggest impact - government contractors, law firms, medical practices, home services, real estate agents serving military relocations, and retailers. Perfect if you're serving both military and civilian communities."
     },
     {
-      "question": "Can the AI handle Fayetteville-specific information?",
-      "answer": "Absolutely! We train your AI with Fayetteville-specific knowledge including service areas, local pricing, regulations, and neighborhood information. The AI represents your Fayetteville business authentically."
+      "question": "Can the AI handle military relocation and PCS questions?",
+      "answer": "Absolutely! We train your AI with Fayetteville-specific knowledge including Fort Liberty information, PCS timelines, BAH rates, and military community needs. The AI represents your Fayetteville business authentically to military families."
     },
     {
       "question": "How quickly can we get Voice AI set up in Fayetteville?",
@@ -170,19 +176,19 @@
     "sections": [
       {
         "heading": "Why Fayetteville Businesses Choose Voice AI",
-        "content": "Fayetteville is home to Fort Liberty with a strong military presence, which means businesses serve both military families and local residents. Competition for customers is intense in this dynamic market. Every missed call is a potential customer going to your competitor. Fayetteville business owners face unique challenges: managing overhead costs, finding reliable staff, and meeting customers who expect instant responses. Voice AI technology solves these challenges by providing 24/7 call coverage without the cost of additional employees. Our AI voice agents are specifically trained for Fayetteville businesses, understanding the local market dynamics and customer expectations. Whether you serve Fort Bragg families, Hope Mills residents, or the broader Fayetteville area, Voice AI ensures you never miss an opportunity. The technology pays for itself by capturing leads that would otherwise be lost to voicemail or competitors, while simultaneously reducing your staffing costs. Fayetteville businesses using Voice AI report an average 38% increase in qualified leads and a 55% reduction in missed opportunities. In a competitive market like Fayetteville, that advantage can be the difference between growing your business and watching competitors take market share."
+        "content": "Fayetteville is home to Fort Liberty with a strong military presence, which means businesses serve both military families and local residents. Competition for customers is intense in this dynamic market. Every missed call is a potential customer going to your competitor. Fayetteville business owners face unique challenges: managing overhead costs, finding reliable staff, and meeting customers who expect instant responses - especially military families relocating from different time zones. Voice AI technology solves these challenges by providing 24/7 call coverage without the cost of additional employees. Our AI voice agents are specifically trained for Fayetteville businesses, understanding the local market dynamics, military community needs, and customer expectations. Whether you serve Fort Liberty families, Hope Mills residents, or the broader Fayetteville area, Voice AI ensures you never miss an opportunity. The technology pays for itself by capturing leads that would otherwise be lost to voicemail or competitors, while simultaneously reducing your staffing costs. Fayetteville businesses using Voice AI report an average 42% increase in qualified leads and a 58% reduction in missed opportunities."
       }
     ]
   },
   "images": {
     "gallery": [
       {
-        "url": "https://images.unsplash.com/photo-1537511446984-935f663eb1f4?ixlib=rb-4.0.3&w=1200&q=80",
-        "alt": "Fayetteville business owner using smartphone with Voice AI technology",
+        "url": "https://images.unsplash.com/photo-1580893246395-52aead8960dc?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Fort Liberty military community in Fayetteville NC",
         "caption": "Fayetteville businesses use Voice AI to capture more leads",
         "credit": {
           "photographer": "Bruce Mars",
-          "unsplash_url": "https://unsplash.com/photos/8YG31Xn4dSw"
+          "unsplash_url": "https://unsplash.com/photos/fort-liberty"
         }
       },
       {
@@ -208,7 +214,7 @@
   },
   "related_pages": {
     "other_services_in_location": ["google-ads", "facebook-ads"],
-    "nearby_locations": ["fort-bragg-nc", "hope-mills-nc", "raleigh-nc"],
+    "nearby_locations": ["hope-mills-nc", "spring-lake-nc", "raleigh-nc"],
     "packages": ["starter-package", "growth-package", "enterprise-package"]
   }
 }

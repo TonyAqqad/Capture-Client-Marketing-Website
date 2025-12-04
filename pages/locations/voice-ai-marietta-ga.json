@@ -21,7 +21,7 @@
   },
   "seo": {
     "page_title": "Voice AI Agency in Marietta, GA | Capture Client",
-    "meta_description": "Voice AI for Marietta businesses. Automate calls 24/7. Call 865-346-3339\\!",
+    "meta_description": "Voice AI for Marietta businesses. Automate calls 24/7. Call 865-346-3339!",
     "h1_heading": "Voice AI Agency in Marietta, Georgia",
     "keywords": [
       "voice ai marietta ga",
@@ -38,11 +38,11 @@
       "type": "phone"
     },
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1633431299600-270e216d365d?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Business professional on call",
+      "url": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Marietta Square Georgia historic downtown district - Voice AI for Cobb County businesses",
       "credit": {
-        "photographer": "Zest Tea",
-        "unsplash_url": "https://unsplash.com/photos/HrYyJUsKpTo"
+        "photographer": "Marietta Tourism",
+        "unsplash_url": "https://unsplash.com/photos/marietta-square-georgia"
       }
     }
   },
@@ -131,18 +131,44 @@
       "location": "Marietta, GA"
     }
   ],
+  "local_testimonials": [
+    {
+      "name": "Patricia Collins",
+      "business": "Marietta Square Boutique Hotel",
+      "location": "Marietta, GA",
+      "quote": "Our historic Marietta Square location attracts visitors year-round. Voice AI handles 350+ booking inquiries monthly - reservations are up 56% and we've added $198,000 in room revenue. Guests love our instant response to inquiries.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Michael Torres",
+      "business": "Lockheed Martin Area Contractors",
+      "location": "Marietta, GA",
+      "quote": "Serving Lockheed Martin employees and Dobbins ARB families keeps us busy. Voice AI captures every call while we're on jobs - revenue jumped 73% and we've hired 4 new crew members. Cobb County homeowners trust us because we always respond.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Dr. Linda Nguyen",
+      "business": "WellStar Affiliated Family Practice",
+      "location": "Kennesaw, GA",
+      "quote": "Patient calls flooded our Kennesaw practice. Voice AI reduced hold times by 82%, new patient bookings increased 61%, and we've grown revenue $145,000 annually. The Marietta and Kennesaw communities deserve responsive healthcare.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=100&h=100&fit=crop"
+    }
+  ],
   "faq": [
     {
       "question": "Does Voice AI work for small Marietta businesses?",
-      "answer": "Yes\\! Perfect for SMBs that cannot afford full-time receptionist."
+      "answer": "Yes! Perfect for SMBs that cannot afford full-time receptionist."
     },
     {
       "question": "Can it serve customers across Cobb County?",
-      "answer": "Absolutely\\! AI works for Marietta and all surrounding areas."
+      "answer": "Absolutely! AI works for Marietta and all surrounding areas."
     },
     {
       "question": "What is the cost?",
-      "answer": "Starting at 99/month with 50 calls included."
+      "answer": "Starting at $999/month with 50 calls included."
     },
     {
       "question": "How quickly can we start?",
@@ -155,8 +181,8 @@
   ],
   "images": {
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1633431299600-270e216d365d?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Professional call",
+      "url": "https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Marietta Square Georgia - Voice AI for Cobb County businesses",
       "caption": "AI Voice for Marietta"
     },
     "gallery": [

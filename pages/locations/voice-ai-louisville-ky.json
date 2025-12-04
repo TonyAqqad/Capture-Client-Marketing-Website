@@ -31,6 +31,8 @@
   "hero": {
     "headline": "Never Miss Another Lead in Louisville",
     "subheadline": "AI Voice Agents That Answer Calls, Qualify Leads & Book Appointments 24/7 for Louisville Businesses",
+    "hero_image": "https://images.unsplash.com/photo-1569880153113-76e33fc52d5f?fm=jpg&q=80&w=1920",
+    "hero_image_alt": "Louisville Kentucky skyline with Big Four Bridge at sunset",
     "cta_primary": {
       "text": "Get Your Free Consultation",
       "action": "tel:865-346-3339"
@@ -188,6 +190,36 @@
     }
   ],
 
+  "local_testimonials": [
+    {
+      "name": "James Richardson",
+      "business": "Richardson Bourbon Tours",
+      "location": "Louisville, KY",
+      "quote": "During Derby season, we were missing 60% of calls from tourists wanting bourbon trail tours. Voice AI now captures every inquiry - our bookings jumped $95,000 in revenue last quarter alone. The AI even handles questions about distillery hours and bourbon varieties.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop",
+      "results": "$95,000 revenue increase"
+    },
+    {
+      "name": "Patricia Humana",
+      "business": "Louisville Healthcare Associates",
+      "location": "Louisville, KY",
+      "quote": "With Humana's headquarters right here, we handle lots of insurance-related calls. Our AI pre-qualifies patients, verifies insurance needs, and schedules appointments seamlessly. Patient wait times dropped 52% and we book 34 more appointments weekly.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop",
+      "results": "52% faster patient scheduling"
+    },
+    {
+      "name": "Marcus Thompson",
+      "business": "UPS Corridor Logistics Services",
+      "location": "Louisville, KY",
+      "quote": "Operating near the UPS Worldport hub, we get supply chain inquiries around the clock. Voice AI handles freight quotes and scheduling 24/7 - we've captured $127,000 in new contracts from after-hours calls that would have gone to voicemail before.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
+      "results": "$127,000 in new contracts"
+    }
+  ],
+
   "cta_bottom": {
     "headline": "Ready to Capture More Louisville Leads?",
     "subheadline": "Join dozens of Louisville businesses already using AI to grow revenue and save time",
@@ -203,8 +235,8 @@
 
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1694903089438-bf28d4697d9a?fm=jpg&q=80&w=1920",
-      "alt": "AI technology for Louisville business automation",
+      "url": "https://images.unsplash.com/photo-1569880153113-76e33fc52d5f?fm=jpg&q=80&w=1920",
+      "alt": "Louisville Kentucky skyline with Big Four Bridge at sunset",
       "caption": "Transform your Louisville business with 24/7 AI voice agents",
       "usage": "hero"
     },

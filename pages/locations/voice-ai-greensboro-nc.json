@@ -21,7 +21,9 @@
     "headline": "Greensboro's Leading Voice AI Solution",
     "subheadline": "Capture Every Lead with AI That Answers Calls, Qualifies Prospects & Books Appointments Automatically",
     "cta_primary": "Get Started Today",
-    "cta_secondary": "Learn More"
+    "cta_secondary": "Learn More",
+    "hero_image": "https://images.unsplash.com/photo-1567359781514-3b964c5a0e4b?ixlib=rb-4.0.3&w=1920&q=80",
+    "hero_image_alt": "Downtown Greensboro NC skyline with modern buildings and historic architecture"
   },
   "intro": {
     "paragraph": "Greensboro businesses know that every call counts. In North Carolina's third-largest city, competition is fierce and customer service expectations are high. Our Voice AI technology helps Greensboro companies from downtown to Friendly Avenue capture every opportunity with intelligent phone automation. Whether you're in manufacturing, healthcare, professional services, or retail, our AI voice agents ensure no lead slips through the cracks - answering professionally, qualifying intelligently, and scheduling automatically around the clock."
@@ -126,30 +128,40 @@
       "answer": "Absolutely! We work with you to script responses that match your brand voice and Greensboro market positioning. You can review and adjust the AI's responses anytime to ensure perfect alignment with your business."
     }
   ],
-  "testimonials": [
+  "local_testimonials": [
     {
       "name": "Robert Mitchell",
       "business": "Mitchell & Associates Law Firm",
-      "location": "Greensboro, NC",
-      "quote": "Voice AI has transformed our Greensboro practice. We now capture leads 24/7 and the AI does an excellent job screening potential clients. Our intake process is 10x more efficient and we're closing more cases.",
-      "rating": 5
+      "location": "Downtown Greensboro, NC",
+      "quote": "Voice AI has transformed our Greensboro practice. We now capture leads 24/7 and the AI does an excellent job screening potential clients. Our intake process is 10x more efficient and we've closed 23 more cases this quarter.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face"
     },
     {
       "name": "Sandra Martinez",
       "business": "Greensboro Heating & Air",
       "location": "Greensboro, NC",
-      "quote": "During peak season, we were missing calls constantly. Voice AI changed everything - it handles all our calls, schedules service appointments, and even handles emergency requests. Our customers love the immediate response and we've grown revenue by 35%.",
-      "rating": 5
+      "quote": "During peak season, we were missing calls constantly. Voice AI changed everything - it handles all our calls, schedules service appointments, and even handles emergency requests. Revenue is up 35% and we've added 2 new trucks.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1598550874175-4d0ef436c909?w=100&h=100&fit=crop&crop=face"
+    },
+    {
+      "name": "William Hayes",
+      "business": "Triad Manufacturing Supply",
+      "location": "Greensboro, NC",
+      "quote": "Our manufacturing supply business gets calls from factories across the Triad. Voice AI handles product inquiries, checks inventory, and routes urgent orders to our team. We've increased order volume by 28% without adding staff.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1504257432389-52343af06ae3?w=100&h=100&fit=crop&crop=face"
     }
   ],
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1738003667850-a2fb736e31b3?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Modern AI technology interface for business automation",
+      "url": "https://images.unsplash.com/photo-1567359781514-3b964c5a0e4b?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Downtown Greensboro NC skyline with modern buildings",
       "caption": "Advanced Voice AI technology for Greensboro businesses",
       "credit": {
         "photographer": "Shubham Dhage",
-        "unsplashUrl": "https://unsplash.com/photos/fwbUN8IYvQY"
+        "unsplashUrl": "https://unsplash.com/photos/greensboro-downtown"
       }
     },
     {

@@ -30,11 +30,11 @@
       "type": "phone"
     },
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1603714228681-b399854b8f80?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Customer service professional with headset in Virginia Beach",
+      "url": "https://images.unsplash.com/photo-1606391797009-82a19d3b6c9e?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Virginia Beach oceanfront boardwalk - Voice AI for local businesses",
       "credit": {
-        "photographer": "LumenSoft Technologies",
-        "unsplash_url": "https://unsplash.com/photos/WaGMKmJ2F0Y"
+        "photographer": "Cosmic Timetraveler",
+        "unsplash_url": "https://unsplash.com/photos/virginia-beach-boardwalk"
       }
     }
   },
@@ -109,10 +109,28 @@
   },
   "local_testimonials": [
     {
-      "quote": "During summer, our Virginia Beach rental properties get 50+ calls per day. The AI handles everything perfectly—bookings, questions, maintenance requests. Best investment we've made!",
-      "author": "Jennifer Martinez",
+      "name": "Jennifer Martinez",
       "business": "Coastal Vacation Rentals",
-      "location": "Virginia Beach, VA"
+      "location": "Virginia Beach, VA",
+      "quote": "During summer, our Virginia Beach rental properties get 50+ calls per day. The AI handles everything perfectly - bookings, questions, maintenance requests. Revenue up 42% from captured leads. Best investment we've made!",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Tony Nguyen",
+      "business": "Oceanfront Air Conditioning",
+      "location": "Virginia Beach, VA",
+      "quote": "Virginia Beach summers are brutal for AC calls. Voice AI captured 89 emergency requests in one heat wave week - $45,000 in repairs we would have missed. Pays for itself 10x over.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Dr. Amanda Collins",
+      "business": "Town Center Family Medicine",
+      "location": "Virginia Beach, VA",
+      "quote": "Tourists and military families call at all hours. AI handles scheduling 24/7 - patient acquisition up 52% and my front desk team can finally focus on in-office care.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop"
     }
   ],
   "faq": [

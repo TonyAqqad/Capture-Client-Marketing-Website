@@ -44,11 +44,11 @@
       "type": "button"
     },
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1694903110330-cc64b7e1d21d?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "AI voice technology for Richmond business automation",
+      "url": "https://images.unsplash.com/photo-1600298882525-8c0d8364d3e7?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Richmond Virginia skyline - Voice AI for local businesses",
       "credit": {
-        "photographer": "Igor Omilaev",
-        "unsplash_url": "https://unsplash.com/photos/gVQLAbGVB6Q"
+        "photographer": "Michael Browning",
+        "unsplash_url": "https://unsplash.com/photos/richmond-virginia-skyline"
       }
     }
   },

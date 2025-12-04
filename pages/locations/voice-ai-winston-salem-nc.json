@@ -21,7 +21,9 @@
     "headline": "Winston-Salem's Smart Choice for Voice AI",
     "subheadline": "AI-Powered Phone Automation That Works 24/7 to Capture Leads & Grow Your Business",
     "cta_primary": "Get Free Quote",
-    "cta_secondary": "How It Works"
+    "cta_secondary": "How It Works",
+    "hero_image": "https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&w=1920&q=80",
+    "hero_image_alt": "Old Salem historic district in Winston-Salem NC with traditional architecture and gardens"
   },
   "intro": {
     "paragraph": "Winston-Salem businesses are discovering the competitive advantage of Voice AI technology. From downtown to the Innovation Quarter, local companies are automating phone calls with AI that sounds human, thinks intelligently, and works tirelessly. Whether you run a healthcare practice, legal firm, home services business, or retail operation in Winston-Salem, our Voice AI ensures you capture every lead opportunity. No more missed calls, no more voicemail frustration, no more lost revenue - just professional, immediate response to every Winston-Salem customer who reaches out."
@@ -126,30 +128,40 @@
       "answer": "Most Winston-Salem businesses see immediate results. From day one, you'll capture calls you would have missed. Within 30 days, clients typically report 20-40% more leads captured, reduced staffing costs, and improved customer satisfaction scores."
     }
   ],
-  "testimonials": [
+  "local_testimonials": [
     {
       "name": "Karen Phillips",
       "business": "Phillips Dental Care",
       "location": "Winston-Salem, NC",
-      "quote": "Our Winston-Salem practice was struggling with appointment scheduling. Voice AI has been incredible - patients can book appointments anytime, our front desk is less overwhelmed, and we've reduced no-shows by 30%. Highly recommend!",
-      "rating": 5
+      "quote": "Our Winston-Salem practice was struggling with appointment scheduling. Voice AI has been incredible - patients can book appointments anytime, our front desk is less overwhelmed, and we've reduced no-shows by 32%. Revenue is up $89,000 this year.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=100&h=100&fit=crop&crop=face"
     },
     {
       "name": "Marcus Johnson",
       "business": "Johnson HVAC Services",
       "location": "Winston-Salem, NC",
-      "quote": "We serve residential and commercial clients across Winston-Salem. Voice AI ensures we never miss a service call, even when our trucks are out on jobs. It's like having a full-time dispatcher for a fraction of the cost. Revenue is up 28% this year.",
-      "rating": 5
+      "quote": "We serve residential and commercial clients across Winston-Salem. Voice AI ensures we never miss a service call, even when our trucks are out on jobs. It's like having a full-time dispatcher for a fraction of the cost. Revenue is up 31%.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face"
+    },
+    {
+      "name": "Dr. Amanda Foster",
+      "business": "Wake Forest Baptist Health Partner",
+      "location": "Winston-Salem, NC",
+      "quote": "With our connection to Wake Forest Baptist, patient communication is critical. Voice AI handles routine scheduling and questions flawlessly, allowing our clinical staff to focus on patient care. Patient satisfaction scores are up 18%.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop&crop=face"
     }
   ],
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1679403766682-3b31efa571a8?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Computer screen showing AI technology interface",
+      "url": "https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "Old Salem historic district in Winston-Salem NC",
       "caption": "Intelligent Voice AI technology for Winston-Salem",
       "credit": {
         "photographer": "Andrew Neel",
-        "unsplashUrl": "https://unsplash.com/photos/CVfAqFRYjb0"
+        "unsplashUrl": "https://unsplash.com/photos/old-salem"
       }
     },
     {

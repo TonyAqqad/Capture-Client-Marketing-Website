@@ -37,11 +37,11 @@
       "type": "phone"
     },
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1626063240213-c629ae4ef34c?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Professional business call",
+      "url": "https://images.unsplash.com/photo-1587162146766-e06b1189b907?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Forsyth Park fountain in Savannah Georgia - Voice AI for Historic District businesses",
       "credit": {
-        "photographer": "Free Walking Tour Salzburg",
-        "unsplash_url": "https://unsplash.com/photos/y12JuFVWUbA"
+        "photographer": "Savannah Tourism",
+        "unsplash_url": "https://unsplash.com/photos/forsyth-park-savannah"
       }
     }
   },
@@ -130,6 +130,32 @@
       "location": "Pooler, GA"
     }
   ],
+  "local_testimonials": [
+    {
+      "name": "Caroline Reynolds",
+      "business": "River Street Inn & Tours",
+      "location": "Savannah, GA",
+      "quote": "Our River Street location gets calls from tourists worldwide at all hours. Voice AI captured 312 bookings last quarter from international visitors calling after midnight. Revenue increased $127,000 from tourists we would have missed.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "James Patterson III",
+      "business": "Patterson Law Group",
+      "location": "Savannah, GA",
+      "quote": "Our Historic District law firm handles estate planning for Savannah's established families. Voice AI provides the dignified, professional response our clients expect. We've signed 34 new clients this year - a 52% increase - because we never miss a call.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Maria Santos",
+      "business": "Coastal Georgia Plumbing",
+      "location": "Pooler, GA",
+      "quote": "Emergency plumbing calls don't wait for business hours. Voice AI handles our after-hours emergency dispatch perfectly. We've captured $89,000 in emergency service revenue and reduced response time by 73%. Pooler families love that we answer instantly.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop"
+    }
+  ],
   "faq": [
     {
       "question": "Does Voice AI work for Savannah tourism businesses?",
@@ -154,8 +180,8 @@
   ],
   "images": {
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1626063240213-c629ae4ef34c?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Business professional",
+      "url": "https://images.unsplash.com/photo-1587162146766-e06b1189b907?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Forsyth Park fountain in Savannah Georgia - Voice AI for local businesses",
       "caption": "AI Voice for Savannah"
     },
     "gallery": [

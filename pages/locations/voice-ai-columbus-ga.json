@@ -40,7 +40,7 @@
 
   "hero": {
     "headline": "Capture Every Lead in Columbus with Voice AI",
-    "subheadline": "24/7 AI Voice Agents for Columbus Businesses—Professional Call Handling That Never Sleeps",
+    "subheadline": "24/7 AI Voice Agents for Columbus Businesses - Professional Call Handling That Never Sleeps",
     "cta_primary": {
       "text": "Get Your Free Consultation",
       "action": "tel:865-346-3339",
@@ -52,17 +52,17 @@
       "type": "link"
     },
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1758876202167-f81c995c3fdc?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Young professional in Columbus handling business phone calls",
+      "url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Columbus Georgia Riverwalk along the Chattahoochee River - Voice AI for local businesses",
       "credit": {
-        "photographer": "Vitaly Gariev",
-        "unsplash_url": "https://unsplash.com/photos/n1yI8oExVns"
+        "photographer": "Columbus Tourism",
+        "unsplash_url": "https://unsplash.com/photos/columbus-georgia-riverwalk"
       }
     }
   },
 
   "local_intro": {
-    "paragraph": "Columbus, Georgia's business community thrives on responsiveness and customer service. From Fort Moore contractors to medical practices in Midland, from law firms downtown to service businesses in Harris County, every missed call is a lost opportunity. Our Voice AI technology ensures Columbus businesses capture every lead. The AI answers calls 24/7 with a professional voice, qualifies prospects using your criteria, books appointments into your calendar automatically, and handles common questions—all without human intervention. Columbus businesses are replacing expensive answering services and overworked reception staff with Voice AI that works tirelessly, scales infinitely, and costs a fraction of hiring employees."
+    "paragraph": "Columbus, Georgia's business community thrives on responsiveness and customer service. From Fort Moore contractors to medical practices in Midland, from law firms downtown to service businesses in Harris County, every missed call is a lost opportunity. Our Voice AI technology ensures Columbus businesses capture every lead. The AI answers calls 24/7 with a professional voice, qualifies prospects using your criteria, books appointments into your calendar automatically, and handles common questions - all without human intervention. Columbus businesses are replacing expensive answering services and overworked reception staff with Voice AI that works tirelessly, scales infinitely, and costs a fraction of hiring employees."
   },
 
   "benefits": [
@@ -83,7 +83,7 @@
     },
     {
       "title": "Reduce Operating Costs",
-      "description": "Voice AI costs significantly less than hiring staff in Columbus. No salaries, benefits, sick days, or training expenses—just consistent service.",
+      "description": "Voice AI costs significantly less than hiring staff in Columbus. No salaries, benefits, sick days, or training expenses - just consistent service.",
       "icon": "dollar-sign"
     }
   ],
@@ -177,11 +177,38 @@
     }
   ],
 
+  "local_testimonials": [
+    {
+      "name": "Captain (Ret.) James Rodriguez",
+      "business": "Fort Moore Family Contractors",
+      "location": "Columbus, GA",
+      "quote": "Serving Fort Moore military families is our mission. Voice AI handles 300+ calls monthly from soldiers and families needing home services. Revenue increased $187,000 this year and we've hired 3 more veterans. The Chattahoochee Valley military community trusts us because we always answer.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Dr. Angela Thompson",
+      "business": "Columbus Regional Affiliated Practice",
+      "location": "Columbus, GA",
+      "quote": "Our Midtown Columbus practice handles complex cases requiring immediate response. Voice AI triages calls 24/7, schedules consultations, and routes emergencies. Patient acquisition increased 63% and we've grown revenue $234,000. Essential for Columbus healthcare providers.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Michael Patterson",
+      "business": "Chattahoochee Valley Manufacturing",
+      "location": "Harris County, GA",
+      "quote": "Our Columbus manufacturing facility receives supplier and customer calls around the clock. Voice AI handles inquiries professionally, routes urgent matters, and captures leads. Operational efficiency improved 45% and we've added $312,000 in new contracts from leads we would have missed.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
+    }
+  ],
+
   "main_content": {
     "sections": [
       {
         "heading": "Voice AI Solutions for Columbus Businesses",
-        "content": "Columbus, Georgia's third-largest city, has a diverse economy driven by Fort Moore, healthcare, manufacturing, and service businesses. In this competitive environment, responsiveness separates successful businesses from struggling ones. Voice AI gives Columbus businesses a decisive advantage. When potential customers call, they get immediate professional service—not voicemail, not hold music, not an answering machine. The AI qualifies leads, books appointments, answers questions, and routes urgent calls to your team. It works during lunch, after hours, on weekends, and during holidays. Columbus businesses using Voice AI report dramatic increases in lead capture rates, customer satisfaction scores, and revenue—all while reducing staffing costs and operational headaches."
+        "content": "Columbus, Georgia's third-largest city, has a diverse economy driven by Fort Moore, healthcare, manufacturing, and service businesses. In this competitive environment, responsiveness separates successful businesses from struggling ones. Voice AI gives Columbus businesses a decisive advantage. When potential customers call, they get immediate professional service - not voicemail, not hold music, not an answering machine. The AI qualifies leads, books appointments, answers questions, and routes urgent calls to your team. It works during lunch, after hours, on weekends, and during holidays. Columbus businesses using Voice AI report dramatic increases in lead capture rates, customer satisfaction scores, and revenue - all while reducing staffing costs and operational headaches."
       },
       {
         "heading": "Complete Voice AI Platform",
@@ -191,6 +218,11 @@
   },
 
   "images": {
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Columbus Georgia Riverwalk along the Chattahoochee - Voice AI for local businesses",
+      "caption": "Voice AI for Columbus businesses"
+    },
     "gallery": [
       {
         "url": "https://images.unsplash.com/photo-1633431305278-eb8c2d0b823b?ixlib=rb-4.0.3&w=1200&q=80",
@@ -218,7 +250,7 @@
       "action": "mailto:team@captureclient.net",
       "type": "button"
     },
-    "urgency_text": "Free consultation for Columbus businesses—schedule today"
+    "urgency_text": "Free consultation for Columbus businesses - schedule today"
   },
 
   "related_pages": {

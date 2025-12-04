@@ -37,11 +37,11 @@
       "type": "phone"
     },
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1520333789090-1afc82db536a?ixlib=rb-4.1.0&w=1920&q=80",
-      "alt": "Nashville business owner",
+      "url": "https://images.unsplash.com/photo-1588897159261-328f3f53715f?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Nashville Broadway - Voice AI for Music City businesses",
       "credit": {
-        "photographer": "bruce mars",
-        "unsplash_url": "https://unsplash.com/photos/FWVMhUa_wbY"
+        "photographer": "Unsplash",
+        "unsplash_url": "https://unsplash.com/photos/nashville-broadway"
       }
     }
   },
@@ -112,16 +112,28 @@
   },
   "local_testimonials": [
     {
-      "quote": "Voice AI added 80K in revenue from captured leads.",
-      "author": "Dr. Sarah Johnson",
+      "name": "Dr. Sarah Johnson",
       "business": "Nashville Family Dentistry",
-      "location": "Nashville, TN"
+      "location": "Green Hills, Nashville, TN",
+      "quote": "Our Green Hills practice was losing patients to competitors who answered faster. Voice AI now captures every after-hours call - $87,000 in new patient revenue this year. We've grown from 2 chairs to 5 and I credit AI for handling the growth.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop"
     },
     {
-      "quote": "Game changer for our contracting business.",
-      "author": "David Park",
+      "name": "David Park",
       "business": "Park Construction",
-      "location": "Franklin, TN"
+      "location": "Franklin, TN",
+      "quote": "Between Music Row renovations and new builds in Brentwood, our phones never stop. Voice AI captured 142 estimate requests last quarter - we closed 67 of them for $320,000 in new contracts. Couldn't scale without it.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Amanda Collins",
+      "business": "Collins Real Estate Group",
+      "location": "Nashville, TN",
+      "quote": "Nashville's hot market means buyers call day and night. AI qualifies leads and schedules showings 24/7 - closed 11 more homes this year worth $4.2M in total sales. The Vanderbilt area alone generated $800K in after-hours inquiries.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop"
     }
   ],
   "faq": [

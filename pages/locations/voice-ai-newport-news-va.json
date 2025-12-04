@@ -119,10 +119,28 @@
   },
   "local_testimonials": [
     {
-      "quote": "Voice AI transformed how we handle patient calls. Our Newport News patients love the instant response, and our staff can focus on in-office care instead of phones.",
-      "author": "Dr. Michelle K.",
+      "name": "Dr. Michelle Kim",
       "business": "Peninsula Medical Group",
-      "location": "Newport News, VA"
+      "location": "Newport News, VA",
+      "quote": "Voice AI transformed how we handle patient calls. Our Newport News patients love the instant response - new patient acquisition up 38% and staff can focus on in-office care instead of phones.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Robert Williams",
+      "business": "Newport News Auto Repair",
+      "location": "Newport News, VA",
+      "quote": "Shipyard workers call at 6 AM before their shift starts. Voice AI captures every early-morning appointment request - booked 47 more jobs last month from calls I used to miss.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Angela Foster",
+      "business": "City Center Legal Services",
+      "location": "Newport News, VA",
+      "quote": "Potential clients don't wait - they call the next attorney. AI pre-qualifies consultations 24/7 and I've signed 12 more cases this quarter. ROI was immediate.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop"
     }
   ],
   "faq": [

@@ -1,1 +1,145 @@
-{"page_id":"voice-ai-farragut-tn","page_type":"service-location","service":{"service_id":"voice-ai","service_name":"Voice AI Services"},"location":{"city":"Farragut","state":"Tennessee","state_abbr":"TN","slug":"farragut-tn","nearby_areas":["Knoxville"],"service_area_radius":"25 miles"},"seo":{"page_title":"Voice AI in Farragut, TN | Capture Client","meta_description":"Farragut businesses automate calls. Call 865-346-3339!","h1_heading":"Voice AI in Farragut, Tennessee","keywords":["voice ai farragut"],"canonical_url":"/voice-ai-farragut-tn"},"hero":{"headline":"Farragut Businesses Use AI","subheadline":"AI Agents for Farragut","cta_primary":{"text":"Get Consultation","action":"tel:865-346-3339","type":"phone"},"hero_image":{"url":"https://images.unsplash.com/photo-1531058240690-006c446962d8?w=1920&q=80","alt":"Farragut business"}},"local_intro":{"paragraph":"Farragut businesses capture more leads with Voice AI. Our AI handles calls 24/7 for Farragut companies."},"benefits":[{"title":"24/7 Farragut","description":"AI never sleeps.","icon":"clock"},{"title":"Qualify Leads","description":"Qualify Farragut prospects.","icon":"filter"}],"how_it_works":[{"step":1,"title":"Strategy","description":"Farragut business analysis."},{"step":2,"title":"Train AI","description":"Custom training."},{"step":3,"title":"Launch","description":"Go live in Farragut."}],"local_use_cases":[{"business_type":"Services in Farragut","scenario":"Missing calls","result":"Revenue increased"}],"service_area":{"heading":"Serving Farragut","areas_list":["Farragut"]},"local_testimonials":[{"quote":"Voice AI is great for Farragut.","author":"Business Owner","business":"Farragut Services","location":"Farragut, TN"}],"faq":[{"question":"Voice AI Farragut?","answer":"Yes, AI for Farragut businesses 24/7."}],"images":{"gallery":[{"url":"https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200","alt":"Farragut"}]},"cta_section":{"headline":"Capture Farragut Leads","cta_primary":{"text":"Call 865-346-3339","action":"tel:865-346-3339","type":"phone"}},"related_pages":{"nearby_locations":["voice-ai-knoxville-tn"],"packages":["starter-package"]}}
+{
+  "page_id": "voice-ai-farragut-tn",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services"
+  },
+  "location": {
+    "city": "Farragut",
+    "state": "Tennessee",
+    "state_abbr": "TN",
+    "slug": "farragut-tn",
+    "nearby_areas": [
+      "Knoxville"
+    ],
+    "service_area_radius": "25 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI in Farragut, TN | Capture Client",
+    "meta_description": "Farragut businesses automate calls. Call 865-346-3339!",
+    "h1_heading": "Voice AI in Farragut, Tennessee",
+    "keywords": [
+      "voice ai farragut"
+    ],
+    "canonical_url": "/voice-ai-farragut-tn"
+  },
+  "hero": {
+    "headline": "Farragut Businesses Use AI",
+    "subheadline": "AI Agents for Farragut",
+    "cta_primary": {
+      "text": "Get Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1694475674677-2187e1c46d44?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Farragut Tennessee area - Voice AI for Farragut businesses",
+      "credit": {
+        "photographer": "Unsplash",
+        "unsplash_url": "https://unsplash.com/photos/tennessee-landscape"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "Farragut businesses capture more leads with Voice AI. Our AI handles calls 24/7 for Farragut companies."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Farragut",
+      "description": "AI never sleeps.",
+      "icon": "clock"
+    },
+    {
+      "title": "Qualify Leads",
+      "description": "Qualify Farragut prospects.",
+      "icon": "filter"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Strategy",
+      "description": "Farragut business analysis."
+    },
+    {
+      "step": 2,
+      "title": "Train AI",
+      "description": "Custom training."
+    },
+    {
+      "step": 3,
+      "title": "Launch",
+      "description": "Go live in Farragut."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Services in Farragut",
+      "scenario": "Missing calls",
+      "result": "Revenue increased"
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Farragut",
+    "areas_list": [
+      "Farragut"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "name": "Dr. Emily Watson",
+      "business": "Farragut Dental Group",
+      "location": "Farragut, TN",
+      "quote": "Our Farragut practice serves busy professionals who call after work hours. Voice AI books appointments 24/7 - new patient revenue up $92,000 this year. The Turkey Creek area alone generated 40% of our after-hours bookings.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Kevin Hughes",
+      "business": "Farragut Home Services",
+      "location": "Farragut, TN",
+      "quote": "Farragut homeowners expect premium service and fast response. Voice AI answers every call instantly - customer satisfaction up 34% and we captured $78,000 in repair jobs from calls I used to miss on service visits.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Rachel Morgan",
+      "business": "Farragut Wealth Advisors",
+      "location": "Farragut, TN",
+      "quote": "High-net-worth clients in Farragut expect immediate attention. AI qualifies prospects and schedules consultations 24/7 - we onboarded 12 new clients this quarter representing $8M in assets under management.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Voice AI Farragut?",
+      "answer": "Yes, AI for Farragut businesses 24/7."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200",
+        "alt": "Farragut"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Capture Farragut Leads",
+    "cta_primary": {
+      "text": "Call 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-knoxville-tn"
+    ],
+    "packages": [
+      "starter-package"
+    ]
+  }
+}

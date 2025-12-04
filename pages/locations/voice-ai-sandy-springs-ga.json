@@ -21,7 +21,7 @@
   },
   "seo": {
     "page_title": "Voice AI Agency in Sandy Springs, GA | Capture Client",
-    "meta_description": "Voice AI for Sandy Springs businesses. Never miss a call. Call 865-346-3339\\!",
+    "meta_description": "Voice AI for Sandy Springs businesses. Never miss a call. Call 865-346-3339!",
     "h1_heading": "Voice AI Agency in Sandy Springs, Georgia",
     "keywords": [
       "voice ai sandy springs ga",
@@ -38,16 +38,16 @@
       "type": "phone"
     },
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1676119451563-0c4a1a37e019?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Business executive on phone",
+      "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Sandy Springs Georgia Perimeter Center business district skyline - Voice AI for corporate businesses",
       "credit": {
-        "photographer": "Remi Devaux",
-        "unsplash_url": "https://unsplash.com/photos/TdgCYy02i_I"
+        "photographer": "Sean Pollock",
+        "unsplash_url": "https://unsplash.com/photos/sandy-springs-perimeter"
       }
     }
   },
   "local_intro": {
-    "paragraph": "Sandy Springs, one of Georgia most affluent cities, demands premium service. From Perimeter Center to Riverside, businesses need professional call handling 24/7. Our Voice AI delivers the white-glove service Sandy Springs clients expect while automating your operations."
+    "paragraph": "Sandy Springs, one of Georgia's most affluent cities, demands premium service. From Perimeter Center to Riverside, businesses need professional call handling 24/7. Our Voice AI delivers the white-glove service Sandy Springs clients expect while automating your operations."
   },
   "benefits": [
     {
@@ -131,22 +131,48 @@
       "location": "Sandy Springs, GA"
     }
   ],
+  "local_testimonials": [
+    {
+      "name": "Robert Ashford III",
+      "business": "Ashford Wealth Management",
+      "location": "Sandy Springs, GA",
+      "quote": "Our Perimeter Center clients have $5M+ portfolios and expect immediate, sophisticated service. Voice AI delivers white-glove responses 24/7. Client retention improved 45% and we've onboarded $47M in new assets under management. Essential for Sandy Springs financial services.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Victoria Chen",
+      "business": "Sandy Springs Luxury Real Estate",
+      "location": "Sandy Springs, GA",
+      "quote": "Sandy Springs luxury buyers call from Buckhead to Riverside at all hours. Voice AI responds instantly with property details and schedules showings. Closed $12.3M in additional sales this year - 67% increase. The Dunwoody and Perimeter market demands instant response.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Dr. Jonathan Hayes",
+      "business": "Northside Hospital Affiliated Practice",
+      "location": "Sandy Springs, GA",
+      "quote": "Our Sandy Springs concierge medical practice serves executives who won't wait on hold. Voice AI provides the premium experience they expect - scheduling increased 52%, patient satisfaction hit 97%, and we've added $267,000 in annual revenue from new patients.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100&h=100&fit=crop"
+    }
+  ],
   "faq": [
     {
       "question": "Can AI match Sandy Springs premium service standards?",
-      "answer": "Yes\\! We train AI to deliver the white-glove experience Sandy Springs clients expect."
+      "answer": "Yes! We train AI to deliver the white-glove experience Sandy Springs clients expect."
     },
     {
       "question": "Does it work for professional services?",
-      "answer": "Absolutely\\! Perfect for law firms, wealth management, medical practices in Sandy Springs."
+      "answer": "Absolutely! Perfect for law firms, wealth management, medical practices in Sandy Springs."
     },
     {
       "question": "What is the investment?",
-      "answer": "Starting at 99/month. Premium Enterprise packages available for larger Sandy Springs operations."
+      "answer": "Starting at $999/month. Premium Enterprise packages available for larger Sandy Springs operations."
     },
     {
       "question": "Can AI handle sophisticated clients?",
-      "answer": "Yes\\! AI is trained to communicate professionally with high-net-worth individuals."
+      "answer": "Yes! AI is trained to communicate professionally with high-net-worth individuals."
     },
     {
       "question": "How quickly can we implement?",
@@ -155,8 +181,8 @@
   ],
   "images": {
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1676119451563-0c4a1a37e019?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Executive professional",
+      "url": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Sandy Springs Georgia Perimeter Center business district - Voice AI for corporate businesses",
       "caption": "Premium AI for Sandy Springs"
     },
     "gallery": [

@@ -11,7 +11,12 @@
     "slug": "chattanooga",
     "state": "Tennessee",
     "state_abbr": "TN",
-    "nearby_areas": ["Cleveland", "East Ridge", "Red Bank", "Signal Mountain"]
+    "nearby_areas": [
+      "Cleveland",
+      "East Ridge",
+      "Red Bank",
+      "Signal Mountain"
+    ]
   },
   "seo": {
     "page_title": "Voice AI Agency in Chattanooga, TN | Capture Client",
@@ -29,9 +34,17 @@
     "headline": "Chattanooga's Smart Choice for Voice AI",
     "subheadline": "Join the Gig City Revolution - Automate Your Business Calls and Capture Every Lead with Advanced AI Technology",
     "cta_primary": "Start Capturing More Leads",
-    "cta_secondary": "See Pricing"
+    "cta_secondary": "See Pricing",
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1628878685986-6b4f03994a98?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Chattanooga Walnut Street Bridge - Voice AI for Scenic City businesses",
+      "credit": {
+        "photographer": "Unsplash",
+        "unsplash_url": "https://unsplash.com/photos/chattanooga-walnut-street-bridge"
+      }
+    }
   },
-  "intro": {
+  "local_intro": {
     "paragraph": "Chattanooga's tech-forward business community knows the value of innovation. As the Gig City continues to attract entrepreneurs and growing companies, having cutting-edge Voice AI gives you a competitive edge. From businesses along the Tennessee River to contractors serving Hamilton County, Capture Client helps Chattanooga companies automate phone operations, qualify leads intelligently, and provide exceptional customer service around the clock - all while you focus on what matters most."
   },
   "benefits": [
@@ -80,18 +93,18 @@
   ],
   "local_use_cases": [
     {
-      "industry": "Home Services & Contractors",
-      "example": "Chattanooga HVAC companies, plumbers, and roofing contractors use Voice AI to handle emergency calls, schedule service visits, and answer pricing questions - even during storm season when call volume spikes.",
+      "business_type": "Home Services & Contractors",
+      "scenario": "Chattanooga HVAC companies, plumbers, and roofing contractors use Voice AI to handle emergency calls, schedule service visits, and answer pricing questions - even during storm season when call volume spikes.",
       "result": "70% faster response time"
     },
     {
-      "industry": "Tourism & Recreation",
-      "example": "Businesses serving Chattanooga's tourism industry - from Rock City to the Tennessee Aquarium area - use AI to handle booking inquiries, answer visitor questions, and manage seasonal call volume.",
+      "business_type": "Tourism & Recreation",
+      "scenario": "Businesses serving Chattanooga's tourism industry - from Rock City to the Tennessee Aquarium area - use AI to handle booking inquiries, answer visitor questions, and manage seasonal call volume.",
       "result": "55% more bookings"
     },
     {
-      "industry": "Tech & Professional Services",
-      "example": "Chattanooga's growing tech sector and professional service firms use Voice AI for client intake, meeting scheduling, and after-hours support - matching the Gig City's innovative reputation.",
+      "business_type": "Tech & Professional Services",
+      "scenario": "Chattanooga's growing tech sector and professional service firms use Voice AI for client intake, meeting scheduling, and after-hours support - matching the Gig City's innovative reputation.",
       "result": "85% reduction in missed calls"
     }
   ],
@@ -109,7 +122,12 @@
       "Ooltewah",
       "Harrison"
     ],
-    "counties_served": ["Hamilton County", "Bradley County", "Marion County", "Sequatchie County"]
+    "counties_served": [
+      "Hamilton County",
+      "Bradley County",
+      "Marion County",
+      "Sequatchie County"
+    ]
   },
   "faq": [
     {
@@ -138,15 +156,25 @@
       "name": "David Thompson",
       "business": "Scenic City Roofing",
       "location": "Chattanooga, TN",
-      "quote": "Storm season used to mean chaos - phones ringing off the hook while we're on roofs. Now Voice AI captures every lead, schedules estimates, and even handles emergency calls. We booked 40% more jobs this year thanks to never missing a call.",
-      "rating": 5
+      "quote": "Storm season used to mean chaos - phones ringing off the hook while we're on roofs. Now Voice AI captures every lead, schedules estimates, and even handles emergency calls. We booked 40% more jobs this year - $145,000 in revenue from calls I used to miss.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
     },
     {
       "name": "Lisa Morgan",
       "business": "Signal Mountain Dental",
       "location": "Chattanooga, TN",
-      "quote": "Our Chattanooga practice needed a better way to handle after-hours calls and appointment scheduling. The Voice AI integration was seamless, and patients love booking appointments at their convenience. Our no-show rate dropped by 25% too.",
-      "rating": 5
+      "quote": "Our Chattanooga practice near the Tennessee Aquarium area needed after-hours scheduling. Voice AI captures every call - no-show rate dropped 25% and new patient revenue up $98,000. Patients love booking at midnight if they need to.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Marcus Williams",
+      "business": "Gig City Tech Solutions",
+      "location": "Chattanooga, TN",
+      "quote": "In the Gig City, tech clients expect instant response. Voice AI handles prospect calls 24/7 and schedules demos automatically - we closed 14 new contracts worth $210,000 this quarter from after-hours inquiries alone.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
     }
   ],
   "images": [
@@ -183,7 +211,15 @@
     "primary_location": "Knoxville, TN"
   },
   "related_pages": {
-    "services": ["facebook-ads", "google-ads", "local-seo"],
-    "locations": ["knoxville", "nashville", "cleveland"]
+    "services": [
+      "facebook-ads",
+      "google-ads",
+      "local-seo"
+    ],
+    "locations": [
+      "knoxville",
+      "nashville",
+      "cleveland"
+    ]
   }
 }

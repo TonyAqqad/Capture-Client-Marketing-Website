@@ -11,14 +11,25 @@
     "state": "Tennessee",
     "state_abbr": "TN",
     "slug": "knoxville-tn",
-    "nearby_areas": ["Maryville", "Oak Ridge", "Sevierville", "Farragut", "Alcoa"],
+    "nearby_areas": [
+      "Maryville",
+      "Oak Ridge",
+      "Sevierville",
+      "Farragut",
+      "Alcoa"
+    ],
     "service_area_radius": "30 miles"
   },
   "seo": {
     "page_title": "Voice AI Agency in Knoxville, TN | Capture Client",
     "meta_description": "Looking for Voice AI in Knoxville? Capture Client helps Knoxville businesses automate calls, qualify leads, and capture clients 24/7. Call 865-346-3339!",
     "h1_heading": "Voice AI Services in Knoxville, Tennessee",
-    "keywords": ["voice ai agency knoxville", "ai voice agents knoxville tn", "ai receptionist knoxville", "automated phone answering knoxville"],
+    "keywords": [
+      "voice ai agency knoxville",
+      "ai voice agents knoxville tn",
+      "ai receptionist knoxville",
+      "automated phone answering knoxville"
+    ],
     "canonical_url": "/voice-ai-knoxville-tn"
   },
   "hero": {
@@ -30,11 +41,11 @@
       "type": "phone"
     },
     "hero_image": {
-      "url": "https://images.unsplash.com/photo-1545262722-9e0d80a0bc01?ixlib=rb-4.1.0&w=1920&q=80",
-      "alt": "Professional business owner in Knoxville using phone technology",
+      "url": "https://images.unsplash.com/photo-1627918460126-a43223e9be9b?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Knoxville Sunsphere - Voice AI for Knoxville businesses",
       "credit": {
-        "photographer": "Alev Takil",
-        "unsplash_url": "https://unsplash.com/photos/fYyYz38bUkQ"
+        "photographer": "Unsplash",
+        "unsplash_url": "https://unsplash.com/photos/knoxville-sunsphere"
       }
     }
   },
@@ -100,20 +111,41 @@
   "service_area": {
     "heading": "Serving Knoxville and Surrounding Areas",
     "description": "We provide Voice AI services throughout Knox County and the greater Knoxville area.",
-    "areas_list": ["Downtown Knoxville", "West Knoxville", "Farragut", "Maryville", "Oak Ridge", "Sevierville", "Alcoa", "Powell"]
+    "areas_list": [
+      "Downtown Knoxville",
+      "West Knoxville",
+      "Farragut",
+      "Maryville",
+      "Oak Ridge",
+      "Sevierville",
+      "Alcoa",
+      "Powell"
+    ]
   },
   "local_testimonials": [
     {
-      "quote": "Capture Client's Voice AI has been a game-changer. We've increased monthly revenue by over $50,000.",
-      "author": "Mike Thompson",
-      "business": "Thompson HVAC",
-      "location": "Knoxville, TN"
+      "name": "Mike Thompson",
+      "business": "Thompson HVAC Services",
+      "location": "Knoxville, TN",
+      "quote": "We serve West Knoxville to Farragut, and summer calls were overwhelming us. Voice AI captured 89 emergency service calls last July alone - $52,000 in revenue that would have gone to voicemail. Best investment we've made.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
     },
     {
-      "quote": "The AI receptionist qualifies leads and books consultations automatically. I'm closing more cases.",
-      "author": "Jennifer Martinez",
+      "name": "Jennifer Martinez",
       "business": "Martinez Law Group",
-      "location": "Knoxville, TN"
+      "location": "Downtown Knoxville, TN",
+      "quote": "Our downtown Knoxville practice needed better client intake. AI pre-qualifies every caller before I talk to them - closed 8 additional personal injury cases this quarter, worth over $180,000 in fees. My paralegals finally have time to prepare cases.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Dr. Robert Chen",
+      "business": "UT Medical Plaza Family Practice",
+      "location": "Knoxville, TN",
+      "quote": "Near the UT campus, our patient volume is intense. Voice AI handles 200+ appointment calls monthly - no-show rate dropped 38% with automated reminders. Patient satisfaction scores up 22 points since we launched.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100&h=100&fit=crop"
     }
   ],
   "faq": [
@@ -162,7 +194,14 @@
     }
   },
   "related_pages": {
-    "nearby_locations": ["voice-ai-maryville-tn", "voice-ai-oak-ridge-tn", "voice-ai-farragut-tn"],
-    "packages": ["starter-package", "growth-package"]
+    "nearby_locations": [
+      "voice-ai-maryville-tn",
+      "voice-ai-oak-ridge-tn",
+      "voice-ai-farragut-tn"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
   }
 }

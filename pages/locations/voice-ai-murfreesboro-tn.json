@@ -1,1 +1,156 @@
-{"page_id":"voice-ai-murfreesboro-tn","page_type":"service-location","service":{"service_id":"voice-ai","service_name":"Voice AI Services","service_slug":"voice-ai"},"location":{"city":"Murfreesboro","state":"Tennessee","state_abbr":"TN","slug":"murfreesboro-tn","nearby_areas":["Smyrna","La Vergne","Nashville"],"service_area_radius":"25 miles"},"seo":{"page_title":"Voice AI Agency in Murfreesboro, TN | Capture Client","meta_description":"Murfreesboro businesses automate calls with Voice AI. Rutherford County lead generation. Call 865-346-3339!","h1_heading":"Voice AI Services in Murfreesboro, Tennessee","keywords":["voice ai murfreesboro","ai receptionist murfreesboro tn"],"canonical_url":"/voice-ai-murfreesboro-tn"},"hero":{"headline":"Murfreesboro Businesses Automate Lead Capture","subheadline":"Voice AI for Rutherford County Booming Economy","cta_primary":{"text":"Get Your Free Consultation","action":"tel:865-346-3339","type":"phone"},"hero_image":{"url":"https://images.unsplash.com/photo-1531058240690-006c446962d8?w=1920&q=80","alt":"Murfreesboro business"}},"local_intro":{"paragraph":"Murfreesboro is growing rapidly. Businesses near MTSU and throughout Rutherford County need scalable solutions. Voice AI handles calls automatically."},"benefits":[{"title":"24/7 Availability","description":"AI for Murfreesboro customers.","icon":"clock"},{"title":"Lead Qualification","description":"Qualifies Murfreesboro prospects.","icon":"filter"}],"how_it_works":[{"step":1,"title":"Strategy","description":"Discuss Murfreesboro needs."},{"step":2,"title":"Training","description":"Train for Murfreesboro."},{"step":3,"title":"Launch","description":"Capture leads now."}],"local_use_cases":[{"business_type":"Student Services","scenario":"Overwhelmed during semester","result":"Handled 600+ inquiries"},{"business_type":"Automotive","scenario":"Missing appointments","result":"Utilization up 35%"}],"service_area":{"heading":"Serving Murfreesboro","areas_list":["Murfreesboro","Smyrna","Nashville"]},"local_testimonials":[{"quote":"Voice AI helps our Murfreesboro business grow.","author":"Owner","business":"Murfreesboro Services","location":"Murfreesboro, TN"}],"faq":[{"question":"Voice AI for Murfreesboro?","answer":"AI answers calls 24/7 for Murfreesboro."}],"images":{"gallery":[{"url":"https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200","alt":"Murfreesboro"}]},"cta_section":{"headline":"Capture Murfreesboro Clients","cta_primary":{"text":"Call 865-346-3339","action":"tel:865-346-3339","type":"phone"}},"related_pages":{"nearby_locations":["voice-ai-nashville-tn"],"packages":["starter-package"]}}
+{
+  "page_id": "voice-ai-murfreesboro-tn",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
+  },
+  "location": {
+    "city": "Murfreesboro",
+    "state": "Tennessee",
+    "state_abbr": "TN",
+    "slug": "murfreesboro-tn",
+    "nearby_areas": [
+      "Smyrna",
+      "La Vergne",
+      "Nashville"
+    ],
+    "service_area_radius": "25 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI Agency in Murfreesboro, TN | Capture Client",
+    "meta_description": "Murfreesboro businesses automate calls with Voice AI. Rutherford County lead generation. Call 865-346-3339!",
+    "h1_heading": "Voice AI Services in Murfreesboro, Tennessee",
+    "keywords": [
+      "voice ai murfreesboro",
+      "ai receptionist murfreesboro tn"
+    ],
+    "canonical_url": "/voice-ai-murfreesboro-tn"
+  },
+  "hero": {
+    "headline": "Murfreesboro Businesses Automate Lead Capture",
+    "subheadline": "Voice AI for Rutherford County Booming Economy",
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1733349621935-3e5c827bc946?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Murfreesboro Tennessee downtown - Voice AI for Murfreesboro businesses",
+      "credit": {
+        "photographer": "Unsplash",
+        "unsplash_url": "https://unsplash.com/photos/tennessee-downtown"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "Murfreesboro is growing rapidly. Businesses near MTSU and throughout Rutherford County need scalable solutions. Voice AI handles calls automatically."
+  },
+  "benefits": [
+    {
+      "title": "24/7 Availability",
+      "description": "AI for Murfreesboro customers.",
+      "icon": "clock"
+    },
+    {
+      "title": "Lead Qualification",
+      "description": "Qualifies Murfreesboro prospects.",
+      "icon": "filter"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Strategy",
+      "description": "Discuss Murfreesboro needs."
+    },
+    {
+      "step": 2,
+      "title": "Training",
+      "description": "Train for Murfreesboro."
+    },
+    {
+      "step": 3,
+      "title": "Launch",
+      "description": "Capture leads now."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Student Services",
+      "scenario": "Overwhelmed during semester",
+      "result": "Handled 600+ inquiries"
+    },
+    {
+      "business_type": "Automotive",
+      "scenario": "Missing appointments",
+      "result": "Utilization up 35%"
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Murfreesboro",
+    "areas_list": [
+      "Murfreesboro",
+      "Smyrna",
+      "Nashville"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "name": "Dr. Rebecca Chen",
+      "business": "Murfreesboro Pediatrics",
+      "location": "Murfreesboro, TN",
+      "quote": "With MTSU families and our growing Rutherford County community, call volume was crushing us. AI handles scheduling 24/7 - new patient bookings up 52% and staff can focus on kids, not phones.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Tommy Jackson",
+      "business": "Rutherford Roofing Co.",
+      "location": "Murfreesboro, TN",
+      "quote": "Murfreesboro's growth means non-stop calls. Voice AI captured 67 estimate requests last month while I was on roofs. Revenue up $85,000 this quarter from leads I would have missed.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Jessica Williams",
+      "business": "The Boro Property Management",
+      "location": "Murfreesboro, TN",
+      "quote": "MTSU students call about rentals at midnight. AI qualifies prospects 24/7 - filled 28 more units this semester from after-hours inquiries. ROI was immediate.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Voice AI for Murfreesboro?",
+      "answer": "AI answers calls 24/7 for Murfreesboro."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200",
+        "alt": "Murfreesboro"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Capture Murfreesboro Clients",
+    "cta_primary": {
+      "text": "Call 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-nashville-tn"
+    ],
+    "packages": [
+      "starter-package"
+    ]
+  }
+}

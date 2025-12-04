@@ -1,1 +1,146 @@
-{"page_id":"voice-ai-sevierville-tn","page_type":"service-location","service":{"service_id":"voice-ai","service_name":"Voice AI Services"},"location":{"city":"Sevierville","state":"Tennessee","state_abbr":"TN","slug":"sevierville-tn","nearby_areas":["Knoxville"],"service_area_radius":"20 miles"},"seo":{"page_title":"Voice AI in Sevierville, TN | Capture Client","meta_description":"Sevierville businesses automate calls with Voice AI. Call 865-346-3339!","h1_heading":"Voice AI in Sevierville, Tennessee","keywords":["voice ai sevierville"],"canonical_url":"/voice-ai-sevierville-tn"},"hero":{"headline":"Sevierville Businesses Powered by AI","subheadline":"AI Voice Agents for Sevierville Companies","cta_primary":{"text":"Get Free Consultation","action":"tel:865-346-3339","type":"phone"},"hero_image":{"url":"https://images.unsplash.com/photo-1531058240690-006c446962d8?w=1920&q=80","alt":"Sevierville business"}},"local_intro":{"paragraph":"Sevierville businesses need efficient call handling. Voice AI ensures you capture every lead from Sevierville customers 24/7."},"benefits":[{"title":"24/7 for Sevierville","description":"Never miss Sevierville calls.","icon":"clock"},{"title":"Qualification","description":"Qualify Sevierville leads.","icon":"filter"}],"how_it_works":[{"step":1,"title":"Strategy","description":"Discuss Sevierville needs."},{"step":2,"title":"Training","description":"Train AI."},{"step":3,"title":"Launch","description":"Capture leads."}],"local_use_cases":[{"business_type":"Services","scenario":"Missing calls","result":"Revenue up"}],"service_area":{"heading":"Serving Sevierville","areas_list":["Sevierville","Knoxville"]},"local_testimonials":[{"quote":"Voice AI works great for our Sevierville business.","author":"Owner","business":"Sevierville Co","location":"Sevierville, TN"}],"faq":[{"question":"Voice AI for Sevierville?","answer":"Yes, AI answers Sevierville calls 24/7."}],"images":{"gallery":[{"url":"https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200","alt":"Sevierville"}]},"cta_section":{"headline":"Capture Sevierville Clients","cta_primary":{"text":"Call 865-346-3339","action":"tel:865-346-3339","type":"phone"}},"related_pages":{"nearby_locations":["voice-ai-knoxville-tn"],"packages":["starter-package"]}}
+{
+  "page_id": "voice-ai-sevierville-tn",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services"
+  },
+  "location": {
+    "city": "Sevierville",
+    "state": "Tennessee",
+    "state_abbr": "TN",
+    "slug": "sevierville-tn",
+    "nearby_areas": [
+      "Knoxville"
+    ],
+    "service_area_radius": "20 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI in Sevierville, TN | Capture Client",
+    "meta_description": "Sevierville businesses automate calls with Voice AI. Call 865-346-3339!",
+    "h1_heading": "Voice AI in Sevierville, Tennessee",
+    "keywords": [
+      "voice ai sevierville"
+    ],
+    "canonical_url": "/voice-ai-sevierville-tn"
+  },
+  "hero": {
+    "headline": "Sevierville Businesses Powered by AI",
+    "subheadline": "AI Voice Agents for Sevierville Companies",
+    "cta_primary": {
+      "text": "Get Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1656039305844-008b35a6276a?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Sevierville Smoky Mountains - Voice AI for Sevierville businesses",
+      "credit": {
+        "photographer": "Unsplash",
+        "unsplash_url": "https://unsplash.com/photos/smoky-mountains"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "Sevierville businesses need efficient call handling. Voice AI ensures you capture every lead from Sevierville customers 24/7."
+  },
+  "benefits": [
+    {
+      "title": "24/7 for Sevierville",
+      "description": "Never miss Sevierville calls.",
+      "icon": "clock"
+    },
+    {
+      "title": "Qualification",
+      "description": "Qualify Sevierville leads.",
+      "icon": "filter"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Strategy",
+      "description": "Discuss Sevierville needs."
+    },
+    {
+      "step": 2,
+      "title": "Training",
+      "description": "Train AI."
+    },
+    {
+      "step": 3,
+      "title": "Launch",
+      "description": "Capture leads."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Services",
+      "scenario": "Missing calls",
+      "result": "Revenue up"
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Sevierville",
+    "areas_list": [
+      "Sevierville",
+      "Knoxville"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "name": "Robert Hayes",
+      "business": "Smokies Cabin Getaways",
+      "location": "Sevierville, TN",
+      "quote": "Our Sevierville cabin business gets calls from tourists planning Smoky Mountain trips at all hours. Voice AI captures reservations 24/7 - occupancy up 47% and we booked $125,000 in rentals from after-midnight inquiries last season.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Jennifer Brooks",
+      "business": "Sevierville Family Dentistry",
+      "location": "Sevierville, TN",
+      "quote": "Tourists and locals both need dental care in Sevierville. AI handles emergency calls and scheduling 24/7 - new patient bookings up 38% and we've captured $72,000 in revenue from visitors needing urgent care.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Mike Patterson",
+      "business": "Great Smoky HVAC",
+      "location": "Sevierville, TN",
+      "quote": "Cabin owners call day and night when AC fails in summer. Voice AI captured 94 emergency calls last July alone - $58,000 in service work from property managers who need instant response. Can't imagine running without it.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Voice AI for Sevierville?",
+      "answer": "Yes, AI answers Sevierville calls 24/7."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200",
+        "alt": "Sevierville"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Capture Sevierville Clients",
+    "cta_primary": {
+      "text": "Call 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-knoxville-tn"
+    ],
+    "packages": [
+      "starter-package"
+    ]
+  }
+}

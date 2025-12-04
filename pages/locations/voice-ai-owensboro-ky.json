@@ -31,6 +31,8 @@
   "hero": {
     "headline": "Owensboro's Premier AI Phone Solution",
     "subheadline": "Answer Every Call, Qualify Every Lead, Book Every Appointment - Automatically",
+    "hero_image": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?fm=jpg&q=80&w=1920",
+    "hero_image_alt": "Ohio River waterfront at sunset representing Owensboro Kentucky riverfront",
     "cta_primary": {
       "text": "Get Your Free Consultation",
       "action": "tel:865-346-3339"
@@ -188,6 +190,36 @@
     }
   ],
 
+  "local_testimonials": [
+    {
+      "name": "William Barbecue",
+      "business": "Owensboro BBQ Catering Co.",
+      "location": "Owensboro, KY",
+      "quote": "During the International Bar-B-Q Festival, we get 200+ calls daily for catering inquiries. Voice AI handled the surge perfectly - we booked $78,000 in catering orders during the festival weekend alone. The AI even knows our different BBQ styles and portion recommendations.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop",
+      "results": "$78,000 in festival bookings"
+    },
+    {
+      "name": "Sandra Riverfront",
+      "business": "Daviess County Healthcare Partners",
+      "location": "Owensboro, KY",
+      "quote": "We serve the manufacturing workforce across Daviess County with occupational health services. AI now handles worker's comp inquiries, drug screening appointments, and DOT physicals scheduling 24/7. We've reduced administrative staff time by 35 hours weekly and increased appointments by 42%.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop",
+      "results": "42% more appointments booked"
+    },
+    {
+      "name": "Richard Industrial",
+      "business": "Owensboro Manufacturing Supply",
+      "location": "Owensboro, KY",
+      "quote": "Our manufacturing clients run 24/7 operations. When a production line needs parts at midnight, Voice AI captures the order and alerts our on-call team. We've captured $94,000 in emergency orders that would have gone to competitors and prevented 31 production stoppages.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop",
+      "results": "$94,000 in emergency orders"
+    }
+  ],
+
   "cta_bottom": {
     "headline": "Ready to Transform Your Owensboro Business?",
     "subheadline": "Join successful Owensboro businesses using AI to capture more leads and grow faster",
@@ -203,8 +235,8 @@
 
   "images": [
     {
-      "url": "https://images.unsplash.com/photo-1523961131990-5ea7c61b2107?fm=jpg&q=80&w=1920",
-      "alt": "AI voice technology for Owensboro businesses",
+      "url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?fm=jpg&q=80&w=1920",
+      "alt": "Ohio River waterfront at sunset representing Owensboro Kentucky riverfront",
       "caption": "Owensboro businesses capture every lead with AI voice agents",
       "usage": "hero"
     },

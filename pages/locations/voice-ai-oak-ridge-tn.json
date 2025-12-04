@@ -1,1 +1,146 @@
-{"page_id":"voice-ai-oak-ridge-tn","page_type":"service-location","service":{"service_id":"voice-ai","service_name":"Voice AI Services"},"location":{"city":"Oak Ridge","state":"Tennessee","state_abbr":"TN","slug":"oak-ridge-tn","nearby_areas":["Knoxville"],"service_area_radius":"20 miles"},"seo":{"page_title":"Voice AI in Oak Ridge, TN | Capture Client","meta_description":"Oak Ridge businesses automate calls with Voice AI. Call 865-346-3339!","h1_heading":"Voice AI in Oak Ridge, Tennessee","keywords":["voice ai oak-ridge"],"canonical_url":"/voice-ai-oak-ridge-tn"},"hero":{"headline":"Oak Ridge Businesses Powered by AI","subheadline":"AI Voice Agents for Oak Ridge Companies","cta_primary":{"text":"Get Free Consultation","action":"tel:865-346-3339","type":"phone"},"hero_image":{"url":"https://images.unsplash.com/photo-1531058240690-006c446962d8?w=1920&q=80","alt":"Oak Ridge business"}},"local_intro":{"paragraph":"Oak Ridge businesses need efficient call handling. Voice AI ensures you capture every lead from Oak Ridge customers 24/7."},"benefits":[{"title":"24/7 for Oak Ridge","description":"Never miss Oak Ridge calls.","icon":"clock"},{"title":"Qualification","description":"Qualify Oak Ridge leads.","icon":"filter"}],"how_it_works":[{"step":1,"title":"Strategy","description":"Discuss Oak Ridge needs."},{"step":2,"title":"Training","description":"Train AI."},{"step":3,"title":"Launch","description":"Capture leads."}],"local_use_cases":[{"business_type":"Services","scenario":"Missing calls","result":"Revenue up"}],"service_area":{"heading":"Serving Oak Ridge","areas_list":["Oak Ridge","Knoxville"]},"local_testimonials":[{"quote":"Voice AI works great for our Oak Ridge business.","author":"Owner","business":"Oak Ridge Co","location":"Oak Ridge, TN"}],"faq":[{"question":"Voice AI for Oak Ridge?","answer":"Yes, AI answers Oak Ridge calls 24/7."}],"images":{"gallery":[{"url":"https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200","alt":"Oak Ridge"}]},"cta_section":{"headline":"Capture Oak Ridge Clients","cta_primary":{"text":"Call 865-346-3339","action":"tel:865-346-3339","type":"phone"}},"related_pages":{"nearby_locations":["voice-ai-knoxville-tn"],"packages":["starter-package"]}}
+{
+  "page_id": "voice-ai-oak-ridge-tn",
+  "page_type": "service-location",
+  "service": {
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services"
+  },
+  "location": {
+    "city": "Oak Ridge",
+    "state": "Tennessee",
+    "state_abbr": "TN",
+    "slug": "oak-ridge-tn",
+    "nearby_areas": [
+      "Knoxville"
+    ],
+    "service_area_radius": "20 miles"
+  },
+  "seo": {
+    "page_title": "Voice AI in Oak Ridge, TN | Capture Client",
+    "meta_description": "Oak Ridge businesses automate calls with Voice AI. Call 865-346-3339!",
+    "h1_heading": "Voice AI in Oak Ridge, Tennessee",
+    "keywords": [
+      "voice ai oak-ridge"
+    ],
+    "canonical_url": "/voice-ai-oak-ridge-tn"
+  },
+  "hero": {
+    "headline": "Oak Ridge Businesses Powered by AI",
+    "subheadline": "AI Voice Agents for Oak Ridge Companies",
+    "cta_primary": {
+      "text": "Get Free Consultation",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1694475674677-2187e1c46d44?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Oak Ridge Tennessee landscape - Voice AI for Oak Ridge businesses",
+      "credit": {
+        "photographer": "Unsplash",
+        "unsplash_url": "https://unsplash.com/photos/tennessee"
+      }
+    }
+  },
+  "local_intro": {
+    "paragraph": "Oak Ridge businesses need efficient call handling. Voice AI ensures you capture every lead from Oak Ridge customers 24/7."
+  },
+  "benefits": [
+    {
+      "title": "24/7 for Oak Ridge",
+      "description": "Never miss Oak Ridge calls.",
+      "icon": "clock"
+    },
+    {
+      "title": "Qualification",
+      "description": "Qualify Oak Ridge leads.",
+      "icon": "filter"
+    }
+  ],
+  "how_it_works": [
+    {
+      "step": 1,
+      "title": "Strategy",
+      "description": "Discuss Oak Ridge needs."
+    },
+    {
+      "step": 2,
+      "title": "Training",
+      "description": "Train AI."
+    },
+    {
+      "step": 3,
+      "title": "Launch",
+      "description": "Capture leads."
+    }
+  ],
+  "local_use_cases": [
+    {
+      "business_type": "Services",
+      "scenario": "Missing calls",
+      "result": "Revenue up"
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Oak Ridge",
+    "areas_list": [
+      "Oak Ridge",
+      "Knoxville"
+    ]
+  },
+  "local_testimonials": [
+    {
+      "name": "Dr. William Foster",
+      "business": "Oak Ridge Family Medicine",
+      "location": "Oak Ridge, TN",
+      "quote": "Many of our patients work at ORNL and Y-12 with demanding schedules. Voice AI books appointments 24/7 - new patient acquisition up 41% and we captured $68,000 in revenue from after-hours calls this year.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Steve Morrison",
+      "business": "Morrison Electric Services",
+      "location": "Oak Ridge, TN",
+      "quote": "Between Oak Ridge and Knoxville, I'm constantly on jobs. Voice AI captured 52 service requests last month while I was working - $38,000 in electrical work I would have missed. Absolutely essential.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Linda Chen",
+      "business": "Oak Ridge Property Management",
+      "location": "Oak Ridge, TN",
+      "quote": "Our rental properties serve DOE contractors and scientists relocating to Oak Ridge. AI handles inquiries 24/7 - filled 18 more units this year from prospects calling after work hours. Vacancy rate dropped to 3%.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Voice AI for Oak Ridge?",
+      "answer": "Yes, AI answers Oak Ridge calls 24/7."
+    }
+  ],
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1664575602276-acd073f104c1?w=1200",
+        "alt": "Oak Ridge"
+      }
+    ]
+  },
+  "cta_section": {
+    "headline": "Capture Oak Ridge Clients",
+    "cta_primary": {
+      "text": "Call 865-346-3339",
+      "action": "tel:865-346-3339",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-knoxville-tn"
+    ],
+    "packages": [
+      "starter-package"
+    ]
+  }
+}

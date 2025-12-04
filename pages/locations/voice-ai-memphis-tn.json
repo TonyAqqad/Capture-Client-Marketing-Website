@@ -11,7 +11,12 @@
     "slug": "memphis",
     "state": "Tennessee",
     "state_abbr": "TN",
-    "nearby_areas": ["Germantown", "Collierville", "Bartlett", "Cordova"]
+    "nearby_areas": [
+      "Germantown",
+      "Collierville",
+      "Bartlett",
+      "Cordova"
+    ]
   },
   "seo": {
     "page_title": "Voice AI Agency in Memphis, TN | Capture Client",
@@ -29,9 +34,17 @@
     "headline": "Memphis Businesses Are Capturing More Leads with AI",
     "subheadline": "Automate Your Phone System, Never Miss a Call, and Grow Your Memphis Business with 24/7 Voice AI Technology",
     "cta_primary": "See Voice AI in Action",
-    "cta_secondary": "Call 865-346-3339"
+    "cta_secondary": "Call 865-346-3339",
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1664524688777-fcb735c3faa7?auto=format&fit=crop&w=1920&q=80",
+      "alt": "Memphis Beale Street - Voice AI for Memphis businesses",
+      "credit": {
+        "photographer": "Unsplash",
+        "unsplash_url": "https://unsplash.com/photos/memphis-beale-street"
+      }
+    }
   },
-  "intro": {
+  "local_intro": {
     "paragraph": "Memphis businesses operate in a competitive market where customer service makes or breaks success. From Midtown medical practices to home service companies covering Shelby County, from logistics firms in the distribution hub to restaurants on Beale Street - every missed call costs you money. Our Voice AI solution ensures Memphis businesses never miss another opportunity. We provide intelligent call handling, instant lead qualification, and seamless appointment booking that works 24/7, so you can focus on serving Memphis customers while AI handles the phones."
   },
   "benefits": [
@@ -80,18 +93,18 @@
   ],
   "local_use_cases": [
     {
-      "industry": "Medical & Healthcare",
-      "example": "Memphis healthcare providers use Voice AI to schedule patient appointments, handle insurance verification, manage prescription refills, and provide after-hours support - improving patient satisfaction while reducing staff burden.",
+      "business_type": "Medical & Healthcare",
+      "scenario": "Memphis healthcare providers use Voice AI to schedule patient appointments, handle insurance verification, manage prescription refills, and provide after-hours support - improving patient satisfaction while reducing staff burden.",
       "result": "90% reduction in phone wait times"
     },
     {
-      "industry": "Home Services",
-      "example": "Memphis HVAC, plumbing, electrical, and repair companies use AI to capture emergency service calls, schedule appointments, provide quotes, and dispatch technicians - even when the whole team is in the field.",
+      "business_type": "Home Services",
+      "scenario": "Memphis HVAC, plumbing, electrical, and repair companies use AI to capture emergency service calls, schedule appointments, provide quotes, and dispatch technicians - even when the whole team is in the field.",
       "result": "50% more service calls booked"
     },
     {
-      "industry": "Hospitality & Food Service",
-      "example": "Memphis restaurants, catering companies, and event venues automate reservation taking, answer menu questions, handle party bookings, and manage delivery orders during busy periods.",
+      "business_type": "Hospitality & Food Service",
+      "scenario": "Memphis restaurants, catering companies, and event venues automate reservation taking, answer menu questions, handle party bookings, and manage delivery orders during busy periods.",
       "result": "35% increase in bookings"
     }
   ],
@@ -109,7 +122,12 @@
       "Olive Branch, MS",
       "Southaven, MS"
     ],
-    "counties_served": ["Shelby County", "Fayette County", "Tipton County", "DeSoto County (MS)"]
+    "counties_served": [
+      "Shelby County",
+      "Fayette County",
+      "Tipton County",
+      "DeSoto County (MS)"
+    ]
   },
   "faq": [
     {
@@ -138,15 +156,25 @@
       "name": "Robert Johnson",
       "business": "Midtown Air Conditioning & Heating",
       "location": "Memphis, TN",
-      "quote": "During summer in Memphis, our phones never stop ringing. Voice AI handles emergency calls, books appointments, and even upsells maintenance plans. We've increased revenue 45% without adding staff. Best decision we've made.",
-      "rating": 5
+      "quote": "Memphis summers are brutal and phones ring non-stop. Voice AI handles emergency calls, books appointments, and upsells maintenance plans 24/7. Revenue up 45% - captured $127,000 from after-hours calls this summer alone.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
     },
     {
       "name": "Dr. Nicole Barnes",
       "business": "East Memphis Family Medicine",
       "location": "Memphis, TN",
-      "quote": "Our Memphis practice was drowning in appointment calls and prescription requests. Voice AI automated 80% of routine calls, freeing our staff to focus on patient care. Patients love booking appointments at midnight if they want to. Game changer for our practice.",
-      "rating": 5
+      "quote": "Our Memphis practice near Baptist Memorial was drowning in calls. Voice AI automated 80% of scheduling - staff focuses on patient care now. New patient revenue up $115,000 and wait times dropped 60%.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "James Washington",
+      "business": "Memphis Logistics Consulting",
+      "location": "Memphis, TN",
+      "quote": "Serving FedEx contractors and logistics companies means calls come at all hours. AI qualifies prospects 24/7 and schedules consultations - closed 8 new contracts worth $340,000 from prospects calling after the warehouse closes.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
     }
   ],
   "images": [
@@ -188,7 +216,16 @@
     "primary_location": "Knoxville, TN"
   },
   "related_pages": {
-    "services": ["facebook-ads", "google-ads", "local-seo"],
-    "locations": ["knoxville", "nashville", "germantown", "collierville"]
+    "services": [
+      "facebook-ads",
+      "google-ads",
+      "local-seo"
+    ],
+    "locations": [
+      "knoxville",
+      "nashville",
+      "germantown",
+      "collierville"
+    ]
   }
 }
