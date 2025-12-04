@@ -51,10 +51,10 @@ export default function MegaMenu() {
   }, []);
 
   const handleDropdownClose = useCallback(() => {
-    // Add a small delay to allow mouse to move to dropdown
+    // Add a generous delay to allow mouse to move to dropdown
     closeTimeoutRef.current = setTimeout(() => {
       setOpenDropdown(null);
-    }, 100);
+    }, 300);
   }, []);
 
   const handleDropdownEnter = useCallback(() => {
@@ -144,9 +144,9 @@ export default function MegaMenu() {
                   <span className="absolute inset-x-4 -bottom-px h-px bg-gradient-to-r from-[#D4AF37] to-[#00C9FF] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
                 </button>
 
-                {/* Invisible hover bridge to prevent gap issues */}
+                {/* Invisible hover bridge to prevent gap issues - larger area */}
                 {openDropdown === key && (
-                  <div className="absolute left-0 right-0 h-4 top-full" />
+                  <div className="absolute -left-4 -right-4 h-8 top-full" />
                 )}
 
                 {/* Dropdown Panel */}
