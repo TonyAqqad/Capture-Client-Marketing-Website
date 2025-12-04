@@ -2,6 +2,7 @@
 
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import Link from "next/link";
+import ObfuscatedEmail from "@/components/ui/ObfuscatedEmail";
 
 export default function ContactPageClient() {
   return (
@@ -125,7 +126,10 @@ export default function ContactPageClient() {
 
                 {/* Email Card */}
                 <div className="group relative overflow-hidden w-full">
-                  <a href="mailto:team@captureclientai.net" className="relative glass rounded-xl p-5 sm:p-6 border border-white/10 hover:border-primary/30 transition-all duration-300 block min-h-[80px] active:scale-[0.98]">
+                  <ObfuscatedEmail
+                    email="team@captureclientai.net"
+                    className="relative glass rounded-xl p-5 sm:p-6 border border-white/10 hover:border-primary/30 transition-all duration-300 block min-h-[80px] active:scale-[0.98] no-underline"
+                  >
                     <div className="flex items-start gap-3 sm:gap-4">
                       <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-full flex items-center justify-center border border-primary/30 flex-shrink-0">
                         <span className="material-icons text-primary text-2xl sm:text-3xl">email</span>
@@ -143,7 +147,7 @@ export default function ContactPageClient() {
                         </p>
                       </div>
                     </div>
-                  </a>
+                  </ObfuscatedEmail>
                 </div>
 
                 {/* Location Card */}

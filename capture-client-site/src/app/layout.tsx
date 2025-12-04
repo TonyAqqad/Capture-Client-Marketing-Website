@@ -103,6 +103,13 @@ export default function RootLayout({
           <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet" />
         </noscript>
 
+        {/* Web App Manifest for PWA support */}
+        <link rel="manifest" href="/site.webmanifest" />
+
+        {/* Theme color for browsers */}
+        <meta name="theme-color" content="#0F172A" />
+        <meta name="msapplication-TileColor" content="#0F172A" />
+
         {/* Global JSON-LD structured data for E-E-A-T and entity recognition */}
         <JsonLd schema={[organizationSchema, websiteSchema]} />
       </head>

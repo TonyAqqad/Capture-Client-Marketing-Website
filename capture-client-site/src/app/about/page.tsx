@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "About Capture Client | Voice AI & Marketing Automation",
   description:
     "Learn about Capture Client, the marketing automation platform helping small businesses capture more leads with AI voice agents and paid advertising.",
+  alternates: {
+    canonical: "https://captureclientai.net/about",
+  },
 };
 
 // Organization Schema - defines the business entity

@@ -1,0 +1,28 @@
+{
+  "name": "Capture Client - AI Voice Agents & Lead Generation",
+  "short_name": "Capture Client",
+  "description": "Enterprise-grade growth platform with 24/7 AI voice agents, Google & Facebook Ads management, built-in CRM, and real-time analytics.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070B14",
+  "theme_color": "#0F172A",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "marketing"],
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en-US",
+  "dir": "ltr"
+}

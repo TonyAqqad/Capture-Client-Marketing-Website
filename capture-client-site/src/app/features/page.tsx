@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Platform Features | All-in-One Growth Hub | Capture Client",
   description:
     "Explore Capture Client's powerful features: AI Voice Agents, CRM, automated lead generation, real-time analytics, and unified inbox—all in one platform.",
+  alternates: {
+    canonical: "https://captureclientai.net/features",
+  },
 };
 
 // Feature data for schema generation

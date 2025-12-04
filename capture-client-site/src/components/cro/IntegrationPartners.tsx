@@ -119,6 +119,7 @@ export default function IntegrationPartners() {
                       alt={`${partner.name} logo`}
                       width={160}
                       height={60}
+                      sizes="(max-width: 640px) 140px, 160px"
                       className="object-contain max-h-12 sm:max-h-14 w-auto filter group-hover:brightness-110 transition-all duration-300"
                       unoptimized
                     />

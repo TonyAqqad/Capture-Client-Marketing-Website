@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Contact Us | Get Your Free Consultation | Capture Client",
   description:
     "Contact Capture Client for Voice AI, Google Ads, and Facebook Ads services. Call (865) 346-3339 or fill out our form for a free consultation.",
+  alternates: {
+    canonical: "https://captureclientai.net/contact",
+  },
 };
 
 // LocalBusiness Schema - detailed business information for local SEO

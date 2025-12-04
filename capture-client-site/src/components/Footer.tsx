@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { trackPhoneClick, trackEmailClick } from "@/lib/analytics";
+import ObfuscatedEmail from "@/components/ui/ObfuscatedEmail";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -63,19 +64,12 @@ export default function Footer() {
                   </span>
                 </a>
 
-                <a
-                  href="mailto:team@captureclientai.net"
+                <ObfuscatedEmail
+                  email="team@captureclientai.net"
                   className="flex items-center gap-3 group min-h-[48px] -mx-2 px-2 rounded-lg hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300 active:scale-95 relative overflow-hidden"
                   onClick={() => trackEmailClick("footer")}
-                >
-                  {/* Subtle gradient on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#4A69E2]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                  <span className="material-icons text-[#4A69E2] group-hover:text-[#00C9FF] text-xl transition-colors duration-300 relative z-10">email</span>
-                  <span className="text-[#94A3B8] group-hover:text-[#00C9FF] font-body text-base sm:text-sm transition-colors duration-300 break-all relative z-10">
-                    team@captureclientai.net
-                  </span>
-                </a>
+                  showIcon={true}
+                />
 
                 <div className="flex items-center gap-3 min-h-[48px] -mx-2 px-2">
                   <span className="material-icons text-[#4A69E2] text-xl">location_on</span>
