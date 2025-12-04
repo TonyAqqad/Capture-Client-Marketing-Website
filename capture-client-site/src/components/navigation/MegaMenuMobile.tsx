@@ -40,7 +40,7 @@ export default function MegaMenuMobile({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-[#070B14]/90 backdrop-blur-lg z-40"
+            className="fixed inset-0 bg-[#070B14]/90 backdrop-blur-lg z-[90]"
             onClick={onClose}
             aria-hidden="true"
           />
@@ -51,7 +51,7 @@ export default function MegaMenuMobile({
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
-            className="fixed top-0 right-0 bottom-0 w-full sm:w-[380px] bg-[#0F172A] border-l border-white/10 z-50 flex flex-col"
+            className="fixed top-0 right-0 bottom-0 w-full sm:w-[380px] bg-[#0F172A] border-l border-white/10 z-[105] flex flex-col"
           >
             {/* Header with close button */}
             <div className="relative bg-[#0F172A] border-b border-white/10 px-6 py-5 flex-shrink-0">

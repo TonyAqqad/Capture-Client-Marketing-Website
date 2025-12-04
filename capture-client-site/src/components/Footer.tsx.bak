@@ -88,7 +88,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/services/voice-ai"
-                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
+                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative"
                   >
                     <span className="w-1 h-1 rounded-full bg-[#4A69E2] group-hover:bg-[#00C9FF] transition-colors duration-300" />
                     <span className="group-hover:translate-x-1 transition-transform duration-300">
@@ -99,7 +99,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/services/google-ads"
-                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
+                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative"
                   >
                     <span className="w-1 h-1 rounded-full bg-[#4A69E2] group-hover:bg-[#00C9FF] transition-colors duration-300" />
                     <span className="group-hover:translate-x-1 transition-transform duration-300">
@@ -110,7 +110,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/services/facebook-ads"
-                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
+                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative"
                   >
                     <span className="w-1 h-1 rounded-full bg-[#4A69E2] group-hover:bg-[#00C9FF] transition-colors duration-300" />
                     <span className="group-hover:translate-x-1 transition-transform duration-300">
@@ -121,7 +121,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/services/lead-generation"
-                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
+                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative"
                   >
                     <span className="w-1 h-1 rounded-full bg-[#4A69E2] group-hover:bg-[#00C9FF] transition-colors duration-300" />
                     <span className="group-hover:translate-x-1 transition-transform duration-300">
@@ -142,7 +142,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/about"
-                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
+                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative"
                   >
                     <span className="w-1 h-1 rounded-full bg-[#4A69E2] group-hover:bg-[#00C9FF] transition-colors duration-300" />
                     <span className="group-hover:translate-x-1 transition-transform duration-300">
@@ -153,7 +153,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/pricing"
-                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
+                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative"
                   >
                     <span className="w-1 h-1 rounded-full bg-[#4A69E2] group-hover:bg-[#00C9FF] transition-colors duration-300" />
                     <span className="group-hover:translate-x-1 transition-transform duration-300">
@@ -164,7 +164,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/contact"
-                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
+                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative"
                   >
                     <span className="w-1 h-1 rounded-full bg-[#4A69E2] group-hover:bg-[#00C9FF] transition-colors duration-300" />
                     <span className="group-hover:translate-x-1 transition-transform duration-300">
@@ -175,7 +175,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/blog"
-                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
+                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative"
                   >
                     <span className="w-1 h-1 rounded-full bg-[#4A69E2] group-hover:bg-[#00C9FF] transition-colors duration-300" />
                     <span className="group-hover:translate-x-1 transition-transform duration-300">
@@ -196,7 +196,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/privacy-policy"
-                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
+                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative"
                   >
                     <span className="w-1 h-1 rounded-full bg-[#4A69E2] group-hover:bg-[#00C9FF] transition-colors duration-300" />
                     <span className="group-hover:translate-x-1 transition-transform duration-300">
@@ -207,7 +207,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/terms-of-service"
-                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
+                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative"
                   >
                     <span className="w-1 h-1 rounded-full bg-[#4A69E2] group-hover:bg-[#00C9FF] transition-colors duration-300" />
                     <span className="group-hover:translate-x-1 transition-transform duration-300">
@@ -218,7 +218,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="/faq"
-                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
+                    className="text-[#94A3B8] hover:text-[#00C9FF] font-body text-sm transition-all duration-300 inline-flex items-center gap-2 group relative"
                   >
                     <span className="w-1 h-1 rounded-full bg-[#4A69E2] group-hover:bg-[#00C9FF] transition-colors duration-300" />
                     <span className="group-hover:translate-x-1 transition-transform duration-300">

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Bricolage_Grotesque } from "next/font/google";
+import { Poppins, Inter, Space_Grotesk, Bricolage_Grotesque, Syne } from "next/font/google";
 import "./globals.css";
 import "./globals-mobile-optimized.css";
 import Header from "@/components/Header";
@@ -16,34 +16,48 @@ import {
   generateWebSiteSchema,
 } from "@/lib/seo-config";
 
-// ============================================
-// FONT OPTIMIZATION: 23 files → 5 files (78% reduction)
-// ============================================
-// BEFORE: Poppins (4) + Inter (3) + Space Grotesk (3) + Bricolage (7) + Syne (5) + Material Icons (1) = 23 files
-// AFTER: Inter (2) + Bricolage (2) + Material Icons (1) = 5 files
-// Performance gain: ~70% faster font loading, ~100ms saved on FCP
-// ============================================
+// CRITICAL: Use font-display swap for faster FCP
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+  preload: true,
+});
 
-// BODY FONT: Inter - Clean, readable, professional
-// Only essential weights: Normal (400) for body, Semibold (600) for emphasis
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  weight: ["400", "600"], // 2 files only
+  weight: ["400", "500", "600"],
   display: "swap",
   preload: true,
-  fallback: ["system-ui", "-apple-system", "sans-serif"],
 });
 
-// DISPLAY FONT: Bricolage Grotesque - Ultra-premium headlines
-// Only essential weights: Normal (400) for subheadings, Bold (700) for hero text
+// PREMIUM: Space Grotesk - Distinctive headline font
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  weight: ["500", "600", "700"],
+  display: "swap",
+  preload: true,
+});
+
+// $1 MILLION: Bricolage Grotesque - Ultra-premium display headlines
 const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-bricolage-grotesque",
-  weight: ["400", "700"], // 2 files only
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
   display: "swap",
   preload: true,
-  fallback: ["system-ui", "-apple-system", "sans-serif"],
+});
+
+// $1 MILLION: Syne - Bold distinctive accent font
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-syne",
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+  preload: false, // Secondary font, don't preload
 });
 
 // Enhanced metadata following Next.js 16 and 2025 SEO best practices
@@ -101,7 +115,7 @@ export default function RootLayout({
         <JsonLd schema={[organizationSchema, websiteSchema]} />
       </head>
       <body
-        className={`${inter.variable} ${bricolageGrotesque.variable} font-body bg-background text-foreground antialiased overflow-x-hidden`}
+        className={`${poppins.variable} ${inter.variable} ${spaceGrotesk.variable} ${bricolageGrotesque.variable} ${syne.variable} font-body bg-background text-foreground antialiased overflow-x-hidden`}
       >
         {/* CRITICAL: Defer Material Icons loading until after initial render */}
         <Script

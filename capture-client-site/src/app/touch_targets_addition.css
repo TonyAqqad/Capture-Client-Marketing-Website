@@ -1,0 +1,32 @@
+
+  /* ============================================ */
+  /* WCAG AAA TOUCH TARGET STANDARDS            */
+  /* Minimum 44x44px for all interactive elements */
+  /* ============================================ */
+
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Apply touch targets globally on mobile */
+  @media (max-width: 768px) {
+    a, button, [role="button"], input[type="button"], input[type="submit"],
+    select, [role="link"], [role="menuitem"], [tabindex="0"] {
+      min-height: 44px;
+    }
+
+    /* Navigation links specifically */
+    nav a:not(.inline), nav button {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+  }
+
+  /* Touch manipulation for faster taps (removes 300ms delay) */
+  .touch-manipulation {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+  }
