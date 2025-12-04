@@ -100,23 +100,15 @@ export default function UrgencyTimer({
       transition={{ duration: 0.5 }}
       className={`bg-gradient-to-r from-orange-500/20 to-red-500/20 border-2 border-orange-500/40 rounded-2xl p-6 shadow-glow ${className}`}
     >
-      {/* Header */}
+      {/* Header - using CSS animation instead of Framer Motion for performance */}
       <div className="flex items-center justify-center gap-2 mb-4">
-        <motion.span
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 1, repeat: Infinity }}
-          className="material-icons text-orange-400 text-2xl"
-        >
+        <span className="material-icons text-orange-400 text-2xl animate-pulse">
           local_fire_department
-        </motion.span>
+        </span>
         <h3 className="text-base sm:text-lg font-bold text-foreground">Limited Time Offer</h3>
-        <motion.span
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 1, repeat: Infinity }}
-          className="material-icons text-orange-400 text-2xl"
-        >
+        <span className="material-icons text-orange-400 text-2xl animate-pulse">
           local_fire_department
-        </motion.span>
+        </span>
       </div>
 
       {/* Offer text */}
@@ -124,20 +116,15 @@ export default function UrgencyTimer({
         {offer}
       </p>
 
-      {/* Countdown Timer */}
+      {/* Countdown Timer - simplified without per-digit animations */}
       <div className="flex items-center justify-center gap-2 sm:gap-3 mb-6">
         {/* Hours */}
         <div className="flex flex-col items-center">
-          <motion.div
-            key={timeLeft.hours}
-            initial={{ scale: 1.2, opacity: 0.5 }}
-            animate={{ scale: 1, opacity: 1 }}
-            className="bg-background-dark/80 border-2 border-orange-500/40 rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] text-center"
-          >
-            <p className="text-2xl sm:text-3xl lg:text-4xl font-black text-gradient bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+          <div className="bg-background-dark/80 border-2 border-orange-500/40 rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] text-center">
+            <p className="text-2xl sm:text-3xl lg:text-4xl font-black text-gradient bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent tabular-nums">
               {String(timeLeft.hours).padStart(2, "0")}
             </p>
-          </motion.div>
+          </div>
           <p className="text-xs text-foreground-muted mt-2 font-semibold uppercase">Hours</p>
         </div>
 
@@ -145,16 +132,11 @@ export default function UrgencyTimer({
 
         {/* Minutes */}
         <div className="flex flex-col items-center">
-          <motion.div
-            key={timeLeft.minutes}
-            initial={{ scale: 1.2, opacity: 0.5 }}
-            animate={{ scale: 1, opacity: 1 }}
-            className="bg-background-dark/80 border-2 border-orange-500/40 rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] text-center"
-          >
-            <p className="text-2xl sm:text-3xl lg:text-4xl font-black text-gradient bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+          <div className="bg-background-dark/80 border-2 border-orange-500/40 rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] text-center">
+            <p className="text-2xl sm:text-3xl lg:text-4xl font-black text-gradient bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent tabular-nums">
               {String(timeLeft.minutes).padStart(2, "0")}
             </p>
-          </motion.div>
+          </div>
           <p className="text-xs text-foreground-muted mt-2 font-semibold uppercase">Minutes</p>
         </div>
 
@@ -162,16 +144,11 @@ export default function UrgencyTimer({
 
         {/* Seconds */}
         <div className="flex flex-col items-center">
-          <motion.div
-            key={timeLeft.seconds}
-            initial={{ scale: 1.2, opacity: 0.5 }}
-            animate={{ scale: 1, opacity: 1 }}
-            className="bg-background-dark/80 border-2 border-orange-500/40 rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] text-center"
-          >
-            <p className="text-2xl sm:text-3xl lg:text-4xl font-black text-gradient bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+          <div className="bg-background-dark/80 border-2 border-orange-500/40 rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] text-center">
+            <p className="text-2xl sm:text-3xl lg:text-4xl font-black text-gradient bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent tabular-nums">
               {String(timeLeft.seconds).padStart(2, "0")}
             </p>
-          </motion.div>
+          </div>
           <p className="text-xs text-foreground-muted mt-2 font-semibold uppercase">Seconds</p>
         </div>
       </div>

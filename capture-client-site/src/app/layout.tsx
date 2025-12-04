@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Poppins, Inter, Space_Grotesk } from "next/font/google";
+import { Poppins, Inter, Space_Grotesk, Bricolage_Grotesque, Syne } from "next/font/google";
 import "./globals.css";
 import "./globals-mobile-optimized.css";
 import Header from "@/components/Header";
@@ -20,25 +20,43 @@ const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
   weight: ["400", "500", "600", "700"],
-  display: "swap", // Already set - good!
-  preload: true, // Ensure preloading
+  display: "swap",
+  preload: true,
 });
 
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
   weight: ["400", "500", "600"],
-  display: "swap", // Already set - good!
-  preload: true, // Ensure preloading
+  display: "swap",
+  preload: true,
 });
 
-// PREMIUM: Space Grotesk - Distinctive headline font for non-AI-slop look
+// PREMIUM: Space Grotesk - Distinctive headline font
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-space-grotesk",
   weight: ["500", "600", "700"],
   display: "swap",
   preload: true,
+});
+
+// $1 MILLION: Bricolage Grotesque - Ultra-premium display headlines
+const bricolageGrotesque = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-bricolage-grotesque",
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  display: "swap",
+  preload: true,
+});
+
+// $1 MILLION: Syne - Bold distinctive accent font
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-syne",
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+  preload: false, // Secondary font, don't preload
 });
 
 // Enhanced metadata following Next.js 16 and 2025 SEO best practices
@@ -89,7 +107,7 @@ export default function RootLayout({
         <JsonLd schema={[organizationSchema, websiteSchema]} />
       </head>
       <body
-        className={`${poppins.variable} ${inter.variable} ${spaceGrotesk.variable} font-body bg-background text-foreground antialiased overflow-x-hidden`}
+        className={`${poppins.variable} ${inter.variable} ${spaceGrotesk.variable} ${bricolageGrotesque.variable} ${syne.variable} font-body bg-background text-foreground antialiased overflow-x-hidden`}
       >
         {/* CRITICAL: Defer Material Icons loading until after initial render */}
         <Script

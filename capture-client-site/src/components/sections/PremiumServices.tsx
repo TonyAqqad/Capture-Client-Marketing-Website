@@ -12,6 +12,7 @@ interface Service {
   benefits: string[];
   gradient: string;
   borderColor: string;
+  featured?: boolean;
 }
 
 const services: Service[] = [
@@ -27,7 +28,8 @@ const services: Service[] = [
       "Instant appointment booking"
     ],
     gradient: "from-accent/20 via-accent/10 to-transparent",
-    borderColor: "border-accent/30"
+    borderColor: "border-accent/30",
+    featured: true // Hero card
   },
   {
     id: "lead-generation",
@@ -97,73 +99,84 @@ export function PremiumServices() {
     <section
       id="services"
       ref={containerRef}
-      className="section bg-background relative overflow-hidden w-full max-w-full py-16 sm:py-20 lg:py-24"
+      className="section bg-background relative overflow-hidden w-full max-w-full py-16 sm:py-20 lg:py-32"
     >
-      {/* Animated background elements */}
+      {/* Animated aurora background */}
       <motion.div
         style={{ y, opacity }}
-        className="absolute inset-0 bg-gradient-to-b from-background-dark via-background to-background-dark opacity-50"
+        className="absolute inset-0 bg-aurora-animated opacity-40"
       />
 
-      {/* Floating orbs - DISABLED ON MOBILE to prevent GPU lag */}
+      {/* Floating geometric shapes - DISABLED ON MOBILE */}
       {!isMobile && (
         <>
           <motion.div
             animate={{
+              rotate: [0, 360],
+              scale: [1, 1.1, 1],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+            className="absolute top-20 right-10 w-32 h-32 border-2 border-aurora-1/20 rounded-2xl"
+            style={{ transformOrigin: "center" }}
+          />
+          <motion.div
+            animate={{
+              rotate: [0, -360],
               scale: [1, 1.2, 1],
-              opacity: [0.1, 0.2, 0.1],
+            }}
+            transition={{
+              duration: 25,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+            className="absolute bottom-40 left-20 w-24 h-24 border-2 border-aurora-3/20 rounded-full"
+            style={{ transformOrigin: "center" }}
+          />
+          <motion.div
+            animate={{
+              y: [0, -30, 0],
+              opacity: [0.2, 0.4, 0.2],
             }}
             transition={{
               duration: 8,
               repeat: Infinity,
               ease: "easeInOut"
             }}
-            className="absolute top-1/4 right-0 w-[300px] sm:w-[400px] md:w-[600px] lg:w-[800px] h-[300px] sm:h-[400px] md:h-[600px] lg:h-[800px] rounded-full bg-gradient-radial from-accent/10 to-transparent blur-3xl translate-x-1/4 overflow-hidden"
-            style={{ maxWidth: '100vw' }}
-          />
-          <motion.div
-            animate={{
-              scale: [1.2, 1, 1.2],
-              opacity: [0.1, 0.2, 0.1],
-            }}
-            transition={{
-              duration: 10,
-              repeat: Infinity,
-              ease: "easeInOut",
-              delay: 2
-            }}
-            className="absolute bottom-1/4 left-0 w-[350px] sm:w-[450px] md:w-[700px] lg:w-[900px] h-[350px] sm:h-[450px] md:h-[700px] lg:h-[900px] rounded-full bg-gradient-radial from-primary/10 to-transparent blur-3xl -translate-x-1/4 overflow-hidden"
-            style={{ maxWidth: '100vw' }}
+            className="absolute top-1/3 left-1/4 w-16 h-16 bg-gradient-to-br from-aurora-2/20 to-aurora-4/10 rounded-lg rotate-45"
           />
         </>
       )}
 
       <div className="container-custom relative z-10 px-6 sm:px-6 lg:px-8">
-        {/* Section header */}
+        {/* Section header with extreme typography */}
         <div className="text-center mb-16 sm:mb-20 lg:mb-24">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-accent mb-4 sm:mb-5">
-              The Integrated Solution
+            <h2 className="text-xs sm:text-sm font-extrabold uppercase tracking-[0.3em] mb-4 sm:mb-5">
+              <span className="text-gradient-gold-cyan">The Integrated Solution</span>
             </h2>
-            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground mb-6 sm:mb-8 text-depth px-4 leading-[1.1] tracking-tight" style={{ hyphens: 'none' }}>
+            <h3 className="text-display-xl font-hero mb-6 sm:mb-8 text-foreground text-depth leading-[0.95]">
               Everything You Need in{" "}
-              <span className="text-gradient bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent whitespace-nowrap">
+              <span className="text-gradient-gold-cyan whitespace-nowrap">
                 One Platform
               </span>
             </h3>
-            <p className="text-lg sm:text-xl md:text-2xl text-foreground-muted max-w-2xl mx-auto leading-[1.6] px-6">
+            <p className="text-lg sm:text-xl md:text-2xl text-light-contrast text-foreground-muted max-w-3xl mx-auto leading-[1.6]">
               Stop juggling multiple tools. Capture Client brings AI, ads, CRM, and analytics
               together in one seamless growth engine.
             </p>
           </motion.div>
         </div>
 
-        {/* Feature cards grid - Single column on mobile, responsive grid on larger screens */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-8 lg:gap-8">
+        {/* BENTO GRID: Asymmetric 2x2 layout with featured card spanning 2 rows */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 max-w-7xl mx-auto">
           {services.map((service, index) => (
             <ServiceCard
               key={service.id}
@@ -180,19 +193,19 @@ export function PremiumServices() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-12 sm:mt-16 px-4"
+          className="text-center mt-16 sm:mt-20 px-4"
         >
-          <p className="text-sm sm:text-base text-foreground-muted mb-4 sm:mb-6">
+          <p className="text-sm sm:text-base text-foreground-muted mb-6 sm:mb-8 font-light tracking-wide">
             Ready to see how it all works together?
           </p>
           <motion.a
             href="#contact"
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.05, y: -4 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-accent via-primary to-accent text-white font-bold text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 rounded-2xl shadow-glow-lg hover:shadow-glow border-2 border-transparent hover:border-accent/30 transition-all duration-300 w-full sm:w-auto"
+            className="inline-flex items-center justify-center gap-3 btn-gold text-lg px-10 sm:px-12 py-5 sm:py-6 rounded-2xl shadow-glow-lg hover:shadow-[0_0_60px_rgba(212,175,55,0.6)] transition-all duration-300 w-full sm:w-auto font-bold"
           >
             Book Your Free Demo
-            <span className="material-icons">arrow_forward</span>
+            <span className="material-icons text-2xl">arrow_forward</span>
           </motion.a>
         </motion.div>
       </div>
@@ -209,93 +222,184 @@ interface ServiceCardProps {
 
 function ServiceCard({ service, index, isInView, isMobile }: ServiceCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current || isMobile) return;
+
+    const rect = cardRef.current.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width;
+    const y = (e.clientY - rect.top) / rect.height;
+
+    setMousePosition({ x, y });
+  };
+
+  // Calculate 3D tilt based on mouse position
+  const tiltX = isMobile ? 0 : (mousePosition.y - 0.5) * -10;
+  const tiltY = isMobile ? 0 : (mousePosition.x - 0.5) * 10;
+
+  // Featured card (Voice AI) spans 2 rows on desktop
+  const gridClasses = service.featured
+    ? "md:row-span-2"
+    : "";
 
   return (
     <motion.div
       ref={cardRef}
-      initial={{ opacity: 0, y: 50, scale: 0.9 }}
+      initial={{ opacity: 0, y: 50, scale: 0.95 }}
       animate={
         isInView
           ? { opacity: 1, y: 0, scale: 1 }
-          : { opacity: 0, y: 50, scale: 0.9 }
+          : { opacity: 0, y: 50, scale: 0.95 }
       }
       transition={{
-        duration: 0.6,
-        delay: index * 0.1,
+        duration: 0.7,
+        delay: index * 0.15,
         type: "spring",
-        stiffness: 100,
+        stiffness: 80,
       }}
-      whileHover={{
-        y: -12,
-        transition: { duration: 0.3 }
+      onMouseMove={handleMouseMove}
+      onMouseLeave={() => setMousePosition({ x: 0.5, y: 0.5 })}
+      className={`group relative ${gridClasses}`}
+      style={{
+        perspective: 1000,
       }}
-      className="group relative"
     >
-      {/* Gradient background on hover */}
-      <div
-        className={`absolute inset-0 bg-gradient-to-br ${service.gradient} rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl`}
-      />
-
-      {/* Card content */}
-      <div
-        className={`relative h-full bg-surface/50 backdrop-blur-lg border-2 ${service.borderColor} rounded-2xl sm:rounded-3xl p-8 sm:p-10 transition-all duration-500 group-hover:border-opacity-100 group-hover:shadow-glow flex flex-col items-center sm:items-start text-center sm:text-left`}
+      {/* 3D Glass Card with hover tilt */}
+      <motion.div
+        animate={!isMobile ? {
+          rotateX: tiltX,
+          rotateY: tiltY,
+        } : {}}
+        transition={{ duration: 0.3, ease: "easeOut" }}
+        whileHover={{
+          y: -8,
+          transition: { duration: 0.3 }
+        }}
+        className="glass-3d h-full p-8 lg:p-10 flex flex-col relative overflow-hidden"
+        style={{
+          transformStyle: "preserve-3d",
+        }}
       >
-        {/* Icon container */}
-        <motion.div
-          whileHover={isMobile ? {} : { rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
-          transition={{ duration: 0.5 }}
-          className={`flex items-center justify-center w-16 h-16 sm:w-18 sm:h-18 rounded-xl bg-gradient-to-br ${service.gradient} border ${service.borderColor} mb-6 sm:mb-8 shadow-lg group-hover:shadow-glow transition-all duration-300`}
-        >
-          <span className={`material-icons ${service.id === "voice-ai" || service.id === "crm" ? "text-accent" : "text-primary"} text-3xl sm:text-4xl`}>
-            {service.icon}
-          </span>
-        </motion.div>
-
-        {/* Title */}
-        <h3 className="text-xl sm:text-2xl font-heading font-bold text-foreground mb-3 sm:mb-4 group-hover:text-gradient transition-all duration-300 w-full leading-tight" style={{ hyphens: 'none' }}>
-          {service.title}
-        </h3>
-
-        {/* Description */}
-        <p className="text-base sm:text-lg text-foreground-muted leading-[1.6] mb-6 sm:mb-8 w-full">
-          {service.description}
-        </p>
-
-        {/* Benefits list */}
-        <ul className="space-y-3 sm:space-y-3 w-full flex flex-col items-center sm:items-start">
-          {service.benefits.map((benefit, idx) => (
-            <motion.li
-              key={idx}
-              initial={{ opacity: 0, x: -10 }}
-              animate={
-                isInView
-                  ? { opacity: 1, x: 0 }
-                  : { opacity: 0, x: -10 }
-              }
-              transition={{
-                duration: isMobile ? 0 : 0.4,
-                delay: isMobile ? 0 : index * 0.1 + idx * 0.05 + 0.3,
-              }}
-              className="flex items-center gap-3 text-base text-foreground-subtle group-hover:text-foreground transition-colors duration-300"
-            >
-              <span className={`material-icons text-lg flex-shrink-0 ${service.id === "voice-ai" || service.id === "crm" ? "text-accent" : "text-primary"}`}>
-                check_circle
-              </span>
-              <span className="leading-[1.5] text-left">{benefit}</span>
-            </motion.li>
-          ))}
-        </ul>
-
-        {/* Hover glow effect */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileHover={{ opacity: 1 }}
-          className="absolute inset-0 rounded-2xl bg-gradient-to-br from-accent/5 via-transparent to-primary/5 pointer-events-none"
+        {/* Aurora gradient border animation */}
+        <div
+          className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-br ${service.gradient} blur-2xl`}
         />
 
-        {/* Corner accent */}
-        <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-accent/10 to-transparent rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      </div>
+        {/* Animated aurora glow for featured card */}
+        {service.featured && (
+          <motion.div
+            animate={{
+              opacity: [0.3, 0.6, 0.3],
+              scale: [1, 1.05, 1],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute -inset-4 bg-gradient-to-br from-aurora-1/20 via-aurora-2/10 to-aurora-4/20 rounded-3xl blur-3xl"
+          />
+        )}
+
+        {/* Content container */}
+        <div className="relative z-10 flex flex-col h-full">
+          {/* Icon container with 3D float effect */}
+          <motion.div
+            whileHover={isMobile ? {} : {
+              rotate: [0, -5, 5, -5, 0],
+              scale: 1.1,
+              z: 50,
+            }}
+            transition={{ duration: 0.6 }}
+            className={`flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-2xl mb-6 sm:mb-8 relative ${
+              service.featured ? 'card-float' : ''
+            }`}
+            style={{
+              background: `linear-gradient(135deg, var(--aurora-${service.id === 'voice-ai' ? '1' : service.id === 'lead-generation' ? '2' : service.id === 'crm' ? '3' : '4'}) 0%, var(--aurora-${service.id === 'voice-ai' ? '2' : service.id === 'lead-generation' ? '3' : service.id === 'crm' ? '4' : '1'}) 100%)`,
+              boxShadow: service.featured
+                ? '0 0 40px rgba(0, 201, 255, 0.4), 0 20px 40px rgba(0, 0, 0, 0.3)'
+                : '0 10px 30px rgba(0, 0, 0, 0.3)',
+              border: '2px solid rgba(255, 255, 255, 0.1)',
+            }}
+          >
+            <span className="material-icons text-white text-4xl sm:text-5xl">
+              {service.icon}
+            </span>
+
+            {/* Rotating ring for featured card */}
+            {service.featured && !isMobile && (
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-0 rounded-2xl border-2 border-transparent"
+                style={{
+                  borderTopColor: 'rgba(212, 175, 55, 0.5)',
+                  borderRightColor: 'rgba(0, 201, 255, 0.3)',
+                }}
+              />
+            )}
+          </motion.div>
+
+          {/* Title with extreme weight contrast */}
+          <h3 className={`${service.featured ? 'text-display-md' : 'text-display-sm'} font-hero text-foreground mb-4 sm:mb-5 group-hover:text-gradient-gold-cyan transition-all duration-300 leading-tight`}>
+            {service.title}
+          </h3>
+
+          {/* Description with light contrast */}
+          <p className={`${service.featured ? 'text-lg sm:text-xl' : 'text-base sm:text-lg'} text-light-contrast text-foreground-muted leading-[1.6] mb-6 sm:mb-8 flex-grow`}>
+            {service.description}
+          </p>
+
+          {/* Benefits list with stagger animation */}
+          <ul className="space-y-3 sm:space-y-4">
+            {service.benefits.map((benefit, idx) => (
+              <motion.li
+                key={idx}
+                initial={{ opacity: 0, x: -20 }}
+                animate={
+                  isInView
+                    ? { opacity: 1, x: 0 }
+                    : { opacity: 0, x: -20 }
+                }
+                transition={{
+                  duration: isMobile ? 0 : 0.5,
+                  delay: isMobile ? 0 : index * 0.15 + idx * 0.08 + 0.3,
+                }}
+                className="flex items-center gap-3 text-base sm:text-lg text-foreground-subtle group-hover:text-foreground transition-colors duration-300"
+              >
+                <span
+                  className="material-icons text-xl flex-shrink-0"
+                  style={{
+                    color: service.id === 'voice-ai' || service.id === 'crm'
+                      ? 'var(--aurora-1)'
+                      : 'var(--aurora-2)',
+                  }}
+                >
+                  check_circle
+                </span>
+                <span className="leading-[1.5] font-medium">{benefit}</span>
+              </motion.li>
+            ))}
+          </ul>
+
+          {/* Shimmer effect on hover */}
+          <motion.div
+            initial={{ x: "-100%", opacity: 0 }}
+            whileHover={{ x: "200%", opacity: [0, 1, 0] }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none"
+          />
+        </div>
+
+        {/* Corner accent - premium touch */}
+        <div
+          className="absolute top-0 right-0 w-32 h-32 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-bl-full"
+          style={{
+            background: `radial-gradient(circle at top right, var(--aurora-${service.featured ? '4' : '2'}) 0%, transparent 70%)`,
+          }}
+        />
+      </motion.div>
     </motion.div>
   );
 }

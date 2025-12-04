@@ -156,7 +156,9 @@ export default function EnhancedROICalculator() {
 
       setSubmitted(true);
     } catch (error) {
-      console.error("Lead capture error:", error);
+      if (process.env.NODE_ENV === 'development') {
+        console.error("Lead capture error:", error);
+      }
     }
   };
 

@@ -33,6 +33,11 @@ export function isIOSDevice(): boolean {
   return isIOSUserAgent || isIOSPlatform || isIPadDesktopMode;
 }
 
+// Extended Navigator interface for device memory API
+interface NavigatorWithMemory extends Navigator {
+  deviceMemory?: number;
+}
+
 /**
  * Detects if device is likely low-powered (iPhone SE, older models)
  */
@@ -42,7 +47,8 @@ export function isLowPowerDevice(): boolean {
   }
 
   // Check memory (if available)
-  const deviceMemory = (navigator as any).deviceMemory;
+  const nav = navigator as NavigatorWithMemory;
+  const deviceMemory = nav.deviceMemory;
   if (deviceMemory && deviceMemory < 4) {
     return true;
   }
@@ -135,13 +141,24 @@ export function getOptimalAnimationConfig(): AnimationConfig {
   };
 }
 
+// Framer Motion transition type
+interface MotionTransition {
+  type?: 'spring' | 'tween' | 'keyframes' | 'inertia';
+  duration?: number;
+  ease?: string | number[];
+  stiffness?: number;
+  damping?: number;
+  mass?: number;
+  [key: string]: unknown;
+}
+
 /**
  * Get optimized Framer Motion transition config for iOS
  */
 export function getIOSOptimizedTransition(
-  defaultTransition: any,
+  defaultTransition: MotionTransition,
   isIOS: boolean
-): any {
+): MotionTransition {
   if (!isIOS) return defaultTransition;
 
   // Convert spring animations to tween for iOS

@@ -1,7 +1,7 @@
 /* ============================================ */
-/* PREMIUM DESIGN SYSTEM - Gold + Cyan Palette  */
-/* Space Grotesk Typography for Distinctive Look */
-/* NOTE: Font loaded via next/font in layout.tsx */
+/* $1 MILLION DESIGN SYSTEM                     */
+/* Premium Aurora Gradients + Bold Typography   */
+/* Built for Impact - No AI Slop Allowed        */
 /* ============================================ */
 
 @tailwind base;
@@ -9,30 +9,40 @@
 @tailwind utilities;
 
 :root {
-  /* PREMIUM: Primary Color Palette */
-  --color-background: #0F1419;
-  --color-surface: #1A1F26;
-  --color-surface-elevated: #242B35;
+  /* MILLION DOLLAR: Deep Rich Color Palette */
+  --color-background: #070B14;
+  --color-background-deep: #030508;
+  --color-surface: #0F1419;
+  --color-surface-elevated: #1A1F26;
 
-  /* PREMIUM: Gold + Cyan Accent System */
+  /* PREMIUM: Gold + Cyan + Purple Accent System */
   --color-gold: #D4AF37;
   --color-gold-light: #E7C96F;
   --color-gold-dark: #B8942C;
   --color-cyan: #00C9FF;
+  --color-purple: #8B5CF6;
+  --color-indigo: #4F46E5;
   --color-mocha: #8B7355;
 
+  /* Aurora Gradient Colors */
+  --aurora-1: #00C9FF;
+  --aurora-2: #4F46E5;
+  --aurora-3: #8B5CF6;
+  --aurora-4: #D4AF37;
+
   /* Glass Effect Variables (GPU-friendly) */
-  --glass-bg: rgba(26, 31, 38, 0.85);
-  --glass-border: rgba(212, 175, 55, 0.15);
-  --glass-highlight: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(15, 20, 25, 0.9);
+  --glass-border: rgba(212, 175, 55, 0.12);
+  --glass-highlight: rgba(255, 255, 255, 0.08);
 
-  /* Text Hierarchy */
-  --text-primary: #F8FAFC;
-  --text-secondary: #94A3B8;
-  --text-muted: #64748B;
+  /* Text Hierarchy with Higher Contrast */
+  --text-primary: #FFFFFF;
+  --text-secondary: #A1A1AA;
+  --text-muted: #71717A;
 
-  /* Space Grotesk font variable */
+  /* Premium Font Stack */
   --font-space-grotesk: 'Space Grotesk', system-ui, sans-serif;
+  --font-bricolage: var(--font-bricolage-grotesque), 'Space Grotesk', system-ui, sans-serif;
 }
 
 @layer base {
@@ -70,13 +80,14 @@
            active:scale-[0.98];
     background: linear-gradient(135deg, #00c9ff 0%, #4a69e2 100%);
     background-size: 200% 200%;
-    animation: gradientShift 8s ease infinite;
+    /* Removed infinite animation - only animate on hover for performance */
     transform: translateZ(0);
   }
 
   .btn-primary:hover,
   .btn-primary:focus {
     will-change: transform;
+    animation: gradientShift 8s ease infinite;
   }
 
   .btn-secondary {
@@ -249,40 +260,160 @@
 
 @layer utilities {
   /* ============================================ */
-  /* PREMIUM TYPOGRAPHY - Space Grotesk + Clamp  */
+  /* $1 MILLION TYPOGRAPHY - Bricolage Grotesque */
+  /* Extreme weight contrasts for maximum impact */
   /* ============================================ */
 
-  /* Fluid typography for premium feel */
+  /* Hero headline - Maximum impact */
+  .text-hero-xl {
+    font-family: var(--font-bricolage-grotesque, var(--font-space-grotesk));
+    font-size: clamp(3rem, 12vw, 7rem);
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+  }
+
+  /* Primary headlines */
   .text-display-xl {
-    font-family: var(--font-space-grotesk);
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-family: var(--font-bricolage-grotesque, var(--font-space-grotesk));
+    font-size: clamp(2.5rem, 8vw, 5rem);
     font-weight: 700;
     letter-spacing: -0.03em;
-    line-height: 1.1;
+    line-height: 1.05;
   }
 
   .text-display-lg {
-    font-family: var(--font-space-grotesk);
-    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-family: var(--font-bricolage-grotesque, var(--font-space-grotesk));
+    font-size: clamp(2rem, 6vw, 3.75rem);
     font-weight: 700;
+    letter-spacing: -0.025em;
+    line-height: 1.1;
+  }
+
+  .text-display-md {
+    font-family: var(--font-bricolage-grotesque, var(--font-space-grotesk));
+    font-size: clamp(1.5rem, 5vw, 2.75rem);
+    font-weight: 600;
     letter-spacing: -0.02em;
     line-height: 1.15;
   }
 
-  .text-display-md {
-    font-family: var(--font-space-grotesk);
-    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  .text-display-sm {
+    font-family: var(--font-bricolage-grotesque, var(--font-space-grotesk));
+    font-size: clamp(1.25rem, 4vw, 1.875rem);
     font-weight: 600;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.015em;
     line-height: 1.2;
   }
 
-  .text-display-sm {
-    font-family: var(--font-space-grotesk);
-    font-size: clamp(1.25rem, 4vw, 1.75rem);
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    line-height: 1.25;
+  /* $1M Accent text with Syne */
+  .text-accent-display {
+    font-family: var(--font-syne, var(--font-space-grotesk));
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+
+  /* Ultra-light contrast text for depth */
+  .text-light-contrast {
+    font-family: var(--font-bricolage-grotesque, var(--font-space-grotesk));
+    font-weight: 200;
+    letter-spacing: 0.02em;
+  }
+
+  /* ============================================ */
+  /* $1 MILLION AURORA GRADIENT SYSTEM           */
+  /* Multi-layer animated gradients for depth    */
+  /* ============================================ */
+
+  /* Aurora background - animated multi-color */
+  .bg-aurora {
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 201, 255, 0.25), transparent),
+      radial-gradient(ellipse 60% 40% at 80% 50%, rgba(79, 70, 229, 0.2), transparent),
+      radial-gradient(ellipse 50% 60% at 20% 80%, rgba(139, 92, 246, 0.15), transparent),
+      radial-gradient(ellipse 40% 40% at 90% 90%, rgba(212, 175, 55, 0.1), transparent),
+      linear-gradient(180deg, var(--color-background-deep) 0%, var(--color-background) 100%);
+  }
+
+  /* Aurora animated - for hero sections */
+  .bg-aurora-animated {
+    background:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 201, 255, 0.3), transparent),
+      radial-gradient(ellipse 60% 40% at 80% 50%, rgba(79, 70, 229, 0.25), transparent),
+      radial-gradient(ellipse 50% 60% at 20% 80%, rgba(139, 92, 246, 0.2), transparent),
+      linear-gradient(180deg, #030508 0%, #070B14 100%);
+    background-size: 100% 100%, 150% 150%, 120% 120%, 100% 100%;
+    animation: auroraShift 15s ease-in-out infinite alternate;
+  }
+
+  @keyframes auroraShift {
+    0% {
+      background-position: 0% 0%, 0% 0%, 100% 100%, 0% 0%;
+    }
+    100% {
+      background-position: 100% 100%, 100% 0%, 0% 100%, 0% 0%;
+    }
+  }
+
+  /* Deep space background */
+  .bg-deep-space {
+    background:
+      radial-gradient(ellipse at top, rgba(79, 70, 229, 0.15) 0%, transparent 50%),
+      radial-gradient(ellipse at bottom, rgba(0, 201, 255, 0.1) 0%, transparent 50%),
+      linear-gradient(180deg, #030508 0%, #070B14 50%, #0F1419 100%);
+  }
+
+  /* ============================================ */
+  /* $1 MILLION 3D CARD EFFECTS                  */
+  /* Perspective transforms for depth            */
+  /* ============================================ */
+
+  /* 3D Card container */
+  .card-3d {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+  }
+
+  /* 3D Card with tilt on hover */
+  .card-3d-tilt {
+    transform-style: preserve-3d;
+    transition: transform 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .card-3d-tilt:hover {
+    transform: rotateX(-5deg) rotateY(5deg) translateZ(20px);
+  }
+
+  /* Glassmorphism 3D card */
+  .glass-3d {
+    @apply relative bg-white/[0.03] border border-white/10 rounded-2xl;
+    backdrop-filter: blur(20px);
+    transform-style: preserve-3d;
+    box-shadow:
+      0 25px 50px -12px rgba(0, 0, 0, 0.5),
+      0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+      0 -20px 40px -20px rgba(0, 201, 255, 0.1) inset;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .glass-3d:hover {
+    transform: translateY(-8px) rotateX(-2deg);
+    box-shadow:
+      0 35px 60px -15px rgba(0, 0, 0, 0.6),
+      0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+      0 -20px 40px -20px rgba(0, 201, 255, 0.2) inset,
+      0 0 60px rgba(0, 201, 255, 0.15);
+  }
+
+  /* Floating card effect */
+  .card-float {
+    animation: cardFloat 6s ease-in-out infinite;
+  }
+
+  @keyframes cardFloat {
+    0%, 100% { transform: translateY(0) rotate(-1deg); }
+    50% { transform: translateY(-15px) rotate(1deg); }
   }
 
   /* ============================================ */
@@ -295,7 +426,7 @@
     background-image: linear-gradient(135deg, #D4AF37 0%, #E7C96F 50%, #D4AF37 100%);
   }
 
-  /* Gold + Cyan gradient - Distinctive brand feel */
+  /* Gold + Cyan + Purple gradient - $1M brand feel */
   .text-gradient-gold-cyan {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(135deg, #D4AF37 0%, #00C9FF 100%);
@@ -364,9 +495,19 @@
     }
   }
 
-  /* Gradient shift for text and backgrounds */
+  /* Gradient shift for text and backgrounds - only on hover for performance */
   .animate-gradient-shift {
+    background-size: 200% 200%;
+  }
+
+  .animate-gradient-shift:hover {
     animation: gradientShift 8s ease infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-gradient-shift:hover {
+      animation: none;
+    }
   }
 
   @keyframes gradientShift {
@@ -564,7 +705,7 @@
       radial-gradient(at 97% 96%, rgba(74, 105, 226, 0.08) 0px, transparent 50%);
   }
 
-  /* Animated gradient border */
+  /* Animated gradient border - only animate on hover for performance */
   .gradient-border-animated {
     position: relative;
     background:
@@ -572,7 +713,16 @@
       linear-gradient(135deg, #4a69e2, #00c9ff, #4a69e2) border-box;
     border: 2px solid transparent;
     background-size: 200% 200%;
+  }
+
+  .gradient-border-animated:hover {
     animation: gradientShift 8s ease infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gradient-border-animated:hover {
+      animation: none;
+    }
   }
 
   /* Enhanced magnetic hover effect */

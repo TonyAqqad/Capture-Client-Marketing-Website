@@ -1,7 +1,7 @@
 "use client";
 
-import { useRef, useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useRef } from "react";
+import { motion } from "framer-motion";
 import { useInView } from "@/hooks/useInView";
 
 interface Testimonial {
@@ -13,6 +13,7 @@ interface Testimonial {
   rating: number;
   result: string;
   image: string;
+  featured?: boolean;
 }
 
 const testimonials: Testimonial[] = [
@@ -26,6 +27,7 @@ const testimonials: Testimonial[] = [
     rating: 5,
     result: "+247% in leads captured",
     image: "👩‍💼",
+    featured: true, // Featured testimonial
   },
   {
     id: 2,
@@ -64,216 +66,113 @@ const testimonials: Testimonial[] = [
 
 export function PremiumTestimonials() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(containerRef, { threshold: 0.2 });
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(1);
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Detect mobile on mount
-  useEffect(() => {
-    setIsMobile(window.innerWidth < 768);
-  }, []);
-
-  // Auto-rotate testimonials (disabled on mobile for performance)
-  useEffect(() => {
-    if (!isInView || isMobile) return;
-
-    const interval = setInterval(() => {
-      setDirection(1);
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 6000);
-
-    return () => clearInterval(interval);
-  }, [isInView, isMobile]);
-
-  const handlePrevious = () => {
-    setDirection(-1);
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
-
-  const handleNext = () => {
-    setDirection(1);
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-  };
-
-  const variants = {
-    enter: (direction: number) => ({
-      x: direction > 0 ? 400 : -400,
-      opacity: 0,
-      scale: 0.8,
-      rotateY: direction > 0 ? 45 : -45,
-    }),
-    center: {
-      x: 0,
-      opacity: 1,
-      scale: 1,
-      rotateY: 0,
-    },
-    exit: (direction: number) => ({
-      x: direction > 0 ? -400 : 400,
-      opacity: 0,
-      scale: 0.8,
-      rotateY: direction > 0 ? -45 : 45,
-    }),
-  };
+  const isInView = useInView(containerRef, { threshold: 0.1 });
 
   return (
-    <section className="section bg-background relative overflow-hidden w-full max-w-full py-16 sm:py-20 lg:py-24">
-      {/* Background effects */}
+    <section className="section bg-background relative overflow-hidden w-full max-w-full py-16 sm:py-20 lg:py-32">
+      {/* Background aurora effects */}
       <div className="absolute inset-0 bg-mesh-premium opacity-30" />
 
-      {/* Disable blur animations on mobile for performance */}
-      {!isMobile && (
-        <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.1, 0.2, 0.1],
-          }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[500px] sm:max-w-[1000px] h-[500px] sm:h-[1000px] rounded-full bg-gradient-radial from-primary/10 to-transparent blur-3xl"
-        />
-      )}
+      {/* Animated background orbs */}
+      <motion.div
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.05, 0.15, 0.05],
+        }}
+        transition={{
+          duration: 12,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+        className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full bg-gradient-radial from-accent/20 to-transparent blur-3xl"
+      />
+      <motion.div
+        animate={{
+          scale: [1, 1.3, 1],
+          opacity: [0.05, 0.1, 0.05],
+        }}
+        transition={{
+          duration: 15,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 2,
+        }}
+        className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-gradient-radial from-primary/20 to-transparent blur-3xl"
+      />
 
       <div ref={containerRef} className="container-custom relative z-10 px-6 sm:px-6 lg:px-8">
-        {/* Section header */}
+        {/* Section header with premium typography */}
         <div className="text-center mb-16 sm:mb-20 lg:mb-24">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-accent mb-4 sm:mb-5">
+            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-[0.3em] text-gradient-gold-cyan mb-4 sm:mb-5">
               Client Success Stories
             </h2>
-            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground mb-6 sm:mb-8 text-depth px-4 leading-[1.1] tracking-tight" style={{ hyphens: 'none' }}>
+            <h3 className="text-hero-xl text-foreground mb-6 sm:mb-8 text-depth px-4">
               Trusted by{" "}
-              <span className="text-gradient bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent whitespace-nowrap">
+              <span className="text-gradient-gold">
                 Growing Businesses
               </span>
             </h3>
-            <p className="text-lg sm:text-xl md:text-2xl text-foreground-muted max-w-2xl mx-auto leading-[1.6] px-6">
+            <p className="text-lg sm:text-xl md:text-2xl text-foreground-muted max-w-3xl mx-auto leading-[1.7] px-6 text-light-contrast">
               Real businesses. Real results. See how Capture Client helps companies like yours capture more leads and grow faster.
             </p>
           </motion.div>
         </div>
 
-        {/* Main testimonial carousel */}
-        <div className="relative max-w-5xl mx-auto">
-          {/* Testimonial card */}
-          <div className="relative h-auto min-h-[580px] sm:min-h-[480px] md:min-h-[420px] mb-12 sm:mb-16">
-            <AnimatePresence initial={false} custom={direction} mode="wait">
+        {/* Testimonials grid with featured card */}
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+            {testimonials.map((testimonial, index) => (
               <motion.div
-                key={currentIndex}
-                custom={direction}
-                variants={variants}
-                initial="enter"
-                animate="center"
-                exit="exit"
+                key={testimonial.id}
+                initial={{ opacity: 0, y: 40 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
                 transition={{
-                  x: { type: "spring", stiffness: 300, damping: 30 },
-                  opacity: { duration: 0.4 },
-                  scale: { duration: 0.4 },
-                  rotateY: { duration: 0.4 },
+                  duration: 0.7,
+                  delay: index * 0.15,
+                  ease: [0.23, 1, 0.32, 1],
                 }}
-                className="absolute inset-0"
+                className={testimonial.featured ? "lg:col-span-2" : ""}
               >
                 <TestimonialCard
-                  testimonial={testimonials[currentIndex]}
+                  testimonial={testimonial}
                   isInView={isInView}
+                  index={index}
                 />
               </motion.div>
-            </AnimatePresence>
-          </div>
-
-          {/* Navigation */}
-          <div className="flex items-center justify-center gap-4 sm:gap-6">
-            {/* Previous button - touch-friendly on mobile */}
-            <motion.button
-              whileHover={{ scale: 1.1, backgroundColor: "rgba(0, 201, 255, 0.1)" }}
-              whileTap={{ scale: 0.9 }}
-              onClick={handlePrevious}
-              className="w-14 h-14 sm:w-16 sm:h-16 rounded-full glass border-2 border-surface-border flex items-center justify-center text-foreground hover:border-accent transition-colors group touch-manipulation min-w-[56px] min-h-[56px]"
-              aria-label="Previous testimonial"
-            >
-              <span className="material-icons text-xl sm:text-2xl group-hover:text-accent transition-colors">
-                chevron_left
-              </span>
-            </motion.button>
-
-            {/* Dots indicator */}
-            <div className="flex gap-2 sm:gap-3">
-              {testimonials.map((_, index) => (
-                <motion.button
-                  key={index}
-                  onClick={() => {
-                    setDirection(index > currentIndex ? 1 : -1);
-                    setCurrentIndex(index);
-                  }}
-                  className="relative p-2 touch-manipulation"
-                  whileHover={{ scale: 1.3 }}
-                  whileTap={{ scale: 0.9 }}
-                  aria-label={`Go to testimonial ${index + 1}`}
-                >
-                  <div
-                    className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-                      index === currentIndex
-                        ? "bg-accent scale-125 shadow-glow"
-                        : "bg-surface-border hover:bg-accent/50"
-                    }`}
-                  />
-                  {index === currentIndex && (
-                    <motion.div
-                      layoutId="activeIndicator"
-                      className="absolute inset-0 rounded-full border-2 border-accent animate-ping"
-                      transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                    />
-                  )}
-                </motion.button>
-              ))}
-            </div>
-
-            {/* Next button - touch-friendly on mobile */}
-            <motion.button
-              whileHover={{ scale: 1.1, backgroundColor: "rgba(0, 201, 255, 0.1)" }}
-              whileTap={{ scale: 0.9 }}
-              onClick={handleNext}
-              className="w-14 h-14 sm:w-16 sm:h-16 rounded-full glass border-2 border-surface-border flex items-center justify-center text-foreground hover:border-accent transition-colors group touch-manipulation min-w-[56px] min-h-[56px]"
-              aria-label="Next testimonial"
-            >
-              <span className="material-icons text-xl sm:text-2xl group-hover:text-accent transition-colors">
-                chevron_right
-              </span>
-            </motion.button>
+            ))}
           </div>
         </div>
 
-        {/* Platform capabilities - mobile optimized */}
+        {/* Platform capabilities with glass treatment */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-12 sm:mt-16 lg:mt-20 pt-8 sm:pt-12 border-t border-surface-border px-4 sm:px-6 lg:px-0"
+          transition={{ duration: 0.7, delay: 0.8 }}
+          className="mt-16 sm:mt-20 lg:mt-24 pt-10 sm:pt-12 border-t border-white/10 px-4 sm:px-6 lg:px-0"
         >
-          <p className="text-center text-foreground-muted text-xs sm:text-sm uppercase tracking-wider mb-6 sm:mb-8">
+          <p className="text-center text-foreground-muted text-xs sm:text-sm uppercase tracking-[0.25em] mb-8 sm:mb-10">
             Platform Capabilities
           </p>
-          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-8 lg:gap-12 opacity-60 hover:opacity-100 transition-opacity duration-500">
-            <div className="text-foreground-muted font-semibold text-sm sm:text-base lg:text-lg flex items-center gap-2">
-              <span className="material-icons text-accent text-lg sm:text-xl">security</span>
-              Enterprise-Grade Security
-            </div>
-            <div className="text-foreground-muted font-semibold text-sm sm:text-base lg:text-lg flex items-center gap-2">
-              <span className="material-icons text-accent text-lg sm:text-xl">support_agent</span>
-              24/7 AI Support
-            </div>
-            <div className="text-foreground-muted font-semibold text-sm sm:text-base lg:text-lg flex items-center gap-2">
-              <span className="material-icons text-accent text-lg sm:text-xl">cloud_done</span>
-              Cloud-Based Platform
-            </div>
+          <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6 sm:gap-10 lg:gap-16">
+            {[
+              { icon: "security", text: "Enterprise-Grade Security" },
+              { icon: "support_agent", text: "24/7 AI Support" },
+              { icon: "cloud_done", text: "Cloud-Based Platform" },
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ scale: 1.05, y: -2 }}
+                className="glass-badge text-foreground font-semibold text-sm sm:text-base lg:text-lg flex items-center gap-3 px-6 py-3 cursor-pointer"
+              >
+                <span className="material-icons text-gold text-xl sm:text-2xl">{item.icon}</span>
+                {item.text}
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </div>
@@ -284,38 +183,62 @@ export function PremiumTestimonials() {
 interface TestimonialCardProps {
   testimonial: Testimonial;
   isInView: boolean;
+  index: number;
 }
 
-function TestimonialCard({ testimonial, isInView }: TestimonialCardProps) {
+function TestimonialCard({ testimonial, isInView, index }: TestimonialCardProps) {
+  const isFeatured = testimonial.featured;
+
   return (
-    <div className="h-full flex flex-col max-w-4xl mx-auto">
-      <div className="relative glass p-8 sm:p-10 md:p-12 rounded-3xl shadow-glow-lg border-2 border-accent/20 h-full flex flex-col hover:border-accent/40 transition-colors duration-500">
-        {/* Large quote mark - smaller on mobile */}
+    <motion.div
+      whileHover={{
+        y: -8,
+        transition: { duration: 0.4, ease: [0.23, 1, 0.32, 1] },
+      }}
+      className="h-full relative group"
+    >
+      {/* Glass 3D card */}
+      <div className={`glass-3d h-full flex flex-col relative overflow-hidden ${
+        isFeatured
+          ? "p-10 sm:p-12 md:p-14 lg:p-16"
+          : "p-8 sm:p-10 md:p-12"
+      }`}>
+
+        {/* Aurora gradient border-top */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gold via-accent to-primary opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
+
+        {/* Massive decorative quote mark with gradient */}
         <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={isInView ? { opacity: 0.08, scale: 1 } : { opacity: 0, scale: 0 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          className="absolute top-4 left-4 sm:top-6 sm:left-6 text-6xl sm:text-9xl text-accent leading-none font-serif"
+          initial={{ opacity: 0, scale: 0.5, rotate: -15 }}
+          animate={isInView ? { opacity: 0.06, scale: 1, rotate: 0 } : { opacity: 0, scale: 0.5, rotate: -15 }}
+          transition={{ delay: 0.3 + index * 0.1, duration: 0.8, ease: "easeOut" }}
+          className={`absolute ${isFeatured ? "top-8 left-8 text-[10rem]" : "top-4 left-4 text-[8rem]"} leading-none font-serif pointer-events-none`}
+          style={{
+            background: "linear-gradient(135deg, #D4AF37 0%, #00C9FF 100%)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+          }}
         >
           "
         </motion.div>
 
-        {/* Result badge - responsive positioning and sizing */}
+        {/* Floating result badge with gold glow */}
         <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
-          transition={{ delay: 0.3, duration: 0.5 }}
-          className="absolute -top-3 right-4 sm:-top-4 sm:right-8 px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-accent to-primary rounded-full shadow-glow-lg border-2 border-background-dark"
+          initial={{ opacity: 0, y: -20, scale: 0.8 }}
+          animate={isInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: -20, scale: 0.8 }}
+          transition={{ delay: 0.4 + index * 0.1, duration: 0.6, type: "spring" }}
+          whileHover={{ scale: 1.05, y: -2 }}
+          className="absolute -top-4 right-6 sm:-top-5 sm:right-8 px-5 py-2.5 sm:px-6 sm:py-3 bg-gradient-to-r from-gold via-gold-light to-gold rounded-full shadow-glow-lg border-2 border-background-dark cursor-pointer hover-glow-gold"
         >
-          <p className="text-xs sm:text-sm font-bold text-white flex items-center gap-1.5 sm:gap-2">
+          <p className="text-xs sm:text-sm font-bold text-background-dark flex items-center gap-2">
             <span className="material-icons text-base sm:text-lg">trending_up</span>
-            <span className="hidden sm:inline">{testimonial.result}</span>
-            <span className="sm:hidden">{testimonial.result.replace('+', '').split(' ')[0]}</span>
+            <span>{testimonial.result}</span>
           </p>
         </motion.div>
 
-        {/* Stars - responsive sizing */}
-        <div className="flex items-center gap-0.5 sm:gap-1 mb-4 sm:mb-6 relative z-10 mt-2">
+        {/* Star rating with gold glow */}
+        <div className="flex items-center gap-1 mb-6 sm:mb-8 relative z-10">
           {[...Array(testimonial.rating)].map((_, i) => (
             <motion.span
               key={i}
@@ -326,65 +249,126 @@ function TestimonialCard({ testimonial, isInView }: TestimonialCardProps) {
                   : { opacity: 0, scale: 0, rotate: -180 }
               }
               transition={{
-                delay: 0.4 + i * 0.08,
-                duration: 0.5,
+                delay: 0.5 + index * 0.1 + i * 0.08,
+                duration: 0.6,
                 type: "spring",
                 stiffness: 200,
               }}
-              className="material-icons text-accent text-lg sm:text-2xl"
+              whileHover={{ scale: 1.2, rotate: 15 }}
+              className="material-icons text-2xl sm:text-3xl cursor-pointer"
+              style={{
+                color: "#D4AF37",
+                filter: "drop-shadow(0 0 8px rgba(212, 175, 55, 0.5))",
+              }}
             >
               star
             </motion.span>
           ))}
         </div>
 
-        {/* Content - responsive font size and spacing */}
+        {/* Testimonial content with elegant typography */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-          className="text-foreground text-lg sm:text-xl md:text-2xl mb-8 sm:mb-10 leading-[1.7] flex-1 relative z-10"
+          transition={{ delay: 0.6 + index * 0.1, duration: 0.7 }}
+          className={`text-foreground ${
+            isFeatured
+              ? "text-xl sm:text-2xl md:text-3xl leading-[1.75]"
+              : "text-lg sm:text-xl md:text-2xl leading-[1.7]"
+          } mb-8 sm:mb-10 flex-1 relative z-10 font-light`}
+          style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
         >
           {testimonial.content}
         </motion.p>
 
-        {/* Author - responsive layout */}
+        {/* Author info with avatar ring animation */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ delay: 0.6, duration: 0.6 }}
-          className="flex items-center gap-3 sm:gap-4 relative z-10 pt-4 sm:pt-6 border-t border-surface-border"
+          transition={{ delay: 0.7 + index * 0.1, duration: 0.7 }}
+          className="flex items-center gap-4 sm:gap-5 relative z-10 pt-6 sm:pt-8 border-t border-white/10"
         >
+          {/* Avatar with aurora ring */}
           <motion.div
             whileHover={{ scale: 1.1, rotate: 5 }}
-            className="w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center text-2xl sm:text-3xl border-2 border-accent/30 flex-shrink-0"
+            className="relative"
           >
-            {testimonial.image}
+            <div className={`${
+              isFeatured ? "w-16 h-16 sm:w-20 sm:h-20" : "w-14 h-14 sm:w-16 sm:h-16"
+            } rounded-2xl bg-gradient-to-br from-gold/30 via-accent/20 to-primary/30 flex items-center justify-center ${
+              isFeatured ? "text-4xl sm:text-5xl" : "text-3xl sm:text-4xl"
+            } border-2 border-gold/40 flex-shrink-0 relative z-10 cursor-pointer`}>
+              {testimonial.image}
+            </div>
+
+            {/* Animated aurora ring around avatar */}
+            <motion.div
+              animate={{
+                rotate: [0, 360],
+                scale: [1, 1.1, 1],
+              }}
+              transition={{
+                rotate: { duration: 8, repeat: Infinity, ease: "linear" },
+                scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
+              }}
+              className="absolute inset-0 rounded-2xl"
+              style={{
+                background: "conic-gradient(from 0deg, #D4AF37, #00C9FF, #8B5CF6, #D4AF37)",
+                opacity: 0.3,
+                filter: "blur(8px)",
+                zIndex: 0,
+              }}
+            />
           </motion.div>
-          <div className="min-w-0">
-            <p className="text-foreground font-bold text-base sm:text-lg truncate">{testimonial.name}</p>
-            <p className="text-foreground-muted text-xs sm:text-sm truncate">
+
+          {/* Name and company with premium typography */}
+          <div className="min-w-0 flex-1">
+            <p className={`text-foreground font-bold ${
+              isFeatured ? "text-xl sm:text-2xl" : "text-base sm:text-lg"
+            } truncate mb-1`}>
+              {testimonial.name}
+            </p>
+            <p className={`text-foreground-muted ${
+              isFeatured ? "text-base sm:text-lg" : "text-sm sm:text-base"
+            } truncate`}>
               {testimonial.role} at {testimonial.company}
             </p>
           </div>
         </motion.div>
 
-        {/* Animated gradient background */}
+        {/* Animated background gradient - only visible on featured */}
+        {isFeatured && (
+          <motion.div
+            animate={{
+              scale: [1, 1.05, 1],
+              rotate: [0, 2, 0],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              repeatType: "reverse",
+            }}
+            className="absolute inset-0 bg-gradient-to-br from-gold/5 via-accent/5 to-primary/5 rounded-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700"
+          />
+        )}
+
+        {/* Subtle corner accent with aurora gradient */}
+        <div className="absolute bottom-0 right-0 w-32 h-32 sm:w-40 sm:h-40 bg-gradient-to-tl from-gold/10 via-accent/5 to-transparent rounded-tr-2xl opacity-30 group-hover:opacity-60 transition-opacity duration-500" />
+
+        {/* Floating effect indicator */}
         <motion.div
           animate={{
-            scale: [1, 1.02, 1],
+            y: [-4, 4, -4],
           }}
           transition={{
-            duration: 5,
+            duration: 4,
             repeat: Infinity,
-            repeatType: "reverse",
+            ease: "easeInOut",
+            delay: index * 0.2,
           }}
-          className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5 rounded-2xl sm:rounded-3xl pointer-events-none"
+          className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3/4 h-8 bg-gradient-to-t from-accent/10 to-transparent blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
         />
-
-        {/* Corner accent */}
-        <div className="absolute bottom-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-gradient-to-tl from-accent/10 to-transparent rounded-tr-2xl sm:rounded-tr-3xl opacity-50" />
       </div>
-    </div>
+    </motion.div>
   );
 }

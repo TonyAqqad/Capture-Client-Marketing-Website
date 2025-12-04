@@ -120,7 +120,9 @@ export default function SmartDemoScheduler() {
 
       setStep(3);
     } catch (error) {
-      console.error("Booking error:", error);
+      if (process.env.NODE_ENV === 'development') {
+        console.error("Booking error:", error);
+      }
     } finally {
       setIsSubmitting(false);
     }

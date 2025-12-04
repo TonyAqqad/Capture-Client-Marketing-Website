@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { generateSoftwareApplicationSchema } from "@/lib/seo-config";
 import AIVoiceVisual from "@/components/AIVoiceVisual";
 import GrowthDashboard from "@/components/GrowthDashboard";
 import PricingCards from "@/components/PricingCards";
 import SocialProofBanner from "@/components/cro/SocialProofBanner";
 import RiskReversal from "@/components/cro/RiskReversal";
 import MobileCTABar from "@/components/cro/MobileCTABar";
-import CapacityIndicator from "@/components/cro/CapacityIndicator";
 import ClientLogos from "@/components/cro/ClientLogos";
+import IntegrationPartners from "@/components/cro/IntegrationPartners";
 import AsSeenIn from "@/components/cro/AsSeenIn";
 import ComparisonTable from "@/components/cro/ComparisonTable";
 import UrgencyTimer from "@/components/cro/UrgencyTimer";
 import StickyPhoneCTA from "@/components/cro/StickyPhoneCTA";
-import ScrollProgress from "@/components/cro/ScrollProgress";
 import { PremiumHero } from "@/components/sections/PremiumHero";
 import { PremiumServices } from "@/components/sections/PremiumServices";
 import { HowItWorks } from "@/components/sections/HowItWorks";
@@ -308,15 +308,16 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateSoftwareApplicationSchema()) }}
+      />
 
       {/* ==================== STICKY PHONE CTA (Top Bar) ==================== */}
       <StickyPhoneCTA />
 
       {/* ==================== EXIT INTENT POPUP ==================== */}
       <ExitIntentPopup />
-
-      {/* ==================== SCROLL PROGRESS & QUICK CTA ==================== */}
-      <ScrollProgress />
 
       {/* ==================== SECTION 1: PREMIUM HERO ==================== */}
       <PremiumHero />
@@ -446,6 +447,9 @@ export default function HomePage() {
           <HowItWorks />
         </div>
       </section>
+
+      {/* ==================== INTEGRATION PARTNERS ==================== */}
+      <IntegrationPartners />
 
       {/* ==================== SECTION 3.5: TECHNOLOGY DEEP DIVE ==================== */}
       {/* Part A: AI Voice Technology */}
@@ -722,11 +726,6 @@ export default function HomePage() {
             <div className="glass-premium p-8 rounded-3xl">
               <RiskReversal />
             </div>
-          </div>
-
-          {/* Capacity indicator */}
-          <div className="mb-6 sm:mb-8">
-            <CapacityIndicator spotsLeft={7} />
           </div>
 
           {/* Urgency Timer */}

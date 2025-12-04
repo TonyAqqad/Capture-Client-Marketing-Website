@@ -236,9 +236,13 @@ export async function initWebVitals(): Promise<void> {
     onTTFB(reportWebVitals);
     onINP(reportWebVitals);
 
-    console.log('✅ [Performance] Web Vitals monitoring initialized');
+    if (process.env.NODE_ENV === 'development') {
+      console.log('✅ [Performance] Web Vitals monitoring initialized');
+    }
   } catch (error) {
-    console.error('❌ [Performance] Failed to initialize Web Vitals:', error);
+    if (process.env.NODE_ENV === 'development') {
+      console.error('❌ [Performance] Failed to initialize Web Vitals:', error);
+    }
   }
 }
 

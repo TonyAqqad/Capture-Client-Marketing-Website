@@ -55,6 +55,7 @@ export interface ServiceData {
   intro: IntroSection;
   benefits: BenefitItem[];
   how_it_works: ProcessStep[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 
@@ -91,12 +92,14 @@ export interface PackageData {
   };
   seo: SeoData;
   hero: HeroSection;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 
 export interface PricingData {
   page_id: string;
   packages?: PackageData[];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 

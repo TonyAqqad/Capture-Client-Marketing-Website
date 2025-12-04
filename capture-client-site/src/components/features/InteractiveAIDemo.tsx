@@ -237,7 +237,9 @@ export default function InteractiveAIDemo() {
         }, 500);
       }
     } catch (error) {
-      console.error("Demo API error:", error);
+      if (process.env.NODE_ENV === 'development') {
+        console.error("Demo API error:", error);
+      }
       setIsError(true);
 
       // Fallback response

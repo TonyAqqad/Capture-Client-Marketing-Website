@@ -83,61 +83,82 @@ export function HowItWorks() {
   return (
     <section
       ref={containerRef}
-      className="section bg-background-dark relative overflow-hidden w-full max-w-full py-16 sm:py-20 lg:py-24"
+      className="section bg-background-dark relative overflow-hidden w-full max-w-full py-16 sm:py-20 lg:py-32"
     >
-      {/* Background effects */}
-      <div className="absolute inset-0 bg-mesh-premium opacity-50" />
+      {/* Aurora background effect */}
+      <div className="absolute inset-0 bg-aurora opacity-40" />
 
-      {/* Animated grid lines */}
-      <div className="absolute inset-0 opacity-5">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: `
-              linear-gradient(to right, rgba(74, 105, 226, 0.3) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(74, 105, 226, 0.3) 1px, transparent 1px)
-            `,
-            backgroundSize: '100px 100px',
-          }}
-        />
-      </div>
+      {/* Geometric accent shapes */}
+      <motion.div
+        animate={{ rotate: 360 }}
+        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        className="absolute top-20 right-20 w-32 h-32 border-2 border-aurora-1/20 rounded-lg hidden lg:block"
+      />
+      <motion.div
+        animate={{ rotate: -360 }}
+        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+        className="absolute bottom-40 left-40 w-24 h-24 border-2 border-aurora-3/20 rounded-full hidden lg:block"
+      />
 
       <div className="container-custom relative z-10 px-6 sm:px-6 lg:px-8">
-        {/* Section header */}
-        <div className="text-center mb-16 sm:mb-20 lg:mb-24">
+        {/* Section header with $1M typography */}
+        <div className="text-center mb-16 sm:mb-20 lg:mb-32">
           <motion.div
             initial={{ opacity: 0, y: isMobile ? 0 : 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: isMobile ? 0 : 30 }}
             transition={{ duration: isMobile ? 0.3 : 0.6 }}
           >
-            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-accent mb-4 sm:mb-5">
+            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-gradient-gold-cyan mb-4 sm:mb-6">
               Simple Process
             </h2>
-            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground mb-6 sm:mb-8 text-depth px-4 leading-[1.1] tracking-tight" style={{ hyphens: 'none' }}>
-              <span className="whitespace-nowrap">How It Works:</span>{" "}
-              <span className="text-gradient bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent whitespace-nowrap">
+            <h3 className="text-hero-xl font-hero text-foreground mb-6 sm:mb-8 text-depth px-4">
+              <span className="block mb-2">How It Works:</span>
+              <span className="text-gradient-gold-cyan block">
                 4 Simple Steps
               </span>
             </h3>
-            <p className="text-lg sm:text-xl md:text-2xl text-foreground-muted max-w-2xl mx-auto leading-[1.6] px-6">
+            <p className="text-xl sm:text-2xl md:text-3xl text-light-contrast text-foreground-muted max-w-3xl mx-auto leading-[1.6] px-6">
               From strategy to scale—we make growth simple, automated, and profitable.
             </p>
           </motion.div>
         </div>
 
-        {/* Steps - Desktop timeline */}
-        <div className="hidden lg:block">
+        {/* Desktop: Vertical Aurora Timeline */}
+        <div className="hidden lg:block max-w-5xl mx-auto">
           <div className="relative">
-            {/* Connection line */}
-            <motion.div
-              initial={{ scaleX: 0 }}
-              animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
-              transition={{ duration: 1.5, delay: 0.3 }}
-              className="absolute top-24 left-0 right-0 h-1 bg-gradient-to-r from-accent via-primary to-accent origin-left"
-              style={{ top: "6rem" }}
-            />
+            {/* Vertical Aurora Timeline Line */}
+            <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-1 overflow-hidden">
+              <motion.div
+                initial={{ scaleY: 0 }}
+                animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
+                transition={{ duration: 2, delay: 0.3, ease: "easeOut" }}
+                className="h-full w-full origin-top relative"
+                style={{
+                  background: "linear-gradient(180deg, #00C9FF 0%, #4F46E5 33%, #8B5CF6 66%, #D4AF37 100%)"
+                }}
+              >
+                {/* Animated glow effect */}
+                <motion.div
+                  animate={{
+                    opacity: [0.5, 1, 0.5],
+                    scale: [1, 1.5, 1]
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }}
+                  className="absolute inset-0 blur-xl"
+                  style={{
+                    background: "linear-gradient(180deg, #00C9FF 0%, #4F46E5 33%, #8B5CF6 66%, #D4AF37 100%)",
+                    opacity: 0.6
+                  }}
+                />
+              </motion.div>
+            </div>
 
-            <div className="grid grid-cols-4 gap-8">
+            {/* Steps */}
+            <div className="space-y-32">
               {steps.map((step, index) => (
                 <StepCardDesktop
                   key={step.number}
@@ -151,8 +172,21 @@ export function HowItWorks() {
           </div>
         </div>
 
-        {/* Steps - Mobile vertical */}
-        <div className="lg:hidden space-y-10 sm:space-y-12">
+        {/* Mobile: Vertical Timeline */}
+        <div className="lg:hidden space-y-12 sm:space-y-16 relative">
+          {/* Mobile vertical aurora line */}
+          <div className="absolute left-8 top-0 bottom-0 w-0.5 overflow-hidden">
+            <motion.div
+              initial={{ scaleY: 0 }}
+              animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
+              transition={{ duration: 1.5, delay: 0.2 }}
+              className="h-full w-full origin-top"
+              style={{
+                background: "linear-gradient(180deg, #00C9FF 0%, #4F46E5 33%, #8B5CF6 66%, #D4AF37 100%)"
+              }}
+            />
+          </div>
+
           {steps.map((step, index) => (
             <StepCardMobile
               key={step.number}
@@ -168,21 +202,21 @@ export function HowItWorks() {
         <motion.div
           initial={{ opacity: 0, y: isMobile ? 0 : 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: isMobile ? 0 : 30 }}
-          transition={{ duration: isMobile ? 0.3 : 0.6, delay: isMobile ? 0 : 1.2 }}
-          className="text-center mt-12 sm:mt-16 lg:mt-20"
+          transition={{ duration: isMobile ? 0.3 : 0.6, delay: isMobile ? 0 : 1.5 }}
+          className="text-center mt-20 sm:mt-24 lg:mt-32"
         >
-          <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-full bg-accent/10 border border-accent/20 mb-4 sm:mb-6 max-w-full">
+          <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-full glass-badge mb-6 sm:mb-8 max-w-full">
             <span className="material-icons text-accent text-lg sm:text-xl">schedule</span>
             <span className="text-xs sm:text-sm font-semibold text-accent whitespace-nowrap">Average setup time: 48 hours</span>
           </div>
-          <p className="text-foreground-muted mb-4 sm:mb-6 text-base sm:text-lg px-4">
+          <p className="text-foreground-muted mb-6 sm:mb-8 text-lg sm:text-xl px-4">
             Ready to get started?
           </p>
           <motion.a
             href="#contact"
-            whileHover={isMobile ? {} : { scale: 1.05 }}
+            whileHover={isMobile ? {} : { scale: 1.05, y: -4 }}
             whileTap={isMobile ? {} : { scale: 0.95 }}
-            className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-accent via-primary to-accent text-white font-bold text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 rounded-2xl shadow-glow-lg hover:shadow-glow border-2 border-transparent hover:border-accent/30 transition-all duration-300 w-full sm:w-auto max-w-md mx-4 sm:mx-0 min-h-[56px]"
+            className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-accent via-primary to-accent text-white font-bold text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 rounded-2xl shadow-glow-lg hover:shadow-glow border-2 border-transparent hover:border-accent/30 transition-all duration-300 w-full sm:w-auto max-w-md mx-4 sm:mx-0 min-h-[56px] desktop-btn-premium"
           >
             Book Your Strategy Call
             <span className="material-icons">arrow_forward</span>
@@ -201,197 +235,197 @@ interface StepCardProps {
 }
 
 function StepCardDesktop({ step, index, isInView, isMobile }: StepCardProps) {
-  const isAccent = step.color === "accent";
+  const isLeft = index % 2 === 0;
+  const auroraGradient = index % 2 === 0
+    ? "from-[#00C9FF] to-[#4F46E5]"
+    : "from-[#8B5CF6] to-[#D4AF37]";
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: isMobile ? 0 : 50 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: isMobile ? 0 : 50 }}
+      initial={{ opacity: 0, x: isLeft ? -100 : 100 }}
+      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: isLeft ? -100 : 100 }}
       transition={{
-        duration: isMobile ? 0.3 : 0.6,
-        delay: isMobile ? 0 : index * 0.2,
-        type: isMobile ? "tween" : "spring",
-        stiffness: 100,
+        duration: 0.8,
+        delay: index * 0.2,
+        type: "spring",
+        stiffness: 80,
       }}
-      className="relative"
+      className={`relative flex items-center ${isLeft ? 'justify-end' : 'justify-start'}`}
     >
-      {/* Number badge on timeline */}
+      {/* Timeline connecting dot with pulse */}
       <motion.div
-        initial={{ scale: isMobile ? 1 : 0 }}
-        animate={isInView ? { scale: 1 } : { scale: isMobile ? 1 : 0 }}
+        initial={{ scale: 0 }}
+        animate={isInView ? { scale: 1 } : { scale: 0 }}
         transition={{
-          duration: isMobile ? 0.2 : 0.5,
-          delay: isMobile ? 0 : index * 0.2 + 0.3,
-          type: isMobile ? "tween" : "spring",
+          duration: 0.6,
+          delay: index * 0.2 + 0.4,
+          type: "spring",
           stiffness: 200,
         }}
-        className={`absolute -top-2 left-1/2 -translate-x-1/2 w-24 h-24 rounded-full bg-gradient-to-br ${
-          isAccent
-            ? "from-accent to-accent/50"
-            : "from-primary to-primary/50"
-        } border-4 border-background-dark flex items-center justify-center shadow-glow z-10`}
+        className="absolute left-1/2 -translate-x-1/2 z-20"
       >
-        <span className="text-3xl font-black text-white">{step.number}</span>
+        <div className="relative">
+          {/* Animated pulse rings */}
+          <motion.div
+            animate={{
+              scale: [1, 1.5, 1],
+              opacity: [0.8, 0, 0.8]
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              delay: index * 0.3
+            }}
+            className={`absolute inset-0 w-24 h-24 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full bg-gradient-to-br ${auroraGradient}`}
+          />
+          {/* Number circle */}
+          <div className={`relative w-24 h-24 rounded-full bg-gradient-to-br ${auroraGradient} flex items-center justify-center shadow-glow border-4 border-background-dark`}>
+            <span className="text-5xl font-black text-white" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+              {step.number}
+            </span>
+          </div>
+        </div>
       </motion.div>
 
       {/* Card */}
-      <div className="mt-32 group">
-        <motion.div
-          whileHover={isMobile ? {} : { y: -8 }}
-          className={`relative bg-surface/50 backdrop-blur-lg border-2 ${
-            isAccent ? "border-accent/30" : "border-primary/30"
-          } rounded-2xl p-8 transition-all duration-500 hover:shadow-glow hover:border-opacity-100`}
-        >
-          {/* Icon */}
-          <div
-            className={`w-14 h-14 rounded-xl bg-gradient-to-br ${
-              isAccent
-                ? "from-accent/20 to-accent/10"
-                : "from-primary/20 to-primary/10"
-            } border ${
-              isAccent ? "border-accent/30" : "border-primary/30"
-            } flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
-          >
-            <span
-              className={`material-icons text-2xl ${
-                isAccent ? "text-accent" : "text-primary"
-              }`}
-            >
-              {step.icon}
-            </span>
+      <motion.div
+        whileHover={{
+          y: -8,
+          rotateY: isLeft ? 2 : -2,
+          rotateX: -2
+        }}
+        className={`${isLeft ? 'mr-16' : 'ml-16'} w-[calc(50%-5rem)] group`}
+        style={{ transformStyle: 'preserve-3d' }}
+      >
+        <div className="glass-3d p-8 rounded-3xl relative overflow-hidden">
+          {/* Animated gradient border */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileHover={{ opacity: 1 }}
+            className="absolute inset-0 rounded-3xl p-[2px] pointer-events-none"
+            style={{
+              background: `linear-gradient(135deg, ${index % 2 === 0 ? '#00C9FF, #4F46E5' : '#8B5CF6, #D4AF37'})`,
+              WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
+              WebkitMaskComposite: 'xor',
+              maskComposite: 'exclude'
+            }}
+          />
+
+          {/* Icon with aurora glow container */}
+          <div className="relative w-20 h-20 mb-6">
+            <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${auroraGradient} opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500`} />
+            <div className={`relative w-20 h-20 rounded-2xl glass-premium flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform duration-500`}>
+              <span className={`material-icons text-4xl bg-gradient-to-br ${auroraGradient} bg-clip-text text-transparent`}>
+                {step.icon}
+              </span>
+            </div>
           </div>
 
-          {/* Title */}
-          <h4 className="text-xl font-heading font-bold text-foreground mb-4">
+          {/* Title with extreme weight */}
+          <h4 className="text-3xl font-hero font-black text-foreground mb-4 leading-tight" style={{ fontWeight: 800 }}>
             {step.title}
           </h4>
 
-          {/* Description */}
-          <p className="text-foreground-muted leading-relaxed mb-6">
+          {/* Description with light weight contrast */}
+          <p className="text-foreground-muted leading-relaxed mb-6 text-lg text-light-contrast" style={{ fontWeight: 200 }}>
             {step.description}
           </p>
 
           {/* Features */}
-          <ul className="space-y-2">
+          <ul className="space-y-3">
             {step.features.map((feature, idx) => (
               <motion.li
                 key={idx}
-                initial={{ opacity: 0, x: isMobile ? 0 : -10 }}
-                animate={
-                  isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: isMobile ? 0 : -10 }
-                }
+                initial={{ opacity: 0, x: -10 }}
+                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
                 transition={{
-                  duration: isMobile ? 0.2 : 0.4,
-                  delay: isMobile ? 0 : index * 0.2 + idx * 0.05 + 0.6,
+                  duration: 0.4,
+                  delay: index * 0.2 + idx * 0.1 + 0.8,
                 }}
-                className="flex items-center gap-2 text-sm text-foreground-subtle"
+                className="flex items-center gap-3 text-base text-foreground-subtle"
               >
-                <span
-                  className={`material-icons text-xs ${
-                    isAccent ? "text-accent" : "text-primary"
-                  }`}
-                >
+                <span className={`material-icons text-lg bg-gradient-to-br ${auroraGradient} bg-clip-text text-transparent`}>
                   check_circle
                 </span>
                 {feature}
               </motion.li>
             ))}
           </ul>
-
-          {/* Hover glow */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileHover={{ opacity: 1 }}
-            className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${
-              isAccent
-                ? "from-accent/5 via-transparent to-accent/5"
-                : "from-primary/5 via-transparent to-primary/5"
-            } pointer-events-none`}
-          />
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </motion.div>
   );
 }
 
 function StepCardMobile({ step, index, isInView, isMobile }: StepCardProps) {
-  const isAccent = step.color === "accent";
+  const auroraGradient = index % 2 === 0
+    ? "from-[#00C9FF] to-[#4F46E5]"
+    : "from-[#8B5CF6] to-[#D4AF37]";
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: isMobile ? 0 : -30 }}
-      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: isMobile ? 0 : -30 }}
+      initial={{ opacity: 0, x: -30 }}
+      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
       transition={{
-        duration: isMobile ? 0.3 : 0.6,
-        delay: isMobile ? 0 : index * 0.15,
+        duration: 0.6,
+        delay: index * 0.15,
       }}
-      className="relative pl-16 sm:pl-20"
+      className="relative pl-20"
     >
-      {/* Timeline line */}
-      {index < steps.length - 1 && (
-        <motion.div
-          initial={{ scaleY: isMobile ? 1 : 0 }}
-          animate={isInView ? { scaleY: 1 } : { scaleY: isMobile ? 1 : 0 }}
-          transition={{ duration: isMobile ? 0.2 : 0.8, delay: isMobile ? 0 : index * 0.15 + 0.3 }}
-          className={`absolute left-7 sm:left-9 top-14 sm:top-16 bottom-0 w-1 bg-gradient-to-b ${
-            isAccent
-              ? "from-accent to-primary"
-              : "from-primary to-accent"
-          } origin-top`}
-        />
-      )}
-
-      {/* Number badge */}
+      {/* Timeline connecting dot with pulse */}
       <motion.div
-        initial={{ scale: isMobile ? 1 : 0 }}
-        animate={isInView ? { scale: 1 } : { scale: isMobile ? 1 : 0 }}
+        initial={{ scale: 0 }}
+        animate={isInView ? { scale: 1 } : { scale: 0 }}
         transition={{
-          duration: isMobile ? 0.2 : 0.5,
-          delay: isMobile ? 0 : index * 0.15 + 0.2,
-          type: isMobile ? "tween" : "spring",
+          duration: 0.5,
+          delay: index * 0.15 + 0.2,
+          type: "spring",
           stiffness: 200,
         }}
-        className={`absolute left-0 top-0 w-14 h-14 sm:w-18 sm:h-18 rounded-full bg-gradient-to-br ${
-          isAccent
-            ? "from-accent to-accent/50"
-            : "from-primary to-primary/50"
-        } border-4 border-background-dark flex items-center justify-center shadow-glow`}
+        className="absolute left-0 top-0 z-10"
       >
-        <span className="text-xl sm:text-2xl font-black text-white">{step.number}</span>
+        <div className="relative">
+          {/* Animated pulse */}
+          <motion.div
+            animate={{
+              scale: [1, 1.4, 1],
+              opacity: [0.6, 0, 0.6]
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              delay: index * 0.3
+            }}
+            className={`absolute inset-0 w-16 h-16 rounded-full bg-gradient-to-br ${auroraGradient}`}
+          />
+          {/* Number circle */}
+          <div className={`relative w-16 h-16 rounded-full bg-gradient-to-br ${auroraGradient} border-4 border-background-dark flex items-center justify-center shadow-glow`}>
+            <span className="text-2xl font-black text-white" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+              {step.number}
+            </span>
+          </div>
+        </div>
       </motion.div>
 
       {/* Card */}
-      <div
-        className={`bg-surface/50 backdrop-blur-lg border-2 ${
-          isAccent ? "border-accent/30" : "border-primary/30"
-        } rounded-2xl sm:rounded-3xl p-7 sm:p-8`}
-      >
-        {/* Icon */}
-        <div
-          className={`w-14 h-14 rounded-xl bg-gradient-to-br ${
-            isAccent
-              ? "from-accent/20 to-accent/10"
-              : "from-primary/20 to-primary/10"
-          } border ${
-            isAccent ? "border-accent/30" : "border-primary/30"
-          } flex items-center justify-center mb-5`}
-        >
-          <span
-            className={`material-icons text-2xl ${
-              isAccent ? "text-accent" : "text-primary"
-            }`}
-          >
-            {step.icon}
-          </span>
+      <div className="glass-3d p-6 sm:p-8 rounded-3xl relative overflow-hidden">
+        {/* Icon with aurora glow */}
+        <div className="relative w-16 h-16 mb-5">
+          <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${auroraGradient} opacity-20 blur-lg`} />
+          <div className={`relative w-16 h-16 rounded-xl glass-premium flex items-center justify-center border border-white/20`}>
+            <span className={`material-icons text-3xl bg-gradient-to-br ${auroraGradient} bg-clip-text text-transparent`}>
+              {step.icon}
+            </span>
+          </div>
         </div>
 
         {/* Title */}
-        <h4 className="text-xl font-heading font-bold text-foreground mb-4 leading-tight" style={{ hyphens: 'none' }}>
+        <h4 className="text-2xl sm:text-3xl font-hero font-black text-foreground mb-4 leading-tight" style={{ fontWeight: 800, hyphens: 'none' }}>
           {step.title}
         </h4>
 
         {/* Description */}
-        <p className="text-foreground-muted leading-[1.6] text-base mb-6">
+        <p className="text-foreground-muted leading-[1.6] text-base sm:text-lg mb-6 text-light-contrast" style={{ fontWeight: 200 }}>
           {step.description}
         </p>
 
@@ -402,11 +436,7 @@ function StepCardMobile({ step, index, isInView, isMobile }: StepCardProps) {
               key={idx}
               className="flex items-center gap-3 text-base text-foreground-subtle"
             >
-              <span
-                className={`material-icons text-base ${
-                  isAccent ? "text-accent" : "text-primary"
-                }`}
-              >
+              <span className={`material-icons text-base bg-gradient-to-br ${auroraGradient} bg-clip-text text-transparent`}>
                 check_circle
               </span>
               <span className="leading-[1.5]">{feature}</span>

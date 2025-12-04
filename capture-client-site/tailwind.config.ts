@@ -102,8 +102,10 @@ const config: Config = {
       fontFamily: {
         heading: ["var(--font-space-grotesk)", "var(--font-poppins)", "sans-serif"],
         body: ["var(--font-inter)", "sans-serif"],
-        // PREMIUM: Space Grotesk for distinctive headlines
-        display: ["var(--font-space-grotesk)", "system-ui", "sans-serif"],
+        // $1 MILLION: Premium display fonts for maximum impact
+        display: ["var(--font-bricolage-grotesque)", "var(--font-space-grotesk)", "system-ui", "sans-serif"],
+        hero: ["var(--font-bricolage-grotesque)", "system-ui", "sans-serif"],
+        accent: ["var(--font-syne)", "system-ui", "sans-serif"],
       },
       borderRadius: {
         DEFAULT: "0.75rem",

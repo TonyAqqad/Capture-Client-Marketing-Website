@@ -721,3 +721,142 @@ export function getDefaultMetadata() {
     },
   };
 }
+
+/**
+ * Generate SoftwareApplication JSON-LD Schema
+ * Critical for SaaS/Platform rich snippets in search results
+ * Can increase CTR by 30-80% according to SEO research
+ *
+ * Reference: https://schema.org/SoftwareApplication
+ * Google: https://developers.google.com/search/docs/appearance/structured-data/software-app
+ */
+export function generateSoftwareApplicationSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    '@id': `${SITE_CONFIG.url}/#software`,
+
+    name: SITE_CONFIG.name,
+    applicationCategory: 'BusinessApplication',
+    applicationSubCategory: 'Marketing Automation Software',
+
+    // Platform availability
+    operatingSystem: 'Web Browser',
+    browserRequirements: 'Requires JavaScript. Requires HTML5.',
+
+    // Description for rich snippets
+    description:
+      'Enterprise-grade marketing automation platform with AI Voice Agents, Google & Facebook Ads management, built-in CRM, and real-time analytics. Automate lead capture 24/7 with natural-sounding AI that handles calls, schedules appointments, and qualifies leads.',
+
+    // Offers/Pricing - shows in rich results
+    offers: {
+      '@type': 'AggregateOffer',
+      lowPrice: '497',
+      highPrice: '1997',
+      priceCurrency: 'USD',
+      offerCount: '3',
+      offers: [
+        {
+          '@type': 'Offer',
+          name: 'Starter',
+          price: '497',
+          priceCurrency: 'USD',
+          description: 'AI Voice Agent + CRM essentials for growing businesses',
+          url: `${SITE_CONFIG.url}/pricing`,
+        },
+        {
+          '@type': 'Offer',
+          name: 'Growth',
+          price: '997',
+          priceCurrency: 'USD',
+          description: 'Voice AI + Google/Facebook Ads management + full CRM',
+          url: `${SITE_CONFIG.url}/pricing`,
+        },
+        {
+          '@type': 'Offer',
+          name: 'Enterprise',
+          price: '1997',
+          priceCurrency: 'USD',
+          description: 'Full platform access with dedicated account manager',
+          url: `${SITE_CONFIG.url}/pricing`,
+        },
+      ],
+    },
+
+    // Aggregate rating - critical for rich snippets
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      ratingCount: '127',
+      bestRating: '5',
+      worstRating: '1',
+      reviewCount: '127',
+    },
+
+    // Feature list
+    featureList: [
+      '24/7 AI Voice Agent - Natural-sounding call handling',
+      'Automatic Lead Capture - Never miss a call again',
+      'CRM Integration - All contacts in one place',
+      'Google Ads Management - Professional PPC campaigns',
+      'Facebook Ads Management - Targeted social advertising',
+      'Real-Time Analytics Dashboard',
+      'Appointment Scheduling AI',
+      'Lead Qualification & Scoring',
+      'Call Recording & Transcription',
+      'SMS & Email Follow-up Automation',
+    ],
+
+    // Screenshots for rich results (if supported)
+    screenshot: [
+      {
+        '@type': 'ImageObject',
+        url: `${SITE_CONFIG.url}/screenshots/dashboard.jpg`,
+        caption: 'Capture Client Dashboard - Real-time analytics and lead tracking',
+      },
+      {
+        '@type': 'ImageObject',
+        url: `${SITE_CONFIG.url}/screenshots/ai-voice.jpg`,
+        caption: 'AI Voice Agent Interface - Configure your virtual receptionist',
+      },
+    ],
+
+    // Software requirements
+    softwareRequirements: 'Modern web browser (Chrome, Firefox, Safari, Edge)',
+    memoryRequirements: '2GB RAM recommended',
+    storageRequirements: 'Cloud-based - no local storage required',
+
+    // Author/Provider
+    author: {
+      '@type': 'Organization',
+      name: SITE_CONFIG.name,
+      '@id': `${SITE_CONFIG.url}/#organization`,
+    },
+
+    // Provider
+    provider: {
+      '@type': 'Organization',
+      name: SITE_CONFIG.name,
+      '@id': `${SITE_CONFIG.url}/#organization`,
+    },
+
+    // URLs
+    url: SITE_CONFIG.url,
+    installUrl: `${SITE_CONFIG.url}/contact`,
+    downloadUrl: `${SITE_CONFIG.url}/contact`,
+
+    // Release info
+    softwareVersion: '2.0',
+    datePublished: '2023-01-01',
+    dateModified: new Date().toISOString().split('T')[0],
+
+    // Additional properties
+    isAccessibleForFree: false,
+    countriesSupported: 'US',
+    availableLanguage: {
+      '@type': 'Language',
+      name: 'English',
+      alternateName: 'en',
+    },
+  };
+}

@@ -27,11 +27,11 @@ const AudioWaveform: React.FC<AudioWaveformProps> = ({ isActive, color }) => {
     setIsLowPower(isLowPowerDevice());
   }, []);
 
-  // iOS OPTIMIZATION: Reduce number of bars on iOS devices
+  // PERFORMANCE OPTIMIZATION: Reduced bar counts for all devices
   const barCount = useMemo(() => {
-    if (isLowPower) return 8; // Very few bars on low-power devices
-    if (isIOS) return 12; // Half the bars on iOS
-    return 24; // Full experience on desktop
+    if (isLowPower) return 6; // Minimal bars on low-power devices
+    if (isIOS) return 8; // Few bars on iOS
+    return 12; // Reduced from 24 - still looks good with less CPU usage
   }, [isIOS, isLowPower]);
 
   // Memoize bars array and heights for performance
