@@ -8,9 +8,9 @@ import { generateWebPageSchema, SITE_CONFIG } from '@/lib/seo-config';
 import JsonLd from '@/components/seo/JsonLd';
 
 interface IndustryPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 // Generate static params for all industries
@@ -22,7 +22,8 @@ export async function generateStaticParams() {
 
 // Generate metadata for SEO
 export async function generateMetadata({ params }: IndustryPageProps): Promise<Metadata> {
-  const industry = getIndustryBySlug(params.slug);
+  const { slug } = await params;
+  const industry = getIndustryBySlug(slug);
 
   if (!industry) {
     return {
@@ -61,8 +62,9 @@ export async function generateMetadata({ params }: IndustryPageProps): Promise<M
   };
 }
 
-export default function IndustryPage({ params }: IndustryPageProps) {
-  const industry = getIndustryBySlug(params.slug);
+export default async function IndustryPage({ params }: IndustryPageProps) {
+  const { slug } = await params;
+  const industry = getIndustryBySlug(slug);
 
   if (!industry) {
     notFound();

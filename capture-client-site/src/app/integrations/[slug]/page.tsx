@@ -14,9 +14,9 @@ import {
 } from "@/data/integrations";
 
 interface IntegrationDetailPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 /**
@@ -35,7 +35,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: IntegrationDetailPageProps): Promise<Metadata> {
-  const integration = getIntegrationBySlug(params.slug);
+  const { slug } = await params;
+  const integration = getIntegrationBySlug(slug);
 
   if (!integration) {
     return {
@@ -100,10 +101,11 @@ export async function generateMetadata({
 /**
  * Integration Detail Page Component
  */
-export default function IntegrationDetailPage({
+export default async function IntegrationDetailPage({
   params,
 }: IntegrationDetailPageProps) {
-  const integration = getIntegrationBySlug(params.slug);
+  const { slug } = await params;
+  const integration = getIntegrationBySlug(slug);
 
   // Return 404 if integration not found
   if (!integration) {
