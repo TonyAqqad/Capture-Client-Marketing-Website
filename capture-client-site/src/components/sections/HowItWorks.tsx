@@ -71,6 +71,7 @@ export function HowItWorks() {
 
   useEffect(() => {
     const checkMobile = () => {
+      if (typeof window === 'undefined') return;
       setIsMobile(window.innerWidth < 768);
     };
 

@@ -9,21 +9,23 @@ export function PremiumHero() {
   const containerRef = useRef<HTMLElement>(null);
 
   // Mobile detection for performance optimization
-  const [isMobile, setIsMobile] = useState(false);
   const [disableAnimations, setDisableAnimations] = useState(false);
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
+
     const checkMobile = () => {
+      if (typeof window === 'undefined') return;
       const mobile = window.innerWidth < 768;
       const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      setIsMobile(mobile);
       setDisableAnimations(mobile || reducedMotion);
     };
     checkMobile();
     window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+    };
   }, []);
 
   const { scrollYProgress } = useScroll({
@@ -56,16 +58,30 @@ export function PremiumHero() {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [mouseX, mouseY, disableAnimations]);
 
-  // Live stats ticker
+  // Live stats ticker - HYDRATION SAFE: Uses deterministic increments
+  // Initial values are static, increments happen only after client-side mount
   const [callsAnswered, setCallsAnswered] = useState(4273);
   const [leadsQualified, setLeadsQualified] = useState(1847);
+  const tickerRef = useRef(0); // Deterministic counter for increments
 
   useEffect(() => {
     if (!isClient || disableAnimations) return;
+
+    // Use deterministic pattern based on tick count to avoid hydration mismatch
     const interval = setInterval(() => {
-      setCallsAnswered(prev => prev + Math.floor(Math.random() * 3));
-      if (Math.random() > 0.5) setLeadsQualified(prev => prev + 1);
+      tickerRef.current += 1;
+      const tick = tickerRef.current;
+
+      // Deterministic increment: +1 or +2 based on tick modulo
+      const callIncrement = tick % 3 === 0 ? 2 : 1;
+      setCallsAnswered(prev => prev + callIncrement);
+
+      // Leads increase every other tick
+      if (tick % 2 === 0) {
+        setLeadsQualified(prev => prev + 1);
+      }
     }, 3000);
+
     return () => clearInterval(interval);
   }, [isClient, disableAnimations]);
 
@@ -164,7 +180,7 @@ export function PremiumHero() {
                 </span>
                 <span className="block relative">
                   <span className="bg-gradient-to-r from-gold via-cyan-400 to-[#D4AF37] bg-clip-text text-transparent">
-                    Another Lead
+                    Another Client
                   </span>
                   {/* Animated underline */}
                   <motion.div
