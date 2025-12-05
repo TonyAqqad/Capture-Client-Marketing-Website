@@ -25,22 +25,23 @@ import {
 // ============================================
 
 // BODY FONT: Inter - Clean, readable, professional
-// Only essential weights: Normal (400) for body, Semibold (600) for emphasis
+// $5M UPGRADE: Extended weights for refined hierarchy (Light 300 → Bold 700)
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  weight: ["400", "600"], // 2 files only
+  weight: ["300", "400", "500", "600", "700"], // Light to Bold range
   display: "swap",
   preload: true,
   fallback: ["system-ui", "-apple-system", "sans-serif"],
 });
 
 // DISPLAY FONT: Bricolage Grotesque - Ultra-premium headlines
-// Only essential weights: Normal (400) for subheadings, Bold (700) for hero text
+// $5M UPGRADE: EXTREME weight contrasts (Ultra-light 200 → Extra-bold 800)
+// Creates dramatic visual impact: "STOP losing" (200) + "LEADS" (800)
 const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-bricolage-grotesque",
-  weight: ["400", "700"], // 2 files only
+  weight: ["200", "400", "600", "700", "800"], // Ultra-light to Extra-bold
   display: "swap",
   preload: true,
   fallback: ["system-ui", "-apple-system", "sans-serif"],

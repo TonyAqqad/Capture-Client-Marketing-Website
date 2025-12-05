@@ -24,7 +24,7 @@ export { IndustryBadge } from "./IndustryBadge";
 export { GlassCard } from "./GlassCard";
 export { Badge } from "./Badge";
 export { Button } from "./Button";
-// MagneticButton removed - causes Turbopack mobile crashes (framer-motion SSR issue)
-// export { MagneticButton } from "./MagneticButton";
+// MagneticButton - Premium cursor-following button with SSR guards
+export { MagneticButton } from "./MagneticButton";
 export { GlowCard } from "./GlowCard";
 export { FeatureCard } from "./FeatureCard";

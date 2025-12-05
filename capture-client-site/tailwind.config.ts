@@ -111,6 +111,16 @@ const config: Config = {
         quote: ["var(--font-playfair)", "Georgia", "serif"],
         editorial: ["var(--font-playfair)", "Georgia", "serif"],
       },
+      fontWeight: {
+        // $5M UPGRADE: Extreme weight contrasts for premium typography
+        'ultralight': '200',  // Bricolage Grotesque ultra-light
+        'light': '300',       // Inter light
+        'normal': '400',      // Standard weight
+        'medium': '500',      // Inter medium
+        'semibold': '600',    // Balanced emphasis
+        'bold': '700',        // Strong emphasis
+        'extrabold': '800',   // Bricolage Grotesque extra-bold - maximum impact
+      },
       borderRadius: {
         DEFAULT: "0.75rem",
         lg: "1rem",
@@ -140,6 +150,18 @@ const config: Config = {
         "mesh-premium": "radial-gradient(at 27% 37%, rgba(74, 105, 226, 0.2) 0px, transparent 50%), radial-gradient(at 97% 21%, rgba(0, 201, 255, 0.15) 0px, transparent 50%), radial-gradient(at 52% 99%, rgba(74, 105, 226, 0.12) 0px, transparent 50%), radial-gradient(at 10% 29%, rgba(0, 201, 255, 0.1) 0px, transparent 50%), radial-gradient(at 97% 96%, rgba(74, 105, 226, 0.08) 0px, transparent 50%)",
         "gradient-angular": "linear-gradient(135deg, #4A69E2 0%, #00C9FF 50%, #4A69E2 100%)",
         "noise": "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")",
+
+        // PREMIUM: Aurora gradient (existing - cyan/gold brand)
+        "gradient-aurora": "linear-gradient(135deg, #00C9FF 0%, #4F46E5 50%, #8B5CF6 100%)",
+
+        // NEW PREMIUM GRADIENTS: Diverse color palettes for $5M variety
+        "gradient-sunset": "linear-gradient(135deg, #FF6B35 0%, #F7931E 50%, #FFD23F 100%)",
+        "gradient-ocean": "linear-gradient(135deg, #0077B6 0%, #00B4D8 50%, #90E0EF 100%)",
+        "gradient-royal": "linear-gradient(135deg, #7B2CBF 0%, #9D4EDD 50%, #C77DFF 100%)",
+        "gradient-forest": "linear-gradient(135deg, #1B4332 0%, #2D6A4F 50%, #40916C 100%)",
+        "gradient-rose": "linear-gradient(135deg, #FF4D6D 0%, #FF758F 50%, #FF8FA3 100%)",
+        "gradient-midnight": "linear-gradient(135deg, #0D1B2A 0%, #1B263B 50%, #415A77 100%)",
+        "gradient-ember": "linear-gradient(135deg, #D00000 0%, #E85D04 50%, #FAA307 100%)",
       },
       animation: {
         "float-slow": "float 6s ease-in-out infinite",

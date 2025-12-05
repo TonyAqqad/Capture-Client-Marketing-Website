@@ -263,24 +263,24 @@
 
 @layer utilities {
   /* ============================================ */
-  /* $1 MILLION TYPOGRAPHY - Bricolage Grotesque */
-  /* Extreme weight contrasts for maximum impact */
+  /* $5M PREMIUM TYPOGRAPHY - Extreme Weight Contrasts */
+  /* Ultra-light (200) to Extra-bold (800) for maximum visual impact */
   /* ============================================ */
 
-  /* Hero headline - Maximum impact */
+  /* Hero headline - Extra-bold for maximum impact */
   .text-hero-xl {
     font-family: var(--font-bricolage-grotesque, var(--font-space-grotesk));
     font-size: clamp(3rem, 12vw, 7rem);
-    font-weight: 800;
+    font-weight: 800;  /* Extra-bold */
     letter-spacing: -0.04em;
     line-height: 0.95;
   }
 
-  /* Primary headlines */
+  /* Primary headlines - Bold */
   .text-display-xl {
     font-family: var(--font-bricolage-grotesque, var(--font-space-grotesk));
     font-size: clamp(2.5rem, 8vw, 5rem);
-    font-weight: 700;
+    font-weight: 700;  /* Bold */
     letter-spacing: -0.03em;
     line-height: 1.05;
   }
@@ -288,7 +288,7 @@
   .text-display-lg {
     font-family: var(--font-bricolage-grotesque, var(--font-space-grotesk));
     font-size: clamp(2rem, 6vw, 3.75rem);
-    font-weight: 700;
+    font-weight: 700;  /* Bold */
     letter-spacing: -0.025em;
     line-height: 1.1;
   }
@@ -296,7 +296,7 @@
   .text-display-md {
     font-family: var(--font-bricolage-grotesque, var(--font-space-grotesk));
     font-size: clamp(1.5rem, 5vw, 2.75rem);
-    font-weight: 600;
+    font-weight: 600;  /* Semibold */
     letter-spacing: -0.02em;
     line-height: 1.15;
   }
@@ -304,24 +304,66 @@
   .text-display-sm {
     font-family: var(--font-bricolage-grotesque, var(--font-space-grotesk));
     font-size: clamp(1.25rem, 4vw, 1.875rem);
-    font-weight: 600;
+    font-weight: 600;  /* Semibold */
     letter-spacing: -0.015em;
     line-height: 1.2;
+  }
+
+  /* ============================================ */
+  /* $5M PREMIUM: Extreme Weight Contrast Utilities */
+  /* ============================================ */
+
+  /* ULTRA-LIGHT (200) - For dramatic contrast words */
+  .text-display-ultralight {
+    font-family: var(--font-bricolage-grotesque, system-ui, sans-serif);
+    font-weight: 200;  /* Ultra-light */
+    letter-spacing: 0.02em;  /* Slightly wider for readability */
+    line-height: 1.2;
+  }
+
+  /* EXTRA-BOLD (800) - For maximum emphasis words */
+  .text-display-hero {
+    font-family: var(--font-bricolage-grotesque, system-ui, sans-serif);
+    font-weight: 800;  /* Extra-bold */
+    letter-spacing: -0.03em;  /* Tighter for impact */
+    line-height: 1.1;
+  }
+
+  /* PREMIUM: Contrast headline - combines ultra-light + extra-bold */
+  .text-contrast-headline {
+    font-family: var(--font-bricolage-grotesque, system-ui, sans-serif);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  /* Example usage:
+   * <h1 class="text-contrast-headline text-6xl">
+   *   <span class="font-ultralight">STOP losing</span>
+   *   <span class="font-extrabold">LEADS</span>
+   * </h1>
+   */
+
+  /* Ultra-light display for subtle emphasis */
+  .text-display-light {
+    font-family: var(--font-bricolage-grotesque, system-ui, sans-serif);
+    font-weight: 200;  /* Ultra-light */
+    letter-spacing: 0.02em;
+    line-height: 1.3;
+  }
+
+  /* Legacy support - keep existing class */
+  .text-light-contrast {
+    font-family: var(--font-bricolage-grotesque, var(--font-space-grotesk));
+    font-weight: 200;  /* Ultra-light */
+    letter-spacing: 0.02em;
   }
 
   /* $1M Accent text with Syne */
   .text-accent-display {
     font-family: var(--font-syne, var(--font-space-grotesk));
-    font-weight: 800;
+    font-weight: 800;  /* Extra-bold */
     letter-spacing: -0.02em;
     text-transform: uppercase;
-  }
-
-  /* Ultra-light contrast text for depth */
-  .text-light-contrast {
-    font-family: var(--font-bricolage-grotesque, var(--font-space-grotesk));
-    font-weight: 200;
-    letter-spacing: 0.02em;
   }
 
   /* ============================================ */
@@ -2594,4 +2636,47 @@ select:focus-visible {
   .flip-card:hover {
     transform: none !important;
   }
+}
+
+/* ============================================ */
+/* PREMIUM SOLID BACKGROUNDS                   */
+/* Alternative to glass for better performance */
+/* ============================================ */
+
+/* Premium dark background - Deep richness */
+.bg-premium-dark {
+  background: linear-gradient(180deg, #0a0a0f 0%, #12121a 100%);
+}
+
+/* Premium card - Solid elevated surface */
+.bg-premium-card {
+  background: rgba(18, 18, 26, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Premium elevated - Multi-layer depth */
+.bg-premium-elevated {
+  background: linear-gradient(145deg, rgba(30, 30, 45, 0.9), rgba(20, 20, 30, 0.95));
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Premium gradient overlay - Subtle depth without blur */
+.bg-premium-overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.08) 0%,
+    rgba(15, 20, 25, 0.92) 50%,
+    rgba(0, 201, 255, 0.06) 100%
+  );
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Premium matte finish - No glass, pure elegance */
+.bg-premium-matte {
+  background: rgba(20, 25, 35, 0.98);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
