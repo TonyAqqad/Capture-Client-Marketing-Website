@@ -215,6 +215,129 @@ export const RestaurantsIcon: React.FC<IconProps> = ({ className = "w-5 h-5" }) 
   </svg>
 );
 
+export const ITServicesIcon: React.FC<IconProps> = ({ className = "w-5 h-5" }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M4 16L4 20M4 20H8M4 20C4 18.895 4.895 18 6 18H18C19.105 18 20 18.895 20 20M20 20H16M20 20V16M9 5H15M12 5V8M5 8H19C20.105 8 21 8.895 21 10V14C21 15.105 20.105 16 19 16H5C3.895 16 3 15.105 3 14V10C3 8.895 3.895 8 5 8Z"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const FinancialServicesIcon: React.FC<IconProps> = ({ className = "w-5 h-5" }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12 8C10.343 8 9 9.343 9 11C9 12.657 10.343 14 12 14C13.657 14 15 15.343 15 17C15 18.657 13.657 20 12 20M12 8C13.11 8 14.08 8.59 14.593 9.5M12 8V6M12 20V22M12 20C10.89 20 9.92 19.41 9.407 18.5M21 12C21 16.971 16.971 21 12 21C7.029 21 3 16.971 3 12C3 7.029 7.029 3 12 3C16.971 3 21 7.029 21 12Z"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const InsuranceIcon: React.FC<IconProps> = ({ className = "w-5 h-5" }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M9 12L11 14L15 10"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const PropertyManagementIcon: React.FC<IconProps> = ({ className = "w-5 h-5" }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M19 21V5C19 3.895 18.105 3 17 3H7C5.895 3 5 3.895 5 5V21M3 21H21M9 7H10M9 11H10M9 15H10M14 7H15M14 11H15"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M16 21V17C16 16.448 15.552 16 15 16H13C12.448 16 12 16.448 12 17V21"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const CleaningIcon: React.FC<IconProps> = ({ className = "w-5 h-5" }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M19 14L20.293 12.707C20.921 12.079 21 11.111 20.413 10.413L19 9C18.448 8.448 17.552 8.448 17 9L14 12M14 12L8.5 17.5C8.224 17.776 8 18.224 8 18.707V21H10.293C10.776 21 11.224 20.776 11.5 20.5L17 15M14 12L17 15M5 8L3 10L5 12L7 10L5 8Z"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M17 5L19 7"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const PestControlIcon: React.FC<IconProps> = ({ className = "w-5 h-5" }) => (
+  <svg
+    className={className}
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M12 4C9.791 4 8 5.791 8 8C8 9.657 9.343 11 11 11H13C14.657 11 16 9.657 16 8C16 5.791 14.209 4 12 4ZM12 4V2M6 8H4M20 8H18M7.5 6L6 4.5M16.5 6L18 4.5M11 11V14M13 11V14M11 14C9.343 14 8 15.343 8 17V20M13 14C14.657 14 16 15.343 16 17V20"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 // Resources Icons
 export const BlogIcon: React.FC<IconProps> = ({ className = "w-5 h-5" }) => (
   <svg
@@ -298,6 +421,12 @@ export const navIcons: Record<string, React.FC<IconProps>> = {
   legal: LegalIcon,
   automotive: AutomotiveIcon,
   restaurants: RestaurantsIcon,
+  "it-services": ITServicesIcon,
+  "financial-services": FinancialServicesIcon,
+  insurance: InsuranceIcon,
+  "property-management": PropertyManagementIcon,
+  cleaning: CleaningIcon,
+  "pest-control": PestControlIcon,
   blog: BlogIcon,
   "case-studies": CaseStudiesIcon,
   "roi-calculator": ROICalculatorIcon,
