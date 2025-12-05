@@ -135,7 +135,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
 
       <div className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="relative py-20 md:py-32 overflow-hidden">
+        <section className="relative pt-24 sm:pt-28 lg:pt-32 pb-16 md:pb-24 overflow-hidden">
           {/* Background Image with Overlay */}
           <div className="absolute inset-0">
             <Image
@@ -144,14 +144,15 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
               fill
               className="object-cover opacity-20"
               priority
+              sizes="100vw"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background" />
           </div>
 
-          {/* Mesh Background */}
-          <div className="absolute inset-0 bg-mesh-premium opacity-30" />
+          {/* Mesh Background - Reduced on mobile for performance */}
+          <div className="absolute inset-0 bg-mesh-premium opacity-20 md:opacity-30" />
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
             <div className="max-w-4xl mx-auto">
               {/* Breadcrumb */}
               <nav className="flex items-center gap-2 text-sm text-foreground-muted mb-8" aria-label="Breadcrumb">
@@ -209,8 +210,8 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
 
         {/* Stats Section */}
         {industry.stats && industry.stats.length > 0 && (
-          <section className="py-16 bg-gradient-to-b from-background to-background-darker">
-            <div className="container mx-auto px-6">
+          <section className="py-12 md:py-16 bg-gradient-to-b from-background to-background-darker">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
                 {industry.stats.map((stat, index) => (
                   <div key={index} className="text-center">
@@ -237,8 +238,8 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
         )}
 
         {/* Pain Points Section */}
-        <section className="py-20 bg-background-darker">
-          <div className="container mx-auto px-6">
+        <section className="py-16 md:py-20 bg-background-darker">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -272,8 +273,8 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
         </section>
 
         {/* Solutions Section */}
-        <section className="py-20 bg-gradient-to-b from-background-darker to-background">
-          <div className="container mx-auto px-6">
+        <section className="py-16 md:py-20 bg-gradient-to-b from-background-darker to-background">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -313,8 +314,8 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
         </section>
 
         {/* Key Features Section */}
-        <section className="py-20 bg-background">
-          <div className="container mx-auto px-6">
+        <section className="py-16 md:py-20 bg-background">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -342,8 +343,8 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
 
         {/* ROI Calculator Section */}
         {industry.roiCalculation && (
-          <section className="py-20 bg-gradient-to-b from-background to-background-darker">
-            <div className="container mx-auto px-6">
+          <section className="py-16 md:py-20 bg-gradient-to-b from-background to-background-darker">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
               <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-16">
                   <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -410,19 +411,20 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
 
         {/* Testimonial Section */}
         {industry.testimonial && (
-          <section className="py-20 bg-background-darker">
-            <div className="container mx-auto px-6">
+          <section className="py-16 md:py-20 bg-background-darker">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
               <div className="max-w-4xl mx-auto">
                 <GlassCard variant="premium">
                   <div className="p-8 md:p-12">
-                    <div className="flex items-start gap-6">
+                    <div className="flex flex-col sm:flex-row items-start gap-6">
                       {industry.testimonial.avatar && (
                         <Image
                           src={industry.testimonial.avatar}
                           alt={industry.testimonial.author}
                           width={80}
                           height={80}
-                          className="rounded-full"
+                          className="rounded-full flex-shrink-0"
+                          sizes="80px"
                         />
                       )}
 
@@ -474,13 +476,13 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
         )}
 
         {/* Final CTA */}
-        <section className="py-20 bg-gradient-to-br from-background-darker via-background to-background-darker relative overflow-hidden">
-          {/* Background */}
-          <div className="absolute inset-0 bg-mesh-premium opacity-40" />
-          <div className="absolute top-10 left-10 w-72 h-72 bg-gold-500/20 rounded-full blur-3xl animate-float-slow" />
-          <div className="absolute bottom-10 right-10 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl animate-float-medium" />
+        <section className="py-16 md:py-20 bg-gradient-to-br from-background-darker via-background to-background-darker relative overflow-hidden">
+          {/* Background - Performance optimized for mobile */}
+          <div className="absolute inset-0 bg-mesh-premium opacity-20 md:opacity-40" />
+          <div className="hidden md:block absolute top-10 left-10 w-72 h-72 bg-gold-500/20 rounded-full blur-3xl animate-float-slow" />
+          <div className="hidden md:block absolute bottom-10 right-10 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl animate-float-medium" />
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
                 Ready to Transform Your {industry.name} Business?

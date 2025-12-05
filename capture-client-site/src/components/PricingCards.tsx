@@ -146,7 +146,7 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
           ...(isMobile ? {} : { rotateX, rotateY }),
         }}
         transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-        className={`relative group h-full min-h-[580px] rounded-3xl overflow-hidden`}
+        className={`relative group h-full min-h-[580px] rounded-3xl ${plan.isPopular ? '' : 'overflow-hidden'}`}
         style={
           isMobile
             ? {}
@@ -161,7 +161,7 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
             initial={{ opacity: 0, y: -20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
             transition={{ delay: 0.6, duration: 0.5 }}
-            className="absolute -top-4 left-1/2 -translate-x-1/2 z-20 w-max"
+            className="absolute -top-4 left-1/2 -translate-x-1/2 z-20 max-w-full px-2"
           >
             <motion.div
               animate={{
@@ -177,7 +177,7 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
                 repeat: Infinity,
                 repeatType: 'reverse',
               }}
-              className="relative px-6 py-2.5 rounded-full bg-gradient-to-r from-accent via-primary to-accent bg-[length:200%_100%] backdrop-blur-md"
+              className="relative px-4 sm:px-6 py-2.5 rounded-full bg-gradient-to-r from-accent via-primary to-accent bg-[length:200%_100%] backdrop-blur-md"
             >
               <motion.div
                 animate={{
@@ -190,15 +190,15 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
                 }}
                 className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent bg-[length:200%_100%] rounded-full"
               />
-              <div className="relative flex items-center gap-2">
+              <div className="relative inline-flex items-start sm:items-center gap-2 max-w-full">
                 <motion.span
                   animate={{ rotate: [0, 360] }}
                   transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
-                  className="text-lg"
+                  className="text-base sm:text-lg flex-shrink-0"
                 >
                   ⭐
                 </motion.span>
-                <span className="font-bold text-sm tracking-wider text-background-dark uppercase">
+                <span className="font-bold text-xs sm:text-sm tracking-wider text-background-dark uppercase whitespace-nowrap">
                   Most Popular
                 </span>
               </div>

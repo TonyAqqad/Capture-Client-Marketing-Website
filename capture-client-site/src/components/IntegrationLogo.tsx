@@ -121,6 +121,7 @@ export function IntegrationLogo({
         alt={`${displayName} logo`}
         width={logoSize.width}
         height={logoSize.height}
+        sizes={`${logoSize.width}px`}
         className={cn(
           'object-contain',
           grayscale && 'grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300'

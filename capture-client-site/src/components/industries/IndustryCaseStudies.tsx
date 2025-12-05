@@ -264,8 +264,8 @@ export default function IndustryCaseStudies({
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-background-darker">
-      <div className="container mx-auto px-6">
+    <section className="py-16 md:py-20 bg-gradient-to-b from-background to-background-darker">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">

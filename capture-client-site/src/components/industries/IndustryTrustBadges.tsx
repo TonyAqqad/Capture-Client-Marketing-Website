@@ -130,10 +130,10 @@ export function IndustryTrustBadges({
   return (
     <section
       ref={ref}
-      className={`py-12 bg-gradient-to-b from-background to-background-darker ${className}`}
+      className={`py-12 md:py-16 bg-gradient-to-b from-background to-background-darker ${className}`}
       aria-label="Trust signals and social proof"
     >
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-6xl mx-auto">
           {/* Client Count Ticker (if provided) */}
           {clientCount && (

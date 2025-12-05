@@ -81,8 +81,8 @@ export function IndustryIntegrations({ industry, maxDisplay = 6 }: IndustryInteg
   const colors = CATEGORY_COLORS[industry.category] || CATEGORY_COLORS['Professional Services'];
 
   return (
-    <section className="py-20 bg-background">
-      <div className="container mx-auto px-6">
+    <section className="py-16 md:py-20 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">

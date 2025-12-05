@@ -111,19 +111,19 @@ const scenarios: ScenarioData[] = [
 // ==================== ANIMATED WAVEFORM COMPONENT ====================
 
 function AnimatedWaveform({ isPlaying }: { isPlaying: boolean }) {
-  const bars = Array.from({ length: 40 }, (_, i) => i);
+  const bars = Array.from({ length: 30 }, (_, i) => i);
 
   return (
-    <div className="flex items-center justify-center gap-1 h-24">
+    <div className="flex items-center justify-center gap-0.5 md:gap-1 h-16 md:h-24 overflow-hidden">
       {bars.map((bar) => (
         <motion.div
           key={bar}
-          className="w-1 bg-gradient-to-t from-accent via-primary to-accent rounded-full"
+          className="w-0.5 md:w-1 bg-gradient-to-t from-accent via-primary to-accent rounded-full"
           initial={{ height: 4 }}
           animate={
             isPlaying
               ? {
-                  height: [4, Math.random() * 60 + 20, 4],
+                  height: [4, Math.random() * 48 + 16, 4],
                   opacity: [0.3, 1, 0.3],
                 }
               : { height: 4, opacity: 0.3 }
@@ -152,24 +152,24 @@ function PhoneInterface({
   currentTranscriptIndex: number;
 }) {
   return (
-    <div className="relative">
-      {/* Decorative glow */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent/30 via-primary/20 to-accent/30 rounded-3xl blur-3xl opacity-60 animate-pulse" />
+    <div className="relative w-full max-w-md mx-auto">
+      {/* Decorative glow - reduced on mobile */}
+      <div className="absolute inset-0 bg-gradient-to-br from-accent/30 via-primary/20 to-accent/30 rounded-3xl blur-xl md:blur-3xl opacity-40 md:opacity-60 animate-pulse" />
 
       {/* Phone mockup */}
       <motion.div
-        className="relative glass-premium border-2 border-white/20 rounded-[2.5rem] p-4 shadow-2xl"
+        className="relative glass-premium border-2 border-white/20 rounded-[2rem] md:rounded-[2.5rem] p-3 md:p-4 shadow-2xl"
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.5, type: "spring" }}
       >
         {/* Phone notch */}
-        <div className="absolute top-6 left-1/2 -translate-x-1/2 w-32 h-6 bg-background-dark rounded-full border border-white/10" />
+        <div className="absolute top-4 md:top-6 left-1/2 -translate-x-1/2 w-24 md:w-32 h-5 md:h-6 bg-background-dark rounded-full border border-white/10" />
 
         {/* Screen */}
-        <div className="relative bg-gradient-to-br from-background-dark via-background to-background-dark rounded-[2rem] overflow-hidden border border-white/10">
+        <div className="relative bg-gradient-to-br from-background-dark via-background to-background-dark rounded-[1.75rem] md:rounded-[2rem] overflow-hidden border border-white/10">
           {/* Status bar */}
-          <div className="flex items-center justify-between px-8 py-4 border-b border-white/5">
+          <div className="flex items-center justify-between px-4 md:px-8 py-3 md:py-4 border-b border-white/5">
             <div className="flex items-center gap-2">
               <div className="w-1 h-1 bg-accent rounded-full animate-pulse" />
               <span className="text-xs text-foreground-muted">Active Call</span>
@@ -182,42 +182,42 @@ function PhoneInterface({
           </div>
 
           {/* Call info */}
-          <div className="p-8 text-center">
+          <div className="p-6 md:p-8 text-center">
             <motion.div
-              className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 flex items-center justify-center"
+              className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-4 md:mb-6 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 flex items-center justify-center"
               animate={isPlaying ? { scale: [1, 1.05, 1] } : {}}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <span className="material-icons text-5xl text-accent">{scenario.icon}</span>
+              <span className="material-icons text-4xl md:text-5xl text-accent">{scenario.icon}</span>
             </motion.div>
 
-            <h3 className="text-2xl font-bold text-foreground mb-2">{scenario.title}</h3>
-            <p className="text-sm text-foreground-muted mb-8">{scenario.description}</p>
+            <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">{scenario.title}</h3>
+            <p className="text-xs md:text-sm text-foreground-muted mb-6 md:mb-8">{scenario.description}</p>
 
             {/* Waveform */}
-            <div className="mb-8">
+            <div className="mb-6 md:mb-8">
               <AnimatedWaveform isPlaying={isPlaying} />
             </div>
 
             {/* Call duration */}
-            <div className="text-4xl font-bold text-gradient bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent mb-8">
+            <div className="text-3xl md:text-4xl font-bold text-gradient bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent mb-6 md:mb-8">
               {scenario.stats.callDuration}
             </div>
           </div>
 
           {/* Bottom stats */}
-          <div className="grid grid-cols-3 gap-4 p-6 border-t border-white/5 bg-white/[0.02]">
+          <div className="grid grid-cols-3 gap-2 md:gap-4 p-4 md:p-6 border-t border-white/5 bg-white/[0.02]">
             <div className="text-center">
               <div className="text-xs text-foreground-muted mb-1">Duration</div>
-              <div className="text-sm font-bold text-foreground">{scenario.stats.callDuration}</div>
+              <div className="text-xs md:text-sm font-bold text-foreground">{scenario.stats.callDuration}</div>
             </div>
             <div className="text-center">
               <div className="text-xs text-foreground-muted mb-1">Quality</div>
-              <div className="text-sm font-bold text-accent">{scenario.stats.leadQuality}</div>
+              <div className="text-xs md:text-sm font-bold text-accent">{scenario.stats.leadQuality}</div>
             </div>
             <div className="text-center">
               <div className="text-xs text-foreground-muted mb-1">Status</div>
-              <div className="text-sm font-bold text-primary">{scenario.stats.outcome}</div>
+              <div className="text-xs md:text-sm font-bold text-primary truncate">{scenario.stats.outcome}</div>
             </div>
           </div>
         </div>
@@ -236,18 +236,18 @@ function TranscriptPanel({
   currentIndex: number;
 }) {
   return (
-    <div className="glass-premium rounded-3xl p-8 h-full max-h-[600px] overflow-hidden">
-      <div className="flex items-center gap-3 mb-6 pb-4 border-b border-white/10">
+    <div className="glass-premium rounded-2xl md:rounded-3xl p-4 md:p-8 h-full max-h-[500px] md:max-h-[600px] overflow-hidden">
+      <div className="flex items-center gap-3 mb-4 md:mb-6 pb-3 md:pb-4 border-b border-white/10">
         <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 flex items-center justify-center">
           <span className="material-icons text-accent">chat</span>
         </div>
         <div>
-          <h3 className="text-xl font-bold text-foreground">Live Transcript</h3>
-          <p className="text-sm text-foreground-muted">Real-time conversation</p>
+          <h3 className="text-lg md:text-xl font-bold text-foreground">Live Transcript</h3>
+          <p className="text-xs md:text-sm text-foreground-muted">Real-time conversation</p>
         </div>
       </div>
 
-      <div className="space-y-4 overflow-y-auto max-h-[460px] pr-2 scrollbar-hide">
+      <div className="space-y-3 md:space-y-4 overflow-y-auto max-h-[380px] md:max-h-[460px] pr-2 scrollbar-hide">
         <AnimatePresence mode="popLayout">
           {transcript.slice(0, currentIndex + 1).map((message, idx) => (
             <motion.div
@@ -262,14 +262,14 @@ function TranscriptPanel({
             >
               {/* Avatar */}
               <div
-                className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 ${
+                className={`w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl flex items-center justify-center flex-shrink-0 ${
                   message.speaker === "AI"
                     ? "bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30"
                     : "bg-gradient-to-br from-gold/20 to-gold/10 border border-gold/30"
                 }`}
               >
                 <span
-                  className={`material-icons text-xl ${
+                  className={`material-icons text-base md:text-xl ${
                     message.speaker === "AI" ? "text-accent" : "text-gold"
                   }`}
                 >
@@ -279,7 +279,7 @@ function TranscriptPanel({
 
               {/* Message bubble */}
               <div
-                className={`flex-1 ${
+                className={`flex-1 min-w-0 ${
                   message.speaker === "AI" ? "text-left" : "text-right"
                 }`}
               >
@@ -294,13 +294,13 @@ function TranscriptPanel({
                   <span className="text-xs text-foreground-muted">{message.timestamp}</span>
                 </div>
                 <div
-                  className={`inline-block px-4 py-3 rounded-2xl ${
+                  className={`inline-block px-3 md:px-4 py-2 md:py-3 rounded-xl md:rounded-2xl max-w-full ${
                     message.speaker === "AI"
                       ? "bg-gradient-to-br from-accent/10 to-primary/5 border border-accent/20"
                       : "bg-gradient-to-br from-gold/10 to-gold/5 border border-gold/20"
                   }`}
                 >
-                  <p className="text-sm text-foreground leading-relaxed">{message.text}</p>
+                  <p className="text-xs md:text-sm text-foreground leading-relaxed break-words">{message.text}</p>
                 </div>
               </div>
             </motion.div>
@@ -558,15 +558,15 @@ export default function DemoContent() {
   };
 
   return (
-    <div className="relative min-h-screen w-full bg-background-dark overflow-hidden">
-      {/* Animated background */}
-      <div className="absolute inset-0">
+    <div className="relative min-h-screen w-full bg-background-dark overflow-x-hidden">
+      {/* Animated background - mobile optimized */}
+      <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background-dark via-background to-background-dark" />
         <div className="absolute inset-0 bg-mesh-premium opacity-30" />
 
-        {/* Floating orbs */}
+        {/* Floating orbs - reduced blur on mobile */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-accent/20 to-transparent rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-gradient-radial from-accent/20 to-transparent rounded-full blur-xl md:blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -574,7 +574,7 @@ export default function DemoContent() {
           transition={{ duration: 8, repeat: Infinity }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-radial from-primary/20 to-transparent rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-gradient-radial from-primary/20 to-transparent rounded-full blur-xl md:blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
             opacity: [0.5, 0.3, 0.5],
@@ -586,17 +586,17 @@ export default function DemoContent() {
       {/* Content */}
       <div className="relative z-10">
         {/* ==================== HERO SECTION ==================== */}
-        <section className="section pt-32 pb-20">
-          <div className="container-custom px-4 sm:px-6 lg:px-8">
+        <section className="section pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 min-h-[85vh] sm:min-h-[80vh] flex items-center">
+          <div className="container-custom px-4 sm:px-6 lg:px-8 w-full">
             <motion.div
-              className="text-center max-w-4xl mx-auto mb-16"
+              className="text-center max-w-4xl mx-auto mb-12 sm:mb-16 relative z-10"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
               {/* Badge */}
               <motion.div
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 via-accent/10 to-transparent border border-accent/30 backdrop-blur-xl mb-6"
+                className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 via-accent/10 to-transparent border border-accent/30 backdrop-blur-xl mb-4 sm:mb-6"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.2, type: "spring" }}
@@ -607,39 +607,40 @@ export default function DemoContent() {
                 </span>
               </motion.div>
 
-              {/* Headline */}
-              <h1 className="text-display-xl mb-6 leading-tight">
+              {/* Headline - mobile optimized sizing */}
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 sm:mb-6 leading-tight tracking-tight">
                 Experience AI That
                 <br />
                 <span className="text-gradient-gold-cyan">Sounds Human</span>
               </h1>
 
-              {/* Subheadline */}
-              <p className="text-xl text-foreground-muted mb-8 leading-relaxed">
+              {/* Subheadline - mobile optimized sizing */}
+              <p className="text-base sm:text-lg md:text-xl text-foreground-muted mb-6 sm:mb-8 leading-relaxed px-4 sm:px-0">
                 Watch real conversations between our AI voice agent and customers.
                 <br className="hidden sm:block" />
                 Choose a scenario below and see the magic happen.
               </p>
 
-              {/* Animated phone mockup decoration */}
+              {/* Animated phone mockup decoration - mobile optimized */}
               <motion.div
-                className="inline-flex items-center gap-2 text-sm text-foreground-muted"
+                className="inline-flex items-center gap-2 text-xs sm:text-sm text-foreground-muted px-4 sm:px-0"
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
-                <span className="material-icons text-accent">phone_in_talk</span>
-                <span>Live simulation - No recordings, 100% AI-generated</span>
+                <span className="material-icons text-accent text-base sm:text-xl">phone_in_talk</span>
+                <span className="hidden sm:inline">Live simulation - No recordings, 100% AI-generated</span>
+                <span className="sm:hidden">100% AI-generated</span>
               </motion.div>
             </motion.div>
           </div>
         </section>
 
         {/* ==================== INTERACTIVE DEMO SECTION ==================== */}
-        <section className="section pb-20">
+        <section className="section pb-12 sm:pb-16 lg:pb-20">
           <div className="container-custom px-4 sm:px-6 lg:px-8">
             {/* Scenario selector */}
             <motion.div
-              className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-12"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8 sm:mb-12"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
@@ -648,24 +649,24 @@ export default function DemoContent() {
                 <motion.button
                   key={scenario.id}
                   onClick={() => handleScenarioChange(scenario)}
-                  className={`glass-card p-6 rounded-2xl text-left transition-all duration-300 ${
+                  className={`glass-card p-4 sm:p-6 rounded-xl sm:rounded-2xl text-left transition-all duration-300 ${
                     selectedScenario.id === scenario.id
                       ? "border-2 border-accent shadow-glow-lg"
-                      : "border border-white/10 hover:border-accent/30"
+                      : "border border-white/10 hover:border-accent/30 active:border-accent/50"
                   }`}
                   whileHover={{ scale: 1.02, y: -4 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className="flex items-center gap-3 mb-3">
+                  <div className="flex items-center gap-3 mb-2 sm:mb-3">
                     <div
-                      className={`w-12 h-12 rounded-xl flex items-center justify-center ${
+                      className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center ${
                         selectedScenario.id === scenario.id
                           ? "bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30"
                           : "bg-white/5 border border-white/10"
                       }`}
                     >
                       <span
-                        className={`material-icons text-2xl ${
+                        className={`material-icons text-xl sm:text-2xl ${
                           selectedScenario.id === scenario.id ? "text-accent" : "text-foreground-muted"
                         }`}
                       >
@@ -676,20 +677,20 @@ export default function DemoContent() {
                       <motion.div
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
-                        className="w-6 h-6 rounded-full bg-accent flex items-center justify-center"
+                        className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-accent flex items-center justify-center"
                       >
-                        <span className="material-icons text-sm text-background-dark">check</span>
+                        <span className="material-icons text-xs sm:text-sm text-background-dark">check</span>
                       </motion.div>
                     )}
                   </div>
-                  <h3 className="text-lg font-bold text-foreground mb-1">{scenario.title}</h3>
-                  <p className="text-sm text-foreground-muted">{scenario.description}</p>
+                  <h3 className="text-base sm:text-lg font-bold text-foreground mb-1">{scenario.title}</h3>
+                  <p className="text-xs sm:text-sm text-foreground-muted">{scenario.description}</p>
                 </motion.button>
               ))}
             </motion.div>
 
             {/* Main demo interface */}
-            <div className="grid lg:grid-cols-2 gap-8 mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 mb-8 sm:mb-12">
               {/* Phone interface */}
               <motion.div
                 key={selectedScenario.id}
@@ -720,18 +721,18 @@ export default function DemoContent() {
 
             {/* Playback controls */}
             <motion.div
-              className="flex items-center justify-center gap-4"
+              className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
             >
               <motion.button
                 onClick={togglePlayback}
-                className="flex items-center gap-3 px-8 py-4 rounded-2xl bg-gradient-to-r from-accent via-primary to-accent text-white font-bold text-lg shadow-glow-lg backdrop-blur-xl border-2 border-accent/30"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-gradient-to-r from-accent via-primary to-accent text-white font-bold text-base sm:text-lg shadow-glow-lg backdrop-blur-xl border-2 border-accent/30 min-h-[56px]"
                 whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(0, 201, 255, 0.6)" }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="material-icons text-3xl">
+                <span className="material-icons text-2xl sm:text-3xl">
                   {isPlaying ? "pause" : "play_arrow"}
                 </span>
                 <span>{isPlaying ? "Pause Demo" : "Play Demo"}</span>
@@ -742,11 +743,11 @@ export default function DemoContent() {
                   setIsPlaying(false);
                   setCurrentTranscriptIndex(0);
                 }}
-                className="flex items-center gap-2 px-6 py-4 rounded-2xl glass-card border border-white/20 text-foreground font-semibold hover:border-accent/30 transition-all duration-300"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-4 rounded-xl sm:rounded-2xl glass-card border border-white/20 text-foreground font-semibold hover:border-accent/30 active:border-accent/50 transition-all duration-300 min-h-[56px]"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="material-icons">replay</span>
+                <span className="material-icons text-xl sm:text-2xl">replay</span>
                 <span>Restart</span>
               </motion.button>
             </motion.div>

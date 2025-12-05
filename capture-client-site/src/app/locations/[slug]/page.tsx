@@ -8,7 +8,7 @@ import TrustSignals from "@/components/cro/TrustSignals";
 import SocialProofBanner from "@/components/cro/SocialProofBanner";
 import RiskReversal from "@/components/cro/RiskReversal";
 import ObjectionHandler from "@/components/cro/ObjectionHandler";
-import MobileCTABar from "@/components/cro/MobileCTABar";
+// NOTE: MobileCTABar is rendered globally in layout.tsx - do NOT duplicate here
 import PremiumLocationFAQ from "@/components/sections/PremiumLocationFAQ";
 import PremiumLocationTestimonials from "@/components/sections/PremiumLocationTestimonials";
 import LocalMarketStats from "@/components/locations/LocalMarketStats";
@@ -197,8 +197,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       {/* Inject JSON-LD structured data for local SEO */}
       <JsonLd schema={schemas} />
 
-      {/* Mobile CTA Bar - Sticky bottom bar for mobile conversions */}
-      <MobileCTABar phoneNumber={localPhoneNumber} />
+      {/* NOTE: MobileCTABar is rendered globally in layout.tsx - no duplicate needed */}
 
       {/* LOCALIZED AURORA HERO - Premium animated background */}
       <section className="relative min-h-screen flex items-center overflow-hidden">

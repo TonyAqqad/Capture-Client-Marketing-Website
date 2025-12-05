@@ -234,8 +234,8 @@ export default function HomePage() {
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
         <div className="container-custom px-4 sm:px-6 lg:px-8 relative">
-          {/* Subtle background glow */}
-          <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-transparent to-transparent opacity-50 blur-3xl pointer-events-none" />
+          {/* Subtle background glow - Mobile optimized blur */}
+          <div className="absolute inset-0 bg-gradient-to-b from-accent/5 via-transparent to-transparent opacity-50 blur-xl md:blur-3xl pointer-events-none" />
 
           <SocialProofBanner />
         </div>
@@ -249,7 +249,7 @@ export default function HomePage() {
         {/* Glass morphism backdrop */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5 opacity-30" />
-          <div className="absolute inset-0 backdrop-blur-3xl bg-white/[0.01]" />
+          <div className="absolute inset-0 backdrop-blur-xl md:backdrop-blur-3xl bg-white/[0.01]" />
         </div>
 
         <div className="container-custom px-4 sm:px-6 lg:px-8 relative z-10">
@@ -264,9 +264,9 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-mesh-premium opacity-40" />
           <div className="absolute inset-0 bg-gradient-to-b from-background-dark via-background to-background-dark" />
 
-          {/* Floating geometric shapes - MOBILE FIX: Smaller on mobile */}
-          <div className="absolute top-1/4 left-1/4 w-48 sm:w-64 md:w-80 lg:w-96 h-48 sm:h-64 md:h-80 lg:h-96 bg-gradient-radial from-accent/10 to-transparent rounded-full blur-3xl animate-float-slow" />
-          <div className="absolute bottom-1/3 right-1/4 w-40 sm:w-56 md:w-72 lg:w-80 h-40 sm:h-56 md:h-72 lg:h-80 bg-gradient-radial from-primary/10 to-transparent rounded-full blur-3xl animate-float-medium" />
+          {/* Floating geometric shapes - MOBILE FIX: Smaller on mobile, reduced blur */}
+          <div className="absolute top-1/4 left-1/4 w-48 sm:w-64 md:w-80 lg:w-96 h-48 sm:h-64 md:h-80 lg:h-96 bg-gradient-radial from-accent/10 to-transparent rounded-full blur-xl md:blur-3xl animate-float-slow" />
+          <div className="absolute bottom-1/3 right-1/4 w-40 sm:w-56 md:w-72 lg:w-80 h-40 sm:h-56 md:h-72 lg:h-80 bg-gradient-radial from-primary/10 to-transparent rounded-full blur-xl md:blur-3xl animate-float-medium" />
         </div>
 
         <div className="relative z-10">
@@ -311,9 +311,9 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-br from-background via-background-dark to-background" />
           <div className="absolute inset-0 bg-noise opacity-[0.015]" />
 
-          {/* Radial glow effects */}
-          <div className="absolute top-1/2 left-0 w-96 h-96 bg-gradient-radial from-primary/15 to-transparent blur-3xl -translate-x-1/2" />
-          <div className="absolute top-1/3 right-0 w-96 h-96 bg-gradient-radial from-accent/12 to-transparent blur-3xl translate-x-1/2" />
+          {/* Radial glow effects - Mobile optimized blur */}
+          <div className="absolute top-1/2 left-0 w-96 h-96 bg-gradient-radial from-primary/15 to-transparent blur-xl md:blur-3xl -translate-x-1/2" />
+          <div className="absolute top-1/3 right-0 w-96 h-96 bg-gradient-radial from-accent/12 to-transparent blur-xl md:blur-3xl translate-x-1/2" />
         </div>
 
         <div className="relative z-10">
@@ -329,7 +329,7 @@ export default function HomePage() {
         {/* Premium glass background */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-mesh opacity-20" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-accent/20 via-primary/10 to-transparent blur-3xl opacity-50" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-accent/20 via-primary/10 to-transparent blur-xl md:blur-3xl opacity-50" />
         </div>
 
         <div className="relative z-10">
@@ -344,9 +344,9 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-background to-background-dark" />
           <div className="absolute inset-0 bg-mesh-premium opacity-30" />
 
-          {/* Floating light orbs - MOBILE FIX: Smaller on mobile */}
-          <div className="absolute top-1/4 right-1/3 w-36 sm:w-48 md:w-60 lg:w-72 h-36 sm:h-48 md:h-60 lg:h-72 bg-gradient-radial from-accent/15 via-accent/5 to-transparent rounded-full blur-3xl animate-pulse-glow" />
-          <div className="absolute bottom-1/4 left-1/3 w-32 sm:w-40 md:w-52 lg:w-64 h-32 sm:h-40 md:h-52 lg:h-64 bg-gradient-radial from-primary/15 via-primary/5 to-transparent rounded-full blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
+          {/* Floating light orbs - MOBILE FIX: Smaller on mobile, reduced blur */}
+          <div className="absolute top-1/4 right-1/3 w-36 sm:w-48 md:w-60 lg:w-72 h-36 sm:h-48 md:h-60 lg:h-72 bg-gradient-radial from-accent/15 via-accent/5 to-transparent rounded-full blur-xl md:blur-3xl animate-pulse-glow" />
+          <div className="absolute bottom-1/4 left-1/3 w-32 sm:w-40 md:w-52 lg:w-64 h-32 sm:h-40 md:h-52 lg:h-64 bg-gradient-radial from-primary/15 via-primary/5 to-transparent rounded-full blur-xl md:blur-3xl animate-pulse-glow" style={{ animationDelay: '1s' }} />
         </div>
 
         <div className="relative z-10">
@@ -368,8 +368,8 @@ export default function HomePage() {
           {/* Geometric accent - MOBILE FIX: Hidden on mobile */}
           <div className="absolute top-20 right-20 w-32 sm:w-40 md:w-52 lg:w-64 h-32 sm:h-40 md:h-52 lg:h-64 border border-accent/10 rounded-3xl rotate-12 backdrop-blur-sm animate-float-slow hidden sm:block" />
 
-          {/* Radial glow - MOBILE FIX: Smaller on mobile */}
-          <div className="absolute bottom-1/4 left-1/4 w-48 sm:w-64 md:w-80 lg:w-96 h-48 sm:h-64 md:h-80 lg:h-96 bg-gradient-radial from-accent/10 to-transparent blur-3xl" />
+          {/* Radial glow - MOBILE FIX: Smaller on mobile, reduced blur */}
+          <div className="absolute bottom-1/4 left-1/4 w-48 sm:w-64 md:w-80 lg:w-96 h-48 sm:h-64 md:h-80 lg:h-96 bg-gradient-radial from-accent/10 to-transparent blur-xl md:blur-3xl" />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -439,8 +439,8 @@ export default function HomePage() {
 
               {/* Visual mockup - Right */}
               <div className="relative">
-                {/* Decorative glow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-3xl blur-3xl opacity-50" />
+                {/* Decorative glow - Mobile optimized blur */}
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-3xl blur-xl md:blur-3xl opacity-50" />
 
                 <div className="relative glass-premium p-6 rounded-3xl">
                   <AIVoiceVisual />
@@ -464,8 +464,8 @@ export default function HomePage() {
           {/* Geometric accent (opposite side) - MOBILE FIX: Hidden on mobile */}
           <div className="absolute bottom-20 left-20 w-28 sm:w-36 md:w-44 lg:w-56 h-28 sm:h-36 md:h-44 lg:h-56 border border-primary/10 rounded-3xl -rotate-12 backdrop-blur-sm animate-float-medium hidden sm:block" />
 
-          {/* Radial glow - MOBILE FIX: Smaller on mobile */}
-          <div className="absolute top-1/4 right-1/4 w-48 sm:w-64 md:w-80 lg:w-96 h-48 sm:h-64 md:h-80 lg:h-96 bg-gradient-radial from-primary/10 to-transparent blur-3xl" />
+          {/* Radial glow - MOBILE FIX: Smaller on mobile, reduced blur */}
+          <div className="absolute top-1/4 right-1/4 w-48 sm:w-64 md:w-80 lg:w-96 h-48 sm:h-64 md:h-80 lg:h-96 bg-gradient-radial from-primary/10 to-transparent blur-xl md:blur-3xl" />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -474,8 +474,8 @@ export default function HomePage() {
             <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
               {/* Visual mockup - Left */}
               <div className="order-2 lg:order-1 relative">
-                {/* Decorative glow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-3xl opacity-50" />
+                {/* Decorative glow - Mobile optimized blur */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-xl md:blur-3xl opacity-50" />
 
                 <div className="relative glass-premium p-6 rounded-3xl">
                   <GrowthDashboard />
@@ -556,9 +556,9 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-background to-background-dark" />
           <div className="absolute inset-0 bg-mesh opacity-20" />
 
-          {/* Floating glow orbs */}
-          <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-gradient-radial from-accent/10 to-transparent rounded-full blur-3xl animate-float-slow" />
-          <div className="absolute bottom-1/3 right-1/4 w-72 h-72 bg-gradient-radial from-primary/10 to-transparent rounded-full blur-3xl animate-float-medium" />
+          {/* Floating glow orbs - Mobile optimized blur */}
+          <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-gradient-radial from-accent/10 to-transparent rounded-full blur-xl md:blur-3xl animate-float-slow" />
+          <div className="absolute bottom-1/3 right-1/4 w-72 h-72 bg-gradient-radial from-primary/10 to-transparent rounded-full blur-xl md:blur-3xl animate-float-medium" />
         </div>
 
         <div className="relative z-10">
@@ -593,10 +593,10 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-br from-background via-background-dark to-background" />
           <div className="absolute inset-0 bg-mesh-premium opacity-30" />
 
-          {/* Large radial glows */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-radial from-accent/15 via-accent/5 to-transparent blur-3xl" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-radial from-primary/10 to-transparent blur-3xl" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-radial from-accent/10 to-transparent blur-3xl" />
+          {/* Large radial glows - Mobile optimized blur */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-gradient-radial from-accent/15 via-accent/5 to-transparent blur-xl md:blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-radial from-primary/10 to-transparent blur-xl md:blur-3xl" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-radial from-accent/10 to-transparent blur-xl md:blur-3xl" />
 
           {/* Geometric accents - MOBILE FIX: Hidden on mobile */}
           <div className="absolute top-20 right-20 w-24 sm:w-32 md:w-40 lg:w-48 h-24 sm:h-32 md:h-40 lg:h-48 border border-accent/10 rounded-3xl rotate-45 backdrop-blur-sm animate-float-slow hidden md:block" />
@@ -652,9 +652,9 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-background-dark to-background" />
           <div className="absolute inset-0 bg-mesh opacity-20" />
 
-          {/* Subtle glows */}
-          <div className="absolute top-1/4 right-1/3 w-64 h-64 bg-gradient-radial from-accent/8 to-transparent blur-3xl" />
-          <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-gradient-radial from-primary/8 to-transparent blur-3xl" />
+          {/* Subtle glows - Mobile optimized blur */}
+          <div className="absolute top-1/4 right-1/3 w-64 h-64 bg-gradient-radial from-accent/8 to-transparent blur-xl md:blur-3xl" />
+          <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-gradient-radial from-primary/8 to-transparent blur-xl md:blur-3xl" />
         </div>
 
         <div className="relative z-10">
@@ -669,8 +669,8 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-background-dark" />
           <div className="absolute inset-0 bg-mesh-premium opacity-30" />
 
-          {/* Large center glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-gradient-radial from-accent/15 via-primary/10 to-transparent blur-3xl" />
+          {/* Large center glow - Mobile optimized blur */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-gradient-radial from-accent/15 via-primary/10 to-transparent blur-xl md:blur-3xl" />
         </div>
 
         <div className="relative z-10">
@@ -718,10 +718,10 @@ export default function HomePage() {
           <div className="absolute inset-0 bg-gradient-to-br from-background-dark via-background to-background-dark" />
           <div className="absolute inset-0 bg-mesh-premium opacity-40" />
 
-          {/* Multiple layered glows */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[800px] bg-gradient-radial from-accent/20 via-primary/15 to-transparent blur-3xl animate-pulse-glow" />
-          <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-radial from-primary/15 to-transparent blur-3xl" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-radial from-accent/15 to-transparent blur-3xl" />
+          {/* Multiple layered glows - Mobile optimized blur */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[800px] bg-gradient-radial from-accent/20 via-primary/15 to-transparent blur-xl md:blur-3xl animate-pulse-glow" />
+          <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-radial from-primary/15 to-transparent blur-xl md:blur-3xl" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-radial from-accent/15 to-transparent blur-xl md:blur-3xl" />
 
           {/* Floating geometric shapes - MOBILE FIX: Hidden on mobile */}
           <div className="absolute top-20 right-1/4 w-32 sm:w-40 md:w-52 lg:w-64 h-32 sm:h-40 md:h-52 lg:h-64 border-2 border-accent/10 rounded-3xl rotate-12 backdrop-blur-sm animate-float-slow hidden lg:block" />

@@ -874,7 +874,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
           scale: isHovered ? 1.02 : 1,
         }}
         transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-        className="relative group h-full min-h-[600px] rounded-3xl overflow-hidden cursor-pointer"
+        className={`relative group h-full min-h-[600px] rounded-3xl cursor-pointer ${isGrowth ? '' : 'overflow-hidden'}`}
         style={{
           transformStyle: 'preserve-3d',
           transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
@@ -888,7 +888,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
-              className="absolute -top-4 left-1/2 -translate-x-1/2 z-20"
+              className="absolute -top-4 left-1/2 -translate-x-1/2 z-20 max-w-full px-2"
             >
               <motion.div
                 animate={{
@@ -900,22 +900,22 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                   ],
                 }}
                 transition={{ duration: 2.5, repeat: Infinity, repeatType: 'reverse' }}
-                className="relative px-6 py-2.5 rounded-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 bg-[length:200%_100%]"
+                className="relative px-4 sm:px-6 py-2.5 rounded-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 bg-[length:200%_100%]"
               >
                 <motion.div
                   animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] }}
                   transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent bg-[length:200%_100%] rounded-full"
                 />
-                <div className="relative flex items-center gap-2">
+                <div className="relative inline-flex items-start sm:items-center gap-2 max-w-full">
                   <motion.span
                     animate={{ rotate: [0, 360] }}
                     transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
-                    className="text-lg"
+                    className="text-base sm:text-lg flex-shrink-0"
                   >
                     ⭐
                   </motion.span>
-                  <span className="font-bold text-sm tracking-wider text-black uppercase">
+                  <span className="font-bold text-xs sm:text-sm tracking-wider text-black uppercase whitespace-nowrap">
                     Most Popular
                   </span>
                 </div>

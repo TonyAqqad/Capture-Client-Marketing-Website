@@ -79,7 +79,7 @@ export function IntegrationCard({
                   alt={`${integration.name} logo`}
                   width={120}
                   height={48}
-                  sizes="(max-width: 640px) 100px, 120px"
+                  sizes="(max-width: 640px) 100px, (max-width: 1024px) 110px, 120px"
                   className="object-contain max-h-10 w-auto filter group-hover:brightness-110 transition-all duration-300"
                   unoptimized
                   onError={() => setImageError(true)}

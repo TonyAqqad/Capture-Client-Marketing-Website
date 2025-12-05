@@ -66,6 +66,7 @@ export const metadata: Metadata = {
 };
 
 // JSON-LD Structured Data for Integrations Page
+// NOTE: WebSite schema is already rendered globally in layout.tsx - do NOT duplicate here
 const integrationsSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
@@ -73,11 +74,6 @@ const integrationsSchema = {
   description:
     "Capture Client integrates with 69+ platforms including HubSpot, Salesforce, Twilio, Zapier, ServiceTitan, and more to connect your entire tech stack.",
   url: "https://captureclientai.net/integrations",
-  isPartOf: {
-    "@type": "WebSite",
-    url: "https://captureclientai.net",
-    name: "Capture Client",
-  },
   about: {
     "@type": "SoftwareApplication",
     name: "Capture Client",
@@ -85,8 +81,8 @@ const integrationsSchema = {
     offers: {
       "@type": "AggregateOffer",
       priceCurrency: "USD",
-      lowPrice: "497",
-      highPrice: "1497",
+      lowPrice: "97",
+      highPrice: "2997",
       offerCount: "3",
     },
   },

@@ -49,16 +49,16 @@ export default function WhoWeServePage() {
 
       <div className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="relative py-20 md:py-32 overflow-hidden">
-          {/* Background Effects */}
-          <div className="absolute inset-0 bg-mesh-premium opacity-40" />
+        <section className="relative pt-24 sm:pt-28 lg:pt-32 pb-16 md:pb-24 overflow-hidden">
+          {/* Background Effects - Performance optimized for mobile */}
+          <div className="absolute inset-0 bg-mesh-premium opacity-20 md:opacity-40" />
           <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
 
-          {/* Animated Orbs */}
-          <div className="absolute top-20 left-10 w-72 h-72 bg-gold-500/20 rounded-full blur-3xl animate-float-slow" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl animate-float-medium" />
+          {/* Animated Orbs - Hidden on mobile for performance */}
+          <div className="hidden md:block absolute top-20 left-10 w-72 h-72 bg-gold-500/20 rounded-full blur-3xl animate-float-slow" />
+          <div className="hidden md:block absolute bottom-20 right-10 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl animate-float-medium" />
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
@@ -106,8 +106,8 @@ export default function WhoWeServePage() {
         </section>
 
         {/* Categories Overview */}
-        <section className="py-16 bg-gradient-to-b from-background to-background-darker">
-          <div className="container mx-auto px-6">
+        <section className="py-12 md:py-16 bg-gradient-to-b from-background to-background-darker">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             <div className="max-w-3xl mx-auto text-center mb-16">
               <h2 className="font-heading text-4xl font-bold text-foreground mb-4">
                 Solutions for Every Sector
@@ -119,7 +119,7 @@ export default function WhoWeServePage() {
             </div>
 
             {/* Category Grid */}
-            <div className="grid md:grid-cols-5 gap-6 max-w-5xl mx-auto mb-20">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6 max-w-5xl mx-auto mb-20">
               {categories.map((category, index) => {
                 const categoryCount = INDUSTRIES.filter(i => i.category === category).length;
                 const categoryIcon = {
@@ -152,8 +152,8 @@ export default function WhoWeServePage() {
         </section>
 
         {/* Industries Grid */}
-        <section className="py-20 bg-background-darker">
-          <div className="container mx-auto px-6">
+        <section className="py-16 md:py-20 bg-background-darker">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {INDUSTRIES.map((industry, index) => (
                 <IndustryCard key={industry.id} industry={industry} index={index} />
@@ -163,8 +163,8 @@ export default function WhoWeServePage() {
         </section>
 
         {/* Why Industry-Specific Matters */}
-        <section className="py-20 bg-gradient-to-b from-background-darker to-background">
-          <div className="container mx-auto px-6">
+        <section className="py-16 md:py-20 bg-gradient-to-b from-background-darker to-background">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
@@ -216,12 +216,12 @@ export default function WhoWeServePage() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-20 bg-background relative overflow-hidden">
-          {/* Background */}
+        <section className="py-16 md:py-20 bg-background relative overflow-hidden">
+          {/* Background - Performance optimized for mobile */}
           <div className="absolute inset-0 bg-gradient-to-br from-gold-500/10 via-background to-accent-500/10" />
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-mesh-premium opacity-30" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-mesh-premium opacity-20 md:opacity-30" />
 
-          <div className="container mx-auto px-6 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
                 Ready to See Your Industry in Action?

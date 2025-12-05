@@ -483,29 +483,653 @@ function HeroIllustration() {
 // ==================== REMAINING COMPONENT IMPLEMENTATIONS ====================
 // These sections complete the How It Works page experience
 
-// Placeholder implementations for remaining sections - to be completed with full designs
 interface BehindTheScenesProps { isMobile: boolean; }
 interface IntegrationShowcaseProps { integrations: Array<{ name: string; logo: string }>; isMobile: boolean; }
 interface SetupWizardProps { isMobile: boolean; }
 interface FAQSectionProps { faqs: Array<{ question: string; answer: string }>; isMobile: boolean; }
 interface FinalCTAProps { isMobile: boolean; }
 
-function BehindTheScenes({}: BehindTheScenesProps) {
-  return <section className="py-24">Behind the Scenes Section</section>;
+// ==================== BEHIND THE SCENES ====================
+function BehindTheScenes({ isMobile }: BehindTheScenesProps) {
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef);
+
+  const techFeatures = [
+    {
+      icon: "psychology",
+      title: "GPT-4 Language Model",
+      description: "Advanced natural language processing with contextual understanding",
+      stat: "99.2%",
+      statLabel: "Accuracy"
+    },
+    {
+      icon: "hearing",
+      title: "Real-Time Speech Recognition",
+      description: "Instant audio transcription with accent & dialect support",
+      stat: "< 200ms",
+      statLabel: "Latency"
+    },
+    {
+      icon: "timeline",
+      title: "Intent Classification",
+      description: "AI analyzes caller sentiment and routes to optimal response",
+      stat: "96%",
+      statLabel: "Intent Match"
+    },
+    {
+      icon: "integration_instructions",
+      title: "CRM Auto-Sync",
+      description: "Real-time data synchronization with bidirectional updates",
+      stat: "2-way",
+      statLabel: "Sync"
+    }
+  ];
+
+  return (
+    <section ref={sectionRef} className="relative py-24 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-accent/10 border border-primary/30 backdrop-blur-xl mb-6">
+            <span className="material-icons text-primary text-sm">settings_suggest</span>
+            <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-primary">
+              Behind the Scenes
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-hero font-black text-foreground mb-4">
+            Powered by{" "}
+            <span className="text-gradient bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+              Advanced AI
+            </span>
+          </h2>
+          <p className="text-lg sm:text-xl text-foreground-muted max-w-2xl mx-auto">
+            See the cutting-edge technology that makes our AI voice agents so effective at capturing and qualifying leads.
+          </p>
+        </motion.div>
+
+        {/* Tech Features Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {techFeatures.map((feature, idx) => (
+            <motion.div
+              key={feature.title}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.6, delay: idx * 0.1 }}
+              className="relative group"
+            >
+              <div className="relative z-10 h-full p-6 sm:p-8 rounded-2xl bg-background-card/50 border border-surface-border/50 backdrop-blur-xl overflow-hidden hover:border-primary/50 transition-all duration-300">
+                {/* Glow effect on hover (desktop only) */}
+                {!isMobile && (
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-accent/0 to-primary/0 group-hover:from-primary/10 group-hover:via-accent/5 group-hover:to-primary/10 transition-all duration-500" />
+                )}
+
+                {/* Icon */}
+                <div className="relative z-10 flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/30 flex items-center justify-center flex-shrink-0">
+                    <span className="material-icons text-primary text-2xl">{feature.icon}</span>
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-foreground mb-2">{feature.title}</h3>
+                  </div>
+                </div>
+
+                {/* Description */}
+                <p className="relative z-10 text-foreground-muted mb-6 leading-relaxed">
+                  {feature.description}
+                </p>
+
+                {/* Stat */}
+                <div className="relative z-10 flex items-baseline gap-2">
+                  <span className="text-3xl font-black text-gradient bg-gradient-to-r from-gold to-accent bg-clip-text text-transparent">
+                    {feature.stat}
+                  </span>
+                  <span className="text-sm text-foreground-subtle uppercase tracking-wide">
+                    {feature.statLabel}
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Visual AI Processing Flow */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="mt-16 relative"
+        >
+          <div className="relative z-10 p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-background-card/80 to-background-darker/80 border border-surface-border/50 backdrop-blur-xl overflow-hidden">
+            {/* Background pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute inset-0 bg-mesh-premium" />
+            </div>
+
+            <div className="relative z-10 text-center">
+              <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-8">
+                Real-Time AI Processing Pipeline
+              </h3>
+
+              {/* Processing Flow */}
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <ProcessNode icon="call" label="Incoming Call" />
+                <FlowArrow isMobile={isMobile} />
+                <ProcessNode icon="graphic_eq" label="Speech-to-Text" primary />
+                <FlowArrow isMobile={isMobile} />
+                <ProcessNode icon="psychology" label="AI Analysis" primary />
+                <FlowArrow isMobile={isMobile} />
+                <ProcessNode icon="campaign" label="Response" />
+                <FlowArrow isMobile={isMobile} />
+                <ProcessNode icon="cloud_sync" label="CRM Sync" />
+              </div>
+
+              <p className="mt-8 text-foreground-muted">
+                Every interaction processed in under 2 seconds with 99.2% accuracy
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
 }
 
-function IntegrationShowcase({}: IntegrationShowcaseProps) {
-  return <section className="py-24">Integration Showcase Section</section>;
+function ProcessNode({ icon, label, primary }: { icon: string; label: string; primary?: boolean }) {
+  return (
+    <div className="flex flex-col items-center gap-2">
+      <div className={`w-16 h-16 rounded-2xl flex items-center justify-center ${
+        primary
+          ? 'bg-gradient-to-br from-primary/30 to-accent/30 border-2 border-primary/50'
+          : 'bg-background-card/80 border border-surface-border/50'
+      }`}>
+        <span className={`material-icons text-2xl ${primary ? 'text-primary' : 'text-foreground-muted'}`}>
+          {icon}
+        </span>
+      </div>
+      <span className="text-xs sm:text-sm font-medium text-foreground-subtle text-center max-w-[80px]">
+        {label}
+      </span>
+    </div>
+  );
 }
 
-function SetupWizard({}: SetupWizardProps) {
-  return <section className="py-24">Setup Wizard Section</section>;
+function FlowArrow({ isMobile }: { isMobile: boolean }) {
+  return (
+    <motion.div
+      animate={{
+        x: isMobile ? 0 : [0, 5, 0],
+        y: isMobile ? [0, 5, 0] : 0
+      }}
+      transition={{ duration: 2, repeat: Infinity }}
+    >
+      <span className="material-icons text-gold text-xl sm:text-2xl sm:rotate-0 rotate-90">
+        arrow_forward
+      </span>
+    </motion.div>
+  );
 }
 
-function FAQSection({}: FAQSectionProps) {
-  return <section className="py-24">FAQ Section</section>;
+// ==================== INTEGRATION SHOWCASE ====================
+function IntegrationShowcase({ integrations, isMobile }: IntegrationShowcaseProps) {
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef);
+
+  return (
+    <section ref={sectionRef} className="relative py-24 overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-gradient-radial from-accent/10 to-transparent blur-3xl" />
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 to-primary/10 border border-accent/30 backdrop-blur-xl mb-6">
+            <span className="material-icons text-accent text-sm">hub</span>
+            <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent">
+              Seamless Integrations
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-hero font-black text-foreground mb-4">
+            Connects with Your{" "}
+            <span className="text-gradient bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
+              Existing Tools
+            </span>
+          </h2>
+          <p className="text-lg sm:text-xl text-foreground-muted max-w-2xl mx-auto">
+            No need to change your workflow. Our AI integrates seamlessly with the CRMs and tools you already use.
+          </p>
+        </motion.div>
+
+        {/* Integration Logos Grid */}
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="grid grid-cols-2 sm:grid-cols-3 gap-6 mb-12"
+        >
+          {integrations.map((integration, idx) => (
+            <motion.div
+              key={integration.name}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={isInView ? { opacity: 1, scale: 1 } : {}}
+              transition={{ duration: 0.5, delay: 0.3 + idx * 0.1 }}
+              whileHover={!isMobile ? { scale: 1.05, y: -5 } : {}}
+              className="relative group"
+            >
+              <div className="relative z-10 p-8 rounded-2xl bg-background-card/50 border border-surface-border/50 backdrop-blur-xl hover:border-accent/50 transition-all duration-300 flex flex-col items-center justify-center gap-4 h-32">
+                {/* Logo placeholder - display initials */}
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 flex items-center justify-center">
+                  <span className="text-lg font-black text-accent">{integration.logo}</span>
+                </div>
+                <span className="text-sm font-semibold text-foreground text-center">
+                  {integration.name}
+                </span>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="text-center"
+        >
+          <p className="text-foreground-muted mb-6">
+            Don't see your CRM? We can integrate with any platform that has an API.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-accent/20 to-primary/20 border border-accent/30 hover:border-accent/50 text-foreground font-semibold transition-all duration-300 hover:scale-105"
+          >
+            <span>Request Custom Integration</span>
+            <span className="material-icons text-sm">arrow_forward</span>
+          </Link>
+        </motion.div>
+      </div>
+    </section>
+  );
 }
 
-function FinalCTA({}: FinalCTAProps) {
-  return <section className="py-24">Final CTA Section</section>;
+// ==================== SETUP WIZARD ====================
+function SetupWizard({ isMobile }: SetupWizardProps) {
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef);
+
+  const setupSteps = [
+    {
+      number: "01",
+      title: "Configure Your AI",
+      description: "Customize scripts, tone, qualification questions, and escalation rules. We'll train the AI to sound exactly like your brand.",
+      icon: "tune",
+      duration: "15-30 minutes"
+    },
+    {
+      number: "02",
+      title: "Connect Your CRM",
+      description: "We handle the technical integration with your CRM. Map custom fields, set up workflows, and configure data sync.",
+      icon: "cable",
+      duration: "15 minutes"
+    },
+    {
+      number: "03",
+      title: "Go Live",
+      description: "Test with sample calls, review transcripts, make final tweaks, and launch. Start capturing leads 24/7 within 48 hours.",
+      icon: "rocket_launch",
+      duration: "24-48 hours"
+    }
+  ];
+
+  return (
+    <section ref={sectionRef} className="relative py-24 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gold/20 to-accent/10 border border-gold/30 backdrop-blur-xl mb-6">
+            <span className="material-icons text-gold text-sm">timeline</span>
+            <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-gold">
+              Simple Setup Process
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-hero font-black text-foreground mb-4">
+            Live in{" "}
+            <span className="text-gradient bg-gradient-to-r from-gold via-accent to-gold bg-clip-text text-transparent">
+              48 Hours
+            </span>
+          </h2>
+          <p className="text-lg sm:text-xl text-foreground-muted max-w-2xl mx-auto">
+            From signup to capturing leads—our streamlined setup gets you operational in less than 2 days.
+          </p>
+        </motion.div>
+
+        {/* Setup Steps Timeline */}
+        <div className="relative max-w-4xl mx-auto">
+          {/* Connecting line (desktop only) */}
+          {!isMobile && (
+            <div className="absolute left-8 top-20 bottom-20 w-0.5 bg-gradient-to-b from-gold via-accent to-primary opacity-30" />
+          )}
+
+          <div className="space-y-12">
+            {setupSteps.map((step, idx) => (
+              <motion.div
+                key={step.number}
+                initial={{ opacity: 0, x: -30 }}
+                animate={isInView ? { opacity: 1, x: 0 } : {}}
+                transition={{ duration: 0.6, delay: idx * 0.2 }}
+                className="relative flex gap-6 sm:gap-8"
+              >
+                {/* Step number circle */}
+                <div className="relative flex-shrink-0">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold/30 to-accent/30 border-2 border-gold/50 flex items-center justify-center relative z-10">
+                    <span className="material-icons text-gold text-2xl">{step.icon}</span>
+                  </div>
+                  {/* Pulsing effect */}
+                  <motion.div
+                    animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0, 0.5] }}
+                    transition={{ duration: 3, repeat: Infinity, delay: idx * 0.5 }}
+                    className="absolute inset-0 rounded-2xl bg-gold/20 blur-md"
+                  />
+                </div>
+
+                {/* Step content */}
+                <div className="flex-1 pb-8">
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="text-sm font-black text-gold uppercase tracking-widest">
+                      Step {step.number}
+                    </span>
+                    <span className="text-xs text-foreground-subtle px-3 py-1 rounded-full bg-background-card/50 border border-surface-border/30">
+                      {step.duration}
+                    </span>
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-foreground-muted leading-relaxed">
+                    {step.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-16 text-center"
+        >
+          <div className="inline-flex items-center gap-3 px-6 py-4 rounded-2xl bg-gradient-to-r from-background-card/50 to-background-darker/50 border border-gold/30 backdrop-blur-xl">
+            <span className="material-icons text-gold text-3xl">support_agent</span>
+            <div className="text-left">
+              <p className="text-sm font-semibold text-foreground">White-Glove Onboarding</p>
+              <p className="text-xs text-foreground-subtle">Dedicated setup specialist guides you every step</p>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+// ==================== FAQ SECTION ====================
+function FAQSection({ faqs, isMobile }: FAQSectionProps) {
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  return (
+    <section ref={sectionRef} className="relative py-24 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="text-center mb-16"
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-accent/10 border border-primary/30 backdrop-blur-xl mb-6">
+            <span className="material-icons text-primary text-sm">help_outline</span>
+            <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-primary">
+              Common Questions
+            </span>
+          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-hero font-black text-foreground mb-4">
+            Frequently Asked{" "}
+            <span className="text-gradient bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+              Questions
+            </span>
+          </h2>
+          <p className="text-lg sm:text-xl text-foreground-muted">
+            Everything you need to know about our AI voice agents
+          </p>
+        </motion.div>
+
+        {/* FAQ Accordion */}
+        <div className="space-y-4">
+          {faqs.map((faq, idx) => {
+            const isOpen = openIndex === idx;
+
+            return (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+              >
+                <button
+                  onClick={() => setOpenIndex(isOpen ? null : idx)}
+                  className="w-full text-left p-6 rounded-2xl bg-background-card/50 border border-surface-border/50 hover:border-primary/50 backdrop-blur-xl transition-all duration-300 group"
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <h3 className="text-lg sm:text-xl font-bold text-foreground group-hover:text-primary transition-colors pr-4">
+                      {faq.question}
+                    </h3>
+                    <motion.span
+                      animate={{ rotate: isOpen ? 180 : 0 }}
+                      transition={{ duration: 0.3 }}
+                      className="material-icons text-primary flex-shrink-0"
+                    >
+                      expand_more
+                    </motion.span>
+                  </div>
+
+                  <motion.div
+                    initial={false}
+                    animate={{
+                      height: isOpen ? 'auto' : 0,
+                      opacity: isOpen ? 1 : 0,
+                      marginTop: isOpen ? 16 : 0
+                    }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <p className="text-foreground-muted leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </motion.div>
+                </button>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Still have questions CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="mt-12 text-center"
+        >
+          <p className="text-foreground-muted mb-4">Still have questions?</p>
+          <Link
+            href="/contact"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 hover:border-primary/50 text-foreground font-semibold transition-all duration-300 hover:scale-105"
+          >
+            <span>Talk to Our Team</span>
+            <span className="material-icons text-sm">arrow_forward</span>
+          </Link>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+// ==================== FINAL CTA ====================
+function FinalCTA({ isMobile }: FinalCTAProps) {
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef);
+
+  return (
+    <section ref={sectionRef} className="relative py-24 overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-mesh-premium opacity-30" />
+        <motion.div
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3]
+          }}
+          transition={{ duration: 8, repeat: Infinity }}
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-gradient-radial from-gold/20 via-accent/10 to-transparent blur-3xl"
+        />
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.8 }}
+          className="relative"
+        >
+          {/* Glass card */}
+          <div className="relative p-8 sm:p-12 lg:p-16 rounded-3xl bg-gradient-to-br from-background-card/80 to-background-darker/80 border border-surface-border/50 backdrop-blur-xl overflow-hidden">
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-accent/10 opacity-50" />
+
+            {/* Content */}
+            <div className="relative z-10 text-center">
+              {/* Badge */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gold/20 to-accent/10 border border-gold/30 backdrop-blur-xl mb-6"
+              >
+                <span className="material-icons text-gold text-sm">stars</span>
+                <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-gold">
+                  Start Capturing Leads Today
+                </span>
+              </motion.div>
+
+              {/* Headline */}
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-hero font-black text-foreground mb-6"
+              >
+                Ready to Stop{" "}
+                <span className="text-gradient bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">
+                  Missing Leads
+                </span>
+                ?
+              </motion.h2>
+
+              {/* Subheadline */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="text-lg sm:text-xl text-foreground-muted max-w-2xl mx-auto mb-10"
+              >
+                Join hundreds of businesses using AI voice agents to capture, qualify, and convert more leads—24/7.
+              </motion.p>
+
+              {/* CTAs */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10"
+              >
+                <Link
+                  href="/demo"
+                  className="group relative px-8 py-4 rounded-xl bg-gradient-to-r from-gold to-accent text-background-darker font-bold text-lg shadow-glow-gold hover:shadow-glow-gold-intense transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                >
+                  <span className="relative z-10 flex items-center justify-center gap-2">
+                    Start Free Trial
+                    <span className="material-icons group-hover:translate-x-1 transition-transform">
+                      arrow_forward
+                    </span>
+                  </span>
+                </Link>
+                <Link
+                  href="/contact"
+                  className="px-8 py-4 rounded-xl bg-background-card/50 border-2 border-primary/50 hover:border-primary text-foreground font-bold text-lg backdrop-blur-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                >
+                  Schedule Demo
+                </Link>
+              </motion.div>
+
+              {/* Trust signals */}
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : {}}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-foreground-muted"
+              >
+                <div className="flex items-center gap-2">
+                  <span className="material-icons text-accent text-lg">check_circle</span>
+                  <span>30-day money-back guarantee</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="material-icons text-accent text-lg">check_circle</span>
+                  <span>No credit card required</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="material-icons text-accent text-lg">check_circle</span>
+                  <span>Setup in 48 hours</span>
+                </div>
+              </motion.div>
+            </div>
+
+            {/* Decorative elements */}
+            {!isMobile && (
+              <>
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="absolute -top-10 -left-10 w-40 h-40 bg-gradient-radial from-gold/20 to-transparent rounded-full blur-2xl"
+                />
+                <motion.div
+                  animate={{ rotate: -360 }}
+                  transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
+                  className="absolute -bottom-10 -right-10 w-40 h-40 bg-gradient-radial from-accent/20 to-transparent rounded-full blur-2xl"
+                />
+              </>
+            )}
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
 }
