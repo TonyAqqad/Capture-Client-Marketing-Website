@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import type { Integration, IntegrationCategory } from "@/data/integrations";

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import Image from "next/image";
 
 // Material Icon component for consistency (replaces Lucide React for bundle savings)
@@ -31,11 +31,11 @@ interface ServiceHeroProps {
       alt: string;
     };
   };
-  stats?: {
-    stat_1: string;
-    stat_2: string;
-    stat_3: string;
-  };
+  stats?: Array<{
+    value: string;
+    label: string;
+    icon?: string;
+  }>;
 }
 
 // Service-specific color schemes and icons (using Material Icon names)
@@ -289,12 +289,12 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
           </motion.div>
 
           {/* Stats - Stack on mobile */}
-          {stats && (
+          {stats && stats.length > 0 && (
             <motion.div
               variants={itemVariants}
               className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl"
             >
-              {Object.values(stats).map((stat, index) => (
+              {stats.map((stat, index) => (
                 <motion.div
                   key={index}
                   className="relative group"
@@ -315,10 +315,10 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
                       animate={{ opacity: 1 }}
                       transition={{ delay: index * 0.15 + 1, duration: 0.5 }}
                     >
-                      {stat.split(" ")[0]}
+                      {stat.value}
                     </motion.div>
                     <div className="text-sm sm:text-base text-gray-200 font-medium">
-                      {stat.split(" ").slice(1).join(" ")}
+                      {stat.label}
                     </div>
                   </div>
                 </motion.div>

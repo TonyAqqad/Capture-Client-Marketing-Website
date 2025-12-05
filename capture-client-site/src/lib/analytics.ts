@@ -6,10 +6,13 @@
  */
 
 // Extend Window interface to include gtag
+// Using the official Gtag.js function signature
+type GtagCommand = 'config' | 'set' | 'event' | 'consent' | 'get';
+
 declare global {
   interface Window {
     gtag?: (
-      command: string,
+      command: GtagCommand,
       targetId: string,
       config?: Record<string, unknown>
     ) => void;

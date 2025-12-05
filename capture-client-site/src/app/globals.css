@@ -853,6 +853,19 @@
     user-select: none;
   }
 
+  /* Global touch manipulation - applies to ALL interactive elements on mobile */
+  button,
+  a,
+  [role="button"],
+  [role="link"],
+  input[type="submit"],
+  input[type="button"],
+  label,
+  select {
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
   .tap-feedback {
     @apply transition-all duration-150 active:scale-95 active:brightness-90;
   }

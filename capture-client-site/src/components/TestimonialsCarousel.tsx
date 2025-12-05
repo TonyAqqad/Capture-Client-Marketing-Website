@@ -1,23 +1,20 @@
 'use client';
 
 import { useRef, useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from '@/lib/motion';
 import { useInView } from '@/hooks/useInView';
+import { Testimonial } from '@/types/content';
 
-interface Testimonial {
+interface CarouselTestimonialExtended extends Testimonial {
   id: number;
-  name: string;
-  role: string;
-  content: string;
-  rating: number;
 }
 
-const testimonials: Testimonial[] = [
+const testimonials: CarouselTestimonialExtended[] = [
   {
     id: 1,
     name: 'Sarah M.',
     role: 'HVAC Business Owner',
-    content:
+    quote:
       "Capture Client transformed our lead generation. We're capturing 3x more clients than before, and the AI handles everything while we focus on the work.",
     rating: 5,
   },
@@ -25,7 +22,7 @@ const testimonials: Testimonial[] = [
     id: 2,
     name: 'Mike T.',
     role: 'Plumbing Company',
-    content:
+    quote:
       "The AI voice agent handles calls better than our old receptionist. It never sleeps, never misses a call, and our customers love how responsive we've become.",
     rating: 5,
   },
@@ -33,7 +30,7 @@ const testimonials: Testimonial[] = [
     id: 3,
     name: 'Jennifer L.',
     role: 'Dental Practice',
-    content:
+    quote:
       "Finally, everything in one place. Our marketing ROI has never been better. The dashboard shows exactly where every dollar is going and what's working.",
     rating: 5,
   },
@@ -206,7 +203,7 @@ export default function TestimonialsCarousel() {
 }
 
 interface TestimonialCardProps {
-  testimonial: Testimonial;
+  testimonial: CarouselTestimonialExtended;
   isInView: boolean;
 }
 
@@ -253,7 +250,7 @@ function TestimonialCard({ testimonial, isInView }: TestimonialCardProps) {
         transition={{ delay: 0.4, duration: 0.6 }}
         className="text-foreground text-lg mb-6 leading-relaxed flex-1 relative z-10"
       >
-        {testimonial.content}
+        {testimonial.quote}
       </motion.p>
 
       {/* Author */}

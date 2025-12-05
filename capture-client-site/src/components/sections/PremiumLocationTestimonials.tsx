@@ -2,9 +2,15 @@
 
 interface Testimonial {
   quote: string;
-  author: string;
-  business: string;
-  location: string;
+  // Support both data formats
+  name?: string;      // from LocationData
+  author?: string;    // legacy format
+  company?: string;   // from LocationData
+  business?: string;  // legacy format
+  role?: string;
+  location?: string;
+  image?: string;
+  rating?: number;
 }
 
 interface PremiumLocationTestimonialsProps {
@@ -89,7 +95,7 @@ export default function PremiumLocationTestimonials({
                     <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full blur-sm opacity-50" />
                     <div className="relative flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400/30 to-blue-500/30 border-2 border-cyan-400/40">
                       <span className="text-cyan-200 font-black text-sm">
-                        {testimonial.author
+                        {(testimonial.author || testimonial.name || "")
                           .split(" ")
                           .map((n) => n[0])
                           .join("")}
@@ -100,22 +106,25 @@ export default function PremiumLocationTestimonials({
                   {/* Author Details */}
                   <div className="flex-1">
                     <div className="text-white font-bold text-base mb-0.5">
-                      {testimonial.author}
+                      {testimonial.author || testimonial.name}
                     </div>
                     <div className="text-sm text-slate-400">
-                      {testimonial.business}
+                      {testimonial.business || testimonial.company}
+                      {testimonial.role && ` • ${testimonial.role}`}
                     </div>
-                    <div className="flex items-center gap-1 text-xs text-cyan-400 mt-1">
-                      <span className="material-icons" style={{ fontSize: '12px' }}>
-                        location_on
-                      </span>
-                      <span>{testimonial.location}</span>
-                    </div>
+                    {testimonial.location && (
+                      <div className="flex items-center gap-1 text-xs text-cyan-400 mt-1">
+                        <span className="material-icons" style={{ fontSize: '12px' }}>
+                          location_on
+                        </span>
+                        <span>{testimonial.location}</span>
+                      </div>
+                    )}
                   </div>
 
                   {/* Star Rating */}
                   <div className="hidden sm:flex items-center gap-0.5 flex-shrink-0">
-                    {[...Array(5)].map((_, i) => (
+                    {[...Array(testimonial.rating || 5)].map((_, i) => (
                       <span
                         key={i}
                         className="material-icons text-yellow-400"

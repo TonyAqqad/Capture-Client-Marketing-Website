@@ -2,7 +2,7 @@
 
 import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion } from '@/lib/motion';
 import { useInView } from '@/hooks/useInView';
 
 interface PricingPlan {

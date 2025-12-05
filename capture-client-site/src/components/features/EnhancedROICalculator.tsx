@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "@/lib/motion";
 import { presets } from "@/lib/simulator-animations";
 import { trackFormStart, trackFormSubmission } from "@/lib/analytics";
 

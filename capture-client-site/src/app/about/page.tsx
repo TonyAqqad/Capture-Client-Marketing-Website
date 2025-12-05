@@ -10,54 +10,7 @@ export const metadata: Metadata = {
   },
 };
 
-// Organization Schema - defines the business entity
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://captureclientai.net/#organization",
-  name: "Capture Client",
-  url: "https://captureclientai.net",
-  logo: {
-    "@type": "ImageObject",
-    url: "https://captureclientai.net/logo-full.png",
-    width: 512,
-    height: 512,
-  },
-  description:
-    "AI-powered marketing automation platform helping small businesses capture more leads with voice AI agents, Google Ads, and Facebook Ads management.",
-  foundingDate: "2023",
-  telephone: "+1-865-346-3339",
-  email: "team@captureclientai.net",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Knoxville",
-    addressRegion: "TN",
-    addressCountry: "US",
-  },
-  areaServed: {
-    "@type": "Country",
-    name: "United States",
-  },
-  sameAs: [
-    "https://www.facebook.com/captureclient",
-    "https://www.linkedin.com/company/captureclient",
-    "https://twitter.com/captureclient",
-  ],
-  knowsAbout: [
-    "AI Voice Agents",
-    "Lead Generation",
-    "Google Ads Management",
-    "Facebook Ads Management",
-    "Marketing Automation",
-    "CRM Software",
-  ],
-  numberOfEmployees: {
-    "@type": "QuantitativeValue",
-    minValue: 10,
-    maxValue: 50,
-  },
-  slogan: "Automate leads. Capture clients.",
-};
+// Organization schema is rendered globally in layout.tsx - no need to duplicate here
 
 // AboutPage Schema - specific to this page
 const aboutPageSchema = {
@@ -86,40 +39,17 @@ const aboutPageSchema = {
   inLanguage: "en-US",
 };
 
-// WebSite Schema - defines the website
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://captureclientai.net/#website",
-  url: "https://captureclientai.net",
-  name: "Capture Client",
-  description:
-    "AI-powered marketing automation platform for small businesses",
-  publisher: {
-    "@id": "https://captureclientai.net/#organization",
-  },
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: "https://captureclientai.net/search?q={search_term_string}",
-    },
-    "query-input": "required name=search_term_string",
-  },
-  inLanguage: "en-US",
-};
+// WebSite schema is also rendered globally in layout.tsx - no need to duplicate
 
 export default function AboutPage() {
   return (
     <>
+      {/* JSON-LD Structured Data - Page-specific schemas only */}
+      {/* Organization and WebSite schemas are rendered globally in layout.tsx */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([
-            organizationSchema,
-            aboutPageSchema,
-            websiteSchema,
-          ]),
+          __html: JSON.stringify(aboutPageSchema),
         }}
       />
       <div className="min-h-screen bg-background-light dark:bg-background-dark">

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "@/lib/motion";
 
 // Material Icon component for consistency (replaces Lucide React for bundle savings)
 const MaterialIcon = ({ name, className = "" }: { name: string; className?: string }) => (

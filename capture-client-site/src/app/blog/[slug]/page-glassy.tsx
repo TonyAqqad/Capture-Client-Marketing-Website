@@ -153,11 +153,11 @@ export default async function BlogPostPage({
     dateModified: post.updatedAt || post.publishedAt,
   });
 
-  const schemas: any[] = [blogPostingSchema, breadcrumbSchema, webPageSchema];
+  const schemas: Array<Record<string, unknown>> = [blogPostingSchema, breadcrumbSchema, webPageSchema];
 
   // Add FAQ schema if post has FAQ section
-  if ((post as any).faq && (post as any).faq.length > 0) {
-    const faqSchema = generateFAQSchema((post as any).faq);
+  if (post.faq && post.faq.length > 0) {
+    const faqSchema = generateFAQSchema(post.faq);
     if (faqSchema) {
       schemas.push(faqSchema);
     }

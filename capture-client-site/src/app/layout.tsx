@@ -9,6 +9,7 @@ import JsonLd from "@/components/seo/JsonLd";
 import { WebVitals } from "@/components/analytics/WebVitals";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import ScrollDepthTracker from "@/components/analytics/ScrollDepthTracker";
+import { LazyMotionProvider } from "@/lib/motion";
 import Script from "next/script";
 import {
   getDefaultMetadata,
@@ -144,10 +145,13 @@ export default function RootLayout({
           Skip to main content
         </a>
 
-        <Header />
-        <main id="main-content" className="min-h-screen">{children}</main>
-        <Footer />
-        <MobileCTABar />
+        {/* PERFORMANCE OPTIMIZATION: LazyMotion reduces framer-motion bundle by ~60KB */}
+        <LazyMotionProvider>
+          <Header />
+          <main id="main-content" className="min-h-screen">{children}</main>
+          <Footer />
+          <MobileCTABar />
+        </LazyMotionProvider>
       </body>
     </html>
   );

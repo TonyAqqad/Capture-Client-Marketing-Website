@@ -1,6 +1,7 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
+import { motion } from "@/lib/motion";
+import { useInView } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { GlassCard } from "@/components/ui/GlassCard";
 

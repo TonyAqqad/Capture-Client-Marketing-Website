@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence } from "@/lib/motion";
 import Link from "next/link";
 import { useRef, useState, useEffect } from "react";
 

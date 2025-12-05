@@ -91,7 +91,7 @@ export default async function NationalPage({ params }: { params: Promise<{ slug:
       )}
 
       {/* Benefits Section */}
-      {page.benefits && page.benefits.length > 0 && (
+      { page.benefits && page.benefits.length > 0 && (
         <section className="py-16 px-8 lg:px-16 bg-gray-50 dark:bg-black/20">
           <div className="container mx-auto">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-12">
@@ -118,7 +118,7 @@ export default async function NationalPage({ params }: { params: Promise<{ slug:
       )}
 
       {/* How It Works Section */}
-      {page.how_it_works && page.how_it_works.length > 0 && (
+      { page.how_it_works && page.how_it_works.length > 0 && (
         <section className="py-16 px-8 lg:px-16">
           <div className="container mx-auto">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-12">
@@ -147,7 +147,7 @@ export default async function NationalPage({ params }: { params: Promise<{ slug:
       )}
 
       {/* Industry Use Cases */}
-      {page.industry_use_cases && page.industry_use_cases.length > 0 && (
+      { page.industry_use_cases && page.industry_use_cases.length > 0 && (
         <section className="py-16 px-8 lg:px-16 bg-gray-50 dark:bg-black/20">
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-12">
@@ -177,7 +177,7 @@ export default async function NationalPage({ params }: { params: Promise<{ slug:
       )}
 
       {/* Nationwide Coverage */}
-      {page.nationwide_coverage && (
+      { page.nationwide_coverage && (
         <section className="py-16 px-8 lg:px-16">
           <div className="container mx-auto max-w-4xl text-center">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
@@ -205,7 +205,7 @@ export default async function NationalPage({ params }: { params: Promise<{ slug:
       )}
 
       {/* FAQ Section */}
-      {page.faq && page.faq.length > 0 && (
+      { page.faq && page.faq.length > 0 && (
         <section className="py-16 px-8 lg:px-16 bg-gray-50 dark:bg-black/20">
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-4xl font-bold text-gray-900 dark:text-white text-center mb-12">

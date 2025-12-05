@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useSpring, useTransform } from "framer-motion";
+import { motion, useSpring, useTransform } from "@/lib/motion";
 import { ReactNode, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { PremiumGlassCard } from "./PremiumGlassCard";

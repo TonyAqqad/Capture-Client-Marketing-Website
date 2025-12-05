@@ -20,16 +20,19 @@ export interface IntroSection {
   paragraph?: string;
 }
 
+// BenefitItem matches Benefit from @/types/content.ts (title, description, icon?)
 export interface BenefitItem {
   title: string;
   description: string;
   icon?: string;
 }
 
+// ProcessStep aligns with HowItWorksStep from @/types/content.ts
 export interface ProcessStep {
   step?: number;
   title: string;
   description: string;
+  icon?: string; // Added to match HowItWorksStep
 }
 
 export interface SeoData {
@@ -55,8 +58,55 @@ export interface ServiceData {
   intro: IntroSection;
   benefits: BenefitItem[];
   how_it_works: ProcessStep[];
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [key: string]: any;
+  faq?: Array<{ question: string; answer: string }>;
+  industry_use_cases?: Array<{
+    title?: string;
+    description?: string;
+    industry?: string;
+    challenge?: string;
+    solution?: string;
+    result?: string;
+  }>;
+  nationwide_coverage?: {
+    heading?: string;
+    description?: string;
+    regions_highlighted?: string[];
+  };
+  process?: {
+    steps?: Array<{
+      step?: number;
+      title: string;
+      description: string;
+      icon?: string;
+    }>;
+  };
+  social_proof?: {
+    stats?: Array<{
+      value: string;
+      label: string;
+      icon?: string;
+    }>;
+    testimonials?: Array<{
+      quote: string;
+      author?: string;
+      business?: string;
+      name?: string;
+      company?: string;
+      role?: string;
+      image?: string;
+      rating?: number;
+    }>;
+  };
+  cta_section?: {
+    headline?: string;
+    subheadline?: string;
+    primary_cta?: { text: string; action: string };
+    secondary_cta?: { text: string; action: string };
+  };
+  related_pages?: {
+    services?: string[];
+    locations?: string[];
+  };
 }
 
 export interface LocationData extends ServiceData {
@@ -69,6 +119,48 @@ export interface LocationData extends ServiceData {
     service_area_radius: string;
   };
   local_intro: IntroSection;
+  testimonials?: Array<{
+    name?: string;
+    company?: string;
+    role?: string;
+    quote: string;
+    image?: string;
+    rating?: number;
+  }>;
+  local_testimonials?: Array<{
+    name?: string;
+    company?: string;
+    role?: string;
+    quote: string;
+    image?: string;
+    rating?: number;
+  }>;
+  nearby_areas_coverage?: {
+    heading?: string;
+    description?: string;
+    areas_list?: string[];
+  };
+  local_use_cases?: Array<{
+    business_type?: string;
+    scenario?: string;
+    result: string;
+    industry?: string;
+    example?: string;
+  }>;
+  service_area?: {
+    heading?: string;
+    description?: string;
+    cities?: string[];
+    areas_list?: string[];
+  };
+  local_phone_number?: string;
+  estimated_missed_call_loss?: number;
+  missed_call_percentage?: number;
+  popular_industries?: Array<{
+    name: string;
+    icon: string;
+    description: string;
+  }>;
 }
 
 export interface NationalData extends ServiceData {
@@ -92,15 +184,108 @@ export interface PackageData {
   };
   seo: SeoData;
   hero: HeroSection;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [key: string]: any;
+  package_info?: {
+    slug?: string;
+    name?: string;
+    price?: string;
+    period?: string;
+    tagline?: string;
+    headline?: string;
+    description?: string;
+    audience?: string;
+  };
+  features?: Array<{
+    name?: string;
+    description?: string;
+    value?: string;
+    included?: boolean;
+  }>;
+  features_included?: Array<{
+    name: string;
+    description: string;
+    value?: string;
+    available_in?: string;
+    note?: string;
+  }>;
+  features_not_included?: Array<{
+    name: string;
+    description: string;
+    value?: string;
+    available_in?: string;
+    note?: string;
+  }>;
+  benefits_section?: {
+    heading?: string;
+    content?: string;
+    benefits?: string[];
+  };
+  value_proposition?: {
+    heading?: string;
+    content?: string;
+    benefits?: Array<{
+      title: string;
+      description: string;
+      icon?: string;
+    }>;
+  };
+  compare_table?: {
+    title?: string;
+    rows?: Array<{
+      feature: string;
+      basic?: string | boolean;
+      pro?: string | boolean;
+      enterprise?: string | boolean;
+    }>;
+  };
+  comparison?: {
+    compare_table?: Array<{
+      feature: string;
+      starter: boolean | string;
+      growth: boolean | string;
+      enterprise: boolean | string;
+    }>;
+  };
+  ideal_for?: {
+    headline?: string;
+    description?: string;
+    audience?: string[];
+  };
+  testimonials?: Array<{
+    name?: string;
+    company?: string;
+    role?: string;
+    quote: string;
+    image?: string;
+    rating?: number;
+    author?: string;
+    business?: string;
+    location?: string;
+    result?: string;
+  }>;
+  faq?: Array<{ question: string; answer: string }>;
+  trust_signals?: Array<{
+    title: string;
+    description: string;
+    icon?: string;
+    stat?: string;
+  }>;
+  cta?: {
+    primary?: { text: string; action: string };
+    secondary?: { text: string; action: string };
+  };
+  cta_footer?: {
+    headline?: string;
+    subheadline?: string;
+    primary_cta?: { text: string; action: string };
+    secondary_cta?: { text: string; action: string };
+    guarantee?: string;
+    bonus?: string;
+  };
 }
 
 export interface PricingData {
   page_id: string;
   packages?: PackageData[];
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  [key: string]: any;
 }
 
 export interface BlogPost {

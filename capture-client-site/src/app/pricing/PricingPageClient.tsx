@@ -2,15 +2,38 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence } from "@/lib/motion";
 
-// This will be replaced with proper server-side data fetching in production
-// For now, using client-side with mock data structure
-const PACKAGES = [
+// ============================================================================
+// TYPES
+// ============================================================================
+
+interface Package {
+  id: string;
+  name: string;
+  price: number;
+  annualPrice: number; // 20% discount
+  period: string;
+  tagline: string;
+  tier: "starter" | "growth" | "enterprise";
+  popular: boolean;
+  features: string[];
+  slug: string;
+  roi: string;
+  missedCallsHandled: number;
+  avgMonthlyReturn: number;
+}
+
+// ============================================================================
+// DATA
+// ============================================================================
+
+const PACKAGES: Package[] = [
   {
     id: "starter",
     name: "Starter Package",
-    price: "$997",
+    price: 997,
+    annualPrice: 797, // 20% off
     period: "per month",
     tagline: "Perfect for small businesses getting started with AI automation",
     tier: "starter",
@@ -25,12 +48,15 @@ const PACKAGES = [
       "Email Support"
     ],
     slug: "starter-package",
-    roi: "Capture just 5 extra leads/month = $1,000+ ROI"
+    roi: "Capture just 5 extra leads/month = $1,000+ ROI",
+    missedCallsHandled: 50,
+    avgMonthlyReturn: 2500
   },
   {
     id: "growth",
     name: "Growth Package",
-    price: "$1,997",
+    price: 1997,
+    annualPrice: 1597, // 20% off
     period: "per month",
     tagline: "Multi-channel marketing automation for ambitious growing businesses",
     tier: "growth",
@@ -46,12 +72,15 @@ const PACKAGES = [
       "Multiple CRM Integrations"
     ],
     slug: "growth-package",
-    roi: "87 leads in 60 days (actual client result)"
+    roi: "87 leads in 60 days (actual client result)",
+    missedCallsHandled: 200,
+    avgMonthlyReturn: 12000
   },
   {
     id: "enterprise",
     name: "Enterprise Package",
-    price: "$3,997+",
+    price: 3997,
+    annualPrice: 3197, // 20% off
     period: "per month",
     tagline: "Complete done-for-you lead generation system with unlimited AI",
     tier: "enterprise",
@@ -67,12 +96,100 @@ const PACKAGES = [
       "Bi-Weekly Strategy Calls"
     ],
     slug: "enterprise-package",
-    roi: "$180K+ monthly new business (real client)"
+    roi: "$180K+ monthly new business (real client)",
+    missedCallsHandled: 999,
+    avgMonthlyReturn: 45000
   }
 ];
 
+// ============================================================================
+// ANIMATED COUNTER COMPONENT
+// ============================================================================
+
+interface AnimatedCounterProps {
+  value: number;
+  prefix?: string;
+  suffix?: string;
+  duration?: number;
+}
+
+function AnimatedCounter({ value, prefix = "", suffix = "", duration = 1000 }: AnimatedCounterProps) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let startTime: number | null = null;
+    const startValue = 0;
+    const endValue = value;
+
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+
+      // Easing function
+      const easeOutQuad = 1 - Math.pow(1 - progress, 3);
+      const currentValue = Math.floor(startValue + (endValue - startValue) * easeOutQuad);
+
+      setCount(currentValue);
+
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      }
+    };
+
+    requestAnimationFrame(animate);
+  }, [value, duration]);
+
+  return (
+    <>
+      {prefix}
+      {count.toLocaleString()}
+      {suffix}
+    </>
+  );
+}
+
+// ============================================================================
+// MINI ROI CALCULATOR COMPONENT
+// ============================================================================
+
+interface MiniROICalculatorProps {
+  pkg: Package;
+  isAnnual: boolean;
+}
+
+function MiniROICalculator({ pkg, isAnnual }: MiniROICalculatorProps) {
+  const price = isAnnual ? pkg.annualPrice : pkg.price;
+  const monthlyReturn = pkg.avgMonthlyReturn;
+  const roi = Math.round((monthlyReturn / price) * 100);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, height: 0 }}
+      animate={{ opacity: 1, height: "auto" }}
+      exit={{ opacity: 0, height: 0 }}
+      className="mt-6 p-4 rounded-xl bg-gradient-to-br from-accent/10 to-primary/5 border border-accent/20"
+    >
+      <div className="text-center">
+        <p className="text-xs text-white/60 mb-2">Potential Monthly Return</p>
+        <div className="text-2xl font-bold text-gradient-gold-cyan mb-1">
+          <AnimatedCounter value={monthlyReturn} prefix="$" duration={800} />
+        </div>
+        <p className="text-xs text-accent font-semibold">
+          <AnimatedCounter value={roi} duration={600} />% ROI
+        </p>
+      </div>
+    </motion.div>
+  );
+}
+
+// ============================================================================
+// MAIN COMPONENT
+// ============================================================================
+
 export default function PricingPageClient() {
   const [showComparison, setShowComparison] = useState(false);
+  const [isAnnual, setIsAnnual] = useState(false);
+  const [showROI, setShowROI] = useState<string | null>(null);
   const { scrollYProgress } = useScroll();
   const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
@@ -203,7 +320,7 @@ export default function PricingPageClient() {
               </motion.div>
             </div>
 
-            {/* Right side - 5 columns - Floating ROI teaser - PREMIUM STYLING */}
+            {/* Right side - 5 columns - Floating ROI teaser */}
             <motion.div
               className="col-span-12 lg:col-span-5 mt-8 lg:mt-0"
               initial={{ opacity: 0, scale: 0.9, y: 30 }}
@@ -211,78 +328,41 @@ export default function PricingPageClient() {
               transition={{ duration: 0.9, delay: 0.4, type: 'spring', stiffness: 100 }}
             >
               <div className="relative">
-                {/* Layered card effect - ENHANCED */}
+                {/* Layered card effect */}
                 <motion.div
                   className="hidden lg:block absolute inset-0 bg-gradient-to-br from-accent/10 to-primary/10 backdrop-blur-xl rounded-3xl translate-x-6 translate-y-6"
-                  animate={{
-                    scale: [1, 1.02, 1],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                  }}
+                  animate={{ scale: [1, 1.02, 1] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                 />
                 <motion.div
                   className="hidden md:block absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/15 backdrop-blur-xl rounded-3xl translate-x-3 translate-y-3"
-                  animate={{
-                    scale: [1, 1.01, 1],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                    delay: 0.5,
-                  }}
+                  animate={{ scale: [1, 1.01, 1] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
                 />
 
-                {/* Main card with premium glass effect */}
+                {/* Main card */}
                 <div className="relative overflow-hidden rounded-3xl">
-                  {/* Animated gradient background */}
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-br from-accent/20 via-primary/20 to-accent/20"
-                    animate={{
-                      backgroundPosition: ['0% 0%', '100% 100%', '0% 0%'],
-                    }}
-                    transition={{
-                      duration: 8,
-                      repeat: Infinity,
-                      ease: 'linear',
-                    }}
+                    animate={{ backgroundPosition: ['0% 0%', '100% 100%', '0% 0%'] }}
+                    transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
                     style={{ backgroundSize: '200% 200%' }}
                   />
 
                   {/* Floating orbs */}
                   <motion.div
                     className="absolute top-0 right-0 w-40 h-40 bg-accent/30 rounded-full blur-3xl"
-                    animate={{
-                      scale: [1, 1.4, 1],
-                      opacity: [0.3, 0.5, 0.3],
-                    }}
-                    transition={{
-                      duration: 5,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                    }}
+                    animate={{ scale: [1, 1.4, 1], opacity: [0.3, 0.5, 0.3] }}
+                    transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
                   />
                   <motion.div
                     className="absolute bottom-0 left-0 w-32 h-32 bg-primary/30 rounded-full blur-3xl"
-                    animate={{
-                      scale: [1, 1.3, 1],
-                      opacity: [0.3, 0.5, 0.3],
-                    }}
-                    transition={{
-                      duration: 6,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                      delay: 1,
-                    }}
+                    animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.5, 0.3] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
                   />
 
-                  {/* Content */}
                   <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl rounded-3xl border-2 border-accent/30 p-8 md:p-10">
                     <div className="text-center">
-                      {/* Badge */}
                       <motion.div
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 to-primary/20 border border-accent/40 mb-6"
                         animate={{
@@ -292,10 +372,7 @@ export default function PricingPageClient() {
                             '0 0 20px rgba(0, 201, 255, 0.3)',
                           ],
                         }}
-                        transition={{
-                          duration: 2,
-                          repeat: Infinity,
-                        }}
+                        transition={{ duration: 2, repeat: Infinity }}
                       >
                         <span className="material-icons text-accent text-sm">trending_up</span>
                         <span className="text-accent text-xs sm:text-sm font-bold tracking-wider uppercase">
@@ -303,17 +380,10 @@ export default function PricingPageClient() {
                         </span>
                       </motion.div>
 
-                      {/* Big number - ULTRA BOLD */}
                       <motion.div
                         className="mb-4"
-                        animate={{
-                          scale: [1, 1.02, 1],
-                        }}
-                        transition={{
-                          duration: 3,
-                          repeat: Infinity,
-                          ease: 'easeInOut',
-                        }}
+                        animate={{ scale: [1, 1.02, 1] }}
+                        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
                       >
                         <div className="text-6xl sm:text-7xl md:text-8xl font-bold bg-gradient-to-br from-accent via-white to-primary bg-clip-text text-transparent leading-none mb-2">
                           <span data-counter="580">0</span>%
@@ -324,7 +394,6 @@ export default function PricingPageClient() {
                         Our clients see an average return of <span className="text-accent font-bold">5.8x</span> their investment
                       </p>
 
-                      {/* Stats grid - Enhanced */}
                       <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/20">
                         <motion.div
                           className="relative p-4 rounded-2xl bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20"
@@ -356,274 +425,53 @@ export default function PricingPageClient() {
         </div>
       </motion.div>
 
-      {/* Pricing Cards - UNIQUE TREATMENT FOR EACH */}
+      {/* Monthly/Annual Toggle */}
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 pb-8 flex justify-center">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="inline-flex items-center gap-4 p-2 bg-white/5 backdrop-blur-xl rounded-full border border-white/10"
+        >
+          <button
+            onClick={() => setIsAnnual(false)}
+            className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+              !isAnnual
+                ? 'bg-gradient-to-r from-accent to-primary text-black shadow-glow'
+                : 'text-white/60 hover:text-white'
+            }`}
+          >
+            Monthly
+          </button>
+          <button
+            onClick={() => setIsAnnual(true)}
+            className={`px-6 py-3 rounded-full font-medium transition-all duration-300 relative ${
+              isAnnual
+                ? 'bg-gradient-to-r from-accent to-primary text-black shadow-glow'
+                : 'text-white/60 hover:text-white'
+            }`}
+          >
+            Annual
+            <span className="absolute -top-2 -right-2 px-2 py-0.5 bg-gradient-to-r from-amber-400 to-amber-600 text-black text-xs font-bold rounded-full">
+              Save 20%
+            </span>
+          </button>
+        </motion.div>
+      </div>
+
+      {/* Pricing Cards - 3D PREMIUM */}
       <div className="container mx-auto px-4 md:px-8 lg:px-16 py-8 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
-          {PACKAGES.map((pkg, index) => {
-            const isStarter = pkg.tier === "starter";
-            const isGrowth = pkg.tier === "growth";
-            const isEnterprise = pkg.tier === "enterprise";
-
-            return (
-              <motion.div
-                key={pkg.id}
-                className={`relative max-w-sm mx-auto lg:max-w-none ${isGrowth ? 'lg:-mt-4 lg:mb-4' : ''}`}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                {/* STARTER TIER - Clean & Minimal */}
-                {isStarter && (
-                  <div className="h-full group cursor-pointer">
-                    {/* Subtle glow on hover */}
-                    <div className="absolute -inset-px bg-gradient-to-b from-white/20 to-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" />
-
-                    <div className="relative h-full bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 transition-all duration-500 group-hover:border-white/30">
-                      {/* Header */}
-                      <div className="mb-8">
-                        <div className="text-white/40 text-xs font-medium tracking-wider uppercase mb-2">
-                          Getting Started
-                        </div>
-                        <h3 className="text-2xl font-bold text-white mb-3">
-                          {pkg.name.replace(' Package', '')}
-                        </h3>
-                        <p className="text-white/60 text-sm leading-relaxed">
-                          {pkg.tagline}
-                        </p>
-                      </div>
-
-                      {/* Price */}
-                      <div className="mb-8">
-                        <div className="flex items-baseline gap-2 mb-2">
-                          <span className="text-5xl font-bold text-white">{pkg.price}</span>
-                          <span className="text-white/40">/{pkg.period.split(' ')[1]}</span>
-                        </div>
-                        <div className="text-accent text-sm">{pkg.roi}</div>
-                      </div>
-
-                      {/* CTA */}
-                      <Link
-                        href={`/pricing/${pkg.slug}`}
-                        className="block w-full text-center px-6 py-4 min-h-[48px] rounded-full bg-white/10 border border-white/20 text-white font-medium mb-8 transition-all duration-300 hover:bg-white/20 hover:border-white/40 touch-manipulation"
-                      >
-                        View Details
-                      </Link>
-
-                      {/* Features */}
-                      <div className="space-y-3">
-                        {pkg.features.slice(0, 5).map((feature, i) => (
-                          <div key={i} className="flex items-start gap-3">
-                            <span className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                              <span className="text-white/60 text-xs">✓</span>
-                            </span>
-                            <span className="text-white/70 text-sm">{feature}</span>
-                          </div>
-                        ))}
-                        {pkg.features.length > 5 && (
-                          <div className="text-accent text-sm pt-2">
-                            +{pkg.features.length - 5} more features
-                          </div>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* GROWTH TIER - DRAMATIC & POPULAR */}
-                {isGrowth && (
-                  <div className="h-full group cursor-pointer relative">
-                    {/* Animated gradient border */}
-                    <motion.div
-                      className="absolute -inset-1 bg-gradient-to-r from-accent via-primary to-accent rounded-2xl opacity-75 group-hover:opacity-100 blur-md"
-                      animate={{
-                        backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-                      }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                      style={{ backgroundSize: "200% 200%" }}
-                    />
-
-                    {/* Floating "Most Popular" badge */}
-                    <motion.div
-                      className="absolute -top-4 left-1/2 -translate-x-1/2 z-10"
-                      animate={{ y: [0, -5, 0] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                    >
-                      <div className="px-6 py-2 bg-gradient-to-r from-accent to-primary rounded-full text-black font-bold text-sm tracking-wider uppercase shadow-xl">
-                        ⭐ Most Popular
-                      </div>
-                    </motion.div>
-
-                    {/* Gradient orb background */}
-                    <div className="absolute inset-0 overflow-hidden rounded-2xl">
-                      <motion.div
-                        className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl"
-                        animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.3, 0.2] }}
-                        transition={{ duration: 4, repeat: Infinity }}
-                      />
-                      <motion.div
-                        className="absolute bottom-0 left-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl"
-                        animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.3, 0.2] }}
-                        transition={{ duration: 5, repeat: Infinity }}
-                      />
-                    </div>
-
-                    <div className="relative h-full bg-gradient-to-br from-[#1E293B] to-[#0F172A] rounded-2xl border border-accent/50 p-8 transition-all duration-500">
-                      {/* Header */}
-                      <div className="mb-8">
-                        <div className="flex items-center gap-2 mb-2">
-                          <motion.div
-                            className="w-2 h-2 rounded-full bg-accent"
-                            animate={{ scale: [1, 1.5, 1], opacity: [1, 0.5, 1] }}
-                            transition={{ duration: 2, repeat: Infinity }}
-                          />
-                          <span className="text-accent text-xs font-medium tracking-wider uppercase">
-                            Best Value
-                          </span>
-                        </div>
-                        <h3 className="text-3xl font-bold text-white mb-3">
-                          {pkg.name.replace(' Package', '')}
-                        </h3>
-                        <p className="text-white/80 text-sm leading-relaxed">
-                          {pkg.tagline}
-                        </p>
-                      </div>
-
-                      {/* Price - Larger */}
-                      <div className="mb-8">
-                        <div className="flex items-baseline gap-2 mb-2">
-                          <span className="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-accent to-primary">
-                            {pkg.price}
-                          </span>
-                          <span className="text-white/40">/{pkg.period.split(' ')[1]}</span>
-                        </div>
-                        <div className="text-accent font-medium">{pkg.roi}</div>
-                      </div>
-
-                      {/* CTA - Glowing */}
-                      <Link
-                        href={`/pricing/${pkg.slug}`}
-                        className="block w-full text-center px-6 py-4 min-h-[48px] rounded-full bg-gradient-to-r from-accent to-primary text-black font-bold mb-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-accent/50 relative overflow-hidden group/btn touch-manipulation"
-                      >
-                        <motion.div
-                          className="absolute inset-0 bg-white/20"
-                          initial={{ x: "-100%" }}
-                          whileHover={{ x: "100%" }}
-                          transition={{ duration: 0.6 }}
-                        />
-                        <span className="relative">Get Started Now</span>
-                      </Link>
-
-                      {/* Features - Enhanced */}
-                      <div className="space-y-3">
-                        {pkg.features.slice(0, 6).map((feature, i) => (
-                          <motion.div
-                            key={i}
-                            className="flex items-start gap-3"
-                            initial={{ opacity: 0, x: -10 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: i * 0.05 }}
-                          >
-                            <span className="w-5 h-5 rounded-full bg-gradient-to-br from-accent to-primary flex items-center justify-center flex-shrink-0 mt-0.5">
-                              <span className="text-black text-xs font-bold">✓</span>
-                            </span>
-                            <span className="text-white text-sm font-medium">{feature}</span>
-                          </motion.div>
-                        ))}
-                        {pkg.features.length > 6 && (
-                          <div className="text-accent font-medium text-sm pt-2">
-                            +{pkg.features.length - 6} more features
-                          </div>
-                        )}
-                      </div>
-
-                      {/* "Best Value" ribbon */}
-                      <div className="absolute top-8 right-0">
-                        <div className="bg-gradient-to-r from-accent to-primary text-black text-xs font-bold px-4 py-1 rounded-l-full shadow-lg">
-                          SAVE 40%
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                {/* ENTERPRISE TIER - Premium & Sophisticated */}
-                {isEnterprise && (
-                  <div className="h-full group cursor-pointer relative flex flex-col">
-                    {/* Gold accent glow */}
-                    <div className="absolute -inset-px bg-gradient-to-b from-amber-500/30 to-amber-700/20 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md" />
-
-                    <div className="relative h-full bg-gradient-to-br from-[#1a1a1a] to-[#0a0a0a] rounded-2xl border border-amber-500/30 p-8 transition-all duration-500 group-hover:border-amber-500/60 flex flex-col">
-                      {/* VIP Badge */}
-                      <div className="absolute top-0 right-0 -mt-3 -mr-3">
-                        <div className="w-16 h-16 bg-gradient-to-br from-amber-400 to-amber-600 rounded-full flex items-center justify-center shadow-xl">
-                          <span className="text-black text-2xl">👑</span>
-                        </div>
-                      </div>
-
-                      {/* Header */}
-                      <div className="mb-8">
-                        <div className="text-amber-400 text-xs font-medium tracking-wider uppercase mb-2">
-                          Premium
-                        </div>
-                        <h3 className="text-2xl font-bold text-white mb-3">
-                          {pkg.name.replace(' Package', '')}
-                        </h3>
-                        <p className="text-white/60 text-sm leading-relaxed">
-                          {pkg.tagline}
-                        </p>
-                      </div>
-
-                      {/* Price */}
-                      <div className="mb-8">
-                        <div className="flex items-baseline gap-2 mb-2">
-                          <span className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-amber-600">
-                            Custom
-                          </span>
-                        </div>
-                        <div className="text-white/60 text-sm mb-2">
-                          Typically {pkg.price}
-                        </div>
-                        <div className="text-amber-400 text-sm font-medium">{pkg.roi}</div>
-                      </div>
-
-                      {/* CTA */}
-                      <Link
-                        href={`/pricing/${pkg.slug}`}
-                        className="block w-full text-center px-6 py-4 min-h-[48px] rounded-full bg-gradient-to-r from-amber-400 to-amber-600 text-black font-bold mb-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/50 touch-manipulation"
-                      >
-                        Schedule Consultation
-                      </Link>
-
-                      {/* Features */}
-                      <div className="space-y-3 flex-grow">
-                        {pkg.features.slice(0, 6).map((feature, i) => (
-                          <div key={i} className="flex items-start gap-3">
-                            <span className="w-5 h-5 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                              <span className="text-black text-xs font-bold">✓</span>
-                            </span>
-                            <span className="text-white/80 text-sm">{feature}</span>
-                          </div>
-                        ))}
-                        {pkg.features.length > 6 && (
-                          <div className="text-amber-400 text-sm pt-2">
-                            +{pkg.features.length - 6} more features
-                          </div>
-                        )}
-                      </div>
-
-                      {/* Premium border pattern */}
-                      <div className="absolute inset-0 rounded-2xl pointer-events-none">
-                        <div className="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-amber-500/50 rounded-tl-2xl" />
-                        <div className="absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 border-amber-500/50 rounded-br-2xl" />
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </motion.div>
-            );
-          })}
+          {PACKAGES.map((pkg, index) => (
+            <PricingCard3D
+              key={pkg.id}
+              pkg={pkg}
+              index={index}
+              isAnnual={isAnnual}
+              showROI={showROI === pkg.id}
+              onToggleROI={() => setShowROI(showROI === pkg.id ? null : pkg.id)}
+            />
+          ))}
         </div>
 
         {/* Comparison Toggle */}
@@ -649,7 +497,7 @@ export default function PricingPageClient() {
           </button>
         </motion.div>
 
-        {/* Feature Comparison Table - PREMIUM STYLING */}
+        {/* Feature Comparison Table */}
         {showComparison && (
           <motion.div
             className="mt-8 md:mt-12 max-w-7xl mx-auto"
@@ -658,22 +506,17 @@ export default function PricingPageClient() {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.5 }}
           >
-            {/* Mobile: Show scrollable hint */}
             <div className="md:hidden text-center text-white/60 text-sm mb-3 flex items-center justify-center gap-2">
               <span className="material-icons text-accent text-lg animate-pulse">swipe_horizontal</span>
               <span>Swipe to see all features</span>
             </div>
 
-            {/* Scrollable wrapper for mobile */}
             <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0 scrollbar-thin scrollbar-thumb-accent/30 scrollbar-track-white/5">
               <div className="min-w-[700px] md:min-w-full">
-                {/* Premium glass container */}
                 <div className="relative rounded-3xl overflow-hidden">
-                  {/* Background effects */}
                   <div className="absolute inset-0 bg-gradient-to-br from-[#1e293b]/80 via-[#0f172a]/90 to-[#0a0f1c]/95 backdrop-blur-2xl" />
                   <div className="absolute inset-0 bg-mesh-premium opacity-30" />
 
-                  {/* Border gradient */}
                   <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-accent/20 via-primary/20 to-accent/20 p-[1px]">
                     <div className="absolute inset-[1px] rounded-3xl bg-gradient-to-br from-[#1e293b]/95 via-[#0f172a]/98 to-[#0a0f1c]" />
                   </div>
@@ -705,8 +548,8 @@ export default function PricingPageClient() {
                         {[
                           { feature: "AI Voice Agents", starter: "1 agent", growth: "2 agents", enterprise: "Unlimited", icon: "smart_toy" },
                           { feature: "Monthly Calls", starter: "50 calls", growth: "200 calls", enterprise: "Unlimited", icon: "call" },
-                          { feature: "Advertising Platforms", starter: "None", growth: "Google OR Facebook", enterprise: "Both + LinkedIn", icon: "campaign" },
-                          { feature: "Landing Pages", starter: "None", growth: "Optimization", enterprise: "Custom built", icon: "web" },
+                          { feature: "Advertising Platforms", starter: "—", growth: "Google OR Facebook", enterprise: "Both + LinkedIn", icon: "campaign" },
+                          { feature: "Landing Pages", starter: "—", growth: "Optimization", enterprise: "Custom built", icon: "web" },
                           { feature: "Reports", starter: "Monthly", growth: "Weekly", enterprise: "Real-time", icon: "assessment" },
                           { feature: "Account Manager", starter: "—", growth: "—", enterprise: "Dedicated", icon: "person" },
                           { feature: "Support", starter: "Email", growth: "Priority (4hr)", enterprise: "24/7", icon: "support_agent" }
@@ -778,7 +621,7 @@ export default function PricingPageClient() {
             },
             {
               title: "Capture Client",
-              price: "Starting at $997/mo",
+              price: isAnnual ? "Starting at $797/mo" : "Starting at $997/mo",
               features: ["AI-powered automation", "24/7 availability", "Instant lead response", "Real-time analytics"],
               badge: "Smart Choice",
               highlight: true
@@ -846,7 +689,7 @@ export default function PricingPageClient() {
         </div>
       </div>
 
-      {/* FAQ Section - Animated Accordion */}
+      {/* FAQ Section */}
       <div className="container mx-auto px-4 md:px-8 lg:px-16 py-8 md:py-16">
         <motion.div
           className="text-center mb-8 md:mb-12"
@@ -865,31 +708,30 @@ export default function PricingPageClient() {
         <div className="max-w-3xl mx-auto space-y-4">
           {[
             {
-              q: "Can I switch packages later?",
-              a: "Absolutely! Upgrade or downgrade anytime. Changes take effect at your next billing cycle. Most clients start with Starter, see results, then upgrade to Growth."
+              question: "Can I switch packages later?",
+              answer: "Absolutely! Upgrade or downgrade anytime. Changes take effect at your next billing cycle. Most clients start with Starter, see results, then upgrade to Growth."
             },
             {
-              q: "Are there any setup fees or hidden costs?",
-              a: "Zero setup fees. The price you see is what you pay. Your only additional cost is ad spend if you choose Growth or Enterprise packages (billed directly by Google/Facebook)."
+              question: "Are there any setup fees or hidden costs?",
+              answer: "Zero setup fees. The price you see is what you pay. Your only additional cost is ad spend if you choose Growth or Enterprise packages (billed directly by Google/Facebook)."
             },
             {
-              q: "What if I go over my call limit?",
-              a: "We'll notify you before you hit your limit. You can upgrade to the next tier or purchase additional call bundles. Starter: $2/call, Growth: $1.50/call, Enterprise: unlimited."
+              question: "What if I go over my call limit?",
+              answer: "We'll notify you before you hit your limit. You can upgrade to the next tier or purchase additional call bundles. Starter: $2/call, Growth: $1.50/call, Enterprise: unlimited."
             },
             {
-              q: "How quickly will I see ROI?",
-              a: "Most clients see their first qualified lead within 24-48 hours of going live. Full ROI typically happens within the first 30-60 days as the AI learns and optimizes."
+              question: "How quickly will I see ROI?",
+              answer: "Most clients see their first qualified lead within 24-48 hours of going live. Full ROI typically happens within the first 30-60 days as the AI learns and optimizes."
             },
             {
-              q: "Do you require a long-term contract?",
-              a: "No! All packages are month-to-month. Cancel anytime with 30 days notice. We earn your business every month through results, not contracts."
+              question: "Do you require a long-term contract?",
+              answer: "No! All packages are month-to-month. Cancel anytime with 30 days notice. We earn your business every month through results, not contracts."
             }
           ].map((faq, i) => (
-            <FAQItem key={i} question={faq.q} answer={faq.a} index={i} />
+            <FAQItem key={i} question={faq.question} answer={faq.answer} index={i} />
           ))}
         </div>
 
-        {/* Contact CTA after FAQ */}
         <motion.div
           className="text-center mt-8 md:mt-12"
           initial={{ opacity: 0, y: 20 }}
@@ -918,7 +760,6 @@ export default function PricingPageClient() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          {/* Animated background */}
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary opacity-20"
               style={{ backgroundSize: "200% 100%" }}
@@ -969,7 +810,410 @@ export default function PricingPageClient() {
   );
 }
 
-// FAQ Accordion Component
+// ============================================================================
+// 3D PRICING CARD COMPONENT
+// ============================================================================
+
+interface PricingCard3DProps {
+  pkg: Package;
+  index: number;
+  isAnnual: boolean;
+  showROI: boolean;
+  onToggleROI: () => void;
+}
+
+function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCard3DProps) {
+  const [rotateX, setRotateX] = useState(0);
+  const [rotateY, setRotateY] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const price = isAnnual ? pkg.annualPrice : pkg.price;
+  const savings = pkg.price - pkg.annualPrice;
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const card = e.currentTarget;
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = ((y - centerY) / centerY) * -5;
+    const rotateY = ((x - centerX) / centerX) * 5;
+
+    setRotateX(rotateX);
+    setRotateY(rotateY);
+  };
+
+  const handleMouseLeave = () => {
+    setRotateX(0);
+    setRotateY(0);
+    setIsHovered(false);
+  };
+
+  const isStarter = pkg.tier === "starter";
+  const isGrowth = pkg.tier === "growth";
+  const isEnterprise = pkg.tier === "enterprise";
+
+  return (
+    <motion.div
+      className={`relative max-w-sm mx-auto lg:max-w-none ${isGrowth ? 'lg:-mt-4 lg:mb-4' : ''}`}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: index * 0.1 }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      onMouseEnter={() => setIsHovered(true)}
+    >
+      <motion.div
+        animate={{
+          rotateX,
+          rotateY,
+          scale: isHovered ? 1.02 : 1,
+        }}
+        transition={{ type: 'spring', stiffness: 300, damping: 25 }}
+        className="relative group h-full min-h-[600px] rounded-3xl overflow-hidden cursor-pointer"
+        style={{
+          transformStyle: 'preserve-3d',
+          transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
+        }}
+      >
+        {/* GROWTH TIER - GOLD PREMIUM */}
+        {isGrowth && (
+          <>
+            {/* Most Popular Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.5 }}
+              className="absolute -top-4 left-1/2 -translate-x-1/2 z-20"
+            >
+              <motion.div
+                animate={{
+                  y: [0, -8, 0],
+                  boxShadow: [
+                    '0 0 20px rgba(212, 175, 55, 0.5)',
+                    '0 0 35px rgba(212, 175, 55, 0.8)',
+                    '0 0 20px rgba(212, 175, 55, 0.5)',
+                  ],
+                }}
+                transition={{ duration: 2.5, repeat: Infinity, repeatType: 'reverse' }}
+                className="relative px-6 py-2.5 rounded-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 bg-[length:200%_100%]"
+              >
+                <motion.div
+                  animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent bg-[length:200%_100%] rounded-full"
+                />
+                <div className="relative flex items-center gap-2">
+                  <motion.span
+                    animate={{ rotate: [0, 360] }}
+                    transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
+                    className="text-lg"
+                  >
+                    ⭐
+                  </motion.span>
+                  <span className="font-bold text-sm tracking-wider text-black uppercase">
+                    Most Popular
+                  </span>
+                </div>
+              </motion.div>
+            </motion.div>
+
+            {/* Animated gold border */}
+            <motion.div
+              className="absolute -inset-1 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 rounded-3xl opacity-75 group-hover:opacity-100 blur-md"
+              animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+              transition={{ duration: 3, repeat: Infinity }}
+              style={{ backgroundSize: "200% 200%" }}
+            />
+
+            {/* Floating gold orbs */}
+            <div className="absolute inset-0 overflow-hidden rounded-3xl">
+              <motion.div
+                className="absolute top-0 right-0 w-64 h-64 bg-amber-400/20 rounded-full blur-3xl"
+                animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.3, 0.2] }}
+                transition={{ duration: 4, repeat: Infinity }}
+              />
+              <motion.div
+                className="absolute bottom-0 left-0 w-64 h-64 bg-amber-600/20 rounded-full blur-3xl"
+                animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.3, 0.2] }}
+                transition={{ duration: 5, repeat: Infinity }}
+              />
+            </div>
+
+            <div className="relative h-full bg-gradient-to-br from-[#1a2942] via-[#0f1c2e] to-[#0a1220] rounded-3xl border-2 border-amber-400/50 p-8 flex flex-col">
+              {/* Save ribbon */}
+              {isAnnual && (
+                <div className="absolute top-8 right-0">
+                  <div className="bg-gradient-to-r from-amber-400 to-amber-600 text-black text-xs font-bold px-4 py-1 rounded-l-full shadow-lg">
+                    SAVE ${savings}/mo
+                  </div>
+                </div>
+              )}
+
+              {/* Header */}
+              <div className="mb-6">
+                <div className="flex items-center gap-2 mb-2">
+                  <motion.div
+                    className="w-2 h-2 rounded-full bg-amber-400"
+                    animate={{ scale: [1, 1.5, 1], opacity: [1, 0.5, 1] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  />
+                  <span className="text-amber-400 text-xs font-medium tracking-wider uppercase">
+                    Best Value
+                  </span>
+                </div>
+                <h3 className="text-3xl font-bold bg-gradient-to-r from-amber-400 via-white to-amber-500 bg-clip-text text-transparent mb-3">
+                  {pkg.name.replace(' Package', '')}
+                </h3>
+                <p className="text-white/80 text-sm leading-relaxed">
+                  {pkg.tagline}
+                </p>
+              </div>
+
+              {/* Price */}
+              <div className="mb-6">
+                <div className="flex items-baseline gap-2 mb-2">
+                  <motion.span
+                    key={price}
+                    initial={{ scale: 1.2, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    className="text-6xl font-bold bg-gradient-to-br from-amber-400 to-amber-600 bg-clip-text text-transparent"
+                  >
+                    ${price.toLocaleString()}
+                  </motion.span>
+                  <span className="text-white/40">/mo</span>
+                </div>
+                {isAnnual && (
+                  <p className="text-amber-400 text-sm font-medium">
+                    ${(price * 12).toLocaleString()}/year (save ${savings * 12})
+                  </p>
+                )}
+                <div className="text-white/70 text-sm mt-2">{pkg.roi}</div>
+              </div>
+
+              {/* CTA */}
+              <Link
+                href={`/pricing/${pkg.slug}`}
+                className="relative block w-full text-center px-6 py-4 min-h-[48px] rounded-full bg-gradient-to-r from-amber-400 to-amber-600 text-black font-bold mb-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/50 overflow-hidden group/btn touch-manipulation gold-shimmer"
+              >
+                <span className="relative">Get Started Now</span>
+              </Link>
+
+              {/* ROI Toggle Button */}
+              <button
+                onClick={onToggleROI}
+                className="w-full text-center py-2 mb-6 text-sm text-amber-400 hover:text-amber-300 transition-colors font-medium"
+              >
+                {showROI ? '− Hide' : '+ Show'} Potential ROI
+              </button>
+
+              {/* Mini ROI Calculator */}
+              <AnimatePresence>
+                {showROI && <MiniROICalculator pkg={pkg} isAnnual={isAnnual} />}
+              </AnimatePresence>
+
+              {/* Features */}
+              <div className="space-y-3 flex-grow">
+                {pkg.features.map((feature, i) => (
+                  <motion.div
+                    key={i}
+                    className="flex items-start gap-3"
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.05 }}
+                  >
+                    <span className="w-5 h-5 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-black text-xs font-bold">✓</span>
+                    </span>
+                    <span className="text-white text-sm font-medium">{feature}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </>
+        )}
+
+        {/* STARTER TIER */}
+        {isStarter && (
+          <>
+            <div className="absolute -inset-px bg-gradient-to-b from-white/20 to-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" />
+
+            <div className="relative h-full bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 transition-all duration-500 group-hover:border-white/30 flex flex-col">
+              {isAnnual && (
+                <div className="absolute top-8 right-0">
+                  <div className="bg-white/10 text-white text-xs font-bold px-4 py-1 rounded-l-full">
+                    SAVE ${savings}/mo
+                  </div>
+                </div>
+              )}
+
+              <div className="mb-6">
+                <div className="text-white/40 text-xs font-medium tracking-wider uppercase mb-2">
+                  Getting Started
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  {pkg.name.replace(' Package', '')}
+                </h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  {pkg.tagline}
+                </p>
+              </div>
+
+              <div className="mb-6">
+                <div className="flex items-baseline gap-2 mb-2">
+                  <motion.span
+                    key={price}
+                    initial={{ scale: 1.2, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    className="text-5xl font-bold text-white"
+                  >
+                    ${price.toLocaleString()}
+                  </motion.span>
+                  <span className="text-white/40">/mo</span>
+                </div>
+                {isAnnual && (
+                  <p className="text-accent text-sm">
+                    ${(price * 12).toLocaleString()}/year (save ${savings * 12})
+                  </p>
+                )}
+                <div className="text-accent text-sm mt-2">{pkg.roi}</div>
+              </div>
+
+              <Link
+                href={`/pricing/${pkg.slug}`}
+                className="block w-full text-center px-6 py-4 min-h-[48px] rounded-full bg-white/10 border border-white/20 text-white font-medium mb-6 transition-all duration-300 hover:bg-white/20 hover:border-white/40 touch-manipulation"
+              >
+                View Details
+              </Link>
+
+              <button
+                onClick={onToggleROI}
+                className="w-full text-center py-2 mb-6 text-sm text-white/60 hover:text-white transition-colors"
+              >
+                {showROI ? '− Hide' : '+ Show'} Potential ROI
+              </button>
+
+              <AnimatePresence>
+                {showROI && <MiniROICalculator pkg={pkg} isAnnual={isAnnual} />}
+              </AnimatePresence>
+
+              <div className="space-y-3 flex-grow">
+                {pkg.features.map((feature, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <span className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-white/60 text-xs">✓</span>
+                    </span>
+                    <span className="text-white/70 text-sm">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </>
+        )}
+
+        {/* ENTERPRISE TIER */}
+        {isEnterprise && (
+          <>
+            <div className="absolute -inset-px bg-gradient-to-b from-primary/30 to-primary/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md" />
+
+            <div className="relative h-full bg-gradient-to-br from-[#0a0f1c] to-[#050810] rounded-2xl border border-primary/30 p-8 transition-all duration-500 group-hover:border-primary/60 flex flex-col">
+              <div className="absolute top-0 right-0 -mt-3 -mr-3">
+                <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shadow-xl">
+                  <span className="text-white text-2xl">👑</span>
+                </div>
+              </div>
+
+              {isAnnual && (
+                <div className="absolute top-8 right-0">
+                  <div className="bg-primary/20 text-primary text-xs font-bold px-4 py-1 rounded-l-full border border-primary/30">
+                    SAVE ${savings}/mo
+                  </div>
+                </div>
+              )}
+
+              <div className="mb-6">
+                <div className="text-primary text-xs font-medium tracking-wider uppercase mb-2">
+                  Premium
+                </div>
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  {pkg.name.replace(' Package', '')}
+                </h3>
+                <p className="text-white/60 text-sm leading-relaxed">
+                  {pkg.tagline}
+                </p>
+              </div>
+
+              <div className="mb-6">
+                <div className="flex items-baseline gap-2 mb-2">
+                  <motion.span
+                    key={price}
+                    initial={{ scale: 1.2, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
+                  >
+                    ${price.toLocaleString()}
+                  </motion.span>
+                  <span className="text-white/40">/mo</span>
+                </div>
+                {isAnnual && (
+                  <p className="text-primary text-sm">
+                    ${(price * 12).toLocaleString()}/year (save ${savings * 12})
+                  </p>
+                )}
+                <div className="text-primary text-sm font-medium mt-2">{pkg.roi}</div>
+              </div>
+
+              <Link
+                href={`/pricing/${pkg.slug}`}
+                className="block w-full text-center px-6 py-4 min-h-[48px] rounded-full bg-gradient-to-r from-primary to-accent text-white font-bold mb-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/50 touch-manipulation"
+              >
+                Schedule Consultation
+              </Link>
+
+              <button
+                onClick={onToggleROI}
+                className="w-full text-center py-2 mb-6 text-sm text-primary hover:text-accent transition-colors"
+              >
+                {showROI ? '− Hide' : '+ Show'} Potential ROI
+              </button>
+
+              <AnimatePresence>
+                {showROI && <MiniROICalculator pkg={pkg} isAnnual={isAnnual} />}
+              </AnimatePresence>
+
+              <div className="space-y-3 flex-grow">
+                {pkg.features.map((feature, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <span className="w-5 h-5 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <span className="text-white text-xs font-bold">✓</span>
+                    </span>
+                    <span className="text-white/80 text-sm">{feature}</span>
+                  </div>
+                ))}
+              </div>
+
+              {/* Premium border pattern */}
+              <div className="absolute inset-0 rounded-2xl pointer-events-none">
+                <div className="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-primary/50 rounded-tl-2xl" />
+                <div className="absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 border-primary/50 rounded-br-2xl" />
+              </div>
+            </div>
+          </>
+        )}
+      </motion.div>
+    </motion.div>
+  );
+}
+
+// ============================================================================
+// FAQ ACCORDION COMPONENT
+// ============================================================================
+
 function FAQItem({ question, answer, index }: { question: string; answer: string; index: number }) {
   const [isOpen, setIsOpen] = useState(false);
 

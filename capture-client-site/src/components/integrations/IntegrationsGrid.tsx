@@ -1,346 +1,84 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useMemo } from "react";
+import { motion, AnimatePresence } from "@/lib/motion";
 import { IntegrationCard } from "./IntegrationCard";
 import { IntegrationFilter } from "./IntegrationFilter";
+import { IntegrationSearch } from "./IntegrationSearch";
+import { FeaturedIntegrationsSpotlight } from "./FeaturedIntegrationsSpotlight";
+import {
+  integrations as centralizedIntegrations,
+  integrationCategories,
+  searchIntegrations,
+} from "@/data/integrations";
 
-// Complete integration data (40+ integrations)
-export const integrations = [
-  // Payments (4)
-  {
-    id: "stripe",
-    name: "Stripe",
-    logo: "https://logo.clearbit.com/stripe.com",
-    description: "Accept payments & manage subscriptions",
-    category: "Payments",
-    featured: true,
-  },
-  {
-    id: "paypal",
-    name: "PayPal",
-    logo: "https://logo.clearbit.com/paypal.com",
-    description: "Global payment processing",
-    category: "Payments",
-  },
-  {
-    id: "square",
-    name: "Square",
-    logo: "https://logo.clearbit.com/squareup.com",
-    description: "Point of sale & payments",
-    category: "Payments",
-  },
-  {
-    id: "authorize-net",
-    name: "Authorize.Net",
-    logo: "https://logo.clearbit.com/authorize.net",
-    description: "Secure payment gateway",
-    category: "Payments",
-  },
+// Category mapping from centralized data to display format
+const categoryDisplayMap: Record<string, string> = {
+  crm: "CRM Systems",
+  automation: "Automation & Workflows",
+  scheduling: "Scheduling & Calendar",
+  "phone-systems": "Phone Systems",
+  "home-services": "Home Services Software",
+  legal: "Legal Practice Management",
+  healthcare: "Healthcare & Medical",
+  "real-estate": "Real Estate",
+  marketing: "Marketing & Analytics",
+  payments: "Billing & Payments",
+  "all-in-one": "All-in-One Platforms",
+};
 
-  // Communication (4)
-  {
-    id: "twilio",
-    name: "Twilio",
-    logo: "https://logo.clearbit.com/twilio.com",
-    description: "SMS & voice communication platform",
-    category: "Communication",
-    featured: true,
-  },
-  {
-    id: "plivo",
-    name: "Plivo",
-    logo: "https://logo.clearbit.com/plivo.com",
-    description: "Global SMS & voice API",
-    category: "Communication",
-  },
-  {
-    id: "signalwire",
-    name: "SignalWire",
-    logo: "https://logo.clearbit.com/signalwire.com",
-    description: "Cloud communications platform",
-    category: "Communication",
-  },
-  {
-    id: "messagebird",
-    name: "MessageBird",
-    logo: "https://logo.clearbit.com/messagebird.com",
-    description: "Omnichannel messaging API",
-    category: "Communication",
-  },
+// Map centralized integrations to display format for IntegrationCard
+const integrations = centralizedIntegrations.map((int) => ({
+  id: int.slug,
+  name: int.name,
+  logoUrl: int.logoUrl,
+  description: int.shortDescription,
+  category: categoryDisplayMap[int.category] || int.category,
+  categoryId: int.category,
+  featured: int.popular || false,
+  keyFeatures: int.keyFeatures,
+}));
 
-  // Email Marketing (6)
-  {
-    id: "mailgun",
-    name: "Mailgun",
-    logo: "https://logo.clearbit.com/mailgun.com",
-    description: "Transactional email service",
-    category: "Email",
+// Derive categories from the data (sorted by integration count)
+const categoryCounts = integrations.reduce(
+  (acc, int) => {
+    acc[int.category] = (acc[int.category] || 0) + 1;
+    return acc;
   },
-  {
-    id: "sendgrid",
-    name: "SendGrid",
-    logo: "https://logo.clearbit.com/sendgrid.com",
-    description: "Email delivery platform",
-    category: "Email",
-  },
-  {
-    id: "mailchimp",
-    name: "Mailchimp",
-    logo: "https://logo.clearbit.com/mailchimp.com",
-    description: "Email marketing automation",
-    category: "Email",
-  },
-  {
-    id: "activecampaign",
-    name: "ActiveCampaign",
-    logo: "https://logo.clearbit.com/activecampaign.com",
-    description: "Marketing automation CRM",
-    category: "Email",
-  },
-  {
-    id: "convertkit",
-    name: "ConvertKit",
-    logo: "https://logo.clearbit.com/convertkit.com",
-    description: "Email marketing for creators",
-    category: "Email",
-  },
-  {
-    id: "constant-contact",
-    name: "Constant Contact",
-    logo: "https://logo.clearbit.com/constantcontact.com",
-    description: "Email & event marketing",
-    category: "Email",
-  },
-
-  // Calendar (3)
-  {
-    id: "google-calendar",
-    name: "Google Calendar",
-    logo: "https://logo.clearbit.com/google.com",
-    description: "Calendar sync & scheduling",
-    category: "Calendar",
-    featured: true,
-  },
-  {
-    id: "calendly",
-    name: "Calendly",
-    logo: "https://logo.clearbit.com/calendly.com",
-    description: "Automated appointment booking",
-    category: "Calendar",
-  },
-  {
-    id: "outlook",
-    name: "Outlook",
-    logo: "https://logo.clearbit.com/outlook.com",
-    description: "Microsoft calendar integration",
-    category: "Calendar",
-  },
-
-  // Video (1)
-  {
-    id: "zoom",
-    name: "Zoom",
-    logo: "https://logo.clearbit.com/zoom.us",
-    description: "Video meetings & webinars",
-    category: "Video",
-  },
-
-  // Social Media (4)
-  {
-    id: "facebook",
-    name: "Facebook",
-    logo: "https://logo.clearbit.com/facebook.com",
-    description: "Social media management",
-    category: "Social",
-    featured: true,
-  },
-  {
-    id: "instagram",
-    name: "Instagram",
-    logo: "https://logo.clearbit.com/instagram.com",
-    description: "Visual content platform",
-    category: "Social",
-  },
-  {
-    id: "tiktok",
-    name: "TikTok",
-    logo: "https://logo.clearbit.com/tiktok.com",
-    description: "Short-form video marketing",
-    category: "Social",
-  },
-  {
-    id: "linkedin",
-    name: "LinkedIn",
-    logo: "https://logo.clearbit.com/linkedin.com",
-    description: "Professional networking",
-    category: "Social",
-  },
-
-  // Advertising (2)
-  {
-    id: "google-ads",
-    name: "Google Ads",
-    logo: "https://logo.clearbit.com/ads.google.com",
-    description: "Search & display advertising",
-    category: "Ads",
-  },
-  {
-    id: "facebook-ads",
-    name: "Facebook Ads",
-    logo: "https://logo.clearbit.com/facebook.com",
-    description: "Social media advertising",
-    category: "Ads",
-  },
-
-  // Automation (2)
-  {
-    id: "zapier",
-    name: "Zapier",
-    logo: "https://logo.clearbit.com/zapier.com",
-    description: "Connect 5,000+ apps instantly",
-    category: "Automation",
-    featured: true,
-  },
-  {
-    id: "make",
-    name: "Make",
-    logo: "https://logo.clearbit.com/make.com",
-    description: "Visual automation builder",
-    category: "Automation",
-  },
-
-  // CRM (3)
-  {
-    id: "salesforce",
-    name: "Salesforce",
-    logo: "https://logo.clearbit.com/salesforce.com",
-    description: "Enterprise CRM platform",
-    category: "CRM",
-    featured: true,
-  },
-  {
-    id: "hubspot",
-    name: "HubSpot",
-    logo: "https://logo.clearbit.com/hubspot.com",
-    description: "Inbound marketing & sales CRM",
-    category: "CRM",
-  },
-  {
-    id: "pipedrive",
-    name: "Pipedrive",
-    logo: "https://logo.clearbit.com/pipedrive.com",
-    description: "Sales pipeline management",
-    category: "CRM",
-  },
-
-  // E-commerce (2)
-  {
-    id: "shopify",
-    name: "Shopify",
-    logo: "https://logo.clearbit.com/shopify.com",
-    description: "E-commerce platform",
-    category: "E-commerce",
-  },
-  {
-    id: "woocommerce",
-    name: "WooCommerce",
-    logo: "https://logo.clearbit.com/woocommerce.com",
-    description: "WordPress e-commerce plugin",
-    category: "E-commerce",
-  },
-
-  // Accounting (1)
-  {
-    id: "quickbooks",
-    name: "QuickBooks",
-    logo: "https://logo.clearbit.com/quickbooks.intuit.com",
-    description: "Accounting & invoicing software",
-    category: "Accounting",
-  },
-
-  // Forms (2)
-  {
-    id: "typeform",
-    name: "Typeform",
-    logo: "https://logo.clearbit.com/typeform.com",
-    description: "Interactive online forms",
-    category: "Forms",
-  },
-  {
-    id: "jotform",
-    name: "JotForm",
-    logo: "https://logo.clearbit.com/jotform.com",
-    description: "Form builder & data collection",
-    category: "Forms",
-  },
-
-  // Local SEO (2)
-  {
-    id: "google-business",
-    name: "Google Business Profile",
-    logo: "https://logo.clearbit.com/google.com",
-    description: "Local business listings",
-    category: "Local SEO",
-  },
-  {
-    id: "yext",
-    name: "Yext",
-    logo: "https://logo.clearbit.com/yext.com",
-    description: "Business listings management",
-    category: "Local SEO",
-  },
-
-  // Analytics (1)
-  {
-    id: "google-analytics",
-    name: "Google Analytics",
-    logo: "https://logo.clearbit.com/analytics.google.com",
-    description: "Website analytics platform",
-    category: "Analytics",
-  },
-
-  // Website (2)
-  {
-    id: "wordpress",
-    name: "WordPress",
-    logo: "https://logo.clearbit.com/wordpress.com",
-    description: "Content management system",
-    category: "Website",
-  },
-  {
-    id: "clickfunnels",
-    name: "ClickFunnels",
-    logo: "https://logo.clearbit.com/clickfunnels.com",
-    description: "Sales funnel builder",
-    category: "Website",
-  },
-];
+  {} as Record<string, number>
+);
 
 export const categories = [
   "All",
-  "Payments",
-  "Communication",
-  "Email",
-  "Calendar",
-  "CRM",
-  "Social",
-  "Ads",
-  "Automation",
-  "E-commerce",
-  "Analytics",
-  "Forms",
-  "Local SEO",
-  "Website",
+  ...Object.keys(categoryCounts).sort((a, b) => categoryCounts[b] - categoryCounts[a]),
 ];
 
 export function IntegrationsGrid() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
+  const [searchQuery, setSearchQuery] = useState<string>("");
 
-  const filteredIntegrations =
-    activeCategory === "All"
-      ? integrations
-      : integrations.filter((int) => int.category === activeCategory);
+  // Filter integrations based on category and search
+  const filteredIntegrations = useMemo(() => {
+    let result = integrations;
+
+    // Filter by category
+    if (activeCategory !== "All") {
+      result = result.filter((int) => int.category === activeCategory);
+    }
+
+    // Filter by search query
+    if (searchQuery.trim()) {
+      const query = searchQuery.toLowerCase();
+      result = result.filter(
+        (int) =>
+          int.name.toLowerCase().includes(query) ||
+          int.description.toLowerCase().includes(query) ||
+          int.keyFeatures?.some((feature) => feature.toLowerCase().includes(query))
+      );
+    }
+
+    return result;
+  }, [activeCategory, searchQuery]);
 
   const featuredIntegrations = integrations.filter((int) => int.featured);
 
@@ -352,78 +90,164 @@ export function IntegrationsGrid() {
         <div className="absolute inset-0 bg-mesh opacity-20" />
 
         {/* Floating glow orbs */}
-        <div className="absolute top-1/3 left-1/4 w-80 h-80 bg-gradient-radial from-accent/10 to-transparent rounded-full blur-3xl animate-float-slow" />
-        <div className="absolute bottom-1/3 right-1/4 w-72 h-72 bg-gradient-radial from-primary/10 to-transparent rounded-full blur-3xl animate-float-medium" />
+        <motion.div
+          className="absolute top-1/3 left-1/4 w-80 h-80 bg-gradient-radial from-accent/10 to-transparent rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.5, 0.3],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-1/3 right-1/4 w-72 h-72 bg-gradient-radial from-primary/10 to-transparent rounded-full blur-3xl"
+          animate={{
+            scale: [1, 1.3, 1],
+            opacity: [0.2, 0.4, 0.2],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
       </div>
 
       <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
-        {/* Featured Integrations Section */}
+        {/* Featured Integrations Spotlight */}
+        <FeaturedIntegrationsSpotlight integrations={featuredIntegrations} />
+
+        {/* Search Bar */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-16 sm:mb-20"
+          className="mb-8 sm:mb-12"
         >
-          <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-foreground mb-3">
-              Featured Integrations
-            </h2>
-            <p className="text-base sm:text-lg text-foreground-muted max-w-2xl mx-auto">
-              The most popular platforms used by our customers
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
-            {featuredIntegrations.map((integration, index) => (
-              <motion.div
-                key={integration.id}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <IntegrationCard integration={integration} featured />
-              </motion.div>
-            ))}
-          </div>
+          <IntegrationSearch
+            searchQuery={searchQuery}
+            onSearchChange={setSearchQuery}
+            resultsCount={filteredIntegrations.length}
+          />
         </motion.div>
 
-        {/* Category Filter */}
+        {/* Category Filter - Sticky on mobile */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="mb-12 sticky top-20 z-20 py-4 bg-background-dark/80 backdrop-blur-xl rounded-2xl border border-white/10"
         >
           <IntegrationFilter
             categories={categories}
             activeCategory={activeCategory}
-            onCategoryChange={setActiveCategory}
+            onCategoryChange={(cat) => {
+              setActiveCategory(cat);
+              setSearchQuery(""); // Clear search when changing category
+            }}
           />
+        </motion.div>
+
+        {/* Results Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
+          className="mb-8"
+        >
+          <div className="flex items-center justify-between flex-wrap gap-4">
+            <div>
+              <h2 className="text-2xl sm:text-3xl font-display font-bold text-foreground mb-2">
+                {activeCategory === "All" ? "All Integrations" : activeCategory}
+              </h2>
+              <p className="text-foreground-muted">
+                {filteredIntegrations.length} integration
+                {filteredIntegrations.length !== 1 ? "s" : ""} found
+                {searchQuery && (
+                  <span className="text-accent font-semibold">
+                    {" "}
+                    for "{searchQuery}"
+                  </span>
+                )}
+              </p>
+            </div>
+
+            {/* Quick stats */}
+            <div className="flex items-center gap-4">
+              <div className="glass-premium-mobile px-4 py-2 rounded-full">
+                <span className="text-xs text-foreground-muted">
+                  <span className="text-accent font-bold">{featuredIntegrations.length}</span>{" "}
+                  Featured
+                </span>
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         {/* All Integrations Grid */}
         <AnimatePresence mode="wait">
           <motion.div
-            key={activeCategory}
+            key={`${activeCategory}-${searchQuery}`}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.4 }}
-            className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6"
           >
-            {filteredIntegrations.map((integration, index) => (
+            {filteredIntegrations.length > 0 ? (
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6">
+                {filteredIntegrations.map((integration, index) => (
+                  <motion.div
+                    key={integration.id}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: index * 0.03 }}
+                  >
+                    <IntegrationCard integration={integration} />
+                  </motion.div>
+                ))}
+              </div>
+            ) : (
+              // No results state
               <motion.div
-                key={integration.id}
-                initial={{ opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: index * 0.03 }}
+                transition={{ duration: 0.4 }}
+                className="glass-premium p-12 rounded-3xl text-center max-w-2xl mx-auto"
               >
-                <IntegrationCard integration={integration} />
+                <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 mb-6">
+                  <span className="material-icons text-accent text-4xl">search_off</span>
+                </div>
+                <h3 className="text-2xl font-display font-bold text-foreground mb-3">
+                  No integrations found
+                </h3>
+                <p className="text-foreground-muted mb-6">
+                  We couldn't find any integrations matching{" "}
+                  <span className="text-accent font-semibold">"{searchQuery}"</span>
+                </p>
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <button
+                    onClick={() => setSearchQuery("")}
+                    className="px-6 py-3 rounded-xl font-semibold bg-accent/10 text-accent border border-accent/30 hover:bg-accent/20 transition-all duration-300"
+                  >
+                    Clear Search
+                  </button>
+                  <button
+                    onClick={() => {
+                      setActiveCategory("All");
+                      setSearchQuery("");
+                    }}
+                    className="px-6 py-3 rounded-xl font-semibold bg-white/5 text-foreground border border-white/10 hover:bg-white/10 transition-all duration-300"
+                  >
+                    View All Integrations
+                  </button>
+                </div>
               </motion.div>
-            ))}
+            )}
           </motion.div>
         </AnimatePresence>
       </div>

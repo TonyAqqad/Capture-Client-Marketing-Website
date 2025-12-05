@@ -189,7 +189,7 @@ export function getIOSOptimizedTransition(
  * Throttles function execution using requestAnimationFrame
  * Perfect for scroll/mouse handlers on iOS
  */
-export function rafThrottle<T extends (...args: any[]) => void>(
+export function rafThrottle<T extends (...args: never[]) => void>(
   callback: T
 ): (...args: Parameters<T>) => void {
   let rafId: number | null = null;
@@ -214,7 +214,7 @@ export function rafThrottle<T extends (...args: any[]) => void>(
 /**
  * Debounces function execution (useful for resize handlers)
  */
-export function debounce<T extends (...args: any[]) => void>(
+export function debounce<T extends (...args: never[]) => void>(
   callback: T,
   wait: number
 ): (...args: Parameters<T>) => void {

@@ -195,6 +195,10 @@ const config: Config = {
         "stagger-5": "staggerFade 0.6s ease-out 0.5s forwards",
         "blur-in": "blurIn 0.8s ease-out forwards",
         "counter-spin": "counterSpin 25s linear infinite",
+        // Aurora animations for location pages
+        "aurora-1": "aurora1 20s ease-in-out infinite",
+        "aurora-2": "aurora2 25s ease-in-out infinite",
+        "aurora-3": "aurora3 30s ease-in-out infinite",
       },
       keyframes: {
         float: {
@@ -356,6 +360,57 @@ const config: Config = {
         counterSpin: {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(-360deg)" }
+        },
+        // Aurora keyframes for flowing animated backgrounds
+        aurora1: {
+          "0%": {
+            transform: "translate(0, 0) scale(1)",
+            opacity: "0.4"
+          },
+          "33%": {
+            transform: "translate(30%, -20%) scale(1.1)",
+            opacity: "0.5"
+          },
+          "66%": {
+            transform: "translate(-20%, 30%) scale(0.9)",
+            opacity: "0.35"
+          },
+          "100%": {
+            transform: "translate(0, 0) scale(1)",
+            opacity: "0.4"
+          }
+        },
+        aurora2: {
+          "0%": {
+            transform: "translate(0, 0) scale(1) rotate(0deg)",
+            opacity: "0.4"
+          },
+          "33%": {
+            transform: "translate(-30%, 20%) scale(1.15) rotate(120deg)",
+            opacity: "0.5"
+          },
+          "66%": {
+            transform: "translate(20%, -25%) scale(0.95) rotate(240deg)",
+            opacity: "0.35"
+          },
+          "100%": {
+            transform: "translate(0, 0) scale(1) rotate(360deg)",
+            opacity: "0.4"
+          }
+        },
+        aurora3: {
+          "0%": {
+            transform: "translate(0, 0) scale(1)",
+            opacity: "0.3"
+          },
+          "50%": {
+            transform: "translate(25%, 25%) scale(1.2)",
+            opacity: "0.45"
+          },
+          "100%": {
+            transform: "translate(0, 0) scale(1)",
+            opacity: "0.3"
+          }
         },
       },
       spacing: {

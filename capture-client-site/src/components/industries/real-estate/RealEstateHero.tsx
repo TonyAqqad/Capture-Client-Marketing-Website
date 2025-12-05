@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "@/lib/motion";
 import { useRef, useEffect, useState } from "react";
 
 export function RealEstateHero() {

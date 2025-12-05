@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "@/lib/motion";
 import { mobileNavSections } from "./navData";
 import { navIcons } from "./navIcons";
 import { trackPhoneClick, trackCTAClick } from "@/lib/analytics";

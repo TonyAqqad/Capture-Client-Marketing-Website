@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "@/lib/motion";
 import { NavSection } from "./navData";
 import { navIcons } from "./navIcons";
 

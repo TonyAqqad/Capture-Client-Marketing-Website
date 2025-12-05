@@ -5,9 +5,9 @@ import { IntegrationsCTA } from "@/components/integrations/IntegrationsCTA";
 
 // SEO Metadata for Integrations Page
 export const metadata: Metadata = {
-  title: "50+ Seamless Integrations | Connect Your Tech Stack | Capture Client",
+  title: "69+ Seamless Integrations | Connect Your Tech Stack | Capture Client",
   description:
-    "Capture Client integrates with 50+ platforms including Stripe, Twilio, Zapier, Salesforce, Google Calendar, and more. Connect your entire tech stack in minutes with our native integrations or 5,000+ apps via Zapier.",
+    "Capture Client integrates with 69+ platforms including HubSpot, Salesforce, Twilio, Zapier, ServiceTitan, Calendly, and more. Connect your entire tech stack in minutes with our native integrations or 5,000+ apps via Zapier.",
   keywords: [
     "integrations",
     "API integrations",
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     "workflow automation",
   ],
   openGraph: {
-    title: "50+ Seamless Integrations | Connect Your Tech Stack",
+    title: "69+ Seamless Integrations | Connect Your Tech Stack",
     description:
-      "Connect Capture Client with your favorite platforms. 50+ native integrations plus 5,000+ apps via Zapier. Stripe, Twilio, Salesforce, and more.",
+      "Connect Capture Client with your favorite platforms. 69+ native integrations plus 5,000+ apps via Zapier. HubSpot, Salesforce, ServiceTitan, and more.",
     url: "https://captureclientai.net/integrations",
     siteName: "Capture Client",
     type: "website",
@@ -38,15 +38,15 @@ export const metadata: Metadata = {
         url: "https://captureclientai.net/og-integrations.jpg",
         width: 1200,
         height: 630,
-        alt: "Capture Client - 50+ Seamless Integrations",
+        alt: "Capture Client - 69+ Seamless Integrations",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "50+ Seamless Integrations | Capture Client",
+    title: "69+ Seamless Integrations | Capture Client",
     description:
-      "Connect Capture Client with your favorite platforms. 50+ native integrations plus 5,000+ apps via Zapier.",
+      "Connect Capture Client with your favorite platforms. 69+ native integrations plus 5,000+ apps via Zapier.",
     images: ["https://captureclientai.net/og-integrations.jpg"],
   },
   alternates: {
@@ -71,7 +71,7 @@ const integrationsSchema = {
   "@type": "WebPage",
   name: "Integrations",
   description:
-    "Capture Client integrates with 50+ platforms including Stripe, Twilio, Zapier, Salesforce, and more to connect your entire tech stack.",
+    "Capture Client integrates with 69+ platforms including HubSpot, Salesforce, Twilio, Zapier, ServiceTitan, and more to connect your entire tech stack.",
   url: "https://captureclientai.net/integrations",
   isPartOf: {
     "@type": "WebSite",

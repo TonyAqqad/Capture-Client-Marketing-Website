@@ -3,10 +3,10 @@
 import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useInView } from "@/hooks/useInView";
+import type { FAQItem } from "@/types/content";
 
-interface FAQ {
-  question: string;
-  answer: string;
+// Extended FAQ interface for PremiumFAQ component with icon and category
+interface FAQ extends FAQItem {
   icon: string;
   category: "technical" | "business" | "pricing";
 }

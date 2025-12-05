@@ -33,6 +33,11 @@ export function WebVitals() {
 
   // Use Next.js hook for additional tracking
   useReportWebVitals((metric) => {
+    // Extended metric type from Next.js
+    interface ExtendedMetric {
+      navigationType?: 'navigate' | 'reload' | 'back-forward' | 'prerender';
+    }
+
     // Convert Next.js metric to web-vitals Metric format
     const webVitalsMetric: Metric = {
       name: metric.name as Metric['name'],
@@ -40,7 +45,7 @@ export function WebVitals() {
       rating: metric.rating as Metric['rating'],
       delta: metric.delta,
       id: metric.id,
-      navigationType: (metric as any).navigationType || 'navigate',
+      navigationType: (metric as ExtendedMetric).navigationType || 'navigate',
       entries: [],
     };
 

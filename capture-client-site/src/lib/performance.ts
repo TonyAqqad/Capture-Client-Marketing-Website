@@ -173,13 +173,15 @@ export function sendToAnalytics(metric: Metric): void {
   }
 }
 
+// gtag type is declared globally in analytics.ts - no duplicate declaration needed
+
 /**
  * Send metric to Google Analytics 4
  */
 export function sendToGoogleAnalytics(metric: Metric): void {
   if (typeof window === 'undefined') return;
 
-  const gtag = (window as any).gtag;
+  const gtag = window.gtag;
   if (!gtag) return;
 
   const metricName = metric.name as MetricName;

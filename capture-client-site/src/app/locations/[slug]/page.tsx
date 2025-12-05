@@ -11,6 +11,10 @@ import ObjectionHandler from "@/components/cro/ObjectionHandler";
 import MobileCTABar from "@/components/cro/MobileCTABar";
 import PremiumLocationFAQ from "@/components/sections/PremiumLocationFAQ";
 import PremiumLocationTestimonials from "@/components/sections/PremiumLocationTestimonials";
+import LocalMarketStats from "@/components/locations/LocalMarketStats";
+import LocalIndustriesServed from "@/components/locations/LocalIndustriesServed";
+import ServiceAreaMap from "@/components/locations/ServiceAreaMap";
+import CompetitorComparison from "@/components/locations/CompetitorComparison";
 import { Benefit, FAQItem } from "@/types/content";
 import {
   SITE_CONFIG,
@@ -185,33 +189,43 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
     howToSchema,
   ].filter(Boolean) as Array<Record<string, unknown>>;
 
+  // Extract local phone number (default if not in data)
+  const localPhoneNumber = location.local_phone_number || "865-346-3339";
+
   return (
     <div className="min-h-screen bg-slate-950">
       {/* Inject JSON-LD structured data for local SEO */}
       <JsonLd schema={schemas} />
 
       {/* Mobile CTA Bar - Sticky bottom bar for mobile conversions */}
-      <MobileCTABar />
+      <MobileCTABar phoneNumber={localPhoneNumber} />
 
-      {/* Hero Section - Innovative Asymmetric Design */}
-      <div className="relative overflow-hidden bg-slate-950 pt-20 sm:pt-24 lg:pt-28">
-        {/* Layered Background Effects - More Visible */}
-        <div className="absolute inset-0">
-          {/* Base gradient with rich depth */}
+      {/* LOCALIZED AURORA HERO - Premium animated background */}
+      <section className="relative min-h-screen flex items-center overflow-hidden">
+        {/* Aurora Animated Background */}
+        <div className="absolute inset-0 bg-slate-950">
+          {/* Base gradient layer */}
           <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950" />
 
-          {/* Enhanced mesh gradient overlays - stronger presence */}
-          <div className="absolute inset-0 opacity-60">
-            <div className="absolute top-0 right-0 w-[900px] h-[900px] bg-cyan-500/20 rounded-full blur-[140px] animate-pulse" />
+          {/* Aurora effect - flowing animated gradients */}
+          <div className="absolute inset-0 opacity-40">
             <div
-              className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-blue-500/20 rounded-full blur-[120px] animate-pulse"
-              style={{ animationDelay: "1s" }}
+              className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-gradient-to-br from-cyan-400/30 via-blue-500/20 to-transparent rounded-full blur-[120px] animate-aurora-1"
+            />
+            <div
+              className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-gradient-to-bl from-blue-600/20 via-cyan-500/30 to-transparent rounded-full blur-[100px] animate-aurora-2"
+            />
+            <div
+              className="absolute bottom-0 left-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-cyan-300/20 via-blue-400/20 to-transparent rounded-full blur-[110px] animate-aurora-3"
             />
           </div>
 
-          {/* Hero image with INCREASED visibility */}
+          {/* Overlay grid pattern for depth */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.05)_1px,transparent_1px)] bg-[size:64px_64px] opacity-30" />
+
+          {/* Hero image overlay */}
           {location.hero?.hero_image && (
-            <div className="absolute inset-0 opacity-25">
+            <div className="absolute inset-0 opacity-15">
               <Image
                 src={location.hero.hero_image.url}
                 alt={location.hero.hero_image.alt}
@@ -223,184 +237,102 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             </div>
           )}
 
-          {/* Angular accent dividers (not generic curves) */}
-          <div className="absolute top-0 right-0 w-1/3 h-full">
-            <div className="absolute top-0 right-0 w-full h-64 bg-gradient-to-bl from-cyan-500/5 to-transparent transform skew-y-6" />
-          </div>
-
-          {/* Layered grid pattern - more visible */}
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.08)_1px,transparent_1px)] bg-[size:64px_64px]" />
+          {/* Bottom fade */}
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-slate-950" />
         </div>
 
-        {/* Asymmetric content layout - breaks conventional grid */}
-        <div className="container mx-auto relative z-10 px-4 sm:px-6 lg:px-16 py-16 sm:py-20 lg:py-32">
-          <div className="grid grid-cols-12 gap-6 lg:gap-8">
-            {/* Main content - offset left (7 cols instead of centered) */}
-            <div className="col-span-12 lg:col-span-7">
-              {/* Location Badge - Magnetic hover effect ready */}
-              <div className="inline-flex items-center gap-3 sm:gap-4 mb-8 sm:mb-10 group animate-in fade-in slide-in-from-bottom-4 duration-700">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-cyan-400 rounded-full blur-xl opacity-40 group-hover:opacity-70 transition-all duration-300" />
-                  <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-cyan-400 via-cyan-500 to-blue-600 flex items-center justify-center shadow-2xl shadow-cyan-500/30 group-hover:scale-110 transition-transform duration-300">
-                    <span className="material-icons text-white text-xl sm:text-2xl">location_on</span>
-                  </div>
-                </div>
-                <div>
-                  <div className="text-xs text-cyan-200 uppercase tracking-[0.2em] font-bold mb-1">
-                    Now Serving
-                  </div>
-                  <span className="text-cyan-300 font-black text-lg sm:text-2xl tracking-tight">
-                    {location.location.city}, {location.location.state_abbr}
-                  </span>
+        {/* Hero Content */}
+        <div className="container mx-auto relative z-10 px-4 sm:px-6 lg:px-16 py-24 sm:py-32 lg:py-40">
+          <div className="max-w-5xl mx-auto text-center">
+            {/* Location Badge */}
+            <div className="inline-flex items-center gap-3 mb-6 sm:mb-8 group animate-in fade-in slide-in-from-bottom-4 duration-700">
+              <div className="relative">
+                <div className="absolute inset-0 bg-cyan-400 rounded-full blur-xl opacity-40 group-hover:opacity-70 transition-all duration-300" />
+                <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-cyan-400 via-cyan-500 to-blue-600 flex items-center justify-center shadow-2xl shadow-cyan-500/30">
+                  <span className="material-icons text-white text-xl sm:text-2xl">location_on</span>
                 </div>
               </div>
-
-              {/* Headline - BOLD with extreme weight contrast */}
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black text-white mb-6 sm:mb-8 leading-[1.05] sm:leading-[0.95] tracking-[-0.02em] animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
-                {location.hero?.headline?.split(" ").map((word, index, words) => {
-                  // Make last 2 words stand out with vibrant gradient
-                  const isAccent = index >= words.length - 2;
-                  return (
-                    <span
-                      key={index}
-                      className={
-                        isAccent
-                          ? "text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-cyan-400 to-blue-400 font-black"
-                          : "text-white"
-                      }
-                    >
-                      {word}{" "}
-                    </span>
-                  );
-                }) || location.seo.h1_heading}
-              </h1>
-
-              {/* Subheadline - IMPROVED readability (no fade) */}
-              <p className="text-base sm:text-lg lg:text-xl xl:text-2xl text-slate-200 max-w-2xl mb-8 sm:mb-12 leading-relaxed font-normal animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
-                {location.hero?.subheadline}
-              </p>
-
-              {/* CRO: Bold Urgency Indicator - Distinctive design */}
-              <div className="mb-8 sm:mb-12 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-450">
-                <div className="relative group">
-                  {/* Layered frame effect (not generic rounded box) */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500 to-amber-500 rounded-2xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity" />
-                  <div className="hidden sm:block absolute inset-0 border-2 border-orange-400/30 rounded-2xl translate-x-2 translate-y-2" />
-
-                  <div className="relative bg-gradient-to-br from-orange-500/15 via-amber-500/15 to-orange-500/15 border-2 border-orange-400/50 rounded-2xl p-4 sm:p-6 shadow-2xl backdrop-blur-sm">
-                    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4">
-                      {/* Animated pulse indicator */}
-                      <div className="relative flex-shrink-0 hidden sm:block">
-                        <div className="w-5 h-5 bg-orange-400 rounded-full animate-pulse" />
-                        <div className="absolute inset-0 w-5 h-5 bg-orange-400 rounded-full animate-ping" />
-                      </div>
-
-                      {/* Main text - HIGH CONTRAST */}
-                      <div className="flex-1">
-                        <div className="flex items-start sm:items-center gap-2 mb-2 sm:mb-1.5">
-                          <div className="flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-orange-400/10 border border-orange-400/20 shrink-0">
-                            <span className="material-icons text-orange-300 text-lg sm:text-xl">schedule</span>
-                          </div>
-                          <p className="text-base sm:text-lg lg:text-xl font-black text-white">
-                            Only{" "}
-                            <span className="text-orange-300 text-xl sm:text-2xl font-black">
-                              5 Spots Left
-                            </span>{" "}
-                            <span className="block sm:inline">for December Onboarding</span>
-                          </p>
-                        </div>
-                        <p className="text-xs sm:text-sm text-orange-100 font-medium pl-12 sm:pl-0">
-                          High demand this month. Book now to secure your spot.
-                        </p>
-                      </div>
-
-                      {/* Warning icon */}
-                      <div className="hidden lg:flex items-center justify-center w-14 h-14 rounded-full bg-orange-400/10 border border-orange-400/20 shrink-0">
-                        <span className="material-icons text-orange-300 text-3xl animate-pulse">
-                          warning
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+              <div className="text-left">
+                <div className="text-xs text-cyan-200 uppercase tracking-[0.2em] font-bold">
+                  Voice AI Agency in
                 </div>
+                <span className="text-cyan-300 font-black text-lg sm:text-2xl tracking-tight">
+                  {location.location.city}, {location.location.state_abbr}
+                </span>
               </div>
+            </div>
 
-              {/* CTA Group - Bold, Confident Design */}
-              <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 mb-8 sm:mb-12 animate-in fade-in slide-in-from-bottom-12 duration-700 delay-600">
-                {location.hero?.cta_primary && (
-                  <a
-                    href={location.hero.cta_primary.action}
-                    className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-cyan-400 via-cyan-500 to-blue-500 text-slate-950 px-8 sm:px-10 lg:px-12 py-5 sm:py-6 rounded-2xl font-black text-base sm:text-lg transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-400/50 hover:scale-[1.03] overflow-hidden min-h-[56px]"
-                  >
-                    {/* Animated shine effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+            {/* Headline with local loss data */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 sm:mb-8 leading-[1.05] tracking-[-0.02em] animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
+              Stop Losing{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400">
+                ${location.estimated_missed_call_loss?.toLocaleString() || "47,000"}
+              </span>
+              /Year to Missed Calls in {location.location.city}
+            </h1>
 
-                    <span className="relative z-10">{location.hero.cta_primary.text}</span>
-                    <span className="material-icons text-xl sm:text-2xl relative z-10 group-hover:translate-x-2 transition-transform duration-300">
-                      arrow_forward
-                    </span>
-                  </a>
-                )}
+            {/* Subheadline */}
+            <p className="text-lg sm:text-xl lg:text-2xl text-slate-200 max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
+              {location.hero?.subheadline}
+            </p>
 
+            {/* Local Phone CTA - Prominent */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 sm:mb-12 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-450">
+              <a
+                href={`tel:${localPhoneNumber.replace(/\D/g, '')}`}
+                className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-cyan-400 via-cyan-500 to-blue-500 text-slate-950 px-10 sm:px-12 py-6 sm:py-7 rounded-2xl font-black text-lg sm:text-xl transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-400/50 hover:scale-[1.03] overflow-hidden w-full sm:w-auto"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
+                <span className="material-icons text-2xl relative z-10">phone</span>
+                <div className="relative z-10 text-left">
+                  <div className="text-sm font-bold opacity-90">Call Our {location.location.city} Team</div>
+                  <div className="text-xl sm:text-2xl font-black tracking-tight">{localPhoneNumber}</div>
+                </div>
+                <span className="material-icons text-2xl relative z-10 group-hover:translate-x-2 transition-transform duration-300">
+                  arrow_forward
+                </span>
+              </a>
+
+              {location.hero?.cta_primary && (
                 <a
-                  href="tel:865-346-3339"
-                  className="group inline-flex items-center justify-center gap-3 sm:gap-4 bg-white/10 backdrop-blur-md text-white border-2 border-white/30 px-6 sm:px-8 lg:px-10 py-5 sm:py-6 rounded-2xl font-bold text-base sm:text-lg transition-all duration-300 hover:bg-white/15 hover:border-cyan-400/70 hover:shadow-xl hover:shadow-cyan-400/20 min-h-[56px]"
+                  href={location.hero.cta_primary.action}
+                  className="group inline-flex items-center justify-center gap-3 bg-white/10 backdrop-blur-md text-white border-2 border-white/30 px-8 sm:px-10 py-6 sm:py-7 rounded-2xl font-bold text-base sm:text-lg transition-all duration-300 hover:bg-white/15 hover:border-cyan-400/70 hover:shadow-xl w-full sm:w-auto"
                 >
-                  <div className="flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/10 border border-white/20 shrink-0 group-hover:bg-cyan-400/20 group-hover:border-cyan-400/40 transition-all duration-300">
-                    <span className="material-icons text-xl sm:text-2xl text-white group-hover:scale-125 group-hover:rotate-12 transition-all duration-300">
-                      phone
-                    </span>
-                  </div>
-                  <div className="text-left">
-                    <div className="text-xs text-slate-300 font-medium uppercase tracking-wider">
-                      Call Now
-                    </div>
-                    <div className="text-base sm:text-lg font-black tracking-tight text-white">
-                      (865) 346-3339
-                    </div>
-                  </div>
-                </a>
-              </div>
-
-              {/* Trust Signals Row - HIGH CONTRAST */}
-              <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-4 sm:gap-6 animate-in fade-in slide-in-from-bottom-14 duration-700 delay-750">
-                {/* Free value offer - more prominent */}
-                <div className="inline-flex items-center gap-3 bg-green-500/15 border-2 border-green-400/50 px-5 sm:px-6 py-3 sm:py-3.5 rounded-full backdrop-blur-sm hover:bg-green-500/20 transition-all w-full sm:w-auto">
-                  <div className="flex items-center justify-center w-7 h-7 rounded-full bg-green-500/30 shrink-0">
-                    <span className="material-icons text-green-300 text-base">verified</span>
-                  </div>
-                  <span className="font-bold text-green-200 text-sm lg:text-base">
-                    Free Strategy Call - No Credit Card Required
+                  <span className="relative z-10">{location.hero.cta_primary.text}</span>
+                  <span className="material-icons text-xl group-hover:translate-x-2 transition-transform duration-300">
+                    calendar_today
                   </span>
-                </div>
-
-                {/* Additional trust indicator - improved contrast */}
-                <div className="inline-flex items-center gap-2.5 text-slate-200">
-                  <div className="flex items-center justify-center w-7 h-7 rounded-full bg-cyan-400/10 border border-cyan-400/20 shrink-0">
-                    <span className="material-icons text-cyan-300 text-base">bolt</span>
-                  </div>
-                  <span className="text-sm font-bold">15-Minute Response Time</span>
-                </div>
-              </div>
+                </a>
+              )}
             </div>
 
-            {/* Right column - Floating visual element (asymmetric) */}
-            <div className="hidden lg:block col-span-5 relative">
-              {/* Decorative geometric accent */}
-              <div className="absolute top-20 right-0 w-80 h-80 border-2 border-cyan-400/20 rounded-3xl transform rotate-12 animate-pulse" />
-              <div
-                className="absolute top-24 right-4 w-80 h-80 border-2 border-blue-400/20 rounded-3xl transform -rotate-6 animate-pulse"
-                style={{ animationDelay: "0.5s" }}
-              />
+            {/* Trust indicators */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 animate-in fade-in slide-in-from-bottom-12 duration-700 delay-600">
+              <div className="inline-flex items-center gap-2 bg-green-500/15 border border-green-400/50 px-5 py-3 rounded-full">
+                <span className="material-icons text-green-300 text-base">verified</span>
+                <span className="font-bold text-green-200 text-sm">Free Strategy Call</span>
+              </div>
+              <div className="inline-flex items-center gap-2 text-slate-200">
+                <span className="material-icons text-cyan-300 text-base">bolt</span>
+                <span className="text-sm font-bold">15-Min Response Time</span>
+              </div>
+              <div className="inline-flex items-center gap-2 text-slate-200">
+                <span className="material-icons text-cyan-300 text-base">support_agent</span>
+                <span className="text-sm font-bold">Local {location.location.city} Support</span>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Bottom gradient fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-slate-950" />
-      </div>
+      {/* LOCAL MARKET STATS - Animated counters with local data */}
+      <LocalMarketStats
+        city={location.location.city}
+        estimatedLoss={location.estimated_missed_call_loss || 47000}
+        missedCallPercentage={location.missed_call_percentage || 27}
+      />
 
-      {/* CRO: Social Proof Banner - Social proof principle */}
+      {/* CRO: Social Proof Banner */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-16 py-6 sm:py-8">
         <SocialProofBanner />
       </div>
@@ -416,17 +348,26 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         </div>
       )}
 
-      {/* Benefits Section - Premium Glass Cards */}
+      {/* LOCAL INDUSTRIES SERVED - Interactive tabs/cards */}
+      <LocalIndustriesServed
+        city={location.location.city}
+        popularIndustries={location.popular_industries || [
+          { name: "HVAC & Home Services", icon: "build", description: "24/7 call answering for emergency calls" },
+          { name: "Legal & Law Firms", icon: "gavel", description: "Pre-qualify leads before attorney consultation" },
+          { name: "Medical & Healthcare", icon: "local_hospital", description: "HIPAA-compliant appointment scheduling" },
+          { name: "Real Estate", icon: "home", description: "Qualify buyers and schedule property showings" }
+        ]}
+      />
+
+      {/* Benefits Section - Why Choose Us */}
       {location.benefits && location.benefits.length > 0 && (
         <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16 bg-slate-900/50 relative overflow-hidden">
-          {/* Background Effects */}
           <div className="absolute inset-0">
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-400/5 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
           </div>
 
           <div className="container mx-auto relative z-10">
-            {/* Section Header */}
             <div className="text-center mb-8 sm:mb-12 max-w-3xl mx-auto">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-400/10 border border-cyan-400/30 mb-6">
                 <span className="material-icons text-cyan-400 text-sm">workspace_premium</span>
@@ -446,35 +387,24 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               </p>
             </div>
 
-            {/* Benefits Grid with Staggered Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {location.benefits.slice(0, 6).map((benefit: Benefit, index: number) => (
                 <div
                   key={index}
                   className="group relative"
-                  style={{
-                    animationDelay: `${index * 80}ms`,
-                  }}
+                  style={{ animationDelay: `${index * 80}ms` }}
                 >
-                  {/* Glow effect on hover */}
                   <div className="absolute -inset-px bg-gradient-to-br from-cyan-400/0 via-cyan-400/40 to-cyan-400/0 rounded-2xl opacity-0 group-hover:opacity-100 blur-md transition-all duration-500" />
-
-                  {/* Card */}
-                  <div className="relative h-full p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.15)] group-hover:border-cyan-400/30 group-hover:shadow-[0_8px_32px_rgba(6,182,212,0.2)] transition-all duration-500 group-hover:translate-y-[-4px]">
-                    {/* Mesh gradient on hover */}
+                  <div className="relative h-full p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.15)] group-hover:border-cyan-400/30 transition-all duration-500 group-hover:translate-y-[-4px]">
                     <div className="absolute inset-0 bg-mesh-premium rounded-2xl opacity-0 group-hover:opacity-40 transition-opacity duration-500 pointer-events-none" />
-
-                    {/* Icon with Gradient Background */}
                     <div className="relative mb-5">
                       <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl blur-lg opacity-30 group-hover:opacity-60 transition-opacity" />
-                      <div className="relative flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-400/20 via-cyan-500/10 to-blue-500/20 border border-cyan-400/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                        <span className="material-icons text-cyan-300 text-2xl group-hover:scale-110 transition-transform">
+                      <div className="relative flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-400/20 via-cyan-500/10 to-blue-500/20 border border-cyan-400/30 group-hover:scale-110 transition-all duration-300">
+                        <span className="material-icons text-cyan-300 text-2xl">
                           {benefit.icon || "check_circle"}
                         </span>
                       </div>
                     </div>
-
-                    {/* Content */}
                     <div className="relative z-10">
                       <h3 className="text-lg sm:text-xl font-black text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-300 group-hover:to-cyan-400 transition-all">
                         {benefit.title}
@@ -483,8 +413,6 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                         {benefit.description}
                       </p>
                     </div>
-
-                    {/* Number badge */}
                     <div className="absolute top-4 right-4 flex items-center justify-center w-8 h-8 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-400 text-xs font-black">
                       {index + 1}
                     </div>
@@ -493,7 +421,6 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               ))}
             </div>
 
-            {/* CRO: Trust Signals - Authority principle */}
             <div className="max-w-5xl mx-auto mt-12 sm:mt-16">
               <TrustSignals />
             </div>
@@ -501,7 +428,10 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         </section>
       )}
 
-      {/* Local Use Cases - Social proof through case studies */}
+      {/* COMPETITOR COMPARISON - Why choose us over competitors */}
+      <CompetitorComparison city={location.location.city} />
+
+      {/* Local Use Cases - Success stories */}
       {location.local_use_cases && location.local_use_cases.length > 0 && (
         <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16">
           <div className="container mx-auto max-w-4xl">
@@ -544,66 +474,17 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         </section>
       )}
 
-      {/* Service Area - Premium Design */}
-      {location.service_area && (
-        <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16 bg-slate-900/50 relative overflow-hidden">
-          {/* Background Effects */}
-          <div className="absolute inset-0">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-400/5 rounded-full blur-3xl" />
-          </div>
+      {/* SERVICE AREA MAP - Visual coverage representation */}
+      <ServiceAreaMap
+        city={location.location.city}
+        state={location.location.state}
+        stateAbbr={location.location.state_abbr}
+        serviceAreaRadius={location.location.service_area_radius || "30 miles"}
+        nearbyAreas={location.location.nearby_areas || []}
+        areasList={location.service_area?.areas_list || []}
+      />
 
-          <div className="container mx-auto max-w-4xl relative z-10">
-            {/* Section Header */}
-            <div className="text-center mb-8 sm:mb-10">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-400/10 border border-cyan-400/30 mb-6">
-                <span className="material-icons text-cyan-400 text-sm">explore</span>
-                <span className="text-xs font-bold text-cyan-300 uppercase tracking-wider">
-                  Coverage Area
-                </span>
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">
-                {location.service_area.heading}
-              </h2>
-              <p className="text-slate-400 text-sm sm:text-base max-w-2xl mx-auto px-4">
-                {location.service_area.description}
-              </p>
-            </div>
-
-            {/* Areas Grid */}
-            {location.service_area.areas_list && (
-              <div className="flex flex-wrap justify-center gap-2.5 sm:gap-3">
-                {location.service_area.areas_list.map((area: string, index: number) => (
-                  <span
-                    key={index}
-                    className="group relative inline-flex items-center gap-2 px-4 sm:px-5 py-2.5 sm:py-3 bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-full text-cyan-300 text-xs sm:text-sm font-bold hover:border-cyan-400/40 hover:shadow-[0_4px_16px_rgba(6,182,212,0.15)] transition-all duration-300 touch-target"
-                  >
-                    <span className="material-icons text-xs">location_on</span>
-                    {area}
-                    {/* Glow on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/0 via-cyan-400/20 to-cyan-400/0 rounded-full opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-300" />
-                  </span>
-                ))}
-              </div>
-            )}
-
-            {/* Coverage Indicator */}
-            <div className="mt-8 sm:mt-10 text-center">
-              <div className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-br from-green-400/10 to-green-500/10 border border-green-400/30 rounded-xl">
-                <div className="flex items-center justify-center w-8 h-8 rounded-full bg-green-400/20">
-                  <span className="material-icons text-green-400" style={{ fontSize: '18px' }}>
-                    verified
-                  </span>
-                </div>
-                <span className="text-sm font-bold text-green-300">
-                  Full Service Coverage Available
-                </span>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* Premium Testimonials Section */}
+      {/* Premium Testimonials Section - Local testimonials with business details */}
       {location.local_testimonials && location.local_testimonials.length > 0 && (
         <PremiumLocationTestimonials
           testimonials={location.local_testimonials}
@@ -611,7 +492,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         />
       )}
 
-      {/* Premium FAQ Section - Collapsible */}
+      {/* Premium FAQ Section */}
       {location.faq && location.faq.length > 0 && (
         <PremiumLocationFAQ
           faqs={location.faq}
@@ -619,21 +500,21 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         />
       )}
 
-      {/* CRO: Objection Handler - Psychology-driven objection handling */}
+      {/* CRO: Objection Handler */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16">
         <div className="container mx-auto">
           <ObjectionHandler />
         </div>
       </section>
 
-      {/* CRO: Risk Reversal - Removes fear of commitment */}
+      {/* CRO: Risk Reversal */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16 bg-slate-900/30">
         <div className="container mx-auto max-w-4xl">
           <RiskReversal />
         </div>
       </section>
 
-      {/* CTA Section with Optimized Lead Form */}
+      {/* CTA Section with Local Context */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16">
         <div className="container mx-auto max-w-4xl">
           <div className="bg-slate-900/50 backdrop-blur-xl rounded-2xl p-6 sm:p-8 lg:p-12 border border-slate-800 shadow-2xl">
@@ -642,20 +523,16 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                 Ready to Grow Your {location.location.city} Business?
               </h2>
               <p className="text-base sm:text-lg text-slate-400 mb-2 px-4">
-                Get your free strategy call and see exactly how we can capture more leads for you.
+                Join {location.location.city} businesses using Voice AI to capture more leads 24/7.
               </p>
               <div className="inline-flex items-center gap-2 text-green-400 text-sm">
-                <div className="flex items-center justify-center w-6 h-6 rounded-full bg-green-400/10 border border-green-400/20 shrink-0">
-                  <span className="material-icons text-green-400" style={{ fontSize: '14px' }}>schedule</span>
-                </div>
-                <span>We'll call you in 15 minutes</span>
+                <span className="material-icons text-base">schedule</span>
+                <span>We'll call you back in 15 minutes</span>
               </div>
             </div>
 
-            {/* CRO: Optimized 2-step form - Commitment & consistency principle */}
             <OptimizedLeadForm source={location.page_id} />
 
-            {/* Trust indicators near form */}
             <div className="mt-6 sm:mt-8 grid grid-cols-3 gap-3 sm:gap-4 max-w-2xl mx-auto">
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-green-500/20 border border-green-500/40 mb-2">
@@ -673,7 +550,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                 <div className="inline-flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-green-500/20 border border-green-500/40 mb-2">
                   <span className="material-icons text-green-400 text-lg sm:text-xl">support_agent</span>
                 </div>
-                <p className="text-xs text-slate-400">Live Support</p>
+                <p className="text-xs text-slate-400">Local Support</p>
               </div>
             </div>
           </div>

@@ -7,7 +7,6 @@ import GrowthDashboard from "@/components/GrowthDashboard";
 import PricingCards from "@/components/PricingCards";
 import SocialProofBanner from "@/components/cro/SocialProofBanner";
 import RiskReversal from "@/components/cro/RiskReversal";
-import MobileCTABar from "@/components/cro/MobileCTABar";
 import ClientLogos from "@/components/cro/ClientLogos";
 import IntegrationPartners from "@/components/cro/IntegrationPartners";
 import AsSeenIn from "@/components/cro/AsSeenIn";
@@ -115,93 +114,7 @@ export const metadata: Metadata = {
   },
 };
 
-// JSON-LD Structured Data
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Capture Client",
-  url: "https://captureclientai.net",
-  logo: "https://captureclientai.net/logo-full.png",
-  description: "AI-powered lead generation and voice agents for small businesses",
-  telephone: "+1-865-346-3339",
-  email: "team@captureclientai.net",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Knoxville",
-    addressRegion: "TN",
-    addressCountry: "US",
-  },
-  sameAs: [
-    "https://twitter.com/captureclient",
-    "https://linkedin.com/company/captureclient",
-    "https://facebook.com/captureclient",
-  ],
-  areaServed: [
-    { "@type": "State", name: "Tennessee" },
-    { "@type": "State", name: "Georgia" },
-    { "@type": "State", name: "North Carolina" },
-    { "@type": "State", name: "Kentucky" },
-    { "@type": "State", name: "Virginia" },
-  ],
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Marketing Services",
-    itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "AI Voice Agents",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Lead Generation",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Google Ads Management",
-        },
-      },
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Facebook Ads Management",
-        },
-      },
-    ],
-  },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "4.9",
-    reviewCount: "127",
-    bestRating: "5",
-    worstRating: "1",
-  },
-};
-
-const websiteSchema = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  url: "https://captureclientai.net",
-  name: "Capture Client",
-  potentialAction: {
-    "@type": "SearchAction",
-    target: {
-      "@type": "EntryPoint",
-      urlTemplate: "https://captureclientai.net/search?q={search_term_string}",
-    },
-    "query-input": "required name=search_term_string",
-  },
-};
-
-// FAQ Schema for rich snippets
+// FAQ Schema for rich snippets (page-specific)
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -291,15 +204,8 @@ const localBusinessSchema = {
 export default function HomePage() {
   return (
     <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-background-dark">
-      {/* JSON-LD Structured Data */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
-      />
+      {/* JSON-LD Structured Data - Page-specific schemas only */}
+      {/* Organization and WebSite schemas are rendered globally in layout.tsx */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -829,9 +735,6 @@ export default function HomePage() {
         {/* Top divider */}
         <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent" />
       </section>
-
-      {/* Mobile CTA Bar - Always present on mobile */}
-      <MobileCTABar />
     </div>
   );
 }

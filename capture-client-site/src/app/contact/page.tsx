@@ -121,41 +121,20 @@ const contactPageSchema = {
   inLanguage: "en-US",
 };
 
-// Organization Schema reference
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "@id": "https://captureclientai.net/#organization",
-  name: "Capture Client",
-  url: "https://captureclientai.net",
-  logo: "https://captureclientai.net/logo-full.png",
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+1-865-346-3339",
-    contactType: "sales",
-    email: "team@captureclientai.net",
-    areaServed: "US",
-    availableLanguage: ["English"],
-    contactOption: ["TollFree"],
-    hoursAvailable: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      opens: "09:00",
-      closes: "18:00",
-    },
-  },
-};
+// Organization schema is rendered globally in layout.tsx - no need to duplicate
+// ContactPoint can be added as page-specific enhancement to Organization schema if needed
 
 export default function ContactPage() {
   return (
     <>
+      {/* JSON-LD Structured Data - Page-specific schemas only */}
+      {/* Organization schema is rendered globally in layout.tsx */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
             localBusinessSchema,
             contactPageSchema,
-            organizationSchema,
           ]),
         }}
       />

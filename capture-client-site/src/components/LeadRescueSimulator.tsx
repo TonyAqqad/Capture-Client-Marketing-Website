@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "@/lib/motion";
 import { useSimulationState } from "@/hooks/useSimulationState";
 import { useTypewriter } from "@/hooks/useTypewriter";
 import { presets, ctaButton, stageTransitions, EASING } from "@/lib/simulator-animations";

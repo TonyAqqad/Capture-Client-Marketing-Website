@@ -1,13 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 export interface Integration {
   name: string;
-  logo: string; // URL or path to logo
+  logo?: string;      // Backward compatibility
+  logoUrl?: string;   // Canonical field
   description?: string;
   category?: string;
 }
@@ -60,7 +61,7 @@ export function IntegrationShowcase({
 
             <div className="relative z-10">
               <Image
-                src={integration.logo}
+                src={integration.logoUrl || integration.logo || ""}
                 alt={integration.name}
                 width={120}
                 height={40}
@@ -140,7 +141,7 @@ function IntegrationLogo({ integration }: { integration: Integration }) {
       <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 shadow-glow transition-opacity duration-300 pointer-events-none" />
 
       <Image
-        src={integration.logo}
+        src={integration.logoUrl || integration.logo || ""}
         alt={integration.name}
         width={96}
         height={32}

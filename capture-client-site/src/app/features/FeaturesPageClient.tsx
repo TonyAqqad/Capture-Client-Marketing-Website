@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import AudioWaveform from "@/components/AudioWaveform";
 import CRMCard from "@/components/CRMCard";
 import GrowthDashboard from "@/components/GrowthDashboard";

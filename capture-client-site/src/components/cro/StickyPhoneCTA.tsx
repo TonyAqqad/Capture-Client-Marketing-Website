@@ -1,35 +1,40 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useEffect, useState, useRef } from "react";
+import { motion, AnimatePresence } from "@/lib/motion";
 
+/**
+ * StickyPhoneCTA Component
+ *
+ * Performance-optimized sticky phone CTA that:
+ * - Shows after scrolling 800px
+ * - Uses requestAnimationFrame for smooth scrolling
+ * - Uses refs to prevent recreating scroll listener
+ * - Passive event listeners for better scroll performance
+ */
 export default function StickyPhoneCTA() {
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const tickingRef = useRef(false);
 
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    let ticking = false;
-
     const handleScroll = () => {
-      if (!ticking) {
+      if (!tickingRef.current) {
         window.requestAnimationFrame(() => {
           // Show after scrolling 800px
-          if (window.scrollY > 800) {
-            setIsVisible(true);
-          } else {
-            setIsVisible(false);
-          }
-          ticking = false;
+          const scrollY = window.scrollY;
+          setIsVisible(scrollY > 800);
+          tickingRef.current = false;
         });
-        ticking = true;
+        tickingRef.current = true;
       }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, []); // Empty dependency array - listener is stable
 
   return (
     <AnimatePresence>

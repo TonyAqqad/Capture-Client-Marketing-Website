@@ -1,11 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import type { FAQItem } from "@/types/content";
+
+// Extended FAQ interface for ObjectionHandler component with icon field
+interface FAQ extends FAQItem {
+  icon: string;
+}
 
 export default function ObjectionHandler() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
-  const faqs = [
+  const faqs: FAQ[] = [
     {
       question: "Will the AI voice agent sound robotic?",
       answer:

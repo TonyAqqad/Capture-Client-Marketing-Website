@@ -64,6 +64,10 @@ export function PremiumHero() {
   const [leadsQualified, setLeadsQualified] = useState(1847);
   const tickerRef = useRef(0); // Deterministic counter for increments
 
+  // Money counter animation - $69K lost revenue
+  const [lostRevenue, setLostRevenue] = useState(0);
+  const targetRevenue = 69000;
+
   useEffect(() => {
     if (!isClient || disableAnimations) return;
 
@@ -85,42 +89,70 @@ export function PremiumHero() {
     return () => clearInterval(interval);
   }, [isClient, disableAnimations]);
 
+  // Money counter animation
+  useEffect(() => {
+    if (!isClient) return;
+
+    let current = 0;
+    const increment = targetRevenue / 50;
+    const timer = setInterval(() => {
+      current += increment;
+      if (current >= targetRevenue) {
+        setLostRevenue(targetRevenue);
+        clearInterval(timer);
+      } else {
+        setLostRevenue(Math.round(current));
+      }
+    }, 30);
+
+    return () => clearInterval(timer);
+  }, [isClient]);
+
   return (
     <section
       ref={containerRef}
       className="relative min-h-screen flex items-center overflow-hidden w-full"
       suppressHydrationWarning
     >
-      {/* $1M AURORA BACKGROUND - Multi-layer animated gradient */}
+      {/* $5M AURORA BACKGROUND - Multi-layer animated gradient */}
       <div className="absolute inset-0 bg-aurora-animated" />
 
-      {/* Animated gradient orbs */}
-      <motion.div
-        style={{ x: disableAnimations ? 0 : springX, y: disableAnimations ? 0 : springY }}
-        className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full opacity-40"
-        animate={disableAnimations ? {} : { scale: [1, 1.1, 1] }}
-        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <div className="w-full h-full bg-gradient-radial from-cyan-500/30 via-cyan-500/10 to-transparent blur-3xl" />
-      </motion.div>
+      {/* Animated gradient orbs - DESKTOP ONLY for 60fps mobile performance */}
+      {!disableAnimations && (
+        <>
+          <motion.div
+            style={{ x: springX, y: springY }}
+            className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full opacity-40 hidden md:block"
+            animate={{ scale: [1, 1.1, 1] }}
+            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <div className="w-full h-full bg-gradient-radial from-cyan-500/30 via-cyan-500/10 to-transparent blur-3xl" />
+          </motion.div>
 
-      <motion.div
-        style={{ x: disableAnimations ? 0 : springX, y: disableAnimations ? 0 : springY }}
-        className="absolute bottom-0 right-0 w-[900px] h-[900px] rounded-full opacity-30"
-        animate={disableAnimations ? {} : { scale: [1.1, 1, 1.1] }}
-        transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-      >
-        <div className="w-full h-full bg-gradient-radial from-[#D4AF37]/25 via-[#D4AF37]/10 to-transparent blur-3xl" />
-      </motion.div>
+          <motion.div
+            style={{ x: springX, y: springY }}
+            className="absolute bottom-0 right-0 w-[900px] h-[900px] rounded-full opacity-30 hidden md:block"
+            animate={{ scale: [1.1, 1, 1.1] }}
+            transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          >
+            <div className="w-full h-full bg-gradient-radial from-[#D4AF37]/25 via-[#D4AF37]/10 to-transparent blur-3xl" />
+          </motion.div>
 
-      {/* Gold accent orb */}
-      <motion.div
-        className="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full opacity-20"
-        animate={disableAnimations ? {} : { scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
-        transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-      >
-        <div className="w-full h-full bg-gradient-radial from-gold/40 via-gold/10 to-transparent blur-3xl" />
-      </motion.div>
+          <motion.div
+            className="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full opacity-20 hidden md:block"
+            animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
+            transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <div className="w-full h-full bg-gradient-radial from-gold/40 via-gold/10 to-transparent blur-3xl" />
+          </motion.div>
+        </>
+      )}
+
+      {/* Static mobile gradient - no animation, no blur for performance */}
+      <div className="md:hidden absolute inset-0 opacity-30">
+        <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-gradient-radial from-cyan-500/20 via-cyan-500/5 to-transparent rounded-full" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-gradient-radial from-gold/20 via-gold/5 to-transparent rounded-full" />
+      </div>
 
       {/* Noise texture */}
       <div className="absolute inset-0 opacity-[0.015] mix-blend-overlay bg-noise pointer-events-none" />
@@ -150,20 +182,20 @@ export function PremiumHero() {
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
             {/* LEFT: Text Content (7 columns) */}
             <div className="lg:col-span-7 text-center lg:text-left">
-              {/* Live badge */}
+              {/* Premium Gold Badge - $5M Quality */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.2 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
                 className="inline-flex items-center gap-3 mb-6 sm:mb-8"
               >
-                <div className="flex items-center gap-3 px-4 py-2.5 rounded-full bg-gradient-to-r from-cyan-500/10 via-[#D4AF37]/10 to-gold/10 border border-white/10 backdrop-blur-xl">
-                  <span className="relative flex h-3 w-3">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
-                    <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-400 shadow-[0_0_10px_rgba(0,201,255,0.8)]" />
+                <div className="flex items-center gap-3 px-4 py-2.5 rounded-full bg-gradient-to-r from-gold/20 via-gold/10 to-transparent border border-gold/30 backdrop-blur-xl">
+                  <span className="relative flex h-2.5 w-2.5">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-gold opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-gold shadow-[0_0_10px_rgba(212,175,55,0.8)]" />
                   </span>
-                  <span className="text-sm font-semibold text-white/90 tracking-wide">
-                    {callsAnswered.toLocaleString()} Calls Answered Today
+                  <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-gold">
+                    500+ Businesses Trust Our AI
                   </span>
                 </div>
               </motion.div>
@@ -207,27 +239,43 @@ export function PremiumHero() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="text-lg text-white/50 max-w-xl mb-10 lg:mb-12"
+                className="text-lg text-white/50 max-w-xl mb-8"
               >
                 Plus Google & Facebook Ads + CRM. Everything you need to{" "}
                 <span className="text-cyan-400">capture 10x more clients</span>.
               </motion.p>
 
+              {/* $5M MONEY COUNTER - Premium Impact */}
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                className="glass-premium p-6 sm:p-8 rounded-2xl mb-8 max-w-md mx-auto lg:mx-0"
+              >
+                <div className="text-sm text-white/60 mb-2 font-medium">Small businesses are losing approximately</div>
+                <motion.div
+                  className="text-4xl sm:text-5xl font-bold text-gradient-gold-cyan mb-2"
+                  animate={{ scale: [1, 1.02, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                >
+                  ${lostRevenue.toLocaleString()}
+                </motion.div>
+                <div className="text-sm text-white/60">per year to missed calls</div>
+              </motion.div>
+
               {/* CTA Buttons */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
-                className="flex flex-col sm:flex-row items-center gap-4 mb-10 lg:mb-12"
+                transition={{ duration: 0.6, delay: 0.9 }}
+                className="flex flex-col sm:flex-row items-center lg:items-start gap-4 mb-10 lg:mb-12"
               >
-                {/* Primary CTA - Gold gradient */}
+                {/* Primary CTA - Premium Gold */}
                 <Link
                   href="/contact"
-                  className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-5 sm:py-6 rounded-2xl font-bold text-lg overflow-hidden transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(212,175,55,0.4)]"
+                  className="btn-gold w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-5 sm:py-6 text-lg shadow-glow-gold-lg hover:scale-105 transition-all"
                 >
-                  <div className="absolute inset-0 bg-gradient-to-r from-gold via-gold-light to-gold" />
-                  <div className="absolute inset-0 bg-gradient-to-r from-gold-light via-gold to-gold-light opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                  <span className="relative z-10 text-black flex items-center gap-2">
+                  <span className="flex items-center gap-2">
                     Book Your Free Demo
                     <motion.span
                       className="material-icons text-2xl"
@@ -239,10 +287,10 @@ export function PremiumHero() {
                   </span>
                 </Link>
 
-                {/* Secondary CTA - Glass */}
+                {/* Secondary CTA - Premium Glass */}
                 <Link
                   href="tel:865-346-3339"
-                  className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-5 sm:py-6 rounded-2xl font-semibold text-lg border-2 border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:shadow-[0_0_40px_rgba(0,201,255,0.2)]"
+                  className="btn-ghost w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-5 sm:py-6 text-lg hover:shadow-[0_0_40px_rgba(0,201,255,0.2)]"
                 >
                   <span className="material-icons text-cyan-400 text-2xl">phone</span>
                   <span className="text-white">(865) 346-3339</span>

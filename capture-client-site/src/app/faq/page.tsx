@@ -13,16 +13,16 @@ const faqData = [
     category: "General",
     questions: [
       {
-        q: "What is Capture Client?",
-        a: "Capture Client is an all-in-one growth platform that combines AI Voice Agents, Google & Facebook Ads management, built-in CRM, and real-time analytics to help small businesses automate lead generation and capture more clients.",
+        question: "What is Capture Client?",
+        answer: "Capture Client is an all-in-one growth platform that combines AI Voice Agents, Google & Facebook Ads management, built-in CRM, and real-time analytics to help small businesses automate lead generation and capture more clients.",
       },
       {
-        q: "Who is Capture Client for?",
-        a: "Capture Client is designed for small to medium-sized service businesses including HVAC, plumbing, dental practices, law firms, real estate agencies, and any business that needs to generate and manage leads effectively.",
+        question: "Who is Capture Client for?",
+        answer: "Capture Client is designed for small to medium-sized service businesses including HVAC, plumbing, dental practices, law firms, real estate agencies, and any business that needs to generate and manage leads effectively.",
       },
       {
-        q: "Do I need technical skills to use Capture Client?",
-        a: "No technical skills required! Our platform is designed to be user-friendly and intuitive. Plus, our team provides full onboarding and ongoing support to ensure your success.",
+        question: "Do I need technical skills to use Capture Client?",
+        answer: "No technical skills required! Our platform is designed to be user-friendly and intuitive. Plus, our team provides full onboarding and ongoing support to ensure your success.",
       },
     ],
   },
@@ -30,20 +30,20 @@ const faqData = [
     category: "AI Voice Agents",
     questions: [
       {
-        q: "How do AI Voice Agents work?",
-        a: "Our AI Voice Agents use advanced natural language processing to answer calls, understand customer questions, qualify leads, book appointments, and handle routine inquiries—all while sounding natural and professional.",
+        question: "How do AI Voice Agents work?",
+        answer: "Our AI Voice Agents use advanced natural language processing to answer calls, understand customer questions, qualify leads, book appointments, and handle routine inquiries—all while sounding natural and professional.",
       },
       {
-        q: "Can the AI Voice Agent handle multiple calls at once?",
-        a: "Yes! Unlike human receptionists, AI Voice Agents can handle unlimited simultaneous calls, ensuring you never miss an opportunity even during peak hours.",
+        question: "Can the AI Voice Agent handle multiple calls at once?",
+        answer: "Yes! Unlike human receptionists, AI Voice Agents can handle unlimited simultaneous calls, ensuring you never miss an opportunity even during peak hours.",
       },
       {
-        q: "What languages do AI Voice Agents support?",
-        a: "Currently, our AI Voice Agents support English with natural-sounding voices. We're actively working on adding support for Spanish and other languages.",
+        question: "What languages do AI Voice Agents support?",
+        answer: "Currently, our AI Voice Agents support English with natural-sounding voices. We're actively working on adding support for Spanish and other languages.",
       },
       {
-        q: "What happens if the AI can't answer a question?",
-        a: "If the AI encounters a question it can't answer, it will politely collect the caller's information and route the inquiry to your team for follow-up. All conversations are logged in your CRM.",
+        question: "What happens if the AI can't answer a question?",
+        answer: "If the AI encounters a question it can't answer, it will politely collect the caller's information and route the inquiry to your team for follow-up. All conversations are logged in your CRM.",
       },
     ],
   },
@@ -51,20 +51,20 @@ const faqData = [
     category: "Lead Generation & Ads",
     questions: [
       {
-        q: "Do you manage both Google Ads and Facebook Ads?",
-        a: "Yes! We provide professional management for both Google Ads and Facebook/Instagram ad campaigns. We'll create, optimize, and monitor your campaigns to maximize ROI.",
+        question: "Do you manage both Google Ads and Facebook Ads?",
+        answer: "Yes! We provide professional management for both Google Ads and Facebook/Instagram ad campaigns. We'll create, optimize, and monitor your campaigns to maximize ROI.",
       },
       {
-        q: "How much should I budget for ads?",
-        a: "Ad budgets vary based on your industry, location, and goals. We typically recommend starting with at least $1,000-$2,000 per month for ad spend, plus our management fee. We'll work with you to determine the right budget for your business.",
+        question: "How much should I budget for ads?",
+        answer: "Ad budgets vary based on your industry, location, and goals. We typically recommend starting with at least $1,000-$2,000 per month for ad spend, plus our management fee. We'll work with you to determine the right budget for your business.",
       },
       {
-        q: "How long does it take to see results?",
-        a: "Most clients start seeing leads within the first week of launching campaigns. However, optimal performance typically develops over 30-60 days as we gather data and continuously optimize your campaigns.",
+        question: "How long does it take to see results?",
+        answer: "Most clients start seeing leads within the first week of launching campaigns. However, optimal performance typically develops over 30-60 days as we gather data and continuously optimize your campaigns.",
       },
       {
-        q: "Do you provide landing pages for ad campaigns?",
-        a: "Yes! We create optimized landing pages with lead capture forms that integrate directly with your CRM and AI Voice Agents.",
+        question: "Do you provide landing pages for ad campaigns?",
+        answer: "Yes! We create optimized landing pages with lead capture forms that integrate directly with your CRM and AI Voice Agents.",
       },
     ],
   },
@@ -72,20 +72,20 @@ const faqData = [
     category: "CRM & Platform",
     questions: [
       {
-        q: "Can I import my existing contacts?",
-        a: "Absolutely! We make it easy to import your existing contacts from spreadsheets, other CRM systems, or email platforms.",
+        question: "Can I import my existing contacts?",
+        answer: "Absolutely! We make it easy to import your existing contacts from spreadsheets, other CRM systems, or email platforms.",
       },
       {
-        q: "Does the CRM work on mobile?",
-        a: "Yes! Our platform is fully responsive and works seamlessly on desktop, tablet, and mobile devices. We also have mobile apps in development.",
+        question: "Does the CRM work on mobile?",
+        answer: "Yes! Our platform is fully responsive and works seamlessly on desktop, tablet, and mobile devices. We also have mobile apps in development.",
       },
       {
-        q: "Can my team collaborate in the platform?",
-        a: "Yes! You can add team members with different permission levels, assign leads, share notes, and collaborate on deals all within the platform.",
+        question: "Can my team collaborate in the platform?",
+        answer: "Yes! You can add team members with different permission levels, assign leads, share notes, and collaborate on deals all within the platform.",
       },
       {
-        q: "What integrations do you support?",
-        a: "We integrate with Google Calendar, popular email platforms, Zapier (for connecting to 5,000+ apps), and major payment processors. We're constantly adding new integrations based on customer feedback.",
+        question: "What integrations do you support?",
+        answer: "We integrate with Google Calendar, popular email platforms, Zapier (for connecting to 5,000+ apps), and major payment processors. We're constantly adding new integrations based on customer feedback.",
       },
     ],
   },
@@ -93,20 +93,20 @@ const faqData = [
     category: "Pricing & Plans",
     questions: [
       {
-        q: "What plans do you offer?",
-        a: "We offer three main plans: Starter ($999/month), Growth ($1,997/month), and Enterprise (custom pricing). Each plan includes different levels of features, support, and capacity. Visit our pricing page for full details.",
+        question: "What plans do you offer?",
+        answer: "We offer three main plans: Starter ($999/month), Growth ($1,997/month), and Enterprise (custom pricing). Each plan includes different levels of features, support, and capacity. Visit our pricing page for full details.",
       },
       {
-        q: "Is there a contract or can I cancel anytime?",
-        a: "We offer both month-to-month and annual contracts. Annual contracts receive a discount. You can cancel your month-to-month plan with 30 days notice.",
+        question: "Is there a contract or can I cancel anytime?",
+        answer: "We offer both month-to-month and annual contracts. Annual contracts receive a discount. You can cancel your month-to-month plan with 30 days notice.",
       },
       {
-        q: "Are there setup fees?",
-        a: "Setup fees vary based on your plan and customization needs. Our Starter plan has a minimal setup fee, while Growth and Enterprise plans may have higher setup costs depending on the complexity of integration and customization required.",
+        question: "Are there setup fees?",
+        answer: "Setup fees vary based on your plan and customization needs. Our Starter plan has a minimal setup fee, while Growth and Enterprise plans may have higher setup costs depending on the complexity of integration and customization required.",
       },
       {
-        q: "What's included in the price?",
-        a: "All plans include the core platform (AI Voice Agents, CRM, Dashboard, Lead Forms), onboarding, training, and ongoing support. Ad management and ad spend are separate costs based on your budget and goals.",
+        question: "What's included in the price?",
+        answer: "All plans include the core platform (AI Voice Agents, CRM, Dashboard, Lead Forms), onboarding, training, and ongoing support. Ad management and ad spend are separate costs based on your budget and goals.",
       },
     ],
   },
@@ -114,16 +114,16 @@ const faqData = [
     category: "Support & Onboarding",
     questions: [
       {
-        q: "How long does onboarding take?",
-        a: "Most clients are fully onboarded within 1-2 weeks. This includes platform setup, AI Voice Agent training, ad campaign creation, and team training.",
+        question: "How long does onboarding take?",
+        answer: "Most clients are fully onboarded within 1-2 weeks. This includes platform setup, AI Voice Agent training, ad campaign creation, and team training.",
       },
       {
-        q: "What kind of support do you provide?",
-        a: "We provide email support for all clients, priority support for Growth plan clients, and dedicated account management for Enterprise clients. We also offer a comprehensive knowledge base and video tutorials.",
+        question: "What kind of support do you provide?",
+        answer: "We provide email support for all clients, priority support for Growth plan clients, and dedicated account management for Enterprise clients. We also offer a comprehensive knowledge base and video tutorials.",
       },
       {
-        q: "Do you provide training?",
-        a: "Yes! All plans include comprehensive onboarding training. We also offer ongoing training sessions and resources to help your team get the most out of the platform.",
+        question: "Do you provide training?",
+        answer: "Yes! All plans include comprehensive onboarding training. We also offer ongoing training sessions and resources to help your team get the most out of the platform.",
       },
     ],
   },
@@ -141,10 +141,10 @@ const faqPageSchema = {
   mainEntity: faqData.flatMap((section) =>
     section.questions.map((faq) => ({
       "@type": "Question",
-      name: faq.q,
+      name: faq.question,
       acceptedAnswer: {
         "@type": "Answer",
-        text: faq.a,
+        text: faq.answer,
       },
     }))
   ),
@@ -234,11 +234,11 @@ export default function FAQPage() {
                       className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 sm:p-5 md:p-6 bg-white dark:bg-gray-900/50 hover:border-primary/50 transition-all group"
                     >
                       <summary className="font-bold text-base sm:text-lg text-gray-900 dark:text-white cursor-pointer flex items-center justify-between group-hover:text-primary transition-colors min-h-[48px] list-none">
-                        <span className="pr-4 faq-question">{faq.q}</span>
+                        <span className="pr-4 faq-question">{faq.question}</span>
                         <span className="material-icons text-accent ml-2 sm:ml-4 flex-shrink-0 text-2xl sm:text-3xl">expand_more</span>
                       </summary>
                       <p className="mt-3 sm:mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed faq-answer" style={{lineHeight: '1.7'}}>
-                        {faq.a}
+                        {faq.answer}
                       </p>
                     </details>
                   ))}

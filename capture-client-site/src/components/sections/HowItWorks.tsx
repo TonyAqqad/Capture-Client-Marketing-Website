@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 
 interface Step {
@@ -371,9 +371,9 @@ function StepCardMobile({ step, index, isInView, isMobile }: StepCardProps) {
         duration: 0.6,
         delay: index * 0.15,
       }}
-      className="relative pl-20"
+      className="relative pl-24"
     >
-      {/* Timeline connecting dot with pulse */}
+      {/* Timeline connecting dot with pulse - FIXED: Reduced size, better spacing */}
       <motion.div
         initial={{ scale: 0 }}
         animate={isInView ? { scale: 1 } : { scale: 0 }}
@@ -386,30 +386,30 @@ function StepCardMobile({ step, index, isInView, isMobile }: StepCardProps) {
         className="absolute left-0 top-0 z-10"
       >
         <div className="relative">
-          {/* Animated pulse */}
+          {/* Animated pulse - FIXED: Reduced max scale from 1.4 to 1.2 */}
           <motion.div
             animate={{
-              scale: [1, 1.4, 1],
-              opacity: [0.6, 0, 0.6]
+              scale: [1, 1.2, 1],
+              opacity: [0.5, 0, 0.5]
             }}
             transition={{
               duration: 2,
               repeat: Infinity,
               delay: index * 0.3
             }}
-            className={`absolute inset-0 w-16 h-16 rounded-full bg-gradient-to-br ${auroraGradient}`}
+            className={`absolute inset-0 w-14 h-14 rounded-full bg-gradient-to-br ${auroraGradient}`}
           />
-          {/* Number circle */}
-          <div className={`relative w-16 h-16 rounded-full bg-gradient-to-br ${auroraGradient} border-4 border-background-dark flex items-center justify-center shadow-glow`}>
-            <span className="text-2xl font-black text-white" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+          {/* Number circle - FIXED: Reduced from w-16 h-16 to w-14 h-14 */}
+          <div className={`relative w-14 h-14 rounded-full bg-gradient-to-br ${auroraGradient} border-[3px] border-background-dark flex items-center justify-center shadow-glow`}>
+            <span className="text-xl font-black text-white" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
               {step.number}
             </span>
           </div>
         </div>
       </motion.div>
 
-      {/* Card */}
-      <div className="glass-3d p-6 sm:p-8 rounded-3xl relative overflow-hidden">
+      {/* Card - FIXED: Increased z-index to ensure content stays above animations */}
+      <div className="glass-3d p-6 sm:p-8 rounded-3xl relative overflow-hidden z-20">
         {/* Icon with aurora glow */}
         <div className="relative w-16 h-16 mb-5">
           <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${auroraGradient} opacity-20 blur-lg`} />

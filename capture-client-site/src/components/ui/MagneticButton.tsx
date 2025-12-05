@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useRef, useState, useEffect, MouseEvent, ReactNode } from "react";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "@/lib/motion";
 import { clsx } from "clsx";
 
 interface MagneticButtonProps {

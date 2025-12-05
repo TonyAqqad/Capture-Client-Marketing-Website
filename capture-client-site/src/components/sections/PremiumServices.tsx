@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState, useEffect } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 
 interface Service {

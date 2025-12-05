@@ -3,26 +3,20 @@
 import { useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "@/hooks/useInView";
+import { Testimonial } from "@/types/content";
 
-interface Testimonial {
+interface PremiumTestimonialExtended extends Testimonial {
   id: number;
-  name: string;
-  role: string;
-  company: string;
-  content: string;
-  rating: number;
-  result: string;
-  image: string;
   featured?: boolean;
 }
 
-const testimonials: Testimonial[] = [
+const testimonials: PremiumTestimonialExtended[] = [
   {
     id: 1,
     name: "Sarah Martinez",
     role: "Owner",
     company: "Elite HVAC Services",
-    content:
+    quote:
       "Capture Client transformed our lead generation. We went from missing 60% of calls to capturing every single opportunity. The AI handles everything while we focus on the work. In 3 months, we've added $180K in revenue.",
     rating: 5,
     result: "+247% in leads captured",
@@ -34,7 +28,7 @@ const testimonials: Testimonial[] = [
     name: "Mike Thompson",
     role: "Founder",
     company: "Thompson Plumbing Co.",
-    content:
+    quote:
       "The AI voice agent is incredible—it sounds more professional than our old receptionist! It qualifies leads, books appointments, and even handles customer service. We're now responding to leads in under 2 minutes instead of 2 hours.",
     rating: 5,
     result: "10x faster response time",
@@ -45,7 +39,7 @@ const testimonials: Testimonial[] = [
     name: "Jennifer Lee",
     role: "Practice Manager",
     company: "Bright Smile Dental",
-    content:
+    quote:
       "Finally, everything in one place. No more juggling between our CRM, ad platforms, and appointment software. The dashboard shows exactly what's working. Our marketing ROI has never been better—up 340% in 90 days.",
     rating: 5,
     result: "+340% marketing ROI",
@@ -56,7 +50,7 @@ const testimonials: Testimonial[] = [
     name: "Carlos Rodriguez",
     role: "CEO",
     company: "Rodriguez Law Firm",
-    content:
+    quote:
       "We were skeptical about AI handling client calls, but the results speak for themselves. The voice agent captures leads 24/7, even when our office is closed. We've signed 15 new clients from after-hours calls alone this quarter.",
     rating: 5,
     result: "15 new clients from after-hours",
@@ -181,7 +175,7 @@ export function PremiumTestimonials() {
 }
 
 interface TestimonialCardProps {
-  testimonial: Testimonial;
+  testimonial: PremiumTestimonialExtended;
   isInView: boolean;
   index: number;
 }
@@ -281,7 +275,7 @@ function TestimonialCard({ testimonial, isInView, index }: TestimonialCardProps)
             letterSpacing: "0.02em",
           }}
         >
-          {testimonial.content}
+          {testimonial.quote}
         </motion.p>
 
         {/* Author info with avatar ring animation */}

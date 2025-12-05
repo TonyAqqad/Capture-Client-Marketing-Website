@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "@/lib/motion";
 
 /**
  * MobileCTABar Component - $3M Website Polish
@@ -13,18 +13,23 @@ import { motion, AnimatePresence } from "framer-motion";
  * - Respects iOS safe areas for notched devices
  * - WCAG AAA touch targets (48px minimum)
  * - Performance-optimized with requestAnimationFrame
+ * - Supports local phone numbers for location pages
+ * - OPTIMIZED: Uses refs to prevent recreating scroll listener on every scroll
  */
 
-export default function MobileCTABar() {
+interface MobileCTABarProps {
+  phoneNumber?: string;
+}
+
+export default function MobileCTABar({ phoneNumber = "865-346-3339" }: MobileCTABarProps = {}) {
   const [isVisible, setIsVisible] = useState(false);
   const [isScrollingUp, setIsScrollingUp] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const lastScrollYRef = useRef(0);
+  const tickingRef = useRef(false);
 
   useEffect(() => {
-    let ticking = false;
-
     const handleScroll = () => {
-      if (!ticking) {
+      if (!tickingRef.current) {
         window.requestAnimationFrame(() => {
           const currentScrollY = window.scrollY;
 
@@ -37,18 +42,18 @@ export default function MobileCTABar() {
 
           // Hide when scrolling down, show when scrolling up
           // This keeps the CTA accessible but non-intrusive
-          setIsScrollingUp(currentScrollY < lastScrollY || currentScrollY < 300);
-          setLastScrollY(currentScrollY);
+          setIsScrollingUp(currentScrollY < lastScrollYRef.current || currentScrollY < 300);
+          lastScrollYRef.current = currentScrollY;
 
-          ticking = false;
+          tickingRef.current = false;
         });
-        ticking = true;
+        tickingRef.current = true;
       }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, []); // Empty dependency array - listener is stable
 
   return (
     <AnimatePresence>
@@ -70,9 +75,9 @@ export default function MobileCTABar() {
             <div className="flex gap-3 max-w-screen-xl mx-auto">
               {/* Phone Button - Secondary action */}
               <a
-                href="tel:8653463339"
+                href={`tel:${phoneNumber.replace(/\D/g, '')}`}
                 className="flex-1 flex items-center justify-center gap-2 bg-[#1E293B] border border-white/10 rounded-xl py-3 min-h-[48px] text-white font-semibold transition-all duration-300 active:scale-95 touch-manipulation"
-                aria-label="Call Capture Client now"
+                aria-label={`Call ${phoneNumber}`}
                 style={{
                   touchAction: 'manipulation',
                   WebkitTapHighlightColor: 'transparent',
