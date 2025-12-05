@@ -1,5 +1,7 @@
 import { MetadataRoute } from "next";
 import { getAllServices, getAllLocations, getAllNationalPages, getAllPackages } from "@/lib/data";
+import { integrations } from "@/data/integrations";
+import { INDUSTRIES } from "@/data/industries";
 
 /**
  * Enhanced XML Sitemap following 2025 SEO best practices
@@ -80,6 +82,38 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     })),
   ];
 
+  // Integration pages (high priority for feature discovery)
+  const integrationPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/integrations`,
+      lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    ...integrations.map((integration) => ({
+      url: `${baseUrl}/integrations/${integration.slug}`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.7, // Integration pages - important for feature discovery
+    })),
+  ];
+
+  // Industry pages (high priority for vertical targeting)
+  const industryPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/who-we-serve`,
+      lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.85,
+    },
+    ...INDUSTRIES.map((industry) => ({
+      url: `${baseUrl}/who-we-serve/${industry.slug}`,
+      lastModified: currentDate,
+      changeFrequency: "monthly" as const,
+      priority: 0.8, // Industry pages - critical for vertical SEO
+    })),
+  ];
+
   // National SEO pages (high priority)
   const nationalSeoPages: MetadataRoute.Sitemap = nationalPages.map((page) => ({
     url: `${baseUrl}/${page.keyword.keyword_slug}`,
@@ -144,19 +178,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     ...corePages,
     ...locationPages, // Location pages first (local SEO focus)
-    ...servicePages, // Then service pages
-    ...nationalSeoPages, // Then national SEO pages
-    ...packagePages, // Then packages
-    ...supportPages, // Then supporting content
+    ...industryPages, // Industry pages (vertical targeting)
+    ...servicePages, // Service pages
+    ...integrationPages, // Integration pages (feature discovery)
+    ...nationalSeoPages, // National SEO pages
+    ...packagePages, // Packages
+    ...supportPages, // Supporting content
     ...legalPages, // Legal pages last
   ];
 }
 
 /**
- * Total expected URLs: ~100-120 pages
+ * Total expected URLs: ~240+ pages
  * - 1 homepage
  * - 4-5 service pages
  * - 90+ location pages (service × location combinations)
+ * - 58 integration pages
+ * - 12 industry pages
  * - 10-15 national SEO pages
  * - 3-5 package pages
  * - 6 supporting pages

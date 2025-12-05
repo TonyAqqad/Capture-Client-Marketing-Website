@@ -266,17 +266,20 @@ function TestimonialCard({ testimonial, isInView, index }: TestimonialCardProps)
           ))}
         </div>
 
-        {/* Testimonial content with elegant typography */}
+        {/* $5M UPGRADE: Testimonial content with elegant serif typography */}
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ delay: 0.6 + index * 0.1, duration: 0.7 }}
           className={`text-foreground ${
             isFeatured
-              ? "text-xl sm:text-2xl md:text-3xl leading-[1.75]"
-              : "text-lg sm:text-xl md:text-2xl leading-[1.7]"
-          } mb-8 sm:mb-10 flex-1 relative z-10 font-light`}
-          style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
+              ? "text-xl sm:text-2xl md:text-3xl leading-[1.85]"
+              : "text-lg sm:text-xl md:text-2xl leading-[1.8]"
+          } mb-8 sm:mb-10 flex-1 relative z-10 font-normal italic tracking-wide`}
+          style={{
+            fontFamily: "var(--font-playfair), Georgia, serif",
+            letterSpacing: "0.02em",
+          }}
         >
           {testimonial.content}
         </motion.p>

@@ -106,6 +106,10 @@ const config: Config = {
         display: ["var(--font-bricolage-grotesque)", "system-ui", "sans-serif"],
         hero: ["var(--font-bricolage-grotesque)", "system-ui", "sans-serif"],
         accent: ["var(--font-bricolage-grotesque)", "system-ui", "sans-serif"],
+        // $5 MILLION UPGRADE: Elegant serif for testimonials and quotes
+        serif: ["var(--font-playfair)", "Georgia", "Times New Roman", "serif"],
+        quote: ["var(--font-playfair)", "Georgia", "serif"],
+        editorial: ["var(--font-playfair)", "Georgia", "serif"],
       },
       borderRadius: {
         DEFAULT: "0.75rem",
@@ -154,6 +158,21 @@ const config: Config = {
         "glow-pulse": "glowPulse 2s ease-in-out infinite",
         "glass-shimmer": "glassShimmer 3s ease-in-out infinite",
         "bounce-subtle": "bounceSubtle 2s ease-in-out infinite",
+        // $5 MILLION UPGRADE: Premium cinematic animations
+        "text-reveal": "textReveal 0.8s cubic-bezier(0.77, 0, 0.175, 1) forwards",
+        "text-reveal-delay": "textReveal 0.8s cubic-bezier(0.77, 0, 0.175, 1) 0.1s forwards",
+        "cinematic-fade": "cinematicFade 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards",
+        "cinematic-scale": "cinematicScale 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards",
+        "magnetic-hover": "magneticHover 0.3s ease-out forwards",
+        "gold-shimmer": "goldShimmer 3s ease-in-out infinite",
+        "hero-entrance": "heroEntrance 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+        "stagger-1": "staggerFade 0.6s ease-out 0.1s forwards",
+        "stagger-2": "staggerFade 0.6s ease-out 0.2s forwards",
+        "stagger-3": "staggerFade 0.6s ease-out 0.3s forwards",
+        "stagger-4": "staggerFade 0.6s ease-out 0.4s forwards",
+        "stagger-5": "staggerFade 0.6s ease-out 0.5s forwards",
+        "blur-in": "blurIn 0.8s ease-out forwards",
+        "counter-spin": "counterSpin 25s linear infinite",
       },
       keyframes: {
         float: {
@@ -224,6 +243,97 @@ const config: Config = {
         bounceSubtle: {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-5px)" }
+        },
+        // $5 MILLION UPGRADE: Premium cinematic keyframes
+        textReveal: {
+          "0%": {
+            clipPath: "inset(100% 0 0 0)",
+            transform: "translateY(20px)",
+            opacity: "0"
+          },
+          "100%": {
+            clipPath: "inset(0% 0 0 0)",
+            transform: "translateY(0)",
+            opacity: "1"
+          }
+        },
+        cinematicFade: {
+          "0%": {
+            opacity: "0",
+            transform: "scale(0.98) translateY(10px)",
+            filter: "blur(4px)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "scale(1) translateY(0)",
+            filter: "blur(0)"
+          }
+        },
+        cinematicScale: {
+          "0%": {
+            opacity: "0",
+            transform: "scale(0.9)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "scale(1)"
+          }
+        },
+        magneticHover: {
+          "0%": { transform: "translate(0, 0)" },
+          "100%": { transform: "translate(var(--magnetic-x, 0), var(--magnetic-y, 0))" }
+        },
+        goldShimmer: {
+          "0%": {
+            backgroundPosition: "-200% center",
+            opacity: "0.8"
+          },
+          "50%": {
+            opacity: "1"
+          },
+          "100%": {
+            backgroundPosition: "200% center",
+            opacity: "0.8"
+          }
+        },
+        heroEntrance: {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(60px) scale(0.95)",
+            filter: "blur(10px)"
+          },
+          "50%": {
+            filter: "blur(2px)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0) scale(1)",
+            filter: "blur(0)"
+          }
+        },
+        staggerFade: {
+          "0%": {
+            opacity: "0",
+            transform: "translateY(20px)"
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translateY(0)"
+          }
+        },
+        blurIn: {
+          "0%": {
+            opacity: "0",
+            filter: "blur(20px)"
+          },
+          "100%": {
+            opacity: "1",
+            filter: "blur(0)"
+          }
+        },
+        counterSpin: {
+          "0%": { transform: "rotate(0deg)" },
+          "100%": { transform: "rotate(-360deg)" }
         },
       },
       spacing: {

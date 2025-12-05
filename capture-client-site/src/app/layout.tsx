@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Bricolage_Grotesque } from "next/font/google";
+import { Inter, Bricolage_Grotesque, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import "./globals-mobile-optimized.css";
 import Header from "@/components/Header";
@@ -44,6 +44,19 @@ const bricolageGrotesque = Bricolage_Grotesque({
   display: "swap",
   preload: true,
   fallback: ["system-ui", "-apple-system", "sans-serif"],
+});
+
+// $5M UPGRADE: SERIF ACCENT FONT - Playfair Display
+// Premium serif for testimonials, quotes, and trust-building content
+// Creates visual sophistication and authority signaling
+const playfairDisplay = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  weight: ["400", "500", "700"], // Regular, Medium, Bold for versatility
+  style: ["normal", "italic"], // Italic for elegant quotes
+  display: "swap",
+  preload: false, // Don't preload - only used in specific sections
+  fallback: ["Georgia", "Times New Roman", "serif"],
 });
 
 // Enhanced metadata following Next.js 16 and 2025 SEO best practices
@@ -101,7 +114,7 @@ export default function RootLayout({
         <JsonLd schema={[organizationSchema, websiteSchema]} />
       </head>
       <body
-        className={`${inter.variable} ${bricolageGrotesque.variable} font-body bg-background text-foreground antialiased overflow-x-hidden`}
+        className={`${inter.variable} ${bricolageGrotesque.variable} ${playfairDisplay.variable} font-body bg-background text-foreground antialiased overflow-x-hidden`}
       >
         {/* CRITICAL: Defer Material Icons loading until after initial render */}
         <Script
