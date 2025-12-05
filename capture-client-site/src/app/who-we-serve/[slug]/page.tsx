@@ -6,6 +6,11 @@ import { Button } from '@/components/ui/Button';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { generateWebPageSchema, SITE_CONFIG } from '@/lib/seo-config';
 import JsonLd from '@/components/seo/JsonLd';
+import { IndustryIntegrations } from '@/components/industries/IndustryIntegrations';
+import IndustryCaseStudies from '@/components/industries/IndustryCaseStudies';
+import { IndustryTrustBadges } from '@/components/industries/IndustryTrustBadges';
+import { IndustryFAQ } from '@/components/industries/IndustryFAQ';
+import { getIndustryFAQs } from '@/data/industryFAQs';
 
 interface IndustryPageProps {
   params: Promise<{
@@ -77,6 +82,9 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
     url: `${SITE_CONFIG.url}/who-we-serve/${industry.slug}`,
   });
 
+  // Get FAQs for this industry
+  const faqs = getIndustryFAQs(industry.slug);
+
   // Service schema
   const serviceSchema = {
     '@context': 'https://schema.org',
@@ -106,9 +114,24 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
     },
   };
 
+  // FAQPage schema
+  const faqSchema = faqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': `${SITE_CONFIG.url}/who-we-serve/${industry.slug}#faq`,
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  } : null;
+
   return (
     <>
-      <JsonLd schema={[pageSchema, serviceSchema]} />
+      <JsonLd schema={faqSchema ? [pageSchema, serviceSchema, faqSchema] : [pageSchema, serviceSchema]} />
 
       <div className="min-h-screen bg-background">
         {/* Hero Section */}
@@ -202,6 +225,15 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
               </div>
             </div>
           </section>
+        )}
+
+        {/* Trust Badges Section */}
+        {industry.trustBadges && industry.trustBadges.length > 0 && (
+          <IndustryTrustBadges
+            badges={industry.trustBadges}
+            clientCount={industry.clientCount}
+            industryName={industry.name}
+          />
         )}
 
         {/* Pain Points Section */}
@@ -418,31 +450,27 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
           </section>
         )}
 
+        {/* Case Studies Section */}
+        {industry.relatedCaseStudies && industry.relatedCaseStudies.length > 0 && (
+          <IndustryCaseStudies
+            caseStudyIds={industry.relatedCaseStudies}
+            industryName={industry.name}
+            industryTheme="gold"
+          />
+        )}
+
         {/* Related Integrations */}
         {industry.relatedIntegrations && industry.relatedIntegrations.length > 0 && (
-          <section className="py-20 bg-background">
-            <div className="container mx-auto px-6">
-              <div className="max-w-4xl mx-auto text-center">
-                <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-4">
-                  Works With Your Existing Tools
-                </h2>
-                <p className="text-lg text-foreground-muted mb-12">
-                  Seamless integrations with the platforms you already use.
-                </p>
+          <IndustryIntegrations industry={industry} maxDisplay={6} />
+        )}
 
-                <div className="flex flex-wrap justify-center gap-4">
-                  {industry.relatedIntegrations.map((integration, index) => (
-                    <div
-                      key={index}
-                      className="px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-foreground font-semibold hover:border-accent-500/50 hover:bg-white/15 transition-all duration-300"
-                    >
-                      {integration.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </section>
+        {/* FAQ Section */}
+        {faqs.length > 0 && (
+          <IndustryFAQ
+            faqs={faqs}
+            industryName={industry.name}
+            categoryColor={industry.category === 'Healthcare' ? 'accent' : 'gold'}
+          />
         )}
 
         {/* Final CTA */}

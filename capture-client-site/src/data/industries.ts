@@ -4,6 +4,19 @@
  * Based on competitor research (Smith.ai, CallRuby, Ruby Receptionists)
  */
 
+export interface IndustryFAQ {
+  question: string;
+  answer: string;
+}
+
+export interface TrustBadge {
+  type: 'compliance' | 'rating' | 'certification' | 'clients' | 'award';
+  label: string;
+  icon: string;
+  value?: string;
+  description?: string;
+}
+
 export interface Industry {
   id: string;
   name: string;
@@ -30,6 +43,7 @@ export interface Industry {
     avatar?: string;
   };
   relatedIntegrations: string[];
+  relatedCaseStudies?: string[]; // Array of case study IDs
   ctaText: string;
   roiCalculation?: {
     traditionalCost: string;
@@ -41,6 +55,9 @@ export interface Industry {
       ai: string;
     }[];
   };
+  faqs?: IndustryFAQ[];
+  trustBadges?: TrustBadge[];
+  clientCount?: number;
 }
 
 export const INDUSTRIES: Industry[] = [
@@ -104,6 +121,7 @@ export const INDUSTRIES: Industry[] = [
       avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200',
     },
     relatedIntegrations: ['clio', 'mycase', 'practice-panther', 'lawmatics'],
+    relatedCaseStudies: ['law-firm'],
     ctaText: 'Book Legal AI Demo',
     roiCalculation: {
       traditionalCost: '$77,000/year',
@@ -116,6 +134,43 @@ export const INDUSTRIES: Industry[] = [
         { item: 'Setup & Training', traditional: '$0', ai: '$0' },
       ],
     },
+    faqs: [
+      {
+        question: 'How much does an AI receptionist cost for law firms?',
+        answer: 'Our AI voice agents for law firms start at $95/month for the Starter plan (up to 100 calls), which is 98% less expensive than hiring a full-time receptionist. The Growth plan ($195/mo for 500 calls) and Enterprise plan (custom pricing for unlimited calls) scale with your firm\'s needs. All plans include 24/7 coverage, client intake, and integration with legal practice management software like Clio and MyCase.',
+      },
+      {
+        question: 'Is the AI receptionist HIPAA compliant and secure for attorney-client privilege?',
+        answer: 'Yes, absolutely. Our system is SOC-II certified with enterprise-grade encryption for all calls and data storage. We maintain attorney-client privilege protection with secure call recording, encrypted transcripts, and audit trails for regulatory compliance. All data is stored on US-based servers with strict access controls, and we never share client information with third parties.',
+      },
+      {
+        question: 'How quickly can the AI be set up for my law firm?',
+        answer: 'Most law firms are up and running in 24-48 hours. The setup process includes: (1) Customizing intake questions for your practice areas, (2) Integrating with your practice management software (Clio, MyCase, etc.), (3) Setting up call routing rules and conflict checking, (4) Testing the AI with sample scenarios. Our team handles the technical setup, and we provide training for your staff to review captured leads and manage the system.',
+      },
+      {
+        question: 'Can the AI handle complex legal intake and conflict checking?',
+        answer: 'Yes. The AI conducts comprehensive client intake by asking customized questions specific to your practice areas (personal injury, family law, estate planning, etc.). It gathers case details, opposing party information, and dates to check for conflicts of interest against your case database before booking consultations. For complex matters, the AI escalates to your staff or attorneys based on rules you define.',
+      },
+      {
+        question: 'What happens if a potential client calls with an emergency?',
+        answer: 'The AI is programmed to identify urgent matters (criminal arrests, active restraining orders, approaching deadlines) and immediately escalate to your on-call attorney via phone call or SMS. You define what qualifies as an "emergency" for your practice, and the AI follows your escalation protocols. Non-urgent calls are handled with intake and appointment scheduling, while routine questions are answered instantly.',
+      },
+      {
+        question: 'How does the AI integrate with Clio, MyCase, and other legal software?',
+        answer: 'We offer native integrations with Clio, MyCase, PracticePanther, Lawmatics, and other major legal practice management platforms. The AI automatically creates new client records, logs intake calls, schedules appointments on your calendar, and performs conflict checks against your matter database. All call recordings and transcripts are attached to client files for compliance and case management.',
+      },
+    ],
+    trustBadges: [
+      { type: 'compliance', label: 'ABA Compliant', icon: 'verified_user', description: 'Meets American Bar Association standards' },
+      { type: 'compliance', label: 'SOC-II Certified', icon: 'security', description: 'Enterprise-grade security controls' },
+      { type: 'certification', label: 'Attorney-Client Privilege', icon: 'gavel', description: 'Protected communications' },
+      { type: 'certification', label: 'Encrypted Storage', icon: 'lock', description: 'Bank-level encryption at rest' },
+      { type: 'clients', label: '500+ Law Firms', icon: 'account_balance', value: 'Trusted Partner' },
+      { type: 'award', label: '99.9% Uptime', icon: 'check_circle', value: 'SLA Guaranteed' },
+      { type: 'certification', label: 'GDPR Ready', icon: 'public', description: 'EU data protection compliant' },
+      { type: 'award', label: 'Clio Integration', icon: 'integration_instructions', value: 'Certified Partner' },
+    ],
+    clientCount: 500,
   },
   {
     id: 'home-services',
@@ -177,6 +232,7 @@ export const INDUSTRIES: Industry[] = [
       avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200',
     },
     relatedIntegrations: ['servicetitan', 'jobber', 'housecall-pro', 'fieldpulse'],
+    relatedCaseStudies: ['hvac', 'plumbing', 'roofing'],
     ctaText: 'Start Free Trial',
     roiCalculation: {
       traditionalCost: '$48,000/year',
@@ -189,6 +245,17 @@ export const INDUSTRIES: Industry[] = [
         { item: 'Additional Revenue Captured', traditional: '$0', ai: '+$180,000' },
       ],
     },
+    trustBadges: [
+      { type: 'certification', label: 'BBB Accredited', icon: 'workspace_premium', value: 'A+ Rating' },
+      { type: 'certification', label: 'Licensed & Insured', icon: 'verified', description: 'Fully bonded contractor' },
+      { type: 'clients', label: '1,200+ Contractors', icon: 'construction', value: 'Industry Leader' },
+      { type: 'award', label: 'ServiceTitan Partner', icon: 'integration_instructions', value: 'Certified Integration' },
+      { type: 'award', label: '24/7 Support', icon: 'support_agent', value: 'Always Available' },
+      { type: 'certification', label: 'SOC-II Type 2', icon: 'security', description: 'Annual security audits' },
+      { type: 'award', label: '99.9% Uptime', icon: 'check_circle', value: 'SLA Backed' },
+      { type: 'clients', label: '50K+ Jobs Booked', icon: 'event_available', value: 'Monthly' },
+    ],
+    clientCount: 1200,
   },
   {
     id: 'real-estate',
@@ -251,6 +318,17 @@ export const INDUSTRIES: Industry[] = [
     },
     relatedIntegrations: ['follow-up-boss', 'kvcore', 'boomtown', 'zillow'],
     ctaText: 'Get Real Estate Demo',
+    trustBadges: [
+      { type: 'certification', label: 'MLS Integrated', icon: 'home_work', description: 'Real-time property sync' },
+      { type: 'certification', label: 'NAR Member', icon: 'card_membership', description: 'National Association of Realtors' },
+      { type: 'clients', label: '800+ Agents', icon: 'real_estate_agent', value: 'Top Performers' },
+      { type: 'award', label: 'Zillow Partner', icon: 'integration_instructions', value: 'Premier Integration' },
+      { type: 'certification', label: 'Data Encryption', icon: 'lock', description: '256-bit SSL encryption' },
+      { type: 'award', label: '99.9% Uptime', icon: 'check_circle', value: 'Never Miss a Lead' },
+      { type: 'clients', label: '10K+ Showings/Month', icon: 'calendar_month', value: 'Scheduled' },
+      { type: 'award', label: 'kvCORE Certified', icon: 'workspace_premium', value: 'Gold Partner' },
+    ],
+    clientCount: 800,
   },
   {
     id: 'healthcare',
@@ -312,7 +390,19 @@ export const INDUSTRIES: Industry[] = [
       avatar: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=200',
     },
     relatedIntegrations: ['athenahealth', 'kareo', 'nextgen', 'drchrono'],
+    relatedCaseStudies: ['dental', 'medical-spa'],
     ctaText: 'Schedule Healthcare Demo',
+    trustBadges: [
+      { type: 'compliance', label: 'HIPAA Compliant', icon: 'health_and_safety', description: 'Full PHI protection' },
+      { type: 'compliance', label: 'SOC-II Type 2', icon: 'security', description: 'Annual audits & validation' },
+      { type: 'certification', label: 'BAA Available', icon: 'description', description: 'Business Associate Agreement' },
+      { type: 'certification', label: 'HL7 FHIR Ready', icon: 'sync', description: 'Interoperability standards' },
+      { type: 'clients', label: '600+ Practices', icon: 'local_hospital', value: 'Healthcare Providers' },
+      { type: 'award', label: 'Epic Integrated', icon: 'integration_instructions', value: 'EHR Certified' },
+      { type: 'certification', label: 'AES-256 Encryption', icon: 'lock', description: 'Data at rest & transit' },
+      { type: 'award', label: '99.99% Uptime', icon: 'favorite', value: 'Patient-Critical' },
+    ],
+    clientCount: 600,
   },
   {
     id: 'it-services',
@@ -499,6 +589,17 @@ export const INDUSTRIES: Industry[] = [
     },
     relatedIntegrations: ['redtail', 'wealthbox', 'salesforce-financial', 'morningstar'],
     ctaText: 'Get Financial Services Demo',
+    trustBadges: [
+      { type: 'compliance', label: 'SEC Compliant', icon: 'account_balance', description: 'Securities & Exchange Commission' },
+      { type: 'compliance', label: 'FINRA Approved', icon: 'gavel', description: 'Financial Industry Regulatory Authority' },
+      { type: 'compliance', label: 'SOC-II Type 2', icon: 'security', description: 'Annual security validation' },
+      { type: 'certification', label: 'Bank-Level Security', icon: 'lock', description: 'AES-256 encryption' },
+      { type: 'clients', label: '300+ Advisors', icon: 'trending_up', value: 'Wealth Management' },
+      { type: 'award', label: 'Redtail Partner', icon: 'integration_instructions', value: 'Certified CRM' },
+      { type: 'certification', label: 'Call Recording', icon: 'mic', description: 'Audit trail compliant' },
+      { type: 'award', label: '99.9% Uptime', icon: 'check_circle', value: 'Market Hours Guaranteed' },
+    ],
+    clientCount: 300,
   },
   {
     id: 'insurance',
