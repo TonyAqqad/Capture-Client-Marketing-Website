@@ -319,7 +319,7 @@ export function PremiumFinalCTA() {
                   className="block mt-2 md:mt-4 bg-gradient-to-r from-[#D4AF37] to-[#FFD700] bg-clip-text text-transparent"
                   style={{ fontWeight: 800 }}
                 >
-                  Leads
+                  Clients
                 </span>
               </h2>
 
@@ -362,7 +362,7 @@ export function PremiumFinalCTA() {
                   />
                   <span className="relative z-10 flex items-center gap-3">
                     <span className="material-icons text-2xl md:text-3xl">rocket_launch</span>
-                    Start Capturing More Leads
+                    Start Capturing More Clients
                   </span>
                   <motion.div
                     className="absolute inset-0 rounded-2xl"
@@ -612,7 +612,7 @@ export function PremiumFinalCTA() {
               transition={{ delay: 1.5, duration: 0.8 }}
               className="mt-8 md:mt-12 text-base md:text-lg text-white/50 font-light italic"
             >
-              Join the businesses that never miss a lead again
+              Join the businesses that never miss a client again
             </motion.p>
           </motion.div>
         </div>

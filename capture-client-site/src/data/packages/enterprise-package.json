@@ -4,7 +4,7 @@
   "package_info": {
     "name": "Enterprise Package",
     "slug": "enterprise-package",
-    "price": "$3,997+",
+    "price": "$2,997+",
     "period": "per month (plus ad spend)",
     "tagline": "Complete done-for-you lead generation system with unlimited AI and dedicated support",
     "value_claim": "Enterprise capabilities at small business prices. Replaces $100k+/year in agency fees + staff."
@@ -20,7 +20,7 @@
     "price_display": {
       "amount": "Custom",
       "period": "pricing based on your needs",
-      "note": "Typically $3,997-$7,997/month depending on scale"
+      "note": "Typically $2,997-$6,997/month depending on scale"
     },
     "badge": "FULL-SERVICE",
     "cta": {
@@ -124,7 +124,7 @@
   "comparison": {
     "downgrade_prompt": {
       "headline": "Not Ready for Enterprise?",
-      "description": "Growth Package includes 2 AI agents, 200 calls/month, and Google OR Facebook Ads for $1,997/mo.",
+      "description": "Growth Package includes 2 AI agents, unlimited calls, and Google OR Facebook Ads for $797/mo.",
       "cta": {
         "text": "See Growth Package",
         "action": "/packages/growth-package"
@@ -140,7 +140,7 @@
       {
         "feature": "Monthly Calls",
         "starter": "50 calls",
-        "growth": "200 calls",
+        "growth": "Unlimited",
         "enterprise": "Unlimited"
       },
       {
@@ -219,7 +219,7 @@
   "faq": [
     {
       "question": "What's the typical investment for Enterprise?",
-      "answer": "Most Enterprise clients invest $3,997-$7,997/month for management + their ad spend budget ($3K-$20K/month). Final pricing depends on the number of AI agents, ad platforms, and level of customization needed. We'll create a custom proposal during your consultation."
+      "answer": "Most Enterprise clients invest $2,997-$6,997/month for management + their ad spend budget ($3K-$20K/month). Final pricing depends on the number of AI agents, ad platforms, and level of customization needed. We'll create a custom proposal during your consultation."
     },
     {
       "question": "How is Enterprise different from Growth?",

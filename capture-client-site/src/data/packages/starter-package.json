@@ -4,27 +4,27 @@
   "package_info": {
     "name": "Starter Package",
     "slug": "starter-package",
-    "price": "$997",
+    "price": "$97",
     "period": "per month",
     "tagline": "Perfect for small businesses getting started with AI automation",
     "competitive_pricing": {
       "research_date": "2025-11-30",
-      "vs_competitors": "32% below competitors' PPC-only packages ($1,450) while including Voice AI they don't offer",
+      "vs_competitors": "93% below competitors' PPC-only packages ($1,450) while including Voice AI they don't offer",
       "value_statement": "Get AI voice agents 24/7 for less than hiring a part-time receptionist",
-      "roi_example": "Capture just 5 extra leads/month at $200 avg value = $1,000 ROI (pays for itself)",
+      "roi_example": "Capture just 5 extra leads/month at $200 avg value = $1,000 ROI (10x return)",
       "market_position": "Best value in market - includes AI technology NO competitor offers"
     }
   },
   "seo": {
-    "title": "Starter Package - $997/mo | AI Voice Agent for Small Business | Capture Client",
-    "meta_description": "Get started with AI automation for just $997/month. Includes AI Voice Agent setup, 50 calls/month, lead qualification, and CRM integration. Perfect for small businesses.",
+    "title": "Starter Package - $97/mo | AI Voice Agent for Small Business | Capture Client",
+    "meta_description": "Get started with AI automation for just $97/month. Includes AI Voice Agent setup, 50 calls/month, lead qualification, and CRM integration. Perfect for small businesses.",
     "keywords": ["ai voice agent starter", "affordable ai automation", "small business voice ai", "ai phone answering service"]
   },
   "hero": {
     "headline": "Start Capturing More Leads with AI",
-    "subheadline": "AI Voice Agent + Lead Qualification for just $997/month",
+    "subheadline": "AI Voice Agent + Lead Qualification for just $97/month",
     "price_display": {
-      "amount": "$997",
+      "amount": "$97",
       "period": "per month",
       "note": "No setup fees. Cancel anytime."
     },
@@ -255,7 +255,7 @@
     "headline": "Ready to Start Capturing More Leads?",
     "subheadline": "Join 500+ small businesses using AI to never miss another call.",
     "primary_cta": {
-      "text": "Get Started for $997/mo",
+      "text": "Get Started for $97/mo",
       "action": "/contact?package=starter"
     },
     "secondary_cta": {

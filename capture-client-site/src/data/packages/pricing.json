@@ -16,11 +16,11 @@
       "id": "starter",
       "name": "Starter",
       "slug": "starter-package",
-      "price": "$999",
+      "price": "$97",
       "period": "per month",
       "tagline": "Perfect for small businesses getting started",
       "popular": false,
-      "ideal_for": "1-10 employees, 50-100 calls/month",
+      "ideal_for": "1-10 employees, 50 calls/month",
       "cta": {
         "text": "Get Started",
         "action": "/contact?package=starter"
@@ -82,12 +82,12 @@
       "id": "growth",
       "name": "Growth",
       "slug": "growth-package",
-      "price": "$1,997",
+      "price": "$797",
       "period": "per month",
       "tagline": "For businesses ready to scale with ads",
       "popular": true,
       "badge": "MOST POPULAR",
-      "ideal_for": "10-50 employees, 200+ calls/month",
+      "ideal_for": "10-50 employees, unlimited calls",
       "cta": {
         "text": "Start Growing",
         "action": "/contact?package=growth"
@@ -100,7 +100,7 @@
         },
         {
           "name": "Monthly Calls",
-          "value": "200 calls",
+          "value": "Unlimited",
           "included": true
         },
         {
@@ -246,7 +246,7 @@
           {
             "name": "Monthly Call Volume",
             "starter": "50 calls",
-            "growth": "200 calls",
+            "growth": "Unlimited",
             "enterprise": "Unlimited"
           },
           {

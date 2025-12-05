@@ -224,17 +224,19 @@ export default function MegaMenuMobile({
                 (865) 346-3339
               </a>
 
-              {/* Book a Demo CTA */}
-              <Link
-                href="/contact"
+              {/* Sign In CTA */}
+              <a
+                href="https://app.captureclient.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="relative group overflow-hidden flex items-center justify-center gap-3 bg-gradient-to-r from-[#4A69E2] to-[#00C9FF] text-white px-6 py-4 rounded-xl font-bold hover:shadow-[0_0_24px_rgba(0,201,255,0.4)] transition-all text-base min-h-[56px] active:scale-[0.98] border border-white/20"
                 onClick={() => {
-                  trackCTAClick("Book a Demo", "mobile_megamenu", "/contact");
+                  trackCTAClick("Sign In", "mobile_megamenu", "https://app.captureclient.com/");
                   onClose();
                 }}
               >
                 <span className="relative z-10 flex items-center gap-3">
-                  Book a Demo
+                  Sign In
                   <svg
                     className="w-5 h-5 group-hover:translate-x-1 transition-transform"
                     fill="none"
@@ -250,7 +252,7 @@ export default function MegaMenuMobile({
                   </svg>
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </Link>
+              </a>
             </div>
           </motion.div>
         </>

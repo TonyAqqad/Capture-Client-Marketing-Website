@@ -446,7 +446,7 @@ export const VoiceAIHowToSchema = generateHowToSchema({
       step: 1,
       title: 'Schedule Free Strategy Call',
       description:
-        "Book a 15-minute call with our team to discuss your business needs and how Voice AI can help you capture more leads. We'll analyze your current call volume and missed opportunities.",
+        "Book a 15-minute call with our team to discuss your business needs and how Voice AI can help you capture more clients. We'll analyze your current call volume and missed opportunities.",
     },
     {
       step: 2,

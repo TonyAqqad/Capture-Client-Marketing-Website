@@ -4,21 +4,21 @@
   "package_info": {
     "name": "Growth Package",
     "slug": "growth-package",
-    "price": "$1,997",
+    "price": "$797",
     "period": "per month",
     "tagline": "Multi-channel marketing automation for ambitious growing businesses",
     "value_comparison": "Get AI voice agents + professional paid advertising management for what agencies charge for ads alone"
   },
   "seo": {
-    "title": "Growth Package - $1,997/mo | AI Voice Agents + Multi-Channel Ads | Capture Client",
-    "meta_description": "Scale faster with 2 AI Voice Agents (200 calls/month), dedicated account manager, and professional Google or Facebook Ads management ($3K-$10K/month budget). Advanced lead qualification included.",
+    "title": "Growth Package - $797/mo | AI Voice Agents + Multi-Channel Ads | Capture Client",
+    "meta_description": "Scale faster with 2 AI Voice Agents (unlimited calls), dedicated account manager, and professional Google or Facebook Ads management ($3K-$10K/month budget). Advanced lead qualification included.",
     "keywords": ["ai voice agent growth", "facebook ads with ai", "google ads lead generation", "ai lead generation system", "dedicated account manager", "advanced lead qualification"]
   },
   "hero": {
     "headline": "Scale Your Lead Generation with AI + Multi-Channel Advertising",
     "subheadline": "2 Custom AI Voice Agents + Professional Google or Facebook Ads + Dedicated Account Manager + Advanced Lead Qualification",
     "price_display": {
-      "amount": "$1,997",
+      "amount": "$797",
       "period": "per month",
       "note": "Ad spend managed: $3,000-$10,000/month"
     },
@@ -41,7 +41,7 @@
     "audience": [
       "Growing businesses with 10-50 employees",
       "Businesses ready to invest in paid advertising",
-      "Companies handling 200+ calls per month",
+      "Companies handling unlimited calls per month",
       "Service businesses wanting predictable lead flow",
       "Businesses with $1K-$3K monthly ad budget",
       "Companies that need multiple AI agents for different services"
@@ -54,9 +54,9 @@
       "value": "2 agents"
     },
     {
-      "name": "200 AI Phone Calls Per Month",
-      "description": "Handle up to 200 calls per month across both AI agents. Scalable for growing businesses.",
-      "value": "200 calls/mo"
+      "name": "Unlimited AI Phone Calls",
+      "description": "Handle unlimited calls per month across both AI agents. Scalable for growing businesses.",
+      "value": "Unlimited"
     },
     {
       "name": "Google Ads OR Facebook Ads Management",
@@ -133,7 +133,7 @@
     },
     "downgrade_prompt": {
       "headline": "Just Need AI Without Ads?",
-      "description": "Starter Package includes 1 AI agent and 50 calls/month for $999/mo - perfect if you're not ready for paid advertising yet.",
+      "description": "Starter Package includes 1 AI agent and 50 calls/month for $97/mo - perfect if you're not ready for paid advertising yet.",
       "cta": {
         "text": "See Starter Package",
         "action": "/packages/starter-package"
@@ -149,7 +149,7 @@
       {
         "feature": "Monthly Calls",
         "starter": "50 calls",
-        "growth": "200 calls",
+        "growth": "Unlimited",
         "enterprise": "Unlimited"
       },
       {
@@ -225,12 +225,12 @@
       "answer": "It depends on your business. Google Ads works best for high-intent searches (like 'plumber near me'). Facebook Ads works better for awareness and targeting specific demographics. We'll recommend the best fit during your strategy call."
     },
     {
-      "question": "What happens if I exceed 200 calls?",
-      "answer": "We'll notify you before you hit the limit. You can either upgrade to Enterprise for unlimited calls or purchase additional call bundles at $1.50 per call."
+      "question": "Are there any call limits?",
+      "answer": "No! The Growth Package includes unlimited calls. You can handle as many inbound calls as your business generates with no additional fees."
     },
     {
       "question": "Who pays for the actual ad spend?",
-      "answer": "The ad spend ($1K-$3K/month) is billed directly from Google or Facebook to your credit card. Our $1,997/mo fee covers the management, optimization, creative, and AI system."
+      "answer": "The ad spend ($1K-$3K/month) is billed directly from Google or Facebook to your credit card. Our $797/mo fee covers the management, optimization, creative, and AI system."
     },
     {
       "question": "Can I switch between Google and Facebook Ads?",
@@ -283,7 +283,7 @@
     "headline": "Ready to Scale Your Lead Generation?",
     "subheadline": "Join 300+ growing businesses using AI + Ads to capture more qualified leads.",
     "primary_cta": {
-      "text": "Start Growing for $1,997/mo",
+      "text": "Start Growing for $797/mo",
       "action": "/contact?package=growth"
     },
     "secondary_cta": {

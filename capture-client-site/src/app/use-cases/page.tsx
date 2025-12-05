@@ -154,7 +154,7 @@ const testimonials = [
     role: "Managing Partner",
     industry: "Legal",
     avatar: "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&auto=format&fit=crop",
-    metric: "63% More Leads"
+    metric: "63% More Clients"
   },
   {
     quote: "I can finally take weekends off knowing every property inquiry gets captured and qualified instantly.",
@@ -170,7 +170,7 @@ const benefits = [
   {
     icon: "schedule",
     title: "24/7 Availability",
-    description: "Never miss a lead, even at 3am on a holiday"
+    description: "Never miss a client, even at 3am on a holiday"
   },
   {
     icon: "speed",
@@ -296,7 +296,7 @@ export default function UseCasesPage() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-xl sm:text-2xl lg:text-3xl text-white/60 max-w-4xl mx-auto mb-12 leading-relaxed font-light"
           >
-            From healthcare to home services, our AI Voice Agents adapt to <span className="text-white font-medium">any industry</span> to capture more leads and automate client communication.
+            From healthcare to home services, our AI Voice Agents adapt to <span className="text-white font-medium">any industry</span> to capture more clients and automate client communication.
           </motion.p>
 
           {/* CTA */}

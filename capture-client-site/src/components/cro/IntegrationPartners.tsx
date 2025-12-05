@@ -7,10 +7,10 @@ import { useState } from "react";
 const partners = [
   // Payments
   {
-    name: "Stripe",
-    logo: "https://logo.clearbit.com/stripe.com",
-    description: "Payment Processing & Subscriptions",
-    website: "https://stripe.com",
+    name: "Excel Payments",
+    logo: "https://excelpayments.com/wp-content/uploads/2023/02/excelpayments_04.png",
+    description: "Merchant Services & Payment Processing",
+    website: "https://excelpayments.com",
     category: "Payments",
   },
   {
@@ -225,6 +225,36 @@ const partners = [
     website: "https://pipedrive.com",
     category: "CRM",
   },
+  {
+    name: "Zoho CRM",
+    logo: "https://logo.clearbit.com/zoho.com",
+    description: "Affordable CRM for Small Business",
+    website: "https://www.zoho.com/crm",
+    category: "CRM",
+  },
+  {
+    name: "Follow Up Boss",
+    logo: "https://logo.clearbit.com/followupboss.com",
+    description: "Real Estate CRM",
+    website: "https://www.followupboss.com",
+    category: "CRM",
+  },
+
+  // Home Services
+  {
+    name: "ServiceTitan",
+    logo: "https://logo.clearbit.com/servicetitan.com",
+    description: "HVAC & Plumbing Software",
+    website: "https://www.servicetitan.com",
+    category: "Home Services",
+  },
+  {
+    name: "Jobber",
+    logo: "https://logo.clearbit.com/getjobber.com",
+    description: "Field Service Management",
+    website: "https://getjobber.com",
+    category: "Home Services",
+  },
 
   // E-commerce
   {
@@ -319,6 +349,7 @@ const categories = [
   "Advertising",
   "Automation",
   "CRM",
+  "Home Services",
   "E-commerce",
   "Analytics",
 ];

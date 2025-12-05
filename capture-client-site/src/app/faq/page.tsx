@@ -94,7 +94,7 @@ const faqData = [
     questions: [
       {
         question: "What plans do you offer?",
-        answer: "We offer three main plans: Starter ($999/month), Growth ($1,997/month), and Enterprise (custom pricing). Each plan includes different levels of features, support, and capacity. Visit our pricing page for full details.",
+        answer: "We offer three main plans: Starter ($97/month), Growth ($797/month), and Enterprise (custom pricing starting at $2,997/month). Each plan includes different levels of features, support, and capacity. Visit our pricing page for full details.",
       },
       {
         question: "Is there a contract or can I cancel anytime?",

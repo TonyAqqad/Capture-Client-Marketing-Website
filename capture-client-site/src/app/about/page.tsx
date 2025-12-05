@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "About Capture Client | Voice AI & Marketing Automation",
   description:
-    "Learn about Capture Client, the marketing automation platform helping small businesses capture more leads with AI voice agents and paid advertising.",
+    "Learn about Capture Client, the marketing automation platform helping small businesses capture more clients with AI voice agents and paid advertising.",
   alternates: {
     canonical: "https://captureclientai.net/about",
   },
@@ -20,7 +20,7 @@ const aboutPageSchema = {
   url: "https://captureclientai.net/about",
   name: "About Capture Client | Voice AI & Marketing Automation",
   description:
-    "Learn about Capture Client, the marketing automation platform helping small businesses capture more leads with AI voice agents and paid advertising.",
+    "Learn about Capture Client, the marketing automation platform helping small businesses capture more clients with AI voice agents and paid advertising.",
   isPartOf: {
     "@id": "https://captureclientai.net/#website",
   },
@@ -90,7 +90,7 @@ export default function AboutPage() {
             </div>
             <div className="text-center bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800 rounded-lg p-6 sm:p-8">
               <div className="text-4xl sm:text-5xl font-bold text-primary mb-2">3x</div>
-              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">More Leads Captured</p>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">More Clients Captured</p>
             </div>
           </section>
 

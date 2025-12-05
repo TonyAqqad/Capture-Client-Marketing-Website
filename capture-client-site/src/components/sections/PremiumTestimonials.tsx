@@ -112,7 +112,7 @@ export function PremiumTestimonials() {
               </span>
             </h3>
             <p className="text-lg sm:text-xl md:text-2xl text-foreground-muted max-w-3xl mx-auto leading-[1.7] px-6 text-light-contrast">
-              Real businesses. Real results. See how Capture Client helps companies like yours capture more leads and grow faster.
+              Real businesses. Real results. See how Capture Client helps companies like yours capture more clients and grow faster.
             </p>
           </motion.div>
         </div>

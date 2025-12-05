@@ -228,7 +228,7 @@ export default function LeadTicker() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg text-foreground-muted max-w-2xl mx-auto"
           >
-            Join hundreds of businesses capturing more leads with Capture Client
+            Join hundreds of businesses capturing more clients with Capture Client
           </motion.p>
         </div>
 

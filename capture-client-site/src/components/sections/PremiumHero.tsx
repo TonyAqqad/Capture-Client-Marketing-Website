@@ -319,7 +319,7 @@ export function PremiumHero() {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
                     <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400" />
                   </span>
-                  <span className="text-sm font-medium text-green-400">{leadsQualified} Leads Today</span>
+                  <span className="text-sm font-medium text-green-400">{leadsQualified} Clients Today</span>
                 </div>
               </motion.div>
             </div>
@@ -428,7 +428,7 @@ export function PremiumHero() {
 
                     <div className="space-y-3">
                       <div className="flex justify-between items-center">
-                        <span className="text-sm text-white/50">Leads Captured</span>
+                        <span className="text-sm text-white/50">Clients Captured</span>
                         <span className="text-sm font-bold text-white">{callsAnswered.toLocaleString()}</span>
                       </div>
                       <div className="h-2 bg-white/5 rounded-full overflow-hidden">

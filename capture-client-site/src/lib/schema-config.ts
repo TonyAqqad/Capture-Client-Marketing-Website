@@ -54,7 +54,7 @@ export const organizationSchema = {
     height: 512,
   },
   description:
-    "AI-powered marketing automation platform helping small businesses capture more leads with voice AI agents, Google Ads, and Facebook Ads management.",
+    "AI-powered marketing automation platform helping small businesses capture more clients with voice AI agents, Google Ads, and Facebook Ads management.",
   foundingDate: BUSINESS_INFO.foundingDate,
   telephone: BUSINESS_INFO.telephone,
   email: BUSINESS_INFO.email,

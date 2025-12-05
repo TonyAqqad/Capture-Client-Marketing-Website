@@ -188,14 +188,16 @@ export default function MegaMenu() {
               </span>
             </a>
 
-            {/* Book a Demo CTA */}
-            <Link
-              href="/contact"
+            {/* Sign In CTA */}
+            <a
+              href="https://app.captureclient.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="relative group overflow-hidden bg-gradient-to-r from-[#4A69E2] to-[#00C9FF] text-white px-6 py-3 min-h-[48px] rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-[0_0_24px_rgba(0,201,255,0.4)] hover:-translate-y-0.5 border border-white/10 flex items-center"
-              onClick={() => trackCTAClick("Book a Demo", "header", "/contact")}
+              onClick={() => trackCTAClick("Sign In", "header", "https://app.captureclient.com/")}
             >
               <span className="relative z-10 flex items-center gap-2">
-                Book a Demo
+                Sign In
                 <svg
                   className="w-4 h-4 transition-transform group-hover:translate-x-1 duration-300"
                   fill="none"
@@ -211,7 +213,7 @@ export default function MegaMenu() {
                 </svg>
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}

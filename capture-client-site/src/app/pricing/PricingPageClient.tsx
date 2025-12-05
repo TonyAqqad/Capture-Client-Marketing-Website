@@ -32,8 +32,8 @@ const PACKAGES: Package[] = [
   {
     id: "starter",
     name: "Starter Package",
-    price: 997,
-    annualPrice: 797, // 20% off
+    price: 97,
+    annualPrice: 77, // 20% off
     period: "per month",
     tagline: "Perfect for small businesses getting started with AI automation",
     tier: "starter",
@@ -55,15 +55,15 @@ const PACKAGES: Package[] = [
   {
     id: "growth",
     name: "Growth Package",
-    price: 1997,
-    annualPrice: 1597, // 20% off
+    price: 797,
+    annualPrice: 637, // 20% off
     period: "per month",
     tagline: "Multi-channel marketing automation for ambitious growing businesses",
     tier: "growth",
     popular: true,
     features: [
       "2 Custom AI Voice Agents",
-      "200 AI Phone Calls Per Month",
+      "Unlimited Phone Calls",
       "Google Ads OR Facebook Ads Management",
       "Landing Page Optimization",
       "Advanced Lead Qualification",
@@ -73,14 +73,14 @@ const PACKAGES: Package[] = [
     ],
     slug: "growth-package",
     roi: "87 leads in 60 days (actual client result)",
-    missedCallsHandled: 200,
+    missedCallsHandled: 999,
     avgMonthlyReturn: 12000
   },
   {
     id: "enterprise",
     name: "Enterprise Package",
-    price: 3997,
-    annualPrice: 3197, // 20% off
+    price: 2997,
+    annualPrice: 2397, // 20% off
     period: "per month",
     tagline: "Complete done-for-you lead generation system with unlimited AI",
     tier: "enterprise",
@@ -547,7 +547,7 @@ export default function PricingPageClient() {
                       <tbody>
                         {[
                           { feature: "AI Voice Agents", starter: "1 agent", growth: "2 agents", enterprise: "Unlimited", icon: "smart_toy" },
-                          { feature: "Monthly Calls", starter: "50 calls", growth: "200 calls", enterprise: "Unlimited", icon: "call" },
+                          { feature: "Monthly Calls", starter: "50 calls", growth: "Unlimited", enterprise: "Unlimited", icon: "call" },
                           { feature: "Advertising Platforms", starter: "—", growth: "Google OR Facebook", enterprise: "Both + LinkedIn", icon: "campaign" },
                           { feature: "Landing Pages", starter: "—", growth: "Optimization", enterprise: "Custom built", icon: "web" },
                           { feature: "Reports", starter: "Monthly", growth: "Weekly", enterprise: "Real-time", icon: "assessment" },
@@ -621,7 +621,7 @@ export default function PricingPageClient() {
             },
             {
               title: "Capture Client",
-              price: isAnnual ? "Starting at $797/mo" : "Starting at $997/mo",
+              price: isAnnual ? "Starting at $77/mo" : "Starting at $97/mo",
               features: ["AI-powered automation", "24/7 availability", "Instant lead response", "Real-time analytics"],
               badge: "Smart Choice",
               highlight: true

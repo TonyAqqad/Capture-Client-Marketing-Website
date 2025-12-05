@@ -4,7 +4,7 @@ import PricingPageClient from './PricingPageClient';
 // SEO Metadata for Pricing Page
 export const metadata: Metadata = {
   title: 'Pricing & Packages | AI Voice Agents & Lead Generation | Capture Client',
-  description: 'Transparent pricing for AI voice agents, Google Ads, and Facebook Ads management. Plans from $997/mo. No setup fees, 30-day money-back guarantee. See which package fits your business.',
+  description: 'Transparent pricing for AI voice agents, Google Ads, and Facebook Ads management. Plans from $97/mo. No setup fees, 30-day money-back guarantee. See which package fits your business.',
   keywords: [
     'marketing agency pricing',
     'AI voice agent cost',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Pricing & Packages | AI Voice Agents & Lead Generation | Capture Client',
-    description: 'Transparent pricing for AI voice agents and lead generation. Plans from $997/mo with 30-day money-back guarantee. No setup fees.',
+    description: 'Transparent pricing for AI voice agents and lead generation. Plans from $97/mo with 30-day money-back guarantee. No setup fees.',
     url: 'https://captureclientai.net/pricing',
     type: 'website',
     images: [
@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Marketing Agency Pricing | AI Voice Agents from $997/mo',
-    description: 'AI voice agents & lead generation from $997/mo. No setup fees, 30-day guarantee.',
+    title: 'Marketing Agency Pricing | AI Voice Agents from $97/mo',
+    description: 'AI voice agents & lead generation from $97/mo. No setup fees, 30-day guarantee.',
   },
   alternates: {
     canonical: 'https://captureclientai.net/pricing',
@@ -76,14 +76,14 @@ export default function PricingPage() {
                 },
                 offers: {
                   '@type': 'Offer',
-                  price: '997',
+                  price: '97',
                   priceCurrency: 'USD',
                   priceValidUntil: '2025-12-31',
                   availability: 'https://schema.org/InStock',
                   url: 'https://captureclientai.net/pricing/starter-package',
                   priceSpecification: {
                     '@type': 'UnitPriceSpecification',
-                    price: '997',
+                    price: '97',
                     priceCurrency: 'USD',
                     unitText: 'MONTH',
                   },
@@ -107,14 +107,14 @@ export default function PricingPage() {
                 },
                 offers: {
                   '@type': 'Offer',
-                  price: '1997',
+                  price: '797',
                   priceCurrency: 'USD',
                   priceValidUntil: '2025-12-31',
                   availability: 'https://schema.org/InStock',
                   url: 'https://captureclientai.net/pricing/growth-package',
                   priceSpecification: {
                     '@type': 'UnitPriceSpecification',
-                    price: '1997',
+                    price: '797',
                     priceCurrency: 'USD',
                     unitText: 'MONTH',
                   },
@@ -138,13 +138,13 @@ export default function PricingPage() {
                 },
                 offers: {
                   '@type': 'AggregateOffer',
-                  lowPrice: '3997',
+                  lowPrice: '2997',
                   priceCurrency: 'USD',
                   availability: 'https://schema.org/InStock',
                   url: 'https://captureclientai.net/pricing/enterprise-package',
                   priceSpecification: {
                     '@type': 'UnitPriceSpecification',
-                    price: '3997',
+                    price: '2997',
                     priceCurrency: 'USD',
                     unitText: 'MONTH',
                   },

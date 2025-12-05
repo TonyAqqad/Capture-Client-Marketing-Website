@@ -18,10 +18,10 @@ interface PricingPlan {
 const plans: PricingPlan[] = [
   {
     name: 'Starter',
-    price: '$999',
+    price: '$97',
     features: [
       '1 AI Voice Agent',
-      'Up to 50 calls/month',
+      '50 calls/month',
       'Basic CRM access',
       'Email support',
       'Analytics dashboard',
@@ -31,10 +31,10 @@ const plans: PricingPlan[] = [
   },
   {
     name: 'Growth',
-    price: '$1,997',
+    price: '$797',
     features: [
       '2 AI Voice Agents',
-      'Up to 200+ calls/month',
+      'Unlimited calls',
       'Full CRM & unified inbox',
       'Google & Facebook Ads setup',
       'Priority support',
@@ -46,7 +46,7 @@ const plans: PricingPlan[] = [
   },
   {
     name: 'Enterprise',
-    price: 'Custom',
+    price: '$2,997',
     subtitle: 'Tailored to your needs',
     features: [
       'Unlimited AI agents',
