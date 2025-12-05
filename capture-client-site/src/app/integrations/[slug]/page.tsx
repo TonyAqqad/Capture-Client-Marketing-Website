@@ -197,6 +197,7 @@ export default async function IntegrationDetailPage({
         <IntegrationHowItWorks
           integrationName={integration.name}
           steps={integration.howItWorks}
+          category={integration.category}
         />
       )}
 

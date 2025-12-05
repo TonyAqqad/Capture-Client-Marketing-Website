@@ -2,21 +2,101 @@
 
 import { motion } from "framer-motion";
 import type { Integration } from "@/data/integrations";
+import { GradientCard, getGradientByCategory } from "@/components/ui/GradientCard";
 
 interface IntegrationFeaturesProps {
   integration: Integration;
 }
 
-const featureIcons = [
-  "check_circle",
-  "bolt",
-  "sync",
-  "auto_awesome",
-  "security",
-  "speed",
-];
+/**
+ * Smart icon detection based on feature text keywords
+ */
+const detectFeatureIcon = (featureText: string): string => {
+  const text = featureText.toLowerCase();
+
+  // Mapping keywords to Material Icons
+  if (text.includes('sync') || text.includes('synchron')) return 'sync';
+  if (text.includes('automat') || text.includes('auto')) return 'auto_awesome';
+  if (text.includes('real-time') || text.includes('instant')) return 'bolt';
+  if (text.includes('secur') || text.includes('protect')) return 'security';
+  if (text.includes('fast') || text.includes('speed') || text.includes('quick')) return 'speed';
+  if (text.includes('data') || text.includes('analytics')) return 'analytics';
+  if (text.includes('call') || text.includes('phone')) return 'phone_in_talk';
+  if (text.includes('contact') || text.includes('lead')) return 'contacts';
+  if (text.includes('schedule') || text.includes('calendar')) return 'event';
+  if (text.includes('track') || text.includes('monitor')) return 'visibility';
+  if (text.includes('integrat') || text.includes('connect')) return 'link';
+  if (text.includes('notif') || text.includes('alert')) return 'notifications_active';
+  if (text.includes('custom') || text.includes('config')) return 'tune';
+  if (text.includes('report')) return 'assessment';
+  if (text.includes('workflow')) return 'account_tree';
+
+  // Default fallback
+  return 'check_circle';
+};
+
+/**
+ * Calculate Bento Grid layout based on feature count
+ * Returns array of layout configs for each feature
+ */
+interface BentoLayout {
+  cols: 1 | 2;
+  featured?: boolean;
+}
+
+const getBentoLayout = (count: number): BentoLayout[] => {
+  if (count <= 2) {
+    // 1-2 features: single column
+    return Array(count).fill({ cols: 1 });
+  }
+
+  if (count === 3) {
+    // 3 features: featured first, then 2 normal
+    return [
+      { cols: 2, featured: true },
+      { cols: 1 },
+      { cols: 1 }
+    ];
+  }
+
+  if (count === 4) {
+    // 4 features: featured first, then 3 normal in 2-column grid
+    return [
+      { cols: 2, featured: true },
+      { cols: 1 },
+      { cols: 1 },
+      { cols: 2 }
+    ];
+  }
+
+  if (count === 5) {
+    // 5 features: featured, 2 normal, featured at end
+    return [
+      { cols: 2, featured: true },
+      { cols: 1 },
+      { cols: 1 },
+      { cols: 1 },
+      { cols: 2, featured: true }
+    ];
+  }
+
+  // 6+ features: alternating pattern
+  const layout: BentoLayout[] = [{ cols: 2, featured: true }];
+  for (let i = 1; i < count; i++) {
+    if (i % 4 === 0) {
+      layout.push({ cols: 2, featured: true });
+    } else {
+      layout.push({ cols: 1 });
+    }
+  }
+
+  return layout;
+};
 
 export function IntegrationFeatures({ integration }: IntegrationFeaturesProps) {
+  const gradientVariant = getGradientByCategory(integration.category);
+  const bentoLayout = getBentoLayout(integration.keyFeatures.length);
+
   return (
     <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden">
       {/* Background */}
@@ -44,37 +124,109 @@ export function IntegrationFeatures({ integration }: IntegrationFeaturesProps) {
           </p>
         </motion.div>
 
-        {/* Features Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {integration.keyFeatures.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative"
-            >
-              {/* Card */}
-              <div className="h-full p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-accent/30 transition-all duration-300 hover:shadow-glow">
-                {/* Icon */}
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="material-icons text-accent text-2xl">
-                    {featureIcons[index % featureIcons.length]}
-                  </span>
-                </div>
+        {/* Bento Grid - Asymmetric Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 auto-rows-fr">
+          {integration.keyFeatures.map((feature, index) => {
+            const layout = bentoLayout[index];
+            const icon = detectFeatureIcon(feature);
+            const isFeatured = layout?.featured;
 
-                {/* Feature Text */}
-                <p className="text-foreground font-medium leading-relaxed">
-                  {feature}
-                </p>
+            return (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.08,
+                  ease: [0.22, 1, 0.36, 1] // Custom easing for premium feel
+                }}
+                className={`
+                  relative
+                  ${layout?.cols === 2 ? 'sm:col-span-2 lg:col-span-2' : 'col-span-1'}
+                `}
+              >
+                <GradientCard
+                  variant={gradientVariant}
+                  hover={true}
+                  interactive={true}
+                  intensity={isFeatured ? "medium" : "subtle"}
+                  className="h-full"
+                >
+                  <div className={`
+                    p-6 sm:p-8 h-full flex flex-col
+                    ${isFeatured ? 'lg:p-10' : ''}
+                  `}>
+                    {/* Featured Badge */}
+                    {index === 0 && (
+                      <motion.div
+                        initial={{ scale: 0.8, opacity: 0 }}
+                        whileInView={{ scale: 1, opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.3, duration: 0.4 }}
+                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-semibold mb-4 w-fit"
+                      >
+                        <span className="material-icons text-sm">stars</span>
+                        <span>Key Feature</span>
+                      </motion.div>
+                    )}
 
-                {/* Hover Glow */}
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/0 via-accent/0 to-accent/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-              </div>
-            </motion.div>
-          ))}
+                    {/* Icon with hover animation */}
+                    <motion.div
+                      className={`
+                        rounded-xl bg-gradient-to-br from-accent/20 to-primary/20
+                        flex items-center justify-center mb-5
+                        ${isFeatured ? 'w-16 h-16 sm:w-20 sm:h-20' : 'w-14 h-14 sm:w-16 sm:h-16'}
+                      `}
+                      whileHover={{
+                        scale: 1.15,
+                        rotate: [0, -5, 5, 0],
+                        transition: { duration: 0.4 }
+                      }}
+                    >
+                      <span className={`
+                        material-icons text-accent
+                        ${isFeatured ? 'text-3xl sm:text-4xl' : 'text-2xl sm:text-3xl'}
+                      `}>
+                        {icon}
+                      </span>
+                    </motion.div>
+
+                    {/* Feature Text */}
+                    <p className={`
+                      text-foreground font-medium leading-relaxed
+                      ${isFeatured ? 'text-lg sm:text-xl' : 'text-base sm:text-lg'}
+                    `}>
+                      {feature}
+                    </p>
+
+                    {/* Decorative corner accent for featured cards */}
+                    {isFeatured && (
+                      <div className="absolute top-0 right-0 w-32 h-32 opacity-10 pointer-events-none">
+                        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-accent via-primary to-transparent rounded-bl-full" />
+                      </div>
+                    )}
+                  </div>
+                </GradientCard>
+              </motion.div>
+            );
+          })}
         </div>
+
+        {/* Feature Count Indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.8, duration: 0.6 }}
+          className="mt-12 text-center"
+        >
+          <p className="text-sm text-foreground-muted">
+            <span className="font-semibold text-accent">{integration.keyFeatures.length}</span> powerful features
+            {integration.keyFeatures.length > 5 && ' to supercharge your workflow'}
+          </p>
+        </motion.div>
       </div>
 
       {/* Divider */}
