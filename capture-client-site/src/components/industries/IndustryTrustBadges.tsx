@@ -53,9 +53,13 @@ export function IndustryTrustBadges({
     if (!isInView || !clientCount) return;
 
     let startTime: number | null = null;
+    let animationId: number;
+    let isCancelled = false;
     const duration = 2000; // 2 seconds
 
     const animate = (timestamp: number) => {
+      if (isCancelled) return;
+
       if (!startTime) startTime = timestamp;
       const progress = Math.min((timestamp - startTime) / duration, 1);
 
@@ -64,13 +68,19 @@ export function IndustryTrustBadges({
       setCount(Math.floor(clientCount * easeOutExpo));
 
       if (progress < 1) {
-        requestAnimationFrame(animate);
+        animationId = requestAnimationFrame(animate);
       } else {
         setCount(clientCount);
       }
     };
 
-    requestAnimationFrame(animate);
+    animationId = requestAnimationFrame(animate);
+
+    // Cleanup: cancel animation on unmount
+    return () => {
+      isCancelled = true;
+      cancelAnimationFrame(animationId);
+    };
   }, [isInView, clientCount]);
 
   // Get badge icon color based on type

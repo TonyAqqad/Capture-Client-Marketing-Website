@@ -1,7 +1,7 @@
 "use client";
 
+import { useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import type { Integration, IntegrationCategory } from "@/data/integrations";
@@ -15,6 +15,8 @@ export function IntegrationDetailHero({
   integration,
   category,
 }: IntegrationDetailHeroProps) {
+  const [imageError, setImageError] = useState(false);
+
   return (
     <section className="relative py-20 sm:py-32 overflow-hidden">
       {/* Background */}
@@ -33,14 +35,21 @@ export function IntegrationDetailHero({
             transition={{ duration: 0.5 }}
             className="mb-8"
           >
-            <div className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-glow p-4">
-              <Image
-                src={integration.logoUrl}
-                alt={`${integration.name} logo`}
-                width={80}
-                height={80}
-                className="w-full h-full object-contain"
-              />
+            <div className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-lg border border-white/20 shadow-glow p-4">
+              {!imageError ? (
+                <img
+                  src={integration.logoUrl}
+                  alt={`${integration.name} logo`}
+                  className="w-full h-full object-contain filter drop-shadow-md"
+                  onError={() => setImageError(true)}
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-accent/20 to-primary/20 rounded-xl">
+                  <span className="text-3xl sm:text-4xl font-bold text-foreground">
+                    {integration.name.charAt(0)}
+                  </span>
+                </div>
+              )}
             </div>
           </motion.div>
 

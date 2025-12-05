@@ -15,6 +15,25 @@ interface IndustryFAQProps {
   categoryColor?: string;
 }
 
+// Static color mapping for Tailwind production build
+const ACCENT_COLORS = {
+  gold: {
+    gradient: "from-gold-400 to-gold-600",
+    text: "text-gold-400",
+    textHover: "text-gold-400 hover:text-gold-300",
+  },
+  accent: {
+    gradient: "from-accent-400 to-accent-600",
+    text: "text-accent-400",
+    textHover: "text-accent-400 hover:text-accent-300",
+  },
+  primary: {
+    gradient: "from-primary-400 to-primary-600",
+    text: "text-primary-400",
+    textHover: "text-primary-400 hover:text-primary-300",
+  },
+} as const;
+
 export function IndustryFAQ({ faqs, industryName, categoryColor = "gold" }: IndustryFAQProps) {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
@@ -22,21 +41,8 @@ export function IndustryFAQ({ faqs, industryName, categoryColor = "gold" }: Indu
     setExpandedIndex(expandedIndex === index ? null : index);
   };
 
-  // Generate accent color based on category
-  const getAccentColor = () => {
-    switch (categoryColor) {
-      case "gold":
-        return "gold-400";
-      case "accent":
-        return "accent-400";
-      case "primary":
-        return "primary-400";
-      default:
-        return "gold-400";
-    }
-  };
-
-  const accentColor = getAccentColor();
+  // Get static color classes based on category
+  const colorClasses = ACCENT_COLORS[categoryColor as keyof typeof ACCENT_COLORS] || ACCENT_COLORS.gold;
 
   return (
     <section className="py-20 bg-gradient-to-b from-background to-background-darker">
@@ -46,7 +52,7 @@ export function IndustryFAQ({ faqs, industryName, categoryColor = "gold" }: Indu
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
               Frequently Asked{" "}
-              <span className={`bg-gradient-to-r from-${accentColor} to-${accentColor.replace("400", "600")} bg-clip-text text-transparent`}>
+              <span className={`bg-gradient-to-r ${colorClasses.gradient} bg-clip-text text-transparent`}>
                 Questions
               </span>
             </h2>
@@ -73,7 +79,7 @@ export function IndustryFAQ({ faqs, industryName, categoryColor = "gold" }: Indu
 
                     <motion.span
                       className={`material-icons text-2xl flex-shrink-0 ${
-                        expandedIndex === index ? `text-${accentColor}` : "text-foreground-muted"
+                        expandedIndex === index ? colorClasses.text : "text-foreground-muted"
                       }`}
                       animate={{ rotate: expandedIndex === index ? 180 : 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
@@ -116,7 +122,7 @@ export function IndustryFAQ({ faqs, industryName, categoryColor = "gold" }: Indu
                 Still have questions?{" "}
                 <a
                   href="/contact"
-                  className={`text-${accentColor} hover:text-${accentColor.replace("400", "300")} font-semibold underline decoration-2 underline-offset-4 transition-colors`}
+                  className={`${colorClasses.textHover} font-semibold underline decoration-2 underline-offset-4 transition-colors`}
                 >
                   Contact our team
                 </a>
