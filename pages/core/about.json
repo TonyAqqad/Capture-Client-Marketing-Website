@@ -1,0 +1,153 @@
+{
+  "page_id": "about",
+  "page_type": "core",
+  "seo": {
+    "page_title": "About Capture Client | Voice AI Pioneers | Our Story & Mission",
+    "meta_description": "From losing $47,000 to missed calls to helping 500+ businesses capture leads 24/7. Discover how Capture Client became the voice AI solution small businesses trust.",
+    "keywords": [
+      "about capture client",
+      "voice ai company",
+      "ai lead generation company",
+      "small business marketing agency",
+      "knoxville marketing company",
+      "voice ai pioneers"
+    ],
+    "canonical_url": "/about"
+  },
+  "hero": {
+    "headline": "Built by Business Owners, For Business Owners",
+    "subheadline": "We watched too many great businesses lose customers to missed calls. So we built the solution we wish we had.",
+    "badge": "Our Story"
+  },
+  "origin_story": {
+    "title": "The $47,000 Mistake That Started It All",
+    "paragraphs": [
+      "In 2022, our founder ran a successful home services company in Knoxville, Tennessee. Business was growing, the team was busy, and everything seemed great on paper. But there was a hidden problem bleeding money.",
+      "A routine audit revealed the truth: 47% of incoming calls were going unanswered. During peak hours, on weekends, and after 5 PM, potential customers were calling and getting voicemail. Most never called back. Conservative math showed we were leaving $47,000 in revenue on the table that year alone.",
+      "The typical solutions were not good enough. Hiring a full-time receptionist meant $40,000+ in salary for someone who could only work 40 hours a week. Answering services were expensive, impersonal, and still missed calls during high-volume periods. After trying every option on the market and being disappointed by each one, the decision was made: build something better.",
+      "That frustration became Capture Client. We combined enterprise-grade AI voice technology with years of small business marketing experience to create a solution that actually works for businesses like ours. Today, we serve 500+ companies across the country, and we have helped capture more than 50,000 leads that would have otherwise been lost to voicemail."
+    ],
+    "callout": {
+      "title": "The Industry Reality",
+      "content": "67% of callers who reach voicemail will not leave a message. 85% of people whose calls go unanswered will not call back. They call your competitor instead."
+    }
+  },
+  "mission": {
+    "title": "Our Mission",
+    "statement": "Level the playing field for small businesses by giving them enterprise-grade technology without enterprise-grade costs.",
+    "description": "Small businesses are the backbone of America. They employ nearly half of all private-sector workers and create two-thirds of new jobs. But they are competing against giants with unlimited resources and 24/7 call centers. Our AI voice agents ensure that when a customer calls, they get answered professionally, whether it is 2 PM on Tuesday or 2 AM on Sunday."
+  },
+  "stats": [
+    { "value": "500+", "label": "Businesses Served" },
+    { "value": "50K+", "label": "Leads Captured" },
+    { "value": "24/7", "label": "AI Availability" },
+    { "value": "3x", "label": "More Leads Captured" }
+  ],
+  "core_values": [
+    {
+      "title": "Results Over Rhetoric",
+      "description": "We measure success in leads captured and revenue generated, not vanity metrics. If it does not help you grow, we do not do it.",
+      "icon": "trending_up"
+    },
+    {
+      "title": "Radical Transparency",
+      "description": "No hidden fees, no confusing contracts, no black box algorithms. You see exactly what we do and what it costs.",
+      "icon": "visibility"
+    },
+    {
+      "title": "Speed to Value",
+      "description": "Most clients are live within 2 weeks. We move fast because every day without us is money left on the table.",
+      "icon": "bolt"
+    },
+    {
+      "title": "Small Business First",
+      "description": "We are built specifically for service businesses with 1-50 employees. Our solutions, pricing, and support reflect that focus.",
+      "icon": "store"
+    }
+  ],
+  "services": [
+    {
+      "title": "Voice AI Agents",
+      "description": "Our AI voice agents answer every call, qualify leads based on your criteria, book appointments directly into your calendar, and transfer hot leads to your team in real-time. They work 24/7/365 and handle unlimited simultaneous calls.",
+      "icon": "record_voice_over",
+      "color": "primary"
+    },
+    {
+      "title": "Google Ads Management",
+      "description": "We create and manage ROI-focused Google Ads campaigns that put your business at the top of search results when customers are actively looking for your services. Our average client sees 3-5x return on ad spend.",
+      "icon": "search",
+      "color": "blue"
+    },
+    {
+      "title": "Facebook Ads Lead Generation",
+      "description": "Targeted Facebook and Instagram advertising campaigns designed to generate qualified leads for local service businesses. We handle creative, targeting, optimization, and reporting.",
+      "icon": "campaign",
+      "color": "purple"
+    }
+  ],
+  "team": [
+    {
+      "name": "Leadership Team",
+      "role": "Founders & Strategy",
+      "expertise": "15+ years combined experience in digital marketing and small business operations",
+      "focus": "Vision, partnerships, and client success"
+    },
+    {
+      "name": "AI Engineering",
+      "role": "Voice AI Development",
+      "expertise": "Natural language processing, conversational AI, and enterprise integrations",
+      "focus": "Building AI that sounds human and works reliably"
+    },
+    {
+      "name": "Campaign Specialists",
+      "role": "Google & Facebook Ads",
+      "expertise": "Certified Google Ads and Meta Blueprint professionals",
+      "focus": "ROI-focused campaigns that generate qualified leads"
+    },
+    {
+      "name": "Client Success",
+      "role": "Onboarding & Support",
+      "expertise": "Small business operations and marketing automation",
+      "focus": "Getting clients live fast and optimizing results"
+    }
+  ],
+  "differentiators": [
+    {
+      "title": "No Long-Term Contracts",
+      "description": "Month-to-month billing. Cancel anytime with 30 days notice. We earn your business every month.",
+      "icon": "schedule"
+    },
+    {
+      "title": "Transparent Pricing",
+      "description": "No hidden fees, no surprise charges, no percentage of ad spend. What you see is what you pay.",
+      "icon": "payments"
+    },
+    {
+      "title": "90-Day Money-Back Guarantee",
+      "description": "If you do not see measurable improvement in lead capture within 90 days, we refund your money.",
+      "icon": "verified"
+    },
+    {
+      "title": "Real Human Support",
+      "description": "Dedicated account managers who know your business. No ticket systems or chatbots for important issues.",
+      "icon": "support_agent"
+    }
+  ],
+  "cta": {
+    "headline": "Ready to Stop Losing Leads?",
+    "subheadline": "Let us show you exactly how many calls you are missing and how much revenue you are leaving on the table. Free, no-obligation consultation.",
+    "primary_button": {
+      "text": "Call Us: (865) 346-3339",
+      "action": "tel:865-346-3339"
+    },
+    "secondary_button": {
+      "text": "Schedule a Demo",
+      "action": "/contact"
+    },
+    "trust_signals": [
+      "No Contracts",
+      "90-Day Guarantee",
+      "Setup in 48 Hours"
+    ]
+  }
+}

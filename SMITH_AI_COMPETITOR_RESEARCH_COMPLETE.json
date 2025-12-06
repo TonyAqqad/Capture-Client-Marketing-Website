@@ -1,0 +1,793 @@
+{
+  "competitorName": "Smith.ai",
+  "websiteUrl": "https://smith.ai/",
+  "researchDate": "2025-12-04",
+
+  "navigationStructure": {
+    "mainMenuItems": [
+      {
+        "label": "Products",
+        "subItems": [
+          "AI Receptionist",
+          "Virtual Receptionists"
+        ]
+      },
+      {
+        "label": "Who We Serve",
+        "subItems": [
+          "Industries",
+          "Companies"
+        ]
+      },
+      {
+        "label": "Solutions",
+        "subItems": [
+          "Integrations",
+          "Case Studies"
+        ]
+      },
+      {
+        "label": "Pricing",
+        "subItems": [
+          "AI Receptionist",
+          "Virtual Receptionists"
+        ]
+      },
+      {
+        "label": "Partners",
+        "subItems": [
+          "Programs",
+          "Affiliates",
+          "Resellers",
+          "Wholesale"
+        ]
+      },
+      {
+        "label": "Company",
+        "subItems": [
+          "About",
+          "Blog",
+          "Press",
+          "Help Center"
+        ]
+      }
+    ],
+
+    "whoWeServe": {
+      "byIndustry": [
+        "Automotive",
+        "Construction & Building Design",
+        "E-commerce & Retail",
+        "Education & Enrichment",
+        "Finance & Accounting",
+        "Hiring & Staffing",
+        "Home Services",
+        "IT, Software & SaaS",
+        "Landscape & Garden",
+        "Legal & Law Firms",
+        "Lifestyle, Events, & Activities",
+        "Marketing & Design Agencies",
+        "Media & Entertainment",
+        "Medical & Wellness",
+        "Real Estate & Property Management",
+        "Transportation & Logistics",
+        "Veterinary & Pet"
+      ],
+
+      "byCompanySize": [
+        "Small business",
+        "Multi-location business",
+        "Enterprise",
+        "Franchise owners",
+        "Marketing agencies"
+      ],
+
+      "specificBusinessTypes": [
+        "Accounting",
+        "Architects",
+        "Car Dealerships",
+        "Carpentry",
+        "Catering",
+        "Chiropractic",
+        "Cleaning",
+        "Couriers/Delivery",
+        "Dance Studios",
+        "Daycare",
+        "Dentists",
+        "Electricians",
+        "Event Planners",
+        "Financial Advisors",
+        "Lenders",
+        "Floor Installers",
+        "Florists",
+        "Furniture Repair",
+        "HVAC",
+        "Hair Salons",
+        "Home Inspectors",
+        "IT/MSPs",
+        "Insurance Agents",
+        "Interior Design",
+        "Landscaping",
+        "Laser Clinics",
+        "Law Firms",
+        "Locksmiths",
+        "Massage/Spas",
+        "Mortgage Brokers",
+        "Movers",
+        "Music Teachers",
+        "Nail Salons",
+        "Nanny Services",
+        "Notary",
+        "Party Rentals",
+        "Pest Control",
+        "Photography",
+        "Plumbing",
+        "Pool Services",
+        "Print Shops",
+        "Property Management",
+        "Real Estate",
+        "Refinishing",
+        "Roofing",
+        "Staffing Agencies",
+        "Tattoo/Piercing",
+        "Taxi",
+        "Travel Agencies",
+        "Trucking/Logistics",
+        "Tutoring",
+        "Veterinary",
+        "Wedding Planning",
+        "Solar Energy"
+      ]
+    }
+  },
+
+  "integrations": {
+    "total": "7,000+ (via Zapier, Make, and native connectors)",
+
+    "categories": {
+      "phoneSystems": [
+        {
+          "name": "1-VoIP",
+          "description": "Leading business phone provider with customizable features"
+        },
+        {
+          "name": "3CX",
+          "description": "Flexible and powerful business phone system"
+        },
+        {
+          "name": "800.com",
+          "description": "Toll-free and local number service"
+        },
+        {
+          "name": "8x8",
+          "description": "Cloud-based voice, video, messaging, and contact center"
+        },
+        {
+          "name": "AXvoice",
+          "description": "Premium VoIP service provider"
+        }
+      ],
+
+      "crm": [
+        {
+          "name": "Act!",
+          "description": "Marketing solution for market outreach and sales"
+        },
+        {
+          "name": "Actionstep",
+          "description": "Creates contacts from new calls and chats"
+        },
+        {
+          "name": "ActiveCampaign",
+          "description": "Contact management with marketing and sales automation"
+        },
+        {
+          "name": "Agile CRM",
+          "description": "All-in-one sales, marketing, and service automation"
+        },
+        {
+          "name": "Assembly Neos",
+          "description": "Legal practice management software"
+        },
+        {
+          "name": "CASEpeer",
+          "description": "Lead creation for incoming calls"
+        },
+        {
+          "name": "HubSpot",
+          "description": "Featured native integration"
+        },
+        {
+          "name": "Salesforce",
+          "description": "Featured native integration"
+        },
+        {
+          "name": "Clio",
+          "description": "Legal CRM featured integration"
+        }
+      ],
+
+      "scheduling": [
+        {
+          "name": "Acuity Scheduling",
+          "description": "Online appointment booking with 24/7 client intake"
+        },
+        {
+          "name": "AppointmentCore",
+          "description": "Scheduling automation for Infusionsoft"
+        },
+        {
+          "name": "Appointy",
+          "description": "Appointment scheduling software"
+        },
+        {
+          "name": "Apptoto",
+          "description": "Appointment reminder system with SMS"
+        },
+        {
+          "name": "Calendly",
+          "description": "Meeting scheduling tool - featured native integration"
+        }
+      ],
+
+      "fieldServiceManagement": [
+        {
+          "name": "ServiceTitan",
+          "description": "Home services management platform - featured native integration"
+        }
+      ],
+
+      "billing": [
+        {
+          "name": "CPACharge",
+          "description": "Payment solution for CPAs and financial planning firms"
+        }
+      ],
+
+      "automation": [
+        {
+          "name": "Airtable",
+          "description": "Low-code platform for building applications"
+        },
+        {
+          "name": "Zapier",
+          "description": "Connects to 7,000+ apps"
+        },
+        {
+          "name": "Make",
+          "description": "Automation platform"
+        }
+      ],
+
+      "marketing": [
+        {
+          "name": "Angi Leads",
+          "description": "Homeowner research and local service provider connection"
+        }
+      ],
+
+      "communication": [
+        {
+          "name": "Slack",
+          "description": "Team messaging - featured native integration"
+        },
+        {
+          "name": "Microsoft Teams",
+          "description": "Team collaboration"
+        }
+      ]
+    }
+  },
+
+  "products": {
+    "aiReceptionist": {
+      "name": "AI Receptionist",
+      "tagline": "AI-first answering, intake & scheduling",
+      "pricingModel": "Per-call billing",
+      "priceRange": "$1.60-$2.40 per call",
+      "keyFeatures": [
+        "24/7 AI-first answering with seamless human escalation",
+        "6 customizable voice options (Ava, Tyler, Marcus, Janelle, Sierra, Beth)",
+        "Custom call playbooks (no code required)",
+        "Lead screening, intake & scheduling",
+        "Automatic spam blocking",
+        "Transparent AI (callers know they're speaking with AI)",
+        "Included human support with no escalation fees",
+        "Native integrations with 7,000+ apps",
+        "30-day money-back guarantee",
+        "No contracts"
+      ],
+      "uniqueDifferentiators": [
+        "First AI-first answering service with 24/7 human support included",
+        "Transparent about AI usage (doesn't hide AI from callers)",
+        "Seamless escalation to 500+ live agents",
+        "Industry-specific playbooks"
+      ]
+    },
+
+    "virtualReceptionists": {
+      "name": "Virtual Receptionists",
+      "tagline": "Human-first answering, intake & scheduling",
+      "pricingModel": "Monthly plans based on call volume",
+      "plans": [
+        {
+          "name": "Starter",
+          "calls": 30,
+          "price": "$292.50/month",
+          "overageRate": "$11.00/call",
+          "transferDestinations": 1
+        },
+        {
+          "name": "Basic",
+          "calls": 90,
+          "price": "$787.50/month",
+          "overageRate": "$10.00/call",
+          "transferDestinations": 2
+        },
+        {
+          "name": "Pro",
+          "calls": 300,
+          "price": "$2,025.00/month",
+          "overageRate": "$8.00/call",
+          "transferDestinations": 10
+        },
+        {
+          "name": "Enterprise",
+          "calls": "Custom",
+          "price": "Custom",
+          "overageRate": "Custom",
+          "transferDestinations": "Custom"
+        }
+      ],
+      "addOnServices": [
+        {
+          "feature": "Appointment booking",
+          "price": "$1.50/call"
+        },
+        {
+          "feature": "SMS/Slack notifications",
+          "price": "$0.50/call"
+        },
+        {
+          "feature": "Microsoft Teams notifications",
+          "price": "$0.50/call"
+        },
+        {
+          "feature": "Text & email follow-up",
+          "price": "$0.50/call"
+        },
+        {
+          "feature": "Conflict checks",
+          "price": "$0.50/call"
+        },
+        {
+          "feature": "Call recording & transcription",
+          "price": "$0.25/call"
+        },
+        {
+          "feature": "Spanish language line",
+          "price": "$1.00/call"
+        },
+        {
+          "feature": "Accept collect calls",
+          "price": "$0.50/call"
+        },
+        {
+          "feature": "Payment acceptance",
+          "price": "$1.00/call"
+        },
+        {
+          "feature": "Third-party intake",
+          "price": "$1.00/call"
+        },
+        {
+          "feature": "Complex call routing",
+          "price": "$1.50/call"
+        },
+        {
+          "feature": "Custom calendaring",
+          "price": "$1.00/call"
+        },
+        {
+          "feature": "Extended intake (6 questions)",
+          "price": "$1.50/call"
+        },
+        {
+          "feature": "Custom questions (per question)",
+          "price": "$0.25/call"
+        }
+      ],
+      "monthlyAddOns": [
+        {
+          "feature": "Business caller ID (outbound)",
+          "price": "$10.00/month"
+        },
+        {
+          "feature": "Additional transfer destinations",
+          "price": "$15.00 each/month"
+        },
+        {
+          "feature": "Inbound tracking numbers",
+          "price": "$5.00 each/month"
+        }
+      ],
+      "includedFeatures": [
+        "Lead screening, qualification & intake",
+        "Live-staffed with expert agents 24/7",
+        "Business insights dashboard",
+        "No setup fees",
+        "No overseas fees",
+        "No hidden fees",
+        "No spam charges",
+        "30-day money-back guarantee",
+        "Month-to-month (no long-term contracts)",
+        "10% discount for 12-month subscriptions"
+      ]
+    }
+  },
+
+  "coreFeatures": {
+    "callManagement": [
+      "24/7 phone answering",
+      "Warm phone transfers",
+      "Payment collection",
+      "Call recording and transcription",
+      "Call intelligence and real-time metadata",
+      "Call routing to multiple locations",
+      "Spam blocking (20M+ robocalls filtered)",
+      "Voicemail-to-email conversion",
+      "Voicemail-to-SMS conversion",
+      "Outbound callbacks",
+      "Outbound calling",
+      "After-hours answering",
+      "Overflow call handling",
+      "Business caller ID display",
+      "Caller recognition technology"
+    ],
+
+    "leadManagement": [
+      "Lead screening & intake",
+      "Lead qualification",
+      "Appointment booking",
+      "Website chat with AI assistance",
+      "Bilingual service (Spanish)",
+      "Email and SMS follow-up automation",
+      "Text notifications for incoming contacts"
+    ],
+
+    "integrationCapabilities": [
+      "CRM synchronization (multiple platforms)",
+      "Native Calendly integration",
+      "Native ServiceTitan integration",
+      "Native HubSpot integration",
+      "Native Slack integration",
+      "Native Salesforce integration",
+      "Native Clio integration",
+      "Zapier (7,000+ apps)",
+      "Make automation",
+      "Open API access",
+      "Google Analytics compatibility"
+    ],
+
+    "communication": [
+      "Live chat with AI assistance",
+      "Real-time English-Spanish chat translation",
+      "Customizable greetings and branding",
+      "Searchable call transcripts",
+      "Dashboard for campaign monitoring"
+    ]
+  },
+
+  "trustSignals": [
+    "5,000+ business clients",
+    "20M+ calls processed",
+    "1M+ work hours saved",
+    "4.8-4.9 star ratings across Clutch, G2, Capterra, Trustpilot",
+    "300+ active partners",
+    "North American support teams",
+    "500+ live agents available",
+    "30-day money-back guarantee",
+    "No long-term contracts",
+    "Featured on major review platforms"
+  ],
+
+  "partnerPrograms": [
+    {
+      "name": "Agency Reseller Program",
+      "target": "Agencies looking to complement existing services",
+      "benefit": "Expand client offerings with responsive engagement"
+    },
+    {
+      "name": "Wholesale Partner Program",
+      "target": "Large or multi-unit operators",
+      "benefit": "Sell services at scale with custom/bulk options"
+    },
+    {
+      "name": "Technology Partner Program",
+      "target": "Integration-focused partners",
+      "benefit": "Native integrations leveraging Smith.ai capabilities"
+    },
+    {
+      "name": "Referral Affiliate Program",
+      "target": "Promoters and advocates",
+      "benefit": "Get paid to promote (10-15% revenue share)"
+    }
+  ],
+
+  "partnerBenefits": [
+    "10-15% revenue share based on scale",
+    "Dedicated partner onboarding and account managers",
+    "Demo accounts and early feature access",
+    "Marketing collateral and co-selling support",
+    "Product training and co-marketing opportunities",
+    "End-to-end reporting with CRM integrations",
+    "API access"
+  ],
+
+  "caseStudies": {
+    "byIndustry": {
+      "legal": {
+        "count": "20+",
+        "examples": [
+          {
+            "company": "Ziegler Diamond Law",
+            "result": "52% conversion rate"
+          },
+          {
+            "company": "Right Law Group",
+            "result": "95% lead funnel automation"
+          },
+          {
+            "company": "Hausen Law",
+            "result": "Seamless overflow call handling"
+          }
+        ]
+      },
+      "homeServices": {
+        "examples": [
+          {
+            "company": "Armor Electric",
+            "result": "Scaling support"
+          },
+          {
+            "company": "Specialized ECU Repair",
+            "result": "Revenue covered annual cost in first week"
+          },
+          {
+            "company": "GSP Homes",
+            "result": "Speed-to-lead in seller's market"
+          }
+        ]
+      },
+      "professionalServices": {
+        "examples": [
+          {
+            "company": "Close to the Earth IT Services",
+            "result": "Admin offloading"
+          },
+          {
+            "company": "CMIT Solutions",
+            "result": "24/7 customer support"
+          }
+        ]
+      },
+      "medicalWellness": {
+        "examples": [
+          {
+            "company": "Colorado Snoring and Sleep Apnea Center",
+            "result": "30 hours monthly saved"
+          },
+          {
+            "company": "Mirelle Institute",
+            "result": "AI-human balance for patient care"
+          }
+        ]
+      },
+      "financial": {
+        "examples": [
+          {
+            "company": "Express Legal Funding",
+            "result": "6x business growth"
+          }
+        ]
+      }
+    }
+  },
+
+  "blogCategories": [
+    "AI & AI Receptionist",
+    "AI Calling Systems & Advanced AI Calling",
+    "Business Education & Solutions",
+    "Call Flow Design, Intelligence, Routing & Infrastructure",
+    "Chat & Integrations",
+    "Client Spotlight & Company News",
+    "Outreach Campaigns & Partnerships",
+    "Product Updates",
+    "Promotions & Offers",
+    "Virtual Receptionists"
+  ],
+
+  "contentThemes": [
+    "Product announcements and feature releases",
+    "Industry education (customer experience, business communication)",
+    "Case studies and client spotlights",
+    "AI and automation thought leadership",
+    "Industry-specific best practices",
+    "Integration tutorials and guides"
+  ],
+
+  "keyPageURLs": [
+    "https://smith.ai/",
+    "https://smith.ai/ai-receptionist",
+    "https://smith.ai/pricing",
+    "https://smith.ai/integrations",
+    "https://smith.ai/industries",
+    "https://smith.ai/case-studies",
+    "https://smith.ai/features",
+    "https://smith.ai/partners",
+    "https://smith.ai/blog"
+  ],
+
+  "urlStructurePatterns": {
+    "products": "/ai-receptionist, /virtual-receptionists",
+    "industries": "/industries (with filter/category system)",
+    "integrations": "/integrations (paginated, category-filtered)",
+    "caseStudies": "/case-studies (industry-filtered)",
+    "pricing": "/pricing (separate pages for each product)",
+    "partners": "/partners (with program types)",
+    "content": "/blog (tag-based filtering)",
+    "legal": "Standard pages (privacy, terms, etc.)"
+  },
+
+  "uniquePositioningElements": [
+    "AI + Human Hybrid Model (seamless escalation included in all plans)",
+    "Transparent AI (doesn't hide AI from callers)",
+    "Industry-specific playbooks (not generic templates)",
+    "Per-call billing model for AI receptionist (low risk entry)",
+    "No escalation fees (human support included)",
+    "North American agents (not overseas)",
+    "30-day money-back guarantee",
+    "No long-term contracts",
+    "Spam filtering included (20M+ robocalls blocked)",
+    "7,000+ integration ecosystem",
+    "Voice customization (6 distinct AI voices)",
+    "Bilingual support (English + Spanish)"
+  ],
+
+  "competitiveAdvantages": [
+    "Massive integration ecosystem (7,000+ apps)",
+    "Dual product offering (AI + Human)",
+    "Transparent pricing with no hidden fees",
+    "Strong social proof (5,000+ clients, 20M+ calls)",
+    "Established partner network (300+ partners)",
+    "Industry-specific expertise (17+ industries)",
+    "Strong review presence (4.8-4.9 stars across platforms)",
+    "Flexible pricing models (per-call for AI, monthly for human)",
+    "Rich case study library (20+ legal alone)",
+    "Comprehensive feature set (20+ capabilities)"
+  ],
+
+  "recommendationsForCaptureClient": {
+    "whoWeServeStructure": {
+      "recommendation": "Create dedicated 'Who We Serve' mega-menu with:",
+      "structure": [
+        "By Industry (17 main categories)",
+        "By Business Type (60+ specific types)",
+        "By Company Size (5 segments)"
+      ],
+      "rationale": "Smith.ai uses this structure to capture every possible search intent. Users can find themselves by industry, specific business type, or company size."
+    },
+
+    "integrationPages": {
+      "recommendation": "Build comprehensive integration directory with:",
+      "structure": [
+        "Main integrations page with category filters",
+        "Individual integration detail pages",
+        "Featured native integrations highlighted",
+        "Category pages (CRM, Scheduling, Phone Systems, etc.)"
+      ],
+      "categories": [
+        "CRM (Salesforce, HubSpot, Clio, etc.)",
+        "Scheduling (Calendly, Acuity, etc.)",
+        "Field Service Management (ServiceTitan, etc.)",
+        "Phone Systems (3CX, 8x8, etc.)",
+        "Communication (Slack, Teams, etc.)",
+        "Automation (Zapier, Make, Airtable, etc.)",
+        "Billing & Payments",
+        "Marketing Tools"
+      ]
+    },
+
+    "navigationBestPractices": {
+      "recommendation": "Implement mega-menu navigation with clear product/service separation",
+      "structure": {
+        "products": "AI Voice Agents (like their AI Receptionist)",
+        "whoWeServe": "Industries + Business Types + Company Size",
+        "solutions": "Integrations + Use Cases + Case Studies",
+        "pricing": "Clear, transparent pricing pages",
+        "partners": "Agency/Reseller programs",
+        "resources": "Blog + Help Center + Guides"
+      }
+    },
+
+    "pricingStrategy": {
+      "recommendation": "Offer multiple pricing models like Smith.ai:",
+      "models": [
+        "Per-call/per-minute pricing for pay-as-you-go",
+        "Monthly plans with included volume",
+        "Add-on services with transparent pricing",
+        "Enterprise custom pricing",
+        "Monthly add-ons (extra features, integrations)"
+      ],
+      "transparency": "List all add-on prices clearly (builds trust)"
+    },
+
+    "contentStrategy": {
+      "recommendation": "Build comprehensive content library:",
+      "priorities": [
+        "Industry-specific case studies (target 5-10 per major industry)",
+        "Product update blog posts (build AI credibility)",
+        "Educational content (business communication, customer experience)",
+        "Integration guides and tutorials",
+        "Client spotlights and success stories"
+      ]
+    },
+
+    "trustSignalPriorities": {
+      "recommendation": "Display quantifiable metrics prominently:",
+      "metrics": [
+        "Total clients/businesses served",
+        "Total calls/interactions processed",
+        "Time/money saved for clients",
+        "Review platform ratings (Clutch, G2, Capterra, Trustpilot)",
+        "Industry certifications and compliance",
+        "Partner network size"
+      ]
+    },
+
+    "partnerProgramStructure": {
+      "recommendation": "Create tiered partner program:",
+      "tiers": [
+        "Referral/Affiliate (easiest entry, commission-based)",
+        "Agency Reseller (for marketing agencies)",
+        "White Label/Wholesale (for large operators)",
+        "Technology Partner (for integration partners)"
+      ],
+      "benefits": "Clear revenue share, dedicated support, co-marketing"
+    },
+
+    "industryPageStructure": {
+      "recommendation": "Create landing pages for ALL business types:",
+      "topPriority": [
+        "Legal/Law Firms (Smith.ai has 20+ case studies here)",
+        "Home Services (HVAC, Plumbing, Electrical, etc.)",
+        "Medical/Healthcare/Wellness",
+        "Real Estate & Property Management",
+        "Professional Services (IT, Accounting, Financial)",
+        "Automotive",
+        "Veterinary & Pet Services"
+      ],
+      "pageElements": [
+        "Industry-specific pain points",
+        "Custom use cases and workflows",
+        "Industry case studies",
+        "Relevant integrations (e.g., Clio for legal)",
+        "Industry-specific testimonials",
+        "Compliance/security info for regulated industries"
+      ]
+    },
+
+    "technicalSEOPriorities": {
+      "recommendation": "Follow Smith.ai's URL structure best practices:",
+      "patterns": [
+        "Clean URLs: /industries, /integrations, /case-studies",
+        "Category-based filtering (not separate URLs for each filter)",
+        "Pagination for large lists",
+        "Consistent naming conventions",
+        "Industry pages: /industries/[industry-name]",
+        "Integration pages: /integrations/[integration-name]",
+        "Case studies: /case-studies/[company-name]"
+      ]
+    }
+  }
+}

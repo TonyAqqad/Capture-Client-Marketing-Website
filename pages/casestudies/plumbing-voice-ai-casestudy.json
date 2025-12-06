@@ -1,0 +1,155 @@
+{
+  "case_study_id": "plumbing-voice-ai",
+  "page_type": "case_study",
+  "seo": {
+    "page_title": "Plumbing Company AI Case Study | 740% After-Hours Growth | Capture Client",
+    "meta_description": "See how Thompson Plumbing achieved 60x faster response times and 740% growth in after-hours conversions with AI voice agents. 485% ROI in 3 months.",
+    "keywords": [
+      "plumbing voice ai case study",
+      "plumbing lead generation",
+      "ai voice agents plumbing",
+      "plumber marketing results",
+      "plumbing emergency calls"
+    ],
+    "canonical_url": "/case-studies/plumbing"
+  },
+  "company": {
+    "name": "Thompson Plumbing Co.",
+    "industry": "Plumbing Company",
+    "location": "Chattanooga, TN",
+    "size": "6 plumbers, 2 office staff",
+    "established": "2012"
+  },
+  "problem": {
+    "headline": "Slow Response Times Causing Leads to Go to Competitors",
+    "description": "Thompson Plumbing had great technicians and excellent reviews, but they were hemorrhaging leads. With plumbers on jobs all day and a small office team, response times averaged 2 hours. For emergency plumbing calls, that was 2 hours too long.",
+    "pain_points": [
+      "Average response time of 2 hours while competitors averaged 15 minutes",
+      "Only 5% of after-hours calls converted (most went to voicemail)",
+      "Emergency calls during business hours often went unanswered when staff was busy",
+      "Losing an estimated $8,000 per month to competitors who answered faster",
+      "Customer satisfaction declining due to delayed responses"
+    ],
+    "key_stat": {
+      "metric": "After-Hours Conversion",
+      "value": "5%",
+      "context": "Almost all after-hours leads lost to voicemail"
+    }
+  },
+  "solution": {
+    "headline": "24/7 AI Voice Agents with Instant Response and Emergency Routing",
+    "description": "Capture Client implemented AI voice agents with a focus on speed-to-lead and emergency handling. The AI was trained to identify true plumbing emergencies and route them immediately while handling routine inquiries and bookings automatically.",
+    "implementation_steps": [
+      {
+        "step": 1,
+        "title": "Emergency Protocol Definition",
+        "description": "Worked with Thompson to define what constitutes a plumbing emergency: burst pipes, no water, sewage backup, major leaks. Created urgent routing rules."
+      },
+      {
+        "step": 2,
+        "title": "Service Training",
+        "description": "Trained the AI on all services offered, pricing guidelines, service areas, and common plumbing questions customers ask."
+      },
+      {
+        "step": 3,
+        "title": "Scheduling Integration",
+        "description": "Connected to ServiceTitan for real-time scheduling based on technician availability and job type."
+      },
+      {
+        "step": 4,
+        "title": "Escalation Setup",
+        "description": "Configured immediate SMS and phone alerts to on-call plumber for after-hours emergencies."
+      }
+    ],
+    "key_features": [
+      "Instant call answering with natural plumbing-specific conversation",
+      "Emergency detection and immediate routing to on-call technician",
+      "Automatic scheduling based on job type and technician skills",
+      "Service area verification before booking",
+      "Price estimate ranges for common jobs",
+      "Complete call transcripts and lead scoring"
+    ]
+  },
+  "results": {
+    "headline": "485% ROI in Just 3 Months",
+    "metrics": [
+      {
+        "metric": "Response Time",
+        "before": "2 hours",
+        "after": "< 2 minutes",
+        "improvement": "60x faster",
+        "context": "From call to first contact"
+      },
+      {
+        "metric": "After-Hours Conversions",
+        "before": "5%",
+        "after": "42%",
+        "improvement": "+740%",
+        "context": "Calls converted to booked jobs"
+      },
+      {
+        "metric": "Customer Satisfaction",
+        "before": "3.8/5",
+        "after": "4.9/5",
+        "improvement": "+29%",
+        "context": "Google review average"
+      },
+      {
+        "metric": "Emergency Job Capture",
+        "before": "22%",
+        "after": "87%",
+        "improvement": "+295%",
+        "context": "Emergency calls converted to same-day jobs"
+      },
+      {
+        "metric": "Monthly Revenue",
+        "before": "$38,000",
+        "after": "$67,000",
+        "improvement": "+76%",
+        "context": "From captured leads"
+      }
+    ],
+    "roi": {
+      "percentage": "485%",
+      "calculation": "Additional revenue ($29,000/month) minus AI cost ($347/month)",
+      "payback_period": "Under 1 week"
+    }
+  },
+  "testimonial": {
+    "quote": "The emergency routing alone paid for the entire system in the first week. We got a burst pipe call at 2 AM on a Saturday. Our AI answered, identified it as an emergency, and had my on-call guy's phone ringing within 30 seconds. That was a $2,400 job we would have lost to whoever the customer called next. Now multiply that by every weekend.",
+    "author": "Robert Thompson",
+    "title": "Owner",
+    "company": "Thompson Plumbing Co."
+  },
+  "timeline": {
+    "total_duration": "3 months",
+    "milestones": [
+      { "week": 1, "milestone": "Emergency protocols and service training" },
+      { "week": 2, "milestone": "ServiceTitan integration and testing" },
+      { "week": 3, "milestone": "Go live with 24/7 answering" },
+      { "week": 4, "milestone": "First emergency successfully routed at 2 AM" },
+      { "month": 2, "milestone": "After-hours conversion rate exceeded 40%" },
+      { "month": 3, "milestone": "76% revenue increase, 485% ROI" }
+    ]
+  },
+  "key_takeaways": [
+    "Response time is critical for plumbing leads - people with emergencies will not wait",
+    "After-hours emergency handling is a massive opportunity most plumbers miss",
+    "AI can reliably distinguish true emergencies from routine service requests",
+    "Customer satisfaction improved significantly with faster, more reliable response",
+    "ROI was achieved within days, not months, due to high-value emergency captures"
+  ],
+  "cta": {
+    "headline": "Ready to Capture Every Plumbing Lead?",
+    "description": "See how Capture Client can deliver similar results for your plumbing company.",
+    "primary_button": {
+      "text": "Book Your Free Demo",
+      "action": "/contact"
+    },
+    "secondary_button": {
+      "text": "Call Us: (865) 346-3339",
+      "action": "tel:865-346-3339"
+    }
+  },
+  "related_case_studies": ["hvac", "roofing"]
+}

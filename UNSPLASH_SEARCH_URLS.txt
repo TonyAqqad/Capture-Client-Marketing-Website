@@ -1,0 +1,430 @@
+================================================================================
+UNSPLASH SEARCH URLs FOR LOCAL LANDMARKS
+================================================================================
+
+
+Chattanooga Tn
+  Landmark: Walnut Street Bridge
+  Primary: https://unsplash.com/s/photos/Walnut+Street+Bridge+Chattanooga+Tennessee
+  Alt:     https://unsplash.com/s/photos/Chattanooga+Tennessee+skyline
+  Alt:     https://unsplash.com/s/photos/Lookout+Mountain+Chattanooga
+
+Knoxville Tn
+  Landmark: Sunsphere
+  Primary: https://unsplash.com/s/photos/Sunsphere+Knoxville+Tennessee
+  Alt:     https://unsplash.com/s/photos/Knoxville+Tennessee+downtown
+  Alt:     https://unsplash.com/s/photos/Market+Square+Knoxville
+
+Memphis Tn
+  Landmark: Beale Street
+  Primary: https://unsplash.com/s/photos/Beale+Street+Memphis+Tennessee
+  Alt:     https://unsplash.com/s/photos/Memphis+Tennessee+skyline
+  Alt:     https://unsplash.com/s/photos/Memphis+Bridge
+
+Nashville Tn
+  Landmark: Broadway Nashville
+  Primary: https://unsplash.com/s/photos/Broadway+Nashville+Tennessee
+  Alt:     https://unsplash.com/s/photos/Nashville+skyline
+  Alt:     https://unsplash.com/s/photos/AT&T+Building+Nashville
+
+Murfreesboro Tn
+  Landmark: Historic Square
+  Primary: https://unsplash.com/s/photos/Murfreesboro+Tennessee+historic+square
+  Alt:     https://unsplash.com/s/photos/Murfreesboro+downtown+Tennessee
+
+Franklin Tn
+  Landmark: Historic Main Street
+  Primary: https://unsplash.com/s/photos/Franklin+Tennessee+historic+downtown
+  Alt:     https://unsplash.com/s/photos/Franklin+Tennessee+Main+Street
+
+Clarksville Tn
+  Landmark: Cumberland River
+  Primary: https://unsplash.com/s/photos/Clarksville+Tennessee+Cumberland+River
+  Alt:     https://unsplash.com/s/photos/Clarksville+Tennessee+downtown
+
+Johnson City Tn
+  Landmark: Downtown Johnson City
+  Primary: https://unsplash.com/s/photos/Johnson+City+Tennessee+downtown
+  Alt:     https://unsplash.com/s/photos/Johnson+City+Tennessee+Founders+Park
+
+Kingsport Tn
+  Landmark: Downtown Kingsport
+  Primary: https://unsplash.com/s/photos/Kingsport+Tennessee+downtown
+  Alt:     https://unsplash.com/s/photos/Kingsport+Tennessee+Bays+Mountain
+
+Maryville Tn
+  Landmark: Great Smoky Mountains
+  Primary: https://unsplash.com/s/photos/Maryville+Tennessee+Smoky+Mountains
+  Alt:     https://unsplash.com/s/photos/Maryville+Tennessee+downtown
+
+Farragut Tn
+  Landmark: West Knoxville
+  Primary: https://unsplash.com/s/photos/Farragut+Tennessee
+  Alt:     https://unsplash.com/s/photos/Turkey+Creek+Knoxville+Tennessee
+
+Gatlinburg Tn
+  Landmark: Great Smoky Mountains
+  Primary: https://unsplash.com/s/photos/Gatlinburg+Tennessee+mountains
+  Alt:     https://unsplash.com/s/photos/Gatlinburg+Tennessee+strip
+
+Sevierville Tn
+  Landmark: Smoky Mountains
+  Primary: https://unsplash.com/s/photos/Sevierville+Tennessee
+  Alt:     https://unsplash.com/s/photos/Sevierville+Tennessee+downtown
+
+Oak Ridge Tn
+  Landmark: Oak Ridge
+  Primary: https://unsplash.com/s/photos/Oak+Ridge+Tennessee
+  Alt:     https://unsplash.com/s/photos/Oak+Ridge+Tennessee+downtown
+
+Atlanta Ga
+  Landmark: Atlanta Skyline
+  Primary: https://unsplash.com/s/photos/Atlanta+Georgia+skyline+Midtown
+  Alt:     https://unsplash.com/s/photos/Peachtree+Street+Atlanta
+  Alt:     https://unsplash.com/s/photos/Atlanta+downtown
+
+Athens Ga
+  Landmark: UGA Arch
+  Primary: https://unsplash.com/s/photos/University+of+Georgia+Athens+arch
+  Alt:     https://unsplash.com/s/photos/Athens+Georgia+downtown
+  Alt:     https://unsplash.com/s/photos/Sanford+Stadium+Athens
+
+Augusta Ga
+  Landmark: Augusta Riverwalk
+  Primary: https://unsplash.com/s/photos/Riverwalk+Augusta+Georgia
+  Alt:     https://unsplash.com/s/photos/Augusta+Georgia+Savannah+River
+
+Alpharetta Ga
+  Landmark: Avalon
+  Primary: https://unsplash.com/s/photos/Alpharetta+Georgia+Avalon
+  Alt:     https://unsplash.com/s/photos/Alpharetta+Georgia+downtown
+
+Marietta Ga
+  Landmark: Marietta Square
+  Primary: https://unsplash.com/s/photos/Marietta+Square+Georgia
+  Alt:     https://unsplash.com/s/photos/Marietta+Georgia+historic+downtown
+
+Roswell Ga
+  Landmark: Historic Roswell
+  Primary: https://unsplash.com/s/photos/Roswell+Georgia+historic+Canton+Street
+  Alt:     https://unsplash.com/s/photos/Canton+Street+Roswell+Georgia
+
+Sandy Springs Ga
+  Landmark: City Springs
+  Primary: https://unsplash.com/s/photos/Sandy+Springs+Georgia+City+Springs
+  Alt:     https://unsplash.com/s/photos/Sandy+Springs+Georgia
+
+Columbus Ga
+  Landmark: Riverwalk
+  Primary: https://unsplash.com/s/photos/Columbus+Georgia+Riverwalk+Chattahoochee
+  Alt:     https://unsplash.com/s/photos/Columbus+Georgia+downtown
+
+Savannah Ga
+  Landmark: Forsyth Park
+  Primary: https://unsplash.com/s/photos/Forsyth+Park+Savannah+Georgia
+  Alt:     https://unsplash.com/s/photos/River+Street+Savannah
+  Alt:     https://unsplash.com/s/photos/Savannah+historic+squares
+
+Charlotte Nc
+  Landmark: Charlotte Skyline
+  Primary: https://unsplash.com/s/photos/Charlotte+North+Carolina+uptown+skyline
+  Alt:     https://unsplash.com/s/photos/Bank+of+America+tower+Charlotte
+
+Raleigh Nc
+  Landmark: North Carolina State Capitol
+  Primary: https://unsplash.com/s/photos/Raleigh+North+Carolina+state+capitol
+  Alt:     https://unsplash.com/s/photos/Raleigh+downtown+North+Carolina
+
+Durham Nc
+  Landmark: Duke Chapel
+  Primary: https://unsplash.com/s/photos/Duke+Chapel+Durham+North+Carolina
+  Alt:     https://unsplash.com/s/photos/Durham+North+Carolina+downtown
+
+Chapel Hill Nc
+  Landmark: Old Well
+  Primary: https://unsplash.com/s/photos/Old+Well+UNC+Chapel+Hill
+  Alt:     https://unsplash.com/s/photos/Franklin+Street+Chapel+Hill
+  Alt:     https://unsplash.com/s/photos/UNC+Chapel+Hill+campus
+
+Greensboro Nc
+  Landmark: Downtown Greensboro
+  Primary: https://unsplash.com/s/photos/Greensboro+North+Carolina+downtown
+  Alt:     https://unsplash.com/s/photos/Greensboro+NC+Gate+City
+
+Winston Salem Nc
+  Landmark: Downtown Winston-Salem
+  Primary: https://unsplash.com/s/photos/Winston-Salem+North+Carolina+downtown
+  Alt:     https://unsplash.com/s/photos/Old+Salem+North+Carolina
+
+Cary Nc
+  Landmark: Downtown Cary
+  Primary: https://unsplash.com/s/photos/Cary+North+Carolina+downtown
+  Alt:     https://unsplash.com/s/photos/Cary+NC+parks
+
+Asheville Nc
+  Landmark: Blue Ridge Mountains
+  Primary: https://unsplash.com/s/photos/Asheville+North+Carolina+Blue+Ridge+Mountains
+  Alt:     https://unsplash.com/s/photos/Downtown+Asheville
+  Alt:     https://unsplash.com/s/photos/Biltmore+Asheville
+
+Wilmington Nc
+  Landmark: Wilmington Riverwalk
+  Primary: https://unsplash.com/s/photos/Wilmington+North+Carolina+riverwalk
+  Alt:     https://unsplash.com/s/photos/Cape+Fear+River+Wilmington
+
+Fayetteville Nc
+  Landmark: Market House
+  Primary: https://unsplash.com/s/photos/Fayetteville+North+Carolina+Market+House
+  Alt:     https://unsplash.com/s/photos/Fayetteville+NC+downtown
+
+Concord Nc
+  Landmark: Downtown Concord
+  Primary: https://unsplash.com/s/photos/Concord+North+Carolina+downtown
+  Alt:     https://unsplash.com/s/photos/Concord+NC+Charlotte+Motor+Speedway
+
+High Point Nc
+  Landmark: Downtown High Point
+  Primary: https://unsplash.com/s/photos/High+Point+North+Carolina+downtown
+  Alt:     https://unsplash.com/s/photos/High+Point+furniture+market
+
+Greenville Nc
+  Landmark: Downtown Greenville
+  Primary: https://unsplash.com/s/photos/Greenville+North+Carolina+downtown
+  Alt:     https://unsplash.com/s/photos/ECU+East+Carolina+University+Greenville
+
+Alexandria Va
+  Landmark: Old Town Alexandria
+  Primary: https://unsplash.com/s/photos/Old+Town+Alexandria+Virginia+King+Street
+  Alt:     https://unsplash.com/s/photos/King+Street+Alexandria
+  Alt:     https://unsplash.com/s/photos/Alexandria+waterfront
+
+Richmond Va
+  Landmark: Richmond Skyline
+  Primary: https://unsplash.com/s/photos/Richmond+Virginia+skyline+James+River
+  Alt:     https://unsplash.com/s/photos/Virginia+State+Capitol+Richmond
+
+Arlington Va
+  Landmark: Rosslyn
+  Primary: https://unsplash.com/s/photos/Arlington+Virginia+Rosslyn+skyline
+  Alt:     https://unsplash.com/s/photos/Crystal+City+Arlington
+
+Virginia Beach Va
+  Landmark: Virginia Beach Oceanfront
+  Primary: https://unsplash.com/s/photos/Virginia+Beach+oceanfront+boardwalk
+  Alt:     https://unsplash.com/s/photos/Virginia+Beach+boardwalk
+
+Norfolk Va
+  Landmark: Norfolk Waterfront
+  Primary: https://unsplash.com/s/photos/Norfolk+Virginia+waterfront+harbor
+  Alt:     https://unsplash.com/s/photos/Norfolk+harbor+Virginia
+
+Chesapeake Va
+  Landmark: Great Bridge
+  Primary: https://unsplash.com/s/photos/Chesapeake+Virginia+Great+Bridge
+  Alt:     https://unsplash.com/s/photos/Chesapeake+Virginia
+
+Newport News Va
+  Landmark: Newport News Waterfront
+  Primary: https://unsplash.com/s/photos/Newport+News+Virginia+waterfront
+  Alt:     https://unsplash.com/s/photos/Newport+News+Virginia+harbor
+
+Hampton Va
+  Landmark: Hampton Waterfront
+  Primary: https://unsplash.com/s/photos/Hampton+Virginia+waterfront
+  Alt:     https://unsplash.com/s/photos/Hampton+Virginia+downtown
+
+Suffolk Va
+  Landmark: Historic Suffolk
+  Primary: https://unsplash.com/s/photos/Suffolk+Virginia+historic+downtown
+  Alt:     https://unsplash.com/s/photos/Suffolk+Virginia+downtown
+
+Roanoke Va
+  Landmark: Roanoke Star
+  Primary: https://unsplash.com/s/photos/Roanoke+Star+Virginia+Blue+Ridge
+  Alt:     https://unsplash.com/s/photos/Roanoke+Virginia+downtown
+
+Lynchburg Va
+  Landmark: James River
+  Primary: https://unsplash.com/s/photos/Lynchburg+Virginia+James+River
+  Alt:     https://unsplash.com/s/photos/Lynchburg+Virginia+downtown
+
+Fredericksburg Va
+  Landmark: Historic Fredericksburg
+  Primary: https://unsplash.com/s/photos/Fredericksburg+Virginia+historic+downtown
+  Alt:     https://unsplash.com/s/photos/Rappahannock+River+Fredericksburg
+
+Louisville Ky
+  Landmark: Louisville Skyline
+  Primary: https://unsplash.com/s/photos/Louisville+Kentucky+skyline+Ohio+River
+  Alt:     https://unsplash.com/s/photos/Churchill+Downs+Louisville
+
+Lexington Ky
+  Landmark: Lexington Horse Farm
+  Primary: https://unsplash.com/s/photos/Lexington+Kentucky+horse+farm
+  Alt:     https://unsplash.com/s/photos/Lexington+Kentucky+downtown
+  Alt:     https://unsplash.com/s/photos/Rupp+Arena+Lexington
+
+Bowling Green Ky
+  Landmark: Downtown Bowling Green
+  Primary: https://unsplash.com/s/photos/Bowling+Green+Kentucky+downtown
+  Alt:     https://unsplash.com/s/photos/WKU+Western+Kentucky+University+Bowling+Green
+
+Covington Ky
+  Landmark: Roebling Suspension Bridge
+  Primary: https://unsplash.com/s/photos/Roebling+Bridge+Covington+Kentucky
+  Alt:     https://unsplash.com/s/photos/Cincinnati+skyline+from+Covington
+  Alt:     https://unsplash.com/s/photos/Mainstrasse+Village+Covington
+
+Owensboro Ky
+  Landmark: Ohio River
+  Primary: https://unsplash.com/s/photos/Owensboro+Kentucky+Ohio+River
+  Alt:     https://unsplash.com/s/photos/Owensboro+Kentucky+downtown
+
+Columbus Oh
+  Landmark: Columbus Skyline
+  Primary: https://unsplash.com/s/photos/Columbus+Ohio+skyline+Scioto+Mile
+  Alt:     https://unsplash.com/s/photos/Scioto+Mile+Columbus
+
+Cleveland Oh
+  Landmark: Terminal Tower
+  Primary: https://unsplash.com/s/photos/Cleveland+Ohio+skyline+Terminal+Tower
+  Alt:     https://unsplash.com/s/photos/Lake+Erie+Cleveland
+
+Cincinnati Oh
+  Landmark: Cincinnati Skyline
+  Primary: https://unsplash.com/s/photos/Cincinnati+Ohio+skyline+Roebling+Bridge
+  Alt:     https://unsplash.com/s/photos/Ohio+River+Cincinnati
+
+Toledo Oh
+  Landmark: Downtown Toledo
+  Primary: https://unsplash.com/s/photos/Toledo+Ohio+downtown+Maumee+River
+  Alt:     https://unsplash.com/s/photos/Maumee+River+Toledo
+
+Akron Oh
+  Landmark: Downtown Akron
+  Primary: https://unsplash.com/s/photos/Akron+Ohio+downtown
+  Alt:     https://unsplash.com/s/photos/Akron+Ohio+canal+district
+
+Dayton Oh
+  Landmark: Downtown Dayton
+  Primary: https://unsplash.com/s/photos/Dayton+Ohio+downtown
+  Alt:     https://unsplash.com/s/photos/Great+Miami+River+Dayton
+
+Canton Oh
+  Landmark: Pro Football Hall of Fame
+  Primary: https://unsplash.com/s/photos/Pro+Football+Hall+of+Fame+Canton+Ohio
+  Alt:     https://unsplash.com/s/photos/Canton+Ohio+downtown
+
+Parma Oh
+  Landmark: Greater Cleveland
+  Primary: https://unsplash.com/s/photos/Cleveland+Ohio+suburbs
+  Alt:     https://unsplash.com/s/photos/Parma+Ohio
+
+Miami Fl
+  Landmark: Miami Skyline
+  Primary: https://unsplash.com/s/photos/Miami+Florida+skyline+Biscayne+Bay
+  Alt:     https://unsplash.com/s/photos/Miami+Beach+Florida
+  Alt:     https://unsplash.com/s/photos/Downtown+Miami
+
+Orlando Fl
+  Landmark: Lake Eola
+  Primary: https://unsplash.com/s/photos/Lake+Eola+Orlando+Florida
+  Alt:     https://unsplash.com/s/photos/Orlando+Florida+skyline
+
+Tampa Fl
+  Landmark: Tampa Riverwalk
+  Primary: https://unsplash.com/s/photos/Tampa+Riverwalk+Florida
+  Alt:     https://unsplash.com/s/photos/Tampa+Bay+Florida+skyline
+
+Jacksonville Fl
+  Landmark: Jacksonville Skyline
+  Primary: https://unsplash.com/s/photos/Jacksonville+Florida+skyline+St+Johns+River
+  Alt:     https://unsplash.com/s/photos/St+Johns+River+Jacksonville
+
+St Petersburg Fl
+  Landmark: St. Petersburg Pier
+  Primary: https://unsplash.com/s/photos/St+Petersburg+Florida+waterfront+pier
+  Alt:     https://unsplash.com/s/photos/St+Petersburg+Florida+downtown
+
+Fort Lauderdale Fl
+  Landmark: Fort Lauderdale Beach
+  Primary: https://unsplash.com/s/photos/Fort+Lauderdale+beach+Florida
+  Alt:     https://unsplash.com/s/photos/Fort+Lauderdale+waterfront
+
+Cape Coral Fl
+  Landmark: Cape Coral Canals
+  Primary: https://unsplash.com/s/photos/Cape+Coral+Florida+canals
+  Alt:     https://unsplash.com/s/photos/Cape+Coral+Florida+waterfront
+
+Hialeah Fl
+  Landmark: Miami Metropolitan Area
+  Primary: https://unsplash.com/s/photos/Miami+metro+Florida
+  Alt:     https://unsplash.com/s/photos/South+Florida+suburbs
+
+Coral Springs Fl
+  Landmark: South Florida
+  Primary: https://unsplash.com/s/photos/South+Florida+suburbs
+  Alt:     https://unsplash.com/s/photos/Coral+Springs+Florida
+
+Tallahassee Fl
+  Landmark: Florida State Capitol
+  Primary: https://unsplash.com/s/photos/Florida+State+Capitol+Tallahassee
+  Alt:     https://unsplash.com/s/photos/Tallahassee+Florida+downtown
+  Alt:     https://unsplash.com/s/photos/FSU+Tallahassee
+
+Houston Tx
+  Landmark: Houston Skyline
+  Primary: https://unsplash.com/s/photos/Houston+Texas+skyline+Buffalo+Bayou
+  Alt:     https://unsplash.com/s/photos/Downtown+Houston+Texas
+
+Dallas Tx
+  Landmark: Dallas Skyline
+  Primary: https://unsplash.com/s/photos/Dallas+Texas+skyline+Reunion+Tower
+  Alt:     https://unsplash.com/s/photos/Reunion+Tower+Dallas
+
+San Antonio Tx
+  Landmark: San Antonio River Walk
+  Primary: https://unsplash.com/s/photos/River+Walk+San+Antonio+Texas
+  Alt:     https://unsplash.com/s/photos/Alamo+San+Antonio
+  Alt:     https://unsplash.com/s/photos/Tower+of+the+Americas
+
+Austin Tx
+  Landmark: Austin Skyline
+  Primary: https://unsplash.com/s/photos/Austin+Texas+skyline+Lady+Bird+Lake
+  Alt:     https://unsplash.com/s/photos/Congress+Avenue+Bridge+Austin
+  Alt:     https://unsplash.com/s/photos/Texas+State+Capitol+Austin
+
+Fort Worth Tx
+  Landmark: Fort Worth Skyline
+  Primary: https://unsplash.com/s/photos/Fort+Worth+Texas+skyline
+  Alt:     https://unsplash.com/s/photos/Fort+Worth+Stockyards
+
+El Paso Tx
+  Landmark: Franklin Mountains
+  Primary: https://unsplash.com/s/photos/El+Paso+Texas+Franklin+Mountains
+  Alt:     https://unsplash.com/s/photos/El+Paso+Texas+downtown
+
+Plano Tx
+  Landmark: Legacy West
+  Primary: https://unsplash.com/s/photos/Plano+Texas+Legacy+West
+  Alt:     https://unsplash.com/s/photos/Plano+Texas+downtown
+
+Irving Tx
+  Landmark: Mustangs of Las Colinas
+  Primary: https://unsplash.com/s/photos/Las+Colinas+Mustangs+Irving+Texas
+  Alt:     https://unsplash.com/s/photos/Las+Colinas+Irving
+
+Frisco Tx
+  Landmark: The Star
+  Primary: https://unsplash.com/s/photos/Frisco+Texas+The+Star
+  Alt:     https://unsplash.com/s/photos/Frisco+Texas+downtown
+
+================================================================================
+NEXT STEPS:
+1. Visit each Unsplash URL above
+2. Select best local landmark image
+3. Extract photo ID from URL (after /photo-)
+4. Note photographer name and username
+5. Create CSV: location_slug,photo_id,photographer,photographer_username
+6. Run: python update_local_images.py update images.csv
+================================================================================

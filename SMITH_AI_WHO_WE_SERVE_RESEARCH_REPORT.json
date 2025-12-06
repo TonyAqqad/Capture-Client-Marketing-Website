@@ -1,0 +1,706 @@
+{
+  "researchDate": "2025-12-04",
+  "source": "Smith.ai Website Research",
+  "totalIndustries": 18,
+  "navigationStructure": "Industries dropdown menu organized by broad categories (Professional Services, Home Services, Lifestyle & Wellness, Technology, Finance)",
+
+  "industries": [
+    {
+      "name": "Legal & Law Firms",
+      "slug": "legal-law-firms",
+      "url": "https://smith.ai/industries/legal-law-firms-answering-service",
+      "category": "Professional Services",
+      "subTypes": [
+        "Solo Practitioners",
+        "Small Law Firms",
+        "General Legal Practice",
+        "Personal Injury Law",
+        "Family Law",
+        "Criminal Defense",
+        "Estate Law",
+        "Property Law"
+      ],
+      "painPoints": [
+        "67% of clients base hiring decision on initial responsiveness",
+        "Attorneys lose 25% of day recovering from interruptions",
+        "Missed calls result in lost leads",
+        "Time spent on administrative intake vs. billable hours",
+        "Need for conflict checking before consultations",
+        "High call volumes without additional staff overhead"
+      ],
+      "keyFeatures": [
+        "Legal intake with conflict checking",
+        "Lead screening and qualification",
+        "Appointment scheduling",
+        "Payment collection",
+        "Call recording and transcription",
+        "CRM integration (7,000+ tools)",
+        "Bilingual support",
+        "24/7 AI + human backup"
+      ],
+      "costSavings": "$77,000/year in-house receptionist vs. $95-292.50/month with Smith.ai"
+    },
+    {
+      "name": "Home Services",
+      "slug": "home-services",
+      "url": "https://smith.ai/industries/home-services-answering-service",
+      "category": "Home Services",
+      "subTypes": [
+        "HVAC Contractors",
+        "Plumbing Services",
+        "Electrical Services",
+        "Roofing Services",
+        "General Contractors",
+        "Carpentry",
+        "Floor Installers",
+        "Furniture Repair",
+        "Home Inspectors",
+        "Painters (Home & Commercial)",
+        "Interior Design",
+        "Locksmiths",
+        "Pool Services",
+        "Refinishing Companies",
+        "Chimney Repair"
+      ],
+      "painPoints": [
+        "Missed calls are missed business opportunities",
+        "Unpredictable incoming calls",
+        "Technicians away from billable work when answering phones",
+        "50% of lead generation budgets wasted on leads never contacted",
+        "After-hours service requests go to voicemail",
+        "Manual data entry slows operations"
+      ],
+      "keyFeatures": [
+        "24/7 AI call answering",
+        "Emergency call prioritization",
+        "Appointment scheduling automation",
+        "Lead screening and intake",
+        "Payment collection",
+        "CRM integration (Housecall Pro, ServiceTitan, etc.)",
+        "Intelligent emergency routing",
+        "Automated scheduling by technician specialty",
+        "Call recording and transcription"
+      ],
+      "costSavings": "60-80% reduction vs. hiring administrative staff, starting at $95/month"
+    },
+    {
+      "name": "Real Estate Agents",
+      "slug": "real-estate-agents",
+      "url": "https://smith.ai/industries/real-estate-agents-answering-service",
+      "category": "Professional Services",
+      "subTypes": [
+        "Residential Real Estate",
+        "Commercial Real Estate",
+        "Buyer's Agents",
+        "Seller's Agents",
+        "Real Estate Brokers",
+        "Multi-location Real Estate Firms"
+      ],
+      "painPoints": [
+        "Calls come during showings, negotiations, client meetings",
+        "50% of lead budgets wasted on leads never contacted",
+        "Hot prospects hit voicemail",
+        "Unable to handle multiple calls during listings launches",
+        "Time drain on routine 'is this still available' inquiries",
+        "In-house receptionists cost $77,000/year with limited availability"
+      ],
+      "keyFeatures": [
+        "Lead qualification (budget, timeline, preferences)",
+        "24/7 showing appointment booking",
+        "Calendar integration (Calendly, etc.)",
+        "Professional call greeting and intake",
+        "Payment processing",
+        "CRM automation (Salesforce, HubSpot)",
+        "Call analytics and buyer pattern tracking",
+        "Bilingual support",
+        "Unlimited simultaneous calls"
+      ],
+      "costSavings": "$40,000-$70,000 saved annually vs. in-house reception, starting at $97.50/month"
+    },
+    {
+      "name": "Property Management",
+      "slug": "property-management",
+      "url": "https://smith.ai/industries/property-management-answering-service",
+      "category": "Real Estate & Property",
+      "subTypes": [
+        "Residential Property Management",
+        "Commercial Property Management",
+        "Multi-family Property Management",
+        "HOA Management"
+      ],
+      "painPoints": [
+        "Tenant calls at all hours",
+        "Maintenance request overload",
+        "Tenant screening time-consuming",
+        "Rent collection follow-ups",
+        "Vacancy scheduling conflicts"
+      ],
+      "keyFeatures": [
+        "24/7 tenant screening",
+        "Maintenance request management",
+        "Viewing scheduling",
+        "Rent collection",
+        "Tenant request prioritization",
+        "CRM integration (7,000+ tools)",
+        "AI-powered analytics (occupancy rates, ROI predictions)",
+        "Automated logging of all interactions"
+      ],
+      "costSavings": "Significant staff reduction vs. in-house team"
+    },
+    {
+      "name": "Medical & Wellness",
+      "slug": "medical-wellness",
+      "url": "https://smith.ai/industries/medical-wellness-answering-service",
+      "category": "Healthcare & Wellness",
+      "subTypes": [
+        "General Medical Practices",
+        "Dental Practices",
+        "Orthodontists",
+        "Chiropractors",
+        "Veterinary Clinics",
+        "Wellness Centers",
+        "Laser Clinics",
+        "Massage & Spas",
+        "Sleep & Respiratory Centers",
+        "Rehabilitation Centers"
+      ],
+      "painPoints": [
+        "No-show appointments impact revenue",
+        "Staff time diverted from patient care",
+        "50% of lead budgets wasted on unconverted leads",
+        "After-hours patient calls",
+        "38% of dental calls from potential patients missed",
+        "$1.7 billion annual cost for dental pain ER visits"
+      ],
+      "keyFeatures": [
+        "Appointment scheduling and reminders",
+        "Patient intake and screening",
+        "Insurance verification",
+        "Prescription refill management",
+        "Follow-up appointment coordination",
+        "Payment collection",
+        "Call recording and transcription",
+        "CRM integration",
+        "Bilingual services"
+      ],
+      "importantNote": "Smith.ai is NOT HIPAA-compliant and cannot handle Protected Health Information (PHI) for regulated healthcare. Best for veterinary, wellness, and non-regulated healthcare businesses.",
+      "costSavings": "Reduces no-shows and administrative burden"
+    },
+    {
+      "name": "IT Services & MSPs",
+      "slug": "it-managed-services",
+      "url": "https://smith.ai/industries/it-managed-services-answering-service",
+      "category": "Technology",
+      "subTypes": [
+        "Managed Service Providers (MSPs)",
+        "IT Consultancies",
+        "Computer Repair Services",
+        "Network Administration",
+        "Cybersecurity Services",
+        "Cloud Services Providers"
+      ],
+      "painPoints": [
+        "Technical teams lack customer-facing skills",
+        "Can't afford downtime - need 24/7 coverage",
+        "Support ticket overload",
+        "Lead qualification inefficiency",
+        "After-hours emergency calls"
+      ],
+      "keyFeatures": [
+        "24/7 call and chat support",
+        "Lead qualification and intake",
+        "Appointment scheduling for demos/consultations",
+        "Support ticket collection",
+        "CRM integration (7,000+ tools)",
+        "Professional client representation",
+        "Emergency call routing",
+        "Bilingual support"
+      ],
+      "costSavings": "24/7 coverage without payroll burden"
+    },
+    {
+      "name": "Software & SaaS",
+      "slug": "software-saas-companies",
+      "url": "https://smith.ai/industries/software-saas-companies-answering-service",
+      "category": "Technology",
+      "subTypes": [
+        "SaaS Platforms",
+        "Software Development Companies",
+        "App Developers",
+        "Enterprise Software",
+        "B2B Software",
+        "B2C Software"
+      ],
+      "painPoints": [
+        "Rapid industry growth - projected $908.21B by 2030",
+        "Lead qualification inefficiency",
+        "Demo scheduling bottlenecks",
+        "Customer support scaling challenges",
+        "Missing sales opportunities during off-hours"
+      ],
+      "keyFeatures": [
+        "24/7 AI + human call handling",
+        "Lead qualification and screening",
+        "Demo scheduling automation",
+        "Customer support assistance",
+        "CRM integration (HubSpot, Zendesk, Base CRM)",
+        "Call analytics and intelligence",
+        "Bilingual support",
+        "Partner portal for MSPs/VARs"
+      ],
+      "costSavings": "Scalable solution vs. hiring support staff"
+    },
+    {
+      "name": "Accounting & Bookkeeping",
+      "slug": "finance-accounting",
+      "url": "https://smith.ai/industries/finance-accounting-answering-service",
+      "category": "Finance & Professional Services",
+      "subTypes": [
+        "Accountants",
+        "Bookkeepers",
+        "CPAs",
+        "Tax Preparation Services",
+        "Financial Auditors",
+        "Payroll Services"
+      ],
+      "painPoints": [
+        "Seasonal call volume spikes (tax season)",
+        "Client intake time-consuming",
+        "Missing leads during busy periods",
+        "Administrative tasks divert from billable work"
+      ],
+      "keyFeatures": [
+        "Client intake and screening",
+        "Appointment scheduling",
+        "Lead qualification",
+        "Payment collection",
+        "CRM integration",
+        "Call recording and transcription",
+        "Bilingual support",
+        "24/7 availability"
+      ],
+      "costSavings": "Focus on billable hours vs. administrative tasks"
+    },
+    {
+      "name": "Financial Advisors & Services",
+      "slug": "financial-services",
+      "url": "https://smith.ai/industries/finance-accounting-answering-service",
+      "category": "Finance & Professional Services",
+      "subTypes": [
+        "Financial Advisors",
+        "Financial Lenders",
+        "Mortgage Brokers",
+        "Investment Advisors",
+        "Wealth Management",
+        "Financial Planners"
+      ],
+      "painPoints": [
+        "Client meetings interrupted by calls",
+        "Lead qualification time-consuming",
+        "Missed opportunities outside business hours",
+        "Complex client intake requirements"
+      ],
+      "keyFeatures": [
+        "Structured intake questions (services needed, financial goals, risk tolerance)",
+        "Lead qualification and screening",
+        "Appointment booking",
+        "Payment processing",
+        "CRM integration",
+        "Call intelligence and analytics",
+        "White-glove implementation",
+        "Bilingual support"
+      ],
+      "costSavings": "Focus on client relationships vs. administrative work"
+    },
+    {
+      "name": "Marketing & Design Agencies",
+      "slug": "marketing-design-agencies",
+      "url": "https://smith.ai/company/agency",
+      "category": "Professional Services",
+      "subTypes": [
+        "Marketing Agencies",
+        "Design Agencies",
+        "Graphic Design Firms",
+        "Social Media Marketing Agencies",
+        "Public Relations Firms",
+        "Creative Agencies",
+        "Photography Services"
+      ],
+      "painPoints": [
+        "Focus on client campaigns disrupted by calls",
+        "Lead qualification inefficiency",
+        "Proving marketing ROI difficult",
+        "Missing leads during project work",
+        "Client communication overload"
+      ],
+      "keyFeatures": [
+        "24/7 AI + human call handling",
+        "Lead capture and qualification",
+        "Appointment scheduling",
+        "CRM integration (proves marketing ROI)",
+        "Call analytics",
+        "Partner/reseller program available",
+        "End-to-end lead management",
+        "Bilingual support"
+      ],
+      "costSavings": "22% improvement in marketing ROI with AI integration"
+    },
+    {
+      "name": "Staffing & Recruiting",
+      "slug": "hiring-staffing",
+      "url": "https://smith.ai/industries/hiring-staffing-answering-service",
+      "category": "Professional Services",
+      "subTypes": [
+        "Staffing Agencies",
+        "Recruiting Firms",
+        "Executive Search",
+        "Temp Agencies",
+        "Workforce Development Firms",
+        "Talent Acquisition Services"
+      ],
+      "painPoints": [
+        "Need to reach candidates outside standard hours",
+        "Peak hiring season overload",
+        "Lead intake and filtering unqualified applicants",
+        "Interview scheduling complexity",
+        "High call volume management"
+      ],
+      "keyFeatures": [
+        "24/7 call handling",
+        "Job seeker screening",
+        "Interview scheduling",
+        "CRM integration (keeps candidate data organized)",
+        "Lead vetting and qualification",
+        "100% North America-based agents",
+        "Industry-specific training",
+        "Bilingual support"
+      ],
+      "costSavings": "Handle volume spikes without additional hiring"
+    },
+    {
+      "name": "Insurance Agencies",
+      "slug": "insurance",
+      "url": "https://smith.ai/industries",
+      "category": "Finance & Professional Services",
+      "subTypes": [
+        "Independent Insurance Agents",
+        "Insurance Brokers",
+        "Life Insurance",
+        "Health Insurance",
+        "Property & Casualty",
+        "Commercial Insurance"
+      ],
+      "painPoints": [
+        "Overwhelming volume of leads",
+        "Follow-ups with existing customers",
+        "Lead vetting time-consuming",
+        "Quote requests outside business hours"
+      ],
+      "keyFeatures": [
+        "Customized call handling",
+        "Lead vetting and qualification",
+        "Appointment scheduling",
+        "Message taking and routing",
+        "CRM integration",
+        "24/7 availability",
+        "Bilingual support"
+      ],
+      "costSavings": "Manage lead volume without additional staff"
+    },
+    {
+      "name": "Pest Control",
+      "slug": "pest-control",
+      "url": "https://smith.ai/industries/pest-control-answering-service",
+      "category": "Home Services",
+      "subTypes": [
+        "Residential Pest Control",
+        "Commercial Pest Control",
+        "Termite Control",
+        "Wildlife Removal",
+        "Bed Bug Treatment"
+      ],
+      "painPoints": [
+        "Emergency pest situations require immediate response",
+        "Technicians in field can't take calls",
+        "Seasonal call volume spikes",
+        "Inspection scheduling complexity"
+      ],
+      "keyFeatures": [
+        "24/7 emergency call handling",
+        "Pest severity assessment (type, location, urgency)",
+        "Inspection booking",
+        "Treatment history tracking",
+        "CRM integration (7,000+ tools)",
+        "Call analytics",
+        "Automated logging"
+      ],
+      "costSavings": "Capture emergency calls without additional staff"
+    },
+    {
+      "name": "Cleaning Services",
+      "slug": "cleaning-services",
+      "url": "https://smith.ai/industries/cleaning-answering-service",
+      "category": "Home Services",
+      "subTypes": [
+        "House Cleaning",
+        "Commercial Cleaning",
+        "Carpet Cleaning",
+        "Window Cleaning",
+        "Move-out Cleaning",
+        "Deep Cleaning"
+      ],
+      "painPoints": [
+        "Cleaning crews can't answer phones during jobs",
+        "Lead response delays",
+        "Appointment scheduling conflicts",
+        "Quote requests outside business hours"
+      ],
+      "keyFeatures": [
+        "24/7 AI-first answering",
+        "Lead capture and booking",
+        "Payment collection",
+        "Appointment scheduling",
+        "CRM integration (Housecall Pro, etc.)",
+        "Automated logging",
+        "Bilingual support"
+      ],
+      "costSavings": "Focus on cleaning services vs. administrative work"
+    },
+    {
+      "name": "Landscaping & Garden Services",
+      "slug": "landscaping",
+      "url": "https://smith.ai/blog/ai-answering-service-for-landscapers",
+      "category": "Home Services",
+      "subTypes": [
+        "Lawn Care",
+        "Landscape Design",
+        "Tree Services",
+        "Irrigation Services",
+        "Hardscaping",
+        "Garden Maintenance"
+      ],
+      "painPoints": [
+        "Seasonal call volume variations",
+        "Crew in field unable to take calls",
+        "Emergency irrigation issues need immediate response",
+        "Estimate scheduling complexity"
+      ],
+      "keyFeatures": [
+        "Seasonal call intelligence (understands urgency by season)",
+        "Irrigation issue assessment",
+        "Appointment booking by neighborhood",
+        "Lead capture and qualification",
+        "CRM integration",
+        "Automated scheduling"
+      ],
+      "costSavings": "Efficient neighborhood routing and lead capture"
+    },
+    {
+      "name": "Construction & Building Design",
+      "slug": "construction-building-design",
+      "url": "https://smith.ai/industries",
+      "category": "Home Services & Professional Services",
+      "subTypes": [
+        "Architects",
+        "General Construction",
+        "Building Design",
+        "Solar Energy",
+        "Custom Home Builders",
+        "Commercial Construction"
+      ],
+      "painPoints": [
+        "Project managers on job sites can't take calls",
+        "Bid requests outside business hours",
+        "Client consultation scheduling complexity",
+        "Lead qualification time-consuming"
+      ],
+      "keyFeatures": [
+        "24/7 call answering",
+        "Estimate appointment scheduling",
+        "Lead screening and intake",
+        "Project inquiry management",
+        "CRM integration",
+        "Payment collection",
+        "Bilingual support"
+      ],
+      "costSavings": "Capture leads without hiring office staff"
+    },
+    {
+      "name": "Automotive Services",
+      "slug": "automotive",
+      "url": "https://smith.ai/industries",
+      "category": "Professional Services",
+      "subTypes": [
+        "Car Dealerships",
+        "Auto Repair Shops",
+        "Body Shops",
+        "Oil Change Services",
+        "Tire Services",
+        "Mobile Mechanics"
+      ],
+      "painPoints": [
+        "Service advisors busy with customers in shop",
+        "Test drive scheduling conflicts",
+        "After-hours sales inquiries",
+        "Service appointment booking complexity"
+      ],
+      "keyFeatures": [
+        "Sales inquiry handling",
+        "Service appointment scheduling",
+        "Test drive booking",
+        "Lead qualification",
+        "CRM integration",
+        "Payment processing",
+        "24/7 availability"
+      ],
+      "costSavings": "Capture sales leads 24/7 without additional staff"
+    },
+    {
+      "name": "Lifestyle, Events & Activities",
+      "slug": "lifestyle-events-activities",
+      "url": "https://smith.ai/industries",
+      "category": "Lifestyle & Wellness",
+      "subTypes": [
+        "Catering Services",
+        "Event Planners",
+        "Wedding Planners",
+        "Hair Salons",
+        "Nail Salons",
+        "Spas",
+        "Massage Therapy",
+        "Tattoo & Piercing Shops",
+        "Party Supplies & Rentals",
+        "Dance Studios",
+        "Music Teachers",
+        "Tutoring Services",
+        "Daycare",
+        "Nanny Services"
+      ],
+      "painPoints": [
+        "Complex scheduling demands",
+        "Client communication during events/appointments",
+        "Lead follow-up outside business hours",
+        "Seasonal booking spikes (wedding season, holidays)",
+        "No-show appointments"
+      ],
+      "keyFeatures": [
+        "24/7 appointment booking",
+        "Lead follow-up automation",
+        "Appointment reminders",
+        "Payment collection",
+        "Event inquiry management",
+        "CRM integration",
+        "Bilingual support"
+      ],
+      "costSavings": "Reduce no-shows and capture bookings 24/7"
+    }
+  ],
+
+  "coreFeatures": {
+    "phoneServices": [
+      "24/7 phone answering with AI + human backup",
+      "After-hours and overflow call handling",
+      "Warm transfer to team members",
+      "Call recording and transcription",
+      "Spam blocking (20M+ robocalls blocked)",
+      "Voicemail-to-email/SMS/MMS",
+      "Port existing numbers free",
+      "Dedicated local or toll-free numbers",
+      "Business caller ID",
+      "High-quality VoIP"
+    ],
+    "leadManagement": [
+      "Lead screening and qualification",
+      "New client intake forms",
+      "Call disposition tagging",
+      "Pre-qualification before consultations",
+      "Business referral monetization"
+    ],
+    "appointmentServices": [
+      "Automated appointment booking",
+      "Appointment reminders",
+      "Calendar integration (Calendly, etc.)",
+      "Conflict checking for CRMs"
+    ],
+    "outboundCapabilities": [
+      "24/7 outbound calling",
+      "Campaign dashboard with real-time tracking",
+      "Adjustable call cadences",
+      "Email and SMS follow-up",
+      "Multi-channel engagement"
+    ],
+    "websiteEngagement": [
+      "24/7 live website chat",
+      "AI-agent collaboration",
+      "Custom knowledge base",
+      "Proactive chat prompts",
+      "Real-time English-Spanish translation",
+      "Chat transcripts and analytics"
+    ],
+    "paymentCollections": [
+      "Payment collection during calls",
+      "Registration fees processing",
+      "Consultation fee collection"
+    ],
+    "integrations": [
+      "7,000+ app integrations via Zapier",
+      "CRM integration (Salesforce, HubSpot, etc.)",
+      "Open API for custom connections",
+      "Google Analytics sync",
+      "Microsoft Teams and Slack integration",
+      "Housecall Pro, ServiceTitan, and more"
+    ],
+    "analytics": [
+      "Online client dashboard",
+      "Call intelligence and metadata",
+      "Real-time call tracking",
+      "Call quota notifications",
+      "Inbound call tracking for marketing campaigns",
+      "AI-powered analytics and predictions"
+    ],
+    "languageSupport": [
+      "Bilingual Spanish answering",
+      "Fully bilingual receptionists",
+      "Real-time translation for chat"
+    ]
+  },
+
+  "pricingTiers": {
+    "aiReceptionist": {
+      "starting": "$95/month",
+      "description": "AI-first with human escalation backup"
+    },
+    "virtualReceptionists": {
+      "starting": "$97.50-$292.50/month",
+      "description": "100% North America-based live agents 24/7"
+    },
+    "comparison": "vs. $77,000/year for in-house receptionist with limited hours"
+  },
+
+  "competitiveAdvantages": [
+    "AI-first technology with seamless human escalation",
+    "North America-based agents (not offshore)",
+    "7,000+ integrations vs. competitors with limited options",
+    "Industry-specific training and customization",
+    "White-glove implementation and ongoing support",
+    "Less than 1% of applicants hired - rigorous quality standards",
+    "Unlimited simultaneous call handling",
+    "82% of consumers expect immediate response - Smith.ai delivers",
+    "67% of clients judge businesses on initial responsiveness"
+  ],
+
+  "notesForCaptureClient": {
+    "megaMenuStructure": "Organize by category: Professional Services, Home Services, Healthcare & Wellness, Technology, Finance, Lifestyle & Events",
+    "contentStrategy": "Each industry page should highlight specific pain points, ROI metrics, and cost savings",
+    "trustSignals": "Include statistics like '67% of clients base decision on responsiveness' and '82% expect immediate response'",
+    "ctaRecommendations": [
+      "Free consultation",
+      "Calculate your ROI",
+      "See pricing for [industry]",
+      "Book a demo",
+      "Start 14-day trial"
+    ],
+    "seoStrategy": "Target keywords: '[Industry] answering service', '[Industry] virtual receptionist', '[Industry] AI receptionist', '24/7 [industry] call answering'",
+    "localSeoOpportunity": "Smith.ai has location-specific pages (LA, NYC, Seattle, Atlanta, etc.) - consider similar approach for Capture Client"
+  }
+}

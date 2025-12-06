@@ -1,0 +1,87 @@
+================================================================================
+FILE: src/app/layout.tsx
+OPTIMIZATION: Reduce font weights and disable preloading on secondary fonts
+================================================================================
+
+FIND (Lines 36-42):
+// PREMIUM: Space Grotesk - Distinctive headline font
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  weight: ["500", "600", "700"],
+  display: "swap",
+  preload: true,
+});
+
+REPLACE WITH:
+// PREMIUM: Space Grotesk - Distinctive headline font
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  weight: ["600", "700"], // CRITICAL: Reduced from 3 to 2 weights
+  display: "swap",
+  preload: false, // CRITICAL: Don't preload secondary fonts
+});
+
+FIND (Lines 44-51):
+// $1 MILLION: Bricolage Grotesque - Ultra-premium display headlines
+const bricolageGrotesque = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-bricolage-grotesque",
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
+  display: "swap",
+  preload: true,
+});
+
+REPLACE WITH:
+// $1 MILLION: Bricolage Grotesque - Ultra-premium display headlines
+const bricolageGrotesque = Bricolage_Grotesque({
+  subsets: ["latin"],
+  variable: "--font-bricolage-grotesque",
+  weight: ["600", "700", "800"], // CRITICAL: Reduced from 7 to 3 weights
+  display: "swap",
+  preload: false, // CRITICAL: Don't preload display fonts
+});
+
+FIND (Lines 53-59):
+// $1 MILLION: Syne - Bold distinctive accent font
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-syne",
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+  preload: false, // Secondary font, don't preload
+});
+
+REPLACE WITH:
+// $1 MILLION: Syne - Bold distinctive accent font
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-syne",
+  weight: ["600", "700"], // CRITICAL: Reduced from 5 to 2 weights
+  display: "swap",
+  preload: false, // Secondary font, don't preload
+});
+
+================================================================================
+SUMMARY OF FONT CHANGES:
+================================================================================
+
+BEFORE:
+- Poppins: 4 weights (preload=true) ✅ KEEP
+- Inter: 3 weights (preload=true) ✅ KEEP
+- Space Grotesk: 3 weights (preload=true) ❌ CHANGE
+- Bricolage Grotesque: 7 weights (preload=true) ❌ CHANGE
+- Syne: 5 weights (preload=false) ❌ CHANGE
+TOTAL: 22 font weight files
+
+AFTER:
+- Poppins: 4 weights (preload=true) ✅
+- Inter: 3 weights (preload=true) ✅
+- Space Grotesk: 2 weights (preload=false) ✅
+- Bricolage Grotesque: 3 weights (preload=false) ✅
+- Syne: 2 weights (preload=false) ✅
+TOTAL: 14 font weight files
+
+SAVINGS: 8 font files = ~275KB network savings
+

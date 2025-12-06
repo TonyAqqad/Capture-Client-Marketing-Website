@@ -60,7 +60,6 @@ export function PremiumHero() {
 
   // Live stats ticker - HYDRATION SAFE: Uses deterministic increments
   // Initial values are static, increments happen only after client-side mount
-  const [callsAnswered, setCallsAnswered] = useState(4273);
   const [leadsQualified, setLeadsQualified] = useState(1847);
   const tickerRef = useRef(0); // Deterministic counter for increments
 
@@ -75,10 +74,6 @@ export function PremiumHero() {
     const interval = setInterval(() => {
       tickerRef.current += 1;
       const tick = tickerRef.current;
-
-      // Deterministic increment: +1 or +2 based on tick modulo
-      const callIncrement = tick % 3 === 0 ? 2 : 1;
-      setCallsAnswered(prev => prev + callIncrement);
 
       // Leads increase every other tick
       if (tick % 2 === 0) {
@@ -324,145 +319,8 @@ export function PremiumHero() {
               </motion.div>
             </div>
 
-            {/* RIGHT: Visual Elements - Desktop (5 columns) */}
-            <div className="lg:col-span-5 relative hidden lg:block">
-              <div className="relative w-full h-[650px]">
-                {/* Main floating card - AI Voice Call */}
-                <motion.div
-                  initial={{ opacity: 0, y: 40 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.8 }}
-                  className="absolute top-0 right-0 w-[380px]"
-                >
-                  <motion.div
-                    animate={{ y: [0, -15, 0], rotate: [-0.5, 0.5, -0.5] }}
-                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                    className="glass-3d p-7"
-                  >
-                    {/* Call header */}
-                    <div className="flex items-center justify-between mb-5">
-                      <div className="flex items-center gap-3">
-                        <span className="relative flex h-3.5 w-3.5">
-                          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-                          <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-green-400 shadow-[0_0_10px_rgba(74,222,128,0.6)]" />
-                        </span>
-                        <span className="text-sm font-bold text-green-400 uppercase tracking-wider">Active Call</span>
-                      </div>
-                      <div className="flex items-center gap-2 px-3 py-1.5 bg-white/5 rounded-lg border border-white/10">
-                        <span className="material-icons text-white/60 text-sm">schedule</span>
-                        <span className="text-xs font-mono text-white/80">2:47</span>
-                      </div>
-                    </div>
-
-                    {/* Caller info */}
-                    <div className="flex items-center gap-4 mb-5 p-4 bg-white/[0.03] rounded-xl border border-white/[0.05]">
-                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-[#D4AF37] flex items-center justify-center shadow-lg">
-                        <span className="material-icons text-white text-2xl">person</span>
-                      </div>
-                      <div>
-                        <p className="font-semibold text-white text-lg">Sarah Martinez</p>
-                        <p className="text-sm text-white/50">Home Services Lead</p>
-                      </div>
-                    </div>
-
-                    {/* AI Response */}
-                    <div className="mb-5 p-4 bg-gradient-to-br from-cyan-500/10 to-[#D4AF37]/10 rounded-xl border border-cyan-500/20">
-                      <div className="flex items-start gap-3">
-                        <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-[#D4AF37] flex items-center justify-center flex-shrink-0">
-                          <span className="material-icons text-white text-sm">smart_toy</span>
-                        </div>
-                        <div>
-                          <p className="text-xs text-cyan-400 font-semibold mb-1.5">AI AGENT</p>
-                          <p className="text-sm text-white/80 leading-relaxed">
-                            "Perfect! I can schedule you for our earliest opening on Tuesday at 2pm. Does that work?"
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2">
-                      <div className="px-3 py-1.5 bg-green-500/10 border border-green-500/20 rounded-lg text-xs font-semibold text-green-400 flex items-center gap-1.5">
-                        <span className="material-icons text-xs">check_circle</span>
-                        Qualified
-                      </div>
-                      <div className="px-3 py-1.5 bg-cyan-500/10 border border-cyan-500/20 rounded-lg text-xs font-semibold text-cyan-400 flex items-center gap-1.5">
-                        <span className="material-icons text-xs">event</span>
-                        Booking
-                      </div>
-                      <div className="px-3 py-1.5 bg-[#D4AF37]/10 border border-[#D4AF37]/20 rounded-lg text-xs font-semibold text-[#D4AF37] flex items-center gap-1.5">
-                        <span className="material-icons text-xs">psychology</span>
-                        NLP Active
-                      </div>
-                    </div>
-                  </motion.div>
-                </motion.div>
-
-                {/* Stats card */}
-                <motion.div
-                  initial={{ opacity: 0, x: -30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: 1 }}
-                  className="absolute bottom-20 left-0 w-[300px]"
-                >
-                  <motion.div
-                    animate={{ y: [0, 10, 0], rotate: [0.5, -0.5, 0.5] }}
-                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                    className="glass-3d p-6"
-                  >
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold to-gold-light flex items-center justify-center shadow-[0_0_20px_rgba(212,175,55,0.3)]">
-                        <span className="material-icons text-black text-xl">trending_up</span>
-                      </div>
-                      <div>
-                        <p className="text-xs text-white/50 uppercase tracking-wider">This Month</p>
-                        <motion.p
-                          className="text-3xl font-bold bg-gradient-to-r from-gold to-cyan-400 bg-clip-text text-transparent"
-                          animate={{ scale: [1, 1.02, 1] }}
-                          transition={{ duration: 2, repeat: Infinity }}
-                        >
-                          +247%
-                        </motion.p>
-                      </div>
-                    </div>
-
-                    <div className="space-y-3">
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm text-white/50">Clients Captured</span>
-                        <span className="text-sm font-bold text-white">{callsAnswered.toLocaleString()}</span>
-                      </div>
-                      <div className="h-2 bg-white/5 rounded-full overflow-hidden">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          animate={{ width: "87%" }}
-                          transition={{ duration: 1.5, delay: 1.2 }}
-                          className="h-full bg-gradient-to-r from-gold via-cyan-400 to-[#D4AF37] rounded-full"
-                        />
-                      </div>
-                      <div className="flex justify-between items-center pt-1">
-                        <span className="text-sm text-white/50">Conversion Rate</span>
-                        <span className="text-sm font-bold text-cyan-400">87.3%</span>
-                      </div>
-                    </div>
-                  </motion.div>
-                </motion.div>
-
-                {/* Decorative rings */}
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                  className="absolute top-1/3 right-1/4 w-32 h-32 border border-white/5 rounded-full"
-                />
-                <motion.div
-                  animate={{ rotate: -360 }}
-                  transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                  className="absolute bottom-1/4 right-1/3 w-20 h-20 border border-cyan-500/10 rounded-full"
-                />
-              </div>
-            </div>
-
-            {/* Interactive AI Demo - $10M PREMIUM DESIGN */}
-            <div className="mt-12 lg:mt-0 lg:absolute lg:right-8 lg:top-1/2 lg:-translate-y-1/2 lg:w-96 lg:z-20">
+            {/* RIGHT: Interactive AI Demo - $10M PREMIUM DESIGN */}
+            <div className="lg:col-span-5 mt-12 lg:mt-0 hidden lg:block">
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}

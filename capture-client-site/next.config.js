@@ -1,5 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // CRITICAL: Experimental optimizations for better FCP
+  experimental: {
+    optimizePackageImports: ["lucide-react", "framer-motion"],
+    // Enable optimized font loading
+    optimizeCss: true,
+  },
+
   // Image optimization - AVIF first, then WebP for better compression
   images: {
     formats: ["image/avif", "image/webp"],
@@ -28,13 +35,6 @@ const nextConfig = {
 
   // Enable compression for all responses
   compress: true,
-
-  // CRITICAL: Experimental optimizations for better FCP
-  experimental: {
-    optimizePackageImports: ["lucide-react", "framer-motion"],
-    // Enable optimized font loading
-    optimizeCss: true,
-  },
 
   // CRITICAL: Compiler optimizations for faster builds and smaller bundles
   compiler: {

@@ -111,6 +111,19 @@ export function MobileHeroVisual() {
         {/* Decorative floating elements */}
         <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-gradient-radial from-cyan-500/20 to-transparent blur-2xl float-slow" />
         <div className="absolute -bottom-4 -left-4 w-24 h-24 rounded-full bg-gradient-radial from-[#D4AF37]/20 to-transparent blur-2xl float-slow-delayed" />
+
+        {/* LIVE NOW badge - floating on phone */}
+        <div className="absolute -top-2 -right-2 z-20">
+          <div className="relative glass-badge px-3 py-1.5 shadow-[0_4px_20px_rgba(212,175,55,0.4)]">
+            <div className="flex items-center gap-1.5">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping-slow absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37] shadow-[0_0_6px_rgba(212,175,55,0.8)]" />
+              </span>
+              <span className="text-[11px] font-bold text-[#D4AF37] uppercase tracking-wide">Live Now</span>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Trust stats bar */}
@@ -131,6 +144,53 @@ export function MobileHeroVisual() {
             <span className="text-xl font-bold bg-gradient-to-r from-gold to-gold-light bg-clip-text text-transparent">1,847</span>
           </div>
           <p className="text-xs text-white/60 font-medium">Leads Captured</p>
+        </div>
+      </div>
+
+      {/* Try Our AI Live CTA Section */}
+      <div className="relative mt-6">
+        {/* Glow ring */}
+        <div className="absolute inset-0 -m-1 rounded-2xl bg-gradient-to-r from-[#D4AF37]/30 via-cyan-500/30 to-[#D4AF37]/30 blur-xl glow-pulse" />
+
+        {/* CTA Container */}
+        <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
+          {/* Header */}
+          <div className="text-center mb-4">
+            <h3 className="text-lg font-bold bg-gradient-to-r from-[#D4AF37] via-cyan-400 to-[#D4AF37] bg-clip-text text-transparent mb-2 gradient-shimmer">
+              Try Our AI Live!
+            </h3>
+            <div className="flex items-center justify-center gap-2">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping-slow absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.8)]" />
+              </span>
+              <span className="text-xs font-semibold text-green-400 uppercase tracking-wide">AI Agent Online</span>
+            </div>
+          </div>
+
+          {/* Phone Number */}
+          <a
+            href="tel:8653463339"
+            className="block text-center mb-4 group"
+          >
+            <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-[#D4AF37] bg-clip-text text-transparent group-active:scale-95 transition-transform">
+              (865) 346-3339
+            </div>
+          </a>
+
+          {/* Call Button */}
+          <a
+            href="tel:8653463339"
+            className="relative block w-full"
+          >
+            {/* Pulsing ring around button */}
+            <div className="absolute inset-0 -m-1 rounded-xl bg-gradient-to-r from-cyan-500 to-[#D4AF37] opacity-50 pulse-ring-button" />
+
+            <button className="relative w-full bg-gradient-to-r from-cyan-500 to-[#D4AF37] text-white font-bold py-3.5 px-6 rounded-xl shadow-[0_4px_20px_rgba(0,201,255,0.4)] active:scale-95 transition-transform flex items-center justify-center gap-2">
+              <span className="material-icons" style={{ fontSize: '20px' }}>phone</span>
+              <span>Call Now</span>
+            </button>
+          </a>
         </div>
       </div>
 
@@ -259,6 +319,53 @@ export function MobileHeroVisual() {
           animation: timer-pulse 1s ease-in-out infinite;
         }
 
+        /* Glow pulse for CTA section */
+        .glow-pulse {
+          animation: glow-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes glow-pulse {
+          0%, 100% {
+            opacity: 0.5;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 0.8;
+            transform: scale(1.02);
+          }
+        }
+
+        /* Pulse ring for button */
+        .pulse-ring-button {
+          animation: pulse-ring-button 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse-ring-button {
+          0%, 100% {
+            opacity: 0.3;
+            transform: scale(1);
+          }
+          50% {
+            opacity: 0.6;
+            transform: scale(1.05);
+          }
+        }
+
+        /* Gradient shimmer */
+        .gradient-shimmer {
+          background-size: 200% auto;
+          animation: gradient-shimmer 3s linear infinite;
+        }
+
+        @keyframes gradient-shimmer {
+          0% {
+            background-position: 0% center;
+          }
+          100% {
+            background-position: 200% center;
+          }
+        }
+
         /* Disable animations for reduced motion preference */
         @media (prefers-reduced-motion: reduce) {
           .pulse-ring,
@@ -269,7 +376,10 @@ export function MobileHeroVisual() {
           .slide-up-fade,
           .float-slow,
           .float-slow-delayed,
-          .call-timer {
+          .call-timer,
+          .glow-pulse,
+          .pulse-ring-button,
+          .gradient-shimmer {
             animation: none !important;
           }
 
@@ -279,6 +389,14 @@ export function MobileHeroVisual() {
 
           .typing-dots span {
             opacity: 1;
+          }
+
+          .glow-pulse {
+            opacity: 0.5;
+          }
+
+          .pulse-ring-button {
+            opacity: 0.5;
           }
         }
       `}</style>

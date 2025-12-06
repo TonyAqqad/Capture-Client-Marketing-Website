@@ -1,0 +1,154 @@
+{
+  "case_study_id": "hvac-voice-ai",
+  "page_type": "case_study",
+  "seo": {
+    "page_title": "HVAC Voice AI Case Study | 247% Revenue Growth | Capture Client",
+    "meta_description": "See how Elite Climate Solutions increased revenue 247% and achieved 100% call answer rates with AI voice agents. From missing 60% of calls to capturing every lead.",
+    "keywords": [
+      "hvac voice ai case study",
+      "hvac lead generation",
+      "ai voice agents hvac",
+      "hvac marketing results",
+      "hvac missed calls solution"
+    ],
+    "canonical_url": "/case-studies/hvac"
+  },
+  "company": {
+    "name": "Elite Climate Solutions",
+    "industry": "HVAC Services",
+    "location": "Knoxville, TN",
+    "size": "15 employees",
+    "established": "2015"
+  },
+  "problem": {
+    "headline": "Missing 60% of Inbound Calls During Peak Season",
+    "description": "Elite Climate Solutions was a successful HVAC company, but they had a critical problem: their technicians were always on jobs, and the office staff could not keep up with call volume during peak summer and winter months.",
+    "pain_points": [
+      "Missing 60% of inbound calls during busy periods",
+      "Losing an estimated $15,000 per month in potential revenue",
+      "Competitors winning jobs simply because they answered first",
+      "After-hours emergency calls going completely unanswered",
+      "Front office overwhelmed trying to dispatch techs and answer phones"
+    ],
+    "key_stat": {
+      "metric": "Calls Missed",
+      "value": "60%",
+      "context": "During peak AC season"
+    }
+  },
+  "solution": {
+    "headline": "24/7 AI Voice Agents with Automatic Lead Qualification",
+    "description": "Capture Client implemented AI voice agents to handle all incoming calls around the clock. The AI was trained on Elite Climate's specific services, pricing, and scheduling preferences.",
+    "implementation_steps": [
+      {
+        "step": 1,
+        "title": "Discovery and Training",
+        "description": "Spent two days learning their business, services, pricing, and common customer questions to train the AI."
+      },
+      {
+        "step": 2,
+        "title": "Integration Setup",
+        "description": "Connected the AI to their scheduling system, CRM, and phone routing to enable seamless appointment booking."
+      },
+      {
+        "step": 3,
+        "title": "Emergency Routing",
+        "description": "Configured smart routing so emergency calls (no AC in summer, no heat in winter) trigger immediate text alerts to on-call technicians."
+      },
+      {
+        "step": 4,
+        "title": "Testing and Launch",
+        "description": "Ran parallel testing for one week, then went fully live with 24/7 AI answering."
+      }
+    ],
+    "key_features": [
+      "24/7 call answering with natural conversation",
+      "Automatic lead qualification based on job type and urgency",
+      "Real-time appointment booking into their ServiceTitan calendar",
+      "Emergency call routing with instant notifications",
+      "Complete call transcripts and lead tracking in CRM"
+    ]
+  },
+  "results": {
+    "headline": "612% ROI in Just 6 Months",
+    "metrics": [
+      {
+        "metric": "Call Answer Rate",
+        "before": "40%",
+        "after": "100%",
+        "improvement": "+150%",
+        "context": "Every call answered within 2 rings"
+      },
+      {
+        "metric": "Monthly Revenue",
+        "before": "$45,000",
+        "after": "$156,000",
+        "improvement": "+247%",
+        "context": "From captured leads that would have been lost"
+      },
+      {
+        "metric": "Response Time",
+        "before": "2 hours",
+        "after": "< 2 minutes",
+        "improvement": "60x faster",
+        "context": "Average time to first contact with lead"
+      },
+      {
+        "metric": "After-Hours Bookings",
+        "before": "3 per month",
+        "after": "47 per month",
+        "improvement": "+1,467%",
+        "context": "Jobs booked between 5 PM and 8 AM"
+      },
+      {
+        "metric": "Customer Satisfaction",
+        "before": "4.1/5",
+        "after": "4.9/5",
+        "improvement": "+20%",
+        "context": "Google review average"
+      }
+    ],
+    "roi": {
+      "percentage": "612%",
+      "calculation": "Additional monthly revenue ($111,000) minus AI cost ($397/month)",
+      "payback_period": "Under 2 weeks"
+    }
+  },
+  "testimonial": {
+    "quote": "We were skeptical about AI answering our phones. Would customers notice? Would it book the wrong jobs? Those fears disappeared within the first week. Our AI books more appointments than our office staff ever did, and it works while we sleep. Best investment we have made in 10 years of business.",
+    "author": "Michael Chen",
+    "title": "Owner",
+    "company": "Elite Climate Solutions"
+  },
+  "timeline": {
+    "total_duration": "6 months",
+    "milestones": [
+      { "week": 1, "milestone": "Discovery and AI training" },
+      { "week": 2, "milestone": "Integration and testing" },
+      { "week": 3, "milestone": "Go live with 24/7 answering" },
+      { "month": 1, "milestone": "100% answer rate achieved" },
+      { "month": 3, "milestone": "Revenue doubled from baseline" },
+      { "month": 6, "milestone": "247% revenue increase, 612% ROI" }
+    ]
+  },
+  "key_takeaways": [
+    "Every missed call during peak season was a lost customer worth $800-$5,000",
+    "AI voice agents can handle HVAC-specific questions about services, pricing, and availability",
+    "24/7 answering is especially valuable for emergency HVAC services",
+    "Integration with existing scheduling software eliminates double-booking risks",
+    "ROI can be achieved within weeks, not months"
+  ],
+  "cta": {
+    "headline": "Ready to Capture Every HVAC Lead?",
+    "description": "See how Capture Client can deliver similar results for your HVAC business.",
+    "primary_button": {
+      "text": "Book Your Free Demo",
+      "action": "/contact"
+    },
+    "secondary_button": {
+      "text": "Call Us: (865) 346-3339",
+      "action": "tel:865-346-3339"
+    }
+  },
+  "related_case_studies": ["plumbing", "roofing"]
+}

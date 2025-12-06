@@ -1,0 +1,215 @@
+{
+  "timestamp": "2025-12-04T21:04:57.618Z",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "deviceScaleFactor": 3,
+    "isMobile": true,
+    "hasTouch": true
+  },
+  "overallScore": 7,
+  "results": [
+    {
+      "name": "Homepage",
+      "url": "/",
+      "screenshots": [
+        "C:\\Users\\eaqqa\\capture-client-website-seo\\capture-client-site\\.playwright-mcp\\homepage-mobile-full.png",
+        "C:\\Users\\eaqqa\\capture-client-website-seo\\capture-client-site\\.playwright-mcp\\homepage-mobile-viewport.png",
+        "C:\\Users\\eaqqa\\capture-client-website-seo\\capture-client-site\\.playwright-mcp\\mobile-menu-closed.png"
+      ],
+      "issues": [
+        "⚠️ Found 31 touch targets smaller than 44x44px",
+        "  - A: \"Skip to main content\" (48x24px)",
+        "  - A: \"No text\" (40x40px)",
+        "  - BUTTON: \"All\" (49x38px)",
+        "  - BUTTON: \"Payments\" (100x38px)",
+        "  - BUTTON: \"Communication\" (139x38px)",
+        "⚠️ Found 108 text elements smaller than 14px",
+        "⚠️ Mobile navigation test failed: elementHandle.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    42 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+      ],
+      "scores": {
+        "layoutAdaptation": 10,
+        "touchTargets": 3,
+        "typographyScaling": 6,
+        "navigation": 5
+      },
+      "consoleErrors": [
+        "🚨 CRITICAL: LCP is 119% of poor threshold! \nImmediate action required. This will hurt SEO rankings and conversions."
+      ],
+      "recommendations": [
+        "⚡ Consider disabling backdrop-blur on mobile for better performance"
+      ],
+      "overallScore": 6
+    },
+    {
+      "name": "Services",
+      "url": "/services",
+      "screenshots": [
+        "C:\\Users\\eaqqa\\capture-client-website-seo\\capture-client-site\\.playwright-mcp\\services-mobile-full.png",
+        "C:\\Users\\eaqqa\\capture-client-website-seo\\capture-client-site\\.playwright-mcp\\services-mobile-viewport.png"
+      ],
+      "issues": [
+        "⚠️ Found 14 touch targets smaller than 44x44px",
+        "  - A: \"Skip to main content\" (48x24px)",
+        "  - A: \"No text\" (40x40px)",
+        "  - A: \"Capture Client\" (183x32px)",
+        "  - A: \"Voice AI Agents\" (117x20px)",
+        "  - A: \"Google Ads\" (89x20px)",
+        "⚠️ Found 1 text elements smaller than 14px"
+      ],
+      "scores": {
+        "layoutAdaptation": 10,
+        "touchTargets": 3,
+        "typographyScaling": 6,
+        "navigation": 10
+      },
+      "consoleErrors": [
+        "🚨 CRITICAL: LCP is 119% of poor threshold! \nImmediate action required. This will hurt SEO rankings and conversions."
+      ],
+      "recommendations": [
+        "⚡ Consider disabling backdrop-blur on mobile for better performance"
+      ],
+      "overallScore": 7
+    },
+    {
+      "name": "Pricing",
+      "url": "/pricing",
+      "screenshots": [
+        "C:\\Users\\eaqqa\\capture-client-website-seo\\capture-client-site\\.playwright-mcp\\pricing-mobile-full.png",
+        "C:\\Users\\eaqqa\\capture-client-website-seo\\capture-client-site\\.playwright-mcp\\pricing-mobile-viewport.png"
+      ],
+      "issues": [
+        "⚠️ Found 14 touch targets smaller than 44x44px",
+        "  - A: \"Skip to main content\" (48x24px)",
+        "  - A: \"No text\" (40x40px)",
+        "  - A: \"Capture Client\" (183x32px)",
+        "  - A: \"Voice AI Agents\" (117x20px)",
+        "  - A: \"Google Ads\" (89x20px)",
+        "⚠️ Found 2 text elements smaller than 14px"
+      ],
+      "scores": {
+        "layoutAdaptation": 10,
+        "touchTargets": 3,
+        "typographyScaling": 6,
+        "navigation": 10
+      },
+      "consoleErrors": [],
+      "recommendations": [
+        "⚡ Consider disabling backdrop-blur on mobile for better performance"
+      ],
+      "overallScore": 7
+    },
+    {
+      "name": "Demo",
+      "url": "/demo",
+      "screenshots": [
+        "C:\\Users\\eaqqa\\capture-client-website-seo\\capture-client-site\\.playwright-mcp\\demo-mobile-full.png",
+        "C:\\Users\\eaqqa\\capture-client-website-seo\\capture-client-site\\.playwright-mcp\\demo-mobile-viewport.png"
+      ],
+      "issues": [
+        "⚠️ Found 14 touch targets smaller than 44x44px",
+        "  - A: \"Skip to main content\" (48x24px)",
+        "  - A: \"No text\" (40x40px)",
+        "  - A: \"Capture Client\" (183x32px)",
+        "  - A: \"Voice AI Agents\" (117x20px)",
+        "  - A: \"Google Ads\" (89x20px)",
+        "⚠️ Found 1 text elements smaller than 14px"
+      ],
+      "scores": {
+        "layoutAdaptation": 10,
+        "touchTargets": 3,
+        "typographyScaling": 6,
+        "navigation": 10
+      },
+      "consoleErrors": [],
+      "recommendations": [
+        "⚡ Consider disabling backdrop-blur on mobile for better performance"
+      ],
+      "overallScore": 7
+    },
+    {
+      "name": "How It Works",
+      "url": "/how-it-works",
+      "screenshots": [
+        "C:\\Users\\eaqqa\\capture-client-website-seo\\capture-client-site\\.playwright-mcp\\how-it-works-mobile-full.png",
+        "C:\\Users\\eaqqa\\capture-client-website-seo\\capture-client-site\\.playwright-mcp\\how-it-works-mobile-viewport.png"
+      ],
+      "issues": [
+        "⚠️ Found 14 touch targets smaller than 44x44px",
+        "  - A: \"Skip to main content\" (48x24px)",
+        "  - A: \"No text\" (40x40px)",
+        "  - A: \"Capture Client\" (183x32px)",
+        "  - A: \"Voice AI Agents\" (117x20px)",
+        "  - A: \"Google Ads\" (89x20px)",
+        "⚠️ Found 1 text elements smaller than 14px"
+      ],
+      "scores": {
+        "layoutAdaptation": 10,
+        "touchTargets": 3,
+        "typographyScaling": 6,
+        "navigation": 10
+      },
+      "consoleErrors": [],
+      "recommendations": [
+        "⚡ Consider disabling backdrop-blur on mobile for better performance"
+      ],
+      "overallScore": 7
+    },
+    {
+      "name": "Contact",
+      "url": "/contact",
+      "screenshots": [
+        "C:\\Users\\eaqqa\\capture-client-website-seo\\capture-client-site\\.playwright-mcp\\contact-mobile-full.png",
+        "C:\\Users\\eaqqa\\capture-client-website-seo\\capture-client-site\\.playwright-mcp\\contact-mobile-viewport.png"
+      ],
+      "issues": [
+        "⚠️ Found 14 touch targets smaller than 44x44px",
+        "  - A: \"Skip to main content\" (48x24px)",
+        "  - A: \"No text\" (40x40px)",
+        "  - A: \"Capture Client\" (183x32px)",
+        "  - A: \"Voice AI Agents\" (117x20px)",
+        "  - A: \"Google Ads\" (89x20px)",
+        "⚠️ Found 4 text elements smaller than 14px"
+      ],
+      "scores": {
+        "layoutAdaptation": 10,
+        "touchTargets": 3,
+        "typographyScaling": 6,
+        "navigation": 10
+      },
+      "consoleErrors": [],
+      "recommendations": [
+        "⚡ Consider disabling backdrop-blur on mobile for better performance"
+      ],
+      "overallScore": 7
+    },
+    {
+      "name": "Location Page",
+      "url": "/locations/voice-ai-knoxville-tn",
+      "screenshots": [
+        "C:\\Users\\eaqqa\\capture-client-website-seo\\capture-client-site\\.playwright-mcp\\location-page-mobile-full.png",
+        "C:\\Users\\eaqqa\\capture-client-website-seo\\capture-client-site\\.playwright-mcp\\location-page-mobile-viewport.png"
+      ],
+      "issues": [
+        "⚠️ Found 15 touch targets smaller than 44x44px",
+        "  - A: \"Skip to main content\" (48x24px)",
+        "  - A: \"No text\" (40x40px)",
+        "  - A: \"phone\nCall us: (865) 346-3339\" (242x28px)",
+        "  - A: \"Capture Client\" (183x32px)",
+        "  - A: \"Voice AI Agents\" (117x20px)",
+        "⚠️ Found 15 text elements smaller than 14px"
+      ],
+      "scores": {
+        "layoutAdaptation": 10,
+        "touchTargets": 3,
+        "typographyScaling": 6,
+        "navigation": 10
+      },
+      "consoleErrors": [],
+      "recommendations": [
+        "⚡ Consider disabling backdrop-blur on mobile for better performance"
+      ],
+      "overallScore": 7
+    }
+  ]
+}

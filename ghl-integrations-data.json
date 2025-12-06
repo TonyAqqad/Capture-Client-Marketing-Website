@@ -1,0 +1,369 @@
+{
+  "integrations": [
+    {
+      "name": "Stripe",
+      "logo_url": "https://logo.clearbit.com/stripe.com",
+      "category": "Payments",
+      "description": "Accept payments and manage subscriptions seamlessly with industry-leading fraud protection"
+    },
+    {
+      "name": "Twilio",
+      "logo_url": "https://logo.clearbit.com/twilio.com",
+      "category": "Communication",
+      "description": "Send SMS messages and make phone calls directly within your CRM platform"
+    },
+    {
+      "name": "Google Calendar",
+      "logo_url": "https://logo.clearbit.com/google.com",
+      "category": "Calendar",
+      "description": "Sync appointments and prevent double-bookings with automatic calendar integration"
+    },
+    {
+      "name": "Zoom",
+      "logo_url": "https://logo.clearbit.com/zoom.us",
+      "category": "Video Conferencing",
+      "description": "Schedule and host video meetings with automatic meeting link generation"
+    },
+    {
+      "name": "Facebook",
+      "logo_url": "https://logo.clearbit.com/facebook.com",
+      "category": "Social Media",
+      "description": "Manage social posts, run ad campaigns, and capture leads from Facebook"
+    },
+    {
+      "name": "Instagram",
+      "logo_url": "https://logo.clearbit.com/instagram.com",
+      "category": "Social Media",
+      "description": "Schedule Instagram stories and reels, manage social presence effortlessly"
+    },
+    {
+      "name": "TikTok",
+      "logo_url": "https://logo.clearbit.com/tiktok.com",
+      "category": "Social Media",
+      "description": "Capture leads from TikTok ads and automate follow-up sequences"
+    },
+    {
+      "name": "LinkedIn",
+      "logo_url": "https://logo.clearbit.com/linkedin.com",
+      "category": "Social Media",
+      "description": "Connect with professionals and manage B2B lead generation campaigns"
+    },
+    {
+      "name": "Bluesky",
+      "logo_url": "https://logo.clearbit.com/bsky.app",
+      "category": "Social Media",
+      "description": "Schedule and manage posts to the fastest-growing decentralized social network"
+    },
+    {
+      "name": "Google Ads",
+      "logo_url": "https://logo.clearbit.com/ads.google.com",
+      "category": "Advertising",
+      "description": "Connect ad campaigns with CRM for seamless lead tracking and ROI measurement"
+    },
+    {
+      "name": "Facebook Ads",
+      "logo_url": "https://logo.clearbit.com/facebook.com",
+      "category": "Advertising",
+      "description": "Automate lead follow-ups and track ad performance in real-time"
+    },
+    {
+      "name": "TikTok Ads",
+      "logo_url": "https://logo.clearbit.com/tiktok.com",
+      "category": "Advertising",
+      "description": "Sync TikTok ad leads directly into your CRM for immediate engagement"
+    },
+    {
+      "name": "Mailgun",
+      "logo_url": "https://logo.clearbit.com/mailgun.com",
+      "category": "Email Marketing",
+      "description": "Send bulk transactional emails with powerful deliverability and analytics"
+    },
+    {
+      "name": "SendGrid",
+      "logo_url": "https://logo.clearbit.com/sendgrid.com",
+      "category": "Email Marketing",
+      "description": "Scale your email marketing with reliable delivery and detailed insights"
+    },
+    {
+      "name": "Mailchimp",
+      "logo_url": "https://logo.clearbit.com/mailchimp.com",
+      "category": "Email Marketing",
+      "description": "Automatically sync leads to Mailchimp lists for targeted email campaigns"
+    },
+    {
+      "name": "Zapier",
+      "logo_url": "https://logo.clearbit.com/zapier.com",
+      "category": "Automation",
+      "description": "Connect with 5,000+ apps through automated workflows and custom integrations"
+    },
+    {
+      "name": "Make",
+      "logo_url": "https://logo.clearbit.com/make.com",
+      "category": "Automation",
+      "description": "Build advanced automation scenarios with visual workflow builder"
+    },
+    {
+      "name": "Calendly",
+      "logo_url": "https://logo.clearbit.com/calendly.com",
+      "category": "Calendar",
+      "description": "Import scheduling events and trigger automated follow-up workflows"
+    },
+    {
+      "name": "QuickBooks",
+      "logo_url": "https://logo.clearbit.com/quickbooks.intuit.com",
+      "category": "Accounting",
+      "description": "Synchronize financial data and automate invoice management seamlessly"
+    },
+    {
+      "name": "Shopify",
+      "logo_url": "https://logo.clearbit.com/shopify.com",
+      "category": "E-commerce",
+      "description": "Recover abandoned carts and automate post-purchase follow-ups"
+    },
+    {
+      "name": "Printify",
+      "logo_url": "https://logo.clearbit.com/printify.com",
+      "category": "E-commerce",
+      "description": "Connect your online store with on-demand print fulfillment services"
+    },
+    {
+      "name": "Yext",
+      "logo_url": "https://logo.clearbit.com/yext.com",
+      "category": "Local SEO",
+      "description": "Manage business listings across top citation sources automatically"
+    },
+    {
+      "name": "Google Business Profile",
+      "logo_url": "https://logo.clearbit.com/google.com",
+      "category": "Local SEO",
+      "description": "Update and manage your Google Business listings from one dashboard"
+    },
+    {
+      "name": "Typeform",
+      "logo_url": "https://logo.clearbit.com/typeform.com",
+      "category": "Forms",
+      "description": "Capture form submissions and create contacts automatically in your CRM"
+    },
+    {
+      "name": "JotForm",
+      "logo_url": "https://logo.clearbit.com/jotform.com",
+      "category": "Forms",
+      "description": "Sync form responses directly into your contact database"
+    },
+    {
+      "name": "Gravity Forms",
+      "logo_url": "https://logo.clearbit.com/gravityforms.com",
+      "category": "Forms",
+      "description": "Connect WordPress forms with your CRM for seamless lead capture"
+    },
+    {
+      "name": "Google Drive",
+      "logo_url": "https://logo.clearbit.com/google.com",
+      "category": "Storage",
+      "description": "Store and manage media files directly within your CRM workspace"
+    },
+    {
+      "name": "Google Analytics",
+      "logo_url": "https://logo.clearbit.com/analytics.google.com",
+      "category": "Analytics",
+      "description": "Track website performance and user behavior with integrated analytics"
+    },
+    {
+      "name": "HubSpot",
+      "logo_url": "https://logo.clearbit.com/hubspot.com",
+      "category": "CRM",
+      "description": "Sync contacts and opportunities between platforms automatically"
+    },
+    {
+      "name": "Salesforce",
+      "logo_url": "https://logo.clearbit.com/salesforce.com",
+      "category": "CRM",
+      "description": "Integrate with enterprise CRM for unified customer data management"
+    },
+    {
+      "name": "Pipedrive",
+      "logo_url": "https://logo.clearbit.com/pipedrive.com",
+      "category": "CRM",
+      "description": "Sync sales pipeline data and automate deal tracking workflows"
+    },
+    {
+      "name": "ClickFunnels",
+      "logo_url": "https://logo.clearbit.com/clickfunnels.com",
+      "category": "Marketing",
+      "description": "Integrate sales funnels with CRM for complete lead journey tracking"
+    },
+    {
+      "name": "WordPress",
+      "logo_url": "https://logo.clearbit.com/wordpress.com",
+      "category": "Website",
+      "description": "Connect WordPress sites with CRM for lead capture and content management"
+    },
+    {
+      "name": "PayPal",
+      "logo_url": "https://logo.clearbit.com/paypal.com",
+      "category": "Payments",
+      "description": "Accept PayPal payments and automate transaction notifications"
+    },
+    {
+      "name": "Square",
+      "logo_url": "https://logo.clearbit.com/squareup.com",
+      "category": "Payments",
+      "description": "Process payments and sync transaction data with your CRM"
+    },
+    {
+      "name": "Authorize.Net",
+      "logo_url": "https://logo.clearbit.com/authorize.net",
+      "category": "Payments",
+      "description": "Secure payment gateway integration for credit card processing"
+    },
+    {
+      "name": "Plivo",
+      "logo_url": "https://logo.clearbit.com/plivo.com",
+      "category": "Communication",
+      "description": "Alternative SMS and voice communication provider with global reach"
+    },
+    {
+      "name": "SignalWire",
+      "logo_url": "https://logo.clearbit.com/signalwire.com",
+      "category": "Communication",
+      "description": "Cloud communications platform for voice, video, and messaging"
+    },
+    {
+      "name": "MessageBird",
+      "logo_url": "https://logo.clearbit.com/messagebird.com",
+      "category": "Communication",
+      "description": "Global SMS and voice communication with multi-channel messaging"
+    },
+    {
+      "name": "Outlook",
+      "logo_url": "https://logo.clearbit.com/outlook.com",
+      "category": "Calendar",
+      "description": "Sync Outlook calendars to prevent scheduling conflicts across platforms"
+    },
+    {
+      "name": "Office 365",
+      "logo_url": "https://logo.clearbit.com/office.com",
+      "category": "Productivity",
+      "description": "Integrate with Microsoft 365 suite for seamless business workflows"
+    },
+    {
+      "name": "Slack",
+      "logo_url": "https://logo.clearbit.com/slack.com",
+      "category": "Communication",
+      "description": "Receive CRM notifications and updates in your team's Slack channels"
+    },
+    {
+      "name": "Trello",
+      "logo_url": "https://logo.clearbit.com/trello.com",
+      "category": "Project Management",
+      "description": "Sync project tasks and customer data for organized workflow management"
+    },
+    {
+      "name": "Asana",
+      "logo_url": "https://logo.clearbit.com/asana.com",
+      "category": "Project Management",
+      "description": "Connect task management with customer relationship workflows"
+    },
+    {
+      "name": "ActiveCampaign",
+      "logo_url": "https://logo.clearbit.com/activecampaign.com",
+      "category": "Email Marketing",
+      "description": "Advanced marketing automation with email and CRM integration"
+    },
+    {
+      "name": "ConvertKit",
+      "logo_url": "https://logo.clearbit.com/convertkit.com",
+      "category": "Email Marketing",
+      "description": "Email marketing platform for creators with subscriber management"
+    },
+    {
+      "name": "AWeber",
+      "logo_url": "https://logo.clearbit.com/aweber.com",
+      "category": "Email Marketing",
+      "description": "Automate email campaigns and sync subscriber lists seamlessly"
+    },
+    {
+      "name": "Constant Contact",
+      "logo_url": "https://logo.clearbit.com/constantcontact.com",
+      "category": "Email Marketing",
+      "description": "Email marketing and event management integration for small businesses"
+    },
+    {
+      "name": "Webflow",
+      "logo_url": "https://logo.clearbit.com/webflow.com",
+      "category": "Website",
+      "description": "Connect Webflow websites with CRM for lead capture and tracking"
+    },
+    {
+      "name": "Wix",
+      "logo_url": "https://logo.clearbit.com/wix.com",
+      "category": "Website",
+      "description": "Integrate Wix websites with CRM for visitor tracking and lead generation"
+    },
+    {
+      "name": "WooCommerce",
+      "logo_url": "https://logo.clearbit.com/woocommerce.com",
+      "category": "E-commerce",
+      "description": "Sync WordPress e-commerce data with CRM for customer management"
+    },
+    {
+      "name": "BigCommerce",
+      "logo_url": "https://logo.clearbit.com/bigcommerce.com",
+      "category": "E-commerce",
+      "description": "Enterprise e-commerce platform integration for order and customer sync"
+    },
+    {
+      "name": "Plai",
+      "logo_url": "https://logo.clearbit.com/plai.team",
+      "category": "Advertising",
+      "description": "AI-powered ad campaign management across Meta, TikTok, and Google"
+    },
+    {
+      "name": "PostHog",
+      "logo_url": "https://logo.clearbit.com/posthog.com",
+      "category": "Analytics",
+      "description": "Product analytics platform with user behavior tracking and insights"
+    },
+    {
+      "name": "Webhooks",
+      "logo_url": "https://logo.clearbit.com/webhook.site",
+      "category": "Developer Tools",
+      "description": "Create custom integrations with any third-party application via webhooks"
+    },
+    {
+      "name": "API",
+      "logo_url": "https://logo.clearbit.com/rapidapi.com",
+      "category": "Developer Tools",
+      "description": "Build custom integrations using RESTful API with OAuth 2.0 authentication"
+    }
+  ],
+  "categories": [
+    "Payments",
+    "Communication",
+    "Calendar",
+    "Video Conferencing",
+    "Social Media",
+    "Advertising",
+    "Email Marketing",
+    "Automation",
+    "Accounting",
+    "E-commerce",
+    "Local SEO",
+    "Forms",
+    "Storage",
+    "Analytics",
+    "CRM",
+    "Marketing",
+    "Website",
+    "Productivity",
+    "Project Management",
+    "Developer Tools"
+  ],
+  "total_integrations": 56,
+  "notes": {
+    "whitelabel_messaging": "Use 'Capture Client integrates with...' NOT 'GoHighLevel integrates with...'",
+    "zapier_note": "Zapier connection enables 5,000+ additional integrations",
+    "native_vs_third_party": "First 20 integrations are native/direct, others available via Zapier/Make",
+    "logo_source": "Logos fetched via Clearbit Logo API (https://logo.clearbit.com/domain.com)"
+  }
+}

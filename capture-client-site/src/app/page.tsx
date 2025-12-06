@@ -12,7 +12,7 @@ import IntegrationPartners from "@/components/cro/IntegrationPartners";
 import AsSeenIn from "@/components/cro/AsSeenIn";
 import ComparisonTable from "@/components/cro/ComparisonTable";
 import UrgencyTimer from "@/components/cro/UrgencyTimer";
-import StickyPhoneCTA from "@/components/cro/StickyPhoneCTA";
+// import StickyPhoneCTA from "@/components/cro/StickyPhoneCTA"; // TEMP DISABLED: HMR issue with framer-motion
 import { PremiumHero } from "@/components/sections/PremiumHero";
 import { PremiumServices } from "@/components/sections/PremiumServices";
 import { HowItWorks } from "@/components/sections/HowItWorks";
@@ -221,7 +221,7 @@ export default function HomePage() {
       />
 
       {/* ==================== STICKY PHONE CTA (Top Bar) ==================== */}
-      <StickyPhoneCTA />
+      {/* <StickyPhoneCTA /> */} {/* TEMP DISABLED: HMR issue with framer-motion */}
 
       {/* ==================== EXIT INTENT POPUP ==================== */}
       <ExitIntentPopup />

@@ -1,0 +1,156 @@
+{
+  "case_study_id": "law-firm-voice-ai",
+  "page_type": "case_study",
+  "seo": {
+    "page_title": "Law Firm AI Case Study | 287% More Consultations | Capture Client",
+    "meta_description": "See how Smith & Associates Legal increased consultation bookings 287% with AI voice agents. 24/7 intake, instant response, and 725% ROI in 5 months.",
+    "keywords": [
+      "law firm voice ai case study",
+      "legal lead generation",
+      "ai intake for law firms",
+      "attorney marketing results",
+      "law firm phone answering"
+    ],
+    "canonical_url": "/case-studies/law-firm"
+  },
+  "company": {
+    "name": "Smith & Associates Legal",
+    "industry": "Law Firm",
+    "location": "Memphis, TN",
+    "size": "8 attorneys, 12 staff",
+    "practice_areas": "Personal Injury, Family Law, Criminal Defense"
+  },
+  "problem": {
+    "headline": "Missing Consultations Due to Slow Follow-Up and Limited Availability",
+    "description": "Smith & Associates was spending significant money on advertising but converting poorly. The problem was not the ads - it was the response time. Potential clients calling after hours, during court appearances, or during consultations were going to voicemail.",
+    "pain_points": [
+      "Missing 45% of inbound calls during business hours due to attorneys in court or consultations",
+      "After-hours calls (often urgent legal matters) going completely unanswered",
+      "Lead response time averaging 4 hours when competitors responded in minutes",
+      "Expensive PPC ads generating leads that were never converted",
+      "Intake staff overwhelmed with qualification calls that went nowhere"
+    ],
+    "key_stat": {
+      "metric": "Average Response Time",
+      "value": "4 hours",
+      "context": "While competitors responded in under 10 minutes"
+    }
+  },
+  "solution": {
+    "headline": "24/7 AI Intake with Smart Qualification and Instant Scheduling",
+    "description": "Capture Client deployed AI voice agents trained specifically on legal intake processes. The AI was configured to handle initial consultations, qualify leads by case type and urgency, and book appointments directly with appropriate attorneys.",
+    "implementation_steps": [
+      {
+        "step": 1,
+        "title": "Practice Area Training",
+        "description": "Trained the AI on each practice area: personal injury, family law, and criminal defense. The AI learned what questions to ask and how to route cases."
+      },
+      {
+        "step": 2,
+        "title": "Qualification Logic",
+        "description": "Built qualification flows to identify case merit, statute of limitations concerns, and potential case value. Hot leads get immediate attorney notification."
+      },
+      {
+        "step": 3,
+        "title": "Calendar Integration",
+        "description": "Connected to each attorney's calendar with rules about case types they handle and available consultation times."
+      },
+      {
+        "step": 4,
+        "title": "Compliance Setup",
+        "description": "Ensured all scripts and processes met bar association guidelines for non-attorney staff interactions."
+      }
+    ],
+    "key_features": [
+      "24/7 legal intake with practice-area-specific questioning",
+      "Smart case routing based on type, urgency, and attorney availability",
+      "Statute of limitations awareness and urgency flagging",
+      "Instant booking of consultations based on attorney calendars",
+      "Complete intake documentation with call transcripts",
+      "Hot lead alerts for high-value or urgent cases"
+    ]
+  },
+  "results": {
+    "headline": "725% ROI in 5 Months",
+    "metrics": [
+      {
+        "metric": "Consultation Bookings",
+        "before": "23/month",
+        "after": "89/month",
+        "improvement": "+287%",
+        "context": "From inbound leads"
+      },
+      {
+        "metric": "Lead Response Time",
+        "before": "4 hours",
+        "after": "< 1 minute",
+        "improvement": "240x faster",
+        "context": "First contact with potential client"
+      },
+      {
+        "metric": "Case Conversion Rate",
+        "before": "12%",
+        "after": "34%",
+        "improvement": "+183%",
+        "context": "From consultation to signed retainer"
+      },
+      {
+        "metric": "After-Hours Intake",
+        "before": "0 per month",
+        "after": "31 per month",
+        "improvement": "New capability",
+        "context": "Leads captured between 6 PM and 8 AM"
+      },
+      {
+        "metric": "Cost Per Acquisition",
+        "before": "$847",
+        "after": "$312",
+        "improvement": "-63%",
+        "context": "Marketing cost per signed case"
+      }
+    ],
+    "roi": {
+      "percentage": "725%",
+      "calculation": "Additional cases signed x average case value, minus AI cost",
+      "payback_period": "Under 3 weeks"
+    }
+  },
+  "testimonial": {
+    "quote": "In personal injury, the first lawyer to call back often wins the case. We were losing cases worth $50,000+ because we could not answer fast enough. Now our AI responds in seconds, qualifies the case, and books the consultation before I even know about the lead. We signed 8 additional cases last month just from after-hours intake. That is over $200,000 in potential fees.",
+    "author": "Jennifer Smith",
+    "title": "Managing Partner",
+    "company": "Smith & Associates Legal"
+  },
+  "timeline": {
+    "total_duration": "5 months",
+    "milestones": [
+      { "week": 1, "milestone": "Practice area training and compliance review" },
+      { "week": 2, "milestone": "Calendar integration and routing setup" },
+      { "week": 3, "milestone": "Testing with internal calls" },
+      { "week": 4, "milestone": "Go live with 24/7 intake" },
+      { "month": 2, "milestone": "Response time under 1 minute achieved" },
+      { "month": 3, "milestone": "Consultation bookings doubled" },
+      { "month": 5, "milestone": "287% increase in bookings, 725% ROI" }
+    ]
+  },
+  "key_takeaways": [
+    "Legal leads are extremely time-sensitive - first responder advantage is real",
+    "AI can handle basic legal intake while maintaining bar compliance",
+    "After-hours intake captures leads competitors miss entirely",
+    "Better qualification means higher conversion rates and less wasted attorney time",
+    "The cost per acquisition dropped dramatically with faster response times"
+  ],
+  "cta": {
+    "headline": "Ready to Capture Every Legal Lead?",
+    "description": "See how Capture Client can deliver similar results for your law firm.",
+    "primary_button": {
+      "text": "Book Your Free Demo",
+      "action": "/contact"
+    },
+    "secondary_button": {
+      "text": "Call Us: (865) 346-3339",
+      "action": "tel:865-346-3339"
+    }
+  },
+  "related_case_studies": ["dental", "medical-spa"]
+}

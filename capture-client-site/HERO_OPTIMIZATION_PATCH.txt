@@ -1,0 +1,156 @@
+================================================================================
+FILE: src/components/sections/PremiumHero.tsx
+OPTIMIZATION: Defer animations until after LCP
+================================================================================
+
+FIND (Line 12-14):
+  const [isMobile, setIsMobile] = useState(false);
+  const [disableAnimations, setDisableAnimations] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+REPLACE WITH:
+  const [isMobile, setIsMobile] = useState(false);
+  const [disableAnimations, setDisableAnimations] = useState(true); // CRITICAL: Start disabled
+  const [isClient, setIsClient] = useState(false);
+  const [animationsReady, setAnimationsReady] = useState(false); // CRITICAL: Defer animations
+
+ADD AFTER LINE 27:
+  // CRITICAL: Delay animations 500ms after mount for faster LCP
+  useEffect(() => {
+    if (isClient && !disableAnimations) {
+      const timer = setTimeout(() => setAnimationsReady(true), 500);
+      return () => clearTimeout(timer);
+    }
+  }, [isClient, disableAnimations]);
+
+FIND (Line 78-79):
+      {/* $1M AURORA BACKGROUND - Multi-layer animated gradient */}
+      <div className="absolute inset-0 bg-aurora-animated" />
+
+REPLACE WITH:
+      {/* CRITICAL: Static background for fast paint */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950" />
+
+FIND (Lines 82-107 - All three motion.div orbs):
+      {/* Animated gradient orbs */}
+      <motion.div...>
+      ...
+      </motion.div>
+
+REPLACE WITH:
+      {/* CRITICAL: Conditional animated orbs - static first, then animate */}
+      {animationsReady ? (
+        <>
+          <motion.div
+            style={{ x: springX, y: springY }}
+            className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full opacity-40"
+            animate={{ scale: [1, 1.1, 1] }}
+            transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <div className="w-full h-full bg-gradient-radial from-cyan-500/30 via-cyan-500/10 to-transparent blur-3xl" />
+          </motion.div>
+          <motion.div
+            style={{ x: springX, y: springY }}
+            className="absolute bottom-0 right-0 w-[900px] h-[900px] rounded-full opacity-30"
+            animate={{ scale: [1.1, 1, 1.1] }}
+            transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          >
+            <div className="w-full h-full bg-gradient-radial from-[#D4AF37]/25 via-[#D4AF37]/10 to-transparent blur-3xl" />
+          </motion.div>
+          <motion.div
+            className="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full opacity-20"
+            animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
+            transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <div className="w-full h-full bg-gradient-radial from-gold/40 via-gold/10 to-transparent blur-3xl" />
+          </motion.div>
+        </>
+      ) : (
+        <>
+          <div className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full opacity-40">
+            <div className="w-full h-full bg-gradient-radial from-cyan-500/30 via-cyan-500/10 to-transparent blur-3xl" />
+          </div>
+          <div className="absolute bottom-0 right-0 w-[900px] h-[900px] rounded-full opacity-30">
+            <div className="w-full h-full bg-gradient-radial from-[#D4AF37]/25 via-[#D4AF37]/10 to-transparent blur-3xl" />
+          </div>
+          <div className="absolute top-1/4 right-1/4 w-[400px] h-[400px] rounded-full opacity-20">
+            <div className="w-full h-full bg-gradient-radial from-gold/40 via-gold/10 to-transparent blur-3xl" />
+          </div>
+        </>
+      )}
+
+FIND (Line 138-143):
+              {/* Live badge */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                className="inline-flex items-center gap-3 mb-6 sm:mb-8"
+              >
+
+REPLACE WITH:
+              {/* Live badge - no animation delay */}
+              <div className="inline-flex items-center gap-3 mb-6 sm:mb-8">
+
+FIND (Line 153):
+              </motion.div>
+
+REPLACE WITH:
+              </div>
+
+FIND (Lines 155-161):
+              {/* $1M HEADLINE - Maximum Impact Typography */}
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="text-hero-xl mb-6 sm:mb-8"
+              >
+
+REPLACE WITH:
+              {/* CRITICAL: Headline renders immediately */}
+              <h1 className="text-hero-xl mb-6 sm:mb-8">
+
+FIND (Lines 170-175 - Underline):
+                  {/* Animated underline */}
+                  <motion.div
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ duration: 1, delay: 1, ease: [0.22, 1, 0.36, 1] }}
+                    className="absolute -bottom-2 left-0 right-0 h-1.5 sm:h-2 bg-gradient-to-r from-gold/50 via-cyan-400/50 to-[#D4AF37]/50 origin-left rounded-full"
+                  />
+
+REPLACE WITH:
+                  {/* Underline deferred */}
+                  {animationsReady && (
+                    <motion.div
+                      initial={{ scaleX: 0 }}
+                      animate={{ scaleX: 1 }}
+                      transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                      className="absolute -bottom-2 left-0 right-0 h-1.5 sm:h-2 bg-gradient-to-r from-gold/50 via-cyan-400/50 to-[#D4AF37]/50 origin-left rounded-full"
+                    />
+                  )}
+
+FIND (Line 177):
+              </motion.h1>
+
+REPLACE WITH:
+              </h1>
+
+REMOVE all <motion.p> wrappers (Lines 180-198) and replace with <p>
+REMOVE all <motion.div> wrappers from CTA buttons section
+
+FIND (Lines 216-222 - Arrow animation):
+                    <motion.span
+                      className="material-icons text-2xl"
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    >
+                      arrow_forward
+                    </motion.span>
+
+REPLACE WITH:
+                    <span className="material-icons text-2xl">arrow_forward</span>
+
+Continue with similar replacements for all motion components in hero section...
+

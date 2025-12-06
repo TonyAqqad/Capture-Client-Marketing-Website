@@ -1,0 +1,6 @@
+{
+  "audit_timestamp": "2025-12-06",
+  "total_errors": 42,
+  "files_with_errors": 3,
+  "critical_action_required": "EXCLUDE INTEGRATION_CODE_EXAMPLES.tsx FROM COMPILATION"
+}

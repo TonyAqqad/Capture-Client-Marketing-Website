@@ -8,3 +8,16 @@ build/
 .DS_Store
 *.log
 .vercel
+
+# Local settings (contains machine-specific permissions)
+.claude/settings.local.json
+
+# MCP local config (may contain API keys)
+.mcp.json
+
+# Playwright MCP screenshots (large files)
+.playwright-mcp/
+
+# Test artifacts
+test-results/
+playwright-report/

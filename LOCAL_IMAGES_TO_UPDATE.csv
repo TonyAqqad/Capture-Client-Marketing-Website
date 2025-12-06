@@ -1,0 +1,114 @@
+location_slug,photo_id,photographer,photographer_username,notes
+# TIER 1 - MAJOR CITIES (Start with these 20)
+# Format: location-slug,unsplash-photo-id,photographer-name,@username,landmark-description
+
+# TENNESSEE - Fill in after searching Unsplash
+chattanooga-tn,REPLACE_ME,REPLACE_ME,REPLACE_ME,Walnut Street Bridge or Chattanooga skyline
+knoxville-tn,REPLACE_ME,REPLACE_ME,REPLACE_ME,Sunsphere or Market Square
+memphis-tn,REPLACE_ME,REPLACE_ME,REPLACE_ME,Beale Street neon or Memphis Bridge
+nashville-tn,REPLACE_ME,REPLACE_ME,REPLACE_ME,Broadway Nashville or Batman Building skyline
+
+# GEORGIA
+atlanta-ga,REPLACE_ME,REPLACE_ME,REPLACE_ME,Atlanta skyline or Midtown
+savannah-ga,REPLACE_ME,REPLACE_ME,REPLACE_ME,Forsyth Park or River Street historic
+
+# NORTH CAROLINA
+charlotte-nc,REPLACE_ME,REPLACE_ME,REPLACE_ME,Charlotte uptown skyline
+raleigh-nc,REPLACE_ME,REPLACE_ME,REPLACE_ME,State Capitol or downtown Raleigh
+durham-nc,REPLACE_ME,REPLACE_ME,REPLACE_ME,Duke Chapel or Durham Bulls
+asheville-nc,REPLACE_ME,REPLACE_ME,REPLACE_ME,Downtown Asheville or Blue Ridge Mountains
+
+# VIRGINIA
+alexandria-va,REPLACE_ME,REPLACE_ME,REPLACE_ME,Old Town King Street or historic waterfront
+richmond-va,REPLACE_ME,REPLACE_ME,REPLACE_ME,Richmond skyline or James River
+
+# KENTUCKY
+louisville-ky,REPLACE_ME,REPLACE_ME,REPLACE_ME,Louisville skyline or Churchill Downs
+lexington-ky,REPLACE_ME,REPLACE_ME,REPLACE_ME,Horse farm or downtown Lexington
+
+# OHIO
+columbus-oh,REPLACE_ME,REPLACE_ME,REPLACE_ME,Columbus skyline or Scioto Mile
+cleveland-oh,REPLACE_ME,REPLACE_ME,REPLACE_ME,Cleveland skyline with Terminal Tower
+cincinnati-oh,REPLACE_ME,REPLACE_ME,REPLACE_ME,Cincinnati skyline or Roebling Bridge
+
+# FLORIDA
+miami-fl,REPLACE_ME,REPLACE_ME,REPLACE_ME,Miami skyline or Miami Beach
+orlando-fl,REPLACE_ME,REPLACE_ME,REPLACE_ME,Lake Eola or Orlando skyline
+tampa-fl,REPLACE_ME,REPLACE_ME,REPLACE_ME,Tampa Riverwalk or Tampa Bay
+
+# TEXAS
+houston-tx,REPLACE_ME,REPLACE_ME,REPLACE_ME,Houston skyline
+dallas-tx,REPLACE_ME,REPLACE_ME,REPLACE_ME,Dallas skyline with Reunion Tower
+austin-tx,REPLACE_ME,REPLACE_ME,REPLACE_ME,Austin skyline or Lady Bird Lake
+san-antonio-tx,REPLACE_ME,REPLACE_ME,REPLACE_ME,River Walk or Alamo
+
+# TIER 2 - REGIONAL HUBS (Continue with these 25)
+murfreesboro-tn,REPLACE_ME,REPLACE_ME,REPLACE_ME,Historic Square or MTSU
+franklin-tn,REPLACE_ME,REPLACE_ME,REPLACE_ME,Historic Main Street Franklin
+clarksville-tn,REPLACE_ME,REPLACE_ME,REPLACE_ME,Cumberland River or downtown
+athens-ga,REPLACE_ME,REPLACE_ME,REPLACE_ME,UGA Arch or Athens downtown
+augusta-ga,REPLACE_ME,REPLACE_ME,REPLACE_ME,Riverwalk Augusta
+wilmington-nc,REPLACE_ME,REPLACE_ME,REPLACE_ME,Wilmington Riverwalk
+chapel-hill-nc,REPLACE_ME,REPLACE_ME,REPLACE_ME,Old Well UNC
+greensboro-nc,REPLACE_ME,REPLACE_ME,REPLACE_ME,Downtown Greensboro
+winston-salem-nc,REPLACE_ME,REPLACE_ME,REPLACE_ME,Downtown Winston-Salem or Old Salem
+norfolk-va,REPLACE_ME,REPLACE_ME,REPLACE_ME,Norfolk waterfront or harbor
+virginia-beach-va,REPLACE_ME,REPLACE_ME,REPLACE_ME,Virginia Beach oceanfront
+arlington-va,REPLACE_ME,REPLACE_ME,REPLACE_ME,Rosslyn skyline or Crystal City
+bowling-green-ky,REPLACE_ME,REPLACE_ME,REPLACE_ME,Bowling Green downtown or WKU
+covington-ky,REPLACE_ME,REPLACE_ME,REPLACE_ME,Roebling Bridge from Covington
+toledo-oh,REPLACE_ME,REPLACE_ME,REPLACE_ME,Toledo downtown or Maumee River
+akron-oh,REPLACE_ME,REPLACE_ME,REPLACE_ME,Akron downtown or canal district
+dayton-oh,REPLACE_ME,REPLACE_ME,REPLACE_ME,Dayton downtown
+jacksonville-fl,REPLACE_ME,REPLACE_ME,REPLACE_ME,Jacksonville skyline
+fort-worth-tx,REPLACE_ME,REPLACE_ME,REPLACE_ME,Fort Worth skyline or Stockyards
+el-paso-tx,REPLACE_ME,REPLACE_ME,REPLACE_ME,El Paso with Franklin Mountains
+plano-tx,REPLACE_ME,REPLACE_ME,REPLACE_ME,Legacy West Plano
+irving-tx,REPLACE_ME,REPLACE_ME,REPLACE_ME,Mustangs of Las Colinas sculpture
+frisco-tx,REPLACE_ME,REPLACE_ME,REPLACE_ME,The Star Frisco
+
+# TIER 3 - SMALLER MARKETS (Remaining 36)
+johnson-city-tn,REPLACE_ME,REPLACE_ME,REPLACE_ME,Downtown Johnson City
+kingsport-tn,REPLACE_ME,REPLACE_ME,REPLACE_ME,Downtown Kingsport
+maryville-tn,REPLACE_ME,REPLACE_ME,REPLACE_ME,Smoky Mountains view
+farragut-tn,REPLACE_ME,REPLACE_ME,REPLACE_ME,West Knoxville area
+gatlinburg-tn,REPLACE_ME,REPLACE_ME,REPLACE_ME,Gatlinburg strip or Smoky Mountains
+sevierville-tn,REPLACE_ME,REPLACE_ME,REPLACE_ME,Sevierville mountain views
+oak-ridge-tn,REPLACE_ME,REPLACE_ME,REPLACE_ME,Oak Ridge downtown
+alpharetta-ga,REPLACE_ME,REPLACE_ME,REPLACE_ME,Avalon Alpharetta
+marietta-ga,REPLACE_ME,REPLACE_ME,REPLACE_ME,Marietta Square
+roswell-ga,REPLACE_ME,REPLACE_ME,REPLACE_ME,Canton Street Roswell
+sandy-springs-ga,REPLACE_ME,REPLACE_ME,REPLACE_ME,City Springs Sandy Springs
+columbus-ga,REPLACE_ME,REPLACE_ME,REPLACE_ME,Columbus GA Riverwalk
+cary-nc,REPLACE_ME,REPLACE_ME,REPLACE_ME,Downtown Cary
+fayetteville-nc,REPLACE_ME,REPLACE_ME,REPLACE_ME,Market House Fayetteville
+concord-nc,REPLACE_ME,REPLACE_ME,REPLACE_ME,Concord downtown
+high-point-nc,REPLACE_ME,REPLACE_ME,REPLACE_ME,High Point downtown
+greenville-nc,REPLACE_ME,REPLACE_ME,REPLACE_ME,Greenville NC downtown
+chesapeake-va,REPLACE_ME,REPLACE_ME,REPLACE_ME,Chesapeake Great Bridge
+newport-news-va,REPLACE_ME,REPLACE_ME,REPLACE_ME,Newport News waterfront
+hampton-va,REPLACE_ME,REPLACE_ME,REPLACE_ME,Hampton waterfront
+suffolk-va,REPLACE_ME,REPLACE_ME,REPLACE_ME,Suffolk historic downtown
+roanoke-va,REPLACE_ME,REPLACE_ME,REPLACE_ME,Roanoke Star
+lynchburg-va,REPLACE_ME,REPLACE_ME,REPLACE_ME,Lynchburg James River
+fredericksburg-va,REPLACE_ME,REPLACE_ME,REPLACE_ME,Historic Fredericksburg
+owensboro-ky,REPLACE_ME,REPLACE_ME,REPLACE_ME,Owensboro Ohio River
+canton-oh,REPLACE_ME,REPLACE_ME,REPLACE_ME,Pro Football Hall of Fame
+parma-oh,REPLACE_ME,REPLACE_ME,REPLACE_ME,Cleveland suburbs
+st-petersburg-fl,REPLACE_ME,REPLACE_ME,REPLACE_ME,St Pete Pier or waterfront
+fort-lauderdale-fl,REPLACE_ME,REPLACE_ME,REPLACE_ME,Fort Lauderdale beach
+cape-coral-fl,REPLACE_ME,REPLACE_ME,REPLACE_ME,Cape Coral canals
+hialeah-fl,REPLACE_ME,REPLACE_ME,REPLACE_ME,Miami metro area
+coral-springs-fl,REPLACE_ME,REPLACE_ME,REPLACE_ME,South Florida suburbs
+tallahassee-fl,REPLACE_ME,REPLACE_ME,REPLACE_ME,Florida State Capitol
+arlington-tx,REPLACE_ME,REPLACE_ME,REPLACE_ME,AT&T Stadium Arlington
+
+# INSTRUCTIONS:
+# 1. Visit: https://unsplash.com/s/photos/[search-query-from-script]
+# 2. Find best local landmark image
+# 3. Click image to open detail page
+# 4. Copy photo ID from URL: https://unsplash.com/photos/[PHOTO-ID]
+# 5. Note photographer name (shown on page)
+# 6. Note photographer username (in URL: https://unsplash.com/@username)
+# 7. Replace REPLACE_ME values in this CSV
+# 8. Run: python update_local_images.py update LOCAL_IMAGES_TO_UPDATE.csv

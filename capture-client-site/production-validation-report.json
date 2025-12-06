@@ -1,0 +1,245 @@
+{
+  "pages_tested": 20,
+  "pages_passed": 0,
+  "pages_failed": 20,
+  "pass_rate": "0.0%",
+  "failures": [
+    {
+      "url": "/",
+      "status_code": 200,
+      "issues": [
+        "39 BROKEN IMAGE(S)",
+        "12 CONSOLE ERROR(S)"
+      ],
+      "console_errors": 234,
+      "broken_images": 39
+    },
+    {
+      "url": "/demo",
+      "status_code": 200,
+      "issues": [
+        "12 CONSOLE ERROR(S)"
+      ],
+      "console_errors": 222,
+      "broken_images": 0
+    },
+    {
+      "url": "/pricing",
+      "status_code": 200,
+      "issues": [
+        "10 CONSOLE ERROR(S)"
+      ],
+      "console_errors": 210,
+      "broken_images": 0
+    },
+    {
+      "url": "/contact",
+      "status_code": 200,
+      "issues": [
+        "8 CONSOLE ERROR(S)"
+      ],
+      "console_errors": 200,
+      "broken_images": 0
+    },
+    {
+      "url": "/features",
+      "status_code": 200,
+      "issues": [
+        "14 CONSOLE ERROR(S)"
+      ],
+      "console_errors": 192,
+      "broken_images": 0
+    },
+    {
+      "url": "/how-it-works",
+      "status_code": 200,
+      "issues": [
+        "14 CONSOLE ERROR(S)"
+      ],
+      "console_errors": 178,
+      "broken_images": 0
+    },
+    {
+      "url": "/services",
+      "status_code": 200,
+      "issues": [
+        "NO MAIN CONTENT (missing h1 or main element)",
+        "NO CTA BUTTONS FOUND",
+        "12 CONSOLE ERROR(S)"
+      ],
+      "console_errors": 164,
+      "broken_images": 0
+    },
+    {
+      "url": "/about",
+      "status_code": 200,
+      "issues": [
+        "NO MAIN CONTENT (missing h1 or main element)",
+        "NO CTA BUTTONS FOUND",
+        "10 CONSOLE ERROR(S)"
+      ],
+      "console_errors": 152,
+      "broken_images": 0
+    },
+    {
+      "url": "/who-we-serve/legal-law-firms",
+      "status_code": 200,
+      "issues": [
+        "NO MAIN CONTENT (missing h1 or main element)",
+        "NO CTA BUTTONS FOUND",
+        "MISSING LEAD FORM (required on this page)",
+        "12 CONSOLE ERROR(S)"
+      ],
+      "console_errors": 142,
+      "broken_images": 0
+    },
+    {
+      "url": "/who-we-serve/home-services",
+      "status_code": 200,
+      "issues": [
+        "4 BROKEN IMAGE(S)",
+        "12 CONSOLE ERROR(S)"
+      ],
+      "console_errors": 130,
+      "broken_images": 4
+    },
+    {
+      "url": "/who-we-serve/healthcare",
+      "status_code": 200,
+      "issues": [
+        "4 BROKEN IMAGE(S)",
+        "12 CONSOLE ERROR(S)"
+      ],
+      "console_errors": 118,
+      "broken_images": 4
+    },
+    {
+      "url": "/who-we-serve/real-estate",
+      "status_code": 200,
+      "issues": [
+        "4 BROKEN IMAGE(S)",
+        "12 CONSOLE ERROR(S)"
+      ],
+      "console_errors": 106,
+      "broken_images": 4
+    },
+    {
+      "url": "/pricing/starter-package",
+      "status_code": 200,
+      "issues": [
+        "8 CONSOLE ERROR(S)"
+      ],
+      "console_errors": 94,
+      "broken_images": 0
+    },
+    {
+      "url": "/pricing/growth-package",
+      "status_code": 200,
+      "issues": [
+        "NO MAIN CONTENT (missing h1 or main element)",
+        "NO CTA BUTTONS FOUND",
+        "MISSING LEAD FORM (required on this page)",
+        "10 CONSOLE ERROR(S)"
+      ],
+      "console_errors": 86,
+      "broken_images": 0
+    },
+    {
+      "url": "/pricing/enterprise-package",
+      "status_code": 200,
+      "issues": [
+        "10 CONSOLE ERROR(S)"
+      ],
+      "console_errors": 76,
+      "broken_images": 0
+    },
+    {
+      "url": "/integrations",
+      "status_code": 200,
+      "issues": [
+        "62 BROKEN IMAGE(S)",
+        "14 CONSOLE ERROR(S)"
+      ],
+      "console_errors": 66,
+      "broken_images": 62
+    },
+    {
+      "url": "/integrations/hubspot",
+      "status_code": 200,
+      "issues": [
+        "12 BROKEN IMAGE(S)",
+        "14 CONSOLE ERROR(S)"
+      ],
+      "console_errors": 52,
+      "broken_images": 12
+    },
+    {
+      "url": "/integrations/salesforce",
+      "status_code": 200,
+      "issues": [
+        "12 BROKEN IMAGE(S)",
+        "14 CONSOLE ERROR(S)"
+      ],
+      "console_errors": 38,
+      "broken_images": 12
+    },
+    {
+      "url": "/services/voice-ai",
+      "status_code": 200,
+      "issues": [
+        "12 CONSOLE ERROR(S)"
+      ],
+      "console_errors": 24,
+      "broken_images": 0
+    },
+    {
+      "url": "/services/google-ads",
+      "status_code": 200,
+      "issues": [
+        "12 CONSOLE ERROR(S)"
+      ],
+      "console_errors": 12,
+      "broken_images": 0
+    }
+  ],
+  "all_console_errors": [
+    "Refused to apply style from 'http://localhost:3000/_next/static/chunks/855d0109291d7631.css' because its MIME type ('text/plain') is not a supported stylesheet MIME type, and strict MIME checking is enabled.",
+    "Refused to apply style from 'http://localhost:3000/_next/static/chunks/2e40d04b1d755ee2.css' because its MIME type ('text/plain') is not a supported stylesheet MIME type, and strict MIME checking is enabled.",
+    "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+    "Refused to execute script from 'http://localhost:3000/_next/static/chunks/07bc9c53c99597ac.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+    "Refused to execute script from 'http://localhost:3000/_next/static/chunks/c1123608ac5d63ab.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+    "Refused to execute script from 'http://localhost:3000/_next/static/chunks/49091111a964e20f.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+    "Refused to execute script from 'http://localhost:3000/_next/static/chunks/275a30ad717e7a01.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+    "Refused to execute script from 'http://localhost:3000/_next/static/chunks/945a4f586afe3e35.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+    "Refused to apply style from 'http://localhost:3000/_next/static/chunks/6c29938cfed2b5ce.css' because its MIME type ('text/plain') is not a supported stylesheet MIME type, and strict MIME checking is enabled.",
+    "Refused to apply style from 'http://localhost:3000/_next/static/chunks/014dd479c4f31850.css' because its MIME type ('text/plain') is not a supported stylesheet MIME type, and strict MIME checking is enabled.",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Refused to execute script from 'http://localhost:3000/_next/static/chunks/85640ed08832ac50.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+    "Refused to execute script from 'http://localhost:3000/_next/static/chunks/34e9364320a952c2.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+    "Refused to execute script from 'http://localhost:3000/_next/static/chunks/5cc61994d345125c.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+    "Refused to execute script from 'http://localhost:3000/_next/static/chunks/0c8a961c7dca5598.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+    "Refused to execute script from 'http://localhost:3000/_next/static/chunks/698a9b5ba523d76f.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+    "Refused to execute script from 'http://localhost:3000/_next/static/chunks/b045a41d4550bf84.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+    "Refused to execute script from 'http://localhost:3000/_next/static/chunks/ce19e84f74e1b8c5.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+    "Refused to execute script from 'http://localhost:3000/_next/static/chunks/1050b23f7977644d.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+    "Refused to execute script from 'http://localhost:3000/_next/static/chunks/89169c04370bbe4e.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+    "Refused to execute script from 'http://localhost:3000/_next/static/chunks/ee64753da0790ccf.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+    "Refused to execute script from 'http://localhost:3000/_next/static/chunks/727ccb38bae3c998.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+    "Refused to execute script from 'http://localhost:3000/_next/static/chunks/4a752f10611f3ad1.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+    "Refused to execute script from 'http://localhost:3000/_next/static/chunks/78f045e5a7b48fa1.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+    "Refused to execute script from 'http://localhost:3000/_next/static/chunks/17f4e19c8beb9648.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled.",
+    "Refused to execute script from 'http://localhost:3000/_next/static/chunks/534cec0a7ea9ca27.js' because its MIME type ('text/plain') is not executable, and strict MIME type checking is enabled."
+  ],
+  "summary": {
+    "total_console_errors": 26,
+    "total_broken_images": 137,
+    "pages_missing_forms": 2,
+    "pages_missing_ctas": 4
+  },
+  "recommendations": [
+    "Fix 20 failing page(s) before production deployment",
+    "Resolve 26 console error(s)",
+    "Fix 137 broken image(s)",
+    "Add CTA buttons to 4 page(s)"
+  ]
+}

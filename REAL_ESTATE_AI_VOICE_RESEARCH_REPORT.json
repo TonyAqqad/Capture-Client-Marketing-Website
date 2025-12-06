@@ -1,0 +1,699 @@
+{
+  "industry": "Real Estate",
+  "research_date": "2025-12-04",
+  "market_overview": {
+    "market_size": "$164.96 billion in 2023 growing to $226.71 billion in 2024",
+    "cagr": "37.4%",
+    "adoption_stats": {
+      "revenue_increase": "63% of real estate companies report revenue increases due to AI integration",
+      "time_savings": "85% of agents using AI report significant time savings",
+      "efficiency_gains": "$34 billion in operating efficiencies by 2030",
+      "task_automation": "AI can automate 37% of tasks in real estate"
+    }
+  },
+  "real_estate_competitors": [
+    {
+      "name": "Structurely",
+      "description": "AI-powered lead engagement platform for real estate",
+      "key_features": [
+        "Natural language processing for complex queries",
+        "Realistic voice and text conversations",
+        "Scripted qualification questions (timeline, budget, motivation)",
+        "Live call transfers to agents when leads qualified",
+        "Multi-sector support (real estate, mortgages, home services)"
+      ],
+      "pricing": "Not specified",
+      "results": {
+        "cost_reduction": "50% reduction in staffing costs",
+        "qualified_connections": "17% increase in qualified connections"
+      }
+    },
+    {
+      "name": "Ylopo",
+      "description": "AI-first lead generation and nurturing platform",
+      "key_features": [
+        "AI-powered texting and voice assistants",
+        "AI voice assistant calls leads automatically",
+        "Voice nearly indistinguishable from human",
+        "AI-powered video ads for Meta using MLS photos",
+        "Automated lead generation and qualification"
+      ],
+      "pricing": "Starting around $1,000/month",
+      "results": {
+        "conversations": "Over 25 million conversations via AI Text",
+        "response_rate": "48% response rate from clients"
+      }
+    },
+    {
+      "name": "Dialzara",
+      "description": "Professional AI phone receptionist for agents and brokers",
+      "key_features": [
+        "Never miss a call (24/7 availability)",
+        "Instant, consistent responses day or night",
+        "Lead capture during showings, open houses, after hours",
+        "Automates answering calls, transferring, relaying messages",
+        "Appointment scheduling automation"
+      ],
+      "pricing": "Not specified"
+    },
+    {
+      "name": "ContactSwing",
+      "description": "AI voice agents for real estate lead capture",
+      "key_features": [
+        "Instant inquiry responses",
+        "24/7 operation",
+        "Handles buyer questions and rental inquiries",
+        "Automated showing scheduling"
+      ],
+      "pricing": "Not specified",
+      "results": {
+        "response_time_reduction": "90%",
+        "lead_conversion_increase": "45%"
+      }
+    },
+    {
+      "name": "Phonely",
+      "description": "AI answering service for real estate agents",
+      "key_features": [
+        "Manages property listing inquiries",
+        "Schedules property viewings",
+        "Provides real estate process information",
+        "Improves response times"
+      ],
+      "pricing": "Not specified"
+    },
+    {
+      "name": "Upfirst",
+      "description": "Virtual receptionist for realtors",
+      "key_features": [
+        "Answer every call 24/7",
+        "Lead qualification",
+        "Setup in minutes"
+      ],
+      "pricing": {
+        "30_calls": "$24.95/month",
+        "90_calls": "$59.95/month",
+        "300_calls": "$159.95/month",
+        "600_calls": "$299/month"
+      }
+    },
+    {
+      "name": "Lofty (formerly Chime)",
+      "description": "AI Sales Assistant functions as virtual ISA",
+      "key_features": [
+        "Lead capture and qualification",
+        "Appointment setting",
+        "Call screening",
+        "Follow-up automation",
+        "Lead nurturing"
+      ],
+      "description_note": "Multi-talented virtual ISA that handles entire lead lifecycle"
+    },
+    {
+      "name": "HouseWhisper",
+      "description": "AI assistant for real estate agents (founded by Zillow veterans)",
+      "key_features": [
+        "Pre-trained on real estate operations",
+        "No hiring, managing, or training required",
+        "Significantly cheaper than human assistant"
+      ],
+      "funding": "$6.7 million seed round led by Mayfield"
+    },
+    {
+      "name": "Lindy AI",
+      "description": "AI Real Estate Assistant",
+      "key_features": [
+        "Answers inquiries on email, SMS, and chat",
+        "Pre-qualifying questions (budget, location, timeline)",
+        "Hot lead routing",
+        "Books appointments across voice, email, and text"
+      ]
+    },
+    {
+      "name": "CINC",
+      "description": "Real estate platform with AI (partnership with Structurely)",
+      "key_features": [
+        "Human-like client interactions",
+        "Improved scripting",
+        "CRM integration"
+      ],
+      "pricing": "$899/month for software + $200/month for AI tools"
+    }
+  ],
+  "crm_integrations": [
+    {
+      "name": "Follow Up Boss",
+      "type": "Real Estate CRM",
+      "description": "CRM with 200+ integrations for lead management",
+      "key_features": [
+        "Action Plans and sales tools",
+        "Automated lead flow via Connected Email",
+        "Integration with all major lead generators",
+        "Zapier support for custom integrations"
+      ],
+      "ai_capabilities": "AI-powered data extraction, summarization, and transformation via Zapier"
+    },
+    {
+      "name": "kvCORE (BoldTrail)",
+      "type": "All-in-one AI-powered CRM",
+      "description": "Comprehensive real estate platform with AI behavioral automation",
+      "key_features": [
+        "Lead generator and nurturing tools",
+        "Lead communication",
+        "Marketing automation",
+        "Business analysis",
+        "AI-infused behavioral automation"
+      ],
+      "tagline": "A serious follow-up machine to 5x your lead conversion rates"
+    },
+    {
+      "name": "BoomTown",
+      "type": "Real Estate CRM",
+      "description": "Inside Real Estate product for brokerages",
+      "key_features": [
+        "Lead management",
+        "CRM integration",
+        "Zapier connectivity"
+      ]
+    },
+    {
+      "name": "Sierra Interactive",
+      "type": "Agent Platform",
+      "description": "Lead generation, IDX websites, CRM, marketing automation",
+      "key_features": [
+        "Built-in CRM fully integrated with websites",
+        "Automated follow-up",
+        "Pipeline tracking",
+        "Custom workflows",
+        "If-then logic automations",
+        "Multi-channel communication (email, SMS, ringless voicemail)",
+        "90+ integrations via open API"
+      ],
+      "pricing": "Starting at $499/month (includes hosting, CRM, IDX, lead gen tools)"
+    },
+    {
+      "name": "Zillow Premier Agent",
+      "type": "Lead Generation Platform",
+      "description": "Premier lead generation from Zillow listings",
+      "integration_requirements": [
+        "5-minute response time best practice",
+        "1-hour maximum response time",
+        "Quick follow-up systems required",
+        "Zillow Flex program has strict response requirements"
+      ]
+    },
+    {
+      "name": "Realtor.com",
+      "type": "Lead Generation Platform",
+      "description": "Lead distribution platform for real estate agents",
+      "integration_requirements": [
+        "Rapid follow-up required (leads distributed to multiple agents)",
+        "First to respond wins the lead",
+        "5-minute response window critical"
+      ]
+    }
+  ],
+  "pain_points": [
+    {
+      "pain_point": "Speed to Lead - First to Respond Wins",
+      "severity": "CRITICAL",
+      "statistics": [
+        "78% of property buyers choose the first agent who responds (NAR)",
+        "100x more likely to connect if responding within 5 minutes vs 30 minutes",
+        "21x higher likelihood of qualifying lead within 5-minute window",
+        "7x more likely to qualify lead if responding within 1 hour",
+        "Contact odds drop by 80% after 5 minutes",
+        "Average lead response time in industry: 47 hours (terrible)"
+      ],
+      "impact": "Missing the 5-minute window means losing most leads to competitors"
+    },
+    {
+      "pain_point": "After-Hours Inquiries",
+      "severity": "CRITICAL",
+      "statistics": [
+        "77% of property inquiries come after 5 PM",
+        "43% of service inquiries happen during 'family time' (5 PM - 9 PM)",
+        "Small/mid-sized businesses miss 62% of calls",
+        "Multifamily professionals miss 49% of all calls (higher after hours)",
+        "Average small business misses 23 calls per week outside business hours",
+        "52% of callers (especially millennials/Gen Z) will never call again if missed"
+      ],
+      "financial_impact": "$62 billion in annual revenue lost to unanswered after-hours calls",
+      "average_lead_value": "$287 per lead",
+      "potential_annual_loss": "$343,000 per business"
+    },
+    {
+      "pain_point": "Lead Qualification - Serious Buyers vs Browsers",
+      "severity": "HIGH",
+      "description": "Agents waste time on unqualified leads instead of focusing on ready-to-buy prospects",
+      "solution": "AI qualification questions filter leads by budget, timeline, pre-approval status, and motivation level",
+      "key_questions": [
+        "Have you been pre-approved by a lender?",
+        "What's your budget range (min/max)?",
+        "How soon do you want to move?",
+        "How long have you been searching?",
+        "What's driving your timeline (job relocation, lease ending, etc.)?"
+      ]
+    },
+    {
+      "pain_point": "Showing Scheduling",
+      "severity": "MEDIUM",
+      "description": "Back-and-forth scheduling coordination wastes time and delays conversions",
+      "solution": "AI scheduling tools automate showing coordination, calendar matching, and reminder sending",
+      "benefits": [
+        "30% reduction in scheduling time (LetHub case study)",
+        "20% increase in lead-to-tour conversions (LetHub case study)",
+        "Automated SMS/email reminders reduce no-shows",
+        "24/7 scheduling availability"
+      ]
+    },
+    {
+      "pain_point": "Lead Routing to Agents",
+      "severity": "MEDIUM",
+      "description": "Manual lead distribution causes delays and unfair agent workload",
+      "routing_strategies": [
+        "Round-Robin: Even distribution among agents",
+        "First-Available: Next available agent responds",
+        "Skill-Based: Route by agent expertise (first-time buyers, luxury, commercial)",
+        "Geographic: Route by neighborhood/ZIP code expertise"
+      ],
+      "best_practice": "Automated routing systems reduce response time and track agent performance"
+    },
+    {
+      "pain_point": "Zillow/Realtor.com Lead Management",
+      "severity": "HIGH",
+      "description": "Expensive leads from portals require instant response to beat competitors",
+      "conversion_rate": "1 in 30 leads convert same month, 2 more over 6-8 months",
+      "response_requirement": "5 minutes (best) to 1 hour (maximum)",
+      "competition": "Leads often distributed to multiple agents - first responder wins"
+    },
+    {
+      "pain_point": "Missed Call Revenue Loss",
+      "severity": "CRITICAL",
+      "case_study": {
+        "company": "ABC Realty (Phoenix brokerage, 15 agents)",
+        "before": "62% call answer rate during business hours, virtually 0% after hours",
+        "after": "98% call answer rate across all hours",
+        "results": {
+          "lead_capture_improvement": "47%",
+          "revenue_growth": "32% year-over-year"
+        }
+      },
+      "industry_impact": "55% of inbound calls are new potential customers, 24% say initial contact is critical"
+    }
+  ],
+  "speed_to_lead_stats": [
+    {
+      "metric": "5-Minute Response Window",
+      "impact": "100x more likely to connect vs waiting 30 minutes",
+      "conversion_likelihood": "21x higher chance to qualify lead"
+    },
+    {
+      "metric": "1-Hour Response Window",
+      "impact": "7x more likely to qualify lead vs later response"
+    },
+    {
+      "metric": "Automated Response (within 1 minute)",
+      "impact": "Up to 391% boost in conversion rates"
+    },
+    {
+      "metric": "Contact Odds",
+      "impact": "Drop by 80% after 5 minutes"
+    },
+    {
+      "metric": "AI Agent Response Time Reduction",
+      "impact": "90% faster responses (ContactSwing data)"
+    },
+    {
+      "metric": "Lead Conversion Increase with AI",
+      "impact": "45% increase (ContactSwing data)"
+    },
+    {
+      "metric": "First Responder Advantage",
+      "impact": "78% of buyers choose the first responsive agent (NAR)"
+    }
+  ],
+  "features_to_highlight": [
+    {
+      "feature": "24/7 AI Phone Answering",
+      "why_it_matters": "77% of inquiries come after 5 PM. Never miss a lead during showings, open houses, or after hours.",
+      "competitive_advantage": "While competitors sleep, your AI answers every call instantly."
+    },
+    {
+      "feature": "5-Minute Response Guarantee",
+      "why_it_matters": "100x more likely to connect within 5 minutes. First responder wins 78% of the time.",
+      "competitive_advantage": "Beat competitors who take hours or days to respond."
+    },
+    {
+      "feature": "Intelligent Lead Qualification",
+      "why_it_matters": "AI asks pre-approval, budget, timeline, and motivation questions automatically.",
+      "competitive_advantage": "Agents only talk to qualified, ready-to-buy leads. No time wasted on browsers."
+    },
+    {
+      "feature": "Automated Showing Scheduling",
+      "why_it_matters": "30% reduction in scheduling time, 20% increase in lead-to-tour conversions.",
+      "competitive_advantage": "Calendar integration, automated reminders, no back-and-forth coordination."
+    },
+    {
+      "feature": "CRM Integration (Follow Up Boss, kvCORE, Sierra, BoomTown)",
+      "why_it_matters": "Leads automatically flow into CRM with all details. No manual data entry.",
+      "competitive_advantage": "Seamless workflow from call to closed deal."
+    },
+    {
+      "feature": "Zillow/Realtor.com Lead Response",
+      "why_it_matters": "Expensive portal leads require instant response to beat other agents.",
+      "competitive_advantage": "AI responds in seconds, not minutes or hours. Higher ROI on lead spend."
+    },
+    {
+      "feature": "Live Call Transfer to Agents",
+      "why_it_matters": "When lead is qualified and ready, AI transfers call to available agent instantly.",
+      "competitive_advantage": "No missed opportunities. Hot leads go straight to closers."
+    },
+    {
+      "feature": "After-Hours Lead Capture",
+      "why_it_matters": "$343,000 in potential annual revenue lost to missed after-hours calls.",
+      "competitive_advantage": "Capture every evening and weekend lead while competitors miss calls."
+    },
+    {
+      "feature": "Multi-Channel Communication (Voice, SMS, Email)",
+      "why_it_matters": "48% response rate via AI text (Ylopo data). Meet leads on their preferred channel.",
+      "competitive_advantage": "AI adapts to how each lead wants to communicate."
+    },
+    {
+      "feature": "Human-Like Conversations",
+      "why_it_matters": "Natural language processing handles complex questions about school districts, HOA fees, property comparisons.",
+      "competitive_advantage": "Leads can't tell they're talking to AI. Professional experience every time."
+    }
+  ],
+  "keywords": {
+    "primary_keywords": [
+      "AI voice assistant for real estate",
+      "real estate AI phone answering",
+      "AI ISA for real estate agents",
+      "real estate lead qualification AI",
+      "AI receptionist for realtors",
+      "voice AI for real estate agents",
+      "real estate AI lead capture"
+    ],
+    "long_tail_keywords": [
+      "AI phone answering service for real estate agents",
+      "automated showing scheduling for realtors",
+      "AI lead qualification real estate",
+      "24/7 real estate answering service AI",
+      "Zillow lead response automation",
+      "realtor.com lead management AI",
+      "AI ISA for real estate teams",
+      "real estate after hours call answering",
+      "speed to lead real estate AI",
+      "AI voice agent for property showings"
+    ],
+    "pain_point_keywords": [
+      "missed real estate calls solution",
+      "real estate lead response time improvement",
+      "after hours real estate inquiries",
+      "qualify real estate leads automatically",
+      "reduce real estate lead response time",
+      "automate real estate showing scheduling",
+      "real estate agent productivity tools"
+    ],
+    "competitor_keywords": [
+      "Structurely alternative",
+      "Ylopo alternative",
+      "Dialzara alternative",
+      "Lofty AI alternative",
+      "real estate AI assistant comparison"
+    ],
+    "crm_integration_keywords": [
+      "Follow Up Boss AI integration",
+      "kvCORE AI voice assistant",
+      "Sierra Interactive AI automation",
+      "BoomTown AI lead routing",
+      "Zillow Premier Agent AI",
+      "realtor.com lead automation"
+    ]
+  },
+  "roi_metrics": [
+    {
+      "metric": "Lead Capture Improvement",
+      "value": "47%",
+      "source": "ABC Realty case study"
+    },
+    {
+      "metric": "Revenue Growth",
+      "value": "32% year-over-year",
+      "source": "ABC Realty case study"
+    },
+    {
+      "metric": "Lead Conversion Increase",
+      "value": "30-60%",
+      "source": "Multiple AI implementation case studies"
+    },
+    {
+      "metric": "Productivity Increase",
+      "value": "60%",
+      "source": "AI implementation study"
+    },
+    {
+      "metric": "Response Time Reduction",
+      "value": "90%",
+      "source": "ContactSwing data"
+    },
+    {
+      "metric": "Lead Conversion Rate Boost",
+      "value": "45%",
+      "source": "ContactSwing data"
+    },
+    {
+      "metric": "Staffing Cost Reduction",
+      "value": "50%",
+      "source": "Structurely data"
+    },
+    {
+      "metric": "Qualified Connections Increase",
+      "value": "17%",
+      "source": "Structurely data"
+    },
+    {
+      "metric": "Scheduling Time Reduction",
+      "value": "30%",
+      "source": "LetHub case study"
+    },
+    {
+      "metric": "Lead-to-Tour Conversion Increase",
+      "value": "20%",
+      "source": "LetHub case study"
+    },
+    {
+      "metric": "Average Lead Value",
+      "value": "$287",
+      "source": "Industry average"
+    },
+    {
+      "metric": "Average Real Estate Commission",
+      "value": "$12,000",
+      "source": "Industry average"
+    },
+    {
+      "metric": "Potential Annual Revenue Loss (Missed After-Hours Calls)",
+      "value": "$343,000",
+      "source": "Industry calculation"
+    },
+    {
+      "metric": "Real Estate Lead Conversion Rate (Industry Average)",
+      "value": "0.4% - 2.4%",
+      "source": "NAR and Inman reports"
+    },
+    {
+      "metric": "Cost Per Lead (Paid Search)",
+      "value": "$66.02",
+      "source": "2023 real estate marketing data"
+    }
+  ],
+  "target_buyer_personas": [
+    {
+      "persona": "Solo Real Estate Agent",
+      "pain_points": [
+        "Can't answer calls during showings",
+        "Misses after-hours inquiries",
+        "Wastes time on unqualified leads",
+        "Slow Zillow/Realtor.com response times"
+      ],
+      "goals": [
+        "Never miss a lead",
+        "Qualify leads automatically",
+        "Focus on closings, not administrative tasks"
+      ],
+      "messaging": "Your 24/7 AI ISA that never takes a day off. Capture every lead while you focus on showings and closings."
+    },
+    {
+      "persona": "Real Estate Team (5-20 agents)",
+      "pain_points": [
+        "Inefficient lead routing",
+        "Inconsistent lead follow-up",
+        "Can't afford full-time ISA",
+        "Manual lead distribution delays"
+      ],
+      "goals": [
+        "Automate lead routing by expertise/geography",
+        "Ensure 5-minute response times",
+        "Scale without hiring more ISAs"
+      ],
+      "messaging": "AI-powered lead routing and qualification for your entire team. 98% call answer rate, 47% more leads captured."
+    },
+    {
+      "persona": "Real Estate Brokerage",
+      "pain_points": [
+        "Agents losing leads to competitors",
+        "Low Zillow/Realtor.com ROI",
+        "High ISA staffing costs",
+        "Poor after-hours coverage"
+      ],
+      "goals": [
+        "Increase agent productivity",
+        "Improve lead conversion rates",
+        "Reduce operational costs",
+        "Provide value-add for agents"
+      ],
+      "messaging": "Enterprise AI voice solution for brokerages. 50% reduction in staffing costs, 32% revenue growth, seamless CRM integration."
+    },
+    {
+      "persona": "Zillow/Realtor.com Premier Agent",
+      "pain_points": [
+        "Paying high costs for leads",
+        "Can't respond fast enough to beat competitors",
+        "Leads go cold before follow-up",
+        "Low conversion rates on paid leads"
+      ],
+      "goals": [
+        "Instant response to portal leads",
+        "Higher conversion rates",
+        "Better ROI on lead spend"
+      ],
+      "messaging": "Respond to Zillow and Realtor.com leads in seconds, not hours. Be the first agent every time. 45% higher conversion rates."
+    }
+  ],
+  "implementation_recommendations": [
+    {
+      "recommendation": "Create Real Estate Industry Landing Page",
+      "priority": "HIGH",
+      "description": "Dedicated page targeting real estate agents with industry-specific messaging, pain points, and ROI metrics"
+    },
+    {
+      "recommendation": "Build Zillow/Realtor.com Lead Response Integration Page",
+      "priority": "HIGH",
+      "description": "Target agents paying for portal leads who need instant response automation"
+    },
+    {
+      "recommendation": "Add CRM Integration Pages",
+      "priority": "MEDIUM",
+      "description": "Create pages for Follow Up Boss, kvCORE, Sierra Interactive, BoomTown integrations"
+    },
+    {
+      "recommendation": "Create ROI Calculator for Real Estate",
+      "priority": "HIGH",
+      "description": "Calculate revenue loss from missed calls, value of faster response times, cost savings vs human ISA"
+    },
+    {
+      "recommendation": "Develop Case Study: Before/After AI Implementation",
+      "priority": "MEDIUM",
+      "description": "Showcase ABC Realty results: 47% lead capture improvement, 32% revenue growth"
+    },
+    {
+      "recommendation": "Create Comparison Pages vs Competitors",
+      "priority": "MEDIUM",
+      "description": "Capture Client vs Structurely, vs Ylopo, vs Dialzara, vs Lofty"
+    },
+    {
+      "recommendation": "Add After-Hours Lead Capture Demo",
+      "priority": "HIGH",
+      "description": "Interactive demo showing AI answering evening/weekend calls while competitors miss them"
+    },
+    {
+      "recommendation": "Build Lead Qualification Workflow Visualization",
+      "priority": "MEDIUM",
+      "description": "Show how AI asks budget/timeline/pre-approval questions and routes qualified leads to agents"
+    }
+  ],
+  "sources": [
+    {
+      "title": "5 Ways to Use AI for Real Estate Leads in 2025",
+      "url": "https://www.luxurypresence.com/blogs/real-estate-ai-lead-generation/"
+    },
+    {
+      "title": "AI Phone Calls: Transforming Lead Qualification for Real Estate Agents",
+      "url": "https://convin.ai/blog/how-can-ai-phone-calls-improve-lead-qualification-for-realtors"
+    },
+    {
+      "title": "AI Receptionist for Real Estate Agents - Dialzara",
+      "url": "https://dialzara.com/industries/real-estate"
+    },
+    {
+      "title": "AI Voice Agent for Real Estate - ContactSwing",
+      "url": "https://www.contactswing.ai/industries/ai-for-realestate"
+    },
+    {
+      "title": "PHONELY FOR REAL ESTATE SERVICES",
+      "url": "https://www.phonely.ai/industries/real-estate-agents-ai-answering-service"
+    },
+    {
+      "title": "Real Estate Answering Service | Upfirst",
+      "url": "https://upfirst.ai/industries/real-estate"
+    },
+    {
+      "title": "AI Real Estate Assistant - Lindy AI",
+      "url": "https://www.lindy.ai/tools/ai-real-estate-assistant"
+    },
+    {
+      "title": "Zillow vets launch HouseWhisper AI assistant",
+      "url": "https://www.geekwire.com/2025/zillow-vets-launch-housewhisper-giving-real-estate-agents-an-ai-assistant-to-help-with-workload/"
+    },
+    {
+      "title": "Lofty Solution Suite",
+      "url": "https://lofty.com/"
+    },
+    {
+      "title": "Follow Up Boss Integrations",
+      "url": "https://www.followupboss.com/integrations"
+    },
+    {
+      "title": "Sierra Interactive Real Estate CRM",
+      "url": "https://sierrainteractive.com/"
+    },
+    {
+      "title": "What's a Good Lead Conversion Rate in Real Estate?",
+      "url": "https://www.followupboss.com/blog/real-estate-lead-conversion-rate"
+    },
+    {
+      "title": "Real Estate Lead Response Time: Why It Matters",
+      "url": "https://www.rubixone.com/blog/real-estate-lead-response-time-why-it-matters"
+    },
+    {
+      "title": "Missing 67% of Leads? The After-Hours Revenue Gap",
+      "url": "https://ringing.io/blog/missing-67-percent-of-leads-after-hours-gap"
+    },
+    {
+      "title": "The Hidden Costs of Missed Calls",
+      "url": "https://www.signmore.com/know-more/hidden-costs-of-missed-calls"
+    },
+    {
+      "title": "5 Best AI Scheduling Tools for Real Estate 2025",
+      "url": "https://dialzara.com/blog/best-ai-scheduling-tools-real-estate"
+    },
+    {
+      "title": "Real Estate Lead Routing Best Practices",
+      "url": "https://www.pipedrive.com/en/blog/real-estate-lead-routing"
+    },
+    {
+      "title": "Real estate buyer questionnaire: 50 questions",
+      "url": "https://www.followupboss.com/blog/real-estate-buyer-questionnaire"
+    },
+    {
+      "title": "Zillow Leads: What Realtors Need to Know",
+      "url": "https://www.ylopo.com/blog/zillow-lead-generation"
+    },
+    {
+      "title": "21 Indispensable AI Tools for Real Estate Agents",
+      "url": "https://www.housingwire.com/articles/ai-tools-real-estate/"
+    }
+  ]
+}
