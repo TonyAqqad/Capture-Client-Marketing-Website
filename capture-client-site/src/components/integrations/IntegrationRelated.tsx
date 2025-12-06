@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from "@/lib/motion";
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import type { Integration } from "@/data/integrations";
 
 interface IntegrationRelatedProps {

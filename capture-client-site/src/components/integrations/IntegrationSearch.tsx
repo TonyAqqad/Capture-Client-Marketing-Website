@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "@/lib/motion";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 interface IntegrationSearchProps {
   searchQuery: string;
@@ -15,16 +15,6 @@ export function IntegrationSearch({
   resultsCount,
 }: IntegrationSearchProps) {
   const [isFocused, setIsFocused] = useState(false);
-  const [debouncedQuery, setDebouncedQuery] = useState(searchQuery);
-
-  // Debounce search input
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setDebouncedQuery(searchQuery);
-    }, 300);
-
-    return () => clearTimeout(timer);
-  }, [searchQuery]);
 
   return (
     <div className="max-w-2xl mx-auto">

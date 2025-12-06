@@ -42,8 +42,8 @@ export function IndustryCard({ industry, index = 0 }: IndustryCardProps) {
           <div className="p-8">
             {/* Icon & Category Badge */}
             <div className="flex items-start justify-between mb-6">
-              <div className={`relative w-16 h-16 rounded-2xl bg-gradient-to-br ${categoryGradient} flex items-center justify-center`}>
-                <span className="material-icons text-4xl text-gold-400 group-hover:text-gold-300 transition-colors duration-300">
+              <div className={`relative w-16 h-16 rounded-2xl bg-gradient-to-br ${categoryGradient} flex items-center justify-center flex-shrink-0`}>
+                <span className="material-icons text-4xl text-gold-400 group-hover:text-gold-300 transition-colors duration-300 flex-shrink-0">
                   {categoryIcon}
                 </span>
 

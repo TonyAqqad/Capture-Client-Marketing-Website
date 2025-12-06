@@ -6,14 +6,12 @@ import { useRef, useEffect, useState } from "react";
 
 export function RealEstateHero() {
   const containerRef = useRef<HTMLElement>(null);
-  const [isMobile, setIsMobile] = useState(false);
   const [disableAnimations, setDisableAnimations] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => {
       const mobile = window.innerWidth < 768;
       const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      setIsMobile(mobile);
       setDisableAnimations(mobile || reducedMotion);
     };
     checkMobile();
@@ -30,7 +28,7 @@ export function RealEstateHero() {
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   // Speed counter animation
-  const [avgResponseTime, setAvgResponseTime] = useState(47);
+  const [avgResponseTime] = useState(47);
   const [targetTime, setTargetTime] = useState(0.8);
 
   useEffect(() => {

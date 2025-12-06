@@ -36,6 +36,10 @@
     ".next/dev/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "INTEGRATION_CODE_EXAMPLES.tsx",
+    "**/INTEGRATION_CODE_EXAMPLES.tsx",
+    "**/*_EXAMPLES.tsx",
+    "tests/production-validation.spec.ts"
   ]
 }

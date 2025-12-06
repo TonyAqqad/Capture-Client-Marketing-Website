@@ -38,7 +38,7 @@ const INDUSTRIES = [
 ];
 
 // Generate time slots for next 7 days
-const generateTimeSlots = (dayOffset: number): TimeSlot[] => {
+const generateTimeSlots = (): TimeSlot[] => {
   const slots: TimeSlot[] = [];
   const times = ["9:00 AM", "10:00 AM", "11:00 AM", "1:00 PM", "2:00 PM", "3:00 PM", "4:00 PM"];
 
@@ -84,7 +84,7 @@ export default function SmartDemoScheduler() {
   const [timeSlots, setTimeSlots] = useState<TimeSlot[]>([]);
 
   useEffect(() => {
-    setTimeSlots(generateTimeSlots(selectedDay));
+    setTimeSlots(generateTimeSlots());
     setSelectedTime(null);
   }, [selectedDay]);
 

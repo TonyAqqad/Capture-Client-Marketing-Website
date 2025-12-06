@@ -176,7 +176,7 @@ export function IntegrationFeatures({ integration }: IntegrationFeaturesProps) {
                     <motion.div
                       className={`
                         rounded-xl bg-gradient-to-br from-accent/20 to-primary/20
-                        flex items-center justify-center mb-5
+                        flex items-center justify-center mb-5 flex-shrink-0
                         ${isFeatured ? 'w-16 h-16 sm:w-20 sm:h-20' : 'w-14 h-14 sm:w-16 sm:h-16'}
                       `}
                       whileHover={{
@@ -186,7 +186,7 @@ export function IntegrationFeatures({ integration }: IntegrationFeaturesProps) {
                       }}
                     >
                       <span className={`
-                        material-icons text-accent
+                        material-icons text-accent flex-shrink-0
                         ${isFeatured ? 'text-3xl sm:text-4xl' : 'text-2xl sm:text-3xl'}
                       `}>
                         {icon}

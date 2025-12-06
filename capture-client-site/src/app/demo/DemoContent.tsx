@@ -113,6 +113,12 @@ const scenarios: ScenarioData[] = [
 function AnimatedWaveform({ isPlaying }: { isPlaying: boolean }) {
   const bars = Array.from({ length: 30 }, (_, i) => i);
 
+  // Deterministic height values based on bar index to avoid hydration mismatch
+  const getBarHeight = (index: number) => {
+    // Creates varied but deterministic wave pattern using sine
+    return 16 + Math.abs(Math.sin(index * 0.7)) * 48;
+  };
+
   return (
     <div className="flex items-center justify-center gap-0.5 md:gap-1 h-16 md:h-24 overflow-hidden">
       {bars.map((bar) => (
@@ -123,7 +129,7 @@ function AnimatedWaveform({ isPlaying }: { isPlaying: boolean }) {
           animate={
             isPlaying
               ? {
-                  height: [4, Math.random() * 48 + 16, 4],
+                  height: [4, getBarHeight(bar), 4],
                   opacity: [0.3, 1, 0.3],
                 }
               : { height: 4, opacity: 0.3 }

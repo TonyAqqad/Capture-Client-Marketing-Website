@@ -173,10 +173,10 @@ export function HowItWorks() {
           </div>
         </div>
 
-        {/* Mobile: Vertical Timeline */}
-        <div className="lg:hidden space-y-8 sm:space-y-12 relative">
-          {/* Mobile vertical aurora line - positioned to align with step numbers */}
-          <div className="absolute left-[calc(1rem+4px)] sm:left-[calc(1rem+6px)] top-6 bottom-6 w-[2px] overflow-hidden rounded-full">
+        {/* Mobile: Vertical Timeline - FIXED positioning to prevent overlap */}
+        <div className="lg:hidden space-y-8 sm:space-y-12 relative pl-20 sm:pl-24">
+          {/* Mobile vertical aurora line - positioned relative to the left padding */}
+          <div className="absolute left-6 sm:left-8 top-6 bottom-6 w-[2px] overflow-hidden rounded-full">
             <motion.div
               initial={{ scaleY: 0 }}
               animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
@@ -207,7 +207,9 @@ export function HowItWorks() {
           className="text-center mt-20 sm:mt-24 lg:mt-32"
         >
           <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-full glass-badge mb-6 sm:mb-8 max-w-full">
-            <span className="material-icons text-accent text-lg sm:text-xl">schedule</span>
+            <div className="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center flex-shrink-0">
+              <span className="material-icons text-accent text-lg sm:text-xl">schedule</span>
+            </div>
             <span className="text-xs sm:text-sm font-semibold text-accent whitespace-nowrap">Average setup time: 48 hours</span>
           </div>
           <p className="text-foreground-muted mb-6 sm:mb-8 text-lg sm:text-xl px-4">
@@ -220,7 +222,9 @@ export function HowItWorks() {
             className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-accent via-primary to-accent text-white font-bold text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 rounded-2xl shadow-glow-lg hover:shadow-glow border-2 border-transparent hover:border-accent/30 transition-all duration-300 w-full sm:w-auto max-w-md mx-4 sm:mx-0 min-h-[56px] desktop-btn-premium"
           >
             Book Your Strategy Call
-            <span className="material-icons">arrow_forward</span>
+            <div className="w-6 h-6 flex items-center justify-center flex-shrink-0">
+              <span className="material-icons">arrow_forward</span>
+            </div>
           </motion.a>
         </motion.div>
       </div>
@@ -235,7 +239,7 @@ interface StepCardProps {
   isMobile: boolean;
 }
 
-function StepCardDesktop({ step, index, isInView, isMobile }: StepCardProps) {
+function StepCardDesktop({ step, index, isInView }: StepCardProps) {
   const isLeft = index % 2 === 0;
   const auroraGradient = index % 2 === 0
     ? "from-[#00C9FF] to-[#4F46E5]"
@@ -313,10 +317,10 @@ function StepCardDesktop({ step, index, isInView, isMobile }: StepCardProps) {
           />
 
           {/* Icon with aurora glow container */}
-          <div className="relative w-20 h-20 mb-6">
+          <div className="relative w-20 h-20 mb-6 flex-shrink-0">
             <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${auroraGradient} opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500`} />
-            <div className={`relative w-20 h-20 rounded-2xl glass-premium flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform duration-500`}>
-              <span className={`material-icons text-4xl bg-gradient-to-br ${auroraGradient} bg-clip-text text-transparent`}>
+            <div className={`relative w-20 h-20 rounded-2xl glass-premium flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform duration-500 flex-shrink-0`}>
+              <span className={`material-icons text-4xl bg-gradient-to-br ${auroraGradient} bg-clip-text text-transparent flex-shrink-0`}>
                 {step.icon}
               </span>
             </div>
@@ -358,7 +362,7 @@ function StepCardDesktop({ step, index, isInView, isMobile }: StepCardProps) {
   );
 }
 
-function StepCardMobile({ step, index, isInView, isMobile }: StepCardProps) {
+function StepCardMobile({ step, index, isInView }: StepCardProps) {
   const auroraGradient = index % 2 === 0
     ? "from-[#00C9FF] to-[#4F46E5]"
     : "from-[#8B5CF6] to-[#D4AF37]";
@@ -371,9 +375,9 @@ function StepCardMobile({ step, index, isInView, isMobile }: StepCardProps) {
         duration: 0.6,
         delay: index * 0.15,
       }}
-      className="relative ml-4 pl-16 sm:pl-20"
+      className="relative"
     >
-      {/* Timeline connecting dot - centered on timeline (left-8 from parent = left-4 from here due to ml-4) */}
+      {/* Timeline connecting dot - FIXED: positioned absolutely to align with vertical line */}
       <motion.div
         initial={{ scale: 0 }}
         animate={isInView ? { scale: 1 } : { scale: 0 }}
@@ -383,7 +387,7 @@ function StepCardMobile({ step, index, isInView, isMobile }: StepCardProps) {
           type: "spring",
           stiffness: 200,
         }}
-        className="absolute left-0 top-6 -translate-x-1/2 z-30"
+        className="absolute left-[-3.5rem] sm:left-[-4rem] top-6 z-30"
       >
         {/* Pulse container with overflow hidden to prevent visual bleed */}
         <div className="relative w-12 h-12 sm:w-14 sm:h-14 overflow-visible">
@@ -412,10 +416,10 @@ function StepCardMobile({ step, index, isInView, isMobile }: StepCardProps) {
       {/* Card - proper z-index layering, clear separation from timeline */}
       <div className="glass-3d p-5 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl relative overflow-hidden border border-white/10">
         {/* Icon with aurora glow */}
-        <div className="relative w-16 h-16 mb-5">
+        <div className="relative w-16 h-16 mb-5 flex-shrink-0">
           <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${auroraGradient} opacity-20 blur-lg`} />
-          <div className={`relative w-16 h-16 rounded-xl glass-premium flex items-center justify-center border border-white/20`}>
-            <span className={`material-icons text-3xl bg-gradient-to-br ${auroraGradient} bg-clip-text text-transparent`}>
+          <div className={`relative w-16 h-16 rounded-xl glass-premium flex items-center justify-center border border-white/20 flex-shrink-0`}>
+            <span className={`material-icons text-3xl bg-gradient-to-br ${auroraGradient} bg-clip-text text-transparent flex-shrink-0`}>
               {step.icon}
             </span>
           </div>

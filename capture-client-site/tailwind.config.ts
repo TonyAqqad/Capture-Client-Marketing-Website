@@ -434,6 +434,20 @@ const config: Config = {
         '9xl': ['8rem', { lineHeight: '1' }],
         'small': ['0.875rem', { lineHeight: '1.5' }],
         'caption': ['0.8125rem', { lineHeight: '1.4' }],
+
+        // $10M FLUID TYPOGRAPHY - Premium scaling inspired by Stripe/Linear
+        // Fluid hero sizes - dramatic scaling from mobile to desktop
+        'hero-sm': ['clamp(1.75rem, 4vw, 2.5rem)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+        'hero-md': ['clamp(2rem, 5vw, 3rem)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+        'hero-lg': ['clamp(2.5rem, 6vw, 4rem)', { lineHeight: '1.1', letterSpacing: '-0.025em' }],
+        'hero-xl': ['clamp(3rem, 7vw, 5rem)', { lineHeight: '1.1', letterSpacing: '-0.03em' }],
+        'hero-2xl': ['clamp(3.5rem, 8vw, 6rem)', { lineHeight: '1.05', letterSpacing: '-0.03em' }],
+
+        // Fluid body sizes - smooth scaling for readability
+        'body-sm': ['clamp(0.875rem, 1vw, 1rem)', { lineHeight: '1.6' }],
+        'body-md': ['clamp(1rem, 1.25vw, 1.125rem)', { lineHeight: '1.6' }],
+        'body-lg': ['clamp(1.125rem, 1.5vw, 1.25rem)', { lineHeight: '1.7' }],
+        'body-xl': ['clamp(1.25rem, 2vw, 1.5rem)', { lineHeight: '1.7' }],
       },
     },
   },

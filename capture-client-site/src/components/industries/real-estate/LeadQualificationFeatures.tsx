@@ -132,7 +132,7 @@ export function LeadQualificationFeatures() {
                   {/* Icon */}
                   <div className="flex items-start gap-6 mb-6">
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${colors.icon} flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      <span className="material-icons text-black text-3xl">
+                      <span className="material-icons text-black text-3xl flex-shrink-0">
                         {feature.icon}
                       </span>
                     </div>
@@ -156,7 +156,7 @@ export function LeadQualificationFeatures() {
                         transition={{ duration: 0.4, delay: index * 0.1 + qIndex * 0.1 }}
                         className="flex items-center gap-3 p-3 bg-white/[0.03] rounded-lg border border-white/5"
                       >
-                        <span className={`material-icons ${colors.text} text-sm`}>
+                        <span className={`material-icons ${colors.text} text-sm flex-shrink-0`}>
                           check_circle
                         </span>
                         <span className="text-white/80 text-sm font-medium">
@@ -180,8 +180,8 @@ export function LeadQualificationFeatures() {
         >
           <div className="inline-flex items-center gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-cyan-400 flex items-center justify-center">
-                <span className="material-icons text-black text-2xl">psychology</span>
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-cyan-400 flex items-center justify-center flex-shrink-0">
+                <span className="material-icons text-black text-2xl flex-shrink-0">psychology</span>
               </div>
               <div className="text-left">
                 <p className="text-2xl font-bold text-white">

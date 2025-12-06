@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import type { FAQItem } from "@/types/content";
 
@@ -155,7 +155,7 @@ export function PremiumFAQ() {
           className="text-center mt-12 sm:mt-16 mx-4 sm:mx-6 lg:mx-auto p-6 sm:p-8 glass rounded-xl sm:rounded-2xl border-2 border-accent/20 max-w-2xl"
         >
           <div className="mb-6">
-            <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-accent to-primary mb-4 shadow-glow">
+            <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-accent to-primary mb-4 shadow-glow flex-shrink-0">
               <span className="material-icons text-white text-2xl sm:text-3xl">phone</span>
             </div>
             <h4 className="text-xl sm:text-2xl font-heading font-bold text-foreground mb-2">
@@ -169,7 +169,9 @@ export function PremiumFAQ() {
             href="tel:865-346-3339"
             className="inline-flex items-center gap-2 text-base sm:text-lg font-bold text-accent hover:text-accent/80 transition-colors group touch-manipulation"
           >
-            <span className="material-icons group-hover:animate-pulse text-xl sm:text-2xl">phone_in_talk</span>
+            <div className="w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center flex-shrink-0">
+              <span className="material-icons group-hover:animate-pulse text-xl sm:text-2xl">phone_in_talk</span>
+            </div>
             Call (865) 346-3339
           </a>
           <p className="text-xs sm:text-sm text-foreground-subtle mt-3">
@@ -238,7 +240,7 @@ function FAQItem({ faq, isOpen, onClick }: FAQItemProps) {
             }`}
           >
             <span
-              className={`material-icons text-2xl sm:text-3xl transition-colors duration-300 ${
+              className={`material-icons text-2xl sm:text-3xl transition-colors duration-300 flex-shrink-0 ${
                 isOpen ? (isAccent ? "text-accent" : "text-primary") : "text-foreground-muted"
               }`}
             >

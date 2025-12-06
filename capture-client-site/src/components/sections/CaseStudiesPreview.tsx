@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion } from "framer-motion";
+import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import Link from "next/link";
 
@@ -211,7 +211,9 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
       <div className="relative h-full glass p-8 sm:p-10 rounded-2xl sm:rounded-3xl border-2 border-accent/20 transition-all duration-500 group-hover:border-accent/50 group-hover:shadow-glow">
         {/* Industry badge */}
         <div className={`inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-gradient-to-r ${study.gradient} mb-6 sm:mb-8`}>
-          <span className="material-icons text-white text-lg sm:text-xl">{study.icon}</span>
+          <div className="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center flex-shrink-0">
+            <span className="material-icons text-white text-lg sm:text-xl">{study.icon}</span>
+          </div>
           <span className="text-sm sm:text-base font-bold text-white">{study.industry}</span>
         </div>
 
@@ -261,7 +263,9 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
                     {result.before}
                   </p>
                 </div>
-                <span className="material-icons text-accent text-sm">arrow_forward</span>
+                <div className="w-4 h-4 flex items-center justify-center flex-shrink-0">
+                  <span className="material-icons text-accent text-sm">arrow_forward</span>
+                </div>
                 <div className="flex-1 bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg p-2 text-center border border-accent/30">
                   <p className="text-accent font-bold text-sm">
                     {result.after}

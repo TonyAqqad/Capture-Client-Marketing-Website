@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "@/lib/motion";
+import { motion } from "@/lib/motion";
 import { useRef } from "react";
 
 interface HowItWorksStep {
@@ -37,10 +37,6 @@ export function IntegrationHowItWorks({
   category = "default",
 }: IntegrationHowItWorksProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
 
   const gradient = categoryGradients[category] || categoryGradients.default;
 

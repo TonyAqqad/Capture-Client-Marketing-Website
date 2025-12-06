@@ -12,7 +12,7 @@
     },
     "growth_packages": {
       "range": "$1,450 - $2,500/mo",
-      "typical": "$1,997/mo",
+      "typical": "$797/mo",
       "includes": ["PPC Management", "SEO basics", "Account manager", "Weekly reporting"],
       "source_agencies": ["Comrade PPC $1,450", "SEO packages $2,500"]
     },
@@ -64,7 +64,7 @@
       "competitive_position": "Best value in market - includes AI technology competitors don't have"
     },
     "growth_package": {
-      "price": "$1,997/mo",
+      "price": "$797/mo",
       "rationale": "Below SEO-only packages ($2,500) but includes Voice AI + multi-channel. Sweet spot for serious small businesses.",
       "competitive_position": "Premium value - Voice AI + lead gen at SEO-only prices"
     },

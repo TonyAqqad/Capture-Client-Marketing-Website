@@ -377,7 +377,7 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
                   }`}
                 >
                   <span
-                    className={`material-icons text-base ${
+                    className={`material-icons text-base flex-shrink-0 ${
                       plan.isPopular ? 'text-background-dark' : 'text-accent'
                     }`}
                   >

@@ -12,7 +12,6 @@ import {
 } from '@/components/IntegrationLogo';
 import {
   getIntegrationsByCategory,
-  getAllIntegrationLogos,
 } from '@/data/integration-logos';
 
 /**

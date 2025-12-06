@@ -41,6 +41,13 @@ export function LazyMotionProvider({ children }: { children: React.ReactNode }) 
 export { m as motion };
 
 /**
- * Export other commonly used Framer Motion components
+ * Export other commonly used Framer Motion components and hooks
  */
-export { AnimatePresence, useScroll, useTransform, useSpring, useMotionValue } from "framer-motion";
+export {
+  AnimatePresence,
+  useScroll,
+  useTransform,
+  useSpring,
+  useMotionValue,
+  useInView
+} from "framer-motion";

@@ -21,6 +21,7 @@ import { PremiumStats } from "@/components/sections/PremiumStats";
 import { CaseStudiesPreview } from "@/components/sections/CaseStudiesPreview";
 import { PremiumFAQ } from "@/components/sections/PremiumFAQ";
 import { PremiumFinalCTA } from "@/components/sections/PremiumFinalCTA";
+import { ClientLogosCarousel } from "@/components/ui/ClientLogosCarousel";
 
 // Dynamic imports for heavy components to reduce initial bundle size
 const LeadRescueSimulator = dynamic(
@@ -227,6 +228,9 @@ export default function HomePage() {
 
       {/* ==================== SECTION 1: PREMIUM HERO ==================== */}
       <PremiumHero />
+
+      {/* ==================== CLIENT LOGOS CAROUSEL ==================== */}
+      <ClientLogosCarousel />
 
       {/* ==================== SOCIAL PROOF BANNER ==================== */}
       <section className="relative bg-background-dark py-8 sm:py-12 overflow-hidden">

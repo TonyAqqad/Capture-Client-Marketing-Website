@@ -197,7 +197,7 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                   required
                   autoComplete="tel"
-                  pattern="[0-9\s\(\)\-\+]+"
+                  minLength={10}
                   className="w-full min-h-[52px] px-5 py-4 text-base
                              bg-white/[0.03] backdrop-blur-xl
                              border-2 border-white/10 rounded-xl
