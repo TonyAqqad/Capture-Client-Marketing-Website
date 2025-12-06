@@ -883,39 +883,39 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
         {/* GROWTH TIER - GOLD PREMIUM */}
         {isGrowth && (
           <>
-            {/* Most Popular Badge */}
+            {/* Most Popular Badge - Premium Gold */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
-              className="absolute -top-4 left-1/2 -translate-x-1/2 z-20 max-w-full px-2"
+              className="absolute -top-5 sm:-top-4 left-1/2 -translate-x-1/2 z-20 w-[calc(100%-1rem)] max-w-fit"
             >
               <motion.div
                 animate={{
-                  y: [0, -8, 0],
+                  y: [0, -6, 0],
                   boxShadow: [
                     '0 0 20px rgba(212, 175, 55, 0.5)',
-                    '0 0 35px rgba(212, 175, 55, 0.8)',
+                    '0 0 40px rgba(212, 175, 55, 0.9)',
                     '0 0 20px rgba(212, 175, 55, 0.5)',
                   ],
                 }}
                 transition={{ duration: 2.5, repeat: Infinity, repeatType: 'reverse' }}
-                className="relative px-4 sm:px-6 py-2.5 rounded-full bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 bg-[length:200%_100%]"
+                className="relative mx-auto px-4 sm:px-6 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 bg-[length:200%_100%] border border-amber-200/50"
               >
                 <motion.div
                   animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] }}
                   transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent bg-[length:200%_100%] rounded-full"
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent bg-[length:200%_100%] rounded-full"
                 />
-                <div className="relative inline-flex items-start sm:items-center gap-2 max-w-full">
+                <div className="relative flex items-center justify-center gap-1.5 sm:gap-2">
                   <motion.span
                     animate={{ rotate: [0, 360] }}
                     transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
-                    className="text-base sm:text-lg flex-shrink-0"
+                    className="text-sm sm:text-lg flex-shrink-0"
                   >
                     ⭐
                   </motion.span>
-                  <span className="font-bold text-xs sm:text-sm tracking-wider text-black uppercase whitespace-nowrap">
+                  <span className="font-black text-xs sm:text-sm tracking-wider text-black uppercase">
                     Most Popular
                   </span>
                 </div>

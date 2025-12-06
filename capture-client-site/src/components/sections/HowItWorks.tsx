@@ -174,9 +174,9 @@ export function HowItWorks() {
         </div>
 
         {/* Mobile: Vertical Timeline */}
-        <div className="lg:hidden space-y-12 sm:space-y-16 relative">
-          {/* Mobile vertical aurora line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 overflow-hidden">
+        <div className="lg:hidden space-y-8 sm:space-y-12 relative">
+          {/* Mobile vertical aurora line - positioned to align with step numbers */}
+          <div className="absolute left-[calc(1rem+4px)] sm:left-[calc(1rem+6px)] top-6 bottom-6 w-[2px] overflow-hidden rounded-full">
             <motion.div
               initial={{ scaleY: 0 }}
               animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
@@ -371,9 +371,9 @@ function StepCardMobile({ step, index, isInView, isMobile }: StepCardProps) {
         duration: 0.6,
         delay: index * 0.15,
       }}
-      className="relative pl-24"
+      className="relative ml-4 pl-16 sm:pl-20"
     >
-      {/* Timeline connecting dot with pulse - FIXED: Reduced size, better spacing */}
+      {/* Timeline connecting dot - centered on timeline (left-8 from parent = left-4 from here due to ml-4) */}
       <motion.div
         initial={{ scale: 0 }}
         animate={isInView ? { scale: 1 } : { scale: 0 }}
@@ -383,33 +383,34 @@ function StepCardMobile({ step, index, isInView, isMobile }: StepCardProps) {
           type: "spring",
           stiffness: 200,
         }}
-        className="absolute left-0 top-0 z-10"
+        className="absolute left-0 top-6 -translate-x-1/2 z-30"
       >
-        <div className="relative">
-          {/* Animated pulse - FIXED: Reduced max scale from 1.4 to 1.2 */}
+        {/* Pulse container with overflow hidden to prevent visual bleed */}
+        <div className="relative w-12 h-12 sm:w-14 sm:h-14 overflow-visible">
+          {/* Animated pulse - contained within parent */}
           <motion.div
             animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.5, 0, 0.5]
+              scale: [1, 1.3, 1],
+              opacity: [0.4, 0, 0.4]
             }}
             transition={{
-              duration: 2,
+              duration: 2.5,
               repeat: Infinity,
               delay: index * 0.3
             }}
-            className={`absolute inset-0 w-14 h-14 rounded-full bg-gradient-to-br ${auroraGradient}`}
+            className={`absolute inset-0 rounded-full bg-gradient-to-br ${auroraGradient} blur-sm`}
           />
-          {/* Number circle - FIXED: Reduced from w-16 h-16 to w-14 h-14 */}
-          <div className={`relative w-14 h-14 rounded-full bg-gradient-to-br ${auroraGradient} border-[3px] border-background-dark flex items-center justify-center shadow-glow`}>
-            <span className="text-xl font-black text-white" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+          {/* Number circle - solid background to clip any bleed */}
+          <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${auroraGradient} border-[3px] border-background-dark flex items-center justify-center shadow-glow-lg`}>
+            <span className="text-lg sm:text-xl font-black text-white drop-shadow-lg" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
               {step.number}
             </span>
           </div>
         </div>
       </motion.div>
 
-      {/* Card - FIXED: Increased z-index to ensure content stays above animations */}
-      <div className="glass-3d p-6 sm:p-8 rounded-3xl relative overflow-hidden z-20">
+      {/* Card - proper z-index layering, clear separation from timeline */}
+      <div className="glass-3d p-5 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl relative overflow-hidden border border-white/10">
         {/* Icon with aurora glow */}
         <div className="relative w-16 h-16 mb-5">
           <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${auroraGradient} opacity-20 blur-lg`} />

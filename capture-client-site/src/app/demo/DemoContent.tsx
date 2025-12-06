@@ -586,7 +586,7 @@ export default function DemoContent() {
       {/* Content */}
       <div className="relative z-10">
         {/* ==================== HERO SECTION ==================== */}
-        <section className="section pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 min-h-[85vh] sm:min-h-[80vh] flex items-center">
+        <section className="section pt-24 sm:pt-28 lg:pt-32 pb-12 sm:pb-16 lg:pb-20 min-h-[60vh] sm:min-h-[70vh] lg:min-h-[85vh] flex items-center">
           <div className="container-custom px-4 sm:px-6 lg:px-8 w-full">
             <motion.div
               className="text-center max-w-4xl mx-auto mb-12 sm:mb-16 relative z-10"
