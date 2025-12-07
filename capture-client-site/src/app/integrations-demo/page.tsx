@@ -7,6 +7,7 @@
  * DELETE THIS FILE after verifying the integration logo system works
  */
 
+import { Metadata } from 'next';
 import {
   IntegrationLogo,
   IntegrationLogoGrid,
@@ -16,6 +17,15 @@ import {
   getIntegrationsByCategory,
   getAllIntegrationLogos,
 } from '@/data/integration-logos';
+
+export const metadata: Metadata = {
+  title: 'Integrations Demo | Capture Client',
+  description: 'Interactive demo of Capture Client integration logos and components.',
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function IntegrationsDemoPage() {
   const topIntegrations = [

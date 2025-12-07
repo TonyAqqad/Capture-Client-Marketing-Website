@@ -1,847 +1,149 @@
-"use client";
+import { Metadata } from "next";
+import UseCasesClient from "./UseCasesClient";
 
-import { motion, useScroll, useTransform, AnimatePresence } from "@/lib/motion";
-import Link from "next/link";
-import { useRef, useState, useEffect } from "react";
+export const metadata: Metadata = {
+  title: "AI Voice Agent Use Cases | Capture Client",
+  description: "Discover how AI voice agents transform businesses. 24/7 call answering, lead qualification, appointment booking. See real use cases across industries.",
+  keywords: [
+    "AI voice agent use cases",
+    "AI phone answering service",
+    "AI appointment booking",
+    "AI lead qualification",
+    "business automation",
+    "AI receptionist examples",
+    "voice AI for business",
+    "automated customer service",
+    "AI call handling",
+    "business phone automation"
+  ],
+  openGraph: {
+    title: "AI Voice Agent Use Cases | Capture Client",
+    description: "Discover how AI voice agents transform businesses. 24/7 call answering, lead qualification, appointment booking. See real use cases across industries.",
+    url: "https://captureclientai.net/use-cases",
+    siteName: "Capture Client",
+    type: "website",
+    images: [
+      {
+        url: "https://captureclientai.net/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Capture Client AI Voice Agent Use Cases",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AI Voice Agent Use Cases | Capture Client",
+    description: "Discover how AI voice agents transform businesses. 24/7 call answering, lead qualification, appointment booking. See real use cases across industries.",
+    images: ["https://captureclientai.net/og-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://captureclientai.net/use-cases",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
-// Industry data structure
-interface Industry {
-  id: string;
-  name: string;
-  icon: string;
-  gradient: string;
-  useCases: string[];
-  stat: string;
-  color: string;
-  iconBg: string;
-}
-
-const industries: Industry[] = [
-  {
-    id: "healthcare",
-    name: "Healthcare & Medical",
-    icon: "medical_services",
-    gradient: "from-cyan-500/20 via-blue-500/20 to-[#D4AF37]/20",
-    iconBg: "from-cyan-500 to-blue-500",
-    color: "cyan",
-    useCases: [
-      "24/7 appointment scheduling for dental & medical offices",
-      "Patient follow-up reminders & prescription refills",
-      "Emergency triage & routing to on-call providers"
-    ],
-    stat: "42% more appointments booked"
+const jsonLdWebPage = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://captureclientai.net/use-cases",
+  "url": "https://captureclientai.net/use-cases",
+  "name": "AI Voice Agent Use Cases",
+  "description": "Discover how AI voice agents transform businesses across industries with 24/7 call answering, lead qualification, and appointment booking.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Capture Client",
+    "url": "https://captureclientai.net",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://captureclientai.net/logo.svg"
+    }
   },
-  {
-    id: "home-services",
-    name: "Home Services",
-    icon: "home_repair_service",
-    gradient: "from-gold/20 via-orange-500/20 to-red-500/20",
-    iconBg: "from-gold to-orange-500",
-    color: "gold",
-    useCases: [
-      "HVAC, plumbing & electrical emergency dispatch",
-      "Service quote generation & technician routing",
-      "Follow-up surveys & maintenance scheduling"
-    ],
-    stat: "35% faster response times"
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://captureclientai.net"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Use Cases",
+        "item": "https://captureclientai.net/use-cases"
+      }
+    ]
   },
-  {
-    id: "legal",
-    name: "Legal Services",
-    icon: "gavel",
-    gradient: "from-[#D4AF37]/20 via-[#4A69E2]/20 to-blue-500/20",
-    iconBg: "from-[#D4AF37] to-[#4A69E2]",
-    color: "purple",
-    useCases: [
-      "Initial case intake & client qualification",
-      "Consultation scheduling with attorneys",
-      "Document reminder & deadline notifications"
-    ],
-    stat: "63% increase in qualified leads"
-  },
-  {
-    id: "real-estate",
-    name: "Real Estate",
-    icon: "apartment",
-    gradient: "from-green-500/20 via-emerald-500/20 to-teal-500/20",
-    iconBg: "from-green-500 to-emerald-500",
-    color: "green",
-    useCases: [
-      "Property inquiry capture & showing scheduling",
-      "Lead qualification by budget & location",
-      "Follow-up campaigns for hot prospects"
-    ],
-    stat: "58% more showings scheduled"
-  },
-  {
-    id: "automotive",
-    name: "Automotive",
-    icon: "directions_car",
-    gradient: "from-red-500/20 via-orange-500/20 to-yellow-500/20",
-    iconBg: "from-red-500 to-orange-500",
-    color: "red",
-    useCases: [
-      "Service appointment booking for dealerships",
-      "Test drive scheduling & trade-in evaluation",
-      "Parts inquiry & availability checks"
-    ],
-    stat: "49% increase in service bookings"
-  },
-  {
-    id: "hospitality",
-    name: "Restaurants & Hospitality",
-    icon: "restaurant",
-    gradient: "from-pink-500/20 via-rose-500/20 to-red-500/20",
-    iconBg: "from-pink-500 to-rose-500",
-    color: "pink",
-    useCases: [
-      "Reservation management & waitlist automation",
-      "Catering inquiry & event booking",
-      "Delivery order support & special requests"
-    ],
-    stat: "31% more reservations"
-  },
-  {
-    id: "fitness",
-    name: "Fitness & Wellness",
-    icon: "fitness_center",
-    gradient: "from-lime-500/20 via-green-500/20 to-emerald-500/20",
-    iconBg: "from-lime-500 to-green-500",
-    color: "lime",
-    useCases: [
-      "Class registration & membership inquiries",
-      "Personal training session scheduling",
-      "Equipment availability & gym tour booking"
-    ],
-    stat: "44% boost in trial sign-ups"
-  },
-  {
-    id: "financial",
-    name: "Financial Services",
-    icon: "account_balance",
-    gradient: "from-blue-500/20 via-cyan-500/20 to-teal-500/20",
-    iconBg: "from-blue-500 to-cyan-500",
-    color: "blue",
-    useCases: [
-      "Mortgage pre-qualification & consultation booking",
-      "Insurance quote generation & policy inquiries",
-      "Investment advisor appointment scheduling"
-    ],
-    stat: "52% more qualified consultations"
+  "mainEntity": {
+    "@type": "ItemList",
+    "name": "AI Voice Agent Use Cases by Industry",
+    "description": "Industry-specific use cases for AI voice agents",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Healthcare & Medical",
+        "description": "24/7 appointment scheduling, patient follow-ups, emergency triage"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Home Services",
+        "description": "HVAC, plumbing & electrical emergency dispatch, service quotes"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Legal Services",
+        "description": "Case intake, client qualification, consultation scheduling"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Real Estate",
+        "description": "Property inquiries, showing scheduling, lead qualification"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Automotive",
+        "description": "Service appointments, test drive scheduling, parts inquiries"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "Restaurants & Hospitality",
+        "description": "Reservation management, catering inquiries, delivery support"
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "name": "Fitness & Wellness",
+        "description": "Class registration, membership inquiries, training sessions"
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "name": "Financial Services",
+        "description": "Mortgage pre-qualification, insurance quotes, advisor appointments"
+      }
+    ]
   }
-];
-
-const testimonials = [
-  {
-    quote: "We went from missing 40% of after-hours calls to capturing every single lead. Our revenue is up 6 figures in 8 months.",
-    author: "Dr. Marcus Chen",
-    role: "Dental Practice Owner",
-    industry: "Healthcare",
-    avatar: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&auto=format&fit=crop",
-    metric: "+$180K Revenue"
-  },
-  {
-    quote: "The AI handles emergency dispatches better than our old answering service. Customers love the instant response.",
-    author: "Sarah Martinez",
-    role: "HVAC Company Owner",
-    industry: "Home Services",
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&auto=format&fit=crop",
-    metric: "35% Faster Dispatch"
-  },
-  {
-    quote: "Client intake that used to take 20 minutes now happens automatically. We can focus on billable work, not admin.",
-    author: "James Thompson",
-    role: "Managing Partner",
-    industry: "Legal",
-    avatar: "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&auto=format&fit=crop",
-    metric: "63% More Clients"
-  },
-  {
-    quote: "I can finally take weekends off knowing every property inquiry gets captured and qualified instantly.",
-    author: "Lisa Rodriguez",
-    role: "Real Estate Broker",
-    industry: "Real Estate",
-    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop",
-    metric: "58% More Showings"
-  }
-];
-
-const benefits = [
-  {
-    icon: "schedule",
-    title: "24/7 Availability",
-    description: "Never miss a client, even at 3am on a holiday"
-  },
-  {
-    icon: "speed",
-    title: "Instant Response",
-    description: "Answer calls in under 2 rings, every time"
-  },
-  {
-    icon: "verified",
-    title: "Lead Qualification",
-    description: "Only high-quality prospects reach your team"
-  },
-  {
-    icon: "integration_instructions",
-    title: "CRM Integration",
-    description: "Seamlessly sync with your existing tools"
-  }
-];
+};
 
 export default function UseCasesPage() {
-  const [selectedIndustry, setSelectedIndustry] = useState<string | null>(null);
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-  const [isClient, setIsClient] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  // Scroll animations
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"]
-  });
-
-  const heroY = useTransform(scrollYProgress, [0, 0.2], ["0%", "50%"]);
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
-
-  // Testimonial carousel
-  useEffect(() => {
-    if (!isClient) return;
-    const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [isClient]);
-
   return (
-    <div ref={containerRef} className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-background-dark">
-      {/* ==================== HERO SECTION ==================== */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Aurora Background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-background via-background-dark to-background" />
-
-          {/* Animated gradient orbs */}
-          <motion.div
-            animate={{ scale: [1, 1.2, 1], x: [0, 50, 0] }}
-            transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-0 left-0 w-[600px] h-[600px] bg-gradient-radial from-cyan-500/20 to-transparent blur-3xl"
-          />
-          <motion.div
-            animate={{ scale: [1.2, 1, 1.2], x: [0, -50, 0] }}
-            transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-gradient-radial from-[#D4AF37]/20 to-transparent blur-3xl"
-          />
-          <motion.div
-            animate={{ scale: [1, 1.3, 1], rotate: [0, 90, 0] }}
-            transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-radial from-gold/15 to-transparent blur-3xl"
-          />
-
-          {/* Grid overlay */}
-          <div className="absolute inset-0 opacity-[0.02]">
-            <div
-              className="absolute inset-0"
-              style={{
-                backgroundImage: `linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
-                                 linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)`,
-                backgroundSize: '80px 80px'
-              }}
-            />
-          </div>
-
-          {/* Noise texture */}
-          <div className="absolute inset-0 opacity-[0.015] mix-blend-overlay bg-noise pointer-events-none" />
-        </div>
-
-        {/* Hero Content */}
-        <motion.div
-          style={{ y: heroY, opacity: heroOpacity }}
-          className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 text-center"
-        >
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500/10 via-[#D4AF37]/10 to-gold/10 border border-white/10 backdrop-blur-xl mb-8"
-          >
-            <span className="material-icons text-cyan-400 text-lg">business_center</span>
-            <span className="text-sm font-bold text-white/90 uppercase tracking-wider">Industry Solutions</span>
-          </motion.div>
-
-          {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold mb-8 leading-[1.1]"
-          >
-            <span className="block text-white mb-4">
-              One AI.
-            </span>
-            <span className="block bg-gradient-to-r from-gold via-cyan-400 to-[#D4AF37] bg-clip-text text-transparent">
-              Endless Possibilities.
-            </span>
-          </motion.h1>
-
-          {/* Subheadline */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            className="text-xl sm:text-2xl lg:text-3xl text-white/60 max-w-4xl mx-auto mb-12 leading-relaxed font-light"
-          >
-            From healthcare to home services, our AI Voice Agents adapt to <span className="text-white font-medium">any industry</span> to capture more clients and automate client communication.
-          </motion.p>
-
-          {/* CTA */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.7 }}
-          >
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-3 px-10 py-6 rounded-2xl bg-gradient-to-r from-gold via-gold-light to-gold font-bold text-lg text-black overflow-hidden relative hover:shadow-[0_0_60px_rgba(212,175,55,0.5)] transition-all duration-500 hover:scale-[1.02]"
-            >
-              <span className="relative z-10">Find Your Solution</span>
-              <motion.span
-                className="material-icons relative z-10 text-2xl"
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                arrow_forward
-              </motion.span>
-            </Link>
-          </motion.div>
-
-          {/* Morphing industry icons grid */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.9 }}
-            className="mt-20 grid grid-cols-4 sm:grid-cols-8 gap-4 sm:gap-6 max-w-4xl mx-auto"
-          >
-            {industries.map((industry, i) => (
-              <motion.div
-                key={industry.id}
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.9 + i * 0.1 }}
-                whileHover={{ scale: 1.2, rotate: 5 }}
-                className="flex items-center justify-center"
-              >
-                <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br ${industry.iconBg} opacity-20 hover:opacity-100 flex items-center justify-center transition-all duration-300 cursor-pointer`}>
-                  <span className="material-icons text-white text-2xl">{industry.icon}</span>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </motion.div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 1.5 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2"
-        >
-          <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-white/20 rounded-full flex items-start justify-center p-2"
-          >
-            <motion.div
-              animate={{ y: [0, 12, 0], opacity: [1, 0, 1] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-1.5 h-3 bg-gold rounded-full"
-            />
-          </motion.div>
-        </motion.div>
-      </section>
-
-      {/* ==================== INDUSTRY USE CASES GRID ==================== */}
-      <section className="relative py-24 sm:py-32 overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-background-dark via-background to-background-dark" />
-          <div className="absolute inset-0 bg-mesh-premium opacity-20" />
-
-          {/* Floating orbs */}
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-primary/10 to-transparent blur-3xl" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-radial from-accent/10 to-transparent blur-3xl" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 via-accent/10 to-transparent border border-accent/20 backdrop-blur-xl mb-6"
-            >
-              <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              <span className="text-sm font-bold uppercase tracking-widest text-accent">Industry Solutions</span>
-            </motion.div>
-
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white mb-6"
-            >
-              Your Industry, <span className="bg-gradient-to-r from-gold to-cyan-400 bg-clip-text text-transparent">Solved</span>
-            </motion.h2>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl text-white/60 max-w-3xl mx-auto"
-            >
-              Tailored AI solutions that understand the unique challenges of your business
-            </motion.p>
-          </div>
-
-          {/* Industry Cards Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            {industries.map((industry, i) => (
-              <motion.div
-                key={industry.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                whileHover={{ y: -8 }}
-                className="group relative"
-              >
-                {/* Card */}
-                <div className="relative h-full bg-gradient-to-br from-white/[0.12] via-white/[0.06] to-white/[0.03] backdrop-blur-2xl border-2 border-white/10 rounded-3xl overflow-hidden hover:border-white/20 transition-all duration-500 hover:shadow-[0_20px_60px_rgba(0,0,0,0.4)]">
-                  {/* Gradient overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${industry.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
-
-                  {/* Top shine */}
-                  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
-
-                  {/* Content */}
-                  <div className="relative z-10 p-8">
-                    {/* Icon */}
-                    <div className="mb-6">
-                      <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${industry.iconBg} shadow-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                        <span className="material-icons text-white text-3xl">{industry.icon}</span>
-                      </div>
-                    </div>
-
-                    {/* Title */}
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-white/80 group-hover:bg-clip-text transition-all duration-300">
-                      {industry.name}
-                    </h3>
-
-                    {/* Use cases */}
-                    <ul className="space-y-3 mb-6">
-                      {industry.useCases.map((useCase, idx) => (
-                        <li key={idx} className="flex items-start gap-2 text-sm text-white/70 leading-relaxed">
-                          <span className="material-icons text-cyan-400 text-base mt-0.5 flex-shrink-0">check_circle</span>
-                          <span>{useCase}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    {/* Stat badge */}
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 mb-6">
-                      <span className="material-icons text-green-400 text-sm">trending_up</span>
-                      <span className="text-sm font-bold text-white">{industry.stat}</span>
-                    </div>
-
-                    {/* Learn More Link */}
-                    <Link
-                      href={`/use-cases/${industry.id}`}
-                      className="inline-flex items-center gap-2 text-cyan-400 font-semibold text-sm group-hover:gap-3 transition-all duration-300"
-                    >
-                      Learn More
-                      <span className="material-icons text-lg">arrow_forward</span>
-                    </Link>
-                  </div>
-
-                  {/* Bottom glow on hover */}
-                  <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ==================== PROBLEM/SOLUTION COMPARISON ==================== */}
-      <section className="relative py-24 sm:py-32 overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-background via-background-dark to-background" />
-          <div className="absolute inset-0 bg-mesh opacity-25" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
-              The <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">Old Way</span> vs{" "}
-              <span className="bg-gradient-to-r from-gold to-cyan-400 bg-clip-text text-transparent">Capture Client</span>
-            </h2>
-            <p className="text-xl text-white/60 max-w-3xl mx-auto">
-              See how we transform the frustrating status quo into a lead-capturing machine
-            </p>
-          </motion.div>
-
-          {/* Comparison Grid */}
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* OLD WAY */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="glass-premium p-8 rounded-3xl border-2 border-red-500/20 bg-gradient-to-br from-red-500/5 to-transparent">
-                {/* Header */}
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-red-500/20 flex items-center justify-center">
-                    <span className="material-icons text-red-400">close</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">The Old Way</h3>
-                </div>
-
-                {/* Problems */}
-                <div className="space-y-4">
-                  {[
-                    "Missed calls during busy hours = lost revenue",
-                    "Voicemails sit unanswered for hours or days",
-                    "Manual lead qualification wastes time",
-                    "No visibility into call quality or conversion",
-                    "Expensive answering services with no AI",
-                    "Leads slip through the cracks constantly"
-                  ].map((problem, i) => (
-                    <div key={i} className="flex items-start gap-3">
-                      <span className="material-icons text-red-400 mt-1">cancel</span>
-                      <p className="text-white/70">{problem}</p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Stat */}
-                <div className="mt-8 p-4 rounded-xl bg-red-500/10 border border-red-500/20">
-                  <p className="text-3xl font-bold text-red-400 mb-1">40-60%</p>
-                  <p className="text-sm text-white/60">of leads lost to missed calls</p>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* CAPTURE CLIENT WAY */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="glass-premium p-8 rounded-3xl border-2 border-gold/30 bg-gradient-to-br from-gold/10 via-cyan-500/5 to-transparent shadow-[0_0_60px_rgba(212,175,55,0.2)]">
-                {/* Header */}
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold to-cyan-400 flex items-center justify-center shadow-glow-gold">
-                    <span className="material-icons text-black">check_circle</span>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white">The Capture Client Way</h3>
-                </div>
-
-                {/* Solutions */}
-                <div className="space-y-4">
-                  {[
-                    "AI answers every call instantly, 24/7/365",
-                    "Real-time lead capture & qualification",
-                    "Automatic CRM sync & follow-up triggers",
-                    "Full call transcripts & sentiment analysis",
-                    "Appointment booking without human touch",
-                    "Zero leads lost, ever"
-                  ].map((solution, i) => (
-                    <div key={i} className="flex items-start gap-3">
-                      <span className="material-icons text-gold mt-1">check_circle</span>
-                      <p className="text-white/90 font-medium">{solution}</p>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Stat */}
-                <div className="mt-8 p-4 rounded-xl bg-gradient-to-r from-gold/20 to-cyan-400/20 border border-gold/30">
-                  <p className="text-3xl font-bold bg-gradient-to-r from-gold to-cyan-400 bg-clip-text text-transparent mb-1">100%</p>
-                  <p className="text-sm text-white/80 font-medium">of leads captured & qualified</p>
-                </div>
-              </div>
-
-              {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-cyan-400/10 blur-3xl -z-10" />
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* ==================== SUCCESS STORIES CAROUSEL ==================== */}
-      <section className="relative py-24 sm:py-32 overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-background-dark" />
-          <div className="absolute inset-0 bg-mesh-premium opacity-30" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-gradient-radial from-accent/15 to-transparent blur-3xl" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 via-primary/10 to-transparent border border-primary/20 backdrop-blur-xl mb-6">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span className="text-sm font-bold uppercase tracking-widest text-primary">Success Stories</span>
-            </div>
-
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
-              Real Results from <span className="bg-gradient-to-r from-gold to-cyan-400 bg-clip-text text-transparent">Real Businesses</span>
-            </h2>
-          </motion.div>
-
-          {/* Carousel */}
-          <div className="relative max-w-5xl mx-auto">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentTestimonial}
-                initial={{ opacity: 0, x: 100 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -100 }}
-                transition={{ duration: 0.5 }}
-                className="glass-premium p-10 sm:p-14 rounded-3xl"
-              >
-                <div className="grid lg:grid-cols-3 gap-8 items-center">
-                  {/* Avatar */}
-                  <div className="flex flex-col items-center lg:items-start">
-                    <div className="w-32 h-32 rounded-2xl overflow-hidden mb-4 ring-4 ring-gold/30">
-                      <img
-                        src={testimonials[currentTestimonial].avatar}
-                        alt={testimonials[currentTestimonial].author}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <h4 className="text-xl font-bold text-white text-center lg:text-left">{testimonials[currentTestimonial].author}</h4>
-                    <p className="text-white/60 text-center lg:text-left">{testimonials[currentTestimonial].role}</p>
-                    <div className="mt-3 px-3 py-1.5 rounded-lg bg-cyan-500/10 border border-cyan-500/20">
-                      <p className="text-sm font-semibold text-cyan-400">{testimonials[currentTestimonial].industry}</p>
-                    </div>
-                  </div>
-
-                  {/* Quote */}
-                  <div className="lg:col-span-2">
-                    <span className="material-icons text-gold text-5xl mb-4 opacity-30">format_quote</span>
-                    <p className="text-2xl sm:text-3xl text-white/90 leading-relaxed mb-6 font-light italic">
-                      "{testimonials[currentTestimonial].quote}"
-                    </p>
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-gold/20 to-cyan-400/20 border border-gold/30">
-                      <span className="material-icons text-gold">trending_up</span>
-                      <span className="text-lg font-bold text-white">{testimonials[currentTestimonial].metric}</span>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-
-            {/* Carousel indicators */}
-            <div className="flex justify-center gap-2 mt-8">
-              {testimonials.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrentTestimonial(i)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    i === currentTestimonial
-                      ? "bg-gold w-8"
-                      : "bg-white/20 hover:bg-white/40"
-                  }`}
-                  aria-label={`Go to testimonial ${i + 1}`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ==================== UNIVERSAL BENEFITS ==================== */}
-      <section className="relative py-24 sm:py-32 overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-background to-background-dark" />
-          <div className="absolute inset-0 bg-mesh opacity-20" />
-        </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
-              Works for <span className="bg-gradient-to-r from-gold to-cyan-400 bg-clip-text text-transparent">Every Business</span>
-            </h2>
-            <p className="text-xl text-white/60 max-w-3xl mx-auto">
-              These core benefits apply no matter your industry
-            </p>
-          </motion.div>
-
-          {/* Benefits Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: i * 0.1 }}
-                whileHover={{ y: -8, scale: 1.02 }}
-                className="group glass-premium p-8 rounded-3xl hover:border-accent/40 transition-all duration-300"
-              >
-                {/* Icon */}
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center mb-6 group-hover:shadow-glow transition-all duration-300 group-hover:scale-110">
-                  <span className="material-icons text-accent text-3xl">{benefit.icon}</span>
-                </div>
-
-                {/* Title */}
-                <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
-
-                {/* Description */}
-                <p className="text-white/60 leading-relaxed">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ==================== FINAL CTA SECTION ==================== */}
-      <section className="relative py-32 overflow-hidden">
-        {/* Epic background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-background-dark via-background to-background-dark" />
-          <div className="absolute inset-0 bg-mesh-premium opacity-40" />
-
-          {/* Animated orbs */}
-          <motion.div
-            animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 0] }}
-            transition={{ duration: 20, repeat: Infinity }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[800px] bg-gradient-radial from-gold/20 via-cyan-400/10 to-transparent blur-3xl"
-          />
-        </div>
-
-        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          {/* Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-gold/20 to-cyan-400/20 border border-gold/30 backdrop-blur-xl mb-8"
-          >
-            <span className="material-icons text-gold text-lg">rocket_launch</span>
-            <span className="text-sm font-bold text-white uppercase tracking-wider">Ready to Transform?</span>
-          </motion.div>
-
-          {/* Headline */}
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold text-white mb-8 leading-tight"
-          >
-            Find Your <span className="bg-gradient-to-r from-gold via-cyan-400 to-[#D4AF37] bg-clip-text text-transparent">Perfect Solution</span>
-          </motion.h2>
-
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="text-2xl text-white/70 mb-12 max-w-3xl mx-auto"
-          >
-            Book a free demo and we'll show you exactly how Capture Client works for your industry
-          </motion.p>
-
-          {/* CTA Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          >
-            <Link
-              href="/contact"
-              className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-6 rounded-2xl bg-gradient-to-r from-gold via-gold-light to-gold font-bold text-lg text-black overflow-hidden relative hover:shadow-[0_0_80px_rgba(212,175,55,0.6)] transition-all duration-500 hover:scale-[1.02]"
-            >
-              <span className="relative z-10">Book Free Demo</span>
-              <motion.span
-                className="material-icons relative z-10 text-2xl"
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                arrow_forward
-              </motion.span>
-            </Link>
-
-            <Link
-              href="tel:865-346-3339"
-              className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-6 rounded-2xl border-2 border-white/20 bg-white/5 backdrop-blur-xl font-semibold text-lg text-white transition-all duration-300 hover:bg-white/10 hover:border-white/30 hover:shadow-[0_0_40px_rgba(0,201,255,0.3)]"
-            >
-              <span className="material-icons text-cyan-400 text-2xl">phone</span>
-              (865) 346-3339
-            </Link>
-          </motion.div>
-
-          {/* Trust badges */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5 }}
-            className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 mt-12 text-white/50"
-          >
-            <div className="flex items-center gap-2">
-              <span className="material-icons text-gold">verified</span>
-              <span className="text-sm font-medium">500+ Active Clients</span>
-            </div>
-            <div className="w-px h-5 bg-white/20 hidden sm:block" />
-            <div className="flex items-center gap-2">
-              <span className="material-icons text-gold">star</span>
-              <span className="text-sm font-medium">4.9/5 Average Rating</span>
-            </div>
-            <div className="w-px h-5 bg-white/20 hidden sm:block" />
-            <div className="flex items-center gap-2">
-              <span className="material-icons text-green-400">trending_up</span>
-              <span className="text-sm font-medium">247% Avg ROI</span>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdWebPage) }}
+      />
+      <UseCasesClient />
+    </>
   );
 }
