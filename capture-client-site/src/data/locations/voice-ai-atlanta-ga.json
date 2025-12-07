@@ -55,22 +55,22 @@
     {
       "title": "24/7 Atlanta Lead Capture",
       "description": "Our AI answers every call instantly, day or night, capturing leads even when closed.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "AI asks qualifying questions so you only talk to serious Atlanta customers.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "AI schedules appointments directly into your calendar automatically.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Scale Without Hiring",
       "description": "Handle 1,000 calls per day without additional staff.",
-      "icon": "trending_up"
+      "icon": "TrendingUp"
     }
   ],
   "how_it_works": [

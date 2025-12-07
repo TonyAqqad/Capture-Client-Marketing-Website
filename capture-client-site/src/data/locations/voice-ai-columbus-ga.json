@@ -69,22 +69,22 @@
     {
       "title": "Never Miss a Call",
       "description": "Columbus customers expect immediate answers. Our Voice AI ensures every call is answered professionally, day or night, weekends and holidays.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Qualify Leads Automatically",
       "description": "AI asks customized questions to identify serious buyers. Your Columbus sales team only spends time with qualified, ready-to-buy prospects.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Book Appointments Instantly",
       "description": "Callers schedule appointments based on your real-time calendar availability. Reduces no-shows with automated confirmations.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Reduce Operating Costs",
       "description": "Voice AI costs significantly less than hiring staff in Columbus. No salaries, benefits, sick days, or training expenses—just consistent service.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     }
   ],
   "how_it_works": [

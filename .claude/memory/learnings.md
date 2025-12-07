@@ -8,3 +8,4 @@
 - SEO: keep server/client split; metadata + canonical + JSON-LD on pages; titles <60 chars, descriptions ~150-160.
 - Batch work: discovery agents in parallel; batch-fixer sequential per folder; verify with typecheck/build and quick audits.
 - **CSS Architecture Decision** (2025-12-07): Keep globals.css AND globals-mobile-optimized.css as separate files. globals.css = design system (standard rules), globals-mobile-optimized.css = performance overrides (uses !important for mobile-first loading). They serve different purposes and should remain separate.
+- **Audit verification pattern** (2025-12-07, Phase 3): When running automated audits for unused imports, always verify removal candidates by checking actual usage in code. Tools like ts-prune can have false positives. Manual verification prevents accidentally removing imports that are used indirectly (e.g., via type inference, re-exports, or runtime-only usage).

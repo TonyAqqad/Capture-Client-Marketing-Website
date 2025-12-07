@@ -53,22 +53,22 @@
     {
       "title": "Tech Hub Ready",
       "description": "Advanced AI perfect for Alpharetta tech-forward businesses.",
-      "icon": "memory"
+      "icon": "Cpu"
     },
     {
       "title": "Enterprise Integrations",
       "description": "Seamless connection with Alpharetta business systems and CRMs.",
-      "icon": "link"
+      "icon": "Link"
     },
     {
       "title": "24/7 North Fulton Coverage",
       "description": "Answer calls across Alpharetta and North Fulton County.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Multilingual Support",
       "description": "Serve Alpharetta diverse international business community.",
-      "icon": "public"
+      "icon": "Globe"
     }
   ],
   "how_it_works": [

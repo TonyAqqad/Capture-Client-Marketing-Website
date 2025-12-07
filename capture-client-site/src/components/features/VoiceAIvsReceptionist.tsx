@@ -2,6 +2,31 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
+import {
+  TrendingUp,
+  TrendingDown,
+  Clock,
+  Infinity,
+  ThermometerSnowflake,
+  Shield,
+  PhoneMissed,
+  PhoneIncoming,
+  GraduationCap,
+  Zap,
+  FileEdit,
+  Wand2,
+  Languages,
+  Globe,
+  Smile,
+  BadgeCheck,
+  RocketIcon,
+  Megaphone,
+  Users,
+  User,
+  Sparkles,
+  PiggyBank,
+  Trophy
+} from "lucide-react";
 
 // ============================================================================
 // TYPE DEFINITIONS
@@ -11,12 +36,12 @@ interface ComparisonMetric {
   category: string;
   traditional: {
     value: string;
-    icon: string;
+    icon: React.ComponentType<{ className?: string }>;
     color: string;
   };
   voiceAI: {
     value: string;
-    icon: string;
+    icon: React.ComponentType<{ className?: string }>;
     color: string;
   };
 }
@@ -30,12 +55,12 @@ const COMPARISONS: ComparisonMetric[] = [
     category: "Monthly Cost",
     traditional: {
       value: "$3,200 - $4,800",
-      icon: "trending_up",
+      icon: TrendingUp,
       color: "text-red-400",
     },
     voiceAI: {
       value: "$797/mo",
-      icon: "trending_down",
+      icon: TrendingDown,
       color: "text-green-400",
     },
   },
@@ -43,12 +68,12 @@ const COMPARISONS: ComparisonMetric[] = [
     category: "Availability",
     traditional: {
       value: "8-10 hours/day",
-      icon: "schedule",
+      icon: Clock,
       color: "text-yellow-400",
     },
     voiceAI: {
       value: "24/7/365",
-      icon: "all_inclusive",
+      icon: Infinity,
       color: "text-accent",
     },
   },
@@ -56,12 +81,12 @@ const COMPARISONS: ComparisonMetric[] = [
     category: "Sick Days",
     traditional: {
       value: "5-10 days/year",
-      icon: "sick",
+      icon: ThermometerSnowflake,
       color: "text-red-400",
     },
     voiceAI: {
       value: "Zero downtime",
-      icon: "health_and_safety",
+      icon: Shield,
       color: "text-green-400",
     },
   },
@@ -69,12 +94,12 @@ const COMPARISONS: ComparisonMetric[] = [
     category: "Call Volume",
     traditional: {
       value: "Limited",
-      icon: "phone_missed",
+      icon: PhoneMissed,
       color: "text-yellow-400",
     },
     voiceAI: {
       value: "Unlimited",
-      icon: "phone_in_talk",
+      icon: PhoneIncoming,
       color: "text-accent",
     },
   },
@@ -82,12 +107,12 @@ const COMPARISONS: ComparisonMetric[] = [
     category: "Training Time",
     traditional: {
       value: "2-4 weeks",
-      icon: "school",
+      icon: GraduationCap,
       color: "text-yellow-400",
     },
     voiceAI: {
       value: "Instant",
-      icon: "flash_on",
+      icon: Zap,
       color: "text-accent",
     },
   },
@@ -95,12 +120,12 @@ const COMPARISONS: ComparisonMetric[] = [
     category: "Data Entry",
     traditional: {
       value: "Manual (errors)",
-      icon: "edit_note",
+      icon: FileEdit,
       color: "text-yellow-400",
     },
     voiceAI: {
       value: "Auto (perfect)",
-      icon: "auto_fix_high",
+      icon: Wand2,
       color: "text-accent",
     },
   },
@@ -108,12 +133,12 @@ const COMPARISONS: ComparisonMetric[] = [
     category: "Language Support",
     traditional: {
       value: "1-2 languages",
-      icon: "translate",
+      icon: Languages,
       color: "text-yellow-400",
     },
     voiceAI: {
       value: "100+ languages",
-      icon: "language",
+      icon: Globe,
       color: "text-accent",
     },
   },
@@ -121,12 +146,12 @@ const COMPARISONS: ComparisonMetric[] = [
     category: "Consistency",
     traditional: {
       value: "Varies by mood",
-      icon: "mood",
+      icon: Smile,
       color: "text-yellow-400",
     },
     voiceAI: {
       value: "Always perfect",
-      icon: "verified",
+      icon: BadgeCheck,
       color: "text-accent",
     },
   },
@@ -223,7 +248,7 @@ export default function VoiceAIvsReceptionist() {
                 <div className="card p-6">
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 rounded-xl bg-red-500/10 border border-red-500/30 flex items-center justify-center">
-                      <span className="material-icons text-red-400">person</span>
+                      <User className="w-6 h-6 text-red-400" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-foreground">Traditional Receptionist</h3>
@@ -245,9 +270,7 @@ export default function VoiceAIvsReceptionist() {
                           <span className="text-xs font-bold uppercase tracking-wider text-foreground-muted">
                             {item.category}
                           </span>
-                          <span className={`material-icons text-lg ${item.traditional.color}`}>
-                            {item.traditional.icon}
-                          </span>
+                          <item.traditional.icon className={`w-5 h-5 ${item.traditional.color}`} />
                         </div>
                         <p className="text-foreground font-semibold">{item.traditional.value}</p>
                       </motion.div>
@@ -260,14 +283,14 @@ export default function VoiceAIvsReceptionist() {
                   {/* Winner badge */}
                   <div className="absolute top-4 right-4">
                     <div className="inline-flex items-center gap-1 px-3 py-1 bg-accent rounded-full">
-                      <span className="material-icons text-white text-sm">emoji_events</span>
+                      <Trophy className="w-4 h-4 text-white" />
                       <span className="text-xs font-bold text-white">Winner</span>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-3 mb-6">
                     <div className="w-12 h-12 rounded-xl bg-accent/10 border border-accent/30 flex items-center justify-center">
-                      <span className="material-icons text-accent">auto_awesome</span>
+                      <Sparkles className="w-6 h-6 text-accent" />
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-foreground">Voice AI Agent</h3>
@@ -289,9 +312,7 @@ export default function VoiceAIvsReceptionist() {
                           <span className="text-xs font-bold uppercase tracking-wider text-foreground-muted">
                             {item.category}
                           </span>
-                          <span className={`material-icons text-lg ${item.voiceAI.color}`}>
-                            {item.voiceAI.icon}
-                          </span>
+                          <item.voiceAI.icon className={`w-5 h-5 ${item.voiceAI.color}`} />
                         </div>
                         <p className="text-foreground font-semibold">{item.voiceAI.value}</p>
                       </motion.div>
@@ -303,7 +324,7 @@ export default function VoiceAIvsReceptionist() {
               {/* CTA */}
               <div className="mt-12 text-center">
                 <a href="#contact" className="btn-primary inline-flex items-center gap-2">
-                  <span className="material-icons">rocket_launch</span>
+                  <RocketIcon className="w-5 h-5" />
                   Switch to Voice AI Today
                 </a>
               </div>
@@ -326,7 +347,7 @@ export default function VoiceAIvsReceptionist() {
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-lg bg-red-500/10 border border-red-500/30 flex items-center justify-center">
-                        <span className="material-icons text-red-400">person</span>
+                        <User className="w-5 h-5 text-red-400" />
                       </div>
                       <span className="font-semibold text-foreground">Traditional Receptionist</span>
                     </div>
@@ -366,7 +387,7 @@ export default function VoiceAIvsReceptionist() {
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <div className="w-10 h-10 rounded-lg bg-accent/10 border border-accent/30 flex items-center justify-center">
-                        <span className="material-icons text-accent">auto_awesome</span>
+                        <Sparkles className="w-5 h-5 text-accent" />
                       </div>
                       <span className="font-semibold text-foreground">Voice AI Agent</span>
                     </div>
@@ -430,15 +451,15 @@ export default function VoiceAIvsReceptionist() {
                   <h4 className="text-lg font-bold text-center mb-6">What You Could Do With $39K</h4>
                   <div className="grid sm:grid-cols-3 gap-4">
                     <div className="p-4 rounded-xl bg-surface-hover border border-surface-border text-center">
-                      <span className="material-icons text-accent text-3xl mb-2">campaign</span>
+                      <Megaphone className="w-8 h-8 text-accent mx-auto mb-2" />
                       <p className="font-semibold text-foreground">10x Your Ad Spend</p>
                     </div>
                     <div className="p-4 rounded-xl bg-surface-hover border border-surface-border text-center">
-                      <span className="material-icons text-accent text-3xl mb-2">group_add</span>
+                      <Users className="w-8 h-8 text-accent mx-auto mb-2" />
                       <p className="font-semibold text-foreground">Hire Another Technician</p>
                     </div>
                     <div className="p-4 rounded-xl bg-surface-hover border border-surface-border text-center">
-                      <span className="material-icons text-accent text-3xl mb-2">trending_up</span>
+                      <TrendingUp className="w-8 h-8 text-accent mx-auto mb-2" />
                       <p className="font-semibold text-foreground">Grow Your Business</p>
                     </div>
                   </div>
@@ -447,7 +468,7 @@ export default function VoiceAIvsReceptionist() {
                 {/* CTA */}
                 <div className="mt-12 text-center">
                   <a href="#pricing" className="btn-primary inline-flex items-center gap-2">
-                    <span className="material-icons">savings</span>
+                    <PiggyBank className="w-5 h-5" />
                     Start Saving Today
                   </a>
                 </div>

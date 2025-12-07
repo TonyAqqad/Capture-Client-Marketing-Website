@@ -43,27 +43,27 @@
     {
       "title": "24/7 Memphis Lead Capture",
       "description": "Customers call at all hours. Whether it's late-night restaurant reservations or early morning service requests, your AI is always ready to capture the lead.",
-      "icon": "phone_incoming"
+      "icon": "PhoneIncoming"
     },
     {
       "title": "Handle High Call Volumes",
       "description": "During peak times, sales, or emergencies, handle unlimited simultaneous calls without busy signals or wait times. Every Memphis caller gets immediate attention.",
-      "icon": "group"
+      "icon": "Users"
     },
     {
       "title": "Reduce No-Shows & Cancellations",
       "description": "Automated appointment confirmations and reminders reduce no-shows by up to 60%. Keep your Memphis business schedule full and profitable.",
-      "icon": "check_circle"
+      "icon": "CheckCircle"
     },
     {
       "title": "Free Up Your Staff",
       "description": "Let your Memphis team focus on delivering great service instead of answering phones. AI handles routine calls while staff handles what matters.",
-      "icon": "group_add"
+      "icon": "UserPlus"
     },
     {
       "title": "Competitive Edge in Memphis Market",
       "description": "While competitors miss calls and lose leads, you're capturing every opportunity. Stand out in Memphis by being available when customers need you.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     }
   ],
   "how_it_works": [

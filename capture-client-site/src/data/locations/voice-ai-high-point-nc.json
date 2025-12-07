@@ -60,27 +60,27 @@
     {
       "title": "24/7 Lead Capture in High Point",
       "description": "Never miss a call from High Point customers. Our AI answers every call instantly.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "AI qualifies High Point leads immediately, so your team only talks to ready-to-buy prospects.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "Let AI book appointments while you focus on serving High Point clients.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Cost Savings for High Point Businesses",
       "description": "Save thousands compared to hiring staff. Our AI scales with your growth.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     },
     {
       "title": "Professional Every Time",
       "description": "Consistent call handling for your High Point business.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     }
   ],
   "how_it_works": [

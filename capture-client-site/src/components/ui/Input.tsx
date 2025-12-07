@@ -2,11 +2,12 @@
 
 import { motion } from "@/lib/motion";
 import { InputHTMLAttributes, useState } from "react";
+import { LucideIcon, AlertCircle } from "lucide-react";
 
 interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onDrag' | 'onDragEnd' | 'onDragStart' | 'onAnimationStart'> {
   label?: string;
   error?: string;
-  icon?: string; // Material icon name
+  icon?: LucideIcon;
   variant?: "default" | "glass";
 }
 
@@ -50,18 +51,20 @@ export function Input({
       )}
 
       <div className="relative">
-        {icon && (
-          <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
-            <span
-              className={`material-icons transition-colors duration-200 ${
-                isFocused ? "text-accent" : "text-foreground-muted"
-              }`}
-              aria-hidden="true"
-            >
-              {icon}
-            </span>
-          </div>
-        )}
+        {icon && (() => {
+          const Icon = icon;
+          return (
+            <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
+              <Icon
+                className={`transition-colors duration-200 ${
+                  isFocused ? "text-accent" : "text-foreground-muted"
+                }`}
+                size={20}
+                aria-hidden="true"
+              />
+            </div>
+          );
+        })()}
 
         <motion.div
           animate={{ scale: isFocused ? 1.01 : 1 }}
@@ -96,7 +99,7 @@ export function Input({
           animate={{ opacity: 1, y: 0 }}
           className="text-sm text-red-400 mt-2 flex items-center gap-1"
         >
-          <span className="material-icons text-sm" aria-hidden="true">error</span>
+          <AlertCircle size={16} aria-hidden="true" />
           {error}
         </motion.p>
       )}

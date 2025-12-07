@@ -4,6 +4,20 @@ import { useRef } from "react";
 import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import { GlassCard } from "@/components/ui/GlassCard";
+import {
+  Drama,
+  Timer,
+  AlertCircle,
+  ArrowDown,
+  Bot,
+  CheckCircle,
+  Sparkles,
+  Moon,
+  Home,
+  CalendarCheck,
+  Users,
+  LucideIcon
+} from "lucide-react";
 
 interface UseCase {
   scenario: string;
@@ -13,6 +27,13 @@ interface UseCase {
   icon: string;
   time: string;
 }
+
+const iconMap: Record<string, LucideIcon> = {
+  nights_stay: Moon,
+  home: Home,
+  event_available: CalendarCheck,
+  groups: Users
+};
 
 const useCases: UseCase[] = [
   {
@@ -67,7 +88,7 @@ export function RealEstateUseCases() {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 backdrop-blur-xl mb-6">
-            <span className="material-icons text-[#D4AF37] text-xl">theater_comedy</span>
+            <Drama className="text-[#D4AF37] w-5 h-5" />
             <span className="text-sm font-semibold text-[#D4AF37] uppercase tracking-wide">
               Real Scenarios
             </span>
@@ -98,16 +119,17 @@ export function RealEstateUseCases() {
                 <div className="flex items-start justify-between mb-6">
                   <div className="flex items-start gap-4">
                     <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-gold to-accent flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
-                      <span className="material-icons text-black text-2xl">
-                        {useCase.icon}
-                      </span>
+                      {(() => {
+                        const IconComponent = iconMap[useCase.icon];
+                        return <IconComponent className="text-black w-6 h-6" />;
+                      })()}
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-white mb-1">
                         {useCase.scenario}
                       </h3>
                       <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 rounded-full">
-                        <span className="material-icons text-accent text-xs">timer</span>
+                        <Timer className="text-accent w-3 h-3" />
                         <span className="text-xs font-semibold text-accent">
                           {useCase.time}
                         </span>
@@ -121,9 +143,7 @@ export function RealEstateUseCases() {
                   {/* Problem */}
                   <div className="p-4 bg-red-500/5 border border-red-500/20 rounded-xl">
                     <div className="flex items-start gap-3">
-                      <span className="material-icons text-red-400 text-lg flex-shrink-0 mt-0.5">
-                        error_outline
-                      </span>
+                      <AlertCircle className="text-red-400 w-5 h-5 flex-shrink-0 mt-0.5" />
                       <div>
                         <p className="text-xs font-bold text-red-400 uppercase tracking-wider mb-1">
                           Problem
@@ -137,17 +157,13 @@ export function RealEstateUseCases() {
 
                   {/* Arrow */}
                   <div className="flex justify-center">
-                    <span className="material-icons text-gold text-2xl">
-                      arrow_downward
-                    </span>
+                    <ArrowDown className="text-gold w-6 h-6" />
                   </div>
 
                   {/* Solution */}
                   <div className="p-4 bg-cyan-500/5 border border-cyan-500/20 rounded-xl">
                     <div className="flex items-start gap-3">
-                      <span className="material-icons text-cyan-400 text-lg flex-shrink-0 mt-0.5">
-                        smart_toy
-                      </span>
+                      <Bot className="text-cyan-400 w-5 h-5 flex-shrink-0 mt-0.5" />
                       <div>
                         <p className="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-1">
                           AI Solution
@@ -161,17 +177,13 @@ export function RealEstateUseCases() {
 
                   {/* Arrow */}
                   <div className="flex justify-center">
-                    <span className="material-icons text-gold text-2xl">
-                      arrow_downward
-                    </span>
+                    <ArrowDown className="text-gold w-6 h-6" />
                   </div>
 
                   {/* Result */}
                   <div className="p-4 bg-green-500/10 border-2 border-green-500/30 rounded-xl">
                     <div className="flex items-start gap-3">
-                      <span className="material-icons text-green-400 text-lg flex-shrink-0 mt-0.5">
-                        check_circle
-                      </span>
+                      <CheckCircle className="text-green-400 w-5 h-5 flex-shrink-0 mt-0.5" />
                       <div>
                         <p className="text-xs font-bold text-green-400 uppercase tracking-wider mb-1">
                           Result
@@ -197,7 +209,7 @@ export function RealEstateUseCases() {
         >
           <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-8 rounded-2xl bg-gradient-to-br from-gold/10 via-accent/5 to-[#D4AF37]/10 border-2 border-gold/20 backdrop-blur-xl">
             <div className="flex items-center gap-4">
-              <span className="material-icons text-gold text-4xl">auto_awesome</span>
+              <Sparkles className="text-gold w-9 h-9" />
               <div className="text-left">
                 <p className="text-2xl font-bold text-white">
                   Turn Every Lead Into <span className="text-gold">Revenue</span>

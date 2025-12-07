@@ -9,7 +9,7 @@ import {
   CheckCircle2, Car, Wrench, Package,
   ShoppingBag, ArrowLeftRight, Moon, DollarSign, RefreshCcw,
   Calculator, User, AlertTriangle, Search, BarChart,
-  ArrowDownUp, Headphones, Bot
+  ArrowDownUp, Headphones, Bot, Phone, ArrowRight
 } from "lucide-react";
 
 type ToggleMode = "sales" | "service";
@@ -131,7 +131,7 @@ export default function AutomotivePageClient() {
                 variant="primary"
                 size="lg"
                 href="tel:865-346-3339"
-                icon="phone"
+                icon={Phone}
                 className="text-lg sm:text-xl shadow-glow-gold-lg hover:shadow-glow-gold-xl transition-shadow"
               >
                 Get Dealership Demo
@@ -693,7 +693,7 @@ export default function AutomotivePageClient() {
                   variant="primary"
                   size="lg"
                   href="tel:865-346-3339"
-                  icon="phone"
+                  icon={Phone}
                 >
                   Get Your Custom ROI Analysis
                 </Button>
@@ -926,7 +926,7 @@ export default function AutomotivePageClient() {
                   variant="primary"
                   size="lg"
                   href="tel:865-346-3339"
-                  icon="phone"
+                  icon={Phone}
                   className="text-lg sm:text-xl w-full sm:w-auto shadow-glow-gold-lg hover:shadow-glow-gold-xl transition-shadow"
                 >
                   Call Now: 865-346-3339
@@ -940,7 +940,7 @@ export default function AutomotivePageClient() {
                   variant="glass"
                   size="lg"
                   href="/contact"
-                  icon="arrow_forward"
+                  icon={ArrowRight}
                   className="text-lg sm:text-xl w-full sm:w-auto hover:shadow-glow transition-shadow"
                 >
                   Schedule Demo

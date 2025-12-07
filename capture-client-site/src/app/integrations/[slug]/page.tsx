@@ -8,9 +8,8 @@ import { IntegrationRelated } from "@/components/integrations/IntegrationRelated
 import { IntegrationCTA } from "@/components/integrations/IntegrationCTA";
 import {
   integrations,
+  integrationCategories,
   getIntegrationBySlug,
-  getIntegrationsByCategory,
-  getCategoryById,
 } from "@/data/integrations";
 
 interface IntegrationDetailPageProps {
@@ -45,7 +44,8 @@ export async function generateMetadata({
     };
   }
 
-  const category = getCategoryById(integration.category);
+  // Manually find category instead of using helper function
+  const category = integrationCategories.find((cat) => cat.id === integration.category);
   const categoryName = category?.name || integration.category;
 
   return {
@@ -112,10 +112,30 @@ export default async function IntegrationDetailPage({
     notFound();
   }
 
-  const category = getCategoryById(integration.category);
-  const relatedIntegrations = getIntegrationsByCategory(integration.category)
-    .filter((int) => int.slug !== integration.slug)
+  // Manually find category to avoid any function serialization issues
+  const category = integrationCategories.find((cat) => cat.id === integration.category);
+
+  // Manually filter related integrations
+  const relatedIntegrations = integrations
+    .filter((int) => int.category === integration.category && int.slug !== integration.slug)
     .slice(0, 4);
+
+  // Force deep serialization to remove any non-serializable data
+  const serializedIntegration = JSON.parse(JSON.stringify(integration));
+  const serializedCategory = category ? JSON.parse(JSON.stringify(category)) : null;
+  const serializedRelated = JSON.parse(JSON.stringify(relatedIntegrations));
+
+  // Serialize props to ensure they're JSON-safe (only primitive values)
+  const heroProps = {
+    name: serializedIntegration.name,
+    description: serializedIntegration.description,
+    logoUrl: serializedIntegration.logoUrl,
+    url: serializedIntegration.url,
+    popular: serializedIntegration.popular || false,
+    setupTime: serializedIntegration.setupTime,
+    categoryName: serializedCategory?.name,
+    categoryIcon: serializedCategory?.icon,
+  };
 
   // JSON-LD Structured Data for SoftwareApplication
   const softwareApplicationSchema = {
@@ -187,38 +207,53 @@ export default async function IntegrationDetailPage({
       )}
 
       {/* Hero Section */}
-      <IntegrationDetailHero integration={integration} category={category} />
+      <IntegrationDetailHero {...heroProps} />
 
       {/* Key Features Section */}
-      <IntegrationFeatures integration={integration} />
+      {serializedIntegration.keyFeatures && serializedIntegration.keyFeatures.length > 0 && (
+        <IntegrationFeatures
+          keyFeatures={serializedIntegration.keyFeatures}
+          category={serializedIntegration.category}
+          integrationName={serializedIntegration.name}
+        />
+      )}
 
       {/* How It Works Section */}
-      {integration.howItWorks && integration.howItWorks.length > 0 && (
+      {serializedIntegration.howItWorks && serializedIntegration.howItWorks.length > 0 && (
         <IntegrationHowItWorks
-          integrationName={integration.name}
-          steps={integration.howItWorks}
-          category={integration.category}
+          integrationName={serializedIntegration.name}
+          steps={serializedIntegration.howItWorks}
+          category={serializedIntegration.category}
         />
       )}
 
       {/* Benefits Section */}
-      {integration.benefits && integration.benefits.length > 0 && (
+      {serializedIntegration.benefits && serializedIntegration.benefits.length > 0 && (
         <IntegrationBenefits
-          integrationName={integration.name}
-          benefits={integration.benefits}
+          integrationName={serializedIntegration.name}
+          benefits={serializedIntegration.benefits}
         />
       )}
 
       {/* Related Integrations */}
-      {relatedIntegrations.length > 0 && (
+      {serializedRelated.length > 0 && (
         <IntegrationRelated
-          integrations={relatedIntegrations}
-          categoryName={category?.name || integration.category}
+          integrations={serializedRelated.map((i: { id: string; name: string; slug: string; logoUrl: string; shortDescription: string; popular?: boolean; setupTime?: string; keyFeatures?: string[] }) => ({
+            id: i.id,
+            name: i.name,
+            slug: i.slug,
+            logoUrl: i.logoUrl,
+            shortDescription: i.shortDescription,
+            popular: i.popular,
+            setupTime: i.setupTime,
+            keyFeatures: i.keyFeatures,
+          }))}
+          categoryName={serializedCategory?.name || serializedIntegration.category}
         />
       )}
 
       {/* CTA Section */}
-      <IntegrationCTA integrationName={integration.name} />
+      <IntegrationCTA integrationName={serializedIntegration.name} />
     </div>
   );
 }

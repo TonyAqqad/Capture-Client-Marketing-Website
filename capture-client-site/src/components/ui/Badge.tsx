@@ -2,12 +2,13 @@
 
 import { motion } from "@/lib/motion";
 import { ReactNode } from "react";
+import { LucideIcon } from "lucide-react";
 
 interface BadgeProps {
   children: ReactNode;
   variant?: "primary" | "accent" | "success" | "warning" | "glass";
   size?: "sm" | "md" | "lg";
-  icon?: string; // Material icon name
+  icon?: LucideIcon;
   pulse?: boolean; // Add pulsing animation
   className?: string;
 }
@@ -50,11 +51,16 @@ export function Badge({
         </>
       )}
 
-      {icon && (
-        <span className="material-icons text-current" aria-hidden="true" style={{ fontSize: size === "sm" ? "14px" : size === "md" ? "16px" : "18px" }}>
-          {icon}
-        </span>
-      )}
+      {icon && (() => {
+        const Icon = icon;
+        return (
+          <Icon
+            className="text-current"
+            aria-hidden="true"
+            size={size === "sm" ? 14 : size === "md" ? 16 : 18}
+          />
+        );
+      })()}
 
       <span className="relative z-10">{children}</span>
 

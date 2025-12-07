@@ -60,27 +60,27 @@
     {
       "title": "Never Miss a Lead Again",
       "description": "Your AI voice agent answers every call within 2 rings, 24/7/365. Whether it is 3 AM or Christmas Day, potential customers reach a professional representative immediately.",
-      "icon": "phone-incoming"
+      "icon": "PhoneIncoming"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "AI asks the right questions to qualify leads before they reach you. You only spend time with prospects who match your ideal customer profile.",
-      "icon": "filter"
+      "icon": "Filter"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "Voice AI checks your calendar in real-time and books appointments directly. No back-and-forth emails or phone tag.",
-      "icon": "calendar-check"
+      "icon": "CalendarCheck"
     },
     {
       "title": "Massive Cost Savings",
       "description": "Replace expensive answering services or full-time receptionists with AI that costs 70 percent less and works 24/7.",
-      "icon": "piggy-bank"
+      "icon": "PiggyBank"
     },
     {
       "title": "Scales With Your Business",
       "description": "Handle 10 calls or 1,000 calls per day without adding staff. Voice AI scales instantly during busy seasons.",
-      "icon": "trending-up"
+      "icon": "TrendingUp"
     }
   ],
   "how_it_works": [

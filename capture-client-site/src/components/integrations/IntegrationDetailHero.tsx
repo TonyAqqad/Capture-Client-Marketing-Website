@@ -4,19 +4,65 @@ import { useState } from "react";
 import { motion } from "@/lib/motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
-import type { Integration, IntegrationCategory } from "@/data/integrations";
-import { ChevronRight, Star, Clock } from "lucide-react";
+import {
+  ChevronRight,
+  Star,
+  Clock,
+  Users,
+  Workflow,
+  Calendar,
+  Phone,
+  Home,
+  Briefcase,
+  Heart,
+  Building,
+  BarChart,
+  CreditCard,
+  Layers,
+  type LucideIcon
+} from "lucide-react";
 
 interface IntegrationDetailHeroProps {
-  integration: Integration;
-  category?: IntegrationCategory;
+  name: string;
+  description: string;
+  logoUrl: string;
+  url: string;
+  popular?: boolean;
+  setupTime?: string;
+  categoryName?: string;
+  categoryIcon?: string;
 }
 
 export function IntegrationDetailHero({
-  integration,
-  category,
+  name,
+  description,
+  logoUrl,
+  url,
+  popular,
+  setupTime,
+  categoryName,
+  categoryIcon,
 }: IntegrationDetailHeroProps) {
   const [imageError, setImageError] = useState(false);
+
+  /**
+   * Icon map for category icons - defined inside component to avoid serialization issues
+   */
+  const categoryIcons: Record<string, LucideIcon> = {
+    users: Users,
+    workflow: Workflow,
+    calendar: Calendar,
+    phone: Phone,
+    home: Home,
+    briefcase: Briefcase,
+    heart: Heart,
+    building: Building,
+    chart: BarChart,
+    'credit-card': CreditCard,
+    layers: Layers,
+  };
+
+  const IconComponent = categoryIcon ? categoryIcons[categoryIcon] : null;
 
   return (
     <section className="relative py-20 sm:py-32 overflow-hidden">
@@ -39,15 +85,15 @@ export function IntegrationDetailHero({
             <div className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-lg border border-white/20 shadow-glow p-4">
               {!imageError ? (
                 <img
-                  src={integration.logoUrl}
-                  alt={`${integration.name} logo`}
+                  src={logoUrl}
+                  alt={`${name} logo`}
                   className="w-full h-full object-contain filter drop-shadow-md"
                   onError={() => setImageError(true)}
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-accent/20 to-primary/20 rounded-xl">
                   <span className="text-3xl sm:text-4xl font-bold text-foreground">
-                    {integration.name.charAt(0)}
+                    {name.charAt(0)}
                   </span>
                 </div>
               )}
@@ -68,15 +114,15 @@ export function IntegrationDetailHero({
               Integrations
             </Link>
             <ChevronRight className="w-3 h-3" />
-            {category && (
+            {categoryName && (
               <>
                 <span className="hover:text-accent transition-colors">
-                  {category.name}
+                  {categoryName}
                 </span>
                 <ChevronRight className="w-3 h-3" />
               </>
             )}
-            <span className="text-foreground">{integration.name}</span>
+            <span className="text-foreground">{name}</span>
           </motion.div>
 
           {/* Heading */}
@@ -88,7 +134,7 @@ export function IntegrationDetailHero({
           >
             Connect Capture Client with{" "}
             <span className="bg-gradient-to-r from-gold via-accent to-gold bg-clip-text text-transparent">
-              {integration.name}
+              {name}
             </span>
           </motion.h1>
 
@@ -99,7 +145,7 @@ export function IntegrationDetailHero({
             transition={{ duration: 0.6, delay: 0.3 }}
             className="text-lg sm:text-xl text-foreground-muted mb-8 max-w-3xl mx-auto leading-relaxed"
           >
-            {integration.description}
+            {description}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -115,12 +161,12 @@ export function IntegrationDetailHero({
               </Button>
             </Link>
             <a
-              href={integration.url}
+              href={url}
               target="_blank"
               rel="noopener noreferrer"
             >
               <Button variant="glass" size="lg">
-                Visit {integration.name}
+                Visit {name}
               </Button>
             </a>
           </motion.div>
@@ -132,22 +178,22 @@ export function IntegrationDetailHero({
             transition={{ duration: 0.6, delay: 0.5 }}
             className="flex flex-wrap gap-3 justify-center"
           >
-            {integration.popular && (
+            {popular && (
               <div className="px-4 py-2 bg-gold/10 border border-gold/20 rounded-full text-sm font-semibold text-gold flex items-center gap-2">
                 <Star className="w-4 h-4" />
                 Popular
               </div>
             )}
-            {category && (
+            {categoryName && (
               <div className="px-4 py-2 bg-accent/10 border border-accent/20 rounded-full text-sm font-semibold text-accent flex items-center gap-2">
-                <span className="material-icons text-sm">{category.icon}</span>
-                {category.name}
+                {IconComponent && <IconComponent className="w-4 h-4" />}
+                {categoryName}
               </div>
             )}
-            {integration.setupTime && (
+            {setupTime && (
               <div className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm font-semibold text-foreground-muted flex items-center gap-2">
                 <Clock className="w-4 h-4" />
-                {integration.setupTime} setup
+                {setupTime} setup
               </div>
             )}
           </motion.div>

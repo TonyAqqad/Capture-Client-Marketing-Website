@@ -55,22 +55,22 @@
     {
       "title": "Serve All Chesapeake Areas",
       "description": "From Greenbrier to Great Bridge, our AI understands Chesapeake neighborhoods and serves customers across the entire city.",
-      "icon": "location_on"
+      "icon": "MapPin"
     },
     {
       "title": "24/7 Availability",
       "description": "Chesapeake customers call at all hours. Our AI answers every call professionally, day or night.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Lead Qualification",
       "description": "Filter out unqualified leads automatically. Only talk to prospects ready to buy your Chesapeake services.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Automated Booking",
       "description": "AI schedules appointments instantly into your calendar. No more phone tag with Chesapeake customers.",
-      "icon": "event"
+      "icon": "Calendar"
     }
   ],
   "how_it_works": [

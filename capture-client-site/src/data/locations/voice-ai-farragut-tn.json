@@ -44,12 +44,12 @@
     {
       "title": "24/7 Farragut",
       "description": "AI never sleeps.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Qualify Leads",
       "description": "Qualify Farragut prospects.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     }
   ],
   "how_it_works": [

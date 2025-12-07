@@ -56,22 +56,22 @@
     {
       "title": "24/7 Availability for Arlington Customers",
       "description": "Your Arlington customers call at all hours. Our AI voice agents never sleep, ensuring every call from Tarrant County is answered professionally.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Handle High Call Volume",
       "description": "Perfect for Arlington businesses near entertainment venues that experience surge calling during events.",
-      "icon": "trending_up"
+      "icon": "TrendingUp"
     },
     {
       "title": "Automatic Appointment Scheduling",
       "description": "Let AI book appointments directly into your calendar. No more phone tag with Arlington customers.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Cost Savings Over Traditional Staff",
       "description": "Hiring a receptionist in Arlington costs $31,000-$43,000/year. Our Voice AI costs a fraction of that.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     }
   ],
   "how_it_works": [

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { ArrowRight, Building2, MapPin, Clock } from 'lucide-react';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { Button } from '@/components/ui/Button';
 
@@ -297,7 +298,7 @@ export default function IndustryCaseStudies({
                       {/* Company Info */}
                       <div className="mb-6">
                         <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border ${theme.border} mb-3`}>
-                          <span className="material-icons text-sm">apartment</span>
+                          <Building2 className="w-3.5 h-3.5" />
                           <span className="text-xs font-semibold text-foreground">
                             {caseStudy.industry}
                           </span>
@@ -306,7 +307,7 @@ export default function IndustryCaseStudies({
                           {caseStudy.company}
                         </h3>
                         <div className="flex items-center gap-2 text-sm text-foreground-muted">
-                          <span className="material-icons text-xs">location_on</span>
+                          <MapPin className="w-3.5 h-3.5" />
                           <span>{caseStudy.location}</span>
                         </div>
                       </div>
@@ -323,7 +324,7 @@ export default function IndustryCaseStudies({
                           <span className="text-foreground-muted">
                             {topResult.before}
                           </span>
-                          <span className="material-icons text-xs text-gold-400">arrow_forward</span>
+                          <ArrowRight className="w-3.5 h-3.5 text-gold-400" />
                           <span className={`font-bold ${theme.text}`}>
                             {topResult.after}
                           </span>
@@ -347,7 +348,7 @@ export default function IndustryCaseStudies({
                       {/* ROI Badge */}
                       <div className="flex items-center justify-between pt-4 border-t border-white/10">
                         <div className="flex items-center gap-2">
-                          <span className="material-icons text-sm text-foreground-muted">schedule</span>
+                          <Clock className="w-4 h-4 text-foreground-muted" />
                           <span className="text-sm text-foreground-muted">{caseStudy.duration}</span>
                         </div>
                         <div className={`px-3 py-1 rounded-full bg-gradient-to-r ${theme.gradient} bg-opacity-20 border ${theme.border}`}>
@@ -360,7 +361,7 @@ export default function IndustryCaseStudies({
                       {/* View Full Story Link */}
                       <div className="mt-6 flex items-center gap-2 text-sm text-gold-400 group-hover:gap-3 transition-all">
                         <span>View Full Story</span>
-                        <span className="material-icons text-sm">arrow_forward</span>
+                        <ArrowRight className="w-4 h-4" />
                       </div>
                     </div>
                   </Link>
@@ -375,7 +376,7 @@ export default function IndustryCaseStudies({
               variant="glass"
               size="lg"
               href="/case-studies"
-              icon="arrow_forward"
+              icon={ArrowRight}
               ariaLabel="View all case studies"
             >
               View All Case Studies

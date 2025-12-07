@@ -4,13 +4,14 @@ import { useRef } from "react";
 import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { Rocket, TrendingUp, Clock, X, Zap, type LucideIcon } from "lucide-react";
 
 interface TimelineItem {
   time: string;
   multiplier: string;
   label: string;
   status: "excellent" | "good" | "poor";
-  icon: string;
+  Icon: LucideIcon;
 }
 
 const timelineData: TimelineItem[] = [
@@ -19,28 +20,28 @@ const timelineData: TimelineItem[] = [
     multiplier: "100x",
     label: "Connection Rate",
     status: "excellent",
-    icon: "rocket_launch"
+    Icon: Rocket
   },
   {
     time: "5 min",
     multiplier: "21x",
     label: "More Likely to Convert",
     status: "good",
-    icon: "trending_up"
+    Icon: TrendingUp
   },
   {
     time: "30 min",
     multiplier: "1x",
     label: "Baseline (Average)",
     status: "poor",
-    icon: "schedule"
+    Icon: Clock
   },
   {
     time: "47 hours",
     multiplier: "Lost",
     label: "Industry Average = Lost Lead",
     status: "poor",
-    icon: "close"
+    Icon: X
   }
 ];
 
@@ -109,9 +110,7 @@ export function SpeedToLeadTimeline() {
                 >
                   {/* Icon */}
                   <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${colors.bg} border-2 ${colors.border} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <span className={`material-icons ${colors.text} text-2xl`}>
-                      {item.icon}
-                    </span>
+                    <item.Icon className={`${colors.text} w-6 h-6`} />
                   </div>
 
                   {/* Time */}
@@ -156,7 +155,7 @@ export function SpeedToLeadTimeline() {
         >
           <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-gold/10 via-accent/5 to-gold/10 border-2 border-gold/20 backdrop-blur-xl">
             <div className="flex items-center gap-3">
-              <span className="material-icons text-gold text-3xl">speed</span>
+              <Zap className="text-gold w-7 h-7" />
               <div className="text-left">
                 <p className="text-2xl font-bold text-white">
                   Be the <span className="text-gold">First Responder</span>

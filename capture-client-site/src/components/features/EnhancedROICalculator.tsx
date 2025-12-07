@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
 import { presets } from "@/lib/simulator-animations";
 import { trackFormStart, trackFormSubmission } from "@/lib/analytics";
+import { AirVent, Wrench, Smile, Gavel, Settings, SlidersHorizontal, Mail, CheckCircle, LucideIcon } from "lucide-react";
 
 // ============================================================================
 // TYPE DEFINITIONS
@@ -12,7 +13,7 @@ import { trackFormStart, trackFormSubmission } from "@/lib/analytics";
 interface IndustryPreset {
   id: string;
   name: string;
-  icon: string;
+  icon: LucideIcon;
   defaults: {
     missedCalls: number;
     avgJobValue: number;
@@ -38,37 +39,37 @@ const INDUSTRY_PRESETS: IndustryPreset[] = [
   {
     id: "hvac",
     name: "HVAC",
-    icon: "ac_unit",
+    icon: AirVent,
     defaults: { missedCalls: 35, avgJobValue: 850, closeRate: 40 },
   },
   {
     id: "plumbing",
     name: "Plumbing",
-    icon: "plumbing",
+    icon: Wrench,
     defaults: { missedCalls: 30, avgJobValue: 650, closeRate: 45 },
   },
   {
     id: "dental",
     name: "Dental",
-    icon: "sentiment_satisfied",
+    icon: Smile,
     defaults: { missedCalls: 25, avgJobValue: 400, closeRate: 60 },
   },
   {
     id: "legal",
     name: "Legal",
-    icon: "gavel",
+    icon: Gavel,
     defaults: { missedCalls: 20, avgJobValue: 3500, closeRate: 25 },
   },
   {
     id: "auto",
     name: "Auto Repair",
-    icon: "build",
+    icon: Settings,
     defaults: { missedCalls: 28, avgJobValue: 550, closeRate: 50 },
   },
   {
     id: "custom",
     name: "Custom",
-    icon: "tune",
+    icon: SlidersHorizontal,
     defaults: { missedCalls: 20, avgJobValue: 500, closeRate: 30 },
   },
 ];
@@ -201,34 +202,35 @@ export default function EnhancedROICalculator() {
         {/* Industry presets */}
         <div className="max-w-4xl mx-auto mb-8">
           <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
-            {INDUSTRY_PRESETS.map((preset) => (
-              <motion.button
-                key={preset.id}
-                onClick={() => handlePresetChange(preset)}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={`p-4 rounded-xl border-2 transition-all duration-300 min-h-[80px] flex flex-col items-center justify-center ${
-                  selectedPreset.id === preset.id
-                    ? "bg-accent/10 border-accent/40"
-                    : "bg-surface border-surface-border hover:bg-surface-hover"
-                }`}
-              >
-                <span
-                  className={`material-icons text-2xl mb-1 ${
-                    selectedPreset.id === preset.id ? "text-accent" : "text-foreground-muted"
+            {INDUSTRY_PRESETS.map((preset) => {
+              const IconComponent = preset.icon;
+              return (
+                <motion.button
+                  key={preset.id}
+                  onClick={() => handlePresetChange(preset)}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className={`p-4 rounded-xl border-2 transition-all duration-300 min-h-[80px] flex flex-col items-center justify-center ${
+                    selectedPreset.id === preset.id
+                      ? "bg-accent/10 border-accent/40"
+                      : "bg-surface border-surface-border hover:bg-surface-hover"
                   }`}
                 >
-                  {preset.icon}
-                </span>
-                <span
-                  className={`text-xs font-semibold text-center ${
-                    selectedPreset.id === preset.id ? "text-foreground" : "text-foreground-muted"
-                  }`}
-                >
-                  {preset.name}
-                </span>
-              </motion.button>
-            ))}
+                  <IconComponent
+                    className={`w-6 h-6 mb-1 ${
+                      selectedPreset.id === preset.id ? "text-accent" : "text-foreground-muted"
+                    }`}
+                  />
+                  <span
+                    className={`text-xs font-semibold text-center ${
+                      selectedPreset.id === preset.id ? "text-foreground" : "text-foreground-muted"
+                    }`}
+                  >
+                    {preset.name}
+                  </span>
+                </motion.button>
+              );
+            })}
           </div>
         </div>
 
@@ -417,7 +419,7 @@ export default function EnhancedROICalculator() {
                   onClick={() => setShowLeadCapture(true)}
                   className="btn-primary inline-flex items-center gap-2"
                 >
-                  <span className="material-icons">email</span>
+                  <Mail className="w-5 h-5" />
                   Email Me This Report
                 </button>
               </motion.div>
@@ -467,7 +469,7 @@ export default function EnhancedROICalculator() {
                   className="mt-8 pt-8 border-t border-surface-border text-center"
                 >
                   <div className="w-16 h-16 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center mx-auto mb-4">
-                    <span className="material-icons text-accent text-3xl">check_circle</span>
+                    <CheckCircle className="w-8 h-8 text-accent" />
                   </div>
                   <h3 className="text-2xl font-bold text-foreground mb-2">Report Sent!</h3>
                   <p className="text-foreground-muted">

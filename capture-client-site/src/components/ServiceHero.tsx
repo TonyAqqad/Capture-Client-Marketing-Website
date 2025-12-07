@@ -2,11 +2,7 @@
 
 import { motion } from "@/lib/motion";
 import Image from "next/image";
-
-// Material Icon component for consistency (replaces Lucide React for bundle savings)
-const MaterialIcon = ({ name, className = "" }: { name: string; className?: string }) => (
-  <span className={`material-icons ${className}`} style={{ fontSize: 'inherit' }}>{name}</span>
-);
+import { Zap, Phone, CheckCircle, Target, TrendingUp, Users, ArrowRight } from "lucide-react";
 
 interface ServiceHeroProps {
   service: {
@@ -38,50 +34,50 @@ interface ServiceHeroProps {
   }>;
 }
 
-// Service-specific color schemes and icons (using Material Icon names)
+// Service-specific color schemes and icons
 const serviceThemes = {
   "voice-ai": {
     gradient: "from-[#4A69E2] via-[#D4AF37]/80 to-[#00C9FF]",
     accentColor: "bg-[#4A69E2]",
     iconColor: "text-[#D4AF37]",
-    icon: "bolt",
+    icon: Zap,
     floatingIcons: [
-      { icon: "phone", delay: 0, position: "top-20 right-20" },
-      { icon: "bolt", delay: 0.2, position: "top-40 left-20" },
-      { icon: "check_circle", delay: 0.4, position: "bottom-32 right-32" },
+      { icon: Phone, delay: 0, position: "top-20 right-20" },
+      { icon: Zap, delay: 0.2, position: "top-40 left-20" },
+      { icon: CheckCircle, delay: 0.4, position: "bottom-32 right-32" },
     ],
   },
   "google-ads": {
     gradient: "from-blue-600 via-cyan-600 to-teal-600",
     accentColor: "bg-blue-500",
     iconColor: "text-blue-400",
-    icon: "track_changes",
+    icon: Target,
     floatingIcons: [
-      { icon: "track_changes", delay: 0, position: "top-24 right-24" },
-      { icon: "trending_up", delay: 0.2, position: "top-48 left-16" },
-      { icon: "check_circle", delay: 0.4, position: "bottom-40 right-40" },
+      { icon: Target, delay: 0, position: "top-24 right-24" },
+      { icon: TrendingUp, delay: 0.2, position: "top-48 left-16" },
+      { icon: CheckCircle, delay: 0.4, position: "bottom-40 right-40" },
     ],
   },
   "facebook-ads": {
     gradient: "from-[#4A69E2] via-[#D4AF37] to-[#00C9FF]",
     accentColor: "bg-[#D4AF37]",
     iconColor: "text-[#D4AF37]",
-    icon: "group",
+    icon: Users,
     floatingIcons: [
-      { icon: "group", delay: 0, position: "top-16 right-28" },
-      { icon: "track_changes", delay: 0.2, position: "top-52 left-24" },
-      { icon: "trending_up", delay: 0.4, position: "bottom-28 right-36" },
+      { icon: Users, delay: 0, position: "top-16 right-28" },
+      { icon: Target, delay: 0.2, position: "top-52 left-24" },
+      { icon: TrendingUp, delay: 0.4, position: "bottom-28 right-36" },
     ],
   },
   "lead-generation": {
     gradient: "from-emerald-600 via-teal-600 to-cyan-600",
     accentColor: "bg-emerald-500",
     iconColor: "text-emerald-400",
-    icon: "trending_up",
+    icon: TrendingUp,
     floatingIcons: [
-      { icon: "trending_up", delay: 0, position: "top-20 right-20" },
-      { icon: "group", delay: 0.2, position: "top-44 left-20" },
-      { icon: "check_circle", delay: 0.4, position: "bottom-36 right-28" },
+      { icon: TrendingUp, delay: 0, position: "top-20 right-20" },
+      { icon: Users, delay: 0.2, position: "top-44 left-20" },
+      { icon: CheckCircle, delay: 0.4, position: "bottom-36 right-28" },
     ],
   },
 };
@@ -90,13 +86,13 @@ const defaultTheme = {
   gradient: "from-gray-900 via-gray-800 to-gray-900",
   accentColor: "bg-primary",
   iconColor: "text-primary",
-  icon: "check_circle",
-  floatingIcons: [] as { icon: string; delay: number; position: string }[],
+  icon: CheckCircle,
+  floatingIcons: [] as { icon: typeof CheckCircle; delay: number; position: string }[],
 };
 
 export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) {
   const theme = serviceThemes[service.service_slug as keyof typeof serviceThemes] || defaultTheme;
-  const mainIconName = theme.icon;
+  const MainIcon = theme.icon;
 
   // Animation variants
   const containerVariants = {
@@ -184,7 +180,7 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
 
       {/* Floating Icons - Hidden on mobile for performance */}
       <div className="absolute inset-0 pointer-events-none hidden lg:block">
-        {theme.floatingIcons.map(({ icon, delay, position }, index) => (
+        {theme.floatingIcons.map(({ icon: FloatingIcon, delay, position }, index) => (
           <motion.div
             key={index}
             className={`absolute ${position}`}
@@ -194,7 +190,7 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
           >
             <motion.div variants={floatingVariants} animate="float">
               <div className={`w-12 h-12 md:w-16 md:h-16 rounded-2xl ${theme.accentColor} bg-opacity-20 backdrop-blur-sm border border-white/10 flex items-center justify-center text-2xl md:text-3xl`}>
-                <MaterialIcon name={icon} className="text-white" />
+                <FloatingIcon className="w-6 h-6 md:w-8 md:h-8 text-white" />
               </div>
             </motion.div>
           </motion.div>
@@ -216,7 +212,7 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
               whileHover={{ scale: 1.1, rotate: 5 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <MaterialIcon name={mainIconName} className="text-white" />
+              <MainIcon className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white" />
             </motion.div>
           </motion.div>
 
@@ -268,9 +264,9 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
                   style={{ opacity: 0.2 }}
                 />
                 <span className="relative flex items-center gap-2">
-                  {hero.cta_primary.type === "phone" && <span className="material-icons text-xl">phone</span>}
+                  {hero.cta_primary.type === "phone" && <Phone className="w-5 h-5" />}
                   {hero.cta_primary.text}
-                  <span className="material-icons text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </span>
               </motion.a>
             )}

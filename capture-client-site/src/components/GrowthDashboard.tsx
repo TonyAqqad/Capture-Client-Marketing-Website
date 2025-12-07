@@ -4,6 +4,7 @@ import { useRef, useEffect, useState } from "react";
 import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import { useCountUp } from "@/hooks/useCountUp";
+import { RefreshCw, TrendingUp, Phone, BarChart, DollarSign } from "lucide-react";
 
 interface Activity {
   id: number;
@@ -83,9 +84,8 @@ export default function GrowthDashboard() {
                   duration: 2,
                   repeat: Infinity,
                 }}
-                className="material-icons text-accent text-lg"
               >
-                update
+                <RefreshCw className="w-5 h-5 text-accent" />
               </motion.span>
               <span>Live</span>
             </div>
@@ -96,7 +96,7 @@ export default function GrowthDashboard() {
             <StatCard
               label="Lead Growth"
               value={`+${leadGrowth}%`}
-              icon="trending_up"
+              icon={<TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
               gradient="from-accent/10 to-primary/10"
               borderColor="border-accent/20"
               textColor="text-accent"
@@ -107,7 +107,7 @@ export default function GrowthDashboard() {
             <StatCard
               label="Calls Handled"
               value={callsHandled.toLocaleString()}
-              icon="phone"
+              icon={<Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
               gradient="from-primary/10 to-accent/10"
               borderColor="border-primary/20"
               textColor="text-primary"
@@ -119,7 +119,7 @@ export default function GrowthDashboard() {
             <StatCard
               label="Conversion Rate"
               value={`${(conversionRate / 10).toFixed(1)}%`}
-              icon="insights"
+              icon={<BarChart className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
               gradient="from-primary/10 to-accent/10"
               borderColor="border-primary/20"
               textColor="text-primary"
@@ -131,7 +131,7 @@ export default function GrowthDashboard() {
             <StatCard
               label="Revenue Impact"
               value={`$${revenueImpact}K`}
-              icon="paid"
+              icon={<DollarSign className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
               gradient="from-accent/10 to-primary/10"
               borderColor="border-accent/20"
               textColor="text-accent"
@@ -189,7 +189,7 @@ export default function GrowthDashboard() {
 interface StatCardProps {
   label: string;
   value: string;
-  icon: string;
+  icon: React.ReactNode;
   gradient: string;
   borderColor: string;
   textColor: string;
@@ -228,7 +228,7 @@ function StatCard({
       </motion.p>
       {subtext && (
         <div className={`flex items-center gap-1 mt-1.5 sm:mt-2 ${textColor} text-[10px] sm:text-xs`}>
-          <span className="material-icons text-sm">{icon}</span>
+          <span>{icon}</span>
           <span>{subtext}</span>
         </div>
       )}

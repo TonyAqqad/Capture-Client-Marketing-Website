@@ -67,32 +67,32 @@
     {
       "title": "Proven Track Record",
       "description": "25,000+ leads generated, $10M+ in client revenue driven, and 3-5x average ROI across 15+ industries.",
-      "icon": "trending-up"
+      "icon": "TrendingUp"
     },
     {
       "title": "Multi-Channel Expertise",
       "description": "Expert management of Google Ads, Facebook Ads, Instagram, LinkedIn, and retargeting campaigns for maximum reach.",
-      "icon": "hub"
+      "icon": "Network"
     },
     {
       "title": "AI-Powered Qualification",
       "description": "24/7 AI voice agents instantly qualify leads and book appointments automatically—no manual follow-up required.",
-      "icon": "zap"
+      "icon": "Zap"
     },
     {
       "title": "Transparent ROI Tracking",
       "description": "Real-time dashboards show cost per lead, conversion rates, and revenue attribution. Complete transparency with every campaign.",
-      "icon": "insights"
+      "icon": "LineChart"
     },
     {
       "title": "Industry Specialization",
       "description": "Deep expertise in home services, healthcare, legal, B2B, and professional services with proven playbooks.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     },
     {
       "title": "End-to-End Service",
       "description": "We handle strategy, ad creation, landing pages, lead nurturing, and reporting. You focus on closing deals.",
-      "icon": "verified"
+      "icon": "CheckCircle"
     }
   ],
   "how_it_works": [

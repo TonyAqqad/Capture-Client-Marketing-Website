@@ -1,5 +1,7 @@
 "use client";
 
+import { Clock, User, Bot, Brain, Phone } from "lucide-react";
+
 /**
  * MobileHeroVisual - Premium Mobile-Optimized Hero Visual
  *
@@ -33,7 +35,7 @@ export function MobileHeroVisual() {
                   <span className="text-xs font-bold text-green-400 uppercase tracking-wider">Active Call</span>
                 </div>
                 <div className="flex items-center gap-1.5 px-2.5 py-1 bg-white/5 rounded-lg border border-white/10">
-                  <span className="material-icons text-white/60" style={{ fontSize: '14px' }}>schedule</span>
+                  <Clock className="text-white/60 w-3.5 h-3.5" />
                   <span className="text-xs font-mono text-white/80 call-timer">2:47</span>
                 </div>
               </div>
@@ -52,7 +54,7 @@ export function MobileHeroVisual() {
 
                 {/* Avatar */}
                 <div className="relative w-28 h-28 rounded-full bg-gradient-to-br from-cyan-500 via-[#D4AF37] to-[#D4AF37]/80 flex items-center justify-center shadow-[0_8px_32px_rgba(0,201,255,0.4)]">
-                  <span className="material-icons text-white text-5xl">person</span>
+                  <User className="text-white w-12 h-12" />
                 </div>
               </div>
             </div>
@@ -68,7 +70,7 @@ export function MobileHeroVisual() {
               <div className="glass-premium-mobile p-4 border-cyan-500/20 slide-up-fade">
                 <div className="flex items-start gap-3">
                   <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-cyan-500 to-[#D4AF37] flex items-center justify-center flex-shrink-0">
-                    <span className="material-icons text-white" style={{ fontSize: '16px' }}>smart_toy</span>
+                    <Bot className="text-white w-4 h-4" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <p className="text-xs text-cyan-400 font-bold mb-1.5">AI AGENT</p>
@@ -96,7 +98,7 @@ export function MobileHeroVisual() {
             {/* Floating badge */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20">
               <div className="glass-badge flex items-center gap-2 px-3 py-2">
-                <span className="material-icons text-cyan-400" style={{ fontSize: '14px' }}>psychology</span>
+                <Brain className="text-cyan-400 w-3.5 h-3.5" />
                 <span className="text-xs font-semibold text-cyan-400">AI Answering</span>
                 <span className="flex items-center gap-0.5 typing-dots">
                   <span className="w-1 h-1 bg-cyan-400 rounded-full dot-1" />
@@ -187,7 +189,7 @@ export function MobileHeroVisual() {
             <div className="absolute inset-0 -m-1 rounded-xl bg-gradient-to-r from-cyan-500 to-[#D4AF37] opacity-50 pulse-ring-button" />
 
             <button className="relative w-full bg-gradient-to-r from-cyan-500 to-[#D4AF37] text-white font-bold py-3.5 px-6 rounded-xl shadow-[0_4px_20px_rgba(0,201,255,0.4)] active:scale-95 transition-transform flex items-center justify-center gap-2">
-              <span className="material-icons" style={{ fontSize: '20px' }}>phone</span>
+              <Phone className="w-5 h-5" />
               <span>Call Now</span>
             </button>
           </a>

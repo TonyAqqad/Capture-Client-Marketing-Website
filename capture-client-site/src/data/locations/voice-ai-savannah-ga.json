@@ -52,22 +52,22 @@
     {
       "title": "24/7 Savannah Availability",
       "description": "Answer calls around the clock for Savannah customers and tourists.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Tourism-Ready AI",
       "description": "Handle inquiries from tourists and locals with equal professionalism.",
-      "icon": "group"
+      "icon": "Users"
     },
     {
       "title": "Emergency Call Handling",
       "description": "Capture urgent service requests instantly, day or night.",
-      "icon": "phone_in_talk"
+      "icon": "Phone"
     },
     {
       "title": "Bilingual Capability",
       "description": "Serve Savannah's diverse community with multilingual support.",
-      "icon": "public"
+      "icon": "Globe"
     }
   ],
   "how_it_works": [

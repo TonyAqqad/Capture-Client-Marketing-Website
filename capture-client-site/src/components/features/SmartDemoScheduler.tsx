@@ -3,6 +3,17 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
 import { trackFormStart, trackFormSubmission } from "@/lib/analytics";
+import {
+  Check,
+  ArrowRight,
+  Clock,
+  RefreshCw,
+  CheckCircle,
+  Calendar,
+  User,
+  Mail,
+  Info
+} from "lucide-react";
 
 // ============================================================================
 // TYPE DEFINITIONS
@@ -176,7 +187,7 @@ export default function SmartDemoScheduler() {
                     }`}
                   >
                     {step > s ? (
-                      <span className="material-icons">check</span>
+                      <Check className="w-5 h-5" />
                     ) : (
                       s
                     )}
@@ -256,8 +267,8 @@ export default function SmartDemoScheduler() {
                   </div>
 
                   {/* Timezone notice */}
-                  <p className="text-center text-foreground-muted text-sm mb-8">
-                    <span className="material-icons text-xs align-middle mr-1">schedule</span>
+                  <p className="text-center text-foreground-muted text-sm mb-8 flex items-center justify-center gap-1">
+                    <Clock className="w-4 h-4" />
                     Times shown in your local timezone (EST)
                   </p>
 
@@ -269,7 +280,7 @@ export default function SmartDemoScheduler() {
                       className="btn-primary inline-flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
                       Continue
-                      <span className="material-icons">arrow_forward</span>
+                      <ArrowRight className="w-5 h-5" />
                     </button>
                   </div>
                 </motion.div>
@@ -399,18 +410,17 @@ export default function SmartDemoScheduler() {
                       >
                         {isSubmitting ? (
                           <>
-                            <motion.span
+                            <motion.div
                               animate={{ rotate: 360 }}
                               transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                              className="material-icons"
                             >
-                              refresh
-                            </motion.span>
+                              <RefreshCw className="w-5 h-5" />
+                            </motion.div>
                             Booking...
                           </>
                         ) : (
                           <>
-                            <span className="material-icons">check_circle</span>
+                            <CheckCircle className="w-5 h-5" />
                             Confirm Booking
                           </>
                         )}
@@ -436,7 +446,7 @@ export default function SmartDemoScheduler() {
                     transition={{ type: "spring", stiffness: 200, damping: 15, delay: 0.2 }}
                     className="w-24 h-24 rounded-full bg-accent/10 border-2 border-accent flex items-center justify-center mx-auto mb-8"
                   >
-                    <span className="material-icons text-accent text-5xl">check_circle</span>
+                    <CheckCircle className="w-12 h-12 text-accent" />
                   </motion.div>
 
                   <h3 className="text-3xl font-bold text-foreground mb-4">
@@ -446,7 +456,7 @@ export default function SmartDemoScheduler() {
                   <div className="max-w-md mx-auto mb-8 p-6 rounded-xl bg-surface-hover border border-surface-border">
                     <div className="space-y-3 text-left">
                       <div className="flex items-center gap-3">
-                        <span className="material-icons text-accent">event</span>
+                        <Calendar className="w-5 h-5 text-accent flex-shrink-0" />
                         <div>
                           <p className="text-xs text-foreground-muted">Date & Time</p>
                           <p className="font-semibold text-foreground">
@@ -461,7 +471,7 @@ export default function SmartDemoScheduler() {
                       </div>
 
                       <div className="flex items-center gap-3">
-                        <span className="material-icons text-accent">person</span>
+                        <User className="w-5 h-5 text-accent flex-shrink-0" />
                         <div>
                           <p className="text-xs text-foreground-muted">Name</p>
                           <p className="font-semibold text-foreground">{formData.name}</p>
@@ -469,7 +479,7 @@ export default function SmartDemoScheduler() {
                       </div>
 
                       <div className="flex items-center gap-3">
-                        <span className="material-icons text-accent">email</span>
+                        <Mail className="w-5 h-5 text-accent flex-shrink-0" />
                         <div>
                           <p className="text-xs text-foreground-muted">Email</p>
                           <p className="font-semibold text-foreground">{formData.email}</p>
@@ -480,7 +490,7 @@ export default function SmartDemoScheduler() {
 
                   <div className="bg-primary/10 border border-primary/30 rounded-xl p-6 mb-8 max-w-md mx-auto">
                     <div className="flex items-start gap-3">
-                      <span className="material-icons text-primary">info</span>
+                      <Info className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                       <div className="text-left">
                         <p className="font-semibold text-foreground mb-2">
                           Check your email

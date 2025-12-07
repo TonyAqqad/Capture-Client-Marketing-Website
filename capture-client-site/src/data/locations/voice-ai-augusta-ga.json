@@ -51,17 +51,17 @@
     {
       "title": "Masters-Ready Capacity",
       "description": "Handle call surges during Augusta busy seasons automatically.",
-      "icon": "trending_up"
+      "icon": "TrendingUp"
     },
     {
       "title": "Medical-Grade Quality",
       "description": "HIPAA-compliant AI for Augusta healthcare businesses.",
-      "icon": "shield"
+      "icon": "Shield"
     },
     {
       "title": "24/7 Augusta Coverage",
       "description": "Answer every call across Augusta metro.",
-      "icon": "schedule"
+      "icon": "Clock"
     }
   ],
   "how_it_works": [

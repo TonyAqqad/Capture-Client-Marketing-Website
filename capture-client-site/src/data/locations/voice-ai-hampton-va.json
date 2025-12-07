@@ -67,27 +67,27 @@
     {
       "title": "24/7 Lead Capture for Hampton",
       "description": "Hampton never sleeps with military operations and shift workers. Your AI agent captures leads around the clock from Langley AFB personnel to downtown businesses.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "Our AI asks the right questions to qualify Hampton leads before they reach your sales team, saving time and increasing conversion rates.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "AI schedules directly into your calendar while you focus on serving Hampton clients. No more back-and-forth scheduling hassles.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Affordable Staffing Alternative",
       "description": "Save thousands compared to hiring receptionist staff in Hampton. No salary, benefits, vacation days, or training costs.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     },
     {
       "title": "Consistent Professional Service",
       "description": "Every Hampton caller receives friendly, professional service that represents your brand perfectly. No human error or bad days.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     }
   ],
   "how_it_works": [

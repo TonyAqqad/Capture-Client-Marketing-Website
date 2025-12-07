@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
+import { ArrowRight, PlayCircle, Calendar, DollarSign, ChevronRight, AlertCircle, CheckCircle, Quote } from 'lucide-react';
 import { INDUSTRIES, getIndustryBySlug } from '@/data/industries';
 import { Button } from '@/components/ui/Button';
 import { GlassCard } from '@/components/ui/GlassCard';
@@ -11,6 +12,7 @@ import IndustryCaseStudies from '@/components/industries/IndustryCaseStudies';
 import { IndustryTrustBadges } from '@/components/industries/IndustryTrustBadges';
 import { IndustryFAQ } from '@/components/industries/IndustryFAQ';
 import { getIndustryFAQs } from '@/data/industryFAQs';
+import { IndustrySolutions } from './IndustrySolutions';
 
 interface IndustryPageProps {
   params: Promise<{
@@ -159,7 +161,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                 <a href="/who-we-serve" className="hover:text-gold-400 transition-colors">
                   Industries
                 </a>
-                <span className="material-icons text-xs">chevron_right</span>
+                <ChevronRight className="w-3 h-3" />
                 <span className="text-foreground">{industry.name}</span>
               </nav>
 
@@ -189,19 +191,23 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                   variant="primary"
                   size="lg"
                   href="/contact"
-                  icon="arrow_forward"
                   ariaLabel={industry.ctaText}
                 >
-                  {industry.ctaText}
+                  <span className="flex items-center gap-2">
+                    {industry.ctaText}
+                    <ArrowRight className="w-5 h-5" />
+                  </span>
                 </Button>
                 <Button
                   variant="glass"
                   size="lg"
                   href="/demo"
-                  icon="play_circle"
                   ariaLabel="Watch demo"
                 >
-                  Watch Demo
+                  <span className="flex items-center gap-2">
+                    Watch Demo
+                    <PlayCircle className="w-5 h-5" />
+                  </span>
                 </Button>
               </div>
             </div>
@@ -259,9 +265,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                     key={index}
                     className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-gold-500/30 transition-all duration-300"
                   >
-                    <span className="material-icons text-gold-400 text-2xl flex-shrink-0 mt-1">
-                      error_outline
-                    </span>
+                    <AlertCircle className="text-gold-400 w-6 h-6 flex-shrink-0 mt-1" />
                     <p className="text-foreground-muted leading-relaxed text-lg">
                       {pain}
                     </p>
@@ -273,45 +277,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
         </section>
 
         {/* Solutions Section */}
-        <section className="py-16 md:py-20 bg-gradient-to-b from-background-darker to-background">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
-                  How We{' '}
-                  <span className="bg-gradient-to-r from-accent-400 to-accent-600 bg-clip-text text-transparent">
-                    Solve It
-                  </span>
-                </h2>
-                <p className="text-xl text-foreground-muted">
-                  Industry-specific AI solutions that understand your business inside and out.
-                </p>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-8">
-                {industry.solutions.map((solution, index) => (
-                  <GlassCard key={index} variant="premium" hover={true}>
-                    <div className="p-8">
-                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent-500/20 to-accent-600/10 flex items-center justify-center mb-6">
-                        <span className="material-icons text-4xl text-accent-400">
-                          {solution.icon}
-                        </span>
-                      </div>
-
-                      <h3 className="text-2xl font-bold text-foreground mb-4">
-                        {solution.title}
-                      </h3>
-
-                      <p className="text-foreground-muted leading-relaxed text-lg">
-                        {solution.description}
-                      </p>
-                    </div>
-                  </GlassCard>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        <IndustrySolutions solutions={industry.solutions} industryName={industry.name} />
 
         {/* Key Features Section */}
         <section className="py-16 md:py-20 bg-background">
@@ -332,7 +298,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                     key={index}
                     className="flex items-center gap-3 p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
                   >
-                    <span className="material-icons text-gold-400">check_circle</span>
+                    <CheckCircle className="text-gold-400 w-4 h-4" />
                     <span className="text-foreground">{feature}</span>
                   </div>
                 ))}
@@ -370,7 +336,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                       </div>
 
                       <div className="flex items-center justify-center">
-                        <span className="material-icons text-4xl text-gold-400">arrow_forward</span>
+                        <ArrowRight className="text-gold-400 w-9 h-9" />
                       </div>
 
                       <div className="text-center">
@@ -396,7 +362,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                           <span className="text-foreground">{item.item}</span>
                           <div className="flex items-center gap-4">
                             <span className="text-foreground-muted line-through">{item.traditional}</span>
-                            <span className="material-icons text-xs text-gold-400">arrow_forward</span>
+                            <ArrowRight className="text-gold-400 w-3 h-3" />
                             <span className="text-gold-400 font-bold">{item.ai}</span>
                           </div>
                         </div>
@@ -429,7 +395,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                       )}
 
                       <div className="flex-1">
-                        <span className="material-icons text-5xl text-gold-400 mb-4">format_quote</span>
+                        <Quote className="text-gold-400 w-12 h-12 mb-4" />
 
                         <p className="text-xl md:text-2xl text-foreground leading-relaxed mb-6 italic">
                           "{industry.testimonial.quote}"
@@ -496,19 +462,23 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                   variant="primary"
                   size="lg"
                   href="/contact"
-                  icon="calendar_month"
                   ariaLabel={industry.ctaText}
                 >
-                  {industry.ctaText}
+                  <span className="flex items-center gap-2">
+                    {industry.ctaText}
+                    <Calendar className="w-5 h-5" />
+                  </span>
                 </Button>
                 <Button
                   variant="glass"
                   size="lg"
                   href="/pricing"
-                  icon="attach_money"
                   ariaLabel="View pricing"
                 >
-                  View Pricing
+                  <span className="flex items-center gap-2">
+                    View Pricing
+                    <DollarSign className="w-5 h-5" />
+                  </span>
                 </Button>
               </div>
             </div>

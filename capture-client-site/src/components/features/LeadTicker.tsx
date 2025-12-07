@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, memo } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
+import { UserPlus, Check } from "lucide-react";
 
 // ============================================================================
 // TYPE DEFINITIONS
@@ -130,7 +131,7 @@ const LeadCard = memo(({ lead, isMobile }: LeadCardProps) => (
         }}
         className="relative w-10 h-10 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center"
       >
-        <span className="material-icons text-accent text-lg">person_add</span>
+        <UserPlus className="w-5 h-5 text-accent" />
       </motion.div>
     </div>
 
@@ -149,7 +150,7 @@ const LeadCard = memo(({ lead, isMobile }: LeadCardProps) => (
 
     {/* Checkmark icon */}
     <div className="flex-shrink-0 w-8 h-8 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center">
-      <span className="material-icons text-accent text-sm">check</span>
+      <Check className="w-4 h-4 text-accent" />
     </div>
   </motion.div>
 ));

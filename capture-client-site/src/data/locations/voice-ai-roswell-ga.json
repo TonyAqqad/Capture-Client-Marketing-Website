@@ -52,17 +52,17 @@
     {
       "title": "24/7 Roswell Coverage",
       "description": "Answer calls day and night for Roswell customers.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Historic District Ready",
       "description": "Perfect for Canton Street shops and services.",
-      "icon": "home"
+      "icon": "Home"
     },
     {
       "title": "Family Business Friendly",
       "description": "Help Roswell family businesses scale.",
-      "icon": "group"
+      "icon": "Users"
     }
   ],
   "how_it_works": [

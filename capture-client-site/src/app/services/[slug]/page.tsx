@@ -13,6 +13,8 @@ import {
   generateFAQSchema,
 } from "@/lib/seo-config";
 import { generateHowToSchema } from "@/lib/advanced-schemas";
+import { getIcon } from "@/lib/icon-map";
+import { ChevronDown } from "lucide-react";
 
 export async function generateStaticParams() {
   const services = await getAllServices();
@@ -182,28 +184,31 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-primary">Benefits</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-              {service.benefits.map((benefit: BenefitItem, index: number) => (
-                <div
-                  key={index}
-                  className="group relative bg-gradient-to-br from-white/[0.08] via-white/[0.04] to-white/[0.01] backdrop-blur-2xl border border-white/10 rounded-2xl p-5 sm:p-6 transition-all duration-500 hover:border-accent/50 hover:shadow-[0_20px_60px_rgba(0,201,255,0.2)] hover:-translate-y-1"
-                >
-                  {/* Inner glow on hover */}
-                  <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-accent/5 via-transparent to-primary/5" />
+              {service.benefits.map((benefit: BenefitItem, index: number) => {
+                const IconComponent = getIcon(benefit.icon || "check_circle");
+                return (
+                  <div
+                    key={index}
+                    className="group relative bg-gradient-to-br from-white/[0.08] via-white/[0.04] to-white/[0.01] backdrop-blur-2xl border border-white/10 rounded-2xl p-5 sm:p-6 transition-all duration-500 hover:border-accent/50 hover:shadow-[0_20px_60px_rgba(0,201,255,0.2)] hover:-translate-y-1"
+                  >
+                    {/* Inner glow on hover */}
+                    <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-accent/5 via-transparent to-primary/5" />
 
-                  {/* Icon - enhanced with glass effect */}
-                  <div className="relative w-12 h-12 sm:w-14 sm:h-14 mb-4">
-                    <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/20 rounded-2xl blur-sm" />
-                    <div className="relative w-full h-full rounded-2xl bg-gradient-to-br from-white/[0.15] to-white/[0.05] backdrop-blur-sm border border-accent/30 flex items-center justify-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] group-hover:border-accent/50 transition-colors duration-500">
-                      <span className="material-icons text-2xl text-accent drop-shadow-[0_4px_8px_rgba(0,201,255,0.5)]">{benefit.icon || "check_circle"}</span>
+                    {/* Icon - enhanced with glass effect */}
+                    <div className="relative w-12 h-12 sm:w-14 sm:h-14 mb-4">
+                      <div className="absolute inset-0 bg-gradient-to-br from-accent/30 to-primary/20 rounded-2xl blur-sm" />
+                      <div className="relative w-full h-full rounded-2xl bg-gradient-to-br from-white/[0.15] to-white/[0.05] backdrop-blur-sm border border-accent/30 flex items-center justify-center shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] group-hover:border-accent/50 transition-colors duration-500">
+                        <IconComponent className="w-6 h-6 text-accent drop-shadow-[0_4px_8px_rgba(0,201,255,0.5)]" />
+                      </div>
                     </div>
-                  </div>
 
-                  <h3 className="relative text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-accent transition-all duration-500">
-                    {benefit.title}
-                  </h3>
-                  <p className="relative text-base text-white/70 leading-relaxed group-hover:text-white/85 transition-colors duration-300">{benefit.description}</p>
-                </div>
-              ))}
+                    <h3 className="relative text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-accent transition-all duration-500">
+                      {benefit.title}
+                    </h3>
+                    <p className="relative text-base text-white/70 leading-relaxed group-hover:text-white/85 transition-colors duration-300">{benefit.description}</p>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
@@ -277,9 +282,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
                   <summary className="relative font-bold text-base sm:text-lg text-white cursor-pointer min-h-[44px] flex items-center list-none group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-accent transition-all duration-500">
                     <span className="flex-1 pr-4">{item.question}</span>
-                    <span className="material-icons text-accent ml-4 group-open:rotate-180 transition-transform duration-300 drop-shadow-[0_4px_8px_rgba(0,201,255,0.5)]">
-                      expand_more
-                    </span>
+                    <ChevronDown className="w-5 h-5 text-accent ml-4 group-open:rotate-180 transition-transform duration-300 drop-shadow-[0_4px_8px_rgba(0,201,255,0.5)]" />
                   </summary>
                   <p className="relative mt-3 sm:mt-4 text-base text-white/70 leading-relaxed group-open:text-white/80 transition-colors duration-300">{item.answer}</p>
                 </details>

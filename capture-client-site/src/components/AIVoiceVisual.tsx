@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import { useTypingEffect } from "@/hooks/useTypingEffect";
+import { PhoneIncoming, Bot, User, Sparkles } from "lucide-react";
 
 interface Message {
   id: number;
@@ -152,7 +153,7 @@ export default function AIVoiceVisual() {
             animate={{ scale: 1, opacity: 1 }}
             className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-accent/20 flex items-center justify-center relative flex-shrink-0"
           >
-            <span className="material-icons text-accent">phone_in_talk</span>
+            <PhoneIncoming className="w-6 h-6 text-accent" />
             {/* Ringing animation */}
             <motion.div
               animate={{
@@ -232,12 +233,12 @@ export default function AIVoiceVisual() {
                 <p className="text-foreground-muted text-xs sm:text-sm mb-1 flex items-center gap-1.5 sm:gap-2">
                   {msg.type === "ai" ? (
                     <>
-                      <span className="material-icons text-xs">smart_toy</span>
+                      <Bot className="w-3 h-3" />
                       AI Agent
                     </>
                   ) : (
                     <>
-                      <span className="material-icons text-xs">person</span>
+                      <User className="w-3 h-3" />
                       {currentScenario.caller}
                     </>
                   )}
@@ -281,9 +282,8 @@ export default function AIVoiceVisual() {
                 repeat: Infinity,
                 repeatType: "loop",
               }}
-              className="material-icons text-accent text-lg"
             >
-              auto_awesome
+              <Sparkles className="w-5 h-5 text-accent" />
             </motion.span>
             <span>AI analyzing conversation sentiment, intent & booking probability...</span>
             <ScanningEffect isActive={isInView} />

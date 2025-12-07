@@ -57,22 +57,22 @@
     {
       "title": "Southwest Virginia Coverage",
       "description": "Serve all of Roanoke Valley including Salem, Vinton, Cave Spring, and surrounding communities with one AI system.",
-      "icon": "location_on"
+      "icon": "MapPin"
     },
     {
       "title": "Small Business Friendly",
       "description": "Affordable solution designed for Roanoke's small and medium businesses. Big-business capabilities at small-business prices.",
-      "icon": "favorite"
+      "icon": "Heart"
     },
     {
       "title": "Always Available",
       "description": "Roanoke customers call evenings and weekends. Our AI is always ready to capture those leads.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Cost Effective",
       "description": "Less than hiring a part-time receptionist. Perfect for growing Roanoke businesses watching overhead.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     }
   ],
   "how_it_works": [

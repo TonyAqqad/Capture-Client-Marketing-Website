@@ -66,32 +66,32 @@
     {
       "title": "Generate Leads 24/7 Automatically",
       "description": "Your automated system works around the clock, capturing and qualifying leads even while you sleep. Never miss an opportunity again.",
-      "icon": "clock"
+      "icon": "Clock"
     },
     {
       "title": "Instant Lead Response (Under 60 Seconds)",
       "description": "AI voice agents respond to inquiries within seconds, not hours or days. Speed-to-lead increases conversion rates by 391%.",
-      "icon": "zap"
+      "icon": "Zap"
     },
     {
       "title": "60-80% Lower Costs",
       "description": "Save $3,000-$5,000/month in labor costs compared to hiring staff. Automated lead gen costs 40% less than manual methods.",
-      "icon": "dollar-sign"
+      "icon": "DollarSign"
     },
     {
       "title": "Scale Infinitely Without Hiring",
       "description": "Handle 10 or 10,000 leads monthly without adding staff. System scales automatically as your business grows.",
-      "icon": "trending-up"
+      "icon": "TrendingUp"
     },
     {
       "title": "Complete CRM Integration",
       "description": "Seamlessly integrates with Salesforce, HubSpot, Zoho, Google Calendar, and 100+ popular CRMs.",
-      "icon": "link"
+      "icon": "Link"
     },
     {
       "title": "Automated Qualification & Nurturing",
       "description": "AI qualifies every lead based on your criteria, books appointments automatically, and nurtures prospects with follow-up sequences.",
-      "icon": "verified"
+      "icon": "CheckCircle"
     }
   ],
   "how_it_works": [

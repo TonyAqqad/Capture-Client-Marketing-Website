@@ -57,27 +57,27 @@
     {
       "title": "Military-Grade Reliability",
       "description": "Norfolk businesses serving military clients need dependability. Our AI has 99.9% uptime and answers every call professionally.",
-      "icon": "shield"
+      "icon": "Shield"
     },
     {
       "title": "24/7 Lead Capture",
       "description": "Norfolk operates around the clock with military and port activities. Our AI works every shift to capture your leads.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Instant Qualification",
       "description": "Pre-qualify Norfolk leads based on your criteria before they reach your sales team. Save time and close more deals.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Automated Scheduling",
       "description": "Let AI book appointments directly into your Norfolk office calendar. No more scheduling hassles.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Cost Savings",
       "description": "More affordable than hiring Norfolk receptionists. Scale your business without increasing overhead.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     }
   ],
   "how_it_works": [

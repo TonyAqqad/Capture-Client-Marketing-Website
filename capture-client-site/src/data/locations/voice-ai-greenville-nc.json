@@ -60,27 +60,27 @@
     {
       "title": "24/7 Lead Capture in Greenville",
       "description": "Never miss a call from Greenville customers. Our AI answers every call instantly.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "AI qualifies Greenville leads immediately for your sales team.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "Let AI book appointments while you serve Greenville clients.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Cost Savings for Greenville Businesses",
       "description": "Save thousands compared to hiring staff. AI scales with growth.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     },
     {
       "title": "Professional Every Time",
       "description": "Consistent call handling for your Greenville business.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     }
   ],
   "how_it_works": [

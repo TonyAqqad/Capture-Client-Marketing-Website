@@ -67,27 +67,27 @@
     {
       "title": "24/7 Lead Capture for Alexandria",
       "description": "Alexandria professionals work long hours. Your AI agent captures leads from early morning commuters to late-night searchers across Old Town, Del Ray, and Carlyle.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "Stop wasting billable hours on unqualified leads. Our AI qualifies Alexandria prospects before they reach you, so you only engage with ready-to-buy clients.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "AI schedules consultations directly into your calendar. No more scheduling back-and-forth with busy Alexandria professionals.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Cost Savings in High-Rent Market",
       "description": "Save thousands compared to hiring staff in Alexandria's expensive labor market. No salary, benefits, or overhead costs.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     },
     {
       "title": "Professional Alexandria Representation",
       "description": "Consistent, polished call handling that matches Alexandria's professional standards. Perfect for law firms, medical practices, and consulting businesses.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     }
   ],
   "how_it_works": [

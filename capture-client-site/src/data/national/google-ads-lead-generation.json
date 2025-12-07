@@ -65,32 +65,32 @@
     {
       "title": "Google Partner Certified",
       "description": "$5M+ in managed ad spend, 15,000+ leads generated. Certified specialists with proven track records and direct Google support.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     },
     {
       "title": "High-Intent Traffic Only",
       "description": "Target customers actively searching for your services right now. 3-5x higher conversion rates than Facebook or other channels.",
-      "icon": "trending-up"
+      "icon": "TrendingUp"
     },
     {
       "title": "4:1 Average ROAS",
       "description": "Our clients average $4 in revenue for every $1 spent on Google Ads. Some industries achieve 6:1 to 10:1 returns with optimized campaigns.",
-      "icon": "dollar-sign"
+      "icon": "DollarSign"
     },
     {
       "title": "Instant AI Lead Qualification",
       "description": "AI voice agents respond within 60 seconds to every call and form submission, qualifying leads 24/7 and booking appointments automatically.",
-      "icon": "zap"
+      "icon": "Zap"
     },
     {
       "title": "Google Local Service Ads",
       "description": "Get the Google Guaranteed badge and top placement above regular ads. Pay only for qualified leads, not clicks.",
-      "icon": "verified"
+      "icon": "CheckCircle"
     },
     {
       "title": "90-Day Performance Guarantee",
       "description": "We guarantee measurable improvements in lead quality and ROI within 90 days, or we make it right. Real-time dashboards track every metric.",
-      "icon": "insights"
+      "icon": "LineChart"
     }
   ],
   "how_it_works": [

@@ -63,37 +63,37 @@
     {
       "title": "Precision Audience Targeting",
       "description": "Target your exact ideal customer by age, location, income, interests, job title, behaviors, and life events. Use advanced geotargeting with custom radius and location exclusions. Meta's targeting is the most sophisticated in digital advertising—we use it to find your perfect prospects.",
-      "icon": "gps_fixed"
+      "icon": "Target"
     },
     {
       "title": "Lower Cost Per Lead",
       "description": "Facebook Ads typically cost 50-70% less than Google Ads for service businesses. Generate more leads with the same budget, or hit your lead goals while spending less. Facebook offers incredible value for smart advertisers.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     },
     {
       "title": "Visual Storytelling",
       "description": "Showcase your work with compelling images and videos. Before/after photos, customer testimonials, project showcases, and educational content build trust and drive engagement. People buy from businesses they know and trust.",
-      "icon": "image"
+      "icon": "Image"
     },
     {
       "title": "Facebook Lead Ads",
       "description": "Capture leads without users ever leaving Facebook. Lead forms auto-fill with user information, making it effortless to submit. This friction-free experience dramatically increases conversion rates compared to sending traffic to external landing pages.",
-      "icon": "group"
+      "icon": "Users"
     },
     {
       "title": "Retargeting Website Visitors",
       "description": "Someone visited your website but didn't call? Retarget them with Facebook ads reminding them why they need your services. Stay top-of-mind and capture leads that would otherwise disappear forever.",
-      "icon": "replay"
+      "icon": "RotateCcw"
     },
     {
       "title": "Lookalike Audiences",
       "description": "Upload your best customer list. Meta's AI finds thousands of people who match your ideal customer profile using machine learning and decades of behavioral data. This AI-powered targeting identifies prospects you'd never find manually—people most likely to need and buy your services.",
-      "icon": "verified_user"
+      "icon": "ShieldCheck"
     },
     {
       "title": "Instagram Ads Integration",
       "description": "Reach customers across both Facebook and Instagram with unified campaigns. Instagram's visual-first platform is perfect for showcasing before/after projects, video testimonials, and engaging reels that build trust and drive conversions.",
-      "icon": "photo_camera"
+      "icon": "Camera"
     }
   ],
   "how_it_works": [

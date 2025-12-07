@@ -56,22 +56,22 @@
     {
       "title": "24/7 Availability for El Paso Customers",
       "description": "Your El Paso customers call at all hours. Our AI voice agents never sleep, ensuring every call from El Paso County is answered professionally.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Bilingual Support Available",
       "description": "Serve El Paso's diverse community with AI that can handle both English and Spanish inquiries seamlessly.",
-      "icon": "language"
+      "icon": "Globe"
     },
     {
       "title": "Automatic Appointment Scheduling",
       "description": "Let AI book appointments directly into your calendar. No more phone tag with El Paso customers.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Cost Savings Over Traditional Staff",
       "description": "Hiring a bilingual receptionist in El Paso costs $32,000-$44,000/year. Our Voice AI costs a fraction of that.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     }
   ],
   "how_it_works": [

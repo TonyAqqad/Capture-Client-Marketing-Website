@@ -1,3 +1,5 @@
+import { GitCompare, Trophy, CheckCircle, X, ArrowRight, Zap, Clock, Phone, Filter, Timer, DollarSign } from 'lucide-react';
+
 interface CompetitorComparisonProps {
   city: string;
 }
@@ -8,42 +10,42 @@ export default function CompetitorComparison({ city }: CompetitorComparisonProps
       feature: "Answer Speed",
       us: "< 2 seconds",
       competitors: "30+ seconds (if answered)",
-      icon: "bolt",
+      icon: Zap,
       highlight: true,
     },
     {
       feature: "24/7 Availability",
       us: "Always available",
       competitors: "Business hours only",
-      icon: "schedule",
+      icon: Clock,
       highlight: true,
     },
     {
       feature: "Call Quality",
       us: "Every call answered",
       competitors: "27% of calls missed",
-      icon: "phone_in_talk",
+      icon: Phone,
       highlight: false,
     },
     {
       feature: "Lead Qualification",
       us: "Instant AI qualification",
       competitors: "Manual (wastes time)",
-      icon: "filter_alt",
+      icon: Filter,
       highlight: true,
     },
     {
       feature: "Setup Time",
       us: "1-2 weeks",
       competitors: "4-6 weeks",
-      icon: "timer",
+      icon: Timer,
       highlight: false,
     },
     {
       feature: "Monthly Cost",
       us: "From $797/month",
       competitors: "$3,000+ for staff",
-      icon: "attach_money",
+      icon: DollarSign,
       highlight: true,
     },
   ];
@@ -59,7 +61,7 @@ export default function CompetitorComparison({ city }: CompetitorComparisonProps
         {/* Section Header */}
         <div className="text-center mb-10 sm:mb-14">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-400/10 border border-cyan-400/30 mb-6">
-            <span className="material-icons text-cyan-400 text-sm">compare</span>
+            <GitCompare className="w-4 h-4 text-cyan-400" />
             <span className="text-xs font-bold text-cyan-300 uppercase tracking-wider">
               Why We're Different
             </span>
@@ -86,7 +88,7 @@ export default function CompetitorComparison({ city }: CompetitorComparisonProps
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 border border-cyan-400/50 rounded-lg">
-                  <span className="material-icons text-cyan-400 text-sm">emoji_events</span>
+                  <Trophy className="w-4 h-4 text-cyan-400" />
                   <span className="text-xs sm:text-sm font-black text-cyan-300">Capture Client</span>
                 </div>
               </div>
@@ -108,9 +110,7 @@ export default function CompetitorComparison({ city }: CompetitorComparisonProps
                   {/* Feature Name */}
                   <div className="flex items-center gap-3">
                     <div className="flex items-center justify-center w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-slate-800/50 border border-slate-700 shrink-0">
-                      <span className="material-icons text-slate-400 text-base sm:text-lg">
-                        {item.icon}
-                      </span>
+                      <item.icon className="w-4 h-4 sm:w-5 sm:h-5 text-slate-400" />
                     </div>
                     <span className="text-sm sm:text-base font-bold text-white">
                       {item.feature}
@@ -120,7 +120,7 @@ export default function CompetitorComparison({ city }: CompetitorComparisonProps
                   {/* Our Value */}
                   <div className="flex items-center justify-center text-center">
                     <div className="inline-flex items-center gap-2 px-3 py-2 bg-green-500/10 border border-green-400/30 rounded-lg">
-                      <span className="material-icons text-green-400 text-sm">check_circle</span>
+                      <CheckCircle className="w-4 h-4 text-green-400" />
                       <span className="text-xs sm:text-sm font-bold text-green-300">
                         {item.us}
                       </span>
@@ -130,7 +130,7 @@ export default function CompetitorComparison({ city }: CompetitorComparisonProps
                   {/* Competitor Value */}
                   <div className="flex items-center justify-center text-center">
                     <div className="inline-flex items-center gap-2 px-3 py-2 bg-red-500/10 border border-red-400/30 rounded-lg">
-                      <span className="material-icons text-red-400 text-sm">cancel</span>
+                      <X className="w-4 h-4 text-red-400" />
                       <span className="text-xs sm:text-sm font-medium text-red-300">
                         {item.competitors}
                       </span>
@@ -157,21 +157,21 @@ export default function CompetitorComparison({ city }: CompetitorComparisonProps
               `}
             >
               <div className="flex items-center gap-2 mb-3">
-                <span className="material-icons text-cyan-400 text-lg">{item.icon}</span>
+                <item.icon className="w-5 h-5 text-cyan-400" />
                 <span className="text-sm font-black text-white">{item.feature}</span>
               </div>
               <div className="space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-slate-400">Us:</span>
                   <div className="flex items-center gap-1.5 px-2.5 py-1 bg-green-500/10 border border-green-400/30 rounded">
-                    <span className="material-icons text-green-400 text-xs">check_circle</span>
+                    <CheckCircle className="w-3 h-3 text-green-400" />
                     <span className="text-xs font-bold text-green-300">{item.us}</span>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-slate-400">Others:</span>
                   <div className="flex items-center gap-1.5 px-2.5 py-1 bg-red-500/10 border border-red-400/30 rounded">
-                    <span className="material-icons text-red-400 text-xs">cancel</span>
+                    <X className="w-3 h-3 text-red-400" />
                     <span className="text-xs font-medium text-red-300">{item.competitors}</span>
                   </div>
                 </div>
@@ -197,9 +197,7 @@ export default function CompetitorComparison({ city }: CompetitorComparisonProps
                 className="group inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 px-8 py-4 rounded-xl font-black text-base hover:shadow-2xl hover:shadow-cyan-400/50 hover:scale-105 transition-all whitespace-nowrap"
               >
                 <span>Get Started</span>
-                <span className="material-icons text-xl group-hover:translate-x-1 transition-transform">
-                  arrow_forward
-                </span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
           </div>

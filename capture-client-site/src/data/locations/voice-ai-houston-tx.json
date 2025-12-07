@@ -56,22 +56,22 @@
     {
       "title": "24/7 Availability for Houston Customers",
       "description": "Your Houston customers call at all hours. Our AI voice agents never sleep, ensuring every call from Harris County is answered professionally.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "Stop wasting time on unqualified leads. Our AI asks the right questions upfront so you only talk to serious Houston prospects ready to buy.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Automatic Appointment Scheduling",
       "description": "Let AI book appointments directly into your calendar. No more phone tag with Houston customers.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Cost Savings Over Traditional Staff",
       "description": "Hiring a receptionist in Houston costs $32,000-$42,000/year. Our Voice AI costs a fraction of that.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     }
   ],
   "how_it_works": [

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
+import { Ban, TrendingUp, BadgeCheck, Zap, TrendingDown } from "lucide-react";
 
 // ============================================================================
 // TYPE DEFINITIONS
@@ -395,9 +396,9 @@ export default function MoneyLossCalculator() {
                       className="inline-block btn-primary text-xl px-12 py-5 shadow-glow-lg relative group"
                     >
                       <span className="relative z-10 flex items-center gap-3">
-                        <span className="material-icons">block</span>
+                        <Ban className="w-5 h-5" />
                         Stop Losing Money Today
-                        <span className="material-icons">trending_up</span>
+                        <TrendingUp className="w-5 h-5" />
                       </span>
                       <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-green-500 opacity-0 group-hover:opacity-20 transition-opacity rounded-xl"></div>
                     </motion.a>
@@ -422,15 +423,15 @@ export default function MoneyLossCalculator() {
             className="flex items-center justify-center gap-8 mt-12 text-foreground-muted text-sm"
           >
             <div className="flex items-center gap-2">
-              <span className="material-icons text-accent">verified</span>
+              <BadgeCheck className="w-5 h-5 text-accent" />
               <span>Trusted by 500+ businesses</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="material-icons text-accent">speed</span>
+              <Zap className="w-5 h-5 text-accent" />
               <span>Setup in 48 hours</span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="material-icons text-accent">trending_up</span>
+              <TrendingUp className="w-5 h-5 text-accent" />
               <span>Average 3x ROI</span>
             </div>
           </motion.div>

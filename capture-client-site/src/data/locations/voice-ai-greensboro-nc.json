@@ -35,27 +35,27 @@
     {
       "title": "Round-the-Clock Availability",
       "description": "Your Greensboro business is always open to new opportunities. AI answers calls 24/7, including nights, weekends, and holidays.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Smart Lead Qualification",
       "description": "AI asks targeted questions to determine lead quality and intent, so you focus your time on prospects ready to buy.",
-      "icon": "psychology"
+      "icon": "Brain"
     },
     {
       "title": "Automated Scheduling",
       "description": "No more phone tag. AI books appointments, consultations, and estimates directly into your calendar automatically.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Lower Operating Costs",
       "description": "Reduce overhead by eliminating expensive answering services and minimizing receptionist needs while improving service quality.",
-      "icon": "trending_down"
+      "icon": "TrendingDown"
     },
     {
       "title": "Consistent Professionalism",
       "description": "Every caller gets the same high-quality, professional experience representing your Greensboro brand perfectly.",
-      "icon": "star"
+      "icon": "Star"
     }
   ],
   "how_it_works": {

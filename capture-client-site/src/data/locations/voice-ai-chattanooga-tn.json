@@ -43,27 +43,27 @@
     {
       "title": "Never Miss a Chattanooga Lead",
       "description": "Every call is answered instantly, whether it's a customer in Lookout Mountain or downtown. No more voicemails, no more lost opportunities.",
-      "icon": "phone_in_talk"
+      "icon": "Phone"
     },
     {
       "title": "Smart Lead Qualification",
       "description": "AI asks qualifying questions specific to your Chattanooga business, filtering out tire-kickers and routing serious buyers directly to you.",
-      "icon": "gps_fixed"
+      "icon": "Target"
     },
     {
       "title": "Appointment Scheduling That Works",
       "description": "Customers book instantly while interest is high. No phone tag, no scheduling conflicts - just more appointments on your calendar.",
-      "icon": "event_available"
+      "icon": "CalendarCheck"
     },
     {
       "title": "Cost-Effective Scalability",
       "description": "Handle unlimited calls for one flat rate. Perfect for growing Chattanooga businesses that need enterprise capabilities on a small business budget.",
-      "icon": "account_balance_wallet"
+      "icon": "Wallet"
     },
     {
       "title": "Gig City-Speed Implementation",
       "description": "Launch in less than a week. Chattanooga businesses expect speed - we deliver AI solutions at the pace of the Gig City.",
-      "icon": "bolt"
+      "icon": "Zap"
     }
   ],
   "how_it_works": [

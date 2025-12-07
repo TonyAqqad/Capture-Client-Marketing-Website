@@ -2,6 +2,7 @@
 
 import { motion } from "@/lib/motion";
 import { ReactNode } from "react";
+import { LucideIcon } from "lucide-react";
 
 interface ButtonProps {
   children: ReactNode;
@@ -10,7 +11,7 @@ interface ButtonProps {
   className?: string;
   onClick?: () => void;
   href?: string;
-  icon?: string; // Material icon name
+  icon?: LucideIcon; // Lucide React icon component
   iconPosition?: "left" | "right";
   fullWidth?: boolean;
   ariaLabel?: string; // Accessible label for links without visible text
@@ -23,7 +24,7 @@ export function Button({
   className = "",
   onClick,
   href,
-  icon,
+  icon: Icon,
   iconPosition = "right",
   fullWidth = false,
   ariaLabel
@@ -76,19 +77,18 @@ export function Button({
 
       {/* Content */}
       <span className="relative z-10 flex items-center gap-2">
-        {icon && iconPosition === "left" && (
-          <span className="material-icons text-current" aria-hidden="true">{icon}</span>
+        {Icon && iconPosition === "left" && (
+          <Icon className="w-4 h-4" aria-hidden="true" />
         )}
         {children}
-        {icon && iconPosition === "right" && (
-          <motion.span
-            className="material-icons text-current"
+        {Icon && iconPosition === "right" && (
+          <motion.div
             aria-hidden="true"
             animate={{ x: [0, 4, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
           >
-            {icon}
-          </motion.span>
+            <Icon className="w-4 h-4" />
+          </motion.div>
         )}
       </span>
     </>

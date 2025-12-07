@@ -43,32 +43,32 @@
     {
       "title": "24/7 Availability",
       "description": "Bowling Green customers call when it's convenient for them - early morning, late night, or weekends. Our AI ensures you never miss a potential customer.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "AI asks customized questions to qualify Bowling Green leads based on your criteria. Focus your time on prospects ready to buy.",
-      "icon": "check_circle"
+      "icon": "CheckCircle"
     },
     {
       "title": "Automated Scheduling",
       "description": "Stop playing phone tag with busy Bowling Green customers. AI books appointments directly into your calendar based on your real-time availability.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Reduce Staffing Costs",
       "description": "Eliminate expensive answering services or reduce front desk workload. Bowling Green businesses typically save $2,500-$4,000 monthly.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     },
     {
       "title": "Perfect Call Handling",
       "description": "AI never has a bad day, forgets training, or treats customers poorly. Every Bowling Green caller gets consistent, professional service.",
-      "icon": "star"
+      "icon": "Star"
     },
     {
       "title": "Rapid ROI",
       "description": "Most Bowling Green clients see positive return on investment within 3-4 weeks. One recovered lead often covers an entire month's service.",
-      "icon": "trending_up"
+      "icon": "TrendingUp"
     }
   ],
   "how_it_works": {

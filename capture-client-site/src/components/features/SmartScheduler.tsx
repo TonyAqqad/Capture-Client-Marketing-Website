@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
 import { presets } from "@/lib/simulator-animations";
 import { trackFormStart, trackFormSubmission } from "@/lib/analytics";
+import { Check, ArrowLeft, ArrowRight, CalendarCheck, Clock, User, Mail, Headset } from "lucide-react";
 
 // ============================================================================
 // TYPE DEFINITIONS
@@ -351,7 +352,7 @@ export default function SmartScheduler() {
                       transition={{ type: "spring", stiffness: 200, damping: 15 }}
                       className="w-20 h-20 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center mx-auto mb-6"
                     >
-                      <span className="material-icons text-accent text-5xl">event_available</span>
+                      <CalendarCheck className="w-12 h-12 text-accent" />
                     </motion.div>
                     <h3 className="text-3xl font-heading font-bold text-foreground mb-3">
                       You're All Set!
@@ -364,28 +365,28 @@ export default function SmartScheduler() {
                   <div className="card p-6 mb-8 bg-accent/5 border-accent/20">
                     <div className="space-y-4">
                       <div className="flex items-center gap-3">
-                        <span className="material-icons text-accent">schedule</span>
+                        <Clock className="w-5 h-5 text-accent flex-shrink-0" />
                         <div>
                           <p className="text-foreground-muted text-sm">Time</p>
                           <p className="text-foreground font-semibold">{selectedTime}</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-3">
-                        <span className="material-icons text-accent">person</span>
+                        <User className="w-5 h-5 text-accent flex-shrink-0" />
                         <div>
                           <p className="text-foreground-muted text-sm">Name</p>
                           <p className="text-foreground font-semibold">{formData.name}</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-3">
-                        <span className="material-icons text-accent">email</span>
+                        <Mail className="w-5 h-5 text-accent flex-shrink-0" />
                         <div>
                           <p className="text-foreground-muted text-sm">Email</p>
                           <p className="text-foreground font-semibold">{formData.email}</p>
                         </div>
                       </div>
                       <div className="flex items-center gap-3">
-                        <span className="material-icons text-accent">support_agent</span>
+                        <Headset className="w-5 h-5 text-accent flex-shrink-0" />
                         <div>
                           <p className="text-foreground-muted text-sm">Service</p>
                           <p className="text-foreground font-semibold">{formData.service}</p>
@@ -412,7 +413,7 @@ export default function SmartScheduler() {
                   disabled={step === "time"}
                   className="btn-ghost disabled:opacity-30 disabled:cursor-not-allowed"
                 >
-                  <span className="material-icons">arrow_back</span>
+                  <ArrowLeft className="w-5 h-5" />
                   Back
                 </button>
                 <button
@@ -421,7 +422,7 @@ export default function SmartScheduler() {
                   className="btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {step === "info" ? "Confirm Booking" : "Next"}
-                  <span className="material-icons">arrow_forward</span>
+                  <ArrowRight className="w-5 h-5" />
                 </button>
               </div>
             )}
@@ -466,7 +467,7 @@ function ProgressStep({ number, label, active, completed }: ProgressStepProps) {
             animate={{ scale: 1, rotate: 0 }}
             transition={{ type: "spring", stiffness: 300, damping: 15 }}
           >
-            <span className="material-icons text-lg">check</span>
+            <Check className="w-5 h-5" />
           </motion.div>
         )}
         {!completed && (

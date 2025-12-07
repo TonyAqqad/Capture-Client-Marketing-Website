@@ -1,5 +1,7 @@
 "use client";
 
+import { Star, Quote, MapPin } from "lucide-react";
+
 interface Testimonial {
   quote: string;
   // Support both data formats
@@ -36,7 +38,7 @@ export default function PremiumLocationTestimonials({
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-400/10 border border-green-400/30 mb-6">
-            <span className="material-icons text-green-400 text-sm">star</span>
+            <Star className="w-3.5 h-3.5 text-green-400 fill-green-400" />
             <span className="text-xs font-bold text-green-300 uppercase tracking-wider">
               Client Success Stories
             </span>
@@ -72,9 +74,7 @@ export default function PremiumLocationTestimonials({
                 <div className="relative mb-6">
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl blur-md opacity-30 group-hover:opacity-50 transition-opacity" />
                   <div className="relative flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-400/20 to-blue-500/20 border border-cyan-400/30">
-                    <span className="material-icons text-cyan-300 text-2xl">
-                      format_quote
-                    </span>
+                    <Quote className="w-6 h-6 text-cyan-300" />
                   </div>
                 </div>
 
@@ -114,9 +114,7 @@ export default function PremiumLocationTestimonials({
                     </div>
                     {testimonial.location && (
                       <div className="flex items-center gap-1 text-xs text-cyan-400 mt-1">
-                        <span className="material-icons" style={{ fontSize: '12px' }}>
-                          location_on
-                        </span>
+                        <MapPin className="w-3 h-3" />
                         <span>{testimonial.location}</span>
                       </div>
                     )}
@@ -125,13 +123,10 @@ export default function PremiumLocationTestimonials({
                   {/* Star Rating */}
                   <div className="hidden sm:flex items-center gap-0.5 flex-shrink-0">
                     {[...Array(testimonial.rating || 5)].map((_, i) => (
-                      <span
+                      <Star
                         key={i}
-                        className="material-icons text-yellow-400"
-                        style={{ fontSize: '18px' }}
-                      >
-                        star
-                      </span>
+                        className="w-4 h-4 text-yellow-400 fill-yellow-400"
+                      />
                     ))}
                   </div>
                 </div>

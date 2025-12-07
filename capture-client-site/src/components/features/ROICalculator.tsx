@@ -3,6 +3,7 @@
 import { useState, useEffect, memo } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
 import { presets } from "@/lib/simulator-animations";
+import { RocketIcon } from "lucide-react";
 
 // ============================================================================
 // TYPE DEFINITIONS
@@ -303,7 +304,7 @@ export default function ROICalculator() {
                   {/* CTA */}
                   <div className="text-center">
                     <a href="#contact" className="btn-primary inline-flex items-center gap-2">
-                      <span className="material-icons">rocket_launch</span>
+                      <RocketIcon className="w-5 h-5" />
                       Start Capturing These Leads
                     </a>
                     <p className="text-foreground-muted text-xs mt-4">

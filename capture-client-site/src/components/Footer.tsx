@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { trackPhoneClick, trackEmailClick } from "@/lib/analytics";
 import ObfuscatedEmail from "@/components/ui/ObfuscatedEmail";
+import { Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -58,7 +59,7 @@ export default function Footer() {
                   {/* Subtle gradient on hover */}
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                  <span className="material-icons text-primary group-hover:text-accent text-xl transition-all duration-300 group-hover:rotate-12 relative z-10">phone</span>
+                  <Phone className="w-5 h-5 text-primary group-hover:text-accent transition-all duration-300 group-hover:rotate-12 relative z-10" />
                   <span className="text-foreground-muted group-hover:text-accent font-body text-base sm:text-sm transition-colors duration-300 relative z-10">
                     (865) 346-3339
                   </span>
@@ -72,7 +73,7 @@ export default function Footer() {
                 />
 
                 <div className="flex items-center gap-3 min-h-[48px] -mx-2 px-2">
-                  <span className="material-icons text-primary text-xl">location_on</span>
+                  <MapPin className="w-5 h-5 text-primary" />
                   <span className="text-foreground-muted font-body text-base sm:text-sm">Knoxville, TN</span>
                 </div>
               </div>

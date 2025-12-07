@@ -52,17 +52,17 @@
     {
       "title": "24/7 for Nashville",
       "description": "AI scales to handle 10 or 1,000 calls per day.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Beat Competition",
       "description": "Answer in under 3 seconds, every time.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     },
     {
       "title": "Bilingual Support",
       "description": "Communicate in multiple languages for Nashville customers.",
-      "icon": "public"
+      "icon": "Globe"
     }
   ],
   "how_it_works": [

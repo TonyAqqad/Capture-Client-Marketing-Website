@@ -35,27 +35,27 @@
     {
       "title": "Zero Missed Opportunities",
       "description": "Every unanswered call is money left on the table. AI ensures 100% of Durham calls are answered professionally, instantly.",
-      "icon": "phone_enabled"
+      "icon": "Phone"
     },
     {
       "title": "Intelligent Conversation",
       "description": "Advanced AI understands context, answers complex questions, and conducts natural conversations with your Durham customers.",
-      "icon": "chat"
+      "icon": "MessageCircle"
     },
     {
       "title": "Instant Appointment Booking",
       "description": "AI checks your availability and books appointments in real-time during the call - no follow-up needed.",
-      "icon": "event_available"
+      "icon": "CalendarCheck"
     },
     {
       "title": "Reduce Labor Costs",
       "description": "Eliminate answering service fees and reduce receptionist overhead while providing superior service to Durham customers.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     },
     {
       "title": "Advanced Analytics",
       "description": "Gain insights into call patterns, lead sources, conversion rates, and customer questions with detailed reporting.",
-      "icon": "bar_chart"
+      "icon": "BarChart"
     }
   ],
   "how_it_works": {

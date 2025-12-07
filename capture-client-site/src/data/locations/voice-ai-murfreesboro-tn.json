@@ -48,12 +48,12 @@
     {
       "title": "24/7 Availability",
       "description": "AI for Murfreesboro customers.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Lead Qualification",
       "description": "Qualifies Murfreesboro prospects.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     }
   ],
   "how_it_works": [

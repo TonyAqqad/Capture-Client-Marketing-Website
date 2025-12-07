@@ -66,32 +66,32 @@
     {
       "title": "Advanced Meta Targeting",
       "description": "Reach your ideal customers with lookalike audiences, custom audience segmentation, interest targeting, and geotargeting. Leverage Meta's AI trained on billions of data points.",
-      "icon": "hub"
+      "icon": "Network"
     },
     {
       "title": "Lower Cost Per Lead",
       "description": "Facebook Ads typically cost 50-70% less per lead than Google Ads. Average cost per lead: $15-$50 depending on industry.",
-      "icon": "dollar-sign"
+      "icon": "DollarSign"
     },
     {
       "title": "Instant AI Follow-Up",
       "description": "AI voice agents respond within 60 seconds of form submission, qualifying leads automatically and booking appointments 24/7.",
-      "icon": "zap"
+      "icon": "Zap"
     },
     {
       "title": "Facebook + Instagram Reach",
       "description": "Your ads run on both Facebook and Instagram, reaching 3+ billion active users monthly for maximum exposure.",
-      "icon": "trending-up"
+      "icon": "TrendingUp"
     },
     {
       "title": "Lead Ads Auto-Fill",
       "description": "Facebook Lead Ads auto-fill user information, reducing friction and increasing conversion rates by 25-40%.",
-      "icon": "verified"
+      "icon": "CheckCircle"
     },
     {
       "title": "Full-Funnel Strategy",
       "description": "We create awareness campaigns, nurturing sequences, and retargeting ads to guide prospects from discovery to appointment.",
-      "icon": "link"
+      "icon": "Link"
     }
   ],
   "how_it_works": [

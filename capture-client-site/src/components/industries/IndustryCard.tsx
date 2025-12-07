@@ -4,18 +4,19 @@ import { motion } from "@/lib/motion";
 import Link from "next/link";
 import { Industry } from "@/data/industries";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { Briefcase, Wrench, Home, Stethoscope, UtensilsCrossed, ArrowRight, type LucideIcon } from "lucide-react";
 
 interface IndustryCardProps {
   industry: Industry;
   index?: number;
 }
 
-const CATEGORY_ICONS: Record<string, string> = {
-  'Professional Services': 'business_center',
-  'Home Services': 'home_repair_service',
-  'Real Estate & Property': 'real_estate_agent',
-  'Healthcare': 'medical_services',
-  'Hospitality': 'restaurant',
+const CATEGORY_ICONS: Record<string, LucideIcon> = {
+  'Professional Services': Briefcase,
+  'Home Services': Wrench,
+  'Real Estate & Property': Home,
+  'Healthcare': Stethoscope,
+  'Hospitality': UtensilsCrossed,
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
@@ -27,7 +28,7 @@ const CATEGORY_COLORS: Record<string, string> = {
 };
 
 export function IndustryCard({ industry, index = 0 }: IndustryCardProps) {
-  const categoryIcon = CATEGORY_ICONS[industry.category] || 'business';
+  const CategoryIcon = CATEGORY_ICONS[industry.category] || Briefcase;
   const categoryGradient = CATEGORY_COLORS[industry.category] || 'from-accent-500/20 to-primary-600/20';
 
   return (
@@ -43,9 +44,7 @@ export function IndustryCard({ industry, index = 0 }: IndustryCardProps) {
             {/* Icon & Category Badge */}
             <div className="flex items-start justify-between mb-6">
               <div className={`relative w-16 h-16 rounded-2xl bg-gradient-to-br ${categoryGradient} flex items-center justify-center flex-shrink-0`}>
-                <span className="material-icons text-4xl text-gold-400 group-hover:text-gold-300 transition-colors duration-300 flex-shrink-0">
-                  {categoryIcon}
-                </span>
+                <CategoryIcon className="w-9 h-9 text-gold-400 group-hover:text-gold-300 transition-colors duration-300 flex-shrink-0" />
 
                 {/* Subtle glow effect */}
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-gold-400/0 to-gold-600/0 group-hover:from-gold-400/20 group-hover:to-gold-600/10 transition-all duration-500" />
@@ -91,13 +90,13 @@ export function IndustryCard({ industry, index = 0 }: IndustryCardProps) {
             {/* CTA */}
             <div className="flex items-center text-accent-400 font-semibold group-hover:text-accent-300 transition-colors duration-300">
               <span>Learn More</span>
-              <motion.span
-                className="material-icons ml-2"
+              <motion.div
+                className="ml-2"
                 animate={{ x: [0, 4, 0] }}
                 transition={{ duration: 1.5, repeat: Infinity }}
               >
-                arrow_forward
-              </motion.span>
+                <ArrowRight className="w-5 h-5" />
+              </motion.div>
             </div>
           </div>
 

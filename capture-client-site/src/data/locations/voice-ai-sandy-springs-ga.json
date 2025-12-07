@@ -53,22 +53,22 @@
     {
       "title": "Premium Call Experience",
       "description": "White-glove AI service matching Sandy Springs expectations.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     },
     {
       "title": "Professional Image",
       "description": "Never let calls go to voicemail - maintain premium brand image.",
-      "icon": "star"
+      "icon": "Star"
     },
     {
       "title": "Perimeter Center Ready",
       "description": "Handle high-volume professional services efficiently.",
-      "icon": "apartment"
+      "icon": "Building"
     },
     {
       "title": "Immediate Response",
       "description": "Affluent Sandy Springs clients expect instant answers - AI delivers.",
-      "icon": "bolt"
+      "icon": "Zap"
     }
   ],
   "how_it_works": [

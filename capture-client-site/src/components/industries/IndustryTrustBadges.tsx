@@ -3,6 +3,18 @@
 import { motion, useInView } from "@/lib/motion";
 import { useRef, useState, useEffect } from "react";
 import { GlassCard } from "@/components/ui/GlassCard";
+import {
+  Star,
+  Users,
+  Clock,
+  ShieldCheck,
+  BadgeCheck,
+  Shield,
+  Award,
+  CheckCircle,
+  TrendingUp,
+  type LucideIcon
+} from "lucide-react";
 
 export interface TrustBadge {
   type: "compliance" | "rating" | "certification" | "clients" | "award";
@@ -11,6 +23,20 @@ export interface TrustBadge {
   value?: string;
   description?: string;
 }
+
+// Map Material Icons to Lucide icons
+const ICON_MAP: Record<string, LucideIcon> = {
+  'verified': BadgeCheck,
+  'shield': Shield,
+  'verified_user': ShieldCheck,
+  'star': Star,
+  'check_circle': CheckCircle,
+  'trending_up': TrendingUp,
+  'groups': Users,
+  'schedule': Clock,
+  'emoji_events': Award,
+  'workspace_premium': Award,
+};
 
 interface IndustryTrustBadgesProps {
   badges: TrustBadge[];
@@ -109,17 +135,13 @@ export function IndustryTrustBadges({
 
     for (let i = 0; i < fullStars; i++) {
       stars.push(
-        <span key={`full-${i}`} className="material-icons text-yellow-400 text-xl">
-          star
-        </span>
+        <Star key={`full-${i}`} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
       );
     }
 
     if (hasHalfStar) {
       stars.push(
-        <span key="half" className="material-icons text-yellow-400 text-xl">
-          star_half
-        </span>
+        <Star key="half" className="w-5 h-5 text-yellow-400 fill-yellow-400" style={{ clipPath: 'inset(0 50% 0 0)' }} />
       );
     }
 
@@ -145,9 +167,7 @@ export function IndustryTrustBadges({
               <GlassCard variant="premium" hover={false} interactive={false}>
                 <div className="p-8">
                   <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-                    <span className="material-icons text-5xl text-gold-400">
-                      groups
-                    </span>
+                    <Users className="w-12 h-12 text-gold-400" />
                     <div className="text-center md:text-left">
                       <div className="text-sm font-semibold text-foreground-muted uppercase tracking-wide mb-1">
                         Trusted By
@@ -192,9 +212,7 @@ export function IndustryTrustBadges({
 
             {/* 24/7 Availability Badge */}
             <div className="flex items-center gap-3 p-6 rounded-2xl bg-gradient-to-br from-accent-500/20 to-accent-600/10 backdrop-blur-xl border border-accent-500/30">
-              <span className="material-icons text-3xl text-accent-400">
-                schedule
-              </span>
+              <Clock className="w-8 h-8 text-accent-400" />
               <div>
                 <div className="text-lg font-bold text-foreground">24/7 Availability</div>
                 <div className="text-sm text-foreground-muted">Always On, Never Miss a Call</div>
@@ -219,9 +237,10 @@ export function IndustryTrustBadges({
                   {/* Icon */}
                   <div className="flex justify-center mb-3">
                     <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <span className={`material-icons text-3xl ${getBadgeIconColor(badge.type)}`}>
-                        {badge.icon}
-                      </span>
+                      {(() => {
+                        const IconComponent = ICON_MAP[badge.icon] || Shield;
+                        return <IconComponent className={`w-8 h-8 ${getBadgeIconColor(badge.type)}`} />;
+                      })()}
                     </div>
                   </div>
 
@@ -260,9 +279,7 @@ export function IndustryTrustBadges({
               className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-blue-500/10 to-green-500/10 border border-blue-500/20 text-center"
             >
               <div className="flex items-center justify-center gap-3 mb-2">
-                <span className="material-icons text-blue-400 text-2xl">
-                  verified_user
-                </span>
+                <ShieldCheck className="w-6 h-6 text-blue-400" />
                 <span className="text-lg font-bold text-foreground">
                   Enterprise-Grade Security & Compliance
                 </span>

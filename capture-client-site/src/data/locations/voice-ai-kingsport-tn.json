@@ -44,12 +44,12 @@
     {
       "title": "24/7 Kingsport",
       "description": "AI never sleeps.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Qualify Leads",
       "description": "Qualify Kingsport prospects.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     }
   ],
   "how_it_works": [

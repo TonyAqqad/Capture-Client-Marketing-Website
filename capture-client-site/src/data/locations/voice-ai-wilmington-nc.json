@@ -60,27 +60,27 @@
     {
       "title": "24/7 Lead Capture in Wilmington",
       "description": "Never miss a call from Wilmington customers, even during peak tourist season or after hours. Our AI answers every call instantly.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "AI qualifies Wilmington leads immediately, so your sales team only talks to ready-to-buy prospects.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "Let AI book appointments while you focus on serving Wilmington clients.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Cost Savings for Wilmington Businesses",
       "description": "Save thousands compared to hiring seasonal staff. Our AI scales with your business growth.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     },
     {
       "title": "Professional Every Time",
       "description": "Consistent, professional call handling for your Wilmington business, even during busy season.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     }
   ],
   "how_it_works": [

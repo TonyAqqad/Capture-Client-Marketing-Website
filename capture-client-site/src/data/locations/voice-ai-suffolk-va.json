@@ -67,27 +67,27 @@
     {
       "title": "24/7 Lead Capture for Suffolk",
       "description": "Suffolk spans 400+ square miles. Your AI agent captures leads from downtown businesses to rural customers calling at any hour of the day.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "Stop wasting time driving to unqualified prospects. Our AI pre-qualifies Suffolk leads before scheduling appointments or estimates.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "Let AI schedule appointments directly into your calendar while you focus on serving Suffolk's diverse customer base.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Cost-Effective Business Growth",
       "description": "Save thousands compared to hiring staff. Perfect for Suffolk businesses looking to grow without overhead expansion.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     },
     {
       "title": "Professional Call Handling",
       "description": "Consistent, friendly service that represents your Suffolk business perfectly across all customer interactions.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     }
   ],
   "how_it_works": [

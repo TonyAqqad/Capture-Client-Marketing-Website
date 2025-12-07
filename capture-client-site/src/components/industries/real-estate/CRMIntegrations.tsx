@@ -4,6 +4,19 @@ import { useRef } from "react";
 import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import { GlassCard } from "@/components/ui/GlassCard";
+import {
+  RefreshCw,
+  RefreshCcw,
+  Sparkles,
+  PencilOff,
+  CheckCircle,
+  Users,
+  Rocket,
+  Mountain,
+  Building2,
+  Home,
+  type LucideIcon
+} from "lucide-react";
 
 interface CRMPlatform {
   name: string;
@@ -54,6 +67,16 @@ const crmPlatforms: CRMPlatform[] = [
   }
 ];
 
+// Icon mapping for CRM logos
+const iconMap: Record<string, LucideIcon> = {
+  supervisor_account: Users,
+  rocket_launch: Rocket,
+  terrain: Mountain,
+  business: Building2,
+  home_work: Home,
+  real_estate_agent: Building2
+};
+
 export function CRMIntegrations() {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { threshold: 0.2 });
@@ -72,7 +95,7 @@ export function CRMIntegrations() {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent/10 border border-accent/20 backdrop-blur-xl mb-6">
-            <span className="material-icons text-accent text-xl">sync</span>
+            <RefreshCw className="text-accent w-5 h-5" />
             <span className="text-sm font-semibold text-accent uppercase tracking-wide">
               Seamless Integration
             </span>
@@ -116,9 +139,10 @@ export function CRMIntegrations() {
 
                 {/* Logo placeholder */}
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/20 to-gold/20 border-2 border-accent/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="material-icons text-accent text-3xl">
-                    {crm.logo}
-                  </span>
+                  {(() => {
+                    const IconComponent = iconMap[crm.logo] || Building2;
+                    return <IconComponent className="text-accent w-7 h-7" />;
+                  })()}
                 </div>
 
                 {/* Name */}
@@ -138,9 +162,7 @@ export function CRMIntegrations() {
                       key={fIndex}
                       className="flex items-center gap-2 text-sm"
                     >
-                      <span className="material-icons text-accent text-sm">
-                        check_circle
-                      </span>
+                      <CheckCircle className="text-accent w-4 h-4" />
                       <span className="text-white/70">{feature}</span>
                     </div>
                   ))}
@@ -167,7 +189,7 @@ export function CRMIntegrations() {
         >
           <div className="flex items-center gap-4 p-6 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10">
             <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center flex-shrink-0">
-              <span className="material-icons text-black text-2xl">sync_alt</span>
+              <RefreshCcw className="text-black w-6 h-6" />
             </div>
             <div>
               <p className="font-bold text-white text-lg">Instant Sync</p>
@@ -177,7 +199,7 @@ export function CRMIntegrations() {
 
           <div className="flex items-center gap-4 p-6 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10">
             <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold to-gold-light flex items-center justify-center flex-shrink-0">
-              <span className="material-icons text-black text-2xl">auto_awesome</span>
+              <Sparkles className="text-black w-6 h-6" />
             </div>
             <div>
               <p className="font-bold text-white text-lg">Auto-Scoring</p>
@@ -187,7 +209,7 @@ export function CRMIntegrations() {
 
           <div className="flex items-center gap-4 p-6 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10">
             <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-cyan-400 flex items-center justify-center flex-shrink-0">
-              <span className="material-icons text-black text-2xl">edit_off</span>
+              <PencilOff className="text-black w-6 h-6" />
             </div>
             <div>
               <p className="font-bold text-white text-lg">Zero Data Entry</p>

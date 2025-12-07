@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { TrendingDown, Store, PhoneMissed, Building2, ArrowRight } from 'lucide-react';
 
 interface LocalMarketStatsProps {
   city: string;
@@ -81,7 +82,7 @@ export default function LocalMarketStats({
         {/* Section Header */}
         <div className="text-center mb-10 sm:mb-14 max-w-3xl mx-auto">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-400/10 border border-orange-400/30 mb-6">
-            <span className="material-icons text-orange-400 text-sm">trending_down</span>
+            <TrendingDown className="w-4 h-4 text-orange-400" />
             <span className="text-xs font-bold text-orange-300 uppercase tracking-wider">
               The Cost of Missed Calls
             </span>
@@ -106,7 +107,7 @@ export default function LocalMarketStats({
               {/* Icon */}
               <div className="mb-5">
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-orange-400/20 to-red-500/20 border border-orange-400/30">
-                  <span className="material-icons text-orange-400 text-3xl">store</span>
+                  <Store className="w-7 h-7 text-orange-400" />
                 </div>
               </div>
 
@@ -134,7 +135,7 @@ export default function LocalMarketStats({
               {/* Icon */}
               <div className="mb-5">
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-red-400/20 to-orange-500/20 border border-red-400/30">
-                  <span className="material-icons text-red-400 text-3xl">phone_missed</span>
+                  <PhoneMissed className="w-7 h-7 text-red-400" />
                 </div>
               </div>
 
@@ -162,7 +163,7 @@ export default function LocalMarketStats({
               {/* Icon */}
               <div className="mb-5">
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-amber-400/20 to-red-500/20 border border-amber-400/30">
-                  <span className="material-icons text-amber-400 text-3xl">location_city</span>
+                  <Building2 className="w-7 h-7 text-amber-400" />
                 </div>
               </div>
 
@@ -203,9 +204,7 @@ export default function LocalMarketStats({
                   className="group/btn inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 px-8 py-4 rounded-xl font-black text-base hover:shadow-2xl hover:shadow-cyan-400/50 hover:scale-105 transition-all whitespace-nowrap"
                 >
                   <span>Fix This Now</span>
-                  <span className="material-icons text-xl group-hover/btn:translate-x-1 transition-transform">
-                    arrow_forward
-                  </span>
+                  <ArrowRight className="w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
                 </a>
               </div>
             </div>

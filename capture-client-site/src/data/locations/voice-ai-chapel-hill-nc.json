@@ -60,27 +60,27 @@
     {
       "title": "24/7 Lead Capture in Chapel Hill",
       "description": "Never miss a call from Chapel Hill customers. Our AI answers instantly.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "AI qualifies Chapel Hill leads immediately for your team.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "Let AI book appointments while you serve Chapel Hill clients.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Cost Savings for Chapel Hill Businesses",
       "description": "Save thousands compared to hiring staff. AI scales with growth.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     },
     {
       "title": "Professional Every Time",
       "description": "Consistent call handling for your Chapel Hill business.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     }
   ],
   "how_it_works": [

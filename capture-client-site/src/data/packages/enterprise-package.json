@@ -181,22 +181,22 @@
       {
         "title": "Complete Done-For-You System",
         "description": "We handle everything - AI setup, ad campaigns, landing pages, lead routing, and optimization. You focus on closing deals.",
-        "icon": "automation"
+        "icon": "Bot"
       },
       {
         "title": "Dedicated Partnership",
         "description": "Your account manager becomes an extension of your team. They understand your business, goals, and growth targets.",
-        "icon": "handshake"
+        "icon": "Handshake"
       },
       {
         "title": "Maximum Lead Volume",
         "description": "No artificial limits on calls or AI agents. Built to scale with high-growth businesses generating hundreds of leads monthly.",
-        "icon": "rocket"
+        "icon": "Rocket"
       },
       {
         "title": "Enterprise-Grade Security",
         "description": "SOC 2 compliant infrastructure, encrypted data, HIPAA available, and enterprise SLAs. Your data is protected.",
-        "icon": "shield"
+        "icon": "Shield"
       }
     ]
   },

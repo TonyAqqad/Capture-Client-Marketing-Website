@@ -390,22 +390,22 @@
   },
   "guarantees": [
     {
-      "icon": "calendar",
+      "icon": "Calendar",
       "title": "No Long-Term Contracts",
       "description": "Month-to-month billing on all packages. Cancel anytime with 30 days notice. We earn your business every month."
     },
     {
-      "icon": "shield",
+      "icon": "Shield",
       "title": "Money Back Guarantee",
       "description": "Starter: 30 days. Growth: 60 days. Enterprise: 90 days. Not satisfied? Get a full refund, no questions asked."
     },
     {
-      "icon": "dollar",
+      "icon": "DollarSign",
       "title": "Transparent Pricing",
       "description": "No hidden fees. No surprise charges. What you see is what you pay. Ad spend is billed separately by Google/Facebook."
     },
     {
-      "icon": "tools",
+      "icon": "Wrench",
       "title": "Setup Included",
       "description": "All packages include complete setup and training at no extra cost. We do the heavy lifting so you can focus on leads."
     }

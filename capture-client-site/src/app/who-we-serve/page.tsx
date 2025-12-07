@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { ArrowRight, PlayCircle, Calendar, DollarSign, Briefcase, Globe, ShieldCheck, Puzzle, Brain, Wrench, Building2, Stethoscope, UtensilsCrossed } from 'lucide-react';
 import { INDUSTRIES, getCategories } from '@/data/industries';
 import { IndustryCard } from '@/components/industries/IndustryCard';
 import { Button } from '@/components/ui/Button';
@@ -62,7 +63,7 @@ export default function WhoWeServePage() {
             <div className="max-w-4xl mx-auto text-center">
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
-                <span className="material-icons text-gold-400 text-sm">business_center</span>
+                <Briefcase className="text-gold-400 w-4 h-4" />
                 <span className="text-sm font-semibold text-foreground">12+ Industries Served</span>
               </div>
 
@@ -86,19 +87,23 @@ export default function WhoWeServePage() {
                   variant="primary"
                   size="lg"
                   href="/contact"
-                  icon="arrow_forward"
                   ariaLabel="Book a free consultation"
                 >
-                  Book Free Consultation
+                  <span className="flex items-center gap-2">
+                    Book Free Consultation
+                    <ArrowRight className="w-5 h-5" />
+                  </span>
                 </Button>
                 <Button
                   variant="glass"
                   size="lg"
                   href="/demo"
-                  icon="play_circle"
                   ariaLabel="Watch industry demo"
                 >
-                  Watch Industry Demos
+                  <span className="flex items-center gap-2">
+                    Watch Industry Demos
+                    <PlayCircle className="w-5 h-5" />
+                  </span>
                 </Button>
               </div>
             </div>
@@ -122,13 +127,14 @@ export default function WhoWeServePage() {
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6 max-w-5xl mx-auto mb-20">
               {categories.map((category, index) => {
                 const categoryCount = INDUSTRIES.filter(i => i.category === category).length;
-                const categoryIcon = {
-                  'Professional Services': 'business_center',
-                  'Home Services': 'home_repair_service',
-                  'Real Estate & Property': 'real_estate_agent',
-                  'Healthcare': 'medical_services',
-                  'Hospitality': 'restaurant',
-                }[category] || 'business';
+                const iconMap: Record<string, React.ComponentType<{className?: string}>> = {
+                  'Professional Services': Briefcase,
+                  'Home Services': Wrench,
+                  'Real Estate & Property': Building2,
+                  'Healthcare': Stethoscope,
+                  'Hospitality': UtensilsCrossed,
+                };
+                const IconComponent = iconMap[category] || Briefcase;
 
                 return (
                   <div
@@ -136,7 +142,7 @@ export default function WhoWeServePage() {
                     className="group relative p-6 rounded-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-gold-500/30 transition-all duration-500 hover:shadow-glow-gold text-center"
                   >
                     <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-br from-gold-500/20 to-gold-600/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <span className="material-icons text-2xl text-gold-400">{categoryIcon}</span>
+                      <IconComponent className="text-gold-400 w-6 h-6" />
                     </div>
                     <h3 className="font-semibold text-foreground mb-2 group-hover:text-gold-400 transition-colors duration-300">
                       {category}
@@ -235,19 +241,23 @@ export default function WhoWeServePage() {
                   variant="primary"
                   size="lg"
                   href="/contact"
-                  icon="calendar_month"
                   ariaLabel="Schedule industry demo"
                 >
-                  Schedule Industry Demo
+                  <span className="flex items-center gap-2">
+                    Schedule Industry Demo
+                    <Calendar className="w-5 h-5" />
+                  </span>
                 </Button>
                 <Button
                   variant="glass"
                   size="lg"
                   href="/pricing"
-                  icon="attach_money"
                   ariaLabel="View pricing"
                 >
-                  View Pricing
+                  <span className="flex items-center gap-2">
+                    View Pricing
+                    <DollarSign className="w-5 h-5" />
+                  </span>
                 </Button>
               </div>
             </div>

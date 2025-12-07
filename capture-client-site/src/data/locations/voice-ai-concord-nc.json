@@ -35,27 +35,27 @@
     {
       "title": "Capture Race Weekend Leads",
       "description": "During busy race weekends at Charlotte Motor Speedway, handle unlimited calls simultaneously while competitors miss opportunities.",
-      "icon": "bolt"
+      "icon": "Zap"
     },
     {
       "title": "Instant Lead Response",
       "description": "Concord customers expect fast responses. AI answers every call in seconds, capturing leads before they move on.",
-      "icon": "phone_in_talk"
+      "icon": "Phone"
     },
     {
       "title": "Automated Booking",
       "description": "Schedule appointments, service calls, and consultations automatically without phone tag or back-and-forth.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Reduce Overhead",
       "description": "Save thousands monthly by eliminating answering services and reducing reception staffing needs.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     },
     {
       "title": "Consistent Excellence",
       "description": "Every Concord caller gets the same professional, accurate service representing your brand perfectly every time.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     }
   ],
   "how_it_works": {

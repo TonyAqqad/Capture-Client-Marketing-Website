@@ -53,22 +53,22 @@
     {
       "title": "24/7 for Maryville",
       "description": "AI never sleeps for Blount County customers.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Lead Qualification",
       "description": "AI asks right questions for Maryville prospects.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Auto Scheduling",
       "description": "Books appointments directly for Maryville customers.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Cost Savings",
       "description": "Fraction of hiring Maryville staff.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     }
   ],
   "how_it_works": [

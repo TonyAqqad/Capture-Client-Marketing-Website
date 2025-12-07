@@ -43,32 +43,32 @@
     {
       "title": "24/7 Availability in Covington",
       "description": "Whether it's a homeowner emergency in Latonia at midnight or a business inquiry from Mainstrasse at 6 AM, our AI answers every call professionally and captures every lead.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Intelligent Lead Screening",
       "description": "AI asks the right questions to identify serious buyers from tire-kickers. You only spend time with qualified Covington prospects ready to do business.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Instant Appointment Booking",
       "description": "No more phone tag with busy Northern Kentucky customers. AI books appointments directly into your calendar based on your real-time availability.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Dramatic Cost Reduction",
       "description": "Save $3,000+ monthly compared to hiring receptionists or using traditional answering services. Most Covington businesses see ROI within their first month.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     },
     {
       "title": "Perfect Brand Representation",
       "description": "Every caller experiences consistent, professional service that reflects your Covington business perfectly. No more inconsistent call quality or rushed interactions.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     },
     {
       "title": "Unlimited Scalability",
       "description": "Handle 10 calls or 1,000 calls per day with the same high quality. Perfect for growing Covington businesses that serve Northern Kentucky and Greater Cincinnati.",
-      "icon": "trending_up"
+      "icon": "TrendingUp"
     }
   ],
   "how_it_works": {

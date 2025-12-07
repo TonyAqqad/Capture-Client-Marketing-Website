@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { HelpCircle, Plus, Minus, ChevronDown, Phone, Headset } from "lucide-react";
 
 interface FAQItem {
   question: string;
@@ -23,7 +24,7 @@ export default function PremiumLocationFAQ({ faqs, cityName }: PremiumLocationFA
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-400/10 border border-cyan-400/30 mb-6">
-            <span className="material-icons text-cyan-400 text-sm">help_outline</span>
+            <HelpCircle className="w-3.5 h-3.5 text-cyan-400" />
             <span className="text-xs font-bold text-cyan-300 uppercase tracking-wider">
               FAQ
             </span>
@@ -73,11 +74,11 @@ export default function PremiumLocationFAQ({ faqs, cityName }: PremiumLocationFA
                           ? 'bg-gradient-to-br from-cyan-400/30 to-blue-500/30 border border-cyan-400/40'
                           : 'bg-white/5 border border-white/10'
                       }`}>
-                        <span className={`material-icons text-xl transition-all duration-300 ${
-                          isOpen ? 'text-cyan-300' : 'text-slate-400'
-                        }`}>
-                          {isOpen ? 'remove' : 'add'}
-                        </span>
+                        {isOpen ? (
+                          <Minus className="w-5 h-5 text-cyan-300 transition-all duration-300" />
+                        ) : (
+                          <Plus className="w-5 h-5 text-slate-400 transition-all duration-300" />
+                        )}
                       </div>
                     </div>
 
@@ -97,9 +98,7 @@ export default function PremiumLocationFAQ({ faqs, cityName }: PremiumLocationFA
                       <div className={`flex items-center justify-center w-8 h-8 rounded-lg bg-white/5 transition-all duration-300 ${
                         isOpen ? 'rotate-180' : 'rotate-0'
                       }`}>
-                        <span className="material-icons text-cyan-400 text-xl">
-                          keyboard_arrow_down
-                        </span>
+                        <ChevronDown className="w-5 h-5 text-cyan-400" />
                       </div>
                     </div>
                   </button>
@@ -130,7 +129,7 @@ export default function PremiumLocationFAQ({ faqs, cityName }: PremiumLocationFA
         <div className="mt-8 sm:mt-12 text-center">
           <div className="inline-flex flex-col sm:flex-row items-center gap-4 bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 rounded-2xl p-6 sm:p-8">
             <div className="flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-400/20 to-blue-500/20 border border-cyan-400/30">
-              <span className="material-icons text-cyan-300 text-2xl">support_agent</span>
+              <Headset className="w-6 h-6 text-cyan-300" />
             </div>
             <div className="text-center sm:text-left flex-1">
               <h3 className="text-lg font-bold text-white mb-1">
@@ -144,7 +143,7 @@ export default function PremiumLocationFAQ({ faqs, cityName }: PremiumLocationFA
               href="tel:865-346-3339"
               className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 px-6 py-3 rounded-xl font-bold transition-all duration-300 hover:shadow-[0_8px_24px_rgba(6,182,212,0.4)] hover:scale-105 touch-target"
             >
-              <span className="material-icons text-xl">phone</span>
+              <Phone className="w-5 h-5" />
               <span>(865) 346-3339</span>
             </a>
           </div>

@@ -56,22 +56,22 @@
     {
       "title": "24/7 Availability for Austin Customers",
       "description": "Your Austin customers call at all hours. Our AI voice agents never sleep, ensuring every call from Travis County is answered professionally.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "Stop wasting time on unqualified leads. Our AI asks the right questions upfront so you only talk to serious Austin prospects ready to buy.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Automatic Appointment Scheduling",
       "description": "Let AI book appointments directly into your calendar. No more phone tag with Austin customers.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Cost Savings Over Traditional Staff",
       "description": "Hiring a receptionist in Austin costs $34,000-$46,000/year. Our Voice AI costs a fraction of that.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     }
   ],
   "how_it_works": [

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { ChevronDown, HelpCircle } from "lucide-react";
 
 export interface IndustryFAQ {
   question: string;
@@ -77,15 +78,15 @@ export function IndustryFAQ({ faqs, industryName, categoryColor = "gold" }: Indu
                       {faq.question}
                     </h3>
 
-                    <motion.span
-                      className={`material-icons text-2xl flex-shrink-0 ${
+                    <motion.div
+                      className={`flex-shrink-0 ${
                         expandedIndex === index ? colorClasses.text : "text-foreground-muted"
                       }`}
                       animate={{ rotate: expandedIndex === index ? 180 : 0 }}
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                     >
-                      expand_more
-                    </motion.span>
+                      <ChevronDown className="w-6 h-6" />
+                    </motion.div>
                   </button>
 
                   {/* Answer (Animated) */}
@@ -117,7 +118,7 @@ export function IndustryFAQ({ faqs, industryName, categoryColor = "gold" }: Indu
           {/* Still Have Questions CTA */}
           <div className="mt-12 text-center">
             <div className="inline-flex items-center gap-2 px-6 py-4 rounded-2xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur-sm border border-white/20">
-              <span className="material-icons text-gold-400">help_outline</span>
+              <HelpCircle className="w-5 h-5 text-gold-400" />
               <span className="text-foreground-muted">
                 Still have questions?{" "}
                 <a

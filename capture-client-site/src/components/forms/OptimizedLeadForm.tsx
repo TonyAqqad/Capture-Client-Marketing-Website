@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { trackFormStart, trackFormSubmission, trackPhoneClick } from "@/lib/analytics";
+import { CheckCircle, Phone, Lock, ArrowRight, Rocket, ArrowLeft, Shield, Clock, Headset, ChevronDown } from "lucide-react";
 
 interface OptimizedLeadFormProps {
   source?: string;
@@ -90,7 +91,7 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
           {/* Animated checkmark */}
           <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-accent/20 border-2 border-accent mb-6 relative">
             <div className="absolute inset-0 rounded-full bg-accent/20 animate-ping" />
-            <span className="material-icons text-accent text-6xl relative z-10">check_circle</span>
+            <CheckCircle className="w-16 h-16 text-accent relative z-10" />
           </div>
 
           <h3 className="text-3xl font-black text-white mb-3">
@@ -100,7 +101,7 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
             A growth specialist will call you within <span className="text-accent font-bold">15 minutes</span>.
           </p>
           <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-5 py-2.5">
-            <span className="material-icons text-accent text-lg">phone</span>
+            <Phone className="w-5 h-5 text-accent" />
             <p className="text-sm text-white/70">
               Check your phone: <span className="text-accent font-bold text-base">{formData.phone}</span>
             </p>
@@ -230,15 +231,13 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
             {/* Button content */}
             <span className="relative z-10 flex items-center justify-center gap-3 px-8 py-4 text-base sm:text-lg font-bold text-background-dark uppercase tracking-wider">
               Continue
-              <span className="material-icons text-xl transition-transform duration-300 group-hover:translate-x-1">
-                arrow_forward
-              </span>
+              <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </span>
           </button>
 
           {/* Trust badge */}
           <p className="flex items-center justify-center gap-2 text-xs text-white/50">
-            <span className="material-icons text-accent text-sm">lock</span>
+            <Lock className="w-3.5 h-3.5 text-accent" />
             We respect your privacy. No spam, ever.
           </p>
         </form>
@@ -281,9 +280,7 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                 <option value="other">Something else</option>
               </select>
               {/* Custom dropdown icon */}
-              <span className="material-icons absolute right-4 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none text-xl">
-                expand_more
-              </span>
+              <ChevronDown className="w-5 h-5 absolute right-4 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none" />
               <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
             </div>
           </div>
@@ -300,7 +297,7 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                          hover:bg-white/[0.08] hover:border-white/20
                          touch-manipulation active:scale-95"
             >
-              <span className="material-icons text-xl">arrow_back</span>
+              <ArrowLeft className="w-5 h-5" />
             </button>
 
             {/* Submit button */}
@@ -343,9 +340,7 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                 ) : (
                   <>
                     Get My Free Demo
-                    <span className="material-icons text-xl transition-transform duration-300 group-hover:translate-x-1">
-                      rocket_launch
-                    </span>
+                    <Rocket className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                   </>
                 )}
               </span>
@@ -355,15 +350,15 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
           {/* Trust signals near submit */}
           <div className="grid grid-cols-3 gap-2 pt-2">
             <div className="flex flex-col items-center gap-1 text-center">
-              <span className="material-icons text-accent text-lg">verified</span>
+              <Shield className="w-5 h-5 text-accent" />
               <span className="text-[10px] sm:text-xs text-white/60">No Credit Card</span>
             </div>
             <div className="flex flex-col items-center gap-1 text-center">
-              <span className="material-icons text-accent text-lg">schedule</span>
+              <Clock className="w-5 h-5 text-accent" />
               <span className="text-[10px] sm:text-xs text-white/60">15-min Setup</span>
             </div>
             <div className="flex flex-col items-center gap-1 text-center">
-              <span className="material-icons text-accent text-lg">support_agent</span>
+              <Headset className="w-5 h-5 text-accent" />
               <span className="text-[10px] sm:text-xs text-white/60">Live Support</span>
             </div>
           </div>

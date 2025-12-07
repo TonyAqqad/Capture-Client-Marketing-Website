@@ -65,32 +65,32 @@
     {
       "title": "Predictable Lead Flow",
       "description": "Get a steady stream of qualified leads every month. No more feast-or-famine cycles. Our campaigns are optimized to deliver consistent, reliable results you can count on.",
-      "icon": "trending_up"
+      "icon": "TrendingUp"
     },
     {
       "title": "Highly Qualified Leads",
       "description": "We target prospects who are actively searching for your services. Advanced audience targeting and qualification ensures you only pay for leads that match your ideal customer profile.",
-      "icon": "verified"
+      "icon": "CheckCircle"
     },
     {
       "title": "Multi-Channel Strategy",
       "description": "Reach customers everywhere they spend time online. We combine Google Search Ads, Google Display, Facebook Ads, and Instagram campaigns for maximum visibility and conversions.",
-      "icon": "hub"
+      "icon": "Network"
     },
     {
       "title": "Expert Campaign Management",
       "description": "Our certified Google Ads and Facebook Ads specialists handle everything. From keyword research to ad creative to landing page optimization—we're your full-service lead generation team.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     },
     {
       "title": "Transparent ROI Tracking",
       "description": "See exactly where every dollar goes. Real-time dashboards show campaign performance, cost per lead, conversion rates, and ROI. Complete transparency with every campaign.",
-      "icon": "insights"
+      "icon": "LineChart"
     },
     {
       "title": "Conversion-Optimized Landing Pages",
       "description": "High-converting landing pages designed to turn clicks into customers. Mobile-optimized, fast-loading pages with compelling copy and clear calls-to-action.",
-      "icon": "web"
+      "icon": "Globe"
     }
   ],
   "how_it_works": [

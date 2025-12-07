@@ -44,12 +44,12 @@
     {
       "title": "24/7 for Gatlinburg",
       "description": "Never miss Gatlinburg calls.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Qualification",
       "description": "Qualify Gatlinburg leads.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     }
   ],
   "how_it_works": [

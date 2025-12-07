@@ -69,22 +69,22 @@
     {
       "title": "24/7 Availability",
       "description": "Athens customers don't just call 9-5. Our Voice AI ensures every call is answered professionally, whether it's 3 PM or 3 AM.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Smart Lead Qualification",
       "description": "The AI asks qualifying questions customized for your Athens business so you only talk to prospects ready to buy.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Appointment Booking",
       "description": "Callers schedule appointments instantly based on your real-time availability. No more phone tag with busy Athens professionals.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Lower Costs",
       "description": "Voice AI costs far less than hiring reception staff in Athens. Predictable monthly pricing with no salaries, benefits, or training costs.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     }
   ],
   "how_it_works": [

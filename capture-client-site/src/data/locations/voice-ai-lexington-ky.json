@@ -43,32 +43,32 @@
     {
       "title": "Never Miss a Lexington Lead",
       "description": "Whether it's Keeneland race day or a Tuesday at 2 AM, our AI answers every call from potential Lexington customers with professionalism and accuracy.",
-      "icon": "phone_in_talk"
+      "icon": "Phone"
     },
     {
       "title": "Smart Lead Qualification",
       "description": "AI intelligently qualifies each Lexington prospect, asking the right questions to determine if they're ready to buy or need more nurturing.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Seamless Scheduling",
       "description": "Appointments book directly into your calendar without phone tag. Lexington customers appreciate the instant response and easy booking.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Massive Cost Savings",
       "description": "Save $3,500+ monthly compared to hiring receptionists or answering services. Lexington businesses see ROI within weeks, not months.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     },
     {
       "title": "Brand Consistency",
       "description": "Every caller experiences your brand the way you intended - professional, knowledgeable, and helpful. No more variation in call quality.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     },
     {
       "title": "Scale Without Hiring",
       "description": "Handle 10 calls or 1,000 calls with the same quality. Perfect for growing Lexington businesses that don't want staffing headaches.",
-      "icon": "trending_up"
+      "icon": "TrendingUp"
     }
   ],
   "how_it_works": {

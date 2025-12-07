@@ -56,22 +56,22 @@
     {
       "title": "24/7 Availability for Orlando Customers",
       "description": "Orlando's economy never stops. Our AI voice agents work around the clock, ensuring every call from Orange County is answered professionally.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "Stop wasting time on unqualified leads. Our AI asks the right questions upfront so you only talk to serious Orlando prospects ready to buy.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Automatic Appointment Scheduling",
       "description": "Let AI book appointments directly into your calendar. No more phone tag with Orlando customers.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Cost Savings Over Traditional Staff",
       "description": "Hiring a receptionist in Orlando costs $31,000-$41,000/year. Our Voice AI costs a fraction of that.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     }
   ],
   "how_it_works": [

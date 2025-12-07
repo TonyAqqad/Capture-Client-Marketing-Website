@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "@/lib/motion";
-import type { Integration } from "@/data/integrations";
 import { GradientCard, getGradientByCategory } from "@/components/ui/GradientCard";
 import {
   RefreshCw,
@@ -24,7 +23,9 @@ import {
 } from "lucide-react";
 
 interface IntegrationFeaturesProps {
-  integration: Integration;
+  keyFeatures: string[];
+  category: string;
+  integrationName: string;
 }
 
 /**
@@ -135,9 +136,9 @@ const getBentoLayout = (count: number): BentoLayout[] => {
   return layout;
 };
 
-export function IntegrationFeatures({ integration }: IntegrationFeaturesProps) {
-  const gradientVariant = getGradientByCategory(integration.category);
-  const bentoLayout = getBentoLayout(integration.keyFeatures.length);
+export function IntegrationFeatures({ keyFeatures, category, integrationName }: IntegrationFeaturesProps) {
+  const gradientVariant = getGradientByCategory(category);
+  const bentoLayout = getBentoLayout(keyFeatures.length);
 
   return (
     <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden">
@@ -162,13 +163,13 @@ export function IntegrationFeatures({ integration }: IntegrationFeaturesProps) {
             Key Features
           </h2>
           <p className="text-lg text-foreground-muted max-w-2xl mx-auto">
-            Everything you need to power your workflow with {integration.name}
+            Everything you need to power your workflow with {integrationName}
           </p>
         </motion.div>
 
         {/* Bento Grid - Asymmetric Layout */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 auto-rows-fr">
-          {integration.keyFeatures.map((feature, index) => {
+          {keyFeatures.map((feature, index) => {
             const layout = bentoLayout[index];
             const FeatureIcon = detectFeatureIcon(feature);
             const isFeatured = layout?.featured;
@@ -263,8 +264,8 @@ export function IntegrationFeatures({ integration }: IntegrationFeaturesProps) {
           className="mt-12 text-center"
         >
           <p className="text-sm text-foreground-muted">
-            <span className="font-semibold text-accent">{integration.keyFeatures.length}</span> powerful features
-            {integration.keyFeatures.length > 5 && ' to supercharge your workflow'}
+            <span className="font-semibold text-accent">{keyFeatures.length}</span> powerful features
+            {keyFeatures.length > 5 && ' to supercharge your workflow'}
           </p>
         </motion.div>
       </div>

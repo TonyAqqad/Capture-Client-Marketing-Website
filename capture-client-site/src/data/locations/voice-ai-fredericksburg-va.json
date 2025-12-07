@@ -67,27 +67,27 @@
     {
       "title": "24/7 Lead Capture for Fredericksburg",
       "description": "Your Fredericksburg business never sleeps. Capture leads from DC commuters, military families, and local residents calling at any hour.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "Stop wasting time on unqualified leads. Our AI qualifies Fredericksburg prospects instantly before they reach your team.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "AI schedules appointments directly into your calendar while you focus on serving Fredericksburg and Stafford customers.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Cost-Effective Growth",
       "description": "Save thousands compared to hiring staff in Fredericksburg's growing market. No salary, benefits, or overhead expansion.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     },
     {
       "title": "Professional Fredericksburg Service",
       "description": "Consistent, professional call handling that represents your Fredericksburg business perfectly on every interaction.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     }
   ],
   "how_it_works": [

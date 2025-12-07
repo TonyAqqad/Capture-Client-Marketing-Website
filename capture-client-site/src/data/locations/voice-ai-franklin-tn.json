@@ -48,17 +48,17 @@
     {
       "title": "24/7 for Franklin",
       "description": "AI handles all Franklin customer calls.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Lead Qualification",
       "description": "AI qualifies Franklin prospects instantly.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Auto Scheduling",
       "description": "Books appointments for Franklin customers.",
-      "icon": "event"
+      "icon": "Calendar"
     }
   ],
   "how_it_works": [

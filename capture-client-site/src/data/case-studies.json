@@ -4,7 +4,7 @@
       "id": "hvac-comfort-zone",
       "slug": "hvac",
       "industry": "HVAC Services",
-      "icon": "ac_unit",
+      "icon": "Snowflake",
       "gradient": "from-accent to-primary",
       "client": {
         "name": "Comfort Zone Heating & Air",
@@ -83,7 +83,7 @@
       "id": "dental-bright-smiles",
       "slug": "dental",
       "industry": "Dental Practice",
-      "icon": "medical_services",
+      "icon": "Stethoscope",
       "gradient": "from-primary to-accent",
       "client": {
         "name": "Bright Smiles Family Dentistry",
@@ -162,7 +162,7 @@
       "id": "law-firm-davidson",
       "slug": "law-firm",
       "industry": "Personal Injury Law",
-      "icon": "gavel",
+      "icon": "Gavel",
       "gradient": "from-accent to-primary",
       "client": {
         "name": "Davidson & Associates",
@@ -241,7 +241,7 @@
       "id": "plumbing-reliable",
       "slug": "plumbing",
       "industry": "Plumbing Services",
-      "icon": "plumbing",
+      "icon": "Wrench",
       "gradient": "from-primary to-accent",
       "client": {
         "name": "Reliable Plumbing Solutions",

@@ -184,22 +184,22 @@
       {
         "title": "Predictable Lead Flow",
         "description": "Stop relying on referrals and word-of-mouth. Paid ads + AI automation = consistent stream of qualified leads every week.",
-        "icon": "trending-up"
+        "icon": "TrendingUp"
       },
       {
         "title": "Lower Cost Per Lead",
         "description": "AI answers calls instantly and qualifies leads automatically. No wasted ad spend on unqualified prospects.",
-        "icon": "dollar"
+        "icon": "DollarSign"
       },
       {
         "title": "Scale Without Hiring",
         "description": "Handle 4x more calls without hiring a receptionist or call center. Your AI agents work 24/7 with no breaks.",
-        "icon": "users"
+        "icon": "Users"
       },
       {
         "title": "Complete Transparency",
         "description": "Weekly reports show exactly where your ad dollars are going and which campaigns drive the most leads.",
-        "icon": "chart-line"
+        "icon": "LineChart"
       }
     ]
   },

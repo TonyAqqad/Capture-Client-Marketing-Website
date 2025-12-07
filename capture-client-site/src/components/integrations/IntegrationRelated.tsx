@@ -5,10 +5,20 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef } from "react";
 import { Pause, Star, Clock, CheckCircle2, ArrowRight, MousePointer, Grid3X3 } from "lucide-react";
-import type { Integration } from "@/data/integrations";
+
+interface IntegrationCardData {
+  id: string;
+  name: string;
+  slug: string;
+  logoUrl: string;
+  shortDescription: string;
+  popular?: boolean;
+  setupTime?: string;
+  keyFeatures?: string[];
+}
 
 interface IntegrationRelatedProps {
-  integrations: Integration[];
+  integrations: IntegrationCardData[];
   categoryName: string;
 }
 

@@ -35,27 +35,27 @@
     {
       "title": "24/7 Cary Coverage",
       "description": "Cary residents and businesses expect quick responses. AI ensures every call is answered instantly, day or night.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Professional Lead Screening",
       "description": "AI qualifies leads by asking targeted questions about needs, budget, and timeline before routing to your team.",
-      "icon": "how_to_reg"
+      "icon": "ClipboardCheck"
     },
     {
       "title": "Seamless Scheduling",
       "description": "Book consultations, appointments, and service calls automatically while the caller is on the phone - no follow-up needed.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Cost Efficiency",
       "description": "Eliminate answering service fees and reduce reception costs while providing superior service to Cary customers.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     },
     {
       "title": "Business Intelligence",
       "description": "Track call patterns, lead sources, and conversation insights to optimize your Cary marketing and operations.",
-      "icon": "trending_up"
+      "icon": "TrendingUp"
     }
   ],
   "how_it_works": {

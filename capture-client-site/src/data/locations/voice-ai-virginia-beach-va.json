@@ -57,27 +57,27 @@
     {
       "title": "Handle Peak Season Calls",
       "description": "Virginia Beach businesses get slammed during summer tourism season. Our AI handles unlimited simultaneous calls from Chesapeake Bay to the Atlantic shore, so you never miss a lead during peak weekends.",
-      "icon": "trending_up"
+      "icon": "TrendingUp"
     },
     {
       "title": "24/7 Availability",
       "description": "Tourists booking oceanfront rentals and locals needing services call at all hours. Our AI answers every call professionally, from dawn patrol surfers to late-night event planners.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Lead Qualification",
       "description": "Stop wasting time on unqualified leads. AI asks the right questions about service areas (Town Center, Red Mill, Hilltop) and only routes serious buyers to your Virginia Beach team.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Appointment Booking",
       "description": "AI schedules appointments instantly into your calendar—perfect for businesses serving both the resort district and residential neighborhoods from Great Neck to Pungo.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Cost-Effective Solution",
       "description": "Less expensive than hiring seasonal staff for summer tourism or a full-time receptionist. Scale up during busy months at Oceanfront and Town Center without increasing overhead.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     }
   ],
   "how_it_works": [

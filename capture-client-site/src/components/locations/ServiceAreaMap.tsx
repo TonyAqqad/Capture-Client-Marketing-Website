@@ -1,3 +1,5 @@
+import { Compass, MapPin, ShieldCheck, Headset, ArrowRight } from 'lucide-react';
+
 interface ServiceAreaMapProps {
   city: string;
   state: string;
@@ -29,7 +31,7 @@ export default function ServiceAreaMap({
         {/* Section Header */}
         <div className="text-center mb-10 sm:mb-14">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-400/10 border border-cyan-400/30 mb-6">
-            <span className="material-icons text-cyan-400 text-sm">explore</span>
+            <Compass className="w-4 h-4 text-cyan-400" />
             <span className="text-xs font-bold text-cyan-300 uppercase tracking-wider">
               Service Coverage Area
             </span>
@@ -72,7 +74,7 @@ export default function ServiceAreaMap({
                     <div className="relative">
                       <div className="absolute inset-0 bg-cyan-400 rounded-2xl blur-xl opacity-80" />
                       <div className="relative flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-cyan-400 via-cyan-500 to-blue-600 border-4 border-slate-950 shadow-2xl">
-                        <span className="material-icons text-white text-4xl">location_on</span>
+                        <MapPin className="w-10 h-10 text-white" />
                       </div>
                     </div>
                     <div className="mt-3 px-4 py-2 bg-slate-950/90 border border-cyan-400/50 rounded-lg shadow-xl">
@@ -114,7 +116,7 @@ export default function ServiceAreaMap({
               {/* Coverage Indicator */}
               <div className="mt-6 text-center">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/10 border border-green-400/30 rounded-lg">
-                  <span className="material-icons text-green-400 text-sm">verified</span>
+                  <ShieldCheck className="w-4 h-4 text-green-400" />
                   <span className="text-xs font-bold text-green-300">
                     Full Coverage: {serviceAreaRadius} Radius
                   </span>
@@ -142,7 +144,7 @@ export default function ServiceAreaMap({
                 >
                   <div className="absolute -inset-px bg-gradient-to-r from-cyan-400/0 via-cyan-400/30 to-cyan-400/0 rounded-lg opacity-0 group-hover:opacity-100 blur-sm transition-opacity" />
                   <div className="relative flex items-center gap-3 px-4 py-3 bg-slate-900/60 backdrop-blur-sm border border-slate-700 rounded-lg group-hover:border-cyan-400/50 transition-all">
-                    <span className="material-icons text-cyan-400 text-base">location_on</span>
+                    <MapPin className="w-4 h-4 text-cyan-400" />
                     <span className="text-sm font-bold text-slate-200 group-hover:text-cyan-300 transition-colors">
                       {area}
                     </span>
@@ -155,7 +157,7 @@ export default function ServiceAreaMap({
             <div className="mt-8 p-6 bg-gradient-to-br from-cyan-400/10 to-blue-500/10 border border-cyan-400/30 rounded-xl">
               <div className="flex items-start gap-4">
                 <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-cyan-400/20 border border-cyan-400/30 shrink-0">
-                  <span className="material-icons text-cyan-300 text-2xl">support_agent</span>
+                  <Headset className="w-6 h-6 text-cyan-300" />
                 </div>
                 <div>
                   <h4 className="text-lg font-black text-white mb-2">
@@ -169,9 +171,7 @@ export default function ServiceAreaMap({
                     className="inline-flex items-center gap-2 text-cyan-400 text-sm font-bold hover:text-cyan-300 transition-colors group/link"
                   >
                     <span>Contact Us</span>
-                    <span className="material-icons text-base group-hover/link:translate-x-1 transition-transform">
-                      arrow_forward
-                    </span>
+                    <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
                   </a>
                 </div>
               </div>

@@ -3,6 +3,7 @@
 import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
 import { presets } from "@/lib/simulator-animations";
+import { Calculator, RocketIcon } from "lucide-react";
 
 // ============================================================================
 // TYPE DEFINITIONS
@@ -104,9 +105,7 @@ export default function MissedCallCalculator() {
           className="text-center mb-12 lg:mb-16"
         >
           <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-4 sm:px-6 py-2 mb-4 sm:mb-6">
-            <span className="material-icons text-accent text-sm sm:text-base" aria-hidden="true">
-              calculate
-            </span>
+            <Calculator className="w-4 h-4 sm:w-5 sm:h-5 text-accent" aria-hidden="true" />
             <span className="text-accent font-bold uppercase tracking-widest text-xs sm:text-sm">
               Free ROI Calculator
             </span>
@@ -366,9 +365,7 @@ export default function MissedCallCalculator() {
                       className="inline-flex items-center gap-3 btn-primary text-base sm:text-lg lg:text-xl px-8 sm:px-12 py-4 sm:py-5 shadow-glow-lg focus-ring"
                       aria-label="Get your free demo of Voice AI"
                     >
-                      <span className="material-icons" aria-hidden="true">
-                        rocket_launch
-                      </span>
+                      <RocketIcon className="w-5 h-5 sm:w-6 sm:h-6" aria-hidden="true" />
                       Get Your Free Demo
                     </motion.a>
 

@@ -57,22 +57,22 @@
     {
       "title": "DC Metro Market Edge",
       "description": "Stand out in Arlington's hyper-competitive DC market with 24/7 professional call handling from Rosslyn to National Landing. Never lose a lead to slower competitors along the Orange Line corridor.",
-      "icon": "trending_up"
+      "icon": "TrendingUp"
     },
     {
       "title": "Government Contractor Ready",
       "description": "Perfect for Arlington businesses serving government clients near the Pentagon. Handle inquiries professionally and securely with enterprise-grade AI that understands the Defense and consulting sectors.",
-      "icon": "shield"
+      "icon": "Shield"
     },
     {
       "title": "Professional Image",
       "description": "Project enterprise credibility across Clarendon, Ballston, and Crystal City with AI that represents your Arlington brand flawlessly—crucial in a market serving federal agencies and Fortune 500 companies.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     },
     {
       "title": "Instant Response",
       "description": "Arlington customers expect immediate responses. Our AI answers in seconds from Rosslyn offices to Pentagon City firms, qualifying leads before competitors serving Tysons Corner and DC even pick up.",
-      "icon": "bolt"
+      "icon": "Zap"
     }
   ],
   "how_it_works": [

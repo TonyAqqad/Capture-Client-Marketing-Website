@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react';
 import Link from 'next/link';
+import { AlertCircle } from 'lucide-react';
 
 export default function Error({
   error,
@@ -23,7 +24,7 @@ export default function Error({
         {/* Error icon */}
         <div className="mb-8">
           <div className="w-20 h-20 mx-auto rounded-full bg-red-500/10 flex items-center justify-center">
-            <span className="material-icons text-red-500 text-4xl">error_outline</span>
+            <AlertCircle className="text-red-500 w-9 h-9" />
           </div>
         </div>
 

@@ -53,22 +53,22 @@
     {
       "title": "24/7 Marietta Availability",
       "description": "Answer calls around the clock for Marietta customers.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Cobb County Coverage",
       "description": "Serve customers across Marietta and Cobb County.",
-      "icon": "location_on"
+      "icon": "MapPin"
     },
     {
       "title": "Small Business Focused",
       "description": "Perfect for Marietta SMBs without full-time staff.",
-      "icon": "work"
+      "icon": "Briefcase"
     },
     {
       "title": "Smart Lead Routing",
       "description": "AI routes leads based on your availability and priorities.",
-      "icon": "phone_forwarded"
+      "icon": "PhoneForwarded"
     }
   ],
   "how_it_works": [

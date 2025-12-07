@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { Benefit, FAQItem, HowItWorksStep, UseCase } from "@/types/content";
+import { getIcon } from "@/lib/icon-map";
 
 export async function generateStaticParams() {
   const nationalPages = await getAllNationalPages();
@@ -98,20 +99,23 @@ export default async function NationalPage({ params }: { params: Promise<{ slug:
               Key Benefits
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {page.benefits.map((benefit: Benefit, index: number) => (
-                <div
-                  key={index}
-                  className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50 hover:border-primary/50 transition-all"
-                >
-                  <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary text-2xl mb-4">
-                    <span className="material-icons">{benefit.icon || "check_circle"}</span>
+              {page.benefits.map((benefit: Benefit, index: number) => {
+                const IconComponent = getIcon(benefit.icon || "check_circle");
+                return (
+                  <div
+                    key={index}
+                    className="border border-gray-200 dark:border-gray-800 rounded-lg p-6 bg-white dark:bg-gray-900/50 hover:border-primary/50 transition-all"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary text-2xl mb-4">
+                      <IconComponent className="w-6 h-6" />
+                    </div>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-400">{benefit.description}</p>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400">{benefit.description}</p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>

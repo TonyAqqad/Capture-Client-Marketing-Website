@@ -63,37 +63,37 @@
     {
       "title": "Instant Visibility on Google",
       "description": "Appear at the very top of Google search results when customers search for your services. Skip the wait of SEO and start getting leads immediately with paid search advertising.",
-      "icon": "search"
+      "icon": "Search"
     },
     {
       "title": "High-Intent Leads Only",
       "description": "Target people actively searching for your exact services right now. Google Ads captures demand—people who need what you offer today, not someday. These are the highest-quality leads you'll find.",
-      "icon": "gps_fixed"
+      "icon": "Target"
     },
     {
       "title": "Complete Budget Control",
       "description": "Set your exact monthly ad spend. Scale up during busy season, scale down when you're fully booked. Pay only when someone clicks your ad. No wasted impressions, no long-term contracts.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     },
     {
       "title": "Google Guaranteed Badge",
       "description": "Get the coveted Google Guaranteed badge with Local Service Ads. Stand out from competitors, build instant trust, and appear in the premium placement above all other search results.",
-      "icon": "verified"
+      "icon": "CheckCircle"
     },
     {
       "title": "Data-Driven Optimization",
       "description": "Track every click, call, and conversion. See exactly which keywords and ads drive leads. We continuously optimize based on performance data to maximize your ROI every single month.",
-      "icon": "trending_up"
+      "icon": "TrendingUp"
     },
     {
       "title": "Google Partner Certified Experts",
       "description": "No guesswork. Our Google Partner certified team has managed $5M+ in ad spend. We handle keyword research, ad creation, bid management, A/B testing, daily optimization, and transparent monthly reporting so you can focus on running your business.",
-      "icon": "emoji_events"
+      "icon": "Trophy"
     },
     {
       "title": "90-Day Performance Guarantee",
       "description": "We're so confident in our Google Ads management that we offer a 90-day performance guarantee. If we don't deliver measurable improvements in lead quality and ROI, we'll make it right or refund your management fees.",
-      "icon": "shield"
+      "icon": "Shield"
     }
   ],
   "how_it_works": [

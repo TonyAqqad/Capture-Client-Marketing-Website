@@ -58,27 +58,27 @@
     {
       "title": "24/7 Availability",
       "description": "Never miss a lead or opportunity with round-the-clock service.",
-      "icon": "clock"
+      "icon": "Clock"
     },
     {
       "title": "Instant Response",
       "description": "Respond to inquiries within seconds not hours or days.",
-      "icon": "zap"
+      "icon": "Zap"
     },
     {
       "title": "Cost Effective",
       "description": "Save 60-80 percent compared to traditional methods.",
-      "icon": "dollar-sign"
+      "icon": "DollarSign"
     },
     {
       "title": "Scalable System",
       "description": "Handle 10 or 1000 leads without adding staff.",
-      "icon": "trending-up"
+      "icon": "TrendingUp"
     },
     {
       "title": "Full Integration",
       "description": "Works with your existing CRM calendar and tools.",
-      "icon": "link"
+      "icon": "Link"
     }
   ],
   "how_it_works": [

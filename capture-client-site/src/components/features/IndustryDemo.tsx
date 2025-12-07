@@ -3,6 +3,15 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
 import { presets } from "@/lib/simulator-animations";
+import {
+  AirVent,
+  Wrench,
+  SmilePlus,
+  Gavel,
+  Dumbbell,
+  Home as HomeIcon,
+  CheckCircle
+} from "lucide-react";
 
 // ============================================================================
 // TYPE DEFINITIONS
@@ -11,7 +20,7 @@ import { presets } from "@/lib/simulator-animations";
 interface Industry {
   id: string;
   name: string;
-  icon: string;
+  icon: React.ComponentType<{ className?: string }>;
   color: string;
   bgColor: string;
   borderColor: string;
@@ -36,7 +45,7 @@ const INDUSTRIES: Industry[] = [
   {
     id: "hvac",
     name: "HVAC",
-    icon: "ac_unit",
+    icon: AirVent,
     color: "text-blue-400",
     bgColor: "bg-blue-500/10",
     borderColor: "border-blue-500/30",
@@ -61,7 +70,7 @@ const INDUSTRIES: Industry[] = [
   {
     id: "plumbing",
     name: "Plumbing",
-    icon: "plumbing",
+    icon: Wrench,
     color: "text-cyan-400",
     bgColor: "bg-cyan-500/10",
     borderColor: "border-cyan-500/30",
@@ -86,7 +95,7 @@ const INDUSTRIES: Industry[] = [
   {
     id: "dental",
     name: "Dental",
-    icon: "sentiment_satisfied",
+    icon: SmilePlus,
     color: "text-[#D4AF37]",
     bgColor: "bg-[#D4AF37]/10",
     borderColor: "border-[#D4AF37]/30",
@@ -111,7 +120,7 @@ const INDUSTRIES: Industry[] = [
   {
     id: "legal",
     name: "Legal",
-    icon: "gavel",
+    icon: Gavel,
     color: "text-amber-400",
     bgColor: "bg-amber-500/10",
     borderColor: "border-amber-500/30",
@@ -136,7 +145,7 @@ const INDUSTRIES: Industry[] = [
   {
     id: "fitness",
     name: "Fitness",
-    icon: "fitness_center",
+    icon: Dumbbell,
     color: "text-red-400",
     bgColor: "bg-red-500/10",
     borderColor: "border-red-500/30",
@@ -161,7 +170,7 @@ const INDUSTRIES: Industry[] = [
   {
     id: "realestate",
     name: "Real Estate",
-    icon: "home",
+    icon: HomeIcon,
     color: "text-green-400",
     bgColor: "bg-green-500/10",
     borderColor: "border-green-500/30",
@@ -240,13 +249,11 @@ export default function IndustryDemo() {
                   : "bg-surface border-surface-border hover:bg-surface-hover"
               }`}
             >
-              <span
-                className={`material-icons text-3xl sm:text-4xl mb-2 block ${
+              <industry.icon
+                className={`w-8 h-8 sm:w-10 sm:h-10 mb-2 ${
                   selectedIndustry.id === industry.id ? industry.color : "text-foreground-muted"
                 }`}
-              >
-                {industry.icon}
-              </span>
+              />
               <p
                 className={`font-semibold text-xs sm:text-sm text-center ${
                   selectedIndustry.id === industry.id ? "text-foreground" : "text-foreground-muted"
@@ -274,9 +281,7 @@ export default function IndustryDemo() {
                 <div
                   className={`w-16 h-16 rounded-2xl ${selectedIndustry.bgColor} border ${selectedIndustry.borderColor} flex items-center justify-center flex-shrink-0`}
                 >
-                  <span className={`material-icons text-3xl ${selectedIndustry.color}`}>
-                    {selectedIndustry.icon}
-                  </span>
+                  <selectedIndustry.icon className={`w-8 h-8 ${selectedIndustry.color}`} />
                 </div>
                 <div>
                   <h3 className="text-3xl font-heading font-bold text-foreground mb-2">
@@ -302,9 +307,7 @@ export default function IndustryDemo() {
                       transition={{ delay: index * 0.1 }}
                       className="flex items-start gap-3"
                     >
-                      <span className={`material-icons ${selectedIndustry.color} mt-0.5`}>
-                        check_circle
-                      </span>
+                      <CheckCircle className={`w-5 h-5 ${selectedIndustry.color} mt-0.5 flex-shrink-0`} />
                       <p className="text-foreground">{feature}</p>
                     </motion.div>
                   ))}

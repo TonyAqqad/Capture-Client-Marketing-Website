@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
 import { useExitIntent } from "@/hooks/useExitIntent";
 import { trackFormStart, trackFormSubmission } from "@/lib/analytics";
+import { X, Sparkles, CheckCircle, Download, RefreshCw } from "lucide-react";
 
 // ============================================================================
 // MAIN COMPONENT
@@ -96,9 +97,7 @@ export default function ExitIntentModal() {
                 onClick={closeModal}
                 className="absolute top-4 right-4 w-8 h-8 rounded-lg bg-surface-hover border border-surface-border hover:bg-surface flex items-center justify-center transition-colors group"
               >
-                <span className="material-icons text-foreground-muted group-hover:text-foreground text-lg">
-                  close
-                </span>
+                <X className="w-5 h-5 text-foreground-muted group-hover:text-foreground" />
               </button>
 
               <AnimatePresence mode="wait">
@@ -116,7 +115,7 @@ export default function ExitIntentModal() {
                       transition={{ type: "spring", stiffness: 200, damping: 15 }}
                       className="w-16 h-16 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center mb-6"
                     >
-                      <span className="material-icons text-accent text-3xl">auto_awesome</span>
+                      <Sparkles className="w-8 h-8 text-accent" />
                     </motion.div>
 
                     {/* Headline */}
@@ -148,9 +147,7 @@ export default function ExitIntentModal() {
                           transition={{ delay: index * 0.1 }}
                           className="flex items-start gap-3"
                         >
-                          <span className="material-icons text-accent text-lg mt-0.5">
-                            check_circle
-                          </span>
+                          <CheckCircle className="w-5 h-5 text-accent mt-0.5 flex-shrink-0" />
                           <p className="text-foreground">{benefit}</p>
                         </motion.div>
                       ))}
@@ -179,18 +176,17 @@ export default function ExitIntentModal() {
                       >
                         {loading ? (
                           <>
-                            <motion.span
+                            <motion.div
                               animate={{ rotate: 360 }}
                               transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                              className="material-icons"
                             >
-                              refresh
-                            </motion.span>
+                              <RefreshCw className="w-5 h-5" />
+                            </motion.div>
                             Sending...
                           </>
                         ) : (
                           <>
-                            <span className="material-icons">download</span>
+                            <Download className="w-5 h-5" />
                             Get My Free Guide
                           </>
                         )}
@@ -216,7 +212,7 @@ export default function ExitIntentModal() {
                       transition={{ type: "spring", stiffness: 200, damping: 15 }}
                       className="w-20 h-20 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center mx-auto mb-6"
                     >
-                      <span className="material-icons text-accent text-5xl">check_circle</span>
+                      <CheckCircle className="w-12 h-12 text-accent" />
                     </motion.div>
 
                     <h3 className="text-3xl font-heading font-bold text-foreground mb-3">

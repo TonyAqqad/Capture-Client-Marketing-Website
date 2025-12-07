@@ -65,32 +65,32 @@
     {
       "title": "24/7 Lead Capture",
       "description": "Never miss a call or lead again. Our AI voice agents answer every call instantly, day or night, weekend or holiday. While your competitors send calls to voicemail, you're capturing clients.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Instant Lead Qualification",
       "description": "Stop wasting time on tire-kickers. Our AI asks the right qualifying questions based on your criteria, routes hot leads to your team immediately, and schedules callbacks for warm prospects.",
-      "icon": "filter"
+      "icon": "Filter"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "Let AI handle scheduling. Your voice agent books appointments directly into your calendar, sends confirmation texts, and handles rescheduling—all without human intervention.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Massive Cost Savings",
       "description": "Replace expensive answering services or additional staff. Voice AI costs a fraction of hiring a receptionist and works 24/7 without overtime, sick days, or vacation time.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     },
     {
       "title": "Professional Every Time",
       "description": "Consistent, friendly, professional call handling every single time. No bad days, no distractions. Your AI represents your brand perfectly on every call.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     },
     {
       "title": "Seamless CRM Integration",
       "description": "Every call is logged automatically. Leads flow directly into your CRM with full call details, transcripts, and qualification status. Complete visibility into your pipeline.",
-      "icon": "link"
+      "icon": "Link"
     }
   ],
   "how_it_works": [

@@ -4,15 +4,22 @@ import { useRef } from "react";
 import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { Moon, Calendar, CircleDot, Ban, X, CheckCircle, Check, Clock, type LucideIcon } from "lucide-react";
 
 export function AfterHoursSection() {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { threshold: 0.3 });
 
+  const iconMap: Record<string, LucideIcon> = {
+    nightlight: Moon,
+    weekend: Calendar,
+    all_inclusive: CircleDot,
+  };
+
   const stats = [
-    { value: "77%", label: "Inquiries After 5 PM", icon: "nightlight" },
-    { value: "63%", label: "Weekend Leads", icon: "weekend" },
-    { value: "24/7", label: "AI Availability", icon: "all_inclusive" }
+    { value: "77%", label: "Inquiries After 5 PM", icon: "nightlight" as const },
+    { value: "63%", label: "Weekend Leads", icon: "weekend" as const },
+    { value: "24/7", label: "AI Availability", icon: "all_inclusive" as const }
   ];
 
   return (
@@ -55,7 +62,7 @@ export function AfterHoursSection() {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 backdrop-blur-xl mb-6">
-            <span className="material-icons text-[#D4AF37] text-xl">bedtime</span>
+            <Moon className="text-[#D4AF37] w-5 h-5" />
             <span className="text-sm font-semibold text-[#D4AF37] uppercase tracking-wide">
               After Hours = Prime Time
             </span>
@@ -83,11 +90,14 @@ export function AfterHoursSection() {
                 className="p-8 border-2 border-[#D4AF37]/20 bg-gradient-to-br from-[#D4AF37]/10 to-[#00C9FF]/5 hover:shadow-[0_0_40px_rgba(168,85,247,0.3)] transition-all duration-500"
               >
                 <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-[#D4AF37] to-[#00C9FF] flex items-center justify-center">
-                    <span className="material-icons text-black text-3xl">
-                      {stat.icon}
-                    </span>
-                  </div>
+                  {(() => {
+                    const IconComponent = iconMap[stat.icon];
+                    return (
+                      <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-[#D4AF37] to-[#00C9FF] flex items-center justify-center">
+                        <IconComponent className="text-black w-7 h-7" />
+                      </div>
+                    );
+                  })()}
                   <p className="text-5xl font-black text-[#D4AF37] mb-2">
                     {stat.value}
                   </p>
@@ -113,13 +123,13 @@ export function AfterHoursSection() {
               className="p-8 border-2 border-red-500/20 bg-gradient-to-br from-red-500/5 to-red-500/10"
             >
               <div className="flex items-center gap-3 mb-6">
-                <span className="material-icons text-red-400 text-3xl">do_not_disturb</span>
+                <Ban className="text-red-400 w-7 h-7" />
                 <h3 className="text-2xl font-bold text-white">Without AI</h3>
               </div>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <span className="material-icons text-red-400 text-lg mt-0.5">close</span>
+                  <X className="text-red-400 w-5 h-5 mt-0.5" />
                   <div>
                     <p className="text-white font-medium mb-1">10 PM Zillow Lead</p>
                     <p className="text-white/60 text-sm">Gets voicemail. Calls competitor. You lose $18K commission.</p>
@@ -127,7 +137,7 @@ export function AfterHoursSection() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <span className="material-icons text-red-400 text-lg mt-0.5">close</span>
+                  <X className="text-red-400 w-5 h-5 mt-0.5" />
                   <div>
                     <p className="text-white font-medium mb-1">Saturday Open House</p>
                     <p className="text-white/60 text-sm">50 sign-ins. Can't call back until Monday. 40 already chose agents.</p>
@@ -135,7 +145,7 @@ export function AfterHoursSection() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <span className="material-icons text-red-400 text-lg mt-0.5">close</span>
+                  <X className="text-red-400 w-5 h-5 mt-0.5" />
                   <div>
                     <p className="text-white font-medium mb-1">Sunday Referral</p>
                     <p className="text-white/60 text-sm">Friend-of-client calls. No answer. Relationship damaged.</p>
@@ -156,13 +166,13 @@ export function AfterHoursSection() {
               className="p-8 border-2 border-green-500/30 bg-gradient-to-br from-green-500/10 to-emerald-500/10"
             >
               <div className="flex items-center gap-3 mb-6">
-                <span className="material-icons text-green-400 text-3xl">check_circle</span>
+                <CheckCircle className="text-green-400 w-7 h-7" />
                 <h3 className="text-2xl font-bold text-white">With AI Voice Agent</h3>
               </div>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <span className="material-icons text-green-400 text-lg mt-0.5">check</span>
+                  <Check className="text-green-400 w-5 h-5 mt-0.5" />
                   <div>
                     <p className="text-white font-medium mb-1">10 PM Zillow Lead</p>
                     <p className="text-white/60 text-sm">AI answers in 30 seconds. Qualifies. Books showing. Deal closed.</p>
@@ -170,7 +180,7 @@ export function AfterHoursSection() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <span className="material-icons text-green-400 text-lg mt-0.5">check</span>
+                  <Check className="text-green-400 w-5 h-5 mt-0.5" />
                   <div>
                     <p className="text-white font-medium mb-1">Saturday Open House</p>
                     <p className="text-white/60 text-sm">AI calls all 50 in 2 hours. 12 qualified. 8 appointments booked.</p>
@@ -178,7 +188,7 @@ export function AfterHoursSection() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <span className="material-icons text-green-400 text-lg mt-0.5">check</span>
+                  <Check className="text-green-400 w-5 h-5 mt-0.5" />
                   <div>
                     <p className="text-white font-medium mb-1">Sunday Referral</p>
                     <p className="text-white/60 text-sm">AI greets by name. Captures details. Notifies you. Referral feels VIP.</p>
@@ -203,7 +213,7 @@ export function AfterHoursSection() {
           className="text-center mt-12"
         >
           <div className="inline-flex items-center gap-4 p-8 rounded-2xl bg-gradient-to-br from-gold/10 via-[#D4AF37]/5 to-gold/10 border-2 border-gold/20 backdrop-blur-xl">
-            <span className="material-icons text-gold text-5xl">schedule</span>
+            <Clock className="text-gold w-12 h-12" />
             <div className="text-left">
               <p className="text-3xl font-black text-white mb-1">
                 Every Hour = <span className="text-gold">More Revenue</span>

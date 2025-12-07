@@ -16,6 +16,8 @@ import LocalIndustriesServed from "@/components/locations/LocalIndustriesServed"
 import ServiceAreaMap from "@/components/locations/ServiceAreaMap";
 import CompetitorComparison from "@/components/locations/CompetitorComparison";
 import { Benefit, FAQItem } from "@/types/content";
+import { MapPin, Phone, ArrowRight, Calendar, BadgeCheck, Zap, Headphones, Award, Building2, Clock, CheckCircle } from "lucide-react";
+import { getIcon } from "@/lib/icon-map";
 import {
   SITE_CONFIG,
   generateLocalBusinessSchema,
@@ -248,7 +250,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               <div className="relative">
                 <div className="absolute inset-0 bg-cyan-400 rounded-full blur-xl opacity-40 group-hover:opacity-70 transition-all duration-300" />
                 <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-br from-cyan-400 via-cyan-500 to-blue-600 flex items-center justify-center shadow-2xl shadow-cyan-500/30">
-                  <span className="material-icons text-white text-xl sm:text-2xl">location_on</span>
+                  <MapPin className="text-white w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
               </div>
               <div className="text-left">
@@ -282,14 +284,12 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                 className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-cyan-400 via-cyan-500 to-blue-500 text-slate-950 px-10 sm:px-12 py-6 sm:py-7 rounded-2xl font-black text-lg sm:text-xl transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-400/50 hover:scale-[1.03] overflow-hidden w-full sm:w-auto"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
-                <span className="material-icons text-2xl relative z-10">phone</span>
+                <Phone className="w-6 h-6 relative z-10" />
                 <div className="relative z-10 text-left">
                   <div className="text-sm font-bold opacity-90">Call Our {location.location.city} Team</div>
                   <div className="text-xl sm:text-2xl font-black tracking-tight">{localPhoneNumber}</div>
                 </div>
-                <span className="material-icons text-2xl relative z-10 group-hover:translate-x-2 transition-transform duration-300">
-                  arrow_forward
-                </span>
+                <ArrowRight className="w-6 h-6 relative z-10 group-hover:translate-x-2 transition-transform duration-300" />
               </a>
 
               {location.hero?.cta_primary && (
@@ -298,9 +298,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                   className="group inline-flex items-center justify-center gap-3 bg-white/10 backdrop-blur-md text-white border-2 border-white/30 px-8 sm:px-10 py-6 sm:py-7 rounded-2xl font-bold text-base sm:text-lg transition-all duration-300 hover:bg-white/15 hover:border-cyan-400/70 hover:shadow-xl w-full sm:w-auto"
                 >
                   <span className="relative z-10">{location.hero.cta_primary.text}</span>
-                  <span className="material-icons text-xl group-hover:translate-x-2 transition-transform duration-300">
-                    calendar_today
-                  </span>
+                  <Calendar className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
                 </a>
               )}
             </div>
@@ -308,15 +306,15 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             {/* Trust indicators */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 animate-in fade-in slide-in-from-bottom-12 duration-700 delay-600">
               <div className="inline-flex items-center gap-2 bg-green-500/15 border border-green-400/50 px-5 py-3 rounded-full">
-                <span className="material-icons text-green-300 text-base">verified</span>
+                <BadgeCheck className="text-green-300 w-4 h-4" />
                 <span className="font-bold text-green-200 text-sm">Free Strategy Call</span>
               </div>
               <div className="inline-flex items-center gap-2 text-slate-200">
-                <span className="material-icons text-cyan-300 text-base">bolt</span>
+                <Zap className="text-cyan-300 w-4 h-4" />
                 <span className="text-sm font-bold">15-Min Response Time</span>
               </div>
               <div className="inline-flex items-center gap-2 text-slate-200">
-                <span className="material-icons text-cyan-300 text-base">support_agent</span>
+                <Headphones className="text-cyan-300 w-4 h-4" />
                 <span className="text-sm font-bold">Local {location.location.city} Support</span>
               </div>
             </div>
@@ -369,7 +367,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
           <div className="container mx-auto relative z-10">
             <div className="text-center mb-8 sm:mb-12 max-w-3xl mx-auto">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-400/10 border border-cyan-400/30 mb-6">
-                <span className="material-icons text-cyan-400 text-sm">workspace_premium</span>
+                <Award className="text-cyan-400 w-4 h-4" />
                 <span className="text-xs font-bold text-cyan-300 uppercase tracking-wider">
                   Why Choose Us
                 </span>
@@ -387,37 +385,38 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-              {location.benefits.slice(0, 6).map((benefit: Benefit, index: number) => (
-                <div
-                  key={index}
-                  className="group relative"
-                  style={{ animationDelay: `${index * 80}ms` }}
-                >
-                  <div className="absolute -inset-px bg-gradient-to-br from-cyan-400/0 via-cyan-400/40 to-cyan-400/0 rounded-2xl opacity-0 group-hover:opacity-100 blur-md transition-all duration-500" />
-                  <div className="relative h-full p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.15)] group-hover:border-cyan-400/30 transition-all duration-500 group-hover:translate-y-[-4px]">
-                    <div className="absolute inset-0 bg-mesh-premium rounded-2xl opacity-0 group-hover:opacity-40 transition-opacity duration-500 pointer-events-none" />
-                    <div className="relative mb-5">
-                      <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl blur-lg opacity-30 group-hover:opacity-60 transition-opacity" />
-                      <div className="relative flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-400/20 via-cyan-500/10 to-blue-500/20 border border-cyan-400/30 group-hover:scale-110 transition-all duration-300">
-                        <span className="material-icons text-cyan-300 text-2xl">
-                          {benefit.icon || "check_circle"}
-                        </span>
+              {location.benefits.slice(0, 6).map((benefit: Benefit, index: number) => {
+                const IconComponent = benefit.icon ? getIcon(benefit.icon) : CheckCircle;
+                return (
+                  <div
+                    key={index}
+                    className="group relative"
+                    style={{ animationDelay: `${index * 80}ms` }}
+                  >
+                    <div className="absolute -inset-px bg-gradient-to-br from-cyan-400/0 via-cyan-400/40 to-cyan-400/0 rounded-2xl opacity-0 group-hover:opacity-100 blur-md transition-all duration-500" />
+                    <div className="relative h-full p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.15)] group-hover:border-cyan-400/30 transition-all duration-500 group-hover:translate-y-[-4px]">
+                      <div className="absolute inset-0 bg-mesh-premium rounded-2xl opacity-0 group-hover:opacity-40 transition-opacity duration-500 pointer-events-none" />
+                      <div className="relative mb-5">
+                        <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl blur-lg opacity-30 group-hover:opacity-60 transition-opacity" />
+                        <div className="relative flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-400/20 via-cyan-500/10 to-blue-500/20 border border-cyan-400/30 group-hover:scale-110 transition-all duration-300">
+                          <IconComponent className="text-cyan-300 w-6 h-6" />
+                        </div>
+                      </div>
+                      <div className="relative z-10">
+                        <h3 className="text-lg sm:text-xl font-black text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-300 group-hover:to-cyan-400 transition-all">
+                          {benefit.title}
+                        </h3>
+                        <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+                          {benefit.description}
+                        </p>
+                      </div>
+                      <div className="absolute top-4 right-4 flex items-center justify-center w-8 h-8 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-400 text-xs font-black">
+                        {index + 1}
                       </div>
                     </div>
-                    <div className="relative z-10">
-                      <h3 className="text-lg sm:text-xl font-black text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-300 group-hover:to-cyan-400 transition-all">
-                        {benefit.title}
-                      </h3>
-                      <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-                        {benefit.description}
-                      </p>
-                    </div>
-                    <div className="absolute top-4 right-4 flex items-center justify-center w-8 h-8 rounded-full bg-cyan-400/10 border border-cyan-400/20 text-cyan-400 text-xs font-black">
-                      {index + 1}
-                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
 
             <div className="max-w-5xl mx-auto mt-12 sm:mt-16">
@@ -450,7 +449,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                 >
                   <div className="flex flex-col sm:flex-row items-start gap-4">
                     <div className="flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-cyan-400/10 border border-cyan-400/20 shrink-0">
-                      <span className="material-icons text-cyan-400 text-xl sm:text-2xl">business</span>
+                      <Building2 className="text-cyan-400 w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
                     <div className="flex-1">
                       <h3 className="text-lg sm:text-xl font-semibold text-cyan-400 mb-3 sm:mb-4">
@@ -525,7 +524,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                 Join {location.location.city} businesses using Voice AI to capture more leads 24/7.
               </p>
               <div className="inline-flex items-center gap-2 text-green-400 text-sm">
-                <span className="material-icons text-base">schedule</span>
+                <Clock className="w-4 h-4" />
                 <span>We'll call you back in 15 minutes</span>
               </div>
             </div>
@@ -535,19 +534,19 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             <div className="mt-6 sm:mt-8 grid grid-cols-3 gap-3 sm:gap-4 max-w-2xl mx-auto">
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-green-500/20 border border-green-500/40 mb-2">
-                  <span className="material-icons text-green-400 text-lg sm:text-xl">verified</span>
+                  <BadgeCheck className="text-green-400 w-5 h-5 sm:w-5 sm:h-5" />
                 </div>
                 <p className="text-xs text-slate-400">100% Secure</p>
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-green-500/20 border border-green-500/40 mb-2">
-                  <span className="material-icons text-green-400 text-lg sm:text-xl">bolt</span>
+                  <Zap className="text-green-400 w-5 h-5 sm:w-5 sm:h-5" />
                 </div>
                 <p className="text-xs text-slate-400">15-Min Setup</p>
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-green-500/20 border border-green-500/40 mb-2">
-                  <span className="material-icons text-green-400 text-lg sm:text-xl">support_agent</span>
+                  <Headphones className="text-green-400 w-5 h-5 sm:w-5 sm:h-5" />
                 </div>
                 <p className="text-xs text-slate-400">Local Support</p>
               </div>

@@ -35,27 +35,27 @@
     {
       "title": "Never Miss Raleigh Calls",
       "description": "Every missed call is a lost opportunity. Our AI answers 100% of calls from Raleigh customers, day or night, weekends and holidays.",
-      "icon": "phone_in_talk"
+      "icon": "Phone"
     },
     {
       "title": "Intelligent Lead Scoring",
       "description": "AI evaluates each caller and scores them based on your criteria, ensuring your team focuses on the highest-value Raleigh opportunities.",
-      "icon": "gps_fixed"
+      "icon": "Target"
     },
     {
       "title": "Seamless Calendar Integration",
       "description": "Voice AI connects with your calendar to book appointments automatically, eliminating phone tag and scheduling hassles.",
-      "icon": "event_available"
+      "icon": "CalendarCheck"
     },
     {
       "title": "Cost-Effective Solution",
       "description": "Replace expensive answering services and reduce staffing overhead while providing better service to your Raleigh customers.",
-      "icon": "savings"
+      "icon": "PiggyBank"
     },
     {
       "title": "Detailed Call Analytics",
       "description": "Get insights into call patterns, common questions, and lead quality with comprehensive analytics and reporting.",
-      "icon": "bar_chart"
+      "icon": "BarChart"
     }
   ],
   "how_it_works": {

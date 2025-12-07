@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "@/lib/motion";
+import { Star, TrendingUp, Play, BadgeCheck, Megaphone, Shield, Heart } from "lucide-react";
 
 // ============================================================================
 // TYPE DEFINITIONS
@@ -9,7 +10,7 @@ import { motion } from "@/lib/motion";
 interface ProofCard {
   type: "review" | "metric" | "video" | "badge";
   content: {
-    [key: string]: string | number;
+    [key: string]: string | number | React.ComponentType<{ className?: string }>;
   };
 }
 
@@ -107,7 +108,7 @@ const PROOF_ITEMS: ProofCard[] = [
     content: {
       title: "Google Partner",
       subtitle: "Certified Since 2020",
-      icon: "verified",
+      icon: BadgeCheck,
     },
   },
   {
@@ -115,7 +116,7 @@ const PROOF_ITEMS: ProofCard[] = [
     content: {
       title: "Meta Business Partner",
       subtitle: "Official Partner",
-      icon: "campaign",
+      icon: Megaphone,
     },
   },
   {
@@ -123,7 +124,7 @@ const PROOF_ITEMS: ProofCard[] = [
     content: {
       title: "SOC 2 Certified",
       subtitle: "Enterprise Security",
-      icon: "shield",
+      icon: Shield,
     },
   },
   {
@@ -131,7 +132,7 @@ const PROOF_ITEMS: ProofCard[] = [
     content: {
       title: "HIPAA Compliant",
       subtitle: "Healthcare Ready",
-      icon: "health_and_safety",
+      icon: Heart,
     },
   },
 ];
@@ -185,9 +186,9 @@ export default function SocialProofWall() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
             >
-              {item.type === "review" && <ReviewCard content={item.content} />}
-              {item.type === "metric" && <MetricCard content={item.content} />}
-              {item.type === "video" && <VideoCard content={item.content} />}
+              {item.type === "review" && <ReviewCard content={item.content as { [key: string]: string | number }} />}
+              {item.type === "metric" && <MetricCard content={item.content as { [key: string]: string | number }} />}
+              {item.type === "video" && <VideoCard content={item.content as { [key: string]: string | number }} />}
               {item.type === "badge" && <BadgeCard content={item.content} />}
             </motion.div>
           ))}
@@ -209,9 +210,7 @@ function ReviewCard({ content }: { content: { [key: string]: string | number } }
       {/* Stars */}
       <div className="flex items-center gap-1 mb-4">
         {stars.map((_, i) => (
-          <span key={i} className="material-icons text-yellow-400 text-lg">
-            star
-          </span>
+          <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
         ))}
       </div>
 
@@ -244,7 +243,7 @@ function MetricCard({ content }: { content: { [key: string]: string | number } }
       <p className="text-foreground font-semibold mb-1">{content.label as string}</p>
       <p className="text-foreground-muted text-sm">{content.period as string}</p>
       <div className="mt-4 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-accent/20 border border-accent/30">
-        <span className="material-icons text-accent text-sm">trending_up</span>
+        <TrendingUp className="w-4 h-4 text-accent" />
         <span className="text-accent text-xs font-bold">{content.trend as string}</span>
       </div>
     </div>
@@ -259,7 +258,7 @@ function VideoCard({ content }: { content: { [key: string]: string | number } })
         <span className="text-6xl">{content.thumbnail as string}</span>
         <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors duration-300 flex items-center justify-center">
           <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-            <span className="material-icons text-primary text-3xl">play_arrow</span>
+            <Play className="w-8 h-8 text-primary ml-1" />
           </div>
         </div>
         <div className="absolute top-3 right-3 px-2 py-1 rounded-lg bg-black/70 backdrop-blur-sm">
@@ -286,11 +285,13 @@ function VideoCard({ content }: { content: { [key: string]: string | number } })
   );
 }
 
-function BadgeCard({ content }: { content: { [key: string]: string | number } }) {
+function BadgeCard({ content }: { content: { [key: string]: string | number | React.ComponentType<{ className?: string }> } }) {
+  const IconComponent = content.icon as React.ComponentType<{ className?: string }>;
+
   return (
     <div className="card p-6 flex items-center gap-4 hover:bg-surface-hover transition-colors duration-300">
       <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/30 flex items-center justify-center flex-shrink-0">
-        <span className="material-icons text-primary text-2xl">{content.icon as string}</span>
+        <IconComponent className="w-6 h-6 text-primary" />
       </div>
       <div>
         <p className="text-foreground font-semibold">{content.title as string}</p>

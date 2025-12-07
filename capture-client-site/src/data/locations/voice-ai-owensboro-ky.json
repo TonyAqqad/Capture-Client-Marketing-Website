@@ -43,32 +43,32 @@
     {
       "title": "Answer Every Owensboro Call",
       "description": "Day or night, weekday or weekend, your AI answers every call from Owensboro customers instantly. No more voicemail, no more missed opportunities.",
-      "icon": "phone_in_talk"
+      "icon": "Phone"
     },
     {
       "title": "Intelligent Lead Scoring",
       "description": "AI qualifies each Owensboro prospect based on your criteria, so you know which leads to prioritize and which need more time to decide.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     },
     {
       "title": "Automatic Appointment Booking",
       "description": "Prospects book directly into your available time slots. No phone tag, no scheduling conflicts. Owensboro customers love the convenience.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Slash Operating Costs",
       "description": "Save $3,000+ monthly versus hiring receptionists or using answering services. Owensboro businesses see immediate bottom-line impact.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     },
     {
       "title": "Consistent Quality",
       "description": "Every caller experiences the same high-quality service. AI never has off days, forgets information, or delivers inconsistent messaging.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     },
     {
       "title": "Scale Effortlessly",
       "description": "Handle seasonal fluctuations without hiring stress. Perfect for Owensboro businesses with varying call volumes throughout the year.",
-      "icon": "trending_up"
+      "icon": "TrendingUp"
     }
   ],
   "how_it_works": {

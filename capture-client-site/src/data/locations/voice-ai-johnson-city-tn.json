@@ -44,12 +44,12 @@
     {
       "title": "24/7 Johnson City",
       "description": "AI never sleeps.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Qualify Leads",
       "description": "Qualify Johnson City prospects.",
-      "icon": "filter_alt"
+      "icon": "Filter"
     }
   ],
   "how_it_works": [

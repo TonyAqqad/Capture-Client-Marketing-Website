@@ -3,6 +3,7 @@
 import { motion } from "@/lib/motion";
 import Link from "next/link";
 import Image from "next/image";
+import { LayoutGrid, CheckCircle, ArrowRight } from "lucide-react";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/Button";
 import { getIntegrationBySlug, Integration } from "@/data/integrations";
@@ -157,9 +158,7 @@ export function IndustryIntegrations({ industry, maxDisplay = 6 }: IndustryInteg
                       <div className="space-y-2 mb-6 pt-4 border-t border-white/10">
                         {integration.keyFeatures.slice(0, 3).map((feature, idx) => (
                           <div key={idx} className="flex items-start gap-2">
-                            <span className={`material-icons text-sm ${colors.accent} flex-shrink-0 mt-0.5`}>
-                              check_circle
-                            </span>
+                            <CheckCircle className={`w-4 h-4 ${colors.accent} flex-shrink-0 mt-0.5`} />
                             <span className="text-sm text-foreground-muted line-clamp-1">
                               {feature}
                             </span>
@@ -170,13 +169,13 @@ export function IndustryIntegrations({ industry, maxDisplay = 6 }: IndustryInteg
                       {/* CTA */}
                       <div className={`flex items-center ${colors.accent} font-semibold group-hover:${colors.accentDark} transition-colors duration-300`}>
                         <span>Learn More</span>
-                        <motion.span
-                          className="material-icons ml-2"
+                        <motion.div
+                          className="ml-2"
                           animate={{ x: [0, 4, 0] }}
                           transition={{ duration: 1.5, repeat: Infinity }}
                         >
-                          arrow_forward
-                        </motion.span>
+                          <ArrowRight className="w-5 h-5" />
+                        </motion.div>
                       </div>
                     </div>
 
@@ -194,7 +193,7 @@ export function IndustryIntegrations({ industry, maxDisplay = 6 }: IndustryInteg
               variant="glass"
               size="lg"
               href="/integrations"
-              icon="apps"
+              icon={LayoutGrid}
               ariaLabel="View all integrations"
             >
               View All {industry.relatedIntegrations.length} Integrations

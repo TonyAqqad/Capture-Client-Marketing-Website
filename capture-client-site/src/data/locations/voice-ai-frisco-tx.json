@@ -56,22 +56,22 @@
     {
       "title": "24/7 Availability for Frisco Customers",
       "description": "Your Frisco customers call at all hours. Our AI voice agents never sleep, ensuring every call from Collin County is answered professionally.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Scale with Frisco's Growth",
       "description": "As Frisco grows, handle more calls without adding staff. Perfect for businesses in America's fastest-growing city.",
-      "icon": "trending_up"
+      "icon": "TrendingUp"
     },
     {
       "title": "Automatic Appointment Scheduling",
       "description": "Let AI book appointments directly into your calendar. No more phone tag with Frisco customers.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Cost Savings Over Traditional Staff",
       "description": "Hiring a receptionist in Frisco costs $35,000-$50,000/year. Our Voice AI costs a fraction of that.",
-      "icon": "attach_money"
+      "icon": "DollarSign"
     }
   ],
   "how_it_works": [

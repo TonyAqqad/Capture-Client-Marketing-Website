@@ -156,22 +156,22 @@
       {
         "title": "Never Miss a Call Again",
         "description": "Your AI answers every call instantly, even when you're with another customer. No more lost leads.",
-        "icon": "phone"
+        "icon": "Phone"
       },
       {
         "title": "Qualify Leads Automatically",
         "description": "AI asks the right questions to determine if callers are serious buyers. Only qualified leads reach your inbox.",
-        "icon": "filter"
+        "icon": "Filter"
       },
       {
         "title": "Save 10+ Hours Per Week",
         "description": "Stop answering repetitive questions. Let AI handle initial inquiries while you focus on closing deals.",
-        "icon": "clock"
+        "icon": "Clock"
       },
       {
         "title": "Test Before You Scale",
         "description": "Start small with 50 calls/month. Once you see results, upgrade to Growth or Enterprise packages.",
-        "icon": "chart"
+        "icon": "BarChart"
       }
     ]
   },

@@ -3,6 +3,7 @@ import { getAllLocations } from "@/lib/data";
 import type { Metadata } from "next";
 import { SITE_CONFIG } from "@/lib/seo-config";
 import { generateCollectionPageSchema } from "@/lib/advanced-schemas";
+import { MapPin, Circle, ArrowRight, Globe, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Service Locations | Voice AI & Marketing Services | Capture Client",
@@ -129,7 +130,7 @@ export default async function LocationsPage() {
           <div className="container mx-auto text-center relative z-10">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
               <div className="flex items-center justify-center w-5 h-5 shrink-0">
-                <span className="material-icons text-primary text-sm">location_on</span>
+                <MapPin className="text-primary w-4 h-4" />
               </div>
               <span className="text-sm font-medium text-primary">Local Service Areas</span>
             </div>
@@ -197,9 +198,7 @@ export default async function LocationsPage() {
                             <div className="relative flex-shrink-0">
                               <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl blur-md opacity-50 group-hover:opacity-80 transition-opacity duration-300" />
                               <div className="relative flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-400/20 via-cyan-500/10 to-blue-500/20 border border-cyan-400/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                                <span className="material-icons text-cyan-300 text-2xl group-hover:scale-110 transition-transform">
-                                  location_on
-                                </span>
+                                <MapPin className="text-cyan-300 w-6 h-6 group-hover:scale-110 transition-transform" />
                               </div>
                             </div>
 
@@ -217,7 +216,7 @@ export default async function LocationsPage() {
                           {location.location.service_area_radius && (
                             <div className="mb-4">
                               <span className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-gradient-to-r from-cyan-400/15 to-blue-500/15 border border-cyan-400/30 text-xs font-bold text-cyan-300 group-hover:border-cyan-400/50 transition-colors">
-                                <span className="material-icons text-xs">adjust</span>
+                                <Circle className="w-3 h-3" />
                                 {location.location.service_area_radius} radius
                               </span>
                             </div>
@@ -243,7 +242,7 @@ export default async function LocationsPage() {
                           <div className="flex items-center justify-between text-cyan-300 font-bold text-sm group-hover:text-cyan-200 transition-colors">
                             <span>View Services</span>
                             <div className="flex items-center justify-center w-8 h-8 rounded-full bg-cyan-400/10 border border-cyan-400/20 group-hover:bg-cyan-400/20 group-hover:border-cyan-400/40 group-hover:translate-x-1 transition-all duration-300">
-                              <span className="material-icons text-base">arrow_forward</span>
+                              <ArrowRight className="w-4 h-4" />
                             </div>
                           </div>
                         </div>
@@ -263,7 +262,7 @@ export default async function LocationsPage() {
 
             <div className="relative z-10">
               <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-primary/10 border border-primary/20 mb-6">
-                <span className="material-icons text-primary text-2xl sm:text-3xl">public</span>
+                <Globe className="text-primary w-6 h-6 sm:w-7 sm:h-7" />
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
                 Don't see your location?
@@ -276,7 +275,7 @@ export default async function LocationsPage() {
                 href="tel:865-346-3339"
                 className="inline-flex items-center justify-center gap-2 bg-primary text-black px-6 sm:px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,163,0.3)] min-h-[44px]"
               >
-                <span className="material-icons text-lg sm:text-xl">phone</span>
+                <Phone className="w-5 h-5 sm:w-5 sm:h-5" />
                 <span className="hidden sm:inline">Call Us: </span>(865) 346-3339
               </a>
             </div>

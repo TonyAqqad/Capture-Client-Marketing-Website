@@ -1,5 +1,7 @@
+"use client";
+
 import Link from "next/link";
-import { Plug } from "lucide-react";
+import { Plug, Grid3x3, Headphones } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 /**
@@ -45,12 +47,14 @@ export default function IntegrationNotFound() {
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <Link href="/integrations">
-            <Button variant="primary" icon="apps" size="lg">
+            <Button variant="primary" size="lg">
+              <Grid3x3 className="w-5 h-5 mr-2" />
               Browse All Integrations
             </Button>
           </Link>
           <Link href="/contact">
-            <Button variant="glass" icon="support_agent" size="lg">
+            <Button variant="glass" size="lg">
+              <Headphones className="w-5 h-5 mr-2" />
               Contact Support
             </Button>
           </Link>

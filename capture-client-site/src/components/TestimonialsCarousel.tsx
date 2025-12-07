@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from 'react';
 import { motion, AnimatePresence } from '@/lib/motion';
 import { useInView } from '@/hooks/useInView';
 import { Testimonial } from '@/types/content';
+import { ChevronLeft, ChevronRight, Star, User } from 'lucide-react';
 
 interface CarouselTestimonialExtended extends Testimonial {
   id: number;
@@ -128,7 +129,7 @@ export default function TestimonialsCarousel() {
             className="w-12 h-12 rounded-full glass border border-surface-border flex items-center justify-center text-foreground hover:border-accent transition-colors"
             aria-label="Previous testimonial"
           >
-            <span className="material-icons">chevron_left</span>
+            <ChevronLeft className="w-6 h-6" />
           </motion.button>
 
           {/* Dots indicator */}
@@ -167,7 +168,7 @@ export default function TestimonialsCarousel() {
             className="w-12 h-12 rounded-full glass border border-surface-border flex items-center justify-center text-foreground hover:border-accent transition-colors"
             aria-label="Next testimonial"
           >
-            <span className="material-icons">chevron_right</span>
+            <ChevronRight className="w-6 h-6" />
           </motion.button>
         </div>
 
@@ -236,9 +237,8 @@ function TestimonialCard({ testimonial, isInView }: TestimonialCardProps) {
               duration: 0.5,
               type: 'spring',
             }}
-            className="material-icons text-accent text-xl"
           >
-            star
+            <Star className="w-5 h-5 text-accent fill-accent" />
           </motion.span>
         ))}
       </div>
@@ -264,7 +264,7 @@ function TestimonialCard({ testimonial, isInView }: TestimonialCardProps) {
           whileHover={{ scale: 1.1, rotate: 5 }}
           className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center"
         >
-          <span className="material-icons text-primary">person</span>
+          <User className="w-6 h-6 text-primary" />
         </motion.div>
         <div>
           <p className="text-foreground font-semibold">{testimonial.name}</p>

@@ -3,9 +3,10 @@
 import { motion } from "@/lib/motion";
 import { useState, useEffect } from "react";
 import { GlowCard } from "./GlowCard";
+import { LucideIcon, ArrowRight } from "lucide-react";
 
 interface FeatureCardProps {
-  icon: string;
+  icon: LucideIcon;
   title: string;
   description: string;
   iconColor?: "primary" | "accent";
@@ -64,7 +65,10 @@ export function FeatureCard({
           >
             {/* Inner glow */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-xl opacity-50" />
-            <span className="material-icons text-2xl sm:text-3xl relative z-10" aria-hidden="true">{icon}</span>
+            {(() => {
+              const Icon = icon;
+              return <Icon className="relative z-10" size={24} aria-hidden="true" />;
+            })()}
 
             {/* Animated ring on hover */}
             {!isMobile && (
@@ -102,14 +106,13 @@ export function FeatureCard({
             className="flex items-center justify-center sm:justify-start gap-2 mt-5 sm:mt-6 text-sm font-semibold text-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300 w-full"
           >
             <span>Learn more</span>
-            <motion.span
-              className="material-icons text-sm"
+            <motion.div
               aria-hidden="true"
               animate={isMobile ? {} : { x: [0, 4, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
             >
-              arrow_forward
-            </motion.span>
+              <ArrowRight size={16} />
+            </motion.div>
           </motion.div>
 
           {/* Bottom shine effect */}

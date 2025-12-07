@@ -35,27 +35,27 @@
     {
       "title": "Always-On for Winston-Salem",
       "description": "Your business never closes with Voice AI answering calls 24/7, capturing Winston-Salem leads around the clock.",
-      "icon": "schedule"
+      "icon": "Clock"
     },
     {
       "title": "Qualify Leads Instantly",
       "description": "AI asks the right questions to determine lead quality, budget, and timeline so you prioritize the best opportunities.",
-      "icon": "check_circle"
+      "icon": "CheckCircle"
     },
     {
       "title": "Schedule Automatically",
       "description": "Voice AI books appointments, consultations, and service calls directly into your calendar without back-and-forth.",
-      "icon": "event"
+      "icon": "Calendar"
     },
     {
       "title": "Slash Costs",
       "description": "Replace expensive answering services and reduce reception staffing while improving response quality and speed.",
-      "icon": "trending_down"
+      "icon": "TrendingDown"
     },
     {
       "title": "Perfect Consistency",
       "description": "Every Winston-Salem caller receives the same professional, accurate, friendly service representing your brand.",
-      "icon": "workspace_premium"
+      "icon": "Award"
     }
   ],
   "how_it_works": {
