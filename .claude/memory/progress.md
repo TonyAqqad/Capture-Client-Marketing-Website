@@ -1,8 +1,17 @@
 # Progress (lean)
-- Overall: ~95% complete (last updated 2025-12-07). Builds passing (228+ pages).
-- Current focus: component consolidation (15 groups), Material Icons conversion (~288 remaining), button/container class standardization, service pages SEO polish, location pages expansion, perf/accessibility sweep.
+- Overall: ~97% complete (last updated 2025-12-07). Builds passing (228 pages).
+- Current focus: component consolidation (15 groups), button/container class standardization, service pages SEO polish, location pages expansion, perf/accessibility sweep.
 
 ## Completed highlights
+- **Phase 4 (12-Phase Plan) - Material Icons to Lucide COMPLETE** (2025-12-07, commit 90d3d0f):
+  - Created centralized icon mapping utility (`src/lib/icon-map.ts`) with 178+ icon mappings
+  - Converted ~288 Material Icons to Lucide React across entire codebase
+  - Fixed Next.js 14+ serialization issues ("Functions cannot be passed to Client Components"):
+    - Pattern: Pass icon NAME (string) to client components, resolve to Lucide component internally
+    - Created IndustrySolutions.tsx client component for who-we-serve dynamic icon rendering
+    - IntegrationDetailHero.tsx resolves categoryIcon string to Lucide component
+  - Updated 165 files, 2618 insertions, 1256 deletions
+  - All 228 pages build successfully with no icon-related errors
 - **Phase 3 (12-Phase Plan) - Code Cleanup COMPLETE** (2025-12-07, commit 69196f2):
   - Removed 29 unused imports/variables across 16 files:
     - Industry pages (6 files): 13 unused imports removed
@@ -22,7 +31,7 @@
 
 ## Outstanding (essentials)
 - Component duplicates: 15 groups to merge (GlassCard, Hero, ROI Calculator, FAQ, Testimonials, CTA, etc.).
-- Icons: ~288 Material Icons remain → convert to lucide-react.
+- ~~Icons: ~288 Material Icons remain → convert to lucide-react.~~ **DONE** (Phase 4)
 - Standardization: buttons (`btn-gold/ghost`), containers (`container-custom`), responsive padding.
 - SEO gaps: service pages refinement; location pages need coverage; ensure canonical/OG/JSON-LD where missing.
 - Performance/accessibility: run checks after consolidations.
