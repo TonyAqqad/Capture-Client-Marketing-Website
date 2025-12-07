@@ -72,7 +72,7 @@ export default async function LocationsPage() {
     telephone: SITE_CONFIG.phoneRaw,
     email: SITE_CONFIG.email,
     url: SITE_CONFIG.url,
-    image: `${SITE_CONFIG.url}/logo-full.png`,
+    image: `${SITE_CONFIG.url}/logo-full.svg`,
     priceRange: "$$",
     areaServed: [
       { "@type": "State", name: "Tennessee" },

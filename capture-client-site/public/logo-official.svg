@@ -1,0 +1,55 @@
+<svg width="220" height="50" viewBox="0 0 220 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Official horizontal logo: Icon + "CAPTURE CLIENT" text -->
+
+  <!-- Icon container (left side) -->
+  <g transform="translate(5, 5)">
+    <!-- Outer ring (capture frame) -->
+    <circle cx="20" cy="20" r="18" stroke="url(#goldGradient1)" stroke-width="2" fill="none" opacity="0.4"/>
+
+    <!-- Main focus ring -->
+    <circle cx="20" cy="20" r="14" stroke="url(#goldGradient2)" stroke-width="2.5" fill="none"/>
+
+    <!-- Corner brackets (capture/targeting theme) -->
+    <g stroke="url(#goldGradient2)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <!-- Top-left -->
+      <path d="M8 12V8H12"/>
+      <!-- Top-right -->
+      <path d="M32 12V8H28"/>
+      <!-- Bottom-left -->
+      <path d="M8 28V32H12"/>
+      <!-- Bottom-right -->
+      <path d="M32 28V32H28"/>
+    </g>
+
+    <!-- Center "C" for Capture Client -->
+    <path d="M25 20C25 22.761 22.761 25 20 25C17.239 25 15 22.761 15 20C15 17.239 17.239 15 20 15C21.326 15 22.547 15.527 23.464 16.379"
+          stroke="url(#goldGradient3)"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          fill="none"/>
+
+    <!-- Center dot (target locked) -->
+    <circle cx="20" cy="20" r="2.5" fill="#F5A623"/>
+  </g>
+
+  <!-- Text: "CAPTURE CLIENT" -->
+  <text x="60" y="32" fill="white" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="700" font-size="20" letter-spacing="0.5">CAPTURE</text>
+  <text x="145" y="32" fill="rgba(255,255,255,0.9)" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-weight="400" font-size="20" letter-spacing="0.5">CLIENT</text>
+
+  <!-- Gradients for premium gold look -->
+  <defs>
+    <linearGradient id="goldGradient1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F5A623"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+    <linearGradient id="goldGradient2" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F5A623"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#B8941F"/>
+    </linearGradient>
+    <linearGradient id="goldGradient3" x1="15" y1="15" x2="25" y2="25" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F5A623"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+  </defs>
+</svg>

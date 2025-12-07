@@ -49,7 +49,7 @@ export const organizationSchema = {
   url: SITE_URL,
   logo: {
     "@type": "ImageObject",
-    url: `${SITE_URL}/logo-full.png`,
+    url: `${SITE_URL}/logo-full.svg`,
     width: 512,
     height: 512,
   },
@@ -86,7 +86,7 @@ export const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": `${SITE_URL}/#localbusiness`,
   name: BUSINESS_INFO.name,
-  image: `${SITE_URL}/logo-full.png`,
+  image: `${SITE_URL}/logo-full.svg`,
   telephone: BUSINESS_INFO.telephone,
   email: BUSINESS_INFO.email,
   url: SITE_URL,
@@ -341,7 +341,7 @@ export function generateBlogPostingSchema(options: {
     publisher: {
       "@id": `${SITE_URL}/#organization`,
     },
-    image: options.image || `${SITE_URL}/logo-full.png`,
+    image: options.image || `${SITE_URL}/logo-full.svg`,
     inLanguage: "en-US",
   };
 }

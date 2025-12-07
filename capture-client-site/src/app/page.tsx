@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import dynamic from "next/dynamic";
+import { CheckCircle2, ArrowRight } from "lucide-react";
 import { generateSoftwareApplicationSchema } from "@/lib/seo-config";
 import AIVoiceVisual from "@/components/AIVoiceVisual";
 import GrowthDashboard from "@/components/GrowthDashboard";
@@ -169,7 +170,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": "https://captureclientai.net/#localbusiness",
   name: "Capture Client",
-  image: "https://captureclientai.net/logo-full.png",
+  image: "https://captureclientai.net/logo-full.svg",
   telephone: "+1-865-346-3339",
   email: "team@captureclientai.net",
   url: "https://captureclientai.net",
@@ -402,7 +403,7 @@ export default function HomePage() {
                 <ul className="space-y-4 sm:space-y-5 mb-6 sm:mb-8">
                   <li className="flex items-start gap-3 sm:gap-4 group">
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 border border-accent/20 flex items-center justify-center flex-shrink-0 group-hover:shadow-glow transition-all duration-300">
-                      <span className="material-icons text-accent text-xl">check_circle</span>
+                      <CheckCircle2 className="w-5 h-5 text-accent" />
                     </div>
                     <div>
                       <p className="font-semibold text-foreground text-base sm:text-lg mb-1">24/7 Availability</p>
@@ -413,7 +414,7 @@ export default function HomePage() {
                   </li>
                   <li className="flex items-start gap-3 sm:gap-4 group">
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 border border-accent/20 flex items-center justify-center flex-shrink-0 group-hover:shadow-glow transition-all duration-300">
-                      <span className="material-icons text-accent text-xl">check_circle</span>
+                      <CheckCircle2 className="w-5 h-5 text-accent" />
                     </div>
                     <div>
                       <p className="font-semibold text-foreground text-base sm:text-lg mb-1">Natural Conversations</p>
@@ -424,7 +425,7 @@ export default function HomePage() {
                   </li>
                   <li className="flex items-start gap-3 sm:gap-4 group">
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 border border-accent/20 flex items-center justify-center flex-shrink-0 group-hover:shadow-glow transition-all duration-300">
-                      <span className="material-icons text-accent text-xl">check_circle</span>
+                      <CheckCircle2 className="w-5 h-5 text-accent" />
                     </div>
                     <div>
                       <p className="font-semibold text-foreground text-base sm:text-lg mb-1">Automatic Transcription</p>
@@ -435,9 +436,9 @@ export default function HomePage() {
                   </li>
                 </ul>
 
-                <Link href="/services/voice-ai" className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-accent/20 to-primary/20 border border-accent/30 backdrop-blur-xl font-semibold text-foreground hover:shadow-glow-lg hover:scale-[1.02] transition-all duration-300 group">
+                <Link href="/services/voice-ai" className="btn-ghost px-8 py-4 rounded-xl inline-flex items-center gap-3 font-semibold hover:scale-[1.02] transition-all duration-300 group w-full sm:w-auto justify-center">
                   Explore Voice AI
-                  <span className="material-icons group-hover:translate-x-1 transition-transform duration-300">arrow_forward</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
 
@@ -507,7 +508,7 @@ export default function HomePage() {
                 <ul className="space-y-4 sm:space-y-5 mb-6 sm:mb-8">
                   <li className="flex items-start gap-3 sm:gap-4 group">
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0 group-hover:shadow-glow-primary transition-all duration-300">
-                      <span className="material-icons text-primary text-xl">check_circle</span>
+                      <CheckCircle2 className="w-5 h-5 text-primary" />
                     </div>
                     <div>
                       <p className="font-semibold text-foreground text-base sm:text-lg mb-1">Real-Time Analytics</p>
@@ -518,7 +519,7 @@ export default function HomePage() {
                   </li>
                   <li className="flex items-start gap-3 sm:gap-4 group">
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0 group-hover:shadow-glow-primary transition-all duration-300">
-                      <span className="material-icons text-primary text-xl">check_circle</span>
+                      <CheckCircle2 className="w-5 h-5 text-primary" />
                     </div>
                     <div>
                       <p className="font-semibold text-foreground text-base sm:text-lg mb-1">Unified Inbox</p>
@@ -529,7 +530,7 @@ export default function HomePage() {
                   </li>
                   <li className="flex items-start gap-3 sm:gap-4 group">
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0 group-hover:shadow-glow-primary transition-all duration-300">
-                      <span className="material-icons text-primary text-xl">check_circle</span>
+                      <CheckCircle2 className="w-5 h-5 text-primary" />
                     </div>
                     <div>
                       <p className="font-semibold text-foreground text-base sm:text-lg mb-1">Growth Tracking</p>
@@ -540,9 +541,9 @@ export default function HomePage() {
                   </li>
                 </ul>
 
-                <Link href="/features" className="inline-flex items-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 backdrop-blur-xl font-semibold text-foreground hover:shadow-glow-lg hover:scale-[1.02] transition-all duration-300 group">
+                <Link href="/features" className="btn-ghost px-8 py-4 rounded-xl inline-flex items-center gap-3 font-semibold hover:scale-[1.02] transition-all duration-300 group w-full sm:w-auto justify-center">
                   Explore CRM & Dashboard
-                  <span className="material-icons group-hover:translate-x-1 transition-transform duration-300">arrow_forward</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </div>
             </div>

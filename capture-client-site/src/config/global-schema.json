@@ -9,7 +9,7 @@
       "url": "https://captureclientai.net",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://captureclientai.net/logo-full.png",
+        "url": "https://captureclientai.net/logo-full.svg",
         "width": 512,
         "height": 512,
         "caption": "Capture Client Logo"
@@ -140,7 +140,7 @@
       "@type": "LocalBusiness",
       "@id": "https://captureclientai.net/#localbusiness",
       "name": "Capture Client",
-      "image": "https://captureclientai.net/logo-full.png",
+      "image": "https://captureclientai.net/logo-full.svg",
       "telephone": "+1-865-346-3339",
       "email": "team@captureclientai.net",
       "url": "https://captureclientai.net",

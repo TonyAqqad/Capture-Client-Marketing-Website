@@ -5,8 +5,39 @@ export const metadata: Metadata = {
   title: "Contact Us | Get Your Free Consultation | Capture Client",
   description:
     "Contact Capture Client for Voice AI, Google Ads, and Facebook Ads services. Call (865) 346-3339 or fill out our form for a free consultation.",
+  keywords: [
+    "contact capture client",
+    "ai voice agents consultation",
+    "free demo call",
+    "marketing automation quote",
+    "voice ai pricing",
+    "lead generation inquiry"
+  ],
+  openGraph: {
+    title: "Contact Us | Get Your Free Consultation | Capture Client",
+    description: "Ready to stop missing calls? Contact Capture Client for a free AI voice agent demo. Call (865) 346-3339 or fill out our form.",
+    url: "https://captureclientai.net/contact",
+    siteName: "Capture Client",
+    type: "website",
+    images: [{
+      url: "https://captureclientai.net/og-image.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Contact Capture Client",
+    }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Us | Get Your Free Consultation | Capture Client",
+    description: "Ready to stop missing calls? Contact Capture Client for a free AI voice agent demo.",
+    images: ["https://captureclientai.net/og-image.jpg"],
+  },
   alternates: {
     canonical: "https://captureclientai.net/contact",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -16,7 +47,7 @@ const localBusinessSchema = {
   "@type": "LocalBusiness",
   "@id": "https://captureclientai.net/#localbusiness",
   name: "Capture Client",
-  image: "https://captureclientai.net/logo-full.png",
+  image: "https://captureclientai.net/logo-full.svg",
   telephone: "+1-865-346-3339",
   email: "team@captureclientai.net",
   url: "https://captureclientai.net",
