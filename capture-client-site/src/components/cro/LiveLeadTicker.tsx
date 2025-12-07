@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
 import { createVisibilityAwareInterval, isIOSDevice } from "@/lib/ios-performance";
+import { X, Clock, CheckCircle2 } from "lucide-react";
 
 interface Lead {
   id: number;
@@ -78,7 +79,7 @@ export default function LiveLeadTicker() {
             className="absolute top-2 right-2 w-6 h-6 flex items-center justify-center rounded-full bg-surface-border/50 hover:bg-surface-border transition-colors"
             aria-label="Close notification"
           >
-            <span className="material-icons text-xs text-foreground-muted">close</span>
+            <X className="w-3 h-3 text-foreground-muted" />
           </button>
 
           <div className="flex items-start gap-2 sm:gap-3">
@@ -105,7 +106,7 @@ export default function LiveLeadTicker() {
               </p>
 
               <div className="flex items-center gap-1.5 sm:gap-2">
-                <span className="material-icons text-foreground-muted text-xs">schedule</span>
+                <Clock className="w-3 h-3 text-foreground-muted" />
                 <p className="text-[10px] sm:text-xs text-foreground-muted">{lead.time}</p>
               </div>
             </div>
@@ -113,7 +114,7 @@ export default function LiveLeadTicker() {
             {/* Success icon */}
             <div className="flex-shrink-0">
               <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 flex items-center justify-center">
-                <span className="material-icons text-accent text-base sm:text-lg">check_circle</span>
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
               </div>
             </div>
           </div>

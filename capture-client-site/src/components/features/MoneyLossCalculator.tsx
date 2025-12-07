@@ -23,7 +23,7 @@ interface LossCalculation {
 // CONSTANTS
 // ============================================================================
 
-const AI_MONTHLY_COST = 497; // Cost of AI Voice Agent per month
+const AI_MONTHLY_COST = 797; // Cost of AI Voice Agent per month (Growth tier)
 const WEEKS_PER_MONTH = 4.33; // Average weeks in a month
 const DAYS_PER_WEEK = 7;
 

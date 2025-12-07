@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Star, BadgeCheck, Shield } from "lucide-react";
 
 export default function SocialProofBanner() {
   const [isVisible, setIsVisible] = useState(false);
@@ -48,9 +49,7 @@ export default function SocialProofBanner() {
             {/* Star rating - subtle gold */}
             <div className="flex items-center gap-0.5">
               {[1, 2, 3, 4, 5].map((star) => (
-                <span key={star} className="material-icons text-amber-400/90 text-base">
-                  star
-                </span>
+                <Star key={star} className="text-amber-400/90 w-4 h-4 fill-amber-400/90" />
               ))}
             </div>
             <span className="text-foreground-muted text-sm font-medium whitespace-nowrap">4.9/5</span>
@@ -62,11 +61,11 @@ export default function SocialProofBanner() {
         {/* Badges - more subtle */}
         <div className="flex flex-wrap items-center justify-center gap-3">
           <div className="flex items-center gap-2 bg-surface/30 px-4 py-2 rounded-full border border-surface-border/40 backdrop-blur-sm min-h-[40px] transition-all duration-300 hover:border-emerald-500/30">
-            <span className="material-icons text-emerald-400/80 text-base">verified</span>
+            <BadgeCheck className="text-emerald-400/80 w-4 h-4" />
             <span className="text-xs text-foreground/80 font-medium whitespace-nowrap tracking-wide">Google Verified</span>
           </div>
           <div className="flex items-center gap-2 bg-surface/30 px-4 py-2 rounded-full border border-surface-border/40 backdrop-blur-sm min-h-[40px] transition-all duration-300 hover:border-blue-500/30">
-            <span className="material-icons text-blue-400/80 text-base">shield</span>
+            <Shield className="text-blue-400/80 w-4 h-4" />
             <span className="text-xs text-foreground/80 font-medium whitespace-nowrap tracking-wide">Secure</span>
           </div>
         </div>

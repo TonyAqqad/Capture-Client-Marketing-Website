@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
+import { Phone, Rocket, Star } from "lucide-react";
 
 /**
  * StickyPhoneCTA Component
@@ -64,9 +65,7 @@ export default function StickyPhoneCTA() {
 
                   <div className="flex items-center gap-1.5">
                     {[1, 2, 3, 4, 5].map((star) => (
-                      <span key={star} className="material-icons text-yellow-400 text-sm">
-                        star
-                      </span>
+                      <Star key={star} className="text-yellow-400 w-3.5 h-3.5 fill-yellow-400" />
                     ))}
                     <span className="text-sm text-foreground-muted ml-1">4.9/5 (1,200 reviews)</span>
                   </div>
@@ -91,7 +90,7 @@ export default function StickyPhoneCTA() {
                       transition={{ duration: 0.3 }}
                     />
 
-                    <span className="material-icons text-xl relative z-10">phone</span>
+                    <Phone className="w-5 h-5 relative z-10" />
                     <AnimatePresence>
                       {isExpanded && (
                         <motion.span
@@ -116,7 +115,7 @@ export default function StickyPhoneCTA() {
                     whileTap={{ scale: 0.95 }}
                     className="flex items-center gap-2 min-h-[48px] border-2 border-accent/50 text-foreground font-bold px-6 py-3 rounded-xl hover:bg-accent/10 transition-all duration-300"
                   >
-                    <span className="material-icons text-accent text-xl">rocket_launch</span>
+                    <Rocket className="text-accent w-5 h-5" />
                     <span className="text-sm">Book Demo</span>
                   </motion.a>
                 </div>

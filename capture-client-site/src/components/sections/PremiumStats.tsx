@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import { useCountUp } from "@/hooks/useCountUp";
+import { ShieldCheck, PhoneCall, TrendingUp, Star } from "lucide-react";
 
 interface Stat {
   value: number;
@@ -11,7 +12,7 @@ interface Stat {
   label: string;
   sublabel: string;
   color: "accent" | "primary";
-  icon: string;
+  icon: React.ComponentType<{ className?: string }>;
 }
 
 const stats: Stat[] = [
@@ -21,7 +22,7 @@ const stats: Stat[] = [
     label: "Active Clients",
     sublabel: "and growing every month",
     color: "accent",
-    icon: "verified_user"
+    icon: ShieldCheck
   },
   {
     value: 1,
@@ -29,7 +30,7 @@ const stats: Stat[] = [
     label: "Calls Handled",
     sublabel: "by AI voice agents",
     color: "primary",
-    icon: "phone_in_talk"
+    icon: PhoneCall
   },
   {
     value: 247,
@@ -37,7 +38,7 @@ const stats: Stat[] = [
     label: "Avg Growth",
     sublabel: "in lead capture",
     color: "accent",
-    icon: "trending_up"
+    icon: TrendingUp
   },
   {
     value: 49,
@@ -45,7 +46,7 @@ const stats: Stat[] = [
     label: "Client Rating",
     sublabel: "based on 500+ reviews",
     color: "primary",
-    icon: "star"
+    icon: Star
   },
 ];
 
@@ -132,7 +133,12 @@ function StatCard({ stat, index, isInView }: StatCardProps) {
       <div
         className={`relative glass p-6 sm:p-6 lg:p-8 rounded-2xl border-2 ${
           isAccent ? "border-accent/20" : "border-primary/20"
-        } transition-all duration-500 group-hover:border-opacity-100 group-hover:shadow-glow min-h-[200px] sm:min-h-[220px] flex flex-col`}
+        } transition-all duration-500 group-hover:border-opacity-100 min-h-[200px] sm:min-h-[220px] flex flex-col`}
+        style={{
+          boxShadow: isAccent
+            ? "0 10px 40px rgba(0, 201, 255, 0.1)"
+            : "0 10px 40px rgba(212, 175, 55, 0.1)",
+        }}
       >
         {/* Icon */}
         <motion.div
@@ -152,13 +158,11 @@ function StatCard({ stat, index, isInView }: StatCardProps) {
             isAccent ? "border-accent/30" : "border-primary/30"
           } flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}
         >
-          <span
-            className={`material-icons ${
+          <stat.icon
+            className={`${
               isAccent ? "text-accent" : "text-primary"
-            } text-2xl`}
-          >
-            {stat.icon}
-          </span>
+            } w-6 h-6`}
+          />
         </motion.div>
 
         {/* Value */}

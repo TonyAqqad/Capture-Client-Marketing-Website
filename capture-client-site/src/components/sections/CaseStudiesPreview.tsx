@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import Link from "next/link";
+import { Snowflake, Stethoscope, Wrench, ArrowRight } from "lucide-react";
 
 interface CaseStudy {
   id: string;
@@ -17,7 +18,7 @@ interface CaseStudy {
     after: string;
     improvement: string;
   }[];
-  icon: string;
+  icon: React.ComponentType<{ className?: string }>;
   gradient: string;
 }
 
@@ -48,7 +49,7 @@ const caseStudies: CaseStudy[] = [
         improvement: "60x faster"
       }
     ],
-    icon: "ac_unit",
+    icon: Snowflake,
     gradient: "from-accent to-primary"
   },
   {
@@ -77,7 +78,7 @@ const caseStudies: CaseStudy[] = [
         improvement: "+292%"
       }
     ],
-    icon: "medical_services",
+    icon: Stethoscope,
     gradient: "from-primary to-accent"
   },
   {
@@ -106,7 +107,7 @@ const caseStudies: CaseStudy[] = [
         improvement: "+29%"
       }
     ],
-    icon: "plumbing",
+    icon: Wrench,
     gradient: "from-accent to-primary"
   }
 ];
@@ -170,13 +171,12 @@ export function CaseStudiesPreview() {
             className="inline-flex items-center gap-2 text-lg font-semibold text-accent hover:text-accent/80 transition-colors group"
           >
             View All Case Studies
-            <motion.span
-              className="material-icons"
+            <motion.div
               animate={{ x: [0, 5, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
             >
-              arrow_forward
-            </motion.span>
+              <ArrowRight className="w-5 h-5" />
+            </motion.div>
           </Link>
         </motion.div>
       </div>
@@ -212,7 +212,7 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
         {/* Industry badge */}
         <div className={`inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-gradient-to-r ${study.gradient} mb-6 sm:mb-8`}>
           <div className="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center flex-shrink-0">
-            <span className="material-icons text-white text-lg sm:text-xl">{study.icon}</span>
+            <study.icon className="text-white w-5 h-5 sm:w-6 sm:h-6" />
           </div>
           <span className="text-sm sm:text-base font-bold text-white">{study.industry}</span>
         </div>
@@ -264,7 +264,7 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
                   </p>
                 </div>
                 <div className="w-4 h-4 flex items-center justify-center flex-shrink-0">
-                  <span className="material-icons text-accent text-sm">arrow_forward</span>
+                  <ArrowRight className="text-accent w-4 h-4" />
                 </div>
                 <div className="flex-1 bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg p-2 text-center border border-accent/30">
                   <p className="text-accent font-bold text-sm">
@@ -282,9 +282,7 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
           className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-accent transition-colors group/link"
         >
           Read Full Story
-          <span className="material-icons text-sm group-hover/link:translate-x-1 transition-transform">
-            arrow_forward
-          </span>
+          <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
         </Link>
 
         {/* Hover gradient overlay */}

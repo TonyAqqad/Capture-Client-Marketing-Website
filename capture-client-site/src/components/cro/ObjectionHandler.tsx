@@ -2,10 +2,12 @@
 
 import { useState } from "react";
 import type { FAQItem } from "@/types/content";
+import { ChevronDown, Phone, Headphones, Brain, Clock, LogOut, Calculator, Smartphone } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 // Extended FAQ interface for ObjectionHandler component with icon field
 interface FAQ extends FAQItem {
-  icon: string;
+  Icon: LucideIcon;
 }
 
 export default function ObjectionHandler() {
@@ -16,37 +18,37 @@ export default function ObjectionHandler() {
       question: "Will the AI voice agent sound robotic?",
       answer:
         "Not at all! Our AI uses cutting-edge natural language processing that sounds remarkably human. It understands context, speaks naturally with appropriate emotion, and even handles interruptions gracefully. Most callers don't realize they're speaking with AI until we tell them.",
-      icon: "support_agent",
+      Icon: Headphones,
     },
     {
       question: "What if the AI can't answer a specific question?",
       answer:
         "Great question! Our AI is trained on your business specifics, but if it encounters something unusual, it seamlessly transfers to your team with full context. You'll get a notification with the call transcript so you know exactly what was discussed. Plus, the AI learns from every interaction to handle similar questions next time.",
-      icon: "psychology",
+      Icon: Brain,
     },
     {
       question: "How long does setup take?",
       answer:
         "We can have you up and running in as little as 48 hours. Our team handles the heavy lifting: we'll set up your AI agent, configure your ad campaigns, import your existing contacts to the CRM, and train you on the dashboard. Most clients are fully operational within a week.",
-      icon: "schedule",
+      Icon: Clock,
     },
     {
       question: "What if I want to cancel?",
       answer:
         "Zero hassle. We offer month-to-month contracts with no long-term commitment required. If you decide to cancel, we'll help export all your data, and you'll keep full access until the end of your billing period. We're confident you'll see results quickly, but there's no pressure to stay if it's not working for you.",
-      icon: "logout",
+      Icon: LogOut,
     },
     {
       question: "Is this really worth the investment?",
       answer:
         "Let's do the math: if our system captures just 5 extra leads per month that convert at 20%, that's 1 new client. For most businesses, one new client pays for the entire system multiple times over. Plus, you're saving 20+ hours per month on manual tasks. Our average client sees 3x ROI within 90 days.",
-      icon: "calculate",
+      Icon: Calculator,
     },
     {
       question: "Do I need technical knowledge to use this?",
       answer:
         "Absolutely not! Our platform is designed for busy business owners, not tech experts. Everything is visual and intuitive. We provide personalized training, video tutorials, and our support team is always one call away. If you can use a smartphone, you can use Capture Client.",
-      icon: "devices",
+      Icon: Smartphone,
     },
   ];
 
@@ -88,25 +90,21 @@ export default function ObjectionHandler() {
                       : "bg-white/5 border border-white/10"
                   }`}
                 >
-                  <span
-                    className={`material-icons text-xl transition-colors duration-300 ${
+                  <faq.Icon
+                    className={`w-5 h-5 transition-colors duration-300 ${
                       openIndex === index ? "text-accent" : "text-gray-400"
                     }`}
-                  >
-                    {faq.icon}
-                  </span>
+                  />
                 </div>
                 <h4 className="text-base md:text-lg font-semibold text-foreground">
                   {faq.question}
                 </h4>
               </div>
-              <span
-                className={`material-icons text-accent transition-transform duration-300 ${
+              <ChevronDown
+                className={`w-6 h-6 text-accent transition-transform duration-300 ${
                   openIndex === index ? "rotate-180" : ""
                 }`}
-              >
-                expand_more
-              </span>
+              />
             </button>
 
             <div
@@ -129,7 +127,7 @@ export default function ObjectionHandler() {
           href="tel:865-346-3339"
           className="inline-flex items-center gap-2 text-lg font-semibold text-accent hover:text-accent/80 transition-colors"
         >
-          <span className="material-icons">phone</span>
+          <Phone className="w-5 h-5" />
           Call us: (865) 346-3339
         </a>
       </div>

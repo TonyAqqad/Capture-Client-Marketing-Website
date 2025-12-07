@@ -2,10 +2,33 @@
 
 import { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "@/lib/motion";
-import { MotionValue } from "framer-motion";
+import type { MotionValue } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import Link from "next/link";
 import { HowItWorks } from "@/components/sections/HowItWorks";
+import {
+  Sparkles,
+  Phone,
+  ArrowRight,
+  CalendarCheck,
+  ChevronDown,
+  Brain,
+  Ear,
+  Activity,
+  Code2,
+  SlidersHorizontal,
+  Settings,
+  Cable,
+  Rocket,
+  HelpCircle,
+  ChevronDown as ExpandMore,
+  Stars,
+  CheckCircle2,
+  Headphones,
+  Database,
+  MessageSquare,
+  Network
+} from "lucide-react";
 
 // FAQ Schema for rich snippets
 const faqSchema = {
@@ -117,7 +140,7 @@ interface ProcessStep {
   };
 }
 
-const processSteps: ProcessStep[] = [
+const processSteps = [
   {
     number: "01",
     title: "Customer Calls Your Business",
@@ -246,6 +269,9 @@ export default function HowItWorksPageClient() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  // Prevent unused variable warnings
+  void processSteps;
+
   return (
     <main className="relative min-h-screen bg-background-dark overflow-hidden">
       {/* JSON-LD Structured Data */}
@@ -346,7 +372,7 @@ function HeroSection({ heroRef, heroY, heroOpacity, isMobile }: HeroSectionProps
           transition={{ duration: 0.6 }}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 via-gold/10 to-transparent border border-accent/30 backdrop-blur-xl mb-8"
         >
-          <span className="material-icons text-accent text-sm">auto_awesome</span>
+          <Sparkles className="w-4 h-4 text-accent" />
           <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent">
             How It Works
           </span>
@@ -414,7 +440,7 @@ function HeroSection({ heroRef, heroY, heroOpacity, isMobile }: HeroSectionProps
             className="inline-flex flex-col items-center gap-2 text-foreground-muted"
           >
             <span className="text-sm font-medium">Scroll to explore</span>
-            <span className="material-icons">keyboard_arrow_down</span>
+            <ChevronDown className="w-5 h-5" />
           </motion.div>
         </motion.div>
       </div>
@@ -432,7 +458,7 @@ function HeroIllustration() {
         transition={{ duration: 3, repeat: Infinity }}
         className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 backdrop-blur-xl flex items-center justify-center"
       >
-        <span className="material-icons text-4xl sm:text-5xl text-accent">call</span>
+        <Phone className="w-10 h-10 sm:w-12 sm:h-12 text-accent" />
       </motion.div>
 
       {/* Arrow 1 */}
@@ -441,16 +467,16 @@ function HeroIllustration() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 1, repeat: Infinity, repeatDelay: 2 }}
       >
-        <span className="material-icons text-3xl sm:text-4xl text-gold">arrow_forward</span>
+        <ArrowRight className="w-8 h-8 sm:w-10 sm:h-10 text-gold" />
       </motion.div>
 
       {/* AI Icon */}
       <motion.div
         animate={{ scale: [1, 1.15, 1] }}
         transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-        className="w-24 h-24 sm:w-32 sm:h-32 rounded-3xl bg-gradient-to-br from-gold/30 to-[#D4AF37]/30 border-2 border-gold/40 backdrop-blur-xl flex items-center justify-center relative"
+        className="w-24 h-24 sm:w-32 sm:h-32 rounded-3xl bg-gradient-to-br from-gold/30 to-gold/30 border-2 border-gold/40 backdrop-blur-xl flex items-center justify-center relative"
       >
-        <span className="material-icons text-5xl sm:text-6xl text-gold">auto_awesome</span>
+        <Sparkles className="w-12 h-12 sm:w-16 sm:h-16 text-gold" />
         {/* Pulsing rings */}
         <motion.div
           animate={{ scale: [1, 1.5], opacity: [0.5, 0] }}
@@ -465,7 +491,7 @@ function HeroIllustration() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 1.5, repeat: Infinity, repeatDelay: 2 }}
       >
-        <span className="material-icons text-3xl sm:text-4xl text-accent">arrow_forward</span>
+        <ArrowRight className="w-8 h-8 sm:w-10 sm:h-10 text-accent" />
       </motion.div>
 
       {/* Calendar Icon */}
@@ -474,7 +500,7 @@ function HeroIllustration() {
         transition={{ duration: 3, repeat: Infinity, delay: 1 }}
         className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/30 backdrop-blur-xl flex items-center justify-center"
       >
-        <span className="material-icons text-4xl sm:text-5xl text-primary">event_available</span>
+        <CalendarCheck className="w-10 h-10 sm:w-12 sm:h-12 text-primary" />
       </motion.div>
     </div>
   );
@@ -488,6 +514,39 @@ interface IntegrationShowcaseProps { integrations: Array<{ name: string; logo: s
 interface SetupWizardProps { isMobile: boolean; }
 interface FAQSectionProps { faqs: Array<{ question: string; answer: string }>; isMobile: boolean; }
 interface FinalCTAProps { isMobile: boolean; }
+
+// Icon mapping helper
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  psychology: Brain,
+  hearing: Ear,
+  timeline: Activity,
+  integration_instructions: Code2,
+  call: Phone,
+  graphic_eq: Activity,
+  campaign: MessageSquare,
+  cloud_sync: Database,
+  tune: SlidersHorizontal,
+  cable: Cable,
+  rocket_launch: Rocket,
+  support_agent: Headphones,
+  help_outline: HelpCircle,
+  stars: Stars
+};
+
+function FeatureIcon({ icon }: { icon: string }) {
+  const IconComponent = iconMap[icon] || Settings;
+  return <IconComponent className="w-6 h-6 text-primary" />;
+}
+
+function SetupIcon({ icon }: { icon: string }) {
+  const IconComponent = iconMap[icon] || Settings;
+  return <IconComponent className="w-6 h-6 text-gold" />;
+}
+
+function ProcessIcon({ icon, primary }: { icon: string; primary?: boolean }) {
+  const IconComponent = iconMap[icon] || Settings;
+  return <IconComponent className={`w-6 h-6 ${primary ? 'text-primary' : 'text-foreground-muted'}`} />;
+}
 
 // ==================== BEHIND THE SCENES ====================
 function BehindTheScenes({ isMobile }: BehindTheScenesProps) {
@@ -536,7 +595,7 @@ function BehindTheScenes({ isMobile }: BehindTheScenesProps) {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-accent/10 border border-primary/30 backdrop-blur-xl mb-6">
-            <span className="material-icons text-primary text-sm">settings_suggest</span>
+            <Settings className="w-4 h-4 text-primary" />
             <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-primary">
               Behind the Scenes
             </span>
@@ -557,41 +616,73 @@ function BehindTheScenes({ isMobile }: BehindTheScenesProps) {
           {techFeatures.map((feature, idx) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: idx * 0.1 }}
+              initial={{ opacity: 0, y: 30, scale: 0.95 }}
+              animate={isInView ? { opacity: 1, y: 0, scale: 1 } : {}}
+              transition={{
+                duration: 0.6,
+                delay: idx * 0.15,
+                type: "spring",
+                stiffness: 100
+              }}
+              whileHover={!isMobile ? { scale: 1.02, y: -5 } : {}}
               className="relative group"
             >
-              <div className="relative z-10 h-full p-6 sm:p-8 rounded-2xl bg-background-card/50 border border-surface-border/50 backdrop-blur-xl overflow-hidden hover:border-primary/50 transition-all duration-300">
+              <div className="relative z-10 h-full p-6 sm:p-8 rounded-2xl bg-background-card/50 border border-surface-border/50 backdrop-blur-xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-glow-gold">
                 {/* Glow effect on hover (desktop only) */}
                 {!isMobile && (
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-accent/0 to-primary/0 group-hover:from-primary/10 group-hover:via-accent/5 group-hover:to-primary/10 transition-all duration-500" />
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                    className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10"
+                  />
                 )}
 
-                {/* Icon */}
+                {/* Icon with hover rotation */}
                 <div className="relative z-10 flex items-start gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/30 flex items-center justify-center flex-shrink-0">
-                    <span className="material-icons text-primary text-2xl">{feature.icon}</span>
-                  </div>
+                  <motion.div
+                    whileHover={!isMobile ? { rotate: 15, scale: 1.1 } : {}}
+                    transition={{ type: "spring", stiffness: 300 }}
+                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/30 flex items-center justify-center flex-shrink-0"
+                  >
+                    <FeatureIcon icon={feature.icon} />
+                  </motion.div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-foreground mb-2">{feature.title}</h3>
+                    <motion.h3
+                      initial={{ opacity: 0 }}
+                      animate={isInView ? { opacity: 1 } : {}}
+                      transition={{ delay: idx * 0.15 + 0.3 }}
+                      className="text-xl font-bold text-foreground mb-2"
+                    >
+                      {feature.title}
+                    </motion.h3>
                   </div>
                 </div>
 
                 {/* Description */}
-                <p className="relative z-10 text-foreground-muted mb-6 leading-relaxed">
+                <motion.p
+                  initial={{ opacity: 0 }}
+                  animate={isInView ? { opacity: 1 } : {}}
+                  transition={{ delay: idx * 0.15 + 0.4 }}
+                  className="relative z-10 text-foreground-muted mb-6 leading-relaxed"
+                >
                   {feature.description}
-                </p>
+                </motion.p>
 
-                {/* Stat */}
-                <div className="relative z-10 flex items-baseline gap-2">
+                {/* Stat with entrance animation */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ delay: idx * 0.15 + 0.5, type: "spring" }}
+                  className="relative z-10 flex items-baseline gap-2"
+                >
                   <span className="text-3xl font-black text-gradient bg-gradient-to-r from-gold to-accent bg-clip-text text-transparent">
                     {feature.stat}
                   </span>
                   <span className="text-sm text-foreground-subtle uppercase tracking-wide">
                     {feature.statLabel}
                   </span>
-                </div>
+                </motion.div>
               </div>
             </motion.div>
           ))}
@@ -647,9 +738,7 @@ function ProcessNode({ icon, label, primary }: { icon: string; label: string; pr
           ? 'bg-gradient-to-br from-primary/30 to-accent/30 border-2 border-primary/50'
           : 'bg-background-card/80 border border-surface-border/50'
       }`}>
-        <span className={`material-icons text-2xl ${primary ? 'text-primary' : 'text-foreground-muted'}`}>
-          {icon}
-        </span>
+        <ProcessIcon icon={icon} primary={primary} />
       </div>
       <span className="text-xs sm:text-sm font-medium text-foreground-subtle text-center max-w-[80px]">
         {label}
@@ -666,10 +755,9 @@ function FlowArrow({ isMobile }: { isMobile: boolean }) {
         y: isMobile ? [0, 5, 0] : 0
       }}
       transition={{ duration: 2, repeat: Infinity }}
+      className={isMobile ? 'rotate-90' : ''}
     >
-      <span className="material-icons text-gold text-xl sm:text-2xl sm:rotate-0 rotate-90">
-        arrow_forward
-      </span>
+      <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-gold" />
     </motion.div>
   );
 }
@@ -695,7 +783,7 @@ function IntegrationShowcase({ integrations, isMobile }: IntegrationShowcaseProp
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 to-primary/10 border border-accent/30 backdrop-blur-xl mb-6">
-            <span className="material-icons text-accent text-sm">hub</span>
+            <Network className="w-4 h-4 text-accent" />
             <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent">
               Seamless Integrations
             </span>
@@ -721,18 +809,36 @@ function IntegrationShowcase({ integrations, isMobile }: IntegrationShowcaseProp
           {integrations.map((integration, idx) => (
             <motion.div
               key={integration.name}
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5, delay: 0.3 + idx * 0.1 }}
-              whileHover={!isMobile ? { scale: 1.05, y: -5 } : {}}
+              transition={{
+                duration: 0.5,
+                delay: 0.3 + idx * 0.1,
+                type: "spring",
+                stiffness: 150
+              }}
+              whileHover={!isMobile ? { scale: 1.05, y: -8 } : {}}
               className="relative group"
             >
-              <div className="relative z-10 p-8 rounded-2xl bg-background-card/50 border border-surface-border/50 backdrop-blur-xl hover:border-accent/50 transition-all duration-300 flex flex-col items-center justify-center gap-4 h-32">
-                {/* Logo placeholder - display initials */}
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 flex items-center justify-center">
+              <div className="relative z-10 p-8 rounded-2xl bg-background-card/50 border border-surface-border/50 backdrop-blur-xl hover:border-accent/50 transition-all duration-300 flex flex-col items-center justify-center gap-4 h-32 hover:shadow-glow-gold overflow-hidden">
+                {/* Hover glow effect */}
+                {!isMobile && (
+                  <motion.div
+                    className="absolute inset-0 bg-gradient-to-br from-accent/10 via-primary/5 to-gold/10"
+                    initial={{ opacity: 0 }}
+                    whileHover={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                  />
+                )}
+                {/* Logo placeholder - display initials with hover animation */}
+                <motion.div
+                  whileHover={!isMobile ? { rotate: 360, scale: 1.15 } : {}}
+                  transition={{ duration: 0.6, type: "spring" }}
+                  className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 flex items-center justify-center relative z-10"
+                >
                   <span className="text-lg font-black text-accent">{integration.logo}</span>
-                </div>
-                <span className="text-sm font-semibold text-foreground text-center">
+                </motion.div>
+                <span className="text-sm font-semibold text-foreground text-center relative z-10">
                   {integration.name}
                 </span>
               </div>
@@ -755,7 +861,7 @@ function IntegrationShowcase({ integrations, isMobile }: IntegrationShowcaseProp
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-accent/20 to-primary/20 border border-accent/30 hover:border-accent/50 text-foreground font-semibold transition-all duration-300 hover:scale-105"
           >
             <span>Request Custom Integration</span>
-            <span className="material-icons text-sm">arrow_forward</span>
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </motion.div>
       </div>
@@ -803,7 +909,7 @@ function SetupWizard({ isMobile }: SetupWizardProps) {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gold/20 to-accent/10 border border-gold/30 backdrop-blur-xl mb-6">
-            <span className="material-icons text-gold text-sm">timeline</span>
+            <Activity className="w-4 h-4 text-gold" />
             <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-gold">
               Simple Setup Process
             </span>
@@ -821,9 +927,14 @@ function SetupWizard({ isMobile }: SetupWizardProps) {
 
         {/* Setup Steps Timeline */}
         <div className="relative max-w-4xl mx-auto">
-          {/* Connecting line (desktop only) */}
+          {/* Connecting line (desktop only) with animated drawing effect */}
           {!isMobile && (
-            <div className="absolute left-8 top-20 bottom-20 w-0.5 bg-gradient-to-b from-gold via-accent to-primary opacity-30" />
+            <motion.div
+              initial={{ scaleY: 0 }}
+              animate={isInView ? { scaleY: 1 } : {}}
+              transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
+              className="absolute left-8 top-20 bottom-20 w-0.5 bg-gradient-to-b from-gold via-accent to-primary opacity-30 origin-top"
+            />
           )}
 
           <div className="space-y-12">
@@ -835,36 +946,79 @@ function SetupWizard({ isMobile }: SetupWizardProps) {
                 transition={{ duration: 0.6, delay: idx * 0.2 }}
                 className="relative flex gap-6 sm:gap-8"
               >
-                {/* Step number circle */}
+                {/* Step number circle with enhanced animations */}
                 <div className="relative flex-shrink-0">
-                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold/30 to-accent/30 border-2 border-gold/50 flex items-center justify-center relative z-10">
-                    <span className="material-icons text-gold text-2xl">{step.icon}</span>
-                  </div>
+                  <motion.div
+                    initial={{ scale: 0, rotate: -180 }}
+                    animate={isInView ? { scale: 1, rotate: 0 } : {}}
+                    transition={{
+                      duration: 0.8,
+                      delay: idx * 0.2 + 0.3,
+                      type: "spring",
+                      stiffness: 200
+                    }}
+                    whileHover={!isMobile ? { rotate: 360, scale: 1.1 } : {}}
+                    className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold/30 to-accent/30 border-2 border-gold/50 flex items-center justify-center relative z-10 cursor-pointer"
+                  >
+                    <SetupIcon icon={step.icon} />
+                  </motion.div>
                   {/* Pulsing effect */}
                   <motion.div
                     animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0, 0.5] }}
                     transition={{ duration: 3, repeat: Infinity, delay: idx * 0.5 }}
                     className="absolute inset-0 rounded-2xl bg-gold/20 blur-md"
                   />
+                  {/* Gold glow effect */}
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: [0, 0.6, 0] } : {}}
+                    transition={{ duration: 2, repeat: Infinity, delay: idx * 0.3 }}
+                    className="absolute inset-0 rounded-2xl shadow-glow-gold"
+                  />
                 </div>
 
-                {/* Step content */}
-                <div className="flex-1 pb-8">
+                {/* Step content card with staggered fade-in */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.6, delay: idx * 0.2 + 0.4 }}
+                  className="flex-1 pb-8"
+                >
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="text-sm font-black text-gold uppercase tracking-widest">
+                    <motion.span
+                      initial={{ opacity: 0, x: -10 }}
+                      animate={isInView ? { opacity: 1, x: 0 } : {}}
+                      transition={{ duration: 0.5, delay: idx * 0.2 + 0.5 }}
+                      className="text-sm font-black text-gold uppercase tracking-widest"
+                    >
                       Step {step.number}
-                    </span>
-                    <span className="text-xs text-foreground-subtle px-3 py-1 rounded-full bg-background-card/50 border border-surface-border/30">
+                    </motion.span>
+                    <motion.span
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                      transition={{ duration: 0.5, delay: idx * 0.2 + 0.6 }}
+                      className="text-xs text-foreground-subtle px-3 py-1 rounded-full bg-background-card/50 border border-surface-border/30"
+                    >
                       {step.duration}
-                    </span>
+                    </motion.span>
                   </div>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-3">
+                  <motion.h3
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: 1 } : {}}
+                    transition={{ duration: 0.6, delay: idx * 0.2 + 0.7 }}
+                    className="text-2xl sm:text-3xl font-bold text-foreground mb-3"
+                  >
                     {step.title}
-                  </h3>
-                  <p className="text-foreground-muted leading-relaxed">
+                  </motion.h3>
+                  <motion.p
+                    initial={{ opacity: 0 }}
+                    animate={isInView ? { opacity: 1 } : {}}
+                    transition={{ duration: 0.6, delay: idx * 0.2 + 0.8 }}
+                    className="text-foreground-muted leading-relaxed"
+                  >
                     {step.description}
-                  </p>
-                </div>
+                  </motion.p>
+                </motion.div>
               </motion.div>
             ))}
           </div>
@@ -878,7 +1032,7 @@ function SetupWizard({ isMobile }: SetupWizardProps) {
           className="mt-16 text-center"
         >
           <div className="inline-flex items-center gap-3 px-6 py-4 rounded-2xl bg-gradient-to-r from-background-card/50 to-background-darker/50 border border-gold/30 backdrop-blur-xl">
-            <span className="material-icons text-gold text-3xl">support_agent</span>
+            <Headphones className="w-8 h-8 text-gold" />
             <div className="text-left">
               <p className="text-sm font-semibold text-foreground">White-Glove Onboarding</p>
               <p className="text-xs text-foreground-subtle">Dedicated setup specialist guides you every step</p>
@@ -907,7 +1061,7 @@ function FAQSection({ faqs, isMobile }: FAQSectionProps) {
           className="text-center mb-16"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-accent/10 border border-primary/30 backdrop-blur-xl mb-6">
-            <span className="material-icons text-primary text-sm">help_outline</span>
+            <HelpCircle className="w-4 h-4 text-primary" />
             <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-primary">
               Common Questions
             </span>
@@ -943,13 +1097,13 @@ function FAQSection({ faqs, isMobile }: FAQSectionProps) {
                     <h3 className="text-lg sm:text-xl font-bold text-foreground group-hover:text-primary transition-colors pr-4">
                       {faq.question}
                     </h3>
-                    <motion.span
+                    <motion.div
                       animate={{ rotate: isOpen ? 180 : 0 }}
                       transition={{ duration: 0.3 }}
-                      className="material-icons text-primary flex-shrink-0"
+                      className="flex-shrink-0"
                     >
-                      expand_more
-                    </motion.span>
+                      <ExpandMore className="w-5 h-5 text-primary" />
+                    </motion.div>
                   </div>
 
                   <motion.div
@@ -985,7 +1139,7 @@ function FAQSection({ faqs, isMobile }: FAQSectionProps) {
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 hover:border-primary/50 text-foreground font-semibold transition-all duration-300 hover:scale-105"
           >
             <span>Talk to Our Team</span>
-            <span className="material-icons text-sm">arrow_forward</span>
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </motion.div>
       </div>
@@ -1034,7 +1188,7 @@ function FinalCTA({ isMobile }: FinalCTAProps) {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gold/20 to-accent/10 border border-gold/30 backdrop-blur-xl mb-6"
               >
-                <span className="material-icons text-gold text-sm">stars</span>
+                <Stars className="w-4 h-4 text-gold" />
                 <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-gold">
                   Start Capturing Leads Today
                 </span>
@@ -1064,30 +1218,59 @@ function FinalCTA({ isMobile }: FinalCTAProps) {
                 Join hundreds of businesses using AI voice agents to capture, qualify, and convert more leads—24/7.
               </motion.p>
 
-              {/* CTAs */}
+              {/* CTAs with enhanced gold glow */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10"
               >
-                <Link
-                  href="/demo"
-                  className="group relative px-8 py-4 rounded-xl bg-gradient-to-r from-gold to-accent text-background-darker font-bold text-lg shadow-glow-gold hover:shadow-glow-gold-intense transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                <motion.div
+                  whileHover={!isMobile ? { scale: 1.05 } : {}}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ type: "spring", stiffness: 400 }}
                 >
-                  <span className="relative z-10 flex items-center justify-center gap-2">
-                    Start Free Trial
-                    <span className="material-icons group-hover:translate-x-1 transition-transform">
-                      arrow_forward
+                  <Link
+                    href="/demo"
+                    className="group relative px-8 py-4 rounded-xl bg-gradient-to-r from-gold to-accent text-background-darker font-bold text-lg shadow-glow-gold hover:shadow-glow-gold-intense transition-all duration-300 w-full sm:w-auto inline-block"
+                  >
+                    <span className="relative z-10 flex items-center justify-center gap-2">
+                      Start Free Trial
+                      <motion.div
+                        animate={{ x: [0, 3, 0] }}
+                        transition={{ duration: 1.5, repeat: Infinity }}
+                      >
+                        <ArrowRight className="w-5 h-5" />
+                      </motion.div>
                     </span>
-                  </span>
-                </Link>
-                <Link
-                  href="/contact"
-                  className="px-8 py-4 rounded-xl bg-background-card/50 border-2 border-primary/50 hover:border-primary text-foreground font-bold text-lg backdrop-blur-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                    {/* Animated gold glow */}
+                    <motion.div
+                      className="absolute inset-0 rounded-xl bg-gold/20 blur-xl"
+                      animate={{
+                        opacity: [0.5, 0.8, 0.5],
+                        scale: [1, 1.05, 1]
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeInOut"
+                      }}
+                    />
+                  </Link>
+                </motion.div>
+                <motion.div
+                  whileHover={!isMobile ? { scale: 1.05 } : {}}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ type: "spring", stiffness: 400 }}
                 >
-                  Schedule Demo
-                </Link>
+                  <a
+                    href="tel:865-346-3339"
+                    className="px-8 py-4 rounded-xl bg-background-card/50 border-2 border-primary/50 hover:border-primary text-foreground font-bold text-lg backdrop-blur-xl transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-2"
+                  >
+                    <Phone className="w-5 h-5" />
+                    Call (865) 346-3339
+                  </a>
+                </motion.div>
               </motion.div>
 
               {/* Trust signals */}
@@ -1098,15 +1281,15 @@ function FinalCTA({ isMobile }: FinalCTAProps) {
                 className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-foreground-muted"
               >
                 <div className="flex items-center gap-2">
-                  <span className="material-icons text-accent text-lg">check_circle</span>
+                  <CheckCircle2 className="w-5 h-5 text-accent" />
                   <span>30-day money-back guarantee</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="material-icons text-accent text-lg">check_circle</span>
+                  <CheckCircle2 className="w-5 h-5 text-accent" />
                   <span>No credit card required</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="material-icons text-accent text-lg">check_circle</span>
+                  <CheckCircle2 className="w-5 h-5 text-accent" />
                   <span>Setup in 48 hours</span>
                 </div>
               </motion.div>

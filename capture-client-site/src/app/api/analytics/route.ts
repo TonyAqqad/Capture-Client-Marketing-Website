@@ -62,7 +62,6 @@ export async function POST(request: NextRequest) {
     const enhancedRating = getMetricRating(metric.name, metric.value);
     const formattedValue = formatMetricValue(metric.name, metric.value);
     const percentOfTarget = ((metric.value / threshold.target) * 100).toFixed(0);
-    const percentOfGood = ((metric.value / threshold.good) * 100).toFixed(0);
 
     // Create performance summary
     const summary: PerformanceSummary = {

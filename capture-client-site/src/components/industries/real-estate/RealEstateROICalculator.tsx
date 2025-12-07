@@ -1,10 +1,11 @@
 "use client";
 
-import { useRef, useState } from "react";
-import { motion } from "@/lib/motion";
+import { useRef, useState, useEffect } from "react";
+import { motion, useSpring } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/Button";
+import { Calculator, Settings, TrendingDown, TrendingUp, ArrowDown } from "lucide-react";
 
 export function RealEstateROICalculator() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -29,6 +30,27 @@ export function RealEstateROICalculator() {
   const additionalRevenue = aiRevenue - currentRevenue;
   const additionalDeals = aiDealsWithBoost - currentDeals;
 
+  // Smooth number animations
+  const currentRevenueSpring = useSpring(currentRevenue, { stiffness: 100, damping: 30 });
+  const aiRevenueSpring = useSpring(aiRevenue, { stiffness: 100, damping: 30 });
+  const additionalRevenueSpring = useSpring(additionalRevenue, { stiffness: 100, damping: 30 });
+
+  const [displayCurrentRevenue, setDisplayCurrentRevenue] = useState(currentRevenue);
+  const [displayAiRevenue, setDisplayAiRevenue] = useState(aiRevenue);
+  const [displayAdditionalRevenue, setDisplayAdditionalRevenue] = useState(additionalRevenue);
+
+  useEffect(() => {
+    const unsubscribe1 = currentRevenueSpring.on("change", (latest) => setDisplayCurrentRevenue(Math.round(latest)));
+    const unsubscribe2 = aiRevenueSpring.on("change", (latest) => setDisplayAiRevenue(Math.round(latest)));
+    const unsubscribe3 = additionalRevenueSpring.on("change", (latest) => setDisplayAdditionalRevenue(Math.round(latest)));
+
+    return () => {
+      unsubscribe1();
+      unsubscribe2();
+      unsubscribe3();
+    };
+  }, [currentRevenueSpring, aiRevenueSpring, additionalRevenueSpring]);
+
   return (
     <section ref={containerRef} className="py-16 sm:py-20 lg:py-28 relative overflow-hidden">
       {/* Background gradient */}
@@ -42,8 +64,8 @@ export function RealEstateROICalculator() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold/10 border border-gold/20 backdrop-blur-xl mb-6">
-            <span className="material-icons text-gold text-xl">calculate</span>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold/10 border border-gold/20 backdrop-blur-xl mb-6 hover:bg-gold/15 hover:border-gold/30 transition-all duration-300">
+            <Calculator className="w-5 h-5 text-gold" />
             <span className="text-sm font-semibold text-gold uppercase tracking-wide">
               ROI Calculator
             </span>
@@ -63,9 +85,9 @@ export function RealEstateROICalculator() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <GlassCard variant="premium" className="p-8 border-2 border-white/10">
+            <GlassCard variant="premium" className="p-8 border-2 border-white/10 hover:border-gold/20 transition-all duration-300">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                <span className="material-icons text-gold text-3xl">tune</span>
+                <Settings className="w-8 h-8 text-gold" />
                 Your Numbers
               </h3>
 
@@ -155,13 +177,13 @@ export function RealEstateROICalculator() {
             className="space-y-6"
           >
             {/* Current vs AI Revenue */}
-            <GlassCard variant="premium" className="p-8 border-2 border-red-500/20 bg-gradient-to-br from-red-500/5 to-red-500/10">
+            <GlassCard variant="premium" className="p-8 border-2 border-red-500/20 bg-gradient-to-br from-red-500/5 to-red-500/10 hover:border-red-500/30 hover:shadow-[0_0_30px_rgba(239,68,68,0.15)] transition-all duration-500">
               <div className="flex items-center gap-3 mb-4">
-                <span className="material-icons text-red-400 text-3xl">trending_down</span>
+                <TrendingDown className="w-8 h-8 text-red-400" />
                 <h3 className="text-xl font-bold text-white">Current Annual Revenue</h3>
               </div>
               <p className="text-5xl font-black text-red-400 mb-2">
-                ${currentRevenue.toLocaleString()}
+                ${displayCurrentRevenue.toLocaleString()}
               </p>
               <p className="text-white/60">
                 {currentDeals.toFixed(1)} deals/year · {currentResponseRate}% response rate
@@ -169,18 +191,16 @@ export function RealEstateROICalculator() {
             </GlassCard>
 
             <div className="flex justify-center">
-              <span className="material-icons text-gold text-4xl animate-bounce">
-                arrow_downward
-              </span>
+              <ArrowDown className="w-10 h-10 text-gold animate-bounce" />
             </div>
 
-            <GlassCard variant="premium" className="p-8 border-2 border-green-500/30 bg-gradient-to-br from-green-500/10 to-emerald-500/10">
+            <GlassCard variant="premium" className="p-8 border-2 border-green-500/30 bg-gradient-to-br from-green-500/10 to-emerald-500/10 hover:border-green-500/40 hover:shadow-[0_0_40px_rgba(74,222,128,0.2)] transition-all duration-500">
               <div className="flex items-center gap-3 mb-4">
-                <span className="material-icons text-green-400 text-3xl">trending_up</span>
+                <TrendingUp className="w-8 h-8 text-green-400" />
                 <h3 className="text-xl font-bold text-white">With AI Voice Agents</h3>
               </div>
               <p className="text-5xl font-black text-green-400 mb-2">
-                ${aiRevenue.toLocaleString()}
+                ${displayAiRevenue.toLocaleString()}
               </p>
               <p className="text-white/60">
                 {aiDealsWithBoost.toFixed(1)} deals/year · {aiResponseRate}% response rate
@@ -192,13 +212,13 @@ export function RealEstateROICalculator() {
               animate={{ scale: [1, 1.02, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <GlassCard variant="premium" className="p-8 border-2 border-gold/40 bg-gradient-to-br from-gold/20 via-gold/10 to-gold/5 shadow-[0_0_60px_rgba(212,175,55,0.3)]">
+              <GlassCard variant="premium" className="p-8 border-2 border-gold/40 bg-gradient-to-br from-gold/20 via-gold/10 to-gold/5 shadow-[0_0_60px_rgba(212,175,55,0.3)] hover:shadow-[0_0_80px_rgba(212,175,55,0.5)] transition-all duration-500">
                 <div className="text-center">
                   <p className="text-sm font-semibold text-gold uppercase tracking-wider mb-2">
                     Additional Annual Revenue
                   </p>
                   <p className="text-6xl font-black bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent mb-2">
-                    +${additionalRevenue.toLocaleString()}
+                    +${displayAdditionalRevenue.toLocaleString()}
                   </p>
                   <p className="text-white/80 text-lg">
                     {additionalDeals.toFixed(1)} more deals per year
@@ -207,7 +227,7 @@ export function RealEstateROICalculator() {
                     <p className="text-white/60 text-sm mb-4">
                       Based on {speedToLeadBoost}% higher conversion with instant response
                     </p>
-                    <Button variant="primary" href="/contact" className="w-full">
+                    <Button variant="primary" href="/contact" className="w-full hover:scale-105 transition-transform duration-300">
                       Capture This Revenue
                     </Button>
                   </div>

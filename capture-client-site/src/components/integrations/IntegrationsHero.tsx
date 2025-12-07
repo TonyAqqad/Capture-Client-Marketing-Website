@@ -72,10 +72,16 @@ export function IntegrationsHero() {
         >
           {/* Premium Badge with pulse animation */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-accent/20 via-accent/10 to-transparent border border-accent/30 backdrop-blur-xl mb-8"
+            initial={{ opacity: 0, scale: 0.8, y: -20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              delay: 0.1,
+              type: "spring",
+              stiffness: 200,
+              damping: 15
+            }}
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-accent/20 via-accent/10 to-transparent border border-accent/30 backdrop-blur-xl mb-8 shadow-glow-accent"
           >
             <div className="relative">
               <div className="w-2.5 h-2.5 bg-accent rounded-full animate-pulse" />
@@ -88,9 +94,15 @@ export function IntegrationsHero() {
 
           {/* Main Headline - Bricolage Grotesque */}
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
+            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{
+              duration: 0.8,
+              delay: 0.2,
+              type: "spring",
+              stiffness: 100,
+              damping: 15
+            }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground mb-6 leading-tight tracking-tight"
           >
             Connects to{" "}
@@ -157,8 +169,9 @@ export function IntegrationsHero() {
           >
             {/* Stat 1 */}
             <motion.div
-              className="glass-premium-mobile p-4 sm:p-6 rounded-2xl group hover:border-accent/30 transition-all duration-300"
-              whileHover={{ scale: 1.05, y: -4 }}
+              className="glass-premium-mobile p-4 sm:p-6 rounded-2xl group hover:border-accent/30 hover:shadow-glow-accent transition-all duration-300"
+              whileHover={{ scale: 1.08, y: -6 }}
+              transition={{ type: "spring", stiffness: 400, damping: 20 }}
             >
               <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-gradient-gold-cyan mb-2">
                 69+
@@ -170,8 +183,9 @@ export function IntegrationsHero() {
 
             {/* Stat 2 */}
             <motion.div
-              className="glass-premium-mobile p-4 sm:p-6 rounded-2xl group hover:border-primary/30 transition-all duration-300"
-              whileHover={{ scale: 1.05, y: -4 }}
+              className="glass-premium-mobile p-4 sm:p-6 rounded-2xl group hover:border-primary/30 hover:shadow-glow transition-all duration-300"
+              whileHover={{ scale: 1.08, y: -6 }}
+              transition={{ type: "spring", stiffness: 400, damping: 20 }}
             >
               <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-gradient-gold-cyan mb-2">
                 5,000+
@@ -183,8 +197,9 @@ export function IntegrationsHero() {
 
             {/* Stat 3 */}
             <motion.div
-              className="glass-premium-mobile p-4 sm:p-6 rounded-2xl group hover:border-gold/30 transition-all duration-300"
-              whileHover={{ scale: 1.05, y: -4 }}
+              className="glass-premium-mobile p-4 sm:p-6 rounded-2xl group hover:border-gold/30 hover:shadow-glow-gold transition-all duration-300"
+              whileHover={{ scale: 1.08, y: -6 }}
+              transition={{ type: "spring", stiffness: 400, damping: 20 }}
             >
               <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-gradient-gold-cyan mb-2">
                 &lt; 5m

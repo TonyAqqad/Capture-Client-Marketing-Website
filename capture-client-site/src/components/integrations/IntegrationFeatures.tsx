@@ -3,36 +3,78 @@
 import { motion } from "@/lib/motion";
 import type { Integration } from "@/data/integrations";
 import { GradientCard, getGradientByCategory } from "@/components/ui/GradientCard";
+import {
+  RefreshCw,
+  Sparkles,
+  Zap,
+  Shield,
+  Gauge,
+  BarChart3,
+  PhoneCall,
+  Users,
+  Calendar,
+  Eye,
+  Link2,
+  Bell,
+  SlidersHorizontal,
+  ClipboardList,
+  GitBranch,
+  CheckCircle2,
+  type LucideIcon
+} from "lucide-react";
 
 interface IntegrationFeaturesProps {
   integration: Integration;
 }
 
 /**
+ * Icon map for dynamic feature icons
+ */
+const iconMap: Record<string, LucideIcon> = {
+  sync: RefreshCw,
+  auto_awesome: Sparkles,
+  bolt: Zap,
+  security: Shield,
+  speed: Gauge,
+  analytics: BarChart3,
+  phone_in_talk: PhoneCall,
+  contacts: Users,
+  event: Calendar,
+  visibility: Eye,
+  link: Link2,
+  notifications_active: Bell,
+  tune: SlidersHorizontal,
+  assessment: ClipboardList,
+  account_tree: GitBranch,
+  check_circle: CheckCircle2,
+  stars: Sparkles, // For the "Key Feature" badge
+};
+
+/**
  * Smart icon detection based on feature text keywords
  */
-const detectFeatureIcon = (featureText: string): string => {
+const detectFeatureIcon = (featureText: string): LucideIcon => {
   const text = featureText.toLowerCase();
 
-  // Mapping keywords to Material Icons
-  if (text.includes('sync') || text.includes('synchron')) return 'sync';
-  if (text.includes('automat') || text.includes('auto')) return 'auto_awesome';
-  if (text.includes('real-time') || text.includes('instant')) return 'bolt';
-  if (text.includes('secur') || text.includes('protect')) return 'security';
-  if (text.includes('fast') || text.includes('speed') || text.includes('quick')) return 'speed';
-  if (text.includes('data') || text.includes('analytics')) return 'analytics';
-  if (text.includes('call') || text.includes('phone')) return 'phone_in_talk';
-  if (text.includes('contact') || text.includes('lead')) return 'contacts';
-  if (text.includes('schedule') || text.includes('calendar')) return 'event';
-  if (text.includes('track') || text.includes('monitor')) return 'visibility';
-  if (text.includes('integrat') || text.includes('connect')) return 'link';
-  if (text.includes('notif') || text.includes('alert')) return 'notifications_active';
-  if (text.includes('custom') || text.includes('config')) return 'tune';
-  if (text.includes('report')) return 'assessment';
-  if (text.includes('workflow')) return 'account_tree';
+  // Mapping keywords to icon keys
+  if (text.includes('sync') || text.includes('synchron')) return iconMap.sync;
+  if (text.includes('automat') || text.includes('auto')) return iconMap.auto_awesome;
+  if (text.includes('real-time') || text.includes('instant')) return iconMap.bolt;
+  if (text.includes('secur') || text.includes('protect')) return iconMap.security;
+  if (text.includes('fast') || text.includes('speed') || text.includes('quick')) return iconMap.speed;
+  if (text.includes('data') || text.includes('analytics')) return iconMap.analytics;
+  if (text.includes('call') || text.includes('phone')) return iconMap.phone_in_talk;
+  if (text.includes('contact') || text.includes('lead')) return iconMap.contacts;
+  if (text.includes('schedule') || text.includes('calendar')) return iconMap.event;
+  if (text.includes('track') || text.includes('monitor')) return iconMap.visibility;
+  if (text.includes('integrat') || text.includes('connect')) return iconMap.link;
+  if (text.includes('notif') || text.includes('alert')) return iconMap.notifications_active;
+  if (text.includes('custom') || text.includes('config')) return iconMap.tune;
+  if (text.includes('report')) return iconMap.assessment;
+  if (text.includes('workflow')) return iconMap.account_tree;
 
   // Default fallback
-  return 'check_circle';
+  return iconMap.check_circle;
 };
 
 /**
@@ -128,7 +170,7 @@ export function IntegrationFeatures({ integration }: IntegrationFeaturesProps) {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 auto-rows-fr">
           {integration.keyFeatures.map((feature, index) => {
             const layout = bentoLayout[index];
-            const icon = detectFeatureIcon(feature);
+            const FeatureIcon = detectFeatureIcon(feature);
             const isFeatured = layout?.featured;
 
             return (
@@ -167,7 +209,7 @@ export function IntegrationFeatures({ integration }: IntegrationFeaturesProps) {
                         transition={{ delay: 0.3, duration: 0.4 }}
                         className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-semibold mb-4 w-fit"
                       >
-                        <span className="material-icons text-sm">stars</span>
+                        <Sparkles className="w-3.5 h-3.5" />
                         <span>Key Feature</span>
                       </motion.div>
                     )}
@@ -185,12 +227,10 @@ export function IntegrationFeatures({ integration }: IntegrationFeaturesProps) {
                         transition: { duration: 0.4 }
                       }}
                     >
-                      <span className={`
-                        material-icons text-accent flex-shrink-0
-                        ${isFeatured ? 'text-3xl sm:text-4xl' : 'text-2xl sm:text-3xl'}
-                      `}>
-                        {icon}
-                      </span>
+                      <FeatureIcon className={`
+                        text-accent flex-shrink-0
+                        ${isFeatured ? 'w-8 h-8 sm:w-10 sm:h-10' : 'w-6 h-6 sm:w-8 sm:h-8'}
+                      `} />
                     </motion.div>
 
                     {/* Feature Text */}

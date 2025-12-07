@@ -3,6 +3,33 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
 import Link from "next/link";
+import {
+  Phone,
+  Bot,
+  Clock,
+  CheckCircle2,
+  User,
+  ArrowRight,
+  Play,
+  Pause,
+  Calendar,
+  TrendingUp,
+  BadgeCheck,
+  MessageSquare,
+  Signal,
+  Wifi,
+  Battery,
+  Stethoscope,
+  Thermometer,
+  Gavel,
+  Home,
+  X,
+  MinusCircle,
+  PlusCircle,
+  Users,
+  RocketIcon,
+  HeadphonesIcon,
+} from "lucide-react";
 
 // ==================== TYPES ====================
 
@@ -24,6 +51,14 @@ interface ScenarioData {
 }
 
 // ==================== DATA ====================
+
+// Icon mapping for scenario data
+const iconMap: Record<string, any> = {
+  medical_services: Stethoscope,
+  thermostat: Thermometer,
+  gavel: Gavel,
+  home: Home,
+};
 
 const scenarios: ScenarioData[] = [
   {
@@ -159,15 +194,22 @@ function PhoneInterface({
 }) {
   return (
     <div className="relative w-full max-w-md mx-auto">
-      {/* Decorative glow - reduced on mobile */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent/30 via-primary/20 to-accent/30 rounded-3xl blur-xl md:blur-3xl opacity-40 md:opacity-60 animate-pulse" />
-
-      {/* Phone mockup */}
+      {/* Enhanced pulsing glow effect */}
       <motion.div
-        className="relative glass-premium border-2 border-white/20 rounded-[2rem] md:rounded-[2.5rem] p-3 md:p-4 shadow-2xl"
-        initial={{ scale: 0.9, opacity: 0 }}
-        animate={{ scale: 1, opacity: 1 }}
-        transition={{ duration: 0.5, type: "spring" }}
+        className="absolute inset-0 bg-gradient-to-br from-accent/40 via-gold/30 to-primary/40 rounded-3xl blur-2xl md:blur-3xl"
+        animate={{
+          opacity: [0.4, 0.7, 0.4],
+          scale: [1, 1.05, 1],
+        }}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+      />
+
+      {/* Phone mockup with premium border */}
+      <motion.div
+        className="relative glass-premium border-2 border-gold/30 rounded-[2rem] md:rounded-[2.5rem] p-3 md:p-4 shadow-glow-gold-lg"
+        initial={{ scale: 0.9, opacity: 0, y: 20 }}
+        animate={{ scale: 1, opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
       >
         {/* Phone notch */}
         <div className="absolute top-4 md:top-6 left-1/2 -translate-x-1/2 w-24 md:w-32 h-5 md:h-6 bg-background-dark rounded-full border border-white/10" />
@@ -178,23 +220,40 @@ function PhoneInterface({
           <div className="flex items-center justify-between px-4 md:px-8 py-3 md:py-4 border-b border-white/5">
             <div className="flex items-center gap-2">
               <div className="w-1 h-1 bg-accent rounded-full animate-pulse" />
-              <span className="text-xs text-foreground-muted">Active Call</span>
+              <span className="text-xs text-foreground-muted">Active Conversation</span>
             </div>
             <div className="flex items-center gap-1 text-foreground-muted text-xs">
-              <span className="material-icons text-sm">signal_cellular_alt</span>
-              <span className="material-icons text-sm">wifi</span>
-              <span className="material-icons text-sm">battery_full</span>
+              <Signal className="w-4 h-4" />
+              <Wifi className="w-4 h-4" />
+              <Battery className="w-4 h-4" />
             </div>
           </div>
 
-          {/* Call info */}
+          {/* Conversation info */}
           <div className="p-6 md:p-8 text-center">
             <motion.div
-              className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-4 md:mb-6 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 flex items-center justify-center"
-              animate={isPlaying ? { scale: [1, 1.05, 1] } : {}}
+              className="relative w-20 h-20 md:w-24 md:h-24 mx-auto mb-4 md:mb-6 rounded-full bg-gradient-to-br from-accent/20 to-gold/20 border border-accent/30 flex items-center justify-center"
+              animate={isPlaying ? {
+                scale: [1, 1.08, 1],
+                rotate: [0, 5, -5, 0],
+              } : {}}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <span className="material-icons text-4xl md:text-5xl text-accent">{scenario.icon}</span>
+              {/* Pulsing ring when playing */}
+              {isPlaying && (
+                <motion.div
+                  className="absolute inset-0 rounded-full border-2 border-accent/50"
+                  animate={{
+                    scale: [1, 1.3, 1.5],
+                    opacity: [0.8, 0.4, 0],
+                  }}
+                  transition={{ duration: 1.5, repeat: Infinity }}
+                />
+              )}
+              {(() => {
+                const IconComponent = iconMap[scenario.icon];
+                return <IconComponent className="w-10 h-10 md:w-12 md:h-12 text-accent" />;
+              })()}
             </motion.div>
 
             <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">{scenario.title}</h3>
@@ -205,14 +264,14 @@ function PhoneInterface({
               <AnimatedWaveform isPlaying={isPlaying} />
             </div>
 
-            {/* Call duration */}
+            {/* Conversation duration */}
             <div className="text-3xl md:text-4xl font-bold text-gradient bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent mb-6 md:mb-8">
               {scenario.stats.callDuration}
             </div>
           </div>
 
           {/* Bottom stats */}
-          <div className="grid grid-cols-3 gap-2 md:gap-4 p-4 md:p-6 border-t border-white/5 bg-white/[0.02]">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-4 p-4 md:p-6 border-t border-white/5 bg-white/[0.02]">
             <div className="text-center">
               <div className="text-xs text-foreground-muted mb-1">Duration</div>
               <div className="text-xs md:text-sm font-bold text-foreground">{scenario.stats.callDuration}</div>
@@ -242,14 +301,27 @@ function TranscriptPanel({
   currentIndex: number;
 }) {
   return (
-    <div className="glass-premium rounded-2xl md:rounded-3xl p-4 md:p-8 h-full max-h-[500px] md:max-h-[600px] overflow-hidden">
+    <div className="glass-premium rounded-2xl md:rounded-3xl p-4 md:p-8 h-full max-h-[500px] md:max-h-[600px] overflow-hidden border-2 border-accent/20 shadow-glow-lg">
       <div className="flex items-center gap-3 mb-4 md:mb-6 pb-3 md:pb-4 border-b border-white/10">
-        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 flex items-center justify-center">
-          <span className="material-icons text-accent">chat</span>
-        </div>
+        <motion.div
+          className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 flex items-center justify-center"
+          animate={{
+            boxShadow: [
+              '0 0 10px rgba(0, 201, 255, 0.3)',
+              '0 0 20px rgba(0, 201, 255, 0.5)',
+              '0 0 10px rgba(0, 201, 255, 0.3)',
+            ],
+          }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <MessageSquare className="w-5 h-5 text-accent" />
+        </motion.div>
         <div>
           <h3 className="text-lg md:text-xl font-bold text-foreground">Live Transcript</h3>
-          <p className="text-xs md:text-sm text-foreground-muted">Real-time conversation</p>
+          <div className="flex items-center gap-2">
+            <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+            <p className="text-xs md:text-sm text-foreground-muted">Real-time conversation</p>
+          </div>
         </div>
       </div>
 
@@ -258,10 +330,10 @@ function TranscriptPanel({
           {transcript.slice(0, currentIndex + 1).map((message, idx) => (
             <motion.div
               key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, x: message.speaker === "AI" ? -20 : 20 }}
+              animate={{ opacity: 1, y: 0, x: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
               className={`flex items-start gap-3 ${
                 message.speaker === "AI" ? "flex-row" : "flex-row-reverse"
               }`}
@@ -274,13 +346,11 @@ function TranscriptPanel({
                     : "bg-gradient-to-br from-gold/20 to-gold/10 border border-gold/30"
                 }`}
               >
-                <span
-                  className={`material-icons text-base md:text-xl ${
-                    message.speaker === "AI" ? "text-accent" : "text-gold"
-                  }`}
-                >
-                  {message.speaker === "AI" ? "smart_toy" : "person"}
-                </span>
+                {message.speaker === "AI" ? (
+                  <Bot className="w-4 h-4 md:w-5 md:h-5 text-accent" />
+                ) : (
+                  <User className="w-4 h-4 md:w-5 md:h-5 text-gold" />
+                )}
               </div>
 
               {/* Message bubble */}
@@ -332,7 +402,7 @@ function BeforeAfterComparison() {
       >
         <div className="flex items-center gap-3 mb-6">
           <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-red-500/20 to-red-600/20 border border-red-500/30 flex items-center justify-center">
-            <span className="material-icons text-2xl text-red-500">close</span>
+            <X className="w-6 h-6 text-red-500" />
           </div>
           <div>
             <h3 className="text-xl font-bold text-foreground">Without Capture Client</h3>
@@ -342,28 +412,28 @@ function BeforeAfterComparison() {
 
         <div className="space-y-4">
           <div className="flex items-start gap-3">
-            <span className="material-icons text-red-500 mt-1">remove_circle_outline</span>
+            <MinusCircle className="w-5 h-5 text-red-500 mt-1" />
             <div>
               <p className="text-foreground font-semibold mb-1">Missed Calls</p>
               <p className="text-sm text-foreground-muted">67% of calls go to voicemail after hours</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <span className="material-icons text-red-500 mt-1">remove_circle_outline</span>
+            <MinusCircle className="w-5 h-5 text-red-500 mt-1" />
             <div>
               <p className="text-foreground font-semibold mb-1">Lost Revenue</p>
               <p className="text-sm text-foreground-muted">Average $12,000/month in missed opportunities</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <span className="material-icons text-red-500 mt-1">remove_circle_outline</span>
+            <MinusCircle className="w-5 h-5 text-red-500 mt-1" />
             <div>
               <p className="text-foreground font-semibold mb-1">Poor Experience</p>
               <p className="text-sm text-foreground-muted">Frustrated customers call competitors instead</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <span className="material-icons text-red-500 mt-1">remove_circle_outline</span>
+            <MinusCircle className="w-5 h-5 text-red-500 mt-1" />
             <div>
               <p className="text-foreground font-semibold mb-1">Manual Follow-up</p>
               <p className="text-sm text-foreground-muted">Hours wasted returning voicemails daily</p>
@@ -393,7 +463,7 @@ function BeforeAfterComparison() {
         <div className="relative z-10">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 flex items-center justify-center">
-              <span className="material-icons text-2xl text-accent">check_circle</span>
+              <CheckCircle2 className="w-6 h-6 text-accent" />
             </div>
             <div>
               <h3 className="text-xl font-bold text-foreground">With Capture Client</h3>
@@ -403,28 +473,28 @@ function BeforeAfterComparison() {
 
           <div className="space-y-4">
             <div className="flex items-start gap-3">
-              <span className="material-icons text-accent mt-1">add_circle_outline</span>
+              <PlusCircle className="w-5 h-5 text-accent mt-1" />
               <div>
                 <p className="text-foreground font-semibold mb-1">100% Call Coverage</p>
                 <p className="text-sm text-foreground-muted">AI answers instantly, 24/7/365</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <span className="material-icons text-accent mt-1">add_circle_outline</span>
+              <PlusCircle className="w-5 h-5 text-accent mt-1" />
               <div>
                 <p className="text-foreground font-semibold mb-1">Maximized Revenue</p>
                 <p className="text-sm text-foreground-muted">Capture every lead automatically</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <span className="material-icons text-accent mt-1">add_circle_outline</span>
+              <PlusCircle className="w-5 h-5 text-accent mt-1" />
               <div>
                 <p className="text-foreground font-semibold mb-1">Premium Experience</p>
                 <p className="text-sm text-foreground-muted">Human-like conversations that impress</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <span className="material-icons text-accent mt-1">add_circle_outline</span>
+              <PlusCircle className="w-5 h-5 text-accent mt-1" />
               <div>
                 <p className="text-foreground font-semibold mb-1">Zero Manual Work</p>
                 <p className="text-sm text-foreground-muted">Automatic transcripts and CRM updates</p>
@@ -468,24 +538,24 @@ function LiveStatsSection() {
   }, []);
 
   return (
-    <div className="grid sm:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
       {[
         {
-          label: "Calls Answered Today",
+          label: "Conversations Today",
           value: stats.calls.toLocaleString(),
-          icon: "call",
+          icon: MessageSquare,
           gradient: "from-accent to-primary",
         },
         {
           label: "Leads Captured",
           value: stats.leads.toLocaleString(),
-          icon: "people",
+          icon: Users,
           gradient: "from-primary to-accent",
         },
         {
           label: "Revenue Generated",
           value: `$${stats.revenue.toLocaleString()}`,
-          icon: "trending_up",
+          icon: TrendingUp,
           gradient: "from-gold to-gold-light",
         },
       ].map((stat, idx) => (
@@ -506,7 +576,7 @@ function LiveStatsSection() {
 
           <div className="relative z-10">
             <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${stat.gradient} bg-opacity-20 border border-white/20 flex items-center justify-center`}>
-              <span className="material-icons text-3xl text-accent">{stat.icon}</span>
+              <stat.icon className="w-8 h-8 text-accent" />
             </div>
             <motion.div
               key={stat.value}
@@ -565,27 +635,43 @@ export default function DemoContent() {
 
   return (
     <div className="relative min-h-screen w-full bg-background-dark overflow-x-hidden">
-      {/* Animated background - mobile optimized */}
+      {/* Enhanced animated background with aurora effect */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background-dark via-background to-background-dark" />
         <div className="absolute inset-0 bg-mesh-premium opacity-30" />
 
-        {/* Floating orbs - reduced blur on mobile */}
+        {/* Aurora gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-primary/10 animate-pulse" style={{ animationDuration: '4s' }} />
+
+        {/* Floating orbs - enhanced glow */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-gradient-radial from-accent/20 to-transparent rounded-full blur-xl md:blur-3xl"
+          className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-gradient-radial from-accent/30 to-transparent rounded-full blur-xl md:blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
+            opacity: [0.3, 0.6, 0.3],
+            x: [0, 50, 0],
+            y: [0, 30, 0],
           }}
-          transition={{ duration: 8, repeat: Infinity }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-gradient-radial from-primary/20 to-transparent rounded-full blur-xl md:blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-gradient-radial from-gold/20 to-transparent rounded-full blur-xl md:blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
             opacity: [0.5, 0.3, 0.5],
+            x: [0, -50, 0],
+            y: [0, -30, 0],
           }}
-          transition={{ duration: 8, repeat: Infinity, delay: 1 }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        />
+        <motion.div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 md:w-[600px] md:h-[600px] bg-gradient-radial from-primary/20 to-transparent rounded-full blur-2xl md:blur-3xl"
+          animate={{
+            scale: [1, 1.1, 1],
+            opacity: [0.2, 0.4, 0.2],
+            rotate: [0, 90, 180, 270, 360],
+          }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
         />
       </div>
 
@@ -617,14 +703,14 @@ export default function DemoContent() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 sm:mb-6 leading-tight tracking-tight">
                 Experience AI That
                 <br />
-                <span className="text-gradient-gold-cyan">Sounds Human</span>
+                <span className="text-gradient-gold-cyan">Handles Every Conversation</span>
               </h1>
 
               {/* Subheadline - mobile optimized sizing */}
               <p className="text-base sm:text-lg md:text-xl text-foreground-muted mb-6 sm:mb-8 leading-relaxed px-4 sm:px-0">
-                Watch real conversations between our AI voice agent and customers.
+                See how our AI agents engage with customers via voice and SMS.
                 <br className="hidden sm:block" />
-                Choose a scenario below and see the magic happen.
+                Choose a scenario below and watch the conversation unfold.
               </p>
 
               {/* Animated phone mockup decoration - mobile optimized */}
@@ -633,9 +719,9 @@ export default function DemoContent() {
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
-                <span className="material-icons text-accent text-base sm:text-xl">phone_in_talk</span>
-                <span className="hidden sm:inline">Live simulation - No recordings, 100% AI-generated</span>
-                <span className="sm:hidden">100% AI-generated</span>
+                <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
+                <span className="hidden sm:inline">Live AI conversation simulation - Voice & SMS capable</span>
+                <span className="sm:hidden">Voice & SMS AI Agent</span>
               </motion.div>
             </motion.div>
           </div>
@@ -671,13 +757,16 @@ export default function DemoContent() {
                           : "bg-white/5 border border-white/10"
                       }`}
                     >
-                      <span
-                        className={`material-icons text-xl sm:text-2xl ${
-                          selectedScenario.id === scenario.id ? "text-accent" : "text-foreground-muted"
-                        }`}
-                      >
-                        {scenario.icon}
-                      </span>
+                      {(() => {
+                        const IconComponent = iconMap[scenario.icon];
+                        return (
+                          <IconComponent
+                            className={`w-5 h-5 sm:w-6 sm:h-6 ${
+                              selectedScenario.id === scenario.id ? "text-accent" : "text-foreground-muted"
+                            }`}
+                          />
+                        );
+                      })()}
                     </div>
                     {selectedScenario.id === scenario.id && (
                       <motion.div
@@ -685,7 +774,7 @@ export default function DemoContent() {
                         animate={{ scale: 1 }}
                         className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-accent flex items-center justify-center"
                       >
-                        <span className="material-icons text-xs sm:text-sm text-background-dark">check</span>
+                        <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-background-dark" />
                       </motion.div>
                     )}
                   </div>
@@ -734,14 +823,26 @@ export default function DemoContent() {
             >
               <motion.button
                 onClick={togglePlayback}
-                className="w-full sm:w-auto flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-gradient-to-r from-accent via-primary to-accent text-white font-bold text-base sm:text-lg shadow-glow-lg backdrop-blur-xl border-2 border-accent/30 min-h-[56px]"
-                whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(0, 201, 255, 0.6)" }}
+                className="w-full sm:w-auto flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-gradient-to-r from-accent via-primary to-accent text-white font-bold text-base sm:text-lg shadow-glow-intense backdrop-blur-xl border-2 border-accent/30 min-h-[56px] relative overflow-hidden"
+                whileHover={{ scale: 1.05, boxShadow: "0 0 50px rgba(0, 201, 255, 0.8)" }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="material-icons text-2xl sm:text-3xl">
-                  {isPlaying ? "pause" : "play_arrow"}
+                {/* Animated gradient overlay */}
+                <motion.div
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"
+                  animate={{
+                    x: ['-100%', '200%'],
+                  }}
+                  transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+                />
+                <span className="relative z-10">
+                  {isPlaying ? (
+                    <Pause className="w-6 h-6 sm:w-8 sm:h-8" />
+                  ) : (
+                    <Play className="w-6 h-6 sm:w-8 sm:h-8" />
+                  )}
                 </span>
-                <span>{isPlaying ? "Pause Demo" : "Play Demo"}</span>
+                <span className="relative z-10">{isPlaying ? "Pause Demo" : "Play Demo"}</span>
               </motion.button>
 
               <motion.button
@@ -753,7 +854,7 @@ export default function DemoContent() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="material-icons text-xl sm:text-2xl">replay</span>
+                <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 rotate-180" />
                 <span>Restart</span>
               </motion.button>
             </motion.div>
@@ -820,6 +921,87 @@ export default function DemoContent() {
           </div>
         </section>
 
+        {/* ==================== FEATURE HIGHLIGHTS & TRUST ==================== */}
+        <section className="section bg-background relative overflow-hidden">
+          <div className="absolute inset-0 bg-mesh opacity-20" />
+
+          <div className="container-custom px-4 sm:px-6 lg:px-8 relative z-10">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <h2 className="text-display-lg mb-4">
+                Enterprise-Grade AI <span className="text-gradient-gold-cyan">Technology</span>
+              </h2>
+              <p className="text-xl text-foreground-muted max-w-2xl mx-auto">
+                Built for reliability, security, and performance at scale
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              {[
+                {
+                  icon: BadgeCheck,
+                  title: "SOC 2 Compliant",
+                  description: "Enterprise-level security and data protection",
+                },
+                {
+                  icon: Signal,
+                  title: "99.9% Uptime",
+                  description: "Always available when your customers call",
+                },
+                {
+                  icon: TrendingUp,
+                  title: "Real-Time Analytics",
+                  description: "Track every conversation and conversion",
+                },
+              ].map((feature, idx) => (
+                <motion.div
+                  key={feature.title}
+                  className="glass-premium rounded-2xl p-6 text-center"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.1 }}
+                >
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-accent/20 to-gold/20 border border-accent/30 flex items-center justify-center">
+                    <feature.icon className="w-8 h-8 text-accent" />
+                  </div>
+                  <h3 className="text-lg font-bold text-foreground mb-2">{feature.title}</h3>
+                  <p className="text-sm text-foreground-muted">{feature.description}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Prominent phone CTA */}
+            <motion.div
+              className="glass-premium rounded-2xl p-8 border-2 border-gold/30 max-w-2xl mx-auto text-center"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-foreground-muted mb-4">
+                Questions? Talk to our AI experts now
+              </p>
+              <a href="tel:865-346-3339">
+                <motion.button
+                  className="btn-gold px-10 py-5 rounded-2xl text-xl font-bold inline-flex items-center gap-3 shadow-glow-gold-lg w-full sm:w-auto"
+                  whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(245, 166, 35, 0.6)" }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Phone className="w-6 h-6" />
+                  <span>Call 865-346-3339</span>
+                </motion.button>
+              </a>
+              <p className="text-xs text-foreground-muted mt-3">
+                Average response time: Under 30 seconds
+              </p>
+            </motion.div>
+          </div>
+        </section>
+
         {/* ==================== CTA SECTION ==================== */}
         <section className="section relative overflow-hidden">
           <div className="absolute inset-0">
@@ -834,7 +1016,7 @@ export default function DemoContent() {
 
           <div className="container-custom px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
-              className="glass-premium rounded-3xl p-12 lg:p-16 text-center max-w-4xl mx-auto"
+              className="glass-premium rounded-3xl p-12 lg:p-16 text-center max-w-4xl mx-auto border-2 border-gold/20 shadow-glow-gold-lg"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -844,7 +1026,7 @@ export default function DemoContent() {
                 animate={{ rotate: [0, 5, 0, -5, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
               >
-                <span className="material-icons text-5xl text-accent">rocket_launch</span>
+                <RocketIcon className="w-12 h-12 text-accent" />
               </motion.div>
 
               <h2 className="text-display-md mb-6">
@@ -860,40 +1042,51 @@ export default function DemoContent() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link href="/contact">
                   <motion.button
-                    className="flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-accent via-primary to-accent text-white font-bold text-lg shadow-glow-intense border-2 border-accent/30"
+                    className="flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-accent via-primary to-accent text-white font-bold text-lg shadow-glow-intense border-2 border-accent/30 w-full sm:w-auto"
                     whileHover={{ scale: 1.05, boxShadow: "0 0 60px rgba(0, 201, 255, 0.8)" }}
                     whileTap={{ scale: 0.95 }}
                   >
                     <span>Start Your Free Trial</span>
-                    <span className="material-icons">arrow_forward</span>
+                    <ArrowRight className="w-5 h-5" />
                   </motion.button>
                 </Link>
 
                 <Link href="/contact">
                   <motion.button
-                    className="flex items-center gap-3 px-8 py-5 rounded-2xl glass-card border-2 border-white/20 text-foreground font-semibold hover:border-accent/30 transition-all duration-300"
+                    className="flex items-center gap-3 px-8 py-5 rounded-2xl glass-card border-2 border-white/20 text-foreground font-semibold hover:border-accent/30 transition-all duration-300 w-full sm:w-auto"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <span className="material-icons">calendar_today</span>
+                    <Calendar className="w-5 h-5" />
                     <span>Schedule a Demo</span>
                   </motion.button>
                 </Link>
+
+                <a href="tel:865-346-3339">
+                  <motion.button
+                    className="flex items-center gap-3 px-8 py-5 rounded-2xl glass-card border-2 border-gold/30 text-foreground font-semibold hover:border-gold/50 hover:bg-gold/5 transition-all duration-300 w-full sm:w-auto"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <Phone className="w-5 h-5 text-gold" />
+                    <span>Call (865) 346-3339</span>
+                  </motion.button>
+                </a>
               </div>
 
               {/* Trust badges */}
               <div className="mt-12 pt-8 border-t border-white/10">
                 <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
                   <div className="flex items-center gap-2">
-                    <span className="material-icons text-gold">verified</span>
+                    <BadgeCheck className="w-5 h-5 text-gold" />
                     <span className="text-sm text-foreground-muted">No Credit Card Required</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="material-icons text-gold">schedule</span>
+                    <Clock className="w-5 h-5 text-gold" />
                     <span className="text-sm text-foreground-muted">48-Hour Setup</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="material-icons text-gold">support_agent</span>
+                    <HeadphonesIcon className="w-5 h-5 text-gold" />
                     <span className="text-sm text-foreground-muted">24/7 Support Included</span>
                   </div>
                 </div>

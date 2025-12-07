@@ -5,8 +5,40 @@ export const metadata: Metadata = {
   title: "Platform Features | All-in-One Growth Hub | Capture Client",
   description:
     "Explore Capture Client's powerful features: AI Voice Agents, CRM, automated lead generation, real-time analytics, and unified inbox—all in one platform.",
+  keywords: [
+    "ai voice agent features",
+    "voice ai capabilities",
+    "automated call handling",
+    "lead qualification ai",
+    "appointment scheduling",
+    "crm integration",
+    "24/7 phone answering"
+  ],
+  openGraph: {
+    title: "Platform Features | All-in-One Growth Hub | Capture Client",
+    description: "Explore Capture Client's AI voice agent features: 24/7 call answering, lead qualification, appointment booking, CRM integration, and more.",
+    url: "https://captureclientai.net/features",
+    siteName: "Capture Client",
+    type: "website",
+    images: [{
+      url: "https://captureclientai.net/og-image.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Capture Client Platform Features",
+    }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Platform Features | All-in-One Growth Hub | Capture Client",
+    description: "Explore Capture Client's AI voice agent features for small businesses.",
+    images: ["https://captureclientai.net/og-image.jpg"],
+  },
   alternates: {
     canonical: "https://captureclientai.net/features",
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

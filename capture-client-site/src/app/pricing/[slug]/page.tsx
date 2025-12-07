@@ -11,6 +11,15 @@ import {
   ComparisonRow,
   PackageFeature,
 } from "@/types/content";
+import {
+  Star,
+  ArrowRight,
+  CheckCircle2,
+  BadgeCheck,
+  X,
+  ChevronDown,
+  Gift
+} from "lucide-react";
 
 export async function generateStaticParams() {
   const packages = await getAllPackages();
@@ -69,7 +78,7 @@ export default async function PackagePage({
             {/* Badge */}
             {pkg.hero?.badge && (
               <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 backdrop-blur-sm">
-                <span className="material-icons text-cyan-400 text-sm">star</span>
+                <Star className="w-4 h-4 text-cyan-400" />
                 <span className="text-cyan-400 font-semibold text-sm tracking-wider">
                   {pkg.hero.badge}
                 </span>
@@ -113,9 +122,7 @@ export default async function PackagePage({
                 >
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     {pkg.hero.cta.primary.text}
-                    <span className="material-icons group-hover:translate-x-1 transition-transform text-lg">
-                      arrow_forward
-                    </span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
               )}
@@ -132,15 +139,15 @@ export default async function PackagePage({
             {/* Trust Signals */}
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-6 text-sm sm:text-base text-slate-400 px-4 sm:px-0">
               <div className="flex items-center gap-3 py-1">
-                <span className="material-icons text-green-400 text-lg flex-shrink-0">check_circle</span>
+                <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
                 <span>No setup fees</span>
               </div>
               <div className="flex items-center gap-3 py-1">
-                <span className="material-icons text-green-400 text-lg flex-shrink-0">check_circle</span>
+                <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
                 <span>Cancel anytime</span>
               </div>
               <div className="flex items-center gap-3 py-1">
-                <span className="material-icons text-green-400 text-lg flex-shrink-0">check_circle</span>
+                <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
                 <span>Money-back guarantee</span>
               </div>
             </div>
@@ -169,9 +176,7 @@ export default async function PackagePage({
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <div className="relative flex items-start gap-3 sm:gap-4">
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center border border-cyan-500/30">
-                      <span className="material-icons text-cyan-400 text-lg sm:text-xl">
-                        verified
-                      </span>
+                      <BadgeCheck className="w-5 h-5 text-cyan-400" />
                     </div>
                     <p className="text-slate-200 text-sm sm:text-base leading-relaxed">{item}</p>
                   </div>
@@ -210,9 +215,7 @@ export default async function PackagePage({
                     <div className="flex flex-col sm:flex-row items-start justify-between mb-4 gap-3">
                       <div className="flex items-center gap-3 sm:gap-4">
                         <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center border border-cyan-500/30">
-                          <span className="material-icons text-cyan-400 text-xl sm:text-2xl">
-                            check_circle
-                          </span>
+                          <CheckCircle2 className="w-6 h-6 text-cyan-400" />
                         </div>
                         <h3 className="font-bold text-lg sm:text-xl text-white">
                           {feature.name}
@@ -251,9 +254,7 @@ export default async function PackagePage({
                     className="rounded-xl bg-slate-800/30 border border-slate-700/50 p-6"
                   >
                     <div className="flex items-start gap-4">
-                      <span className="material-icons text-slate-500 flex-shrink-0">
-                        cancel
-                      </span>
+                      <X className="w-5 h-5 text-slate-500 flex-shrink-0" />
                       <div className="flex-1">
                         <p className="text-slate-400 mb-1">{feature.name}</p>
                         {feature.available_in && (
@@ -264,7 +265,7 @@ export default async function PackagePage({
                             className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold inline-flex items-center gap-1"
                           >
                             Available in {feature.available_in}
-                            <span className="material-icons text-sm">arrow_forward</span>
+                            <ArrowRight className="w-4 h-4" />
                           </Link>
                         )}
                         {feature.note && (
@@ -310,9 +311,7 @@ export default async function PackagePage({
 
                   <div className="relative">
                     <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center border border-cyan-500/30 mb-6">
-                      <span className="material-icons text-cyan-400 text-3xl">
-                        {benefit.icon || "star"}
-                      </span>
+                      <Star className="w-8 h-8 text-cyan-400" />
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4">
                       {benefit.title}
@@ -394,7 +393,7 @@ export default async function PackagePage({
                 className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 min-h-[48px] bg-white/5 border border-white/10 rounded-full text-white font-semibold hover:bg-white/10 transition-all duration-300 backdrop-blur-sm touch-manipulation text-sm sm:text-base"
               >
                 View Full Comparison
-                <span className="material-icons text-base sm:text-lg">arrow_forward</span>
+                <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
           </div>
@@ -423,9 +422,7 @@ export default async function PackagePage({
                   {/* Rating stars */}
                   <div className="flex gap-1 mb-6">
                     {[...Array(5)].map((_, i) => (
-                      <span key={i} className="material-icons text-yellow-400 text-xl">
-                        star
-                      </span>
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
                     ))}
                   </div>
 
@@ -479,9 +476,7 @@ export default async function PackagePage({
                 >
                   <summary className="flex items-center justify-between cursor-pointer p-6 text-white font-bold text-lg">
                     <span>{item.question}</span>
-                    <span className="material-icons text-cyan-400 group-open:rotate-180 transition-transform">
-                      expand_more
-                    </span>
+                    <ChevronDown className="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform" />
                   </summary>
                   <div className="px-6 pb-6 text-slate-400 leading-relaxed border-t border-slate-700/50 pt-4">
                     {item.answer}
@@ -504,7 +499,7 @@ export default async function PackagePage({
                   className="text-center p-5 sm:p-6 rounded-xl bg-slate-800/30 border border-slate-700/50"
                 >
                   <div className="w-12 h-12 rounded-full bg-green-500/10 border border-green-500/20 flex items-center justify-center mx-auto mb-4">
-                    <span className="material-icons text-green-400 text-xl">verified</span>
+                    <BadgeCheck className="w-6 h-6 text-green-400" />
                   </div>
                   <h4 className="font-bold text-white mb-2 text-base sm:text-lg">{signal.title}</h4>
                   <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">{signal.description}</p>
@@ -542,9 +537,7 @@ export default async function PackagePage({
                   >
                     <span className="relative z-10 flex items-center justify-center gap-2">
                       {pkg.cta_footer.primary_cta.text}
-                      <span className="material-icons group-hover:translate-x-1 transition-transform">
-                        arrow_forward
-                      </span>
+                      <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </span>
                   </Link>
                 )}
@@ -567,7 +560,7 @@ export default async function PackagePage({
             {/* Bonus */}
             {pkg.cta_footer?.bonus && (
               <div className="inline-flex items-center gap-2 px-6 py-3 mx-auto rounded-full bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border border-yellow-500/20">
-                <span className="material-icons text-yellow-400">card_giftcard</span>
+                <Gift className="w-5 h-5 text-yellow-400" />
                 <span className="text-yellow-300 font-semibold">{pkg.cta_footer.bonus}</span>
               </div>
             )}

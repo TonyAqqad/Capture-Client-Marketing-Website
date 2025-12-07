@@ -2,6 +2,7 @@
 
 import { motion } from "@/lib/motion";
 import Link from "next/link";
+import { PlusCircle, Rocket, ArrowRight, Code, CheckCircle2, Clock, Headphones, Timer, RefreshCw, Shield } from "lucide-react";
 
 export function IntegrationsCTA() {
   return (
@@ -89,9 +90,7 @@ export function IntegrationsCTA() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="inline-flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gradient-to-br from-gold/20 to-accent/20 border border-gold/30 mb-6 sm:mb-8 shadow-glow-gold"
               >
-                <span className="material-icons text-gold text-3xl sm:text-4xl">
-                  add_circle
-                </span>
+                <PlusCircle className="w-8 h-8 sm:w-10 sm:h-10 text-gold" />
               </motion.div>
 
               {/* Headline */}
@@ -133,35 +132,59 @@ export function IntegrationsCTA() {
                 className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
               >
                 {/* Primary CTA - Request Integration */}
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-base sm:text-lg
-                           bg-gradient-to-r from-gold to-gold-light text-background-dark
-                           shadow-glow-gold-lg hover:shadow-glow-gold-intense
-                           hover:scale-[1.03] hover:-translate-y-1
-                           transition-all duration-300 touch-manipulation
-                           group w-full sm:w-auto justify-center"
+                <motion.div
+                  whileHover={{
+                    scale: 1.05,
+                    y: -4
+                  }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 20
+                  }}
+                  className="w-full sm:w-auto"
                 >
-                  <span className="material-icons">rocket_launch</span>
-                  <span>Request Custom Integration</span>
-                  <span className="material-icons group-hover:translate-x-1 transition-transform duration-300">
-                    arrow_forward
-                  </span>
-                </Link>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-base sm:text-lg
+                             bg-gradient-to-r from-gold to-gold-light text-background-dark
+                             shadow-glow-gold-lg hover:shadow-glow-gold-intense
+                             transition-all duration-300 touch-manipulation
+                             group w-full sm:w-auto justify-center"
+                  >
+                    <Rocket className="w-5 h-5" />
+                    <span>Request Custom Integration</span>
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Link>
+                </motion.div>
 
                 {/* Secondary CTA - View API Docs */}
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-base sm:text-lg
-                           bg-white/5 border border-white/20 text-foreground backdrop-blur-xl
-                           hover:bg-white/10 hover:border-white/30 hover:shadow-glow
-                           hover:scale-[1.02]
-                           transition-all duration-300 touch-manipulation
-                           group w-full sm:w-auto justify-center"
+                <motion.div
+                  whileHover={{
+                    scale: 1.03,
+                    y: -2
+                  }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 400,
+                    damping: 20
+                  }}
+                  className="w-full sm:w-auto"
                 >
-                  <span className="material-icons">code</span>
-                  <span>View API Documentation</span>
-                </Link>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center gap-3 px-8 py-4 rounded-xl font-semibold text-base sm:text-lg
+                             bg-white/5 border border-white/20 text-foreground backdrop-blur-xl
+                             hover:bg-white/10 hover:border-white/30 hover:shadow-glow
+                             transition-all duration-300 touch-manipulation
+                             group w-full sm:w-auto justify-center"
+                  >
+                    <Code className="w-5 h-5" />
+                    <span>View API Documentation</span>
+                  </Link>
+                </motion.div>
               </motion.div>
 
               {/* Trust Indicators */}
@@ -173,15 +196,15 @@ export function IntegrationsCTA() {
                 className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-foreground-muted"
               >
                 <div className="flex items-center gap-2">
-                  <span className="material-icons text-accent text-lg">check_circle</span>
+                  <CheckCircle2 className="w-5 h-5 text-accent" />
                   <span>No setup fees</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="material-icons text-accent text-lg">schedule</span>
+                  <Clock className="w-5 h-5 text-accent" />
                   <span>Fast delivery</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="material-icons text-accent text-lg">support_agent</span>
+                  <Headphones className="w-5 h-5 text-accent" />
                   <span>Full support</span>
                 </div>
               </motion.div>
@@ -198,13 +221,16 @@ export function IntegrationsCTA() {
           >
             {/* Benefit 1 */}
             <motion.div
-              className="glass-premium-mobile p-6 rounded-2xl text-center group hover:border-accent/30 transition-all duration-300"
-              whileHover={{ scale: 1.03, y: -4 }}
+              className="glass-premium-mobile p-6 rounded-2xl text-center group hover:border-accent/30 hover:shadow-glow-accent transition-all duration-300"
+              whileHover={{ scale: 1.05, y: -6 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 20
+              }}
             >
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 border border-accent/30 mb-4 group-hover:shadow-glow-accent transition-all duration-300">
-                <span className="material-icons text-accent text-xl">
-                  timer
-                </span>
+                <Timer className="w-5 h-5 text-accent" />
               </div>
               <h3 className="text-foreground font-semibold text-base sm:text-lg mb-2">
                 Lightning Fast Setup
@@ -216,13 +242,16 @@ export function IntegrationsCTA() {
 
             {/* Benefit 2 */}
             <motion.div
-              className="glass-premium-mobile p-6 rounded-2xl text-center group hover:border-primary/30 transition-all duration-300"
-              whileHover={{ scale: 1.03, y: -4 }}
+              className="glass-premium-mobile p-6 rounded-2xl text-center group hover:border-primary/30 hover:shadow-glow transition-all duration-300"
+              whileHover={{ scale: 1.05, y: -6 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 20
+              }}
             >
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 border border-primary/30 mb-4 group-hover:shadow-glow transition-all duration-300">
-                <span className="material-icons text-primary text-xl">
-                  sync
-                </span>
+                <RefreshCw className="w-5 h-5 text-primary" />
               </div>
               <h3 className="text-foreground font-semibold text-base sm:text-lg mb-2">
                 Real-Time Sync
@@ -234,13 +263,16 @@ export function IntegrationsCTA() {
 
             {/* Benefit 3 */}
             <motion.div
-              className="glass-premium-mobile p-6 rounded-2xl text-center group hover:border-gold/30 transition-all duration-300"
-              whileHover={{ scale: 1.03, y: -4 }}
+              className="glass-premium-mobile p-6 rounded-2xl text-center group hover:border-gold/30 hover:shadow-glow-gold transition-all duration-300"
+              whileHover={{ scale: 1.05, y: -6 }}
+              transition={{
+                type: "spring",
+                stiffness: 400,
+                damping: 20
+              }}
             >
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-gold/20 to-gold/10 border border-gold/30 mb-4 group-hover:shadow-glow-gold transition-all duration-300">
-                <span className="material-icons text-gold text-xl">
-                  security
-                </span>
+                <Shield className="w-5 h-5 text-gold" />
               </div>
               <h3 className="text-foreground font-semibold text-base sm:text-lg mb-2">
                 Enterprise Security

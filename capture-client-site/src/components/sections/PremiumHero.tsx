@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion, useScroll, useTransform, useMotionValue, useSpring } from "@/lib/motion";
 import { useRef, useEffect, useState } from "react";
 import { MobileHeroVisual } from "@/components/premium/MobileHeroVisual";
+import { ArrowRight, Phone, ShieldCheck, Star, PhoneCall, TrendingUp } from "lucide-react";
 
 export function PremiumHero() {
   const containerRef = useRef<HTMLElement>(null);
@@ -130,7 +131,7 @@ export function PremiumHero() {
             animate={{ scale: [1.1, 1, 1.1] }}
             transition={{ duration: 15, repeat: Infinity, ease: "easeInOut", delay: 2 }}
           >
-            <div className="w-full h-full bg-gradient-radial from-[#D4AF37]/25 via-[#D4AF37]/10 to-transparent blur-3xl" />
+            <div className="w-full h-full bg-gradient-radial from-gold/25 via-gold/10 to-transparent blur-3xl" />
           </motion.div>
 
           <motion.div
@@ -206,7 +207,7 @@ export function PremiumHero() {
                   Never Miss
                 </span>
                 <span className="block relative">
-                  <span className="bg-gradient-to-r from-gold via-cyan-400 to-[#D4AF37] bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-gold via-cyan-400 to-gold bg-clip-text text-transparent">
                     Another Client
                   </span>
                   {/* Animated underline */}
@@ -214,7 +215,7 @@ export function PremiumHero() {
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}
                     transition={{ duration: 1, delay: 1, ease: [0.22, 1, 0.36, 1] }}
-                    className="absolute -bottom-2 left-0 right-0 h-1.5 sm:h-2 bg-gradient-to-r from-gold/50 via-cyan-400/50 to-[#D4AF37]/50 origin-left rounded-full"
+                    className="absolute -bottom-2 left-0 right-0 h-1.5 sm:h-2 bg-gradient-to-r from-gold/50 via-cyan-400/50 to-gold/50 origin-left rounded-full"
                   />
                 </span>
               </motion.h1>
@@ -266,28 +267,33 @@ export function PremiumHero() {
                 className="flex flex-col sm:flex-row items-center lg:items-start gap-4 mb-10 lg:mb-12"
               >
                 {/* Primary CTA - Premium Gold */}
-                <Link
-                  href="/contact"
-                  className="btn-gold w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-5 sm:py-6 text-lg sm:text-xl shadow-glow-gold-lg hover:scale-105 transition-all"
+                <motion.div
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="w-full sm:w-auto"
                 >
+                  <Link
+                    href="/contact"
+                    className="btn-gold w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 sm:px-10 py-5 sm:py-6 text-lg sm:text-xl shadow-glow-gold-lg hover:shadow-[0_0_60px_rgba(212,175,55,0.8)] transition-all duration-300"
+                  >
                   <span className="flex items-center gap-2">
                     Book Your Free Demo
                     <motion.span
-                      className="material-icons text-2xl"
                       animate={{ x: [0, 5, 0] }}
                       transition={{ duration: 1.5, repeat: Infinity }}
                     >
-                      arrow_forward
+                      <ArrowRight className="w-6 h-6" />
                     </motion.span>
                   </span>
-                </Link>
+                  </Link>
+                </motion.div>
 
                 {/* Secondary CTA - Premium Glass */}
                 <Link
                   href="tel:865-346-3339"
                   className="btn-ghost w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-5 sm:py-6 text-lg sm:text-xl hover:shadow-[0_0_40px_rgba(0,201,255,0.2)]"
                 >
-                  <span className="material-icons text-cyan-400 text-2xl">phone</span>
+                  <Phone className="w-6 h-6 text-cyan-400" />
                   <span className="text-white">(865) 346-3339</span>
                 </Link>
               </motion.div>
@@ -299,23 +305,35 @@ export function PremiumHero() {
                 transition={{ duration: 0.6, delay: 0.9 }}
                 className="flex flex-wrap items-center justify-center lg:justify-start gap-6 sm:gap-8"
               >
-                <div className="flex items-center gap-2">
-                  <span className="material-icons text-gold text-xl">verified</span>
+                <motion.div
+                  className="flex items-center gap-2"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <ShieldCheck className="w-5 h-5 text-gold drop-shadow-[0_0_8px_rgba(212,175,55,0.6)]" />
                   <span className="text-sm font-medium text-white/70">500+ Businesses</span>
-                </div>
+                </motion.div>
                 <div className="w-px h-5 bg-white/20 hidden sm:block" />
-                <div className="flex items-center gap-2">
-                  <span className="material-icons text-gold text-xl">star</span>
+                <motion.div
+                  className="flex items-center gap-2"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Star className="w-5 h-5 text-gold fill-gold drop-shadow-[0_0_8px_rgba(212,175,55,0.6)]" />
                   <span className="text-sm font-medium text-white/70">4.9/5 Rating</span>
-                </div>
+                </motion.div>
                 <div className="w-px h-5 bg-white/20 hidden sm:block" />
-                <div className="flex items-center gap-2">
+                <motion.div
+                  className="flex items-center gap-2"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                >
                   <span className="relative flex h-2.5 w-2.5">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
-                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400" />
+                    <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.8)]" />
                   </span>
                   <span className="text-sm font-medium text-green-400">{leadsQualified} Clients Today</span>
-                </div>
+                </motion.div>
               </motion.div>
             </div>
 
@@ -332,9 +350,9 @@ export function PremiumHero() {
                   <motion.div
                     animate={{ rotate: 360 }}
                     transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                    className="absolute -inset-1 rounded-3xl bg-gradient-conic from-gold via-cyan-400 to-gold opacity-30 blur-sm"
+                    className="absolute -inset-1 rounded-3xl opacity-30 blur-sm"
                     style={{
-                      background: "conic-gradient(from 0deg, #D4AF37, #00C9FF, #D4AF37)"
+                      background: "conic-gradient(from 0deg, rgb(245, 166, 35), rgb(0, 201, 255), rgb(245, 166, 35))"
                     }}
                   />
                 )}
@@ -356,11 +374,18 @@ export function PremiumHero() {
                   <div className="text-center">
                     {/* Premium Phone Icon with Pulse */}
                     <motion.div
-                      animate={{ scale: [1, 1.1, 1] }}
+                      animate={{
+                        scale: [1, 1.1, 1],
+                        boxShadow: [
+                          "0 0 40px rgba(212, 175, 55, 0.6), 0 0 80px rgba(212, 175, 55, 0.3)",
+                          "0 0 60px rgba(212, 175, 55, 0.8), 0 0 100px rgba(212, 175, 55, 0.4)",
+                          "0 0 40px rgba(212, 175, 55, 0.6), 0 0 80px rgba(212, 175, 55, 0.3)"
+                        ]
+                      }}
                       transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                      className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-gold to-gold-light flex items-center justify-center shadow-glow-gold"
+                      className="w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-gold to-gold-light flex items-center justify-center"
                     >
-                      <span className="material-icons text-black text-4xl">phone_in_talk</span>
+                      <PhoneCall className="w-10 h-10 text-black" />
                     </motion.div>
 
                     {/* Premium Title */}
@@ -415,22 +440,26 @@ export function PremiumHero() {
           >
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {[
-                { value: "500+", label: "Active Clients", icon: "verified_user" },
-                { value: "1M+", label: "Calls Handled", icon: "phone_in_talk" },
-                { value: "247%", label: "Avg Growth", icon: "trending_up" },
-                { value: "4.9/5", label: "Client Rating", icon: "star" }
+                { value: "500+", label: "Active Clients", Icon: ShieldCheck },
+                { value: "1M+", label: "Calls Handled", Icon: PhoneCall },
+                { value: "247%", label: "Avg Growth", Icon: TrendingUp },
+                { value: "4.9/5", label: "Client Rating", Icon: Star }
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: 0.9 + index * 0.1 }}
-                  className="glass p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-white/10 text-center hover:border-gold/30 transition-colors duration-300 group"
+                  whileHover={{
+                    scale: 1.05,
+                    y: -4,
+                    boxShadow: "0 20px 40px rgba(212, 175, 55, 0.2), 0 0 20px rgba(212, 175, 55, 0.1)",
+                    transition: { duration: 0.3 }
+                  }}
+                  className="glass p-4 sm:p-5 rounded-xl sm:rounded-2xl border border-white/10 text-center hover:border-gold/40 transition-colors duration-300 group"
                 >
                   <div className="flex items-center justify-center gap-2 mb-2">
-                    <span className="material-icons text-gold text-lg sm:text-xl group-hover:scale-110 transition-transform">
-                      {stat.icon}
-                    </span>
+                    <stat.Icon className="w-5 h-5 sm:w-6 sm:h-6 text-gold group-hover:scale-110 transition-transform" />
                     <span className="text-2xl sm:text-3xl lg:text-4xl font-black text-gold">
                       {stat.value}
                     </span>
@@ -445,7 +474,7 @@ export function PremiumHero() {
         </div>
       </motion.div>
 
-      {/* Scroll indicator */}
+      {/* Enhanced Scroll indicator with glow */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -457,11 +486,11 @@ export function PremiumHero() {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
-          <div className="w-6 h-10 border-2 border-white/20 rounded-full flex items-start justify-center p-2">
+          <div className="w-6 h-10 border-2 border-white/20 rounded-full flex items-start justify-center p-2 shadow-[0_0_20px_rgba(245,166,35,0.2)]">
             <motion.div
               animate={{ y: [0, 12, 0], opacity: [1, 0, 1] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="w-1.5 h-3 bg-gold rounded-full"
+              className="w-1.5 h-3 bg-gold rounded-full shadow-[0_0_10px_rgba(245,166,35,0.6)]"
             />
           </div>
         </motion.div>

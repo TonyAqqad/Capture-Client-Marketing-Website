@@ -30,3 +30,6 @@ export {
   useMotionValue,
   useInView
 } from "framer-motion";
+
+// Export types for use in other files
+export type { Variants, Transition, MotionValue } from "framer-motion";

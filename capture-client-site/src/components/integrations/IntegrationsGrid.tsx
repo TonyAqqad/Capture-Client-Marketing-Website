@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
+import { SearchX } from "lucide-react";
 import { IntegrationCard } from "./IntegrationCard";
 import { IntegrationFilter } from "./IntegrationFilter";
 import { IntegrationSearch } from "./IntegrationSearch";
@@ -219,7 +220,7 @@ export function IntegrationsGrid() {
                 className="glass-premium p-12 rounded-3xl text-center max-w-2xl mx-auto"
               >
                 <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 mb-6">
-                  <span className="material-icons text-accent text-4xl">search_off</span>
+                  <SearchX className="w-10 h-10 text-accent" />
                 </div>
                 <h3 className="text-2xl font-display font-bold text-foreground mb-3">
                   No integrations found

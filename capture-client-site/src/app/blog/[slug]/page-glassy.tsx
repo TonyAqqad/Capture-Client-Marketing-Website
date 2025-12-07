@@ -164,14 +164,14 @@ export default async function BlogPostPage({
   }
 
   return (
-    <div className="min-h-screen bg-[#0F172A] relative overflow-hidden">
+    <div className="min-h-screen bg-slate-900 relative overflow-hidden">
       {/* Inject JSON-LD structured data */}
       <JsonLd schema={schemas} />
 
       {/* Animated Background Gradients */}
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#D4AF37]/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1000ms" }} />
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-gold/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "1000ms" }} />
         <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "500ms" }} />
       </div>
 
@@ -210,12 +210,12 @@ export default async function BlogPostPage({
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
               {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-[#0F172A]/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-[#0F172A]/50 to-transparent" />
 
               {/* Floating Glass Card - Positioned over image */}
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-10">
                 {/* Category Badge with Glow */}
-                <div className="inline-flex items-center gap-2 px-4 py-2 backdrop-blur-xl bg-gradient-to-r from-cyan-500/20 to-[#D4AF37]/20 border border-cyan-400/30 text-cyan-300 text-sm font-bold rounded-full mb-4 shadow-lg shadow-cyan-500/20 animate-pulse">
+                <div className="inline-flex items-center gap-2 px-4 py-2 backdrop-blur-xl bg-gradient-to-r from-cyan-500/20 to-gold/20 border border-cyan-400/30 text-cyan-300 text-sm font-bold rounded-full mb-4 shadow-lg shadow-cyan-500/20 animate-pulse">
                   <span className="w-2 h-2 bg-cyan-400 rounded-full animate-ping" />
                   {post.category}
                 </div>
@@ -236,7 +236,7 @@ export default async function BlogPostPage({
                           alt={post.author.name}
                           className="w-10 h-10 rounded-full ring-2 ring-cyan-400/50 shadow-lg"
                         />
-                        <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400/20 to-[#D4AF37]/20" />
+                        <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400/20 to-gold/20" />
                       </div>
                     )}
                     <div>
@@ -279,7 +279,7 @@ export default async function BlogPostPage({
                     <span className="text-white/30">•</span>
                     <div className="flex items-center gap-2">
                       <svg
-                        className="w-4 h-4 text-[#D4AF37]"
+                        className="w-4 h-4 text-gold"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -303,7 +303,7 @@ export default async function BlogPostPage({
           {!post.featuredImage && (
             <div className="backdrop-blur-xl bg-gradient-to-br from-white/10 to-white/5 border border-white/20 rounded-3xl p-8 md:p-12 mb-8 shadow-2xl">
               {/* Category Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 backdrop-blur-xl bg-gradient-to-r from-cyan-500/20 to-[#D4AF37]/20 border border-cyan-400/30 text-cyan-300 text-sm font-bold rounded-full mb-6 shadow-lg shadow-cyan-500/20">
+              <div className="inline-flex items-center gap-2 px-4 py-2 backdrop-blur-xl bg-gradient-to-r from-cyan-500/20 to-gold/20 border border-cyan-400/30 text-cyan-300 text-sm font-bold rounded-full mb-6 shadow-lg shadow-cyan-500/20">
                 <span className="w-2 h-2 bg-cyan-400 rounded-full animate-ping" />
                 {post.category}
               </div>
@@ -323,7 +323,7 @@ export default async function BlogPostPage({
                         alt={post.author.name}
                         className="w-12 h-12 rounded-full ring-2 ring-cyan-400/50"
                       />
-                      <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400/20 to-[#D4AF37]/20" />
+                      <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-cyan-400/20 to-gold/20" />
                     </div>
                   )}
                   <div>
@@ -361,7 +361,7 @@ export default async function BlogPostPage({
                   <span className="text-white/30">•</span>
                   <div className="flex items-center gap-2">
                     <svg
-                      className="w-4 h-4 text-[#D4AF37]"
+                      className="w-4 h-4 text-gold"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -522,7 +522,7 @@ export default async function BlogPostPage({
                 {/* Avatar with Ring Effect */}
                 {post.author.avatar && (
                   <div className="relative flex-shrink-0 group/avatar">
-                    <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500 to-[#D4AF37] rounded-full blur-lg opacity-50 group-hover/avatar:opacity-100 transition-opacity" />
+                    <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500 to-gold rounded-full blur-lg opacity-50 group-hover/avatar:opacity-100 transition-opacity" />
                     <img
                       src={post.author.avatar}
                       alt={post.author.name}
@@ -549,7 +549,7 @@ export default async function BlogPostPage({
                   <div className="flex gap-3">
                     <a
                       href="#"
-                      className="p-3 backdrop-blur-sm bg-white/5 border border-white/10 rounded-xl hover:bg-gradient-to-br hover:from-cyan-500/20 hover:to-[#D4AF37]/20 hover:border-cyan-400/30 transition-all group/link"
+                      className="p-3 backdrop-blur-sm bg-white/5 border border-white/10 rounded-xl hover:bg-gradient-to-br hover:from-cyan-500/20 hover:to-gold/20 hover:border-cyan-400/30 transition-all group/link"
                     >
                       <svg
                         className="w-5 h-5 text-gray-400 group-hover/link:text-cyan-400 transition-colors"
@@ -561,7 +561,7 @@ export default async function BlogPostPage({
                     </a>
                     <a
                       href="#"
-                      className="p-3 backdrop-blur-sm bg-white/5 border border-white/10 rounded-xl hover:bg-gradient-to-br hover:from-cyan-500/20 hover:to-[#D4AF37]/20 hover:border-cyan-400/30 transition-all group/link"
+                      className="p-3 backdrop-blur-sm bg-white/5 border border-white/10 rounded-xl hover:bg-gradient-to-br hover:from-cyan-500/20 hover:to-gold/20 hover:border-cyan-400/30 transition-all group/link"
                     >
                       <svg
                         className="w-5 h-5 text-gray-400 group-hover/link:text-cyan-400 transition-colors"
@@ -573,7 +573,7 @@ export default async function BlogPostPage({
                     </a>
                     <a
                       href="#"
-                      className="p-3 backdrop-blur-sm bg-white/5 border border-white/10 rounded-xl hover:bg-gradient-to-br hover:from-cyan-500/20 hover:to-[#D4AF37]/20 hover:border-cyan-400/30 transition-all group/link"
+                      className="p-3 backdrop-blur-sm bg-white/5 border border-white/10 rounded-xl hover:bg-gradient-to-br hover:from-cyan-500/20 hover:to-gold/20 hover:border-cyan-400/30 transition-all group/link"
                     >
                       <svg
                         className="w-5 h-5 text-gray-400 group-hover/link:text-cyan-400 transition-colors"
@@ -599,7 +599,7 @@ export default async function BlogPostPage({
         >
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-8 flex items-center gap-3">
-              <span className="w-1 h-8 bg-gradient-to-b from-cyan-400 to-[#D4AF37] rounded-full" />
+              <span className="w-1 h-8 bg-gradient-to-b from-cyan-400 to-gold rounded-full" />
               Related Articles
             </h2>
 
@@ -623,10 +623,10 @@ export default async function BlogPostPage({
                           alt={relatedPost.title}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-transparent" />
+                        <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent" />
 
                         {/* Category Badge on Image */}
-                        <div className="absolute top-3 left-3 px-3 py-1 backdrop-blur-xl bg-gradient-to-r from-cyan-500/30 to-[#D4AF37]/30 border border-cyan-400/40 text-cyan-300 text-xs font-bold rounded-full">
+                        <div className="absolute top-3 left-3 px-3 py-1 backdrop-blur-xl bg-gradient-to-r from-cyan-500/30 to-gold/30 border border-cyan-400/40 text-cyan-300 text-xs font-bold rounded-full">
                           {relatedPost.category}
                         </div>
                       </div>
@@ -690,10 +690,10 @@ export default async function BlogPostPage({
                 {/* Primary CTA - Glowing Button */}
                 <Link
                   href="/contact"
-                  className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-[#D4AF37]/80 text-white font-bold uppercase tracking-wider text-sm rounded-full overflow-hidden shadow-xl shadow-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/80 transition-all duration-300 hover:scale-105"
+                  className="group relative px-8 py-4 bg-gradient-to-r from-cyan-500 to-gold/80 text-white font-bold uppercase tracking-wider text-sm rounded-full overflow-hidden shadow-xl shadow-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/80 transition-all duration-300 hover:scale-105"
                 >
                   <span className="relative z-10">Book a Free Demo</span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-[#D4AF37]/80 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-gold/80 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </Link>
 
                 {/* Secondary CTA - Glass Button */}

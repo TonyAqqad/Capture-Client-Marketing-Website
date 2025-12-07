@@ -22,7 +22,7 @@ interface ROICalculation {
 // CONSTANTS
 // ============================================================================
 
-const MONTHLY_COST = 497; // AI Voice Agent cost per month
+const MONTHLY_COST = 797; // AI Voice Agent cost per month (Growth tier)
 
 // ============================================================================
 // ANIMATED COUNTER COMPONENT (Memoized)

@@ -3,6 +3,20 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion, useScroll, useTransform, AnimatePresence } from "@/lib/motion";
+import {
+  TrendingUp,
+  ArrowLeftRight,
+  MoveHorizontal,
+  Bot,
+  Phone,
+  Megaphone,
+  Globe,
+  FileText,
+  User,
+  Headphones,
+  CheckCircle2,
+  Shield
+} from "lucide-react";
 
 // ============================================================================
 // TYPES
@@ -213,7 +227,7 @@ export default function PricingPageClient() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0F172A] relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Floating currency symbols */}
@@ -374,7 +388,7 @@ export default function PricingPageClient() {
                         }}
                         transition={{ duration: 2, repeat: Infinity }}
                       >
-                        <span className="material-icons text-accent text-sm">trending_up</span>
+                        <TrendingUp className="w-4 h-4 text-accent" />
                         <span className="text-accent text-xs sm:text-sm font-bold tracking-wider uppercase">
                           Average ROI
                         </span>
@@ -485,7 +499,7 @@ export default function PricingPageClient() {
             onClick={() => setShowComparison(!showComparison)}
             className="inline-flex items-center gap-3 px-6 md:px-8 py-4 min-h-[48px] rounded-full bg-gradient-to-r from-white/5 to-white/10 border border-white/20 text-white hover:bg-white/15 hover:border-accent/30 transition-all duration-300 shadow-lg hover:shadow-accent/10 touch-manipulation"
           >
-            <span className="material-icons text-accent text-base md:text-xl">compare_arrows</span>
+            <ArrowLeftRight className="w-5 h-5 md:w-6 md:h-6 text-accent" />
             <span className="font-medium text-sm md:text-base">{showComparison ? 'Hide' : 'Show'} Feature Comparison</span>
             <motion.span
               className="text-accent"
@@ -507,25 +521,25 @@ export default function PricingPageClient() {
             transition={{ duration: 0.5 }}
           >
             <div className="md:hidden text-center text-white/60 text-sm mb-3 flex items-center justify-center gap-2">
-              <span className="material-icons text-accent text-lg animate-pulse">swipe_horizontal</span>
+              <MoveHorizontal className="w-5 h-5 text-accent animate-pulse" />
               <span>Swipe to see all features</span>
             </div>
 
             <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0 scrollbar-thin scrollbar-thumb-accent/30 scrollbar-track-white/5">
               <div className="min-w-[700px] md:min-w-full">
                 <div className="relative rounded-3xl overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#1e293b]/80 via-[#0f172a]/90 to-[#0a0f1c]/95 backdrop-blur-2xl" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-slate-800/80 via-slate-900/90 to-slate-950/95 backdrop-blur-2xl" />
                   <div className="absolute inset-0 bg-mesh-premium opacity-30" />
 
                   <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-accent/20 via-primary/20 to-accent/20 p-[1px]">
-                    <div className="absolute inset-[1px] rounded-3xl bg-gradient-to-br from-[#1e293b]/95 via-[#0f172a]/98 to-[#0a0f1c]" />
+                    <div className="absolute inset-[1px] rounded-3xl bg-gradient-to-br from-slate-800/95 via-slate-900/98 to-slate-950" />
                   </div>
 
                   <div className="relative">
                     <table className="w-full">
                       <thead>
                         <tr className="border-b border-white/10">
-                          <th className="text-left p-4 md:p-6 text-white/60 font-semibold text-sm md:text-base sticky left-0 bg-gradient-to-r from-[#1e293b]/95 to-[#1e293b]/80 backdrop-blur-xl z-10">
+                          <th className="text-left p-4 md:p-6 text-white/60 font-semibold text-sm md:text-base sticky left-0 bg-gradient-to-r from-slate-800/95 to-slate-800/80 backdrop-blur-xl z-10">
                             Feature
                           </th>
                           <th className="text-center p-4 md:p-6">
@@ -545,15 +559,28 @@ export default function PricingPageClient() {
                         </tr>
                       </thead>
                       <tbody>
-                        {[
-                          { feature: "AI Voice Agents", starter: "1 agent", growth: "2 agents", enterprise: "Unlimited", icon: "smart_toy" },
-                          { feature: "Monthly Calls", starter: "50 calls", growth: "Unlimited", enterprise: "Unlimited", icon: "call" },
-                          { feature: "Advertising Platforms", starter: "—", growth: "Google OR Facebook", enterprise: "Both + LinkedIn", icon: "campaign" },
-                          { feature: "Landing Pages", starter: "—", growth: "Optimization", enterprise: "Custom built", icon: "web" },
-                          { feature: "Reports", starter: "Monthly", growth: "Weekly", enterprise: "Real-time", icon: "assessment" },
-                          { feature: "Account Manager", starter: "—", growth: "—", enterprise: "Dedicated", icon: "person" },
-                          { feature: "Support", starter: "Email", growth: "Priority (4hr)", enterprise: "24/7", icon: "support_agent" }
-                        ].map((row, i) => (
+                        {(() => {
+                          const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+                            smart_toy: Bot,
+                            call: Phone,
+                            campaign: Megaphone,
+                            web: Globe,
+                            assessment: FileText,
+                            person: User,
+                            support_agent: Headphones
+                          };
+
+                          return [
+                            { feature: "AI Voice Agents", starter: "1 agent", growth: "2 agents", enterprise: "Unlimited", icon: "smart_toy" },
+                            { feature: "Monthly Calls", starter: "50 calls", growth: "Unlimited", enterprise: "Unlimited", icon: "call" },
+                            { feature: "Advertising Platforms", starter: "—", growth: "Google OR Facebook", enterprise: "Both + LinkedIn", icon: "campaign" },
+                            { feature: "Landing Pages", starter: "—", growth: "Optimization", enterprise: "Custom built", icon: "web" },
+                            { feature: "Reports", starter: "Monthly", growth: "Weekly", enterprise: "Real-time", icon: "assessment" },
+                            { feature: "Account Manager", starter: "—", growth: "—", enterprise: "Dedicated", icon: "person" },
+                            { feature: "Support", starter: "Email", growth: "Priority (4hr)", enterprise: "24/7", icon: "support_agent" }
+                          ].map((row, i) => {
+                            const IconComponent = iconMap[row.icon];
+                            return (
                           <motion.tr
                             key={i}
                             className="border-b border-white/5 hover:bg-white/5 transition-all duration-300 group"
@@ -562,9 +589,9 @@ export default function PricingPageClient() {
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.05 }}
                           >
-                            <td className="p-4 md:p-6 sticky left-0 bg-gradient-to-r from-[#1e293b]/95 to-[#1e293b]/80 backdrop-blur-xl z-10">
+                            <td className="p-4 md:p-6 sticky left-0 bg-gradient-to-r from-slate-800/95 to-slate-800/80 backdrop-blur-xl z-10">
                               <div className="flex items-center gap-3">
-                                <span className="material-icons text-accent/60 text-lg group-hover:text-accent transition-colors">{row.icon}</span>
+                                <IconComponent className="w-5 h-5 text-accent/60 group-hover:text-accent transition-colors" />
                                 <span className="text-white font-medium text-sm md:text-base">{row.feature}</span>
                               </div>
                             </td>
@@ -578,7 +605,9 @@ export default function PricingPageClient() {
                               <span className="text-white/70 text-sm md:text-base">{row.enterprise}</span>
                             </td>
                           </motion.tr>
-                        ))}
+                            );
+                          });
+                        })()}
                       </tbody>
                     </table>
                   </div>
@@ -665,27 +694,72 @@ export default function PricingPageClient() {
         </div>
       </div>
 
-      {/* Trust Signals */}
+      {/* Trust Signals - Enhanced */}
       <div className="container mx-auto px-4 md:px-8 lg:px-16 py-8 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-4xl mx-auto">
           {[
-            { icon: "🔒", title: "30-Day Money Back", desc: "Not happy? Full refund, no questions asked" },
-            { icon: "📈", title: "Average 580% ROI", desc: "Our clients see 5.8x return on investment" },
-            { icon: "⚡", title: "Setup in 3-5 Days", desc: "Go live fast with expert onboarding" }
-          ].map((signal, i) => (
-            <motion.div
-              key={i}
-              className="text-center p-6 max-w-sm mx-auto md:max-w-none"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-            >
-              <div className="text-5xl mb-4">{signal.icon}</div>
-              <h3 className="text-xl font-bold text-white mb-2">{signal.title}</h3>
-              <p className="text-white/60">{signal.desc}</p>
-            </motion.div>
-          ))}
+            {
+              icon: Shield,
+              title: "30-Day Money Back",
+              desc: "Not happy? Full refund, no questions asked",
+              color: "gold"
+            },
+            {
+              icon: TrendingUp,
+              title: "Average 580% ROI",
+              desc: "Our clients see 5.8x return on investment",
+              color: "cyan"
+            },
+            {
+              icon: CheckCircle2,
+              title: "Setup in 3-5 Days",
+              desc: "Go live fast with expert onboarding",
+              color: "gold"
+            }
+          ].map((signal, i) => {
+            const Icon = signal.icon;
+            return (
+              <motion.div
+                key={i}
+                className="relative overflow-hidden rounded-2xl p-6 max-w-sm mx-auto md:max-w-none"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+              >
+                {/* Glass background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-xl border border-white/10" />
+
+                {/* Gradient orb */}
+                <motion.div
+                  className={`absolute top-0 right-0 w-32 h-32 rounded-full blur-3xl opacity-20 ${
+                    signal.color === 'gold' ? 'bg-gold' : 'bg-cyan-500'
+                  }`}
+                  animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.3, 0.2] }}
+                  transition={{ duration: 4, repeat: Infinity }}
+                />
+
+                {/* Content */}
+                <div className="relative text-center">
+                  <motion.div
+                    className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4 ${
+                      signal.color === 'gold'
+                        ? 'bg-gradient-to-br from-gold/20 to-gold/10 border border-gold/30'
+                        : 'bg-gradient-to-br from-cyan-500/20 to-cyan-500/10 border border-cyan-500/30'
+                    }`}
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    transition={{ type: 'spring', stiffness: 400 }}
+                  >
+                    <Icon className={`w-8 h-8 ${
+                      signal.color === 'gold' ? 'text-gold' : 'text-cyan-500'
+                    }`} />
+                  </motion.div>
+                  <h3 className="text-xl font-bold text-white mb-2">{signal.title}</h3>
+                  <p className="text-white/60 text-sm">{signal.desc}</p>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
 
@@ -858,7 +932,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
 
   return (
     <motion.div
-      className={`relative max-w-sm mx-auto lg:max-w-none ${isGrowth ? 'lg:-mt-4 lg:mb-4' : ''}`}
+      className={`relative max-w-sm mx-auto lg:max-w-none ${isGrowth ? 'lg:-mt-8 lg:mb-8 lg:z-10' : ''}`}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -871,7 +945,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
         animate={{
           rotateX,
           rotateY,
-          scale: isHovered ? 1.02 : 1,
+          scale: isHovered ? (isGrowth ? 1.05 : 1.02) : (isGrowth ? 1.03 : 1),
         }}
         transition={{ type: 'spring', stiffness: 300, damping: 25 }}
         className={`relative group h-full min-h-[600px] rounded-3xl cursor-pointer ${isGrowth ? '' : 'overflow-hidden'}`}
@@ -944,7 +1018,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
               />
             </div>
 
-            <div className="relative h-full bg-gradient-to-br from-[#1a2942] via-[#0f1c2e] to-[#0a1220] rounded-3xl border-2 border-amber-400/50 p-8 flex flex-col">
+            <div className="relative h-full bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 rounded-3xl border-2 border-amber-400/50 p-8 flex flex-col">
               {/* Save ribbon */}
               {isAnnual && (
                 <div className="absolute top-8 right-0">
@@ -998,7 +1072,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
               {/* CTA */}
               <Link
                 href={`/pricing/${pkg.slug}`}
-                className="relative block w-full text-center px-6 py-4 min-h-[48px] rounded-full bg-gradient-to-r from-amber-400 to-amber-600 text-black font-bold mb-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-amber-500/50 overflow-hidden group/btn touch-manipulation gold-shimmer"
+                className="relative block w-full text-center px-6 py-4 min-h-[48px] rounded-full bg-gradient-to-r from-amber-400 to-amber-600 text-black font-bold mb-6 transition-all duration-300 hover:scale-105 shadow-glow-gold-lg hover:shadow-2xl hover:shadow-amber-500/70 overflow-hidden group/btn touch-manipulation gold-shimmer"
               >
                 <span className="relative">Get Started Now</span>
               </Link>
@@ -1027,9 +1101,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.05 }}
                   >
-                    <span className="w-5 h-5 rounded-full bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-black text-xs font-bold">✓</span>
-                    </span>
+                    <CheckCircle2 className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
                     <span className="text-white text-sm font-medium">{feature}</span>
                   </motion.div>
                 ))}
@@ -1105,9 +1177,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
               <div className="space-y-3 flex-grow">
                 {pkg.features.map((feature, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <span className="w-5 h-5 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white/60 text-xs">✓</span>
-                    </span>
+                    <CheckCircle2 className="w-5 h-5 text-cyan-500/60 flex-shrink-0 mt-0.5" />
                     <span className="text-white/70 text-sm">{feature}</span>
                   </div>
                 ))}
@@ -1121,7 +1191,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
           <>
             <div className="absolute -inset-px bg-gradient-to-b from-primary/30 to-primary/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md" />
 
-            <div className="relative h-full bg-gradient-to-br from-[#0a0f1c] to-[#050810] rounded-2xl border border-primary/30 p-8 transition-all duration-500 group-hover:border-primary/60 flex flex-col">
+            <div className="relative h-full bg-gradient-to-br from-slate-950 to-slate-950 rounded-2xl border border-primary/30 p-8 transition-all duration-500 group-hover:border-primary/60 flex flex-col">
               <div className="absolute top-0 right-0 -mt-3 -mr-3">
                 <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shadow-xl">
                   <span className="text-white text-2xl">👑</span>
@@ -1189,9 +1259,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
               <div className="space-y-3 flex-grow">
                 {pkg.features.map((feature, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <span className="w-5 h-5 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <span className="text-white text-xs font-bold">✓</span>
-                    </span>
+                    <CheckCircle2 className="w-5 h-5 text-cyan-500 flex-shrink-0 mt-0.5" />
                     <span className="text-white/80 text-sm">{feature}</span>
                   </div>
                 ))}

@@ -2,6 +2,7 @@
 
 import { motion } from "@/lib/motion";
 import { useState, useRef, useEffect } from "react";
+import { MoveRight, Star, CheckCircle2, XCircle } from "lucide-react";
 
 export default function ComparisonTable() {
   const [showScrollHint, setShowScrollHint] = useState(true);
@@ -75,7 +76,7 @@ export default function ComparisonTable() {
           className="sm:hidden text-center mb-3 px-4"
         >
           <div className="inline-flex items-center gap-2 text-xs text-accent bg-accent/10 px-3 py-1.5 rounded-full">
-            <span className="material-icons text-sm">swipe</span>
+            <MoveRight className="w-4 h-4" />
             <span>Swipe to compare</span>
           </div>
         </motion.div>
@@ -106,7 +107,7 @@ export default function ComparisonTable() {
               <div className="col-span-1"></div>
               <div className="text-center">
                 <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-accent to-primary rounded-full mb-2">
-                  <span className="material-icons text-white text-xs sm:text-sm">star</span>
+                  <Star className="w-4 h-4 sm:w-5 sm:h-5 text-white fill-white" />
                   <span className="text-xs sm:text-sm font-bold text-white whitespace-nowrap">Capture Client</span>
                 </div>
               </div>
@@ -138,11 +139,11 @@ export default function ComparisonTable() {
                 <div className="flex items-center justify-center">
                   {item.captureClient === true ? (
                     <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-accent/20 border border-accent/40 flex items-center justify-center flex-shrink-0">
-                      <span className="material-icons text-accent text-lg sm:text-xl">check_circle</span>
+                      <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-accent" />
                     </div>
                   ) : item.captureClient === false ? (
                     <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-red-500/20 border border-red-500/40 flex items-center justify-center flex-shrink-0">
-                      <span className="material-icons text-red-400 text-lg sm:text-xl">cancel</span>
+                      <XCircle className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />
                     </div>
                   ) : (
                     <div className="px-2 sm:px-3 py-1 sm:py-1.5 bg-accent/20 border border-accent/30 rounded-full">
@@ -155,11 +156,11 @@ export default function ComparisonTable() {
                 <div className="flex items-center justify-center">
                   {item.competitors === true ? (
                     <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-yellow-500/20 border border-yellow-500/40 flex items-center justify-center flex-shrink-0">
-                      <span className="material-icons text-yellow-400 text-lg sm:text-xl">check_circle</span>
+                      <CheckCircle2 className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" />
                     </div>
                   ) : item.competitors === false ? (
                     <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-red-500/20 border border-red-500/40 flex items-center justify-center flex-shrink-0">
-                      <span className="material-icons text-red-400 text-lg sm:text-xl">cancel</span>
+                      <XCircle className="w-5 h-5 sm:w-6 sm:h-6 text-red-400" />
                     </div>
                   ) : (
                     <div className="px-2 sm:px-3 py-1 sm:py-1.5 bg-yellow-500/20 border border-yellow-500/30 rounded-full">
@@ -183,7 +184,7 @@ export default function ComparisonTable() {
                   className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-accent to-primary text-white font-bold px-6 sm:px-8 py-3 sm:py-4 rounded-xl hover:shadow-glow-lg transition-all duration-300 text-sm sm:text-base min-h-[48px] sm:min-h-[56px] touch-manipulation"
                 >
                   See Pricing
-                  <span className="material-icons text-base sm:text-lg">arrow_forward</span>
+                  <MoveRight className="w-5 h-5 sm:w-6 sm:h-6" />
                 </a>
               </div>
             </div>

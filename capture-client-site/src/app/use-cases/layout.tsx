@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Use Cases & Industry Solutions | AI Voice Agents for Every Business | Capture Client",
+  title: "AI Voice Agent Use Cases | Capture Client",
   description:
     "Discover how Capture Client's AI Voice Agents transform healthcare, home services, legal, real estate, automotive, and more. See real results from 500+ businesses across 8+ industries.",
   keywords: [

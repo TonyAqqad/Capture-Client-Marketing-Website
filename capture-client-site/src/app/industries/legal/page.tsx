@@ -41,9 +41,90 @@ export const metadata: Metadata = {
     title: "AI Receptionist for Law Firms | Legal Intake",
     description: "48% of law firms miss client calls. AI legal intake specialists answer 24/7. Clio & MyCase integration.",
     images: ["https://captureclientai.net/og-legal.jpg"]
-  }
+  },
+  alternates: {
+    canonical: "https://captureclientai.net/industries/legal",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+// JSON-LD Schemas
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://captureclientai.net/industries/legal#service",
+  name: "AI Voice Agents for Law Firms",
+  description: "24/7 AI receptionists for law firms. Capture every potential client call, qualify leads, and book consultations. Integrates with Clio, Lawmatics, and other legal software.",
+  provider: {
+    "@type": "Organization",
+    name: "Capture Client",
+    url: "https://captureclientai.net",
+  },
+  serviceType: "AI Voice Agent Service",
+  areaServed: {
+    "@type": "Country",
+    name: "United States",
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How does AI help law firms capture more clients?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "AI voice agents answer every call 24/7, qualify potential clients, and book consultations. Studies show 42% of legal calls go unanswered, and those callers often hire the first attorney who answers.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does the AI integrate with legal practice management software?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our AI integrates with Clio, Lawmatics, MyCase, PracticePanther, and other popular legal practice management platforms for seamless lead capture and scheduling.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Is the AI suitable for different practice areas?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely. Our AI is trained for criminal defense, personal injury, family law, immigration, bankruptcy, and other practice areas with industry-specific scripts and intake flows.",
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://captureclientai.net" },
+    { "@type": "ListItem", position: 2, name: "Industries", item: "https://captureclientai.net/industries" },
+    { "@type": "ListItem", position: 3, name: "Legal", item: "https://captureclientai.net/industries/legal" },
+  ],
 };
 
 export default function LegalIndustryPage() {
-  return <LegalIndustryClient />;
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <LegalIndustryClient />
+    </>
+  );
 }

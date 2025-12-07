@@ -20,15 +20,26 @@ export function IntegrationFilter({
           key={category}
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.3, delay: index * 0.05 }}
+          whileHover={{
+            scale: 1.05,
+            y: -2
+          }}
+          whileTap={{ scale: 0.95 }}
+          transition={{
+            duration: 0.3,
+            delay: index * 0.05,
+            type: "spring",
+            stiffness: 400,
+            damping: 25
+          }}
           onClick={() => onCategoryChange(category)}
           className={`
             relative px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-semibold
             transition-all duration-300 touch-manipulation
             ${
               activeCategory === category
-                ? "text-background-dark shadow-glow-gold"
-                : "text-foreground-muted hover:text-foreground hover:bg-white/10"
+                ? "text-background-dark shadow-glow-gold-lg"
+                : "text-foreground-muted hover:text-foreground hover:bg-white/10 hover:shadow-glow"
             }
           `}
           style={{
@@ -38,7 +49,7 @@ export function IntegrationFilter({
                 : "rgba(255, 255, 255, 0.05)",
             border:
               activeCategory === category
-                ? "1px solid rgba(212, 175, 55, 0.3)"
+                ? "1px solid rgba(212, 175, 55, 0.4)"
                 : "1px solid rgba(255, 255, 255, 0.1)",
           }}
         >

@@ -1,10 +1,44 @@
-import Link from "next/link";
 import type { Metadata } from "next";
+import FAQClient from "./FAQClient";
 
 export const metadata: Metadata = {
   title: "FAQ | Frequently Asked Questions | Capture Client",
   description:
     "Find answers to common questions about Capture Client's AI voice agents, lead generation services, pricing, and platform features.",
+  keywords: [
+    "ai voice agent faq",
+    "voice ai questions",
+    "automated phone answering",
+    "ai receptionist pricing",
+    "capture client support",
+    "voice ai setup"
+  ],
+  openGraph: {
+    title: "FAQ | Frequently Asked Questions | Capture Client",
+    description: "Get answers to common questions about AI voice agents, pricing, setup, and how Capture Client helps businesses never miss another call.",
+    url: "https://captureclientai.net/faq",
+    siteName: "Capture Client",
+    type: "website",
+    images: [{
+      url: "https://captureclientai.net/og-image.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Capture Client FAQ",
+    }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FAQ | Frequently Asked Questions | Capture Client",
+    description: "Get answers to common questions about AI voice agents and how Capture Client helps businesses.",
+    images: ["https://captureclientai.net/og-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://captureclientai.net/faq",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 // FAQ data structure - used for both rendering and schema
@@ -206,75 +240,7 @@ export default function FAQPage() {
           __html: JSON.stringify([faqPageSchema, webPageSchema]),
         }}
       />
-      <div className="min-h-screen bg-background-light dark:bg-background-dark">
-        {/* Hero Section */}
-        <section className="relative pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 md:pb-24 px-4 sm:px-6 lg:px-16 bg-gradient-to-br from-background-dark via-background-dark to-primary/10">
-          <div className="container mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 sm:mb-6 leading-tight">
-              Frequently Asked Questions
-            </h1>
-            <p className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto px-4">
-              Find answers to common questions about Capture Client
-            </p>
-          </div>
-        </section>
-
-        {/* FAQ Sections */}
-        <section className="container mx-auto px-4 sm:px-6 lg:px-16 py-12 sm:py-16 md:py-20">
-          <div className="max-w-4xl mx-auto space-y-8 sm:space-y-12">
-            {faqData.map((section, sectionIdx) => (
-              <div key={sectionIdx}>
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 pb-3 sm:pb-4 border-b-2 border-primary">
-                  {section.category}
-                </h2>
-                <div className="space-y-3 sm:space-y-4">
-                  {section.questions.map((faq, faqIdx) => (
-                    <details
-                      key={faqIdx}
-                      className="border border-gray-200 dark:border-gray-800 rounded-lg p-4 sm:p-5 md:p-6 bg-white dark:bg-gray-900/50 hover:border-primary/50 transition-all group"
-                    >
-                      <summary className="font-bold text-base sm:text-lg text-gray-900 dark:text-white cursor-pointer flex items-center justify-between group-hover:text-primary transition-colors min-h-[48px] list-none">
-                        <span className="pr-4 faq-question">{faq.question}</span>
-                        <span className="material-icons text-accent ml-2 sm:ml-4 flex-shrink-0 text-2xl sm:text-3xl">expand_more</span>
-                      </summary>
-                      <p className="mt-3 sm:mt-4 text-sm sm:text-base text-gray-600 dark:text-gray-400 leading-relaxed faq-answer" style={{lineHeight: '1.7'}}>
-                        {faq.answer}
-                      </p>
-                    </details>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Still Have Questions */}
-          <div className="mt-12 sm:mt-16 max-w-4xl mx-auto">
-            <div className="border border-gray-200 dark:border-gray-800 rounded-xl p-6 sm:p-8 md:p-12 bg-gradient-to-br from-primary/5 to-accent/5 text-center">
-              <span className="material-icons text-5xl sm:text-6xl text-accent mb-3 sm:mb-4">help_outline</span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
-                Still Have Questions?
-              </h2>
-              <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 px-4">
-                We&apos;re here to help! Reach out to our team and we&apos;ll get back to you right away.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center min-h-[52px] bg-primary text-black px-6 sm:px-8 py-3 sm:py-4 rounded-full font-bold uppercase tracking-wider text-sm transition-all duration-300 hover:scale-105 glowing-button active:scale-95"
-                >
-                  Contact Us
-                </Link>
-                <a
-                  href="tel:865-346-3339"
-                  className="inline-flex items-center justify-center min-h-[52px] bg-white/10 border border-white/20 text-gray-900 dark:text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full backdrop-blur-sm hover:bg-white/20 transition-all duration-300 active:scale-95"
-                >
-                  Call: (865) 346-3339
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
+      <FAQClient faqData={faqData} />
     </>
   );
 }

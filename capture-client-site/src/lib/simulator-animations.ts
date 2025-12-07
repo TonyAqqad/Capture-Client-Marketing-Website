@@ -3,7 +3,7 @@
  * Framer Motion configurations for fluid, polished transitions
  */
 
-import { Variants, Transition } from "framer-motion";
+import type { Variants, Transition } from "@/lib/motion";
 
 // ============================================================================
 // TIMING CONSTANTS

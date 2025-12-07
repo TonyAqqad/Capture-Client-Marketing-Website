@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "@/lib/motion";
+import { Check } from "lucide-react";
 
 interface IntegrationBenefitsProps {
   integrationName: string;
@@ -53,9 +54,7 @@ export function IntegrationBenefits({
               <div className="flex items-start gap-4 p-4 sm:p-5 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-gold/30 transition-all duration-300 hover:shadow-glow-gold">
                 {/* Check Icon */}
                 <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gradient-to-br from-gold to-accent flex items-center justify-center shadow-glow-gold group-hover:scale-110 transition-transform duration-300">
-                  <span className="material-icons text-black text-sm">
-                    check
-                  </span>
+                  <Check className="w-3.5 h-3.5 text-black" />
                 </div>
 
                 {/* Benefit Text */}

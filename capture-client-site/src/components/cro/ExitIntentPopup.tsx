@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
+import { X, Lightbulb, Rocket, TrendingUp, ShieldCheck, Clock, ArrowRight, Phone, BadgeCheck, Star, Shield } from "lucide-react";
 
 export default function ExitIntentPopup() {
   const [isVisible, setIsVisible] = useState(false);
@@ -101,9 +102,7 @@ export default function ExitIntentPopup() {
                 className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-surface/40 border border-surface-border/40 hover:border-surface-border hover:bg-surface/60 transition-all duration-300 backdrop-blur-sm active:scale-95"
                 aria-label="Close popup"
               >
-                <span className="material-icons text-foreground-muted hover:text-foreground text-lg">
-                  close
-                </span>
+                <X className="w-5 h-5 text-foreground-muted hover:text-foreground" />
               </button>
 
               {/* Content */}
@@ -112,7 +111,7 @@ export default function ExitIntentPopup() {
                 <div className="flex justify-center mb-6">
                   <div className="relative">
                     <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-accent/15 to-primary/15 border border-accent/30 flex items-center justify-center backdrop-blur-sm">
-                      <span className="material-icons text-accent text-4xl">lightbulb</span>
+                      <Lightbulb className="w-10 h-10 text-accent" />
                     </div>
                   </div>
                 </div>
@@ -131,9 +130,9 @@ export default function ExitIntentPopup() {
                 {/* Benefits list - SIMPLIFIED: Remove stagger animations on mobile */}
                 <div className="space-y-3 mb-8 max-w-md mx-auto">
                   {[
-                    { icon: "rocket_launch", text: "Get started in 48 hours" },
-                    { icon: "trending_up", text: "Average 3x ROI in 90 days" },
-                    { icon: "verified_user", text: "30-day money-back guarantee" },
+                    { Icon: Rocket, text: "Get started in 48 hours" },
+                    { Icon: TrendingUp, text: "Average 3x ROI in 90 days" },
+                    { Icon: ShieldCheck, text: "30-day money-back guarantee" },
                   ].map((benefit, index) => (
                     <motion.div
                       key={index}
@@ -143,7 +142,7 @@ export default function ExitIntentPopup() {
                       className="flex items-center gap-3 text-foreground"
                     >
                       <div className="w-8 h-8 rounded-lg bg-accent/20 border border-accent/30 flex items-center justify-center flex-shrink-0">
-                        <span className="material-icons text-accent text-lg">{benefit.icon}</span>
+                        <benefit.Icon className="w-5 h-5 text-accent" />
                       </div>
                       <p className="text-sm font-semibold">{benefit.text}</p>
                     </motion.div>
@@ -153,9 +152,7 @@ export default function ExitIntentPopup() {
                 {/* Urgency element - softer approach */}
                 <div className="bg-gradient-to-r from-amber-500/10 to-orange-500/10 border border-amber-500/25 rounded-xl p-4 mb-6 backdrop-blur-sm">
                   <div className="flex items-center justify-center gap-2.5">
-                    <span className="material-icons text-amber-400/80 text-lg">
-                      schedule
-                    </span>
+                    <Clock className="w-5 h-5 text-amber-400/80" />
                     <p className="text-sm font-semibold text-foreground/90">
                       <span className="text-amber-400">Limited spots</span> available for December onboarding
                     </p>
@@ -171,7 +168,7 @@ export default function ExitIntentPopup() {
                     className="flex-1 sm:flex-initial bg-gradient-to-r from-accent to-primary text-white font-bold px-6 sm:px-8 py-4 rounded-xl shadow-glow-lg hover:shadow-glow transition-all duration-300 flex items-center justify-center gap-2 min-h-[52px]"
                   >
                     <span className="text-sm sm:text-base">Book Free Demo</span>
-                    <span className="material-icons text-lg">arrow_forward</span>
+                    <ArrowRight className="w-5 h-5" />
                   </motion.button>
 
                   <motion.a
@@ -180,7 +177,7 @@ export default function ExitIntentPopup() {
                     whileTap={{ scale: 0.95 }}
                     className="flex-1 sm:flex-initial border-2 border-accent/50 text-foreground font-bold px-6 sm:px-8 py-4 rounded-xl hover:bg-accent/10 transition-all duration-300 flex items-center justify-center gap-2 min-h-[52px]"
                   >
-                    <span className="material-icons text-accent text-lg">phone</span>
+                    <Phone className="w-5 h-5 text-accent" />
                     <span className="text-sm sm:text-base">Call Now</span>
                   </motion.a>
                 </div>
@@ -188,17 +185,17 @@ export default function ExitIntentPopup() {
                 {/* Trust badges - wrap on small screens */}
                 <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 mt-6 pt-6 border-t border-surface-border">
                   <div className="flex items-center gap-1.5">
-                    <span className="material-icons text-green-500 text-sm">verified</span>
+                    <BadgeCheck className="w-4 h-4 text-green-500" />
                     <span className="text-xs text-foreground-muted whitespace-nowrap">500+ Clients</span>
                   </div>
                   <div className="hidden sm:block w-px h-4 bg-surface-border" />
                   <div className="flex items-center gap-1.5">
-                    <span className="material-icons text-yellow-400 text-sm">star</span>
+                    <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
                     <span className="text-xs text-foreground-muted whitespace-nowrap">4.9/5 Rating</span>
                   </div>
                   <div className="hidden sm:block w-px h-4 bg-surface-border" />
                   <div className="flex items-center gap-1.5">
-                    <span className="material-icons text-accent text-sm">security</span>
+                    <Shield className="w-4 h-4 text-accent" />
                     <span className="text-xs text-foreground-muted whitespace-nowrap">100% Secure</span>
                   </div>
                 </div>

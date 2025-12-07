@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
+import { Rocket, ChevronUp } from "lucide-react";
 
 export default function ScrollProgress() {
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -103,9 +104,7 @@ export default function ScrollProgress() {
               className="absolute inset-0 rounded-full border-2 border-accent"
             />
 
-            <span className="material-icons text-white text-2xl relative z-10">
-              rocket_launch
-            </span>
+            <Rocket className="text-white w-6 h-6 relative z-10" />
 
             {/* Tooltip */}
             <motion.div
@@ -149,9 +148,7 @@ export default function ScrollProgress() {
               />
             </svg>
 
-            <span className="material-icons text-foreground group-hover:text-accent transition-colors relative z-10">
-              keyboard_arrow_up
-            </span>
+            <ChevronUp className="text-foreground group-hover:text-accent transition-colors relative z-10 w-6 h-6" />
           </motion.button>
         </motion.div>
       )}

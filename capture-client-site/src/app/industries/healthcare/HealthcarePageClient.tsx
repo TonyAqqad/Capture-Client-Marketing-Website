@@ -1,13 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "@/lib/motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "@/lib/motion";
 import { useRef, useState, useEffect } from "react";
+import {
+  Phone, Clock, Calendar, Users, TrendingUp, Shield,
+  CheckCircle2, Building2, Heart,
+  Activity, Bell, UserPlus, History, BadgeCheck,
+  Headphones, Calculator, User, Smile, Hospital,
+  Siren, ShieldCheck, Lock, Gavel, EyeOff, Moon,
+  Brain, Stethoscope, Heart as HeartIcon, Pill, Syringe,
+  ArrowRight, Mail
+} from "lucide-react";
 
 // ==================== INTERFACES ====================
 interface TrustBadgeProps {
-  icon: string;
+  icon: React.ReactNode;
   label: string;
 }
 
@@ -21,7 +29,7 @@ interface CounterProps {
 interface PracticeType {
   id: string;
   label: string;
-  icon: string;
+  icon: React.ReactNode;
   stat: string;
   statLabel: string;
   useCases: string[];
@@ -29,7 +37,7 @@ interface PracticeType {
 }
 
 interface FeatureCardProps {
-  icon: string;
+  icon: React.ReactNode;
   title: string;
   description: string;
   delay?: number;
@@ -53,10 +61,11 @@ interface PainPointCardProps {
 function TrustBadge({ icon, label }: TrustBadgeProps) {
   return (
     <motion.div
-      whileHover={{ scale: 1.05 }}
-      className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 backdrop-blur-xl border border-blue-500/30 shadow-lg"
+      whileHover={{ scale: 1.05, y: -2 }}
+      transition={{ duration: 0.2, ease: "easeOut" }}
+      className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 backdrop-blur-xl border border-blue-500/30 shadow-lg hover:shadow-blue-500/30 hover:border-blue-400/50 transition-all duration-300"
     >
-      <span className="material-icons text-blue-400 text-lg">{icon}</span>
+      <div className="text-blue-400">{icon}</div>
       <span className="text-sm font-semibold text-foreground">{label}</span>
     </motion.div>
   );
@@ -100,16 +109,21 @@ function AnimatedCounter({ end, suffix = "", prefix = "", duration = 2000 }: Cou
 // ==================== PAIN POINT FLOW CARD ====================
 function PainPointCard({ icon, label, isNegative = false }: PainPointCardProps) {
   return (
-    <div
-      className={`relative p-6 rounded-2xl backdrop-blur-xl border ${
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      whileHover={{ scale: 1.02, y: -4 }}
+      className={`relative p-6 rounded-2xl backdrop-blur-xl border transition-all duration-300 ${
         isNegative
-          ? "bg-red-500/10 border-red-500/30"
-          : "bg-blue-500/10 border-blue-500/30"
+          ? "bg-red-500/10 border-red-500/30 hover:border-red-400/50 hover:shadow-lg hover:shadow-red-500/20"
+          : "bg-blue-500/10 border-blue-500/30 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/20"
       }`}
     >
       <div className="flex flex-col items-center text-center gap-3">
         <div
-          className={`w-16 h-16 rounded-full flex items-center justify-center ${
+          className={`w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 ${
             isNegative
               ? "bg-gradient-to-br from-red-500/30 to-red-600/20"
               : "bg-gradient-to-br from-blue-500/30 to-teal-500/20"
@@ -125,7 +139,7 @@ function PainPointCard({ icon, label, isNegative = false }: PainPointCardProps) 
         </div>
         <p className="font-semibold text-foreground">{label}</p>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -134,7 +148,7 @@ const practiceTypes: PracticeType[] = [
   {
     id: "medical",
     label: "Medical Practices",
-    icon: "local_hospital",
+    icon: <Hospital className="w-5 h-5" />,
     stat: "$85K",
     statLabel: "avg missed revenue per year",
     useCases: [
@@ -152,7 +166,7 @@ const practiceTypes: PracticeType[] = [
   {
     id: "dental",
     label: "Dental Offices",
-    icon: "sentiment_satisfied",
+    icon: <Smile className="w-5 h-5" />,
     stat: "12%",
     statLabel: "average no-show rate (we reduce it 72%)",
     useCases: [
@@ -170,7 +184,7 @@ const practiceTypes: PracticeType[] = [
   {
     id: "mental-health",
     label: "Mental Health",
-    icon: "psychology",
+    icon: <Brain className="w-5 h-5" />,
     stat: "48hr",
     statLabel: "booking window is critical for therapy",
     useCases: [
@@ -188,7 +202,7 @@ const practiceTypes: PracticeType[] = [
   {
     id: "urgent-care",
     label: "Urgent Care",
-    icon: "emergency",
+    icon: <Siren className="w-5 h-5" />,
     stat: "67%",
     statLabel: "of calls happen after regular hours",
     useCases: [
@@ -207,12 +221,12 @@ const practiceTypes: PracticeType[] = [
 
 // ==================== EHR INTEGRATIONS ====================
 const ehrIntegrations = [
-  { name: "Epic", logo: "medical_services" },
-  { name: "Cerner", logo: "health_and_safety" },
-  { name: "Athenahealth", logo: "monitor_heart" },
-  { name: "eClinicalWorks", logo: "vaccines" },
-  { name: "OpenDental", logo: "sentiment_satisfied" },
-  { name: "Dentrix", logo: "dental_services" },
+  { name: "Epic", logo: <Stethoscope className="w-10 h-10" /> },
+  { name: "Cerner", logo: <Shield className="w-10 h-10" /> },
+  { name: "Athenahealth", logo: <HeartIcon className="w-10 h-10" /> },
+  { name: "eClinicalWorks", logo: <Pill className="w-10 h-10" /> },
+  { name: "OpenDental", logo: <Smile className="w-10 h-10" /> },
+  { name: "Dentrix", logo: <Syringe className="w-10 h-10" /> },
 ];
 
 // ==================== FEATURE CARD COMPONENT ====================
@@ -226,12 +240,17 @@ function FeatureCard({ icon, title, description, delay = 0 }: FeatureCardProps) 
       initial={{ opacity: 0, y: 20 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay }}
-      className="group relative p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-teal-500/10 backdrop-blur-xl border border-blue-500/20 hover:border-blue-400/40 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+      whileHover={{ scale: 1.02, y: -4 }}
+      className="group relative p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-teal-500/10 backdrop-blur-xl border border-blue-500/20 hover:border-blue-400/40 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 cursor-pointer"
     >
-      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/30 to-teal-500/20 border border-blue-400/30 flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-blue-500/30 transition-all duration-300">
-        <span className="material-icons text-blue-400 text-2xl">{icon}</span>
-      </div>
-      <h3 className="text-xl font-heading font-bold text-foreground mb-2">{title}</h3>
+      <motion.div
+        whileHover={{ scale: 1.1, rotate: 5 }}
+        transition={{ duration: 0.3 }}
+        className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/30 to-teal-500/20 border border-blue-400/30 flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-blue-500/30 transition-all duration-300"
+      >
+        <div className="text-blue-400 [&>svg]:w-6 [&>svg]:h-6">{icon}</div>
+      </motion.div>
+      <h3 className="text-xl font-heading font-bold text-foreground mb-2 group-hover:text-blue-400 transition-colors duration-300">{title}</h3>
       <p className="text-foreground-muted leading-relaxed">{description}</p>
     </motion.div>
   );
@@ -336,13 +355,21 @@ function ROICalculator() {
 function TestimonialCard({ quote, author, practice, location, results }: TestimonialProps) {
   return (
     <motion.div
-      whileHover={{ y: -4 }}
-      className="glass-premium p-8 rounded-2xl border border-blue-500/20 hover:border-blue-400/40 transition-all duration-300"
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      whileHover={{ y: -4, scale: 1.02 }}
+      className="glass-premium p-8 rounded-2xl border border-blue-500/20 hover:border-blue-400/40 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300"
     >
       <div className="flex items-start gap-4 mb-4">
-        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500/30 to-teal-500/20 flex items-center justify-center flex-shrink-0">
-          <span className="material-icons text-blue-400 text-xl">person</span>
-        </div>
+        <motion.div
+          whileHover={{ rotate: 360, scale: 1.1 }}
+          transition={{ duration: 0.5 }}
+          className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500/30 to-teal-500/20 flex items-center justify-center flex-shrink-0"
+        >
+          <User className="w-5 h-5 text-blue-400" />
+        </motion.div>
         <div>
           <div className="font-semibold text-foreground">{author}</div>
           <div className="text-sm text-foreground-muted">{practice}</div>
@@ -433,9 +460,9 @@ export default function HealthcarePageClient() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="flex flex-wrap justify-center gap-4 mb-8"
             >
-              <TrustBadge icon="verified_user" label="HIPAA Compliant" />
-              <TrustBadge icon="security" label="SOC 2 Certified" />
-              <TrustBadge icon="lock" label="End-to-End Encrypted" />
+              <TrustBadge icon={<ShieldCheck className="w-5 h-5" />} label="HIPAA Compliant" />
+              <TrustBadge icon={<Shield className="w-5 h-5" />} label="SOC 2 Certified" />
+              <TrustBadge icon={<Lock className="w-5 h-5" />} label="End-to-End Encrypted" />
             </motion.div>
 
             {/* Headline */}
@@ -488,23 +515,25 @@ export default function HealthcarePageClient() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <Link
-                href="tel:865-346-3339"
-                className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-teal-500 font-semibold text-white hover:shadow-lg hover:shadow-blue-500/50 hover:scale-[1.02] transition-all duration-300"
-              >
-                <span className="material-icons">phone</span>
-                Get HIPAA-Compliant Demo
-                <span className="material-icons group-hover:translate-x-1 transition-transform duration-300">
-                  arrow_forward
-                </span>
-              </Link>
-              <Link
-                href="#calculator"
-                className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white/5 backdrop-blur-xl border border-blue-500/30 font-semibold text-foreground hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
-              >
-                <span className="material-icons">calculate</span>
-                Calculate ROI
-              </Link>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+                <Link
+                  href="tel:865-346-3339"
+                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-teal-500 font-semibold text-white hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 w-full sm:w-auto"
+                >
+                  <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+                  Get HIPAA-Compliant Demo
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                </Link>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+                <Link
+                  href="#calculator"
+                  className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white/5 backdrop-blur-xl border border-blue-500/30 font-semibold text-foreground hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 w-full sm:w-auto"
+                >
+                  <Calculator className="w-5 h-5" />
+                  Calculate ROI
+                </Link>
+              </motion.div>
             </motion.div>
 
             {/* Contact Info */}
@@ -613,18 +642,21 @@ export default function HealthcarePageClient() {
             {/* Tabs */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {practiceTypes.map((type) => (
-                <button
+                <motion.button
                   key={type.id}
                   onClick={() => setActiveTab(type.id)}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ duration: 0.2 }}
                   className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                     activeTab === type.id
                       ? "bg-gradient-to-r from-blue-500/20 to-teal-500/20 border border-blue-400/40 text-foreground shadow-lg shadow-blue-500/20"
-                      : "bg-white/5 backdrop-blur-xl border border-white/10 text-foreground-muted hover:border-blue-500/30"
+                      : "bg-white/5 backdrop-blur-xl border border-white/10 text-foreground-muted hover:border-blue-500/30 hover:shadow-md"
                   }`}
                 >
-                  <span className="material-icons">{type.icon}</span>
+                  {type.icon}
                   {type.label}
-                </button>
+                </motion.button>
               ))}
             </div>
 
@@ -643,9 +675,9 @@ export default function HealthcarePageClient() {
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-2xl font-heading font-bold text-foreground mb-6 flex items-center gap-3">
-                    <span className="material-icons text-blue-400 text-3xl">
+                    <div className="text-blue-400 [&>svg]:w-8 [&>svg]:h-8">
                       {activePractice.icon}
-                    </span>
+                    </div>
                     {activePractice.label}
                   </h3>
 
@@ -653,9 +685,7 @@ export default function HealthcarePageClient() {
                   <ul className="space-y-3 mb-8">
                     {activePractice.useCases.map((useCase, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <span className="material-icons text-blue-400 text-xl flex-shrink-0">
-                          check_circle
-                        </span>
+                        <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0" />
                         <span className="text-foreground-muted">{useCase}</span>
                       </li>
                     ))}
@@ -689,7 +719,7 @@ export default function HealthcarePageClient() {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-teal-500/20 border border-blue-500/30 mb-6 backdrop-blur-xl">
-                <span className="material-icons text-blue-400">verified_user</span>
+                <ShieldCheck className="w-5 h-5 text-blue-400" />
                 <span className="font-semibold text-foreground">Enterprise-Grade Security</span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
@@ -704,11 +734,22 @@ export default function HealthcarePageClient() {
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-teal-500/10 border border-blue-500/20">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                whileHover={{ scale: 1.02, y: -4 }}
+                className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-teal-500/10 border border-blue-500/20 hover:border-blue-400/40 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+              >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-teal-500/20 flex items-center justify-center">
-                    <span className="material-icons text-blue-400 text-2xl">gavel</span>
-                  </div>
+                  <motion.div
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-teal-500/20 flex items-center justify-center"
+                  >
+                    <Gavel className="w-6 h-6 text-blue-400" />
+                  </motion.div>
                   <h3 className="text-xl font-heading font-bold text-foreground">
                     HIPAA Compliant
                   </h3>
@@ -716,13 +757,24 @@ export default function HealthcarePageClient() {
                 <p className="text-foreground-muted leading-relaxed">
                   We sign a Business Associate Agreement (BAA) with every healthcare customer, ensuring full HIPAA compliance and clear liability protection.
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-teal-500/10 border border-blue-500/20">
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                whileHover={{ scale: 1.02, y: -4 }}
+                className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-teal-500/10 border border-blue-500/20 hover:border-blue-400/40 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+              >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-teal-500/20 flex items-center justify-center">
-                    <span className="material-icons text-blue-400 text-2xl">security</span>
-                  </div>
+                  <motion.div
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-teal-500/20 flex items-center justify-center"
+                  >
+                    <Shield className="w-6 h-6 text-blue-400" />
+                  </motion.div>
                   <h3 className="text-xl font-heading font-bold text-foreground">
                     SOC 2 Type II
                   </h3>
@@ -730,13 +782,24 @@ export default function HealthcarePageClient() {
                 <p className="text-foreground-muted leading-relaxed">
                   Independently audited security controls ensure your patient data is protected with enterprise-grade infrastructure.
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-teal-500/10 border border-blue-500/20">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                whileHover={{ scale: 1.02, y: -4 }}
+                className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-teal-500/10 border border-blue-500/20 hover:border-blue-400/40 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+              >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-teal-500/20 flex items-center justify-center">
-                    <span className="material-icons text-blue-400 text-2xl">lock</span>
-                  </div>
+                  <motion.div
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-teal-500/20 flex items-center justify-center"
+                  >
+                    <Lock className="w-6 h-6 text-blue-400" />
+                  </motion.div>
                   <h3 className="text-xl font-heading font-bold text-foreground">
                     End-to-End Encrypted
                   </h3>
@@ -744,13 +807,24 @@ export default function HealthcarePageClient() {
                 <p className="text-foreground-muted leading-relaxed">
                   All patient data encrypted at rest and in transit using military-grade AES-256 encryption standards.
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-teal-500/10 border border-blue-500/20">
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                whileHover={{ scale: 1.02, y: -4 }}
+                className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-teal-500/10 border border-blue-500/20 hover:border-blue-400/40 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+              >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-teal-500/20 flex items-center justify-center">
-                    <span className="material-icons text-blue-400 text-2xl">visibility_off</span>
-                  </div>
+                  <motion.div
+                    whileHover={{ rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-teal-500/20 flex items-center justify-center"
+                  >
+                    <EyeOff className="w-6 h-6 text-blue-400" />
+                  </motion.div>
                   <h3 className="text-xl font-heading font-bold text-foreground">
                     Zero-Retention Modes
                   </h3>
@@ -758,7 +832,7 @@ export default function HealthcarePageClient() {
                 <p className="text-foreground-muted leading-relaxed">
                   Optional zero-retention mode ensures no voice recordings or transcripts are stored after processing.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </div>
@@ -788,9 +862,16 @@ export default function HealthcarePageClient() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="glass-premium p-6 rounded-2xl flex flex-col items-center justify-center gap-3 border border-blue-500/20 hover:shadow-lg hover:shadow-blue-500/20 hover:border-blue-400/40 transition-all duration-300"
+                  whileHover={{ scale: 1.05, y: -4 }}
+                  className="glass-premium p-6 rounded-2xl flex flex-col items-center justify-center gap-3 border border-blue-500/20 hover:shadow-lg hover:shadow-blue-500/20 hover:border-blue-400/40 transition-all duration-300 cursor-pointer"
                 >
-                  <span className="material-icons text-blue-400 text-4xl">{ehr.logo}</span>
+                  <motion.div
+                    whileHover={{ rotate: [0, -10, 10, -10, 0] }}
+                    transition={{ duration: 0.5 }}
+                    className="text-blue-400"
+                  >
+                    {ehr.logo}
+                  </motion.div>
                   <span className="text-sm font-semibold text-foreground">{ehr.name}</span>
                 </motion.div>
               ))}
@@ -848,37 +929,37 @@ export default function HealthcarePageClient() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               <FeatureCard
-                icon="schedule"
+                icon={<Clock className="w-6 h-6" />}
                 title="24/7 Patient Scheduling"
                 description="Let patients book appointments anytime, day or night. AI checks provider availability and confirms in real-time."
                 delay={0}
               />
               <FeatureCard
-                icon="verified"
+                icon={<BadgeCheck className="w-6 h-6" />}
                 title="Insurance Verification"
                 description="Automatically verify patient insurance eligibility before appointments to reduce claim denials."
                 delay={0.1}
               />
               <FeatureCard
-                icon="notifications_active"
+                icon={<Bell className="w-6 h-6" />}
                 title="Appointment Reminders"
                 description="Automated SMS and voice reminders reduce no-shows by 72% with personalized messages."
                 delay={0.2}
               />
               <FeatureCard
-                icon="nightlight"
+                icon={<Moon className="w-6 h-6" />}
                 title="After-Hours Triage"
                 description="Route urgent cases to on-call staff, schedule routine visits, and direct emergencies to 911."
                 delay={0.3}
               />
               <FeatureCard
-                icon="person_add"
+                icon={<UserPlus className="w-6 h-6" />}
                 title="New Patient Intake"
                 description="Collect patient information, insurance details, and medical history before their first visit."
                 delay={0.4}
               />
               <FeatureCard
-                icon="history"
+                icon={<History className="w-6 h-6" />}
                 title="Recall Management"
                 description="Automatically remind patients about due cleanings, checkups, and follow-up appointments."
                 delay={0.5}
@@ -907,27 +988,48 @@ export default function HealthcarePageClient() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <TestimonialCard
-                quote="We recovered $142K in our first year just from answering calls we used to miss. The AI handles scheduling perfectly and our patients love the 24/7 availability."
-                author="Dr. Sarah Johnson"
-                practice="Johnson Family Medicine"
-                location="Nashville, TN"
-                results="$142K recovered in first year, 80% fewer missed calls"
-              />
-              <TestimonialCard
-                quote="Our no-show rate dropped from 18% to 5% in just 2 months. The automated reminders are incredibly effective, and the HIPAA compliance gave us complete peace of mind."
-                author="Dr. Michael Chen"
-                practice="Smile Dental Group"
-                location="Knoxville, TN"
-                results="No-shows dropped 72%, 2+ hours saved daily"
-              />
-              <TestimonialCard
-                quote="We're handling 200+ after-hours calls per month now. Patients get instant wait times and pre-register before arrival. It's transformed our patient experience."
-                author="Dr. Emily Rodriguez"
-                practice="Metro Urgent Care"
-                location="Chattanooga, TN"
-                results="200+ after-hours calls/month, faster patient throughput"
-              />
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0 }}
+              >
+                <TestimonialCard
+                  quote="We recovered $142K in our first year just from answering calls we used to miss. The AI handles scheduling perfectly and our patients love the 24/7 availability."
+                  author="Dr. Sarah Johnson"
+                  practice="Johnson Family Medicine"
+                  location="Nashville, TN"
+                  results="$142K recovered in first year, 80% fewer missed calls"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <TestimonialCard
+                  quote="Our no-show rate dropped from 18% to 5% in just 2 months. The automated reminders are incredibly effective, and the HIPAA compliance gave us complete peace of mind."
+                  author="Dr. Michael Chen"
+                  practice="Smile Dental Group"
+                  location="Knoxville, TN"
+                  results="No-shows dropped 72%, 2+ hours saved daily"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+              >
+                <TestimonialCard
+                  quote="We're handling 200+ after-hours calls per month now. Patients get instant wait times and pre-register before arrival. It's transformed our patient experience."
+                  author="Dr. Emily Rodriguez"
+                  practice="Metro Urgent Care"
+                  location="Chattanooga, TN"
+                  results="200+ after-hours calls/month, faster patient throughput"
+                />
+              </motion.div>
             </div>
           </div>
         </div>
@@ -960,36 +1062,38 @@ export default function HealthcarePageClient() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <Link
-                  href="tel:865-346-3339"
-                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-teal-500 font-semibold text-white hover:shadow-lg hover:shadow-blue-500/50 hover:scale-[1.02] transition-all duration-300"
-                >
-                  <span className="material-icons">phone</span>
-                  Call 865-346-3339
-                  <span className="material-icons group-hover:translate-x-1 transition-transform duration-300">
-                    arrow_forward
-                  </span>
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white/5 backdrop-blur-xl border border-blue-500/30 font-semibold text-foreground hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
-                >
-                  <span className="material-icons">email</span>
-                  Request Demo
-                </Link>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+                  <Link
+                    href="tel:865-346-3339"
+                    className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-teal-500 font-semibold text-white hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 w-full sm:w-auto"
+                  >
+                    <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+                    Call 865-346-3339
+                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                  </Link>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white/5 backdrop-blur-xl border border-blue-500/30 font-semibold text-foreground hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 w-full sm:w-auto"
+                  >
+                    <Mail className="w-5 h-5" />
+                    Request Demo
+                  </Link>
+                </motion.div>
               </div>
 
               <div className="flex flex-wrap justify-center gap-6 text-sm text-foreground-muted">
                 <div className="flex items-center gap-2">
-                  <span className="material-icons text-blue-400 text-lg">check_circle</span>
+                  <CheckCircle2 className="w-5 h-5 text-blue-400" />
                   HIPAA Compliant & BAA Included
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="material-icons text-blue-400 text-lg">check_circle</span>
+                  <CheckCircle2 className="w-5 h-5 text-blue-400" />
                   48-hour setup
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="material-icons text-blue-400 text-lg">check_circle</span>
+                  <CheckCircle2 className="w-5 h-5 text-blue-400" />
                   Cancel anytime
                 </div>
               </div>

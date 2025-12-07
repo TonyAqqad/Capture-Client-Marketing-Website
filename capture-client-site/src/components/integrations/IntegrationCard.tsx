@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "@/lib/motion";
 import Image from "next/image";
 import Link from "next/link";
+import { Star, ArrowRight } from "lucide-react";
 
 interface Integration {
   id: string;
@@ -35,8 +36,13 @@ export function IntegrationCard({
 
   return (
     <motion.div
-      whileHover={{ scale: 1.05, y: -4 }}
-      transition={{ duration: 0.3, ease: "easeOut" }}
+      whileHover={{ scale: 1.08, y: -8 }}
+      transition={{
+        type: "spring",
+        stiffness: 400,
+        damping: 25,
+        mass: 0.5
+      }}
       className="group relative h-full touch-manipulation overflow-visible"
     >
       <Link
@@ -45,17 +51,18 @@ export function IntegrationCard({
         aria-label={`View ${integration.name} integration details`}
       >
         {/* Card Container - overflow-visible on parent to show badges above card */}
-        <div className="relative h-full glass-premium-mobile p-4 sm:p-6 rounded-2xl transition-all duration-300 hover:border-accent/30 hover:shadow-glow overflow-visible">
+        <div className="relative h-full glass-premium-mobile p-4 sm:p-6 rounded-2xl transition-all duration-300 hover:border-accent/30 hover:shadow-glow-lg overflow-visible">
           {/* Hover Glow Effect */}
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-primary/10" />
+            <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-primary/20" />
+            <div className="absolute inset-0 shadow-glow-accent" />
           </div>
 
           {/* Featured Badge - positioned above card with high z-index */}
           {isFeatured && (
             <div className="absolute -top-3 -right-2 z-30">
               <span className="inline-flex items-center gap-1 px-3 py-1.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-gold bg-gold/10 rounded-full border border-gold/30 shadow-lg backdrop-blur-sm min-h-[28px]">
-                <span className="material-icons text-[12px] sm:text-[14px]">star</span>
+                <Star className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                 <span>Featured</span>
               </span>
             </div>
@@ -106,15 +113,13 @@ export function IntegrationCard({
 
           {/* Arrow Indicator */}
           <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0 pointer-events-none z-10">
-            <span className="material-icons text-accent text-base sm:text-lg">
-              arrow_forward
-            </span>
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
           </div>
 
           {/* Premium gold border effect on hover */}
           {isFeatured && (
             <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10">
-              <div className="absolute inset-0 rounded-2xl border border-gold/20" />
+              <div className="absolute inset-0 rounded-2xl border-2 border-gold/40 shadow-glow-gold-lg" />
             </div>
           )}
         </div>

@@ -586,7 +586,10 @@ function ServiceCard({ service, index, isInView, isMobile }: ServiceCardProps) {
         } : {}}
         transition={{ duration: 0.3, ease: "easeOut" }}
         whileHover={{
-          y: -8,
+          y: -12,
+          boxShadow: service.featured
+            ? "0 30px 80px rgba(0, 201, 255, 0.4), 0 0 60px rgba(212, 175, 55, 0.3)"
+            : "0 20px 60px rgba(0, 0, 0, 0.5), 0 0 40px rgba(255, 255, 255, 0.1)",
           transition: { duration: 0.3 }
         }}
         className="glass-3d h-full p-8 lg:p-10 flex flex-col relative overflow-hidden"

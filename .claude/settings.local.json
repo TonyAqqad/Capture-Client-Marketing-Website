@@ -28,13 +28,33 @@
       "mcp__playwright__browser_close",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "mcp__bright-data__scrape_as_markdown",
+      "mcp__bright-data__scrape_as_html",
+      "mcp__bright-data__search_engine",
+      "mcp__bright-data__web_data",
+      "WebSearch",
+      "WebFetch(domain:www.ison24.com)",
+      "WebFetch(domain:www.goodcall.com)",
+      "WebFetch(domain:nice-branding.com)",
+      "WebFetch(domain:citizenadagency.com)",
+      "WebFetch(domain:www.sociallink.com)",
+      "WebFetch(domain:www.sitepoint.com)",
+      "WebFetch(domain:www.atvoid.com)",
+      "WebFetch(domain:www.chopdawg.com)",
+      "WebFetch(domain:mediaboom.com)",
+      "WebFetch(domain:www.everydayux.net)",
+      "WebFetch(domain:www.mindinventory.com)",
+      "WebFetch(domain:stripe.com)",
+      "WebFetch(domain:linear.app)",
+      "WebFetch(domain:vercel.com)"
     ],
     "deny": [],
     "ask": []
   },
   "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
-    "playwright"
+    "playwright",
+    "bright-data"
   ]
 }

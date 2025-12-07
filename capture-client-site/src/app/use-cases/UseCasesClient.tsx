@@ -38,7 +38,7 @@ interface Industry {
   stat: string;
   color: string;
   iconBg: string;
-  route: string; // Added route field for proper linking
+  route: string;
 }
 
 // Icon component mapping

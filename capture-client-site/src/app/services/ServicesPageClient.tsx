@@ -294,7 +294,7 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
             >
               <a
                 href="tel:865-346-3339"
-                className="group relative px-8 py-4 min-h-[56px] bg-gradient-to-r from-gold to-[#D4AF37] text-background-dark font-bold text-lg rounded-full overflow-hidden transition-all hover:scale-105 hover:shadow-glow-gold-intense flex items-center justify-center"
+                className="group relative px-8 py-4 min-h-[56px] bg-gradient-to-r from-gold to-[#D4AF37] text-background-dark font-bold text-lg rounded-full overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(245,166,35,0.6)] shadow-glow-gold-lg flex items-center justify-center"
               >
                 <span className="relative z-10">Call Now: (865) 346-3339</span>
               </a>
@@ -395,7 +395,8 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
                           initial={{ opacity: 0, x: 20 }}
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.3, delay: idx * 0.1 }}
-                          className="glass-card p-6 hover:shadow-glow-lg transition-all"
+                          whileHover={{ x: 4, scale: 1.02 }}
+                          className="glass-card p-6 hover:shadow-[0_0_40px_rgba(245,166,35,0.25)] hover:border-gold/30 border border-transparent transition-all duration-300"
                         >
                           <div className="flex items-start gap-4">
                             <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${activeConfig.color} border ${activeConfig.borderColor} flex items-center justify-center flex-shrink-0`}>
@@ -422,9 +423,11 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
                   className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6"
                 >
                   {activeConfig.stats.map((stat, idx) => (
-                    <div
+                    <motion.div
                       key={idx}
-                      className="glass-card p-6 text-center hover:shadow-glow transition-all"
+                      whileHover={{ y: -4, scale: 1.03 }}
+                      transition={{ duration: 0.3 }}
+                      className="glass-card p-6 text-center hover:shadow-[0_0_30px_rgba(245,166,35,0.3)] hover:border-gold/30 border border-transparent transition-all duration-300"
                     >
                       <div className="text-sm text-foreground-muted mb-2 uppercase tracking-wider">
                         {stat.label}
@@ -435,7 +438,7 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
                       <div className="text-xs text-foreground-muted">
                         {stat.description}
                       </div>
-                    </div>
+                    </motion.div>
                   ))}
                 </motion.div>
               </motion.div>
@@ -451,10 +454,10 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
           >
             <Link
               href="/contact"
-              className="inline-flex items-center gap-3 btn-gold text-lg md:text-xl px-10 py-5 rounded-2xl shadow-glow-gold-intense hover:scale-105 transition-all font-bold"
+              className="inline-flex items-center gap-3 btn-gold text-lg md:text-xl px-10 py-5 rounded-2xl shadow-glow-gold-lg hover:shadow-[0_0_50px_rgba(245,166,35,0.7)] hover:scale-105 transition-all duration-500 font-bold"
             >
               See It In Action - Book Demo
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="w-6 h-6">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="w-6 h-6 group-hover:translate-x-1 transition-transform">
                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
             </Link>
@@ -486,14 +489,15 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
                   initial={{ opacity: 0, y: 40 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  transition={{ duration: 0.6, delay: index * 0.15 }}
+                  whileHover={{ y: -8, scale: 1.02 }}
                   className="h-full"
                 >
                   <Link
                     href={`/services/${service.service.service_slug}`}
                     className="block h-full group"
                   >
-                    <div className={`glass-3d h-full min-h-[400px] p-8 lg:p-10 bg-gradient-to-br ${config.color} border ${config.borderColor} hover:shadow-glow-lg hover:-translate-y-2 transition-all duration-500 relative overflow-hidden rounded-3xl`}>
+                    <div className={`glass-3d h-full min-h-[400px] p-8 lg:p-10 bg-gradient-to-br ${config.color} border ${config.borderColor} hover:shadow-[0_0_60px_rgba(245,166,35,0.4)] hover:border-gold/50 transition-all duration-500 relative overflow-hidden rounded-3xl`}>
                       {/* Number badge */}
                       <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-gold/90 to-cyan-500/90 backdrop-blur-xl rounded-full border-4 border-background-dark shadow-glow-gold flex items-center justify-center">
                         <span className="text-2xl font-black text-white">
@@ -501,8 +505,10 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
                         </span>
                       </div>
 
-                      {/* Icon */}
-                      <div className="text-6xl mb-6 mt-4">{config.icon}</div>
+                      {/* Icon with gradient background */}
+                      <div className={`inline-flex w-20 h-20 mb-6 mt-4 items-center justify-center rounded-2xl bg-gradient-to-br ${config.color} border-2 ${config.borderColor} shadow-lg group-hover:scale-110 transition-transform duration-500`}>
+                        <div className="text-5xl">{config.icon}</div>
+                      </div>
 
                       {/* Title */}
                       <h3 className="text-2xl md:text-3xl font-hero font-black text-foreground mb-4 leading-tight group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:via-gold group-hover:to-cyan-500 transition-all">
@@ -572,7 +578,7 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
               <a
                 href="tel:865-346-3339"
-                className="group relative w-full sm:w-auto px-10 py-5 min-h-[60px] bg-gradient-to-r from-gold to-[#D4AF37] text-background-dark font-bold text-lg md:text-xl rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-glow-gold-intense flex items-center justify-center gap-3"
+                className="group relative w-full sm:w-auto px-10 py-5 min-h-[60px] bg-gradient-to-r from-gold to-[#D4AF37] text-background-dark font-bold text-lg md:text-xl rounded-2xl overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_60px_rgba(245,166,35,0.8)] shadow-glow-gold-lg flex items-center justify-center gap-3"
               >
                 <span className="text-2xl">📞</span>
                 <span>Call Us: (865) 346-3339</span>

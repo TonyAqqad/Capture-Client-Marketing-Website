@@ -4,6 +4,7 @@ import Link from "next/link";
 import { motion } from "@/lib/motion";
 import { useRef } from "react";
 import { useInView } from "@/hooks/useInView";
+import { Trophy, Phone, ArrowRight, CheckCircle } from "lucide-react";
 
 export function RealEstateFinalCTA() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -43,9 +44,9 @@ export function RealEstateFinalCTA() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold/10 border-2 border-gold/30 backdrop-blur-xl mb-8"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gold/10 border-2 border-gold/30 backdrop-blur-xl mb-8 hover:bg-gold/15 hover:border-gold/40 hover:scale-105 transition-all duration-300"
           >
-            <span className="material-icons text-gold text-2xl">emoji_events</span>
+            <Trophy className="w-6 h-6 text-gold" />
             <span className="text-base font-bold text-gold uppercase tracking-wide">
               Become the Fastest Agent in Your Market
             </span>
@@ -82,27 +83,21 @@ export function RealEstateFinalCTA() {
           >
             <Link
               href="/contact"
-              className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-3 px-12 py-6 rounded-2xl font-bold text-xl overflow-hidden transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_0_80px_rgba(212,175,55,0.5)]"
+              className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-3 px-12 py-6 rounded-2xl font-bold text-xl overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_80px_rgba(212,175,55,0.6)]"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-gold via-gold-light to-gold" />
               <div className="absolute inset-0 bg-gradient-to-r from-gold-light via-gold to-gold-light opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <span className="relative z-10 text-black flex items-center gap-2">
                 Book Your Demo
-                <motion.span
-                  className="material-icons text-3xl"
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ duration: 1.5, repeat: Infinity }}
-                >
-                  arrow_forward
-                </motion.span>
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
               </span>
             </Link>
 
             <Link
               href="tel:865-346-3339"
-              className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-6 rounded-2xl font-bold text-xl border-2 border-white/20 bg-white/5 backdrop-blur-xl transition-all duration-300 hover:bg-white/10 hover:border-accent/40 hover:shadow-[0_0_40px_rgba(0,201,255,0.3)]"
+              className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-6 rounded-2xl font-bold text-xl border-2 border-white/20 bg-white/5 backdrop-blur-xl transition-all duration-300 hover:bg-white/10 hover:border-accent/40 hover:shadow-[0_0_40px_rgba(0,201,255,0.3)] hover:scale-105"
             >
-              <span className="material-icons text-accent text-3xl">phone</span>
+              <Phone className="w-6 h-6 text-accent" />
               <span className="text-white">(865) 346-3339</span>
             </Link>
           </motion.div>
@@ -114,23 +109,23 @@ export function RealEstateFinalCTA() {
             transition={{ duration: 0.6, delay: 0.7 }}
             className="flex flex-wrap items-center justify-center gap-8 text-white/60"
           >
-            <div className="flex items-center gap-2">
-              <span className="material-icons text-gold">check_circle</span>
+            <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
+              <CheckCircle className="w-5 h-5 text-gold" />
               <span className="text-sm font-medium">No Setup Fees</span>
             </div>
             <div className="w-px h-5 bg-white/20 hidden sm:block" />
-            <div className="flex items-center gap-2">
-              <span className="material-icons text-gold">check_circle</span>
+            <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
+              <CheckCircle className="w-5 h-5 text-gold" />
               <span className="text-sm font-medium">Cancel Anytime</span>
             </div>
             <div className="w-px h-5 bg-white/20 hidden sm:block" />
-            <div className="flex items-center gap-2">
-              <span className="material-icons text-gold">check_circle</span>
+            <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
+              <CheckCircle className="w-5 h-5 text-gold" />
               <span className="text-sm font-medium">Live in 48 Hours</span>
             </div>
             <div className="w-px h-5 bg-white/20 hidden sm:block" />
-            <div className="flex items-center gap-2">
-              <span className="material-icons text-gold">check_circle</span>
+            <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
+              <CheckCircle className="w-5 h-5 text-gold" />
               <span className="text-sm font-medium">Follow Up Boss Certified</span>
             </div>
           </motion.div>

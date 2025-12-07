@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Plug } from "lucide-react";
 import { Button } from "@/components/ui/Button";
 
 /**
@@ -21,7 +22,7 @@ export default function IntegrationNotFound() {
         {/* Error Icon */}
         <div className="mb-8">
           <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-white/5 backdrop-blur-lg border border-white/10">
-            <span className="material-icons text-6xl text-accent">integration_instructions</span>
+            <Plug className="w-14 h-14 text-accent" />
           </div>
         </div>
 

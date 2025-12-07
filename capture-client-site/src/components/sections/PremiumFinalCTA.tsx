@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import OptimizedLeadForm from "@/components/forms/OptimizedLeadForm";
+import { Rocket, Phone, Clock, Headphones, BadgeCheck, Lock, PhoneCall, Star } from "lucide-react";
 
 // Generate particle positions - only used client-side
 interface ParticlePosition {
@@ -361,7 +362,7 @@ export function PremiumFinalCTA() {
                     }}
                   />
                   <span className="relative z-10 flex items-center gap-3">
-                    <span className="material-icons text-2xl md:text-3xl">rocket_launch</span>
+                    <Rocket className="w-6 h-6 md:w-7 md:h-7" />
                     Start Capturing More Clients
                   </span>
                   <motion.div
@@ -391,7 +392,7 @@ export function PremiumFinalCTA() {
                     boxShadow: "0 0 30px rgba(0, 201, 255, 0.2)",
                   }}
                 >
-                  <span className="material-icons text-2xl md:text-3xl text-[#00C9FF]">phone</span>
+                  <Phone className="w-6 h-6 md:w-7 md:h-7 text-[#00C9FF]" />
                   (865) 346-3339
                 </motion.a>
               </div>
@@ -407,44 +408,45 @@ export function PremiumFinalCTA() {
           >
             {[
               {
-                icon: "schedule",
+                icon: Clock,
                 title: "48-Hour Setup",
                 color: "#00C9FF"
               },
               {
-                icon: "support_agent",
+                icon: Headphones,
                 title: "White-Glove Service",
                 color: "#8B5CF6"
               },
               {
-                icon: "verified",
+                icon: BadgeCheck,
                 title: "No Long-Term Contract",
                 color: "#D4AF37"
               }
-            ].map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
-                transition={{
-                  duration: 0.5,
-                  delay: 0.4 + index * 0.1,
-                }}
-                whileHover={{ scale: 1.05 }}
-                className="glass-3d inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 py-3 md:py-4 rounded-full transition-all duration-300"
-                style={{
-                  border: `1px solid ${item.color}40`,
-                  boxShadow: `0 0 20px ${item.color}20`,
-                }}
-              >
-                <span className="material-icons text-xl md:text-2xl" style={{ color: item.color }}>
-                  {item.icon}
-                </span>
-                <span className="font-semibold text-white text-sm md:text-base">
-                  {item.title}
-                </span>
-              </motion.div>
-            ))}
+            ].map((item, index) => {
+              const IconComponent = item.icon;
+              return (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.4 + index * 0.1,
+                  }}
+                  whileHover={{ scale: 1.05 }}
+                  className="glass-3d inline-flex items-center gap-2 md:gap-3 px-4 md:px-6 py-3 md:py-4 rounded-full transition-all duration-300"
+                  style={{
+                    border: `1px solid ${item.color}40`,
+                    boxShadow: `0 0 20px ${item.color}20`,
+                  }}
+                >
+                  <IconComponent className="w-5 h-5 md:w-6 md:h-6" style={{ color: item.color }} />
+                  <span className="font-semibold text-white text-sm md:text-base">
+                    {item.title}
+                  </span>
+                </motion.div>
+              );
+            })}
           </motion.div>
 
           {/* Lead capture form with enhanced glass treatment */}
@@ -487,23 +489,24 @@ export function PremiumFinalCTA() {
               <div className="mt-8 pt-8 border-t border-white/10">
                 <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
                   {[
-                    { icon: "lock", text: "SSL Encrypted", color: "#00C9FF" },
-                    { icon: "schedule", text: "No Commitment", color: "#8B5CF6" },
-                    { icon: "verified", text: "500+ Businesses Trust Us", color: "#D4AF37" },
-                  ].map((item, index) => (
-                    <div
-                      key={index}
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-3d"
-                      style={{
-                        border: `1px solid ${item.color}30`,
-                      }}
-                    >
-                      <span className="material-icons text-base md:text-lg" style={{ color: item.color }}>
-                        {item.icon}
-                      </span>
-                      <span className="text-xs md:text-sm text-white/80">{item.text}</span>
-                    </div>
-                  ))}
+                    { icon: Lock, text: "SSL Encrypted", color: "#00C9FF" },
+                    { icon: Clock, text: "No Commitment", color: "#8B5CF6" },
+                    { icon: BadgeCheck, text: "500+ Businesses Trust Us", color: "#D4AF37" },
+                  ].map((item, index) => {
+                    const IconComponent = item.icon;
+                    return (
+                      <div
+                        key={index}
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-3d"
+                        style={{
+                          border: `1px solid ${item.color}30`,
+                        }}
+                      >
+                        <IconComponent className="w-4 h-4 md:w-5 md:h-5" style={{ color: item.color }} />
+                        <span className="text-xs md:text-sm text-white/80">{item.text}</span>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -525,9 +528,7 @@ export function PremiumFinalCTA() {
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-3 md:gap-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold group"
             >
-              <motion.span
-                className="material-icons text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
-                style={{ color: "#00C9FF" }}
+              <motion.div
                 animate={{
                   scale: [1, 1.1, 1],
                 }}
@@ -537,8 +538,8 @@ export function PremiumFinalCTA() {
                   ease: "easeInOut",
                 }}
               >
-                phone_in_talk
-              </motion.span>
+                <PhoneCall className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 text-[#00C9FF]" />
+              </motion.div>
               <span className="bg-gradient-to-r from-[#00C9FF] via-[#8B5CF6] to-[#D4AF37] bg-clip-text text-transparent">
                 (865) 346-3339
               </span>
@@ -586,16 +587,14 @@ export function PremiumFinalCTA() {
               <div className="flex items-center gap-3 md:gap-4">
                 <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, i) => (
-                    <motion.span
+                    <motion.div
                       key={i}
                       initial={{ opacity: 0, scale: 0 }}
                       animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
                       transition={{ delay: 1.2 + i * 0.05, type: "spring" }}
-                      className="material-icons text-xl md:text-2xl"
-                      style={{ color: "#D4AF37" }}
                     >
-                      star
-                    </motion.span>
+                      <Star className="w-5 h-5 md:w-6 md:h-6 fill-[#D4AF37] text-[#D4AF37]" />
+                    </motion.div>
                   ))}
                 </div>
                 <div className="text-left">

@@ -1,7 +1,7 @@
 // Premium Animation Variants for $10M website
 // Based on Linear, Vercel, Stripe patterns
 
-import type { Variants } from "framer-motion";
+import type { Variants } from "@/lib/motion";
 
 // Fade up animation (most common)
 export const fadeInUp: Variants = {

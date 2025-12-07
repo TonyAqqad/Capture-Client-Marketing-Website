@@ -1,10 +1,27 @@
 "use client";
 
-import { useState, useRef, useMemo } from "react";
+import { useState, useRef, useMemo, useEffect } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import Link from "next/link";
-import { Button } from "@/components/ui/Button";
+import {
+  SearchX,
+  BadgeCheck,
+  MapPin,
+  TrendingUp,
+  AlertCircle,
+  ArrowRight,
+  ChevronUp,
+  ChevronDown,
+  Lightbulb,
+  Snowflake,
+  Stethoscope,
+  Wrench,
+  Scale,
+  Home,
+  Sparkles,
+  Building2,
+} from "lucide-react";
 
 interface CaseStudyResult {
   metric: string;
@@ -30,13 +47,16 @@ interface CaseStudiesPageClientProps {
 }
 
 // Industry icons mapping
-const industryIcons: Record<string, string> = {
-  "HVAC Services": "ac_unit",
-  "Dental Practice": "medical_services",
-  "Plumbing Company": "plumbing",
-  "Law Firm": "gavel",
-  "Roofing Contractor": "roofing",
-  "Medical Spa": "spa",
+const industryIcons: Record<
+  string,
+  React.ComponentType<{ className?: string }>
+> = {
+  "HVAC Services": Snowflake,
+  "Dental Practice": Stethoscope,
+  "Plumbing Company": Wrench,
+  "Law Firm": Scale,
+  "Roofing Contractor": Home,
+  "Medical Spa": Sparkles,
 };
 
 // Industry gradient mapping
@@ -49,6 +69,35 @@ const industryGradients: Record<string, string> = {
   "Medical Spa": "from-primary to-accent",
 };
 
+// Animated counter hook
+function useAnimatedCounter(end: number, duration: number = 2000, shouldStart: boolean = false) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!shouldStart) return;
+
+    let startTime: number | null = null;
+    let animationFrame: number;
+
+    const animate = (currentTime: number) => {
+      if (!startTime) startTime = currentTime;
+      const progress = Math.min((currentTime - startTime) / duration, 1);
+
+      const easeOutQuart = 1 - Math.pow(1 - progress, 4);
+      setCount(Math.floor(end * easeOutQuart));
+
+      if (progress < 1) {
+        animationFrame = requestAnimationFrame(animate);
+      }
+    };
+
+    animationFrame = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationFrame);
+  }, [end, duration, shouldStart]);
+
+  return count;
+}
+
 export default function CaseStudiesPageClient({
   caseStudies,
 }: CaseStudiesPageClientProps) {
@@ -60,6 +109,11 @@ export default function CaseStudiesPageClient({
   const gridRef = useRef<HTMLDivElement>(null);
   const isHeroInView = useInView(heroRef, { threshold: 0.2 });
   const isGridInView = useInView(gridRef, { threshold: 0.1 });
+
+  // Animated counters for stats
+  const revenueCount = useAnimatedCounter(247, 2000, isHeroInView);
+  const answerRateCount = useAnimatedCounter(100, 2000, isHeroInView);
+  const responseCount = useAnimatedCounter(60, 2000, isHeroInView);
 
   // Extract unique industries
   const industries = useMemo(() => {
@@ -114,62 +168,92 @@ export default function CaseStudiesPageClient({
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isHeroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.8 }}
+            initial={{ opacity: 0, y: 50, scale: 0.95 }}
+            animate={isHeroInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 50, scale: 0.95 }}
+            transition={{ duration: 1, type: "spring", stiffness: 60 }}
             className="text-center max-w-4xl mx-auto"
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 via-accent/10 to-transparent border border-accent/20 backdrop-blur-xl mb-6">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={isHeroInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 via-accent/10 to-transparent border border-accent/20 backdrop-blur-xl mb-6 shadow-glow-gold-lg"
+            >
               <div className="w-2 h-2 bg-accent rounded-full animate-pulse shadow-glow" />
               <h2 className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent">
                 Real Results
               </h2>
-            </div>
+            </motion.div>
 
             {/* Main heading */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground mb-6 leading-tight">
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={isHeroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground mb-6 leading-tight"
+            >
               Success Stories:{" "}
-              <span className="text-gradient bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
+              <span className="text-gradient bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent animate-gradient">
                 Transforming Small Businesses
               </span>
-            </h1>
+            </motion.h1>
 
-            <p className="text-lg sm:text-xl md:text-2xl text-foreground-muted max-w-3xl mx-auto leading-relaxed mb-8">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={isHeroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-lg sm:text-xl md:text-2xl text-foreground-muted max-w-3xl mx-auto leading-relaxed mb-8"
+            >
               See exactly how Capture Client delivers measurable, dramatic
               results for businesses like yours. Real data. Real growth. Real
               impact.
-            </p>
+            </motion.p>
 
-            {/* Stats bar */}
+            {/* Stats bar with animated counters */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 20, scale: 0.95 }}
               animate={
-                isHeroInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+                isHeroInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 20, scale: 0.95 }
               }
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="glass-premium p-6 rounded-2xl inline-flex flex-wrap items-center justify-center gap-8 sm:gap-12"
+              transition={{ duration: 0.8, delay: 0.5, type: "spring", stiffness: 100 }}
+              className="glass-premium p-6 rounded-2xl inline-flex flex-wrap items-center justify-center gap-8 sm:gap-12 border-2 border-gold/20 shadow-glow-gold-lg"
             >
-              <div className="text-center">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={isHeroInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+                className="text-center"
+              >
                 <div className="text-3xl sm:text-4xl font-bold text-gradient bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent mb-1">
-                  247%
+                  {revenueCount}%
                 </div>
                 <div className="text-sm text-foreground-muted">Avg Revenue Growth</div>
-              </div>
+              </motion.div>
               <div className="h-12 w-px bg-surface-border hidden sm:block" />
-              <div className="text-center">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={isHeroInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+                className="text-center"
+              >
                 <div className="text-3xl sm:text-4xl font-bold text-gradient bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-1">
-                  100%
+                  {answerRateCount}%
                 </div>
                 <div className="text-sm text-foreground-muted">Call Answer Rate</div>
-              </div>
+              </motion.div>
               <div className="h-12 w-px bg-surface-border hidden sm:block" />
-              <div className="text-center">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={isHeroInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.6, delay: 0.9 }}
+                className="text-center"
+              >
                 <div className="text-3xl sm:text-4xl font-bold text-gradient bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent mb-1">
-                  60x
+                  {responseCount}x
                 </div>
                 <div className="text-sm text-foreground-muted">Faster Response</div>
-              </div>
+              </motion.div>
             </motion.div>
           </motion.div>
         </div>
@@ -190,17 +274,19 @@ export default function CaseStudiesPageClient({
                 </label>
                 <div className="flex flex-wrap gap-2">
                   {industries.map((industry) => (
-                    <button
+                    <motion.button
                       key={industry}
                       onClick={() => setSelectedIndustry(industry)}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
                       className={`px-4 py-2 rounded-xl font-medium text-sm transition-all duration-300 ${
                         selectedIndustry === industry
-                          ? "bg-gradient-to-r from-accent to-primary text-white shadow-glow"
-                          : "bg-surface/50 text-foreground-muted hover:bg-surface border border-surface-border hover:border-accent/30"
+                          ? "bg-gradient-to-r from-accent to-primary text-white shadow-glow-gold-lg border-2 border-gold/40"
+                          : "bg-surface/50 text-foreground-muted hover:bg-surface border border-surface-border hover:border-accent/30 hover:shadow-glow-gold"
                       }`}
                     >
                       {industry}
-                    </button>
+                    </motion.button>
                   ))}
                 </div>
               </div>
@@ -211,26 +297,30 @@ export default function CaseStudiesPageClient({
                   Sort by
                 </label>
                 <div className="flex gap-2">
-                  <button
+                  <motion.button
                     onClick={() => setSortBy("roi")}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     className={`flex-1 px-4 py-2 rounded-xl font-medium text-sm transition-all duration-300 ${
                       sortBy === "roi"
-                        ? "bg-gradient-to-r from-primary to-accent text-white shadow-glow-primary"
-                        : "bg-surface/50 text-foreground-muted hover:bg-surface border border-surface-border"
+                        ? "bg-gradient-to-r from-primary to-accent text-white shadow-glow-gold-lg border-2 border-gold/40"
+                        : "bg-surface/50 text-foreground-muted hover:bg-surface border border-surface-border hover:shadow-glow-gold"
                     }`}
                   >
                     Highest ROI
-                  </button>
-                  <button
+                  </motion.button>
+                  <motion.button
                     onClick={() => setSortBy("duration")}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     className={`flex-1 px-4 py-2 rounded-xl font-medium text-sm transition-all duration-300 ${
                       sortBy === "duration"
-                        ? "bg-gradient-to-r from-primary to-accent text-white shadow-glow-primary"
-                        : "bg-surface/50 text-foreground-muted hover:bg-surface border border-surface-border"
+                        ? "bg-gradient-to-r from-primary to-accent text-white shadow-glow-gold-lg border-2 border-gold/40"
+                        : "bg-surface/50 text-foreground-muted hover:bg-surface border border-surface-border hover:shadow-glow-gold"
                     }`}
                   >
                     Quickest Results
-                  </button>
+                  </motion.button>
                 </div>
               </div>
             </div>
@@ -296,9 +386,7 @@ export default function CaseStudiesPageClient({
               className="text-center py-20"
             >
               <div className="glass-premium p-12 rounded-3xl inline-block">
-                <span className="material-icons text-6xl text-foreground-muted mb-4">
-                  search_off
-                </span>
+                <SearchX className="w-16 h-16 text-foreground-muted mb-4 mx-auto" />
                 <p className="text-xl text-foreground-muted">
                   No case studies found for this filter
                 </p>
@@ -320,66 +408,98 @@ export default function CaseStudiesPageClient({
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl relative z-10">
-          <div className="glass-premium p-12 lg:p-16 rounded-3xl text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, type: "spring", stiffness: 80 }}
+            className="glass-premium p-12 lg:p-16 rounded-3xl text-center border-2 border-gold/20 shadow-glow-gold-lg"
+          >
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-6">
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-6"
+              >
                 Ready to Become Our{" "}
-                <span className="text-gradient bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+                <span className="text-gradient bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent animate-gradient">
                   Next Success Story?
                 </span>
-              </h2>
+              </motion.h2>
 
-              <p className="text-lg sm:text-xl text-foreground-muted mb-8 leading-relaxed max-w-2xl mx-auto">
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                className="text-lg sm:text-xl text-foreground-muted mb-8 leading-relaxed max-w-2xl mx-auto"
+              >
                 Join hundreds of small businesses already growing with Capture
                 Client. Book your free demo and see how we can transform your
                 business.
-              </p>
+              </motion.p>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button variant="primary" size="lg" href="/contact" icon="arrow_forward">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.5 }}
+                className="flex flex-col sm:flex-row items-center justify-center gap-4"
+              >
+                <Link
+                  href="/contact"
+                  className="btn-gold px-8 py-4 text-lg font-semibold rounded-xl shadow-glow-gold-lg hover:scale-105 transition-all inline-flex items-center gap-2 w-full sm:w-auto justify-center"
+                >
                   Book Your Free Demo
-                </Button>
-                <Button variant="glass" size="lg" href="/pricing">
+                  <ArrowRight className="w-5 h-5" />
+                </Link>
+                <Link
+                  href="/pricing"
+                  className="btn-ghost px-8 py-4 text-lg font-semibold rounded-xl hover:shadow-glow-gold hover:scale-105 transition-all inline-flex items-center gap-2 w-full sm:w-auto justify-center"
+                >
                   View Pricing
-                </Button>
-              </div>
+                </Link>
+              </motion.div>
 
               {/* Trust signals */}
-              <div className="mt-12 pt-8 border-t border-white/10">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.6 }}
+                className="mt-12 pt-8 border-t border-white/10"
+              >
                 <div className="flex flex-wrap items-center justify-center gap-8">
-                  <div className="flex items-center gap-2">
-                    <span className="material-icons text-accent text-xl">
-                      verified
-                    </span>
-                    <span className="text-sm text-foreground-muted">
-                      No Long-Term Contracts
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="material-icons text-accent text-xl">
-                      verified
-                    </span>
-                    <span className="text-sm text-foreground-muted">
-                      90-Day Money-Back Guarantee
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="material-icons text-accent text-xl">
-                      verified
-                    </span>
-                    <span className="text-sm text-foreground-muted">
-                      Setup in 48 Hours
-                    </span>
-                  </div>
+                  {[
+                    "No Long-Term Contracts",
+                    "90-Day Money-Back Guarantee",
+                    "Setup in 48 Hours"
+                  ].map((text, idx) => (
+                    <motion.div
+                      key={text}
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.4, delay: 0.7 + idx * 0.1 }}
+                      className="flex items-center gap-2"
+                    >
+                      <BadgeCheck className="w-5 h-5 text-accent" />
+                      <span className="text-sm text-foreground-muted">
+                        {text}
+                      </span>
+                    </motion.div>
+                  ))}
                 </div>
-              </div>
+              </motion.div>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>
@@ -402,7 +522,7 @@ function CaseStudyCard({
   isExpanded,
   onToggleExpand,
 }: CaseStudyCardProps) {
-  const icon = industryIcons[study.industry] || "business";
+  const IconComponent = industryIcons[study.industry] || Building2;
   const gradient = industryGradients[study.industry] || "from-accent to-primary";
 
   return (
@@ -419,14 +539,18 @@ function CaseStudyCard({
         type: "spring",
         stiffness: 100,
       }}
+      whileHover={{
+        y: -8,
+        transition: { duration: 0.3, type: "spring", stiffness: 300 }
+      }}
       className="group h-full"
     >
-      <div className="relative h-full glass-premium p-6 lg:p-8 rounded-2xl border-2 border-accent/20 transition-all duration-500 hover:border-accent/50 hover:shadow-glow hover:scale-[1.02] flex flex-col">
+      <div className="relative h-full glass-premium p-6 lg:p-8 rounded-2xl border-2 border-accent/20 transition-all duration-500 hover:border-gold/60 hover:shadow-glow-gold-lg flex flex-col">
         {/* Industry badge */}
         <div
           className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r ${gradient} mb-6 self-start`}
         >
-          <span className="material-icons text-white text-lg">{icon}</span>
+          <IconComponent className="w-5 h-5 text-white" />
           <span className="text-sm font-bold text-white">{study.industry}</span>
         </div>
 
@@ -435,23 +559,34 @@ function CaseStudyCard({
           {study.company}
         </h3>
         <p className="text-sm text-foreground-muted mb-6 flex items-center gap-1">
-          <span className="material-icons text-accent text-sm">place</span>
+          <MapPin className="w-4 h-4 text-accent" />
           {study.location}
         </p>
 
         {/* ROI Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gradient-to-r from-accent/20 to-primary/20 border border-accent/30 mb-6 self-start">
-          <span className="material-icons text-accent text-sm">trending_up</span>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+          transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
+          whileHover={{ scale: 1.05 }}
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-gradient-to-r from-accent/20 to-primary/20 border border-accent/30 mb-6 self-start shadow-glow-gold"
+        >
+          <motion.div
+            animate={{ rotate: [0, 5, -5, 0] }}
+            transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}
+          >
+            <TrendingUp className="w-4 h-4 text-accent" />
+          </motion.div>
           <span className="text-sm font-bold text-accent">{study.roi} ROI</span>
           <span className="text-xs text-foreground-muted">
             in {study.duration}
           </span>
-        </div>
+        </motion.div>
 
         {/* Problem */}
         <div className="mb-6">
           <p className="text-xs uppercase tracking-wider text-foreground-muted font-semibold mb-2 flex items-center gap-2">
-            <span className="material-icons text-sm">error_outline</span>
+            <AlertCircle className="w-4 h-4" />
             The Challenge
           </p>
           <p className="text-foreground-muted leading-relaxed text-sm">
@@ -478,22 +613,40 @@ function CaseStudyCard({
                 <span className="text-xs uppercase tracking-wider text-foreground-subtle font-semibold">
                   {result.metric}
                 </span>
-                <span className="text-xs font-bold text-accent">
+                <motion.span
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                  transition={{ duration: 0.4, delay: index * 0.1 + idx * 0.1 + 0.5 }}
+                  className="text-xs font-bold text-accent px-2 py-1 rounded-full bg-accent/10 border border-accent/30"
+                >
                   {result.improvement}
-                </span>
+                </motion.span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="flex-1 bg-surface-border/30 rounded-lg p-2 text-center">
+                <motion.div
+                  initial={{ opacity: 0.6, scale: 0.95 }}
+                  whileHover={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.2 }}
+                  className="flex-1 bg-surface-border/30 rounded-lg p-2 text-center"
+                >
                   <p className="text-foreground-muted text-sm line-through">
                     {result.before}
                   </p>
-                </div>
-                <span className="material-icons text-accent text-sm">
-                  arrow_forward
-                </span>
-                <div className="flex-1 bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg p-2 text-center border border-accent/30">
+                </motion.div>
+                <motion.div
+                  animate={{ x: [0, 3, 0] }}
+                  transition={{ duration: 2, repeat: Infinity, repeatType: "loop" }}
+                >
+                  <ArrowRight className="w-4 h-4 text-accent" />
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0.8, scale: 0.95 }}
+                  whileHover={{ opacity: 1, scale: 1.05 }}
+                  transition={{ duration: 0.2 }}
+                  className="flex-1 bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg p-2 text-center border border-accent/30 shadow-glow-gold"
+                >
                   <p className="text-accent font-bold text-sm">{result.after}</p>
-                </div>
+                </motion.div>
               </div>
             </motion.div>
           ))}
@@ -511,7 +664,7 @@ function CaseStudyCard({
             >
               <div className="pt-6 border-t border-white/10">
                 <p className="text-xs uppercase tracking-wider text-foreground-muted font-semibold mb-2 flex items-center gap-2">
-                  <span className="material-icons text-sm">lightbulb</span>
+                  <Lightbulb className="w-4 h-4" />
                   The Solution
                 </p>
                 <p className="text-foreground-muted leading-relaxed text-sm">
@@ -524,22 +677,41 @@ function CaseStudyCard({
 
         {/* Action buttons */}
         <div className="flex items-center gap-3 mt-auto pt-4 border-t border-white/10">
-          <button
+          <motion.button
             onClick={onToggleExpand}
-            className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-surface/50 border border-surface-border text-sm font-semibold text-foreground hover:bg-surface hover:border-accent/30 transition-all duration-300"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-surface/50 border border-surface-border text-sm font-semibold text-foreground hover:bg-surface hover:border-accent/30 hover:shadow-glow-gold transition-all duration-300"
           >
             {isExpanded ? "Show Less" : "View Details"}
-            <span className="material-icons text-sm">
-              {isExpanded ? "expand_less" : "expand_more"}
-            </span>
-          </button>
-          <Link
-            href={`/case-studies/${study.id}`}
-            className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-accent/20 to-primary/20 border border-accent/30 text-sm font-semibold text-accent hover:shadow-glow transition-all duration-300"
+            <motion.div
+              animate={{ rotate: isExpanded ? 180 : 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              {isExpanded ? (
+                <ChevronUp className="w-4 h-4" />
+              ) : (
+                <ChevronDown className="w-4 h-4" />
+              )}
+            </motion.div>
+          </motion.button>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            Full Story
-            <span className="material-icons text-sm">arrow_forward</span>
-          </Link>
+            <Link
+              href={`/case-studies/${study.id}`}
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-accent/20 to-primary/20 border border-accent/30 text-sm font-semibold text-accent hover:shadow-glow-gold-lg hover:border-gold/50 transition-all duration-300"
+            >
+              Full Story
+              <motion.div
+                animate={{ x: [0, 3, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, repeatType: "loop" }}
+              >
+                <ArrowRight className="w-4 h-4" />
+              </motion.div>
+            </Link>
+          </motion.div>
         </div>
 
         {/* Hover gradient overlay */}

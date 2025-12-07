@@ -1,5 +1,7 @@
 "use client";
 
+import { ShieldCheck, CheckCircle2 } from "lucide-react";
+
 export default function RiskReversal() {
   return (
     <div className="relative group bg-gradient-to-br from-emerald-500/5 via-surface/10 to-teal-500/5 border border-emerald-500/20 rounded-2xl p-8 sm:p-10 text-center backdrop-blur-sm transition-all duration-500 hover:border-emerald-500/30">
@@ -8,7 +10,7 @@ export default function RiskReversal() {
 
       {/* Shield icon - more refined */}
       <div className="relative inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 mb-5 transition-transform duration-500 group-hover:scale-105">
-        <span className="material-icons text-emerald-400/90 text-4xl">verified_user</span>
+        <ShieldCheck className="text-emerald-400/90 w-10 h-10" />
       </div>
 
       {/* Headline - more trustworthy tone */}
@@ -24,15 +26,15 @@ export default function RiskReversal() {
       {/* Benefits - cleaner layout */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6 max-w-3xl mx-auto mb-6">
         <div className="flex flex-col items-center gap-2 text-foreground/90 min-h-[60px] group/item">
-          <span className="material-icons text-emerald-400/70 text-2xl transition-colors duration-300 group-hover/item:text-emerald-400">check_circle</span>
+          <CheckCircle2 className="text-emerald-400/70 w-6 h-6 transition-colors duration-300 group-hover/item:text-emerald-400" />
           <span className="text-sm font-medium">30-Day Money Back</span>
         </div>
         <div className="flex flex-col items-center gap-2 text-foreground/90 min-h-[60px] group/item">
-          <span className="material-icons text-emerald-400/70 text-2xl transition-colors duration-300 group-hover/item:text-emerald-400">check_circle</span>
+          <CheckCircle2 className="text-emerald-400/70 w-6 h-6 transition-colors duration-300 group-hover/item:text-emerald-400" />
           <span className="text-sm font-medium">Cancel Anytime</span>
         </div>
         <div className="flex flex-col items-center gap-2 text-foreground/90 min-h-[60px] group/item">
-          <span className="material-icons text-emerald-400/70 text-2xl transition-colors duration-300 group-hover/item:text-emerald-400">check_circle</span>
+          <CheckCircle2 className="text-emerald-400/70 w-6 h-6 transition-colors duration-300 group-hover/item:text-emerald-400" />
           <span className="text-sm font-medium">No Setup Fees</span>
         </div>
       </div>

@@ -2,6 +2,7 @@
 
 import { motion } from "@/lib/motion";
 import { useRef } from "react";
+import { Plug } from "lucide-react";
 
 interface HowItWorksStep {
   step: number;
@@ -246,9 +247,7 @@ export function IntegrationHowItWorks({
             href="/contact"
             className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-xl border border-white/20 hover:border-accent/50 text-foreground font-semibold transition-all duration-300 hover:shadow-glow"
           >
-            <span className="material-icons text-accent">
-              integration_instructions
-            </span>
+            <Plug className="w-5 h-5 text-accent" />
             Get Started
           </a>
         </motion.div>

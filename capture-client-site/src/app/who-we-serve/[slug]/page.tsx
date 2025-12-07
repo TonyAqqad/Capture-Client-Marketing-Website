@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import { INDUSTRIES, getIndustryBySlug, Industry } from '@/data/industries';
+import { INDUSTRIES, getIndustryBySlug } from '@/data/industries';
 import { Button } from '@/components/ui/Button';
 import { GlassCard } from '@/components/ui/GlassCard';
 import { generateWebPageSchema, SITE_CONFIG } from '@/lib/seo-config';

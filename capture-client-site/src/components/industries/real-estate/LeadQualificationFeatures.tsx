@@ -4,11 +4,12 @@ import { useRef } from "react";
 import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import { GlassCard } from "@/components/ui/GlassCard";
+import { DollarSign, Calendar, Home, Shuffle, CheckCircle, ShieldCheck, Brain } from "lucide-react";
 
 interface Feature {
   title: string;
   description: string;
-  icon: string;
+  icon: React.ComponentType<{ className?: string }>;
   color: "gold" | "accent" | "purple";
   questions: string[];
 }
@@ -17,7 +18,7 @@ const features: Feature[] = [
   {
     title: "Budget Qualification",
     description: "Identify serious buyers instantly with intelligent budget screening",
-    icon: "payments",
+    icon: DollarSign,
     color: "gold",
     questions: [
       "What's your price range?",
@@ -28,7 +29,7 @@ const features: Feature[] = [
   {
     title: "Timeline Assessment",
     description: "Prioritize hot leads by understanding their buying timeline",
-    icon: "event",
+    icon: Calendar,
     color: "accent",
     questions: [
       "When are you looking to move?",
@@ -39,7 +40,7 @@ const features: Feature[] = [
   {
     title: "Property Preferences",
     description: "Capture detailed requirements to match perfect listings",
-    icon: "home",
+    icon: Home,
     color: "purple",
     questions: [
       "Bedrooms & bathrooms?",
@@ -50,7 +51,7 @@ const features: Feature[] = [
   {
     title: "Hot Lead Routing",
     description: "Instantly connect qualified buyers to the right agent",
-    icon: "swap_horiz",
+    icon: Shuffle,
     color: "gold",
     questions: [
       "Lead scored automatically",
@@ -98,8 +99,8 @@ export function LeadQualificationFeatures() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold/10 border border-gold/20 backdrop-blur-xl mb-6">
-            <span className="material-icons text-gold text-xl">verified</span>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold/10 border border-gold/20 backdrop-blur-xl mb-6 hover:bg-gold/15 hover:border-gold/30 transition-all duration-300">
+            <ShieldCheck className="w-5 h-5 text-gold" />
             <span className="text-sm font-semibold text-gold uppercase tracking-wide">
               AI-Powered Qualification
             </span>
@@ -117,6 +118,7 @@ export function LeadQualificationFeatures() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {features.map((feature, index) => {
             const colors = colorClasses[feature.color];
+            const IconComponent = feature.icon;
             return (
               <motion.div
                 key={feature.title}
@@ -127,14 +129,12 @@ export function LeadQualificationFeatures() {
               >
                 <GlassCard
                   variant="premium"
-                  className={`h-full p-8 border-2 ${colors.border} transition-all duration-500 ${colors.glow}`}
+                  className={`h-full p-8 border-2 ${colors.border} transition-all duration-500 ${colors.glow} hover:scale-[1.02] cursor-pointer`}
                 >
                   {/* Icon */}
                   <div className="flex items-start gap-6 mb-6">
-                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${colors.icon} flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                      <span className="material-icons text-black text-3xl flex-shrink-0">
-                        {feature.icon}
-                      </span>
+                    <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${colors.icon} flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
+                      <IconComponent className="w-8 h-8 text-black" />
                     </div>
                     <div>
                       <h3 className={`text-2xl font-bold ${colors.text} mb-2`}>
@@ -154,11 +154,9 @@ export function LeadQualificationFeatures() {
                         initial={{ opacity: 0, x: -20 }}
                         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                         transition={{ duration: 0.4, delay: index * 0.1 + qIndex * 0.1 }}
-                        className="flex items-center gap-3 p-3 bg-white/[0.03] rounded-lg border border-white/5"
+                        className="flex items-center gap-3 p-3 bg-white/[0.03] rounded-lg border border-white/5 hover:bg-white/[0.06] hover:border-white/10 transition-all duration-300"
                       >
-                        <span className={`material-icons ${colors.text} text-sm flex-shrink-0`}>
-                          check_circle
-                        </span>
+                        <CheckCircle className={`w-4 h-4 ${colors.text} flex-shrink-0`} />
                         <span className="text-white/80 text-sm font-medium">
                           {question}
                         </span>
@@ -178,10 +176,10 @@ export function LeadQualificationFeatures() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center"
         >
-          <div className="inline-flex items-center gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
+          <div className="inline-flex items-center gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 hover:border-accent/30 hover:shadow-[0_0_40px_rgba(0,201,255,0.2)] transition-all duration-500">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-cyan-400 flex items-center justify-center flex-shrink-0">
-                <span className="material-icons text-black text-2xl flex-shrink-0">psychology</span>
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-cyan-400 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <Brain className="w-6 h-6 text-black" />
               </div>
               <div className="text-left">
                 <p className="text-2xl font-bold text-white">

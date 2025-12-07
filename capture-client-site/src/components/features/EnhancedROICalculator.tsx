@@ -73,7 +73,7 @@ const INDUSTRY_PRESETS: IndustryPreset[] = [
   },
 ];
 
-const MONTHLY_COST = 497;
+const MONTHLY_COST = 797; // Growth tier pricing
 
 // ============================================================================
 // MAIN COMPONENT

@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
+import { Clock, ArrowRight, CheckCircle2, Phone, Rocket, Brain, Bot } from "lucide-react";
 
 interface Step {
   number: string;
@@ -18,7 +19,7 @@ const steps: Step[] = [
     number: "01",
     title: "Book Your Strategy Call",
     description: "We analyze your business, identify growth opportunities, and design a custom plan tailored to your goals.",
-    icon: "phone_in_talk",
+    icon: "phone",
     color: "accent",
     features: [
       "Free 30-minute consultation",
@@ -30,7 +31,7 @@ const steps: Step[] = [
     number: "02",
     title: "We Build & Launch",
     description: "Our team sets up your AI agents, configures campaigns, and integrates everything into one seamless platform.",
-    icon: "rocket_launch",
+    icon: "rocket",
     color: "primary",
     features: [
       "48-hour setup",
@@ -42,7 +43,7 @@ const steps: Step[] = [
     number: "03",
     title: "AI Captures Leads 24/7",
     description: "Your AI voice agents answer every call, qualify leads, and book appointments while you focus on running your business.",
-    icon: "smart_toy",
+    icon: "bot",
     color: "accent",
     features: [
       "24/7 lead capture",
@@ -54,7 +55,7 @@ const steps: Step[] = [
     number: "04",
     title: "Watch Your Business Grow",
     description: "Track performance in real-time, see exactly where your leads come from, and scale what works.",
-    icon: "monitoring",
+    icon: "brain",
     color: "primary",
     features: [
       "Live analytics dashboard",
@@ -63,6 +64,14 @@ const steps: Step[] = [
     ]
   }
 ];
+
+// Icon mapping for dynamic rendering
+const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+  phone: Phone,
+  rocket: Rocket,
+  bot: Bot,
+  brain: Brain,
+};
 
 export function HowItWorks() {
   const containerRef = useRef<HTMLElement>(null);
@@ -207,9 +216,7 @@ export function HowItWorks() {
           className="text-center mt-20 sm:mt-24 lg:mt-32"
         >
           <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-full glass-badge mb-6 sm:mb-8 max-w-full">
-            <div className="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center flex-shrink-0">
-              <span className="material-icons text-accent text-lg sm:text-xl">schedule</span>
-            </div>
+            <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" />
             <span className="text-xs sm:text-sm font-semibold text-accent whitespace-nowrap">Average setup time: 48 hours</span>
           </div>
           <p className="text-foreground-muted mb-6 sm:mb-8 text-lg sm:text-xl px-4">
@@ -222,9 +229,7 @@ export function HowItWorks() {
             className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-accent via-primary to-accent text-white font-bold text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 rounded-2xl shadow-glow-lg hover:shadow-glow border-2 border-transparent hover:border-accent/30 transition-all duration-300 w-full sm:w-auto max-w-md mx-4 sm:mx-0 min-h-[56px] desktop-btn-premium"
           >
             Book Your Strategy Call
-            <div className="w-6 h-6 flex items-center justify-center flex-shrink-0">
-              <span className="material-icons">arrow_forward</span>
-            </div>
+            <ArrowRight className="w-6 h-6 flex-shrink-0" />
           </motion.a>
         </motion.div>
       </div>
@@ -299,7 +304,7 @@ function StepCardDesktop({ step, index, isInView }: StepCardProps) {
           rotateY: isLeft ? 2 : -2,
           rotateX: -2
         }}
-        className={`${isLeft ? 'mr-16' : 'ml-16'} w-[calc(50%-5rem)] group`}
+        className={`${isLeft ? 'mr-20' : 'ml-20'} w-[calc(50%-6rem)] group`}
         style={{ transformStyle: 'preserve-3d' }}
       >
         <div className="glass-3d p-8 rounded-3xl relative overflow-hidden">
@@ -320,9 +325,10 @@ function StepCardDesktop({ step, index, isInView }: StepCardProps) {
           <div className="relative w-20 h-20 mb-6 flex-shrink-0">
             <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${auroraGradient} opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500`} />
             <div className={`relative w-20 h-20 rounded-2xl glass-premium flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform duration-500 flex-shrink-0`}>
-              <span className={`material-icons text-4xl bg-gradient-to-br ${auroraGradient} bg-clip-text text-transparent flex-shrink-0`}>
-                {step.icon}
-              </span>
+              {(() => {
+                const IconComponent = iconMap[step.icon];
+                return <IconComponent className={`w-10 h-10 bg-gradient-to-br ${auroraGradient} bg-clip-text text-transparent flex-shrink-0`} />;
+              })()}
             </div>
           </div>
 
@@ -349,9 +355,7 @@ function StepCardDesktop({ step, index, isInView }: StepCardProps) {
                 }}
                 className="flex items-center gap-3 text-base text-foreground-subtle"
               >
-                <span className={`material-icons text-lg bg-gradient-to-br ${auroraGradient} bg-clip-text text-transparent`}>
-                  check_circle
-                </span>
+                <CheckCircle2 className={`w-5 h-5 bg-gradient-to-br ${auroraGradient} bg-clip-text text-transparent`} />
                 {feature}
               </motion.li>
             ))}
@@ -419,9 +423,10 @@ function StepCardMobile({ step, index, isInView }: StepCardProps) {
         <div className="relative w-16 h-16 mb-5 flex-shrink-0">
           <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${auroraGradient} opacity-20 blur-lg`} />
           <div className={`relative w-16 h-16 rounded-xl glass-premium flex items-center justify-center border border-white/20 flex-shrink-0`}>
-            <span className={`material-icons text-3xl bg-gradient-to-br ${auroraGradient} bg-clip-text text-transparent flex-shrink-0`}>
-              {step.icon}
-            </span>
+            {(() => {
+              const IconComponent = iconMap[step.icon];
+              return <IconComponent className={`w-8 h-8 bg-gradient-to-br ${auroraGradient} bg-clip-text text-transparent flex-shrink-0`} />;
+            })()}
           </div>
         </div>
 
@@ -442,9 +447,7 @@ function StepCardMobile({ step, index, isInView }: StepCardProps) {
               key={idx}
               className="flex items-center gap-3 text-base text-foreground-subtle"
             >
-              <span className={`material-icons text-base bg-gradient-to-br ${auroraGradient} bg-clip-text text-transparent`}>
-                check_circle
-              </span>
+              <CheckCircle2 className={`w-4 h-4 bg-gradient-to-br ${auroraGradient} bg-clip-text text-transparent`} />
               <span className="leading-[1.5]">{feature}</span>
             </li>
           ))}

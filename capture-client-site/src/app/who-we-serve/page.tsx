@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { INDUSTRIES, getCategories, Industry } from '@/data/industries';
+import { INDUSTRIES, getCategories } from '@/data/industries';
 import { IndustryCard } from '@/components/industries/IndustryCard';
 import { Button } from '@/components/ui/Button';
 import { generateWebPageSchema } from '@/lib/seo-config';

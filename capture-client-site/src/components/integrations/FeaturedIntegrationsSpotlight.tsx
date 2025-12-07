@@ -4,6 +4,7 @@ import { motion } from "@/lib/motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { Star, ArrowRight, CheckCircle2 } from "lucide-react";
 
 interface Integration {
   id: string;
@@ -40,7 +41,7 @@ export function FeaturedIntegrationsSpotlight({
           transition={{ duration: 0.5 }}
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gold/20 via-gold/10 to-transparent border border-gold/30 backdrop-blur-xl mb-6"
         >
-          <span className="material-icons text-gold text-lg">star</span>
+          <Star className="w-5 h-5 text-gold" />
           <span className="text-sm font-bold uppercase tracking-widest text-gold">
             Featured Integrations
           </span>
@@ -93,7 +94,7 @@ function FeaturedCard({
           {/* Featured Badge */}
           <div className="absolute -top-2 -right-2 z-20">
             <span className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold uppercase tracking-wider text-gold bg-gold/10 rounded-full border border-gold/30 shadow-glow-gold backdrop-blur-sm">
-              <span className="material-icons text-sm">star</span>
+              <Star className="w-3.5 h-3.5" />
               <span>Featured</span>
             </span>
           </div>
@@ -132,9 +133,7 @@ function FeaturedCard({
                 <h3 className="text-xl sm:text-2xl font-display font-bold text-foreground group-hover:text-gradient-gold-cyan transition-colors duration-300">
                   {integration.name}
                 </h3>
-                <span className="material-icons text-accent opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300">
-                  arrow_forward
-                </span>
+                <ArrowRight className="w-5 h-5 text-accent opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
               </div>
 
               <p className="text-foreground-muted text-sm sm:text-base leading-relaxed mb-4 line-clamp-2">
@@ -159,9 +158,7 @@ function FeaturedCard({
                       key={idx}
                       className="flex items-start gap-2 text-xs sm:text-sm text-foreground-muted"
                     >
-                      <span className="material-icons text-accent text-sm mt-0.5 flex-shrink-0">
-                        check_circle
-                      </span>
+                      <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
                       <span className="line-clamp-1">{feature}</span>
                     </li>
                   ))}
@@ -173,9 +170,7 @@ function FeaturedCard({
             <div className="mt-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-gold/10 to-accent/10 border border-gold/20 text-gold font-semibold text-sm group-hover:border-gold/40 group-hover:shadow-glow-gold-sm transition-all duration-300">
                 <span>See How It Works</span>
-                <span className="material-icons text-base transform group-hover:translate-x-1 transition-transform duration-300">
-                  arrow_forward
-                </span>
+                <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
               </div>
             </div>
           </div>

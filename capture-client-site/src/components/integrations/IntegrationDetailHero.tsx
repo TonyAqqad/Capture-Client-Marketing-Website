@@ -5,6 +5,7 @@ import { motion } from "@/lib/motion";
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
 import type { Integration, IntegrationCategory } from "@/data/integrations";
+import { ChevronRight, Star, Clock } from "lucide-react";
 
 interface IntegrationDetailHeroProps {
   integration: Integration;
@@ -66,13 +67,13 @@ export function IntegrationDetailHero({
             >
               Integrations
             </Link>
-            <span className="material-icons text-xs">chevron_right</span>
+            <ChevronRight className="w-3 h-3" />
             {category && (
               <>
                 <span className="hover:text-accent transition-colors">
                   {category.name}
                 </span>
-                <span className="material-icons text-xs">chevron_right</span>
+                <ChevronRight className="w-3 h-3" />
               </>
             )}
             <span className="text-foreground">{integration.name}</span>
@@ -109,7 +110,7 @@ export function IntegrationDetailHero({
             className="flex flex-col sm:flex-row gap-4 justify-center mb-8"
           >
             <Link href="/contact">
-              <Button variant="primary" icon="integration_instructions" size="lg">
+              <Button variant="primary" size="lg">
                 Set Up Integration
               </Button>
             </Link>
@@ -118,7 +119,7 @@ export function IntegrationDetailHero({
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button variant="glass" icon="open_in_new" size="lg">
+              <Button variant="glass" size="lg">
                 Visit {integration.name}
               </Button>
             </a>
@@ -133,7 +134,7 @@ export function IntegrationDetailHero({
           >
             {integration.popular && (
               <div className="px-4 py-2 bg-gold/10 border border-gold/20 rounded-full text-sm font-semibold text-gold flex items-center gap-2">
-                <span className="material-icons text-sm">star</span>
+                <Star className="w-4 h-4" />
                 Popular
               </div>
             )}
@@ -145,7 +146,7 @@ export function IntegrationDetailHero({
             )}
             {integration.setupTime && (
               <div className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm font-semibold text-foreground-muted flex items-center gap-2">
-                <span className="material-icons text-sm">schedule</span>
+                <Clock className="w-4 h-4" />
                 {integration.setupTime} setup
               </div>
             )}

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { RealEstateHero } from "@/components/industries/real-estate/RealEstateHero";
 import { SpeedToLeadTimeline } from "@/components/industries/real-estate/SpeedToLeadTimeline";
 import { LeadQualificationFeatures } from "@/components/industries/real-estate/LeadQualificationFeatures";
@@ -35,19 +34,113 @@ export const metadata: Metadata = {
     url: "https://captureclientai.net/industries/real-estate",
     siteName: "Capture Client",
     type: "website",
+    images: [{
+      url: "https://captureclientai.net/og-real-estate.jpg",
+      width: 1200,
+      height: 630,
+      alt: "AI Voice Agents for Real Estate - Speed to Lead - Capture Client",
+    }],
   },
   twitter: {
     card: "summary_large_image",
     title: "AI Voice Agents for Real Estate | Speed to Lead",
     description: "78% of buyers choose the first agent who responds. AI voice agents that respond in under 1 minute.",
+    images: ["https://captureclientai.net/og-real-estate.jpg"],
   },
+  alternates: {
+    canonical: "https://captureclientai.net/industries/real-estate",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+// JSON-LD Schema Markup
+const serviceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://captureclientai.net/industries/real-estate#service",
+  name: "AI Voice Agents for Real Estate",
+  description: "Speed to lead AI that answers every inquiry instantly. Qualify buyers and sellers, schedule showings, and capture leads 24/7 for real estate agents and property managers.",
+  provider: {
+    "@type": "Organization",
+    name: "Capture Client",
+    url: "https://captureclientai.net",
+  },
+  serviceType: "AI Voice Agent Service",
+  areaServed: {
+    "@type": "Country",
+    name: "United States",
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Why is speed to lead important in real estate?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Studies show that responding to leads within 5 minutes increases conversion by 400%. AI voice agents answer instantly, ensuring you never lose a lead to a faster competitor.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Can the AI schedule property showings?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes, our AI integrates with your calendar to schedule showings, open house registrations, and buyer/seller consultations automatically.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Does it work for property management companies?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Absolutely. AI handles tenant inquiries, maintenance requests, leasing calls, and appointment scheduling for property management companies of all sizes.",
+      },
+    },
+  ],
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://captureclientai.net" },
+    { "@type": "ListItem", position: 2, name: "Industries", item: "https://captureclientai.net/industries" },
+    { "@type": "ListItem", position: 3, name: "Real Estate", item: "https://captureclientai.net/industries/real-estate" },
+  ],
 };
 
 export default function RealEstatePage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-background-darker via-background-dark to-background">
-      {/* Hero Section */}
-      <RealEstateHero />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <main className="min-h-screen bg-gradient-to-b from-background-darker via-background-dark to-background">
+        {/* Hero Section */}
+        <RealEstateHero />
 
       {/* Speed to Lead Stats Section */}
       <SpeedToLeadTimeline />
@@ -83,6 +176,7 @@ export default function RealEstatePage() {
 
       {/* Final CTA */}
       <RealEstateFinalCTA />
-    </main>
+      </main>
+    </>
   );
 }

@@ -4,6 +4,13 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/Button";
+import {
+  Calendar, TrendingUp, ShieldCheck,
+  CheckCircle2, Car, Wrench, Package,
+  ShoppingBag, ArrowLeftRight, Moon, DollarSign, RefreshCcw,
+  Calculator, User, AlertTriangle, Search, BarChart,
+  ArrowDownUp, Headphones, Bot
+} from "lucide-react";
 
 type ToggleMode = "sales" | "service";
 
@@ -26,28 +33,6 @@ export default function AutomotivePageClient() {
 
   return (
     <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-background-dark">
-      {/* JSON-LD Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            name: "AI BDC for Car Dealerships",
-            provider: {
-              "@type": "Organization",
-              name: "Capture Client"
-            },
-            description: "AI-powered BDC agents for automotive dealerships with DMS integration",
-            areaServed: "US",
-            audience: {
-              "@type": "Audience",
-              audienceType: "Car Dealerships"
-            }
-          })
-        }}
-      />
-
       {/* ==================== HERO SECTION ==================== */}
       <section className="relative overflow-hidden pt-32 pb-16 sm:pt-40 sm:pb-24 lg:pt-48 lg:pb-32">
         {/* Premium Background */}
@@ -61,60 +46,98 @@ export default function AutomotivePageClient() {
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="max-w-5xl mx-auto text-center"
-          >
+          <div className="max-w-5xl mx-auto text-center">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gold/20 via-gold/10 to-transparent border border-gold/20 backdrop-blur-xl mb-6">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gold/20 via-gold/10 to-transparent border border-gold/20 backdrop-blur-xl mb-6"
+            >
               <div className="w-2 h-2 bg-gold rounded-full animate-pulse shadow-glow-gold" />
               <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-gold font-accent">
                 Automotive AI Solutions
               </span>
-            </div>
+            </motion.div>
 
             {/* Headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground mb-6 leading-tight">
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground mb-6 leading-tight"
+            >
               Your Sales Floor is Busy.{" "}
               <span className="text-gradient bg-gradient-to-r from-gold via-accent to-gold bg-clip-text text-transparent">
                 AI Answers.
               </span>
-            </h1>
+            </motion.h1>
 
             {/* Subheadline */}
-            <p className="text-xl sm:text-2xl text-foreground-muted mb-8 max-w-3xl mx-auto font-body leading-relaxed">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-xl sm:text-2xl text-foreground-muted mb-8 max-w-3xl mx-auto font-body leading-relaxed"
+            >
               AI BDC Agents for Car Dealerships - Sales & Service
-            </p>
+            </motion.p>
 
             {/* Stats Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 max-w-3xl mx-auto">
-              <GlassCard variant="premium" hover={false} className="p-4 sm:p-6">
-                <div className="text-3xl sm:text-4xl font-display font-bold text-gold mb-1">$49K</div>
-                <div className="text-sm text-foreground-muted">Lost Per Year to Missed Calls</div>
-              </GlassCard>
-              <GlassCard variant="premium" hover={false} className="p-4 sm:p-6">
-                <div className="text-3xl sm:text-4xl font-display font-bold text-accent mb-1">80%</div>
-                <div className="text-sm text-foreground-muted">Planning AI Investment</div>
-              </GlassCard>
-              <GlassCard variant="premium" hover={false} className="p-4 sm:p-6">
-                <div className="text-3xl sm:text-4xl font-display font-bold text-gold mb-1">&lt;3 Mo</div>
-                <div className="text-sm text-foreground-muted">40% See ROI</div>
-              </GlassCard>
-            </div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8 max-w-3xl mx-auto"
+            >
+              <motion.div
+                whileHover={{ y: -4, scale: 1.02 }}
+                transition={{ duration: 0.2 }}
+              >
+                <GlassCard variant="premium" hover={false} className="p-4 sm:p-6 h-full">
+                  <div className="text-3xl sm:text-4xl font-display font-bold text-gold mb-1">$49K</div>
+                  <div className="text-sm text-foreground-muted">Lost Per Year to Missed Calls</div>
+                </GlassCard>
+              </motion.div>
+              <motion.div
+                whileHover={{ y: -4, scale: 1.02 }}
+                transition={{ duration: 0.2 }}
+              >
+                <GlassCard variant="premium" hover={false} className="p-4 sm:p-6 h-full">
+                  <div className="text-3xl sm:text-4xl font-display font-bold text-accent mb-1">80%</div>
+                  <div className="text-sm text-foreground-muted">Planning AI Investment</div>
+                </GlassCard>
+              </motion.div>
+              <motion.div
+                whileHover={{ y: -4, scale: 1.02 }}
+                transition={{ duration: 0.2 }}
+              >
+                <GlassCard variant="premium" hover={false} className="p-4 sm:p-6 h-full">
+                  <div className="text-3xl sm:text-4xl font-display font-bold text-gold mb-1">&lt;3 Mo</div>
+                  <div className="text-sm text-foreground-muted">40% See ROI</div>
+                </GlassCard>
+              </motion.div>
+            </motion.div>
 
             {/* CTA */}
-            <Button
-              variant="primary"
-              size="lg"
-              href="tel:865-346-3339"
-              icon="phone"
-              className="text-lg sm:text-xl"
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
             >
-              Get Dealership Demo
-            </Button>
-          </motion.div>
+              <Button
+                variant="primary"
+                size="lg"
+                href="tel:865-346-3339"
+                icon="phone"
+                className="text-lg sm:text-xl shadow-glow-gold-lg hover:shadow-glow-gold-xl transition-shadow"
+              >
+                Get Dealership Demo
+              </Button>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -148,36 +171,46 @@ export default function AutomotivePageClient() {
           </motion.div>
 
           {/* Toggle Switch */}
-          <div className="flex justify-center mb-12">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="flex justify-center mb-12"
+          >
             <div className="glass-premium p-2 rounded-2xl inline-flex gap-2">
-              <button
+              <motion.button
                 onClick={() => setMode("sales")}
+                whileHover={{ scale: mode === "sales" ? 1 : 1.03 }}
+                whileTap={{ scale: 0.98 }}
                 className={`px-8 py-3 rounded-xl font-semibold transition-all duration-300 ${
                   mode === "sales"
-                    ? "bg-gradient-to-r from-gold to-gold/80 text-background shadow-glow-gold"
-                    : "text-foreground-muted hover:text-foreground"
+                    ? "bg-gradient-to-r from-gold to-gold/80 text-background shadow-glow-gold-lg"
+                    : "text-foreground-muted hover:text-foreground hover:bg-white/5"
                 }`}
               >
                 <span className="flex items-center gap-2">
-                  <span className="material-icons">local_mall</span>
+                  <ShoppingBag className="w-5 h-5" />
                   Sales
                 </span>
-              </button>
-              <button
+              </motion.button>
+              <motion.button
                 onClick={() => setMode("service")}
+                whileHover={{ scale: mode === "service" ? 1 : 1.03 }}
+                whileTap={{ scale: 0.98 }}
                 className={`px-8 py-3 rounded-xl font-semibold transition-all duration-300 ${
                   mode === "service"
-                    ? "bg-gradient-to-r from-accent to-accent/80 text-background shadow-glow"
-                    : "text-foreground-muted hover:text-foreground"
+                    ? "bg-gradient-to-r from-accent to-accent/80 text-background shadow-glow-lg"
+                    : "text-foreground-muted hover:text-foreground hover:bg-white/5"
                 }`}
               >
                 <span className="flex items-center gap-2">
-                  <span className="material-icons">build</span>
+                  <Wrench className="w-5 h-5" />
                   Service
                 </span>
-              </button>
+              </motion.button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Features Display */}
           <AnimatePresence mode="wait">
@@ -192,55 +225,63 @@ export default function AutomotivePageClient() {
               >
                 {[
                   {
-                    icon: "verified_user",
+                    icon: ShieldCheck,
                     title: "Lead Qualification",
                     desc: "AI pre-qualifies buyers based on budget, timeline, and trade-in value"
                   },
                   {
-                    icon: "drive_eta",
+                    icon: Car,
                     title: "Test Drive Scheduling",
                     desc: "Books test drives directly into your calendar with customer preferences"
                   },
                   {
-                    icon: "swap_horiz",
+                    icon: ArrowLeftRight,
                     title: "Trade-In Inquiries",
                     desc: "Captures VIN, mileage, condition for instant trade-in quotes"
                   },
                   {
-                    icon: "inventory_2",
+                    icon: Package,
                     title: "Inventory Questions",
                     desc: "Checks live inventory: 'Do you have a red Camry?' - Instant answer"
                   },
                   {
-                    icon: "nightlight",
+                    icon: Moon,
                     title: "After-Hours Sales",
                     desc: "35-40% of AI-captured deals come from after-hours calls"
                   },
                   {
-                    icon: "trending_up",
+                    icon: TrendingUp,
                     title: "CRM Integration",
                     desc: "Every lead logged automatically in your DMS with full context"
                   }
-                ].map((feature, idx) => (
-                  <motion.div
-                    key={feature.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: idx * 0.1 }}
-                  >
-                    <GlassCard variant="premium" className="p-6 h-full">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold/20 to-gold/10 border border-gold/20 flex items-center justify-center mb-4">
-                        <span className="material-icons text-gold text-2xl">{feature.icon}</span>
-                      </div>
-                      <h3 className="text-xl font-display font-bold text-foreground mb-2">
-                        {feature.title}
-                      </h3>
-                      <p className="text-foreground-muted leading-relaxed">
-                        {feature.desc}
-                      </p>
-                    </GlassCard>
-                  </motion.div>
-                ))}
+                ].map((feature, idx) => {
+                  const IconComponent = feature.icon;
+                  return (
+                    <motion.div
+                      key={feature.title}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: idx * 0.1 }}
+                      whileHover={{ y: -8, scale: 1.02 }}
+                    >
+                      <GlassCard variant="premium" className="p-6 h-full transition-all duration-300 hover:shadow-glow-gold">
+                        <motion.div
+                          className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold/20 to-gold/10 border border-gold/20 flex items-center justify-center mb-4"
+                          whileHover={{ rotate: 5, scale: 1.1 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <IconComponent className="w-6 h-6 text-gold" />
+                        </motion.div>
+                        <h3 className="text-xl font-display font-bold text-foreground mb-2">
+                          {feature.title}
+                        </h3>
+                        <p className="text-foreground-muted leading-relaxed">
+                          {feature.desc}
+                        </p>
+                      </GlassCard>
+                    </motion.div>
+                  );
+                })}
               </motion.div>
             ) : (
               <motion.div
@@ -253,55 +294,63 @@ export default function AutomotivePageClient() {
               >
                 {[
                   {
-                    icon: "event",
+                    icon: Calendar,
                     title: "Service Appointment Booking",
                     desc: "Books oil changes, repairs, recalls - directly into your service scheduler"
                   },
                   {
-                    icon: "warning",
+                    icon: AlertTriangle,
                     title: "Recall Notifications",
                     desc: "Proactive outreach for open recalls with instant appointment booking"
                   },
                   {
-                    icon: "support_agent",
+                    icon: Headphones,
                     title: "Service Advisor Routing",
                     desc: "Complex issues routed to the right advisor with full context"
                   },
                   {
-                    icon: "directions_car",
+                    icon: Car,
                     title: "Loaner Car Scheduling",
                     desc: "Coordinates loaner vehicle availability with service appointments"
                   },
                   {
-                    icon: "money_off",
+                    icon: DollarSign,
                     title: "No-Show Prevention",
                     desc: "Automated reminders reduce no-shows by up to 60%"
                   },
                   {
-                    icon: "sync",
+                    icon: RefreshCcw,
                     title: "DMS Sync",
                     desc: "All service appointments sync to CDK, Reynolds, DealerSocket, or Tekion"
                   }
-                ].map((feature, idx) => (
-                  <motion.div
-                    key={feature.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: idx * 0.1 }}
-                  >
-                    <GlassCard variant="premium" className="p-6 h-full">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 border border-accent/20 flex items-center justify-center mb-4">
-                        <span className="material-icons text-accent text-2xl">{feature.icon}</span>
-                      </div>
-                      <h3 className="text-xl font-display font-bold text-foreground mb-2">
-                        {feature.title}
-                      </h3>
-                      <p className="text-foreground-muted leading-relaxed">
-                        {feature.desc}
-                      </p>
-                    </GlassCard>
-                  </motion.div>
-                ))}
+                ].map((feature, idx) => {
+                  const IconComponent = feature.icon;
+                  return (
+                    <motion.div
+                      key={feature.title}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: idx * 0.1 }}
+                      whileHover={{ y: -8, scale: 1.02 }}
+                    >
+                      <GlassCard variant="premium" className="p-6 h-full transition-all duration-300 hover:shadow-glow">
+                        <motion.div
+                          className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 border border-accent/20 flex items-center justify-center mb-4"
+                          whileHover={{ rotate: 5, scale: 1.1 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <IconComponent className="w-6 h-6 text-accent" />
+                        </motion.div>
+                        <h3 className="text-xl font-display font-bold text-foreground mb-2">
+                          {feature.title}
+                        </h3>
+                        <p className="text-foreground-muted leading-relaxed">
+                          {feature.desc}
+                        </p>
+                      </GlassCard>
+                    </motion.div>
+                  );
+                })}
               </motion.div>
             )}
           </AnimatePresence>
@@ -330,23 +379,47 @@ export default function AutomotivePageClient() {
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            <GlassCard variant="premium" className="p-8 text-center">
-              <div className="text-5xl font-display font-bold text-red-400 mb-3">$49K</div>
-              <div className="text-xl font-semibold text-foreground mb-2">Per Year</div>
-              <div className="text-foreground-muted">Lost revenue from missed sales calls per dealership</div>
-            </GlassCard>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0 }}
+              whileHover={{ y: -6, scale: 1.02 }}
+            >
+              <GlassCard variant="premium" className="p-8 text-center h-full transition-all duration-300 hover:border-red-400/30">
+                <div className="text-5xl font-display font-bold text-red-400 mb-3">$49K</div>
+                <div className="text-xl font-semibold text-foreground mb-2">Per Year</div>
+                <div className="text-foreground-muted">Lost revenue from missed sales calls per dealership</div>
+              </GlassCard>
+            </motion.div>
 
-            <GlassCard variant="premium" className="p-8 text-center">
-              <div className="text-5xl font-display font-bold text-red-400 mb-3">$176K-$332K</div>
-              <div className="text-xl font-semibold text-foreground mb-2">Per Year</div>
-              <div className="text-foreground-muted">Lost revenue from service appointment no-shows</div>
-            </GlassCard>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              whileHover={{ y: -6, scale: 1.02 }}
+            >
+              <GlassCard variant="premium" className="p-8 text-center h-full transition-all duration-300 hover:border-red-400/30">
+                <div className="text-5xl font-display font-bold text-red-400 mb-3">$176K-$332K</div>
+                <div className="text-xl font-semibold text-foreground mb-2">Per Year</div>
+                <div className="text-foreground-muted">Lost revenue from service appointment no-shows</div>
+              </GlassCard>
+            </motion.div>
 
-            <GlassCard variant="premium" className="p-8 text-center">
-              <div className="text-5xl font-display font-bold text-red-400 mb-3">33%</div>
-              <div className="text-xl font-semibold text-foreground mb-2">Unanswered</div>
-              <div className="text-foreground-muted">Of all dealership calls go to voicemail</div>
-            </GlassCard>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              whileHover={{ y: -6, scale: 1.02 }}
+            >
+              <GlassCard variant="premium" className="p-8 text-center h-full transition-all duration-300 hover:border-red-400/30">
+                <div className="text-5xl font-display font-bold text-red-400 mb-3">33%</div>
+                <div className="text-xl font-semibold text-foreground mb-2">Unanswered</div>
+                <div className="text-foreground-muted">Of all dealership calls go to voicemail</div>
+              </GlassCard>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -420,7 +493,7 @@ export default function AutomotivePageClient() {
               viewport={{ once: true }}
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gold/20 via-gold/10 to-transparent border border-gold/20 backdrop-blur-xl mb-6">
-                <span className="material-icons text-gold text-sm">nightlight</span>
+                <Moon className="w-4 h-4 text-gold" />
                 <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-gold font-accent">
                   24/7 Revenue
                 </span>
@@ -440,7 +513,7 @@ export default function AutomotivePageClient() {
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-lg bg-gold/10 border border-gold/20 flex items-center justify-center flex-shrink-0">
-                    <span className="material-icons text-gold">check_circle</span>
+                    <CheckCircle2 className="w-5 h-5 text-gold" />
                   </div>
                   <div>
                     <div className="font-semibold text-foreground mb-1">Weekend Warriors</div>
@@ -449,7 +522,7 @@ export default function AutomotivePageClient() {
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-lg bg-gold/10 border border-gold/20 flex items-center justify-center flex-shrink-0">
-                    <span className="material-icons text-gold">check_circle</span>
+                    <CheckCircle2 className="w-5 h-5 text-gold" />
                   </div>
                   <div>
                     <div className="font-semibold text-foreground mb-1">Early Birds</div>
@@ -458,7 +531,7 @@ export default function AutomotivePageClient() {
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-lg bg-gold/10 border border-gold/20 flex items-center justify-center flex-shrink-0">
-                    <span className="material-icons text-gold">check_circle</span>
+                    <CheckCircle2 className="w-5 h-5 text-gold" />
                   </div>
                   <div>
                     <div className="font-semibold text-foreground mb-1">Lunch Break Shoppers</div>
@@ -514,7 +587,7 @@ export default function AutomotivePageClient() {
             className="text-center mb-12"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gold/20 via-gold/10 to-transparent border border-gold/20 backdrop-blur-xl mb-4">
-              <span className="material-icons text-gold text-sm">calculate</span>
+              <Calculator className="w-4 h-4 text-gold" />
               <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-gold font-accent">
                 ROI Calculator
               </span>
@@ -644,7 +717,7 @@ export default function AutomotivePageClient() {
               viewport={{ once: true }}
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 via-accent/10 to-transparent border border-accent/20 backdrop-blur-xl mb-6">
-                <span className="material-icons text-accent text-sm">inventory</span>
+                <Package className="w-4 h-4 text-accent" />
                 <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent font-accent">
                   Live Inventory
                 </span>
@@ -664,7 +737,7 @@ export default function AutomotivePageClient() {
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center flex-shrink-0">
-                    <span className="material-icons text-accent">search</span>
+                    <Search className="w-5 h-5 text-accent" />
                   </div>
                   <div>
                     <div className="font-semibold text-foreground mb-1">Real-Time Inventory Check</div>
@@ -673,7 +746,7 @@ export default function AutomotivePageClient() {
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center flex-shrink-0">
-                    <span className="material-icons text-accent">bar_chart</span>
+                    <BarChart className="w-5 h-5 text-accent" />
                   </div>
                   <div>
                     <div className="font-semibold text-foreground mb-1">VIN Lookup</div>
@@ -682,7 +755,7 @@ export default function AutomotivePageClient() {
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center flex-shrink-0">
-                    <span className="material-icons text-accent">compare_arrows</span>
+                    <ArrowDownUp className="w-5 h-5 text-accent" />
                   </div>
                   <div>
                     <div className="font-semibold text-foreground mb-1">Alternative Suggestions</div>
@@ -701,7 +774,7 @@ export default function AutomotivePageClient() {
                 <div className="space-y-4">
                   <div className="p-4 rounded-xl bg-white/5 border-l-4 border-gold">
                     <div className="flex items-start gap-3">
-                      <span className="material-icons text-gold mt-1">person</span>
+                      <User className="w-5 h-5 text-gold mt-1" />
                       <div>
                         <div className="font-semibold text-foreground mb-1">Customer</div>
                         <div className="text-foreground-muted">"Do you have a 2024 Toyota Camry in red?"</div>
@@ -713,7 +786,7 @@ export default function AutomotivePageClient() {
                   </div>
                   <div className="p-4 rounded-xl bg-gradient-to-br from-accent/10 to-accent/5 border-l-4 border-accent">
                     <div className="flex items-start gap-3">
-                      <span className="material-icons text-accent mt-1">smart_toy</span>
+                      <Bot className="w-5 h-5 text-accent mt-1" />
                       <div>
                         <div className="font-semibold text-foreground mb-1">AI Agent</div>
                         <div className="text-foreground-muted">"Yes! We have 2 in stock: a 2024 Camry XLE in Supersonic Red with navigation, and a 2024 Camry SE in Ruby Flare Pearl. Both available for test drive today. Would you like to schedule?"</div>
@@ -775,18 +848,23 @@ export default function AutomotivePageClient() {
             ].map((testimonial, idx) => (
               <motion.div
                 key={testimonial.name}
-                initial={{ opacity: 0, y: 20 }}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
+                transition={{ delay: idx * 0.15, duration: 0.5 }}
+                whileHover={{ y: -8, scale: 1.02 }}
               >
-                <GlassCard variant="premium" className="p-6 h-full">
+                <GlassCard variant="premium" className="p-6 h-full transition-all duration-300 hover:shadow-glow-gold">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-gold/20 to-accent/20 flex items-center justify-center">
+                    <motion.div
+                      className="w-12 h-12 rounded-full bg-gradient-to-br from-gold/20 to-accent/20 flex items-center justify-center"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ duration: 0.3 }}
+                    >
                       <span className="text-xl font-bold text-gold">
                         {testimonial.name.split(" ").map(n => n[0]).join("")}
                       </span>
-                    </div>
+                    </motion.div>
                     <div>
                       <div className="font-semibold text-foreground">{testimonial.name}</div>
                       <div className="text-sm text-foreground-muted">{testimonial.role}</div>
@@ -794,9 +872,13 @@ export default function AutomotivePageClient() {
                   </div>
                   <div className="text-xs text-gold font-semibold mb-3">{testimonial.dealership}</div>
                   <p className="text-foreground-muted mb-4 leading-relaxed italic">"{testimonial.quote}"</p>
-                  <div className="inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-gold/20 to-accent/20 border border-gold/20">
+                  <motion.div
+                    className="inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-gold/20 to-accent/20 border border-gold/20"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.2 }}
+                  >
                     <div className="text-2xl font-display font-bold text-gold">{testimonial.revenue}</div>
-                  </div>
+                  </motion.div>
                 </GlassCard>
               </motion.div>
             ))}
@@ -829,41 +911,81 @@ export default function AutomotivePageClient() {
               Join 100+ dealerships using AI to capture every opportunity, 24/7.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-              <Button
-                variant="primary"
-                size="lg"
-                href="tel:865-346-3339"
-                icon="phone"
-                className="text-lg sm:text-xl w-full sm:w-auto"
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
+            >
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
               >
-                Call Now: 865-346-3339
-              </Button>
-              <Button
-                variant="glass"
-                size="lg"
-                href="/contact"
-                icon="arrow_forward"
-                className="text-lg sm:text-xl w-full sm:w-auto"
+                <Button
+                  variant="primary"
+                  size="lg"
+                  href="tel:865-346-3339"
+                  icon="phone"
+                  className="text-lg sm:text-xl w-full sm:w-auto shadow-glow-gold-lg hover:shadow-glow-gold-xl transition-shadow"
+                >
+                  Call Now: 865-346-3339
+                </Button>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
               >
-                Schedule Demo
-              </Button>
-            </div>
+                <Button
+                  variant="glass"
+                  size="lg"
+                  href="/contact"
+                  icon="arrow_forward"
+                  className="text-lg sm:text-xl w-full sm:w-auto hover:shadow-glow transition-shadow"
+                >
+                  Schedule Demo
+                </Button>
+              </motion.div>
+            </motion.div>
 
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-foreground-muted">
-              <div className="flex items-center gap-2">
-                <span className="material-icons text-gold text-sm">check_circle</span>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.4 }}
+              className="flex flex-wrap justify-center gap-6 text-sm text-foreground-muted"
+            >
+              <motion.div
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5 }}
+                className="flex items-center gap-2"
+              >
+                <CheckCircle2 className="w-4 h-4 text-gold" />
                 <span>No long-term contracts</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="material-icons text-accent text-sm">check_circle</span>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.6 }}
+                className="flex items-center gap-2"
+              >
+                <CheckCircle2 className="w-4 h-4 text-accent" />
                 <span>48-hour setup</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="material-icons text-primary text-sm">check_circle</span>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -10 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.7 }}
+                className="flex items-center gap-2"
+              >
+                <CheckCircle2 className="w-4 h-4 text-primary" />
                 <span>30-day money-back guarantee</span>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </motion.div>
         </div>
       </section>

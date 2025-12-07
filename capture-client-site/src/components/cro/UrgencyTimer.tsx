@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "@/lib/motion";
+import { Flame, ArrowRight } from "lucide-react";
 
 interface UrgencyTimerProps {
   offer?: string;
@@ -51,13 +52,9 @@ export default function UrgencyTimer({
       <div className={`bg-gradient-to-r from-orange-500/20 to-red-500/20 border-2 border-orange-500/40 rounded-2xl p-6 shadow-glow ${className}`}>
         {/* Header */}
         <div className="flex items-center justify-center gap-2 mb-4">
-          <span className="material-icons text-orange-400 text-2xl">
-            local_fire_department
-          </span>
+          <Flame className="text-orange-400 w-6 h-6" />
           <h3 className="text-base sm:text-lg font-bold text-foreground">Limited Time Offer</h3>
-          <span className="material-icons text-orange-400 text-2xl">
-            local_fire_department
-          </span>
+          <Flame className="text-orange-400 w-6 h-6" />
         </div>
 
         {/* Offer text */}
@@ -81,7 +78,7 @@ export default function UrgencyTimer({
             className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold px-8 py-4 rounded-xl hover:shadow-glow-lg transition-all duration-300 hover:scale-105 text-base min-h-[56px]"
           >
             <span>Claim Your Bonus Now</span>
-            <span className="material-icons text-lg">arrow_forward</span>
+            <ArrowRight className="w-5 h-5" />
           </a>
         </div>
 
@@ -102,13 +99,9 @@ export default function UrgencyTimer({
     >
       {/* Header - using CSS animation instead of Framer Motion for performance */}
       <div className="flex items-center justify-center gap-2 mb-4">
-        <span className="material-icons text-orange-400 text-2xl animate-pulse">
-          local_fire_department
-        </span>
+        <Flame className="text-orange-400 w-6 h-6 animate-pulse" />
         <h3 className="text-base sm:text-lg font-bold text-foreground">Limited Time Offer</h3>
-        <span className="material-icons text-orange-400 text-2xl animate-pulse">
-          local_fire_department
-        </span>
+        <Flame className="text-orange-400 w-6 h-6 animate-pulse" />
       </div>
 
       {/* Offer text */}
@@ -160,7 +153,7 @@ export default function UrgencyTimer({
           className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold px-8 py-4 rounded-xl hover:shadow-glow-lg transition-all duration-300 hover:scale-105 text-base min-h-[56px]"
         >
           <span>Claim Your Bonus Now</span>
-          <span className="material-icons text-lg">arrow_forward</span>
+          <ArrowRight className="w-5 h-5" />
         </a>
       </div>
 

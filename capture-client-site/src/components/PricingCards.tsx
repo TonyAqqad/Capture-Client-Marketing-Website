@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from '@/lib/motion';
 import { useInView } from '@/hooks/useInView';
+import { Check, ArrowRight } from 'lucide-react';
 
 interface PricingPlan {
   name: string;
@@ -376,13 +377,11 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
                       : 'bg-white/10'
                   }`}
                 >
-                  <span
-                    className={`material-icons text-base flex-shrink-0 ${
+                  <Check
+                    className={`w-4 h-4 flex-shrink-0 ${
                       plan.isPopular ? 'text-background-dark' : 'text-accent'
                     }`}
-                  >
-                    check
-                  </span>
+                  />
                 </motion.div>
                 <span
                   className={`text-base leading-relaxed ${
@@ -438,7 +437,6 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
               >
                 {plan.ctaText}
                 <motion.span
-                  className="material-icons text-xl"
                   animate={{
                     x: isHovered ? [0, 5, 0] : 0,
                   }}
@@ -447,7 +445,7 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
                     repeat: isHovered ? Infinity : 0,
                   }}
                 >
-                  arrow_forward
+                  <ArrowRight className="w-5 h-5" />
                 </motion.span>
               </motion.span>
             </Link>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Clock } from "lucide-react";
 
 interface CapacityIndicatorProps {
   spotsLeft?: number;
@@ -46,7 +47,7 @@ export default function CapacityIndicator({
 
           {/* Text - more professional tone */}
           <div className="flex flex-wrap items-center justify-center gap-2.5 text-center">
-            <span className="material-icons text-amber-400/80 text-lg">schedule</span>
+            <Clock className="w-5 h-5 text-amber-400/80" />
             <p className="text-sm md:text-base font-semibold text-foreground/90">
               <span className="text-amber-400">{spotsLeft} onboarding spots</span> available this month
             </p>

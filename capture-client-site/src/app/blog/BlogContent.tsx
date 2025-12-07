@@ -2,13 +2,15 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { Star, Calendar, Clock, ArrowRight, FileText, Mail } from "lucide-react";
+import { motion } from "@/lib/motion";
 
 // Category styling based on category name
 const getCategoryStyle = (category: string) => {
   const styles: { [key: string]: { gradient: string; categoryColor: string } } = {
     "Voice AI": {
-      gradient: "from-[#D4AF37]/20 to-blue-500/20",
-      categoryColor: "bg-[#D4AF37]/10 text-[#D4AF37] border-[#D4AF37]/20",
+      gradient: "from-gold/20 to-blue-500/20",
+      categoryColor: "bg-gold/10 text-gold border-gold/20",
     },
     "Google Ads": {
       gradient: "from-emerald-500/20 to-teal-500/20",
@@ -19,12 +21,12 @@ const getCategoryStyle = (category: string) => {
       categoryColor: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
     },
     "Business Growth": {
-      gradient: "from-orange-500/20 to-[#00C9FF]/20",
+      gradient: "from-orange-500/20 to-cyan-500/20",
       categoryColor: "bg-orange-500/10 text-orange-400 border-orange-500/20",
     },
     "Automation": {
-      gradient: "from-[#4A69E2]/20 to-[#D4AF37]/20",
-      categoryColor: "bg-[#4A69E2]/10 text-[#D4AF37] border-indigo-500/20",
+      gradient: "from-blue-500/20 to-gold/20",
+      categoryColor: "bg-blue-500/10 text-gold border-indigo-500/20",
     },
   };
   return styles[category] || styles["Lead Generation"];
@@ -68,283 +70,440 @@ export default function BlogContent({ posts }: BlogContentProps) {
   const regularPosts = filteredPosts.slice(1);
 
   return (
-    <div className="min-h-screen bg-[#0F172A] relative overflow-hidden">
+    <div className="min-h-screen bg-slate-900 relative overflow-hidden">
       {/* Ambient Background Gradients */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#4A69E2]/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-[#00C9FF]/20 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-[#D4AF37]/20 rounded-full blur-3xl animate-pulse delay-2000" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-gold/20 rounded-full blur-3xl animate-pulse delay-2000" />
       </div>
 
       {/* Hero Section with Glass Card */}
-      <section className="relative pt-32 pb-20 px-6 lg:px-16">
+      <section className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-16">
         <div className="container mx-auto max-w-7xl">
           {/* Glass Hero Card */}
-          <div className="relative backdrop-blur-md bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-3xl p-12 lg:p-16 shadow-2xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative glass-premium rounded-3xl p-12 lg:p-16 shadow-2xl"
+          >
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#4A69E2]/10 to-[#00C9FF]/10 rounded-3xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-3xl" />
 
             <div className="relative z-10 text-center">
               {/* Animated Headline */}
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight">
-                <span className="inline-block animate-fade-in-up">Insights &</span>{" "}
-                <span className="inline-block animate-fade-in-up delay-100 bg-gradient-to-r from-[#4A69E2] to-[#00C9FF] bg-clip-text text-transparent">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight"
+              >
+                <span className="inline-block">Insights &</span>{" "}
+                <span className="inline-block bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
                   Strategies
                 </span>
-              </h1>
+              </motion.h1>
 
-              <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10 animate-fade-in-up delay-200">
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10"
+              >
                 Marketing tips, AI insights, and growth strategies to help your small business
                 thrive.
-              </p>
+              </motion.p>
 
               {/* Category Filter Pills */}
-              <div className="flex flex-wrap justify-center gap-3 animate-fade-in-up delay-300">
-                {categories.map((category) => (
-                  <button
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="flex flex-wrap justify-center gap-3"
+              >
+                {categories.map((category, index) => (
+                  <motion.button
                     key={category}
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: 0.5 + index * 0.05 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
                     onClick={() => setSelectedCategory(category)}
                     className={`
                       px-6 py-3 rounded-full font-semibold text-sm
                       backdrop-blur-md border transition-all duration-300
                       ${
                         selectedCategory === category
-                          ? "bg-white/20 border-white/30 text-white shadow-lg shadow-white/20"
+                          ? "bg-white/20 border-white/30 text-white shadow-lg shadow-white/20 scale-105"
                           : "bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20"
                       }
                     `}
                   >
                     {category}
-                  </button>
+                  </motion.button>
                 ))}
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Blog Posts Section */}
-      <section className="relative pb-20 px-6 lg:px-16">
+      <section className="relative pb-20 px-4 sm:px-6 lg:px-16">
         <div className="container mx-auto max-w-7xl">
           {/* Featured Post (Large Glass Card) */}
           {featuredPost && (
-            <Link
-              href={`/blog/${featuredPost.slug}`}
-              className="block mb-12 group animate-fade-in-up delay-400"
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="mb-12"
             >
-              <div
-                className="relative backdrop-blur-md bg-gradient-to-br from-white/10 to-white/5
-                         border border-white/10 rounded-3xl overflow-hidden
-                         hover:bg-white/15 hover:border-[#00C9FF]/30
-                         transition-all duration-500 hover:shadow-2xl hover:shadow-[#00C9FF]/20
-                         hover:-translate-y-2"
-              >
-                {/* Gradient Background */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${featuredPost.gradient} opacity-0
-                             group-hover:opacity-100 transition-opacity duration-500`}
-                />
+              <Link href={`/blog/${featuredPost.slug}`} className="block group">
+                <motion.div
+                  whileHover={{ y: -8, scale: 1.01 }}
+                  transition={{ duration: 0.3 }}
+                  className="relative glass-premium rounded-3xl overflow-hidden
+                           hover:border-cyan-500/30
+                           transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20"
+                >
+                  {/* Gradient Background */}
+                  <div
+                    className={`absolute inset-0 bg-gradient-to-br ${featuredPost.gradient} opacity-0
+                               group-hover:opacity-100 transition-opacity duration-500`}
+                  />
 
-                <div className="relative z-10 p-8 lg:p-12">
-                  <div className="flex flex-col lg:flex-row lg:items-center gap-8">
-                    {/* Content */}
-                    <div className="flex-1">
-                      {/* Featured Badge */}
-                      <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#4A69E2]/20 to-[#00C9FF]/20 border border-[#4A69E2]/30 mb-6">
-                        <span className="material-icons text-[#00C9FF] text-sm">star</span>
-                        <span className="text-white font-bold text-sm">Featured Article</span>
-                      </div>
-
-                      {/* Category */}
-                      <div className="mb-4">
-                        <span
-                          className={`inline-block px-4 py-2 rounded-full text-sm font-bold border ${featuredPost.categoryColor}`}
+                  <div className="relative z-10 p-8 lg:p-12">
+                    <div className="flex flex-col lg:flex-row lg:items-center gap-8">
+                      {/* Content */}
+                      <div className="flex-1">
+                        {/* Featured Badge */}
+                        <motion.div
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.4, delay: 0.1 }}
+                          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6"
                         >
-                          {featuredPost.category}
-                        </span>
-                      </div>
+                          <Star className="w-4 h-4 text-cyan-500" />
+                          <span className="text-white font-bold text-sm">Featured Article</span>
+                        </motion.div>
 
-                      {/* Title */}
-                      <h2 className="text-3xl lg:text-5xl font-black text-white mb-4 group-hover:text-[#00C9FF] transition-colors duration-300">
-                        {featuredPost.title}
-                      </h2>
-
-                      {/* Excerpt */}
-                      <p className="text-lg text-gray-300 mb-6 leading-relaxed">
-                        {featuredPost.excerpt}
-                      </p>
-
-                      {/* Meta Info */}
-                      <div className="flex items-center gap-6 text-gray-400">
-                        <div className="flex items-center gap-2">
-                          <span className="material-icons text-sm">calendar_today</span>
-                          <span>
-                            {new Date(featuredPost.date).toLocaleDateString("en-US", {
-                              month: "short",
-                              day: "numeric",
-                              year: "numeric",
-                            })}
+                        {/* Category */}
+                        <motion.div
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.4, delay: 0.15 }}
+                          className="mb-4"
+                        >
+                          <span
+                            className={`inline-block px-4 py-2 rounded-full text-sm font-bold border ${featuredPost.categoryColor}`}
+                          >
+                            {featuredPost.category}
                           </span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <span className="material-icons text-sm">schedule</span>
-                          <span>{featuredPost.readTime}</span>
-                        </div>
-                      </div>
-                    </div>
+                        </motion.div>
 
-                    {/* CTA Arrow */}
-                    <div className="lg:ml-8">
-                      <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white/10 border border-white/20 group-hover:bg-[#00C9FF]/20 group-hover:border-[#00C9FF]/50 transition-all duration-300">
-                        <span className="material-icons text-white text-3xl group-hover:translate-x-1 transition-transform duration-300">
-                          arrow_forward
-                        </span>
+                        {/* Title */}
+                        <motion.h2
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.4, delay: 0.2 }}
+                          className="text-3xl lg:text-5xl font-black text-white mb-4 group-hover:text-cyan-500 transition-colors duration-300"
+                        >
+                          {featuredPost.title}
+                        </motion.h2>
+
+                        {/* Excerpt */}
+                        <motion.p
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.4, delay: 0.25 }}
+                          className="text-lg text-gray-300 mb-6 leading-relaxed"
+                        >
+                          {featuredPost.excerpt}
+                        </motion.p>
+
+                        {/* Meta Info */}
+                        <motion.div
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.4, delay: 0.3 }}
+                          className="flex items-center gap-6 text-gray-400"
+                        >
+                          <div className="flex items-center gap-2">
+                            <Calendar className="w-4 h-4" />
+                            <span>
+                              {new Date(featuredPost.date).toLocaleDateString("en-US", {
+                                month: "short",
+                                day: "numeric",
+                                year: "numeric",
+                              })}
+                            </span>
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <Clock className="w-4 h-4" />
+                            <span>{featuredPost.readTime}</span>
+                          </div>
+                        </motion.div>
                       </div>
+
+                      {/* CTA Arrow */}
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4, delay: 0.35 }}
+                        className="lg:ml-8"
+                      >
+                        <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white/10 border border-white/20 group-hover:bg-cyan-500/20 group-hover:border-cyan-500/50 transition-all duration-300">
+                          <ArrowRight className="w-8 h-8 text-white group-hover:translate-x-1 transition-transform duration-300" />
+                        </div>
+                      </motion.div>
                     </div>
                   </div>
-                </div>
-              </div>
-            </Link>
+                </motion.div>
+              </Link>
+            </motion.div>
           )}
 
           {/* Regular Posts Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {regularPosts.map((post, index) => (
-              <Link
+              <motion.div
                 key={post.slug}
-                href={`/blog/${post.slug}`}
-                className="block group animate-fade-in-up"
-                style={{ animationDelay: `${500 + index * 100}ms` }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
               >
-                <div
-                  className="relative h-full backdrop-blur-md bg-gradient-to-br from-white/10 to-white/5
-                           border border-white/10 rounded-2xl overflow-hidden
-                           hover:bg-white/15 hover:border-[#4A69E2]/30
-                           transition-all duration-500 hover:shadow-xl hover:shadow-[#4A69E2]/20
-                           hover:-translate-y-2 min-h-[320px]"
-                >
-                  {/* Gradient Background on Hover */}
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-0
-                               group-hover:opacity-100 transition-opacity duration-500`}
-                  />
+                <Link href={`/blog/${post.slug}`} className="block group h-full">
+                  <motion.div
+                    whileHover={{ y: -8, scale: 1.02 }}
+                    transition={{ duration: 0.3 }}
+                    className="relative h-full glass-premium rounded-2xl overflow-hidden
+                             hover:border-blue-500/30
+                             transition-all duration-500 hover:shadow-xl hover:shadow-blue-500/20
+                             min-h-[320px]"
+                  >
+                    {/* Gradient Background on Hover */}
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${post.gradient} opacity-0
+                                 group-hover:opacity-100 transition-opacity duration-500`}
+                    />
 
-                  <div className="relative z-10 p-6 flex flex-col h-full">
-                    {/* Category */}
-                    <div className="mb-4">
-                      <span
-                        className={`inline-block px-3 py-1.5 rounded-full text-xs font-bold border ${post.categoryColor}`}
+                    <div className="relative z-10 p-6 flex flex-col h-full">
+                      {/* Category */}
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0.9 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.3, delay: index * 0.1 + 0.1 }}
+                        className="mb-4"
                       >
-                        {post.category}
-                      </span>
-                    </div>
-
-                    {/* Title */}
-                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#00C9FF] transition-colors duration-300 line-clamp-2">
-                      {post.title}
-                    </h3>
-
-                    {/* Excerpt */}
-                    <p className="text-gray-300 text-sm mb-4 line-clamp-3 flex-grow">
-                      {post.excerpt}
-                    </p>
-
-                    {/* Meta Info */}
-                    <div className="flex items-center justify-between text-xs text-gray-400 pt-4 border-t border-white/10">
-                      <div className="flex items-center gap-1.5">
-                        <span className="material-icons text-xs">calendar_today</span>
-                        <span>
-                          {new Date(post.date).toLocaleDateString("en-US", {
-                            month: "short",
-                            day: "numeric",
-                          })}
+                        <span
+                          className={`inline-block px-3 py-1.5 rounded-full text-xs font-bold border ${post.categoryColor}`}
+                        >
+                          {post.category}
                         </span>
-                      </div>
-                      <div className="flex items-center gap-1.5">
-                        <span className="material-icons text-xs">schedule</span>
-                        <span>{post.readTime}</span>
-                      </div>
-                    </div>
+                      </motion.div>
 
-                    {/* Read More Arrow */}
-                    <div className="mt-4 flex items-center gap-2 text-[#00C9FF] font-semibold text-sm">
-                      <span>Read Article</span>
-                      <span className="material-icons text-sm group-hover:translate-x-1 transition-transform duration-300">
-                        arrow_forward
-                      </span>
+                      {/* Title */}
+                      <motion.h3
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.3, delay: index * 0.1 + 0.15 }}
+                        className="text-xl font-bold text-white mb-3 group-hover:text-cyan-500 transition-colors duration-300 line-clamp-2"
+                      >
+                        {post.title}
+                      </motion.h3>
+
+                      {/* Excerpt */}
+                      <motion.p
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.3, delay: index * 0.1 + 0.2 }}
+                        className="text-gray-300 text-sm mb-4 line-clamp-3 flex-grow"
+                      >
+                        {post.excerpt}
+                      </motion.p>
+
+                      {/* Meta Info */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 10 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.3, delay: index * 0.1 + 0.25 }}
+                        className="flex items-center justify-between text-xs text-gray-400 pt-4 border-t border-white/10"
+                      >
+                        <div className="flex items-center gap-1.5">
+                          <Calendar className="w-3 h-3" />
+                          <span>
+                            {new Date(post.date).toLocaleDateString("en-US", {
+                              month: "short",
+                              day: "numeric",
+                            })}
+                          </span>
+                        </div>
+                        <div className="flex items-center gap-1.5">
+                          <Clock className="w-3 h-3" />
+                          <span>{post.readTime}</span>
+                        </div>
+                      </motion.div>
+
+                      {/* Read More Arrow */}
+                      <motion.div
+                        initial={{ opacity: 0, x: -10 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.3, delay: index * 0.1 + 0.3 }}
+                        className="mt-4 flex items-center gap-2 text-cyan-500 font-semibold text-sm"
+                      >
+                        <span>Read Article</span>
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+                      </motion.div>
                     </div>
-                  </div>
-                </div>
-              </Link>
+                  </motion.div>
+                </Link>
+              </motion.div>
             ))}
           </div>
 
           {/* Coming Soon Glass Card */}
-          <div className="mt-16 animate-fade-in-up delay-1000">
-            <div className="relative backdrop-blur-md bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-3xl p-12 text-center shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-[#D4AF37]/10 to-[#00C9FF]/10 rounded-3xl" />
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-16"
+          >
+            <div className="relative glass-premium rounded-3xl p-12 text-center shadow-2xl">
+              <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-cyan-500/10 rounded-3xl" />
 
               <div className="relative z-10">
-                <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-[#4A69E2]/20 to-[#00C9FF]/20 border border-white/20 mb-6">
-                  <span className="material-icons text-[#00C9FF] text-4xl">edit_note</span>
-                </div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-white/20 mb-6"
+                >
+                  <FileText className="w-10 h-10 text-cyan-500" />
+                </motion.div>
 
-                <h3 className="text-3xl font-black text-white mb-4">More Articles Coming Soon</h3>
+                <motion.h3
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="text-3xl font-black text-white mb-4"
+                >
+                  More Articles Coming Soon
+                </motion.h3>
 
-                <p className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto">
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                  className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto"
+                >
                   We're constantly adding new content to help you grow your business. Subscribe to
                   our newsletter to stay updated.
-                </p>
+                </motion.p>
 
-                <Link
-                  href="/#contact"
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-[#4A69E2] to-[#00C9FF] text-white px-8 py-4 rounded-full font-bold hover:shadow-lg hover:shadow-[#00C9FF]/50 transition-all duration-300 hover:scale-105"
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
                 >
-                  <span className="material-icons">mail</span>
-                  Subscribe Now
-                </Link>
+                  <Link
+                    href="/#contact"
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-full font-bold hover:shadow-lg hover:shadow-cyan-500/50 transition-all duration-300 hover:scale-105"
+                  >
+                    <Mail className="w-5 h-5" />
+                    Subscribe Now
+                  </Link>
+                </motion.div>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* CTA Section with Glass */}
-      <section className="relative py-20 px-6 lg:px-16">
+      <section className="relative py-20 px-4 sm:px-6 lg:px-16">
         <div className="container mx-auto max-w-5xl">
-          <div className="relative backdrop-blur-md bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-3xl p-12 lg:p-16 text-center shadow-2xl">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative glass-premium rounded-3xl p-12 lg:p-16 text-center shadow-2xl"
+          >
             {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#4A69E2]/20 to-[#00C9FF]/20 rounded-3xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-3xl" />
 
             <div className="relative z-10">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6">
+              <motion.h2
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6"
+              >
                 Ready to Grow Your Business?
-              </h2>
+              </motion.h2>
 
-              <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto"
+              >
                 Book a free demo and discover how Capture Client can help you automate leads and
                 capture more clients.
-              </p>
+              </motion.p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#4A69E2] to-[#00C9FF] text-white px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm hover:shadow-xl hover:shadow-[#00C9FF]/50 transition-all duration-300 hover:scale-105"
-                >
-                  <span className="material-icons">calendar_today</span>
-                  Book a Demo
-                </Link>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center"
+              >
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm hover:shadow-xl hover:shadow-cyan-500/50 transition-all duration-300"
+                  >
+                    <Calendar className="w-5 h-5" />
+                    Book a Demo
+                  </Link>
+                </motion.div>
 
-                <a
-                  href="tel:865-346-3339"
-                  className="inline-flex items-center justify-center gap-2 backdrop-blur-md bg-white/10 border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white/20 hover:border-white/30 transition-all duration-300 hover:scale-105"
-                >
-                  <span className="material-icons">phone</span>
-                  (865) 346-3339
-                </a>
-              </div>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <a
+                    href="tel:865-346-3339"
+                    className="inline-flex items-center justify-center gap-2 backdrop-blur-md bg-white/10 border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white/20 hover:border-white/30 transition-all duration-300"
+                  >
+                    <Mail className="w-5 h-5" />
+                    (865) 346-3339
+                  </a>
+                </motion.div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

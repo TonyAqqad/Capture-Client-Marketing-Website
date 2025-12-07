@@ -34,7 +34,7 @@ const COMPARISONS: ComparisonMetric[] = [
       color: "text-red-400",
     },
     voiceAI: {
-      value: "$497/mo",
+      value: "$797/mo",
       icon: "trending_down",
       color: "text-green-400",
     },
@@ -134,7 +134,7 @@ const COMPARISONS: ComparisonMetric[] = [
 
 // Annual cost calculation
 const TRADITIONAL_ANNUAL_COST = 45000; // $3,750/mo avg
-const VOICE_AI_ANNUAL_COST = 5964; // $497/mo
+const VOICE_AI_ANNUAL_COST = 9564; // $797/mo
 
 // ============================================================================
 // MAIN COMPONENT

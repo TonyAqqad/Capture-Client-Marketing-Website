@@ -4,10 +4,11 @@ import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import type { FAQItem } from "@/types/content";
+import { Phone, PhoneCall, Headphones, Brain, Clock, LogOut, Calculator, Laptop, Shield, Code, ChevronDown } from "lucide-react";
 
 // Extended FAQ interface for PremiumFAQ component with icon and category
 interface FAQ extends FAQItem {
-  icon: string;
+  icon: React.ComponentType<{ className?: string }>;
   category: "technical" | "business" | "pricing";
 }
 
@@ -16,56 +17,56 @@ const faqs: FAQ[] = [
     question: "Will the AI voice agent sound robotic?",
     answer:
       "Not at all! Our AI uses cutting-edge natural language processing that sounds remarkably human. It understands context, speaks naturally with appropriate emotion, and even handles interruptions gracefully. Most callers don't realize they're speaking with AI until we tell them. You can listen to sample calls during your demo.",
-    icon: "support_agent",
+    icon: Headphones,
     category: "technical"
   },
   {
     question: "What if the AI can't answer a specific question?",
     answer:
       "Great question! Our AI is trained on your business specifics, but if it encounters something unusual, it seamlessly transfers to your team with full context. You'll get a notification with the call transcript so you know exactly what was discussed. Plus, the AI learns from every interaction to handle similar questions next time.",
-    icon: "psychology",
+    icon: Brain,
     category: "technical"
   },
   {
     question: "How long does setup take?",
     answer:
       "We can have you up and running in as little as 48 hours. Our team handles the heavy lifting: we'll set up your AI agent, configure your ad campaigns, import your existing contacts to the CRM, and train you on the dashboard. Most clients are fully operational within a week with zero technical knowledge required.",
-    icon: "schedule",
+    icon: Clock,
     category: "business"
   },
   {
     question: "What if I want to cancel?",
     answer:
       "Zero hassle. We offer month-to-month contracts with no long-term commitment required. If you decide to cancel, we'll help export all your data, and you'll keep full access until the end of your billing period. We're confident you'll see results quickly, but there's no pressure to stay if it's not working for you.",
-    icon: "logout",
+    icon: LogOut,
     category: "pricing"
   },
   {
     question: "Is this really worth the investment?",
     answer:
       "Let's do the math: if our system captures just 5 extra leads per month that convert at 20%, that's 1 new client. For most businesses, one new client pays for the entire system multiple times over. Plus, you're saving 20+ hours per month on manual tasks. Our average client sees 3x ROI within 90 days, and many see payback in the first month.",
-    icon: "calculate",
+    icon: Calculator,
     category: "pricing"
   },
   {
     question: "Do I need technical knowledge to use this?",
     answer:
       "Absolutely not! Our platform is designed for busy business owners, not tech experts. Everything is visual and intuitive. We provide personalized training, video tutorials, and our support team is always one call away. If you can use a smartphone, you can use Capture Client. We handle all the technical complexity behind the scenes.",
-    icon: "devices",
+    icon: Laptop,
     category: "technical"
   },
   {
     question: "How do you ensure data security and privacy?",
     answer:
       "Security is our top priority. We use enterprise-grade encryption, comply with GDPR and CCPA regulations, and undergo regular third-party security audits. Your data is stored in secure, redundant data centers with 99.99% uptime. We'll never sell your data or use it for anything other than providing you service. You own your data 100%.",
-    icon: "security",
+    icon: Shield,
     category: "technical"
   },
   {
     question: "Can I integrate with my existing tools?",
     answer:
       "Yes! Capture Client integrates with 1000+ popular business tools including Calendly, Stripe, QuickBooks, Zapier, and most major CRMs. If you have a specific integration need, let us know—we can usually set it up within days. Our goal is to work seamlessly with your existing workflow, not disrupt it.",
-    icon: "integration_instructions",
+    icon: Code,
     category: "technical"
   }
 ];
@@ -156,7 +157,7 @@ export function PremiumFAQ() {
         >
           <div className="mb-6">
             <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-accent to-primary mb-4 shadow-glow flex-shrink-0">
-              <span className="material-icons text-white text-2xl sm:text-3xl">phone</span>
+              <Phone className="text-white w-6 h-6 sm:w-8 sm:h-8" />
             </div>
             <h4 className="text-xl sm:text-2xl font-heading font-bold text-foreground mb-2">
               Still have questions?
@@ -170,7 +171,7 @@ export function PremiumFAQ() {
             className="inline-flex items-center gap-2 text-base sm:text-lg font-bold text-accent hover:text-accent/80 transition-colors group touch-manipulation"
           >
             <div className="w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center flex-shrink-0">
-              <span className="material-icons group-hover:animate-pulse text-xl sm:text-2xl">phone_in_talk</span>
+              <PhoneCall className="group-hover:animate-pulse w-5 h-5 sm:w-6 sm:h-6" />
             </div>
             Call (865) 346-3339
           </a>
@@ -239,13 +240,11 @@ function FAQItem({ faq, isOpen, onClick }: FAQItemProps) {
                 : "bg-white/5 border-2 border-white/10"
             }`}
           >
-            <span
-              className={`material-icons text-2xl sm:text-3xl transition-colors duration-300 flex-shrink-0 ${
+            <faq.icon
+              className={`w-6 h-6 sm:w-8 sm:h-8 transition-colors duration-300 flex-shrink-0 ${
                 isOpen ? (isAccent ? "text-accent" : "text-primary") : "text-foreground-muted"
               }`}
-            >
-              {faq.icon}
-            </span>
+            />
           </motion.div>
 
           {/* Question - responsive text size */}
@@ -260,15 +259,17 @@ function FAQItem({ faq, isOpen, onClick }: FAQItemProps) {
         </div>
 
         {/* Expand icon - responsive sizing */}
-        <motion.span
+        <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
-          className={`material-icons text-2xl sm:text-3xl transition-colors duration-300 ml-3 sm:ml-4 flex-shrink-0 ${
-            isOpen ? (isAccent ? "text-accent" : "text-primary") : "text-foreground-muted"
-          }`}
+          className="ml-3 sm:ml-4 flex-shrink-0"
         >
-          expand_more
-        </motion.span>
+          <ChevronDown
+            className={`w-6 h-6 sm:w-8 sm:h-8 transition-colors duration-300 ${
+              isOpen ? (isAccent ? "text-accent" : "text-primary") : "text-foreground-muted"
+            }`}
+          />
+        </motion.div>
       </button>
 
       {/* Answer - responsive padding and text */}

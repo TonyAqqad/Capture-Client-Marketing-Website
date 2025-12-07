@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { SITE_CONFIG, generateBlogPostingSchema, generateBreadcrumbSchema, generateWebPageSchema, generateFAQSchema } from "@/lib/seo-config";
 import JsonLd from "@/components/seo/JsonLd";
+import { ChevronRight, Calendar, Clock } from "lucide-react";
 
 export async function generateStaticParams() {
   const posts = await getAllBlogPosts();
@@ -161,22 +162,22 @@ export default async function BlogPostPage({
       <JsonLd schema={schemas} />
 
       {/* Breadcrumb Navigation */}
-      <section className="container mx-auto px-8 lg:px-16 pt-8">
+      <section className="container mx-auto px-4 sm:px-8 lg:px-16 pt-8">
         <nav className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
           <Link href="/" className="hover:text-primary transition-colors">
             Home
           </Link>
-          <span className="material-icons text-xs">chevron_right</span>
+          <ChevronRight className="w-3 h-3" />
           <Link href="/blog" className="hover:text-primary transition-colors">
             Blog
           </Link>
-          <span className="material-icons text-xs">chevron_right</span>
+          <ChevronRight className="w-3 h-3" />
           <span className="text-gray-900 dark:text-white">{post.title}</span>
         </nav>
       </section>
 
       {/* Hero Section */}
-      <section className="container mx-auto px-8 lg:px-16 py-16">
+      <section className="container mx-auto px-4 sm:px-8 lg:px-16 py-16">
         <div className="max-w-4xl mx-auto">
           {/* Category Badge */}
           <div className="inline-block px-4 py-2 bg-primary/10 text-primary text-sm font-semibold rounded-full mb-6">
@@ -207,7 +208,7 @@ export default async function BlogPostPage({
             </div>
             <div className="flex items-center gap-6 text-sm">
               <div className="flex items-center gap-2">
-                <span className="material-icons text-lg">calendar_today</span>
+                <Calendar className="w-5 h-5" />
                 <span>
                   {new Date(post.publishedAt).toLocaleDateString("en-US", {
                     month: "long",
@@ -217,7 +218,7 @@ export default async function BlogPostPage({
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="material-icons text-lg">schedule</span>
+                <Clock className="w-5 h-5" />
                 <span>{post.readTime}</span>
               </div>
             </div>
@@ -237,7 +238,7 @@ export default async function BlogPostPage({
       </section>
 
       {/* Blog Content */}
-      <section className="container mx-auto px-8 lg:px-16 pb-16">
+      <section className="container mx-auto px-4 sm:px-8 lg:px-16 pb-16">
         <div className="max-w-4xl mx-auto">
           <article className="prose prose-lg prose-slate dark:prose-invert max-w-none">
             <div
@@ -265,7 +266,7 @@ export default async function BlogPostPage({
       </section>
 
       {/* Author Bio Section */}
-      <section className="container mx-auto px-8 lg:px-16 pb-16">
+      <section className="container mx-auto px-4 sm:px-8 lg:px-16 pb-16">
         <div className="max-w-4xl mx-auto">
           <div className="border border-gray-200 dark:border-gray-800 rounded-xl p-8 bg-white dark:bg-gray-900/50">
             <div className="flex items-start gap-6">
@@ -294,7 +295,7 @@ export default async function BlogPostPage({
 
       {/* Related Posts Section */}
       {relatedPosts.length > 0 && (
-        <section className="container mx-auto px-8 lg:px-16 pb-16">
+        <section className="container mx-auto px-4 sm:px-8 lg:px-16 pb-16">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
               Related Articles
@@ -334,7 +335,7 @@ export default async function BlogPostPage({
       )}
 
       {/* CTA Section */}
-      <section className="py-20 px-8 lg:px-16 bg-gray-50 dark:bg-black/20">
+      <section className="py-20 px-4 sm:px-8 lg:px-16 bg-gray-50 dark:bg-black/20">
         <div className="container mx-auto max-w-4xl text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             Ready to Transform Your Business?

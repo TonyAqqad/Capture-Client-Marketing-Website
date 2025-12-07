@@ -1,31 +1,33 @@
 "use client";
 
 import { motion } from "@/lib/motion";
+import { PhoneCall, Binary, MousePointerClick, RefreshCcw, CreditCard, Calendar, Dumbbell, Boxes, Cloud, Mail, TrendingUp, MessageSquare, ShieldCheck, Gauge, Headset } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 interface Integration {
   name: string;
-  icon: string;
+  Icon: LucideIcon;
   category: string;
   color: string;
 }
 
 export default function AsSeenIn() {
   const technicalIntegrations: Integration[] = [
-    { name: "Twilio", icon: "phone_in_talk", category: "Voice & SMS API", color: "text-red-400" },
-    { name: "Google APIs", icon: "api", category: "Analytics & Ads", color: "text-blue-400" },
-    { name: "Meta Business", icon: "ads_click", category: "Facebook Ads", color: "text-blue-500" },
-    { name: "Zapier", icon: "sync_alt", category: "Automation", color: "text-orange-400" },
-    { name: "Stripe", icon: "payment", category: "Payments", color: "text-[#D4AF37]" },
-    { name: "Calendly", icon: "event", category: "Scheduling", color: "text-cyan-400" },
+    { name: "Twilio", Icon: PhoneCall, category: "Voice & SMS API", color: "text-red-400" },
+    { name: "Google APIs", Icon: Binary, category: "Analytics & Ads", color: "text-blue-400" },
+    { name: "Meta Business", Icon: MousePointerClick, category: "Facebook Ads", color: "text-blue-500" },
+    { name: "Zapier", Icon: RefreshCcw, category: "Automation", color: "text-orange-400" },
+    { name: "Stripe", Icon: CreditCard, category: "Payments", color: "text-[#D4AF37]" },
+    { name: "Calendly", Icon: Calendar, category: "Scheduling", color: "text-cyan-400" },
   ];
 
   const businessPartners: Integration[] = [
-    { name: "Mindbody", icon: "fitness_center", category: "Fitness & Wellness", color: "text-accent" },
-    { name: "HubSpot", icon: "hub", category: "CRM Platform", color: "text-orange-500" },
-    { name: "Salesforce", icon: "cloud", category: "Enterprise CRM", color: "text-blue-400" },
-    { name: "Mailchimp", icon: "mail", category: "Email Marketing", color: "text-yellow-400" },
-    { name: "GoHighLevel", icon: "trending_up", category: "Marketing Automation", color: "text-green-400" },
-    { name: "Slack", icon: "chat", category: "Team Communication", color: "text-[#D4AF37]" },
+    { name: "Mindbody", Icon: Dumbbell, category: "Fitness & Wellness", color: "text-accent" },
+    { name: "HubSpot", Icon: Boxes, category: "CRM Platform", color: "text-orange-500" },
+    { name: "Salesforce", Icon: Cloud, category: "Enterprise CRM", color: "text-blue-400" },
+    { name: "Mailchimp", Icon: Mail, category: "Email Marketing", color: "text-yellow-400" },
+    { name: "GoHighLevel", Icon: TrendingUp, category: "Marketing Automation", color: "text-green-400" },
+    { name: "Slack", Icon: MessageSquare, category: "Team Communication", color: "text-[#D4AF37]" },
   ];
 
   return (
@@ -60,9 +62,7 @@ export default function AsSeenIn() {
                 <div className="flex flex-col items-center gap-3 px-5 sm:px-6 py-6 bg-surface/30 border border-surface-border rounded-xl group-hover:border-accent/40 group-hover:bg-surface/50 transition-all duration-300 min-w-[140px] sm:min-w-0 min-h-[120px] sm:min-h-[140px]">
                   {/* Icon */}
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-accent/20 to-primary/10 border border-accent/20 flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
-                    <span className={`material-icons ${integration.color} text-2xl`}>
-                      {integration.icon}
-                    </span>
+                    <integration.Icon className={`${integration.color} w-6 h-6`} />
                   </div>
 
                   {/* Name */}
@@ -109,9 +109,7 @@ export default function AsSeenIn() {
                 <div className="flex flex-col items-center gap-3 px-5 sm:px-6 py-6 bg-surface/30 border border-surface-border rounded-xl group-hover:border-primary/40 group-hover:bg-surface/50 transition-all duration-300 min-w-[140px] sm:min-w-0 min-h-[120px] sm:min-h-[140px]">
                   {/* Icon */}
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-primary/20 to-accent/10 border border-primary/20 flex items-center justify-center group-hover:shadow-glow-primary transition-all duration-300">
-                    <span className={`material-icons ${partner.color} text-2xl`}>
-                      {partner.icon}
-                    </span>
+                    <partner.Icon className={`${partner.color} w-6 h-6`} />
                   </div>
 
                   {/* Name */}
@@ -138,7 +136,7 @@ export default function AsSeenIn() {
             transition={{ duration: 0.5 }}
             className="flex items-center gap-3 px-5 sm:px-6 py-3 sm:py-4 bg-surface/20 border border-surface-border rounded-full hover:border-accent/30 transition-all duration-300 hover:shadow-glow min-h-[48px]"
           >
-            <span className="material-icons text-accent text-xl sm:text-2xl flex-shrink-0">verified_user</span>
+            <ShieldCheck className="text-accent w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
             <div className="text-left">
               <span className="text-xs sm:text-sm font-semibold text-foreground block">
                 Enterprise-Grade Security
@@ -154,7 +152,7 @@ export default function AsSeenIn() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="flex items-center gap-3 px-5 sm:px-6 py-3 sm:py-4 bg-surface/20 border border-surface-border rounded-full hover:border-primary/30 transition-all duration-300 hover:shadow-glow-primary min-h-[48px]"
           >
-            <span className="material-icons text-primary text-xl sm:text-2xl flex-shrink-0">speed</span>
+            <Gauge className="text-primary w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
             <div className="text-left">
               <span className="text-xs sm:text-sm font-semibold text-foreground block">
                 99.9% Uptime SLA
@@ -170,7 +168,7 @@ export default function AsSeenIn() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="flex items-center gap-3 px-5 sm:px-6 py-3 sm:py-4 bg-surface/20 border border-surface-border rounded-full hover:border-accent/30 transition-all duration-300 hover:shadow-glow min-h-[48px]"
           >
-            <span className="material-icons text-accent text-xl sm:text-2xl flex-shrink-0">support_agent</span>
+            <Headset className="text-accent w-5 h-5 sm:w-6 sm:h-6 flex-shrink-0" />
             <div className="text-left">
               <span className="text-xs sm:text-sm font-semibold text-foreground block">
                 24/7 Support

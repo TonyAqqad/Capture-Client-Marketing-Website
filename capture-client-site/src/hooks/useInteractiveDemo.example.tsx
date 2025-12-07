@@ -9,7 +9,7 @@
 
 import React from 'react';
 import { useInteractiveDemo, BusinessType } from './useInteractiveDemo';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from '@/lib/motion';
 
 export default function InteractiveDemoExample() {
   const { state, controls } = useInteractiveDemo('plumbing');

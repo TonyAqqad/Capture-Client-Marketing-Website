@@ -5,7 +5,7 @@ import { SITE_CONFIG } from "@/lib/seo-config";
 import { generateCollectionPageSchema } from "@/lib/advanced-schemas";
 
 export const metadata: Metadata = {
-  title: "Marketing Services for Small Business | Voice AI, Ads & Lead Gen | Capture Client",
+  title: "Marketing Services | Voice AI & Lead Gen | Capture Client",
   description:
     "Never miss a lead again. 24/7 AI voice agents, ROI-focused Google Ads, Facebook Ads, and lead generation services for small businesses. Trusted by 500+ companies. Free consultation: (865) 346-3339",
   keywords: [
@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     description:
       "Voice AI agents that answer every call, Google Ads & Facebook Ads that generate qualified leads. Trusted by 500+ small businesses. Book your free consultation today.",
     url: "https://captureclientai.net/services",
+    siteName: "Capture Client",
     type: "website",
     images: [
       {
@@ -39,9 +40,21 @@ export const metadata: Metadata = {
     title: "Marketing Services for Small Business | Voice AI & Lead Generation",
     description:
       "24/7 AI voice agents, professional Google Ads & Facebook Ads management. Trusted by 500+ businesses.",
+    images: ["https://captureclientai.net/og-image.jpg"],
   },
   alternates: {
     canonical: "https://captureclientai.net/services",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 

@@ -296,20 +296,24 @@ export default function LegalIndustryClient() {
 
               {/* CTA */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                <Link
-                  href="tel:8653463339"
-                  className="btn-gold text-lg px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-2 hover-glow-gold group w-full sm:w-auto justify-center"
-                >
-                  <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                  Get Legal Demo
-                </Link>
-                <Link
-                  href="#practice-areas"
-                  className="btn-glass text-lg px-8 py-4 w-full sm:w-auto justify-center inline-flex items-center gap-2"
-                >
-                  View Practice Areas
-                  <ChevronRight className="w-5 h-5" />
-                </Link>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link
+                    href="tel:8653463339"
+                    className="btn-gold text-lg px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-2 shadow-glow-gold-lg group w-full sm:w-auto justify-center"
+                  >
+                    <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                    Get Legal Demo
+                  </Link>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link
+                    href="#practice-areas"
+                    className="btn-glass text-lg px-8 py-4 w-full sm:w-auto justify-center inline-flex items-center gap-2 group"
+                  >
+                    View Practice Areas
+                    <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </motion.div>
               </div>
 
               {/* Live stat */}
@@ -359,9 +363,10 @@ export default function LegalIndustryClient() {
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
+                whileHover={{ scale: 1.05, y: -5 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="glass-premium p-8 rounded-2xl border-2 border-green-500/20 bg-green-500/5 relative"
+                className="glass-premium p-8 rounded-2xl border-2 border-green-500/20 bg-green-500/5 relative hover:border-green-500/40 hover:shadow-glow-lg cursor-pointer"
               >
                 <div className="absolute -top-4 -right-4 w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center border-2 border-green-500/40">
                   <PhoneCall className="w-6 h-6 text-green-400" />
@@ -380,9 +385,10 @@ export default function LegalIndustryClient() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ scale: 1.05, y: -5 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="glass-premium p-8 rounded-2xl border-2 border-red-500/30 bg-red-500/10 relative"
+                className="glass-premium p-8 rounded-2xl border-2 border-red-500/30 bg-red-500/10 relative hover:border-red-500/50 hover:shadow-glow-lg cursor-pointer"
               >
                 <div className="absolute -top-4 -right-4 w-12 h-12 bg-red-500/20 rounded-full flex items-center justify-center border-2 border-red-500/40">
                   <AlertCircle className="w-6 h-6 text-red-400" />
@@ -401,9 +407,10 @@ export default function LegalIndustryClient() {
               <motion.div
                 initial={{ opacity: 0, x: 20 }}
                 whileInView={{ opacity: 1, x: 0 }}
+                whileHover={{ scale: 1.05, y: -5 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="glass-premium p-8 rounded-2xl border-2 border-orange-500/30 bg-orange-500/10 relative"
+                className="glass-premium p-8 rounded-2xl border-2 border-orange-500/30 bg-orange-500/10 relative hover:border-orange-500/50 hover:shadow-glow-lg cursor-pointer"
               >
                 <div className="absolute -top-4 -right-4 w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center border-2 border-orange-500/40">
                   <DollarSign className="w-6 h-6 text-orange-400" />
@@ -448,10 +455,11 @@ export default function LegalIndustryClient() {
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  whileHover={{ scale: 1.05, y: -8 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className={`glass-premium p-8 rounded-2xl text-center ${
-                    stat.highlight ? 'border-2 border-red-500/30 bg-red-500/5' : ''
+                  className={`glass-premium p-8 rounded-2xl text-center cursor-pointer ${
+                    stat.highlight ? 'border-2 border-red-500/30 bg-red-500/5 hover:border-red-500/50 hover:shadow-glow-lg' : 'hover:border-gold/30 hover:shadow-glow-gold'
                   }`}
                 >
                   <div className={`text-5xl md:text-6xl font-bold mb-3 ${
@@ -483,13 +491,15 @@ export default function LegalIndustryClient() {
                     Our AI answers every call in seconds - even at 2 AM on Saturday.
                   </p>
                 </div>
-                <Link
-                  href="tel:8653463339"
-                  className="btn-gold px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-2 whitespace-nowrap"
-                >
-                  <PhoneCall className="w-5 h-5" />
-                  Call 865-346-3339
-                </Link>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link
+                    href="tel:8653463339"
+                    className="btn-gold px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-2 whitespace-nowrap shadow-glow-gold group"
+                  >
+                    <PhoneCall className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                    Call 865-346-3339
+                  </Link>
+                </motion.div>
               </div>
             </motion.div>
           </div>
@@ -518,13 +528,15 @@ export default function LegalIndustryClient() {
             {/* Practice Area Tabs with Urgency Indicators */}
             <div className="flex flex-wrap justify-center gap-3 mb-12">
               {practiceAreas.map((area) => (
-                <button
+                <motion.button
                   key={area.id}
                   onClick={() => setActiveTab(area.id)}
+                  whileHover={{ scale: activeTab === area.id ? 1.05 : 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 inline-flex items-center gap-2 relative ${
                     activeTab === area.id
                       ? 'bg-gradient-to-r ' + getUrgencyColor(area.urgency) + ' text-white shadow-glow-lg scale-105'
-                      : 'glass border border-white/10 text-foreground-muted hover:border-white/20 hover:scale-102'
+                      : 'glass border border-white/10 text-foreground-muted hover:border-white/20 hover:shadow-glow-gold'
                   }`}
                 >
                   {/* Urgency Pulse Indicator */}
@@ -548,7 +560,7 @@ export default function LegalIndustryClient() {
                       Speed to lead wins 67%
                     </span>
                   )}
-                </button>
+                </motion.button>
               ))}
             </div>
 
@@ -699,9 +711,10 @@ export default function LegalIndustryClient() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -8, scale: 1.02 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="glass-premium p-6 rounded-xl border-2 border-gold/20 text-center"
+                className="glass-premium p-6 rounded-xl border-2 border-gold/20 text-center hover:border-gold/40 hover:shadow-glow-gold-lg cursor-pointer"
               >
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gold/20 to-gold/10 rounded-2xl flex items-center justify-center">
                   <Lock className="w-8 h-8 text-gold" />
@@ -717,9 +730,10 @@ export default function LegalIndustryClient() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -8, scale: 1.02 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="glass-premium p-6 rounded-xl border-2 border-purple-500/20 text-center"
+                className="glass-premium p-6 rounded-xl border-2 border-purple-500/20 text-center hover:border-purple-500/40 hover:shadow-glow-lg cursor-pointer"
               >
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-500/20 to-purple-500/10 rounded-2xl flex items-center justify-center">
                   <Scale className="w-8 h-8 text-purple-400" />
@@ -735,9 +749,10 @@ export default function LegalIndustryClient() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -8, scale: 1.02 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="glass-premium p-6 rounded-xl border-2 border-indigo-500/20 text-center"
+                className="glass-premium p-6 rounded-xl border-2 border-indigo-500/20 text-center hover:border-indigo-500/40 hover:shadow-glow-lg cursor-pointer"
               >
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-indigo-500/20 to-indigo-500/10 rounded-2xl flex items-center justify-center">
                   <FileCheck className="w-8 h-8 text-indigo-400" />
@@ -753,9 +768,10 @@ export default function LegalIndustryClient() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -8, scale: 1.02 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="glass-premium p-6 rounded-xl border-2 border-accent/20 text-center"
+                className="glass-premium p-6 rounded-xl border-2 border-accent/20 text-center hover:border-accent/40 hover:shadow-glow-lg cursor-pointer"
               >
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-accent/20 to-accent/10 rounded-2xl flex items-center justify-center">
                   <Shield className="w-8 h-8 text-accent" />
@@ -825,10 +841,11 @@ export default function LegalIndustryClient() {
                   key={index}
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
+                  whileHover={{ scale: 1.1, y: -5 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
-                  className={`glass-premium p-6 rounded-xl flex items-center justify-center hover-glow-gold transition-all duration-300 group cursor-pointer ${
-                    software.popular ? 'border-2 border-gold/30 bg-gold/5' : 'border border-white/10'
+                  className={`glass-premium p-6 rounded-xl flex items-center justify-center hover:shadow-glow-gold-lg transition-all duration-300 group cursor-pointer ${
+                    software.popular ? 'border-2 border-gold/30 bg-gold/5 hover:border-gold/50' : 'border border-white/10 hover:border-white/30'
                   }`}
                 >
                   <div className="text-center">
@@ -848,9 +865,10 @@ export default function LegalIndustryClient() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -8, scale: 1.02 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="glass-premium p-6 rounded-xl"
+                className="glass-premium p-6 rounded-xl hover:border-accent/30 hover:shadow-glow-lg cursor-pointer"
               >
                 <FileCheck className="w-12 h-12 text-accent mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Auto Case Creation</h3>
@@ -862,9 +880,10 @@ export default function LegalIndustryClient() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -8, scale: 1.02 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="glass-premium p-6 rounded-xl"
+                className="glass-premium p-6 rounded-xl hover:border-gold/30 hover:shadow-glow-gold-lg cursor-pointer"
               >
                 <Shield className="w-12 h-12 text-gold mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Conflict Checking</h3>
@@ -876,9 +895,10 @@ export default function LegalIndustryClient() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -8, scale: 1.02 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="glass-premium p-6 rounded-xl"
+                className="glass-premium p-6 rounded-xl hover:border-primary/30 hover:shadow-glow-lg cursor-pointer"
               >
                 <Calendar className="w-12 h-12 text-primary mb-4" />
                 <h3 className="text-xl font-bold text-white mb-2">Calendar Sync</h3>
@@ -993,13 +1013,15 @@ export default function LegalIndustryClient() {
               <p className="text-foreground-muted text-lg mb-6">
                 That&apos;s enough to hire another attorney or invest in marketing
               </p>
-              <Link
-                href="tel:8653463339"
-                className="btn-gold px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-2"
-              >
-                <Phone className="w-5 h-5" />
-                Calculate Your Savings
-              </Link>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="inline-block">
+                <Link
+                  href="tel:8653463339"
+                  className="btn-gold px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-2 shadow-glow-gold-lg group"
+                >
+                  <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform" />
+                  Calculate Your Savings
+                </Link>
+              </motion.div>
             </motion.div>
           </div>
         </div>
@@ -1059,13 +1081,15 @@ export default function LegalIndustryClient() {
                 </div>
               </div>
 
-              <Link
-                href="tel:8653463339"
-                className="btn-gold text-xl px-10 py-5 rounded-xl font-semibold inline-flex items-center gap-2 hover-glow-gold"
-              >
-                <PhoneCall className="w-6 h-6" />
-                Call 865-346-3339
-              </Link>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Link
+                  href="tel:8653463339"
+                  className="btn-gold text-xl px-10 py-5 rounded-xl font-semibold inline-flex items-center gap-2 shadow-glow-gold-lg group"
+                >
+                  <PhoneCall className="w-6 h-6 group-hover:rotate-12 transition-transform" />
+                  Call 865-346-3339
+                </Link>
+              </motion.div>
             </motion.div>
           </div>
         </div>
@@ -1099,9 +1123,10 @@ export default function LegalIndustryClient() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -10, scale: 1.02 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="glass-premium p-8 rounded-2xl border-2 border-gold/20 relative"
+                className="glass-premium p-8 rounded-2xl border-2 border-gold/20 relative hover:border-gold/40 hover:shadow-glow-gold-lg cursor-pointer"
               >
                 <div className="absolute -top-3 -right-3 w-12 h-12 bg-gold rounded-full flex items-center justify-center">
                   <Scale className="w-6 h-6 text-background-dark" />
@@ -1123,9 +1148,10 @@ export default function LegalIndustryClient() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -10, scale: 1.02 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="glass-premium p-8 rounded-2xl border-2 border-purple-500/20 relative"
+                className="glass-premium p-8 rounded-2xl border-2 border-purple-500/20 relative hover:border-purple-500/40 hover:shadow-glow-lg cursor-pointer"
               >
                 <div className="absolute -top-3 -right-3 w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
                   <Users className="w-6 h-6 text-white" />
@@ -1147,9 +1173,10 @@ export default function LegalIndustryClient() {
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                whileHover={{ y: -10, scale: 1.02 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="glass-premium p-8 rounded-2xl border-2 border-indigo-500/20 relative"
+                className="glass-premium p-8 rounded-2xl border-2 border-indigo-500/20 relative hover:border-indigo-500/40 hover:shadow-glow-lg cursor-pointer"
               >
                 <div className="absolute -top-3 -right-3 w-12 h-12 bg-indigo-500 rounded-full flex items-center justify-center">
                   <FileCheck className="w-6 h-6 text-white" />
@@ -1220,20 +1247,24 @@ export default function LegalIndustryClient() {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link
-                  href="tel:8653463339"
-                  className="btn-gold text-xl px-10 py-5 rounded-xl font-semibold inline-flex items-center gap-2 hover-glow-gold w-full sm:w-auto justify-center group"
-                >
-                  <Phone className="w-6 h-6 group-hover:rotate-12 transition-transform" />
-                  Call 865-346-3339
-                </Link>
-                <Link
-                  href="/contact"
-                  className="btn-glass text-xl px-10 py-5 w-full sm:w-auto justify-center inline-flex items-center gap-2"
-                >
-                  Schedule Demo
-                  <ChevronRight className="w-5 h-5" />
-                </Link>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link
+                    href="tel:8653463339"
+                    className="btn-gold text-xl px-10 py-5 rounded-xl font-semibold inline-flex items-center gap-2 shadow-glow-gold-lg w-full sm:w-auto justify-center group"
+                  >
+                    <Phone className="w-6 h-6 group-hover:rotate-12 transition-transform" />
+                    Call 865-346-3339
+                  </Link>
+                </motion.div>
+                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                  <Link
+                    href="/contact"
+                    className="btn-glass text-xl px-10 py-5 w-full sm:w-auto justify-center inline-flex items-center gap-2 group"
+                  >
+                    Schedule Demo
+                    <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </motion.div>
               </div>
 
               <div className="flex flex-wrap items-center justify-center gap-6 pt-4">

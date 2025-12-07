@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import { Testimonial } from "@/types/content";
+import { Shield, Headphones, CloudCheck, TrendingUp, Star } from "lucide-react";
 
 interface PremiumTestimonialExtended extends Testimonial {
   id: number;
@@ -154,19 +155,22 @@ export function PremiumTestimonials() {
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-6 sm:gap-10 lg:gap-16">
             {[
-              { icon: "security", text: "Enterprise-Grade Security" },
-              { icon: "support_agent", text: "24/7 AI Support" },
-              { icon: "cloud_done", text: "Cloud-Based Platform" },
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                whileHover={{ scale: 1.05, y: -2 }}
-                className="glass-badge text-foreground font-semibold text-sm sm:text-base lg:text-lg flex items-center gap-3 px-6 py-3 cursor-pointer"
-              >
-                <span className="material-icons text-gold text-xl sm:text-2xl">{item.icon}</span>
-                {item.text}
-              </motion.div>
-            ))}
+              { icon: Shield, text: "Enterprise-Grade Security" },
+              { icon: Headphones, text: "24/7 AI Support" },
+              { icon: CloudCheck, text: "Cloud-Based Platform" },
+            ].map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <motion.div
+                  key={idx}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  className="glass-badge text-foreground font-semibold text-sm sm:text-base lg:text-lg flex items-center gap-3 px-6 py-3 cursor-pointer"
+                >
+                  <Icon className="text-gold w-5 h-5 sm:w-6 sm:h-6" />
+                  {item.text}
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
       </div>
@@ -226,7 +230,7 @@ function TestimonialCard({ testimonial, isInView, index }: TestimonialCardProps)
           className="absolute -top-4 right-6 sm:-top-5 sm:right-8 px-5 py-2.5 sm:px-6 sm:py-3 bg-gradient-to-r from-gold via-gold-light to-gold rounded-full shadow-glow-lg border-2 border-background-dark cursor-pointer hover-glow-gold"
         >
           <p className="text-xs sm:text-sm font-bold text-background-dark flex items-center gap-2">
-            <span className="material-icons text-base sm:text-lg">trending_up</span>
+            <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5" />
             <span>{testimonial.result}</span>
           </p>
         </motion.div>
@@ -234,7 +238,7 @@ function TestimonialCard({ testimonial, isInView, index }: TestimonialCardProps)
         {/* Star rating with gold glow */}
         <div className="flex items-center gap-1 mb-6 sm:mb-8 relative z-10">
           {[...Array(testimonial.rating)].map((_, i) => (
-            <motion.span
+            <motion.div
               key={i}
               initial={{ opacity: 0, scale: 0, rotate: -180 }}
               animate={
@@ -249,14 +253,15 @@ function TestimonialCard({ testimonial, isInView, index }: TestimonialCardProps)
                 stiffness: 200,
               }}
               whileHover={{ scale: 1.2, rotate: 15 }}
-              className="material-icons text-2xl sm:text-3xl cursor-pointer"
-              style={{
-                color: "#D4AF37",
-                filter: "drop-shadow(0 0 8px rgba(212, 175, 55, 0.5))",
-              }}
+              className="cursor-pointer"
             >
-              star
-            </motion.span>
+              <Star
+                className="w-6 h-6 sm:w-8 sm:h-8 fill-gold text-gold"
+                style={{
+                  filter: "drop-shadow(0 0 8px rgba(212, 175, 55, 0.5))",
+                }}
+              />
+            </motion.div>
           ))}
         </div>
 

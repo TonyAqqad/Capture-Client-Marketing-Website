@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "@/lib/motion";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef } from "react";
+import { Pause, Star, Clock, CheckCircle2, ArrowRight, MousePointer, Grid3X3 } from "lucide-react";
 import type { Integration } from "@/data/integrations";
 
 interface IntegrationRelatedProps {
@@ -87,7 +88,7 @@ export function IntegrationRelated({
                 exit={{ opacity: 0, scale: 0.8 }}
                 className="absolute top-4 right-4 z-20 px-3 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-xs font-semibold text-foreground-muted flex items-center gap-1.5"
               >
-                <span className="material-icons text-sm">pause</span>
+                <Pause className="w-3.5 h-3.5" />
                 Paused
               </motion.div>
             )}
@@ -150,13 +151,13 @@ export function IntegrationRelated({
                       <div className="flex flex-wrap gap-2 justify-center mb-3">
                         {integration.popular && (
                           <div className="px-2 py-1 bg-gold/10 border border-gold/20 rounded-full text-xs font-semibold text-gold flex items-center gap-1">
-                            <span className="material-icons text-xs">star</span>
+                            <Star className="w-3 h-3" />
                             Popular
                           </div>
                         )}
                         {integration.setupTime && (
                           <div className="px-2 py-1 bg-accent/10 border border-accent/20 rounded-full text-xs font-semibold text-accent flex items-center gap-1">
-                            <span className="material-icons text-xs">schedule</span>
+                            <Clock className="w-3 h-3" />
                             {integration.setupTime}
                           </div>
                         )}
@@ -194,9 +195,7 @@ export function IntegrationRelated({
                                       key={idx}
                                       className="text-xs text-foreground-muted flex items-start gap-1.5"
                                     >
-                                      <span className="material-icons text-xs text-accent mt-0.5 flex-shrink-0">
-                                        check_circle
-                                      </span>
+                                      <CheckCircle2 className="w-3 h-3 text-accent mt-0.5 flex-shrink-0" />
                                       <span className="line-clamp-1">{feature}</span>
                                     </li>
                                   ))}
@@ -207,7 +206,7 @@ export function IntegrationRelated({
                             {/* View Details Link */}
                             <div className="mt-4 flex items-center justify-center gap-1 text-accent text-sm font-semibold">
                               <span>View Details</span>
-                              <span className="material-icons text-sm">arrow_forward</span>
+                              <ArrowRight className="w-3.5 h-3.5" />
                             </div>
                           </motion.div>
                         )}
@@ -216,7 +215,7 @@ export function IntegrationRelated({
                       {/* Static Hover Arrow (when quick-view is not shown) */}
                       {hoveredIndex !== index && (
                         <div className="absolute bottom-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                          <span className="material-icons text-accent">arrow_forward</span>
+                          <ArrowRight className="w-5 h-5 text-accent" />
                         </div>
                       )}
                     </div>
@@ -229,7 +228,7 @@ export function IntegrationRelated({
           {/* Mobile Swipe Hint */}
           <div className="lg:hidden text-center mt-4 px-4">
             <p className="text-xs text-foreground-muted flex items-center justify-center gap-2">
-              <span className="material-icons text-sm">swipe</span>
+              <MousePointer className="w-3.5 h-3.5" />
               Swipe to explore more integrations
             </p>
           </div>
@@ -248,9 +247,9 @@ export function IntegrationRelated({
               href="/integrations"
               className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-accent/20 via-accent/10 to-transparent hover:from-accent/30 hover:via-accent/20 backdrop-blur-sm rounded-xl border border-accent/30 hover:border-accent/50 text-foreground font-semibold transition-all duration-300 hover:shadow-glow hover:scale-105"
             >
-              <span className="material-icons text-accent">apps</span>
+              <Grid3X3 className="w-5 h-5 text-accent" />
               Browse All Integrations
-              <span className="material-icons text-sm">arrow_forward</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
         </div>

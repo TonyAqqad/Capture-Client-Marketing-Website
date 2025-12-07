@@ -1,11 +1,12 @@
 "use client";
 
 import { motion } from "@/lib/motion";
+import { Lock, ShieldCheck, Shield, Award, BadgeCheck, Trophy, CheckCircle2, Eye } from "lucide-react";
 
 export default function SecurityBadges() {
   const badges = [
     {
-      icon: "lock",
+      Icon: Lock,
       label: "256-Bit SSL Encryption",
       description: "Bank-level security",
       color: "text-green-400",
@@ -13,7 +14,7 @@ export default function SecurityBadges() {
       borderColor: "border-green-400/20",
     },
     {
-      icon: "privacy_tip",
+      Icon: Eye,
       label: "GDPR Compliant",
       description: "Your data protected",
       color: "text-blue-400",
@@ -21,7 +22,7 @@ export default function SecurityBadges() {
       borderColor: "border-blue-400/20",
     },
     {
-      icon: "verified_user",
+      Icon: ShieldCheck,
       label: "SOC 2 Certified",
       description: "Audited security",
       color: "text-[#D4AF37]",
@@ -29,7 +30,7 @@ export default function SecurityBadges() {
       borderColor: "border-[#D4AF37]/20",
     },
     {
-      icon: "shield",
+      Icon: Shield,
       label: "Data Backup",
       description: "Never lose data",
       color: "text-accent",
@@ -39,10 +40,10 @@ export default function SecurityBadges() {
   ];
 
   const certifications = [
-    { icon: "workspace_premium", text: "Google Ads Partner", color: "text-primary" },
-    { icon: "verified", text: "Meta Business Partner", color: "text-accent" },
-    { icon: "emoji_events", text: "BBB A+ Rated", color: "text-yellow-400" },
-    { icon: "security", text: "ISO 27001 Compliant", color: "text-green-400" },
+    { Icon: Award, text: "Google Ads Partner", color: "text-primary" },
+    { Icon: BadgeCheck, text: "Meta Business Partner", color: "text-accent" },
+    { Icon: Trophy, text: "BBB A+ Rated", color: "text-yellow-400" },
+    { Icon: ShieldCheck, text: "ISO 27001 Compliant", color: "text-green-400" },
   ];
 
   return (
@@ -63,9 +64,7 @@ export default function SecurityBadges() {
               whileHover={{ scale: 1.05 }}
               className={`${badge.bgColor} border ${badge.borderColor} rounded-xl p-4 text-center transition-all duration-300 hover:shadow-lg min-h-[120px] sm:min-h-[130px] flex flex-col items-center justify-center`}
             >
-              <span className={`material-icons ${badge.color} text-3xl mb-2 block`}>
-                {badge.icon}
-              </span>
+              <badge.Icon className={`${badge.color} w-8 h-8 mb-2`} />
               <p className="text-sm font-bold text-foreground mb-1 leading-tight">
                 {badge.label}
               </p>
@@ -80,7 +79,7 @@ export default function SecurityBadges() {
         <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
           <div className="flex-shrink-0">
             <div className="w-16 h-16 rounded-full bg-green-500/20 border-2 border-green-500/40 flex items-center justify-center">
-              <span className="material-icons text-green-400 text-3xl">verified_user</span>
+              <ShieldCheck className="text-green-400 w-8 h-8" />
             </div>
           </div>
           <div className="flex-1">
@@ -94,7 +93,7 @@ export default function SecurityBadges() {
           </div>
           <div className="flex-shrink-0">
             <div className="flex items-center gap-2 px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full min-h-[44px]">
-              <span className="material-icons text-green-400 text-base">check_circle</span>
+              <CheckCircle2 className="text-green-400 w-4 h-4" />
               <span className="text-sm font-semibold text-green-400">100% Secure</span>
             </div>
           </div>
@@ -116,7 +115,7 @@ export default function SecurityBadges() {
               transition={{ duration: 0.3, delay: index * 0.1 }}
               className="flex items-center gap-2 px-4 py-2 bg-surface/30 border border-surface-border rounded-full hover:border-accent/30 transition-all duration-300 min-h-[44px]"
             >
-              <span className={`material-icons ${cert.color} text-xl`}>{cert.icon}</span>
+              <cert.Icon className={`${cert.color} w-5 h-5`} />
               <span className="text-sm font-semibold text-foreground">{cert.text}</span>
             </motion.div>
           ))}
@@ -126,7 +125,7 @@ export default function SecurityBadges() {
       {/* Privacy statement */}
       <div className="text-center bg-surface/20 border border-surface-border rounded-xl p-4">
         <div className="flex flex-wrap items-center justify-center gap-2 text-sm text-foreground-muted">
-          <span className="material-icons text-accent text-lg">privacy_tip</span>
+          <Eye className="text-accent w-5 h-5" />
           <span className="text-center">
             We respect your privacy.{" "}
             <span className="text-accent font-semibold">No spam, ever.</span> Unsubscribe

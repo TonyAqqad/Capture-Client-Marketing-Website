@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "@/lib/motion";
 import { useRef, useEffect, useState } from "react";
+import { Zap, Phone, ArrowRight, CheckCircle, Clock } from "lucide-react";
 
 export function RealEstateHero() {
   const containerRef = useRef<HTMLElement>(null);
@@ -92,9 +93,9 @@ export function RealEstateHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center gap-2 mb-8 px-5 py-3 rounded-full bg-white/5 backdrop-blur-xl border border-white/10"
+              className="inline-flex items-center gap-2 mb-8 px-5 py-3 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
             >
-              <span className="material-icons text-gold text-xl">flash_on</span>
+              <Zap className="w-5 h-5 text-gold" />
               <span className="text-sm sm:text-base font-semibold text-white/90">
                 Industry Average Response: <span className="text-red-400">47 Hours</span>
               </span>
@@ -140,13 +141,13 @@ export function RealEstateHero() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 text-lg"
             >
-              <div className="flex items-center gap-2 px-5 py-3 bg-red-500/10 border border-red-500/20 rounded-xl backdrop-blur-sm">
-                <span className="material-icons text-red-400">schedule</span>
+              <div className="flex items-center gap-2 px-5 py-3 bg-red-500/10 border border-red-500/20 rounded-xl backdrop-blur-sm hover:bg-red-500/15 transition-all duration-300">
+                <Clock className="w-5 h-5 text-red-400" />
                 <span className="text-red-400 font-semibold line-through">{avgResponseTime} hours</span>
               </div>
-              <span className="material-icons text-white/40">arrow_forward</span>
-              <div className="flex items-center gap-2 px-5 py-3 bg-green-500/10 border border-green-500/20 rounded-xl backdrop-blur-sm">
-                <span className="material-icons text-green-400">bolt</span>
+              <ArrowRight className="w-5 h-5 text-white/40" />
+              <div className="flex items-center gap-2 px-5 py-3 bg-green-500/10 border border-green-500/20 rounded-xl backdrop-blur-sm hover:bg-green-500/15 hover:shadow-[0_0_30px_rgba(74,222,128,0.2)] transition-all duration-300">
+                <Zap className="w-5 h-5 text-green-400" />
                 <motion.span
                   className="text-green-400 font-bold"
                   animate={{ scale: [1, 1.05, 1] }}
@@ -166,27 +167,21 @@ export function RealEstateHero() {
             >
               <Link
                 href="/contact"
-                className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-6 rounded-2xl font-bold text-lg overflow-hidden transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_0_60px_rgba(212,175,55,0.4)]"
+                className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-6 rounded-2xl font-bold text-lg overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_60px_rgba(212,175,55,0.5)]"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-gold via-gold-light to-gold" />
                 <div className="absolute inset-0 bg-gradient-to-r from-gold-light via-gold to-gold-light opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <span className="relative z-10 text-black flex items-center gap-2">
                   Get Speed to Lead Demo
-                  <motion.span
-                    className="material-icons text-2xl"
-                    animate={{ x: [0, 5, 0] }}
-                    transition={{ duration: 1.5, repeat: Infinity }}
-                  >
-                    arrow_forward
-                  </motion.span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </span>
               </Link>
 
               <Link
                 href="tel:865-346-3339"
-                className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-6 rounded-2xl font-semibold text-lg border-2 border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-300 hover:bg-white/10 hover:border-white/20 hover:shadow-[0_0_40px_rgba(0,201,255,0.2)]"
+                className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-6 rounded-2xl font-semibold text-lg border-2 border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-300 hover:bg-white/10 hover:border-accent/40 hover:shadow-[0_0_40px_rgba(0,201,255,0.3)] hover:scale-105"
               >
-                <span className="material-icons text-accent text-2xl">phone</span>
+                <Phone className="w-5 h-5 text-accent" />
                 <span className="text-white">(865) 346-3339</span>
               </Link>
             </motion.div>
@@ -198,18 +193,18 @@ export function RealEstateHero() {
               transition={{ duration: 0.6, delay: 0.9 }}
               className="flex flex-wrap items-center justify-center gap-8"
             >
-              <div className="flex items-center gap-2">
-                <span className="material-icons text-gold">check_circle</span>
+              <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
+                <CheckCircle className="w-5 h-5 text-gold" />
                 <span className="text-sm font-medium text-white/70">Follow Up Boss Integration</span>
               </div>
               <div className="w-px h-5 bg-white/20 hidden sm:block" />
-              <div className="flex items-center gap-2">
-                <span className="material-icons text-gold">check_circle</span>
+              <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
+                <CheckCircle className="w-5 h-5 text-gold" />
                 <span className="text-sm font-medium text-white/70">kvCORE & Zillow Ready</span>
               </div>
               <div className="w-px h-5 bg-white/20 hidden sm:block" />
-              <div className="flex items-center gap-2">
-                <span className="material-icons text-gold">check_circle</span>
+              <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
+                <CheckCircle className="w-5 h-5 text-gold" />
                 <span className="text-sm font-medium text-white/70">24/7 Lead Response</span>
               </div>
             </motion.div>

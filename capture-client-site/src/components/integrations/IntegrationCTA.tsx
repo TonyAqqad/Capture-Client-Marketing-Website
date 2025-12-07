@@ -2,7 +2,7 @@
 
 import { motion } from "@/lib/motion";
 import Link from "next/link";
-import { Button } from "@/components/ui/Button";
+import { Plug, Rocket, Phone, BadgeCheck, Star, Clock } from "lucide-react";
 
 interface IntegrationCTAProps {
   integrationName: string;
@@ -66,9 +66,7 @@ export function IntegrationCTA({ integrationName }: IntegrationCTAProps) {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-gold to-accent shadow-glow-gold mb-6"
               >
-                <span className="material-icons text-3xl text-black">
-                  integration_instructions
-                </span>
+                <Plug className="w-8 h-8 text-black" />
               </motion.div>
 
               {/* Heading */}
@@ -105,15 +103,19 @@ export function IntegrationCTA({ integrationName }: IntegrationCTAProps) {
                 transition={{ duration: 0.6, delay: 0.5 }}
                 className="flex flex-col sm:flex-row gap-4 justify-center"
               >
-                <Link href="/contact">
-                  <Button variant="primary" icon="rocket_launch" size="lg">
-                    Book Your Free Demo
-                  </Button>
+                <Link
+                  href="/contact"
+                  className="btn-gold px-8 py-4 text-lg font-semibold rounded-xl shadow-glow-gold-lg hover:scale-105 transition-all inline-flex items-center gap-2 w-full sm:w-auto justify-center"
+                >
+                  <Rocket className="w-5 h-5" />
+                  Book Your Free Demo
                 </Link>
-                <Link href="tel:865-346-3339">
-                  <Button variant="glass" icon="phone" size="lg">
-                    (865) 346-3339
-                  </Button>
+                <Link
+                  href="tel:865-346-3339"
+                  className="btn-ghost px-8 py-4 text-lg font-semibold rounded-xl hover:scale-105 transition-all inline-flex items-center gap-2 w-full sm:w-auto justify-center"
+                >
+                  <Phone className="w-5 h-5" />
+                  (865) 346-3339
                 </Link>
               </motion.div>
 
@@ -126,17 +128,17 @@ export function IntegrationCTA({ integrationName }: IntegrationCTAProps) {
                 className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-foreground-muted"
               >
                 <div className="flex items-center gap-2">
-                  <span className="material-icons text-gold text-lg">verified</span>
+                  <BadgeCheck className="w-5 h-5 text-gold" />
                   <span>500+ Businesses</span>
                 </div>
                 <div className="w-px h-4 bg-white/20 hidden sm:block" />
                 <div className="flex items-center gap-2">
-                  <span className="material-icons text-gold text-lg">star</span>
+                  <Star className="w-5 h-5 text-gold" />
                   <span>4.9/5 Rating</span>
                 </div>
                 <div className="w-px h-4 bg-white/20 hidden sm:block" />
                 <div className="flex items-center gap-2">
-                  <span className="material-icons text-gold text-lg">schedule</span>
+                  <Clock className="w-5 h-5 text-gold" />
                   <span>5-Minute Setup</span>
                 </div>
               </motion.div>

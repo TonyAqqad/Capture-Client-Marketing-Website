@@ -206,20 +206,24 @@ export default function RestaurantsPageClient() {
               transition={{ delay: 0.7 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <a
+              <motion.a
                 href="tel:865-346-3339"
-                className="btn-gold text-lg px-8 py-4 inline-flex items-center justify-center gap-2"
+                className="btn-gold text-lg px-8 py-4 inline-flex items-center justify-center gap-2 w-full sm:w-auto"
+                whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(245, 166, 35, 0.5)" }}
+                whileTap={{ scale: 0.95 }}
               >
                 <Phone className="w-5 h-5" />
                 Get Restaurant Demo
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href="#calculator"
-                className="btn-gold-outline text-lg px-8 py-4 inline-flex items-center justify-center gap-2"
+                className="btn-gold-outline text-lg px-8 py-4 inline-flex items-center justify-center gap-2 w-full sm:w-auto"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <Calculator className="w-5 h-5" />
                 Calculate Your ROI
-              </a>
+              </motion.a>
             </motion.div>
           </motion.div>
         </div>
@@ -300,19 +304,21 @@ export default function RestaurantsPageClient() {
             {featureTabs.map((tab) => {
               const Icon = tab.icon;
               return (
-                <button
+                <motion.button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                   className={cn(
                     "flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300",
                     activeTab === tab.id
                       ? "bg-gold text-background-dark shadow-glow-gold"
-                      : "glass border border-white/10 text-foreground hover:border-gold/50"
+                      : "glass border border-white/10 text-foreground hover:border-gold/50 hover:shadow-glow-gold-sm"
                   )}
                 >
                   <Icon className="w-5 h-5" />
                   {tab.label}
-                </button>
+                </motion.button>
               );
             })}
           </div>
@@ -383,9 +389,16 @@ export default function RestaurantsPageClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="glass-card p-8 text-center hover-glow-gold rounded-2xl transition-all duration-300"
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="glass-card p-8 text-center rounded-2xl transition-all duration-300 hover:shadow-glow-gold-lg hover:border-gold/30"
               >
-                <div className="text-6xl mb-4">{pos.logo}</div>
+                <motion.div
+                  className="text-6xl mb-4"
+                  whileHover={{ scale: 1.1, rotate: 5 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  {pos.logo}
+                </motion.div>
                 <h3 className="text-2xl font-bold text-white mb-2">{pos.name}</h3>
                 <p className="text-gold flex items-center justify-center gap-2">
                   <Clock className="w-4 h-4" />
@@ -433,9 +446,16 @@ export default function RestaurantsPageClient() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="glass-premium p-8 text-center rounded-2xl"
+                whileHover={{ scale: 1.05, y: -5 }}
+                className="glass-premium p-8 text-center rounded-2xl hover:shadow-glow-gold-lg transition-shadow duration-300"
               >
-                <div className="text-6xl mb-4">{platform.logo}</div>
+                <motion.div
+                  className="text-6xl mb-4"
+                  whileHover={{ scale: 1.2, rotate: -5 }}
+                  transition={{ type: "spring", stiffness: 400 }}
+                >
+                  {platform.logo}
+                </motion.div>
                 <h3 className="text-2xl font-bold text-white mb-2">{platform.name}</h3>
                 <p className="text-gold">{platform.boost}</p>
               </motion.div>
@@ -537,13 +557,15 @@ export default function RestaurantsPageClient() {
             </div>
 
             <div className="text-center">
-              <a
+              <motion.a
                 href="tel:865-346-3339"
-                className="btn-gold text-lg px-8 py-4 inline-flex items-center gap-2"
+                className="btn-gold text-lg px-8 py-4 inline-flex items-center gap-2 w-full sm:w-auto"
+                whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(245, 166, 35, 0.5)" }}
+                whileTap={{ scale: 0.95 }}
               >
                 <Phone className="w-5 h-5" />
                 Start Recovering Revenue Now
-              </a>
+              </motion.a>
             </div>
           </div>
         </div>
@@ -574,11 +596,24 @@ export default function RestaurantsPageClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                className="glass-card p-8 rounded-2xl hover:border-gold/50 transition-all duration-300"
+                whileHover={{ y: -10, scale: 1.03 }}
+                className="glass-card p-8 rounded-2xl hover:border-gold/50 hover:shadow-glow-gold-lg transition-all duration-300"
               >
-                <div className="text-6xl mb-4">{study.icon}</div>
+                <motion.div
+                  className="text-6xl mb-4"
+                  whileHover={{ scale: 1.15, rotate: 10 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  {study.icon}
+                </motion.div>
                 <h3 className="text-2xl font-bold text-white mb-2">{study.type}</h3>
-                <div className="text-4xl font-bold text-gold mb-2">{study.revenue}</div>
+                <motion.div
+                  className="text-4xl font-bold text-gold mb-2"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 400 }}
+                >
+                  {study.revenue}
+                </motion.div>
                 <p className="text-foreground-muted mb-1">{study.roi} ROI</p>
                 <p className="text-sm text-foreground-muted">{study.period}</p>
               </motion.div>
@@ -602,7 +637,11 @@ export default function RestaurantsPageClient() {
               <span className="text-gradient-gold-cyan">Zero Missed with AI.</span>
             </h2>
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-12">
-              <div className="glass-card p-6 rounded-2xl">
+              <motion.div
+                className="glass-card p-6 rounded-2xl"
+                whileHover={{ y: -5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 <h3 className="text-xl font-bold text-white mb-4">Before AI</h3>
                 <ul className="space-y-2 text-foreground-muted">
                   <li>❌ 46 missed calls</li>
@@ -610,8 +649,12 @@ export default function RestaurantsPageClient() {
                   <li>❌ Burned food</li>
                   <li>❌ $1,610 lost revenue</li>
                 </ul>
-              </div>
-              <div className="glass-gold-accent p-6 rounded-2xl">
+              </motion.div>
+              <motion.div
+                className="glass-gold-accent p-6 rounded-2xl"
+                whileHover={{ y: -5, scale: 1.02 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
                 <h3 className="text-xl font-bold text-white mb-4">With AI</h3>
                 <ul className="space-y-2 text-white">
                   <li>✅ 200/200 calls answered</li>
@@ -619,7 +662,7 @@ export default function RestaurantsPageClient() {
                   <li>✅ Perfect orders</li>
                   <li>✅ $7,000+ captured</li>
                 </ul>
-              </div>
+              </motion.div>
             </div>
           </motion.div>
         </div>
@@ -641,19 +684,23 @@ export default function RestaurantsPageClient() {
               Join restaurants recovering $47K+ annually with AI phone automation
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <motion.a
                 href="tel:865-346-3339"
-                className="btn-gold text-lg px-10 py-5 inline-flex items-center justify-center gap-2"
+                className="btn-gold text-lg px-10 py-5 inline-flex items-center justify-center gap-2 w-full sm:w-auto"
+                whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(245, 166, 35, 0.6)" }}
+                whileTap={{ scale: 0.95 }}
               >
                 <Phone className="w-5 h-5" />
                 Call 865-346-3339
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href="/contact"
-                className="btn-gold-outline text-lg px-10 py-5 inline-flex items-center justify-center gap-2"
+                className="btn-gold-outline text-lg px-10 py-5 inline-flex items-center justify-center gap-2 w-full sm:w-auto"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 Request Demo
-              </a>
+              </motion.a>
             </div>
           </motion.div>
         </div>

@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "@/lib/motion";
+import { CheckCircle, ChevronDown, ArrowRight, Phone } from "lucide-react";
 import { trackFormStart, trackFormSubmission, trackPhoneClick } from "@/lib/analytics";
 
 interface LeadCaptureFormProps {
@@ -79,7 +81,12 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
 
   if (submitted) {
     return (
-      <div className="relative group animate-fade-in">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        className="relative group"
+      >
         {/* Success glow effect */}
         <div className="absolute -inset-4 bg-gradient-to-r from-accent/30 via-primary/30 to-accent/30 rounded-3xl blur-2xl opacity-50 animate-pulse" />
 
@@ -87,7 +94,7 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
           {/* Animated checkmark */}
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-accent/20 border-2 border-accent mb-6 relative">
             <div className="absolute inset-0 rounded-full bg-accent/10 animate-ping" />
-            <span className="material-icons text-accent text-5xl relative z-10 animate-bounce-subtle">check_circle</span>
+            <CheckCircle className="w-12 h-12 text-accent relative z-10 animate-bounce-subtle" />
           </div>
 
           <h3 className="text-2xl sm:text-3xl font-bold text-white mb-3">
@@ -100,14 +107,19 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
             We'll get back to you within 2 hours.
           </p>
         </div>
-      </div>
+      </motion.div>
     );
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5 sm:space-y-6">
       {/* Name field with premium glass styling */}
-      <div className="group">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0 }}
+        className="group"
+      >
         <label
           htmlFor="name"
           className="block text-sm font-semibold text-white/90 mb-2.5 transition-colors group-focus-within:text-accent"
@@ -140,10 +152,15 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
           {/* Decorative accent line */}
           <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
         </div>
-      </div>
+      </motion.div>
 
       {/* Email field with glass styling */}
-      <div className="group">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.1 }}
+        className="group"
+      >
         <label
           htmlFor="email"
           className="block text-sm font-semibold text-white/90 mb-2.5 transition-colors group-focus-within:text-accent"
@@ -172,10 +189,15 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
           />
           <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
         </div>
-      </div>
+      </motion.div>
 
       {/* Phone field with glass styling */}
-      <div className="group">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.2 }}
+        className="group"
+      >
         <label
           htmlFor="phone"
           className="block text-sm font-semibold text-white/90 mb-2.5 transition-colors group-focus-within:text-accent"
@@ -205,10 +227,15 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
           />
           <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
         </div>
-      </div>
+      </motion.div>
 
       {/* Service select with premium styling */}
-      <div className="group">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.3 }}
+        className="group"
+      >
         <label
           htmlFor="service"
           className="block text-sm font-semibold text-white/90 mb-2.5 transition-colors group-focus-within:text-accent"
@@ -240,15 +267,18 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
             <option value="all">All Services</option>
           </select>
           {/* Custom dropdown icon */}
-          <span className="material-icons absolute right-4 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none text-xl">
-            expand_more
-          </span>
+          <ChevronDown className="w-5 h-5 absolute right-4 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none" />
           <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
         </div>
-      </div>
+      </motion.div>
 
       {/* Message textarea with premium styling */}
-      <div className="group">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.4 }}
+        className="group"
+      >
         <label
           htmlFor="message"
           className="block text-sm font-semibold text-white/90 mb-2.5 transition-colors group-focus-within:text-accent"
@@ -276,10 +306,13 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
           />
           <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
         </div>
-      </div>
+      </motion.div>
 
       {/* Premium gradient submit button */}
-      <button
+      <motion.button
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.5 }}
         type="submit"
         disabled={isSubmitting}
         className="group relative w-full min-h-[56px] overflow-hidden rounded-xl
@@ -311,16 +344,19 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
           ) : (
             <>
               Get Your Free Consultation
-              <span className="material-icons text-xl transition-transform duration-300 group-hover:translate-x-1">
-                arrow_forward
-              </span>
+              <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </>
           )}
         </span>
-      </button>
+      </motion.button>
 
       {/* Call option with trust signals */}
-      <div className="flex flex-col items-center gap-3 pt-2">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4, delay: 0.6 }}
+        className="flex flex-col items-center gap-3 pt-2"
+      >
         <div className="flex items-center gap-2 text-xs text-white/40">
           <span className="w-12 h-px bg-gradient-to-r from-transparent to-white/20" />
           <span>OR</span>
@@ -337,7 +373,7 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
                      min-h-[56px]"
           onClick={() => trackPhoneClick("865-346-3339", `lead_form_${source}`)}
         >
-          <span className="material-icons text-accent text-lg">phone</span>
+          <Phone className="w-5 h-5 text-accent" />
           <span className="text-sm text-white/80 group-hover:text-white transition-colors">
             Call us directly:
           </span>
@@ -345,7 +381,7 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
             (865) 346-3339
           </span>
         </a>
-      </div>
+      </motion.div>
     </form>
   );
 }

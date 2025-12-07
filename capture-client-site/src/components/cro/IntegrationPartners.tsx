@@ -3,6 +3,7 @@
 import { motion } from "@/lib/motion";
 import Image from "next/image";
 import { useState } from "react";
+import { Network, ArrowRight } from "lucide-react";
 
 const partners = [
   // Payments
@@ -391,7 +392,7 @@ export default function IntegrationPartners() {
         >
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-6">
-            <span className="material-icons text-cyan-400 text-lg">hub</span>
+            <Network className="w-5 h-5 text-cyan-400" />
             <span className="text-cyan-400 text-sm font-medium tracking-wide">
               50+ Seamless Integrations
             </span>
@@ -488,9 +489,7 @@ export default function IntegrationPartners() {
 
                 {/* Arrow indicator */}
                 <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0">
-                  <span className="material-icons text-cyan-400 text-base">
-                    arrow_forward
-                  </span>
+                  <ArrowRight className="w-4 h-4 text-cyan-400" />
                 </div>
               </div>
             </motion.a>
@@ -542,7 +541,7 @@ export default function IntegrationPartners() {
             className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-cyan-400 text-slate-900 font-semibold rounded-full hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-105"
           >
             <span>Request an Integration</span>
-            <span className="material-icons text-lg">arrow_forward</span>
+            <ArrowRight className="w-5 h-5" />
           </a>
         </motion.div>
       </div>
