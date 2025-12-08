@@ -262,7 +262,9 @@ function StepCardDesktop({ step, index, isInView }: StepCardProps) {
       }}
       className={`relative flex items-center ${isLeft ? 'justify-end' : 'justify-start'}`}
     >
-      {/* Timeline connecting dot with pulse - centered vertically on the row */}
+      {/* Timeline connecting dot with pulse - side-aware positioning */}
+      {/* When isLeft (card on left/justify-end): badge goes to RIGHT of centerline */}
+      {/* When !isLeft (card on right/justify-start): badge goes to LEFT of centerline */}
       <motion.div
         initial={{ scale: 0 }}
         animate={isInView ? { scale: 1 } : { scale: 0 }}
@@ -272,25 +274,26 @@ function StepCardDesktop({ step, index, isInView }: StepCardProps) {
           type: "spring",
           stiffness: 200,
         }}
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
+        className={`absolute left-1/2 top-1/2 -translate-y-1/2 z-20 ${isLeft ? 'translate-x-[10%]' : '-translate-x-[110%]'}`}
       >
         <div className="relative flex items-center justify-center">
-          {/* Animated pulse rings - slightly larger than badge */}
+          {/* Animated pulse rings */}
           <motion.div
             animate={{
               scale: [1, 1.4, 1],
-              opacity: [0.6, 0, 0.6]
+              opacity: [0.5, 0, 0.5]
             }}
             transition={{
-              duration: 2,
+              duration: 2.5,
               repeat: Infinity,
               delay: index * 0.3
             }}
-            className={`absolute w-20 h-20 rounded-full bg-gradient-to-br ${auroraGradient}`}
+            className={`absolute w-18 h-18 rounded-full bg-gradient-to-br ${auroraGradient}`}
+            style={{ width: '4.5rem', height: '4.5rem' }}
           />
-          {/* Number circle - reduced size for better spacing */}
-          <div className={`relative w-16 h-16 rounded-full bg-gradient-to-br ${auroraGradient} flex items-center justify-center shadow-glow border-4 border-background-dark`}>
-            <span className="text-3xl font-black text-white" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+          {/* Number circle */}
+          <div className={`relative w-14 h-14 rounded-full bg-gradient-to-br ${auroraGradient} flex items-center justify-center shadow-glow border-4 border-background-dark`}>
+            <span className="text-2xl font-black text-white" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
               {step.number}
             </span>
           </div>
