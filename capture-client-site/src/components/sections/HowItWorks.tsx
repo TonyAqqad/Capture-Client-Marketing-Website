@@ -262,7 +262,7 @@ function StepCardDesktop({ step, index, isInView }: StepCardProps) {
       }}
       className={`relative flex items-center ${isLeft ? 'justify-end' : 'justify-start'}`}
     >
-      {/* Timeline connecting dot with pulse */}
+      {/* Timeline connecting dot with pulse - centered vertically on the row */}
       <motion.div
         initial={{ scale: 0 }}
         animate={isInView ? { scale: 1 } : { scale: 0 }}
@@ -272,25 +272,25 @@ function StepCardDesktop({ step, index, isInView }: StepCardProps) {
           type: "spring",
           stiffness: 200,
         }}
-        className="absolute left-1/2 -translate-x-1/2 z-20"
+        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20"
       >
-        <div className="relative">
-          {/* Animated pulse rings */}
+        <div className="relative flex items-center justify-center">
+          {/* Animated pulse rings - slightly larger than badge */}
           <motion.div
             animate={{
-              scale: [1, 1.5, 1],
-              opacity: [0.8, 0, 0.8]
+              scale: [1, 1.4, 1],
+              opacity: [0.6, 0, 0.6]
             }}
             transition={{
               duration: 2,
               repeat: Infinity,
               delay: index * 0.3
             }}
-            className={`absolute inset-0 w-24 h-24 -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full bg-gradient-to-br ${auroraGradient}`}
+            className={`absolute w-20 h-20 rounded-full bg-gradient-to-br ${auroraGradient}`}
           />
-          {/* Number circle */}
-          <div className={`relative w-24 h-24 rounded-full bg-gradient-to-br ${auroraGradient} flex items-center justify-center shadow-glow border-4 border-background-dark`}>
-            <span className="text-5xl font-black text-white" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+          {/* Number circle - reduced size for better spacing */}
+          <div className={`relative w-16 h-16 rounded-full bg-gradient-to-br ${auroraGradient} flex items-center justify-center shadow-glow border-4 border-background-dark`}>
+            <span className="text-3xl font-black text-white" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
               {step.number}
             </span>
           </div>
@@ -304,7 +304,7 @@ function StepCardDesktop({ step, index, isInView }: StepCardProps) {
           rotateY: isLeft ? 2 : -2,
           rotateX: -2
         }}
-        className={`${isLeft ? 'mr-20' : 'ml-20'} w-[calc(50%-6rem)] group`}
+        className={`${isLeft ? 'mr-24' : 'ml-24'} w-[calc(50%_-_6rem)] group`}
         style={{ transformStyle: 'preserve-3d' }}
       >
         <div className="glass-3d p-8 rounded-3xl relative overflow-hidden">
