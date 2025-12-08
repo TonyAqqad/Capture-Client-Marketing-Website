@@ -1,41 +1,24 @@
 "use client";
 
 import Link from "next/link";
-import { motion, useScroll, useTransform } from "@/lib/motion";
+import { motion } from "@/lib/motion";
 import { useRef, useEffect, useState } from "react";
 import { MobileHeroVisual } from "@/components/premium/MobileHeroVisual";
 import { ArrowRight, Phone, ShieldCheck, Star, PhoneCall, TrendingUp } from "lucide-react";
+import { PremiumGlassCard } from "@/components/ui/PremiumGlassCard";
 
 // ============================================
-// EDITORIAL HERO - Confident, Clean, Human
-// Inspired by: Apple, Linear, Stripe, Vercel
+// $10B VALUATION HERO - Linear/Stripe Dark Luxury
+// Editorial typography • 3D floating dashboard • Premium refinement
 // ============================================
 
 export function PremiumHero() {
   const containerRef = useRef<HTMLElement>(null);
   const [isClient, setIsClient] = useState(false);
-  const [disableAnimations, setDisableAnimations] = useState(false);
 
   useEffect(() => {
     setIsClient(true);
-    const checkMobile = () => {
-      if (typeof window === 'undefined') return;
-      const mobile = window.innerWidth < 768;
-      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      setDisableAnimations(mobile || reducedMotion);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
   }, []);
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"]
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
   // Live counter - starts after hydration
   const [clientsToday, setClientsToday] = useState(1847);
@@ -52,14 +35,14 @@ export function PremiumHero() {
       ref={containerRef}
       className="relative min-h-screen flex items-center overflow-hidden"
       style={{
-        background: "linear-gradient(180deg, #030508 0%, #070B14 40%, #0A0E1A 100%)",
+        background: "#08090A",
       }}
     >
       {/* ============================================ */}
-      {/* BACKGROUND: Single subtle gradient accent */}
+      {/* BACKGROUND: Linear-inspired radial glows */}
       {/* ============================================ */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Top-right gold accent - subtle, not overwhelming */}
+        {/* Top-right gold accent */}
         <div
           className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] opacity-[0.07]"
           style={{
@@ -77,7 +60,7 @@ export function PremiumHero() {
         />
       </div>
 
-      {/* Subtle grid texture */}
+      {/* Grid pattern - 2% opacity */}
       <div className="absolute inset-0 opacity-[0.02] pointer-events-none">
         <div
           className="absolute inset-0"
@@ -90,24 +73,18 @@ export function PremiumHero() {
       </div>
 
       {/* Main content */}
-      <motion.div
-        style={{
-          y: disableAnimations ? 0 : y,
-          opacity: disableAnimations ? 1 : opacity,
-        }}
-        className="relative z-10 w-full pt-28 sm:pt-36 lg:pt-24 pb-16"
-      >
+      <div className="relative z-10 w-full pt-28 sm:pt-36 lg:pt-24 pb-16">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* ============================================ */}
-          {/* EDITORIAL LAYOUT: Asymmetric grid */}
+          {/* ASYMMETRIC 40/60 SPLIT: Typography left, Visual right */}
           {/* ============================================ */}
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
 
-            {/* LEFT: Typography-first content */}
-            <div className="lg:col-span-7">
+            {/* LEFT: Typography-first content (40% = 5 cols) */}
+            <div className="lg:col-span-5">
 
-              {/* Status badge - minimal, confident */}
+              {/* Status badge */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -123,29 +100,39 @@ export function PremiumHero() {
               </motion.div>
 
               {/* ============================================ */}
-              {/* HEADLINE: Editorial weight contrasts */}
+              {/* EDITORIAL HEADLINE: Weight contrast + animate (not whileInView for hero) */}
               {/* ============================================ */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.1 }}
-              >
-                <h1 className="mb-8">
-                  {/* Line 1: Light weight creates tension */}
-                  <span className="block text-[2.75rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5.5rem] xl:text-[6.5rem] font-extralight text-white leading-[0.95] tracking-tight">
-                    Never miss
-                  </span>
-
-                  {/* Line 2: Heavy weight creates anchor */}
-                  <span className="block text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[6rem] xl:text-[7rem] font-black leading-[0.9] tracking-tight mt-1">
-                    <span className="bg-gradient-to-r from-[#D4AF37] via-[#F5D67B] to-[#D4AF37] bg-clip-text text-transparent">
-                      another client
+              <h1 className="mb-8" style={{ letterSpacing: '-0.02em' }}>
+                {/* Line 1: Extralight (100 weight) */}
+                <div className="overflow-hidden">
+                  <motion.div
+                    initial={{ clipPath: "inset(100% 0 0 0)" }}
+                    animate={{ clipPath: "inset(0% 0 0 0)" }}
+                    transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.1 }}
+                  >
+                    <span className="block text-[2.75rem] sm:text-[3.5rem] md:text-[4.5rem] lg:text-[5rem] xl:text-[5.5rem] font-extralight text-white leading-[0.95]">
+                      Never miss
                     </span>
-                  </span>
-                </h1>
-              </motion.div>
+                  </motion.div>
+                </div>
 
-              {/* Subheadline - clean, readable */}
+                {/* Line 2: Black (900 weight) with gold gradient */}
+                <div className="overflow-hidden">
+                  <motion.div
+                    initial={{ clipPath: "inset(100% 0 0 0)" }}
+                    animate={{ clipPath: "inset(0% 0 0 0)" }}
+                    transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
+                  >
+                    <span className="block text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[5.5rem] xl:text-[6rem] font-black leading-[0.9] mt-1">
+                      <span className="bg-gradient-to-r from-[#D4AF37] via-[#F5D67B] to-[#D4AF37] bg-clip-text text-transparent">
+                        another client
+                      </span>
+                    </span>
+                  </motion.div>
+                </div>
+              </h1>
+
+              {/* Subheadline */}
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -156,7 +143,7 @@ export function PremiumHero() {
                 and book appointments while you focus on what matters.
               </motion.p>
 
-              {/* CTAs - confident, not desperate */}
+              {/* CTAs */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -185,7 +172,7 @@ export function PremiumHero() {
                 </Link>
               </motion.div>
 
-              {/* Social proof - minimal, impactful */}
+              {/* Social proof */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -209,65 +196,154 @@ export function PremiumHero() {
               </motion.div>
             </div>
 
-            {/* RIGHT: Interactive Demo Card */}
-            <div className="lg:col-span-5 hidden lg:block">
+            {/* RIGHT: Floating 3D Mock Dashboard (60% = 7 cols) */}
+            <div className="lg:col-span-7 hidden lg:block">
               <motion.div
                 initial={{ opacity: 0, y: 40 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className="relative"
+                style={{
+                  transform: "perspective(1500px) rotateY(-2deg) rotateX(3deg)",
+                  transformStyle: "preserve-3d",
+                }}
               >
-                {/* Demo Card */}
-                <div className="relative p-8 rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-sm">
+                <PremiumGlassCard
+                  variant="premium"
+                  glowColor="gold"
+                  hover={false}
+                  className="p-8"
+                >
+                  {/* Dashboard Header */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+                    className="mb-8"
+                  >
+                    <h3 className="text-2xl font-bold text-white mb-2">
+                      Live Dashboard
+                    </h3>
+                    <p className="text-sm text-white/50">
+                      Real-time AI performance metrics
+                    </p>
+                  </motion.div>
 
-                  {/* Live indicator */}
-                  <div className="absolute -top-3 left-8">
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
-                      <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
-                      </span>
-                      <span className="text-xs font-medium text-emerald-400">Live Demo</span>
-                    </div>
+                  {/* Stats Grid - 3 mini stat displays */}
+                  <div className="grid grid-cols-3 gap-4 mb-8">
+                    {[
+                      { value: "500+", label: "Clients", icon: ShieldCheck },
+                      { value: "1M+", label: "Calls", icon: PhoneCall },
+                      { value: "4.9", label: "Rating", icon: Star }
+                    ].map((stat, index) => (
+                      <motion.div
+                        key={stat.label}
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                          duration: 0.6,
+                          delay: 0.7 + index * 0.1,
+                          ease: [0.25, 0.46, 0.45, 0.94]
+                        }}
+                        className="p-4 rounded-xl bg-white/[0.03] border border-white/10"
+                      >
+                        <div className="flex items-center gap-2 mb-2">
+                          <stat.icon className="w-4 h-4 text-[#D4AF37]" />
+                        </div>
+                        <div className="text-2xl font-bold text-white">
+                          {stat.value}
+                        </div>
+                        <div className="text-xs text-white/40">
+                          {stat.label}
+                        </div>
+                      </motion.div>
+                    ))}
                   </div>
 
-                  <div className="text-center pt-4">
-                    {/* Phone icon - clean, not pulsing */}
-                    <div className="w-16 h-16 mx-auto mb-6 rounded-2xl bg-gradient-to-br from-[#D4AF37] to-[#F5D67B] flex items-center justify-center shadow-lg">
-                      <PhoneCall className="w-8 h-8 text-[#0A0E1A]" />
+                  {/* Integration Partners Row */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 1.0,
+                      ease: [0.25, 0.46, 0.45, 0.94]
+                    }}
+                    className="mb-8 p-4 rounded-xl bg-white/[0.02] border border-white/10"
+                  >
+                    <div className="text-xs text-white/40 mb-3 font-medium uppercase tracking-wider">
+                      Integrations
                     </div>
+                    <div className="grid grid-cols-2 gap-2">
+                      {["ServiceTitan", "HubSpot", "Salesforce", "Calendly"].map((name, index) => (
+                        <motion.div
+                          key={name}
+                          initial={{ opacity: 0, scale: 0.9 }}
+                          animate={{ opacity: 1, scale: 1 }}
+                          transition={{
+                            duration: 0.4,
+                            delay: 1.1 + index * 0.05,
+                            ease: [0.25, 0.46, 0.45, 0.94]
+                          }}
+                          className="px-3 py-2 rounded-lg bg-white/[0.05] border border-white/10 text-xs font-medium text-white/70 text-center"
+                        >
+                          {name}
+                        </motion.div>
+                      ))}
+                    </div>
+                  </motion.div>
 
-                    <h3 className="text-xl font-semibold text-white mb-2">
-                      Experience it yourself
-                    </h3>
+                  {/* Try AI Live Section - Hero Feature */}
+                  <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      duration: 0.6,
+                      delay: 1.3,
+                      ease: [0.25, 0.46, 0.45, 0.94]
+                    }}
+                    className="p-6 rounded-xl bg-gradient-to-br from-[#D4AF37]/10 via-transparent to-transparent border border-[#D4AF37]/20"
+                  >
+                    <div className="flex items-start gap-4">
+                      {/* Phone Icon */}
+                      <div className="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-[#D4AF37] to-[#F5D67B] flex items-center justify-center shadow-lg">
+                        <PhoneCall className="w-6 h-6 text-[#0A0E1A]" />
+                      </div>
 
-                    <p className="text-sm text-white/50 mb-6">
-                      Call our AI agent and see how it handles your inquiry
-                    </p>
+                      <div className="flex-1">
+                        <h4 className="text-lg font-bold text-white mb-1">
+                          Try Our AI Live!
+                        </h4>
+                        <p className="text-sm text-white/50 mb-3">
+                          Call now and experience it yourself
+                        </p>
 
-                    {/* Phone number - prominent but not garish */}
-                    <a
-                      href="tel:865-346-3339"
-                      className="block group"
-                    >
-                      <span className="text-2xl font-bold text-white group-hover:text-[#D4AF37] transition-colors">
-                        (865) 346-3339
-                      </span>
-                    </a>
+                        {/* Phone Number - clickable */}
+                        <a
+                          href="tel:865-346-3339"
+                          className="block group mb-3"
+                        >
+                          <span className="text-xl font-bold text-white group-hover:text-[#D4AF37] transition-colors">
+                            (865) 346-3339
+                          </span>
+                        </a>
 
-                    {/* Availability indicator */}
-                    <div className="mt-6 pt-6 border-t border-white/5">
-                      <div className="flex items-center justify-center gap-2 text-xs text-white/40">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                        Available 24/7
+                        {/* AI Agent Online Status */}
+                        <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
+                          <span className="relative flex h-2 w-2">
+                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
+                          </span>
+                          <span className="text-xs font-medium text-emerald-400">AI Agent Online</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
+                  </motion.div>
+                </PremiumGlassCard>
               </motion.div>
             </div>
 
-            {/* Mobile Demo Visual */}
+            {/* Mobile: Simplified Phone Badge */}
             <div className="lg:hidden">
               <MobileHeroVisual />
             </div>
@@ -310,7 +386,7 @@ export function PremiumHero() {
             </div>
           </motion.div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Scroll indicator - minimal */}
       <motion.div
