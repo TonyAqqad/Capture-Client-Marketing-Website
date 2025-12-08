@@ -3,15 +3,14 @@
 import { useRef, useState, useEffect } from "react";
 import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
-import { Clock, ArrowRight, CheckCircle2, Phone, Rocket, Brain, Bot } from "lucide-react";
+import { ArrowRight, Phone, Rocket, Bot, TrendingUp } from "lucide-react";
 
 interface Step {
   number: string;
   title: string;
   description: string;
   icon: string;
-  color: "accent" | "primary";
-  features: string[];
+  highlight: string;
 }
 
 const steps: Step[] = [
@@ -20,62 +19,41 @@ const steps: Step[] = [
     title: "Book Your Strategy Call",
     description: "We analyze your business, identify growth opportunities, and design a custom plan tailored to your goals.",
     icon: "phone",
-    color: "accent",
-    features: [
-      "Free 30-minute consultation",
-      "Custom growth strategy",
-      "No pressure, no commitment"
-    ]
+    highlight: "Free 30-min consultation"
   },
   {
     number: "02",
     title: "We Build & Launch",
     description: "Our team sets up your AI agents, configures campaigns, and integrates everything into one seamless platform.",
     icon: "rocket",
-    color: "primary",
-    features: [
-      "48-hour setup",
-      "Full training included",
-      "White-glove onboarding"
-    ]
+    highlight: "48-hour setup"
   },
   {
     number: "03",
     title: "AI Captures Leads 24/7",
     description: "Your AI voice agents answer every call, qualify leads, and book appointments while you focus on running your business.",
     icon: "bot",
-    color: "accent",
-    features: [
-      "24/7 lead capture",
-      "Instant qualification",
-      "Auto-scheduling"
-    ]
+    highlight: "Never miss a lead"
   },
   {
     number: "04",
     title: "Watch Your Business Grow",
     description: "Track performance in real-time, see exactly where your leads come from, and scale what works.",
-    icon: "brain",
-    color: "primary",
-    features: [
-      "Live analytics dashboard",
-      "ROI tracking",
-      "Continuous optimization"
-    ]
+    icon: "growth",
+    highlight: "Real-time analytics"
   }
 ];
 
-// Icon mapping for dynamic rendering
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   phone: Phone,
   rocket: Rocket,
   bot: Bot,
-  brain: Brain,
+  growth: TrendingUp,
 };
 
 export function HowItWorks() {
   const containerRef = useRef<HTMLElement>(null);
-  const isInView = useInView(containerRef, { threshold: 0.2 });
+  const isInView = useInView(containerRef, { threshold: 0.1 });
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -93,144 +71,80 @@ export function HowItWorks() {
   return (
     <section
       ref={containerRef}
-      className="section bg-background-dark relative overflow-hidden w-full max-w-full py-16 sm:py-20 lg:py-32"
+      className="relative bg-background-dark py-20 sm:py-28 lg:py-36 overflow-hidden"
     >
-      {/* Aurora background effect */}
-      <div className="absolute inset-0 bg-aurora opacity-40" />
+      {/* Subtle gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/[0.02] to-transparent" />
 
-      {/* Geometric accent shapes */}
-      <motion.div
-        animate={{ rotate: 360 }}
-        transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        className="absolute top-20 right-20 w-32 h-32 border-2 border-aurora-1/20 rounded-lg hidden lg:block"
-      />
-      <motion.div
-        animate={{ rotate: -360 }}
-        transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-        className="absolute bottom-40 left-40 w-24 h-24 border-2 border-aurora-3/20 rounded-full hidden lg:block"
-      />
-
-      <div className="container-custom relative z-10 px-6 sm:px-6 lg:px-8">
-        {/* Section header with $1M typography */}
-        <div className="text-center mb-16 sm:mb-20 lg:mb-32">
-          <motion.div
-            initial={{ opacity: 0, y: isMobile ? 0 : 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: isMobile ? 0 : 30 }}
-            transition={{ duration: isMobile ? 0.3 : 0.6 }}
-          >
-            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-gradient-gold-cyan mb-4 sm:mb-6">
-              Simple Process
-            </h2>
-            <h3 className="text-hero-xl font-hero text-foreground mb-6 sm:mb-8 text-depth px-4">
-              <span className="block mb-2">How It Works:</span>
-              <span className="text-gradient-gold-cyan block">
-                4 Simple Steps
-              </span>
-            </h3>
-            <p className="text-xl sm:text-2xl md:text-3xl text-light-contrast text-foreground-muted max-w-3xl mx-auto leading-[1.6] px-6">
-              From strategy to scale—we make growth simple, automated, and profitable.
-            </p>
-          </motion.div>
-        </div>
-
-        {/* Desktop: Vertical Aurora Timeline */}
-        <div className="hidden lg:block max-w-5xl mx-auto">
-          <div className="relative">
-            {/* Vertical Aurora Timeline Line */}
-            <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-1 overflow-hidden">
-              <motion.div
-                initial={{ scaleY: 0 }}
-                animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
-                transition={{ duration: 2, delay: 0.3, ease: "easeOut" }}
-                className="h-full w-full origin-top relative"
-                style={{
-                  background: "linear-gradient(180deg, #00C9FF 0%, #4F46E5 33%, #8B5CF6 66%, #D4AF37 100%)"
-                }}
-              >
-                {/* Animated glow effect */}
-                <motion.div
-                  animate={{
-                    opacity: [0.5, 1, 0.5],
-                    scale: [1, 1.5, 1]
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }}
-                  className="absolute inset-0 blur-xl"
-                  style={{
-                    background: "linear-gradient(180deg, #00C9FF 0%, #4F46E5 33%, #8B5CF6 66%, #D4AF37 100%)",
-                    opacity: 0.6
-                  }}
-                />
-              </motion.div>
-            </div>
-
-            {/* Steps */}
-            <div className="space-y-32">
-              {steps.map((step, index) => (
-                <StepCardDesktop
-                  key={step.number}
-                  step={step}
-                  index={index}
-                  isInView={isInView}
-                  isMobile={isMobile}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile: Vertical Timeline - FIXED positioning to prevent overlap */}
-        <div className="lg:hidden space-y-8 sm:space-y-12 relative pl-20 sm:pl-24">
-          {/* Mobile vertical aurora line - positioned relative to the left padding */}
-          <div className="absolute left-6 sm:left-8 top-6 bottom-6 w-[2px] overflow-hidden rounded-full">
-            <motion.div
-              initial={{ scaleY: 0 }}
-              animate={isInView ? { scaleY: 1 } : { scaleY: 0 }}
-              transition={{ duration: 1.5, delay: 0.2 }}
-              className="h-full w-full origin-top"
-              style={{
-                background: "linear-gradient(180deg, #00C9FF 0%, #4F46E5 33%, #8B5CF6 66%, #D4AF37 100%)"
-              }}
-            />
-          </div>
-
-          {steps.map((step, index) => (
-            <StepCardMobile
-              key={step.number}
-              step={step}
-              index={index}
-              isInView={isInView}
-              isMobile={isMobile}
-            />
-          ))}
-        </div>
-
-        {/* Bottom CTA */}
+      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
+        {/* Editorial Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: isMobile ? 0 : 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: isMobile ? 0 : 30 }}
-          transition={{ duration: isMobile ? 0.3 : 0.6, delay: isMobile ? 0 : 1.5 }}
-          className="text-center mt-20 sm:mt-24 lg:mt-32"
+          initial={{ opacity: 0, y: isMobile ? 0 : 24 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: isMobile ? 0 : 24 }}
+          transition={{ duration: 0.6 }}
+          className="max-w-2xl mb-16 sm:mb-20 lg:mb-24"
         >
-          <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-full glass-badge mb-6 sm:mb-8 max-w-full">
-            <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-accent flex-shrink-0" />
-            <span className="text-xs sm:text-sm font-semibold text-accent whitespace-nowrap">Average setup time: 48 hours</span>
-          </div>
-          <p className="text-foreground-muted mb-6 sm:mb-8 text-lg sm:text-xl px-4">
-            Ready to get started?
+          <p className="text-sm font-medium tracking-widest uppercase text-accent mb-4">
+            The Process
           </p>
-          <motion.a
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1] mb-6">
+            Four steps to
+            <span className="text-gradient-gold-cyan block mt-1">
+              automated growth
+            </span>
+          </h2>
+          <p className="text-lg sm:text-xl text-foreground-muted leading-relaxed">
+            From strategy call to live AI agents capturing leads around the clock.
+            Most businesses are fully operational within 48 hours.
+          </p>
+        </motion.div>
+
+        {/* Desktop: Horizontal Steps */}
+        <div className="hidden lg:block">
+          <div className="grid grid-cols-4 gap-8">
+            {steps.map((step, index) => (
+              <DesktopStepCard
+                key={step.number}
+                step={step}
+                index={index}
+                isInView={isInView}
+                isLast={index === steps.length - 1}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Mobile/Tablet: Vertical Steps */}
+        <div className="lg:hidden">
+          <div className="space-y-6">
+            {steps.map((step, index) => (
+              <MobileStepCard
+                key={step.number}
+                step={step}
+                index={index}
+                isInView={isInView}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom CTA - Clean and Confident */}
+        <motion.div
+          initial={{ opacity: 0, y: isMobile ? 0 : 24 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: isMobile ? 0 : 24 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+          className="mt-16 sm:mt-20 lg:mt-24 text-center"
+        >
+          <p className="text-foreground-muted mb-6 text-lg">
+            Ready to stop missing leads?
+          </p>
+          <a
             href="#contact"
-            whileHover={isMobile ? {} : { scale: 1.05, y: -4 }}
-            whileTap={isMobile ? {} : { scale: 0.95 }}
-            className="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-accent via-primary to-accent text-white font-bold text-base sm:text-lg px-8 sm:px-10 py-4 sm:py-5 rounded-2xl shadow-glow-lg hover:shadow-glow border-2 border-transparent hover:border-accent/30 transition-all duration-300 w-full sm:w-auto max-w-md mx-4 sm:mx-0 min-h-[56px] desktop-btn-premium"
+            className="btn-gold inline-flex items-center gap-3 text-lg px-8 py-4"
           >
             Book Your Strategy Call
-            <ArrowRight className="w-6 h-6 flex-shrink-0" />
-          </motion.a>
+            <ArrowRight className="w-5 h-5" />
+          </a>
         </motion.div>
       </div>
     </section>
@@ -241,220 +155,102 @@ interface StepCardProps {
   step: Step;
   index: number;
   isInView: boolean;
-  isMobile: boolean;
+  isLast?: boolean;
 }
 
-function StepCardDesktop({ step, index, isInView }: StepCardProps) {
-  const isLeft = index % 2 === 0;
-  const auroraGradient = index % 2 === 0
-    ? "from-[#00C9FF] to-[#4F46E5]"
-    : "from-[#8B5CF6] to-[#D4AF37]";
+function DesktopStepCard({ step, index, isInView, isLast }: StepCardProps) {
+  const IconComponent = iconMap[step.icon];
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: isLeft ? -100 : 100 }}
-      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: isLeft ? -100 : 100 }}
+      initial={{ opacity: 0, y: 32 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 32 }}
       transition={{
-        duration: 0.8,
-        delay: index * 0.2,
-        type: "spring",
-        stiffness: 80,
+        duration: 0.5,
+        delay: index * 0.15,
+        ease: [0.25, 0.1, 0.25, 1]
       }}
-      className={`relative flex items-center ${isLeft ? 'justify-end' : 'justify-start'}`}
+      className="relative group"
     >
-      {/* Timeline connecting dot with pulse - side-aware positioning */}
-      {/* When isLeft (card on left/justify-end): badge goes to RIGHT of centerline */}
-      {/* When !isLeft (card on right/justify-start): badge goes to LEFT of centerline */}
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={isInView ? { scale: 1 } : { scale: 0 }}
-        transition={{
-          duration: 0.6,
-          delay: index * 0.2 + 0.4,
-          type: "spring",
-          stiffness: 200,
-        }}
-        className={`absolute left-1/2 top-1/2 -translate-y-1/2 z-20 ${isLeft ? 'translate-x-[10%]' : '-translate-x-[110%]'}`}
-      >
-        <div className="relative flex items-center justify-center">
-          {/* Animated pulse rings */}
+      {/* Connector line */}
+      {!isLast && (
+        <div className="absolute top-8 left-full w-full h-px">
           <motion.div
-            animate={{
-              scale: [1, 1.4, 1],
-              opacity: [0.5, 0, 0.5]
-            }}
-            transition={{
-              duration: 2.5,
-              repeat: Infinity,
-              delay: index * 0.3
-            }}
-            className={`absolute w-18 h-18 rounded-full bg-gradient-to-br ${auroraGradient}`}
-            style={{ width: '4.5rem', height: '4.5rem' }}
+            initial={{ scaleX: 0 }}
+            animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.15 + 0.3 }}
+            className="h-full bg-gradient-to-r from-white/20 to-transparent origin-left"
           />
-          {/* Number circle */}
-          <div className={`relative w-14 h-14 rounded-full bg-gradient-to-br ${auroraGradient} flex items-center justify-center shadow-glow border-4 border-background-dark`}>
-            <span className="text-2xl font-black text-white" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
-              {step.number}
-            </span>
-          </div>
         </div>
-      </motion.div>
+      )}
 
-      {/* Card */}
-      <motion.div
-        whileHover={{
-          y: -8,
-          rotateY: isLeft ? 2 : -2,
-          rotateX: -2
-        }}
-        className={`${isLeft ? 'mr-24' : 'ml-24'} w-[calc(50%_-_6rem)] group`}
-        style={{ transformStyle: 'preserve-3d' }}
-      >
-        <div className="glass-3d p-8 rounded-3xl relative overflow-hidden">
-          {/* Animated gradient border */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileHover={{ opacity: 1 }}
-            className="absolute inset-0 rounded-3xl p-[2px] pointer-events-none"
-            style={{
-              background: `linear-gradient(135deg, ${index % 2 === 0 ? '#00C9FF, #4F46E5' : '#8B5CF6, #D4AF37'})`,
-              WebkitMask: 'linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)',
-              WebkitMaskComposite: 'xor',
-              maskComposite: 'exclude'
-            }}
-          />
-
-          {/* Icon with aurora glow container */}
-          <div className="relative w-20 h-20 mb-6 flex-shrink-0">
-            <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${auroraGradient} opacity-20 blur-xl group-hover:opacity-40 transition-opacity duration-500`} />
-            <div className={`relative w-20 h-20 rounded-2xl glass-premium flex items-center justify-center border border-white/20 group-hover:scale-110 transition-transform duration-500 flex-shrink-0`}>
-              {(() => {
-                const IconComponent = iconMap[step.icon];
-                return <IconComponent className={`w-10 h-10 bg-gradient-to-br ${auroraGradient} bg-clip-text text-transparent flex-shrink-0`} />;
-              })()}
-            </div>
-          </div>
-
-          {/* Title with extreme weight */}
-          <h4 className="text-3xl font-hero font-black text-foreground mb-4 leading-tight" style={{ fontWeight: 800 }}>
-            {step.title}
-          </h4>
-
-          {/* Description with light weight contrast */}
-          <p className="text-foreground-muted leading-relaxed mb-6 text-lg text-light-contrast" style={{ fontWeight: 200 }}>
-            {step.description}
-          </p>
-
-          {/* Features */}
-          <ul className="space-y-3">
-            {step.features.map((feature, idx) => (
-              <motion.li
-                key={idx}
-                initial={{ opacity: 0, x: -10 }}
-                animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -10 }}
-                transition={{
-                  duration: 0.4,
-                  delay: index * 0.2 + idx * 0.1 + 0.8,
-                }}
-                className="flex items-center gap-3 text-base text-foreground-subtle"
-              >
-                <CheckCircle2 className={`w-5 h-5 bg-gradient-to-br ${auroraGradient} bg-clip-text text-transparent`} />
-                {feature}
-              </motion.li>
-            ))}
-          </ul>
+      {/* Step number - large, editorial */}
+      <div className="flex items-center gap-4 mb-6">
+        <span className="text-5xl font-bold text-white/10 font-mono">
+          {step.number}
+        </span>
+        <div className="w-12 h-12 rounded-xl glass flex items-center justify-center border border-white/10 group-hover:border-accent/30 transition-colors duration-300">
+          <IconComponent className="w-5 h-5 text-accent" />
         </div>
-      </motion.div>
+      </div>
+
+      {/* Content */}
+      <div>
+        <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors duration-300">
+          {step.title}
+        </h3>
+        <p className="text-foreground-muted leading-relaxed mb-4 text-sm">
+          {step.description}
+        </p>
+
+        {/* Highlight badge */}
+        <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-accent/10 text-accent border border-accent/20">
+          {step.highlight}
+        </span>
+      </div>
     </motion.div>
   );
 }
 
-function StepCardMobile({ step, index, isInView }: StepCardProps) {
-  const auroraGradient = index % 2 === 0
-    ? "from-[#00C9FF] to-[#4F46E5]"
-    : "from-[#8B5CF6] to-[#D4AF37]";
+function MobileStepCard({ step, index, isInView }: StepCardProps) {
+  const IconComponent = iconMap[step.icon];
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: -30 }}
-      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
+      initial={{ opacity: 0, x: -16 }}
+      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -16 }}
       transition={{
-        duration: 0.6,
-        delay: index * 0.15,
+        duration: 0.4,
+        delay: index * 0.1,
+        ease: [0.25, 0.1, 0.25, 1]
       }}
-      className="relative"
+      className="glass rounded-2xl p-6 border border-white/5"
     >
-      {/* Timeline connecting dot - FIXED: positioned absolutely to align with vertical line */}
-      <motion.div
-        initial={{ scale: 0 }}
-        animate={isInView ? { scale: 1 } : { scale: 0 }}
-        transition={{
-          duration: 0.5,
-          delay: index * 0.15 + 0.2,
-          type: "spring",
-          stiffness: 200,
-        }}
-        className="absolute left-[-3.5rem] sm:left-[-4rem] top-6 z-30"
-      >
-        {/* Pulse container with overflow hidden to prevent visual bleed */}
-        <div className="relative w-12 h-12 sm:w-14 sm:h-14 overflow-visible">
-          {/* Animated pulse - contained within parent */}
-          <motion.div
-            animate={{
-              scale: [1, 1.3, 1],
-              opacity: [0.4, 0, 0.4]
-            }}
-            transition={{
-              duration: 2.5,
-              repeat: Infinity,
-              delay: index * 0.3
-            }}
-            className={`absolute inset-0 rounded-full bg-gradient-to-br ${auroraGradient} blur-sm`}
-          />
-          {/* Number circle - solid background to clip any bleed */}
-          <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${auroraGradient} border-[3px] border-background-dark flex items-center justify-center shadow-glow-lg`}>
-            <span className="text-lg sm:text-xl font-black text-white drop-shadow-lg" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+      <div className="flex items-start gap-4">
+        {/* Number and Icon column */}
+        <div className="flex-shrink-0">
+          <div className="relative">
+            <span className="text-3xl font-bold text-white/10 font-mono">
               {step.number}
             </span>
-          </div>
-        </div>
-      </motion.div>
-
-      {/* Card - proper z-index layering, clear separation from timeline */}
-      <div className="glass-3d p-5 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl relative overflow-hidden border border-white/10">
-        {/* Icon with aurora glow */}
-        <div className="relative w-16 h-16 mb-5 flex-shrink-0">
-          <div className={`absolute inset-0 rounded-xl bg-gradient-to-br ${auroraGradient} opacity-20 blur-lg`} />
-          <div className={`relative w-16 h-16 rounded-xl glass-premium flex items-center justify-center border border-white/20 flex-shrink-0`}>
-            {(() => {
-              const IconComponent = iconMap[step.icon];
-              return <IconComponent className={`w-8 h-8 bg-gradient-to-br ${auroraGradient} bg-clip-text text-transparent flex-shrink-0`} />;
-            })()}
+            <div className="absolute -bottom-1 -right-1 w-8 h-8 rounded-lg glass flex items-center justify-center border border-white/10">
+              <IconComponent className="w-4 h-4 text-accent" />
+            </div>
           </div>
         </div>
 
-        {/* Title */}
-        <h4 className="text-2xl sm:text-3xl font-hero font-black text-foreground mb-4 leading-tight" style={{ fontWeight: 800, hyphens: 'none' }}>
-          {step.title}
-        </h4>
-
-        {/* Description */}
-        <p className="text-foreground-muted leading-[1.6] text-base sm:text-lg mb-6 text-light-contrast" style={{ fontWeight: 200 }}>
-          {step.description}
-        </p>
-
-        {/* Features */}
-        <ul className="space-y-3">
-          {step.features.map((feature, idx) => (
-            <li
-              key={idx}
-              className="flex items-center gap-3 text-base text-foreground-subtle"
-            >
-              <CheckCircle2 className={`w-4 h-4 bg-gradient-to-br ${auroraGradient} bg-clip-text text-transparent`} />
-              <span className="leading-[1.5]">{feature}</span>
-            </li>
-          ))}
-        </ul>
+        {/* Content */}
+        <div className="flex-1 min-w-0">
+          <h3 className="text-lg font-semibold text-foreground mb-2">
+            {step.title}
+          </h3>
+          <p className="text-foreground-muted text-sm leading-relaxed mb-3">
+            {step.description}
+          </p>
+          <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-accent/10 text-accent">
+            {step.highlight}
+          </span>
+        </div>
       </div>
     </motion.div>
   );

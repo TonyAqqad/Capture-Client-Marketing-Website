@@ -124,7 +124,7 @@
   "comparison": {
     "downgrade_prompt": {
       "headline": "Not Ready for Enterprise?",
-      "description": "Growth Package includes 2 AI agents, unlimited calls, and Google OR Facebook Ads for $797/mo.",
+      "description": "Growth Package includes 2 AI agents, unlimited calls, and Facebook Ads (Google Ads add-on available) for $950/mo.",
       "cta": {
         "text": "See Growth Package",
         "action": "/packages/growth-package"
@@ -146,7 +146,7 @@
       {
         "feature": "Advertising Platforms",
         "starter": "None",
-        "growth": "Google OR Facebook",
+        "growth": "Facebook (Google add-on)",
         "enterprise": "Both + LinkedIn"
       },
       {

@@ -755,7 +755,7 @@ export default function HomeServicesClient() {
                 >
                   <Link
                     href="/contact"
-                    className="btn-ghost px-10 py-5 text-xl font-semibold rounded-xl block"
+                    className="btn-ghost px-10 py-5 text-xl font-semibold rounded-xl w-full sm:w-auto"
                   >
                     Book a Demo
                   </Link>

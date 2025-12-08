@@ -35,9 +35,41 @@ export const metadata = {
 };
 ```
 
-## Do / Don’t
+## Canonical Components (use these, don't create duplicates)
+
+### Forms
+- `LeadCaptureForm` - General 5-field form (Contact, Pricing, Services pages)
+- `OptimizedLeadForm` - 3-field multi-step form (Locations, Final CTA) - supports optional email
+
+### Heroes
+- `PremiumHero` - Homepage only (particles, parallax, aurora orbs)
+- `ServiceHero` - Service/industry pages (props-driven, themeable)
+
+### CTAs
+- `PremiumFinalCTA` - Homepage final CTA with embedded form
+
+### Calculators
+- `RealEstateROICalculator` - Real estate industry page only (specialized)
+
+### Cards
+- `GlassCard` - General purpose (15+ usages across site)
+- `PremiumGlassCard` - Slot-based layouts (header/body/footer)
+
+### CRO Components
+- `ExitIntentPopup` - Exit intent modal (homepage via dynamic import)
+- `InteractiveAIDemo` - Live chat demo (homepage via dynamic import)
+
+### Testimonials
+- `PremiumTestimonials` - Grid layout (standard)
+- `TestimonialsCarousel` - Carousel/slider layout
+
+### Integration Partners
+- `IntegrationPartners` - Partner logo grid (homepage and feature pages)
+
+## Do / Don't
 - Do reuse existing components/patterns before adding new.
+- Do check canonical components list before creating new ones.
 - Do keep server/client split for SEO (metadata in server page).
-- Don’t hardcode colors; use theme classes.
-- Don’t invent new button/glass styles.
-- Don’t skip mobile checks (375px) and desktop (1440px).
+- Don't hardcode colors; use theme classes.
+- Don't invent new button/glass styles.
+- Don't skip mobile checks (375px) and desktop (1440px).

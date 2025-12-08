@@ -1,8 +1,82 @@
 # Progress (lean)
-- Overall: ~97% complete (last updated 2025-12-07). Builds passing (228 pages).
+- Overall: ~98% complete (last updated 2025-12-08). Builds passing (228 pages).
 - Current focus: component consolidation (15 groups), button/container class standardization, service pages SEO polish, location pages expansion, perf/accessibility sweep.
 
 ## Completed highlights
+- **COMPONENT CONSOLIDATION - Phase 1 COMPLETE** (2025-12-08):
+  - **Discovery**: Identified 9 orphaned component files to delete
+  - **Verification**: Confirmed 3 components still in use (InteractiveAIDemo, ExitIntentPopup, RealEstateROICalculator)
+  - **Deleted files** (9 total):
+    - `src/components/features/IndustryDemo.tsx` - unused demo component
+    - `src/components/features/SmartDemoScheduler.tsx` - duplicate scheduler
+    - `src/components/features/SmartScheduler.tsx` - duplicate scheduler
+    - `src/components/features/LeadTicker.tsx` - duplicate ticker
+    - `src/components/cro/LiveLeadTicker.tsx` - unused ticker variant
+    - `src/components/features/ROICalculator.tsx` - duplicate calculator
+    - `src/components/features/MissedCallCalculator.tsx` - duplicate calculator
+    - `src/components/features/MoneyLossCalculator.tsx` - duplicate calculator
+    - `src/components/features/EnhancedROICalculator.tsx` - duplicate calculator
+    - Also removed: `CALCULATOR_PAGE_EXAMPLE.tsx` (example/documentation file)
+  - **Components kept** (verified usage):
+    - `InteractiveAIDemo` - Homepage (dynamic import)
+    - `ExitIntentPopup` - Homepage (already integrated)
+    - `RealEstateROICalculator` - Real estate industry page
+  - **Enhancement**: Added optional email field to `OptimizedLeadForm.tsx` for flexibility
+  - **Documentation**: Created canonical components reference in patterns.md
+  - **Result**: 10 files removed, codebase cleaner, no functionality lost
+  - **Remaining work**: 14 component duplicate groups still to consolidate
+- **$10M HERO TRANSFORMATION COMPLETE** (2025-12-08):
+  - **Phase 1 - Background Layers**: Added 5 floating aurora orbs with parallax, 5 geometric shapes (cubes, circles, diamonds), 30 floating particles with glow, enhanced noise texture via inline SVG, boosted aurora opacity to 40%
+  - **Phase 2 - Typography**: New 3-line headline ("Your Business" / "Deserves More" / "Clients"), gold gradient + cyan gradient text, glowing animated underline with `boxShadow: 0 0 30px #D4AF37`, colored keywords in subheadline (cyan/purple/gold)
+  - **Phase 3 - Layout**: Scarcity badge at top ("Limited: Only X Spots Left This Month"), premium gold gradient CTA with pulsing glow effect, glass phone CTA with cyan accent border
+  - **Phase 4 - Interactivity**: Pulsing glow animation on primary CTA, all decorative elements hidden on mobile for performance
+  - **Validation**: TypeScript passes, Build passes (228 pages), Desktop (1440px) + Mobile (375px) tested
+  - **Files modified**: `capture-client-site/src/components/sections/PremiumHero.tsx`
+- **BRAND COLOR OPTIMIZATION COMPLETE** (2025-12-08):
+  - **Audit**: Found 143+ off-brand color instances across 35+ files using parallel subagents
+  - **categoryThemes.ts**: Fixed root cause - replaced all rainbow colors with brand palette (gold/cyan/purple)
+  - **Healthcare page**: Converted 40+ blue instances to cyan/gold (blue-500 → cyan, blue CTAs → gold)
+  - **Homepage components**: Removed purple overuse from PremiumHero, HowItWorks, PremiumFinalCTA
+    - Aurora orbs: Purple → Gold/Cyan
+    - Timeline gradient: 4-color → 2-color (cyan to gold)
+    - Particles: Purple → Gold
+    - Geometric shapes: Purple → Gold/Cyan
+  - **Legal page**: Removed standalone purple/indigo, kept only in gradients
+  - **Pricing page**: Fixed toggle from blue to gold, updated badges from amber to brand gold
+  - **UseCases page**: Removed rainbow carnival (orange/green/red/pink/lime) → gold/cyan only
+  - **Brand Rules Enforced**:
+    - Gold (#D4AF37) = Primary CTAs, premium highlights
+    - Cyan (#00C9FF) = Secondary accent, tech feel
+    - Purple (#8B5CF6, #4F46E5) = Gradients ONLY, never standalone
+    - Deep Space (#070B14, #030508, #0A0E1A) = Backgrounds
+  - **Validation**: TypeScript passes, Build passes (228 pages)
+- **MOBILE HERO OPTIMIZATION COMPLETE** (2025-12-08):
+  - **Problem**: Hero text was too small on mobile (375px) - clamp() CSS function calculated poorly
+  - **Typography Fix**: Replaced `clamp(2.8rem, 10vw, 6.5rem)` with explicit Tailwind responsive classes:
+    - "Your Business": `text-[2.5rem]` (40px) on mobile → `xl:text-8xl` on desktop
+    - "Deserves More": `text-[2.5rem]` (40px) on mobile → `xl:text-8xl` on desktop
+    - "Clients": `text-[3rem]` (48px) on mobile → `xl:text-9xl` on desktop (largest for emphasis)
+  - **CTA Optimization**: Full-width buttons on mobile (`w-full sm:w-auto`) for thumb-friendly tapping
+  - **Trust Indicators**: Added glass background (`bg-white/5 backdrop-blur-sm`) for better contrast
+  - **Vertical Spacing**: Tightened margins (`mt-3` → `mt-2`) for better visual grouping
+  - **Validation**: TypeScript passes, Build passes (228 pages), Mobile screenshot verified
+- **Homepage Aesthetic Upgrade COMPLETE** (2025-12-08):
+  - **Phase 0 (Quick Wins)**:
+    - Fixed purple gradients to gold (#7B2CBF → #D4AF37) in error/loading/not-found pages
+    - Added ARIA dialog role to ExitIntentPopup.tsx
+    - Completed SEO metadata for [slug]/page.tsx and pricing/[slug]/page.tsx
+  - **Phase 1-4 (Homepage PremiumFinalCTA Pattern)**:
+    - Applied deep space aesthetic to all homepage sections in page.tsx
+    - Deep space gradients: `linear-gradient(135deg, #070B14, #030508, #0A0E1A)`
+    - Aurora overlays: `bg-aurora-animated` with proper z-index layering
+    - Noise textures: SVG turbulence filter for depth
+    - Cyan/gold grid patterns for visual interest
+    - Floating geometric shapes (hidden on mobile for performance)
+    - Animated glow underlines on headings
+    - Enhanced glass borders: `border-accent/20`, `border-gold/20`
+    - Pulsing glow animations: `animate-pulse-glow`
+  - **Validation**: TypeScript passes, Build passes (228 pages)
+  - **Next**: Standardization of this pattern to other pages will follow later
 - **Phase 4 (12-Phase Plan) - Material Icons to Lucide COMPLETE** (2025-12-07, commit 90d3d0f):
   - Created centralized icon mapping utility (`src/lib/icon-map.ts`) with 178+ icon mappings
   - Converted ~288 Material Icons to Lucide React across entire codebase
@@ -30,7 +104,7 @@
 - /integrations-demo set to noindex; use-cases and integrations SEO done; multiple backup files removed.
 
 ## Outstanding (essentials)
-- Component duplicates: 15 groups to merge (GlassCard, Hero, ROI Calculator, FAQ, Testimonials, CTA, etc.).
+- Component duplicates: 14 groups to merge (GlassCard, Hero, FAQ, Testimonials, CTA, etc.) - Phase 1 complete (calculators/schedulers/demos cleaned up).
 - ~~Icons: ~288 Material Icons remain → convert to lucide-react.~~ **DONE** (Phase 4)
 - Standardization: buttons (`btn-gold/ghost`), containers (`container-custom`), responsive padding.
 - SEO gaps: service pages refinement; location pages need coverage; ensure canonical/OG/JSON-LD where missing.

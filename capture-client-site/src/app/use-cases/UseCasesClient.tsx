@@ -88,8 +88,8 @@ const industries: Industry[] = [
     name: "Home Services",
     icon: "home_repair_service",
     route: "/industries/home-services",
-    gradient: "from-gold/20 via-orange-500/20 to-red-500/20",
-    iconBg: "from-gold to-orange-500",
+    gradient: "from-gold/20 via-gold/15 to-gold/10",
+    iconBg: "from-gold to-gold-600",
     color: "gold",
     useCases: [
       "HVAC, plumbing & electrical emergency dispatch",
@@ -118,9 +118,9 @@ const industries: Industry[] = [
     name: "Real Estate",
     icon: "apartment",
     route: "/industries/real-estate",
-    gradient: "from-green-500/20 via-emerald-500/20 to-teal-500/20",
-    iconBg: "from-green-500 to-emerald-500",
-    color: "green",
+    gradient: "from-cyan-500/20 via-cyan-400/15 to-cyan-500/10",
+    iconBg: "from-cyan-500 to-cyan-600",
+    color: "cyan",
     useCases: [
       "Property inquiry capture & showing scheduling",
       "Lead qualification by budget & location",
@@ -133,9 +133,9 @@ const industries: Industry[] = [
     name: "Automotive",
     icon: "directions_car",
     route: "/industries/automotive",
-    gradient: "from-red-500/20 via-orange-500/20 to-yellow-500/20",
-    iconBg: "from-red-500 to-orange-500",
-    color: "red",
+    gradient: "from-gold/20 via-gold-600/15 to-gold/10",
+    iconBg: "from-gold-600 to-gold",
+    color: "gold",
     useCases: [
       "Service appointment booking for dealerships",
       "Test drive scheduling & trade-in evaluation",
@@ -148,9 +148,9 @@ const industries: Industry[] = [
     name: "Restaurants & Hospitality",
     icon: "restaurant",
     route: "/industries/restaurants",
-    gradient: "from-pink-500/20 via-rose-500/20 to-red-500/20",
-    iconBg: "from-pink-500 to-rose-500",
-    color: "pink",
+    gradient: "from-[#8B5CF6]/20 via-cyan-500/15 to-cyan-400/10",
+    iconBg: "from-[#8B5CF6] to-cyan-500",
+    color: "purple",
     useCases: [
       "Reservation management & waitlist automation",
       "Catering inquiry & event booking",
@@ -163,9 +163,9 @@ const industries: Industry[] = [
     name: "Fitness & Wellness",
     icon: "fitness_center",
     route: "/industries/fitness",
-    gradient: "from-lime-500/20 via-green-500/20 to-emerald-500/20",
-    iconBg: "from-lime-500 to-green-500",
-    color: "lime",
+    gradient: "from-cyan-400/20 via-cyan-500/15 to-accent/10",
+    iconBg: "from-cyan-400 to-accent",
+    color: "cyan",
     useCases: [
       "Class registration & membership inquiries",
       "Personal training session scheduling",
@@ -178,9 +178,9 @@ const industries: Industry[] = [
     name: "Financial Services",
     icon: "account_balance",
     route: "/contact",
-    gradient: "from-blue-500/20 via-cyan-500/20 to-teal-500/20",
-    iconBg: "from-blue-500 to-cyan-500",
-    color: "blue",
+    gradient: "from-cyan-500/20 via-accent/15 to-cyan-400/10",
+    iconBg: "from-cyan-500 to-accent",
+    color: "cyan",
     useCases: [
       "Mortgage pre-qualification & consultation booking",
       "Insurance quote generation & policy inquiries",
@@ -526,7 +526,7 @@ export default function UseCasesClient() {
 
                       {/* Stat badge */}
                       <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 border border-white/10 mb-6">
-                        <TrendingUp className="w-4 h-4 text-green-400" />
+                        <TrendingUp className="w-4 h-4 text-cyan-400" />
                         <span className="text-sm font-bold text-white">{industry.stat}</span>
                       </div>
 
@@ -567,7 +567,7 @@ export default function UseCasesClient() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
-              The <span className="bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">Old Way</span> vs{" "}
+              The <span className="bg-gradient-to-r from-gold-600 to-gold bg-clip-text text-transparent">Old Way</span> vs{" "}
               <span className="bg-gradient-to-r from-gold to-cyan-400 bg-clip-text text-transparent">Capture Client</span>
             </h2>
             <p className="text-xl text-white/60 max-w-3xl mx-auto">
@@ -924,7 +924,7 @@ export default function UseCasesClient() {
             </div>
             <div className="w-px h-5 bg-white/20 hidden sm:block" />
             <div className="flex items-center gap-2">
-              <TrendingUp className="w-5 h-5 text-green-400" />
+              <TrendingUp className="w-5 h-5 text-cyan-400" />
               <span className="text-sm font-medium">247% Avg ROI</span>
             </div>
           </motion.div>

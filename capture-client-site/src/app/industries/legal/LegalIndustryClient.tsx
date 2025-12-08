@@ -223,19 +223,19 @@ export default function LegalIndustryClient() {
               transition={{ duration: 0.6 }}
               className="text-center space-y-8"
             >
-              {/* Industry Badge with Purple/Gold */}
+              {/* Industry Badge with Gold/Cyan */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass border border-purple-500/30 bg-gradient-to-r from-indigo-500/10 to-purple-500/10"
+                className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass border border-gold/30 bg-gradient-to-r from-gold/10 to-cyan/10"
               >
                 <div className="relative">
                   <div className="w-2 h-2 bg-gold rounded-full animate-pulse" />
                   <div className="absolute inset-0 w-2 h-2 bg-gold rounded-full animate-ping" />
                 </div>
                 <Scale className="w-5 h-5 text-gold" />
-                <span className="text-sm font-semibold bg-gradient-to-r from-purple-300 to-gold bg-clip-text text-transparent">
+                <span className="text-sm font-semibold bg-gradient-to-r from-gold to-cyan bg-clip-text text-transparent">
                   For Law Firms, Solo Practitioners & Legal Services
                 </span>
               </motion.div>
@@ -284,12 +284,12 @@ export default function LegalIndustryClient() {
                   <Lock className="w-5 h-5 text-gold" />
                   <span className="text-sm font-semibold text-foreground">Attorney-Client Privilege</span>
                 </div>
-                <div className="flex items-center gap-2 glass-premium px-4 py-2 rounded-xl border border-purple-500/20">
-                  <Shield className="w-5 h-5 text-purple-400" />
+                <div className="flex items-center gap-2 glass-premium px-4 py-2 rounded-xl border border-gold/20">
+                  <Shield className="w-5 h-5 text-gold" />
                   <span className="text-sm font-semibold text-foreground">Bar Approved</span>
                 </div>
-                <div className="flex items-center gap-2 glass-premium px-4 py-2 rounded-xl border border-indigo-500/20">
-                  <Scale className="w-5 h-5 text-indigo-400" />
+                <div className="flex items-center gap-2 glass-premium px-4 py-2 rounded-xl border border-cyan/20">
+                  <Scale className="w-5 h-5 text-cyan" />
                   <span className="text-sm font-semibold text-foreground">Legal-Trained AI</span>
                 </div>
               </div>
@@ -733,10 +733,10 @@ export default function LegalIndustryClient() {
                 whileHover={{ y: -8, scale: 1.02 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="glass-premium p-6 rounded-xl border-2 border-purple-500/20 text-center hover:border-purple-500/40 hover:shadow-glow-lg cursor-pointer"
+                className="glass-premium p-6 rounded-xl border-2 border-gold/20 text-center hover:border-gold/40 hover:shadow-glow-gold-lg cursor-pointer"
               >
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-purple-500/20 to-purple-500/10 rounded-2xl flex items-center justify-center">
-                  <Scale className="w-8 h-8 text-purple-400" />
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-gold/20 to-gold/10 rounded-2xl flex items-center justify-center">
+                  <Scale className="w-8 h-8 text-gold" />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">
                   Bar Association Approved
@@ -752,10 +752,10 @@ export default function LegalIndustryClient() {
                 whileHover={{ y: -8, scale: 1.02 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="glass-premium p-6 rounded-xl border-2 border-indigo-500/20 text-center hover:border-indigo-500/40 hover:shadow-glow-lg cursor-pointer"
+                className="glass-premium p-6 rounded-xl border-2 border-cyan/20 text-center hover:border-cyan/40 hover:shadow-glow-lg cursor-pointer"
               >
-                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-indigo-500/20 to-indigo-500/10 rounded-2xl flex items-center justify-center">
-                  <FileCheck className="w-8 h-8 text-indigo-400" />
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-cyan/20 to-cyan/10 rounded-2xl flex items-center justify-center">
+                  <FileCheck className="w-8 h-8 text-cyan" />
                 </div>
                 <h3 className="text-lg font-bold text-white mb-2">
                   Conflict Check Integration
@@ -1016,7 +1016,7 @@ export default function LegalIndustryClient() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="inline-block">
                 <Link
                   href="tel:8653463339"
-                  className="btn-gold px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-2 shadow-glow-gold-lg group"
+                  className="btn-gold px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-2 shadow-glow-gold-lg group w-full sm:w-auto justify-center"
                 >
                   <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                   Calculate Your Savings
@@ -1084,7 +1084,7 @@ export default function LegalIndustryClient() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   href="tel:8653463339"
-                  className="btn-gold text-xl px-10 py-5 rounded-xl font-semibold inline-flex items-center gap-2 shadow-glow-gold-lg group"
+                  className="btn-gold text-xl px-10 py-5 rounded-xl font-semibold inline-flex items-center gap-2 shadow-glow-gold-lg group w-full sm:w-auto justify-center"
                 >
                   <PhoneCall className="w-6 h-6 group-hover:rotate-12 transition-transform" />
                   Call 865-346-3339
@@ -1151,13 +1151,13 @@ export default function LegalIndustryClient() {
                 whileHover={{ y: -10, scale: 1.02 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="glass-premium p-8 rounded-2xl border-2 border-purple-500/20 relative hover:border-purple-500/40 hover:shadow-glow-lg cursor-pointer"
+                className="glass-premium p-8 rounded-2xl border-2 border-cyan/20 relative hover:border-cyan/40 hover:shadow-glow-lg cursor-pointer"
               >
-                <div className="absolute -top-3 -right-3 w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center">
+                <div className="absolute -top-3 -right-3 w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center">
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <div className="mb-6">
-                  <div className="text-4xl font-bold text-purple-400 mb-2">23 Cases</div>
+                  <div className="text-4xl font-bold text-cyan mb-2">23 Cases</div>
                   <p className="text-sm text-foreground-muted">Qualified While In Court</p>
                 </div>
                 <p className="text-foreground-muted mb-6 italic leading-relaxed">
@@ -1176,13 +1176,13 @@ export default function LegalIndustryClient() {
                 whileHover={{ y: -10, scale: 1.02 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="glass-premium p-8 rounded-2xl border-2 border-indigo-500/20 relative hover:border-indigo-500/40 hover:shadow-glow-lg cursor-pointer"
+                className="glass-premium p-8 rounded-2xl border-2 border-gold/20 relative hover:border-gold/40 hover:shadow-glow-gold-lg cursor-pointer"
               >
-                <div className="absolute -top-3 -right-3 w-12 h-12 bg-indigo-500 rounded-full flex items-center justify-center">
-                  <FileCheck className="w-6 h-6 text-white" />
+                <div className="absolute -top-3 -right-3 w-12 h-12 bg-gold rounded-full flex items-center justify-center">
+                  <FileCheck className="w-6 h-6 text-background-dark" />
                 </div>
                 <div className="mb-6">
-                  <div className="text-4xl font-bold text-indigo-400 mb-2">+35%</div>
+                  <div className="text-4xl font-bold text-gold mb-2">+35%</div>
                   <p className="text-sm text-foreground-muted">Increase in Consultation Bookings</p>
                 </div>
                 <p className="text-foreground-muted mb-6 italic leading-relaxed">
@@ -1217,7 +1217,7 @@ export default function LegalIndustryClient() {
                   <p className="text-foreground-muted text-sm">Cases Qualified</p>
                 </div>
                 <div>
-                  <div className="text-4xl font-bold text-purple-400 mb-2">2.3x</div>
+                  <div className="text-4xl font-bold text-cyan mb-2">2.3x</div>
                   <p className="text-foreground-muted text-sm">ROI on Average</p>
                 </div>
               </div>

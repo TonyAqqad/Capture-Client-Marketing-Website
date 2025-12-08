@@ -4,23 +4,23 @@
   "package_info": {
     "name": "Growth Package",
     "slug": "growth-package",
-    "price": "$797",
+    "price": "$950",
     "period": "per month",
     "tagline": "Multi-channel marketing automation for ambitious growing businesses",
     "value_comparison": "Get AI voice agents + professional paid advertising management for what agencies charge for ads alone"
   },
   "seo": {
-    "title": "Growth Package - $797/mo | AI Voice Agents + Multi-Channel Ads | Capture Client",
+    "title": "Growth Package - $950/mo | AI Voice Agents + Facebook Ads | Capture Client",
     "meta_description": "Scale faster with 2 AI Voice Agents (unlimited calls), dedicated account manager, and professional Google or Facebook Ads management ($3K-$10K/month budget). Advanced lead qualification included.",
     "keywords": ["ai voice agent growth", "facebook ads with ai", "google ads lead generation", "ai lead generation system", "dedicated account manager", "advanced lead qualification"]
   },
   "hero": {
-    "headline": "Scale Your Lead Generation with AI + Multi-Channel Advertising",
-    "subheadline": "2 Custom AI Voice Agents + Professional Google or Facebook Ads + Dedicated Account Manager + Advanced Lead Qualification",
+    "headline": "Scale Your Lead Generation with AI + Facebook Ads",
+    "subheadline": "2 Custom AI Voice Agents + Professional Facebook Ads Management + Google Ads Add-on Available + Advanced Lead Qualification",
     "price_display": {
-      "amount": "$797",
+      "amount": "$950",
       "period": "per month",
-      "note": "Ad spend managed: $3,000-$10,000/month"
+      "note": "Ad spend managed: $1,000-$3,000/month"
     },
     "badge": "MOST POPULAR",
     "cta": {
@@ -59,9 +59,14 @@
       "value": "Unlimited"
     },
     {
-      "name": "Google Ads OR Facebook Ads Management",
-      "description": "Choose either Google Ads or Facebook Ads. We create campaigns, write ad copy, design graphics, optimize targeting, and manage your budget daily.",
-      "value": "Full management"
+      "name": "Facebook Ads Management",
+      "description": "Professional Facebook Ads management included. We create campaigns, write ad copy, design graphics, optimize targeting, and manage your budget daily.",
+      "value": "Included"
+    },
+    {
+      "name": "Google Ads (Add-on Available)",
+      "description": "Add Google Ads management to your package for additional reach. Contact us for add-on pricing.",
+      "value": "Add-on"
     },
     {
       "name": "Ad Spend: $1,000-$3,000/month",

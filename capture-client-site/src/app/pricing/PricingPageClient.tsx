@@ -69,8 +69,8 @@ const PACKAGES: Package[] = [
   {
     id: "growth",
     name: "Growth Package",
-    price: 797,
-    annualPrice: 637, // 20% off
+    price: 950,
+    annualPrice: 760, // 20% off
     period: "per month",
     tagline: "Multi-channel marketing automation for ambitious growing businesses",
     tier: "growth",
@@ -78,7 +78,8 @@ const PACKAGES: Package[] = [
     features: [
       "2 Custom AI Voice Agents",
       "Unlimited Phone Calls",
-      "Google Ads OR Facebook Ads Management",
+      "Facebook Ads Management",
+      "Google Ads (Add-on Available)",
       "Landing Page Optimization",
       "Advanced Lead Qualification",
       "Weekly Performance Reports",
@@ -227,7 +228,7 @@ export default function PricingPageClient() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-[#070B14] via-[#030508] to-[#0A0E1A] relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Floating currency symbols */}
@@ -451,7 +452,7 @@ export default function PricingPageClient() {
             onClick={() => setIsAnnual(false)}
             className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
               !isAnnual
-                ? 'bg-gradient-to-r from-accent to-primary text-black shadow-glow'
+                ? 'bg-gradient-to-r from-gold to-gold-600 text-black shadow-glow'
                 : 'text-white/60 hover:text-white'
             }`}
           >
@@ -461,12 +462,12 @@ export default function PricingPageClient() {
             onClick={() => setIsAnnual(true)}
             className={`px-6 py-3 rounded-full font-medium transition-all duration-300 relative ${
               isAnnual
-                ? 'bg-gradient-to-r from-accent to-primary text-black shadow-glow'
+                ? 'bg-gradient-to-r from-gold to-gold-600 text-black shadow-glow'
                 : 'text-white/60 hover:text-white'
             }`}
           >
             Annual
-            <span className="absolute -top-2 -right-2 px-2 py-0.5 bg-gradient-to-r from-amber-400 to-amber-600 text-black text-xs font-bold rounded-full">
+            <span className="absolute -top-2 -right-2 px-2 py-0.5 bg-gradient-to-r from-gold to-gold-600 text-black text-xs font-bold rounded-full">
               Save 20%
             </span>
           </button>
@@ -974,7 +975,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                   ],
                 }}
                 transition={{ duration: 2.5, repeat: Infinity, repeatType: 'reverse' }}
-                className="relative mx-auto px-4 sm:px-6 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-amber-400 via-amber-300 to-amber-400 bg-[length:200%_100%] border border-amber-200/50"
+                className="relative mx-auto px-4 sm:px-6 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-gold via-gold-300 to-gold bg-[length:200%_100%] border border-gold-200/50"
               >
                 <motion.div
                   animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] }}
@@ -998,7 +999,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
 
             {/* Animated gold border */}
             <motion.div
-              className="absolute -inset-1 bg-gradient-to-r from-amber-400 via-amber-500 to-amber-400 rounded-3xl opacity-75 group-hover:opacity-100 blur-md"
+              className="absolute -inset-1 bg-gradient-to-r from-gold via-gold-500 to-gold rounded-3xl opacity-75 group-hover:opacity-100 blur-md"
               animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
               transition={{ duration: 3, repeat: Infinity }}
               style={{ backgroundSize: "200% 200%" }}
@@ -1007,22 +1008,22 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
             {/* Floating gold orbs */}
             <div className="absolute inset-0 overflow-hidden rounded-3xl">
               <motion.div
-                className="absolute top-0 right-0 w-64 h-64 bg-amber-400/20 rounded-full blur-3xl"
+                className="absolute top-0 right-0 w-64 h-64 bg-gold/20 rounded-full blur-3xl"
                 animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.3, 0.2] }}
                 transition={{ duration: 4, repeat: Infinity }}
               />
               <motion.div
-                className="absolute bottom-0 left-0 w-64 h-64 bg-amber-600/20 rounded-full blur-3xl"
+                className="absolute bottom-0 left-0 w-64 h-64 bg-gold-600/20 rounded-full blur-3xl"
                 animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.3, 0.2] }}
                 transition={{ duration: 5, repeat: Infinity }}
               />
             </div>
 
-            <div className="relative h-full bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 rounded-3xl border-2 border-amber-400/50 p-8 flex flex-col">
+            <div className="relative h-full bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 rounded-3xl border-2 border-gold/50 p-8 flex flex-col">
               {/* Save ribbon */}
               {isAnnual && (
                 <div className="absolute top-8 right-0">
-                  <div className="bg-gradient-to-r from-amber-400 to-amber-600 text-black text-xs font-bold px-4 py-1 rounded-l-full shadow-lg">
+                  <div className="bg-gradient-to-r from-gold to-gold-600 text-black text-xs font-bold px-4 py-1 rounded-l-full shadow-lg">
                     SAVE ${savings}/mo
                   </div>
                 </div>
@@ -1032,15 +1033,15 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
               <div className="mb-6">
                 <div className="flex items-center gap-2 mb-2">
                   <motion.div
-                    className="w-2 h-2 rounded-full bg-amber-400"
+                    className="w-2 h-2 rounded-full bg-gold"
                     animate={{ scale: [1, 1.5, 1], opacity: [1, 0.5, 1] }}
                     transition={{ duration: 2, repeat: Infinity }}
                   />
-                  <span className="text-amber-400 text-xs font-medium tracking-wider uppercase">
+                  <span className="text-gold text-xs font-medium tracking-wider uppercase">
                     Best Value
                   </span>
                 </div>
-                <h3 className="text-3xl font-bold bg-gradient-to-r from-amber-400 via-white to-amber-500 bg-clip-text text-transparent mb-3">
+                <h3 className="text-3xl font-bold bg-gradient-to-r from-gold via-white to-gold-500 bg-clip-text text-transparent mb-3">
                   {pkg.name.replace(' Package', '')}
                 </h3>
                 <p className="text-white/80 text-sm leading-relaxed">
@@ -1055,14 +1056,14 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                     key={price}
                     initial={{ scale: 1.2, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
-                    className="text-6xl font-bold bg-gradient-to-br from-amber-400 to-amber-600 bg-clip-text text-transparent"
+                    className="text-6xl font-bold bg-gradient-to-br from-gold to-gold-600 bg-clip-text text-transparent"
                   >
                     ${price.toLocaleString()}
                   </motion.span>
                   <span className="text-white/40">/mo</span>
                 </div>
                 {isAnnual && (
-                  <p className="text-amber-400 text-sm font-medium">
+                  <p className="text-gold text-sm font-medium">
                     ${(price * 12).toLocaleString()}/year (save ${savings * 12})
                   </p>
                 )}
@@ -1072,7 +1073,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
               {/* CTA */}
               <Link
                 href={`/pricing/${pkg.slug}`}
-                className="relative block w-full text-center px-6 py-4 min-h-[48px] rounded-full bg-gradient-to-r from-amber-400 to-amber-600 text-black font-bold mb-6 transition-all duration-300 hover:scale-105 shadow-glow-gold-lg hover:shadow-2xl hover:shadow-amber-500/70 overflow-hidden group/btn touch-manipulation gold-shimmer"
+                className="relative block w-full text-center px-6 py-4 min-h-[48px] rounded-full bg-gradient-to-r from-gold to-gold-600 text-black font-bold mb-6 transition-all duration-300 hover:scale-105 shadow-glow-gold-lg hover:shadow-2xl hover:shadow-gold/70 overflow-hidden group/btn touch-manipulation gold-shimmer"
               >
                 <span className="relative">Get Started Now</span>
               </Link>
@@ -1080,7 +1081,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
               {/* ROI Toggle Button */}
               <button
                 onClick={onToggleROI}
-                className="w-full text-center py-2 mb-6 text-sm text-amber-400 hover:text-amber-300 transition-colors font-medium"
+                className="w-full text-center py-2 mb-6 text-sm text-gold hover:text-gold-300 transition-colors font-medium"
               >
                 {showROI ? '− Hide' : '+ Show'} Potential ROI
               </button>
@@ -1101,7 +1102,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.05 }}
                   >
-                    <CheckCircle2 className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
                     <span className="text-white text-sm font-medium">{feature}</span>
                   </motion.div>
                 ))}
@@ -1177,7 +1178,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
               <div className="space-y-3 flex-grow">
                 {pkg.features.map((feature, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-500/60 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-gold/60 flex-shrink-0 mt-0.5" />
                     <span className="text-white/70 text-sm">{feature}</span>
                   </div>
                 ))}

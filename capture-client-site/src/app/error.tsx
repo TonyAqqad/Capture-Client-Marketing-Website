@@ -19,7 +19,7 @@ export default function Error({
   }, [error]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-black px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-background-dark to-background px-4">
       <div className="text-center max-w-md">
         {/* Error icon */}
         <div className="mb-8">
@@ -47,7 +47,7 @@ export default function Error({
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
             onClick={reset}
-            className="px-6 py-3 bg-gradient-to-r from-[#00D4FF] to-[#7B2CBF] text-white font-semibold rounded-full hover:opacity-90 transition-opacity"
+            className="px-6 py-3 bg-gradient-to-r from-[#00C9FF] to-[#D4AF37] text-white font-semibold rounded-full hover:opacity-90 transition-opacity"
           >
             Try Again
           </button>

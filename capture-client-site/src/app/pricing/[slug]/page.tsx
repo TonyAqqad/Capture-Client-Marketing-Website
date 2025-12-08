@@ -46,6 +46,21 @@ export async function generateMetadata({
     title: pkg.seo.page_title,
     description: pkg.seo.meta_description,
     keywords: pkg.seo.keywords,
+    openGraph: {
+      title: pkg.seo.og_title || pkg.seo.page_title,
+      description: pkg.seo.og_description || pkg.seo.meta_description,
+      url: `https://captureclientai.net/pricing/${resolvedParams.slug}`,
+      siteName: "Capture Client",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: pkg.seo.og_title || pkg.seo.page_title,
+      description: pkg.seo.og_description || pkg.seo.meta_description,
+    },
+    alternates: {
+      canonical: `https://captureclientai.net/pricing/${resolvedParams.slug}`,
+    },
   };
 }
 

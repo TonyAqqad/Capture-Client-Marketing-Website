@@ -3,19 +3,16 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
 import { useTypewriter, TYPEWRITER_CONFIG } from "@/hooks/useTypewriter";
-import { presets, EASING } from "@/lib/simulator-animations";
 import {
-  Sparkles,
-  CheckCircle,
-  User,
-  RefreshCw,
+  RotateCcw,
   Send,
-  Clock,
+  User,
   Phone,
-  AlertCircle,
-  MapPin,
-  MessageSquare,
-  Star
+  Briefcase,
+  Target,
+  TrendingUp,
+  Zap,
+  MessageCircle,
 } from "lucide-react";
 
 // ============================================================================
@@ -98,6 +95,15 @@ const BUSINESS_TYPES: Record<BusinessType, BusinessGreeting> = {
   },
 };
 
+const BUSINESS_LABELS: Record<BusinessType, string> = {
+  plumbing: "Plumbing",
+  dental: "Dental",
+  auto: "Auto Shop",
+  hvac: "HVAC",
+  law: "Law Firm",
+  general: "General",
+};
+
 const INITIAL_CRM_DATA: CRMData = {
   name: "",
   phone: "",
@@ -155,14 +161,12 @@ export default function InteractiveAIDemo() {
     }
   }, [businessType]);
 
-  // Auto-scroll to bottom on new messages (within container only, not page)
-  // iOS OPTIMIZATION: Uses double-RAF for iOS Safari rendering pipeline
+  // Auto-scroll to bottom on new messages
   useEffect(() => {
     if (messagesContainerRef.current) {
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           if (messagesContainerRef.current) {
-            // iOS OPTIMIZATION: Instant scrolling on iOS (no smooth behavior)
             messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
           }
         });
@@ -232,7 +236,7 @@ export default function InteractiveAIDemo() {
       setActiveAIMessage(data.response);
       setIsTyping(true);
 
-      // Update CRM data with animation
+      // Update CRM data
       if (data.suggestedCrmFields || data.leadScore) {
         setTimeout(() => {
           setCrmData((prev) => ({
@@ -280,138 +284,89 @@ export default function InteractiveAIDemo() {
   // ============================================================================
 
   return (
-    <section className="relative py-16 sm:py-20 md:py-24 lg:py-32 overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-slate-950">
-        <div
-          className="absolute inset-0 opacity-[0.015]"
-          style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)`,
-            backgroundSize: "64px 64px",
-          }}
-        />
-        <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-cyan-500/8 rounded-full blur-[120px]" />
-        <div className="absolute bottom-1/4 -right-32 w-[500px] h-[500px] bg-primary/8 rounded-full blur-[120px]" />
+    <section className="relative py-20 sm:py-24 lg:py-32 overflow-hidden bg-slate-950">
+      {/* Subtle background gradient */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-[150px]" />
+        <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[150px]" />
       </div>
 
-      <div className="container-custom relative z-10 px-6 lg:px-8">
-        {/* Header */}
+      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
+        {/* Header - Clean editorial style */}
         <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={presets.fadeInUp}
-          className="max-w-3xl mx-auto text-center mb-12"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="max-w-2xl mx-auto text-center mb-12 lg:mb-16"
         >
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-6">
-            <motion.div
-              animate={{ rotate: [0, 360] }}
-              transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
-            >
-              <Sparkles className="w-4 h-4 text-cyan-400" />
-            </motion.div>
-            <span className="text-cyan-400 text-sm font-medium tracking-wide">
-              Live AI Demo
-            </span>
-          </div>
-
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-            Try Our AI Voice Agent
-            <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-cyan-300 to-primary">
-              Right Now
-            </span>
-          </h2>
-          <p className="text-lg text-slate-400">
-            See how our AI handles real customer conversations and captures leads automatically
+          <p className="text-cyan-400 text-sm font-medium tracking-wide uppercase mb-4">
+            Live Demo
           </p>
-
-          {/* Trust Signal */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="mt-6 flex items-center justify-center gap-2 text-sm text-slate-500"
-          >
-            <CheckCircle className="w-4 h-4 text-cyan-500" />
-            <span>This is a live demo of our AI technology</span>
-          </motion.div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">
+            See the AI in action
+          </h2>
+          <p className="text-slate-400 text-lg max-w-xl mx-auto">
+            Type like a customer would. Watch leads captured in real-time.
+          </p>
         </motion.div>
 
-        {/* Business Type Selector */}
+        {/* Business Type Selector - Clean pill buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="max-w-4xl mx-auto mb-8"
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="flex flex-wrap items-center justify-center gap-2 mb-10 lg:mb-12"
         >
-          <label className="block text-sm font-semibold text-slate-300 mb-3 text-center">
-            Choose Business Type
-          </label>
-          <div className="flex flex-wrap items-center justify-center gap-2">
-            {(Object.keys(BUSINESS_TYPES) as BusinessType[]).map((type) => (
-              <button
-                key={type}
-                onClick={() => handleBusinessTypeChange(type)}
-                className={`
-                  px-4 py-2.5 rounded-xl font-medium text-sm transition-all duration-300 min-h-[44px] min-w-[44px]
-                  ${
-                    businessType === type
-                      ? "bg-gradient-to-r from-cyan-500 to-primary text-white shadow-glow"
-                      : "bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10 hover:border-white/20"
-                  }
-                `}
-                aria-label={`Select ${type} business type`}
-              >
-                {type.charAt(0).toUpperCase() + type.slice(1)}
-              </button>
-            ))}
-          </div>
+          {(Object.keys(BUSINESS_TYPES) as BusinessType[]).map((type) => (
+            <button
+              key={type}
+              onClick={() => handleBusinessTypeChange(type)}
+              className={`
+                px-4 py-2 rounded-full text-sm font-medium transition-all duration-200
+                ${
+                  businessType === type
+                    ? "bg-cyan-500 text-white"
+                    : "bg-white/5 text-slate-400 hover:bg-white/10 hover:text-white"
+                }
+              `}
+            >
+              {BUSINESS_LABELS[type]}
+            </button>
+          ))}
         </motion.div>
 
-        {/* Main Demo Area - MOBILE FIX: Proper container with overflow protection */}
+        {/* Main Demo Layout */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.4 }}
-          className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 w-full"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8"
         >
-          {/* Left: Chat Interface */}
-          <div className="lg:col-span-2">
-            <div className="backdrop-blur-xl bg-white/[0.03] border border-white/10 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
+          {/* Chat Interface - 3 columns on desktop */}
+          <div className="lg:col-span-3">
+            <div className="bg-slate-900/80 border border-white/10 rounded-2xl overflow-hidden">
               {/* Chat Header */}
-              <div className="px-4 sm:px-6 py-3 sm:py-4 border-b border-white/10 bg-gradient-to-r from-cyan-500/10 to-primary/10">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2 sm:gap-3">
-                    <motion.div
-                      animate={{
-                        scale: [1, 1.1, 1],
-                        opacity: [0.7, 1, 0.7],
-                      }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                      className="w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-cyan-400"
-                    />
-                    <div>
-                      <h3 className="text-white font-semibold text-sm sm:text-base">AI Voice Agent</h3>
-                      <p className="text-xs text-slate-400">Active & Ready</p>
-                    </div>
-                  </div>
-                  <button
-                    onClick={handleReset}
-                    className="p-2 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center"
-                    aria-label="Reset conversation"
-                  >
-                    <RefreshCw className="w-4 h-4 text-slate-400" />
-                  </button>
+              <div className="px-5 py-4 border-b border-white/10 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-2 h-2 rounded-full bg-emerald-400" />
+                  <span className="text-white font-medium text-sm">SMS Agent</span>
                 </div>
+                <button
+                  onClick={handleReset}
+                  className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+                  aria-label="Reset conversation"
+                >
+                  <RotateCcw className="w-4 h-4" />
+                </button>
               </div>
 
-              {/* Messages Area - MOBILE FIX: Flexible height with max-height */}
+              {/* Messages */}
               <div
                 ref={messagesContainerRef}
-                className="min-h-[300px] max-h-[400px] sm:max-h-[450px] lg:max-h-[500px] overflow-y-auto p-4 sm:p-6 space-y-4 scrollbar-thin scrollbar-thumb-white/10 scrollbar-track-transparent"
+                className="h-[360px] sm:h-[400px] overflow-y-auto p-5 space-y-4"
               >
                 <AnimatePresence mode="popLayout">
                   {messages.map((message, index) => (
@@ -429,43 +384,36 @@ export default function InteractiveAIDemo() {
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    className="flex items-center gap-2 text-slate-400"
+                    className="flex items-center gap-2"
                   >
-                    <div className="flex gap-1">
+                    <div className="flex gap-1 px-4 py-3 rounded-2xl bg-white/5">
                       {[0, 1, 2].map((i) => (
                         <motion.div
                           key={i}
-                          animate={{ opacity: [0.3, 1, 0.3] }}
+                          animate={{ opacity: [0.4, 1, 0.4] }}
                           transition={{
-                            duration: 1,
+                            duration: 1.2,
                             repeat: Infinity,
-                            delay: i * 0.2,
+                            delay: i * 0.15,
                           }}
-                          className="w-2 h-2 rounded-full bg-cyan-400"
+                          className="w-1.5 h-1.5 rounded-full bg-slate-400"
                         />
                       ))}
                     </div>
-                    <span className="text-sm">AI is thinking...</span>
                   </motion.div>
                 )}
 
                 {isError && (
-                  <motion.div
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="flex items-center gap-2 p-3 rounded-xl bg-red-500/10 border border-red-500/30 text-red-400 text-sm"
-                  >
-                    <AlertCircle className="w-4 h-4 flex-shrink-0" />
-                    <span>Connection issue. Try the example questions below.</span>
-                  </motion.div>
+                  <div className="text-sm text-amber-400/80 px-4 py-2">
+                    Connection issue. Try an example below.
+                  </div>
                 )}
 
                 <div ref={messagesEndRef} />
               </div>
 
-              {/* Input Area */}
-              <div className="px-4 sm:px-6 py-4 border-t border-white/10 bg-black/20">
+              {/* Input */}
+              <div className="px-5 py-4 border-t border-white/10 bg-slate-900/50">
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
@@ -477,44 +425,39 @@ export default function InteractiveAIDemo() {
                     type="text"
                     value={userInput}
                     onChange={(e) => setUserInput(e.target.value)}
-                    placeholder="Type what a caller would say..."
+                    placeholder="Type a message..."
                     disabled={isLoading}
-                    className="flex-1 px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white text-base placeholder-slate-500 focus:outline-none focus:border-cyan-500/50 focus:bg-white/10 transition-all disabled:opacity-50 min-h-[48px]"
-                    aria-label="Message input"
+                    className="flex-1 px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white text-sm placeholder-slate-500 focus:outline-none focus:border-cyan-500/50 transition-colors disabled:opacity-50"
                   />
                   <button
                     type="submit"
                     disabled={isLoading || !userInput.trim()}
-                    className="px-4 sm:px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-primary text-white font-semibold hover:shadow-glow transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 min-h-[48px] min-w-[48px]"
+                    className="px-4 py-3 rounded-xl bg-cyan-500 text-white font-medium hover:bg-cyan-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                     aria-label="Send message"
                   >
-                    <Send className="w-5 h-5" />
-                    <span className="hidden sm:inline">Send</span>
+                    <Send className="w-4 h-4" />
                   </button>
                 </form>
 
-                {/* Example Questions */}
-                <div className="mt-4">
-                  <p className="text-xs text-slate-500 mb-2">Try asking:</p>
-                  <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2">
-                    {BUSINESS_TYPES[businessType].questions.map((question, index) => (
-                      <button
-                        key={index}
-                        onClick={() => handleQuestionClick(question)}
-                        disabled={isLoading}
-                        className="px-4 py-3 text-sm rounded-lg bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10 hover:border-cyan-500/30 transition-all disabled:opacity-50 text-left min-h-[48px] w-full sm:w-auto"
-                      >
-                        {question}
-                      </button>
-                    ))}
-                  </div>
+                {/* Quick prompts */}
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {BUSINESS_TYPES[businessType].questions.map((question, index) => (
+                    <button
+                      key={index}
+                      onClick={() => handleQuestionClick(question)}
+                      disabled={isLoading}
+                      className="px-3 py-2 text-xs rounded-lg bg-white/5 text-slate-400 hover:bg-white/10 hover:text-white transition-colors disabled:opacity-50 text-left"
+                    >
+                      {question}
+                    </button>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right: CRM Panel - Stacks below on mobile/tablet */}
-          <div className="lg:col-span-1">
+          {/* CRM Panel - 2 columns on desktop */}
+          <div className="lg:col-span-2">
             <CRMPanel crmData={crmData} />
           </div>
         </motion.div>
@@ -537,69 +480,40 @@ interface ChatMessageProps {
 function ChatMessage({ message, isLatest, typedText, isTyping }: ChatMessageProps) {
   const isAI = message.role === "ai";
 
-  // Determine which text to display with safeguards
+  // Determine which text to display
   let displayText = message.text;
   let showCursor = false;
 
   if (isLatest && isAI && isTyping) {
-    // While typing: show typed text if available, otherwise show full message as fallback
     displayText = typedText || message.text;
     showCursor = typedText.length > 0 && typedText.length < message.text.length;
   }
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20, scale: 0.95 }}
-      animate={{ opacity: 1, y: 0, scale: 1 }}
-      exit={{ opacity: 0, x: -20, scale: 0.95 }}
-      transition={{
-        duration: 0.4,
-        type: "spring",
-        stiffness: 300,
-        damping: 25
-      }}
-      className={`flex items-start gap-3 ${isAI ? "" : "flex-row-reverse"}`}
+      initial={{ opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.2 }}
+      className={`flex ${isAI ? "justify-start" : "justify-end"}`}
     >
-      {/* Avatar */}
       <div
         className={`
-          w-7 h-7 sm:w-8 sm:h-8 rounded-lg flex items-center justify-center flex-shrink-0
+          max-w-[85%] px-4 py-3 rounded-2xl text-sm leading-relaxed
           ${
             isAI
-              ? "bg-gradient-to-br from-cyan-500/20 to-primary/20 border border-cyan-500/30"
-              : "bg-gradient-to-br from-primary/20 to-cyan-500/20 border border-primary/30"
+              ? "bg-white/5 text-white rounded-bl-md"
+              : "bg-cyan-500 text-white rounded-br-md"
           }
         `}
       >
-        {isAI ? (
-          <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-cyan-400" />
-        ) : (
-          <User className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
-        )}
-      </div>
-
-      {/* Message Bubble - MOBILE FIX: Better text wrapping */}
-      <div
-        className={`
-          max-w-[90%] sm:max-w-[80%] px-4 py-3 rounded-2xl overflow-hidden
-          ${
-            isAI
-              ? "bg-white/5 border border-white/10"
-              : "bg-gradient-to-r from-primary/20 to-cyan-500/20 border border-primary/30"
-          }
-        `}
-      >
-        <p className="text-sm sm:text-base text-white leading-relaxed break-words overflow-wrap-anywhere">
+        <p className="break-words">
           {displayText}
           {showCursor && (
-            <motion.span
-              animate={{ opacity: [1, 0.3, 1] }}
-              transition={{ duration: 0.8, repeat: Infinity, ease: "easeInOut" }}
-              className="inline-block w-0.5 h-4 bg-cyan-400 ml-1 align-middle rounded-full"
-            />
+            <span className="inline-block w-0.5 h-4 bg-cyan-400 ml-0.5 animate-pulse" />
           )}
         </p>
-        <p className="text-xs text-slate-500 mt-1">
+        <p className={`text-xs mt-1.5 ${isAI ? "text-slate-500" : "text-cyan-200"}`}>
           {message.timestamp.toLocaleTimeString([], {
             hour: "2-digit",
             minute: "2-digit",
@@ -620,88 +534,79 @@ interface CRMPanelProps {
 
 function CRMPanel({ crmData }: CRMPanelProps) {
   const fields = [
-    { label: "Name", value: crmData.name, icon: User, filled: !!crmData.name },
-    { label: "Phone", value: crmData.phone, icon: Phone, filled: !!crmData.phone },
-    { label: "Service", value: crmData.service, icon: MapPin, filled: !!crmData.service },
-    { label: "Intent", value: crmData.intent, icon: MessageSquare, filled: !!crmData.intent },
+    { label: "Name", value: crmData.name, icon: User },
+    { label: "Phone", value: crmData.phone, icon: Phone },
+    { label: "Service", value: crmData.service, icon: Briefcase },
+    { label: "Intent", value: crmData.intent, icon: Target },
   ];
 
+  const filledCount = fields.filter(f => f.value).length;
+  const captureProgress = filledCount / fields.length;
+
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: 0.5 }}
-      className="backdrop-blur-xl bg-white/[0.03] border border-white/10 rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl"
-    >
+    <div className="bg-slate-900/80 border border-white/10 rounded-2xl overflow-hidden h-full">
       {/* Header */}
-      <div className="px-4 sm:px-6 py-3 sm:py-4 border-b border-white/10 bg-gradient-to-r from-cyan-500/10 to-primary/10">
-        <div className="flex items-center gap-2 sm:gap-3">
-          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-br from-cyan-500/20 to-primary/20 border border-cyan-500/30 flex items-center justify-center text-base sm:text-lg">
-            <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-400" />
+      <div className="px-5 py-4 border-b border-white/10 flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <div className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center">
+            <MessageCircle className="w-4 h-4 text-cyan-400" />
           </div>
           <div>
-            <h3 className="text-white font-semibold text-sm sm:text-base">Lead Data</h3>
-            <p className="text-xs text-slate-400 font-mono">Real-time Capture</p>
+            <h3 className="text-white font-medium text-sm">Lead Capture</h3>
+            <p className="text-slate-500 text-xs">Auto-extracted data</p>
           </div>
+        </div>
+        <div className="flex items-center gap-1">
+          <Zap className="w-3 h-3 text-cyan-400" />
+          <span className="text-xs text-slate-400">Live</span>
         </div>
       </div>
 
       {/* Fields */}
-      <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
-        {fields.map((field, index) => (
-          <CRMField key={field.label} field={field} index={index} />
+      <div className="p-5 space-y-3">
+        {fields.map((field) => (
+          <CRMField key={field.label} field={field} />
         ))}
 
         {/* Lead Score */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="pt-4 border-t border-white/10"
-        >
-          <div className="flex items-center justify-between mb-2">
-            <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
-              Lead Score
-            </span>
-            <div className="flex items-center gap-1">
-              <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={crmData.leadScore}
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 10 }}
-                  className="text-lg font-bold text-white"
-                >
-                  {crmData.leadScore}
-                </motion.span>
-              </AnimatePresence>
-              <span className="text-slate-500">/10</span>
+        <div className="pt-4 mt-4 border-t border-white/10">
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-2">
+              <TrendingUp className="w-4 h-4 text-slate-500" />
+              <span className="text-sm text-slate-400">Lead Score</span>
             </div>
+            <span className="text-lg font-semibold text-white">
+              {crmData.leadScore}
+              <span className="text-slate-500 text-sm font-normal">/10</span>
+            </span>
           </div>
-          <div className="relative h-2 bg-white/5 rounded-full overflow-hidden">
+          <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: `${crmData.leadScore * 10}%` }}
-              transition={{ duration: 0.8, ease: EASING.smooth }}
-              className="absolute inset-y-0 left-0 bg-gradient-to-r from-cyan-500 to-primary rounded-full"
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              className="h-full bg-gradient-to-r from-cyan-500 to-cyan-400 rounded-full"
             />
           </div>
-        </motion.div>
+        </div>
 
-        {/* Integration Badges */}
-        <div className="pt-4 flex items-center justify-center gap-4 text-slate-500 text-xs">
-          <span className="flex items-center gap-1 text-xs">
-            <Clock className="w-3 h-3 text-cyan-500/50" />
-            Real-time
-          </span>
-          <span className="flex items-center gap-1 text-xs">
-            <CheckCircle className="w-3 h-3 text-cyan-500/50" />
-            Auto-saved
-          </span>
+        {/* Capture progress indicator */}
+        <div className="pt-4">
+          <div className="flex items-center justify-between text-xs text-slate-500 mb-2">
+            <span>Data captured</span>
+            <span>{filledCount}/{fields.length} fields</span>
+          </div>
+          <div className="h-1 bg-white/5 rounded-full overflow-hidden">
+            <motion.div
+              initial={{ width: 0 }}
+              animate={{ width: `${captureProgress * 100}%` }}
+              transition={{ duration: 0.3 }}
+              className="h-full bg-emerald-500/50 rounded-full"
+            />
+          </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -709,128 +614,60 @@ function CRMPanel({ crmData }: CRMPanelProps) {
 // CRM FIELD COMPONENT
 // ============================================================================
 
-interface CRMFieldComponentProps {
+interface CRMFieldProps {
   field: {
     label: string;
     value: string;
     icon: React.ComponentType<{ className?: string }>;
-    filled: boolean;
   };
-  index: number;
 }
 
-function CRMField({ field, index }: CRMFieldComponentProps) {
+function CRMField({ field }: CRMFieldProps) {
   const IconComponent = field.icon;
+  const filled = !!field.value;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, x: -10 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: index * 0.1 }}
+    <div
       className={`
-        relative rounded-xl backdrop-blur-md transition-all duration-500 p-3 sm:p-4
-        ${
-          field.filled
-            ? "bg-cyan-500/5 border border-cyan-500/30 shadow-lg shadow-cyan-500/20"
-            : "bg-white/[0.02] border border-white/5"
-        }
+        rounded-xl p-3 transition-all duration-300
+        ${filled ? "bg-cyan-500/10 border border-cyan-500/20" : "bg-white/[0.02] border border-white/5"}
       `}
     >
-      {/* Label */}
-      <div className="flex items-center gap-1.5 sm:gap-2 mb-1.5 sm:mb-2">
+      <div className="flex items-center gap-2 mb-1">
         <IconComponent
-          className={`
-            w-4 h-4 sm:w-5 sm:h-5 transition-colors duration-300
-            ${field.filled ? "text-cyan-400" : "text-white/30"}
-          `}
+          className={`w-3.5 h-3.5 ${filled ? "text-cyan-400" : "text-slate-600"}`}
         />
         <span
-          className={`
-            text-xs font-bold uppercase tracking-wider transition-colors duration-300
-            ${field.filled ? "text-cyan-400" : "text-white/30"}
-          `}
+          className={`text-xs font-medium uppercase tracking-wide ${
+            filled ? "text-cyan-400" : "text-slate-600"
+          }`}
         >
           {field.label}
         </span>
       </div>
-
-      {/* Value */}
-      <div className="min-h-[24px] sm:min-h-[28px] flex items-center">
+      <div className="min-h-[20px]">
         <AnimatePresence mode="wait">
-          {!field.filled ? (
-            <motion.div
+          {filled ? (
+            <motion.p
+              key="value"
+              initial={{ opacity: 0, x: -8 }}
+              animate={{ opacity: 1, x: 0 }}
+              className="text-sm text-white font-mono"
+            >
+              {field.value}
+            </motion.p>
+          ) : (
+            <motion.p
               key="empty"
               initial={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="flex items-center gap-2"
+              className="text-sm text-slate-600"
             >
-              <div className="flex gap-1">
-                {[0, 1, 2].map((i) => (
-                  <motion.div
-                    key={i}
-                    animate={{
-                      opacity: [0.2, 0.5, 0.2],
-                      scale: [1, 1.2, 1],
-                    }}
-                    transition={{
-                      duration: 1.5,
-                      repeat: Infinity,
-                      delay: i * 0.2,
-                    }}
-                    className="w-1.5 h-1.5 rounded-full bg-white/20"
-                  />
-                ))}
-              </div>
-              <span className="text-sm text-white/20 font-mono">Waiting...</span>
-            </motion.div>
-          ) : (
-            <motion.div
-              key="filled"
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="flex items-center justify-between w-full"
-            >
-              {/* Flash Effect */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: [0, 1, 0] }}
-                transition={{ duration: 0.6, times: [0, 0.3, 1] }}
-                className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-500/30 to-transparent"
-              />
-
-              {/* Value Text */}
-              <motion.span
-                initial={{ opacity: 0, y: 5 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                className="text-xs sm:text-sm font-mono font-medium text-white relative z-10 break-all"
-              >
-                {field.value}
-              </motion.span>
-
-              {/* Checkmark */}
-              <motion.div
-                initial={{ scale: 0, rotate: -180 }}
-                animate={{ scale: 1, rotate: 0 }}
-                transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
-                className="relative z-10"
-              >
-                <CheckCircle className="w-4 h-4 text-cyan-400" />
-              </motion.div>
-            </motion.div>
+              Waiting...
+            </motion.p>
           )}
         </AnimatePresence>
       </div>
-
-      {/* Pulse Effect on Fill */}
-      {field.filled && (
-        <motion.div
-          initial={{ scale: 1, opacity: 0.5 }}
-          animate={{ scale: 1.5, opacity: 0 }}
-          transition={{ duration: 0.8 }}
-          className="absolute inset-0 rounded-xl border-2 border-cyan-500/50 pointer-events-none"
-        />
-      )}
-    </motion.div>
+    </div>
   );
 }

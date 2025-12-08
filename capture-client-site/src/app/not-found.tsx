@@ -2,11 +2,11 @@ import Link from 'next/link';
 
 export default function NotFound() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-black px-4">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-background-dark to-background px-4">
       <div className="text-center max-w-md">
         {/* 404 graphic */}
         <div className="mb-8">
-          <h1 className="text-8xl font-bold bg-gradient-to-r from-[#00D4FF] to-[#7B2CBF] bg-clip-text text-transparent">
+          <h1 className="text-8xl font-bold bg-gradient-to-r from-[#00C9FF] to-[#D4AF37] bg-clip-text text-transparent">
             404
           </h1>
         </div>
@@ -23,7 +23,7 @@ export default function NotFound() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
           <Link
             href="/"
-            className="px-6 py-3 bg-gradient-to-r from-[#00D4FF] to-[#7B2CBF] text-white font-semibold rounded-full hover:opacity-90 transition-opacity"
+            className="px-6 py-3 bg-gradient-to-r from-[#00C9FF] to-[#D4AF37] text-white font-semibold rounded-full hover:opacity-90 transition-opacity"
           >
             Go Home
           </Link>

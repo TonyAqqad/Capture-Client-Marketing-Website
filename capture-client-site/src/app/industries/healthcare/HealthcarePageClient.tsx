@@ -63,9 +63,9 @@ function TrustBadge({ icon, label }: TrustBadgeProps) {
     <motion.div
       whileHover={{ scale: 1.05, y: -2 }}
       transition={{ duration: 0.2, ease: "easeOut" }}
-      className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 backdrop-blur-xl border border-blue-500/30 shadow-lg hover:shadow-blue-500/30 hover:border-blue-400/50 transition-all duration-300"
+      className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 backdrop-blur-xl border border-cyan-500/30 shadow-lg hover:shadow-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300"
     >
-      <div className="text-blue-400">{icon}</div>
+      <div className="text-cyan">{icon}</div>
       <span className="text-sm font-semibold text-foreground">{label}</span>
     </motion.div>
   );
@@ -118,7 +118,7 @@ function PainPointCard({ icon, label, isNegative = false }: PainPointCardProps) 
       className={`relative p-6 rounded-2xl backdrop-blur-xl border transition-all duration-300 ${
         isNegative
           ? "bg-red-500/10 border-red-500/30 hover:border-red-400/50 hover:shadow-lg hover:shadow-red-500/20"
-          : "bg-blue-500/10 border-blue-500/30 hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/20"
+          : "bg-cyan-500/10 border-cyan-500/30 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/20"
       }`}
     >
       <div className="flex flex-col items-center text-center gap-3">
@@ -126,12 +126,12 @@ function PainPointCard({ icon, label, isNegative = false }: PainPointCardProps) 
           className={`w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 ${
             isNegative
               ? "bg-gradient-to-br from-red-500/30 to-red-600/20"
-              : "bg-gradient-to-br from-blue-500/30 to-teal-500/20"
+              : "bg-gradient-to-br from-cyan-500/30 to-accent/20"
           }`}
         >
           <span
             className={`text-4xl ${
-              isNegative ? "text-red-400" : "text-blue-400"
+              isNegative ? "text-red-400" : "text-cyan"
             }`}
           >
             {icon}
@@ -241,16 +241,16 @@ function FeatureCard({ icon, title, description, delay = 0 }: FeatureCardProps) 
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay }}
       whileHover={{ scale: 1.02, y: -4 }}
-      className="group relative p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-teal-500/10 backdrop-blur-xl border border-blue-500/20 hover:border-blue-400/40 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 cursor-pointer"
+      className="group relative p-6 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-accent/10 backdrop-blur-xl border border-cyan-500/20 hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 cursor-pointer"
     >
       <motion.div
         whileHover={{ scale: 1.1, rotate: 5 }}
         transition={{ duration: 0.3 }}
-        className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500/30 to-teal-500/20 border border-blue-400/30 flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-blue-500/30 transition-all duration-300"
+        className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500/30 to-accent/20 border border-cyan-400/30 flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-cyan-500/30 transition-all duration-300"
       >
-        <div className="text-blue-400 [&>svg]:w-6 [&>svg]:h-6">{icon}</div>
+        <div className="text-cyan [&>svg]:w-6 [&>svg]:h-6">{icon}</div>
       </motion.div>
-      <h3 className="text-xl font-heading font-bold text-foreground mb-2 group-hover:text-blue-400 transition-colors duration-300">{title}</h3>
+      <h3 className="text-xl font-heading font-bold text-foreground mb-2 group-hover:text-cyan transition-colors duration-300">{title}</h3>
       <p className="text-foreground-muted leading-relaxed">{description}</p>
     </motion.div>
   );
@@ -271,7 +271,7 @@ function ROICalculator() {
   const annualRevenue = monthlyRevenue * 12;
 
   return (
-    <div className="glass-premium p-8 rounded-3xl border border-blue-500/20 shadow-xl shadow-blue-500/10">
+    <div className="glass-premium p-8 rounded-3xl border border-cyan-500/20 shadow-xl shadow-cyan-500/10">
       <h3 className="text-2xl font-heading font-bold text-foreground mb-6 text-center">
         Calculate Your Revenue Recovery
       </h3>
@@ -287,9 +287,9 @@ function ROICalculator() {
             max="500"
             value={monthlyPatientCalls}
             onChange={(e) => setMonthlyPatientCalls(Number(e.target.value))}
-            className="w-full h-2 bg-surface rounded-lg appearance-none cursor-pointer accent-blue-400"
+            className="w-full h-2 bg-surface rounded-lg appearance-none cursor-pointer accent-cyan"
           />
-          <div className="text-2xl font-bold text-blue-400 mt-2">
+          <div className="text-2xl font-bold text-cyan mt-2">
             {monthlyPatientCalls} calls/month
           </div>
         </div>
@@ -305,9 +305,9 @@ function ROICalculator() {
             step="25"
             value={avgAppointmentValue}
             onChange={(e) => setAvgAppointmentValue(Number(e.target.value))}
-            className="w-full h-2 bg-surface rounded-lg appearance-none cursor-pointer accent-blue-400"
+            className="w-full h-2 bg-surface rounded-lg appearance-none cursor-pointer accent-cyan"
           />
-          <div className="text-2xl font-bold text-blue-400 mt-2">
+          <div className="text-2xl font-bold text-cyan mt-2">
             ${avgAppointmentValue}
           </div>
         </div>
@@ -321,24 +321,24 @@ function ROICalculator() {
           </div>
         </div>
 
-        <div className="p-4 rounded-xl bg-blue-500/10 border border-blue-500/30">
+        <div className="p-4 rounded-xl bg-cyan-500/10 border border-cyan-500/30">
           <div className="text-sm text-foreground-muted mb-1">Calls Recovered with AI</div>
-          <div className="text-2xl font-bold text-blue-400">
+          <div className="text-2xl font-bold text-cyan">
             {Math.round(recoveredCalls)} calls
           </div>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 p-6 rounded-2xl bg-gradient-to-br from-blue-500/20 to-teal-500/20 border border-blue-400/30">
+      <div className="grid md:grid-cols-2 gap-6 p-6 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-accent/20 border border-cyan-400/30">
         <div>
           <div className="text-sm text-foreground-muted mb-1">Monthly Revenue Recovered</div>
-          <div className="text-3xl font-bold text-blue-400">
+          <div className="text-3xl font-bold text-cyan">
             ${Math.round(monthlyRevenue).toLocaleString()}
           </div>
         </div>
         <div>
           <div className="text-sm text-foreground-muted mb-1">Annual Revenue Recovered</div>
-          <div className="text-4xl font-bold text-blue-400">
+          <div className="text-4xl font-bold text-cyan">
             ${Math.round(annualRevenue).toLocaleString()}
           </div>
         </div>
@@ -360,15 +360,15 @@ function TestimonialCard({ quote, author, practice, location, results }: Testimo
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       whileHover={{ y: -4, scale: 1.02 }}
-      className="glass-premium p-8 rounded-2xl border border-blue-500/20 hover:border-blue-400/40 hover:shadow-xl hover:shadow-blue-500/20 transition-all duration-300"
+      className="glass-premium p-8 rounded-2xl border border-cyan-500/20 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300"
     >
       <div className="flex items-start gap-4 mb-4">
         <motion.div
           whileHover={{ rotate: 360, scale: 1.1 }}
           transition={{ duration: 0.5 }}
-          className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500/30 to-teal-500/20 flex items-center justify-center flex-shrink-0"
+          className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500/30 to-accent/20 flex items-center justify-center flex-shrink-0"
         >
-          <User className="w-5 h-5 text-blue-400" />
+          <User className="w-5 h-5 text-cyan" />
         </motion.div>
         <div>
           <div className="font-semibold text-foreground">{author}</div>
@@ -377,8 +377,8 @@ function TestimonialCard({ quote, author, practice, location, results }: Testimo
         </div>
       </div>
       <p className="text-foreground-muted italic mb-4">&quot;{quote}&quot;</p>
-      <div className="px-4 py-3 rounded-lg bg-gradient-to-r from-blue-500/20 to-teal-500/20 border border-blue-400/30">
-        <div className="text-sm font-semibold text-blue-400">{results}</div>
+      <div className="px-4 py-3 rounded-lg bg-gradient-to-r from-cyan-500/20 to-accent/20 border border-cyan-400/30">
+        <div className="text-sm font-semibold text-cyan">{results}</div>
       </div>
     </motion.div>
   );
@@ -395,7 +395,7 @@ export default function HealthcarePageClient() {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Aurora Background */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-background-dark via-blue-950/20 to-background-dark" />
+          <div className="absolute inset-0 bg-gradient-to-br from-background-dark via-cyan-950/20 to-background-dark" />
           <div className="absolute inset-0 bg-mesh-premium opacity-40" />
 
           {/* Medical-themed animated gradient orbs */}
@@ -407,7 +407,7 @@ export default function HealthcarePageClient() {
             }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           >
-            <div className="w-full h-full bg-gradient-radial from-blue-500/40 via-teal-500/20 to-transparent blur-3xl" />
+            <div className="w-full h-full bg-gradient-radial from-cyan-500/40 via-accent/20 to-transparent blur-3xl" />
           </motion.div>
 
           <motion.div
@@ -418,7 +418,7 @@ export default function HealthcarePageClient() {
             }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
           >
-            <div className="w-full h-full bg-gradient-radial from-teal-500/30 via-blue-500/15 to-transparent blur-3xl" />
+            <div className="w-full h-full bg-gradient-radial from-accent/30 via-cyan-500/15 to-transparent blur-3xl" />
           </motion.div>
 
           {/* Pulsing medical cross accent */}
@@ -430,7 +430,7 @@ export default function HealthcarePageClient() {
             }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
           >
-            <div className="w-full h-full bg-gradient-radial from-blue-400/40 to-transparent blur-2xl" />
+            <div className="w-full h-full bg-gradient-radial from-cyan-400/40 to-transparent blur-2xl" />
           </motion.div>
         </div>
 
@@ -442,13 +442,13 @@ export default function HealthcarePageClient() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-teal-500/20 border border-blue-500/30 mb-6 backdrop-blur-xl"
+              className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-accent/20 border border-cyan-500/30 mb-6 backdrop-blur-xl"
             >
               <div className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-500"></span>
               </div>
-              <span className="text-sm font-semibold text-blue-400">
+              <span className="text-sm font-semibold text-cyan">
                 For Medical, Dental, Mental Health & Urgent Care
               </span>
             </motion.div>
@@ -473,7 +473,7 @@ export default function HealthcarePageClient() {
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground mb-6 leading-tight"
             >
               Never Miss a{" "}
-              <span className="text-gradient bg-gradient-to-r from-blue-400 via-teal-400 to-blue-500 bg-clip-text text-transparent">
+              <span className="text-gradient bg-gradient-to-r from-cyan-400 via-gold-400 to-cyan-500 bg-clip-text text-transparent">
                 Patient Call
               </span>{" "}
               Again
@@ -518,7 +518,7 @@ export default function HealthcarePageClient() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                 <Link
                   href="tel:865-346-3339"
-                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-teal-500 font-semibold text-white hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 w-full sm:w-auto"
+                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-gold to-gold-600 font-semibold text-black hover:shadow-lg hover:shadow-gold/50 transition-all duration-300 w-full sm:w-auto"
                 >
                   <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
                   Get HIPAA-Compliant Demo
@@ -528,7 +528,7 @@ export default function HealthcarePageClient() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                 <Link
                   href="#calculator"
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white/5 backdrop-blur-xl border border-blue-500/30 font-semibold text-foreground hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 w-full sm:w-auto"
+                  className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white/5 backdrop-blur-xl border border-cyan-500/30 font-semibold text-foreground hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 w-full sm:w-auto"
                 >
                   <Calculator className="w-5 h-5" />
                   Calculate ROI
@@ -546,7 +546,7 @@ export default function HealthcarePageClient() {
               Call us:{" "}
               <a
                 href="tel:865-346-3339"
-                className="text-blue-400 hover:underline font-semibold"
+                className="text-gold hover:underline font-semibold"
               >
                 865-346-3339
               </a>
@@ -608,7 +608,7 @@ export default function HealthcarePageClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-blue-500/20 to-teal-500/20 border border-blue-500/30 text-center"
+              className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-accent/20 border border-cyan-500/30 text-center"
             >
               <p className="text-lg font-semibold text-foreground mb-2">
                 Our AI breaks this cycle
@@ -630,7 +630,7 @@ export default function HealthcarePageClient() {
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
                 Built for Your{" "}
-                <span className="text-gradient bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+                <span className="text-gradient bg-gradient-to-r from-cyan-400 to-gold-400 bg-clip-text text-transparent">
                   Practice Type
                 </span>
               </h2>
@@ -650,8 +650,8 @@ export default function HealthcarePageClient() {
                   transition={{ duration: 0.2 }}
                   className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                     activeTab === type.id
-                      ? "bg-gradient-to-r from-blue-500/20 to-teal-500/20 border border-blue-400/40 text-foreground shadow-lg shadow-blue-500/20"
-                      : "bg-white/5 backdrop-blur-xl border border-white/10 text-foreground-muted hover:border-blue-500/30 hover:shadow-md"
+                      ? "bg-gradient-to-r from-cyan-500/20 to-accent/20 border border-cyan-400/40 text-foreground shadow-lg shadow-cyan-500/20"
+                      : "bg-white/5 backdrop-blur-xl border border-white/10 text-foreground-muted hover:border-cyan-500/30 hover:shadow-md"
                   }`}
                 >
                   {type.icon}
@@ -661,10 +661,10 @@ export default function HealthcarePageClient() {
             </div>
 
             {/* Tab Content */}
-            <div className="glass-premium p-8 sm:p-12 rounded-3xl border border-blue-500/20">
+            <div className="glass-premium p-8 sm:p-12 rounded-3xl border border-cyan-500/20">
               {/* Practice Stat */}
-              <div className="text-center mb-8 p-6 rounded-2xl bg-gradient-to-r from-blue-500/20 to-teal-500/20 border border-blue-400/30">
-                <div className="text-4xl font-bold text-blue-400 mb-2">
+              <div className="text-center mb-8 p-6 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-accent/20 border border-cyan-400/30">
+                <div className="text-4xl font-bold text-cyan mb-2">
                   {activePractice.stat}
                 </div>
                 <div className="text-foreground-muted">
@@ -675,7 +675,7 @@ export default function HealthcarePageClient() {
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h3 className="text-2xl font-heading font-bold text-foreground mb-6 flex items-center gap-3">
-                    <div className="text-blue-400 [&>svg]:w-8 [&>svg]:h-8">
+                    <div className="text-cyan [&>svg]:w-8 [&>svg]:h-8">
                       {activePractice.icon}
                     </div>
                     {activePractice.label}
@@ -685,7 +685,7 @@ export default function HealthcarePageClient() {
                   <ul className="space-y-3 mb-8">
                     {activePractice.useCases.map((useCase, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-blue-400 flex-shrink-0" />
+                        <CheckCircle2 className="w-5 h-5 text-cyan flex-shrink-0" />
                         <span className="text-foreground-muted">{useCase}</span>
                       </li>
                     ))}
@@ -698,7 +698,7 @@ export default function HealthcarePageClient() {
                     {activePractice.benefits.map((benefit, idx) => (
                       <div
                         key={idx}
-                        className="p-4 rounded-xl bg-gradient-to-br from-blue-500/10 to-teal-500/10 border border-blue-400/30"
+                        className="p-4 rounded-xl bg-gradient-to-br from-cyan-500/10 to-accent/10 border border-cyan-400/30"
                       >
                         <p className="text-foreground font-semibold">{benefit}</p>
                       </div>
@@ -718,13 +718,13 @@ export default function HealthcarePageClient() {
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-blue-500/20 to-teal-500/20 border border-blue-500/30 mb-6 backdrop-blur-xl">
-                <ShieldCheck className="w-5 h-5 text-blue-400" />
+              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-accent/20 border border-cyan-500/30 mb-6 backdrop-blur-xl">
+                <ShieldCheck className="w-5 h-5 text-cyan" />
                 <span className="font-semibold text-foreground">Enterprise-Grade Security</span>
               </div>
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
                 HIPAA Compliance{" "}
-                <span className="text-gradient bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+                <span className="text-gradient bg-gradient-to-r from-cyan-400 to-gold-400 bg-clip-text text-transparent">
                   You Can Trust
                 </span>
               </h2>
@@ -740,15 +740,15 @@ export default function HealthcarePageClient() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
                 whileHover={{ scale: 1.02, y: -4 }}
-                className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-teal-500/10 border border-blue-500/20 hover:border-blue-400/40 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+                className="p-6 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-accent/10 border border-cyan-500/20 hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <motion.div
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
-                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-teal-500/20 flex items-center justify-center"
+                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/30 to-accent/20 flex items-center justify-center"
                   >
-                    <Gavel className="w-6 h-6 text-blue-400" />
+                    <Gavel className="w-6 h-6 text-cyan" />
                   </motion.div>
                   <h3 className="text-xl font-heading font-bold text-foreground">
                     HIPAA Compliant
@@ -765,15 +765,15 @@ export default function HealthcarePageClient() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 whileHover={{ scale: 1.02, y: -4 }}
-                className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-teal-500/10 border border-blue-500/20 hover:border-blue-400/40 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+                className="p-6 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-accent/10 border border-cyan-500/20 hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <motion.div
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
-                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-teal-500/20 flex items-center justify-center"
+                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/30 to-accent/20 flex items-center justify-center"
                   >
-                    <Shield className="w-6 h-6 text-blue-400" />
+                    <Shield className="w-6 h-6 text-cyan" />
                   </motion.div>
                   <h3 className="text-xl font-heading font-bold text-foreground">
                     SOC 2 Type II
@@ -790,15 +790,15 @@ export default function HealthcarePageClient() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 whileHover={{ scale: 1.02, y: -4 }}
-                className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-teal-500/10 border border-blue-500/20 hover:border-blue-400/40 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+                className="p-6 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-accent/10 border border-cyan-500/20 hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <motion.div
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
-                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-teal-500/20 flex items-center justify-center"
+                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/30 to-accent/20 flex items-center justify-center"
                   >
-                    <Lock className="w-6 h-6 text-blue-400" />
+                    <Lock className="w-6 h-6 text-cyan" />
                   </motion.div>
                   <h3 className="text-xl font-heading font-bold text-foreground">
                     End-to-End Encrypted
@@ -815,15 +815,15 @@ export default function HealthcarePageClient() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 whileHover={{ scale: 1.02, y: -4 }}
-                className="p-6 rounded-2xl bg-gradient-to-br from-blue-500/10 to-teal-500/10 border border-blue-500/20 hover:border-blue-400/40 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300"
+                className="p-6 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-accent/10 border border-cyan-500/20 hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <motion.div
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
-                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-teal-500/20 flex items-center justify-center"
+                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/30 to-accent/20 flex items-center justify-center"
                   >
-                    <EyeOff className="w-6 h-6 text-blue-400" />
+                    <EyeOff className="w-6 h-6 text-cyan" />
                   </motion.div>
                   <h3 className="text-xl font-heading font-bold text-foreground">
                     Zero-Retention Modes
@@ -846,7 +846,7 @@ export default function HealthcarePageClient() {
           <div className="max-w-5xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
               Integrates with Your{" "}
-              <span className="text-gradient bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+              <span className="text-gradient bg-gradient-to-r from-cyan-400 to-gold-400 bg-clip-text text-transparent">
                 Existing Systems
               </span>
             </h2>
@@ -863,12 +863,12 @@ export default function HealthcarePageClient() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   whileHover={{ scale: 1.05, y: -4 }}
-                  className="glass-premium p-6 rounded-2xl flex flex-col items-center justify-center gap-3 border border-blue-500/20 hover:shadow-lg hover:shadow-blue-500/20 hover:border-blue-400/40 transition-all duration-300 cursor-pointer"
+                  className="glass-premium p-6 rounded-2xl flex flex-col items-center justify-center gap-3 border border-cyan-500/20 hover:shadow-lg hover:shadow-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 cursor-pointer"
                 >
                   <motion.div
                     whileHover={{ rotate: [0, -10, 10, -10, 0] }}
                     transition={{ duration: 0.5 }}
-                    className="text-blue-400"
+                    className="text-cyan"
                   >
                     {ehr.logo}
                   </motion.div>
@@ -877,7 +877,7 @@ export default function HealthcarePageClient() {
               ))}
             </div>
 
-            <div className="mt-12 p-6 rounded-2xl bg-gradient-to-r from-blue-500/20 to-teal-500/20 border border-blue-400/30">
+            <div className="mt-12 p-6 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-accent/20 border border-cyan-400/30">
               <p className="text-lg font-semibold text-foreground mb-2">
                 Don&apos;t see your system?
               </p>
@@ -898,7 +898,7 @@ export default function HealthcarePageClient() {
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
                 Calculate Your{" "}
-                <span className="text-gradient bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+                <span className="text-gradient bg-gradient-to-r from-cyan-400 to-gold-400 bg-clip-text text-transparent">
                   Revenue Recovery
                 </span>
               </h2>
@@ -921,7 +921,7 @@ export default function HealthcarePageClient() {
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
                 Powerful Features for{" "}
-                <span className="text-gradient bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+                <span className="text-gradient bg-gradient-to-r from-cyan-400 to-gold-400 bg-clip-text text-transparent">
                   Healthcare
                 </span>
               </h2>
@@ -978,7 +978,7 @@ export default function HealthcarePageClient() {
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
                 Trusted by{" "}
-                <span className="text-gradient bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+                <span className="text-gradient bg-gradient-to-r from-cyan-400 to-gold-400 bg-clip-text text-transparent">
                   Healthcare Providers
                 </span>
               </h2>
@@ -1038,9 +1038,9 @@ export default function HealthcarePageClient() {
       {/* ==================== FINAL CTA SECTION ==================== */}
       <section className="section bg-background-dark relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-background-dark via-blue-950/20 to-background-dark" />
+          <div className="absolute inset-0 bg-gradient-to-br from-background-dark via-cyan-950/20 to-background-dark" />
           <div className="absolute inset-0 bg-mesh-premium opacity-40" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[800px] bg-gradient-radial from-blue-500/20 via-teal-500/15 to-transparent blur-3xl animate-pulse-glow" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[800px] bg-gradient-radial from-cyan-500/20 via-accent/15 to-transparent blur-3xl animate-pulse-glow" />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -1053,7 +1053,7 @@ export default function HealthcarePageClient() {
             >
               <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-6 leading-tight">
                 Start Recovering Lost{" "}
-                <span className="text-gradient bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">
+                <span className="text-gradient bg-gradient-to-r from-cyan-400 to-gold-400 bg-clip-text text-transparent">
                   Revenue Today
                 </span>
               </h2>
@@ -1065,7 +1065,7 @@ export default function HealthcarePageClient() {
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                   <Link
                     href="tel:865-346-3339"
-                    className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-teal-500 font-semibold text-white hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 w-full sm:w-auto"
+                    className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-gold to-gold-600 font-semibold text-black hover:shadow-lg hover:shadow-gold/50 transition-all duration-300 w-full sm:w-auto"
                   >
                     <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
                     Call 865-346-3339
@@ -1075,7 +1075,7 @@ export default function HealthcarePageClient() {
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white/5 backdrop-blur-xl border border-blue-500/30 font-semibold text-foreground hover:border-blue-400/50 hover:shadow-lg hover:shadow-blue-500/20 transition-all duration-300 w-full sm:w-auto"
+                    className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white/5 backdrop-blur-xl border border-cyan-500/30 font-semibold text-foreground hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 w-full sm:w-auto"
                   >
                     <Mail className="w-5 h-5" />
                     Request Demo
@@ -1085,15 +1085,15 @@ export default function HealthcarePageClient() {
 
               <div className="flex flex-wrap justify-center gap-6 text-sm text-foreground-muted">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-blue-400" />
+                  <CheckCircle2 className="w-5 h-5 text-cyan" />
                   HIPAA Compliant & BAA Included
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-blue-400" />
+                  <CheckCircle2 className="w-5 h-5 text-cyan" />
                   48-hour setup
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-blue-400" />
+                  <CheckCircle2 className="w-5 h-5 text-cyan" />
                   Cancel anytime
                 </div>
               </div>

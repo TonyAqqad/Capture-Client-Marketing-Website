@@ -15,6 +15,7 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
   const [step, setStep] = useState<1 | 2>(1);
   const [formData, setFormData] = useState({
     name: "",
+    email: "",
     phone: "",
     challenge: "",
   });
@@ -54,7 +55,7 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
         },
         body: JSON.stringify({
           name: formData.name,
-          email: "",
+          email: formData.email,
           phone: formData.phone,
           company: "",
           source: source,
@@ -199,6 +200,37 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                   required
                   autoComplete="tel"
                   minLength={10}
+                  className="w-full min-h-[52px] px-5 py-4 text-base
+                             bg-white/[0.03] backdrop-blur-xl
+                             border-2 border-white/10 rounded-xl
+                             text-white placeholder-white/40
+                             transition-all duration-300
+                             hover:bg-white/[0.05] hover:border-white/20
+                             focus:outline-none focus:bg-white/[0.08]
+                             focus:border-accent focus:ring-4 focus:ring-accent/20
+                             focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]
+                             touch-manipulation"
+                />
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
+              </div>
+            </div>
+
+            {/* Email field (optional) */}
+            <div className="group">
+              <label
+                htmlFor="email"
+                className="block text-sm font-semibold text-white/90 mb-2.5 transition-colors group-focus-within:text-accent"
+              >
+                Email <span className="text-white/40">(optional)</span>
+              </label>
+              <div className="relative">
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="john@company.com"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  autoComplete="email"
                   className="w-full min-h-[52px] px-5 py-4 text-base
                              bg-white/[0.03] backdrop-blur-xl
                              border-2 border-white/10 rounded-xl

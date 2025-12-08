@@ -92,6 +92,9 @@ export default function ExitIntentPopup() {
             {/* Popup */}
             <motion.div
               {...popupAnimation}
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="exit-popup-title"
               className="w-full max-w-2xl max-h-[90vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
@@ -117,7 +120,7 @@ export default function ExitIntentPopup() {
                 </div>
 
                 {/* Headline - less desperate */}
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-center text-foreground mb-3 sm:mb-4">
+                <h3 id="exit-popup-title" className="text-2xl sm:text-3xl md:text-4xl font-heading font-bold text-center text-foreground mb-3 sm:mb-4">
                   Before You Go...
                 </h3>
 
@@ -130,7 +133,7 @@ export default function ExitIntentPopup() {
                 {/* Benefits list - SIMPLIFIED: Remove stagger animations on mobile */}
                 <div className="space-y-3 mb-8 max-w-md mx-auto">
                   {[
-                    { Icon: Rocket, text: "Get started in 48 hours" },
+                    { Icon: Rocket, text: "Get Started Now" },
                     { Icon: TrendingUp, text: "Average 3x ROI in 90 days" },
                     { Icon: ShieldCheck, text: "30-day money-back guarantee" },
                   ].map((benefit, index) => (

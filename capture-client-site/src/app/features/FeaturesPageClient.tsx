@@ -425,7 +425,7 @@ export default function FeaturesPageClient() {
                   ))}
                 </div>
 
-                <div className="grid grid-cols-3 gap-3 sm:gap-4 relative z-10">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 relative z-10">
                   <div className="text-center">
                     <p className="text-cyan-500 text-xl sm:text-2xl font-bold">+127%</p>
                     <p className="text-white/40 text-xs sm:text-sm">Lead Growth</p>

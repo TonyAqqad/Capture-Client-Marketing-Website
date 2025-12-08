@@ -357,6 +357,7 @@ const categories = [
 
 export default function IntegrationPartners() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [imageErrors, setImageErrors] = useState<Set<string>>(new Set());
 
   const filteredPartners =
     activeCategory === "All"
@@ -465,15 +466,27 @@ export default function IntegrationPartners() {
                 {/* Logo container */}
                 <div className="relative flex items-center justify-center h-16 mb-3">
                   <div className="relative w-full h-full flex items-center justify-center p-2 rounded-xl bg-white/90 group-hover:bg-white transition-colors duration-300">
-                    <Image
-                      src={partner.logo}
-                      alt={`${partner.name} logo`}
-                      width={120}
-                      height={48}
-                      sizes="(max-width: 640px) 100px, 120px"
-                      className="object-contain max-h-10 w-auto filter group-hover:brightness-110 transition-all duration-300"
-                      unoptimized
-                    />
+                    {imageErrors.has(partner.name) ? (
+                      // Fallback: Premium styled initials badge
+                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 via-[#D4AF37]/10 to-cyan-500/20 border border-white/10 flex items-center justify-center backdrop-blur-sm">
+                        <span className="text-sm font-bold text-slate-700 tracking-wide">
+                          {partner.name.substring(0, 2).toUpperCase()}
+                        </span>
+                      </div>
+                    ) : (
+                      <Image
+                        src={partner.logo}
+                        alt={`${partner.name} logo`}
+                        width={120}
+                        height={48}
+                        sizes="(max-width: 640px) 100px, 120px"
+                        className="object-contain max-h-10 w-auto filter group-hover:brightness-110 transition-all duration-300"
+                        unoptimized
+                        onError={() => {
+                          setImageErrors((prev) => new Set(prev).add(partner.name));
+                        }}
+                      />
+                    )}
                   </div>
                 </div>
 
