@@ -186,7 +186,7 @@ export default function WhoWeServePage() {
 
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="p-8 rounded-2xl bg-gradient-to-br from-white/[0.12] to-white/[0.03] backdrop-blur-2xl border border-white/20">
-                  <span className="material-icons text-4xl text-gold-400 mb-4">language</span>
+                  <Globe className="w-10 h-10 text-gold-400 mb-4" />
                   <h3 className="text-2xl font-bold text-foreground mb-3">Industry Vocabulary</h3>
                   <p className="text-foreground-muted leading-relaxed">
                     Legal conflict checking. HVAC diagnostics. Real estate MLS terms. Our AI speaks your industry's language naturally.
@@ -194,7 +194,7 @@ export default function WhoWeServePage() {
                 </div>
 
                 <div className="p-8 rounded-2xl bg-gradient-to-br from-white/[0.12] to-white/[0.03] backdrop-blur-2xl border border-white/20">
-                  <span className="material-icons text-4xl text-accent-400 mb-4">verified_user</span>
+                  <ShieldCheck className="w-10 h-10 text-accent-400 mb-4" />
                   <h3 className="text-2xl font-bold text-foreground mb-3">Compliance Ready</h3>
                   <p className="text-foreground-muted leading-relaxed">
                     HIPAA for healthcare. Attorney-client privilege for law. SOC-II across the board. Industry-specific security baked in.
@@ -202,7 +202,7 @@ export default function WhoWeServePage() {
                 </div>
 
                 <div className="p-8 rounded-2xl bg-gradient-to-br from-white/[0.12] to-white/[0.03] backdrop-blur-2xl border border-white/20">
-                  <span className="material-icons text-4xl text-primary-400 mb-4">integration_instructions</span>
+                  <Puzzle className="w-10 h-10 text-primary-400 mb-4" />
                   <h3 className="text-2xl font-bold text-foreground mb-3">Native Integrations</h3>
                   <p className="text-foreground-muted leading-relaxed">
                     Clio for legal. ServiceTitan for HVAC. Epic for healthcare. We integrate with the tools you already use.
@@ -210,7 +210,7 @@ export default function WhoWeServePage() {
                 </div>
 
                 <div className="p-8 rounded-2xl bg-gradient-to-br from-white/[0.12] to-white/[0.03] backdrop-blur-2xl border border-white/20">
-                  <span className="material-icons text-4xl text-cyan-400 mb-4">psychology</span>
+                  <Brain className="w-10 h-10 text-cyan-400 mb-4" />
                   <h3 className="text-2xl font-bold text-foreground mb-3">Smart Workflows</h3>
                   <p className="text-foreground-muted leading-relaxed">
                     Emergency triage for home services. Lead qualification for real estate. Symptom assessment for healthcare. Industry-tuned logic.

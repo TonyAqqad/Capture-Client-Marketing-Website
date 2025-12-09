@@ -182,12 +182,12 @@ export function RealEstateHero() {
               </Link>
 
               <Link
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-6 rounded-2xl text-lg border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl transition-all duration-300 hover:bg-white/[0.04] hover:border-[#00C9FF]/40 hover:shadow-[0_0_40px_rgba(0,201,255,0.3)] hover:scale-105"
                 style={{ fontWeight: 500 }}
               >
                 <Phone className="w-5 h-5 text-[#00C9FF]" />
-                <span className="text-white">(865) 346-3339</span>
+                <span className="text-white">(865) 346-6111</span>
               </Link>
             </motion.div>
 

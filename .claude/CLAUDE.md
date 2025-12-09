@@ -71,9 +71,6 @@ If a task matches an agent, spawn it via Task tool with the ACTION AGENT DIRECTI
 - "SEO… / Metadata…" → seo-checker
 - "Update memory / Save progress" → memory-sync
 
-## 🚨 CRITICAL RULES
-**Process hygiene:** Only start dev servers when needed, and stop them when done (Ctrl+C/kill). If multiple are running, clean up with `pkill -f "pnpm dev|next dev|node .*dev"` from repo root.
-
 ### Before ANY Change:
 1. **Read the pattern files** - Check @.claude/memory/patterns.md
 2. **Check if component exists** - Search before creating new ones

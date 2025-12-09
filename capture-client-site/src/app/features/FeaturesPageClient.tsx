@@ -10,13 +10,13 @@ import { ArrowRight, Phone, CheckCircle2, Sparkles, Target, ThumbsUp, Inbox, Cal
 
 export default function FeaturesPageClient() {
   return (
-    <div className="min-h-screen bg-slate-900 overflow-hidden">
+    <div className="min-h-screen bg-background-dark overflow-hidden">
       {/* HERO SECTION - Diagonal Split */}
       <section className="relative min-h-[90vh] flex items-center pt-20 sm:pt-24">
         {/* Diagonal background division */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-slate-900" />
-          <div className="absolute top-0 right-0 bottom-0 w-1/2 bg-gradient-to-br from-slate-900 to-slate-900 transform skew-x-[-8deg] origin-top-right" />
+          <div className="absolute inset-0 bg-background-dark" />
+          <div className="absolute top-0 right-0 bottom-0 w-1/2 bg-gradient-to-br from-background-dark to-background-dark transform skew-x-[-8deg] origin-top-right" />
 
           {/* Mesh gradient overlay */}
           <div
@@ -222,7 +222,7 @@ export default function FeaturesPageClient() {
               <motion.div
                 whileHover={{ scale: 1.02, y: -5 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-br from-slate-900 to-slate-900 border border-white/10 p-6 sm:p-8 md:p-12 overflow-hidden"
+                className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-br from-background-dark to-background-dark border border-white/10 p-6 sm:p-8 md:p-12 overflow-hidden"
               >
                 {/* Glow effect - enhanced */}
                 <div className="absolute -inset-px bg-gradient-to-r from-cyan-500/50 to-blue-500/50 rounded-3xl opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500" />
@@ -404,7 +404,7 @@ export default function FeaturesPageClient() {
               <motion.div
                 whileHover={{ scale: 1.02, y: -5 }}
                 transition={{ type: "spring", stiffness: 300 }}
-                className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-br from-slate-900 to-slate-900 border border-white/10 p-6 sm:p-8 overflow-hidden"
+                className="relative rounded-2xl sm:rounded-3xl bg-gradient-to-br from-background-dark to-background-dark border border-white/10 p-6 sm:p-8 overflow-hidden"
               >
                 {/* Hover glow effect */}
                 <div className="absolute -inset-px bg-gradient-to-r from-cyan-500/50 to-blue-500/50 rounded-3xl opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500" />
@@ -453,7 +453,7 @@ export default function FeaturesPageClient() {
       </div>
 
       {/* SECONDARY FEATURES - Staggered Card Grid */}
-      <section className="relative py-16 sm:py-24 md:py-32 bg-slate-900">
+      <section className="relative py-16 sm:py-24 md:py-32 bg-background-dark">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16">
           <div className="text-center mb-12 sm:mb-16 md:mb-20">
             <motion.div
@@ -517,7 +517,7 @@ export default function FeaturesPageClient() {
       </section>
 
       {/* SUPPORTING FEATURES - Compact Row */}
-      <section className="relative py-12 sm:py-16 md:py-20 bg-slate-900">
+      <section className="relative py-12 sm:py-16 md:py-20 bg-background-dark">
         <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-16">
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
             <SupportingFeature
@@ -540,7 +540,7 @@ export default function FeaturesPageClient() {
       </section>
 
       {/* INTEGRATIONS - Premium Animated Carousel */}
-      <section className="relative py-16 sm:py-24 md:py-32 bg-gradient-to-b from-slate-900 to-slate-900 overflow-hidden">
+      <section className="relative py-16 sm:py-24 md:py-32 bg-gradient-to-b from-background-dark to-background-dark overflow-hidden">
         {/* Background mesh gradient */}
         <div
           className="absolute inset-0 opacity-30"
@@ -571,8 +571,8 @@ export default function FeaturesPageClient() {
           {/* Premium animated logo carousel with glass cards */}
           <div className="relative">
             {/* Gradient fade edges */}
-            <div className="absolute left-0 top-0 bottom-0 w-32 sm:w-40 bg-gradient-to-r from-slate-900 to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-32 sm:w-40 bg-gradient-to-l from-slate-900 to-transparent z-10 pointer-events-none" />
+            <div className="absolute left-0 top-0 bottom-0 w-32 sm:w-40 bg-gradient-to-r from-background-dark to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-32 sm:w-40 bg-gradient-to-l from-background-dark to-transparent z-10 pointer-events-none" />
 
             <motion.div
               animate={{ x: [0, -1000] }}
@@ -617,7 +617,7 @@ export default function FeaturesPageClient() {
       <section className="relative py-16 sm:py-24 md:py-32 px-4 sm:px-6 md:px-8 lg:px-16 overflow-hidden">
         {/* Multi-layer background */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-slate-900" />
+          <div className="absolute inset-0 bg-background-dark" />
           <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-blue-500/10 to-transparent" />
 
           {/* Animated gradient orbs */}
@@ -774,7 +774,7 @@ function SecondaryFeatureCard({ icon, title, description, color, delay, number }
       {/* Glow effect on hover */}
       <div className={`absolute -inset-px bg-gradient-to-r ${colors.border} rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500`} />
 
-      <div className="relative bg-slate-900/80 backdrop-blur-xl border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 h-full transition-all duration-300 group-hover:-translate-y-2">
+      <div className="relative bg-background-dark/80 backdrop-blur-xl border border-white/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 h-full transition-all duration-300 group-hover:-translate-y-2">
         {/* Number badge - positioned top-left */}
         <div className={`absolute -top-3 -left-3 w-10 h-10 sm:w-12 sm:h-12 ${colors.badge} border rounded-full flex items-center justify-center font-black text-sm sm:text-base shadow-lg`}>
           {number}

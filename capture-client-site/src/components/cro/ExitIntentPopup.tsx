@@ -187,7 +187,7 @@ export default function ExitIntentPopup() {
                   </motion.button>
 
                   <motion.a
-                    href="tel:865-346-3339"
+                    href="tel:865-346-6111"
                     whileHover={isMobile ? undefined : { scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex-1 sm:flex-initial border border-white/[0.06] bg-white/[0.02] text-white font-bold px-6 sm:px-8 py-4 rounded-xl hover:bg-white/[0.04] hover:border-white/[0.12] transition-all duration-300 flex items-center justify-center gap-2 min-h-[52px] backdrop-blur-sm"
