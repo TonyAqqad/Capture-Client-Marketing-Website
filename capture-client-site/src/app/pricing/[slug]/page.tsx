@@ -49,7 +49,7 @@ export async function generateMetadata({
     openGraph: {
       title: pkg.seo.og_title || pkg.seo.page_title,
       description: pkg.seo.og_description || pkg.seo.meta_description,
-      url: `https://captureclientai.net/pricing/${resolvedParams.slug}`,
+      url: `https://captureclient.com/pricing/${resolvedParams.slug}`,
       siteName: "Capture Client",
       type: "website",
     },
@@ -59,7 +59,7 @@ export async function generateMetadata({
       description: pkg.seo.og_description || pkg.seo.meta_description,
     },
     alternates: {
-      canonical: `https://captureclientai.net/pricing/${resolvedParams.slug}`,
+      canonical: `https://captureclient.com/pricing/${resolvedParams.slug}`,
     },
   };
 }

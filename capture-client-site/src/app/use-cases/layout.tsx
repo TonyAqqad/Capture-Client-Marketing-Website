@@ -24,12 +24,12 @@ export const metadata: Metadata = {
     title: "Use Cases & Industry Solutions | AI Voice Agents for Every Business",
     description:
       "See how AI Voice Agents capture leads 24/7 across healthcare, home services, legal, real estate, and more. Real results from 500+ businesses.",
-    url: "https://captureclientai.net/use-cases",
+    url: "https://captureclient.com/use-cases",
     siteName: "Capture Client",
     type: "website",
     images: [
       {
-        url: "https://captureclientai.net/og-use-cases.jpg",
+        url: "https://captureclient.com/og-use-cases.jpg",
         width: 1200,
         height: 630,
         alt: "Capture Client Use Cases - AI Voice Agents for Every Industry",
@@ -41,10 +41,10 @@ export const metadata: Metadata = {
     title: "Use Cases & Industry Solutions | AI Voice Agents",
     description:
       "See how AI Voice Agents capture leads 24/7 across 8+ industries. Real results from 500+ businesses.",
-    images: ["https://captureclientai.net/og-use-cases.jpg"],
+    images: ["https://captureclient.com/og-use-cases.jpg"],
   },
   alternates: {
-    canonical: "https://captureclientai.net/use-cases",
+    canonical: "https://captureclient.com/use-cases",
   },
   robots: {
     index: true,

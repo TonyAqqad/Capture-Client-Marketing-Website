@@ -81,12 +81,12 @@ export const metadata: Metadata = {
     title: "Capture Client | AI Voice Agents & Lead Generation for Small Business",
     description:
       "Never miss a lead again. AI voice agents answer calls 24/7, qualify leads, and book appointments automatically.",
-    url: "https://captureclientai.net",
+    url: "https://captureclient.com",
     siteName: "Capture Client",
     type: "website",
     images: [
       {
-        url: "https://captureclientai.net/og-image.jpg",
+        url: "https://captureclient.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Capture Client - AI Voice Agents for Small Business",
@@ -98,10 +98,10 @@ export const metadata: Metadata = {
     title: "Capture Client | AI Voice Agents & Lead Generation",
     description:
       "Never miss a lead again. AI voice agents answer calls 24/7, qualify leads, and book appointments.",
-    images: ["https://captureclientai.net/og-image.jpg"],
+    images: ["https://captureclient.com/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://captureclientai.net",
+    canonical: "https://captureclient.com",
   },
   robots: {
     index: true,
@@ -168,12 +168,12 @@ const faqSchema = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://captureclientai.net/#localbusiness",
+  "@id": "https://captureclient.com/#localbusiness",
   name: "Capture Client",
-  image: "https://captureclientai.net/logo-full.svg",
+  image: "https://captureclient.com/logo-full.svg",
   telephone: "+1-865-346-6111",
-  email: "team@captureclientai.net",
-  url: "https://captureclientai.net",
+  email: "team@captureclient.com",
+  url: "https://captureclient.com",
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",

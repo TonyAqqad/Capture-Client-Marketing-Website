@@ -171,7 +171,7 @@ export default function ContactPageClient() {
                   className="group relative overflow-hidden w-full"
                 >
                   <ObfuscatedEmail
-                    email="team@captureclientai.net"
+                    email="team@captureclient.com"
                     className="relative glass rounded-xl p-5 sm:p-6 border border-white/10 hover:border-primary/30 transition-all duration-300 block min-h-[80px] active:scale-[0.98] no-underline"
                   >
                     <div className="flex items-start gap-3 sm:gap-4">
@@ -184,7 +184,7 @@ export default function ContactPageClient() {
                           Email Us
                         </h3>
                         <span className="text-base sm:text-lg lg:text-xl font-bold text-white group-hover:text-primary transition-colors duration-300 block mb-1 break-words">
-                          team@captureclientai.net
+                          team@captureclient.com
                         </span>
                         <p className="text-xs sm:text-sm text-white/50">
                           24-hour response time

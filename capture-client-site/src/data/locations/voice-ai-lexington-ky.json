@@ -185,8 +185,8 @@
       "action": "tel:865-346-6111"
     },
     "cta_secondary": {
-      "text": "Email team@captureclientai.net",
-      "action": "mailto:team@captureclientai.net"
+      "text": "Email team@captureclient.com",
+      "action": "mailto:team@captureclient.com"
     }
   },
   "images": [

@@ -24,12 +24,12 @@ export const metadata: Metadata = {
     title: "AI Answering Service for Contractors | Stop Losing $69K/Year to Missed Calls",
     description:
       "AI voice agents answer every emergency call for HVAC, plumbing, electrical, and roofing contractors. Integrates with ServiceTitan & Housecall Pro.",
-    url: "https://captureclientai.net/industries/home-services",
+    url: "https://captureclient.com/industries/home-services",
     siteName: "Capture Client",
     type: "website",
     images: [
       {
-        url: "https://captureclientai.net/og-home-services.jpg",
+        url: "https://captureclient.com/og-home-services.jpg",
         width: 1200,
         height: 630,
         alt: "AI Voice Agents for Home Service Contractors",
@@ -41,10 +41,10 @@ export const metadata: Metadata = {
     title: "AI Answering Service for Contractors | Capture Every Emergency Call",
     description:
       "Stop losing $69K/year to missed calls. AI answers 24/7, qualifies leads, books jobs into ServiceTitan/Housecall Pro.",
-    images: ["https://captureclientai.net/og-home-services.jpg"],
+    images: ["https://captureclient.com/og-home-services.jpg"],
   },
   alternates: {
-    canonical: "https://captureclientai.net/industries/home-services",
+    canonical: "https://captureclient.com/industries/home-services",
   },
   robots: {
     index: true,
@@ -67,7 +67,7 @@ const industrySchema = {
   provider: {
     "@type": "Organization",
     name: "Capture Client",
-    url: "https://captureclientai.net",
+    url: "https://captureclient.com",
   },
   areaServed: {
     "@type": "Country",

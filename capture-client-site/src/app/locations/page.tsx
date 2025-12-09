@@ -24,11 +24,11 @@ export const metadata: Metadata = {
     title: "Service Locations | Voice AI & Marketing Services | Capture Client",
     description:
       "Serving businesses across TN, GA, NC, VA, and KY with Voice AI, Google Ads, and Facebook Ads management.",
-    url: "https://captureclientai.net/locations",
+    url: "https://captureclient.com/locations",
     type: "website",
     images: [
       {
-        url: "https://captureclientai.net/og-image.jpg",
+        url: "https://captureclient.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Capture Client Service Locations"
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     ]
   },
   alternates: {
-    canonical: "https://captureclientai.net/locations",
+    canonical: "https://captureclient.com/locations",
   },
 };
 

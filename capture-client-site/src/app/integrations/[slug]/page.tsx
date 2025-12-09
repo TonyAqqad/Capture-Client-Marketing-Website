@@ -63,12 +63,12 @@ export async function generateMetadata({
     openGraph: {
       title: `${integration.name} Integration | Capture Client`,
       description: integration.shortDescription,
-      url: `https://captureclientai.net/integrations/${integration.slug}`,
+      url: `https://captureclient.com/integrations/${integration.slug}`,
       siteName: "Capture Client",
       type: "website",
       images: [
         {
-          url: `https://captureclientai.net/og-integration-${integration.slug}.jpg`,
+          url: `https://captureclient.com/og-integration-${integration.slug}.jpg`,
           width: 1200,
           height: 630,
           alt: `${integration.name} Integration with Capture Client`,
@@ -79,10 +79,10 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: `${integration.name} Integration | Capture Client`,
       description: integration.shortDescription,
-      images: [`https://captureclientai.net/og-integration-${integration.slug}.jpg`],
+      images: [`https://captureclient.com/og-integration-${integration.slug}.jpg`],
     },
     alternates: {
-      canonical: `https://captureclientai.net/integrations/${integration.slug}`,
+      canonical: `https://captureclient.com/integrations/${integration.slug}`,
     },
     robots: {
       index: true,
@@ -164,10 +164,10 @@ export default async function IntegrationDetailPage({
     "@type": "WebPage",
     name: `${integration.name} Integration`,
     description: integration.shortDescription,
-    url: `https://captureclientai.net/integrations/${integration.slug}`,
+    url: `https://captureclient.com/integrations/${integration.slug}`,
     isPartOf: {
       "@type": "WebSite",
-      url: "https://captureclientai.net",
+      url: "https://captureclient.com",
       name: "Capture Client",
     },
   };

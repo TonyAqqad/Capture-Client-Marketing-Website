@@ -24,11 +24,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI Dental Receptionist | 24/7 Booking | Capture Client",
     description: "Stop losing 35% of patient calls. AI answers every call, books appointments 24/7. Recover $100K+ annually in lost revenue.",
-    url: "https://captureclientai.net/industries/dental",
+    url: "https://captureclient.com/industries/dental",
     siteName: "Capture Client",
     type: "website",
     images: [{
-      url: "https://captureclientai.net/og-dental.jpg",
+      url: "https://captureclient.com/og-dental.jpg",
       width: 1200,
       height: 630,
       alt: "AI Voice Agent for Dental Practices - 24/7 Patient Booking",
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI Dental Receptionist | 24/7 Booking | Capture Client",
     description: "Stop losing 35% of patient calls. AI answers every call, books appointments 24/7. Recover $100K+ annually.",
-    images: ["https://captureclientai.net/og-dental.jpg"],
+    images: ["https://captureclient.com/og-dental.jpg"],
   },
   alternates: {
-    canonical: "https://captureclientai.net/industries/dental",
+    canonical: "https://captureclient.com/industries/dental",
   },
   robots: {
     index: true,
@@ -65,14 +65,14 @@ const serviceSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Capture Client",
-    "url": "https://captureclientai.net",
+    "url": "https://captureclient.com",
     "telephone": "865-346-6111"
   },
   "serviceType": "Dental Practice Automation",
   "areaServed": "US",
   "availableChannel": {
     "@type": "ServiceChannel",
-    "serviceUrl": "https://captureclientai.net/industries/dental",
+    "serviceUrl": "https://captureclient.com/industries/dental",
     "servicePhone": {
       "@type": "ContactPoint",
       "telephone": "865-346-6111",
@@ -140,19 +140,19 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://captureclientai.net"
+      "item": "https://captureclient.com"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Industries",
-      "item": "https://captureclientai.net/industries"
+      "item": "https://captureclient.com/industries"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Dental Practices",
-      "item": "https://captureclientai.net/industries/dental"
+      "item": "https://captureclient.com/industries/dental"
     }
   ]
 };

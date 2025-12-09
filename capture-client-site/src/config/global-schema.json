@@ -3,22 +3,22 @@
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://captureclientai.net/#organization",
+      "@id": "https://captureclient.com/#organization",
       "name": "Capture Client",
       "legalName": "Capture Client LLC",
-      "url": "https://captureclientai.net",
+      "url": "https://captureclient.com",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://captureclientai.net/logo-full.svg",
+        "url": "https://captureclient.com/logo-full.svg",
         "width": 512,
         "height": 512,
         "caption": "Capture Client Logo"
       },
-      "image": "https://captureclientai.net/og-image.jpg",
+      "image": "https://captureclient.com/og-image.jpg",
       "description": "Capture Client is the enterprise-grade growth platform for small businesses, combining AI Voice Agents (24/7 call answering), Google & Facebook Ads management, built-in CRM, and real-time analytics. Trusted by 500+ businesses with 50,000+ calls handled and 97% customer satisfaction.",
       "foundingDate": "2023",
       "telephone": "+1-865-346-6111",
-      "email": "team@captureclientai.net",
+      "email": "team@captureclient.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Knoxville",
@@ -119,18 +119,18 @@
     },
     {
       "@type": "WebSite",
-      "@id": "https://captureclientai.net/#website",
-      "url": "https://captureclientai.net",
+      "@id": "https://captureclient.com/#website",
+      "url": "https://captureclient.com",
       "name": "Capture Client",
       "description": "AI-powered marketing automation platform for small businesses - Voice AI, Lead Generation, CRM, and Paid Ads Management",
       "publisher": {
-        "@id": "https://captureclientai.net/#organization"
+        "@id": "https://captureclient.com/#organization"
       },
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": "https://captureclientai.net/search?q={search_term_string}"
+          "urlTemplate": "https://captureclient.com/search?q={search_term_string}"
         },
         "query-input": "required name=search_term_string"
       },
@@ -138,12 +138,12 @@
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://captureclientai.net/#localbusiness",
+      "@id": "https://captureclient.com/#localbusiness",
       "name": "Capture Client",
-      "image": "https://captureclientai.net/logo-full.svg",
+      "image": "https://captureclient.com/logo-full.svg",
       "telephone": "+1-865-346-6111",
-      "email": "team@captureclientai.net",
-      "url": "https://captureclientai.net",
+      "email": "team@captureclient.com",
+      "url": "https://captureclient.com",
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Knoxville",
@@ -174,7 +174,7 @@
         "geoRadius": "500 mi"
       },
       "parentOrganization": {
-        "@id": "https://captureclientai.net/#organization"
+        "@id": "https://captureclient.com/#organization"
       }
     }
   ]

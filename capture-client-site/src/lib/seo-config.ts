@@ -13,10 +13,10 @@ import { LocationData, ServiceData, PackageData } from './data';
 export const SITE_CONFIG = {
   name: 'Capture Client',
   legalName: 'Capture Client LLC',
-  url: 'https://captureclientai.net',
+  url: 'https://captureclient.com',
   phone: '(865) 346-6111',
   phoneRaw: '+18653466111',
-  email: 'info@captureclientai.net',
+  email: 'info@captureclient.com',
   foundingDate: '2023',
 
   // Primary business location

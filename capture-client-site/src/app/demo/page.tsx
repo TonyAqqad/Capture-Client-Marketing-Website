@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Interactive AI Voice Demo | Capture Client",
     description: "Experience AI that sounds human. Watch live simulations of AI handling calls for dental, HVAC, law, and real estate businesses. 100% AI-generated, no recordings.",
-    url: "https://captureclientai.net/demo",
+    url: "https://captureclient.com/demo",
     type: "website",
     images: [
       {
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://captureclientai.net/demo",
+    canonical: "https://captureclient.com/demo",
   },
 };
 

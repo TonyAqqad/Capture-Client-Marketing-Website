@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact Us | Get Your Free Consultation | Capture Client",
     description: "Ready to stop missing calls? Contact Capture Client to try our AI voice agents. Call (865) 346-6111 or fill out our form.",
-    url: "https://captureclientai.net/contact",
+    url: "https://captureclient.com/contact",
     siteName: "Capture Client",
     type: "website",
     images: [{
-      url: "https://captureclientai.net/og-image.jpg",
+      url: "https://captureclient.com/og-image.jpg",
       width: 1200,
       height: 630,
       alt: "Contact Capture Client",
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact Us | Get Your Free Consultation | Capture Client",
     description: "Ready to stop missing calls? Contact Capture Client to try our AI voice agents.",
-    images: ["https://captureclientai.net/og-image.jpg"],
+    images: ["https://captureclient.com/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://captureclientai.net/contact",
+    canonical: "https://captureclient.com/contact",
   },
   robots: {
     index: true,
@@ -45,12 +45,12 @@ export const metadata: Metadata = {
 const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://captureclientai.net/#localbusiness",
+  "@id": "https://captureclient.com/#localbusiness",
   name: "Capture Client",
-  image: "https://captureclientai.net/logo-full.svg",
+  image: "https://captureclient.com/logo-full.svg",
   telephone: "+1-865-346-6111",
-  email: "team@captureclientai.net",
-  url: "https://captureclientai.net",
+  email: "team@captureclient.com",
+  url: "https://captureclient.com",
   address: {
     "@type": "PostalAddress",
     streetAddress: "",
@@ -133,19 +133,19 @@ const localBusinessSchema = {
 const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  "@id": "https://captureclientai.net/contact/#webpage",
-  url: "https://captureclientai.net/contact",
+  "@id": "https://captureclient.com/contact/#webpage",
+  url: "https://captureclient.com/contact",
   name: "Contact Us | Get Your Free Consultation | Capture Client",
   description:
     "Contact Capture Client for Voice AI, Google Ads, and Facebook Ads services. Call (865) 346-6111 or fill out our form for a free consultation.",
   isPartOf: {
-    "@id": "https://captureclientai.net/#website",
+    "@id": "https://captureclient.com/#website",
   },
   about: {
-    "@id": "https://captureclientai.net/#organization",
+    "@id": "https://captureclient.com/#organization",
   },
   mainEntity: {
-    "@id": "https://captureclientai.net/#localbusiness",
+    "@id": "https://captureclient.com/#localbusiness",
   },
   datePublished: "2023-01-01",
   dateModified: new Date().toISOString().split("T")[0],

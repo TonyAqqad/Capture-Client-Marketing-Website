@@ -31,11 +31,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI Voice Agents for Real Estate | Speed to Lead | Capture Client",
     description: "78% of buyers choose the first agent who responds. Be first. Every time. With AI voice agents that respond in under 1 minute.",
-    url: "https://captureclientai.net/industries/real-estate",
+    url: "https://captureclient.com/industries/real-estate",
     siteName: "Capture Client",
     type: "website",
     images: [{
-      url: "https://captureclientai.net/og-real-estate.jpg",
+      url: "https://captureclient.com/og-real-estate.jpg",
       width: 1200,
       height: 630,
       alt: "AI Voice Agents for Real Estate - Speed to Lead - Capture Client",
@@ -45,10 +45,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI Voice Agents for Real Estate | Speed to Lead",
     description: "78% of buyers choose the first agent who responds. AI voice agents that respond in under 1 minute.",
-    images: ["https://captureclientai.net/og-real-estate.jpg"],
+    images: ["https://captureclient.com/og-real-estate.jpg"],
   },
   alternates: {
-    canonical: "https://captureclientai.net/industries/real-estate",
+    canonical: "https://captureclient.com/industries/real-estate",
   },
   robots: {
     index: true,
@@ -67,13 +67,13 @@ export const metadata: Metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://captureclientai.net/industries/real-estate#service",
+  "@id": "https://captureclient.com/industries/real-estate#service",
   name: "AI Voice Agents for Real Estate",
   description: "Speed to lead AI that answers every inquiry instantly. Qualify buyers and sellers, schedule showings, and capture leads 24/7 for real estate agents and property managers.",
   provider: {
     "@type": "Organization",
     name: "Capture Client",
-    url: "https://captureclientai.net",
+    url: "https://captureclient.com",
   },
   serviceType: "AI Voice Agent Service",
   areaServed: {
@@ -117,9 +117,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://captureclientai.net" },
-    { "@type": "ListItem", position: 2, name: "Industries", item: "https://captureclientai.net/industries" },
-    { "@type": "ListItem", position: 3, name: "Real Estate", item: "https://captureclientai.net/industries/real-estate" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://captureclient.com" },
+    { "@type": "ListItem", position: 2, name: "Industries", item: "https://captureclient.com/industries" },
+    { "@type": "ListItem", position: 3, name: "Real Estate", item: "https://captureclient.com/industries/real-estate" },
   ],
 };
 

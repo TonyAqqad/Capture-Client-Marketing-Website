@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Capture Client | Voice AI & Marketing Automation",
     description: "Learn how Capture Client helps small businesses grow with AI voice agents and marketing automation. 500+ businesses trust our 24/7 lead capture solutions.",
-    url: "https://captureclientai.net/about",
+    url: "https://captureclient.com/about",
     siteName: "Capture Client",
     type: "website",
     images: [{
-      url: "https://captureclientai.net/og-image.jpg",
+      url: "https://captureclient.com/og-image.jpg",
       width: 1200,
       height: 630,
       alt: "Capture Client - AI Voice Agents & Marketing Automation",
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Capture Client | Voice AI & Marketing Automation",
     description: "Learn how Capture Client helps small businesses grow with AI voice agents and marketing automation.",
-    images: ["https://captureclientai.net/og-image.jpg"],
+    images: ["https://captureclient.com/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://captureclientai.net/about",
+    canonical: "https://captureclient.com/about",
   },
   robots: {
     index: true,
@@ -47,23 +47,23 @@ export const metadata: Metadata = {
 const aboutPageSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  "@id": "https://captureclientai.net/about/#webpage",
-  url: "https://captureclientai.net/about",
+  "@id": "https://captureclient.com/about/#webpage",
+  url: "https://captureclient.com/about",
   name: "About Capture Client | Voice AI & Marketing Automation",
   description:
     "Learn about Capture Client, the marketing automation platform helping small businesses capture more clients with AI voice agents and paid advertising.",
   isPartOf: {
-    "@id": "https://captureclientai.net/#website",
+    "@id": "https://captureclient.com/#website",
   },
   about: {
-    "@id": "https://captureclientai.net/#organization",
+    "@id": "https://captureclient.com/#organization",
   },
   mainEntity: {
-    "@id": "https://captureclientai.net/#organization",
+    "@id": "https://captureclient.com/#organization",
   },
   primaryImageOfPage: {
     "@type": "ImageObject",
-    url: "https://captureclientai.net/logo-full.svg",
+    url: "https://captureclient.com/logo-full.svg",
   },
   datePublished: "2023-01-01",
   dateModified: new Date().toISOString().split("T")[0],

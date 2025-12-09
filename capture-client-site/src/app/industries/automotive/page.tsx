@@ -5,13 +5,13 @@ import AutomotivePageClient from "./AutomotivePageClient";
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://captureclientai.net/industries/automotive#service",
+  "@id": "https://captureclient.com/industries/automotive#service",
   name: "AI BDC for Car Dealerships",
   description: "24/7 AI BDC agents for automotive dealerships. Handle sales inquiries, service appointments, and customer follow-ups. Integrates with DealerSocket, CDK, Reynolds & Reynolds.",
   provider: {
     "@type": "Organization",
     name: "Capture Client",
-    url: "https://captureclientai.net",
+    url: "https://captureclient.com",
   },
   serviceType: "AI Voice Agent Service",
   areaServed: {
@@ -55,9 +55,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://captureclientai.net" },
-    { "@type": "ListItem", position: 2, name: "Industries", item: "https://captureclientai.net/industries" },
-    { "@type": "ListItem", position: 3, name: "Automotive", item: "https://captureclientai.net/industries/automotive" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://captureclient.com" },
+    { "@type": "ListItem", position: 2, name: "Industries", item: "https://captureclient.com/industries" },
+    { "@type": "ListItem", position: 3, name: "Automotive", item: "https://captureclient.com/industries/automotive" },
   ],
 };
 
@@ -81,11 +81,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI BDC for Car Dealerships | Sales & Service",
     description: "Stop losing $49K/year to missed calls. AI BDC agents that integrate with your DMS for 24/7 sales and service.",
-    url: "https://captureclientai.net/industries/automotive",
+    url: "https://captureclient.com/industries/automotive",
     siteName: "Capture Client",
     type: "website",
     images: [{
-      url: "https://captureclientai.net/og-automotive.jpg",
+      url: "https://captureclient.com/og-automotive.jpg",
       width: 1200,
       height: 630,
       alt: "AI BDC for Car Dealerships - Capture Client",
@@ -95,10 +95,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI BDC for Car Dealerships | Sales & Service",
     description: "Stop losing $49K/year to missed calls. AI BDC agents for 24/7 sales and service.",
-    images: ["https://captureclientai.net/og-automotive.jpg"],
+    images: ["https://captureclient.com/og-automotive.jpg"],
   },
   alternates: {
-    canonical: "https://captureclientai.net/industries/automotive",
+    canonical: "https://captureclient.com/industries/automotive",
   },
   robots: {
     index: true,

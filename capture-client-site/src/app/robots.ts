@@ -10,7 +10,7 @@ import { MetadataRoute } from "next";
  * - Support multiple search engines (Google, Bing, etc.)
  */
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = "https://captureclientai.net";
+  const baseUrl = "https://captureclient.com";
 
   return {
     rules: [

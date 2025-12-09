@@ -85,7 +85,7 @@ export default function Footer() {
                 </a>
 
                 <ObfuscatedEmail
-                  email="team@captureclientai.net"
+                  email="team@captureclient.com"
                   className="flex items-center gap-3 group min-h-[48px] -mx-2 px-2 rounded-lg hover:bg-white/[0.02] border border-transparent hover:border-white/[0.06] backdrop-blur-xl transition-all duration-300 active:scale-95 relative overflow-hidden"
                   onClick={() => trackEmailClick("footer")}
                   showIcon={true}

@@ -18,7 +18,7 @@ import { useState } from 'react';
 import { Mail } from 'lucide-react';
 
 interface ObfuscatedEmailProps {
-  /** Email address to obfuscate (e.g., "team@captureclientai.net") */
+  /** Email address to obfuscate (e.g., "team@captureclient.com") */
   email: string;
   /** Additional CSS classes */
   className?: string;
@@ -42,7 +42,7 @@ function reverseString(str: string): string {
 
 /**
  * Splits email into parts for obfuscation
- * Example: "team@captureclientai.net" -> { user: "team", domain: "captureclientai.net" }
+ * Example: "team@captureclient.com" -> { user: "team", domain: "captureclient.com" }
  */
 function parseEmail(email: string): { user: string; domain: string } {
   const [user, domain] = email.split('@');

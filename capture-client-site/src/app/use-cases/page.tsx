@@ -19,12 +19,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI Voice Agent Use Cases | Capture Client",
     description: "Discover how AI voice agents transform businesses. 24/7 call answering, lead qualification, appointment booking. See real use cases across industries.",
-    url: "https://captureclientai.net/use-cases",
+    url: "https://captureclient.com/use-cases",
     siteName: "Capture Client",
     type: "website",
     images: [
       {
-        url: "https://captureclientai.net/og-image.jpg",
+        url: "https://captureclient.com/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Capture Client AI Voice Agent Use Cases",
@@ -35,10 +35,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI Voice Agent Use Cases | Capture Client",
     description: "Discover how AI voice agents transform businesses. 24/7 call answering, lead qualification, appointment booking. See real use cases across industries.",
-    images: ["https://captureclientai.net/og-image.jpg"],
+    images: ["https://captureclient.com/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://captureclientai.net/use-cases",
+    canonical: "https://captureclient.com/use-cases",
   },
   robots: {
     index: true,
@@ -49,17 +49,17 @@ export const metadata: Metadata = {
 const jsonLdWebPage = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://captureclientai.net/use-cases",
-  "url": "https://captureclientai.net/use-cases",
+  "@id": "https://captureclient.com/use-cases",
+  "url": "https://captureclient.com/use-cases",
   "name": "AI Voice Agent Use Cases",
   "description": "Discover how AI voice agents transform businesses across industries with 24/7 call answering, lead qualification, and appointment booking.",
   "publisher": {
     "@type": "Organization",
     "name": "Capture Client",
-    "url": "https://captureclientai.net",
+    "url": "https://captureclient.com",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://captureclientai.net/logo.svg"
+      "url": "https://captureclient.com/logo.svg"
     }
   },
   "breadcrumb": {
@@ -69,13 +69,13 @@ const jsonLdWebPage = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://captureclientai.net"
+        "item": "https://captureclient.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Use Cases",
-        "item": "https://captureclientai.net/use-cases"
+        "item": "https://captureclient.com/use-cases"
       }
     ]
   },

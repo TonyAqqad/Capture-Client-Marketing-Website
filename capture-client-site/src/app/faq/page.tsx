@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "FAQ | Frequently Asked Questions | Capture Client",
     description: "Get answers to common questions about AI voice agents, pricing, setup, and how Capture Client helps businesses never miss another call.",
-    url: "https://captureclientai.net/faq",
+    url: "https://captureclient.com/faq",
     siteName: "Capture Client",
     type: "website",
     images: [{
-      url: "https://captureclientai.net/og-image.jpg",
+      url: "https://captureclient.com/og-image.jpg",
       width: 1200,
       height: 630,
       alt: "Capture Client FAQ",
@@ -30,10 +30,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "FAQ | Frequently Asked Questions | Capture Client",
     description: "Get answers to common questions about AI voice agents and how Capture Client helps businesses.",
-    images: ["https://captureclientai.net/og-image.jpg"],
+    images: ["https://captureclient.com/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://captureclientai.net/faq",
+    canonical: "https://captureclient.com/faq",
   },
   robots: {
     index: true,
@@ -167,8 +167,8 @@ const faqData = [
 const faqPageSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://captureclientai.net/faq/#faqpage",
-  url: "https://captureclientai.net/faq",
+  "@id": "https://captureclient.com/faq/#faqpage",
+  url: "https://captureclient.com/faq",
   name: "FAQ | Frequently Asked Questions | Capture Client",
   description:
     "Find answers to common questions about Capture Client's AI voice agents, lead generation services, pricing, and platform features.",
@@ -183,7 +183,7 @@ const faqPageSchema = {
     }))
   ),
   isPartOf: {
-    "@id": "https://captureclientai.net/#website",
+    "@id": "https://captureclient.com/#website",
   },
   datePublished: "2023-01-01",
   dateModified: new Date().toISOString().split("T")[0],
@@ -194,16 +194,16 @@ const faqPageSchema = {
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://captureclientai.net/faq/#webpage",
-  url: "https://captureclientai.net/faq",
+  "@id": "https://captureclient.com/faq/#webpage",
+  url: "https://captureclient.com/faq",
   name: "FAQ | Frequently Asked Questions | Capture Client",
   description:
     "Find answers to common questions about Capture Client's AI voice agents, lead generation services, pricing, and platform features.",
   isPartOf: {
-    "@id": "https://captureclientai.net/#website",
+    "@id": "https://captureclient.com/#website",
   },
   about: {
-    "@id": "https://captureclientai.net/#organization",
+    "@id": "https://captureclient.com/#organization",
   },
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -212,13 +212,13 @@ const webPageSchema = {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://captureclientai.net",
+        item: "https://captureclient.com",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "FAQ",
-        item: "https://captureclientai.net/faq",
+        item: "https://captureclient.com/faq",
       },
     ],
   },

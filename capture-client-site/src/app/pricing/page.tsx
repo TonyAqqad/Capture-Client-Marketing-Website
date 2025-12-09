@@ -20,11 +20,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Pricing & Packages | AI Voice Agents & Lead Generation | Capture Client',
     description: 'Transparent pricing for AI voice agents and lead generation. Plans from $97/mo with no long-term contracts. No setup fees.',
-    url: 'https://captureclientai.net/pricing',
+    url: 'https://captureclient.com/pricing',
     type: 'website',
     images: [
       {
-        url: 'https://captureclientai.net/og-image.jpg',
+        url: 'https://captureclient.com/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Capture Client Pricing - AI Voice Agents & Lead Generation',
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description: 'AI voice agents & lead generation from $97/mo. No setup fees, no long-term contracts.',
   },
   alternates: {
-    canonical: 'https://captureclientai.net/pricing',
+    canonical: 'https://captureclient.com/pricing',
   },
   robots: {
     index: true,
@@ -80,7 +80,7 @@ export default function PricingPage() {
                   priceCurrency: 'USD',
                   priceValidUntil: '2025-12-31',
                   availability: 'https://schema.org/InStock',
-                  url: 'https://captureclientai.net/pricing/starter-package',
+                  url: 'https://captureclient.com/pricing/starter-package',
                   priceSpecification: {
                     '@type': 'UnitPriceSpecification',
                     price: '97',
@@ -111,7 +111,7 @@ export default function PricingPage() {
                   priceCurrency: 'USD',
                   priceValidUntil: '2025-12-31',
                   availability: 'https://schema.org/InStock',
-                  url: 'https://captureclientai.net/pricing/growth-package',
+                  url: 'https://captureclient.com/pricing/growth-package',
                   priceSpecification: {
                     '@type': 'UnitPriceSpecification',
                     price: '797',
@@ -141,7 +141,7 @@ export default function PricingPage() {
                   lowPrice: '2997',
                   priceCurrency: 'USD',
                   availability: 'https://schema.org/InStock',
-                  url: 'https://captureclientai.net/pricing/enterprise-package',
+                  url: 'https://captureclient.com/pricing/enterprise-package',
                   priceSpecification: {
                     '@type': 'UnitPriceSpecification',
                     price: '2997',
@@ -227,13 +227,13 @@ export default function PricingPage() {
                 '@type': 'ListItem',
                 position: 1,
                 name: 'Home',
-                item: 'https://captureclientai.net',
+                item: 'https://captureclient.com',
               },
               {
                 '@type': 'ListItem',
                 position: 2,
                 name: 'Pricing',
-                item: 'https://captureclientai.net/pricing',
+                item: 'https://captureclient.com/pricing',
               },
             ],
           }),

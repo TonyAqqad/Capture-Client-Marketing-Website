@@ -34,7 +34,7 @@ export async function generateMetadata({
     openGraph: {
       title: page.seo.og_title || page.seo.page_title,
       description: page.seo.og_description || page.seo.meta_description,
-      url: `https://captureclientai.net/${resolvedParams.slug}`,
+      url: `https://captureclient.com/${resolvedParams.slug}`,
       siteName: "Capture Client",
       type: "website",
     },
@@ -44,7 +44,7 @@ export async function generateMetadata({
       description: page.seo.og_description || page.seo.meta_description,
     },
     alternates: {
-      canonical: `https://captureclientai.net/${resolvedParams.slug}`,
+      canonical: `https://captureclient.com/${resolvedParams.slug}`,
     },
   };
 }

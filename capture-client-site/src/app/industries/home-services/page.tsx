@@ -26,12 +26,12 @@ export const metadata: Metadata = {
     title: "AI Voice Agents for HVAC, Plumbing & Contractors | Capture Client",
     description:
       "Stop losing $69K/year to missed calls. AI voice agents answer every emergency call 24/7 for contractors. Never miss a 3 AM burst pipe again.",
-    url: "https://captureclientai.net/industries/home-services",
+    url: "https://captureclient.com/industries/home-services",
     siteName: "Capture Client",
     type: "website",
     images: [
       {
-        url: "https://captureclientai.net/og-home-services.jpg",
+        url: "https://captureclient.com/og-home-services.jpg",
         width: 1200,
         height: 630,
         alt: "AI Voice Agents for Home Services Contractors - Capture Client",
@@ -43,10 +43,10 @@ export const metadata: Metadata = {
     title: "AI Voice Agents for HVAC, Plumbing & Contractors",
     description:
       "Stop losing $69K/year to missed calls. AI answers every emergency call 24/7. ServiceTitan & Housecall Pro integration.",
-    images: ["https://captureclientai.net/og-home-services.jpg"],
+    images: ["https://captureclient.com/og-home-services.jpg"],
   },
   alternates: {
-    canonical: "https://captureclientai.net/industries/home-services",
+    canonical: "https://captureclient.com/industries/home-services",
   },
   robots: {
     index: true,
@@ -65,14 +65,14 @@ export const metadata: Metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://captureclientai.net/industries/home-services#service",
+  "@id": "https://captureclient.com/industries/home-services#service",
   name: "AI Voice Agents for Home Services Contractors",
   description:
     "24/7 AI voice agents that answer every call, qualify leads, and book appointments for HVAC, plumbing, electrical, and roofing contractors. Integrates with ServiceTitan, Housecall Pro, Jobber, and FieldEdge.",
   provider: {
     "@type": "Organization",
     name: "Capture Client",
-    url: "https://captureclientai.net",
+    url: "https://captureclient.com",
   },
   serviceType: "AI Voice Agent Service",
   areaServed: {
@@ -168,19 +168,19 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://captureclientai.net",
+      item: "https://captureclient.com",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Industries",
-      item: "https://captureclientai.net/industries",
+      item: "https://captureclient.com/industries",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Home Services",
-      item: "https://captureclientai.net/industries/home-services",
+      item: "https://captureclient.com/industries/home-services",
     },
   ],
 };

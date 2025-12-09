@@ -20,12 +20,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI Phone Ordering for Restaurants | Never Miss an Order Again",
     description: "Stop losing 23% of phone orders during rush. AI handles ordering, reservations, and catering. Toast, Square, OpenTable integration. 760% ROI proven.",
-    url: 'https://captureclientai.net/industries/restaurants',
+    url: 'https://captureclient.com/industries/restaurants',
     siteName: 'Capture Client',
     type: 'website',
     images: [
       {
-        url: 'https://captureclientai.net/og-restaurant-ai.jpg',
+        url: 'https://captureclient.com/og-restaurant-ai.jpg',
         width: 1200,
         height: 630,
         alt: 'AI Phone Ordering for Restaurants - Capture Client',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     description: 'Stop losing 23% of phone orders. AI voice ordering with Toast, Square, OpenTable integration. 760% ROI proven.',
   },
   alternates: {
-    canonical: 'https://captureclientai.net/industries/restaurants',
+    canonical: 'https://captureclient.com/industries/restaurants',
   },
   robots: {
     index: true,
@@ -57,13 +57,13 @@ export const metadata: Metadata = {
 const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  '@id': 'https://captureclientai.net/industries/restaurants#service',
+  '@id': 'https://captureclient.com/industries/restaurants#service',
   name: 'AI Phone Ordering for Restaurants',
   serviceType: 'Restaurant Automation',
   provider: {
     '@type': 'Organization',
     name: 'Capture Client',
-    url: 'https://captureclientai.net',
+    url: 'https://captureclient.com',
     telephone: '865-346-6111',
   },
   areaServed: {
@@ -123,19 +123,19 @@ const breadcrumbSchema = {
       '@type': 'ListItem',
       position: 1,
       name: 'Home',
-      item: 'https://captureclientai.net',
+      item: 'https://captureclient.com',
     },
     {
       '@type': 'ListItem',
       position: 2,
       name: 'Industries',
-      item: 'https://captureclientai.net/industries',
+      item: 'https://captureclient.com/industries',
     },
     {
       '@type': 'ListItem',
       position: 3,
       name: 'Restaurants',
-      item: 'https://captureclientai.net/industries/restaurants',
+      item: 'https://captureclient.com/industries/restaurants',
     },
   ],
 };

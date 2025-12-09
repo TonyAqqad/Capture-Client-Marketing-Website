@@ -19,12 +19,12 @@ export const metadata: Metadata = {
     title: "How It Works | AI Voice Agent Process | Capture Client",
     description:
       "Watch how every call transforms into a qualified lead automatically. AI answers instantly, qualifies leads, and syncs to your CRM—24/7.",
-    url: "https://captureclientai.net/how-it-works",
+    url: "https://captureclient.com/how-it-works",
     siteName: "Capture Client",
     type: "website",
     images: [
       {
-        url: "https://captureclientai.net/og-how-it-works.jpg",
+        url: "https://captureclient.com/og-how-it-works.jpg",
         width: 1200,
         height: 630,
         alt: "How Capture Client AI Voice Agents Work",
@@ -36,10 +36,10 @@ export const metadata: Metadata = {
     title: "How It Works | AI Voice Agent Process",
     description:
       "See the 4-step process that turns missed calls into booked appointments automatically.",
-    images: ["https://captureclientai.net/og-how-it-works.jpg"],
+    images: ["https://captureclient.com/og-how-it-works.jpg"],
   },
   alternates: {
-    canonical: "https://captureclientai.net/how-it-works",
+    canonical: "https://captureclient.com/how-it-works",
   },
   robots: {
     index: true,

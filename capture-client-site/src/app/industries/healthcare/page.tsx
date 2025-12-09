@@ -31,10 +31,10 @@ export const metadata: Metadata = {
     description:
       "HIPAA-compliant AI receptionist for medical and dental practices. Reduce missed calls 80%, cut no-shows 72%.",
     type: "website",
-    url: "https://captureclientai.net/industries/healthcare",
+    url: "https://captureclient.com/industries/healthcare",
     siteName: "Capture Client",
     images: [{
-      url: "https://captureclientai.net/og-healthcare.jpg",
+      url: "https://captureclient.com/og-healthcare.jpg",
       width: 1200,
       height: 630,
       alt: "AI Voice Agents for Healthcare | HIPAA Compliant - Capture Client",
@@ -45,10 +45,10 @@ export const metadata: Metadata = {
     title: "AI Voice Agents for Healthcare | HIPAA Compliant",
     description:
       "HIPAA-compliant AI receptionist for medical and dental practices. Reduce missed calls 80%, cut no-shows 72%.",
-    images: ["https://captureclientai.net/og-healthcare.jpg"],
+    images: ["https://captureclient.com/og-healthcare.jpg"],
   },
   alternates: {
-    canonical: "https://captureclientai.net/industries/healthcare",
+    canonical: "https://captureclient.com/industries/healthcare",
   },
   robots: {
     index: true,
@@ -67,13 +67,13 @@ export const metadata: Metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://captureclientai.net/industries/healthcare#service",
+  "@id": "https://captureclient.com/industries/healthcare#service",
   name: "AI Voice Agents for Healthcare",
   description: "HIPAA-compliant AI voice agents for medical practices, dental offices, and healthcare providers. Automate appointment scheduling, patient intake, and after-hours calls.",
   provider: {
     "@type": "Organization",
     name: "Capture Client",
-    url: "https://captureclientai.net",
+    url: "https://captureclient.com",
   },
   serviceType: "AI Voice Agent Service",
   areaServed: {
@@ -117,9 +117,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://captureclientai.net" },
-    { "@type": "ListItem", position: 2, name: "Industries", item: "https://captureclientai.net/industries" },
-    { "@type": "ListItem", position: 3, name: "Healthcare", item: "https://captureclientai.net/industries/healthcare" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://captureclient.com" },
+    { "@type": "ListItem", position: 2, name: "Industries", item: "https://captureclient.com/industries" },
+    { "@type": "ListItem", position: 3, name: "Healthcare", item: "https://captureclient.com/industries/healthcare" },
   ],
 };
 

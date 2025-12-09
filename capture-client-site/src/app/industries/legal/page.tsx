@@ -24,12 +24,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI Receptionist for Law Firms | Legal Intake",
     description: "48% of law firms miss client calls. AI legal intake specialists answer 24/7, qualify leads, and integrate with Clio & MyCase.",
-    url: "https://captureclientai.net/industries/legal",
+    url: "https://captureclient.com/industries/legal",
     siteName: "Capture Client",
     type: "website",
     images: [
       {
-        url: "https://captureclientai.net/og-legal.jpg",
+        url: "https://captureclient.com/og-legal.jpg",
         width: 1200,
         height: 630,
         alt: "AI Receptionist for Law Firms - Capture Client"
@@ -40,10 +40,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI Receptionist for Law Firms | Legal Intake",
     description: "48% of law firms miss client calls. AI legal intake specialists answer 24/7. Clio & MyCase integration.",
-    images: ["https://captureclientai.net/og-legal.jpg"]
+    images: ["https://captureclient.com/og-legal.jpg"]
   },
   alternates: {
-    canonical: "https://captureclientai.net/industries/legal",
+    canonical: "https://captureclient.com/industries/legal",
   },
   robots: {
     index: true,
@@ -62,13 +62,13 @@ export const metadata: Metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  "@id": "https://captureclientai.net/industries/legal#service",
+  "@id": "https://captureclient.com/industries/legal#service",
   name: "AI Voice Agents for Law Firms",
   description: "24/7 AI receptionists for law firms. Capture every potential client call, qualify leads, and book consultations. Integrates with Clio, Lawmatics, and other legal software.",
   provider: {
     "@type": "Organization",
     name: "Capture Client",
-    url: "https://captureclientai.net",
+    url: "https://captureclient.com",
   },
   serviceType: "AI Voice Agent Service",
   areaServed: {
@@ -112,9 +112,9 @@ const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://captureclientai.net" },
-    { "@type": "ListItem", position: 2, name: "Industries", item: "https://captureclientai.net/industries" },
-    { "@type": "ListItem", position: 3, name: "Legal", item: "https://captureclientai.net/industries/legal" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://captureclient.com" },
+    { "@type": "ListItem", position: 2, name: "Industries", item: "https://captureclient.com/industries" },
+    { "@type": "ListItem", position: 3, name: "Legal", item: "https://captureclient.com/industries/legal" },
   ],
 };
 

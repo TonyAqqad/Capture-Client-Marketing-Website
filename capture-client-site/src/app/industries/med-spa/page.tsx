@@ -24,11 +24,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI Concierge for Med Spas | Capture Client",
     description: "Stop losing high-value clients to voicemail. AI concierge answers every call with 5-star service. Boulevard & Zenoti integration. Recover $125K+ annually.",
-    url: "https://captureclientai.net/industries/med-spa",
+    url: "https://captureclient.com/industries/med-spa",
     siteName: "Capture Client",
     type: "website",
     images: [{
-      url: "https://captureclientai.net/og-image.jpg",
+      url: "https://captureclient.com/og-image.jpg",
       width: 1200,
       height: 630,
       alt: "Capture Client - AI Voice Agents for Med Spas",
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI Concierge for Med Spas | Capture Client",
     description: "Stop losing high-value clients to voicemail. AI concierge answers every call with 5-star service. Recover $125K+ annually.",
-    images: ["https://captureclientai.net/og-image.jpg"],
+    images: ["https://captureclient.com/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://captureclientai.net/industries/med-spa",
+    canonical: "https://captureclient.com/industries/med-spa",
   },
   robots: {
     index: true,
@@ -64,8 +64,8 @@ const serviceSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Capture Client",
-    "url": "https://captureclientai.net",
-    "logo": "https://captureclientai.net/logo-full.svg",
+    "url": "https://captureclient.com",
+    "logo": "https://captureclient.com/logo-full.svg",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-865-346-6111",
@@ -150,19 +150,19 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://captureclientai.net"
+      "item": "https://captureclient.com"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Industries",
-      "item": "https://captureclientai.net/industries"
+      "item": "https://captureclient.com/industries"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Med Spas",
-      "item": "https://captureclientai.net/industries/med-spa"
+      "item": "https://captureclient.com/industries/med-spa"
     }
   ]
 };

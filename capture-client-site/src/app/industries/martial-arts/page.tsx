@@ -24,11 +24,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI for Martial Arts Studios | Capture Client",
     description: "AI answers every parent call during class. Book trial classes automatically. Kicksite & Zen Planner integration. Recover $48K+ in lost enrollments.",
-    url: "https://captureclientai.net/industries/martial-arts",
+    url: "https://captureclient.com/industries/martial-arts",
     siteName: "Capture Client",
     type: "website",
     images: [{
-      url: "https://captureclientai.net/og-martial-arts.jpg",
+      url: "https://captureclient.com/og-martial-arts.jpg",
       width: 1200,
       height: 630,
       alt: "AI Receptionist for Martial Arts Studios - Answer Every Parent Call",
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI for Martial Arts Studios | Capture Client",
     description: "Stop losing families during class. AI answers every parent call, books trials 24/7. Kicksite integration.",
-    images: ["https://captureclientai.net/og-martial-arts.jpg"],
+    images: ["https://captureclient.com/og-martial-arts.jpg"],
   },
   alternates: {
-    canonical: "https://captureclientai.net/industries/martial-arts",
+    canonical: "https://captureclient.com/industries/martial-arts",
   },
   robots: {
     index: true,
@@ -65,8 +65,8 @@ const serviceSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Capture Client",
-    "url": "https://captureclientai.net",
-    "logo": "https://captureclientai.net/logo-full.svg",
+    "url": "https://captureclient.com",
+    "logo": "https://captureclient.com/logo-full.svg",
     "telephone": "865-346-6111"
   },
   "areaServed": "United States",
@@ -181,19 +181,19 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://captureclientai.net"
+      "item": "https://captureclient.com"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Industries",
-      "item": "https://captureclientai.net/industries"
+      "item": "https://captureclient.com/industries"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Martial Arts Studios",
-      "item": "https://captureclientai.net/industries/martial-arts"
+      "item": "https://captureclient.com/industries/martial-arts"
     }
   ]
 };

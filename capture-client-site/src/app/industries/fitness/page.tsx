@@ -24,11 +24,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AI Voice Agents for Fitness Studios | Capture Client",
     description: "Stop losing 76% of fitness leads. AI answers every call, books trials, and converts members 24/7. $69K+ recovered annually.",
-    url: "https://captureclientai.net/industries/fitness",
+    url: "https://captureclient.com/industries/fitness",
     siteName: "Capture Client",
     type: "website",
     images: [{
-      url: "https://captureclientai.net/og-image.jpg",
+      url: "https://captureclient.com/og-image.jpg",
       width: 1200,
       height: 630,
       alt: "Capture Client - AI Voice Agents for Fitness Studios",
@@ -38,10 +38,10 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI Voice Agents for Fitness Studios | Capture Client",
     description: "Stop losing 76% of fitness leads. AI answers every call, books trials, and converts members 24/7.",
-    images: ["https://captureclientai.net/og-image.jpg"],
+    images: ["https://captureclient.com/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://captureclientai.net/industries/fitness",
+    canonical: "https://captureclient.com/industries/fitness",
   },
   robots: {
     index: true,
@@ -65,7 +65,7 @@ const serviceSchema = {
   "provider": {
     "@type": "Organization",
     "name": "Capture Client",
-    "url": "https://captureclientai.net",
+    "url": "https://captureclient.com",
     "telephone": "+1-865-346-6111"
   },
   "serviceType": "AI Voice Agent & Lead Capture",
@@ -139,19 +139,19 @@ const breadcrumbSchema = {
       "@type": "ListItem",
       "position": 1,
       "name": "Home",
-      "item": "https://captureclientai.net"
+      "item": "https://captureclient.com"
     },
     {
       "@type": "ListItem",
       "position": 2,
       "name": "Industries",
-      "item": "https://captureclientai.net/industries"
+      "item": "https://captureclient.com/industries"
     },
     {
       "@type": "ListItem",
       "position": 3,
       "name": "Fitness",
-      "item": "https://captureclientai.net/industries/fitness"
+      "item": "https://captureclient.com/industries/fitness"
     }
   ]
 };

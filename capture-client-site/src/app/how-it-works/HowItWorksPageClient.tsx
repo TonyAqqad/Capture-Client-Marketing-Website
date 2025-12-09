@@ -98,28 +98,28 @@ const howToSchema = {
       position: 1,
       name: "Customer Calls Your Business",
       text: "A potential customer calls your business at any time—even at 2 AM or during busy hours. The AI answers instantly in under 2 seconds.",
-      image: "https://captureclientai.net/step-1-call.jpg"
+      image: "https://captureclient.com/step-1-call.jpg"
     },
     {
       "@type": "HowToStep",
       position: 2,
       name: "AI Answers Instantly",
       text: "Our GPT-4 powered AI engages in natural conversation, understands context, answers questions, and builds rapport with 96% caller satisfaction.",
-      image: "https://captureclientai.net/step-2-ai.jpg"
+      image: "https://captureclient.com/step-2-ai.jpg"
     },
     {
       "@type": "HowToStep",
       position: 3,
       name: "Lead Captured & Qualified",
       text: "The AI extracts contact info, qualifies the lead based on your criteria, and syncs all data automatically to your CRM with 99.2% accuracy.",
-      image: "https://captureclientai.net/step-3-crm.jpg"
+      image: "https://captureclient.com/step-3-crm.jpg"
     },
     {
       "@type": "HowToStep",
       position: 4,
       name: "You Follow Up & Close",
       text: "Qualified leads land in your inbox instantly with complete context, transcripts, and priority scores—ready to close with 3.2x better conversion rates.",
-      image: "https://captureclientai.net/step-4-close.jpg"
+      image: "https://captureclient.com/step-4-close.jpg"
     }
   ],
   totalTime: "PT2M"

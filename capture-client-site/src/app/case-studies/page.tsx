@@ -20,12 +20,12 @@ export const metadata: Metadata = {
     title: "Case Studies | Real Client Results & Success Stories | Capture Client",
     description:
       "See how Capture Client transforms small businesses with AI voice agents. Real results: 247% revenue growth, 100% call answer rates.",
-    url: "https://captureclientai.net/case-studies",
+    url: "https://captureclient.com/case-studies",
     siteName: "Capture Client",
     type: "website",
     images: [
       {
-        url: "https://captureclientai.net/og-case-studies.jpg",
+        url: "https://captureclient.com/og-case-studies.jpg",
         width: 1200,
         height: 630,
         alt: "Capture Client Case Studies - Real Results",
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
     title: "Case Studies | Real Client Results | Capture Client",
     description:
       "See how Capture Client transforms small businesses. Real results: 247% revenue growth, 100% call answer rates.",
-    images: ["https://captureclientai.net/og-case-studies.jpg"],
+    images: ["https://captureclient.com/og-case-studies.jpg"],
   },
   alternates: {
-    canonical: "https://captureclientai.net/case-studies",
+    canonical: "https://captureclient.com/case-studies",
   },
   robots: {
     index: true,
@@ -243,16 +243,16 @@ const caseStudiesData = [
 const webPageSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "@id": "https://captureclientai.net/case-studies/#webpage",
-  url: "https://captureclientai.net/case-studies",
+  "@id": "https://captureclient.com/case-studies/#webpage",
+  url: "https://captureclient.com/case-studies",
   name: "Case Studies | Real Client Results & Success Stories | Capture Client",
   description:
     "See how Capture Client transforms small businesses with AI voice agents and lead generation. Real results: 247% revenue growth, 100% call answer rates.",
   isPartOf: {
-    "@id": "https://captureclientai.net/#website",
+    "@id": "https://captureclient.com/#website",
   },
   about: {
-    "@id": "https://captureclientai.net/#organization",
+    "@id": "https://captureclient.com/#organization",
   },
   breadcrumb: {
     "@type": "BreadcrumbList",
@@ -261,13 +261,13 @@ const webPageSchema = {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://captureclientai.net",
+        item: "https://captureclient.com",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Case Studies",
-        item: "https://captureclientai.net/case-studies",
+        item: "https://captureclient.com/case-studies",
       },
     ],
   },
@@ -284,7 +284,7 @@ const webPageSchema = {
 const itemListSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "@id": "https://captureclientai.net/case-studies/#itemlist",
+  "@id": "https://captureclient.com/case-studies/#itemlist",
   name: "Capture Client Case Studies",
   description:
     "Real success stories from small businesses using Capture Client's AI voice agents and lead generation platform.",
@@ -294,7 +294,7 @@ const itemListSchema = {
     position: index + 1,
     name: `${study.company} - ${study.industry}`,
     description: study.problem,
-    url: `https://captureclientai.net/case-studies/${study.id}`,
+    url: `https://captureclient.com/case-studies/${study.id}`,
   })),
 };
 

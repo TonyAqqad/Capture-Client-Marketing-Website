@@ -30,12 +30,12 @@ export const metadata: Metadata = {
     title: "69+ Seamless Integrations | Connect Your Tech Stack",
     description:
       "Connect Capture Client with your favorite platforms. 69+ native integrations plus 5,000+ apps via Zapier. HubSpot, Salesforce, ServiceTitan, and more.",
-    url: "https://captureclientai.net/integrations",
+    url: "https://captureclient.com/integrations",
     siteName: "Capture Client",
     type: "website",
     images: [
       {
-        url: "https://captureclientai.net/og-integrations.jpg",
+        url: "https://captureclient.com/og-integrations.jpg",
         width: 1200,
         height: 630,
         alt: "Capture Client - 69+ Seamless Integrations",
@@ -47,10 +47,10 @@ export const metadata: Metadata = {
     title: "69+ Seamless Integrations | Capture Client",
     description:
       "Connect Capture Client with your favorite platforms. 69+ native integrations plus 5,000+ apps via Zapier.",
-    images: ["https://captureclientai.net/og-integrations.jpg"],
+    images: ["https://captureclient.com/og-integrations.jpg"],
   },
   alternates: {
-    canonical: "https://captureclientai.net/integrations",
+    canonical: "https://captureclient.com/integrations",
   },
   robots: {
     index: true,
@@ -73,7 +73,7 @@ const integrationsSchema = {
   name: "Integrations",
   description:
     "Capture Client integrates with 69+ platforms including HubSpot, Salesforce, Twilio, Zapier, ServiceTitan, and more to connect your entire tech stack.",
-  url: "https://captureclientai.net/integrations",
+  url: "https://captureclient.com/integrations",
   about: {
     "@type": "SoftwareApplication",
     name: "Capture Client",
