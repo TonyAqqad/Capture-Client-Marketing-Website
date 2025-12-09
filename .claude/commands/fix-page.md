@@ -1,6 +1,6 @@
 ---
 description: Fix issues on an existing page to match established patterns
-model: claude-sonnet
+model: claude-sonnet-4.5
 ---
 Fix issues on the page at: $ARGUMENTS
 

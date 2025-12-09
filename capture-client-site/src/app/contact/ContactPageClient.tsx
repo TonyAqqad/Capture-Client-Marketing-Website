@@ -138,7 +138,7 @@ export default function ContactPageClient() {
                   className="group relative overflow-hidden w-full"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500" />
-                  <a href="tel:865-346-3339" className="relative glass rounded-xl p-5 sm:p-6 border border-white/10 hover:border-accent/30 transition-all duration-300 block min-h-[80px] active:scale-[0.98]">
+                  <a href="tel:865-346-6111" className="relative glass rounded-xl p-5 sm:p-6 border border-white/10 hover:border-accent/30 transition-all duration-300 block min-h-[80px] active:scale-[0.98]">
                     <div className="flex items-start gap-3 sm:gap-4">
                       {/* Animated Phone Icon */}
                       <div className="relative flex-shrink-0">
@@ -153,7 +153,7 @@ export default function ContactPageClient() {
                           Prefer to Call?
                         </h3>
                         <span className="text-xl sm:text-2xl lg:text-3xl font-black text-white group-hover:text-accent transition-colors duration-300 block mb-1 break-words">
-                          (865) 346-3339
+                          (865) 346-6111
                         </span>
                         <p className="text-xs sm:text-sm text-white/50">
                           Mon-Fri: 9am - 6pm EST
@@ -521,7 +521,7 @@ export default function ContactPageClient() {
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
                 <a
-                  href="tel:865-346-3339"
+                  href="tel:865-346-6111"
                   className="btn-primary inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-base sm:text-lg group w-full sm:w-auto justify-center min-h-[48px] active:scale-[0.98] transition-transform"
                 >
                   <Phone className="w-5 h-5 sm:w-6 sm:h-6" />

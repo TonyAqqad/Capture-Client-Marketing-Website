@@ -10,7 +10,7 @@ interface UrgencyTimerProps {
 }
 
 export default function UrgencyTimer({
-  offer = "Book your demo in the next 24 hours and get a FREE strategy session ($500 value)",
+  offer = "Start your AI trial in the next 24 hours and get a FREE strategy session ($500 value)",
   className = ""
 }: UrgencyTimerProps) {
   // Initialize with null to prevent hydration mismatch

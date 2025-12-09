@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { trackFormStart, trackFormSubmission, trackPhoneClick } from "@/lib/analytics";
 import { CheckCircle, Phone, Lock, ArrowRight, Rocket, ArrowLeft, Shield, Clock, Headset, ChevronDown } from "lucide-react";
 
@@ -18,6 +19,7 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
     email: "",
     phone: "",
     challenge: "",
+    smsConsent: false,
   });
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -245,6 +247,38 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                 <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
               </div>
             </div>
+
+            {/* SMS Consent Checkbox - A2P 10DLC Compliant */}
+            <div className="group">
+              <label className="flex items-start gap-3 cursor-pointer p-3 rounded-xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] hover:border-white/10 transition-all">
+                <input
+                  type="checkbox"
+                  checked={formData.smsConsent}
+                  onChange={(e) => setFormData({ ...formData, smsConsent: e.target.checked })}
+                  className="mt-1 w-5 h-5 rounded border-2 border-white/20 bg-white/5
+                             checked:bg-accent checked:border-accent
+                             focus:ring-2 focus:ring-accent/50 focus:ring-offset-0
+                             cursor-pointer appearance-none
+                             relative after:content-['✓'] after:absolute after:inset-0
+                             after:flex after:items-center after:justify-center
+                             after:text-background-dark after:font-bold after:text-xs
+                             after:opacity-0 checked:after:opacity-100
+                             transition-all"
+                />
+                <span className="text-sm text-white/70 leading-relaxed">
+                  I agree to receive text messages from Capture Client at the phone number provided.
+                  Message frequency varies. Message and data rates may apply.
+                  Reply STOP to unsubscribe.{" "}
+                  <Link href="/privacy-policy" className="text-accent hover:underline">
+                    Privacy Policy
+                  </Link>{" "}
+                  &{" "}
+                  <Link href="/terms-of-service" className="text-accent hover:underline">
+                    Terms
+                  </Link>
+                </span>
+              </label>
+            </div>
           </div>
 
           {/* Premium continue button */}
@@ -371,7 +405,7 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                   </>
                 ) : (
                   <>
-                    Get My Free Demo
+                    Try Our AI Now
                     <Rocket className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
                   </>
                 )}
@@ -400,13 +434,13 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
             <p className="text-xs text-white/50">
               Or call:{" "}
               <a
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 className="text-accent hover:underline font-bold inline-flex items-center
                            touch-manipulation active:scale-95 transition-transform duration-100
                            min-h-[48px]"
-                onClick={() => trackPhoneClick("865-346-3339", `optimized_form_${source}`)}
+                onClick={() => trackPhoneClick("865-346-6111", `optimized_form_${source}`)}
               >
-                (865) 346-3339
+                (865) 346-6111
               </a>
             </p>
           </div>

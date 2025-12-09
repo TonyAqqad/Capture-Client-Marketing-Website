@@ -256,13 +256,13 @@ export default function AboutClient() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <motion.a
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="btn-gold px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold inline-flex items-center justify-center gap-2 shadow-glow-gold-lg w-full sm:w-auto"
               >
                 <Phone className="w-5 h-5" />
-                Call 865-346-3339
+                Call 865-346-6111
               </motion.a>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link

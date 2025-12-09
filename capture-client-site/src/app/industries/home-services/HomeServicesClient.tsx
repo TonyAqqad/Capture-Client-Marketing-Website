@@ -168,10 +168,10 @@ export default function HomeServicesClient() {
                 Calculate Your Lost Revenue
               </Link>
               <a
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 className="btn-ghost px-8 py-4 text-lg font-semibold rounded-xl w-full sm:w-auto"
               >
-                Call 865-346-3339
+                Call 865-346-6111
               </a>
             </motion.div>
           </div>
@@ -510,10 +510,10 @@ export default function HomeServicesClient() {
                 {/* CTA */}
                 <div className="text-center">
                   <a
-                    href="tel:865-346-3339"
+                    href="tel:865-346-6111"
                     className="btn-gold px-8 py-4 text-lg font-semibold rounded-xl shadow-glow-gold-lg hover:scale-105 transition-all inline-block"
                   >
-                    Stop The Bleeding - Call 865-346-3339
+                    Stop The Bleeding - Call 865-346-6111
                   </a>
                 </div>
               </div>
@@ -741,12 +741,12 @@ export default function HomeServicesClient() {
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
                 <motion.a
-                  href="tel:865-346-3339"
+                  href="tel:865-346-6111"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
                   className="btn-gold px-10 py-5 text-xl font-bold rounded-xl shadow-glow-gold-intense transition-all w-full sm:w-auto"
                 >
-                  📞 Call 865-346-3339
+                  📞 Call 865-346-6111
                 </motion.a>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
@@ -757,7 +757,7 @@ export default function HomeServicesClient() {
                     href="/contact"
                     className="btn-ghost px-10 py-5 text-xl font-semibold rounded-xl w-full sm:w-auto"
                   >
-                    Book a Demo
+                    Try Our AI Now
                   </Link>
                 </motion.div>
               </div>

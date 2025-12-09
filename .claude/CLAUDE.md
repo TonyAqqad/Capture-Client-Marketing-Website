@@ -1,4 +1,5 @@
 # Capture Client Website - Claude Code Instructions
+model: opus-4.5
 
 ## ⚠️ READ THIS FIRST
 You are working on a 200+ page Next.js marketing website that is 65% complete.

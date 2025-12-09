@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { motion } from "@/lib/motion";
 import { CheckCircle, ChevronDown, ArrowRight, Phone } from "lucide-react";
 import { trackFormStart, trackFormSubmission, trackPhoneClick } from "@/lib/analytics";
@@ -16,6 +17,7 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
     phone: "",
     service: "",
     message: "",
+    smsConsent: false,
   });
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -74,7 +76,7 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
 
     // Reset form after 3 seconds
     setTimeout(() => {
-      setFormData({ name: "", email: "", phone: "", service: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", service: "", message: "", smsConsent: false });
       setSubmitted(false);
     }, 3000);
   };
@@ -308,6 +310,43 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
         </div>
       </motion.div>
 
+      {/* SMS Consent Checkbox - A2P 10DLC Compliant */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.4, delay: 0.45 }}
+        className="group"
+      >
+        <label className="flex items-start gap-3 cursor-pointer p-3 rounded-xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] hover:border-white/10 transition-all">
+          <input
+            type="checkbox"
+            checked={formData.smsConsent}
+            onChange={(e) => setFormData({ ...formData, smsConsent: e.target.checked })}
+            className="mt-1 w-5 h-5 rounded border-2 border-white/20 bg-white/5
+                       checked:bg-accent checked:border-accent
+                       focus:ring-2 focus:ring-accent/50 focus:ring-offset-0
+                       cursor-pointer appearance-none
+                       relative after:content-['✓'] after:absolute after:inset-0
+                       after:flex after:items-center after:justify-center
+                       after:text-background-dark after:font-bold after:text-xs
+                       after:opacity-0 checked:after:opacity-100
+                       transition-all"
+          />
+          <span className="text-sm text-white/70 leading-relaxed">
+            I agree to receive text messages from Capture Client at the phone number provided.
+            Message frequency varies. Message and data rates may apply.
+            Reply STOP to unsubscribe.{" "}
+            <Link href="/privacy-policy" className="text-accent hover:underline">
+              Privacy Policy
+            </Link>{" "}
+            &{" "}
+            <Link href="/terms-of-service" className="text-accent hover:underline">
+              Terms
+            </Link>
+          </span>
+        </label>
+      </motion.div>
+
       {/* Premium gradient submit button */}
       <motion.button
         initial={{ opacity: 0, y: 20 }}
@@ -364,21 +403,21 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
         </div>
 
         <a
-          href="tel:865-346-3339"
+          href="tel:865-346-6111"
           className="group inline-flex items-center gap-2 px-5 py-3 rounded-lg
                      bg-white/[0.03] border border-white/10
                      hover:bg-white/[0.08] hover:border-accent/30
                      transition-all duration-300
                      touch-manipulation active:scale-95
                      min-h-[56px]"
-          onClick={() => trackPhoneClick("865-346-3339", `lead_form_${source}`)}
+          onClick={() => trackPhoneClick("865-346-6111", `lead_form_${source}`)}
         >
           <Phone className="w-5 h-5 text-accent" />
           <span className="text-sm text-white/80 group-hover:text-white transition-colors">
             Call us directly:
           </span>
           <span className="text-base font-bold text-accent group-hover:underline">
-            (865) 346-3339
+            (865) 346-6111
           </span>
         </a>
       </motion.div>

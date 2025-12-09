@@ -21,3 +21,4 @@ build/
 # Test artifacts
 test-results/
 playwright-report/
+nul

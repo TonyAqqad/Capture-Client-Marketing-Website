@@ -66,7 +66,7 @@ const serviceSchema = {
     "@type": "Organization",
     "name": "Capture Client",
     "url": "https://captureclientai.net",
-    "telephone": "+1-865-346-3339"
+    "telephone": "+1-865-346-6111"
   },
   "serviceType": "AI Voice Agent & Lead Capture",
   "areaServed": {

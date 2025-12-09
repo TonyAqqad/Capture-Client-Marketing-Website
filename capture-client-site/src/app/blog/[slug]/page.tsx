@@ -348,13 +348,13 @@ export default async function BlogPostPage({
               href="/contact"
               className="bg-primary text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm transition-all duration-300 hover:scale-105 glowing-button"
             >
-              Book a Free Demo
+              Try Our AI Now
             </Link>
             <a
-              href="tel:865-346-3339"
+              href="tel:865-346-6111"
               className="bg-white/10 border border-white/20 text-gray-900 dark:text-white px-8 py-4 rounded-full backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
             >
-              Call Us: (865) 346-3339
+              Call Us: (865) 346-6111
             </a>
           </div>
         </div>

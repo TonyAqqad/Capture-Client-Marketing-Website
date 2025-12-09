@@ -5,6 +5,7 @@ import "./globals-mobile-optimized.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileCTABar from "@/components/cro/MobileCTABar";
+import CookieConsent from "@/components/CookieConsent";
 import JsonLd from "@/components/seo/JsonLd";
 import { WebVitals } from "@/components/analytics/WebVitals";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
@@ -151,6 +152,7 @@ export default function RootLayout({
           <main id="main-content" className="min-h-screen">{children}</main>
           <Footer />
           <MobileCTABar />
+          <CookieConsent />
         </LazyMotionProvider>
       </body>
     </html>

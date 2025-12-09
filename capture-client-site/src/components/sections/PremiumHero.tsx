@@ -48,7 +48,7 @@ function MobileHeroCard() {
         <div className="absolute inset-2 rounded-full bg-[#00C9FF]/10" />
         {/* Phone button */}
         <a
-          href="tel:865-346-3339"
+          href="tel:865-346-6111"
           className="relative w-full h-full rounded-full bg-gradient-to-br from-[#00C9FF] to-[#5FE3FF] flex items-center justify-center shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 transition-shadow"
         >
           <Phone className="w-8 h-8 text-[#0A0E1A]" />
@@ -241,11 +241,11 @@ export function PremiumHero() {
 
                 {/* Secondary CTA - Phone */}
                 <Link
-                  href="tel:865-346-3339"
+                  href="tel:865-346-6111"
                   className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-base font-semibold text-white border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] hover:border-white/20 transition-all duration-300"
                 >
                   <Phone className="w-5 h-5 text-[#00C9FF]" />
-                  <span>(865) 346-3339</span>
+                  <span>(865) 346-6111</span>
                 </Link>
               </motion.div>
 
@@ -297,12 +297,20 @@ export function PremiumHero() {
         </div>
       </div>
 
+      {/* Bottom gradient fade - seamless transition to next section */}
+      <div
+        className="absolute bottom-0 left-0 right-0 h-40 pointer-events-none"
+        style={{
+          background: "linear-gradient(to bottom, transparent 0%, #08090A 100%)"
+        }}
+      />
+
       {/* Scroll indicator - minimal */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-3"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-3 z-20"
       >
         <span className="text-[10px] text-white/30 uppercase tracking-[0.2em] font-medium">
           Scroll

@@ -200,10 +200,10 @@ export default function FAQClient({ faqData }: FAQClientProps) {
                 Contact Us
               </Link>
               <a
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 className="btn-ghost px-6 sm:px-8 py-3 sm:py-4 rounded-full transition-all duration-300 hover:scale-105 active:scale-95 inline-flex items-center justify-center min-h-[52px]"
               >
-                Call: (865) 346-3339
+                Call: (865) 346-6111
               </a>
             </motion.div>
           </div>

@@ -25,7 +25,7 @@
   "hero": {
     "headline": "Durham's Most Advanced Voice AI Solution",
     "subheadline": "Intelligent Automation That Answers Every Call, Captures Every Lead & Grows Your Business",
-    "cta_primary": "Book Free Demo",
+    "cta_primary": "Try Our AI Now",
     "cta_secondary": "See Pricing"
   },
   "intro": {
@@ -170,8 +170,8 @@
   "cta": {
     "headline": "Ready to Transform Your Durham Business?",
     "subheadline": "Join Durham's leading companies using Voice AI for competitive advantage",
-    "button_text": "Schedule Demo",
-    "phone": "865-346-3339",
+    "button_text": "Try Our AI Now",
+    "phone": "865-346-6111",
     "email": "team@captureclientai.net"
   }
 }

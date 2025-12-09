@@ -65,10 +65,10 @@ export default function Error({
             Need help? Contact our support team
           </p>
           <a
-            href="tel:865-346-3339"
+            href="tel:865-346-6111"
             className="text-[#00D4FF] hover:underline font-medium"
           >
-            (865) 346-3339
+            (865) 346-6111
           </a>
         </div>
       </div>

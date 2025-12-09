@@ -88,17 +88,17 @@ export function RealEstateFinalCTA() {
               <div className="absolute inset-0 bg-gradient-to-r from-gold via-gold-light to-gold" />
               <div className="absolute inset-0 bg-gradient-to-r from-gold-light via-gold to-gold-light opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <span className="relative z-10 text-black flex items-center gap-2">
-                Book Your Demo
+                Try Our AI Now
                 <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform duration-300" />
               </span>
             </Link>
 
             <Link
-              href="tel:865-346-3339"
+              href="tel:865-346-6111"
               className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-6 rounded-2xl font-bold text-xl border-2 border-white/20 bg-white/5 backdrop-blur-xl transition-all duration-300 hover:bg-white/10 hover:border-accent/40 hover:shadow-[0_0_40px_rgba(0,201,255,0.3)] hover:scale-105"
             >
               <Phone className="w-6 h-6 text-accent" />
-              <span className="text-white">(865) 346-3339</span>
+              <span className="text-white">(865) 346-6111</span>
             </Link>
           </motion.div>
 

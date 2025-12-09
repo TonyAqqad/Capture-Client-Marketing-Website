@@ -167,13 +167,13 @@ export function PremiumFAQ() {
             </p>
           </div>
           <a
-            href="tel:865-346-3339"
+            href="tel:865-346-6111"
             className="inline-flex items-center gap-2 text-base sm:text-lg font-bold text-accent hover:text-accent/80 transition-colors group touch-manipulation"
           >
             <div className="w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center flex-shrink-0">
               <PhoneCall className="group-hover:animate-pulse w-5 h-5 sm:w-6 sm:h-6" />
             </div>
-            Call (865) 346-3339
+            Call (865) 346-6111
           </a>
           <p className="text-xs sm:text-sm text-foreground-subtle mt-3">
             Monday-Friday, 9am-6pm EST

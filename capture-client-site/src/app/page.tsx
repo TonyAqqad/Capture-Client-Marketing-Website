@@ -171,7 +171,7 @@ const localBusinessSchema = {
   "@id": "https://captureclientai.net/#localbusiness",
   name: "Capture Client",
   image: "https://captureclientai.net/logo-full.svg",
-  telephone: "+1-865-346-3339",
+  telephone: "+1-865-346-6111",
   email: "team@captureclientai.net",
   url: "https://captureclientai.net",
   priceRange: "$$",

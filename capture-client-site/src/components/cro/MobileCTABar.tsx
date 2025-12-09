@@ -21,7 +21,7 @@ interface MobileCTABarProps {
   phoneNumber?: string;
 }
 
-export default function MobileCTABar({ phoneNumber = "865-346-3339" }: MobileCTABarProps = {}) {
+export default function MobileCTABar({ phoneNumber = "865-346-6111" }: MobileCTABarProps = {}) {
   const [isVisible, setIsVisible] = useState(false);
   const [isScrollingUp, setIsScrollingUp] = useState(true);
   const lastScrollYRef = useRef(0);
@@ -101,18 +101,18 @@ export default function MobileCTABar({ phoneNumber = "865-346-3339" }: MobileCTA
                 <span className="text-sm">Call Now</span>
               </a>
 
-              {/* Book Demo Button - Primary action */}
+              {/* Try Our AI Button - Primary action */}
               <Link
                 href="/contact"
                 className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-[#D4AF37] to-[#D4AF37]/80 rounded-xl py-3 min-h-[48px] text-[#0F172A] font-bold transition-all duration-300 active:scale-95 touch-manipulation"
-                aria-label="Book a demo with Capture Client"
+                aria-label="Try our AI with Capture Client"
                 style={{
                   touchAction: 'manipulation',
                   WebkitTapHighlightColor: 'transparent',
                   userSelect: 'none'
                 }}
               >
-                <span className="text-sm">Book Demo</span>
+                <span className="text-sm">Try Our AI Now</span>
                 <svg
                   className="w-5 h-5"
                   fill="none"

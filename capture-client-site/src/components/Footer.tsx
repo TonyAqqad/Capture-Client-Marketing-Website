@@ -52,16 +52,16 @@ export default function Footer() {
               {/* Premium contact info with hover effects */}
               <div className="mt-6 sm:mt-8 space-y-3">
                 <a
-                  href="tel:865-346-3339"
+                  href="tel:865-346-6111"
                   className="flex items-center gap-3 group min-h-[48px] -mx-2 px-2 rounded-lg hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300 active:scale-95 relative overflow-hidden"
-                  onClick={() => trackPhoneClick("865-346-3339", "footer")}
+                  onClick={() => trackPhoneClick("865-346-6111", "footer")}
                 >
                   {/* Subtle gradient on hover */}
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                   <Phone className="w-5 h-5 text-primary group-hover:text-accent transition-all duration-300 group-hover:rotate-12 relative z-10" />
                   <span className="text-foreground-muted group-hover:text-accent font-body text-base sm:text-sm transition-colors duration-300 relative z-10">
-                    (865) 346-3339
+                    (865) 346-6111
                   </span>
                 </a>
 

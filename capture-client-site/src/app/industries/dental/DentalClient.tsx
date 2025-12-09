@@ -208,7 +208,7 @@ export default function DentalClient() {
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
               <motion.a
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 0 40px rgba(212, 175, 55, 0.6)",
@@ -218,7 +218,7 @@ export default function DentalClient() {
                 className="btn-gold px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 shadow-glow-gold-lg transition-all w-full sm:w-auto"
               >
                 <Phone className="w-6 h-6" />
-                Call 865-346-3339
+                Call 865-346-6111
               </motion.a>
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -683,7 +683,7 @@ export default function DentalClient() {
             {/* CTA */}
             <div className="text-center">
               <motion.a
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 0 40px rgba(212, 175, 55, 0.6)",
@@ -1002,7 +1002,7 @@ export default function DentalClient() {
               className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"
             >
               <motion.a
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 whileHover={{
                   scale: 1.05,
                   boxShadow: "0 0 40px rgba(212, 175, 55, 0.6)",
@@ -1012,7 +1012,7 @@ export default function DentalClient() {
                 className="btn-gold px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 shadow-glow-gold-lg transition-all w-full sm:w-auto"
               >
                 <Phone className="w-6 h-6" />
-                Call 865-346-3339
+                Call 865-346-6111
               </motion.a>
               <motion.div
                 whileHover={{ scale: 1.05 }}

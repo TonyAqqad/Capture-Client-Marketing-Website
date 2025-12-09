@@ -207,13 +207,13 @@ export default function RestaurantsPageClient() {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <motion.a
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 className="btn-gold text-lg px-8 py-4 inline-flex items-center justify-center gap-2 w-full sm:w-auto"
                 whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(245, 166, 35, 0.5)" }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Phone className="w-5 h-5" />
-                Get Restaurant Demo
+                Try Our AI Now
               </motion.a>
               <motion.a
                 href="#calculator"
@@ -558,7 +558,7 @@ export default function RestaurantsPageClient() {
 
             <div className="text-center">
               <motion.a
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 className="btn-gold text-lg px-8 py-4 inline-flex items-center gap-2 w-full sm:w-auto"
                 whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(245, 166, 35, 0.5)" }}
                 whileTap={{ scale: 0.95 }}
@@ -685,13 +685,13 @@ export default function RestaurantsPageClient() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 className="btn-gold text-lg px-10 py-5 inline-flex items-center justify-center gap-2 w-full sm:w-auto"
                 whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(245, 166, 35, 0.6)" }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Phone className="w-5 h-5" />
-                Call 865-346-3339
+                Call 865-346-6111
               </motion.a>
               <motion.a
                 href="/contact"

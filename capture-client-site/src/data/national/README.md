@@ -47,7 +47,7 @@ All images sourced from Unsplash (free to use):
 
 ## Agency Information
 - **Name**: Capture Client
-- **Phone**: 865-346-3339
+- **Phone**: 865-346-6111
 - **Email**: team@captureclient.net
 - **Services**: Voice AI, Google Ads, Facebook Ads, Lead Generation
 - **Serves**: Nationwide (all 50 states)

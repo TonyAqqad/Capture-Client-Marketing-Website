@@ -66,7 +66,7 @@ const serviceSchema = {
     "@type": "Organization",
     "name": "Capture Client",
     "url": "https://captureclientai.net",
-    "telephone": "865-346-3339"
+    "telephone": "865-346-6111"
   },
   "serviceType": "Dental Practice Automation",
   "areaServed": "US",
@@ -75,7 +75,7 @@ const serviceSchema = {
     "serviceUrl": "https://captureclientai.net/industries/dental",
     "servicePhone": {
       "@type": "ContactPoint",
-      "telephone": "865-346-3339",
+      "telephone": "865-346-6111",
       "contactType": "Sales"
     }
   },

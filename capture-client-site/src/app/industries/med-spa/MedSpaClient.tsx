@@ -215,7 +215,7 @@ export default function MedSpaClient() {
               className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
             >
               <motion.a
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 className="btn-gold px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 shadow-glow-gold-lg w-full sm:w-auto group relative overflow-hidden"
                 whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(245, 166, 35, 0.5)" }}
                 whileTap={{ scale: 0.98 }}
@@ -227,7 +227,7 @@ export default function MedSpaClient() {
                   transition={{ duration: 0.6 }}
                 />
                 <Phone className="w-6 h-6 relative z-10" />
-                <span className="relative z-10">Call 865-346-3339</span>
+                <span className="relative z-10">Call 865-346-6111</span>
               </motion.a>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                 <Link
@@ -959,7 +959,7 @@ export default function MedSpaClient() {
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
               <motion.a
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 className="btn-gold px-12 py-6 text-2xl font-bold rounded-xl inline-flex items-center gap-3 shadow-glow-gold-lg w-full sm:w-auto relative overflow-hidden group"
                 whileHover={{
                   scale: 1.05,
@@ -985,7 +985,7 @@ export default function MedSpaClient() {
                   }}
                 />
                 <Phone className="w-7 h-7 relative z-10" />
-                <span className="relative z-10">Call 865-346-3339</span>
+                <span className="relative z-10">Call 865-346-6111</span>
               </motion.a>
               <motion.div
                 whileHover={{ scale: 1.05 }}

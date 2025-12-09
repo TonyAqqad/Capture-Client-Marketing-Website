@@ -1,7 +1,7 @@
 ---
 name: page-auditor
 description: Audit pages against established patterns without cluttering main context. Returns structured audit reports for one or multiple pages.
-model: claude-opus
+model: claude-opus-4.5
 path: capture-client-site/src
 ---
 

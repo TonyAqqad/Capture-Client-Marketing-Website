@@ -64,7 +64,7 @@ const serviceSchema = {
     '@type': 'Organization',
     name: 'Capture Client',
     url: 'https://captureclientai.net',
-    telephone: '865-346-3339',
+    telephone: '865-346-6111',
   },
   areaServed: {
     '@type': 'Country',

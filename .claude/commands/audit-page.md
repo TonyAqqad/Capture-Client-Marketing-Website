@@ -1,6 +1,6 @@
 ---
 description: Audit a page against established patterns (no changes)
-model: claude-opus
+model: claude-opus-4.5
 ---
 Audit the page at: $ARGUMENTS
 

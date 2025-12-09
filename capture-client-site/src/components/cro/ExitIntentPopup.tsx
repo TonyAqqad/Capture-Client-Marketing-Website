@@ -170,12 +170,12 @@ export default function ExitIntentPopup() {
                     whileTap={{ scale: 0.95 }}
                     className="flex-1 sm:flex-initial bg-gradient-to-r from-accent to-primary text-white font-bold px-6 sm:px-8 py-4 rounded-xl shadow-glow-lg hover:shadow-glow transition-all duration-300 flex items-center justify-center gap-2 min-h-[52px]"
                   >
-                    <span className="text-sm sm:text-base">Book Free Demo</span>
+                    <span className="text-sm sm:text-base">Try Our AI Now</span>
                     <ArrowRight className="w-5 h-5" />
                   </motion.button>
 
                   <motion.a
-                    href="tel:865-346-3339"
+                    href="tel:865-346-6111"
                     whileHover={isMobile ? undefined : { scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     className="flex-1 sm:flex-initial border-2 border-accent/50 text-foreground font-bold px-6 sm:px-8 py-4 rounded-xl hover:bg-accent/10 transition-all duration-300 flex items-center justify-center gap-2 min-h-[52px]"

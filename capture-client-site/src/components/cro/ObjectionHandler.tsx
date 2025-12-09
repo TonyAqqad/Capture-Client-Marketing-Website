@@ -124,11 +124,11 @@ export default function ObjectionHandler() {
       <div className="text-center mt-10">
         <p className="text-gray-400 mb-4">Still have questions?</p>
         <a
-          href="tel:865-346-3339"
+          href="tel:865-346-6111"
           className="inline-flex items-center gap-2 text-lg font-semibold text-accent hover:text-accent/80 transition-colors"
         >
           <Phone className="w-5 h-5" />
-          Call us: (865) 346-3339
+          Call us: (865) 346-6111
         </a>
       </div>
     </div>

@@ -1,5 +1,5 @@
 ---
-model: claude-opus
+model: claude-opus-4.5
 description: Create a new marketing page following established patterns
 ---
 Create a new page at the specified route: $ARGUMENTS

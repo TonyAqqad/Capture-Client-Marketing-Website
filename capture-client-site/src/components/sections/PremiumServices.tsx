@@ -715,17 +715,17 @@ export function PremiumServices() {
                     href="/contact"
                     className="btn-gold px-10 py-5 text-lg font-semibold rounded-xl shadow-glow-gold-lg inline-flex items-center gap-3 w-full sm:w-auto justify-center group"
                   >
-                    Book Your Free Demo
+                    Try Our AI Now
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                   <a
-                    href="tel:865-346-3339"
+                    href="tel:865-346-6111"
                     className="btn-ghost px-10 py-5 text-lg font-semibold rounded-xl inline-flex items-center gap-3 w-full sm:w-auto justify-center group"
                   >
                     <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform" />
-                    Call 865-346-3339
+                    (865) 346-6111
                   </a>
                 </motion.div>
               </div>

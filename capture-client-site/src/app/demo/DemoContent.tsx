@@ -985,14 +985,14 @@ export default function DemoContent() {
               <p className="text-foreground-muted mb-4">
                 Questions? Talk to our AI experts now
               </p>
-              <a href="tel:865-346-3339">
+              <a href="tel:865-346-6111">
                 <motion.button
                   className="btn-gold px-10 py-5 rounded-2xl text-xl font-bold inline-flex items-center gap-3 shadow-glow-gold-lg w-full sm:w-auto"
                   whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(245, 166, 35, 0.6)" }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <Phone className="w-6 h-6" />
-                  <span>Call 865-346-3339</span>
+                  <span>Call 865-346-6111</span>
                 </motion.button>
               </a>
               <p className="text-xs text-foreground-muted mt-3">
@@ -1062,14 +1062,14 @@ export default function DemoContent() {
                   </motion.button>
                 </Link>
 
-                <a href="tel:865-346-3339">
+                <a href="tel:865-346-6111">
                   <motion.button
                     className="flex items-center gap-3 px-8 py-5 rounded-2xl glass-card border-2 border-gold/30 text-foreground font-semibold hover:border-gold/50 hover:bg-gold/5 transition-all duration-300 w-full sm:w-auto"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
                     <Phone className="w-5 h-5 text-gold" />
-                    <span>Call (865) 346-3339</span>
+                    <span>Call (865) 346-6111</span>
                   </motion.button>
                 </a>
               </div>

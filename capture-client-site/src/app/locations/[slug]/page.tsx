@@ -192,7 +192,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
   ].filter(Boolean) as Array<Record<string, unknown>>;
 
   // Extract local phone number (default if not in data)
-  const localPhoneNumber = location.local_phone_number || "865-346-3339";
+  const localPhoneNumber = location.local_phone_number || "865-346-6111";
 
   return (
     <div className="min-h-screen bg-slate-950">

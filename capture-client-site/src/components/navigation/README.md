@@ -275,7 +275,7 @@ Phone clicks and CTA clicks are tracked via:
 import { trackPhoneClick, trackCTAClick } from "@/lib/analytics";
 
 // Phone click
-trackPhoneClick("865-346-3339", "header");
+trackPhoneClick("865-346-6111", "header");
 
 // CTA click
 trackCTAClick("Book a Demo", "header", "/contact");

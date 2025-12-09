@@ -108,14 +108,14 @@ export function IntegrationCTA({ integrationName }: IntegrationCTAProps) {
                   className="btn-gold px-8 py-4 text-lg font-semibold rounded-xl shadow-glow-gold-lg hover:scale-105 transition-all inline-flex items-center gap-2 w-full sm:w-auto justify-center"
                 >
                   <Rocket className="w-5 h-5" />
-                  Book Your Free Demo
+                  Try Our AI Now
                 </Link>
                 <Link
-                  href="tel:865-346-3339"
+                  href="tel:865-346-6111"
                   className="btn-ghost px-8 py-4 text-lg font-semibold rounded-xl hover:scale-105 transition-all inline-flex items-center gap-2 w-full sm:w-auto justify-center"
                 >
                   <Phone className="w-5 h-5" />
-                  (865) 346-3339
+                  (865) 346-6111
                 </Link>
               </motion.div>
 

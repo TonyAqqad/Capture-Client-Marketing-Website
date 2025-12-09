@@ -14,8 +14,8 @@ export const SITE_CONFIG = {
   name: 'Capture Client',
   legalName: 'Capture Client LLC',
   url: 'https://captureclientai.net',
-  phone: '(865) 346-3339',
-  phoneRaw: '+18653463339',
+  phone: '(865) 346-6111',
+  phoneRaw: '+18653466111',
   email: 'info@captureclientai.net',
   foundingDate: '2023',
 

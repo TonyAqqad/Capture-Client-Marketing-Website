@@ -1,7 +1,7 @@
 ---
 name: memory-sync
 description: Update memory bank files at end of session. Captures progress, learnings, and issues discovered during work.
-model: claude-sonnet
+model: claude-sonnet-4.5
 /sync-memory
 ---
 

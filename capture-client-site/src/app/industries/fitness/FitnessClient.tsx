@@ -246,11 +246,11 @@ export default function FitnessClient() {
               className="flex flex-col sm:flex-row items-center justify-center gap-4"
             >
               <a
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 className="btn-gold px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 shadow-glow-gold-lg hover:scale-105 transition-all w-full sm:w-auto"
               >
                 <Phone className="w-6 h-6" />
-                Call 865-346-3339
+                Call 865-346-6111
               </a>
               <Link
                 href="/demo"
@@ -681,7 +681,7 @@ export default function FitnessClient() {
                 Based on {Math.round(monthlyLeads * 0.30)} missed leads/month × 25% conversion rate
               </p>
               <motion.a
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
                 className="btn-gold px-8 py-4 text-lg font-bold rounded-xl inline-flex items-center gap-3 shadow-glow-gold-lg transition-all w-full sm:w-auto"
@@ -965,11 +965,11 @@ export default function FitnessClient() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12">
               <a
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 className="btn-gold px-12 py-6 text-2xl font-bold rounded-xl inline-flex items-center gap-3 shadow-glow-gold-lg hover:scale-105 transition-all w-full sm:w-auto"
               >
                 <Phone className="w-7 h-7" />
-                Call 865-346-3339
+                Call 865-346-6111
               </a>
               <Link
                 href="/demo"

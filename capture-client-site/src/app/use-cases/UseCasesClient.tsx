@@ -883,7 +883,7 @@ export default function UseCasesClient() {
                 href="/contact"
                 className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-6 rounded-2xl bg-gradient-to-r from-gold via-gold-light to-gold font-bold text-lg text-black overflow-hidden relative hover:shadow-[0_0_80px_rgba(212,175,55,0.6)] transition-shadow duration-500"
               >
-                <span className="relative z-10">Book Free Demo</span>
+                <span className="relative z-10">Try Our AI Now</span>
                 <motion.div
                   className="relative z-10"
                   animate={{ x: [0, 5, 0] }}
@@ -896,11 +896,11 @@ export default function UseCasesClient() {
 
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
               <Link
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-6 rounded-2xl border-2 border-white/20 bg-white/5 backdrop-blur-xl font-semibold text-lg text-white transition-all duration-300 hover:bg-white/10 hover:border-white/30 hover:shadow-[0_0_40px_rgba(0,201,255,0.3)]"
               >
                 <Phone className="w-6 h-6 text-cyan-400" />
-                (865) 346-3339
+                (865) 346-6111
               </Link>
             </motion.div>
           </motion.div>

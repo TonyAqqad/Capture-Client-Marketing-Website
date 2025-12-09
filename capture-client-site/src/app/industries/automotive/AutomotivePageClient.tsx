@@ -130,11 +130,11 @@ export default function AutomotivePageClient() {
               <Button
                 variant="primary"
                 size="lg"
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 icon={Phone}
                 className="text-lg sm:text-xl shadow-glow-gold-lg hover:shadow-glow-gold-xl transition-shadow"
               >
-                Get Dealership Demo
+                Try Our AI Now
               </Button>
             </motion.div>
           </div>
@@ -692,7 +692,7 @@ export default function AutomotivePageClient() {
                 <Button
                   variant="primary"
                   size="lg"
-                  href="tel:865-346-3339"
+                  href="tel:865-346-6111"
                   icon={Phone}
                 >
                   Get Your Custom ROI Analysis
@@ -925,11 +925,11 @@ export default function AutomotivePageClient() {
                 <Button
                   variant="primary"
                   size="lg"
-                  href="tel:865-346-3339"
+                  href="tel:865-346-6111"
                   icon={Phone}
                   className="text-lg sm:text-xl w-full sm:w-auto shadow-glow-gold-lg hover:shadow-glow-gold-xl transition-shadow"
                 >
-                  Call Now: 865-346-3339
+                  Call Now: 865-346-6111
                 </Button>
               </motion.div>
               <motion.div
@@ -943,7 +943,7 @@ export default function AutomotivePageClient() {
                   icon={ArrowRight}
                   className="text-lg sm:text-xl w-full sm:w-auto hover:shadow-glow transition-shadow"
                 >
-                  Schedule Demo
+                  Book Consultation
                 </Button>
               </motion.div>
             </motion.div>

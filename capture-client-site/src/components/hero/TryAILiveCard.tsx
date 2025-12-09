@@ -37,11 +37,11 @@ export function TryAILiveCard({ className = "" }: TryAILiveCardProps) {
 
             {/* Phone Number - clickable */}
             <a
-              href="tel:865-346-3339"
+              href="tel:865-346-6111"
               className="block group mb-3"
             >
               <span className="text-xl font-bold text-[#00C9FF] group-hover:text-[#5FE3FF] transition-colors">
-                (865) 346-3339
+                (865) 346-6111
               </span>
             </a>
 

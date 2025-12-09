@@ -517,11 +517,11 @@ export default function HealthcarePageClient() {
             >
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                 <Link
-                  href="tel:865-346-3339"
+                  href="tel:865-346-6111"
                   className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-gold to-gold-600 font-semibold text-black hover:shadow-lg hover:shadow-gold/50 transition-all duration-300 w-full sm:w-auto"
                 >
                   <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-                  Get HIPAA-Compliant Demo
+                  Try Our AI Now
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
               </motion.div>
@@ -545,10 +545,10 @@ export default function HealthcarePageClient() {
             >
               Call us:{" "}
               <a
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 className="text-gold hover:underline font-semibold"
               >
-                865-346-3339
+                865-346-6111
               </a>
             </motion.p>
           </div>
@@ -1064,11 +1064,11 @@ export default function HealthcarePageClient() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                   <Link
-                    href="tel:865-346-3339"
+                    href="tel:865-346-6111"
                     className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-gold to-gold-600 font-semibold text-black hover:shadow-lg hover:shadow-gold/50 transition-all duration-300 w-full sm:w-auto"
                   >
                     <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-                    Call 865-346-3339
+                    Call 865-346-6111
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </motion.div>

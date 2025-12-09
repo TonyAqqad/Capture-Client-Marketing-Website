@@ -457,7 +457,7 @@ export default function CaseStudiesPageClient({
                   href="/contact"
                   className="btn-gold px-8 py-4 text-lg font-semibold rounded-xl shadow-glow-gold-lg hover:scale-105 transition-all inline-flex items-center gap-2 w-full sm:w-auto justify-center"
                 >
-                  Book Your Free Demo
+                  Try Our AI Now
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link

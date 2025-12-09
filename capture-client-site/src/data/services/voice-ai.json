@@ -8,7 +8,7 @@
   },
   "seo": {
     "page_title": "Voice AI Agents | 24/7 Lead Capture | Capture Client",
-    "meta_description": "Missing calls and losing leads? AI voice agents answer 24/7, qualify prospects, book appointments automatically. Handle unlimited calls. Trusted by 500+ businesses. Free demo: (865) 346-3339",
+    "meta_description": "Missing calls and losing leads? AI voice agents answer 24/7, qualify prospects, book appointments automatically. Handle unlimited calls. Trusted by 500+ businesses. Free demo: (865) 346-6111",
     "h1_heading": "Never Miss Another Call. Never Lose Another Lead.",
     "primary_benefit": "24/7 Lead Capture",
     "pain_point": "Missing calls and losing leads",
@@ -40,8 +40,8 @@
     "headline": "Never Miss Another Call. Never Lose Another Lead.",
     "subheadline": "AI Voice Agents That Answer Every Call, Qualify Leads & Book Appointments 24/7",
     "cta_primary": {
-      "text": "Get Your Free Consultation",
-      "action": "tel:865-346-3339",
+      "text": "Try Our AI Now",
+      "action": "tel:865-346-6111",
       "type": "phone"
     },
     "cta_secondary": {
@@ -227,10 +227,10 @@
   },
   "cta_section": {
     "headline": "Ready to Capture Every Lead?",
-    "subheadline": "See how Voice AI can transform your business with a free consultation and custom demo",
+    "subheadline": "See how Voice AI can transform your business with a free consultation",
     "cta_primary": {
-      "text": "Call Now: 865-346-3339",
-      "action": "tel:865-346-3339",
+      "text": "Call Now: 865-346-6111",
+      "action": "tel:865-346-6111",
       "type": "phone"
     },
     "urgency_text": "Limited spots available this month for new Voice AI implementations"

@@ -488,17 +488,17 @@ export default function BlogContent({ posts }: BlogContentProps) {
                     className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm hover:shadow-xl hover:shadow-cyan-500/50 transition-all duration-300"
                   >
                     <Calendar className="w-5 h-5" />
-                    Book a Demo
+                    Try Our AI Now
                   </Link>
                 </motion.div>
 
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <a
-                    href="tel:865-346-3339"
+                    href="tel:865-346-6111"
                     className="inline-flex items-center justify-center gap-2 backdrop-blur-md bg-white/10 border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white/20 hover:border-white/30 transition-all duration-300"
                   >
                     <Mail className="w-5 h-5" />
-                    (865) 346-3339
+                    (865) 346-6111
                   </a>
                 </motion.div>
               </motion.div>

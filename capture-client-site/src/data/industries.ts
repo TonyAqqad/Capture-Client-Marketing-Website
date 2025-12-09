@@ -122,7 +122,7 @@ export const INDUSTRIES: Industry[] = [
     },
     relatedIntegrations: ['clio', 'mycase', 'practice-panther', 'lawmatics'],
     relatedCaseStudies: ['law-firm'],
-    ctaText: 'Book Legal AI Demo',
+    ctaText: 'Try Our AI Now',
     roiCalculation: {
       traditionalCost: '$77,000/year',
       aiSolution: '$1,140/year',
@@ -317,7 +317,7 @@ export const INDUSTRIES: Industry[] = [
       avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200',
     },
     relatedIntegrations: ['follow-up-boss', 'kvcore', 'boomtown', 'zillow'],
-    ctaText: 'Get Real Estate Demo',
+    ctaText: 'Try Our AI Now',
     trustBadges: [
       { type: 'certification', label: 'MLS Integrated', icon: 'home_work', description: 'Real-time property sync' },
       { type: 'certification', label: 'NAR Member', icon: 'card_membership', description: 'National Association of Realtors' },
@@ -391,7 +391,7 @@ export const INDUSTRIES: Industry[] = [
     },
     relatedIntegrations: ['athenahealth', 'kareo', 'nextgen', 'drchrono'],
     relatedCaseStudies: ['dental', 'medical-spa'],
-    ctaText: 'Schedule Healthcare Demo',
+    ctaText: 'Try Our AI Now',
     trustBadges: [
       { type: 'compliance', label: 'HIPAA Compliant', icon: 'health_and_safety', description: 'Full PHI protection' },
       { type: 'compliance', label: 'SOC-II Type 2', icon: 'security', description: 'Annual audits & validation' },
@@ -526,7 +526,7 @@ export const INDUSTRIES: Industry[] = [
       avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200',
     },
     relatedIntegrations: ['cdk-global', 'reynolds-reynolds', 'dealertrack', 'eleads'],
-    ctaText: 'Book Auto Demo',
+    ctaText: 'Try Our AI Now',
   },
   {
     id: 'financial-services',
@@ -588,7 +588,7 @@ export const INDUSTRIES: Industry[] = [
       avatar: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=200',
     },
     relatedIntegrations: ['redtail', 'wealthbox', 'salesforce-financial', 'morningstar'],
-    ctaText: 'Get Financial Services Demo',
+    ctaText: 'Try Our AI Now',
     trustBadges: [
       { type: 'compliance', label: 'SEC Compliant', icon: 'account_balance', description: 'Securities & Exchange Commission' },
       { type: 'compliance', label: 'FINRA Approved', icon: 'gavel', description: 'Financial Industry Regulatory Authority' },
@@ -661,7 +661,7 @@ export const INDUSTRIES: Industry[] = [
       avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200',
     },
     relatedIntegrations: ['applied-epic', 'ams360', 'hawksoft', 'agency-matrix'],
-    ctaText: 'Get Insurance Demo',
+    ctaText: 'Try Our AI Now',
   },
   {
     id: 'property-management',
@@ -785,7 +785,7 @@ export const INDUSTRIES: Industry[] = [
       avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200',
     },
     relatedIntegrations: ['launch27', 'jobber', 'housecall-pro', 'zenmaid'],
-    ctaText: 'Book Cleaning Demo',
+    ctaText: 'Try Our AI Now',
   },
   {
     id: 'pest-control',

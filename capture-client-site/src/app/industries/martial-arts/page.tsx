@@ -67,7 +67,7 @@ const serviceSchema = {
     "name": "Capture Client",
     "url": "https://captureclientai.net",
     "logo": "https://captureclientai.net/logo-full.svg",
-    "telephone": "865-346-3339"
+    "telephone": "865-346-6111"
   },
   "areaServed": "United States",
   "serviceType": "AI Phone Answering Service",
@@ -87,7 +87,7 @@ const serviceSchema = {
     "@type": "CommunicateAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": "tel:865-346-3339",
+      "urlTemplate": "tel:865-346-6111",
       "actionPlatform": [
         "http://schema.org/DesktopWebPlatform",
         "http://schema.org/MobileWebPlatform"

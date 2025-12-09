@@ -75,7 +75,7 @@ export default function StickyPhoneCTA() {
                 <div className="flex items-center gap-3">
                   {/* Phone button - 48px minimum tap target */}
                   <motion.a
-                    href="tel:865-346-3339"
+                    href="tel:865-346-6111"
                     onMouseEnter={() => setIsExpanded(true)}
                     onMouseLeave={() => setIsExpanded(false)}
                     whileHover={{ scale: 1.05 }}
@@ -99,7 +99,7 @@ export default function StickyPhoneCTA() {
                           exit={{ width: 0, opacity: 0 }}
                           className="relative z-10 overflow-hidden whitespace-nowrap"
                         >
-                          (865) 346-3339
+                          (865) 346-6111
                         </motion.span>
                       )}
                     </AnimatePresence>
@@ -108,7 +108,7 @@ export default function StickyPhoneCTA() {
                     )}
                   </motion.a>
 
-                  {/* Demo button - 48px minimum tap target */}
+                  {/* Try Our AI button - 48px minimum tap target */}
                   <motion.a
                     href="#contact"
                     whileHover={{ scale: 1.05 }}
@@ -116,7 +116,7 @@ export default function StickyPhoneCTA() {
                     className="flex items-center gap-2 min-h-[48px] border-2 border-accent/50 text-foreground font-bold px-6 py-3 rounded-xl hover:bg-accent/10 transition-all duration-300"
                   >
                     <Rocket className="text-accent w-5 h-5" />
-                    <span className="text-sm">Book Demo</span>
+                    <span className="text-sm">Try Our AI Now</span>
                   </motion.a>
                 </div>
               </div>

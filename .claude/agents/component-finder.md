@@ -1,7 +1,7 @@
 ---
 name: component-finder
 description: Find duplicate, similar, and related components across the codebase. Helps identify consolidation opportunities and the canonical version to use.
-model: claude-opus
+model: claude-opus-4.5
 ---
 
 You are a component discovery specialist for a large Next.js codebase.

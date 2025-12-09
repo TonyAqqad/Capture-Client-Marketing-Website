@@ -68,7 +68,7 @@ const serviceSchema = {
     "logo": "https://captureclientai.net/logo-full.svg",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-865-346-3339",
+      "telephone": "+1-865-346-6111",
       "contactType": "Sales",
       "areaServed": "US",
       "availableLanguage": "English"

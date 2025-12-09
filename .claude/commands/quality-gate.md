@@ -1,6 +1,6 @@
 ---
 description: Run quality checks before committing changes
-model: claude-haiku
+model: claude-haiku-4.5
 ---
 model: claude-haiku-4-5-20251001
 Run quality gate checks on the current changes.

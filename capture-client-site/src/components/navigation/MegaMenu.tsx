@@ -165,9 +165,9 @@ export default function MegaMenu() {
           <div className="hidden lg:flex items-center gap-4">
             {/* Phone Number */}
             <a
-              href="tel:865-346-3339"
+              href="tel:865-346-6111"
               className="relative group text-[#F8FAFC]/80 hover:text-[#00C9FF] transition-all duration-300 text-sm font-medium flex items-center gap-2 px-4 py-3 min-h-[44px] rounded-lg hover:bg-white/5 border border-transparent hover:border-white/10"
-              onClick={() => trackPhoneClick("865-346-3339", "header")}
+              onClick={() => trackPhoneClick("865-346-6111", "header")}
             >
               <svg
                 className="w-5 h-5 transition-transform group-hover:rotate-12 duration-300"
@@ -183,7 +183,7 @@ export default function MegaMenu() {
                 />
               </svg>
               <span className="relative">
-                (865) 346-3339
+                (865) 346-6111
                 <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-gradient-to-r from-[#4A69E2] to-[#00C9FF] group-hover:w-full transition-all duration-300" />
               </span>
             </a>

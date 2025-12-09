@@ -19,7 +19,7 @@ export const SITE_URL = "https://captureclientai.net";
 export const BUSINESS_INFO = {
   name: "Capture Client",
   legalName: "Capture Client LLC",
-  telephone: "+1-865-346-3339",
+  telephone: "+1-865-346-6111",
   email: "team@captureclientai.net",
   foundingDate: "2023",
   priceRange: "$$",

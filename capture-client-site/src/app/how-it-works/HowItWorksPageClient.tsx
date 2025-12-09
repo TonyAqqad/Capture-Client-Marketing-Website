@@ -1264,11 +1264,11 @@ function FinalCTA({ isMobile }: FinalCTAProps) {
                   transition={{ type: "spring", stiffness: 400 }}
                 >
                   <a
-                    href="tel:865-346-3339"
+                    href="tel:865-346-6111"
                     className="px-8 py-4 rounded-xl bg-background-card/50 border-2 border-primary/50 hover:border-primary text-foreground font-bold text-lg backdrop-blur-xl transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-2"
                   >
                     <Phone className="w-5 h-5" />
-                    Call (865) 346-3339
+                    Call (865) 346-6111
                   </a>
                 </motion.div>
               </motion.div>

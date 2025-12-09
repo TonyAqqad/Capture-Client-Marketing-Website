@@ -815,13 +815,13 @@ export default function PricingPageClient() {
         >
           <p className="text-white/60 mb-4 text-sm md:text-base">Still have questions?</p>
           <a
-            href="tel:865-346-3339"
+            href="tel:865-346-6111"
             className="inline-flex items-center gap-3 px-6 md:px-8 py-4 min-h-[56px] rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-all duration-300 touch-manipulation"
           >
             <span className="text-xl md:text-2xl">📞</span>
             <div className="text-left">
               <div className="text-xs md:text-sm text-white/60">Call us now</div>
-              <div className="font-bold text-sm md:text-base">(865) 346-3339</div>
+              <div className="font-bold text-sm md:text-base">(865) 346-6111</div>
             </div>
           </a>
         </motion.div>
@@ -868,10 +868,10 @@ export default function PricingPageClient() {
                   Get Started Free
                 </Link>
                 <a
-                  href="tel:865-346-3339"
+                  href="tel:865-346-6111"
                   className="inline-flex items-center justify-center px-8 py-4 min-h-[56px] rounded-full border-2 border-white text-white font-bold text-base md:text-lg hover:bg-white hover:text-primary transition-all duration-300 w-full sm:w-auto sm:min-w-[200px] touch-manipulation"
                 >
-                  Call (865) 346-3339
+                  Call (865) 346-6111
                 </a>
               </div>
               <p className="text-white/60 text-xs md:text-sm mt-4 md:mt-6 px-4">

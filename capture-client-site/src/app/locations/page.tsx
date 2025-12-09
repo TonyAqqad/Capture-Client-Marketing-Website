@@ -272,11 +272,11 @@ export default async function LocationsPage() {
                 Let's discuss how we can help you grow.
               </p>
               <a
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 className="inline-flex items-center justify-center gap-2 bg-primary text-black px-6 sm:px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,163,0.3)] min-h-[44px]"
               >
                 <Phone className="w-5 h-5 sm:w-5 sm:h-5" />
-                <span className="hidden sm:inline">Call Us: </span>(865) 346-3339
+                <span className="hidden sm:inline">Call Us: </span>(865) 346-6111
               </a>
             </div>
           </div>

@@ -390,7 +390,7 @@ export const CaptureClientSchemas = {
     url: "https://captureclientai.net",
     description:
       "The All-in-One Growth Hub for Small Business. Voice AI agents, lead generation, CRM, and marketing automation.",
-    phone: "(865) 346-3339",
+    phone: "(865) 346-6111",
     email: "team@captureclientai.net",
     socialLinks: [
       // Add your social media links here

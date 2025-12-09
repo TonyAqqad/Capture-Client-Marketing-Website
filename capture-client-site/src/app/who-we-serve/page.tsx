@@ -244,7 +244,7 @@ export default function WhoWeServePage() {
                   ariaLabel="Schedule industry demo"
                 >
                   <span className="flex items-center gap-2">
-                    Schedule Industry Demo
+                    Book Consultation
                     <Calendar className="w-5 h-5" />
                   </span>
                 </Button>

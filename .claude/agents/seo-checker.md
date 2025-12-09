@@ -1,7 +1,7 @@
 ---
 name: seo-checker
 description: Audit pages for SEO compliance. Check metadata, headings, canonical URLs, and structured data.
-model: claude-sonnet
+model: claude-sonnet-4.5
 path: capture-client-site/src
 ---
 

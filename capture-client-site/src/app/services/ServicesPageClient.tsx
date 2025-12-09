@@ -293,10 +293,10 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
               transition={{ duration: 0.8, delay: 0.3 }}
             >
               <a
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 className="group relative px-8 py-4 min-h-[56px] bg-gradient-to-r from-gold to-[#D4AF37] text-background-dark font-bold text-lg rounded-full overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_40px_rgba(245,166,35,0.6)] shadow-glow-gold-lg flex items-center justify-center"
               >
-                <span className="relative z-10">Call Now: (865) 346-3339</span>
+                <span className="relative z-10">Call Now: (865) 346-6111</span>
               </a>
               <Link
                 href="/contact"
@@ -456,7 +456,7 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
               href="/contact"
               className="inline-flex items-center gap-3 btn-gold text-lg md:text-xl px-10 py-5 rounded-2xl shadow-glow-gold-lg hover:shadow-[0_0_50px_rgba(245,166,35,0.7)] hover:scale-105 transition-all duration-500 font-bold"
             >
-              See It In Action - Book Demo
+              Try Our AI Now
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="w-6 h-6 group-hover:translate-x-1 transition-transform">
                 <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>
@@ -577,11 +577,11 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
               <a
-                href="tel:865-346-3339"
+                href="tel:865-346-6111"
                 className="group relative w-full sm:w-auto px-10 py-5 min-h-[60px] bg-gradient-to-r from-gold to-[#D4AF37] text-background-dark font-bold text-lg md:text-xl rounded-2xl overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_60px_rgba(245,166,35,0.8)] shadow-glow-gold-lg flex items-center justify-center gap-3"
               >
                 <span className="text-2xl">📞</span>
-                <span>Call Us: (865) 346-3339</span>
+                <span>Call Us: (865) 346-6111</span>
               </a>
 
               <Link

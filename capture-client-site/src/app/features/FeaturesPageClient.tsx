@@ -103,14 +103,14 @@ export default function FeaturesPageClient() {
                 </motion.div>
 
                 <a
-                  href="tel:865-346-3339"
+                  href="tel:865-346-6111"
                   className="flex items-center gap-3 sm:gap-4 text-white/80 hover:text-white group min-h-[56px] p-2"
                 >
                   <span className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-white/20 flex items-center justify-center group-hover:border-cyan-500 group-hover:bg-cyan-500/10 transition-all flex-shrink-0">
                     <Phone className="w-6 h-6 sm:w-8 sm:h-8" />
                   </span>
                   <span className="text-sm sm:text-base">
-                    <span className="block font-bold text-base sm:text-lg">(865) 346-3339</span>
+                    <span className="block font-bold text-base sm:text-lg">(865) 346-6111</span>
                     <span className="text-white/40 text-xs sm:text-sm">Talk to our team</span>
                   </span>
                 </a>
@@ -691,7 +691,7 @@ export default function FeaturesPageClient() {
                   />
 
                   <span className="relative z-10 flex items-center justify-center gap-2">
-                    Book a Demo
+                    Try Our AI Now
                     <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
                   </span>
                 </Link>
@@ -699,14 +699,14 @@ export default function FeaturesPageClient() {
 
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <a
-                  href="tel:865-346-3339"
+                  href="tel:865-346-6111"
                   className="group relative px-8 sm:px-10 py-4 sm:py-5 bg-white/[0.05] border-2 border-white/20 text-white font-bold text-base sm:text-lg rounded-full backdrop-blur-lg hover:bg-white/10 hover:border-cyan-500/50 transition-all min-h-[56px] flex items-center justify-center overflow-hidden"
                 >
                   {/* Glass shimmer effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                   <span className="relative z-10">
-                    Call Us: (865) 346-3339
+                    Call Us: (865) 346-6111
                   </span>
                 </a>
               </motion.div>

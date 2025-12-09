@@ -140,11 +140,11 @@ export default function PremiumLocationFAQ({ faqs, cityName }: PremiumLocationFA
               </p>
             </div>
             <a
-              href="tel:865-346-3339"
+              href="tel:865-346-6111"
               className="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-slate-950 px-6 py-3 rounded-xl font-bold transition-all duration-300 hover:shadow-[0_8px_24px_rgba(6,182,212,0.4)] hover:scale-105 touch-target"
             >
               <Phone className="w-5 h-5" />
-              <span>(865) 346-3339</span>
+              <span>(865) 346-6111</span>
             </a>
           </div>
         </div>

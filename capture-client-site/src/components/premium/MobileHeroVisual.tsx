@@ -172,17 +172,17 @@ export function MobileHeroVisual() {
 
           {/* Phone Number */}
           <a
-            href="tel:865-346-3339"
+            href="tel:865-346-6111"
             className="block text-center mb-4 group"
           >
             <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-[#D4AF37] bg-clip-text text-transparent group-active:scale-95 transition-transform">
-              (865) 346-3339
+              (865) 346-6111
             </div>
           </a>
 
           {/* Call Button */}
           <a
-            href="tel:865-346-3339"
+            href="tel:865-346-6111"
             className="relative block w-full"
           >
             {/* Pulsing ring around button */}

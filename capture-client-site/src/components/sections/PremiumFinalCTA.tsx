@@ -76,16 +76,16 @@ export function PremiumFinalCTA() {
             href="#contact-form"
             className="btn-gold group flex items-center gap-3 px-8 py-4 text-lg font-semibold w-full sm:w-auto justify-center"
           >
-            Schedule Your Demo
+            Try Our AI Now
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </Link>
 
           <a
-            href="tel:865-346-3339"
+            href="tel:865-346-6111"
             className="btn-ghost flex items-center gap-3 px-8 py-4 text-lg font-semibold w-full sm:w-auto justify-center"
           >
             <Phone className="w-5 h-5" />
-            (865) 346-3339
+            (865) 346-6111
           </a>
         </motion.div>
 
@@ -149,10 +149,10 @@ export function PremiumFinalCTA() {
           <p className="text-white/50 text-sm md:text-base">
             Prefer to talk? Call us at{" "}
             <a
-              href="tel:865-346-3339"
+              href="tel:865-346-6111"
               className="text-[#00C9FF] hover:text-[#00C9FF]/80 transition-colors"
             >
-              (865) 346-3339
+              (865) 346-6111
             </a>
             {" "}— we answer every call.
           </p>
