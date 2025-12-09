@@ -32,17 +32,21 @@ export default function AutomotivePageClient() {
   const noShowReduction = 176000; // Conservative estimate
 
   return (
-    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-background-dark">
+    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden" style={{ backgroundColor: '#030303' }}>
       {/* ==================== HERO SECTION ==================== */}
       <section className="relative overflow-hidden pt-32 pb-16 sm:pt-40 sm:pb-24 lg:pt-48 lg:pb-32">
-        {/* Premium Background */}
+        {/* Premium Background - Deep Space Aesthetic */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-background-dark via-background to-background-dark" />
-          <div className="absolute inset-0 bg-mesh-premium opacity-30" />
+          <div className="absolute inset-0" style={{
+            background: 'radial-gradient(circle at 20% 50%, rgba(0, 201, 255, 0.08) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(74, 105, 226, 0.06) 0%, transparent 50%)',
+            backgroundColor: '#030303'
+          }} />
 
-          {/* Animated orbs */}
-          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-gradient-radial from-gold/20 to-transparent rounded-full blur-3xl animate-float-slow" />
-          <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-gradient-radial from-accent/15 to-transparent rounded-full blur-3xl animate-float-medium" />
+          {/* Mesh gradient overlay */}
+          <div className="absolute inset-0 opacity-30" style={{
+            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.03) 1px, transparent 0)',
+            backgroundSize: '40px 40px'
+          }} />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -52,10 +56,18 @@ export default function AutomotivePageClient() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gold/20 via-gold/10 to-transparent border border-gold/20 backdrop-blur-xl mb-6"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-xl mb-6"
+              style={{
+                border: '1px solid rgba(255, 255, 255, 0.06)',
+                background: 'rgba(255, 255, 255, 0.02)'
+              }}
             >
-              <div className="w-2 h-2 bg-gold rounded-full animate-pulse shadow-glow-gold" />
-              <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-gold font-accent">
+              <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: '#00C9FF' }} />
+              <span className="text-xs sm:text-sm uppercase tracking-widest" style={{
+                color: '#00C9FF',
+                fontFamily: 'var(--font-bricolage-grotesque)',
+                fontWeight: 600
+              }}>
                 Automotive AI Solutions
               </span>
             </motion.div>
@@ -65,10 +77,17 @@ export default function AutomotivePageClient() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground mb-6 leading-tight"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight"
+              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
             >
-              Your Sales Floor is Busy.{" "}
-              <span className="text-gradient bg-gradient-to-r from-gold via-accent to-gold bg-clip-text text-transparent">
+              <span style={{ fontWeight: 200 }}>Your Sales Floor is Busy. </span>
+              <span style={{
+                fontWeight: 800,
+                background: 'linear-gradient(to right, #00C9FF, #4A69E2)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}>
                 AI Answers.
               </span>
             </motion.h1>
@@ -78,7 +97,12 @@ export default function AutomotivePageClient() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl sm:text-2xl text-foreground-muted mb-8 max-w-3xl mx-auto font-body leading-relaxed"
+              className="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed"
+              style={{
+                color: 'rgba(255, 255, 255, 0.6)',
+                fontFamily: 'var(--font-bricolage-grotesque)',
+                fontWeight: 300
+              }}
             >
               AI BDC Agents for Car Dealerships - Sales & Service
             </motion.p>
@@ -93,29 +117,59 @@ export default function AutomotivePageClient() {
               <motion.div
                 whileHover={{ y: -4, scale: 1.02 }}
                 transition={{ duration: 0.2 }}
+                className="p-4 sm:p-6 h-full backdrop-blur-xl rounded-2xl"
+                style={{
+                  border: '1px solid rgba(255, 255, 255, 0.06)',
+                  background: 'rgba(255, 255, 255, 0.02)'
+                }}
               >
-                <GlassCard variant="premium" hover={false} className="p-4 sm:p-6 h-full">
-                  <div className="text-3xl sm:text-4xl font-display font-bold text-gold mb-1">$49K</div>
-                  <div className="text-sm text-foreground-muted">Lost Per Year to Missed Calls</div>
-                </GlassCard>
+                <div className="text-3xl sm:text-4xl mb-1" style={{
+                  fontFamily: 'var(--font-bricolage-grotesque)',
+                  fontWeight: 800,
+                  background: 'linear-gradient(to right, #00C9FF, #4A69E2)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}>$49K</div>
+                <div className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.6)', fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>Lost Per Year to Missed Calls</div>
               </motion.div>
               <motion.div
                 whileHover={{ y: -4, scale: 1.02 }}
                 transition={{ duration: 0.2 }}
+                className="p-4 sm:p-6 h-full backdrop-blur-xl rounded-2xl"
+                style={{
+                  border: '1px solid rgba(255, 255, 255, 0.06)',
+                  background: 'rgba(255, 255, 255, 0.02)'
+                }}
               >
-                <GlassCard variant="premium" hover={false} className="p-4 sm:p-6 h-full">
-                  <div className="text-3xl sm:text-4xl font-display font-bold text-accent mb-1">80%</div>
-                  <div className="text-sm text-foreground-muted">Planning AI Investment</div>
-                </GlassCard>
+                <div className="text-3xl sm:text-4xl mb-1" style={{
+                  fontFamily: 'var(--font-bricolage-grotesque)',
+                  fontWeight: 800,
+                  background: 'linear-gradient(to right, #00C9FF, #4A69E2)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}>80%</div>
+                <div className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.6)', fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>Planning AI Investment</div>
               </motion.div>
               <motion.div
                 whileHover={{ y: -4, scale: 1.02 }}
                 transition={{ duration: 0.2 }}
+                className="p-4 sm:p-6 h-full backdrop-blur-xl rounded-2xl"
+                style={{
+                  border: '1px solid rgba(255, 255, 255, 0.06)',
+                  background: 'rgba(255, 255, 255, 0.02)'
+                }}
               >
-                <GlassCard variant="premium" hover={false} className="p-4 sm:p-6 h-full">
-                  <div className="text-3xl sm:text-4xl font-display font-bold text-gold mb-1">&lt;3 Mo</div>
-                  <div className="text-sm text-foreground-muted">40% See ROI</div>
-                </GlassCard>
+                <div className="text-3xl sm:text-4xl mb-1" style={{
+                  fontFamily: 'var(--font-bricolage-grotesque)',
+                  fontWeight: 800,
+                  background: 'linear-gradient(to right, #00C9FF, #4A69E2)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}>&lt;3 Mo</div>
+                <div className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.6)', fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>40% See ROI</div>
               </motion.div>
             </motion.div>
 
@@ -127,25 +181,32 @@ export default function AutomotivePageClient() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
             >
-              <Button
-                variant="primary"
-                size="lg"
+              <a
                 href="tel:865-346-6111"
-                icon={Phone}
-                className="text-lg sm:text-xl shadow-glow-gold-lg hover:shadow-glow-gold-xl transition-shadow"
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-xl text-lg sm:text-xl transition-all"
+                style={{
+                  background: 'linear-gradient(to right, #00C9FF, #4A69E2)',
+                  color: '#030303',
+                  fontFamily: 'var(--font-bricolage-grotesque)',
+                  fontWeight: 700,
+                  boxShadow: '0 0 40px rgba(0, 201, 255, 0.3)'
+                }}
               >
+                <Phone className="w-5 h-5" />
                 Try Our AI Now
-              </Button>
+              </a>
             </motion.div>
           </div>
         </div>
       </section>
 
       {/* ==================== SALES VS SERVICE TOGGLE ==================== */}
-      <section className="section relative overflow-hidden">
+      <section className="section relative overflow-hidden" style={{ backgroundColor: '#030303' }}>
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-background to-background-dark" />
-          <div className="absolute inset-0 bg-mesh opacity-20" />
+          <div className="absolute inset-0 opacity-20" style={{
+            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.03) 1px, transparent 0)',
+            backgroundSize: '40px 40px'
+          }} />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -156,15 +217,28 @@ export default function AutomotivePageClient() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 via-accent/10 to-transparent border border-accent/20 backdrop-blur-xl mb-4">
-              <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent font-accent">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-xl mb-4" style={{
+              border: '1px solid rgba(255, 255, 255, 0.06)',
+              background: 'rgba(255, 255, 255, 0.02)'
+            }}>
+              <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: '#4A69E2' }} />
+              <span className="text-xs sm:text-sm uppercase tracking-widest" style={{
+                color: '#4A69E2',
+                fontFamily: 'var(--font-bricolage-grotesque)',
+                fontWeight: 600
+              }}>
                 Dual-Mode AI
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
-              Sales & Service in{" "}
-              <span className="text-gradient bg-gradient-to-r from-accent to-gold bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl text-white mb-4" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+              <span style={{ fontWeight: 200 }}>Sales & Service in </span>
+              <span style={{
+                fontWeight: 800,
+                background: 'linear-gradient(to right, #00C9FF, #4A69E2)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text'
+              }}>
                 One System
               </span>
             </h2>
@@ -178,16 +252,26 @@ export default function AutomotivePageClient() {
             transition={{ duration: 0.5 }}
             className="flex justify-center mb-12"
           >
-            <div className="glass-premium p-2 rounded-2xl inline-flex gap-2">
+            <div className="p-2 rounded-2xl inline-flex gap-2 backdrop-blur-xl" style={{
+              border: '1px solid rgba(255, 255, 255, 0.06)',
+              background: 'rgba(255, 255, 255, 0.02)'
+            }}>
               <motion.button
                 onClick={() => setMode("sales")}
                 whileHover={{ scale: mode === "sales" ? 1 : 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className={`px-8 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                  mode === "sales"
-                    ? "bg-gradient-to-r from-gold to-gold/80 text-background shadow-glow-gold-lg"
-                    : "text-foreground-muted hover:text-foreground hover:bg-white/5"
-                }`}
+                className="px-8 py-3 rounded-xl font-semibold transition-all duration-300"
+                style={mode === "sales" ? {
+                  background: 'linear-gradient(to right, #00C9FF, #4A69E2)',
+                  color: '#030303',
+                  fontFamily: 'var(--font-bricolage-grotesque)',
+                  fontWeight: 700,
+                  boxShadow: '0 0 30px rgba(0, 201, 255, 0.4)'
+                } : {
+                  color: 'rgba(255, 255, 255, 0.5)',
+                  fontFamily: 'var(--font-bricolage-grotesque)',
+                  fontWeight: 600
+                }}
               >
                 <span className="flex items-center gap-2">
                   <ShoppingBag className="w-5 h-5" />
@@ -198,11 +282,18 @@ export default function AutomotivePageClient() {
                 onClick={() => setMode("service")}
                 whileHover={{ scale: mode === "service" ? 1 : 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className={`px-8 py-3 rounded-xl font-semibold transition-all duration-300 ${
-                  mode === "service"
-                    ? "bg-gradient-to-r from-accent to-accent/80 text-background shadow-glow-lg"
-                    : "text-foreground-muted hover:text-foreground hover:bg-white/5"
-                }`}
+                className="px-8 py-3 rounded-xl font-semibold transition-all duration-300"
+                style={mode === "service" ? {
+                  background: 'linear-gradient(to right, #00C9FF, #4A69E2)',
+                  color: '#030303',
+                  fontFamily: 'var(--font-bricolage-grotesque)',
+                  fontWeight: 700,
+                  boxShadow: '0 0 30px rgba(0, 201, 255, 0.4)'
+                } : {
+                  color: 'rgba(255, 255, 255, 0.5)',
+                  fontFamily: 'var(--font-bricolage-grotesque)',
+                  fontWeight: 600
+                }}
               >
                 <span className="flex items-center gap-2">
                   <Wrench className="w-5 h-5" />
@@ -263,22 +354,36 @@ export default function AutomotivePageClient() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: idx * 0.1 }}
                       whileHover={{ y: -8, scale: 1.02 }}
+                      className="p-6 h-full transition-all duration-300 backdrop-blur-xl rounded-2xl"
+                      style={{
+                        border: '1px solid rgba(255, 255, 255, 0.06)',
+                        background: 'rgba(255, 255, 255, 0.02)'
+                      }}
                     >
-                      <GlassCard variant="premium" className="p-6 h-full transition-all duration-300 hover:shadow-glow-gold">
-                        <motion.div
-                          className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold/20 to-gold/10 border border-gold/20 flex items-center justify-center mb-4"
-                          whileHover={{ rotate: 5, scale: 1.1 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <IconComponent className="w-6 h-6 text-gold" />
-                        </motion.div>
-                        <h3 className="text-xl font-display font-bold text-foreground mb-2">
-                          {feature.title}
-                        </h3>
-                        <p className="text-foreground-muted leading-relaxed">
-                          {feature.desc}
-                        </p>
-                      </GlassCard>
+                      <motion.div
+                        className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 backdrop-blur-xl"
+                        style={{
+                          border: '1px solid rgba(0, 201, 255, 0.2)',
+                          background: 'rgba(0, 201, 255, 0.05)'
+                        }}
+                        whileHover={{ rotate: 5, scale: 1.1 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <IconComponent className="w-6 h-6" style={{ color: '#00C9FF' }} />
+                      </motion.div>
+                      <h3 className="text-xl text-white mb-2" style={{
+                        fontFamily: 'var(--font-bricolage-grotesque)',
+                        fontWeight: 700
+                      }}>
+                        {feature.title}
+                      </h3>
+                      <p className="leading-relaxed" style={{
+                        color: 'rgba(255, 255, 255, 0.6)',
+                        fontFamily: 'var(--font-bricolage-grotesque)',
+                        fontWeight: 300
+                      }}>
+                        {feature.desc}
+                      </p>
                     </motion.div>
                   );
                 })}
@@ -332,22 +437,36 @@ export default function AutomotivePageClient() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: idx * 0.1 }}
                       whileHover={{ y: -8, scale: 1.02 }}
+                      className="p-6 h-full transition-all duration-300 backdrop-blur-xl rounded-2xl"
+                      style={{
+                        border: '1px solid rgba(255, 255, 255, 0.06)',
+                        background: 'rgba(255, 255, 255, 0.02)'
+                      }}
                     >
-                      <GlassCard variant="premium" className="p-6 h-full transition-all duration-300 hover:shadow-glow">
-                        <motion.div
-                          className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-accent/10 border border-accent/20 flex items-center justify-center mb-4"
-                          whileHover={{ rotate: 5, scale: 1.1 }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <IconComponent className="w-6 h-6 text-accent" />
-                        </motion.div>
-                        <h3 className="text-xl font-display font-bold text-foreground mb-2">
-                          {feature.title}
-                        </h3>
-                        <p className="text-foreground-muted leading-relaxed">
-                          {feature.desc}
-                        </p>
-                      </GlassCard>
+                      <motion.div
+                        className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 backdrop-blur-xl"
+                        style={{
+                          border: '1px solid rgba(74, 105, 226, 0.2)',
+                          background: 'rgba(74, 105, 226, 0.05)'
+                        }}
+                        whileHover={{ rotate: 5, scale: 1.1 }}
+                        transition={{ duration: 0.3 }}
+                      >
+                        <IconComponent className="w-6 h-6" style={{ color: '#4A69E2' }} />
+                      </motion.div>
+                      <h3 className="text-xl text-white mb-2" style={{
+                        fontFamily: 'var(--font-bricolage-grotesque)',
+                        fontWeight: 700
+                      }}>
+                        {feature.title}
+                      </h3>
+                      <p className="leading-relaxed" style={{
+                        color: 'rgba(255, 255, 255, 0.6)',
+                        fontFamily: 'var(--font-bricolage-grotesque)',
+                        fontWeight: 300
+                      }}>
+                        {feature.desc}
+                      </p>
                     </motion.div>
                   );
                 })}
@@ -358,9 +477,12 @@ export default function AutomotivePageClient() {
       </section>
 
       {/* ==================== PROBLEM STATS SECTION ==================== */}
-      <section className="section relative overflow-hidden bg-background-dark">
+      <section className="section relative overflow-hidden" style={{ backgroundColor: '#030303' }}>
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-mesh-premium opacity-25" />
+          <div className="absolute inset-0 opacity-25" style={{
+            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.03) 1px, transparent 0)',
+            backgroundSize: '40px 40px'
+          }} />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -370,9 +492,12 @@ export default function AutomotivePageClient() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
-              The Cost of{" "}
-              <span className="text-gradient bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl text-white mb-4" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+              <span style={{ fontWeight: 200 }}>The Cost of </span>
+              <span style={{
+                fontWeight: 800,
+                color: '#FF4444'
+              }}>
                 Missed Opportunities
               </span>
             </h2>
@@ -385,12 +510,26 @@ export default function AutomotivePageClient() {
               viewport={{ once: true }}
               transition={{ delay: 0 }}
               whileHover={{ y: -6, scale: 1.02 }}
+              className="p-8 text-center h-full transition-all duration-300 backdrop-blur-xl rounded-2xl"
+              style={{
+                border: '1px solid rgba(255, 68, 68, 0.2)',
+                background: 'rgba(255, 255, 255, 0.02)'
+              }}
             >
-              <GlassCard variant="premium" className="p-8 text-center h-full transition-all duration-300 hover:border-red-400/30">
-                <div className="text-5xl font-display font-bold text-red-400 mb-3">$49K</div>
-                <div className="text-xl font-semibold text-foreground mb-2">Per Year</div>
-                <div className="text-foreground-muted">Lost revenue from missed sales calls per dealership</div>
-              </GlassCard>
+              <div className="text-5xl mb-3" style={{
+                fontFamily: 'var(--font-bricolage-grotesque)',
+                fontWeight: 800,
+                color: '#FF4444'
+              }}>$49K</div>
+              <div className="text-xl text-white mb-2" style={{
+                fontFamily: 'var(--font-bricolage-grotesque)',
+                fontWeight: 600
+              }}>Per Year</div>
+              <div style={{
+                color: 'rgba(255, 255, 255, 0.6)',
+                fontFamily: 'var(--font-bricolage-grotesque)',
+                fontWeight: 300
+              }}>Lost revenue from missed sales calls per dealership</div>
             </motion.div>
 
             <motion.div
@@ -399,12 +538,26 @@ export default function AutomotivePageClient() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
               whileHover={{ y: -6, scale: 1.02 }}
+              className="p-8 text-center h-full transition-all duration-300 backdrop-blur-xl rounded-2xl"
+              style={{
+                border: '1px solid rgba(255, 68, 68, 0.2)',
+                background: 'rgba(255, 255, 255, 0.02)'
+              }}
             >
-              <GlassCard variant="premium" className="p-8 text-center h-full transition-all duration-300 hover:border-red-400/30">
-                <div className="text-5xl font-display font-bold text-red-400 mb-3">$176K-$332K</div>
-                <div className="text-xl font-semibold text-foreground mb-2">Per Year</div>
-                <div className="text-foreground-muted">Lost revenue from service appointment no-shows</div>
-              </GlassCard>
+              <div className="text-5xl mb-3" style={{
+                fontFamily: 'var(--font-bricolage-grotesque)',
+                fontWeight: 800,
+                color: '#FF4444'
+              }}>$176K-$332K</div>
+              <div className="text-xl text-white mb-2" style={{
+                fontFamily: 'var(--font-bricolage-grotesque)',
+                fontWeight: 600
+              }}>Per Year</div>
+              <div style={{
+                color: 'rgba(255, 255, 255, 0.6)',
+                fontFamily: 'var(--font-bricolage-grotesque)',
+                fontWeight: 300
+              }}>Lost revenue from service appointment no-shows</div>
             </motion.div>
 
             <motion.div
@@ -413,12 +566,26 @@ export default function AutomotivePageClient() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
               whileHover={{ y: -6, scale: 1.02 }}
+              className="p-8 text-center h-full transition-all duration-300 backdrop-blur-xl rounded-2xl"
+              style={{
+                border: '1px solid rgba(255, 68, 68, 0.2)',
+                background: 'rgba(255, 255, 255, 0.02)'
+              }}
             >
-              <GlassCard variant="premium" className="p-8 text-center h-full transition-all duration-300 hover:border-red-400/30">
-                <div className="text-5xl font-display font-bold text-red-400 mb-3">33%</div>
-                <div className="text-xl font-semibold text-foreground mb-2">Unanswered</div>
-                <div className="text-foreground-muted">Of all dealership calls go to voicemail</div>
-              </GlassCard>
+              <div className="text-5xl mb-3" style={{
+                fontFamily: 'var(--font-bricolage-grotesque)',
+                fontWeight: 800,
+                color: '#FF4444'
+              }}>33%</div>
+              <div className="text-xl text-white mb-2" style={{
+                fontFamily: 'var(--font-bricolage-grotesque)',
+                fontWeight: 600
+              }}>Unanswered</div>
+              <div style={{
+                color: 'rgba(255, 255, 255, 0.6)',
+                fontFamily: 'var(--font-bricolage-grotesque)',
+                fontWeight: 300
+              }}>Of all dealership calls go to voicemail</div>
             </motion.div>
           </div>
         </div>

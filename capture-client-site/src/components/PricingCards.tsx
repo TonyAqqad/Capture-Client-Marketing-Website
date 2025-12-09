@@ -178,7 +178,7 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
                 repeat: Infinity,
                 repeatType: 'reverse',
               }}
-              className="relative px-4 sm:px-6 py-2.5 rounded-full bg-gradient-to-r from-accent via-primary to-accent bg-[length:200%_100%] backdrop-blur-md"
+              className="relative px-4 sm:px-6 py-2.5 rounded-full bg-gradient-to-r from-[#00C9FF] via-[#4A69E2] to-[#00C9FF] bg-[length:200%_100%] backdrop-blur-md"
             >
               <motion.div
                 animate={{
@@ -199,7 +199,7 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
                 >
                   ⭐
                 </motion.span>
-                <span className="font-bold text-xs sm:text-sm tracking-wider text-background-dark uppercase whitespace-nowrap">
+                <span className="font-bold text-xs sm:text-sm tracking-wider text-[#030303] uppercase whitespace-nowrap">
                   Most Popular
                 </span>
               </div>
@@ -209,29 +209,23 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
 
         {/* Layered glass background effect */}
         <div className="absolute inset-0">
-          {/* Base gradient */}
-          <div
-            className={`absolute inset-0 ${
-              plan.isPopular
-                ? 'bg-gradient-to-br from-[#1a2942] via-[#0f1c2e] to-[#0a1220]'
-                : 'bg-gradient-to-br from-[#1e293b]/90 via-[#0f172a]/95 to-[#0a0f1c]'
-            }`}
-          />
+          {/* Deep space black base */}
+          <div className="absolute inset-0 bg-[#030303]" />
 
           {/* Mesh gradient overlay */}
-          {plan.isPopular && (
-            <motion.div
-              className="absolute inset-0 bg-mesh-premium opacity-60"
-              animate={{
-                opacity: [0.4, 0.7, 0.4],
-              }}
-              transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-            />
-          )}
+          <div
+            className="absolute inset-0 opacity-30"
+            style={{
+              backgroundImage: plan.isPopular
+                ? `
+                  radial-gradient(ellipse 80% 80% at 20% 20%, #00C9FF10 0%, transparent 50%),
+                  radial-gradient(ellipse 80% 80% at 80% 80%, #4A69E210 0%, transparent 50%)
+                `
+                : `
+                  radial-gradient(ellipse 80% 80% at 20% 20%, #FFFFFF05 0%, transparent 50%)
+                `,
+            }}
+          />
 
           {/* Glassmorphism layer */}
           <div className="absolute inset-0 bg-white/[0.02] backdrop-blur-xl" />
@@ -240,17 +234,17 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
           <div
             className={`absolute inset-0 rounded-3xl ${
               plan.isPopular
-                ? 'bg-gradient-to-r from-accent/50 via-primary/50 to-accent/50 p-[2px]'
+                ? 'bg-gradient-to-r from-[#00C9FF]/50 via-[#4A69E2]/50 to-[#00C9FF]/50 p-[2px]'
                 : 'bg-gradient-to-r from-white/10 via-white/5 to-white/10 p-[1px]'
             }`}
           >
-            <div className="absolute inset-[1px] rounded-3xl bg-gradient-to-br from-[#1e293b]/95 via-[#0f172a]/98 to-[#0a0f1c]" />
+            <div className="absolute inset-[1px] rounded-3xl bg-[#030303]" />
           </div>
 
           {/* Hover glow effect */}
           {plan.isPopular && (
             <motion.div
-              className="absolute -inset-[2px] bg-gradient-to-r from-accent via-primary to-accent rounded-3xl opacity-0 blur-xl"
+              className="absolute -inset-[2px] bg-gradient-to-r from-[#00C9FF] via-[#4A69E2] to-[#00C9FF] rounded-3xl opacity-0 blur-xl"
               animate={{
                 opacity: isHovered ? 0.6 : 0,
               }}
@@ -262,7 +256,7 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
           {plan.isPopular && (
             <>
               <motion.div
-                className="absolute top-20 right-10 w-32 h-32 bg-accent/20 rounded-full blur-3xl"
+                className="absolute top-20 right-10 w-32 h-32 bg-[#00C9FF]/20 rounded-full blur-3xl"
                 animate={{
                   scale: [1, 1.3, 1],
                   opacity: [0.2, 0.4, 0.2],
@@ -275,7 +269,7 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
                 }}
               />
               <motion.div
-                className="absolute bottom-20 left-10 w-40 h-40 bg-primary/15 rounded-full blur-3xl"
+                className="absolute bottom-20 left-10 w-40 h-40 bg-[#4A69E2]/15 rounded-full blur-3xl"
                 animate={{
                   scale: [1, 1.2, 1],
                   opacity: [0.15, 0.3, 0.15],
@@ -300,12 +294,16 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
             <motion.h3
               initial={{ opacity: 0, y: 10 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-              transition={{ delay: index * 0.15 + 0.2 }}
-              className={`text-2xl lg:text-3xl font-heading font-bold mb-6 ${
+              transition={{ delay: index * 0.15 + 0.2, ease: [0.22, 1, 0.36, 1] }}
+              className={`text-2xl lg:text-3xl mb-6 tracking-tight ${
                 plan.isPopular
-                  ? 'bg-gradient-to-r from-accent via-white to-primary bg-clip-text text-transparent'
-                  : 'text-white'
+                  ? 'bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] bg-clip-text text-transparent'
+                  : 'text-white font-extralight'
               }`}
+              style={{
+                fontFamily: 'var(--font-bricolage-grotesque)',
+                fontWeight: plan.isPopular ? 800 : 200
+              }}
             >
               {plan.name}
             </motion.h3>
@@ -314,23 +312,27 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-              transition={{ delay: index * 0.15 + 0.3, duration: 0.6, type: 'spring' }}
+              transition={{ delay: index * 0.15 + 0.3, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
               className="mb-2"
             >
               <div className="flex items-baseline gap-2">
                 <span
-                  className={`text-6xl lg:text-7xl font-bold leading-none tracking-tight ${
+                  className={`text-6xl lg:text-7xl leading-none tracking-tight ${
                     plan.isPopular
-                      ? 'bg-gradient-to-br from-accent via-white to-primary bg-clip-text text-transparent'
+                      ? 'bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] bg-clip-text text-transparent'
                       : plan.price === 'Custom'
                       ? 'bg-gradient-to-br from-amber-400 to-amber-600 bg-clip-text text-transparent'
                       : 'text-white'
                   }`}
+                  style={{
+                    fontFamily: 'var(--font-bricolage-grotesque)',
+                    fontWeight: 800
+                  }}
                 >
                   {plan.price}
                 </span>
                 {plan.price !== 'Custom' && (
-                  <span className="text-foreground-muted text-lg">/mo</span>
+                  <span className="text-white/40 text-lg" style={{ fontWeight: 200 }}>/mo</span>
                 )}
               </div>
             </motion.div>
@@ -341,7 +343,7 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : { opacity: 0 }}
                 transition={{ delay: index * 0.15 + 0.4 }}
-                className="text-foreground-muted text-sm"
+                className="text-white/50 text-sm"
               >
                 {plan.subtitle}
               </motion.p>
@@ -355,7 +357,7 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
                 key={i}
                 initial={{ opacity: 0, x: -20 }}
                 animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                transition={{ delay: index * 0.15 + 0.4 + i * 0.08 }}
+                transition={{ delay: index * 0.15 + 0.4 + i * 0.08, ease: [0.22, 1, 0.36, 1] }}
                 className="flex items-start gap-3 group/feature"
               >
                 <motion.div
@@ -373,19 +375,19 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
                   }}
                   className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center mt-0.5 ${
                     plan.isPopular
-                      ? 'bg-gradient-to-br from-accent to-primary'
+                      ? 'bg-gradient-to-br from-[#00C9FF] to-[#4A69E2]'
                       : 'bg-white/10'
                   }`}
                 >
                   <Check
                     className={`w-4 h-4 flex-shrink-0 ${
-                      plan.isPopular ? 'text-background-dark' : 'text-accent'
+                      plan.isPopular ? 'text-[#030303]' : 'text-[#00C9FF]'
                     }`}
                   />
                 </motion.div>
                 <span
                   className={`text-base leading-relaxed ${
-                    plan.isPopular ? 'text-white font-medium' : 'text-foreground-muted'
+                    plan.isPopular ? 'text-white font-medium' : 'text-white/60'
                   }`}
                 >
                   {feature}
@@ -398,17 +400,24 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ delay: index * 0.15 + 0.6 }}
+            transition={{ delay: index * 0.15 + 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="relative z-20"
+            style={{ pointerEvents: 'auto' }}
           >
             <Link
               href={plan.ctaLink}
-              className={`relative block w-full text-center py-4 min-h-[56px] rounded-2xl font-bold text-lg overflow-hidden group/cta transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${
+              className={`relative block w-full text-center py-4 min-h-[56px] rounded-2xl text-lg overflow-hidden group/cta transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${
                 plan.isPopular
-                  ? 'bg-gradient-to-r from-accent via-primary to-accent bg-[length:200%_100%]'
+                  ? 'bg-gradient-to-r from-[#00C9FF] via-[#4A69E2] to-[#00C9FF] bg-[length:200%_100%]'
                   : plan.price === 'Custom'
                   ? 'bg-gradient-to-r from-amber-500 to-amber-600'
                   : 'bg-white/5 border-2 border-white/20 hover:bg-white/10 hover:border-white/30'
               }`}
+              style={{
+                fontFamily: 'var(--font-bricolage-grotesque)',
+                fontWeight: 600,
+                pointerEvents: 'auto'
+              }}
             >
               {/* Shimmer effect */}
               {plan.isPopular && (
@@ -429,7 +438,7 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
               <span
                 className={`relative z-10 flex items-center justify-center gap-2 ${
                   plan.isPopular || plan.price === 'Custom'
-                    ? 'text-background-dark'
+                    ? 'text-[#030303]'
                     : 'text-white'
                 }`}
               >

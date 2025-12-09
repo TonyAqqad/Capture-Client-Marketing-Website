@@ -66,6 +66,59 @@ export const metadata = {
 ### Integration Partners
 - `IntegrationPartners` - Partner logo grid (homepage and feature pages)
 
+## Homepage Design System ($100B Linear/Stripe Aesthetic)
+
+### Background System
+- **Base**: Deep space black `#030303` or `bg-[#030303]`
+- **Mesh gradients**: Using radial gradients with cyan (#00C9FF) and indigo (#4A69E2)
+- **Example**:
+```tsx
+backgroundImage: `
+  radial-gradient(ellipse 80% 80% at 20% 20%, #00C9FF10 0%, transparent 50%),
+  radial-gradient(ellipse 80% 80% at 80% 80%, #4A69E210 0%, transparent 50%)
+`
+```
+
+### Typography
+- **Font**: Bricolage Grotesque via `style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}`
+- **Editorial weight contrast**: Light (200) → Bold (800)
+- **Pattern**:
+```tsx
+<span className="font-extralight" style={{ fontWeight: 200 }}>Light text </span>
+<span className="font-extrabold" style={{ fontWeight: 800 }}>Bold text</span>
+```
+
+### Glass Morphism
+```tsx
+className="border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl"
+```
+
+### Color Palette (NO PURPLE)
+- Cyan: `#00C9FF`
+- Indigo: `#4A69E2`
+- White at various opacities: `text-white/40`, `text-white/60`, `text-white/80`
+- Gradients: `bg-gradient-to-r from-[#00C9FF] to-[#4A69E2]`
+
+### Motion
+- Import: `import { motion } from "@/lib/motion";`
+- Standard easing: `[0.22, 1, 0.36, 1]`
+- Duration: 0.5-0.7s for entrances
+
+### Section Labels
+```tsx
+<p className="text-xs font-medium uppercase tracking-[0.25em] text-white/40 mb-6">
+  Section Label
+</p>
+```
+
+### Transformed Components (use as reference)
+- PricingCards.tsx
+- PremiumHero.tsx
+- PremiumFAQ.tsx
+- PremiumStats.tsx
+- ComparisonTable.tsx
+- Footer.tsx
+
 ## Do / Don't
 - Do reuse existing components/patterns before adding new.
 - Do check canonical components list before creating new ones.

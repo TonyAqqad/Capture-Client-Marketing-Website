@@ -23,11 +23,15 @@ export function AfterHoursSection() {
   ];
 
   return (
-    <section ref={containerRef} className="py-16 sm:py-20 lg:py-28 relative overflow-hidden">
+    <section
+      ref={containerRef}
+      className="py-16 sm:py-20 lg:py-28 relative overflow-hidden"
+      style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+    >
       {/* Night/Day background effect */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900" />
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-cyan-500/10 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-[#030303]" />
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#00C9FF]/10 via-transparent to-transparent" />
       </div>
 
       {/* Stars effect */}
@@ -61,18 +65,19 @@ export function AfterHoursSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#D4AF37]/10 border border-[#D4AF37]/20 backdrop-blur-xl mb-6">
-            <Moon className="text-[#D4AF37] w-5 h-5" />
-            <span className="text-sm font-semibold text-[#D4AF37] uppercase tracking-wide">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl mb-6">
+            <Moon className="text-[#00C9FF] w-5 h-5" />
+            <span className="text-sm text-[#00C9FF] uppercase tracking-wide" style={{ fontWeight: 600 }}>
               After Hours = Prime Time
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-hero font-bold text-white mb-6">
-            Your AI ISA <span className="text-gold">Never Sleeps</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
+            <span style={{ fontWeight: 200 }}>Your AI ISA </span>
+            <span className="text-[#00C9FF]" style={{ fontWeight: 800 }}>Never Sleeps</span>
           </h2>
-          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed" style={{ fontWeight: 300 }}>
             77% of real estate inquiries happen after 5 PM. That's when buyers are researching,
-            comparing, and <span className="text-white font-semibold">ready to commit</span>.
+            comparing, and <span className="text-white" style={{ fontWeight: 600 }}>ready to commit</span>.
           </p>
         </motion.div>
 
@@ -87,21 +92,21 @@ export function AfterHoursSection() {
             >
               <GlassCard
                 variant="premium"
-                className="p-8 border-2 border-[#D4AF37]/20 bg-gradient-to-br from-[#D4AF37]/10 to-[#00C9FF]/5 hover:shadow-[0_0_40px_rgba(168,85,247,0.3)] transition-all duration-500"
+                className="p-8 border border-white/[0.06] bg-gradient-to-br from-[#00C9FF]/10 to-[#4A69E2]/5 backdrop-blur-xl hover:shadow-[0_0_40px_rgba(0,201,255,0.3)] transition-all duration-500"
               >
                 <div className="text-center">
                   {(() => {
                     const IconComponent = iconMap[stat.icon];
                     return (
-                      <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-[#D4AF37] to-[#00C9FF] flex items-center justify-center">
+                      <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-[#00C9FF] to-[#4A69E2] flex items-center justify-center">
                         <IconComponent className="text-black w-7 h-7" />
                       </div>
                     );
                   })()}
-                  <p className="text-5xl font-black text-[#D4AF37] mb-2">
+                  <p className="text-5xl text-[#00C9FF] mb-2" style={{ fontWeight: 800 }}>
                     {stat.value}
                   </p>
-                  <p className="text-white/80 font-medium">
+                  <p className="text-white/80" style={{ fontWeight: 500 }}>
                     {stat.label}
                   </p>
                 </div>
@@ -212,13 +217,13 @@ export function AfterHoursSection() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-12"
         >
-          <div className="inline-flex items-center gap-4 p-8 rounded-2xl bg-gradient-to-br from-gold/10 via-[#D4AF37]/5 to-gold/10 border-2 border-gold/20 backdrop-blur-xl">
-            <Clock className="text-gold w-12 h-12" />
+          <div className="inline-flex items-center gap-4 p-8 rounded-2xl bg-gradient-to-br from-[#00C9FF]/10 via-[#4A69E2]/5 to-[#00C9FF]/10 border border-white/[0.06] backdrop-blur-xl">
+            <Clock className="text-[#00C9FF] w-12 h-12" />
             <div className="text-left">
-              <p className="text-3xl font-black text-white mb-1">
-                Every Hour = <span className="text-gold">More Revenue</span>
+              <p className="text-3xl text-white mb-1" style={{ fontWeight: 800 }}>
+                Every Hour = <span className="text-[#00C9FF]">More Revenue</span>
               </p>
-              <p className="text-white/70 text-lg">
+              <p className="text-white/70 text-lg" style={{ fontWeight: 400 }}>
                 While competitors sleep, you're closing deals
               </p>
             </div>

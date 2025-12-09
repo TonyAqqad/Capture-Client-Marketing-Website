@@ -10,7 +10,7 @@ interface Feature {
   title: string;
   description: string;
   icon: React.ComponentType<{ className?: string }>;
-  color: "gold" | "accent" | "purple";
+  color: "cyan" | "indigo";
   questions: string[];
 }
 
@@ -19,7 +19,7 @@ const features: Feature[] = [
     title: "Budget Qualification",
     description: "Identify serious buyers instantly with intelligent budget screening",
     icon: DollarSign,
-    color: "gold",
+    color: "cyan",
     questions: [
       "What's your price range?",
       "Are you pre-approved?",
@@ -30,7 +30,7 @@ const features: Feature[] = [
     title: "Timeline Assessment",
     description: "Prioritize hot leads by understanding their buying timeline",
     icon: Calendar,
-    color: "accent",
+    color: "indigo",
     questions: [
       "When are you looking to move?",
       "Current housing situation?",
@@ -41,7 +41,7 @@ const features: Feature[] = [
     title: "Property Preferences",
     description: "Capture detailed requirements to match perfect listings",
     icon: Home,
-    color: "purple",
+    color: "cyan",
     questions: [
       "Bedrooms & bathrooms?",
       "Must-have features?",
@@ -52,7 +52,7 @@ const features: Feature[] = [
     title: "Hot Lead Routing",
     description: "Instantly connect qualified buyers to the right agent",
     icon: Shuffle,
-    color: "gold",
+    color: "indigo",
     questions: [
       "Lead scored automatically",
       "Routed by specialty",
@@ -66,30 +66,29 @@ export function LeadQualificationFeatures() {
   const isInView = useInView(containerRef, { threshold: 0.2 });
 
   const colorClasses = {
-    gold: {
-      icon: "from-gold to-gold-light",
-      text: "text-gold",
-      border: "border-gold/30",
-      glow: "group-hover:shadow-[0_0_40px_rgba(212,175,55,0.3)]"
-    },
-    accent: {
-      icon: "from-accent to-cyan-400",
-      text: "text-accent",
-      border: "border-accent/30",
+    cyan: {
+      icon: "from-[#00C9FF] to-[#4A69E2]",
+      text: "text-[#00C9FF]",
+      border: "border-[#00C9FF]/30",
       glow: "group-hover:shadow-[0_0_40px_rgba(0,201,255,0.3)]"
     },
-    purple: {
-      icon: "from-[#D4AF37] to-[#00C9FF]",
-      text: "text-[#D4AF37]",
-      border: "border-[#D4AF37]/30",
-      glow: "group-hover:shadow-[0_0_40px_rgba(168,85,247,0.3)]"
+    indigo: {
+      icon: "from-[#4A69E2] to-[#00C9FF]",
+      text: "text-[#4A69E2]",
+      border: "border-[#4A69E2]/30",
+      glow: "group-hover:shadow-[0_0_40px_rgba(74,105,226,0.3)]"
     }
   };
 
   return (
-    <section ref={containerRef} className="py-16 sm:py-20 lg:py-28 relative">
+    <section
+      ref={containerRef}
+      className="py-16 sm:py-20 lg:py-28 relative"
+      style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+    >
       {/* Background accent */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gold/5 to-transparent" />
+      <div className="absolute inset-0 bg-[#030303]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#00C9FF]/5 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -99,18 +98,19 @@ export function LeadQualificationFeatures() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold/10 border border-gold/20 backdrop-blur-xl mb-6 hover:bg-gold/15 hover:border-gold/30 transition-all duration-300">
-            <ShieldCheck className="w-5 h-5 text-gold" />
-            <span className="text-sm font-semibold text-gold uppercase tracking-wide">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl mb-6 hover:bg-white/[0.04] hover:border-[#00C9FF]/30 transition-all duration-300">
+            <ShieldCheck className="w-5 h-5 text-[#00C9FF]" />
+            <span className="text-sm text-[#00C9FF] uppercase tracking-wide" style={{ fontWeight: 600 }}>
               AI-Powered Qualification
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-hero font-bold text-white mb-6">
-            Not Just Fast. <span className="text-accent">Smart.</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
+            <span style={{ fontWeight: 200 }}>Not Just Fast. </span>
+            <span className="text-[#00C9FF]" style={{ fontWeight: 800 }}>Smart.</span>
           </h2>
-          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed" style={{ fontWeight: 300 }}>
             Our AI doesn't just answer calls—it qualifies leads with natural conversation
-            that feels human, <span className="text-white font-semibold">not robotic</span>.
+            that feels human, <span className="text-white" style={{ fontWeight: 600 }}>not robotic</span>.
           </p>
         </motion.div>
 

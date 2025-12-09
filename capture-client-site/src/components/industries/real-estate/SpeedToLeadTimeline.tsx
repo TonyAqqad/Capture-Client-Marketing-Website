@@ -71,9 +71,14 @@ export function SpeedToLeadTimeline() {
   };
 
   return (
-    <section ref={containerRef} className="py-16 sm:py-20 lg:py-28 relative overflow-hidden">
+    <section
+      ref={containerRef}
+      className="py-16 sm:py-20 lg:py-28 relative overflow-hidden"
+      style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+    >
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background-darker via-background-dark to-background-darker opacity-50" />
+      <div className="absolute inset-0 bg-[#030303]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#00C9FF]/5 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -83,11 +88,13 @@ export function SpeedToLeadTimeline() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-hero font-bold text-white mb-6">
-            Every <span className="text-gold">Minute</span> Costs You Leads
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
+            <span style={{ fontWeight: 200 }}>Every </span>
+            <span className="text-[#00C9FF]" style={{ fontWeight: 800 }}>Minute</span>
+            <span style={{ fontWeight: 200 }}> Costs You Leads</span>
           </h2>
-          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
-            Speed to lead isn't just important—it's <span className="text-white font-semibold">everything</span>.
+          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed" style={{ fontWeight: 300 }}>
+            Speed to lead isn't just important—it's <span className="text-white" style={{ fontWeight: 600 }}>everything</span>.
             Here's what the data shows:
           </p>
         </motion.div>
@@ -153,14 +160,14 @@ export function SpeedToLeadTimeline() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center"
         >
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-gold/10 via-accent/5 to-gold/10 border-2 border-gold/20 backdrop-blur-xl">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-[#00C9FF]/10 via-[#4A69E2]/5 to-[#00C9FF]/10 border border-white/[0.06] backdrop-blur-xl">
             <div className="flex items-center gap-3">
-              <Zap className="text-gold w-7 h-7" />
+              <Zap className="text-[#00C9FF] w-7 h-7" />
               <div className="text-left">
-                <p className="text-2xl font-bold text-white">
-                  Be the <span className="text-gold">First Responder</span>
+                <p className="text-2xl text-white" style={{ fontWeight: 700 }}>
+                  Be the <span className="text-[#00C9FF]">First Responder</span>
                 </p>
-                <p className="text-white/70">And win 78% more buyers</p>
+                <p className="text-white/70" style={{ fontWeight: 400 }}>And win 78% more buyers</p>
               </div>
             </div>
           </div>

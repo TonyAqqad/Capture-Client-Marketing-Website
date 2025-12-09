@@ -82,9 +82,14 @@ export function CRMIntegrations() {
   const isInView = useInView(containerRef, { threshold: 0.2 });
 
   return (
-    <section ref={containerRef} className="py-16 sm:py-20 lg:py-28 relative overflow-hidden">
+    <section
+      ref={containerRef}
+      className="py-16 sm:py-20 lg:py-28 relative overflow-hidden"
+      style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+    >
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-gold/10" />
+      <div className="absolute inset-0 bg-[#030303]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#00C9FF]/10 via-transparent to-[#4A69E2]/10" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -94,16 +99,17 @@ export function CRMIntegrations() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent/10 border border-accent/20 backdrop-blur-xl mb-6">
-            <RefreshCw className="text-accent w-5 h-5" />
-            <span className="text-sm font-semibold text-accent uppercase tracking-wide">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl mb-6">
+            <RefreshCw className="text-[#00C9FF] w-5 h-5" />
+            <span className="text-sm text-[#00C9FF] uppercase tracking-wide" style={{ fontWeight: 600 }}>
               Seamless Integration
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-hero font-bold text-white mb-6">
-            Works With Your <span className="text-gold">Existing CRM</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
+            <span style={{ fontWeight: 200 }}>Works With Your </span>
+            <span className="text-[#00C9FF]" style={{ fontWeight: 800 }}>Existing CRM</span>
           </h2>
-          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed" style={{ fontWeight: 300 }}>
             Leads flow directly into your workflow. Automatic lead scoring. Zero manual entry.
           </p>
         </motion.div>
@@ -120,17 +126,17 @@ export function CRMIntegrations() {
             >
               <GlassCard
                 variant="premium"
-                className={`h-full p-6 border-2 transition-all duration-500 ${
+                className={`h-full p-6 border transition-all duration-500 ${
                   crm.popular
-                    ? "border-gold/40 bg-gradient-to-br from-gold/10 to-accent/5"
-                    : "border-white/10"
-                } group-hover:border-accent/40 group-hover:shadow-[0_0_40px_rgba(0,201,255,0.2)]`}
+                    ? "border-[#00C9FF]/40 bg-gradient-to-br from-[#00C9FF]/10 to-[#4A69E2]/5"
+                    : "border-white/[0.06] bg-white/[0.02]"
+                } backdrop-blur-xl group-hover:border-[#00C9FF]/40 group-hover:shadow-[0_0_40px_rgba(0,201,255,0.2)]`}
               >
                 {/* Popular badge */}
                 {crm.popular && (
                   <div className="absolute top-4 right-4">
-                    <div className="px-3 py-1 bg-gold rounded-full">
-                      <span className="text-xs font-bold text-black uppercase tracking-wider">
+                    <div className="px-3 py-1 bg-[#00C9FF] rounded-full">
+                      <span className="text-xs text-black uppercase tracking-wider" style={{ fontWeight: 700 }}>
                         Popular
                       </span>
                     </div>
@@ -138,10 +144,10 @@ export function CRMIntegrations() {
                 )}
 
                 {/* Logo placeholder */}
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-accent/20 to-gold/20 border-2 border-accent/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#00C9FF]/20 to-[#4A69E2]/20 border-2 border-[#00C9FF]/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   {(() => {
                     const IconComponent = iconMap[crm.logo] || Building2;
-                    return <IconComponent className="text-accent w-7 h-7" />;
+                    return <IconComponent className="text-[#00C9FF] w-7 h-7" />;
                   })()}
                 </div>
 
@@ -162,8 +168,8 @@ export function CRMIntegrations() {
                       key={fIndex}
                       className="flex items-center gap-2 text-sm"
                     >
-                      <CheckCircle className="text-accent w-4 h-4" />
-                      <span className="text-white/70">{feature}</span>
+                      <CheckCircle className="text-[#00C9FF] w-4 h-4" />
+                      <span className="text-white/70" style={{ fontWeight: 400 }}>{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -173,7 +179,7 @@ export function CRMIntegrations() {
                   initial={{ scaleX: 0 }}
                   animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 + 0.3 }}
-                  className="h-1 bg-gradient-to-r from-accent to-gold mt-4 rounded-full origin-left"
+                  className="h-1 bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] mt-4 rounded-full origin-left"
                 />
               </GlassCard>
             </motion.div>

@@ -44,26 +44,28 @@ export function RealEstateHero() {
     <section
       ref={containerRef}
       className="relative min-h-screen flex items-center overflow-hidden"
+      style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
       suppressHydrationWarning
     >
-      {/* Premium Aurora Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-background-dark to-background-darker" />
+      {/* Deep Space Background with Mesh */}
+      <div className="absolute inset-0 bg-[#030303]" />
+      <div className="absolute inset-0 bg-mesh-premium opacity-40" />
 
-      {/* Animated gradient orbs */}
+      {/* Animated gradient orbs - Cyan/Indigo */}
       <motion.div
-        className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-30"
+        className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-20"
         animate={disableAnimations ? {} : { scale: [1, 1.2, 1], x: [0, 50, 0] }}
         transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
       >
-        <div className="w-full h-full bg-gradient-radial from-gold/40 via-gold/10 to-transparent blur-3xl" />
+        <div className="w-full h-full bg-gradient-radial from-[#00C9FF]/40 via-[#00C9FF]/10 to-transparent blur-3xl" />
       </motion.div>
 
       <motion.div
-        className="absolute bottom-0 left-0 w-[700px] h-[700px] rounded-full opacity-25"
+        className="absolute bottom-0 left-0 w-[700px] h-[700px] rounded-full opacity-15"
         animate={disableAnimations ? {} : { scale: [1.1, 1, 1.1], x: [0, -40, 0] }}
         transition={{ duration: 18, repeat: Infinity, ease: "easeInOut", delay: 2 }}
       >
-        <div className="w-full h-full bg-gradient-radial from-accent/30 via-accent/10 to-transparent blur-3xl" />
+        <div className="w-full h-full bg-gradient-radial from-[#4A69E2]/30 via-[#4A69E2]/10 to-transparent blur-3xl" />
       </motion.div>
 
       {/* Grid pattern overlay */}
@@ -88,38 +90,38 @@ export function RealEstateHero() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            {/* Stat badge */}
+            {/* Stat badge - Glass with Cyan accent */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="inline-flex items-center gap-2 mb-8 px-5 py-3 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300"
+              className="inline-flex items-center gap-2 mb-8 px-5 py-3 rounded-full border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl hover:bg-white/[0.04] hover:border-[#00C9FF]/20 transition-all duration-300"
             >
-              <Zap className="w-5 h-5 text-gold" />
-              <span className="text-sm sm:text-base font-semibold text-white/90">
-                Industry Average Response: <span className="text-red-400">47 Hours</span>
+              <Zap className="w-5 h-5 text-[#00C9FF]" />
+              <span className="text-sm sm:text-base font-medium text-white/90" style={{ fontWeight: 500 }}>
+                Industry Average Response: <span className="text-red-400" style={{ fontWeight: 700 }}>47 Hours</span>
               </span>
             </motion.div>
 
-            {/* Main headline */}
+            {/* Main headline - Editorial weight contrast */}
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-hero font-bold mb-6 sm:mb-8"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-6 sm:mb-8"
             >
-              <span className="block text-white mb-2">
+              <span className="block text-white mb-2" style={{ fontWeight: 200 }}>
                 78% of Buyers Choose
               </span>
               <span className="block relative">
-                <span className="bg-gradient-to-r from-gold via-accent to-gold bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#00C9FF] via-[#4A69E2] to-[#00C9FF] bg-clip-text text-transparent" style={{ fontWeight: 800 }}>
                   The First Agent Who Responds
                 </span>
                 <motion.div
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ duration: 1, delay: 1, ease: [0.22, 1, 0.36, 1] }}
-                  className="absolute -bottom-2 left-0 right-0 h-2 bg-gradient-to-r from-gold/50 via-accent/50 to-gold/50 origin-center rounded-full"
+                  className="absolute -bottom-2 left-0 right-0 h-2 bg-gradient-to-r from-[#00C9FF]/50 via-[#4A69E2]/50 to-[#00C9FF]/50 origin-center rounded-full"
                 />
               </span>
             </motion.h1>
@@ -130,8 +132,9 @@ export function RealEstateHero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
               className="text-xl sm:text-2xl lg:text-3xl text-white/70 max-w-4xl mx-auto mb-4 leading-relaxed"
+              style={{ fontWeight: 300 }}
             >
-              Be First. <span className="text-white font-semibold">Every Time.</span> With AI Voice Agents.
+              Be First. <span className="text-white" style={{ fontWeight: 600 }}>Every Time.</span> With AI Voice Agents.
             </motion.p>
 
             {/* Speed comparison */}
@@ -158,7 +161,7 @@ export function RealEstateHero() {
               </div>
             </motion.div>
 
-            {/* CTAs */}
+            {/* CTAs - Cyan gradient */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -167,10 +170,11 @@ export function RealEstateHero() {
             >
               <Link
                 href="/contact"
-                className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-6 rounded-2xl font-bold text-lg overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_60px_rgba(212,175,55,0.5)]"
+                className="group relative w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-6 rounded-2xl text-lg overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_60px_rgba(0,201,255,0.5)]"
+                style={{ fontWeight: 600 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-gold via-gold-light to-gold" />
-                <div className="absolute inset-0 bg-gradient-to-r from-gold-light via-gold to-gold-light opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#00C9FF] via-[#4A69E2] to-[#00C9FF]" />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#4A69E2] via-[#00C9FF] to-[#4A69E2] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <span className="relative z-10 text-black flex items-center gap-2">
                   Try Our AI Now
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
@@ -178,11 +182,12 @@ export function RealEstateHero() {
               </Link>
 
               <Link
-                href="tel:865-346-6111"
-                className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-6 rounded-2xl font-semibold text-lg border-2 border-white/10 bg-white/5 backdrop-blur-xl transition-all duration-300 hover:bg-white/10 hover:border-accent/40 hover:shadow-[0_0_40px_rgba(0,201,255,0.3)] hover:scale-105"
+                href="tel:865-346-3339"
+                className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-6 rounded-2xl text-lg border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl transition-all duration-300 hover:bg-white/[0.04] hover:border-[#00C9FF]/40 hover:shadow-[0_0_40px_rgba(0,201,255,0.3)] hover:scale-105"
+                style={{ fontWeight: 500 }}
               >
-                <Phone className="w-5 h-5 text-accent" />
-                <span className="text-white">(865) 346-6111</span>
+                <Phone className="w-5 h-5 text-[#00C9FF]" />
+                <span className="text-white">(865) 346-3339</span>
               </Link>
             </motion.div>
 
@@ -194,18 +199,18 @@ export function RealEstateHero() {
               className="flex flex-wrap items-center justify-center gap-8"
             >
               <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
-                <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="text-sm font-medium text-white/70">Follow Up Boss Integration</span>
+                <CheckCircle className="w-5 h-5 text-[#00C9FF]" />
+                <span className="text-sm text-white/70" style={{ fontWeight: 400 }}>Follow Up Boss Integration</span>
               </div>
-              <div className="w-px h-5 bg-white/20 hidden sm:block" />
+              <div className="w-px h-5 bg-white/10 hidden sm:block" />
               <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
-                <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="text-sm font-medium text-white/70">kvCORE & Zillow Ready</span>
+                <CheckCircle className="w-5 h-5 text-[#00C9FF]" />
+                <span className="text-sm text-white/70" style={{ fontWeight: 400 }}>kvCORE & Zillow Ready</span>
               </div>
-              <div className="w-px h-5 bg-white/20 hidden sm:block" />
+              <div className="w-px h-5 bg-white/10 hidden sm:block" />
               <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
-                <CheckCircle className="w-5 h-5 text-gold" />
-                <span className="text-sm font-medium text-white/70">24/7 Lead Response</span>
+                <CheckCircle className="w-5 h-5 text-[#00C9FF]" />
+                <span className="text-sm text-white/70" style={{ fontWeight: 400 }}>24/7 Lead Response</span>
               </div>
             </motion.div>
           </div>
@@ -219,16 +224,16 @@ export function RealEstateHero() {
         transition={{ duration: 0.6, delay: 1.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-3 hidden sm:flex"
       >
-        <span className="text-xs text-white/40 uppercase tracking-widest font-medium">See the impact</span>
+        <span className="text-xs text-white/40 uppercase tracking-widest" style={{ fontWeight: 400 }}>See the impact</span>
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
-          <div className="w-6 h-10 border-2 border-white/20 rounded-full flex items-start justify-center p-2">
+          <div className="w-6 h-10 border-2 border-white/10 rounded-full flex items-start justify-center p-2">
             <motion.div
               animate={{ y: [0, 12, 0], opacity: [1, 0, 1] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-              className="w-1.5 h-3 bg-gold rounded-full"
+              className="w-1.5 h-3 bg-[#00C9FF] rounded-full"
             />
           </div>
         </motion.div>

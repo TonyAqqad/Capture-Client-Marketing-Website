@@ -496,11 +496,14 @@ export default function HomePage() {
                   </h2>
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-4 sm:mb-6 leading-tight">
-                  See Everything. <span className="text-gradient bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Control Everything.</span>
+                <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-bold text-foreground mb-4 sm:mb-6 leading-tight break-words">
+                  See Everything.{" "}
+                  <span className="text-gradient bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                    Control Everything.
+                  </span>
                 </h3>
 
-                <p className="text-base sm:text-lg text-foreground-muted mb-6 sm:mb-8 leading-relaxed">
+                <p className="text-base sm:text-lg text-foreground-muted mb-6 sm:mb-8 leading-relaxed break-words">
                   Our dashboard gives you complete visibility into your entire growth engine. Track
                   campaigns, manage leads, and analyze performance—all from one beautiful interface.
                 </p>
@@ -510,9 +513,9 @@ export default function HomePage() {
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0 group-hover:shadow-glow-primary transition-all duration-300">
                       <CheckCircle2 className="w-5 h-5 text-primary" />
                     </div>
-                    <div>
-                      <p className="font-semibold text-foreground text-base sm:text-lg mb-1">Real-Time Analytics</p>
-                      <p className="text-sm sm:text-base text-foreground-muted leading-relaxed">
+                    <div className="flex-1 min-w-0">
+                      <p className="font-semibold text-foreground text-base sm:text-lg mb-1 break-words">Real-Time Analytics</p>
+                      <p className="text-sm sm:text-base text-foreground-muted leading-relaxed break-words">
                         Live updates on campaign performance and lead activity
                       </p>
                     </div>
@@ -521,9 +524,9 @@ export default function HomePage() {
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0 group-hover:shadow-glow-primary transition-all duration-300">
                       <CheckCircle2 className="w-5 h-5 text-primary" />
                     </div>
-                    <div>
-                      <p className="font-semibold text-foreground text-base sm:text-lg mb-1">Unified Inbox</p>
-                      <p className="text-sm sm:text-base text-foreground-muted leading-relaxed">
+                    <div className="flex-1 min-w-0">
+                      <p className="font-semibold text-foreground text-base sm:text-lg mb-1 break-words">Unified Inbox</p>
+                      <p className="text-sm sm:text-base text-foreground-muted leading-relaxed break-words">
                         Manage calls, texts, emails, and form submissions in one place
                       </p>
                     </div>
@@ -532,9 +535,9 @@ export default function HomePage() {
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-primary/20 to-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0 group-hover:shadow-glow-primary transition-all duration-300">
                       <CheckCircle2 className="w-5 h-5 text-primary" />
                     </div>
-                    <div>
-                      <p className="font-semibold text-foreground text-base sm:text-lg mb-1">Growth Tracking</p>
-                      <p className="text-sm sm:text-base text-foreground-muted leading-relaxed">
+                    <div className="flex-1 min-w-0">
+                      <p className="font-semibold text-foreground text-base sm:text-lg mb-1 break-words">Growth Tracking</p>
+                      <p className="text-sm sm:text-base text-foreground-muted leading-relaxed break-words">
                         Visualize your growth trajectory with beautiful, actionable insights
                       </p>
                     </div>

@@ -23,23 +23,31 @@ function LogoItem({ logo, index }: { logo: typeof integrationLogos[0]; index: nu
       key={`${logo.name}-${index}`}
       className="flex-shrink-0 group cursor-pointer"
     >
-      <div className="h-12 lg:h-14 w-28 lg:w-36 glass rounded-xl border border-white/10 flex items-center justify-center gap-2 opacity-60 hover:opacity-100 hover:border-accent/30 transition-all duration-300 px-3">
+      <div className="h-12 lg:h-14 w-28 lg:w-36 rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl flex items-center justify-center gap-2 opacity-60 hover:opacity-100 hover:border-[#00C9FF]/30 transition-all duration-300 px-3">
         {!imageError ? (
           <Image
             src={logo.logo}
             alt={`${logo.name} logo`}
             width={100}
             height={32}
-            className="h-6 lg:h-7 w-auto object-contain filter brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity"
+            className="h-6 lg:h-7 w-auto object-contain filter brightness-0 invert opacity-60 group-hover:opacity-90 transition-opacity"
             onError={() => setImageError(true)}
             unoptimized
           />
         ) : (
           <>
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
-              <span className="text-xs font-bold text-accent">{logo.name.slice(0, 2).toUpperCase()}</span>
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#00C9FF]/20 to-[#4A69E2]/20 flex items-center justify-center">
+              <span
+                className="text-xs text-[#00C9FF]"
+                style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}
+              >
+                {logo.name.slice(0, 2).toUpperCase()}
+              </span>
             </div>
-            <span className="text-white/80 text-sm font-medium hidden sm:block">
+            <span
+              className="text-white/80 text-sm hidden sm:block"
+              style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 500 }}
+            >
               {logo.name}
             </span>
           </>
@@ -51,9 +59,12 @@ function LogoItem({ logo, index }: { logo: typeof integrationLogos[0]; index: nu
 
 export function ClientLogosCarousel() {
   return (
-    <section className="py-12 lg:py-16 overflow-hidden bg-background-dark/50 border-y border-white/5">
+    <section className="py-12 lg:py-16 overflow-hidden bg-[#030303] border-y border-white/[0.06]">
       <div className="container-custom mb-8">
-        <p className="text-center text-xs sm:text-sm uppercase tracking-[0.2em] text-white/40 font-semibold">
+        <p
+          className="text-center text-xs sm:text-sm uppercase tracking-[0.25em] text-white/40"
+          style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 500 }}
+        >
           Trusted by 500+ Growing Businesses • Integrates With Your Favorite Tools
         </p>
       </div>
@@ -61,10 +72,10 @@ export function ClientLogosCarousel() {
       {/* Infinite scroll container */}
       <div className="relative">
         {/* Gradient fade left */}
-        <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-background-dark to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-[#030303] to-transparent z-10 pointer-events-none" />
 
         {/* Gradient fade right */}
-        <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-background-dark to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-[#030303] to-transparent z-10 pointer-events-none" />
 
         {/* Scrolling logos */}
         <motion.div

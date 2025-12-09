@@ -49,12 +49,12 @@ export default function GrowthDashboard() {
   ];
 
   return (
-    <div ref={containerRef} className="relative order-2 lg:order-1">
+    <div ref={containerRef} className="relative order-2 lg:order-1 w-full max-w-full">
       <motion.div
         initial={{ opacity: 0, x: -30 }}
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
         transition={{ duration: 0.6 }}
-        className="glass p-4 sm:p-6 lg:p-8 rounded-2xl shadow-glow-primary relative overflow-hidden"
+        className="glass p-3 sm:p-4 md:p-6 lg:p-8 rounded-2xl shadow-glow-primary relative overflow-hidden w-full"
       >
         {/* Animated background gradient */}
         <motion.div
@@ -72,9 +72,9 @@ export default function GrowthDashboard() {
 
         <div className="relative z-10">
           {/* Header */}
-          <div className="flex items-center justify-between mb-4 sm:mb-6">
-            <h4 className="text-foreground font-semibold text-base sm:text-lg">Growth Dashboard</h4>
-            <div className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-foreground-muted">
+          <div className="flex items-center justify-between mb-3 sm:mb-4 md:mb-6">
+            <h4 className="text-foreground font-semibold text-sm sm:text-base md:text-lg">Growth Dashboard</h4>
+            <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2 text-[10px] sm:text-xs md:text-sm text-foreground-muted">
               <motion.span
                 animate={{
                   scale: [1, 1.2, 1],
@@ -85,18 +85,18 @@ export default function GrowthDashboard() {
                   repeat: Infinity,
                 }}
               >
-                <RefreshCw className="w-5 h-5 text-accent" />
+                <RefreshCw className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-5 md:h-5 text-accent" />
               </motion.span>
               <span>Live</span>
             </div>
           </div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
+          <div className="grid grid-cols-2 gap-2 sm:gap-3 md:gap-4 mb-3 sm:mb-4 md:mb-6">
             <StatCard
               label="Lead Growth"
               value={`+${leadGrowth}%`}
-              icon={<TrendingUp className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
+              icon={<TrendingUp className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4" />}
               gradient="from-accent/10 to-primary/10"
               borderColor="border-accent/20"
               textColor="text-accent"
@@ -107,7 +107,7 @@ export default function GrowthDashboard() {
             <StatCard
               label="Calls Handled"
               value={callsHandled.toLocaleString()}
-              icon={<Phone className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
+              icon={<Phone className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4" />}
               gradient="from-primary/10 to-accent/10"
               borderColor="border-primary/20"
               textColor="text-primary"
@@ -119,7 +119,7 @@ export default function GrowthDashboard() {
             <StatCard
               label="Conversion Rate"
               value={`${(conversionRate / 10).toFixed(1)}%`}
-              icon={<BarChart className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
+              icon={<BarChart className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4" />}
               gradient="from-primary/10 to-accent/10"
               borderColor="border-primary/20"
               textColor="text-primary"
@@ -131,7 +131,7 @@ export default function GrowthDashboard() {
             <StatCard
               label="Revenue Impact"
               value={`$${revenueImpact}K`}
-              icon={<DollarSign className="w-3.5 h-3.5 sm:w-4 sm:h-4" />}
+              icon={<DollarSign className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4" />}
               gradient="from-accent/10 to-primary/10"
               borderColor="border-accent/20"
               textColor="text-accent"
@@ -146,10 +146,10 @@ export default function GrowthDashboard() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="bg-surface/50 border border-surface-border rounded-xl p-3 sm:p-4"
+            className="bg-surface/50 border border-surface-border rounded-xl p-2.5 sm:p-3 md:p-4 w-full max-w-full overflow-hidden"
           >
-            <p className="text-foreground-muted text-xs sm:text-sm mb-2 sm:mb-3">Recent Activity</p>
-            <div className="space-y-1.5 sm:space-y-2 h-[70px] sm:h-[90px] relative overflow-hidden">
+            <p className="text-foreground-muted text-[10px] sm:text-xs md:text-sm mb-2 sm:mb-2.5 md:mb-3">Recent Activity</p>
+            <div className="space-y-1.5 sm:space-y-2 h-[70px] sm:h-[80px] md:h-[90px] relative overflow-hidden">
               {visibleActivities.map((activity, index) => (
                 <motion.div
                   key={`${activity.id}-${currentActivityIndex}`}
@@ -157,7 +157,7 @@ export default function GrowthDashboard() {
                   animate={{ opacity: index === 0 ? 1 : 0.5, x: 0 }}
                   exit={{ opacity: 0, x: 20 }}
                   transition={{ duration: 0.5 }}
-                  className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm"
+                  className="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs md:text-sm w-full max-w-full"
                 >
                   <motion.div
                     animate={{
@@ -171,8 +171,8 @@ export default function GrowthDashboard() {
                       activity.icon === "accent" ? "bg-accent" : "bg-primary"
                     }`}
                   />
-                  <span className="text-foreground flex-1 truncate">{activity.text}</span>
-                  <span className="text-foreground-muted text-[10px] sm:text-xs flex-shrink-0">{activity.time}</span>
+                  <span className="text-foreground flex-1 truncate min-w-0">{activity.text}</span>
+                  <span className="text-foreground-muted text-[9px] sm:text-[10px] md:text-xs flex-shrink-0">{activity.time}</span>
                 </motion.div>
               ))}
             </div>
@@ -215,21 +215,21 @@ function StatCard({
       animate={isInView ? { opacity: 1, scale: 1, y: 0 } : { opacity: 0, scale: 0.9, y: 20 }}
       transition={{ delay, duration: 0.5 }}
       whileHover={{ scale: 1.05, y: -5 }}
-      className={`bg-gradient-to-br ${gradient} border ${borderColor} rounded-xl p-3 sm:p-4 cursor-default`}
+      className={`bg-gradient-to-br ${gradient} border ${borderColor} rounded-xl p-2 sm:p-3 md:p-4 cursor-default w-full max-w-full`}
     >
-      <p className="text-foreground-muted text-xs sm:text-sm mb-1">{label}</p>
+      <p className="text-foreground-muted text-[10px] sm:text-xs md:text-sm mb-0.5 sm:mb-1 truncate">{label}</p>
       <motion.p
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ delay: delay + 0.5, duration: 0.3 }}
-        className={`text-2xl sm:text-3xl font-bold ${textColor}`}
+        className={`text-lg sm:text-2xl md:text-3xl font-bold ${textColor} truncate`}
       >
         {value}
       </motion.p>
       {subtext && (
-        <div className={`flex items-center gap-1 mt-1.5 sm:mt-2 ${textColor} text-[10px] sm:text-xs`}>
+        <div className={`flex items-center gap-0.5 sm:gap-1 mt-1 sm:mt-1.5 md:mt-2 ${textColor} text-[9px] sm:text-[10px] md:text-xs`}>
           <span>{icon}</span>
-          <span>{subtext}</span>
+          <span className="truncate">{subtext}</span>
         </div>
       )}
     </motion.div>
@@ -240,8 +240,8 @@ function ChartVisualization({ isInView }: { isInView: boolean }) {
   const bars = [40, 65, 50, 80, 70, 90, 85];
 
   return (
-    <div className="absolute bottom-0 right-0 w-32 h-24 opacity-10 pointer-events-none">
-      <div className="flex items-end justify-end gap-1 h-full p-4">
+    <div className="absolute bottom-0 right-0 w-20 h-16 sm:w-24 sm:h-20 md:w-32 md:h-24 opacity-10 pointer-events-none overflow-hidden">
+      <div className="flex items-end justify-end gap-0.5 sm:gap-1 h-full p-2 sm:p-3 md:p-4">
         {bars.map((height, i) => (
           <motion.div
             key={i}
@@ -253,7 +253,7 @@ function ChartVisualization({ isInView }: { isInView: boolean }) {
               type: "spring",
             }}
             style={{ height: `${height}%` }}
-            className="w-2 bg-accent rounded-t origin-bottom"
+            className="w-1 sm:w-1.5 md:w-2 bg-accent rounded-t origin-bottom"
           />
         ))}
       </div>

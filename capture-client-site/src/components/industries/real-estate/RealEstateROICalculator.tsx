@@ -52,9 +52,14 @@ export function RealEstateROICalculator() {
   }, [currentRevenueSpring, aiRevenueSpring, additionalRevenueSpring]);
 
   return (
-    <section ref={containerRef} className="py-16 sm:py-20 lg:py-28 relative overflow-hidden">
+    <section
+      ref={containerRef}
+      className="py-16 sm:py-20 lg:py-28 relative overflow-hidden"
+      style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+    >
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-accent/10" />
+      <div className="absolute inset-0 bg-[#030303]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-[#00C9FF]/10 via-transparent to-[#4A69E2]/10" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -64,16 +69,17 @@ export function RealEstateROICalculator() {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gold/10 border border-gold/20 backdrop-blur-xl mb-6 hover:bg-gold/15 hover:border-gold/30 transition-all duration-300">
-            <Calculator className="w-5 h-5 text-gold" />
-            <span className="text-sm font-semibold text-gold uppercase tracking-wide">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl mb-6 hover:bg-white/[0.04] hover:border-[#00C9FF]/30 transition-all duration-300">
+            <Calculator className="w-5 h-5 text-[#00C9FF]" />
+            <span className="text-sm text-[#00C9FF] uppercase tracking-wide" style={{ fontWeight: 600 }}>
               ROI Calculator
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-hero font-bold text-white mb-6">
-            Calculate Your <span className="text-gold">Commission Increase</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
+            <span style={{ fontWeight: 200 }}>Calculate Your </span>
+            <span className="text-[#00C9FF]" style={{ fontWeight: 800 }}>Commission Increase</span>
           </h2>
-          <p className="text-xl text-white/70 max-w-3xl mx-auto">
+          <p className="text-xl text-white/70 max-w-3xl mx-auto" style={{ fontWeight: 300 }}>
             See exactly how much more revenue you'll capture with instant AI responses
           </p>
         </motion.div>
@@ -85,9 +91,9 @@ export function RealEstateROICalculator() {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <GlassCard variant="premium" className="p-8 border-2 border-white/10 hover:border-gold/20 transition-all duration-300">
-              <h3 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                <Settings className="w-8 h-8 text-gold" />
+            <GlassCard variant="premium" className="p-8 border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl hover:border-[#00C9FF]/20 transition-all duration-300">
+              <h3 className="text-2xl text-white mb-6 flex items-center gap-3" style={{ fontWeight: 700 }}>
+                <Settings className="w-8 h-8 text-[#00C9FF]" />
                 Your Numbers
               </h3>
 
@@ -95,8 +101,8 @@ export function RealEstateROICalculator() {
                 {/* Monthly Leads */}
                 <div>
                   <div className="flex justify-between items-center mb-3">
-                    <label className="text-white font-medium">Monthly Leads</label>
-                    <span className="text-2xl font-bold text-gold">{monthlyLeads}</span>
+                    <label className="text-white" style={{ fontWeight: 500 }}>Monthly Leads</label>
+                    <span className="text-2xl text-[#00C9FF]" style={{ fontWeight: 700 }}>{monthlyLeads}</span>
                   </div>
                   <input
                     type="range"
@@ -105,9 +111,9 @@ export function RealEstateROICalculator() {
                     step="5"
                     value={monthlyLeads}
                     onChange={(e) => setMonthlyLeads(Number(e.target.value))}
-                    className="w-full h-2 bg-white/10 rounded-full appearance-none cursor-pointer accent-gold"
+                    className="w-full h-2 bg-white/10 rounded-full appearance-none cursor-pointer"
                     style={{
-                      background: `linear-gradient(to right, rgb(212, 175, 55) 0%, rgb(212, 175, 55) ${((monthlyLeads - 10) / 190) * 100}%, rgba(255,255,255,0.1) ${((monthlyLeads - 10) / 190) * 100}%, rgba(255,255,255,0.1) 100%)`
+                      background: `linear-gradient(to right, rgb(0, 201, 255) 0%, rgb(0, 201, 255) ${((monthlyLeads - 10) / 190) * 100}%, rgba(255,255,255,0.1) ${((monthlyLeads - 10) / 190) * 100}%, rgba(255,255,255,0.1) 100%)`
                     }}
                   />
                   <div className="flex justify-between text-xs text-white/40 mt-1">
@@ -119,8 +125,8 @@ export function RealEstateROICalculator() {
                 {/* Close Rate */}
                 <div>
                   <div className="flex justify-between items-center mb-3">
-                    <label className="text-white font-medium">Close Rate (%)</label>
-                    <span className="text-2xl font-bold text-accent">{closeRate}%</span>
+                    <label className="text-white" style={{ fontWeight: 500 }}>Close Rate (%)</label>
+                    <span className="text-2xl text-[#4A69E2]" style={{ fontWeight: 700 }}>{closeRate}%</span>
                   </div>
                   <input
                     type="range"
@@ -129,9 +135,9 @@ export function RealEstateROICalculator() {
                     step="0.5"
                     value={closeRate}
                     onChange={(e) => setCloseRate(Number(e.target.value))}
-                    className="w-full h-2 bg-white/10 rounded-full appearance-none cursor-pointer accent-accent"
+                    className="w-full h-2 bg-white/10 rounded-full appearance-none cursor-pointer"
                     style={{
-                      background: `linear-gradient(to right, rgb(0, 201, 255) 0%, rgb(0, 201, 255) ${((closeRate - 1) / 9) * 100}%, rgba(255,255,255,0.1) ${((closeRate - 1) / 9) * 100}%, rgba(255,255,255,0.1) 100%)`
+                      background: `linear-gradient(to right, rgb(74, 105, 226) 0%, rgb(74, 105, 226) ${((closeRate - 1) / 9) * 100}%, rgba(255,255,255,0.1) ${((closeRate - 1) / 9) * 100}%, rgba(255,255,255,0.1) 100%)`
                     }}
                   />
                   <div className="flex justify-between text-xs text-white/40 mt-1">
@@ -143,8 +149,8 @@ export function RealEstateROICalculator() {
                 {/* Average Commission */}
                 <div>
                   <div className="flex justify-between items-center mb-3">
-                    <label className="text-white font-medium">Avg Commission</label>
-                    <span className="text-2xl font-bold text-green-400">
+                    <label className="text-white" style={{ fontWeight: 500 }}>Avg Commission</label>
+                    <span className="text-2xl text-green-400" style={{ fontWeight: 700 }}>
                       ${avgCommission.toLocaleString()}
                     </span>
                   </div>
@@ -212,19 +218,19 @@ export function RealEstateROICalculator() {
               animate={{ scale: [1, 1.02, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <GlassCard variant="premium" className="p-8 border-2 border-gold/40 bg-gradient-to-br from-gold/20 via-gold/10 to-gold/5 shadow-[0_0_60px_rgba(212,175,55,0.3)] hover:shadow-[0_0_80px_rgba(212,175,55,0.5)] transition-all duration-500">
+              <GlassCard variant="premium" className="p-8 border-2 border-[#00C9FF]/40 bg-gradient-to-br from-[#00C9FF]/20 via-[#00C9FF]/10 to-[#4A69E2]/5 shadow-[0_0_60px_rgba(0,201,255,0.3)] hover:shadow-[0_0_80px_rgba(0,201,255,0.5)] transition-all duration-500">
                 <div className="text-center">
-                  <p className="text-sm font-semibold text-gold uppercase tracking-wider mb-2">
+                  <p className="text-sm text-[#00C9FF] uppercase tracking-wider mb-2" style={{ fontWeight: 600 }}>
                     Additional Annual Revenue
                   </p>
-                  <p className="text-6xl font-black bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent mb-2">
+                  <p className="text-6xl bg-gradient-to-r from-[#00C9FF] via-[#4A69E2] to-[#00C9FF] bg-clip-text text-transparent mb-2" style={{ fontWeight: 800 }}>
                     +${displayAdditionalRevenue.toLocaleString()}
                   </p>
-                  <p className="text-white/80 text-lg">
+                  <p className="text-white/80 text-lg" style={{ fontWeight: 400 }}>
                     {additionalDeals.toFixed(1)} more deals per year
                   </p>
                   <div className="mt-6 pt-6 border-t border-white/10">
-                    <p className="text-white/60 text-sm mb-4">
+                    <p className="text-white/60 text-sm mb-4" style={{ fontWeight: 400 }}>
                       Based on {speedToLeadBoost}% higher conversion with instant response
                     </p>
                     <Button variant="primary" href="/contact" className="w-full hover:scale-105 transition-transform duration-300">

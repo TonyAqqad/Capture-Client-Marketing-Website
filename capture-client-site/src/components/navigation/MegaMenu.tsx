@@ -66,8 +66,8 @@ export default function MegaMenu() {
   }, []);
 
   const scrolledClass = isScrolled
-    ? "bg-[#0F172A]/98 backdrop-blur-2xl border-b border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
-    : "bg-[#0F172A]/70 backdrop-blur-md border-b border-white/5";
+    ? "bg-[#030303]/98 backdrop-blur-2xl border-b border-white/[0.06] shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+    : "bg-[#030303]/70 backdrop-blur-md border-b border-white/[0.03]";
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${scrolledClass}`}>
@@ -117,7 +117,8 @@ export default function MegaMenu() {
                 onMouseLeave={handleDropdownClose}
               >
                 <button
-                  className="relative px-4 py-3 min-h-[44px] text-[#F8FAFC]/80 hover:text-[#D4AF37] font-body text-sm font-medium transition-all duration-300 group flex items-center gap-1"
+                  className="relative px-4 py-3 min-h-[44px] text-white/80 hover:text-[#00C9FF] text-sm font-medium transition-all duration-300 group flex items-center gap-1"
+                  style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
                   aria-haspopup="true"
                   aria-expanded={openDropdown === key}
                 >
@@ -126,7 +127,7 @@ export default function MegaMenu() {
                   {/* Chevron indicator */}
                   <svg
                     className={`w-4 h-4 transition-transform duration-300 ${
-                      openDropdown === key ? "rotate-180 text-[#D4AF37]" : ""
+                      openDropdown === key ? "rotate-180 text-[#00C9FF]" : ""
                     }`}
                     fill="none"
                     viewBox="0 0 24 24"
@@ -140,8 +141,8 @@ export default function MegaMenu() {
                     />
                   </svg>
 
-                  {/* Gold underline on hover */}
-                  <span className="absolute inset-x-4 -bottom-px h-px bg-gradient-to-r from-[#D4AF37] to-[#00C9FF] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
+                  {/* Cyan underline on hover */}
+                  <span className="absolute inset-x-4 -bottom-px h-px bg-gradient-to-r from-[#4A69E2] to-[#00C9FF] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" />
                 </button>
 
                 {/* Invisible hover bridge to prevent gap issues - larger area */}
@@ -166,7 +167,8 @@ export default function MegaMenu() {
             {/* Phone Number */}
             <a
               href="tel:865-346-6111"
-              className="relative group text-[#F8FAFC]/80 hover:text-[#00C9FF] transition-all duration-300 text-sm font-medium flex items-center gap-2 px-4 py-3 min-h-[44px] rounded-lg hover:bg-white/5 border border-transparent hover:border-white/10"
+              className="relative group text-white/80 hover:text-[#00C9FF] transition-all duration-300 text-sm font-medium flex items-center gap-2 px-4 py-3 min-h-[44px] rounded-lg hover:bg-white/5 border border-transparent hover:border-white/[0.06]"
+              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
               onClick={() => trackPhoneClick("865-346-6111", "header")}
             >
               <svg
@@ -193,7 +195,8 @@ export default function MegaMenu() {
               href="https://app.captureclient.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="relative group overflow-hidden bg-gradient-to-r from-[#4A69E2] to-[#00C9FF] text-white px-6 py-3 min-h-[48px] rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-[0_0_24px_rgba(0,201,255,0.4)] hover:-translate-y-0.5 border border-white/10 flex items-center"
+              className="relative group overflow-hidden bg-gradient-to-r from-[#4A69E2] to-[#00C9FF] text-white px-6 py-3 min-h-[48px] rounded-lg font-semibold text-sm transition-all duration-300 hover:shadow-[0_0_24px_rgba(0,201,255,0.4)] hover:-translate-y-0.5 border border-white/[0.06] flex items-center"
+              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
               onClick={() => trackCTAClick("Sign In", "header", "https://app.captureclient.com/")}
             >
               <span className="relative z-10 flex items-center gap-2">
@@ -218,13 +221,13 @@ export default function MegaMenu() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden relative min-w-[48px] min-h-[48px] flex items-center justify-center rounded-lg hover:bg-white/5 border border-white/10 hover:border-white/20 transition-all active:scale-95 group z-[120] touch-manipulation"
+            className="lg:hidden relative min-w-[48px] min-h-[48px] flex items-center justify-center rounded-lg hover:bg-white/5 border border-white/[0.06] hover:border-white/[0.12] transition-all active:scale-95 group z-[120] touch-manipulation"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
             aria-expanded={mobileMenuOpen}
           >
             <svg
-              className={`w-6 h-6 text-[#F8FAFC] transition-all duration-300 ${
+              className={`w-6 h-6 text-white transition-all duration-300 ${
                 mobileMenuOpen ? "rotate-90 text-[#00C9FF]" : ""
               }`}
               fill="none"

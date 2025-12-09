@@ -18,15 +18,25 @@ export default function SocialProofBanner() {
       initial={{ opacity: 0, y: 16 }}
       animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
       transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
-      className="glass-premium rounded-2xl p-6 sm:p-8"
+      className="border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl rounded-2xl p-6 sm:p-8"
+      style={{
+        backgroundColor: '#030303',
+        fontFamily: 'var(--font-bricolage-grotesque)'
+      }}
     >
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
         {/* Left: Confident statement */}
         <div className="text-center md:text-left">
-          <p className="text-foreground font-semibold text-lg sm:text-xl tracking-tight mb-1">
+          <p
+            className="text-foreground text-lg sm:text-xl tracking-tight mb-1"
+            style={{ fontWeight: 600 }}
+          >
             500+ businesses trust Capture Client
           </p>
-          <p className="text-foreground-muted text-sm sm:text-base">
+          <p
+            className="text-foreground-muted text-sm sm:text-base"
+            style={{ fontWeight: 300 }}
+          >
             From solo practitioners to 50-person teams
           </p>
         </div>
@@ -34,9 +44,9 @@ export default function SocialProofBanner() {
         {/* Right: Clean stats row */}
         <div className="flex items-center gap-8 sm:gap-12">
           <Stat value="1M+" label="Calls handled" />
-          <div className="w-px h-10 bg-white/10" />
+          <div className="w-px h-10 bg-white/[0.06]" />
           <Stat value="4.9" label="Client rating" />
-          <div className="w-px h-10 bg-white/10 hidden sm:block" />
+          <div className="w-px h-10 bg-white/[0.06] hidden sm:block" />
           <Stat value="247%" label="Avg. lead growth" className="hidden sm:block" />
         </div>
       </div>
@@ -55,10 +65,16 @@ function Stat({
 }) {
   return (
     <div className={`text-center ${className}`}>
-      <p className="text-2xl sm:text-3xl font-bold text-gradient-gold-cyan tracking-tight">
+      <p
+        className="text-2xl sm:text-3xl tracking-tight bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] bg-clip-text text-transparent"
+        style={{ fontWeight: 800 }}
+      >
         {value}
       </p>
-      <p className="text-foreground-muted text-xs sm:text-sm mt-0.5">
+      <p
+        className="text-foreground-muted text-xs sm:text-sm mt-0.5"
+        style={{ fontWeight: 300 }}
+      >
         {label}
       </p>
     </div>

@@ -34,12 +34,12 @@ interface ServiceHeroProps {
   }>;
 }
 
-// Service-specific color schemes and icons
+// Service-specific color schemes and icons - Linear/Stripe aesthetic
 const serviceThemes = {
   "voice-ai": {
-    gradient: "from-[#4A69E2] via-[#D4AF37]/80 to-[#00C9FF]",
-    accentColor: "bg-[#4A69E2]",
-    iconColor: "text-[#D4AF37]",
+    gradient: "from-[#00C9FF] via-[#4A69E2] to-[#00C9FF]",
+    accentColor: "bg-[#00C9FF]",
+    iconColor: "text-[#00C9FF]",
     icon: Zap,
     floatingIcons: [
       { icon: Phone, delay: 0, position: "top-20 right-20" },
@@ -48,9 +48,9 @@ const serviceThemes = {
     ],
   },
   "google-ads": {
-    gradient: "from-blue-600 via-cyan-600 to-teal-600",
-    accentColor: "bg-blue-500",
-    iconColor: "text-blue-400",
+    gradient: "from-[#4A69E2] via-[#00C9FF] to-[#4A69E2]",
+    accentColor: "bg-[#4A69E2]",
+    iconColor: "text-[#00C9FF]",
     icon: Target,
     floatingIcons: [
       { icon: Target, delay: 0, position: "top-24 right-24" },
@@ -59,9 +59,9 @@ const serviceThemes = {
     ],
   },
   "facebook-ads": {
-    gradient: "from-[#4A69E2] via-[#D4AF37] to-[#00C9FF]",
-    accentColor: "bg-[#D4AF37]",
-    iconColor: "text-[#D4AF37]",
+    gradient: "from-[#00C9FF] via-[#4A69E2] to-[#00C9FF]",
+    accentColor: "bg-[#00C9FF]",
+    iconColor: "text-[#00C9FF]",
     icon: Users,
     floatingIcons: [
       { icon: Users, delay: 0, position: "top-16 right-28" },
@@ -70,9 +70,9 @@ const serviceThemes = {
     ],
   },
   "lead-generation": {
-    gradient: "from-emerald-600 via-teal-600 to-cyan-600",
-    accentColor: "bg-emerald-500",
-    iconColor: "text-emerald-400",
+    gradient: "from-[#4A69E2] via-[#00C9FF] to-[#4A69E2]",
+    accentColor: "bg-[#00C9FF]",
+    iconColor: "text-[#00C9FF]",
     icon: TrendingUp,
     floatingIcons: [
       { icon: TrendingUp, delay: 0, position: "top-20 right-20" },
@@ -83,9 +83,9 @@ const serviceThemes = {
 };
 
 const defaultTheme = {
-  gradient: "from-gray-900 via-gray-800 to-gray-900",
-  accentColor: "bg-primary",
-  iconColor: "text-primary",
+  gradient: "from-[#030303] via-[#0a0a0a] to-[#030303]",
+  accentColor: "bg-[#00C9FF]",
+  iconColor: "text-[#00C9FF]",
   icon: CheckCircle,
   floatingIcons: [] as { icon: typeof CheckCircle; delay: number; position: string }[],
 };
@@ -113,7 +113,7 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut" as const,
+        ease: [0.22, 1, 0.36, 1] as const,
       },
     },
   };
@@ -143,17 +143,20 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
   };
 
   return (
-    <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-20 sm:pt-24 md:pt-20">
-      {/* Animated Gradient Background */}
-      <div className={`absolute inset-0 bg-gradient-to-br ${theme.gradient}`}>
+    <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-20 sm:pt-24 md:pt-20" style={{ backgroundColor: '#030303' }}>
+      {/* Mesh Gradient Background */}
+      <div className="absolute inset-0 bg-mesh-premium opacity-40" />
+
+      {/* Animated Gradient Overlay */}
+      <div className={`absolute inset-0 bg-gradient-to-br ${theme.gradient} opacity-20`}>
         <motion.div
           className="absolute inset-0 opacity-30"
           animate={{
             background: [
-              "radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%)",
-              "radial-gradient(circle at 80% 50%, rgba(255,255,255,0.1) 0%, transparent 50%)",
-              "radial-gradient(circle at 50% 80%, rgba(255,255,255,0.1) 0%, transparent 50%)",
-              "radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%)",
+              "radial-gradient(circle at 20% 50%, rgba(0,201,255,0.15) 0%, transparent 50%)",
+              "radial-gradient(circle at 80% 50%, rgba(74,105,226,0.15) 0%, transparent 50%)",
+              "radial-gradient(circle at 50% 80%, rgba(0,201,255,0.15) 0%, transparent 50%)",
+              "radial-gradient(circle at 20% 50%, rgba(0,201,255,0.15) 0%, transparent 50%)",
             ],
           }}
           transition={{
@@ -189,8 +192,8 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
             transition={{ delay: delay + 0.5, duration: 0.5 }}
           >
             <motion.div variants={floatingVariants} animate="float">
-              <div className={`w-12 h-12 md:w-16 md:h-16 rounded-2xl ${theme.accentColor} bg-opacity-20 backdrop-blur-sm border border-white/10 flex items-center justify-center text-2xl md:text-3xl`}>
-                <FloatingIcon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+              <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl flex items-center justify-center text-2xl md:text-3xl">
+                <FloatingIcon className={`w-6 h-6 md:w-8 md:h-8 ${theme.iconColor}`} />
               </div>
             </motion.div>
           </motion.div>
@@ -208,11 +211,11 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
           {/* Main Icon - Responsive sizing */}
           <motion.div variants={itemVariants} className="mb-4 sm:mb-6">
             <motion.div
-              className={`inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-xl sm:rounded-2xl ${theme.accentColor} bg-opacity-20 backdrop-blur-sm border border-white/20 text-3xl sm:text-4xl md:text-5xl`}
+              className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-xl sm:rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl text-3xl sm:text-4xl md:text-5xl"
               whileHover={{ scale: 1.1, rotate: 5 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <MainIcon className="w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 text-white" />
+              <MainIcon className={`w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10 ${theme.iconColor}`} />
             </motion.div>
           </motion.div>
 
@@ -220,7 +223,8 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
           {hero.headline && (
             <motion.h1
               variants={itemVariants}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white mb-4 sm:mb-6 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-4 sm:mb-6 leading-tight"
+              style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
             >
               {hero.headline.split(" ").map((word, index) => (
                 <motion.span
@@ -240,7 +244,8 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
           {hero.subheadline && (
             <motion.p
               variants={itemVariants}
-              className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-100 mb-6 sm:mb-8 md:mb-10 max-w-3xl leading-relaxed font-light"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-100 mb-6 sm:mb-8 md:mb-10 max-w-3xl leading-relaxed"
+              style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}
             >
               {hero.subheadline}
             </motion.p>
@@ -251,7 +256,8 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
             {hero.cta_primary && (
               <motion.a
                 href={hero.cta_primary.action}
-                className={`group relative w-full sm:w-auto px-6 sm:px-8 py-4 min-h-[48px] ${theme.accentColor} text-white font-bold text-base sm:text-lg rounded-full overflow-hidden shadow-2xl flex items-center justify-center`}
+                className={`group relative w-full sm:w-auto px-6 sm:px-8 py-4 min-h-[48px] ${theme.accentColor} text-black rounded-full overflow-hidden shadow-2xl flex items-center justify-center`}
+                style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -274,7 +280,8 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
             {hero.cta_secondary && (
               <motion.a
                 href={hero.cta_secondary.action}
-                className="w-full sm:w-auto px-6 sm:px-8 py-4 min-h-[48px] bg-white/10 backdrop-blur-md text-white font-semibold text-base sm:text-lg rounded-full border-2 border-white/30 hover:bg-white/20 transition-all flex items-center justify-center"
+                className="w-full sm:w-auto px-6 sm:px-8 py-4 min-h-[48px] border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl text-white rounded-full hover:bg-white/[0.05] transition-all flex items-center justify-center"
+                style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 500 }}
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -299,21 +306,25 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
                   transition={{ delay: index * 0.15 + 0.8, duration: 0.5 }}
                 >
                   <motion.div
-                    className="absolute inset-0 bg-white rounded-xl sm:rounded-2xl opacity-10"
+                    className="absolute inset-0 bg-gradient-to-br from-[#00C9FF]/10 to-[#4A69E2]/10 rounded-xl sm:rounded-2xl opacity-50"
                     variants={pulseVariants}
                     animate="pulse"
                     style={{ animationDelay: `${index * 0.5}s` }}
                   />
-                  <div className="relative p-4 sm:p-6 bg-white/5 backdrop-blur-md rounded-xl sm:rounded-2xl border border-white/10 group-hover:border-white/30 transition-all">
+                  <div className="relative p-4 sm:p-6 border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl rounded-xl sm:rounded-2xl group-hover:border-white/[0.12] transition-all">
                     <motion.div
-                      className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mb-1"
+                      className="text-2xl sm:text-3xl md:text-4xl text-white mb-1"
+                      style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: index * 0.15 + 1, duration: 0.5 }}
                     >
                       {stat.value}
                     </motion.div>
-                    <div className="text-sm sm:text-base text-gray-200 font-medium">
+                    <div
+                      className="text-sm sm:text-base text-gray-300"
+                      style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}
+                    >
                       {stat.label}
                     </div>
                   </div>
