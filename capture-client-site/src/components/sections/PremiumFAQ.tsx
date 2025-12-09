@@ -83,50 +83,76 @@ export function PremiumFAQ() {
   return (
     <section
       ref={containerRef}
-      className="section bg-background relative overflow-hidden w-full max-w-full py-16 sm:py-20 lg:py-24"
+      className="section relative overflow-hidden w-full max-w-full py-24 md:py-32 lg:py-40"
     >
-      {/* Background effects */}
-      <div className="absolute inset-0 bg-mesh-premium opacity-30" />
+      {/* Deep space black base */}
+      <div className="absolute inset-0 bg-[#030303]" />
 
+      {/* Mesh gradient background */}
+      <div
+        className="absolute inset-0 opacity-30"
+        style={{
+          backgroundImage: `
+            radial-gradient(ellipse 80% 80% at 20% 20%, #00C9FF10 0%, transparent 50%),
+            radial-gradient(ellipse 80% 80% at 80% 80%, #4A69E210 0%, transparent 50%)
+          `,
+        }}
+      />
+
+      {/* Floating mesh animation */}
       <motion.div
+        className="absolute inset-0 opacity-20"
         animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.08, 0.15, 0.08],
+          scale: [1, 1.1, 1],
+          opacity: [0.15, 0.2, 0.15],
         }}
         transition={{
-          duration: 12,
+          duration: 15,
           repeat: Infinity,
           ease: "easeInOut"
         }}
-        className="absolute top-0 left-0 w-full max-w-[500px] sm:max-w-[1000px] h-[500px] sm:h-[1000px] rounded-full bg-gradient-radial from-accent/10 to-transparent blur-3xl -translate-x-1/4 -translate-y-1/4"
+        style={{
+          backgroundImage: `radial-gradient(ellipse 100% 100% at 30% 30%, #00C9FF08 0%, transparent 50%)`,
+        }}
       />
 
-      <div className="container-custom relative z-10 px-6 sm:px-6 lg:px-8">
-        {/* Section header */}
-        <div className="text-center mb-16 sm:mb-20">
+      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
+        {/* Editorial headline section */}
+        <div className="text-center mb-16 md:mb-20">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-accent mb-4 sm:mb-5">
+            {/* Subtle label */}
+            <p className="text-xs font-medium uppercase tracking-[0.25em] text-white/40 mb-6">
               Common Questions
-            </h2>
-            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground mb-6 sm:mb-8 text-depth px-4 leading-[1.1] tracking-tight" style={{ hyphens: 'none' }}>
-              <span className="whitespace-nowrap">Got Questions?</span>{" "}
-              <span className="text-gradient bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
-                We've Got Answers
+            </p>
+
+            {/* Editorial headline - extreme weight contrast */}
+            <h2
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.1] mb-6 md:mb-8"
+              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+            >
+              <span className="text-white font-extralight" style={{ fontWeight: 200 }}>Got questions? </span>
+              <span
+                className="font-extrabold bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] bg-clip-text text-transparent"
+                style={{ fontWeight: 800 }}
+              >
+                We've got answers
               </span>
-            </h3>
-            <p className="text-lg sm:text-xl md:text-2xl text-foreground-muted max-w-2xl mx-auto leading-[1.6] px-6">
+            </h2>
+
+            {/* Supporting copy */}
+            <p className="text-lg sm:text-xl md:text-2xl text-white/60 max-w-2xl mx-auto leading-relaxed">
               We've helped hundreds of businesses overcome these exact objections. Here's the truth.
             </p>
           </motion.div>
         </div>
 
-        {/* FAQ Accordion - mobile optimized */}
+        {/* FAQ Accordion */}
         <div className="max-w-4xl mx-auto">
-          <div className="space-y-4 sm:space-y-5">
+          <div className="space-y-4">
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
@@ -135,11 +161,11 @@ export function PremiumFAQ() {
                 transition={{
                   duration: 0.5,
                   delay: index * 0.05,
+                  ease: [0.22, 1, 0.36, 1],
                 }}
               >
-                <FAQItem
+                <FAQItemComponent
                   faq={faq}
-                  index={index}
                   isOpen={openIndex === index}
                   onClick={() => toggleFAQ(index)}
                 />
@@ -148,34 +174,35 @@ export function PremiumFAQ() {
           </div>
         </div>
 
-        {/* CTA after FAQ - mobile optimized */}
+        {/* CTA after FAQ */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="text-center mt-12 sm:mt-16 mx-4 sm:mx-6 lg:mx-auto p-6 sm:p-8 glass rounded-xl sm:rounded-2xl border-2 border-accent/20 max-w-2xl"
+          transition={{ duration: 0.7, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+          className="text-center mt-16 md:mt-20 mx-auto p-8 md:p-10 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl max-w-2xl"
         >
           <div className="mb-6">
-            <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-accent to-primary mb-4 shadow-glow flex-shrink-0">
-              <Phone className="text-white w-6 h-6 sm:w-8 sm:h-8" />
+            <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-[#00C9FF] to-[#4A69E2] mb-4">
+              <Phone className="w-6 h-6 text-white" />
             </div>
-            <h4 className="text-xl sm:text-2xl font-heading font-bold text-foreground mb-2">
+            <h3
+              className="text-xl sm:text-2xl font-bold text-white mb-2"
+              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+            >
               Still have questions?
-            </h4>
-            <p className="text-sm sm:text-base text-foreground-muted">
+            </h3>
+            <p className="text-sm sm:text-base text-white/60">
               Our team is here to help. Talk to a real human.
             </p>
           </div>
           <a
             href="tel:865-346-6111"
-            className="inline-flex items-center gap-2 text-base sm:text-lg font-bold text-accent hover:text-accent/80 transition-colors group touch-manipulation"
+            className="inline-flex items-center gap-2 text-base sm:text-lg font-semibold text-[#00C9FF] hover:text-[#00C9FF]/80 transition-colors group"
           >
-            <div className="w-6 h-6 sm:w-7 sm:h-7 flex items-center justify-center flex-shrink-0">
-              <PhoneCall className="group-hover:animate-pulse w-5 h-5 sm:w-6 sm:h-6" />
-            </div>
+            <PhoneCall className="w-5 h-5 group-hover:animate-pulse" />
             Call (865) 346-6111
           </a>
-          <p className="text-xs sm:text-sm text-foreground-subtle mt-3">
+          <p className="text-xs sm:text-sm text-white/40 mt-3">
             Monday-Friday, 9am-6pm EST
           </p>
         </motion.div>
@@ -184,95 +211,67 @@ export function PremiumFAQ() {
   );
 }
 
-interface FAQItemProps {
+interface FAQItemComponentProps {
   faq: FAQ;
-  index: number;
   isOpen: boolean;
   onClick: () => void;
 }
 
-function FAQItem({ faq, isOpen, onClick }: FAQItemProps) {
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case "technical":
-        return "accent";
-      case "business":
-        return "primary";
-      case "pricing":
-        return "accent";
-      default:
-        return "accent";
-    }
-  };
-
-  const color = getCategoryColor(faq.category);
-  const isAccent = color === "accent";
-
+function FAQItemComponent({ faq, isOpen, onClick }: FAQItemComponentProps) {
   return (
-    <motion.div
-      whileHover={{ scale: 1.01 }}
-      className={`glass rounded-xl sm:rounded-2xl overflow-hidden transition-all duration-300 ${
+    <div
+      className={`rounded-xl overflow-hidden transition-all duration-300 ${
         isOpen
-          ? `border-2 ${isAccent ? "border-accent/50" : "border-primary/50"} shadow-glow`
-          : "border-2 border-surface-border hover:border-surface-border/50"
+          ? "border border-[#00C9FF]/20 bg-white/[0.03]"
+          : "border border-white/[0.06] bg-white/[0.02] hover:border-white/[0.1]"
       }`}
     >
-      {/* Question button - full width tap target on mobile */}
+      {/* Question button */}
       <button
         onClick={onClick}
-        className="w-full px-6 sm:px-8 py-6 sm:py-7 flex items-center justify-between text-left transition-all duration-200 hover:bg-white/5 group touch-manipulation min-h-[72px]"
+        className="w-full px-6 sm:px-8 py-6 flex items-center justify-between text-left transition-all duration-200 group"
       >
-        <div className="flex items-center gap-4 sm:gap-5 flex-1 min-w-0">
-          {/* Icon - responsive sizing */}
-          <motion.div
-            animate={{
-              scale: isOpen ? 1.1 : 1,
-              rotate: isOpen ? [0, -10, 10, 0] : 0,
-            }}
-            transition={{ duration: 0.3 }}
-            className={`flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-xl transition-all duration-300 flex-shrink-0 ${
+        <div className="flex items-center gap-4 flex-1 min-w-0">
+          {/* Icon */}
+          <div
+            className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex-shrink-0 transition-all duration-300 ${
               isOpen
-                ? `bg-gradient-to-br ${
-                    isAccent
-                      ? "from-accent/30 to-accent/10"
-                      : "from-primary/30 to-primary/10"
-                  } border-2 ${isAccent ? "border-accent/40" : "border-primary/40"}`
-                : "bg-white/5 border-2 border-white/10"
+                ? "bg-gradient-to-br from-[#00C9FF]/20 to-[#4A69E2]/20 border border-[#00C9FF]/30"
+                : "bg-white/[0.04] border border-white/[0.06]"
             }`}
           >
             <faq.icon
-              className={`w-6 h-6 sm:w-8 sm:h-8 transition-colors duration-300 flex-shrink-0 ${
-                isOpen ? (isAccent ? "text-accent" : "text-primary") : "text-foreground-muted"
+              className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors duration-300 ${
+                isOpen ? "text-[#00C9FF]" : "text-white/50"
               }`}
             />
-          </motion.div>
+          </div>
 
-          {/* Question - responsive text size */}
-          <h4
-            className={`text-base sm:text-lg lg:text-xl font-semibold transition-colors duration-300 pr-2 leading-tight ${
-              isOpen ? "text-foreground" : "text-foreground group-hover:text-foreground"
+          {/* Question */}
+          <h3
+            className={`text-base sm:text-lg font-semibold transition-colors duration-300 pr-2 leading-tight ${
+              isOpen ? "text-white" : "text-white/80 group-hover:text-white"
             }`}
-            style={{ hyphens: 'none' }}
           >
             {faq.question}
-          </h4>
+          </h3>
         </div>
 
-        {/* Expand icon - responsive sizing */}
+        {/* Expand icon */}
         <motion.div
           animate={{ rotate: isOpen ? 180 : 0 }}
           transition={{ duration: 0.3 }}
-          className="ml-3 sm:ml-4 flex-shrink-0"
+          className="ml-4 flex-shrink-0"
         >
           <ChevronDown
-            className={`w-6 h-6 sm:w-8 sm:h-8 transition-colors duration-300 ${
-              isOpen ? (isAccent ? "text-accent" : "text-primary") : "text-foreground-muted"
+            className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors duration-300 ${
+              isOpen ? "text-[#00C9FF]" : "text-white/40"
             }`}
           />
         </motion.div>
       </button>
 
-      {/* Answer - responsive padding and text */}
+      {/* Answer */}
       <AnimatePresence initial={false}>
         {isOpen && (
           <motion.div
@@ -282,22 +281,14 @@ function FAQItem({ faq, isOpen, onClick }: FAQItemProps) {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <motion.div
-              initial={{ y: -10 }}
-              animate={{ y: 0 }}
-              exit={{ y: -10 }}
-              transition={{ duration: 0.2 }}
-              className={`px-6 sm:px-8 pb-6 sm:pb-7 sm:pl-20 lg:pl-28 border-t ${
-                isAccent ? "border-accent/20" : "border-primary/20"
-              }`}
-            >
-              <p className="text-foreground-muted text-base sm:text-lg leading-[1.7] pt-5 sm:pt-6">
+            <div className="px-6 sm:px-8 pb-6 pl-16 sm:pl-24 border-t border-white/[0.04]">
+              <p className="text-white/60 text-base sm:text-lg leading-relaxed pt-5">
                 {faq.answer}
               </p>
-            </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.div>
+    </div>
   );
 }

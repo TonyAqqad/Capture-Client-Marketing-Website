@@ -17,19 +17,41 @@ export function PremiumFinalCTA() {
       ref={containerRef}
       className="section relative overflow-hidden py-24 md:py-32 lg:py-40"
     >
-      {/* Clean gradient background - sophisticated, not overwhelming */}
+      {/* Deep space black base */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 bg-[#030303]"
+      />
+
+      {/* Mesh gradient background */}
+      <div
+        className="absolute inset-0 opacity-40"
         style={{
-          background: "linear-gradient(180deg, #030508 0%, #070B14 50%, #0A0E1A 100%)",
+          backgroundImage: `
+            radial-gradient(ellipse 100% 100% at 10% 20%, #00C9FF15 0%, transparent 50%),
+            radial-gradient(ellipse 100% 100% at 90% 80%, #4A69E215 0%, transparent 50%),
+            radial-gradient(ellipse 80% 80% at 50% 50%, #D4AF3708 0%, transparent 50%)
+          `,
         }}
       />
 
-      {/* Subtle accent glow - top */}
-      <div
-        className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] opacity-20 blur-[120px] pointer-events-none"
+      {/* Floating mesh animation */}
+      <motion.div
+        className="absolute inset-0 opacity-30"
+        animate={{
+          backgroundPosition: ['0% 0%', '100% 100%'],
+        }}
+        transition={{
+          duration: 20,
+          repeat: Infinity,
+          repeatType: 'reverse',
+          ease: 'linear',
+        }}
         style={{
-          background: "radial-gradient(ellipse, #D4AF37 0%, transparent 70%)",
+          backgroundImage: `
+            radial-gradient(circle at 20% 30%, #00C9FF10 0%, transparent 40%),
+            radial-gradient(circle at 80% 70%, #4A69E210 0%, transparent 40%)
+          `,
+          backgroundSize: '200% 200%',
         }}
       />
 
@@ -39,17 +61,25 @@ export function PremiumFinalCTA() {
         {/* Main headline section */}
         <div className="max-w-4xl mx-auto text-center mb-16 md:mb-20">
 
-          {/* Editorial headline - dramatic typography */}
+          {/* Editorial headline - extreme weight contrast */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h2 className="font-hero text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1] mb-6 md:mb-8">
-              <span className="text-white">Every missed call is a </span>
-              <span className="text-gradient-gold-cyan">client choosing</span>
+            <h2
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.1] mb-6 md:mb-8"
+              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+            >
+              <span className="text-white font-extralight" style={{ fontWeight: 200 }}>Every missed call is a </span>
+              <span
+                className="font-extrabold bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] bg-clip-text text-transparent"
+                style={{ fontWeight: 800 }}
+              >
+                client choosing
+              </span>
               <br className="hidden sm:block" />
-              <span className="text-white"> your competitor.</span>
+              <span className="text-white font-extralight" style={{ fontWeight: 200 }}> your competitor.</span>
             </h2>
           </motion.div>
 
@@ -74,18 +104,21 @@ export function PremiumFinalCTA() {
         >
           <Link
             href="#contact-form"
-            className="btn-gold group flex items-center gap-3 px-8 py-4 text-lg font-semibold w-full sm:w-auto justify-center"
+            className="group relative flex items-center gap-3 px-8 py-4 text-lg font-semibold w-full sm:w-auto justify-center rounded-xl overflow-hidden transition-all hover:scale-[1.02]"
+            style={{
+              background: 'linear-gradient(135deg, #00C9FF 0%, #4A69E2 100%)',
+            }}
           >
-            Try Our AI Now
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            <span className="relative z-10 text-white">Try Our AI Now</span>
+            <ArrowRight className="relative z-10 w-5 h-5 text-white transition-transform group-hover:translate-x-1" />
           </Link>
 
           <a
             href="tel:865-346-6111"
-            className="btn-ghost flex items-center gap-3 px-8 py-4 text-lg font-semibold w-full sm:w-auto justify-center"
+            className="group flex items-center gap-3 px-8 py-4 text-lg font-semibold w-full sm:w-auto justify-center rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl transition-all hover:bg-white/[0.04] hover:border-white/[0.12]"
           >
-            <Phone className="w-5 h-5" />
-            (865) 346-6111
+            <Phone className="w-5 h-5 text-[#00C9FF]" />
+            <span className="text-white">(865) 346-6111</span>
           </a>
         </motion.div>
 
@@ -101,13 +134,16 @@ export function PremiumFinalCTA() {
             { icon: Shield, text: "No long-term contracts" },
             { icon: Users, text: "500+ businesses served" },
           ].map((item, index) => (
-            <div
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 10 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
+              transition={{ duration: 0.5, delay: 0.35 + index * 0.1 }}
               className="flex items-center gap-2 text-white/60"
             >
-              <item.icon className="w-4 h-4 text-[#D4AF37]" />
+              <item.icon className="w-4 h-4 text-[#00C9FF]" />
               <span className="text-sm md:text-base">{item.text}</span>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
 
@@ -119,10 +155,13 @@ export function PremiumFinalCTA() {
           transition={{ duration: 0.7, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
           className="max-w-xl mx-auto"
         >
-          <div className="glass-premium p-8 md:p-10 rounded-2xl border border-white/10">
+          <div className="bg-white/[0.02] backdrop-blur-xl p-8 md:p-10 rounded-2xl border border-white/[0.06]">
             {/* Form header */}
             <div className="text-center mb-8">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+              <h3
+                className="text-2xl md:text-3xl text-white mb-2"
+                style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}
+              >
                 Book Your Free Demo
               </h3>
               <p className="text-white/60">

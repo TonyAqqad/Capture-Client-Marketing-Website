@@ -19,7 +19,6 @@ interface CaseStudy {
     improvement: string;
   }[];
   icon: React.ComponentType<{ className?: string }>;
-  gradient: string;
 }
 
 const caseStudies: CaseStudy[] = [
@@ -50,7 +49,6 @@ const caseStudies: CaseStudy[] = [
       }
     ],
     icon: Snowflake,
-    gradient: "from-accent to-primary"
   },
   {
     id: "dental",
@@ -79,7 +77,6 @@ const caseStudies: CaseStudy[] = [
       }
     ],
     icon: Stethoscope,
-    gradient: "from-primary to-accent"
   },
   {
     id: "plumbing",
@@ -108,7 +105,6 @@ const caseStudies: CaseStudy[] = [
       }
     ],
     icon: Wrench,
-    gradient: "from-accent to-primary"
   }
 ];
 
@@ -119,36 +115,87 @@ export function CaseStudiesPreview() {
   return (
     <section
       ref={containerRef}
-      className="section bg-background-dark relative overflow-hidden w-full max-w-full py-16 sm:py-20 lg:py-24"
+      className="section relative overflow-hidden w-full max-w-full py-24 md:py-32 lg:py-40"
     >
-      {/* Background effects */}
-      <div className="absolute inset-0 bg-mesh-premium opacity-40" />
+      {/* Deep space black base */}
+      <div className="absolute inset-0 bg-[#030303]" />
 
-      <div className="container-custom relative z-10 px-6 sm:px-6 lg:px-8">
-        {/* Section header */}
-        <div className="text-center mb-16 sm:mb-20 lg:mb-24">
+      {/* Mesh gradient background */}
+      <div
+        className="absolute inset-0 opacity-40"
+        style={{
+          backgroundImage: `
+            radial-gradient(ellipse 100% 100% at 20% 30%, #00C9FF12 0%, transparent 50%),
+            radial-gradient(ellipse 100% 100% at 80% 70%, #4A69E212 0%, transparent 50%),
+            radial-gradient(ellipse 80% 80% at 50% 50%, #D4AF3706 0%, transparent 50%)
+          `,
+        }}
+      />
+
+      {/* Floating mesh animation */}
+      <motion.div
+        className="absolute inset-0 opacity-25"
+        animate={{
+          backgroundPosition: ['0% 0%', '100% 100%'],
+        }}
+        transition={{
+          duration: 25,
+          repeat: Infinity,
+          repeatType: 'reverse',
+          ease: 'linear',
+        }}
+        style={{
+          backgroundImage: `
+            radial-gradient(circle at 30% 40%, #00C9FF08 0%, transparent 40%),
+            radial-gradient(circle at 70% 60%, #4A69E208 0%, transparent 40%)
+          `,
+          backgroundSize: '200% 200%',
+        }}
+      />
+
+      <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
+        {/* Editorial headline section */}
+        <div className="text-center mb-16 md:mb-20 lg:mb-24">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            <h2 className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-accent mb-4 sm:mb-5">
+            {/* Subtle label */}
+            <p className="text-xs font-medium uppercase tracking-[0.25em] text-white/40 mb-6">
               Real Results
-            </h2>
-            <h3 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground mb-6 sm:mb-8 text-depth px-4 leading-[1.1] tracking-tight" style={{ hyphens: 'none' }}>
-              <span className="whitespace-nowrap">Success Stories:</span>{" "}
-              <span className="text-gradient bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent whitespace-nowrap">
-                Before & After
+            </p>
+
+            {/* Editorial headline - extreme weight contrast */}
+            <h2
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.1] mb-6 md:mb-8"
+              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+            >
+              <span className="text-white font-extralight" style={{ fontWeight: 200 }}>Success stories: </span>
+              <span
+                className="font-extrabold bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] bg-clip-text text-transparent"
+                style={{ fontWeight: 800 }}
+              >
+                before
               </span>
-            </h3>
-            <p className="text-lg sm:text-xl md:text-2xl text-foreground-muted max-w-2xl mx-auto leading-[1.6] px-6">
+              <span className="text-white font-extralight" style={{ fontWeight: 200 }}> & </span>
+              <span
+                className="font-extrabold bg-gradient-to-r from-[#4A69E2] to-[#00C9FF] bg-clip-text text-transparent"
+                style={{ fontWeight: 800 }}
+              >
+                after
+              </span>
+            </h2>
+
+            {/* Supporting copy */}
+            <p className="text-lg sm:text-xl md:text-2xl text-white/60 max-w-2xl mx-auto leading-relaxed">
               See exactly how Capture Client transforms businesses like yours with measurable, dramatic results.
             </p>
           </motion.div>
         </div>
 
         {/* Case studies grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 mb-16 sm:mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16 md:mb-20">
           {caseStudies.map((study, index) => (
             <CaseStudyCard
               key={study.id}
@@ -161,22 +208,17 @@ export function CaseStudiesPreview() {
 
         {/* CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.7, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="text-center"
         >
           <Link
             href="/case-studies"
-            className="inline-flex items-center gap-2 text-lg font-semibold text-accent hover:text-accent/80 transition-colors group"
+            className="group inline-flex items-center gap-3 px-8 py-4 text-base font-semibold rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl text-white transition-all hover:bg-white/[0.04] hover:border-white/[0.12]"
           >
             View All Case Studies
-            <motion.div
-              animate={{ x: [0, 5, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            >
-              <ArrowRight className="w-5 h-5" />
-            </motion.div>
+            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
           </Link>
         </motion.div>
       </div>
@@ -193,47 +235,46 @@ interface CaseStudyCardProps {
 function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 50, scale: 0.9 }}
+      initial={{ opacity: 0, y: 40 }}
       animate={
         isInView
-          ? { opacity: 1, y: 0, scale: 1 }
-          : { opacity: 0, y: 50, scale: 0.9 }
+          ? { opacity: 1, y: 0 }
+          : { opacity: 0, y: 40 }
       }
       transition={{
-        duration: 0.6,
+        duration: 0.7,
         delay: index * 0.15,
-        type: "spring",
-        stiffness: 100,
+        ease: [0.22, 1, 0.36, 1],
       }}
-      whileHover={{ y: -12, transition: { duration: 0.3 } }}
       className="group"
     >
-      <div className="relative h-full glass p-8 sm:p-10 rounded-2xl sm:rounded-3xl border-2 border-accent/20 transition-all duration-500 group-hover:border-accent/50 group-hover:shadow-glow">
+      <div className="relative h-full p-8 sm:p-10 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl transition-all duration-500 hover:border-white/[0.12] hover:bg-white/[0.04]">
         {/* Industry badge */}
-        <div className={`inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-5 py-2 sm:py-2.5 rounded-full bg-gradient-to-r ${study.gradient} mb-6 sm:mb-8`}>
-          <div className="w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center flex-shrink-0">
-            <study.icon className="text-white w-5 h-5 sm:w-6 sm:h-6" />
-          </div>
-          <span className="text-sm sm:text-base font-bold text-white">{study.industry}</span>
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#00C9FF]/10 to-[#4A69E2]/10 border border-white/[0.06] mb-6">
+          <study.icon className="w-4 h-4 text-[#00C9FF]" />
+          <span className="text-sm font-medium text-white/80">{study.industry}</span>
         </div>
 
         {/* Company */}
-        <h4 className="text-2xl sm:text-3xl font-heading font-bold text-foreground mb-4 sm:mb-5 leading-tight" style={{ hyphens: 'none' }}>
+        <h3
+          className="text-xl sm:text-2xl font-bold text-white mb-4 leading-tight"
+          style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}
+        >
           {study.company}
-        </h4>
+        </h3>
 
-        {/* Problem */}
+        {/* Challenge */}
         <div className="mb-8">
-          <p className="text-xs uppercase tracking-[0.15em] text-foreground-muted font-semibold mb-3">
+          <p className="text-xs uppercase tracking-[0.2em] text-white/40 font-medium mb-3">
             The Challenge
           </p>
-          <p className="text-foreground-muted leading-[1.6] text-base">
+          <p className="text-white/60 leading-relaxed text-sm sm:text-base">
             {study.problem}
           </p>
         </div>
 
         {/* Results - Before/After */}
-        <div className="space-y-5 mb-8">
+        <div className="space-y-4 mb-8">
           {study.results.map((result, idx) => (
             <motion.div
               key={idx}
@@ -250,24 +291,22 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
               className="relative"
             >
               <div className="flex items-center justify-between mb-2">
-                <span className="text-xs uppercase tracking-wider text-foreground-subtle font-semibold">
+                <span className="text-xs uppercase tracking-wider text-white/40 font-medium">
                   {result.metric}
                 </span>
-                <span className="text-xs font-bold text-accent">
+                <span className="text-xs font-bold text-[#00C9FF]">
                   {result.improvement}
                 </span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="flex-1 bg-surface-border/30 rounded-lg p-2 text-center">
-                  <p className="text-foreground-muted text-sm line-through">
+                <div className="flex-1 bg-white/[0.03] rounded-lg p-2 text-center border border-white/[0.04]">
+                  <p className="text-white/40 text-sm line-through">
                     {result.before}
                   </p>
                 </div>
-                <div className="w-4 h-4 flex items-center justify-center flex-shrink-0">
-                  <ArrowRight className="text-accent w-4 h-4" />
-                </div>
-                <div className="flex-1 bg-gradient-to-r from-accent/20 to-primary/20 rounded-lg p-2 text-center border border-accent/30">
-                  <p className="text-accent font-bold text-sm">
+                <ArrowRight className="w-4 h-4 text-[#00C9FF] flex-shrink-0" />
+                <div className="flex-1 bg-gradient-to-r from-[#00C9FF]/10 to-[#4A69E2]/10 rounded-lg p-2 text-center border border-[#00C9FF]/20">
+                  <p className="text-[#00C9FF] font-bold text-sm">
                     {result.after}
                   </p>
                 </div>
@@ -279,21 +318,14 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
         {/* Read more link */}
         <Link
           href={`/case-studies#${study.id}`}
-          className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-accent transition-colors group/link"
+          className="inline-flex items-center gap-2 text-sm font-medium text-white/60 hover:text-[#00C9FF] transition-colors group/link"
         >
           Read Full Story
           <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
         </Link>
 
-        {/* Hover gradient overlay */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileHover={{ opacity: 1 }}
-          className="absolute inset-0 rounded-2xl bg-gradient-to-br from-accent/5 via-transparent to-primary/5 pointer-events-none"
-        />
-
-        {/* Corner accent */}
-        <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-accent/10 to-transparent rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        {/* Subtle glow on hover */}
+        <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-[#00C9FF]/[0.02] via-transparent to-[#4A69E2]/[0.02]" />
       </div>
     </motion.div>
   );

@@ -71,10 +71,14 @@ export function HowItWorks() {
   return (
     <section
       ref={containerRef}
-      className="relative bg-background-dark py-20 sm:py-28 lg:py-36 overflow-hidden"
+      className="relative bg-[#030303] py-20 sm:py-28 lg:py-36 overflow-hidden"
     >
-      {/* Subtle gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-accent/[0.02] to-transparent" />
+      {/* Mesh gradient background */}
+      <div className="absolute inset-0 opacity-40">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#00C9FF]/10 via-transparent to-[#4A69E2]/10" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(0,201,255,0.08),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(74,105,226,0.08),transparent_50%)]" />
+      </div>
 
       <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
         {/* Editorial Section Header */}
@@ -82,18 +86,19 @@ export function HowItWorks() {
           initial={{ opacity: 0, y: isMobile ? 0 : 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: isMobile ? 0 : 24 }}
           transition={{ duration: 0.6 }}
-          className="max-w-2xl mb-16 sm:mb-20 lg:mb-24"
+          className="max-w-3xl mb-16 sm:mb-20 lg:mb-24"
         >
-          <p className="text-sm font-medium tracking-widest uppercase text-accent mb-4">
+          <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#00C9FF] mb-6" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
             The Process
           </p>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1] mb-6">
-            Four steps to
-            <span className="text-gradient-gold-cyan block mt-1">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl leading-[1.08] mb-6" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+            <span className="font-[200] text-white/90">Four steps to</span>
+            {' '}
+            <span className="font-[800] bg-gradient-to-r from-[#00C9FF] via-[#4A69E2] to-white bg-clip-text text-transparent block mt-2">
               automated growth
             </span>
           </h2>
-          <p className="text-lg sm:text-xl text-foreground-muted leading-relaxed">
+          <p className="text-lg sm:text-xl text-white/60 leading-[1.6] font-light">
             From strategy call to live AI agents capturing leads around the clock.
             Most businesses are fully operational within 48 hours.
           </p>
@@ -135,12 +140,13 @@ export function HowItWorks() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-16 sm:mt-20 lg:mt-24 text-center"
         >
-          <p className="text-foreground-muted mb-6 text-lg">
+          <p className="text-white/50 mb-6 text-lg font-light" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
             Ready to stop missing leads?
           </p>
           <a
             href="#contact"
-            className="btn-gold inline-flex items-center gap-3 text-lg px-8 py-4"
+            className="inline-flex items-center gap-3 text-base px-8 py-4 rounded-full bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] text-white font-medium hover:shadow-[0_0_30px_rgba(0,201,255,0.3)] transition-all duration-300"
+            style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
           >
             Book Your Strategy Call
             <ArrowRight className="w-5 h-5" />
@@ -167,7 +173,7 @@ function DesktopStepCard({ step, index, isInView, isLast }: StepCardProps) {
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 32 }}
       transition={{
         duration: 0.5,
-        delay: index * 0.15,
+        delay: index * 0.12,
         ease: [0.25, 0.1, 0.25, 1]
       }}
       className="relative group"
@@ -178,33 +184,33 @@ function DesktopStepCard({ step, index, isInView, isLast }: StepCardProps) {
           <motion.div
             initial={{ scaleX: 0 }}
             animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.15 + 0.3 }}
-            className="h-full bg-gradient-to-r from-white/20 to-transparent origin-left"
+            transition={{ duration: 0.6, delay: index * 0.12 + 0.3 }}
+            className="h-full bg-gradient-to-r from-[#00C9FF]/30 via-[#4A69E2]/20 to-transparent origin-left"
           />
         </div>
       )}
 
       {/* Step number - large, editorial */}
       <div className="flex items-center gap-4 mb-6">
-        <span className="text-5xl font-bold text-white/10 font-mono">
+        <span className="text-5xl font-[800] text-white/[0.06]" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
           {step.number}
         </span>
-        <div className="w-12 h-12 rounded-xl glass flex items-center justify-center border border-white/10 group-hover:border-accent/30 transition-colors duration-300">
-          <IconComponent className="w-5 h-5 text-accent" />
+        <div className="w-12 h-12 rounded-2xl backdrop-blur-xl bg-white/[0.03] flex items-center justify-center border border-white/[0.06] group-hover:border-[#00C9FF]/30 group-hover:bg-[#00C9FF]/[0.05] transition-all duration-300">
+          <IconComponent className="w-5 h-5 text-[#00C9FF]" />
         </div>
       </div>
 
       {/* Content */}
       <div>
-        <h3 className="text-xl font-semibold text-foreground mb-3 group-hover:text-accent transition-colors duration-300">
+        <h3 className="text-xl font-[600] text-white/90 mb-3 group-hover:text-[#00C9FF] transition-colors duration-300" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
           {step.title}
         </h3>
-        <p className="text-foreground-muted leading-relaxed mb-4 text-sm">
+        <p className="text-white/50 leading-[1.6] mb-4 text-sm font-light">
           {step.description}
         </p>
 
         {/* Highlight badge */}
-        <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-accent/10 text-accent border border-accent/20">
+        <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-[#00C9FF]/10 text-[#00C9FF] border border-[#00C9FF]/20" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
           {step.highlight}
         </span>
       </div>
@@ -224,30 +230,30 @@ function MobileStepCard({ step, index, isInView }: StepCardProps) {
         delay: index * 0.1,
         ease: [0.25, 0.1, 0.25, 1]
       }}
-      className="glass rounded-2xl p-6 border border-white/5"
+      className="backdrop-blur-xl bg-white/[0.03] rounded-2xl p-6 border border-white/[0.06]"
     >
       <div className="flex items-start gap-4">
         {/* Number and Icon column */}
         <div className="flex-shrink-0">
           <div className="relative">
-            <span className="text-3xl font-bold text-white/10 font-mono">
+            <span className="text-3xl font-[800] text-white/[0.06]" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
               {step.number}
             </span>
-            <div className="absolute -bottom-1 -right-1 w-8 h-8 rounded-lg glass flex items-center justify-center border border-white/10">
-              <IconComponent className="w-4 h-4 text-accent" />
+            <div className="absolute -bottom-1 -right-1 w-8 h-8 rounded-lg backdrop-blur-xl bg-white/[0.03] flex items-center justify-center border border-white/[0.06]">
+              <IconComponent className="w-4 h-4 text-[#00C9FF]" />
             </div>
           </div>
         </div>
 
         {/* Content */}
         <div className="flex-1 min-w-0">
-          <h3 className="text-lg font-semibold text-foreground mb-2">
+          <h3 className="text-lg font-[600] text-white/90 mb-2" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
             {step.title}
           </h3>
-          <p className="text-foreground-muted text-sm leading-relaxed mb-3">
+          <p className="text-white/50 text-sm leading-[1.6] mb-3 font-light">
             {step.description}
           </p>
-          <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-accent/10 text-accent">
+          <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-[#00C9FF]/10 text-[#00C9FF] border border-[#00C9FF]/20" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
             {step.highlight}
           </span>
         </div>
