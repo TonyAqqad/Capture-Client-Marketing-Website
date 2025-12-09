@@ -52,7 +52,7 @@ export default function Footer() {
               {/* Premium contact info with hover effects */}
               <div className="mt-6 sm:mt-8 space-y-3">
                 <a
-                  href="tel:8653463339"
+                  href="tel:865-346-3339"
                   className="flex items-center gap-3 group min-h-[48px] -mx-2 px-2 rounded-lg hover:bg-white/5 border border-transparent hover:border-white/10 transition-all duration-300 active:scale-95 relative overflow-hidden"
                   onClick={() => trackPhoneClick("865-346-3339", "footer")}
                 >

@@ -1,17 +1,53 @@
 "use client";
 
 import { motion } from "@/lib/motion";
+import Image from "next/image";
+import { useState } from "react";
 
 const integrationLogos = [
-  { name: "ServiceTitan", initial: "ST" },
-  { name: "HubSpot", initial: "HS" },
-  { name: "Calendly", initial: "CA" },
-  { name: "Salesforce", initial: "SF" },
-  { name: "Zapier", initial: "ZP" },
-  { name: "QuickBooks", initial: "QB" },
-  { name: "Housecall Pro", initial: "HP" },
-  { name: "Jobber", initial: "JB" },
+  { name: "ServiceTitan", logo: "/images/integrations/servicetitan.svg" },
+  { name: "HubSpot", logo: "/images/integrations/hubspot.svg" },
+  { name: "Calendly", logo: "/images/integrations/calendly.svg" },
+  { name: "Salesforce", logo: "/images/integrations/salesforce.svg" },
+  { name: "Zapier", logo: "/images/integrations/zapier.svg" },
+  { name: "QuickBooks", logo: "/images/integrations/quickbooks-online.svg" },
+  { name: "Housecall Pro", logo: "/images/integrations/housecall-pro.svg" },
+  { name: "Jobber", logo: "/images/integrations/jobber.svg" },
 ];
+
+function LogoItem({ logo, index }: { logo: typeof integrationLogos[0]; index: number }) {
+  const [imageError, setImageError] = useState(false);
+
+  return (
+    <div
+      key={`${logo.name}-${index}`}
+      className="flex-shrink-0 group cursor-pointer"
+    >
+      <div className="h-12 lg:h-14 w-28 lg:w-36 glass rounded-xl border border-white/10 flex items-center justify-center gap-2 opacity-60 hover:opacity-100 hover:border-accent/30 transition-all duration-300 px-3">
+        {!imageError ? (
+          <Image
+            src={logo.logo}
+            alt={`${logo.name} logo`}
+            width={100}
+            height={32}
+            className="h-6 lg:h-7 w-auto object-contain filter brightness-0 invert opacity-80 group-hover:opacity-100 transition-opacity"
+            onError={() => setImageError(true)}
+            unoptimized
+          />
+        ) : (
+          <>
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
+              <span className="text-xs font-bold text-accent">{logo.name.slice(0, 2).toUpperCase()}</span>
+            </div>
+            <span className="text-white/80 text-sm font-medium hidden sm:block">
+              {logo.name}
+            </span>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
 
 export function ClientLogosCarousel() {
   return (
@@ -45,19 +81,7 @@ export function ClientLogosCarousel() {
         >
           {/* Double the logos for seamless loop */}
           {[...integrationLogos, ...integrationLogos, ...integrationLogos].map((logo, index) => (
-            <div
-              key={`${logo.name}-${index}`}
-              className="flex-shrink-0 group cursor-pointer"
-            >
-              <div className="h-12 lg:h-14 w-28 lg:w-36 glass rounded-xl border border-white/10 flex items-center justify-center gap-2 opacity-60 hover:opacity-100 hover:border-accent/30 transition-all duration-300">
-                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-accent/20 to-primary/20 flex items-center justify-center">
-                  <span className="text-xs font-bold text-accent">{logo.initial}</span>
-                </div>
-                <span className="text-white/80 text-sm font-medium hidden sm:block">
-                  {logo.name}
-                </span>
-              </div>
-            </div>
+            <LogoItem key={`${logo.name}-${index}`} logo={logo} index={index} />
           ))}
         </motion.div>
       </div>

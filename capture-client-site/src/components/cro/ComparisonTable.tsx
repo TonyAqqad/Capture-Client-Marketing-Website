@@ -18,7 +18,7 @@ export default function ComparisonTable() {
     { feature: "Unlimited Call Handling", captureClient: true, competitors: "Pay per call" },
     { feature: "Auto Lead Qualification", captureClient: true, competitors: false },
     { feature: "Multi-channel Inbox", captureClient: true, competitors: false },
-    { feature: "30-Day Money Back", captureClient: true, competitors: false },
+    { feature: "No Long-Term Contract", captureClient: true, competitors: false },
     { feature: "No Setup Fees", captureClient: true, competitors: false },
     { feature: "Dedicated Support", captureClient: "24/7", competitors: "Business hours" },
   ];

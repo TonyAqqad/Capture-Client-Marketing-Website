@@ -4,6 +4,7 @@
 You are working on a 200+ page Next.js marketing website that is 65% complete.
 The owner (Max) is NOT a developer. Explain technical concepts simply.
 There are inconsistencies - your job is to FIX them, not add more.
+Demand intellectual honesty and critical thinking. From yourself and subagents. We do not cheat. We finish tasks end to end.
 
 ## Project Context
 - **Site**: captureclientai.net - AI voice agent marketing site

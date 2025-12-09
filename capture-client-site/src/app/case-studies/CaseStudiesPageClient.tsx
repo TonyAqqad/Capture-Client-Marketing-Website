@@ -479,7 +479,7 @@ export default function CaseStudiesPageClient({
                 <div className="flex flex-wrap items-center justify-center gap-8">
                   {[
                     "No Long-Term Contracts",
-                    "90-Day Money-Back Guarantee",
+                    "No Setup Fees",
                     "Setup in 48 Hours"
                   ].map((text, idx) => (
                     <motion.div
@@ -527,6 +527,7 @@ function CaseStudyCard({
 
   return (
     <motion.div
+      id={study.id}
       initial={{ opacity: 0, y: 50, scale: 0.95 }}
       animate={
         isInView
@@ -543,7 +544,7 @@ function CaseStudyCard({
         y: -8,
         transition: { duration: 0.3, type: "spring", stiffness: 300 }
       }}
-      className="group h-full"
+      className="group h-full scroll-mt-32"
     >
       <div className="relative h-full glass-premium p-6 lg:p-8 rounded-2xl border-2 border-accent/20 transition-all duration-500 hover:border-gold/60 hover:shadow-glow-gold-lg flex flex-col">
         {/* Industry badge */}
@@ -700,7 +701,7 @@ function CaseStudyCard({
             whileTap={{ scale: 0.95 }}
           >
             <Link
-              href={`/case-studies/${study.id}`}
+              href={`#${study.id}`}
               className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-accent/20 to-primary/20 border border-accent/30 text-sm font-semibold text-accent hover:shadow-glow-gold-lg hover:border-gold/50 transition-all duration-300"
             >
               Full Story

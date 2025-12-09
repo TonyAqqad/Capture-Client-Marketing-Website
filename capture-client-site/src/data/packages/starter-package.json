@@ -117,7 +117,7 @@
   "comparison": {
     "upgrade_prompt": {
       "headline": "Need More Calls or Features?",
-      "description": "Upgrade to Growth Package for 200 calls/month, multiple AI agents, and advertising management.",
+      "description": "Upgrade to Growth Package for unlimited calls, 2 AI agents, and Facebook Ads management.",
       "cta": {
         "text": "See Growth Package",
         "action": "/packages/growth-package"
@@ -133,13 +133,13 @@
       {
         "feature": "Monthly Calls",
         "starter": "50 calls",
-        "growth": "200 calls",
+        "growth": "Unlimited",
         "enterprise": "Unlimited"
       },
       {
         "feature": "Advertising Management",
         "starter": "Not included",
-        "growth": "Google OR Facebook",
+        "growth": "Facebook Ads",
         "enterprise": "Both + LinkedIn"
       },
       {
@@ -219,10 +219,6 @@
       "description": "Month-to-month billing. Cancel anytime with 30 days notice."
     },
     {
-      "title": "30-Day Money Back Guarantee",
-      "description": "Not happy? Get a full refund within the first 30 days."
-    },
-    {
       "title": "Setup Included",
       "description": "No setup fees. We handle everything to get you live."
     },
@@ -262,6 +258,6 @@
       "text": "Compare All Packages",
       "action": "/packages/pricing"
     },
-    "guarantee": "30-day money back guarantee. No setup fees. Cancel anytime."
+    "guarantee": "No setup fees. Cancel anytime."
   }
 }

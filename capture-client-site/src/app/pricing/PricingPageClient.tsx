@@ -323,7 +323,7 @@ export default function PricingPageClient() {
                 {[
                   { label: "No Setup Fees", icon: "✓" },
                   { label: "Cancel Anytime", icon: "✓" },
-                  { label: "Money-Back Guarantee", icon: "✓" }
+                  { label: "Transparent Pricing", icon: "✓" }
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 py-1">
                     <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-accent/20 text-accent flex items-center justify-center text-sm font-bold flex-shrink-0">
@@ -701,8 +701,8 @@ export default function PricingPageClient() {
           {[
             {
               icon: Shield,
-              title: "30-Day Money Back",
-              desc: "Not happy? Full refund, no questions asked",
+              title: "No Long-Term Contract",
+              desc: "Month-to-month billing. Cancel anytime.",
               color: "gold"
             },
             {
@@ -875,7 +875,7 @@ export default function PricingPageClient() {
                 </a>
               </div>
               <p className="text-white/60 text-xs md:text-sm mt-4 md:mt-6 px-4">
-                ✓ No credit card required  ✓ Setup in 3-5 days  ✓ 30-day money back guarantee
+                ✓ No credit card required  ✓ Setup in 3-5 days  ✓ No long-term contract
               </p>
             </motion.div>
           </div>

@@ -15,19 +15,19 @@ export default function RiskReversal() {
 
       {/* Headline - more trustworthy tone */}
       <h3 className="text-2xl sm:text-2xl md:text-3xl font-bold text-foreground mb-4 tracking-tight">
-        Your Success, Guaranteed
+        Transparent Pricing, No Contracts
       </h3>
 
       {/* Description - confident, not desperate */}
       <p className="text-base sm:text-lg text-foreground-muted mb-8 max-w-2xl mx-auto leading-relaxed">
-        We stand behind our results. Try Capture Client risk-free for 30 days. If you don't see measurable improvement, we'll refund your investment—no questions asked.
+        We stand behind our results. Month-to-month billing with no long-term contracts. Start growing your business with confidence.
       </p>
 
       {/* Benefits - cleaner layout */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6 max-w-3xl mx-auto mb-6">
         <div className="flex flex-col items-center gap-2 text-foreground/90 min-h-[60px] group/item">
           <CheckCircle2 className="text-emerald-400/70 w-6 h-6 transition-colors duration-300 group-hover/item:text-emerald-400" />
-          <span className="text-sm font-medium">30-Day Money Back</span>
+          <span className="text-sm font-medium">No Long-Term Contract</span>
         </div>
         <div className="flex flex-col items-center gap-2 text-foreground/90 min-h-[60px] group/item">
           <CheckCircle2 className="text-emerald-400/70 w-6 h-6 transition-colors duration-300 group-hover/item:text-emerald-400" />

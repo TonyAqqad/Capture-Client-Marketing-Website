@@ -983,7 +983,7 @@ export default function AutomotivePageClient() {
                 className="flex items-center gap-2"
               >
                 <CheckCircle2 className="w-4 h-4 text-primary" />
-                <span>30-day money-back guarantee</span>
+                <span>No long-term contract</span>
               </motion.div>
             </motion.div>
           </motion.div>

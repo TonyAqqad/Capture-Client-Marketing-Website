@@ -1,0 +1,109 @@
+================================================================================
+MANUAL LOGO DOWNLOAD INSTRUCTIONS
+================================================================================
+
+Output Directory:
+C:\Users\eaqqa\capture-client-website-seo\capture-client-site\public\images\integrations
+
+6 Logos Need Manual Download:
+
+--------------------------------------------------------------------------------
+HOME SERVICES (2 logos)
+--------------------------------------------------------------------------------
+
+1. SERVICETITAN
+   Filename: servicetitan.svg
+   Website: https://www.servicetitan.com/
+   Steps:
+   - Open https://www.servicetitan.com/ in browser
+   - Right-click ServiceTitan logo in header
+   - Save As: servicetitan.svg
+   - Save to integrations folder above
+
+2. JOBBER
+   Filename: jobber.svg
+   Website: https://getjobber.com/
+   Steps:
+   - Open https://getjobber.com/ in browser
+   - Right-click Jobber logo in header
+   - Save As: jobber.svg
+   - Save to integrations folder above
+
+--------------------------------------------------------------------------------
+LEGAL (1 logo)
+--------------------------------------------------------------------------------
+
+3. LAWMATICS
+   Filename: lawmatics.svg
+   Website: https://www.lawmatics.com/
+   Steps:
+   - Open https://www.lawmatics.com/ in browser
+   - Right-click Lawmatics logo in header
+   - Save As: lawmatics.svg
+   - Save to integrations folder above
+
+--------------------------------------------------------------------------------
+HEALTHCARE (1 logo)
+--------------------------------------------------------------------------------
+
+4. ATHENAHEALTH
+   Filename: athenahealth.svg
+   Website: https://www.athenahealth.com/
+   Steps:
+   - Open https://www.athenahealth.com/ in browser
+   - Right-click Athenahealth logo in header
+   - Save As: athenahealth.svg
+   - Save to integrations folder above
+
+--------------------------------------------------------------------------------
+REAL ESTATE (2 logos)
+--------------------------------------------------------------------------------
+
+5. ZILLOW PREMIER AGENT
+   Filename: zillow-premier-agent.svg
+   Website: https://www.zillow.com/
+   Alternative: Search "Zillow logo download" or visit brand assets page
+   Steps:
+   - Open https://www.zillow.com/ in browser
+   - Right-click Zillow logo in header
+   - Save As: zillow-premier-agent.svg
+   - Save to integrations folder above
+
+6. REALTOR.COM
+   Filename: realtor-com.png
+   Website: https://www.realtor.com/
+   Steps:
+   - Open https://www.realtor.com/ in browser
+   - Right-click Realtor.com logo in header
+   - Save As: realtor-com.png
+   - Save to integrations folder above
+
+================================================================================
+TIPS FOR MANUAL DOWNLOAD
+================================================================================
+
+1. Use Chrome or Firefox Developer Tools (F12) if right-click is disabled
+2. Look for <img> or <svg> tags in the page source
+3. Some sites may have brand/press kits with downloadable logos
+4. Prefer SVG format when available (smaller, scalable)
+5. If only PNG available, choose highest resolution (typically "large")
+6. Ensure transparent background when possible
+7. Check if logo works on both light and dark backgrounds
+
+================================================================================
+AFTER DOWNLOAD VERIFICATION
+================================================================================
+
+Run this command to verify all logos are present:
+cd C:\Users\eaqqa\capture-client-website-seo\capture-client-site\public\images\integrations
+ls -lh | grep -E "(servicetitan|jobber|lawmatics|athena|zillow|realtor)"
+
+Expected files:
+- servicetitan.svg
+- jobber.svg
+- lawmatics.svg
+- athenahealth.svg
+- zillow-premier-agent.svg
+- realtor-com.png
+
+================================================================================

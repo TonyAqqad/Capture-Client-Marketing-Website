@@ -165,7 +165,7 @@ export default function MegaMenu() {
           <div className="hidden lg:flex items-center gap-4">
             {/* Phone Number */}
             <a
-              href="tel:8653463339"
+              href="tel:865-346-3339"
               className="relative group text-[#F8FAFC]/80 hover:text-[#00C9FF] transition-all duration-300 text-sm font-medium flex items-center gap-2 px-4 py-3 min-h-[44px] rounded-lg hover:bg-white/5 border border-transparent hover:border-white/10"
               onClick={() => trackPhoneClick("865-346-3339", "header")}
             >

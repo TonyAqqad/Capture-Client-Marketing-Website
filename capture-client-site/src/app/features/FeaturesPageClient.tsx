@@ -103,7 +103,7 @@ export default function FeaturesPageClient() {
                 </motion.div>
 
                 <a
-                  href="tel:8653463339"
+                  href="tel:865-346-3339"
                   className="flex items-center gap-3 sm:gap-4 text-white/80 hover:text-white group min-h-[56px] p-2"
                 >
                   <span className="w-14 h-14 sm:w-16 sm:h-16 rounded-full border-2 border-white/20 flex items-center justify-center group-hover:border-cyan-500 group-hover:bg-cyan-500/10 transition-all flex-shrink-0">
@@ -699,7 +699,7 @@ export default function FeaturesPageClient() {
 
               <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                 <a
-                  href="tel:8653463339"
+                  href="tel:865-346-3339"
                   className="group relative px-8 sm:px-10 py-4 sm:py-5 bg-white/[0.05] border-2 border-white/20 text-white font-bold text-base sm:text-lg rounded-full backdrop-blur-lg hover:bg-white/10 hover:border-cyan-500/50 transition-all min-h-[56px] flex items-center justify-center overflow-hidden"
                 >
                   {/* Glass shimmer effect */}

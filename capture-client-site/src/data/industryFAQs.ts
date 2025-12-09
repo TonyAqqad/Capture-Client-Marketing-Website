@@ -9,7 +9,7 @@ export const INDUSTRY_FAQS: Record<string, IndustryFAQ[]> = {
   'legal': [
     {
       question: 'How much does an AI receptionist cost for law firms?',
-      answer: 'Our AI voice agents for law firms start at $97/month for the Starter plan (up to 100 calls), which is 98% less expensive than hiring a full-time receptionist. The Growth plan ($797/mo for 500 calls) and Enterprise plan (custom pricing for unlimited calls) scale with your firm\'s needs. All plans include 24/7 coverage, client intake, and integration with legal practice management software like Clio and MyCase.',
+      answer: 'Our AI voice agents for law firms start at $97/month for the Starter plan (up to 100 calls), which is 98% less expensive than hiring a full-time receptionist. The Growth plan ($997/mo for 500 calls) and Enterprise plan (custom pricing for unlimited calls) scale with your firm\'s needs. All plans include 24/7 coverage, client intake, and integration with legal practice management software like Clio and MyCase.',
     },
     {
       question: 'Is the AI receptionist HIPAA compliant and secure for attorney-client privilege?',

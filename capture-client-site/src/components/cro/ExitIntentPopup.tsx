@@ -135,7 +135,7 @@ export default function ExitIntentPopup() {
                   {[
                     { Icon: Rocket, text: "Get Started Now" },
                     { Icon: TrendingUp, text: "Average 3x ROI in 90 days" },
-                    { Icon: ShieldCheck, text: "30-day money-back guarantee" },
+                    { Icon: ShieldCheck, text: "No long-term contract" },
                   ].map((benefit, index) => (
                     <motion.div
                       key={index}

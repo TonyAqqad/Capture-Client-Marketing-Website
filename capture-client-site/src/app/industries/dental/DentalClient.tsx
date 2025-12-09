@@ -672,10 +672,10 @@ export default function DentalClient() {
 
               <div className="border-t border-white/10 pt-6">
                 <p className="text-center text-foreground-muted mb-2">
-                  AI answering service cost: <span className="font-bold text-foreground">$797/month</span>
+                  AI answering service cost: <span className="font-bold text-foreground">$997/month</span>
                 </p>
                 <p className="text-center text-2xl font-bold text-gradient-gold-cyan">
-                  ROI: {Math.round((lostRevenue / 12) / 797)}x return on investment
+                  ROI: {Math.round((lostRevenue / 12) / 997)}x return on investment
                 </p>
               </div>
             </div>

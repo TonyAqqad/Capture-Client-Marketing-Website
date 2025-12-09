@@ -1282,7 +1282,7 @@ function FinalCTA({ isMobile }: FinalCTAProps) {
               >
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-accent" />
-                  <span>30-day money-back guarantee</span>
+                  <span>No long-term contract</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-accent" />

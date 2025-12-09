@@ -110,7 +110,7 @@ export const integrations: Integration[] = [
     category: 'crm',
     description: 'Connect Capture Client with HubSpot to automatically log calls, create contacts, update deal stages, and trigger workflows based on phone conversations. Every call becomes actionable data in your CRM, with full conversation transcripts and AI-powered insights synced in real-time.',
     shortDescription: 'Sync calls, contacts, and deals automatically with the world\'s leading growth platform.',
-    logoUrl: 'https://logo.clearbit.com/hubspot.com',
+    logoUrl: '/images/integrations/hubspot.svg',
     url: 'https://www.hubspot.com',
     keyFeatures: [
       'Automatic contact creation from inbound calls',
@@ -129,7 +129,7 @@ export const integrations: Integration[] = [
     category: 'crm',
     description: 'Enterprise-grade integration with Salesforce CRM. Capture Client syncs call data, creates leads and opportunities, updates custom objects, and provides sales teams with AI-generated call summaries and next-best-action recommendations directly in Salesforce.',
     shortDescription: 'Enterprise CRM integration with advanced call intelligence and lead management.',
-    logoUrl: 'https://logo.clearbit.com/salesforce.com',
+    logoUrl: '/images/integrations/salesforce.svg',
     url: 'https://www.salesforce.com',
     keyFeatures: [
       'Bi-directional contact and lead sync',
@@ -148,7 +148,7 @@ export const integrations: Integration[] = [
     category: 'crm',
     description: 'Integrate Capture Client with Zoho CRM to centralize customer communications. Automatically create leads, update contact information, log call activities, and trigger Zoho workflows based on conversation outcomes and AI insights.',
     shortDescription: 'Affordable CRM integration for small to mid-sized businesses with complete call tracking.',
-    logoUrl: 'https://logo.clearbit.com/zoho.com',
+    logoUrl: '/images/integrations/zoho-crm.svg',
     url: 'https://www.zoho.com/crm',
     keyFeatures: [
       'Lead capture from phone conversations',
@@ -167,7 +167,7 @@ export const integrations: Integration[] = [
     category: 'crm',
     description: 'Sales-focused CRM integration that automatically creates deals, updates pipeline stages, and logs call activities. Capture Client\'s AI analyzes conversations to recommend next steps and automatically moves deals through your Pipedrive pipeline.',
     shortDescription: 'Sales pipeline CRM with automated deal creation and stage progression from calls.',
-    logoUrl: 'https://logo.clearbit.com/pipedrive.com',
+    logoUrl: '/images/integrations/pipedrive.svg',
     url: 'https://www.pipedrive.com',
     keyFeatures: [
       'Automatic deal creation from calls',
@@ -186,7 +186,7 @@ export const integrations: Integration[] = [
     category: 'crm',
     description: 'Purpose-built real estate CRM integration. Capture Client creates leads from property inquiries, schedules showings, updates lead status, and provides real estate agents with instant notifications and AI-generated lead quality scores.',
     shortDescription: 'Real estate CRM integration for lead capture, showing scheduling, and agent notifications.',
-    logoUrl: 'https://logo.clearbit.com/followupboss.com',
+    logoUrl: '/images/integrations/follow-up-boss.svg',
     url: 'https://www.followupboss.com',
     keyFeatures: [
       'Real estate lead capture and qualification',
@@ -205,7 +205,7 @@ export const integrations: Integration[] = [
     category: 'crm',
     description: 'Google Workspace-native CRM integration. Capture Client syncs call data directly into Copper, creating leads and opportunities while maintaining perfect sync with your Gmail and Google Calendar ecosystem.',
     shortDescription: 'Google Workspace CRM with seamless call logging and contact management.',
-    logoUrl: 'https://logo.clearbit.com/copper.com',
+    logoUrl: '/images/integrations/copper.svg',
     url: 'https://www.copper.com',
     keyFeatures: [
       'Native Google Workspace integration',
@@ -223,7 +223,7 @@ export const integrations: Integration[] = [
     category: 'crm',
     description: 'Visual CRM integration with monday.com. Capture Client creates items, updates boards, and triggers automations based on call outcomes. Perfect for teams who want visual pipeline management with AI-powered call intelligence.',
     shortDescription: 'Visual work platform with customizable boards and call-triggered automations.',
-    logoUrl: 'https://logo.clearbit.com/monday.com',
+    logoUrl: '/images/integrations/monday-crm.svg',
     url: 'https://monday.com',
     keyFeatures: [
       'Custom board and item creation',
@@ -241,7 +241,7 @@ export const integrations: Integration[] = [
     category: 'crm',
     description: 'Inside sales CRM built for phone-centric teams. Capture Client integrates natively with Close to provide AI-powered call handling, automatic lead creation, and conversation intelligence that helps sales teams close more deals.',
     shortDescription: 'Sales-focused CRM designed for teams that rely on phone conversations.',
-    logoUrl: 'https://logo.clearbit.com/close.com',
+    logoUrl: '/images/integrations/close.svg',
     url: 'https://www.close.com',
     keyFeatures: [
       'Built-in calling integration',
@@ -262,7 +262,7 @@ export const integrations: Integration[] = [
     category: 'automation',
     description: 'Connect Capture Client to 5,000+ apps with Zapier. Trigger automated workflows when calls are received, completed, or when specific keywords are detected. Send call data to any platform, create multi-step automations, and build custom integrations without code.',
     shortDescription: 'Connect to 5,000+ apps with no-code automation workflows triggered by calls.',
-    logoUrl: 'https://logo.clearbit.com/zapier.com',
+    logoUrl: '/images/integrations/zapier.svg',
     url: 'https://zapier.com',
     keyFeatures: [
       'Access to 5,000+ app integrations',
@@ -281,7 +281,7 @@ export const integrations: Integration[] = [
     category: 'automation',
     description: 'Advanced automation platform for complex workflows. Build sophisticated integrations with Capture Client using visual builders, conditional logic, data transformation, and error handling. Perfect for businesses with unique workflow requirements.',
     shortDescription: 'Advanced automation with visual workflow builder and complex logic support.',
-    logoUrl: 'https://logo.clearbit.com/make.com',
+    logoUrl: '/images/integrations/make.svg',
     url: 'https://www.make.com',
     keyFeatures: [
       'Visual workflow design',
@@ -300,7 +300,7 @@ export const integrations: Integration[] = [
     category: 'automation',
     description: 'Flexible database integration for teams who want to track calls, leads, and customer data in customizable tables. Capture Client automatically creates records, updates fields, and can trigger Airtable automations based on call events.',
     shortDescription: 'Flexible database for tracking calls, leads, and custom data structures.',
-    logoUrl: 'https://logo.clearbit.com/airtable.com',
+    logoUrl: '/images/integrations/airtable.svg',
     url: 'https://www.airtable.com',
     keyFeatures: [
       'Custom table and field creation',
@@ -319,7 +319,7 @@ export const integrations: Integration[] = [
     category: 'automation',
     description: 'Real-time team notifications in Slack channels. Get instant alerts for new calls, missed calls, urgent customer requests, or when specific keywords are mentioned. Includes call summaries, transcripts, and quick action buttons.',
     shortDescription: 'Real-time call notifications and alerts delivered to your team channels.',
-    logoUrl: 'https://logo.clearbit.com/slack.com',
+    logoUrl: '/images/integrations/slack.svg',
     url: 'https://slack.com',
     keyFeatures: [
       'Channel-specific notifications',
@@ -338,7 +338,7 @@ export const integrations: Integration[] = [
     category: 'automation',
     description: 'Enterprise team collaboration integration. Receive call notifications, share transcripts, and collaborate on customer conversations directly in Microsoft Teams channels with full Microsoft 365 integration.',
     shortDescription: 'Enterprise team notifications integrated with Microsoft 365 ecosystem.',
-    logoUrl: 'https://logo.clearbit.com/microsoft.com',
+    logoUrl: '/images/integrations/microsoft-teams.svg',
     url: 'https://www.microsoft.com/microsoft-teams',
     keyFeatures: [
       'Teams channel notifications',
@@ -356,7 +356,7 @@ export const integrations: Integration[] = [
     category: 'automation',
     description: 'Open-source workflow automation for businesses who want complete control. Self-host or use cloud version to create custom integrations with Capture Client using 350+ nodes and full API access.',
     shortDescription: 'Open-source automation platform with self-hosting and full API control.',
-    logoUrl: 'https://logo.clearbit.com/n8n.io',
+    logoUrl: '/images/integrations/n8n.svg',
     url: 'https://n8n.io',
     keyFeatures: [
       'Self-hosting option',
@@ -376,7 +376,7 @@ export const integrations: Integration[] = [
     category: 'scheduling',
     description: 'Enable your AI voice agent to book appointments directly into Calendly. Customers can schedule consultations, service calls, or meetings during phone conversations with automatic calendar sync, confirmations, and reminders.',
     shortDescription: 'AI-powered appointment booking directly into your Calendly calendar.',
-    logoUrl: 'https://logo.clearbit.com/calendly.com',
+    logoUrl: '/images/integrations/calendly.svg',
     url: 'https://calendly.com',
     keyFeatures: [
       'Real-time availability checking',
@@ -395,7 +395,7 @@ export const integrations: Integration[] = [
     category: 'scheduling',
     description: 'Professional scheduling platform integration for service-based businesses. Capture Client\'s AI books appointments, collects intake forms, processes payments, and manages complex scheduling rules during phone conversations.',
     shortDescription: 'Professional scheduling with intake forms, payments, and advanced booking rules.',
-    logoUrl: 'https://logo.clearbit.com/acuityscheduling.com',
+    logoUrl: '/images/integrations/acuity-scheduling.svg',
     url: 'https://acuityscheduling.com',
     keyFeatures: [
       'Service-based booking',
@@ -414,7 +414,7 @@ export const integrations: Integration[] = [
     category: 'scheduling',
     description: 'Direct integration with Google Calendar for appointment scheduling. Your AI agent checks availability, books appointments, sends invites, and manages your calendar in real-time during customer phone calls.',
     shortDescription: 'Native Google Calendar integration for seamless appointment management.',
-    logoUrl: 'https://logo.clearbit.com/google.com',
+    logoUrl: '/images/integrations/google-calendar.svg',
     url: 'https://calendar.google.com',
     keyFeatures: [
       'Real-time availability sync',
@@ -433,7 +433,7 @@ export const integrations: Integration[] = [
     category: 'scheduling',
     description: 'Microsoft Outlook and Office 365 calendar integration. Perfect for enterprise teams using Microsoft ecosystem. AI voice agent books meetings, checks availability across organization, and manages complex scheduling scenarios.',
     shortDescription: 'Enterprise calendar scheduling for Microsoft 365 and Outlook users.',
-    logoUrl: 'https://logo.clearbit.com/microsoft.com',
+    logoUrl: '/images/integrations/outlook-calendar.svg',
     url: 'https://outlook.office.com/calendar',
     keyFeatures: [
       'Office 365 integration',
@@ -451,7 +451,7 @@ export const integrations: Integration[] = [
     category: 'scheduling',
     description: 'Free scheduling platform integration for small businesses. Enable phone-based appointment booking with automatic confirmations, reminders, and calendar management for service providers.',
     shortDescription: 'Free scheduling solution for small businesses with automated booking.',
-    logoUrl: 'https://logo.clearbit.com/setmore.com',
+    logoUrl: '/images/integrations/setmore.svg',
     url: 'https://www.setmore.com',
     keyFeatures: [
       'Multi-staff scheduling',
@@ -469,7 +469,7 @@ export const integrations: Integration[] = [
     category: 'scheduling',
     description: 'Scheduling and payment platform for appointment-based businesses. AI voice agent books services, collects payments, and manages your Square calendar during phone conversations.',
     shortDescription: 'Appointment scheduling with integrated payment processing.',
-    logoUrl: 'https://logo.clearbit.com/squareup.com',
+    logoUrl: '/images/integrations/square-appointments.svg',
     url: 'https://squareup.com/appointments',
     keyFeatures: [
       'Integrated payment collection',
@@ -489,7 +489,7 @@ export const integrations: Integration[] = [
     category: 'phone-systems',
     description: 'Enterprise cloud phone system integration. Capture Client works with RingCentral to provide AI-powered call handling, intelligent routing, call recording, and advanced analytics for business communications.',
     shortDescription: 'Enterprise VoIP integration with AI call handling and intelligent routing.',
-    logoUrl: 'https://logo.clearbit.com/ringcentral.com',
+    logoUrl: '/images/integrations/ringcentral.png',
     url: 'https://www.ringcentral.com',
     keyFeatures: [
       'Call routing and forwarding',
@@ -508,7 +508,7 @@ export const integrations: Integration[] = [
     category: 'phone-systems',
     description: 'Unified communications platform integration. Connect Capture Client with Nextiva for AI-enhanced calling, SMS automation, video conferencing integration, and comprehensive business phone features.',
     shortDescription: 'Unified communications with AI voice, SMS, and video integration.',
-    logoUrl: 'https://logo.clearbit.com/nextiva.com',
+    logoUrl: '/images/integrations/nextiva.svg',
     url: 'https://www.nextiva.com',
     keyFeatures: [
       'Unified communications hub',
@@ -527,7 +527,7 @@ export const integrations: Integration[] = [
     category: 'phone-systems',
     description: 'Programmable communications platform for developers. Build custom voice experiences combining Capture Client\'s AI with Twilio\'s powerful calling, SMS, and messaging APIs for complete control over customer communications.',
     shortDescription: 'Programmable voice and SMS API for custom communication workflows.',
-    logoUrl: 'https://logo.clearbit.com/twilio.com',
+    logoUrl: '/images/integrations/twilio.svg',
     url: 'https://www.twilio.com',
     keyFeatures: [
       'Programmable voice API',
@@ -545,7 +545,7 @@ export const integrations: Integration[] = [
     category: 'phone-systems',
     description: 'Virtual phone system for small businesses and entrepreneurs. Integrate Capture Client to add AI call handling to your professional business number with extensions, call forwarding, and voicemail transcription.',
     shortDescription: 'Virtual business phone system with AI call answering for entrepreneurs.',
-    logoUrl: 'https://logo.clearbit.com/grasshopper.com',
+    logoUrl: '/images/integrations/grasshopper.png',
     url: 'https://grasshopper.com',
     keyFeatures: [
       'Virtual business number',
@@ -563,7 +563,7 @@ export const integrations: Integration[] = [
     category: 'phone-systems',
     description: 'AI-powered business phone system. Combine Dialpad\'s native AI features with Capture Client\'s advanced voice agents for superior call intelligence, real-time transcription, and conversation analytics.',
     shortDescription: 'AI-native business communications with real-time intelligence.',
-    logoUrl: 'https://logo.clearbit.com/dialpad.com',
+    logoUrl: '/images/integrations/dialpad.png',
     url: 'https://www.dialpad.com',
     keyFeatures: [
       'Real-time AI transcription',
@@ -581,7 +581,7 @@ export const integrations: Integration[] = [
     category: 'phone-systems',
     description: 'Modern business phone for startups and small teams. Add Capture Client\'s AI to OpenPhone for intelligent call handling, automated responses, and seamless integration with your existing workflow.',
     shortDescription: 'Modern business phone with AI automation for growing teams.',
-    logoUrl: 'https://logo.clearbit.com/openphone.com',
+    logoUrl: '/images/integrations/openphone.png',
     url: 'https://www.openphone.com',
     keyFeatures: [
       'Shared phone numbers',
@@ -601,7 +601,7 @@ export const integrations: Integration[] = [
     category: 'home-services',
     description: 'All-in-one software for HVAC, plumbing, and electrical contractors. Capture Client creates jobs, schedules technicians, updates customer records, and manages dispatch directly from phone conversations with homeowners.',
     shortDescription: 'Complete contractor management with AI job booking and dispatch.',
-    logoUrl: 'https://logo.clearbit.com/servicetitan.com',
+    logoUrl: '/images/integrations/servicetitan.svg',
     url: 'https://www.servicetitan.com',
     keyFeatures: [
       'Job creation from calls',
@@ -620,7 +620,7 @@ export const integrations: Integration[] = [
     category: 'home-services',
     description: 'Field service management for home service professionals. AI voice agent books jobs, schedules appointments, sends estimates, collects payments, and manages your entire business from customer phone calls.',
     shortDescription: 'Field service management with AI booking, scheduling, and payments.',
-    logoUrl: 'https://logo.clearbit.com/housecallpro.com',
+    logoUrl: '/images/integrations/housecall-pro.svg',
     url: 'https://www.housecallpro.com',
     keyFeatures: [
       'Job scheduling and dispatch',
@@ -639,7 +639,7 @@ export const integrations: Integration[] = [
     category: 'home-services',
     description: 'Business management platform for home service companies. Capture Client integrates to create quotes, schedule work, manage clients, and automate follow-ups based on phone conversations with customers.',
     shortDescription: 'Home service business management with automated quoting and scheduling.',
-    logoUrl: 'https://logo.clearbit.com/getjobber.com',
+    logoUrl: '/images/integrations/jobber.svg',
     url: 'https://getjobber.com',
     keyFeatures: [
       'Quote and estimate creation',
@@ -658,7 +658,7 @@ export const integrations: Integration[] = [
     category: 'home-services',
     description: 'Pest control and lawn care software integration. AI voice agent handles customer calls, books services, manages recurring appointments, and updates service history in GorillaDesk automatically.',
     shortDescription: 'Pest control and lawn care software with AI service booking.',
-    logoUrl: 'https://logo.clearbit.com/goriladesk.com',
+    logoUrl: '/images/integrations/gorilladesk.png',
     url: 'https://www.goriladesk.com',
     keyFeatures: [
       'Service program management',
@@ -676,7 +676,7 @@ export const integrations: Integration[] = [
     category: 'home-services',
     description: 'Field service management software for commercial and residential contractors. Capture Client creates work orders, schedules crews, and manages customer communications through AI-powered phone interactions.',
     shortDescription: 'Field service software with work order creation and crew scheduling.',
-    logoUrl: 'https://logo.clearbit.com/servicefusion.com',
+    logoUrl: '/images/integrations/service-fusion.svg',
     url: 'https://www.servicefusion.com',
     keyFeatures: [
       'Work order management',
@@ -694,7 +694,7 @@ export const integrations: Integration[] = [
     category: 'home-services',
     description: 'HVAC and plumbing business software. Enable AI call handling that creates service calls, schedules maintenance, manages contracts, and provides technicians with customer information before arrival.',
     shortDescription: 'HVAC and plumbing software with AI call intake and scheduling.',
-    logoUrl: 'https://logo.clearbit.com/fieldedge.com',
+    logoUrl: '/images/integrations/fieldedge.png',
     url: 'https://www.fieldedge.com',
     keyFeatures: [
       'Service call dispatch',
@@ -714,7 +714,7 @@ export const integrations: Integration[] = [
     category: 'legal',
     description: 'Leading legal practice management software. Capture Client\'s AI captures new client intake, creates matters, schedules consultations, and manages client communications while maintaining attorney-client privilege and confidentiality.',
     shortDescription: 'Legal practice management with secure client intake and matter creation.',
-    logoUrl: 'https://logo.clearbit.com/clio.com',
+    logoUrl: '/images/integrations/clio.svg',
     url: 'https://www.clio.com',
     keyFeatures: [
       'Client and matter creation',
@@ -733,7 +733,7 @@ export const integrations: Integration[] = [
     category: 'legal',
     description: 'All-in-one legal case management. AI voice agent qualifies leads, schedules consultations, creates new cases, and manages client communications with full integration into MyCase workflows and calendars.',
     shortDescription: 'Legal case management with AI lead qualification and intake.',
-    logoUrl: 'https://logo.clearbit.com/mycase.com',
+    logoUrl: '/images/integrations/mycase.png',
     url: 'https://www.mycase.com',
     keyFeatures: [
       'Lead intake and qualification',
@@ -752,7 +752,7 @@ export const integrations: Integration[] = [
     category: 'legal',
     description: 'Cloud-based legal software for modern law firms. Capture Client integrates to handle client calls, create matters, schedule appointments, and automate intake workflows with AI-powered conversation intelligence.',
     shortDescription: 'Cloud legal software with automated intake and scheduling.',
-    logoUrl: 'https://logo.clearbit.com/practicepanther.com',
+    logoUrl: '/images/integrations/practice-panther.svg',
     url: 'https://www.practicepanther.com',
     keyFeatures: [
       'Matter management',
@@ -771,7 +771,7 @@ export const integrations: Integration[] = [
     category: 'legal',
     description: 'Legal CRM and marketing automation platform. Capture Client creates leads, triggers automated follow-up sequences, schedules consultations, and tracks lead source attribution for law firm marketing ROI.',
     shortDescription: 'Legal CRM with lead tracking, automation, and marketing attribution.',
-    logoUrl: 'https://logo.clearbit.com/lawmatics.com',
+    logoUrl: '/images/integrations/lawmatics.svg',
     url: 'https://www.lawmatics.com',
     keyFeatures: [
       'Lead source tracking',
@@ -789,7 +789,7 @@ export const integrations: Integration[] = [
     category: 'legal',
     description: 'Legal productivity software with automatic time tracking. AI voice agent captures new clients, creates matters, and logs call time automatically while integrating with Smokeball\'s document automation and billing.',
     shortDescription: 'Legal productivity software with automatic time capture and billing.',
-    logoUrl: 'https://logo.clearbit.com/smokeball.com',
+    logoUrl: '/images/integrations/smokeball.svg',
     url: 'https://www.smokeball.com',
     keyFeatures: [
       'Automatic time tracking',
@@ -809,7 +809,7 @@ export const integrations: Integration[] = [
     category: 'healthcare',
     description: 'Cloud-based EHR and practice management. HIPAA-compliant integration allows Capture Client to schedule appointments, verify insurance, collect patient information, and manage the patient journey from first call.',
     shortDescription: 'HIPAA-compliant medical practice management with AI appointment scheduling.',
-    logoUrl: 'https://logo.clearbit.com/athenahealth.com',
+    logoUrl: '/images/integrations/athenahealth.svg',
     url: 'https://www.athenahealth.com',
     keyFeatures: [
       'HIPAA-compliant patient data',
@@ -827,7 +827,7 @@ export const integrations: Integration[] = [
     category: 'healthcare',
     description: 'Medical practice management and billing software. AI voice agent handles patient scheduling, collects insurance information, manages waitlists, and sends appointment reminders through Kareo integration.',
     shortDescription: 'Medical billing and practice management with automated patient scheduling.',
-    logoUrl: 'https://logo.clearbit.com/kareo.com',
+    logoUrl: '/images/integrations/kareo.svg',
     url: 'https://www.kareo.com',
     keyFeatures: [
       'Patient appointment booking',
@@ -845,7 +845,7 @@ export const integrations: Integration[] = [
     category: 'healthcare',
     description: 'Mobile-first EHR platform for modern medical practices. Capture Client provides HIPAA-compliant patient intake, appointment scheduling, and telehealth coordination through AI-powered phone conversations.',
     shortDescription: 'Mobile EHR with HIPAA-compliant AI intake and telehealth support.',
-    logoUrl: 'https://logo.clearbit.com/drchrono.com',
+    logoUrl: '/images/integrations/drchrono.svg',
     url: 'https://www.drchrono.com',
     keyFeatures: [
       'Mobile patient check-in',
@@ -863,7 +863,7 @@ export const integrations: Integration[] = [
     category: 'healthcare',
     description: 'Wellness and fitness business management platform. AI voice agent books classes, schedules appointments, manages memberships, and processes payments for yoga studios, spas, and wellness centers.',
     shortDescription: 'Wellness business management with class booking and membership automation.',
-    logoUrl: 'https://logo.clearbit.com/mindbodyonline.com',
+    logoUrl: '/images/integrations/mindbody.svg',
     url: 'https://www.mindbodyonline.com',
     keyFeatures: [
       'Class and appointment booking',
@@ -883,7 +883,7 @@ export const integrations: Integration[] = [
     category: 'real-estate',
     description: 'Real estate CRM and lead generation platform. Capture Client qualifies buyer and seller leads, schedules showings, captures property information, and assigns leads to agents based on AI conversation analysis.',
     shortDescription: 'Real estate CRM with AI lead qualification and showing scheduling.',
-    logoUrl: 'https://logo.clearbit.com/kvcore.com',
+    logoUrl: '/images/integrations/kvcore.png',
     url: 'https://kvcore.com',
     keyFeatures: [
       'Lead qualification and scoring',
@@ -901,7 +901,7 @@ export const integrations: Integration[] = [
     category: 'real-estate',
     description: 'Real estate CRM and lead nurturing platform. AI voice agent captures leads from property inquiries, qualifies buyer readiness, schedules appointments, and triggers automated follow-up campaigns.',
     shortDescription: 'Real estate lead management with automated nurturing and qualification.',
-    logoUrl: 'https://logo.clearbit.com/boomtownroi.com',
+    logoUrl: '/images/integrations/boomtown.svg',
     url: 'https://boomtownroi.com',
     keyFeatures: [
       'Lead capture and nurture',
@@ -919,7 +919,7 @@ export const integrations: Integration[] = [
     category: 'real-estate',
     description: 'Zillow lead management for real estate agents. Capture Client handles Zillow leads instantly, qualifies prospects, schedules showings, and integrates with your Zillow Premier Agent dashboard.',
     shortDescription: 'Zillow lead response automation with instant qualification and scheduling.',
-    logoUrl: 'https://logo.clearbit.com/zillow.com',
+    logoUrl: '/images/integrations/zillow-premier-agent.svg',
     url: 'https://www.zillow.com/agent-resources',
     keyFeatures: [
       'Instant Zillow lead response',
@@ -937,7 +937,7 @@ export const integrations: Integration[] = [
     category: 'real-estate',
     description: 'Realtor.com lead management integration. AI voice agent responds to leads immediately, gathers property requirements, schedules consultations, and updates your Connections Plus dashboard automatically.',
     shortDescription: 'Realtor.com lead management with AI response and scheduling.',
-    logoUrl: 'https://logo.clearbit.com/realtor.com',
+    logoUrl: '/images/integrations/realtor-com.png',
     url: 'https://www.realtor.com',
     keyFeatures: [
       'Lead response automation',
@@ -957,7 +957,7 @@ export const integrations: Integration[] = [
     category: 'marketing',
     description: 'Call tracking and analytics platform. Combine CallRail\'s attribution data with Capture Client\'s AI conversation intelligence to understand which marketing campaigns drive the highest quality leads and conversions.',
     shortDescription: 'Call tracking and marketing attribution with AI conversation analytics.',
-    logoUrl: 'https://logo.clearbit.com/callrail.com',
+    logoUrl: '/images/integrations/callrail.svg',
     url: 'https://www.callrail.com',
     keyFeatures: [
       'Marketing source attribution',
@@ -976,7 +976,7 @@ export const integrations: Integration[] = [
     category: 'marketing',
     description: 'Web analytics integration for complete customer journey tracking. Capture Client sends call events, lead quality scores, and conversion data to GA4 to measure phone call impact on overall marketing performance.',
     shortDescription: 'Web analytics integration with call event tracking and conversion attribution.',
-    logoUrl: 'https://logo.clearbit.com/google.com',
+    logoUrl: '/images/integrations/google-analytics.svg',
     url: 'https://analytics.google.com',
     keyFeatures: [
       'Call event tracking',
@@ -994,7 +994,7 @@ export const integrations: Integration[] = [
     category: 'marketing',
     description: 'Email marketing automation platform. Capture Client adds phone contacts to email lists, triggers automated campaigns based on call outcomes, and syncs customer data for personalized email marketing.',
     shortDescription: 'Email marketing automation with call-triggered campaigns and list building.',
-    logoUrl: 'https://logo.clearbit.com/mailchimp.com',
+    logoUrl: '/images/integrations/mailchimp.svg',
     url: 'https://mailchimp.com',
     keyFeatures: [
       'Automatic list building',
@@ -1012,7 +1012,7 @@ export const integrations: Integration[] = [
     category: 'marketing',
     description: 'Marketing automation and CRM platform. AI voice conversations trigger sophisticated automation workflows, update contact records, and provide sales teams with conversation intelligence for personalized follow-up.',
     shortDescription: 'Marketing automation CRM with call-triggered workflows and intelligence.',
-    logoUrl: 'https://logo.clearbit.com/activecampaign.com',
+    logoUrl: '/images/integrations/activecampaign.svg',
     url: 'https://www.activecampaign.com',
     keyFeatures: [
       'Marketing automation triggers',
@@ -1030,7 +1030,7 @@ export const integrations: Integration[] = [
     category: 'marketing',
     description: 'Facebook and Instagram lead generation integration. Automatically call Facebook Lead Ads submissions, qualify leads in real-time, and sync conversion data back to Facebook for campaign optimization.',
     shortDescription: 'Facebook Lead Ads integration with instant call-back and conversion tracking.',
-    logoUrl: 'https://logo.clearbit.com/facebook.com',
+    logoUrl: '/images/integrations/facebook-ads.svg',
     url: 'https://www.facebook.com/business/ads/lead-ads',
     keyFeatures: [
       'Instant lead notification',
@@ -1048,7 +1048,7 @@ export const integrations: Integration[] = [
     category: 'marketing',
     description: 'Google Ads conversion tracking and optimization. Capture Client sends call conversion data, lead quality scores, and offline conversions to Google Ads for better campaign targeting and bid optimization.',
     shortDescription: 'Google Ads conversion tracking with call quality and offline conversion data.',
-    logoUrl: 'https://logo.clearbit.com/google.com',
+    logoUrl: '/images/integrations/google-ads.svg',
     url: 'https://ads.google.com',
     keyFeatures: [
       'Call conversion tracking',
@@ -1068,7 +1068,7 @@ export const integrations: Integration[] = [
     category: 'payments',
     description: 'Full-service merchant services and payment processing for businesses of all sizes. Excel Payments provides competitive rates, next-day funding, and dedicated account management. Enable AI voice agent to collect payments, process credit cards, and manage recurring billing with seamless POS integration.',
     shortDescription: 'Merchant services and payment processing with competitive rates and next-day funding.',
-    logoUrl: 'https://excelpayments.com/wp-content/uploads/2023/02/excelpayments_04.png',
+    logoUrl: '/images/integrations/excel-payments.jpg',
     url: 'https://excelpayments.com',
     keyFeatures: [
       'Credit card processing',
@@ -1087,7 +1087,7 @@ export const integrations: Integration[] = [
     category: 'payments',
     description: 'Global payment platform integration. Capture Client can send PayPal invoices, collect payments, and process transactions during customer phone calls with automatic payment confirmation.',
     shortDescription: 'PayPal integration for invoice sending and payment processing.',
-    logoUrl: 'https://logo.clearbit.com/paypal.com',
+    logoUrl: '/images/integrations/paypal.svg',
     url: 'https://www.paypal.com',
     keyFeatures: [
       'Invoice generation',
@@ -1105,7 +1105,7 @@ export const integrations: Integration[] = [
     category: 'payments',
     description: 'Legal payment processing platform. IOLTA-compliant integration allows law firms to collect retainers, accept payments, and manage trust accounting while maintaining attorney-client privilege.',
     shortDescription: 'IOLTA-compliant legal payment processing for law firms.',
-    logoUrl: 'https://logo.clearbit.com/lawpay.com',
+    logoUrl: '/images/integrations/lawpay.svg',
     url: 'https://lawpay.com',
     keyFeatures: [
       'IOLTA trust accounting',
@@ -1123,7 +1123,7 @@ export const integrations: Integration[] = [
     category: 'payments',
     description: 'Accounting software integration for small businesses. Capture Client creates customers, generates invoices, logs payments, and syncs financial data automatically from phone conversations.',
     shortDescription: 'Accounting integration with automated invoicing and customer creation.',
-    logoUrl: 'https://logo.clearbit.com/intuit.com',
+    logoUrl: '/images/integrations/quickbooks-online.svg',
     url: 'https://quickbooks.intuit.com',
     keyFeatures: [
       'Customer creation',
@@ -1143,7 +1143,7 @@ export const integrations: Integration[] = [
     category: 'all-in-one',
     description: 'Complete business platform for agencies and local businesses. Capture Client integrates with GHL to provide AI voice handling, CRM updates, workflow triggers, appointment booking, and SMS automation in one unified platform.',
     shortDescription: 'All-in-one business platform with AI voice, CRM, and marketing automation.',
-    logoUrl: 'https://logo.clearbit.com/gohighlevel.com',
+    logoUrl: '/images/integrations/gohighlevel.svg',
     url: 'https://www.gohighlevel.com',
     keyFeatures: [
       'CRM contact creation',
@@ -1162,7 +1162,7 @@ export const integrations: Integration[] = [
     category: 'all-in-one',
     description: 'Small business CRM and marketing automation. AI voice agent captures leads, triggers campaigns, books appointments, and manages the complete customer lifecycle through Keap\'s powerful automation engine.',
     shortDescription: 'Small business CRM with marketing automation and lifecycle management.',
-    logoUrl: 'https://logo.clearbit.com/keap.com',
+    logoUrl: '/images/integrations/keap.svg',
     url: 'https://keap.com',
     keyFeatures: [
       'Lead capture and tagging',
@@ -1180,7 +1180,7 @@ export const integrations: Integration[] = [
     category: 'all-in-one',
     description: 'Business automation platform for entrepreneurs and growing companies. Capture Client creates contacts, triggers campaigns, updates pipelines, and provides complete visibility into customer phone interactions.',
     shortDescription: 'Business automation with CRM, marketing, and sales pipeline integration.',
-    logoUrl: 'https://logo.clearbit.com/ontraport.com',
+    logoUrl: '/images/integrations/ontraport.png',
     url: 'https://ontraport.com',
     keyFeatures: [
       'Contact and lead management',

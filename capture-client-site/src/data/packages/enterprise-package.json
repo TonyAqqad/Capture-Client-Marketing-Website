@@ -124,7 +124,7 @@
   "comparison": {
     "downgrade_prompt": {
       "headline": "Not Ready for Enterprise?",
-      "description": "Growth Package includes 2 AI agents, unlimited calls, and Facebook Ads (Google Ads add-on available) for $950/mo.",
+      "description": "Growth Package includes 2 AI agents, unlimited calls, and Facebook Ads (Google Ads add-on available) for $997/mo.",
       "cta": {
         "text": "See Growth Package",
         "action": "/packages/growth-package"
@@ -244,10 +244,6 @@
       "description": "Dedicated onboarding specialist for the first 30 days."
     },
     {
-      "title": "90-Day Performance Guarantee",
-      "description": "We guarantee measurable improvement in lead quality and volume."
-    },
-    {
       "title": "SOC 2 Compliant",
       "description": "Enterprise-grade security and data protection."
     },
@@ -287,7 +283,7 @@
       "text": "Download Case Studies",
       "action": "/resources/enterprise-case-studies.pdf"
     },
-    "guarantee": "90-day performance guarantee. SOC 2 compliant. Dedicated support.",
+    "guarantee": "No setup fees. Cancel anytime. SOC 2 compliant. Dedicated support.",
     "bonus": "BONUS: Get a free comprehensive marketing audit ($2,500 value) when you schedule a consultation."
   },
   "enterprise_addons": {

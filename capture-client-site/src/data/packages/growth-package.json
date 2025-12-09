@@ -4,21 +4,21 @@
   "package_info": {
     "name": "Growth Package",
     "slug": "growth-package",
-    "price": "$950",
+    "price": "$997",
     "period": "per month",
     "tagline": "Multi-channel marketing automation for ambitious growing businesses",
     "value_comparison": "Get AI voice agents + professional paid advertising management for what agencies charge for ads alone"
   },
   "seo": {
-    "title": "Growth Package - $950/mo | AI Voice Agents + Facebook Ads | Capture Client",
-    "meta_description": "Scale faster with 2 AI Voice Agents (unlimited calls), dedicated account manager, and professional Google or Facebook Ads management ($3K-$10K/month budget). Advanced lead qualification included.",
-    "keywords": ["ai voice agent growth", "facebook ads with ai", "google ads lead generation", "ai lead generation system", "dedicated account manager", "advanced lead qualification"]
+    "title": "Growth Package - $997/mo | AI Voice Agents + Facebook Ads | Capture Client",
+    "meta_description": "Scale faster with 2 AI Voice Agents (unlimited calls), dedicated account manager, and professional Facebook Ads management ($1K-$3K/month budget). Advanced lead qualification included.",
+    "keywords": ["ai voice agent growth", "facebook ads with ai", "facebook ads lead generation", "ai lead generation system", "dedicated account manager", "advanced lead qualification"]
   },
   "hero": {
     "headline": "Scale Your Lead Generation with AI + Facebook Ads",
-    "subheadline": "2 Custom AI Voice Agents + Professional Facebook Ads Management + Google Ads Add-on Available + Advanced Lead Qualification",
+    "subheadline": "2 Custom AI Voice Agents + Professional Facebook Ads Management + Advanced Lead Qualification",
     "price_display": {
-      "amount": "$950",
+      "amount": "$997",
       "period": "per month",
       "note": "Ad spend managed: $1,000-$3,000/month"
     },
@@ -63,14 +63,9 @@
       "description": "Professional Facebook Ads management included. We create campaigns, write ad copy, design graphics, optimize targeting, and manage your budget daily.",
       "value": "Included"
     },
-    {
-      "name": "Google Ads (Add-on Available)",
-      "description": "Add Google Ads management to your package for additional reach. Contact us for add-on pricing.",
-      "value": "Add-on"
-    },
-    {
+        {
       "name": "Ad Spend: $1,000-$3,000/month",
-      "description": "We manage ad spend between $1K-$3K monthly (ad spend billed separately by Google/Facebook). Optimized for maximum lead generation.",
+      "description": "We manage ad spend between $1K-$3K monthly (ad spend billed separately by Facebook). Optimized for maximum lead generation.",
       "value": "$1K-$3K managed"
     },
     {
@@ -103,7 +98,7 @@
     {
       "name": "Both Google AND Facebook Ads",
       "available_in": "Enterprise Package",
-      "note": "Growth includes one platform only"
+      "note": "Growth includes Facebook Ads only"
     },
     {
       "name": "Unlimited Calls",
@@ -160,7 +155,7 @@
       {
         "feature": "Advertising Platforms",
         "starter": "None",
-        "growth": "Google OR Facebook",
+        "growth": "Facebook Ads",
         "enterprise": "Both + LinkedIn"
       },
       {
@@ -226,8 +221,8 @@
   ],
   "faq": [
     {
-      "question": "Should I choose Google Ads or Facebook Ads?",
-      "answer": "It depends on your business. Google Ads works best for high-intent searches (like 'plumber near me'). Facebook Ads works better for awareness and targeting specific demographics. We'll recommend the best fit during your strategy call."
+      "question": "Why Facebook Ads specifically?",
+      "answer": "Facebook Ads excels at targeting specific demographics and building awareness for local service businesses. The platform's advanced targeting lets us reach your ideal customers based on location, interests, and behaviors - perfect for generating qualified leads."
     },
     {
       "question": "Are there any call limits?",
@@ -235,11 +230,11 @@
     },
     {
       "question": "Who pays for the actual ad spend?",
-      "answer": "The ad spend ($1K-$3K/month) is billed directly from Google or Facebook to your credit card. Our $797/mo fee covers the management, optimization, creative, and AI system."
+      "answer": "The ad spend ($1K-$3K/month) is billed directly from Facebook to your credit card. Our $997/mo fee covers the management, optimization, creative, and AI system."
     },
     {
-      "question": "Can I switch between Google and Facebook Ads?",
-      "answer": "Yes! You can switch platforms once per quarter. Or upgrade to Enterprise to run both simultaneously."
+      "question": "Can I add Google Ads later?",
+      "answer": "Yes! Upgrade to Enterprise Package to run both Facebook and Google Ads simultaneously with dedicated account management."
     },
     {
       "question": "How quickly will I see results?",
@@ -252,12 +247,8 @@
       "description": "Month-to-month billing. Cancel anytime with 30 days notice."
     },
     {
-      "title": "60-Day Money Back Guarantee",
-      "description": "Not getting results? Get a full refund within 60 days."
-    },
-    {
       "title": "Certified Ad Experts",
-      "description": "Our team is Google Ads and Facebook Blueprint certified."
+      "description": "Our team is Facebook Blueprint certified with proven results."
     },
     {
       "title": "Transparent Reporting",
@@ -288,14 +279,14 @@
     "headline": "Ready to Scale Your Lead Generation?",
     "subheadline": "Join 300+ growing businesses using AI + Ads to capture more qualified leads.",
     "primary_cta": {
-      "text": "Start Growing for $797/mo",
+      "text": "Start Growing for $997/mo",
       "action": "/contact?package=growth"
     },
     "secondary_cta": {
       "text": "Schedule Strategy Call",
       "action": "/contact?type=strategy"
     },
-    "guarantee": "60-day money back guarantee. No setup fees. Cancel anytime.",
+    "guarantee": "No setup fees. Cancel anytime.",
     "bonus": "BONUS: Get a free landing page audit when you schedule a call this week."
   }
 }

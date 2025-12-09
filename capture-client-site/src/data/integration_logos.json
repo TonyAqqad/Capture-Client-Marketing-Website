@@ -1,0 +1,470 @@
+[
+  {
+    "id": "hubspot",
+    "name": "HubSpot",
+    "logoUrl": "https://cdn.brandfetch.io/idRt0LuzRf/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1761193704935",
+    "format": "svg"
+  },
+  {
+    "id": "salesforce",
+    "name": "Salesforce",
+    "logoUrl": "https://cdn.brandfetch.io/idVE84WdIN/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667559911541",
+    "format": "svg"
+  },
+  {
+    "id": "zoho-crm",
+    "name": "Zoho CRM",
+    "logoUrl": "https://www.zohowebstatic.com/sites/zweb/images/commonroot/zoho-logo-web.svg",
+    "format": "svg"
+  },
+  {
+    "id": "pipedrive",
+    "name": "Pipedrive",
+    "logoUrl": "https://cdn.brandfetch.io/idZG_U1qqs/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667601678397",
+    "format": "svg"
+  },
+  {
+    "id": "follow-up-boss",
+    "name": "Follow Up Boss",
+    "logoUrl": "https://cdn.presskithero.com/rails/active_storage/blobs/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbkxHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4c530a48e9e41f3fbb0ac6ea924fb183e1c600d8/FUB%20Logo%20RGB_Main.png?disposition=attachment",
+    "format": "png"
+  },
+  {
+    "id": "copper",
+    "name": "Copper CRM",
+    "logoUrl": "https://cdn.brandfetch.io/idu9yKg5gS/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "monday-crm",
+    "name": "Monday.com",
+    "logoUrl": "https://cdn.brandfetch.io/idHFUcTb1F/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1700068254966",
+    "format": "svg"
+  },
+  {
+    "id": "close",
+    "name": "Close CRM",
+    "logoUrl": "https://cdn.brandfetch.io/id2K-M_V2y/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1720167201651",
+    "format": "svg"
+  },
+  {
+    "id": "zapier",
+    "name": "Zapier",
+    "logoUrl": "https://cdn.brandfetch.io/idNMs_nMA0/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667563370508",
+    "format": "svg"
+  },
+  {
+    "id": "make",
+    "name": "Make",
+    "logoUrl": "https://cdn.brandfetch.io/idVHU5hl7_/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1690469454303",
+    "format": "svg"
+  },
+  {
+    "id": "airtable",
+    "name": "Airtable",
+    "logoUrl": "https://cdn.brandfetch.io/iddsnRzkxS/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1675163442487",
+    "format": "svg"
+  },
+  {
+    "id": "slack",
+    "name": "Slack",
+    "logoUrl": "https://cdn.brandfetch.io/idJ_HhtG0Z/w/1600/h/572/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1745381296551",
+    "format": "png"
+  },
+  {
+    "id": "microsoft-teams",
+    "name": "Microsoft Teams",
+    "logoUrl": "https://cdn.brandfetch.io/id5aIBxRPy/w/216/h/46/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1764689994646",
+    "format": "png"
+  },
+  {
+    "id": "n8n",
+    "name": "n8n",
+    "logoUrl": "https://cdn.brandfetch.io/idO6_6uqJ9/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667631203558",
+    "format": "svg"
+  },
+  {
+    "id": "calendly",
+    "name": "Calendly",
+    "logoUrl": "https://cdn.brandfetch.io/idbJpTKFPT/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667628252411",
+    "format": "svg"
+  },
+  {
+    "id": "acuity-scheduling",
+    "name": "Acuity Scheduling",
+    "logoUrl": "https://cdn-marketing.acuityscheduling.com/img/brand/acuity-squarespace-logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "google-calendar",
+    "name": "Google Calendar",
+    "logoUrl": "https://cdn.brandfetch.io/id6O2oGzv-/theme/dark/idMX2_OMSc.svg?c=1bxid64Mup7aczewSAYMX&t=1755572706253",
+    "format": "svg"
+  },
+  {
+    "id": "outlook-calendar",
+    "name": "Outlook Calendar",
+    "logoUrl": "https://cdn.brandfetch.io/idmOzMM07F/w/216/h/46/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1756349552153",
+    "format": "png"
+  },
+  {
+    "id": "setmore",
+    "name": "Setmore",
+    "logoUrl": "https://cdn.brandfetch.io/idBCyUVkEU/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1757864290344",
+    "format": "svg"
+  },
+  {
+    "id": "square-appointments",
+    "name": "Square",
+    "logoUrl": "https://cdn.brandfetch.io/id1i7bS9z2/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1763249813243",
+    "format": "svg"
+  },
+  {
+    "id": "ringcentral",
+    "name": "RingCentral",
+    "logoUrl": "https://cdn.brandfetch.io/idYddL3cYo/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "nextiva",
+    "name": "Nextiva",
+    "logoUrl": "https://cdn.brandfetch.io/idzzJjQAlc/w/2400/h/800/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1764933713106",
+    "format": "png"
+  },
+  {
+    "id": "twilio",
+    "name": "Twilio",
+    "logoUrl": "https://cdn.brandfetch.io/idT7wVo_zL/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "grasshopper",
+    "name": "Grasshopper",
+    "logoUrl": "http://logmeincdn.blob.core.windows.net/grasshoppermedia/2017-10-09--175149/assets/img/png/resources/media-kit/grasshopper_logo.png",
+    "format": "png"
+  },
+  {
+    "id": "dialpad",
+    "name": "Dialpad",
+    "logoUrl": "https://cdn.brandfetch.io/idUMeZW7IP/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "openphone",
+    "name": "OpenPhone",
+    "logoUrl": "https://cdn.brandfetch.io/idaS25mAXr/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "servicetitan",
+    "name": "ServiceTitan",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/ServiceTitan_logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "housecall-pro",
+    "name": "Housecall Pro",
+    "logoUrl": "https://cdn.brandfetch.io/idPDAJupjD/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "jobber",
+    "name": "Jobber",
+    "logoUrl": "https://cdn.brandfetch.io/idHUKhM-L7/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "goriladesk",
+    "name": "GorillaDesk",
+    "logoUrl": "https://gorilladesk.com/wp-content/uploads/2019/11/GorillaDesk-type-logo-1.png",
+    "format": "png"
+  },
+  {
+    "id": "service-fusion",
+    "name": "Service Fusion",
+    "logoUrl": "https://www.servicefusion.com/wp-content/uploads/2024/11/byEP_SF-white.svg",
+    "format": "svg"
+  },
+  {
+    "id": "fieldedge",
+    "name": "FieldEdge",
+    "logoUrl": "https://cdn.brandfetch.io/idaTkrvuT9/w/254/h/92/theme/dark/logo.png",
+    "format": "png"
+  },
+  {
+    "id": "clio",
+    "name": "Clio",
+    "logoUrl": "https://cdn.brandfetch.io/idLK47BYXu/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "mycase",
+    "name": "MyCase",
+    "logoUrl": "https://cdn.brandfetch.io/idGi9dFGi9/w/450/h/450/theme/dark/logo.png",
+    "format": "png"
+  },
+  {
+    "id": "practice-panther",
+    "name": "PracticePanther",
+    "logoUrl": "https://cdn.brandfetch.io/idpYRKtF40/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "lawmatics",
+    "name": "Lawmatics",
+    "logoUrl": "https://cdn.brandfetch.io/idTQuJEQ3_/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "smokeball",
+    "name": "Smokeball",
+    "logoUrl": "https://cdn.brandfetch.io/idYHhYQbS0/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1764716952881",
+    "format": "svg"
+  },
+  {
+    "id": "athenahealth",
+    "name": "athenahealth",
+    "logoUrl": "https://cdn.brandfetch.io/idKku0o9zf/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667575709738",
+    "format": "svg"
+  },
+  {
+    "id": "kareo",
+    "name": "Kareo",
+    "logoUrl": "https://www.tebra.com/wp-content/themes/tebra-website/dist//images/logo_kareo+tebra.svg",
+    "format": "svg"
+  },
+  {
+    "id": "drchrono",
+    "name": "drchrono",
+    "logoUrl": "https://cdn.brandfetch.io/idRaJNTDhZ/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "mindbody",
+    "name": "Mindbody",
+    "logoUrl": "https://cdn.brandfetch.io/idet1DrRLE/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1746617229398",
+    "format": "svg"
+  },
+  {
+    "id": "kvcore",
+    "name": "kvCORE",
+    "logoUrl": "https://cdn.brandfetch.io/id9y0BNU4h/w/170/h/61/theme/light/logo.png?c=1bxid64Mup7aczewSAYMX&t=1764890370777",
+    "format": "png"
+  },
+  {
+    "id": "boomtown",
+    "name": "BoomTown",
+    "logoUrl": "https://cdn.brandfetch.io/idxXZkrGAb/theme/light/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1743175330485",
+    "format": "svg"
+  },
+  {
+    "id": "zillow-premier-agent",
+    "name": "Zillow",
+    "logoUrl": "https://cdn.brandfetch.io/id0FkKJwP_/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "realtor-com",
+    "name": "Realtor.com",
+    "logoUrl": "https://cdn.brandfetch.io/idQJeXNZhi/w/949/h/190/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1764614153306",
+    "format": "png"
+  },
+  {
+    "id": "callrail",
+    "name": "CallRail",
+    "logoUrl": "https://cdn.brandfetch.io/id2tENgwdX/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667616161752",
+    "format": "svg"
+  },
+  {
+    "id": "google-analytics",
+    "name": "Google Analytics",
+    "logoUrl": "https://www.svgrepo.com/show/372863/google-analytics.svg",
+    "format": "svg"
+  },
+  {
+    "id": "mailchimp",
+    "name": "Mailchimp",
+    "logoUrl": "https://cdn.brandfetch.io/idzGlLFr-J/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "activecampaign",
+    "name": "ActiveCampaign",
+    "logoUrl": "https://cdn.brandfetch.io/idrxWbUzLf/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1719412316697",
+    "format": "svg"
+  },
+  {
+    "id": "facebook-ads",
+    "name": "Facebook",
+    "logoUrl": "https://cdn.brandfetch.io/idpKX559uw/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "google-ads",
+    "name": "Google Ads",
+    "logoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Ads_logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "excel-payments",
+    "name": "Excel Payments",
+    "logoUrl": "https://excelpayments.com/wp-content/uploads/2023/02/excelpayments_04.png",
+    "format": "png"
+  },
+  {
+    "id": "paypal",
+    "name": "PayPal",
+    "logoUrl": "https://cdn.brandfetch.io/id-Wd4a4TS/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1727787926363",
+    "format": "svg"
+  },
+  {
+    "id": "lawpay",
+    "name": "LawPay",
+    "logoUrl": "https://cdn.brandfetch.io/id3-9zSVMI/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "quickbooks-online",
+    "name": "QuickBooks",
+    "logoUrl": "https://cdn.brandfetch.io/idYwh2MQCX/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667569145160",
+    "format": "svg"
+  },
+  {
+    "id": "gohighlevel",
+    "name": "GoHighLevel",
+    "logoUrl": "https://cdn.brandfetch.io/idK-hvK7Lv/w/1853/h/420/theme/dark/logo.png?c=1bxid64Mup7aczewSAYMX&t=1692001848005",
+    "format": "png"
+  },
+  {
+    "id": "keap",
+    "name": "Keap",
+    "logoUrl": "https://cdn.brandfetch.io/id5-qRK0R3/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1667589541502",
+    "format": "svg"
+  },
+  {
+    "id": "ontraport",
+    "name": "Ontraport",
+    "logoUrl": "https://cdn.brandfetch.io/idti9f_kHJ/theme/dark/logo.svg?c=1bxid64Mup7aczewSAYMX&t=1668014093270",
+    "format": "svg"
+  },
+  {
+    "id": "instagram",
+    "name": "Instagram",
+    "logoUrl": "https://cdn.brandfetch.io/idgJhkJE-y/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "tiktok",
+    "name": "TikTok",
+    "logoUrl": "https://cdn.brandfetch.io/id4m_K95aj/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "linkedin",
+    "name": "LinkedIn",
+    "logoUrl": "https://cdn.brandfetch.io/idaREW7gdl/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "shopify",
+    "name": "Shopify",
+    "logoUrl": "https://cdn.brandfetch.io/idWKqHOJz_/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "woocommerce",
+    "name": "WooCommerce",
+    "logoUrl": "https://cdn.brandfetch.io/idHPeDaqqF/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "typeform",
+    "name": "Typeform",
+    "logoUrl": "https://cdn.brandfetch.io/idcxuBc8zN/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "jotform",
+    "name": "JotForm",
+    "logoUrl": "https://cdn.brandfetch.io/idbPBJdVaS/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "google-business",
+    "name": "Google Business",
+    "logoUrl": "https://cdn.brandfetch.io/id6O2oGzv-/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "yext",
+    "name": "Yext",
+    "logoUrl": "https://cdn.brandfetch.io/idxnccR5pJ/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "wordpress",
+    "name": "WordPress",
+    "logoUrl": "https://cdn.brandfetch.io/idiKN0APXZ/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "clickfunnels",
+    "name": "ClickFunnels",
+    "logoUrl": "https://cdn.brandfetch.io/idAHkRxeJg/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "plivo",
+    "name": "Plivo",
+    "logoUrl": "https://cdn.brandfetch.io/idcAiJZmBV/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "signalwire",
+    "name": "SignalWire",
+    "logoUrl": "https://cdn.brandfetch.io/idTiX3xvjw/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "messagebird",
+    "name": "MessageBird",
+    "logoUrl": "https://cdn.brandfetch.io/idrbsqmj8i/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "mailgun",
+    "name": "Mailgun",
+    "logoUrl": "https://cdn.brandfetch.io/idoRH5fQJK/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "sendgrid",
+    "name": "SendGrid",
+    "logoUrl": "https://cdn.brandfetch.io/idNHALIj0b/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "convertkit",
+    "name": "ConvertKit",
+    "logoUrl": "https://cdn.brandfetch.io/idLGlpZkpb/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "constant-contact",
+    "name": "Constant Contact",
+    "logoUrl": "https://cdn.brandfetch.io/iddWNTbSWR/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "zoom",
+    "name": "Zoom",
+    "logoUrl": "https://cdn.brandfetch.io/idq5kCQ4BA/theme/dark/logo.svg",
+    "format": "svg"
+  },
+  {
+    "id": "authorize-net",
+    "name": "Authorize.Net",
+    "logoUrl": "https://cdn.brandfetch.io/idMaYD3t5c/theme/dark/logo.svg",
+    "format": "svg"
+  }
+]

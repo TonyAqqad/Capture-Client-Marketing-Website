@@ -2,35 +2,83 @@
 
 import { motion } from "@/lib/motion";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import { Network, ArrowRight } from "lucide-react";
+
+// Map partner names to their internal integration slugs
+const partnerSlugMap: Record<string, string> = {
+  "Excel Payments": "excel-payments",
+  "PayPal": "paypal",
+  "Square": "square-appointments",
+  "Authorize.Net": "", // No internal page yet
+  "Twilio": "twilio",
+  "Plivo": "", // No internal page yet
+  "SignalWire": "", // No internal page yet
+  "MessageBird": "", // No internal page yet
+  "Mailgun": "", // No internal page yet
+  "SendGrid": "", // No internal page yet
+  "Mailchimp": "mailchimp",
+  "ActiveCampaign": "activecampaign",
+  "ConvertKit": "", // No internal page yet
+  "Constant Contact": "", // No internal page yet
+  "Google Calendar": "google-calendar",
+  "Calendly": "calendly",
+  "Outlook": "outlook-calendar",
+  "Zoom": "", // No internal page yet
+  "Facebook": "facebook-ads",
+  "Instagram": "", // No internal page yet
+  "TikTok": "", // No internal page yet
+  "LinkedIn": "", // No internal page yet
+  "Google Ads": "google-ads",
+  "Facebook Ads": "facebook-ads",
+  "Zapier": "zapier",
+  "Make": "make",
+  "Salesforce": "salesforce",
+  "HubSpot": "hubspot",
+  "Pipedrive": "pipedrive",
+  "Zoho CRM": "zoho-crm",
+  "Follow Up Boss": "follow-up-boss",
+  "ServiceTitan": "servicetitan",
+  "Jobber": "jobber",
+  "Shopify": "", // No internal page yet
+  "WooCommerce": "", // No internal page yet
+  "QuickBooks": "quickbooks-online",
+  "Typeform": "", // No internal page yet
+  "JotForm": "", // No internal page yet
+  "Google Business": "", // No internal page yet
+  "Yext": "", // No internal page yet
+  "Google Analytics": "google-analytics",
+  "WordPress": "", // No internal page yet
+  "ClickFunnels": "", // No internal page yet
+};
 
 const partners = [
   // Payments
   {
     name: "Excel Payments",
-    logo: "https://excelpayments.com/wp-content/uploads/2023/02/excelpayments_04.png",
+    logo: "/images/integrations/excel-payments.png",
     description: "Merchant Services & Payment Processing",
     website: "https://excelpayments.com",
     category: "Payments",
   },
   {
     name: "PayPal",
-    logo: "https://logo.clearbit.com/paypal.com",
+    logo: "/images/integrations/paypal.svg",
     description: "Global Payment Solutions",
     website: "https://paypal.com",
     category: "Payments",
   },
   {
     name: "Square",
-    logo: "https://logo.clearbit.com/squareup.com",
+    logo: "/images/integrations/square-appointments.svg",
     description: "Point of Sale & Payments",
     website: "https://squareup.com",
     category: "Payments",
   },
   {
     name: "Authorize.Net",
-    logo: "https://logo.clearbit.com/authorize.net",
+    logo: "/images/integrations/authorize-net.svg",
     description: "Payment Gateway",
     website: "https://authorize.net",
     category: "Payments",
@@ -39,28 +87,28 @@ const partners = [
   // Communication
   {
     name: "Twilio",
-    logo: "https://logo.clearbit.com/twilio.com",
+    logo: "/images/integrations/twilio.svg",
     description: "SMS & Voice Communication",
     website: "https://twilio.com",
     category: "Communication",
   },
   {
     name: "Plivo",
-    logo: "https://logo.clearbit.com/plivo.com",
+    logo: "/images/integrations/plivo.svg",
     description: "Global SMS & Voice Platform",
     website: "https://plivo.com",
     category: "Communication",
   },
   {
     name: "SignalWire",
-    logo: "https://logo.clearbit.com/signalwire.com",
+    logo: "/images/integrations/signalwire.svg",
     description: "Cloud Communications",
     website: "https://signalwire.com",
     category: "Communication",
   },
   {
     name: "MessageBird",
-    logo: "https://logo.clearbit.com/messagebird.com",
+    logo: "/images/integrations/messagebird.svg",
     description: "Omnichannel Messaging",
     website: "https://messagebird.com",
     category: "Communication",
@@ -69,42 +117,42 @@ const partners = [
   // Email Marketing
   {
     name: "Mailgun",
-    logo: "https://logo.clearbit.com/mailgun.com",
+    logo: "/images/integrations/mailgun.svg",
     description: "Transactional Email Service",
     website: "https://mailgun.com",
     category: "Email Marketing",
   },
   {
     name: "SendGrid",
-    logo: "https://logo.clearbit.com/sendgrid.com",
+    logo: "/images/integrations/sendgrid.svg",
     description: "Email Delivery Platform",
     website: "https://sendgrid.com",
     category: "Email Marketing",
   },
   {
     name: "Mailchimp",
-    logo: "https://logo.clearbit.com/mailchimp.com",
+    logo: "/images/integrations/mailchimp.svg",
     description: "Marketing Automation",
     website: "https://mailchimp.com",
     category: "Email Marketing",
   },
   {
     name: "ActiveCampaign",
-    logo: "https://logo.clearbit.com/activecampaign.com",
+    logo: "/images/integrations/activecampaign.svg",
     description: "Email & Marketing Automation",
     website: "https://activecampaign.com",
     category: "Email Marketing",
   },
   {
     name: "ConvertKit",
-    logo: "https://logo.clearbit.com/convertkit.com",
+    logo: "/images/integrations/convertkit.svg",
     description: "Email Marketing for Creators",
     website: "https://convertkit.com",
     category: "Email Marketing",
   },
   {
     name: "Constant Contact",
-    logo: "https://logo.clearbit.com/constantcontact.com",
+    logo: "/images/integrations/constant-contact.svg",
     description: "Email & Event Marketing",
     website: "https://constantcontact.com",
     category: "Email Marketing",
@@ -113,21 +161,21 @@ const partners = [
   // Calendar & Scheduling
   {
     name: "Google Calendar",
-    logo: "https://logo.clearbit.com/google.com",
+    logo: "/images/integrations/google-calendar.svg",
     description: "Calendar Sync & Scheduling",
     website: "https://calendar.google.com",
     category: "Calendar",
   },
   {
     name: "Calendly",
-    logo: "https://logo.clearbit.com/calendly.com",
+    logo: "/images/integrations/calendly.svg",
     description: "Automated Scheduling",
     website: "https://calendly.com",
     category: "Calendar",
   },
   {
     name: "Outlook",
-    logo: "https://logo.clearbit.com/outlook.com",
+    logo: "/images/integrations/outlook-calendar.png",
     description: "Microsoft Calendar Integration",
     website: "https://outlook.com",
     category: "Calendar",
@@ -136,7 +184,7 @@ const partners = [
   // Video Conferencing
   {
     name: "Zoom",
-    logo: "https://logo.clearbit.com/zoom.us",
+    logo: "/images/integrations/zoom.svg",
     description: "Video Meetings & Webinars",
     website: "https://zoom.us",
     category: "Video",
@@ -145,28 +193,28 @@ const partners = [
   // Social Media
   {
     name: "Facebook",
-    logo: "https://logo.clearbit.com/facebook.com",
+    logo: "/images/integrations/facebook-ads.svg",
     description: "Social Media Management",
     website: "https://facebook.com",
     category: "Social Media",
   },
   {
     name: "Instagram",
-    logo: "https://logo.clearbit.com/instagram.com",
+    logo: "/images/integrations/instagram.svg",
     description: "Visual Content Platform",
     website: "https://instagram.com",
     category: "Social Media",
   },
   {
     name: "TikTok",
-    logo: "https://logo.clearbit.com/tiktok.com",
+    logo: "/images/integrations/tiktok.svg",
     description: "Short-Form Video Marketing",
     website: "https://tiktok.com",
     category: "Social Media",
   },
   {
     name: "LinkedIn",
-    logo: "https://logo.clearbit.com/linkedin.com",
+    logo: "/images/integrations/linkedin.svg",
     description: "Professional Networking",
     website: "https://linkedin.com",
     category: "Social Media",
@@ -175,14 +223,14 @@ const partners = [
   // Advertising
   {
     name: "Google Ads",
-    logo: "https://logo.clearbit.com/ads.google.com",
+    logo: "/images/integrations/google-ads.svg",
     description: "Search & Display Advertising",
     website: "https://ads.google.com",
     category: "Advertising",
   },
   {
     name: "Facebook Ads",
-    logo: "https://logo.clearbit.com/facebook.com",
+    logo: "/images/integrations/facebook-ads.svg",
     description: "Social Media Advertising",
     website: "https://facebook.com/business/ads",
     category: "Advertising",
@@ -191,14 +239,14 @@ const partners = [
   // Automation
   {
     name: "Zapier",
-    logo: "https://logo.clearbit.com/zapier.com",
+    logo: "/images/integrations/zapier.svg",
     description: "Connect 5,000+ Apps",
     website: "https://zapier.com",
     category: "Automation",
   },
   {
     name: "Make",
-    logo: "https://logo.clearbit.com/make.com",
+    logo: "/images/integrations/make.svg",
     description: "Visual Automation Platform",
     website: "https://make.com",
     category: "Automation",
@@ -207,35 +255,35 @@ const partners = [
   // CRM
   {
     name: "Salesforce",
-    logo: "https://logo.clearbit.com/salesforce.com",
+    logo: "/images/integrations/salesforce.svg",
     description: "Enterprise CRM Platform",
     website: "https://salesforce.com",
     category: "CRM",
   },
   {
     name: "HubSpot",
-    logo: "https://logo.clearbit.com/hubspot.com",
+    logo: "/images/integrations/hubspot.svg",
     description: "Inbound Marketing & Sales",
     website: "https://hubspot.com",
     category: "CRM",
   },
   {
     name: "Pipedrive",
-    logo: "https://logo.clearbit.com/pipedrive.com",
+    logo: "/images/integrations/pipedrive.svg",
     description: "Sales Pipeline Management",
     website: "https://pipedrive.com",
     category: "CRM",
   },
   {
     name: "Zoho CRM",
-    logo: "https://logo.clearbit.com/zoho.com",
+    logo: "/images/integrations/zoho-crm.svg",
     description: "Affordable CRM for Small Business",
     website: "https://www.zoho.com/crm",
     category: "CRM",
   },
   {
     name: "Follow Up Boss",
-    logo: "https://logo.clearbit.com/followupboss.com",
+    logo: "/images/integrations/follow-up-boss.png",
     description: "Real Estate CRM",
     website: "https://www.followupboss.com",
     category: "CRM",
@@ -244,14 +292,14 @@ const partners = [
   // Home Services
   {
     name: "ServiceTitan",
-    logo: "https://logo.clearbit.com/servicetitan.com",
+    logo: "/images/integrations/servicetitan.svg",
     description: "HVAC & Plumbing Software",
     website: "https://www.servicetitan.com",
     category: "Home Services",
   },
   {
     name: "Jobber",
-    logo: "https://logo.clearbit.com/getjobber.com",
+    logo: "/images/integrations/jobber.svg",
     description: "Field Service Management",
     website: "https://getjobber.com",
     category: "Home Services",
@@ -260,14 +308,14 @@ const partners = [
   // E-commerce
   {
     name: "Shopify",
-    logo: "https://logo.clearbit.com/shopify.com",
+    logo: "/images/integrations/shopify.svg",
     description: "E-commerce Platform",
     website: "https://shopify.com",
     category: "E-commerce",
   },
   {
     name: "WooCommerce",
-    logo: "https://logo.clearbit.com/woocommerce.com",
+    logo: "/images/integrations/woocommerce.svg",
     description: "WordPress E-commerce",
     website: "https://woocommerce.com",
     category: "E-commerce",
@@ -276,7 +324,7 @@ const partners = [
   // Accounting
   {
     name: "QuickBooks",
-    logo: "https://logo.clearbit.com/quickbooks.intuit.com",
+    logo: "/images/integrations/quickbooks-online.svg",
     description: "Accounting & Invoicing",
     website: "https://quickbooks.intuit.com",
     category: "Accounting",
@@ -285,14 +333,14 @@ const partners = [
   // Forms
   {
     name: "Typeform",
-    logo: "https://logo.clearbit.com/typeform.com",
+    logo: "/images/integrations/typeform.svg",
     description: "Interactive Forms",
     website: "https://typeform.com",
     category: "Forms",
   },
   {
     name: "JotForm",
-    logo: "https://logo.clearbit.com/jotform.com",
+    logo: "/images/integrations/jotform.svg",
     description: "Online Form Builder",
     website: "https://jotform.com",
     category: "Forms",
@@ -301,14 +349,14 @@ const partners = [
   // Local SEO
   {
     name: "Google Business",
-    logo: "https://logo.clearbit.com/google.com",
+    logo: "/images/integrations/google-business.svg",
     description: "Local Business Listings",
     website: "https://business.google.com",
     category: "Local SEO",
   },
   {
     name: "Yext",
-    logo: "https://logo.clearbit.com/yext.com",
+    logo: "/images/integrations/yext.svg",
     description: "Business Listings Management",
     website: "https://yext.com",
     category: "Local SEO",
@@ -317,7 +365,7 @@ const partners = [
   // Analytics
   {
     name: "Google Analytics",
-    logo: "https://logo.clearbit.com/analytics.google.com",
+    logo: "/images/integrations/google-analytics.svg",
     description: "Website Analytics Platform",
     website: "https://analytics.google.com",
     category: "Analytics",
@@ -326,14 +374,14 @@ const partners = [
   // Website Builders
   {
     name: "WordPress",
-    logo: "https://logo.clearbit.com/wordpress.com",
+    logo: "/images/integrations/wordpress.svg",
     description: "Content Management System",
     website: "https://wordpress.com",
     category: "Website",
   },
   {
     name: "ClickFunnels",
-    logo: "https://logo.clearbit.com/clickfunnels.com",
+    logo: "/images/integrations/clickfunnels.svg",
     description: "Sales Funnel Builder",
     website: "https://clickfunnels.com",
     category: "Marketing",
@@ -436,19 +484,24 @@ export default function IntegrationPartners() {
 
         {/* Partner Logos Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 max-w-7xl mx-auto">
-          {filteredPartners.map((partner, index) => (
-            <motion.a
+          {filteredPartners.map((partner, index) => {
+            // Get internal slug - if exists, link internally; otherwise link to /integrations
+            const internalSlug = partnerSlugMap[partner.name];
+            const href = internalSlug ? `/integrations/${internalSlug}` : "/integrations";
+
+            return (
+            <Link
               key={partner.name}
-              href={partner.website}
-              target="_blank"
-              rel="noopener noreferrer"
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.3, delay: index * 0.02 }}
-              whileHover={{ scale: 1.03, y: -4 }}
+              href={href}
               className="group relative"
             >
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.3, delay: index * 0.02 }}
+                whileHover={{ scale: 1.03, y: -4 }}
+              >
               {/* Card */}
               <div className="relative h-full bg-white/[0.03] backdrop-blur-xl border border-white/10 rounded-2xl p-6 transition-all duration-300 hover:border-cyan-500/30 hover:bg-white/[0.05] overflow-hidden">
                 {/* Hover glow effect */}
@@ -505,8 +558,10 @@ export default function IntegrationPartners() {
                   <ArrowRight className="w-4 h-4 text-cyan-400" />
                 </div>
               </div>
-            </motion.a>
-          ))}
+              </motion.div>
+            </Link>
+            );
+          })}
         </div>
 
         {/* Stats */}

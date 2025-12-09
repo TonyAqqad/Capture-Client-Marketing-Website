@@ -278,7 +278,7 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
 
         {/* Read more link */}
         <Link
-          href={`/case-studies/${study.id}`}
+          href={`/case-studies#${study.id}`}
           className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:text-accent transition-colors group/link"
         >
           Read Full Story

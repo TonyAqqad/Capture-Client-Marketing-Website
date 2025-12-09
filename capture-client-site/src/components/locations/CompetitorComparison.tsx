@@ -43,7 +43,7 @@ export default function CompetitorComparison({ city }: CompetitorComparisonProps
     },
     {
       feature: "Monthly Cost",
-      us: "From $797/month",
+      us: "From $997/month",
       competitors: "$3,000+ for staff",
       icon: DollarSign,
       highlight: true,

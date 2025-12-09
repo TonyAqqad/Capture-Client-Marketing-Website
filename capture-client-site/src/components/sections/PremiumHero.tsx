@@ -42,11 +42,11 @@ export function PremiumHero() {
       {/* BACKGROUND: Linear-inspired radial glows */}
       {/* ============================================ */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Top-right gold accent */}
+        {/* Top-right cyan accent */}
         <div
           className="absolute -top-[20%] -right-[10%] w-[800px] h-[800px] opacity-[0.07]"
           style={{
-            background: "radial-gradient(circle, #D4AF37 0%, transparent 60%)",
+            background: "radial-gradient(circle, #00C9FF 0%, transparent 60%)",
             filter: "blur(100px)",
           }}
         />
@@ -124,7 +124,7 @@ export function PremiumHero() {
                     transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
                   >
                     <span className="block text-[3rem] sm:text-[4rem] md:text-[5rem] lg:text-[5.5rem] xl:text-[6rem] font-black leading-[0.9] mt-1">
-                      <span className="bg-gradient-to-r from-[#D4AF37] via-[#F5D67B] to-[#D4AF37] bg-clip-text text-transparent">
+                      <span className="bg-gradient-to-r from-[#00C9FF] via-[#5FE3FF] to-[#00C9FF] bg-clip-text text-transparent">
                         another client
                       </span>
                     </span>
@@ -153,9 +153,9 @@ export function PremiumHero() {
                 {/* Primary CTA */}
                 <Link
                   href="/contact"
-                  className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-base font-semibold text-[#0A0E1A] overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(212,175,55,0.3)]"
+                  className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl text-base font-semibold text-[#0A0E1A] overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(0,201,255,0.3)]"
                   style={{
-                    background: "linear-gradient(135deg, #D4AF37 0%, #F5D67B 50%, #D4AF37 100%)",
+                    background: "linear-gradient(135deg, #00C9FF 0%, #5FE3FF 50%, #00C9FF 100%)",
                   }}
                 >
                   <span className="relative z-10">Get Started</span>
@@ -180,12 +180,12 @@ export function PremiumHero() {
                 className="flex flex-wrap items-center gap-6 text-sm text-white/50"
               >
                 <div className="flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-[#D4AF37]" />
+                  <ShieldCheck className="w-4 h-4 text-[#00C9FF]" />
                   <span>500+ businesses</span>
                 </div>
                 <div className="hidden sm:block w-px h-4 bg-white/10" />
                 <div className="flex items-center gap-2">
-                  <Star className="w-4 h-4 text-[#D4AF37] fill-[#D4AF37]" />
+                  <Star className="w-4 h-4 text-[#00C9FF] fill-[#00C9FF]" />
                   <span>4.9/5 rating</span>
                 </div>
                 <div className="hidden sm:block w-px h-4 bg-white/10" />
@@ -210,7 +210,7 @@ export function PremiumHero() {
               >
                 <PremiumGlassCard
                   variant="premium"
-                  glowColor="gold"
+                  glowColor="cyan"
                   hover={false}
                   className="p-8"
                 >
@@ -248,7 +248,7 @@ export function PremiumHero() {
                         className="p-4 rounded-xl bg-white/[0.03] border border-white/10"
                       >
                         <div className="flex items-center gap-2 mb-2">
-                          <stat.icon className="w-4 h-4 text-[#D4AF37]" />
+                          <stat.icon className="w-4 h-4 text-[#00C9FF]" />
                         </div>
                         <div className="text-2xl font-bold text-white">
                           {stat.value}
@@ -302,11 +302,11 @@ export function PremiumHero() {
                       delay: 1.3,
                       ease: [0.25, 0.46, 0.45, 0.94]
                     }}
-                    className="p-6 rounded-xl bg-gradient-to-br from-[#D4AF37]/10 via-transparent to-transparent border border-[#D4AF37]/20"
+                    className="p-6 rounded-xl bg-gradient-to-br from-[#00C9FF]/10 via-transparent to-transparent border border-[#00C9FF]/20"
                   >
                     <div className="flex items-start gap-4">
                       {/* Phone Icon */}
-                      <div className="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-[#D4AF37] to-[#F5D67B] flex items-center justify-center shadow-lg">
+                      <div className="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-[#00C9FF] to-[#5FE3FF] flex items-center justify-center shadow-lg">
                         <PhoneCall className="w-6 h-6 text-[#0A0E1A]" />
                       </div>
 
@@ -323,7 +323,7 @@ export function PremiumHero() {
                           href="tel:865-346-3339"
                           className="block group mb-3"
                         >
-                          <span className="text-xl font-bold text-white group-hover:text-[#D4AF37] transition-colors">
+                          <span className="text-xl font-bold text-white group-hover:text-[#00C9FF] transition-colors">
                             (865) 346-3339
                           </span>
                         </a>
@@ -373,7 +373,7 @@ export function PremiumHero() {
                   className="p-6 sm:p-8 bg-white/[0.02] hover:bg-white/[0.04] transition-colors group"
                 >
                   <div className="flex items-center gap-2 mb-2">
-                    <stat.Icon className="w-5 h-5 text-[#D4AF37] opacity-60 group-hover:opacity-100 transition-opacity" />
+                    <stat.Icon className="w-5 h-5 text-[#00C9FF] opacity-60 group-hover:opacity-100 transition-opacity" />
                   </div>
                   <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-1">
                     {stat.value}

@@ -259,9 +259,9 @@
     ]
   },
   "recommended_pricing_strategy": {
-    "voice_ai_starter": "$997/mo - Competitive entry point below Comrade's PPC package",
-    "voice_ai_growth": "$797/mo - Competitive with mid-tier marketing packages",
-    "voice_ai_enterprise": "$3,997/mo - Competitive with Comrade's all-in-one package while offering specialized Voice AI value",
+    "voice_ai_starter": "$97/mo - Competitive entry point for small businesses",
+    "voice_ai_growth": "$997/mo - Competitive with mid-tier marketing packages",
+    "voice_ai_enterprise": "$2,997/mo - Competitive with Comrade's all-in-one package while offering specialized Voice AI value",
     "rationale": "These prices position competitively against established Chicago/Dallas agencies while emphasizing the unique value of Voice AI automation, which most competitors don't offer"
   }
 }

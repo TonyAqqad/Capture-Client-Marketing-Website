@@ -126,7 +126,7 @@ const faqSchema = {
       "name": "How much does an AI receptionist cost for a dental practice?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Plans start at $797/month for unlimited call handling, 24/7 availability, and practice management integration. Given that most dental practices lose $100K+ annually to missed calls, the ROI is typically realized within the first month. Month-to-month pricing with no long-term contracts."
+        "text": "Plans start at $997/month for unlimited call handling, 24/7 availability, and practice management integration. Given that most dental practices lose $100K+ annually to missed calls, the ROI is typically realized within the first month. Month-to-month pricing with no long-term contracts."
       }
     }
   ]

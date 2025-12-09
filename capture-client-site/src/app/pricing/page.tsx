@@ -4,7 +4,7 @@ import PricingPageClient from './PricingPageClient';
 // SEO Metadata for Pricing Page
 export const metadata: Metadata = {
   title: 'Pricing & Packages | AI Voice Agents & Lead Generation | Capture Client',
-  description: 'Transparent pricing for AI voice agents, Google Ads, and Facebook Ads management. Plans from $97/mo. No setup fees, 30-day money-back guarantee. See which package fits your business.',
+  description: 'Transparent pricing for AI voice agents, Google Ads, and Facebook Ads management. Plans from $97/mo. No setup fees, no long-term contracts. See which package fits your business.',
   keywords: [
     'marketing agency pricing',
     'AI voice agent cost',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: 'Pricing & Packages | AI Voice Agents & Lead Generation | Capture Client',
-    description: 'Transparent pricing for AI voice agents and lead generation. Plans from $97/mo with 30-day money-back guarantee. No setup fees.',
+    description: 'Transparent pricing for AI voice agents and lead generation. Plans from $97/mo with no long-term contracts. No setup fees.',
     url: 'https://captureclientai.net/pricing',
     type: 'website',
     images: [
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Marketing Agency Pricing | AI Voice Agents from $97/mo',
-    description: 'AI voice agents & lead generation from $97/mo. No setup fees, 30-day guarantee.',
+    description: 'AI voice agents & lead generation from $97/mo. No setup fees, no long-term contracts.',
   },
   alternates: {
     canonical: 'https://captureclientai.net/pricing',

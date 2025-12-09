@@ -32,12 +32,12 @@ const plans: PricingPlan[] = [
   },
   {
     name: 'Growth',
-    price: '$797',
+    price: '$997',
     features: [
       '2 AI Voice Agents',
       'Unlimited calls',
       'Full CRM & unified inbox',
-      'Google & Facebook Ads setup',
+      'Facebook Ads Management',
       'Priority support',
       'Advanced analytics',
     ],
@@ -402,7 +402,7 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
           >
             <Link
               href={plan.ctaLink}
-              className={`relative block w-full text-center py-4 min-h-[56px] rounded-2xl font-bold text-lg overflow-hidden group/cta transition-all duration-300 ${
+              className={`relative block w-full text-center py-4 min-h-[56px] rounded-2xl font-bold text-lg overflow-hidden group/cta transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] ${
                 plan.isPopular
                   ? 'bg-gradient-to-r from-accent via-primary to-accent bg-[length:200%_100%]'
                   : plan.price === 'Custom'
@@ -413,7 +413,7 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
               {/* Shimmer effect */}
               {plan.isPopular && (
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
+                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none"
                   animate={{
                     x: ['-200%', '200%'],
                   }}
@@ -426,9 +426,7 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
                 />
               )}
 
-              <motion.span
-                whileHover={{ scale: isMobile ? 1 : 1.02 }}
-                whileTap={{ scale: 0.98 }}
+              <span
                 className={`relative z-10 flex items-center justify-center gap-2 ${
                   plan.isPopular || plan.price === 'Custom'
                     ? 'text-background-dark'
@@ -436,18 +434,14 @@ function PricingCard({ plan, index, isInView }: PricingCardProps) {
                 }`}
               >
                 {plan.ctaText}
-                <motion.span
-                  animate={{
-                    x: isHovered ? [0, 5, 0] : 0,
-                  }}
-                  transition={{
-                    duration: 0.8,
-                    repeat: isHovered ? Infinity : 0,
-                  }}
+                <span
+                  className={`inline-block transition-transform duration-300 ${
+                    isHovered ? 'translate-x-1' : ''
+                  }`}
                 >
                   <ArrowRight className="w-5 h-5" />
-                </motion.span>
-              </motion.span>
+                </span>
+              </span>
             </Link>
           </motion.div>
         </div>

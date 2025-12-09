@@ -201,7 +201,7 @@ export default function MegaMenuMobile({
 
               {/* Phone CTA */}
               <a
-                href="tel:8653463339"
+                href="tel:865-346-3339"
                 className="flex items-center justify-center gap-3 text-[#F8FAFC] bg-[#1E293B] border border-white/10 px-6 py-4 rounded-xl hover:bg-white/10 hover:border-white/20 transition-all font-semibold text-base min-h-[56px] active:scale-[0.98] group"
                 onClick={() => {
                   trackPhoneClick("865-346-3339", "mobile_megamenu");

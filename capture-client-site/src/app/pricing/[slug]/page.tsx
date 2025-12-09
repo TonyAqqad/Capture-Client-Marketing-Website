@@ -163,7 +163,7 @@ export default async function PackagePage({
               </div>
               <div className="flex items-center gap-3 py-1">
                 <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
-                <span>Money-back guarantee</span>
+                <span>No long-term contract</span>
               </div>
             </div>
           </div>

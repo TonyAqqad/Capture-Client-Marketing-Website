@@ -298,7 +298,7 @@ export default function LegalIndustryClient() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Link
-                    href="tel:8653463339"
+                    href="tel:865-346-3339"
                     className="btn-gold text-lg px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-2 shadow-glow-gold-lg group w-full sm:w-auto justify-center"
                   >
                     <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform" />
@@ -493,7 +493,7 @@ export default function LegalIndustryClient() {
                 </div>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Link
-                    href="tel:8653463339"
+                    href="tel:865-346-3339"
                     className="btn-gold px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-2 whitespace-nowrap shadow-glow-gold group"
                   >
                     <PhoneCall className="w-5 h-5 group-hover:rotate-12 transition-transform" />
@@ -1015,7 +1015,7 @@ export default function LegalIndustryClient() {
               </p>
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="inline-block">
                 <Link
-                  href="tel:8653463339"
+                  href="tel:865-346-3339"
                   className="btn-gold px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-2 shadow-glow-gold-lg group w-full sm:w-auto justify-center"
                 >
                   <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform" />
@@ -1083,7 +1083,7 @@ export default function LegalIndustryClient() {
 
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
-                  href="tel:8653463339"
+                  href="tel:865-346-3339"
                   className="btn-gold text-xl px-10 py-5 rounded-xl font-semibold inline-flex items-center gap-2 shadow-glow-gold-lg group w-full sm:w-auto justify-center"
                 >
                   <PhoneCall className="w-6 h-6 group-hover:rotate-12 transition-transform" />
@@ -1249,7 +1249,7 @@ export default function LegalIndustryClient() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Link
-                    href="tel:8653463339"
+                    href="tel:865-346-3339"
                     className="btn-gold text-xl px-10 py-5 rounded-xl font-semibold inline-flex items-center gap-2 shadow-glow-gold-lg w-full sm:w-auto justify-center group"
                   >
                     <Phone className="w-6 h-6 group-hover:rotate-12 transition-transform" />
