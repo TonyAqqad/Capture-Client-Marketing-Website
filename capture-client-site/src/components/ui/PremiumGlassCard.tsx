@@ -10,9 +10,9 @@ interface PremiumGlassCardProps {
   body?: ReactNode;
   footer?: ReactNode;
   className?: string;
-  variant?: "default" | "premium" | "gold" | "subtle";
+  variant?: "default" | "premium" | "subtle";
   hover?: boolean;
-  glowColor?: "cyan" | "gold" | "primary";
+  glowColor?: "blue" | "primary";
 }
 
 /**
@@ -27,19 +27,17 @@ export function PremiumGlassCard({
   className = "",
   variant = "premium",
   hover = true,
-  glowColor = "cyan"
+  glowColor = "blue"
 }: PremiumGlassCardProps) {
   const variantClasses = {
-    default: "bg-surface/50 backdrop-blur-lg border border-surface-border",
-    premium: "bg-gradient-to-br from-white/[0.12] via-white/[0.06] to-white/[0.03] backdrop-blur-2xl border border-white/20 shadow-card",
-    gold: "bg-gradient-to-br from-gold/[0.12] via-gold/[0.06] to-white/[0.03] backdrop-blur-2xl border border-gold/30 shadow-glow-gold",
-    subtle: "bg-white/5 backdrop-blur-xl border border-white/10"
+    default: "bg-white/80 backdrop-blur-lg border border-slate-200",
+    premium: "bg-white/90 backdrop-blur-xl border border-slate-200 shadow-lg",
+    subtle: "bg-slate-50/80 backdrop-blur-lg border border-slate-200"
   };
 
   const glowClasses = {
-    cyan: "hover:shadow-[0_8px_32px_rgba(0,201,255,0.25),inset_0_1px_1px_rgba(255,255,255,0.1)] hover:border-accent/40",
-    gold: "hover:shadow-glow-gold-lg hover:border-gold/50",
-    primary: "hover:shadow-glow-primary hover:border-primary/40"
+    blue: "hover:shadow-[0_8px_32px_rgba(59,130,246,0.15)] hover:border-blue-400",
+    primary: "hover:shadow-[0_8px_32px_rgba(59,130,246,0.15)] hover:border-blue-400"
   };
 
   return (
@@ -55,23 +53,18 @@ export function PremiumGlassCard({
     >
       {/* Top gradient border highlight */}
       {variant === "premium" && (
-        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent pointer-events-none" />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-200/40 to-transparent pointer-events-none" />
       )}
 
       {/* Glass reflection effect */}
       {variant === "premium" && (
-        <div className="absolute top-0 left-0 right-0 h-1/3 bg-gradient-to-b from-white/[0.08] to-transparent pointer-events-none rounded-t-2xl" />
-      )}
-
-      {/* Gold accent glow for gold variant */}
-      {variant === "gold" && (
-        <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-transparent pointer-events-none" />
+        <div className="absolute top-0 left-0 right-0 h-1/3 bg-gradient-to-b from-white/40 to-transparent pointer-events-none rounded-t-2xl" />
       )}
 
       {/* Content wrapper */}
       <div className="relative z-10">
         {header && (
-          <div className="px-6 py-5 border-b border-white/10">
+          <div className="px-6 py-5 border-b border-slate-200/50">
             {header}
           </div>
         )}
@@ -90,7 +83,7 @@ export function PremiumGlassCard({
         )}
 
         {footer && (
-          <div className="px-6 py-4 border-t border-white/10 bg-white/[0.02]">
+          <div className="px-6 py-4 border-t border-slate-200/50 bg-slate-50/50">
             {footer}
           </div>
         )}
@@ -100,7 +93,7 @@ export function PremiumGlassCard({
       {hover && (
         <div className={cn(
           "absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300",
-          glowColor === "gold" ? "via-gold/50" : glowColor === "cyan" ? "via-accent/50" : "via-primary/50"
+          glowColor === "blue" ? "via-blue-400/50" : "via-blue-500/50"
         )} />
       )}
     </motion.div>

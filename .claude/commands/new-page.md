@@ -1,6 +1,7 @@
 ---
-model: claude-opus-4.5
 description: Create a new marketing page following established patterns
+argument-hint: [/route/path]
+model: opus
 ---
 Create a new page at the specified route: $ARGUMENTS
 
@@ -54,12 +55,12 @@ Create a new page at the specified route: $ARGUMENTS
 - [ ] Following patterns.md styling exactly
 - [ ] Mobile responsive (test at 375px mentally)
 - [ ] Proper section structure with z-index
-- [ ] CTA with phone number 865-346-3339
+- [ ] CTA with phone number 865-346-6111
 - [ ] Motion animations have `viewport={{ once: true }}`
 
 ## After Creation
 
-1. Run `pnpm typecheck` to verify no errors
+1. Run `npm run typecheck` to verify no errors
 2. Explain to user what was created and why
 3. Suggest testing the page in browser
 4. Offer to update progress.md with new page status

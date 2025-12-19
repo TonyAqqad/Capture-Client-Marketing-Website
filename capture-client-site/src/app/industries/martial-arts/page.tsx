@@ -28,17 +28,17 @@ export const metadata: Metadata = {
     siteName: "Capture Client",
     type: "website",
     images: [{
-      url: "https://captureclient.com/og-martial-arts.jpg",
+      url: "https://captureclient.com/og-image.png",
       width: 1200,
       height: 630,
-      alt: "AI Receptionist for Martial Arts Studios - Answer Every Parent Call",
+      alt: "Capture Client - AI for Martial Arts Studios",
     }],
   },
   twitter: {
     card: "summary_large_image",
     title: "AI for Martial Arts Studios | Capture Client",
     description: "Stop losing families during class. AI answers every parent call, books trials 24/7. Kicksite integration.",
-    images: ["https://captureclient.com/og-martial-arts.jpg"],
+    images: ["https://captureclient.com/og-image.png"],
   },
   alternates: {
     canonical: "https://captureclient.com/industries/martial-arts",
@@ -186,8 +186,8 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Industries",
-      "item": "https://captureclient.com/industries"
+      "name": "Who We Serve",
+      "item": "https://captureclient.com/who-we-serve"
     },
     {
       "@type": "ListItem",

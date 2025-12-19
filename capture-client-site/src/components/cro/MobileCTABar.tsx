@@ -68,15 +68,15 @@ export default function MobileCTABar({ phoneNumber = "865-346-6111" }: MobileCTA
           aria-label="Sticky call-to-action bar"
         >
           {/* Gradient fade for seamless appearance */}
-          <div className="absolute inset-x-0 -top-8 h-8 bg-gradient-to-t from-[#070B14] to-transparent pointer-events-none" />
+          <div className="absolute inset-x-0 -top-8 h-8 bg-gradient-to-t from-white to-transparent pointer-events-none" />
 
           {/* CTA Bar Container */}
-          <div className="bg-[#0F172A]/95 backdrop-blur-xl border-t border-white/10 px-4 py-3 safe-area-pb">
+          <div className="bg-white/95 backdrop-blur-xl border-t border-slate-200 shadow-lg shadow-slate-200/50 px-4 py-3 safe-area-pb">
             <div className="flex gap-3 max-w-screen-xl mx-auto">
               {/* Phone Button - Secondary action */}
               <a
                 href={`tel:${phoneNumber.replace(/\D/g, '')}`}
-                className="flex-1 flex items-center justify-center gap-2 bg-[#1E293B] border border-white/10 rounded-xl py-3 min-h-[48px] text-white font-semibold transition-all duration-300 active:scale-95 touch-manipulation"
+                className="flex-1 flex items-center justify-center gap-2 bg-white border border-slate-200 rounded-xl py-3 min-h-[48px] text-slate-700 font-semibold transition-all duration-300 active:scale-95 hover:bg-slate-50 hover:border-slate-300 touch-manipulation"
                 aria-label={`Call ${phoneNumber}`}
                 style={{
                   touchAction: 'manipulation',
@@ -85,7 +85,7 @@ export default function MobileCTABar({ phoneNumber = "865-346-6111" }: MobileCTA
                 }}
               >
                 <svg
-                  className="w-5 h-5 text-[#00C9FF]"
+                  className="w-5 h-5 text-blue-600"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -104,7 +104,7 @@ export default function MobileCTABar({ phoneNumber = "865-346-6111" }: MobileCTA
               {/* Try Our AI Button - Primary action */}
               <Link
                 href="/contact"
-                className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-[#D4AF37] to-[#D4AF37]/80 rounded-xl py-3 min-h-[48px] text-[#0F172A] font-bold transition-all duration-300 active:scale-95 touch-manipulation"
+                className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-xl py-3 min-h-[48px] text-white font-bold transition-all duration-300 active:scale-95 hover:from-blue-700 hover:to-cyan-600 shadow-lg shadow-blue-500/25 touch-manipulation"
                 aria-label="Try our AI with Capture Client"
                 style={{
                   touchAction: 'manipulation',

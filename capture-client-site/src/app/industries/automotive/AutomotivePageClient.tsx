@@ -32,19 +32,18 @@ export default function AutomotivePageClient() {
   const noShowReduction = 176000; // Conservative estimate
 
   return (
-    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden" style={{ backgroundColor: '#030303' }}>
+    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-white">
       {/* ==================== HERO SECTION ==================== */}
-      <section className="relative overflow-hidden pt-32 pb-16 sm:pt-40 sm:pb-24 lg:pt-48 lg:pb-32">
-        {/* Premium Background - Deep Space Aesthetic */}
+      <section className="relative overflow-hidden pt-32 pb-16 sm:pt-40 sm:pb-24 lg:pt-48 lg:pb-32 bg-gradient-to-b from-white to-slate-50">
+        {/* Premium Background - Clean Light Aesthetic */}
         <div className="absolute inset-0">
           <div className="absolute inset-0" style={{
-            background: 'radial-gradient(circle at 20% 50%, rgba(0, 201, 255, 0.08) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(74, 105, 226, 0.06) 0%, transparent 50%)',
-            backgroundColor: '#030303'
+            background: 'radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.04) 0%, transparent 50%)'
           }} />
 
           {/* Mesh gradient overlay */}
-          <div className="absolute inset-0 opacity-30" style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.03) 1px, transparent 0)',
+          <div className="absolute inset-0 opacity-20" style={{
+            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.15) 1px, transparent 0)',
             backgroundSize: '40px 40px'
           }} />
         </div>
@@ -56,15 +55,10 @@ export default function AutomotivePageClient() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-xl mb-6"
-              style={{
-                border: '1px solid rgba(255, 255, 255, 0.06)',
-                background: 'rgba(255, 255, 255, 0.02)'
-              }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200 mb-6"
             >
-              <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: '#00C9FF' }} />
-              <span className="text-xs sm:text-sm uppercase tracking-widest" style={{
-                color: '#00C9FF',
+              <div className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
+              <span className="text-xs sm:text-sm uppercase tracking-widest text-blue-600" style={{
                 fontFamily: 'var(--font-bricolage-grotesque)',
                 fontWeight: 600
               }}>
@@ -77,16 +71,12 @@ export default function AutomotivePageClient() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-slate-900 mb-6 leading-tight"
               style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
             >
               <span style={{ fontWeight: 200 }}>Your Sales Floor is Busy. </span>
-              <span style={{
-                fontWeight: 800,
-                background: 'linear-gradient(to right, #00C9FF, #4A69E2)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text'
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent" style={{
+                fontWeight: 800
               }}>
                 AI Answers.
               </span>
@@ -97,9 +87,8 @@ export default function AutomotivePageClient() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed"
+              className="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-slate-600"
               style={{
-                color: 'rgba(255, 255, 255, 0.6)',
                 fontFamily: 'var(--font-bricolage-grotesque)',
                 fontWeight: 300
               }}
@@ -117,59 +106,35 @@ export default function AutomotivePageClient() {
               <motion.div
                 whileHover={{ y: -4, scale: 1.02 }}
                 transition={{ duration: 0.2 }}
-                className="p-4 sm:p-6 h-full backdrop-blur-xl rounded-2xl"
-                style={{
-                  border: '1px solid rgba(255, 255, 255, 0.06)',
-                  background: 'rgba(255, 255, 255, 0.02)'
-                }}
+                className="p-4 sm:p-6 h-full bg-white/70 backdrop-blur-xl border border-slate-200 rounded-2xl shadow-lg shadow-slate-200/50"
               >
-                <div className="text-3xl sm:text-4xl mb-1" style={{
+                <div className="text-3xl sm:text-4xl mb-1 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent" style={{
                   fontFamily: 'var(--font-bricolage-grotesque)',
-                  fontWeight: 800,
-                  background: 'linear-gradient(to right, #00C9FF, #4A69E2)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text'
+                  fontWeight: 800
                 }}>$49K</div>
-                <div className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.6)', fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>Lost Per Year to Missed Calls</div>
+                <div className="text-sm text-slate-600" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>Lost Per Year to Missed Calls</div>
               </motion.div>
               <motion.div
                 whileHover={{ y: -4, scale: 1.02 }}
                 transition={{ duration: 0.2 }}
-                className="p-4 sm:p-6 h-full backdrop-blur-xl rounded-2xl"
-                style={{
-                  border: '1px solid rgba(255, 255, 255, 0.06)',
-                  background: 'rgba(255, 255, 255, 0.02)'
-                }}
+                className="p-4 sm:p-6 h-full bg-white/70 backdrop-blur-xl border border-slate-200 rounded-2xl shadow-lg shadow-slate-200/50"
               >
-                <div className="text-3xl sm:text-4xl mb-1" style={{
+                <div className="text-3xl sm:text-4xl mb-1 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent" style={{
                   fontFamily: 'var(--font-bricolage-grotesque)',
-                  fontWeight: 800,
-                  background: 'linear-gradient(to right, #00C9FF, #4A69E2)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text'
+                  fontWeight: 800
                 }}>80%</div>
-                <div className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.6)', fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>Planning AI Investment</div>
+                <div className="text-sm text-slate-600" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>Planning AI Investment</div>
               </motion.div>
               <motion.div
                 whileHover={{ y: -4, scale: 1.02 }}
                 transition={{ duration: 0.2 }}
-                className="p-4 sm:p-6 h-full backdrop-blur-xl rounded-2xl"
-                style={{
-                  border: '1px solid rgba(255, 255, 255, 0.06)',
-                  background: 'rgba(255, 255, 255, 0.02)'
-                }}
+                className="p-4 sm:p-6 h-full bg-white/70 backdrop-blur-xl border border-slate-200 rounded-2xl shadow-lg shadow-slate-200/50"
               >
-                <div className="text-3xl sm:text-4xl mb-1" style={{
+                <div className="text-3xl sm:text-4xl mb-1 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent" style={{
                   fontFamily: 'var(--font-bricolage-grotesque)',
-                  fontWeight: 800,
-                  background: 'linear-gradient(to right, #00C9FF, #4A69E2)',
-                  WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  backgroundClip: 'text'
+                  fontWeight: 800
                 }}>&lt;3 Mo</div>
-                <div className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.6)', fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>40% See ROI</div>
+                <div className="text-sm text-slate-600" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>40% See ROI</div>
               </motion.div>
             </motion.div>
 
@@ -183,13 +148,10 @@ export default function AutomotivePageClient() {
             >
               <a
                 href="tel:865-346-6111"
-                className="inline-flex items-center gap-3 px-8 py-4 rounded-xl text-lg sm:text-xl transition-all"
+                className="inline-flex items-center gap-3 px-8 py-4 rounded-xl text-lg sm:text-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-200/50 transition-all"
                 style={{
-                  background: 'linear-gradient(to right, #00C9FF, #4A69E2)',
-                  color: '#030303',
                   fontFamily: 'var(--font-bricolage-grotesque)',
-                  fontWeight: 700,
-                  boxShadow: '0 0 40px rgba(0, 201, 255, 0.3)'
+                  fontWeight: 700
                 }}
               >
                 <Phone className="w-5 h-5" />
@@ -201,10 +163,10 @@ export default function AutomotivePageClient() {
       </section>
 
       {/* ==================== SALES VS SERVICE TOGGLE ==================== */}
-      <section className="section relative overflow-hidden" style={{ backgroundColor: '#030303' }}>
+      <section className="section relative overflow-hidden bg-slate-50">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-20" style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.03) 1px, transparent 0)',
+          <div className="absolute inset-0 opacity-30" style={{
+            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)',
             backgroundSize: '40px 40px'
           }} />
         </div>
@@ -217,27 +179,19 @@ export default function AutomotivePageClient() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full backdrop-blur-xl mb-4" style={{
-              border: '1px solid rgba(255, 255, 255, 0.06)',
-              background: 'rgba(255, 255, 255, 0.02)'
-            }}>
-              <div className="w-2 h-2 rounded-full animate-pulse" style={{ backgroundColor: '#4A69E2' }} />
-              <span className="text-xs sm:text-sm uppercase tracking-widest" style={{
-                color: '#4A69E2',
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200 mb-4">
+              <div className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
+              <span className="text-xs sm:text-sm uppercase tracking-widest text-blue-600" style={{
                 fontFamily: 'var(--font-bricolage-grotesque)',
                 fontWeight: 600
               }}>
                 Dual-Mode AI
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl text-white mb-4" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl text-slate-900 mb-4" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
               <span style={{ fontWeight: 200 }}>Sales & Service in </span>
-              <span style={{
-                fontWeight: 800,
-                background: 'linear-gradient(to right, #00C9FF, #4A69E2)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text'
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent" style={{
+                fontWeight: 800
               }}>
                 One System
               </span>
@@ -252,25 +206,19 @@ export default function AutomotivePageClient() {
             transition={{ duration: 0.5 }}
             className="flex justify-center mb-12"
           >
-            <div className="p-2 rounded-2xl inline-flex gap-2 backdrop-blur-xl" style={{
-              border: '1px solid rgba(255, 255, 255, 0.06)',
-              background: 'rgba(255, 255, 255, 0.02)'
-            }}>
+            <div className="p-2 rounded-2xl inline-flex gap-2 bg-white/70 backdrop-blur-xl border border-slate-200">
               <motion.button
                 onClick={() => setMode("sales")}
                 whileHover={{ scale: mode === "sales" ? 1 : 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 py-3 rounded-xl font-semibold transition-all duration-300"
-                style={mode === "sales" ? {
-                  background: 'linear-gradient(to right, #00C9FF, #4A69E2)',
-                  color: '#030303',
+                className={`px-8 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  mode === "sales"
+                    ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-200/50"
+                    : "text-slate-500"
+                }`}
+                style={{
                   fontFamily: 'var(--font-bricolage-grotesque)',
-                  fontWeight: 700,
-                  boxShadow: '0 0 30px rgba(0, 201, 255, 0.4)'
-                } : {
-                  color: 'rgba(255, 255, 255, 0.5)',
-                  fontFamily: 'var(--font-bricolage-grotesque)',
-                  fontWeight: 600
+                  fontWeight: mode === "sales" ? 700 : 600
                 }}
               >
                 <span className="flex items-center gap-2">
@@ -282,17 +230,14 @@ export default function AutomotivePageClient() {
                 onClick={() => setMode("service")}
                 whileHover={{ scale: mode === "service" ? 1 : 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 py-3 rounded-xl font-semibold transition-all duration-300"
-                style={mode === "service" ? {
-                  background: 'linear-gradient(to right, #00C9FF, #4A69E2)',
-                  color: '#030303',
+                className={`px-8 py-3 rounded-xl font-semibold transition-all duration-300 ${
+                  mode === "service"
+                    ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-200/50"
+                    : "text-slate-500"
+                }`}
+                style={{
                   fontFamily: 'var(--font-bricolage-grotesque)',
-                  fontWeight: 700,
-                  boxShadow: '0 0 30px rgba(0, 201, 255, 0.4)'
-                } : {
-                  color: 'rgba(255, 255, 255, 0.5)',
-                  fontFamily: 'var(--font-bricolage-grotesque)',
-                  fontWeight: 600
+                  fontWeight: mode === "service" ? 700 : 600
                 }}
               >
                 <span className="flex items-center gap-2">
@@ -354,31 +299,22 @@ export default function AutomotivePageClient() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: idx * 0.1 }}
                       whileHover={{ y: -8, scale: 1.02 }}
-                      className="p-6 h-full transition-all duration-300 backdrop-blur-xl rounded-2xl"
-                      style={{
-                        border: '1px solid rgba(255, 255, 255, 0.06)',
-                        background: 'rgba(255, 255, 255, 0.02)'
-                      }}
+                      className="p-6 h-full transition-all duration-300 bg-white/70 backdrop-blur-xl border border-slate-200 rounded-2xl shadow-lg shadow-slate-200/50"
                     >
                       <motion.div
-                        className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 backdrop-blur-xl"
-                        style={{
-                          border: '1px solid rgba(0, 201, 255, 0.2)',
-                          background: 'rgba(0, 201, 255, 0.05)'
-                        }}
+                        className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-blue-50 border border-blue-200"
                         whileHover={{ rotate: 5, scale: 1.1 }}
                         transition={{ duration: 0.3 }}
                       >
-                        <IconComponent className="w-6 h-6" style={{ color: '#00C9FF' }} />
+                        <IconComponent className="w-6 h-6 text-blue-600" />
                       </motion.div>
-                      <h3 className="text-xl text-white mb-2" style={{
+                      <h3 className="text-xl text-slate-900 mb-2" style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 700
                       }}>
                         {feature.title}
                       </h3>
-                      <p className="leading-relaxed" style={{
-                        color: 'rgba(255, 255, 255, 0.6)',
+                      <p className="leading-relaxed text-slate-600" style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 300
                       }}>
@@ -437,31 +373,22 @@ export default function AutomotivePageClient() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: idx * 0.1 }}
                       whileHover={{ y: -8, scale: 1.02 }}
-                      className="p-6 h-full transition-all duration-300 backdrop-blur-xl rounded-2xl"
-                      style={{
-                        border: '1px solid rgba(255, 255, 255, 0.06)',
-                        background: 'rgba(255, 255, 255, 0.02)'
-                      }}
+                      className="p-6 h-full transition-all duration-300 bg-white/70 backdrop-blur-xl border border-slate-200 rounded-2xl shadow-lg shadow-slate-200/50"
                     >
                       <motion.div
-                        className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 backdrop-blur-xl"
-                        style={{
-                          border: '1px solid rgba(74, 105, 226, 0.2)',
-                          background: 'rgba(74, 105, 226, 0.05)'
-                        }}
+                        className="w-12 h-12 rounded-xl flex items-center justify-center mb-4 bg-cyan-50 border border-cyan-200"
                         whileHover={{ rotate: 5, scale: 1.1 }}
                         transition={{ duration: 0.3 }}
                       >
-                        <IconComponent className="w-6 h-6" style={{ color: '#4A69E2' }} />
+                        <IconComponent className="w-6 h-6 text-cyan-600" />
                       </motion.div>
-                      <h3 className="text-xl text-white mb-2" style={{
+                      <h3 className="text-xl text-slate-900 mb-2" style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 700
                       }}>
                         {feature.title}
                       </h3>
-                      <p className="leading-relaxed" style={{
-                        color: 'rgba(255, 255, 255, 0.6)',
+                      <p className="leading-relaxed text-slate-600" style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 300
                       }}>
@@ -477,10 +404,10 @@ export default function AutomotivePageClient() {
       </section>
 
       {/* ==================== PROBLEM STATS SECTION ==================== */}
-      <section className="section relative overflow-hidden" style={{ backgroundColor: '#030303' }}>
+      <section className="section relative overflow-hidden bg-white">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-25" style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.03) 1px, transparent 0)',
+          <div className="absolute inset-0 opacity-30" style={{
+            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)',
             backgroundSize: '40px 40px'
           }} />
         </div>
@@ -492,11 +419,11 @@ export default function AutomotivePageClient() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl text-white mb-4" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl text-slate-900 mb-4" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
               <span style={{ fontWeight: 200 }}>The Cost of </span>
               <span style={{
                 fontWeight: 800,
-                color: '#FF4444'
+                color: '#EF4444'
               }}>
                 Missed Opportunities
               </span>
@@ -510,23 +437,18 @@ export default function AutomotivePageClient() {
               viewport={{ once: true }}
               transition={{ delay: 0 }}
               whileHover={{ y: -6, scale: 1.02 }}
-              className="p-8 text-center h-full transition-all duration-300 backdrop-blur-xl rounded-2xl"
-              style={{
-                border: '1px solid rgba(255, 68, 68, 0.2)',
-                background: 'rgba(255, 255, 255, 0.02)'
-              }}
+              className="p-8 text-center h-full transition-all duration-300 bg-white/70 backdrop-blur-xl border border-red-200 rounded-2xl shadow-lg shadow-red-200/50"
             >
               <div className="text-5xl mb-3" style={{
                 fontFamily: 'var(--font-bricolage-grotesque)',
                 fontWeight: 800,
-                color: '#FF4444'
+                color: '#EF4444'
               }}>$49K</div>
-              <div className="text-xl text-white mb-2" style={{
+              <div className="text-xl text-slate-900 mb-2" style={{
                 fontFamily: 'var(--font-bricolage-grotesque)',
                 fontWeight: 600
               }}>Per Year</div>
-              <div style={{
-                color: 'rgba(255, 255, 255, 0.6)',
+              <div className="text-slate-600" style={{
                 fontFamily: 'var(--font-bricolage-grotesque)',
                 fontWeight: 300
               }}>Lost revenue from missed sales calls per dealership</div>
@@ -538,23 +460,18 @@ export default function AutomotivePageClient() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
               whileHover={{ y: -6, scale: 1.02 }}
-              className="p-8 text-center h-full transition-all duration-300 backdrop-blur-xl rounded-2xl"
-              style={{
-                border: '1px solid rgba(255, 68, 68, 0.2)',
-                background: 'rgba(255, 255, 255, 0.02)'
-              }}
+              className="p-8 text-center h-full transition-all duration-300 bg-white/70 backdrop-blur-xl border border-red-200 rounded-2xl shadow-lg shadow-red-200/50"
             >
               <div className="text-5xl mb-3" style={{
                 fontFamily: 'var(--font-bricolage-grotesque)',
                 fontWeight: 800,
-                color: '#FF4444'
+                color: '#EF4444'
               }}>$176K-$332K</div>
-              <div className="text-xl text-white mb-2" style={{
+              <div className="text-xl text-slate-900 mb-2" style={{
                 fontFamily: 'var(--font-bricolage-grotesque)',
                 fontWeight: 600
               }}>Per Year</div>
-              <div style={{
-                color: 'rgba(255, 255, 255, 0.6)',
+              <div className="text-slate-600" style={{
                 fontFamily: 'var(--font-bricolage-grotesque)',
                 fontWeight: 300
               }}>Lost revenue from service appointment no-shows</div>
@@ -566,23 +483,18 @@ export default function AutomotivePageClient() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
               whileHover={{ y: -6, scale: 1.02 }}
-              className="p-8 text-center h-full transition-all duration-300 backdrop-blur-xl rounded-2xl"
-              style={{
-                border: '1px solid rgba(255, 68, 68, 0.2)',
-                background: 'rgba(255, 255, 255, 0.02)'
-              }}
+              className="p-8 text-center h-full transition-all duration-300 bg-white/70 backdrop-blur-xl border border-red-200 rounded-2xl shadow-lg shadow-red-200/50"
             >
               <div className="text-5xl mb-3" style={{
                 fontFamily: 'var(--font-bricolage-grotesque)',
                 fontWeight: 800,
-                color: '#FF4444'
+                color: '#EF4444'
               }}>33%</div>
-              <div className="text-xl text-white mb-2" style={{
+              <div className="text-xl text-slate-900 mb-2" style={{
                 fontFamily: 'var(--font-bricolage-grotesque)',
                 fontWeight: 600
               }}>Unanswered</div>
-              <div style={{
-                color: 'rgba(255, 255, 255, 0.6)',
+              <div className="text-slate-600" style={{
                 fontFamily: 'var(--font-bricolage-grotesque)',
                 fontWeight: 300
               }}>Of all dealership calls go to voicemail</div>
@@ -592,9 +504,12 @@ export default function AutomotivePageClient() {
       </section>
 
       {/* ==================== DMS INTEGRATION SHOWCASE ==================== */}
-      <section className="section relative overflow-hidden">
+      <section className="section relative overflow-hidden bg-slate-50">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-background to-background-dark" />
+          <div className="absolute inset-0 opacity-30" style={{
+            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)',
+            backgroundSize: '40px 40px'
+          }} />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -604,19 +519,19 @@ export default function AutomotivePageClient() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 via-primary/10 to-transparent border border-primary/20 backdrop-blur-xl mb-4">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-primary font-accent">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200 mb-4">
+              <div className="w-2 h-2 bg-blue-600 rounded-full animate-pulse" />
+              <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-blue-600" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
                 Native Integrations
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl text-slate-900 mb-4" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>
               Works With Your{" "}
-              <span className="text-gradient bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                 Existing DMS
               </span>
             </h2>
-            <p className="text-xl text-foreground-muted max-w-2xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               No expensive API fees. No data migration. Plug and play.
             </p>
           </motion.div>
@@ -624,20 +539,20 @@ export default function AutomotivePageClient() {
           <GlassCard variant="premium" className="p-12">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
               {[
-                { name: "CDK Global", color: "text-blue-400" },
-                { name: "Reynolds & Reynolds", color: "text-green-400" },
-                { name: "DealerSocket", color: "text-[#D4AF37]" },
-                { name: "Tekion", color: "text-orange-400" }
+                { name: "CDK Global", color: "text-blue-600" },
+                { name: "Reynolds & Reynolds", color: "text-green-600" },
+                { name: "DealerSocket", color: "text-blue-600" },
+                { name: "Tekion", color: "text-orange-600" }
               ].map((dms) => (
                 <motion.div
                   key={dms.name}
                   whileHover={{ scale: 1.05 }}
                   className="text-center"
                 >
-                  <div className={`text-4xl font-display font-bold ${dms.color} mb-2`}>
+                  <div className={`text-4xl font-bold ${dms.color} mb-2`} style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
                     {dms.name.split(" ")[0]}
                   </div>
-                  <div className="text-sm text-foreground-muted">{dms.name}</div>
+                  <div className="text-sm text-slate-600">{dms.name}</div>
                 </motion.div>
               ))}
             </div>
@@ -646,10 +561,12 @@ export default function AutomotivePageClient() {
       </section>
 
       {/* ==================== AFTER-HOURS REVENUE ==================== */}
-      <section className="section relative overflow-hidden bg-background-dark">
+      <section className="section relative overflow-hidden bg-white">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-background-dark to-slate-900" />
-          <div className="absolute inset-0 bg-mesh-premium opacity-20" />
+          <div className="absolute inset-0 opacity-30" style={{
+            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)',
+            backgroundSize: '40px 40px'
+          }} />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -659,50 +576,50 @@ export default function AutomotivePageClient() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gold/20 via-gold/10 to-transparent border border-gold/20 backdrop-blur-xl mb-6">
-                <Moon className="w-4 h-4 text-gold" />
-                <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-gold font-accent">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-50 to-white border border-blue-200 backdrop-blur-xl mb-6">
+                <Moon className="w-4 h-4 text-blue-600" />
+                <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-blue-600 font-accent">
                   24/7 Revenue
                 </span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-slate-900 mb-6">
                 Your Competitors Close at 9 PM.{" "}
-                <span className="text-gradient bg-gradient-to-r from-gold to-accent bg-clip-text text-transparent">
+                <span className="text-gradient bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                   You Don't.
                 </span>
               </h2>
 
-              <p className="text-xl text-foreground-muted mb-6 leading-relaxed">
+              <p className="text-xl text-slate-600 mb-6 leading-relaxed">
                 35-40% of AI-captured deals come from after-hours calls. While your competition sleeps, you're closing deals.
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-gold/10 border border-gold/20 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-5 h-5 text-gold" />
+                  <div className="w-10 h-10 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground mb-1">Weekend Warriors</div>
-                    <div className="text-foreground-muted">Buyers browsing late Friday/Saturday nights</div>
+                    <div className="font-semibold text-slate-900 mb-1">Weekend Warriors</div>
+                    <div className="text-slate-600">Buyers browsing late Friday/Saturday nights</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-gold/10 border border-gold/20 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-5 h-5 text-gold" />
+                  <div className="w-10 h-10 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground mb-1">Early Birds</div>
-                    <div className="text-foreground-muted">7 AM service calls before you open</div>
+                    <div className="font-semibold text-slate-900 mb-1">Early Birds</div>
+                    <div className="text-slate-600">7 AM service calls before you open</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-gold/10 border border-gold/20 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle2 className="w-5 h-5 text-gold" />
+                  <div className="w-10 h-10 rounded-lg bg-blue-50 border border-blue-200 flex items-center justify-center flex-shrink-0">
+                    <CheckCircle2 className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground mb-1">Lunch Break Shoppers</div>
-                    <div className="text-foreground-muted">When your sales team is at lunch</div>
+                    <div className="font-semibold text-slate-900 mb-1">Lunch Break Shoppers</div>
+                    <div className="text-slate-600">When your sales team is at lunch</div>
                   </div>
                 </div>
               </div>
@@ -717,20 +634,20 @@ export default function AutomotivePageClient() {
               <GlassCard variant="premium" className="p-8">
                 <div className="text-center mb-6">
                   <div className="text-6xl mb-4">🌙</div>
-                  <div className="text-2xl font-display font-bold text-foreground mb-2">After-Hours Impact</div>
+                  <div className="text-2xl font-display font-bold text-slate-900 mb-2">After-Hours Impact</div>
                 </div>
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center p-4 rounded-xl bg-white/5 border border-white/10">
-                    <span className="text-foreground-muted">Weekend Calls</span>
-                    <span className="text-2xl font-bold text-gold">40%</span>
+                  <div className="flex justify-between items-center p-4 rounded-xl bg-slate-50 border border-slate-200">
+                    <span className="text-slate-600">Weekend Calls</span>
+                    <span className="text-2xl font-bold text-blue-600">40%</span>
                   </div>
-                  <div className="flex justify-between items-center p-4 rounded-xl bg-white/5 border border-white/10">
-                    <span className="text-foreground-muted">Evening (6-11 PM)</span>
-                    <span className="text-2xl font-bold text-accent">25%</span>
+                  <div className="flex justify-between items-center p-4 rounded-xl bg-slate-50 border border-slate-200">
+                    <span className="text-slate-600">Evening (6-11 PM)</span>
+                    <span className="text-2xl font-bold text-cyan-600">25%</span>
                   </div>
-                  <div className="flex justify-between items-center p-4 rounded-xl bg-white/5 border border-white/10">
-                    <span className="text-foreground-muted">Early Morning (6-9 AM)</span>
-                    <span className="text-2xl font-bold text-primary">15%</span>
+                  <div className="flex justify-between items-center p-4 rounded-xl bg-slate-50 border border-slate-200">
+                    <span className="text-slate-600">Early Morning (6-9 AM)</span>
+                    <span className="text-2xl font-bold text-blue-600">15%</span>
                   </div>
                 </div>
               </GlassCard>
@@ -740,10 +657,12 @@ export default function AutomotivePageClient() {
       </section>
 
       {/* ==================== ROI CALCULATOR ==================== */}
-      <section className="section relative overflow-hidden">
+      <section className="section relative overflow-hidden bg-slate-50">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-background via-background-dark to-background" />
-          <div className="absolute inset-0 bg-mesh opacity-20" />
+          <div className="absolute inset-0 opacity-30" style={{
+            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)',
+            backgroundSize: '40px 40px'
+          }} />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -753,15 +672,15 @@ export default function AutomotivePageClient() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gold/20 via-gold/10 to-transparent border border-gold/20 backdrop-blur-xl mb-4">
-              <Calculator className="w-4 h-4 text-gold" />
-              <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-gold font-accent">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-50 to-white border border-blue-200 backdrop-blur-xl mb-4">
+              <Calculator className="w-4 h-4 text-blue-600" />
+              <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-blue-600 font-accent">
                 ROI Calculator
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-slate-900 mb-4">
               Calculate Your{" "}
-              <span className="text-gradient bg-gradient-to-r from-gold to-accent bg-clip-text text-transparent">
+              <span className="text-gradient bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                 Recovery Potential
               </span>
             </h2>
@@ -773,81 +692,81 @@ export default function AutomotivePageClient() {
                 {/* Inputs */}
                 <div className="space-y-6">
                   <div>
-                    <label className="block text-sm font-semibold text-foreground mb-2">
+                    <label className="block text-sm font-semibold text-slate-900 mb-2">
                       Monthly Calls
                     </label>
                     <input
                       type="number"
                       value={calculatorInputs.monthlyCalls}
                       onChange={(e) => setCalculatorInputs({ ...calculatorInputs, monthlyCalls: parseInt(e.target.value) || 0 })}
-                      className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-foreground focus:border-gold/50 focus:ring-2 focus:ring-gold/20 outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-foreground mb-2">
+                    <label className="block text-sm font-semibold text-slate-900 mb-2">
                       Missed Call % (Industry avg: 33%)
                     </label>
                     <input
                       type="number"
                       value={calculatorInputs.missedPercent}
                       onChange={(e) => setCalculatorInputs({ ...calculatorInputs, missedPercent: parseInt(e.target.value) || 0 })}
-                      className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-foreground focus:border-gold/50 focus:ring-2 focus:ring-gold/20 outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-foreground mb-2">
+                    <label className="block text-sm font-semibold text-slate-900 mb-2">
                       Average Sale Value
                     </label>
                     <input
                       type="number"
                       value={calculatorInputs.avgSaleValue}
                       onChange={(e) => setCalculatorInputs({ ...calculatorInputs, avgSaleValue: parseInt(e.target.value) || 0 })}
-                      className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-foreground focus:border-gold/50 focus:ring-2 focus:ring-gold/20 outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-semibold text-foreground mb-2">
+                    <label className="block text-sm font-semibold text-slate-900 mb-2">
                       Average Service Value
                     </label>
                     <input
                       type="number"
                       value={calculatorInputs.avgServiceValue}
                       onChange={(e) => setCalculatorInputs({ ...calculatorInputs, avgServiceValue: parseInt(e.target.value) || 0 })}
-                      className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-foreground focus:border-gold/50 focus:ring-2 focus:ring-gold/20 outline-none transition-all"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
                     />
                   </div>
                 </div>
 
                 {/* Results */}
                 <div className="space-y-6">
-                  <div className="p-6 rounded-2xl bg-gradient-to-br from-gold/10 to-gold/5 border border-gold/20">
-                    <div className="text-sm text-foreground-muted mb-1">Annual Missed Calls</div>
-                    <div className="text-4xl font-display font-bold text-gold">
+                  <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-white border border-blue-200">
+                    <div className="text-sm text-slate-600 mb-1">Annual Missed Calls</div>
+                    <div className="text-4xl font-display font-bold text-blue-600">
                       {annualMissedCalls.toLocaleString()}
                     </div>
                   </div>
-                  <div className="p-6 rounded-2xl bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20">
-                    <div className="text-sm text-foreground-muted mb-1">Sales Recovery Potential</div>
-                    <div className="text-3xl font-display font-bold text-accent">
+                  <div className="p-6 rounded-2xl bg-gradient-to-br from-cyan-50 to-white border border-cyan-200">
+                    <div className="text-sm text-slate-600 mb-1">Sales Recovery Potential</div>
+                    <div className="text-3xl font-display font-bold text-cyan-600">
                       ${(salesRecovery / 1000).toFixed(0)}K/year
                     </div>
-                    <div className="text-xs text-foreground-muted mt-1">15% conversion rate</div>
+                    <div className="text-xs text-slate-600 mt-1">15% conversion rate</div>
                   </div>
-                  <div className="p-6 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20">
-                    <div className="text-sm text-foreground-muted mb-1">Service Recovery Potential</div>
-                    <div className="text-3xl font-display font-bold text-primary">
+                  <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-white border border-blue-200">
+                    <div className="text-sm text-slate-600 mb-1">Service Recovery Potential</div>
+                    <div className="text-3xl font-display font-bold text-blue-600">
                       ${(serviceRecovery / 1000).toFixed(0)}K/year
                     </div>
-                    <div className="text-xs text-foreground-muted mt-1">25% conversion rate</div>
+                    <div className="text-xs text-slate-600 mt-1">25% conversion rate</div>
                   </div>
-                  <div className="p-6 rounded-2xl bg-gradient-to-br from-gold/20 to-gold/10 border-2 border-gold/30">
-                    <div className="text-sm text-foreground-muted mb-1">Total Annual Recovery</div>
-                    <div className="text-5xl font-display font-bold text-gold">
+                  <div className="p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-white border-2 border-blue-300">
+                    <div className="text-sm text-slate-600 mb-1">Total Annual Recovery</div>
+                    <div className="text-5xl font-display font-bold text-blue-600">
                       ${(totalRecovery / 1000).toFixed(0)}K
                     </div>
                   </div>
                   <div className="p-4 rounded-xl bg-green-500/10 border border-green-500/20">
-                    <div className="text-sm text-foreground-muted mb-1">+ No-Show Reduction Savings</div>
+                    <div className="text-sm text-slate-600 mb-1">+ No-Show Reduction Savings</div>
                     <div className="text-2xl font-display font-bold text-green-400">
                       ${(noShowReduction / 1000).toFixed(0)}K/year
                     </div>
@@ -871,9 +790,12 @@ export default function AutomotivePageClient() {
       </section>
 
       {/* ==================== INVENTORY LOOKUP FEATURE ==================== */}
-      <section className="section relative overflow-hidden bg-background-dark">
+      <section className="section relative overflow-hidden bg-white">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-mesh-premium opacity-25" />
+          <div className="absolute inset-0 opacity-30" style={{
+            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)',
+            backgroundSize: '40px 40px'
+          }} />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -883,50 +805,50 @@ export default function AutomotivePageClient() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 via-accent/10 to-transparent border border-accent/20 backdrop-blur-xl mb-6">
-                <Package className="w-4 h-4 text-accent" />
-                <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent font-accent">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-cyan-50 to-white border border-cyan-200 backdrop-blur-xl mb-6">
+                <Package className="w-4 h-4 text-cyan-600" />
+                <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-cyan-600 font-accent">
                   Live Inventory
                 </span>
               </div>
 
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-slate-900 mb-6">
                 "Do You Have a Red Camry?"{" "}
-                <span className="text-gradient bg-gradient-to-r from-accent to-gold bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
                   Instant Answer.
                 </span>
               </h2>
 
-              <p className="text-xl text-foreground-muted mb-6 leading-relaxed">
+              <p className="text-xl text-slate-600 mb-6 leading-relaxed">
                 AI checks your live inventory and answers instantly - no "let me check" or "can I call you back."
               </p>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center flex-shrink-0">
-                    <Search className="w-5 h-5 text-accent" />
+                  <div className="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-200 flex items-center justify-center flex-shrink-0">
+                    <Search className="w-5 h-5 text-cyan-600" />
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground mb-1">Real-Time Inventory Check</div>
-                    <div className="text-foreground-muted">Color, trim, features, availability</div>
+                    <div className="font-semibold text-slate-900 mb-1">Real-Time Inventory Check</div>
+                    <div className="text-slate-600">Color, trim, features, availability</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center flex-shrink-0">
-                    <BarChart className="w-5 h-5 text-accent" />
+                  <div className="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-200 flex items-center justify-center flex-shrink-0">
+                    <BarChart className="w-5 h-5 text-cyan-600" />
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground mb-1">VIN Lookup</div>
-                    <div className="text-foreground-muted">Full vehicle history and details</div>
+                    <div className="font-semibold text-slate-900 mb-1">VIN Lookup</div>
+                    <div className="text-slate-600">Full vehicle history and details</div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-center flex-shrink-0">
-                    <ArrowDownUp className="w-5 h-5 text-accent" />
+                  <div className="w-10 h-10 rounded-lg bg-cyan-50 border border-cyan-200 flex items-center justify-center flex-shrink-0">
+                    <ArrowDownUp className="w-5 h-5 text-cyan-600" />
                   </div>
                   <div>
-                    <div className="font-semibold text-foreground mb-1">Alternative Suggestions</div>
-                    <div className="text-foreground-muted">If unavailable, suggests similar vehicles</div>
+                    <div className="font-semibold text-slate-900 mb-1">Alternative Suggestions</div>
+                    <div className="text-slate-600">If unavailable, suggests similar vehicles</div>
                   </div>
                 </div>
               </div>
@@ -939,24 +861,24 @@ export default function AutomotivePageClient() {
             >
               <GlassCard variant="premium" className="p-8">
                 <div className="space-y-4">
-                  <div className="p-4 rounded-xl bg-white/5 border-l-4 border-gold">
+                  <div className="p-4 rounded-xl bg-slate-50 border-l-4 border-blue-500">
                     <div className="flex items-start gap-3">
-                      <User className="w-5 h-5 text-gold mt-1" />
+                      <User className="w-5 h-5 text-blue-600 mt-1" />
                       <div>
-                        <div className="font-semibold text-foreground mb-1">Customer</div>
-                        <div className="text-foreground-muted">"Do you have a 2024 Toyota Camry in red?"</div>
+                        <div className="font-semibold text-slate-900 mb-1">Customer</div>
+                        <div className="text-slate-600">"Do you have a 2024 Toyota Camry in red?"</div>
                       </div>
                     </div>
                   </div>
                   <div className="flex justify-center">
-                    <div className="w-1 h-8 bg-gradient-to-b from-gold to-accent rounded-full" />
+                    <div className="w-1 h-8 bg-gradient-to-b from-blue-600 to-cyan-500 rounded-full" />
                   </div>
-                  <div className="p-4 rounded-xl bg-gradient-to-br from-accent/10 to-accent/5 border-l-4 border-accent">
+                  <div className="p-4 rounded-xl bg-gradient-to-br from-cyan-50 to-white border-l-4 border-cyan-500">
                     <div className="flex items-start gap-3">
-                      <Bot className="w-5 h-5 text-accent mt-1" />
+                      <Bot className="w-5 h-5 text-cyan-600 mt-1" />
                       <div>
-                        <div className="font-semibold text-foreground mb-1">AI Agent</div>
-                        <div className="text-foreground-muted">"Yes! We have 2 in stock: a 2024 Camry XLE in Supersonic Red with navigation, and a 2024 Camry SE in Ruby Flare Pearl. Both available for test drive today. Would you like to schedule?"</div>
+                        <div className="font-semibold text-slate-900 mb-1">AI Agent</div>
+                        <div className="text-slate-600">"Yes! We have 2 in stock: a 2024 Camry XLE in Supersonic Red with navigation, and a 2024 Camry SE in Ruby Flare Pearl. Both available for test drive today. Would you like to schedule?"</div>
                       </div>
                     </div>
                   </div>
@@ -968,10 +890,12 @@ export default function AutomotivePageClient() {
       </section>
 
       {/* ==================== TESTIMONIALS ==================== */}
-      <section className="section relative overflow-hidden">
+      <section className="section relative overflow-hidden bg-white">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-background to-background-dark" />
-          <div className="absolute inset-0 bg-mesh opacity-20" />
+          <div className="absolute inset-0 opacity-30" style={{
+            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)',
+            backgroundSize: '40px 40px'
+          }} />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -981,9 +905,9 @@ export default function AutomotivePageClient() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-slate-900 mb-4">
               Trusted by{" "}
-              <span className="text-gradient bg-gradient-to-r from-gold to-accent bg-clip-text text-transparent">
+              <span className="text-gradient bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                 Top Dealers
               </span>
             </h2>
@@ -1021,30 +945,30 @@ export default function AutomotivePageClient() {
                 transition={{ delay: idx * 0.15, duration: 0.5 }}
                 whileHover={{ y: -8, scale: 1.02 }}
               >
-                <GlassCard variant="premium" className="p-6 h-full transition-all duration-300 hover:shadow-glow-gold">
+                <GlassCard variant="premium" className="p-6 h-full transition-all duration-300 hover:shadow-lg hover:shadow-slate-200/50-gold">
                   <div className="flex items-center gap-3 mb-4">
                     <motion.div
-                      className="w-12 h-12 rounded-full bg-gradient-to-br from-gold/20 to-accent/20 flex items-center justify-center"
+                      className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-100 to-cyan-100 flex items-center justify-center"
                       whileHover={{ scale: 1.1, rotate: 5 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <span className="text-xl font-bold text-gold">
+                      <span className="text-xl font-bold text-blue-600">
                         {testimonial.name.split(" ").map(n => n[0]).join("")}
                       </span>
                     </motion.div>
                     <div>
-                      <div className="font-semibold text-foreground">{testimonial.name}</div>
-                      <div className="text-sm text-foreground-muted">{testimonial.role}</div>
+                      <div className="font-semibold text-slate-900">{testimonial.name}</div>
+                      <div className="text-sm text-slate-600">{testimonial.role}</div>
                     </div>
                   </div>
-                  <div className="text-xs text-gold font-semibold mb-3">{testimonial.dealership}</div>
-                  <p className="text-foreground-muted mb-4 leading-relaxed italic">"{testimonial.quote}"</p>
+                  <div className="text-xs text-blue-600 font-semibold mb-3">{testimonial.dealership}</div>
+                  <p className="text-slate-600 mb-4 leading-relaxed italic">"{testimonial.quote}"</p>
                   <motion.div
-                    className="inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-gold/20 to-accent/20 border border-gold/20"
+                    className="inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="text-2xl font-display font-bold text-gold">{testimonial.revenue}</div>
+                    <div className="text-2xl font-display font-bold text-blue-600">{testimonial.revenue}</div>
                   </motion.div>
                 </GlassCard>
               </motion.div>
@@ -1054,10 +978,13 @@ export default function AutomotivePageClient() {
       </section>
 
       {/* ==================== FINAL CTA ==================== */}
-      <section className="section relative overflow-hidden bg-background-dark">
+      <section className="section relative overflow-hidden bg-gradient-to-b from-slate-50 to-white">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-mesh-premium opacity-40" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-gradient-radial from-gold/20 via-accent/15 to-transparent blur-3xl" />
+          <div className="absolute inset-0 opacity-30" style={{
+            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)',
+            backgroundSize: '40px 40px'
+          }} />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-gradient-radial from-blue-100/40 via-cyan-100/20 to-transparent blur-3xl" />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -1067,14 +994,14 @@ export default function AutomotivePageClient() {
             viewport={{ once: true }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-foreground mb-6 leading-tight">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-slate-900 mb-6 leading-tight">
               Turn Missed Calls Into{" "}
-              <span className="text-gradient bg-gradient-to-r from-gold via-accent to-gold bg-clip-text text-transparent">
+              <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
                 Sold Cars
               </span>
             </h2>
 
-            <p className="text-xl sm:text-2xl text-foreground-muted mb-8 max-w-2xl mx-auto">
+            <p className="text-xl sm:text-2xl text-slate-600 mb-8 max-w-2xl mx-auto">
               Join 100+ dealerships using AI to capture every opportunity, 24/7.
             </p>
 
@@ -1094,7 +1021,7 @@ export default function AutomotivePageClient() {
                   size="lg"
                   href="tel:865-346-6111"
                   icon={Phone}
-                  className="text-lg sm:text-xl w-full sm:w-auto shadow-glow-gold-lg hover:shadow-glow-gold-xl transition-shadow"
+                  className="text-lg sm:text-xl w-full sm:w-auto shadow-lg shadow-blue-200/50 hover:shadow-xl hover:shadow-blue-300/50 transition-shadow"
                 >
                   Call Now: 865-346-6111
                 </Button>
@@ -1108,7 +1035,7 @@ export default function AutomotivePageClient() {
                   size="lg"
                   href="/contact"
                   icon={ArrowRight}
-                  className="text-lg sm:text-xl w-full sm:w-auto hover:shadow-glow transition-shadow"
+                  className="text-lg sm:text-xl w-full sm:w-auto hover:shadow-lg hover:shadow-slate-200/50 transition-shadow"
                 >
                   Book Consultation
                 </Button>
@@ -1120,7 +1047,7 @@ export default function AutomotivePageClient() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
-              className="flex flex-wrap justify-center gap-6 text-sm text-foreground-muted"
+              className="flex flex-wrap justify-center gap-6 text-sm text-slate-600"
             >
               <motion.div
                 initial={{ opacity: 0, x: -10 }}
@@ -1129,7 +1056,7 @@ export default function AutomotivePageClient() {
                 transition={{ delay: 0.5 }}
                 className="flex items-center gap-2"
               >
-                <CheckCircle2 className="w-4 h-4 text-gold" />
+                <CheckCircle2 className="w-4 h-4 text-blue-600" />
                 <span>No long-term contracts</span>
               </motion.div>
               <motion.div
@@ -1139,7 +1066,7 @@ export default function AutomotivePageClient() {
                 transition={{ delay: 0.6 }}
                 className="flex items-center gap-2"
               >
-                <CheckCircle2 className="w-4 h-4 text-accent" />
+                <CheckCircle2 className="w-4 h-4 text-cyan-600" />
                 <span>48-hour setup</span>
               </motion.div>
               <motion.div
@@ -1149,7 +1076,7 @@ export default function AutomotivePageClient() {
                 transition={{ delay: 0.7 }}
                 className="flex items-center gap-2"
               >
-                <CheckCircle2 className="w-4 h-4 text-primary" />
+                <CheckCircle2 className="w-4 h-4 text-blue-600" />
                 <span>No long-term contract</span>
               </motion.div>
             </motion.div>

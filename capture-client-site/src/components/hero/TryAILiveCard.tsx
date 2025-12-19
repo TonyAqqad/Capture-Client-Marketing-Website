@@ -20,7 +20,7 @@ export function TryAILiveCard({ className = "" }: TryAILiveCardProps) {
       transition={{ duration: 0.6, delay: 0.8 }}
       className={className}
     >
-      <div className="glass-premium p-6 rounded-2xl border border-white/10 max-w-[280px]">
+      <div className="bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg p-6 rounded-2xl max-w-[280px]">
         <div className="flex items-start gap-4">
           {/* Phone Icon */}
           <div className="w-12 h-12 flex-shrink-0 rounded-xl bg-gradient-to-br from-[#00C9FF] to-[#5FE3FF] flex items-center justify-center shadow-lg shadow-cyan-500/20">
@@ -28,10 +28,10 @@ export function TryAILiveCard({ className = "" }: TryAILiveCardProps) {
           </div>
 
           <div className="flex-1">
-            <h4 className="text-lg font-bold text-white mb-1">
+            <h4 className="text-lg font-bold text-slate-900 mb-1">
               Try Our AI Live!
             </h4>
-            <p className="text-sm text-white/50 mb-3">
+            <p className="text-sm text-slate-600 mb-3">
               Call now and experience it yourself
             </p>
 

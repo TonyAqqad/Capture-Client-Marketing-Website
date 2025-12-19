@@ -3,7 +3,7 @@ import RestaurantsPageClient from './RestaurantsPageClient';
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: "AI Phone Ordering for Restaurants | Toast Integration | Capture Client",
+  title: "AI Phone Ordering for Restaurants | Capture Client",
   description: "Stop losing 23% of phone orders. AI voice ordering and reservations for restaurants. Toast, Square, OpenTable integration. 760% ROI, 90-day payback.",
   keywords: [
     'restaurant phone ordering AI',
@@ -18,23 +18,23 @@ export const metadata: Metadata = {
     'AI restaurant receptionist'
   ],
   openGraph: {
-    title: "AI Phone Ordering for Restaurants | Never Miss an Order Again",
+    title: "AI Phone Ordering for Restaurants | Capture Client",
     description: "Stop losing 23% of phone orders during rush. AI handles ordering, reservations, and catering. Toast, Square, OpenTable integration. 760% ROI proven.",
     url: 'https://captureclient.com/industries/restaurants',
     siteName: 'Capture Client',
     type: 'website',
     images: [
       {
-        url: 'https://captureclient.com/og-restaurant-ai.jpg',
+        url: 'https://captureclient.com/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'AI Phone Ordering for Restaurants - Capture Client',
+        alt: 'Capture Client - AI Phone Ordering for Restaurants',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'AI Phone Ordering for Restaurants | Never Miss an Order',
+    title: 'AI Phone Ordering for Restaurants | Capture Client',
     description: 'Stop losing 23% of phone orders. AI voice ordering with Toast, Square, OpenTable integration. 760% ROI proven.',
   },
   alternates: {
@@ -128,8 +128,8 @@ const breadcrumbSchema = {
     {
       '@type': 'ListItem',
       position: 2,
-      name: 'Industries',
-      item: 'https://captureclient.com/industries',
+      name: 'Who We Serve',
+      item: 'https://captureclient.com/who-we-serve',
     },
     {
       '@type': 'ListItem',

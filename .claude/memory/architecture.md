@@ -130,7 +130,7 @@ function AboutPage() {
 ```
 
 ### Why TypeScript?
-TypeScript catches errors before they break the site. When you see red squiggly lines, something is wrong. Running `pnpm typecheck` shows all errors.
+TypeScript catches errors before they break the site. When you see red squiggly lines, something is wrong. Running `npm run typecheck` shows all errors.
 
 ### Common Terms Translated
 

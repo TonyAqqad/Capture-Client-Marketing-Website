@@ -48,14 +48,14 @@ export default function CapacityIndicator({
           {/* Text - more professional tone */}
           <div className="flex flex-wrap items-center justify-center gap-2.5 text-center">
             <Clock className="w-5 h-5 text-amber-400/80" />
-            <p className="text-sm md:text-base font-semibold text-foreground/90">
+            <p className="text-sm md:text-base font-semibold text-slate-800">
               <span className="text-amber-400">{spotsLeft} onboarding spots</span> available this month
             </p>
           </div>
         </div>
 
         {/* Sub-text - informative, not pushy */}
-        <p className="text-xs text-foreground-muted/70 text-center mt-3 font-medium">
+        <p className="text-xs text-slate-500 text-center mt-3 font-medium">
           Limited availability due to our personalized onboarding process
         </p>
       </div>

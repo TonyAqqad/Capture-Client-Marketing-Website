@@ -3,7 +3,7 @@ import LegalIndustryClient from "./LegalIndustryClient";
 
 // SEO Metadata
 export const metadata: Metadata = {
-  title: "AI Receptionist for Law Firms | Legal Intake | Capture Client",
+  title: "AI for Law Firms | Legal Intake | Capture Client",
   description: "48% of law firms miss client calls. AI legal intake specialists for criminal defense, personal injury, family law. Clio & MyCase integration. 24/7 availability.",
   keywords: [
     "ai receptionist for law firms",
@@ -22,25 +22,25 @@ export const metadata: Metadata = {
     "after hours legal answering"
   ],
   openGraph: {
-    title: "AI Receptionist for Law Firms | Legal Intake",
+    title: "AI for Law Firms | Legal Intake | Capture Client",
     description: "48% of law firms miss client calls. AI legal intake specialists answer 24/7, qualify leads, and integrate with Clio & MyCase.",
     url: "https://captureclient.com/industries/legal",
     siteName: "Capture Client",
     type: "website",
     images: [
       {
-        url: "https://captureclient.com/og-legal.jpg",
+        url: "https://captureclient.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "AI Receptionist for Law Firms - Capture Client"
+        alt: "Capture Client - AI Legal Intake for Law Firms"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Receptionist for Law Firms | Legal Intake",
+    title: "AI for Law Firms | Legal Intake | Capture Client",
     description: "48% of law firms miss client calls. AI legal intake specialists answer 24/7. Clio & MyCase integration.",
-    images: ["https://captureclient.com/og-legal.jpg"]
+    images: ["https://captureclient.com/og-image.png"]
   },
   alternates: {
     canonical: "https://captureclient.com/industries/legal",
@@ -113,7 +113,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://captureclient.com" },
-    { "@type": "ListItem", position: 2, name: "Industries", item: "https://captureclient.com/industries" },
+    { "@type": "ListItem", position: 2, name: "Who We Serve", item: "https://captureclient.com/who-we-serve" },
     { "@type": "ListItem", position: 3, name: "Legal", item: "https://captureclient.com/industries/legal" },
   ],
 };

@@ -29,14 +29,14 @@ export function IntegrationSearch({
           damping: 25
         }}
         className={`
-          relative glass-premium rounded-2xl transition-all duration-300
-          ${isFocused ? "border-accent/60 shadow-glow-accent-lg" : "border-white/10"}
+          relative bg-white/70 backdrop-blur-xl border shadow-lg shadow-slate-200/50 rounded-2xl transition-all duration-300
+          ${isFocused ? "border-blue-600/60 shadow-lg shadow-blue-600/20" : "border-slate-200"}
         `}
       >
         {/* Search Icon */}
         <div className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 pointer-events-none">
           <Search className={`w-6 h-6 transition-colors duration-300 ${
-            isFocused ? "text-accent" : "text-foreground-muted"
+            isFocused ? "text-blue-600" : "text-slate-600"
           }`} />
         </div>
 
@@ -48,7 +48,7 @@ export function IntegrationSearch({
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
           placeholder="Search integrations by name, category, or feature..."
-          className="w-full pl-14 sm:pl-16 pr-24 sm:pr-28 py-4 sm:py-5 bg-transparent text-foreground placeholder:text-foreground-muted text-base sm:text-lg font-medium outline-none"
+          className="w-full pl-14 sm:pl-16 pr-24 sm:pr-28 py-4 sm:py-5 bg-transparent text-slate-900 placeholder:text-slate-600 text-base sm:text-lg font-medium outline-none"
           aria-label="Search integrations"
         />
 
@@ -59,10 +59,10 @@ export function IntegrationSearch({
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             onClick={() => onSearchChange("")}
-            className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 p-2 rounded-lg hover:bg-white/10 transition-all duration-300 touch-manipulation group"
+            className="absolute right-4 sm:right-6 top-1/2 -translate-y-1/2 p-2 rounded-lg hover:bg-slate-100 transition-all duration-300 touch-manipulation group"
             aria-label="Clear search"
           >
-            <X className="w-5 h-5 text-foreground-muted group-hover:text-foreground" />
+            <X className="w-5 h-5 text-slate-600 group-hover:text-slate-900" />
           </motion.button>
         )}
 
@@ -73,7 +73,7 @@ export function IntegrationSearch({
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.98 }}
-            className="absolute inset-0 rounded-2xl border-2 border-accent/40 pointer-events-none shadow-glow-accent"
+            className="absolute inset-0 rounded-2xl border-2 border-blue-600/40 pointer-events-none shadow-lg shadow-blue-600/20"
             transition={{ type: "spring", stiffness: 400, damping: 30 }}
           />
         )}
@@ -88,16 +88,16 @@ export function IntegrationSearch({
           transition={{ duration: 0.3 }}
           className="mt-4 text-center"
         >
-          <p className="text-sm text-foreground-muted">
+          <p className="text-sm text-slate-600">
             {resultsCount > 0 ? (
               <>
                 Found{" "}
-                <span className="text-accent font-bold">{resultsCount}</span>{" "}
+                <span className="text-blue-600 font-bold">{resultsCount}</span>{" "}
                 {resultsCount === 1 ? "integration" : "integrations"}
               </>
             ) : (
               <>
-                <span className="text-red-400 font-bold">No results</span> found
+                <span className="text-red-500 font-bold">No results</span> found
               </>
             )}
           </p>
@@ -113,12 +113,12 @@ export function IntegrationSearch({
           className="mt-4 text-center"
         >
           <div className="flex flex-wrap items-center justify-center gap-2">
-            <span className="text-xs text-foreground-muted">Popular:</span>
+            <span className="text-xs text-slate-600">Popular:</span>
             {["HubSpot", "Salesforce", "Zapier", "Calendly", "ServiceTitan"].map((term) => (
               <button
                 key={term}
                 onClick={() => onSearchChange(term)}
-                className="px-3 py-1 text-xs font-medium text-accent bg-accent/10 rounded-full border border-accent/20 hover:bg-accent/20 hover:border-accent/30 transition-all duration-300 touch-manipulation"
+                className="px-3 py-1 text-xs font-medium text-blue-600 bg-blue-600/10 rounded-full border border-blue-600/20 hover:bg-blue-600/20 hover:border-blue-600/30 transition-all duration-300 touch-manipulation"
               >
                 {term}
               </button>
@@ -135,13 +135,13 @@ export function IntegrationSearch({
           transition={{ duration: 0.3, delay: 0.2 }}
           className="mt-6"
         >
-          <div className="glass-premium-mobile p-6 rounded-2xl text-center">
-            <p className="text-foreground-muted mb-4">
+          <div className="bg-white/70 backdrop-blur-xl border border-slate-200 p-6 rounded-2xl text-center">
+            <p className="text-slate-600 mb-4">
               Can't find your platform? We'll build it.
             </p>
             <a
               href="/contact"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-gold to-gold-light text-background-dark hover:shadow-glow-gold transition-all duration-300 touch-manipulation"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-blue-600 to-cyan-500 text-white hover:shadow-lg hover:shadow-blue-600/20 transition-all duration-300 touch-manipulation"
             >
               <PlusCircle className="w-4 h-4" />
               <span>Request Integration</span>

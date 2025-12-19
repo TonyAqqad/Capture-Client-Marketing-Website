@@ -143,7 +143,7 @@ const PROOF_ITEMS: ProofCard[] = [
 
 export default function SocialProofWall() {
   return (
-    <section className="section bg-background-dark relative overflow-hidden">
+    <section className="section bg-slate-50 relative overflow-hidden">
       <div className="container-custom">
         {/* Section header */}
         <div className="text-center mb-12">

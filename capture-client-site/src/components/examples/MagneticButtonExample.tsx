@@ -11,7 +11,7 @@ import { MagneticButton } from "@/components/ui/premium-components";
  */
 export default function MagneticButtonExample() {
   return (
-    <div className="min-h-screen bg-background-dark p-8 space-y-12">
+    <div className="min-h-screen bg-slate-50 p-8 space-y-12">
       <div className="max-w-4xl mx-auto space-y-8">
         <h1 className="text-4xl font-bold text-white mb-8">
           MagneticButton Component Examples

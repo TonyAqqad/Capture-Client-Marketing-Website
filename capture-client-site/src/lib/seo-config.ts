@@ -54,12 +54,12 @@ export const SITE_CONFIG = {
   // Target audience
   audience: 'Small Business Owners',
 
-  // Brand values for E-E-A-T
+  // Brand values for E-E-A-T (keep claims verifiable)
   values: {
-    experience: 'Over 500+ small businesses served, 50,000+ calls handled',
-    expertise: 'Certified Google and Meta Business Partners with advanced AI expertise',
-    authority: 'Industry-leading AI voice technology with 97% CSAT scores',
-    trust: 'BBB Accredited, SOC-II compliant, transparent pricing, 30-day guarantee',
+    experience: 'Serving small businesses with AI-powered solutions',
+    expertise: 'Advanced AI voice technology and marketing automation',
+    authority: 'Modern AI voice technology with high customer satisfaction',
+    trust: 'Transparent pricing, dedicated support',
   },
 };
 
@@ -75,8 +75,8 @@ export function generateOrganizationSchema() {
     name: SITE_CONFIG.name,
     legalName: SITE_CONFIG.legalName,
     url: SITE_CONFIG.url,
-    logo: `${SITE_CONFIG.url}/logo.svg`,
-    image: `${SITE_CONFIG.url}/og-image.jpg`,
+    logo: `${SITE_CONFIG.url}/logo-full.svg`,
+    image: `${SITE_CONFIG.url}/og-image.png`,
     description:
       'Capture Client is the enterprise-grade growth platform for small businesses, combining AI Voice Agents (24/7 call answering), Google & Facebook Ads management, built-in CRM, and real-time analytics. Trusted by 500+ businesses with 50,000+ calls handled and 97% customer satisfaction.',
 
@@ -109,25 +109,27 @@ export function generateOrganizationSchema() {
       })),
     },
 
-    // Aggregate rating (add when you have reviews)
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    // NOTE: Aggregate rating commented out until we have verifiable reviews
+    // Connect Google Business Profile or Trustpilot to enable real ratings
+    // aggregateRating: {
+    //   '@type': 'AggregateRating',
+    //   ratingValue: '4.9',
+    //   reviewCount: '127',
+    //   bestRating: '5',
+    //   worstRating: '1',
+    // },
 
     // Trust signals
     slogan: 'Automate Leads. Capture Clients. Scale Effortlessly.',
 
-    // Awards and certifications for E-E-A-T
-    award: [
-      'Google Ads Partner',
-      'Meta Business Partner',
-      'BBB Accredited Business',
-      'SOC-II Certified'
-    ],
+    // NOTE: Awards commented out until officially verified
+    // Uncomment when certifications are obtained and can be linked
+    // award: [
+    //   'Google Ads Partner',
+    //   'Meta Business Partner',
+    //   'BBB Accredited Business',
+    //   'SOC-II Certified'
+    // ],
 
     // Business attributes
     priceRange: '$$',
@@ -206,12 +208,12 @@ export function generateLocalBusinessSchema(locationData: LocationData) {
       geoRadius: location.service_area_radius,
     },
 
-    // Aggregate rating
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '127',
-    },
+    // NOTE: Aggregate rating commented out until verifiable
+    // aggregateRating: {
+    //   '@type': 'AggregateRating',
+    //   ratingValue: '4.9',
+    //   reviewCount: '127',
+    // },
 
     priceRange: '$$',
   };
@@ -277,11 +279,12 @@ export function generateServiceSchema(serviceData: ServiceData) {
       },
     ],
 
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '127',
-    },
+    // NOTE: Aggregate rating commented out until verifiable
+    // aggregateRating: {
+    //   '@type': 'AggregateRating',
+    //   ratingValue: '4.9',
+    //   reviewCount: '127',
+    // },
   };
 }
 
@@ -359,11 +362,12 @@ export function generateProductSchema(packageData: PackageData) {
       },
     },
 
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '127',
-    },
+    // NOTE: Aggregate rating commented out until verifiable
+    // aggregateRating: {
+    //   '@type': 'AggregateRating',
+    //   ratingValue: '4.9',
+    //   reviewCount: '127',
+    // },
   };
 }
 
@@ -385,14 +389,8 @@ export function generateWebSiteSchema() {
       '@id': `${SITE_CONFIG.url}/#organization`,
     },
 
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: {
-        '@type': 'EntryPoint',
-        urlTemplate: `${SITE_CONFIG.url}/search?q={search_term_string}`,
-      },
-      'query-input': 'required name=search_term_string',
-    },
+    // SearchAction removed - no /search page implemented
+    // Add back when site search is available
   };
 }
 
@@ -527,7 +525,7 @@ export function generateBlogPostingSchema(post: {
       '@id': `${SITE_CONFIG.url}/#organization`,
       logo: {
         '@type': 'ImageObject',
-        url: `${SITE_CONFIG.url}/logo.svg`,
+        url: `${SITE_CONFIG.url}/logo-full.svg`,
         width: 600,
         height: 60,
       },
@@ -622,7 +620,7 @@ export function getDefaultMetadata() {
     },
 
     description:
-      'Enterprise-grade growth platform trusted by 500+ businesses. Automate leads with 24/7 AI voice agents, professional Google/Facebook Ads management, built-in CRM, and real-time analytics. 97% customer satisfaction, SOC-II compliant. Free consultation.',
+      'Enterprise-grade growth platform for small businesses. Automate leads with 24/7 AI voice agents, professional Google/Facebook Ads management, built-in CRM, and real-time analytics. Free consultation available.',
 
     keywords: [
       'voice ai',
@@ -676,10 +674,10 @@ export function getDefaultMetadata() {
       siteName: SITE_CONFIG.name,
       title: `${SITE_CONFIG.name} | Enterprise AI Voice Agents & Lead Generation Platform`,
       description:
-        'Enterprise-grade platform trusted by 500+ businesses. 24/7 AI voice agents, professional ads management, built-in CRM, real-time analytics. 97% CSAT, SOC-II compliant. Free consultation.',
+        'Enterprise-grade platform for small businesses. 24/7 AI voice agents, professional ads management, built-in CRM, real-time analytics. Free consultation available.',
       images: [
         {
-          url: `${SITE_CONFIG.url}/og-image.jpg`,
+          url: `${SITE_CONFIG.url}/og-image.png`,
           width: 1200,
           height: 630,
           alt: `${SITE_CONFIG.name} - Marketing Automation Platform`,
@@ -695,15 +693,18 @@ export function getDefaultMetadata() {
       title: `${SITE_CONFIG.name} | The All-in-One Growth Hub for Small Business`,
       description:
         'Voice AI, Lead Generation & Marketing Automation for Small Businesses.',
-      images: [`${SITE_CONFIG.url}/og-image.jpg`],
+      images: [`${SITE_CONFIG.url}/og-image.png`],
     },
 
-    // Verification tags (add your verification codes)
-    verification: {
-      google: 'your-google-verification-code',
-      yandex: 'your-yandex-verification-code',
-      bing: 'your-bing-verification-code',
-    },
+    // NOTE: Verification codes should be added via environment variables or
+    // directly here after obtaining from:
+    // - Google Search Console: https://search.google.com/search-console
+    // - Bing Webmaster Tools: https://www.bing.com/webmasters
+    // Omitting until real codes are available to avoid invalid meta tags
+    // verification: {
+    //   google: 'YOUR_GOOGLE_CODE',
+    //   bing: 'YOUR_BING_CODE',
+    // },
 
     // Alternate languages (if applicable)
     alternates: {
@@ -768,15 +769,15 @@ export function generateSoftwareApplicationSchema() {
     // Offers/Pricing - shows in rich results
     offers: {
       '@type': 'AggregateOffer',
-      lowPrice: '497',
-      highPrice: '1997',
+      lowPrice: '97',
+      highPrice: '950',
       priceCurrency: 'USD',
       offerCount: '3',
       offers: [
         {
           '@type': 'Offer',
           name: 'Starter',
-          price: '497',
+          price: '97',
           priceCurrency: 'USD',
           description: 'AI Voice Agent + CRM essentials for growing businesses',
           url: `${SITE_CONFIG.url}/pricing`,
@@ -784,7 +785,7 @@ export function generateSoftwareApplicationSchema() {
         {
           '@type': 'Offer',
           name: 'Growth',
-          price: '997',
+          price: '950',
           priceCurrency: 'USD',
           description: 'Voice AI + Google/Facebook Ads management + full CRM',
           url: `${SITE_CONFIG.url}/pricing`,
@@ -792,7 +793,7 @@ export function generateSoftwareApplicationSchema() {
         {
           '@type': 'Offer',
           name: 'Enterprise',
-          price: '1997',
+          price: '2997',
           priceCurrency: 'USD',
           description: 'Full platform access with dedicated account manager',
           url: `${SITE_CONFIG.url}/pricing`,
@@ -800,15 +801,16 @@ export function generateSoftwareApplicationSchema() {
       ],
     },
 
-    // Aggregate rating - critical for rich snippets
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      ratingCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-      reviewCount: '127',
-    },
+    // NOTE: Aggregate rating commented out until verifiable
+    // Connect to a real review platform to enable this
+    // aggregateRating: {
+    //   '@type': 'AggregateRating',
+    //   ratingValue: '4.9',
+    //   ratingCount: '127',
+    //   bestRating: '5',
+    //   worstRating: '1',
+    //   reviewCount: '127',
+    // },
 
     // Feature list
     featureList: [
@@ -824,19 +826,20 @@ export function generateSoftwareApplicationSchema() {
       'SMS & Email Follow-up Automation',
     ],
 
-    // Screenshots for rich results (if supported)
-    screenshot: [
-      {
-        '@type': 'ImageObject',
-        url: `${SITE_CONFIG.url}/screenshots/dashboard.jpg`,
-        caption: 'Capture Client Dashboard - Real-time analytics and lead tracking',
-      },
-      {
-        '@type': 'ImageObject',
-        url: `${SITE_CONFIG.url}/screenshots/ai-voice.jpg`,
-        caption: 'AI Voice Agent Interface - Configure your virtual receptionist',
-      },
-    ],
+    // NOTE: Screenshots commented out until real assets are created
+    // Create public/screenshots/dashboard.jpg and ai-voice.jpg to enable
+    // screenshot: [
+    //   {
+    //     '@type': 'ImageObject',
+    //     url: `${SITE_CONFIG.url}/screenshots/dashboard.jpg`,
+    //     caption: 'Capture Client Dashboard - Real-time analytics and lead tracking',
+    //   },
+    //   {
+    //     '@type': 'ImageObject',
+    //     url: `${SITE_CONFIG.url}/screenshots/ai-voice.jpg`,
+    //     caption: 'AI Voice Agent Interface - Configure your virtual receptionist',
+    //   },
+    // ],
 
     // Software requirements
     softwareRequirements: 'Modern web browser (Chrome, Firefox, Safari, Edge)',
@@ -877,3 +880,4 @@ export function generateSoftwareApplicationSchema() {
     },
   };
 }
+

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import CaseStudiesPageClient from "./CaseStudiesPageClient";
 
 export const metadata: Metadata = {
-  title: "Case Studies | Real Client Results & Success Stories | Capture Client",
+  title: "Case Studies | Real Client Results | Capture Client",
   description:
     "See how Capture Client transforms small businesses with AI voice agents and lead generation. Real results: 247% revenue growth, 100% call answer rates, and 60x faster response times.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "proven results",
   ],
   openGraph: {
-    title: "Case Studies | Real Client Results & Success Stories | Capture Client",
+    title: "Case Studies | Real Client Results | Capture Client",
     description:
       "See how Capture Client transforms small businesses with AI voice agents. Real results: 247% revenue growth, 100% call answer rates.",
     url: "https://captureclient.com/case-studies",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://captureclient.com/og-case-studies.jpg",
+        url: "https://captureclient.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "Capture Client Case Studies - Real Results",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Case Studies | Real Client Results | Capture Client",
     description:
       "See how Capture Client transforms small businesses. Real results: 247% revenue growth, 100% call answer rates.",
-    images: ["https://captureclient.com/og-case-studies.jpg"],
+    images: ["https://captureclient.com/og-image.png"],
   },
   alternates: {
     canonical: "https://captureclient.com/case-studies",

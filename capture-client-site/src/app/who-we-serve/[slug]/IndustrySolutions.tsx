@@ -164,19 +164,19 @@ function getIconComponent(materialIconName: string): LucideIcon {
   return ICON_MAP[materialIconName] || HelpCircle;
 }
 
-export function IndustrySolutions({ solutions, industryName }: IndustrySolutionsProps) {
+export function IndustrySolutions({ solutions }: IndustrySolutionsProps) {
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-background-darker to-background">
+    <section className="py-16 md:py-20 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               How We{' '}
               <span className="bg-gradient-to-r from-accent-400 to-accent-600 bg-clip-text text-transparent">
                 Solve It
               </span>
             </h2>
-            <p className="text-xl text-foreground-muted">
+            <p className="text-xl text-slate-600">
               Industry-specific AI solutions that understand your business inside and out.
             </p>
           </div>
@@ -191,11 +191,11 @@ export function IndustrySolutions({ solutions, industryName }: IndustrySolutions
                       <IconComponent className="text-accent-400 w-9 h-9" />
                     </div>
 
-                    <h3 className="text-2xl font-bold text-foreground mb-4">
+                    <h3 className="text-2xl font-bold text-slate-900 mb-4">
                       {solution.title}
                     </h3>
 
-                    <p className="text-foreground-muted leading-relaxed text-lg">
+                    <p className="text-slate-600 leading-relaxed text-lg">
                       {solution.description}
                     </p>
                   </div>

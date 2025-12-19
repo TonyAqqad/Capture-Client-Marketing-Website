@@ -3,7 +3,7 @@ import HomeServicesClient from "./HomeServicesClient";
 
 // SEO Metadata for Home Services Industry Page
 export const metadata: Metadata = {
-  title: "AI Voice Agents for HVAC, Plumbing & Contractors | Capture Client",
+  title: "AI for HVAC, Plumbing & Contractors | Capture Client",
   description:
     "Stop losing $69K/year to missed calls. AI voice agents answer every emergency call 24/7 for HVAC, plumbing, electrical & roofing contractors. ServiceTitan & Housecall Pro integration.",
   keywords: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "field service management AI",
   ],
   openGraph: {
-    title: "AI Voice Agents for HVAC, Plumbing & Contractors | Capture Client",
+    title: "AI for HVAC, Plumbing & Contractors | Capture Client",
     description:
       "Stop losing $69K/year to missed calls. AI voice agents answer every emergency call 24/7 for contractors. Never miss a 3 AM burst pipe again.",
     url: "https://captureclient.com/industries/home-services",
@@ -31,19 +31,19 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://captureclient.com/og-home-services.jpg",
+        url: "https://captureclient.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "AI Voice Agents for Home Services Contractors - Capture Client",
+        alt: "Capture Client - AI for HVAC, Plumbing & Contractors",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Voice Agents for HVAC, Plumbing & Contractors",
+    title: "AI for HVAC, Plumbing & Contractors | Capture Client",
     description:
       "Stop losing $69K/year to missed calls. AI answers every emergency call 24/7. ServiceTitan & Housecall Pro integration.",
-    images: ["https://captureclient.com/og-home-services.jpg"],
+    images: ["https://captureclient.com/og-image.png"],
   },
   alternates: {
     canonical: "https://captureclient.com/industries/home-services",
@@ -173,8 +173,8 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       position: 2,
-      name: "Industries",
-      item: "https://captureclient.com/industries",
+      name: "Who We Serve",
+      item: "https://captureclient.com/who-we-serve",
     },
     {
       "@type": "ListItem",

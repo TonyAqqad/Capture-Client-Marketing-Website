@@ -322,12 +322,12 @@ export default function IntegrationsDemoPage() {
       </div>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-8 mt-24">
+      <footer className="bg-slate-50 text-slate-900 py-8 mt-24 border-t border-slate-200">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-400">
+          <p className="text-slate-600">
             Integration Logos System - Built for Capture Client
           </p>
-          <p className="text-sm text-gray-500 mt-2">
+          <p className="text-sm text-slate-500 mt-2">
             Powered by Clearbit Logo API
           </p>
         </div>

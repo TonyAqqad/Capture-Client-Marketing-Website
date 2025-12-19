@@ -177,10 +177,10 @@ export default function AIVoiceVisual() {
               transition={{ duration: 0.3 }}
               className="min-w-0 flex-1"
             >
-              <p className="text-sm sm:text-base text-foreground font-semibold truncate">
+              <p className="text-sm sm:text-base text-slate-900 font-semibold truncate">
                 {currentScenario.caller} - {formatDuration(callDuration)}
               </p>
-              <p className="text-foreground-muted text-xs sm:text-sm truncate">{currentScenario.phone}</p>
+              <p className="text-slate-600 text-xs sm:text-sm truncate">{currentScenario.phone}</p>
             </motion.div>
           </AnimatePresence>
           <div className="ml-auto hidden sm:block">
@@ -227,10 +227,10 @@ export default function AIVoiceVisual() {
                 className={
                   msg.type === "ai"
                     ? "bg-primary/10 border border-primary/20 rounded-lg p-3 sm:p-4"
-                    : "bg-surface/50 border border-surface-border rounded-lg p-3 sm:p-4"
+                    : "bg-slate-50 border border-slate-200 rounded-lg p-3 sm:p-4"
                 }
               >
-                <p className="text-foreground-muted text-xs sm:text-sm mb-1 flex items-center gap-1.5 sm:gap-2">
+                <p className="text-slate-600 text-xs sm:text-sm mb-1 flex items-center gap-1.5 sm:gap-2">
                   {msg.type === "ai" ? (
                     <>
                       <Bot className="w-3 h-3" />
@@ -243,7 +243,7 @@ export default function AIVoiceVisual() {
                     </>
                   )}
                 </p>
-                <p className="text-sm sm:text-base text-foreground">
+                <p className="text-sm sm:text-base text-slate-900">
                   {index === currentMessageIndex ? (
                     <span>
                       {displayedText}
@@ -269,9 +269,9 @@ export default function AIVoiceVisual() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ delay: 0.8 }}
-          className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-surface-border"
+          className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-slate-200"
         >
-          <div className="flex items-center gap-2 text-xs sm:text-sm text-foreground-muted flex-wrap">
+          <div className="flex items-center gap-2 text-xs sm:text-sm text-slate-600 flex-wrap">
             <motion.span
               animate={{
                 scale: [1, 1.2, 1],

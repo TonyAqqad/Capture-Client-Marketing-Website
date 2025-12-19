@@ -68,7 +68,7 @@ export function IntegrationDetailHero({
     <section className="relative py-20 sm:py-32 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background-dark to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white" />
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-radial from-accent/10 to-transparent rounded-full blur-3xl animate-float-slow" />
         <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-radial from-primary/10 to-transparent rounded-full blur-3xl animate-float-medium" />
       </div>
@@ -82,7 +82,7 @@ export function IntegrationDetailHero({
             transition={{ duration: 0.5 }}
             className="mb-8"
           >
-            <div className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-lg border border-white/20 shadow-glow p-4">
+            <div className="inline-flex items-center justify-center w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-white/90 via-white/80 to-white/70 backdrop-blur-lg border border-slate-200 shadow-glow p-4">
               {!imageError ? (
                 <img
                   src={logoUrl}
@@ -92,7 +92,7 @@ export function IntegrationDetailHero({
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-accent/20 to-primary/20 rounded-xl">
-                  <span className="text-3xl sm:text-4xl font-bold text-foreground">
+                  <span className="text-3xl sm:text-4xl font-bold text-slate-900">
                     {name.charAt(0)}
                   </span>
                 </div>
@@ -105,7 +105,7 @@ export function IntegrationDetailHero({
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="flex items-center justify-center gap-2 text-sm text-foreground-muted mb-6"
+            className="flex items-center justify-center gap-2 text-sm text-slate-600 mb-6"
           >
             <Link
               href="/integrations"
@@ -122,7 +122,7 @@ export function IntegrationDetailHero({
                 <ChevronRight className="w-3 h-3" />
               </>
             )}
-            <span className="text-foreground">{name}</span>
+            <span className="text-slate-900">{name}</span>
           </motion.div>
 
           {/* Heading */}
@@ -130,7 +130,7 @@ export function IntegrationDetailHero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-foreground mb-6"
+            className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-slate-900 mb-6"
           >
             Connect Capture Client with{" "}
             <span className="bg-gradient-to-r from-gold via-accent to-gold bg-clip-text text-transparent">
@@ -143,7 +143,7 @@ export function IntegrationDetailHero({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="text-lg sm:text-xl text-foreground-muted mb-8 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg sm:text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed"
           >
             {description}
           </motion.p>
@@ -191,7 +191,7 @@ export function IntegrationDetailHero({
               </div>
             )}
             {setupTime && (
-              <div className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm font-semibold text-foreground-muted flex items-center gap-2">
+              <div className="px-4 py-2 bg-white/70 border border-slate-200 rounded-full text-sm font-semibold text-slate-600 flex items-center gap-2">
                 <Clock className="w-4 h-4" />
                 {setupTime} setup
               </div>

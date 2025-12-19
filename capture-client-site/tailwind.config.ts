@@ -86,6 +86,21 @@ const config: Config = {
           card: "#1E293B",
           light: "#1A1A2E",
         },
+        // NEW: Light theme colors (Stripe/Linear style)
+        light: {
+          bg: "#FFFFFF",
+          surface: "#F8FAFC",
+          elevated: "#FFFFFF",
+          border: "#E2E8F0",
+          "border-hover": "#CBD5E1",
+        },
+        // NEW: Dark text colors for light mode
+        "dark-text": {
+          primary: "#0F172A",
+          secondary: "#334155",
+          muted: "#64748B",
+          subtle: "#94A3B8",
+        },
         // Text colors
         foreground: {
           DEFAULT: "#F8FAFC",
@@ -140,6 +155,13 @@ const config: Config = {
         // PREMIUM: Clean single shadow for mobile (GPU-friendly)
         "card-mobile": "0 4px 12px rgba(0, 0, 0, 0.15)",
         "glass-mobile": "0 8px 32px rgba(0, 0, 0, 0.2)",
+        // NEW: Light mode shadows (soft, subtle)
+        "light-sm": "0 1px 2px rgba(0, 0, 0, 0.04)",
+        "light-md": "0 4px 12px rgba(0, 0, 0, 0.06)",
+        "light-lg": "0 12px 32px rgba(0, 0, 0, 0.08)",
+        "light-xl": "0 20px 40px rgba(0, 0, 0, 0.1)",
+        "light-accent": "0 8px 24px rgba(37, 99, 235, 0.15)",
+        "light-accent-lg": "0 12px 32px rgba(37, 99, 235, 0.25)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

@@ -1,26 +1,25 @@
 ---
 description: Run quality checks before committing changes
-model: claude-haiku-4.5
+model: haiku
 ---
-model: claude-haiku-4-5-20251001
 Run quality gate checks on the current changes.
 ## Automated Checks
 
 ### 1. TypeScript Check
 ```bash
-cd capture-client-site && pnpm typecheck
+cd capture-client-site && npm run typecheck
 ```
 **Must pass** - No TypeScript errors allowed.
 
 ### 2. Build Check
 ```bash
-cd capture-client-site && pnpm build
+cd capture-client-site && npm run build
 ```
 **Must pass** - Build must complete successfully.
 
 ### 3. Lint Check
 ```bash
-cd capture-client-site && pnpm audit
+cd capture-client-site && npm run lint
 ```
 **Should pass** - Fix any linting errors.
 
@@ -32,8 +31,8 @@ Present this to the user:
 ## Quality Gate Checklist
 
 ### Code Quality
-- [ ] `pnpm typecheck` passes
-- [ ] `pnpm build` completes successfully
+- [ ] `npm run typecheck` passes
+- [ ] `npm run build` completes successfully
 - [ ] No console errors in browser
 
 ### Visual Quality (please verify)
@@ -110,4 +109,4 @@ Suggest a commit message following conventional commits:
 - `refactor: improve {area}`
 - `docs: update {documentation}`
 
-> After running these commands, ensure any Node.js processes are stopped (Ctrl+C/kill) so nothing stays running.
+> After running these commands, stop only the dev/build processes you started (Ctrl+C) so nothing stays running; avoid blanket-killing unrelated Node processes.

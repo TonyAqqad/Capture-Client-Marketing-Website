@@ -51,13 +51,13 @@ export function IndustryCard({ industry, index = 0 }: IndustryCardProps) {
               </div>
 
               {/* Category Badge */}
-              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-foreground-muted border border-white/10">
+              <span className="px-3 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-500 border border-slate-200">
                 {industry.category}
               </span>
             </div>
 
             {/* Industry Name */}
-            <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-gold-400 transition-colors duration-300">
+            <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-gold-400 transition-colors duration-300">
               {industry.name}
             </h3>
 
@@ -67,19 +67,19 @@ export function IndustryCard({ industry, index = 0 }: IndustryCardProps) {
             </p>
 
             {/* Description */}
-            <p className="text-foreground-muted leading-relaxed mb-6 line-clamp-3">
+            <p className="text-slate-600 leading-relaxed mb-6 line-clamp-3">
               {industry.description}
             </p>
 
             {/* Key Stats Preview */}
             {industry.stats && industry.stats.length > 0 && (
-              <div className="grid grid-cols-2 gap-4 mb-6 pt-6 border-t border-white/10">
+              <div className="grid grid-cols-2 gap-4 mb-6 pt-6 border-t border-slate-200">
                 {industry.stats.slice(0, 2).map((stat, idx) => (
                   <div key={idx}>
                     <div className="text-2xl font-bold text-gold-400 mb-1">
                       {stat.value}
                     </div>
-                    <div className="text-sm text-foreground-muted">
+                    <div className="text-sm text-slate-600">
                       {stat.label}
                     </div>
                   </div>

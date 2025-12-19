@@ -25,9 +25,9 @@ export default function SecurityBadges() {
       Icon: ShieldCheck,
       label: "SOC 2 Certified",
       description: "Audited security",
-      color: "text-[#D4AF37]",
-      bgColor: "bg-[#D4AF37]/10",
-      borderColor: "border-[#D4AF37]/20",
+      color: "text-blue-600",
+      bgColor: "bg-blue-600/10",
+      borderColor: "border-blue-600/20",
     },
     {
       Icon: Shield,
@@ -50,7 +50,7 @@ export default function SecurityBadges() {
     <div className="space-y-8">
       {/* Security badges grid */}
       <div>
-        <p className="text-sm uppercase tracking-widest text-foreground-muted mb-4 text-center">
+        <p className="text-sm uppercase tracking-widest text-slate-500 mb-4 text-center">
           Enterprise-Grade Security
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-4">
@@ -65,10 +65,10 @@ export default function SecurityBadges() {
               className={`${badge.bgColor} border ${badge.borderColor} rounded-xl p-4 text-center transition-all duration-300 hover:shadow-lg min-h-[120px] sm:min-h-[130px] flex flex-col items-center justify-center`}
             >
               <badge.Icon className={`${badge.color} w-8 h-8 mb-2`} />
-              <p className="text-sm font-bold text-foreground mb-1 leading-tight">
+              <p className="text-sm font-bold text-slate-900 mb-1 leading-tight">
                 {badge.label}
               </p>
-              <p className="text-xs text-foreground-muted">{badge.description}</p>
+              <p className="text-xs text-slate-500">{badge.description}</p>
             </motion.div>
           ))}
         </div>
@@ -83,10 +83,10 @@ export default function SecurityBadges() {
             </div>
           </div>
           <div className="flex-1">
-            <h4 className="text-xl sm:text-lg font-bold text-foreground mb-2">
+            <h4 className="text-xl sm:text-lg font-bold text-slate-900 mb-2">
               Your Data is Safe & Secure
             </h4>
-            <p className="text-base sm:text-sm text-foreground-muted leading-relaxed">
+            <p className="text-base sm:text-sm text-slate-500 leading-relaxed">
               We use enterprise-grade encryption and security protocols. Your business data is
               backed up daily, and we never share your information with third parties. Period.
             </p>
@@ -102,7 +102,7 @@ export default function SecurityBadges() {
 
       {/* Certifications row */}
       <div>
-        <p className="text-sm uppercase tracking-widest text-foreground-muted mb-4 text-center">
+        <p className="text-sm uppercase tracking-widest text-slate-500 mb-4 text-center">
           Industry Certifications
         </p>
         <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
@@ -113,18 +113,18 @@ export default function SecurityBadges() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.3, delay: index * 0.1 }}
-              className="flex items-center gap-2 px-4 py-2 bg-surface/30 border border-surface-border rounded-full hover:border-accent/30 transition-all duration-300 min-h-[44px]"
+              className="flex items-center gap-2 px-4 py-2 bg-slate-50 border border-slate-200 rounded-full hover:border-accent/30 transition-all duration-300 min-h-[44px]"
             >
               <cert.Icon className={`${cert.color} w-5 h-5`} />
-              <span className="text-sm font-semibold text-foreground">{cert.text}</span>
+              <span className="text-sm font-semibold text-slate-900">{cert.text}</span>
             </motion.div>
           ))}
         </div>
       </div>
 
       {/* Privacy statement */}
-      <div className="text-center bg-surface/20 border border-surface-border rounded-xl p-4">
-        <div className="flex flex-wrap items-center justify-center gap-2 text-sm text-foreground-muted">
+      <div className="text-center bg-slate-50 border border-slate-200 rounded-xl p-4">
+        <div className="flex flex-wrap items-center justify-center gap-2 text-sm text-slate-500">
           <Eye className="text-accent w-5 h-5" />
           <span className="text-center">
             We respect your privacy.{" "}

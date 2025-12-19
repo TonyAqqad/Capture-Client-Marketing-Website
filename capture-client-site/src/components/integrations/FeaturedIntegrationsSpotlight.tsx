@@ -39,18 +39,18 @@ export function FeaturedIntegrationsSpotlight({
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gold/20 via-gold/10 to-transparent border border-gold/30 backdrop-blur-xl mb-6"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600/10 via-blue-600/5 to-transparent border border-blue-600/30 backdrop-blur-xl mb-6"
         >
-          <Star className="w-5 h-5 text-gold" />
-          <span className="text-sm font-bold uppercase tracking-widest text-gold">
+          <Star className="w-5 h-5 text-blue-600" />
+          <span className="text-sm font-bold uppercase tracking-widest text-blue-600">
             Featured Integrations
           </span>
         </motion.div>
 
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-foreground mb-3">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-slate-900 mb-3">
           Most Popular Platforms
         </h2>
-        <p className="text-base sm:text-lg text-foreground-muted max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto">
           Trusted by thousands of businesses. Connect in minutes, not days.
         </p>
       </div>
@@ -90,10 +90,10 @@ function FeaturedCard({
         aria-label={`View ${integration.name} integration details`}
       >
         {/* Card Container */}
-        <div className="relative h-full glass-premium p-6 sm:p-8 rounded-3xl transition-all duration-500 hover:border-gold/30 hover:shadow-glow-gold overflow-hidden">
+        <div className="relative h-full bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-6 sm:p-8 rounded-3xl transition-all duration-500 hover:border-blue-600/30 hover:shadow-xl hover:shadow-slate-200/60 overflow-hidden">
           {/* Featured Badge */}
           <div className="absolute -top-2 -right-2 z-20">
-            <span className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold uppercase tracking-wider text-gold bg-gold/10 rounded-full border border-gold/30 shadow-glow-gold backdrop-blur-sm">
+            <span className="inline-flex items-center gap-1.5 px-4 py-2 text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-600/10 rounded-full border border-blue-600/30 shadow-lg backdrop-blur-sm">
               <Star className="w-3.5 h-3.5" />
               <span>Featured</span>
             </span>
@@ -101,14 +101,14 @@ function FeaturedCard({
 
           {/* Hover Glow Effect */}
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-            <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-accent/5 to-transparent rounded-3xl" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-blue-600/3 to-transparent rounded-3xl" />
           </div>
 
           {/* Content */}
           <div className="relative z-10 flex flex-col h-full">
             {/* Logo Container */}
             <div className="mb-6">
-              <div className="w-full h-24 flex items-center justify-center p-4 rounded-2xl bg-white/95 group-hover:bg-white transition-all duration-300 shadow-card-mobile">
+              <div className="w-full h-24 flex items-center justify-center p-4 rounded-2xl bg-white group-hover:bg-slate-50 transition-all duration-300 shadow-sm">
                 {!imageError ? (
                   <Image
                     src={integration.logoUrl}
@@ -120,7 +120,7 @@ function FeaturedCard({
                     onError={() => setImageError(true)}
                   />
                 ) : (
-                  <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 text-foreground font-bold text-2xl">
+                  <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-br from-blue-600/10 to-cyan-500/10 text-slate-900 font-bold text-2xl">
                     {integration.name.charAt(0)}
                   </div>
                 )}
@@ -130,20 +130,20 @@ function FeaturedCard({
             {/* Integration Info */}
             <div className="flex-1">
               <div className="flex items-center justify-between mb-3">
-                <h3 className="text-xl sm:text-2xl font-display font-bold text-foreground group-hover:text-gradient-gold-cyan transition-colors duration-300">
+                <h3 className="text-xl sm:text-2xl font-display font-bold text-slate-900 group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 group-hover:bg-clip-text group-hover:text-transparent transition-colors duration-300">
                   {integration.name}
                 </h3>
-                <ArrowRight className="w-5 h-5 text-accent opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
+                <ArrowRight className="w-5 h-5 text-blue-600 opacity-0 group-hover:opacity-100 transform translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
               </div>
 
-              <p className="text-foreground-muted text-sm sm:text-base leading-relaxed mb-4 line-clamp-2">
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-4 line-clamp-2">
                 {integration.description}
               </p>
 
               {/* Category Badge */}
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20">
-                <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-                <span className="text-xs font-semibold text-accent">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-600/10 border border-blue-600/20">
+                <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
+                <span className="text-xs font-semibold text-blue-600">
                   {integration.category}
                 </span>
               </div>
@@ -151,14 +151,14 @@ function FeaturedCard({
 
             {/* Key Features (if available) */}
             {integration.keyFeatures && integration.keyFeatures.length > 0 && (
-              <div className="mt-4 pt-4 border-t border-white/10">
+              <div className="mt-4 pt-4 border-t border-slate-200">
                 <ul className="space-y-2">
                   {integration.keyFeatures.slice(0, 3).map((feature, idx) => (
                     <li
                       key={idx}
-                      className="flex items-start gap-2 text-xs sm:text-sm text-foreground-muted"
+                      className="flex items-start gap-2 text-xs sm:text-sm text-slate-600"
                     >
-                      <CheckCircle2 className="w-4 h-4 text-accent mt-0.5 flex-shrink-0" />
+                      <CheckCircle2 className="w-4 h-4 text-blue-600 mt-0.5 flex-shrink-0" />
                       <span className="line-clamp-1">{feature}</span>
                     </li>
                   ))}
@@ -168,16 +168,16 @@ function FeaturedCard({
 
             {/* CTA Button */}
             <div className="mt-6">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-gold/10 to-accent/10 border border-gold/20 text-gold font-semibold text-sm group-hover:border-gold/40 group-hover:shadow-glow-gold-sm transition-all duration-300">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-600/10 to-cyan-500/10 border border-blue-600/20 text-blue-600 font-semibold text-sm group-hover:border-blue-600/40 transition-all duration-300">
                 <span>See How It Works</span>
                 <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" />
               </div>
             </div>
           </div>
 
-          {/* Premium gold border effect on hover */}
+          {/* Premium border effect on hover */}
           <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-            <div className="absolute inset-0 rounded-3xl border border-gold/30" />
+            <div className="absolute inset-0 rounded-3xl border border-blue-600/30" />
           </div>
         </div>
       </Link>

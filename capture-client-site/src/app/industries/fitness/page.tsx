@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "Capture Client",
     type: "website",
     images: [{
-      url: "https://captureclient.com/og-image.jpg",
+      url: "https://captureclient.com/og-image.png",
       width: 1200,
       height: 630,
       alt: "Capture Client - AI Voice Agents for Fitness Studios",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI Voice Agents for Fitness Studios | Capture Client",
     description: "Stop losing 76% of fitness leads. AI answers every call, books trials, and converts members 24/7.",
-    images: ["https://captureclient.com/og-image.jpg"],
+    images: ["https://captureclient.com/og-image.png"],
   },
   alternates: {
     canonical: "https://captureclient.com/industries/fitness",
@@ -144,8 +144,8 @@ const breadcrumbSchema = {
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Industries",
-      "item": "https://captureclient.com/industries"
+      "name": "Who We Serve",
+      "item": "https://captureclient.com/who-we-serve"
     },
     {
       "@type": "ListItem",

@@ -15,7 +15,6 @@ import {
   Zap,
   Award,
   Shield,
-  ArrowRight,
   PlayCircle
 } from "lucide-react";
 
@@ -120,34 +119,34 @@ export default function MedSpaClient() {
   const annualLostRevenue = monthlyLostRevenue * 12;
 
   return (
-    <div className="min-h-screen bg-background-dark">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Aurora Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background-dark via-purple-950/20 to-background-dark" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50 to-white" />
 
         {/* Animated Gradient Orb */}
         <motion.div
-          className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full opacity-30"
+          className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full opacity-20"
           animate={{
             scale: [1, 1.3, 1],
-            opacity: [0.3, 0.5, 0.3],
+            opacity: [0.2, 0.3, 0.2],
             rotate: [0, 90, 0]
           }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         >
-          <div className="w-full h-full bg-gradient-radial from-gold-500/50 via-cyan-500/30 to-transparent blur-3xl" />
+          <div className="w-full h-full bg-gradient-radial from-blue-200/60 via-cyan-100/30 to-transparent blur-3xl" />
         </motion.div>
 
         <motion.div
-          className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full opacity-20"
+          className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full opacity-15"
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.2, 0.4, 0.2]
+            opacity: [0.15, 0.25, 0.15]
           }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         >
-          <div className="w-full h-full bg-gradient-radial from-cyan-500/40 to-transparent blur-3xl" />
+          <div className="w-full h-full bg-gradient-radial from-cyan-200/50 via-blue-100/20 to-transparent blur-3xl" />
         </motion.div>
 
         {/* Content */}
@@ -159,15 +158,15 @@ export default function MedSpaClient() {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
               whileHover={{ scale: 1.05 }}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass-premium border border-gold/30 mb-8 shadow-glow-gold hover:shadow-glow-gold-lg transition-shadow"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 mb-8 shadow-lg shadow-slate-200/50 hover:shadow-xl hover:shadow-slate-200/50 transition-shadow"
             >
               <motion.div
                 animate={{ rotate: [0, 360] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
               >
-                <Sparkles className="w-5 h-5 text-gold" />
+                <Sparkles className="w-5 h-5 text-blue-600" />
               </motion.div>
-              <span className="text-sm font-semibold text-gold">For Med Spas & Aesthetic Practices</span>
+              <span className="text-sm font-semibold text-blue-600">For Med Spas & Aesthetic Practices</span>
             </motion.div>
 
             {/* Main Headline */}
@@ -175,11 +174,11 @@ export default function MedSpaClient() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-              className="text-display-lg lg:text-hero-xl font-display font-bold text-foreground mb-6"
+              className="text-display-lg lg:text-hero-xl font-display font-bold text-slate-900 mb-6"
             >
               Stop Losing{" "}
               <motion.span
-                className="text-gradient-gold-cyan inline-block"
+                className="text-gradient bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent inline-block"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
@@ -194,11 +193,11 @@ export default function MedSpaClient() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.25, ease: "easeOut" }}
-              className="text-xl sm:text-2xl lg:text-3xl text-foreground-muted mb-12 max-w-4xl mx-auto leading-relaxed"
+              className="text-xl sm:text-2xl lg:text-3xl text-slate-600 mb-12 max-w-4xl mx-auto leading-relaxed"
             >
               AI Voice Concierge for High-End Clientele.{" "}
               <motion.span
-                className="text-gold font-semibold inline-block"
+                className="text-blue-600 font-semibold inline-block"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6, delay: 0.5 }}
@@ -216,8 +215,8 @@ export default function MedSpaClient() {
             >
               <motion.a
                 href="tel:865-346-6111"
-                className="btn-gold px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 shadow-glow-gold-lg w-full sm:w-auto group relative overflow-hidden"
-                whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(245, 166, 35, 0.5)" }}
+                className="bg-gradient-to-r from-gold to-gold-600 px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 shadow-lg shadow-gold/50 w-full sm:w-auto group relative overflow-hidden text-black hover:shadow-xl hover:shadow-gold/60 transition-all"
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <motion.div
@@ -232,7 +231,7 @@ export default function MedSpaClient() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                 <Link
                   href="/demo"
-                  className="btn-ghost px-10 py-5 text-xl font-semibold rounded-xl inline-flex items-center gap-3 transition-all w-full sm:w-auto"
+                  className="bg-white/70 backdrop-blur-xl border border-slate-200 px-10 py-5 text-xl font-semibold rounded-xl inline-flex items-center gap-3 transition-all w-full sm:w-auto text-slate-900 hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50"
                 >
                   <PlayCircle className="w-6 h-6" />
                   Watch Demo
@@ -258,17 +257,17 @@ export default function MedSpaClient() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
                   whileHover={{ y: -5, scale: 1.02 }}
-                  className="glass-card p-6 rounded-xl border border-white/10 hover:border-gold/30 hover:shadow-glow-gold transition-all cursor-default"
+                  className="bg-white/70 backdrop-blur-xl p-6 rounded-xl border border-slate-200 hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50 transition-all cursor-default"
                 >
                   <motion.div
-                    className="text-4xl font-bold text-gradient-gold-cyan mb-2"
+                    className="text-4xl font-bold text-blue-600 mb-2"
                     initial={{ scale: 0.8 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
                   >
                     {item.stat}
                   </motion.div>
-                  <p className="text-sm text-foreground-muted">{item.label}</p>
+                  <p className="text-sm text-slate-600">{item.label}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -277,7 +276,7 @@ export default function MedSpaClient() {
       </section>
 
       {/* Problem Impact Section */}
-      <section className="section relative bg-background">
+      <section className="section relative bg-slate-50">
         <div className="absolute inset-0 bg-mesh opacity-10" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -286,7 +285,7 @@ export default function MedSpaClient() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-display-md font-display font-bold text-foreground mb-6"
+              className="text-display-md font-display font-bold text-slate-900 mb-6"
             >
               The VIP Client Problem
             </motion.h2>
@@ -295,10 +294,10 @@ export default function MedSpaClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-foreground-muted max-w-3xl mx-auto"
+              className="text-xl text-slate-600 max-w-3xl mx-auto"
             >
               Your clients expect luxury service.{" "}
-              <span className="text-gold font-semibold">Voicemail isn&apos;t luxury.</span>
+              <span className="text-blue-600 font-semibold">Voicemail isn&apos;t luxury.</span>
             </motion.p>
           </div>
 
@@ -308,19 +307,19 @@ export default function MedSpaClient() {
                 icon: Phone,
                 title: "VIP Client Calls",
                 description: "$2,000 laser treatment inquiry at 7:30 PM",
-                color: "text-cyan-400"
+                color: "text-blue-600"
               },
               {
                 icon: Clock,
                 title: "No Answer",
                 description: "Front desk closed. Call goes to voicemail.",
-                color: "text-red-400"
+                color: "text-red-600"
               },
               {
                 icon: TrendingUp,
                 title: "Books at Competitor",
                 description: "They call the next med spa. $4,200 lifetime value lost.",
-                color: "text-gold"
+                color: "text-blue-600"
               }
             ].map((item, index) => (
               <motion.div
@@ -330,17 +329,17 @@ export default function MedSpaClient() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
                 whileHover={{ y: -8, scale: 1.03 }}
-                className="glass-premium p-8 rounded-2xl text-center hover:shadow-glow-gold transition-shadow cursor-default"
+                className="bg-white/70 backdrop-blur-xl p-8 rounded-2xl text-center border border-slate-200 hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50 transition-all cursor-default"
               >
                 <motion.div
-                  className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-gold/20 to-cyan/20 mb-6"
+                  className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-blue-100 to-cyan-100 mb-6"
                   whileHover={{ rotate: 5, scale: 1.1 }}
                   transition={{ duration: 0.3 }}
                 >
                   <item.icon className={`w-8 h-8 ${item.color}`} />
                 </motion.div>
-                <h3 className="text-xl font-bold text-foreground mb-3">{item.title}</h3>
-                <p className="text-foreground-muted leading-relaxed">{item.description}</p>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -351,12 +350,12 @@ export default function MedSpaClient() {
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            <div className="glass-card p-8 rounded-2xl inline-block border-2 border-gold/30">
-              <p className="text-2xl font-bold text-foreground mb-2">
-                <span className="text-gold">32%</span> of spa bookings occur after business hours
+            <div className="bg-white/70 backdrop-blur-xl p-8 rounded-2xl inline-block border-2 border-blue-300 shadow-lg shadow-slate-200/50">
+              <p className="text-2xl font-bold text-slate-900 mb-2">
+                <span className="text-blue-600">32%</span> of spa bookings occur after business hours
               </p>
-              <p className="text-lg text-foreground-muted">
-                Average treatment value: <span className="text-gold font-semibold">$1,500</span>
+              <p className="text-lg text-slate-600">
+                Average treatment value: <span className="text-blue-600 font-semibold">$1,500</span>
               </p>
             </div>
           </motion.div>
@@ -364,7 +363,7 @@ export default function MedSpaClient() {
       </section>
 
       {/* Treatment Type Tabs */}
-      <section className="section relative bg-background-dark">
+      <section className="section relative bg-white">
         <div className="absolute inset-0 bg-mesh-premium opacity-20" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -373,7 +372,7 @@ export default function MedSpaClient() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-display-md font-display font-bold text-foreground mb-6"
+              className="text-display-md font-display font-bold text-slate-900 mb-6"
             >
               Every Treatment Type Covered
             </motion.h2>
@@ -382,7 +381,7 @@ export default function MedSpaClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-foreground-muted max-w-3xl mx-auto"
+              className="text-xl text-slate-600 max-w-3xl mx-auto"
             >
               AI trained specifically for aesthetic services and luxury clientele
             </motion.p>
@@ -408,14 +407,14 @@ export default function MedSpaClient() {
                 whileTap={{ scale: 0.98 }}
                 className={`px-6 py-4 rounded-xl font-semibold transition-all relative overflow-hidden ${
                   selectedTreatment === treatment.id
-                    ? "glass-premium border-2 border-gold/50 text-gold shadow-glow-gold"
-                    : "glass-card text-foreground-muted hover:text-foreground hover:border-gold/30 border border-transparent"
+                    ? "bg-gradient-to-r from-blue-50 to-cyan-50 border-2 border-blue-300 text-slate-900 shadow-lg shadow-slate-200/50"
+                    : "bg-white/70 backdrop-blur-xl text-slate-600 hover:text-slate-900 hover:border-blue-200 border border-slate-200"
                 }`}
               >
                 {selectedTreatment === treatment.id && (
                   <motion.div
                     layoutId="activeTreatment"
-                    className="absolute inset-0 bg-gradient-to-r from-gold/10 via-gold/5 to-transparent rounded-xl"
+                    className="absolute inset-0 bg-gradient-to-r from-blue-50/50 via-cyan-50/30 to-transparent rounded-xl"
                     transition={{ duration: 0.3, ease: "easeInOut" }}
                   />
                 )}
@@ -435,38 +434,38 @@ export default function MedSpaClient() {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.3 }}
-                  className="glass-premium p-10 rounded-2xl border-2 border-gold/30 max-w-4xl mx-auto"
+                  className="bg-white/70 backdrop-blur-xl p-10 rounded-2xl border-2 border-blue-300 shadow-lg shadow-slate-200/50 max-w-4xl mx-auto"
                 >
                   <div className="grid md:grid-cols-2 gap-8 items-center">
                     <div>
                       <div className="text-6xl mb-6">{treatment.emoji}</div>
-                      <h3 className="text-3xl font-bold text-foreground mb-4">{treatment.name}</h3>
+                      <h3 className="text-3xl font-bold text-slate-900 mb-4">{treatment.name}</h3>
                       <div className="flex items-center gap-3 mb-6">
-                        <DollarSign className="w-6 h-6 text-gold" />
-                        <span className="text-2xl font-bold text-gold">{treatment.value}</span>
-                        <span className="text-foreground-muted">per treatment</span>
+                        <DollarSign className="w-6 h-6 text-blue-600" />
+                        <span className="text-2xl font-bold text-blue-600">{treatment.value}</span>
+                        <span className="text-slate-600">per treatment</span>
                       </div>
-                      <p className="text-lg text-foreground-muted leading-relaxed mb-6">
-                        Scenario: <span className="text-foreground font-semibold">{treatment.scenario}</span>
+                      <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                        Scenario: <span className="text-slate-900 font-semibold">{treatment.scenario}</span>
                       </p>
                     </div>
-                    <div className="glass-card p-8 rounded-xl border-l-4 border-red-500">
+                    <div className="bg-white/50 p-8 rounded-xl border-l-4 border-red-500">
                       <div className="flex items-start gap-3 mb-4">
                         <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
-                          <span className="text-red-400 font-bold">!</span>
+                          <span className="text-red-600 font-bold">!</span>
                         </div>
                         <div>
-                          <h4 className="font-bold text-red-400 mb-2">Without AI Concierge:</h4>
-                          <p className="text-foreground-muted leading-relaxed">{treatment.pain}</p>
+                          <h4 className="font-bold text-red-600 mb-2">Without AI Concierge:</h4>
+                          <p className="text-slate-600 leading-relaxed">{treatment.pain}</p>
                         </div>
                       </div>
-                      <div className="flex items-start gap-3 mt-6 pt-6 border-t border-white/10">
-                        <div className="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center flex-shrink-0">
-                          <CheckCircle2 className="w-5 h-5 text-gold" />
+                      <div className="flex items-start gap-3 mt-6 pt-6 border-t border-slate-200">
+                        <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                          <CheckCircle2 className="w-5 h-5 text-blue-600" />
                         </div>
                         <div>
-                          <h4 className="font-bold text-gold mb-2">With AI Concierge:</h4>
-                          <p className="text-foreground-muted leading-relaxed">
+                          <h4 className="font-bold text-blue-600 mb-2">With AI Concierge:</h4>
+                          <p className="text-slate-600 leading-relaxed">
                             AI answers elegantly, qualifies the client, books consultation into your calendar.
                             You capture the high-value treatment.
                           </p>
@@ -482,23 +481,23 @@ export default function MedSpaClient() {
       </section>
 
       {/* Integration Showcase */}
-      <section className="section relative bg-background">
+      <section className="section relative bg-slate-50">
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass-premium border border-gold/30 mb-6"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 mb-6"
             >
-              <Award className="w-5 h-5 text-gold" />
-              <span className="text-sm font-semibold text-gold">Luxury Practice Integration</span>
+              <Award className="w-5 h-5 text-blue-600" />
+              <span className="text-sm font-semibold text-blue-600">Luxury Practice Integration</span>
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-display-md font-display font-bold text-foreground mb-6"
+              className="text-display-md font-display font-bold text-slate-900 mb-6"
             >
               Seamless Calendar Integration
             </motion.h2>
@@ -507,7 +506,7 @@ export default function MedSpaClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-foreground-muted max-w-3xl mx-auto"
+              className="text-xl text-slate-600 max-w-3xl mx-auto"
             >
               Consultations and treatments book directly into your existing system
             </motion.p>
@@ -524,9 +523,9 @@ export default function MedSpaClient() {
                 whileHover={{
                   y: -5,
                   scale: 1.08,
-                  boxShadow: "0 0 25px rgba(245, 166, 35, 0.3)"
+                  boxShadow: "0 10px 25px rgba(148, 163, 184, 0.3)"
                 }}
-                className="glass-premium p-6 rounded-xl text-center transition-all cursor-default hover:border-gold/30 border border-white/10"
+                className="bg-white/70 backdrop-blur-xl p-6 rounded-xl text-center transition-all cursor-default hover:border-blue-300 border border-slate-200 shadow-md shadow-slate-200/50"
               >
                 <motion.div
                   className="text-4xl mb-3"
@@ -535,7 +534,7 @@ export default function MedSpaClient() {
                 >
                   {platform.logo}
                 </motion.div>
-                <p className="font-semibold text-foreground">{platform.name}</p>
+                <p className="font-semibold text-slate-900">{platform.name}</p>
               </motion.div>
             ))}
           </div>
@@ -546,10 +545,10 @@ export default function MedSpaClient() {
             viewport={{ once: true }}
             className="text-center mt-12"
           >
-            <div className="glass-card p-8 rounded-2xl inline-block">
+            <div className="bg-white/70 backdrop-blur-xl p-8 rounded-2xl inline-block border border-slate-200 shadow-lg shadow-slate-200/50">
               <div className="flex items-center justify-center gap-3">
-                <CheckCircle2 className="w-6 h-6 text-gold" />
-                <p className="text-lg text-foreground">
+                <CheckCircle2 className="w-6 h-6 text-blue-600" />
+                <p className="text-lg text-slate-900">
                   Real-time booking, automatic client data sync, zero manual entry
                 </p>
               </div>
@@ -559,7 +558,7 @@ export default function MedSpaClient() {
       </section>
 
       {/* ROI Calculator */}
-      <section className="section relative bg-background-dark">
+      <section className="section relative bg-white">
         <div className="absolute inset-0 bg-mesh opacity-20" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -569,7 +568,7 @@ export default function MedSpaClient() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-display-md font-display font-bold text-foreground mb-6"
+                className="text-display-md font-display font-bold text-slate-900 mb-6"
               >
                 Calculate Your Lost Revenue
               </motion.h2>
@@ -578,7 +577,7 @@ export default function MedSpaClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="text-xl text-foreground-muted"
+                className="text-xl text-slate-600"
               >
                 See exactly how much money voicemail is costing you
               </motion.p>
@@ -588,11 +587,11 @@ export default function MedSpaClient() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="glass-premium p-10 rounded-2xl border-2 border-gold/30"
+              className="bg-white/70 backdrop-blur-xl p-10 rounded-2xl border-2 border-blue-300 shadow-lg shadow-slate-200/50"
             >
               {/* Slider 1: Monthly Inquiries */}
               <div className="mb-10">
-                <label className="block text-lg font-semibold text-foreground mb-4">
+                <label className="block text-lg font-semibold text-slate-900 mb-4">
                   Monthly Phone Inquiries
                 </label>
                 <input
@@ -602,18 +601,18 @@ export default function MedSpaClient() {
                   step="10"
                   value={monthlyInquiries}
                   onChange={(e) => setMonthlyInquiries(Number(e.target.value))}
-                  className="w-full h-3 bg-white/10 rounded-lg appearance-none cursor-pointer accent-gold"
+                  className="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
                 />
                 <div className="flex justify-between mt-3">
-                  <span className="text-foreground-muted text-sm">20</span>
-                  <span className="text-2xl font-bold text-gold">{monthlyInquiries}</span>
-                  <span className="text-foreground-muted text-sm">200</span>
+                  <span className="text-slate-600 text-sm">20</span>
+                  <span className="text-2xl font-bold text-blue-600">{monthlyInquiries}</span>
+                  <span className="text-slate-600 text-sm">200</span>
                 </div>
               </div>
 
               {/* Slider 2: Avg Treatment Value */}
               <div className="mb-10">
-                <label className="block text-lg font-semibold text-foreground mb-4">
+                <label className="block text-lg font-semibold text-slate-900 mb-4">
                   Average Treatment Value
                 </label>
                 <input
@@ -623,39 +622,39 @@ export default function MedSpaClient() {
                   step="100"
                   value={avgTreatmentValue}
                   onChange={(e) => setAvgTreatmentValue(Number(e.target.value))}
-                  className="w-full h-3 bg-white/10 rounded-lg appearance-none cursor-pointer accent-gold"
+                  className="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
                 />
                 <div className="flex justify-between mt-3">
-                  <span className="text-foreground-muted text-sm">$200</span>
-                  <span className="text-2xl font-bold text-gold">${avgTreatmentValue.toLocaleString()}</span>
-                  <span className="text-foreground-muted text-sm">$3,000</span>
+                  <span className="text-slate-600 text-sm">$200</span>
+                  <span className="text-2xl font-bold text-blue-600">${avgTreatmentValue.toLocaleString()}</span>
+                  <span className="text-slate-600 text-sm">$3,000</span>
                 </div>
               </div>
 
               {/* Results */}
-              <div className="glass-card p-8 rounded-xl border-2 border-gold/50 bg-gradient-to-br from-gold/5 to-cyan/5">
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-xl border-2 border-blue-200 shadow-md shadow-slate-200/50">
                 <div className="text-center mb-6">
-                  <p className="text-sm text-foreground-muted mb-2">Assuming 30% Miss Rate</p>
-                  <div className="text-5xl font-bold text-gradient-gold-cyan mb-2">
+                  <p className="text-sm text-slate-600 mb-2">Assuming 30% Miss Rate</p>
+                  <div className="text-5xl font-bold text-blue-600 mb-2">
                     ${annualLostRevenue.toLocaleString()}
                   </div>
-                  <p className="text-xl text-foreground">Lost annually to missed calls</p>
+                  <p className="text-xl text-slate-900">Lost annually to missed calls</p>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-4 mb-6">
                   <div className="text-center">
-                    <p className="text-3xl font-bold text-gold">{missedCallsPerMonth}</p>
-                    <p className="text-sm text-foreground-muted">Missed calls/month</p>
+                    <p className="text-3xl font-bold text-blue-600">{missedCallsPerMonth}</p>
+                    <p className="text-sm text-slate-600">Missed calls/month</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-3xl font-bold text-cyan-400">${monthlyLostRevenue.toLocaleString()}</p>
-                    <p className="text-sm text-foreground-muted">Lost/month</p>
+                    <p className="text-3xl font-bold text-cyan-600">${monthlyLostRevenue.toLocaleString()}</p>
+                    <p className="text-sm text-slate-600">Lost/month</p>
                   </div>
                 </div>
 
                 <Link
                   href="/contact"
-                  className="btn-gold w-full py-4 rounded-xl font-bold text-lg inline-flex items-center justify-center gap-2 shadow-glow-gold-lg hover:scale-105 transition-all"
+                  className="bg-gradient-to-r from-gold to-gold-600 w-full py-4 rounded-xl font-bold text-lg inline-flex items-center justify-center gap-2 shadow-lg shadow-gold/50 hover:scale-105 transition-all text-black"
                 >
                   <Zap className="w-5 h-5" />
                   Stop Losing Money Today
@@ -667,14 +666,14 @@ export default function MedSpaClient() {
       </section>
 
       {/* How It Works */}
-      <section className="section relative bg-background">
+      <section className="section relative bg-slate-50">
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-display-md font-display font-bold text-foreground mb-6"
+              className="text-display-md font-display font-bold text-slate-900 mb-6"
             >
               White-Glove Service, Automated
             </motion.h2>
@@ -683,7 +682,7 @@ export default function MedSpaClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-foreground-muted max-w-3xl mx-auto"
+              className="text-xl text-slate-600 max-w-3xl mx-auto"
             >
               Four steps to capturing every high-value client
             </motion.p>
@@ -725,30 +724,30 @@ export default function MedSpaClient() {
                 whileHover={{
                   y: -8,
                   scale: 1.03,
-                  boxShadow: "0 0 30px rgba(245, 166, 35, 0.3)"
+                  boxShadow: "0 10px 30px rgba(148, 163, 184, 0.3)"
                 }}
-                className="glass-premium p-8 rounded-2xl text-center relative cursor-default transition-all"
+                className="bg-white/70 backdrop-blur-xl p-8 rounded-2xl text-center relative cursor-default transition-all border border-slate-200 hover:border-blue-300 shadow-lg shadow-slate-200/50"
               >
                 <motion.div
-                  className="absolute top-4 right-4 text-6xl font-bold text-gold/10"
-                  whileHover={{ scale: 1.2, opacity: 0.3 }}
+                  className="absolute top-4 right-4 text-6xl font-bold text-blue-100"
+                  whileHover={{ scale: 1.2, opacity: 0.5 }}
                   transition={{ duration: 0.3 }}
                 >
                   {item.step}
                 </motion.div>
                 <motion.div
-                  className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-gold/20 to-cyan/20 mb-6"
+                  className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-blue-100 to-cyan-100 mb-6"
                   whileHover={{
                     scale: 1.15,
                     rotate: 10,
-                    boxShadow: "0 0 20px rgba(245, 166, 35, 0.4)"
+                    boxShadow: "0 0 20px rgba(37, 99, 235, 0.4)"
                   }}
                   transition={{ duration: 0.3 }}
                 >
-                  <item.icon className="w-8 h-8 text-gold" />
+                  <item.icon className="w-8 h-8 text-blue-600" />
                 </motion.div>
-                <h3 className="text-xl font-bold text-foreground mb-3">{item.title}</h3>
-                <p className="text-foreground-muted leading-relaxed">{item.description}</p>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -756,7 +755,7 @@ export default function MedSpaClient() {
       </section>
 
       {/* Testimonials */}
-      <section className="section relative bg-background-dark">
+      <section className="section relative bg-white">
         <div className="absolute inset-0 bg-mesh-premium opacity-20" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -765,7 +764,7 @@ export default function MedSpaClient() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-display-md font-display font-bold text-foreground mb-6"
+              className="text-display-md font-display font-bold text-slate-900 mb-6"
             >
               Elite Med Spas Trust Us
             </motion.h2>
@@ -774,7 +773,7 @@ export default function MedSpaClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-foreground-muted max-w-3xl mx-auto"
+              className="text-xl text-slate-600 max-w-3xl mx-auto"
             >
               Real results from practices that demand excellence
             </motion.p>
@@ -791,12 +790,12 @@ export default function MedSpaClient() {
                 whileHover={{
                   y: -10,
                   scale: 1.02,
-                  boxShadow: "0 0 30px rgba(245, 166, 35, 0.3)"
+                  boxShadow: "0 10px 30px rgba(148, 163, 184, 0.3)"
                 }}
-                className="glass-premium p-8 rounded-2xl border border-gold/20 hover:border-gold/50 transition-all cursor-default"
+                className="bg-white/70 backdrop-blur-xl p-8 rounded-2xl border border-slate-200 hover:border-blue-300 transition-all cursor-default shadow-lg shadow-slate-200/50"
               >
                 <motion.div
-                  className="text-gold text-5xl mb-4"
+                  className="text-blue-600 text-5xl mb-4"
                   initial={{ opacity: 0, scale: 0.5 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
@@ -804,16 +803,16 @@ export default function MedSpaClient() {
                 >
                   &ldquo;
                 </motion.div>
-                <p className="text-foreground mb-6 leading-relaxed text-lg">
+                <p className="text-slate-900 mb-6 leading-relaxed text-lg">
                   {testimonial.quote}
                 </p>
-                <div className="flex items-center justify-between pt-6 border-t border-white/10">
+                <div className="flex items-center justify-between pt-6 border-t border-slate-200">
                   <div>
-                    <p className="font-bold text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-foreground-muted">{testimonial.business}</p>
+                    <p className="font-bold text-slate-900">{testimonial.name}</p>
+                    <p className="text-sm text-slate-600">{testimonial.business}</p>
                   </div>
                   <motion.div
-                    className="text-2xl font-bold text-gradient-gold-cyan"
+                    className="text-2xl font-bold text-blue-600"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.2 }}
                   >
@@ -827,7 +826,7 @@ export default function MedSpaClient() {
       </section>
 
       {/* Before/After Comparison */}
-      <section className="section relative bg-background">
+      <section className="section relative bg-slate-50">
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
@@ -835,7 +834,7 @@ export default function MedSpaClient() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="text-display-md font-display font-bold text-foreground mb-6"
+                className="text-display-md font-display font-bold text-slate-900 mb-6"
               >
                 The Difference Is Crystal Clear
               </motion.h2>
@@ -847,13 +846,13 @@ export default function MedSpaClient() {
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="glass-card p-8 rounded-2xl border-2 border-red-500/30"
+                className="bg-white/70 backdrop-blur-xl p-8 rounded-2xl border-2 border-red-300 shadow-lg shadow-slate-200/50"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-full bg-red-500/20 flex items-center justify-center">
-                    <span className="text-red-400 font-bold text-xl">✗</span>
+                  <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center">
+                    <span className="text-red-600 font-bold text-xl">✗</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-red-400">Without AI</h3>
+                  <h3 className="text-2xl font-bold text-red-600">Without AI</h3>
                 </div>
                 <ul className="space-y-4">
                   {[
@@ -864,8 +863,8 @@ export default function MedSpaClient() {
                     "Miss 30% of all inquiries"
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <span className="text-red-400 mt-1">•</span>
-                      <span className="text-foreground-muted">{item}</span>
+                      <span className="text-red-600 mt-1">•</span>
+                      <span className="text-slate-600">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -876,13 +875,13 @@ export default function MedSpaClient() {
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="glass-premium p-8 rounded-2xl border-2 border-gold/50 shadow-glow-gold"
+                className="bg-white/70 backdrop-blur-xl p-8 rounded-2xl border-2 border-blue-300 shadow-xl shadow-blue-200/50"
               >
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-full bg-gold/20 flex items-center justify-center">
-                    <CheckCircle2 className="w-7 h-7 text-gold" />
+                  <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                    <CheckCircle2 className="w-7 h-7 text-blue-600" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gold">With AI Concierge</h3>
+                  <h3 className="text-2xl font-bold text-blue-600">With AI Concierge</h3>
                 </div>
                 <ul className="space-y-4">
                   {[
@@ -893,8 +892,8 @@ export default function MedSpaClient() {
                     "Capture 100% of inquiries"
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-gold mt-1 flex-shrink-0" />
-                      <span className="text-foreground">{item}</span>
+                      <CheckCircle2 className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
+                      <span className="text-slate-900">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -905,17 +904,17 @@ export default function MedSpaClient() {
       </section>
 
       {/* Final CTA */}
-      <section className="section relative bg-background-dark overflow-hidden">
+      <section className="section relative bg-white overflow-hidden">
         {/* Dramatic Glow Background */}
         <motion.div
           className="absolute inset-0"
           animate={{
-            opacity: [0.3, 0.6, 0.3],
+            opacity: [0.2, 0.3, 0.2],
             scale: [1, 1.1, 1]
           }}
           transition={{ duration: 8, repeat: Infinity }}
         >
-          <div className="absolute inset-0 bg-gradient-radial from-gold/30 via-cyan/20 to-transparent blur-3xl" />
+          <div className="absolute inset-0 bg-gradient-radial from-blue-200/40 via-cyan-100/20 to-transparent blur-3xl" />
         </motion.div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -924,20 +923,20 @@ export default function MedSpaClient() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass-premium border border-gold/30 mb-8"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 mb-8 shadow-lg shadow-slate-200/50"
             >
-              <Shield className="w-5 h-5 text-gold" />
-              <span className="text-sm font-semibold text-gold">Exclusive: Only 3 Med Spas Onboarded Per Month</span>
+              <Shield className="w-5 h-5 text-blue-600" />
+              <span className="text-sm font-semibold text-blue-600">Exclusive: Only 3 Med Spas Onboarded Per Month</span>
             </motion.div>
 
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-display-lg lg:text-hero font-display font-bold text-foreground mb-6"
+              className="text-display-lg lg:text-hero font-display font-bold text-slate-900 mb-6"
             >
               Elevate Your Client Experience{" "}
-              <span className="text-gradient-gold-cyan">Tonight</span>
+              <span className="text-gradient bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Tonight</span>
             </motion.h2>
 
             <motion.p
@@ -945,7 +944,7 @@ export default function MedSpaClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-xl sm:text-2xl text-foreground-muted mb-12 max-w-3xl mx-auto"
+              className="text-xl sm:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto"
             >
               Every missed call is a VIP client lost to your competitor.
               Join the elite med spas capturing 100% of inquiries.
@@ -960,10 +959,9 @@ export default function MedSpaClient() {
             >
               <motion.a
                 href="tel:865-346-6111"
-                className="btn-gold px-12 py-6 text-2xl font-bold rounded-xl inline-flex items-center gap-3 shadow-glow-gold-lg w-full sm:w-auto relative overflow-hidden group"
+                className="bg-gradient-to-r from-gold to-gold-600 px-12 py-6 text-2xl font-bold rounded-xl inline-flex items-center gap-3 shadow-lg shadow-gold/50 w-full sm:w-auto relative overflow-hidden group text-black hover:shadow-xl hover:shadow-gold/60 transition-all"
                 whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 0 50px rgba(245, 166, 35, 0.6)"
+                  scale: 1.05
                 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -993,7 +991,7 @@ export default function MedSpaClient() {
               >
                 <Link
                   href="/demo"
-                  className="btn-ghost px-12 py-6 text-2xl font-semibold rounded-xl inline-flex items-center gap-3 transition-all w-full sm:w-auto"
+                  className="bg-white/70 backdrop-blur-xl border border-slate-200 px-12 py-6 text-2xl font-semibold rounded-xl inline-flex items-center gap-3 transition-all w-full sm:w-auto text-slate-900 hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50"
                 >
                   <PlayCircle className="w-7 h-7" />
                   Watch Demo
@@ -1006,7 +1004,7 @@ export default function MedSpaClient() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3 }}
-              className="text-sm text-foreground-muted mt-8"
+              className="text-sm text-slate-600 mt-8"
             >
               Month-to-month. No long-term contracts. Cancel anytime.
             </motion.p>

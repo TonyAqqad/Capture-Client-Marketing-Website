@@ -28,6 +28,9 @@ export async function generateStaticParams() {
   }));
 }
 
+// Return true 404 for unknown slugs (prevents soft 404s)
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: {
@@ -77,11 +80,11 @@ export default async function PackagePage({
   }
 
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen bg-white">
       {/* Premium Hero Section */}
       <section className="relative overflow-hidden">
         {/* Animated gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-950/30 via-slate-950 to-blue-950/30">
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/30 via-white to-blue-50/30">
           <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
           {/* Glow effects */}
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
@@ -92,7 +95,7 @@ export default async function PackagePage({
           <div className="max-w-4xl mx-auto text-center">
             {/* Badge */}
             {pkg.hero?.badge && (
-              <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 backdrop-blur-sm">
                 <Star className="w-4 h-4 text-cyan-400" />
                 <span className="text-cyan-400 font-semibold text-sm tracking-wider">
                   {pkg.hero.badge}
@@ -101,12 +104,12 @@ export default async function PackagePage({
             )}
 
             {/* Headline */}
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-100 to-blue-200 bg-clip-text text-transparent leading-tight px-4 sm:px-0">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 bg-gradient-to-r from-slate-900 via-cyan-600 to-blue-600 bg-clip-text text-transparent leading-tight px-4 sm:px-0">
               {pkg.hero?.headline || pkg.package.package_name}
             </h1>
 
             {/* Subheadline */}
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-300 mb-12 leading-relaxed max-w-3xl mx-auto px-4 sm:px-6 md:px-0">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 mb-12 leading-relaxed max-w-3xl mx-auto px-4 sm:px-6 md:px-0">
               {pkg.hero?.subheadline || pkg.package.tagline}
             </p>
 
@@ -114,13 +117,13 @@ export default async function PackagePage({
             <div className="mb-12 px-4 sm:px-0">
               <div className="inline-block relative w-full max-w-md mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl blur-xl opacity-30"></div>
-                <div className="relative bg-slate-900/80 backdrop-blur-sm border border-cyan-500/20 rounded-2xl px-6 sm:px-8 md:px-12 py-6 sm:py-8">
+                <div className="relative bg-white/80 border border-slate-200 rounded-2xl px-6 sm:px-8 md:px-12 py-6 sm:py-8">
                   <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">
                     {pkg.package.price}
                   </div>
-                  <div className="text-slate-400 text-base sm:text-lg">{pkg.package.period}</div>
+                  <div className="text-slate-600 text-base sm:text-lg">{pkg.package.period}</div>
                   {pkg.hero?.price_display?.note && (
-                    <div className="text-slate-500 text-xs sm:text-sm mt-2">
+                    <div className="text-slate-600 text-xs sm:text-sm mt-2">
                       {pkg.hero.price_display.note}
                     </div>
                   )}
@@ -144,7 +147,7 @@ export default async function PackagePage({
               {pkg.hero?.cta?.secondary && (
                 <Link
                   href={pkg.hero.cta.secondary.action}
-                  className="px-6 sm:px-8 py-4 min-h-[56px] bg-white/5 border border-white/10 rounded-full font-bold text-white text-base sm:text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm touch-manipulation w-full sm:w-auto"
+                  className="px-6 sm:px-8 py-4 min-h-[56px] bg-white border border-slate-200 rounded-full font-bold text-slate-900 text-base sm:text-lg hover:bg-slate-50 transition-all duration-300 backdrop-blur-sm touch-manipulation w-full sm:w-auto"
                 >
                   {pkg.hero.cta.secondary.text}
                 </Link>
@@ -152,7 +155,7 @@ export default async function PackagePage({
             </div>
 
             {/* Trust Signals */}
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-6 text-sm sm:text-base text-slate-400 px-4 sm:px-0">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-6 text-sm sm:text-base text-slate-600 px-4 sm:px-0">
               <div className="flex items-center gap-3 py-1">
                 <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
                 <span>No setup fees</span>
@@ -172,13 +175,13 @@ export default async function PackagePage({
 
       {/* Perfect For Section */}
       {pkg.ideal_for && (
-        <section className="py-20 px-6 bg-gradient-to-b from-slate-950 to-slate-900">
+        <section className="py-20 px-6 bg-gradient-to-b from-white to-slate-50">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-slate-900">
               {pkg.ideal_for.headline || "Perfect For:"}
             </h2>
             {pkg.ideal_for.description && (
-              <p className="text-xl text-slate-400 text-center mb-12 max-w-3xl mx-auto">
+              <p className="text-xl text-slate-600 text-center mb-12 max-w-3xl mx-auto">
                 {pkg.ideal_for.description}
               </p>
             )}
@@ -186,14 +189,14 @@ export default async function PackagePage({
               {pkg.ideal_for.audience?.map((item: string, index: number) => (
                 <div
                   key={index}
-                  className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-cyan-500/10 p-5 sm:p-6 hover:border-cyan-500/30 transition-all duration-300"
+                  className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-slate-50 to-white border border-slate-200 p-5 sm:p-6 hover:border-cyan-500/30 transition-all duration-300"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <div className="relative flex items-start gap-3 sm:gap-4">
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center border border-cyan-500/30">
                       <BadgeCheck className="w-5 h-5 text-cyan-400" />
                     </div>
-                    <p className="text-slate-200 text-sm sm:text-base leading-relaxed">{item}</p>
+                    <p className="text-slate-700 text-sm sm:text-base leading-relaxed">{item}</p>
                   </div>
                 </div>
               ))}
@@ -205,15 +208,15 @@ export default async function PackagePage({
       {/* What's Included Section */}
       {pkg.features_included && pkg.features_included.length > 0 && (
         <section className="py-20 px-6 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-white to-white"></div>
           <div className="absolute top-1/2 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"></div>
 
           <div className="relative container mx-auto max-w-6xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">
                 What&apos;s Included
               </h2>
-              <p className="text-xl text-slate-400 max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 max-w-2xl mx-auto">
                 Everything you need to capture, qualify, and convert more leads
               </p>
             </div>
@@ -222,7 +225,7 @@ export default async function PackagePage({
               {pkg.features_included.map((feature: PackageFeature, index: number) => (
                 <div
                   key={index}
-                  className="group relative rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-cyan-500/10 p-6 sm:p-8 hover:border-cyan-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10"
+                  className="group relative rounded-2xl bg-gradient-to-br from-slate-50 to-white border border-slate-200 p-6 sm:p-8 hover:border-cyan-500/30 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/10"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/5 group-hover:to-blue-500/5 rounded-2xl transition-all duration-300"></div>
 
@@ -232,7 +235,7 @@ export default async function PackagePage({
                         <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center border border-cyan-500/30">
                           <CheckCircle2 className="w-6 h-6 text-cyan-400" />
                         </div>
-                        <h3 className="font-bold text-lg sm:text-xl text-white">
+                        <h3 className="font-bold text-lg sm:text-xl text-slate-900">
                           {feature.name}
                         </h3>
                       </div>
@@ -242,7 +245,7 @@ export default async function PackagePage({
                         </span>
                       )}
                     </div>
-                    <p className="text-slate-400 text-sm sm:text-base leading-relaxed">
+                    <p className="text-slate-600 text-sm sm:text-base leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
@@ -257,21 +260,21 @@ export default async function PackagePage({
       {pkg.features_not_included &&
         pkg.features_not_included.length > 0 &&
         pkg.features_not_included[0].name !== "Nothing" && (
-          <section className="py-20 px-6 bg-slate-900/50">
+          <section className="py-20 px-6 bg-slate-50">
             <div className="container mx-auto max-w-4xl">
-              <h3 className="text-3xl font-bold text-center mb-12 text-white">
+              <h3 className="text-3xl font-bold text-center mb-12 text-slate-900">
                 Available in Higher Tiers
               </h3>
               <div className="grid md:grid-cols-2 gap-4">
                 {pkg.features_not_included.map((feature: PackageFeature, index: number) => (
                   <div
                     key={index}
-                    className="rounded-xl bg-slate-800/30 border border-slate-700/50 p-6"
+                    className="rounded-xl bg-white border border-slate-200 p-6"
                   >
                     <div className="flex items-start gap-4">
-                      <X className="w-5 h-5 text-slate-500 flex-shrink-0" />
+                      <X className="w-5 h-5 text-slate-600 flex-shrink-0" />
                       <div className="flex-1">
-                        <p className="text-slate-400 mb-1">{feature.name}</p>
+                        <p className="text-slate-600 mb-1">{feature.name}</p>
                         {feature.available_in && (
                           <Link
                             href={`/pricing/${feature.available_in
@@ -284,14 +287,14 @@ export default async function PackagePage({
                           </Link>
                         )}
                         {feature.note && (
-                          <p className="text-slate-500 text-sm mt-1">{feature.note}</p>
+                          <p className="text-slate-600 text-sm mt-1">{feature.note}</p>
                         )}
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
-              <p className="text-center text-slate-500 mt-8">
+              <p className="text-center text-slate-600 mt-8">
                 Upgrade anytime to access these features
               </p>
             </div>
@@ -301,16 +304,16 @@ export default async function PackagePage({
       {/* Value Proposition Section */}
       {pkg.value_proposition && pkg.value_proposition.benefits && (
         <section className="py-20 px-6 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white"></div>
           <div className="absolute top-1/3 right-0 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
 
           <div className="relative container mx-auto max-w-6xl">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">
                 {pkg.value_proposition.heading}
               </h2>
               {pkg.value_proposition.content && (
-                <p className="text-xl text-slate-400 max-w-3xl mx-auto">
+                <p className="text-xl text-slate-600 max-w-3xl mx-auto">
                   {pkg.value_proposition.content}
                 </p>
               )}
@@ -320,7 +323,7 @@ export default async function PackagePage({
               {pkg.value_proposition.benefits.map((benefit: Benefit, index: number) => (
                 <div
                   key={index}
-                  className="group relative rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-cyan-500/10 p-8 hover:border-cyan-500/30 transition-all duration-300"
+                  className="group relative rounded-2xl bg-gradient-to-br from-slate-50 to-white border border-slate-200 p-8 hover:border-cyan-500/30 transition-all duration-300"
                 >
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 to-blue-500/0 group-hover:from-cyan-500/5 group-hover:to-blue-500/5 rounded-2xl transition-all duration-300"></div>
 
@@ -328,10 +331,10 @@ export default async function PackagePage({
                     <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center border border-cyan-500/30 mb-6">
                       <Star className="w-8 h-8 text-cyan-400" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-4">
+                    <h3 className="text-2xl font-bold text-slate-900 mb-4">
                       {benefit.title}
                     </h3>
-                    <p className="text-slate-400 leading-relaxed text-lg">
+                    <p className="text-slate-600 leading-relaxed text-lg">
                       {benefit.description}
                     </p>
                   </div>
@@ -344,28 +347,28 @@ export default async function PackagePage({
 
       {/* Comparison Table Section */}
       {pkg.comparison?.compare_table && pkg.comparison.compare_table.length > 0 && (
-        <section className="py-20 px-6 bg-slate-900/50">
+        <section className="py-20 px-6 bg-slate-50">
           <div className="container mx-auto max-w-6xl">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-slate-900">
               Compare All Packages
             </h2>
-            <p className="text-xl text-slate-400 text-center mb-12">
+            <p className="text-xl text-slate-600 text-center mb-12">
               See how this package stacks up against our other offerings
             </p>
 
             {/* Mobile: Show scroll hint */}
-            <div className="md:hidden text-center text-slate-400 text-sm mb-3">
+            <div className="md:hidden text-center text-slate-600 text-sm mb-3">
               ← Swipe to see all packages →
             </div>
 
             <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-thin scrollbar-thumb-cyan-500/20 scrollbar-track-transparent">
               <table className="w-full min-w-[600px]">
                 <thead>
-                  <tr className="border-b border-slate-700">
-                    <th className="text-left py-3 sm:py-4 px-3 sm:px-6 text-slate-400 font-semibold text-sm sm:text-base sticky left-0 bg-slate-900/50 backdrop-blur-sm z-10">
+                  <tr className="border-b border-slate-200">
+                    <th className="text-left py-3 sm:py-4 px-3 sm:px-6 text-slate-600 font-semibold text-sm sm:text-base sticky left-0 bg-slate-50 backdrop-blur-sm z-10">
                       Feature
                     </th>
-                    <th className="text-center py-3 sm:py-4 px-3 sm:px-6 text-slate-400 font-semibold text-sm sm:text-base">
+                    <th className="text-center py-3 sm:py-4 px-3 sm:px-6 text-slate-600 font-semibold text-sm sm:text-base">
                       Starter
                     </th>
                     <th className="text-center py-3 sm:py-4 px-3 sm:px-6">
@@ -373,7 +376,7 @@ export default async function PackagePage({
                         Growth
                       </div>
                     </th>
-                    <th className="text-center py-3 sm:py-4 px-3 sm:px-6 text-slate-400 font-semibold text-sm sm:text-base">
+                    <th className="text-center py-3 sm:py-4 px-3 sm:px-6 text-slate-600 font-semibold text-sm sm:text-base">
                       Enterprise
                     </th>
                   </tr>
@@ -382,18 +385,18 @@ export default async function PackagePage({
                   {pkg.comparison.compare_table.map((row: ComparisonRow, index: number) => (
                     <tr
                       key={index}
-                      className="border-b border-slate-800 hover:bg-slate-800/30 transition-colors"
+                      className="border-b border-slate-200 hover:bg-white/50 transition-colors"
                     >
-                      <td className="py-3 sm:py-4 px-3 sm:px-6 text-white font-medium text-sm sm:text-base sticky left-0 bg-slate-900/50 backdrop-blur-sm z-10">
+                      <td className="py-3 sm:py-4 px-3 sm:px-6 text-slate-900 font-medium text-sm sm:text-base sticky left-0 bg-slate-50 backdrop-blur-sm z-10">
                         {row.feature}
                       </td>
-                      <td className="py-3 sm:py-4 px-3 sm:px-6 text-center text-slate-400 text-sm sm:text-base">
+                      <td className="py-3 sm:py-4 px-3 sm:px-6 text-center text-slate-600 text-sm sm:text-base">
                         {row.starter}
                       </td>
                       <td className="py-3 sm:py-4 px-3 sm:px-6 text-center">
                         <span className="text-cyan-400 font-semibold text-sm sm:text-base">{row.growth}</span>
                       </td>
-                      <td className="py-3 sm:py-4 px-3 sm:px-6 text-center text-slate-400 text-sm sm:text-base">
+                      <td className="py-3 sm:py-4 px-3 sm:px-6 text-center text-slate-600 text-sm sm:text-base">
                         {row.enterprise}
                       </td>
                     </tr>
@@ -405,7 +408,7 @@ export default async function PackagePage({
             <div className="text-center mt-8">
               <Link
                 href="/pricing"
-                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 min-h-[48px] bg-white/5 border border-white/10 rounded-full text-white font-semibold hover:bg-white/10 transition-all duration-300 backdrop-blur-sm touch-manipulation text-sm sm:text-base"
+                className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 min-h-[48px] bg-white border border-slate-200 rounded-full text-slate-900 font-semibold hover:bg-slate-50 transition-all duration-300 backdrop-blur-sm touch-manipulation text-sm sm:text-base"
               >
                 View Full Comparison
                 <ArrowRight className="w-5 h-5" />
@@ -418,13 +421,13 @@ export default async function PackagePage({
       {/* Testimonials Section */}
       {pkg.testimonials && pkg.testimonials.length > 0 && (
         <section className="py-20 px-6 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white"></div>
 
           <div className="relative container mx-auto max-w-6xl">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-slate-900">
               Success Stories
             </h2>
-            <p className="text-xl text-slate-400 text-center mb-16">
+            <p className="text-xl text-slate-600 text-center mb-16">
               Real results from real businesses
             </p>
 
@@ -432,7 +435,7 @@ export default async function PackagePage({
               {pkg.testimonials.map((testimonial: Testimonial, index: number) => (
                 <div
                   key={index}
-                  className="relative rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-cyan-500/10 p-8 hover:border-cyan-500/30 transition-all duration-300"
+                  className="relative rounded-2xl bg-gradient-to-br from-slate-50 to-white border border-slate-200 p-8 hover:border-cyan-500/30 transition-all duration-300"
                 >
                   {/* Rating stars */}
                   <div className="flex gap-1 mb-6">
@@ -442,18 +445,18 @@ export default async function PackagePage({
                   </div>
 
                   {/* Quote */}
-                  <blockquote className="text-slate-300 text-lg leading-relaxed mb-6">
+                  <blockquote className="text-slate-600 text-lg leading-relaxed mb-6">
                     &quot;{testimonial.quote}&quot;
                   </blockquote>
 
                   {/* Author info */}
                   <div className="flex items-center justify-between">
                     <div>
-                      <div className="font-bold text-white">{testimonial.author}</div>
-                      <div className="text-slate-400 text-sm">
+                      <div className="font-bold text-slate-900">{testimonial.author}</div>
+                      <div className="text-slate-600 text-sm">
                         {testimonial.business}
                       </div>
-                      <div className="text-slate-500 text-sm">
+                      <div className="text-slate-600 text-sm">
                         {testimonial.location}
                       </div>
                     </div>
@@ -474,12 +477,12 @@ export default async function PackagePage({
 
       {/* FAQ Section */}
       {pkg.faq && pkg.faq.length > 0 && (
-        <section className="py-20 px-6 bg-slate-900/50">
+        <section className="py-20 px-6 bg-slate-50">
           <div className="container mx-auto max-w-4xl">
-            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-white">
+            <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-slate-900">
               Frequently Asked Questions
             </h2>
-            <p className="text-xl text-slate-400 text-center mb-12">
+            <p className="text-xl text-slate-600 text-center mb-12">
               Everything you need to know about this package
             </p>
 
@@ -487,13 +490,13 @@ export default async function PackagePage({
               {pkg.faq.map((item: FAQItem, index: number) => (
                 <details
                   key={index}
-                  className="group rounded-xl bg-slate-800/50 border border-slate-700/50 overflow-hidden hover:border-cyan-500/30 transition-all duration-300"
+                  className="group rounded-xl bg-white border border-slate-200 overflow-hidden hover:border-cyan-500/30 transition-all duration-300"
                 >
-                  <summary className="flex items-center justify-between cursor-pointer p-6 text-white font-bold text-lg">
+                  <summary className="flex items-center justify-between cursor-pointer p-6 text-slate-900 font-bold text-lg">
                     <span>{item.question}</span>
                     <ChevronDown className="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform" />
                   </summary>
-                  <div className="px-6 pb-6 text-slate-400 leading-relaxed border-t border-slate-700/50 pt-4">
+                  <div className="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-200 pt-4">
                     {item.answer}
                   </div>
                 </details>
@@ -511,13 +514,13 @@ export default async function PackagePage({
               {pkg.trust_signals.map((signal: TrustSignal, index: number) => (
                 <div
                   key={index}
-                  className="text-center p-5 sm:p-6 rounded-xl bg-slate-800/30 border border-slate-700/50"
+                  className="text-center p-5 sm:p-6 rounded-xl bg-white border border-slate-200"
                 >
                   <div className="w-12 h-12 rounded-full bg-green-500/10 border border-green-500/20 flex items-center justify-center mx-auto mb-4">
                     <BadgeCheck className="w-6 h-6 text-green-400" />
                   </div>
-                  <h4 className="font-bold text-white mb-2 text-base sm:text-lg">{signal.title}</h4>
-                  <p className="text-slate-400 text-xs sm:text-sm leading-relaxed">{signal.description}</p>
+                  <h4 className="font-bold text-slate-900 mb-2 text-base sm:text-lg">{signal.title}</h4>
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">{signal.description}</p>
                 </div>
               ))}
             </div>
@@ -527,17 +530,17 @@ export default async function PackagePage({
 
       {/* Final CTA Section */}
       <section className="py-20 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-950/30 via-slate-950 to-blue-950/30">
+        <div className="absolute inset-0 bg-gradient-to-br from-cyan-50/30 via-white to-blue-50/30">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-3xl"></div>
         </div>
 
         <div className="relative container mx-auto max-w-5xl">
-          <div className="rounded-3xl bg-gradient-to-br from-slate-800/80 to-slate-900/80 border border-cyan-500/20 p-12 backdrop-blur-sm">
+          <div className="rounded-3xl bg-gradient-to-br from-white/80 to-slate-50/80 border border-slate-200 p-12 backdrop-blur-sm">
             <div className="text-center mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">
                 {pkg.cta_footer?.headline || `Ready to Get Started with ${pkg.package.package_name}?`}
               </h2>
-              <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 max-w-2xl mx-auto">
                 {pkg.cta_footer?.subheadline || "Contact us today to activate your package and start automating your leads."}
               </p>
             </div>
@@ -559,7 +562,7 @@ export default async function PackagePage({
                 {pkg.cta_footer.secondary_cta && (
                   <Link
                     href={pkg.cta_footer.secondary_cta.action}
-                    className="px-8 py-4 bg-white/5 border border-white/10 rounded-full font-bold text-white text-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
+                    className="px-8 py-4 bg-white border border-slate-200 rounded-full font-bold text-slate-900 text-lg hover:bg-slate-50 transition-all duration-300 backdrop-blur-sm"
                   >
                     {pkg.cta_footer.secondary_cta.text}
                   </Link>
@@ -569,7 +572,7 @@ export default async function PackagePage({
 
             {/* Guarantee */}
             {pkg.cta_footer?.guarantee && (
-              <p className="text-center text-slate-400 mb-4">{pkg.cta_footer.guarantee}</p>
+              <p className="text-center text-slate-600 mb-4">{pkg.cta_footer.guarantee}</p>
             )}
 
             {/* Bonus */}

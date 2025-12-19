@@ -10,7 +10,6 @@ import {
   CheckCircle2,
   TrendingUp,
   AlertCircle,
-  DollarSign,
   ArrowRight,
   Zap,
   Shield,
@@ -114,19 +113,21 @@ export default function DentalClient() {
   const selectedPracticeData = PRACTICE_TYPES.find(p => p.id === selectedPractice) || PRACTICE_TYPES[0];
 
   return (
-    <div className="min-h-screen bg-background-dark">
+    <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Aurora Background */}
-        <div className="absolute inset-0 bg-aurora-animated opacity-40" />
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50 to-white" />
+          <div className="absolute inset-0 bg-mesh-premium opacity-20" />
+        </div>
 
         {/* Animated Gradient Orb */}
         <motion.div
-          className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full opacity-30 pointer-events-none"
+          className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full opacity-20 pointer-events-none"
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-            rotate: [0, 90, 0]
+            opacity: [0.2, 0.3, 0.2]
           }}
           transition={{
             duration: 12,
@@ -134,7 +135,7 @@ export default function DentalClient() {
             ease: "easeInOut"
           }}
         >
-          <div className="w-full h-full bg-gradient-radial from-gold-500/50 via-cyan-500/30 to-transparent blur-3xl" />
+          <div className="w-full h-full bg-gradient-radial from-blue-200/60 via-cyan-100/30 to-transparent blur-3xl" />
         </motion.div>
 
         {/* Content */}
@@ -145,10 +146,10 @@ export default function DentalClient() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 glass-premium px-6 py-3 rounded-full mb-8"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 mb-8"
             >
-              <BadgeCheck className="w-5 h-5 text-gold" />
-              <span className="text-sm font-semibold text-foreground">
+              <BadgeCheck className="w-5 h-5 text-blue-600" />
+              <span className="text-sm font-semibold text-blue-600">
                 For General, Cosmetic & Specialty Dental Practices
               </span>
             </motion.div>
@@ -158,10 +159,10 @@ export default function DentalClient() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-display-lg lg:text-hero-xl font-display font-bold text-foreground mb-6"
+              className="text-display-lg lg:text-hero-xl font-display font-bold text-slate-900 mb-6"
             >
               Stop Losing{" "}
-              <span className="text-gradient-gold-cyan">
+              <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 bg-clip-text text-transparent">
                 $100K/Year
               </span>
               <br />
@@ -173,10 +174,10 @@ export default function DentalClient() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-xl sm:text-2xl lg:text-3xl text-foreground-muted mb-8 leading-relaxed"
+              className="text-xl sm:text-2xl lg:text-3xl text-slate-600 mb-8 leading-relaxed"
             >
               AI Voice Agents That Book Every Patient, 24/7.{" "}
-              <span className="text-gold font-semibold">Even at 3 AM.</span>
+              <span className="text-blue-600 font-semibold">Even at 3 AM.</span>
             </motion.p>
 
             {/* Money Counter */}
@@ -184,18 +185,18 @@ export default function DentalClient() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="glass-premium p-8 rounded-2xl mb-12 max-w-2xl mx-auto border-2 border-gold/30"
+              className="p-8 rounded-2xl mb-12 max-w-2xl mx-auto bg-gradient-to-r from-red-50 to-red-100 border border-red-200"
             >
               <div className="flex items-center justify-center gap-3 mb-3">
-                <AlertCircle className="w-6 h-6 text-gold" />
-                <p className="text-sm text-foreground-muted uppercase tracking-wider">
+                <AlertCircle className="w-6 h-6 text-red-600" />
+                <p className="text-sm text-red-700 uppercase tracking-wider">
                   Lost Revenue While You Read This
                 </p>
               </div>
-              <div className="text-5xl sm:text-6xl font-bold text-gradient-gold-cyan tabular-nums">
+              <div className="text-5xl sm:text-6xl font-bold text-red-600 tabular-nums">
                 ${moneyCounter.toLocaleString()}
               </div>
-              <p className="text-sm text-foreground-muted mt-2">
+              <p className="text-sm text-slate-600 mt-2">
                 35% of dental calls go unanswered nationwide
               </p>
             </motion.div>
@@ -211,11 +212,10 @@ export default function DentalClient() {
                 href="tel:865-346-6111"
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: "0 0 40px rgba(212, 175, 55, 0.6)",
                   transition: { duration: 0.2 }
                 }}
                 whileTap={{ scale: 0.98 }}
-                className="btn-gold px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 shadow-glow-gold-lg transition-all w-full sm:w-auto"
+                className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 transition-all w-full sm:w-auto"
               >
                 <Phone className="w-6 h-6" />
                 Call 865-346-6111
@@ -227,7 +227,7 @@ export default function DentalClient() {
               >
                 <Link
                   href="/demo"
-                  className="btn-ghost px-10 py-5 text-xl font-semibold rounded-xl inline-flex items-center gap-3 w-full"
+                  className="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 px-10 py-5 text-xl font-semibold rounded-xl inline-flex items-center gap-3 w-full"
                 >
                   Watch Demo
                   <ArrowRight className="w-5 h-5" />
@@ -240,7 +240,7 @@ export default function DentalClient() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="text-sm text-foreground-muted mt-6"
+              className="text-sm text-slate-600 mt-6"
             >
               Integrates with Dentrix, Eaglesoft, Open Dental & More
             </motion.p>
@@ -249,7 +249,7 @@ export default function DentalClient() {
       </section>
 
       {/* Problem Impact Section */}
-      <section className="section relative bg-background">
+      <section className="section relative bg-slate-50">
         <div className="absolute inset-0 bg-mesh opacity-10" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -258,7 +258,7 @@ export default function DentalClient() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-display-md font-display font-bold text-foreground mb-4"
+              className="text-display-md font-display font-bold text-slate-900 mb-4"
             >
               The Problem Every Dentist Faces
             </motion.h2>
@@ -267,7 +267,7 @@ export default function DentalClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-foreground-muted max-w-3xl mx-auto"
+              className="text-xl text-slate-600 max-w-3xl mx-auto"
             >
               Your competition answers their phones. Do you?
             </motion.p>
@@ -280,15 +280,15 @@ export default function DentalClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="glass-premium p-8 rounded-2xl text-center hover:shadow-glow-gold-lg transition-shadow"
+              className="bg-white/70 backdrop-blur-xl border border-slate-200 p-8 rounded-2xl text-center hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300"
             >
-              <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Phone className="w-8 h-8 text-gold" />
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Phone className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3">
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">
                 Patient Calls
               </h3>
-              <p className="text-foreground-muted leading-relaxed">
+              <p className="text-slate-600 leading-relaxed">
                 Emergency at 8 PM. Cosmetic inquiry on Saturday. New patient during lunch rush.
               </p>
             </motion.div>
@@ -300,23 +300,23 @@ export default function DentalClient() {
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="glass-premium p-8 rounded-2xl text-center border-2 border-gold/50 hover:shadow-glow-gold-lg transition-shadow"
+              className="bg-white/70 backdrop-blur-xl border-2 border-blue-300 p-8 rounded-2xl text-center hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300"
             >
-              <div className="w-16 h-16 bg-gold/30 rounded-full flex items-center justify-center mx-auto mb-6">
-                <AlertCircle className="w-8 h-8 text-gold" />
+              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <AlertCircle className="w-8 h-8 text-red-600" />
               </div>
-              <h3 className="text-2xl font-bold text-gold mb-3">
+              <h3 className="text-2xl font-bold text-red-600 mb-3">
                 No Answer
               </h3>
-              <p className="text-foreground-muted leading-relaxed mb-4">
-                <span className="text-3xl font-bold text-gold block mb-2">35%</span>
+              <p className="text-slate-600 leading-relaxed mb-4">
+                <span className="text-3xl font-bold text-red-600 block mb-2">35%</span>
                 of calls go unanswered
               </p>
-              <div className="glass-card p-4 rounded-xl">
-                <p className="text-sm text-foreground font-semibold">
+              <div className="bg-slate-50 border border-slate-200 p-4 rounded-xl">
+                <p className="text-sm text-slate-900 font-semibold">
                   Lost per missed new patient:
                 </p>
-                <p className="text-2xl font-bold text-gradient-gold-cyan">
+                <p className="text-2xl font-bold text-blue-600">
                   $850-$1,300
                 </p>
               </div>
@@ -329,15 +329,15 @@ export default function DentalClient() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
-              className="glass-premium p-8 rounded-2xl text-center hover:shadow-glow-gold-lg transition-shadow"
+              className="bg-white/70 backdrop-blur-xl border border-slate-200 p-8 rounded-2xl text-center hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300"
             >
-              <div className="w-16 h-16 bg-cyan/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <TrendingUp className="w-8 h-8 text-cyan-500 rotate-180" />
+              <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <TrendingUp className="w-8 h-8 text-cyan-600 rotate-180" />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-3">
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">
                 Books With Competitor
               </h3>
-              <p className="text-foreground-muted leading-relaxed">
+              <p className="text-slate-600 leading-relaxed">
                 They Google "dentist near me who answers phone" and find someone else. Forever.
               </p>
             </motion.div>
@@ -350,12 +350,12 @@ export default function DentalClient() {
             viewport={{ once: true }}
             className="text-center mt-16"
           >
-            <div className="glass-premium p-8 rounded-2xl max-w-4xl mx-auto border-2 border-gold/30">
-              <p className="text-2xl sm:text-3xl font-bold text-foreground mb-4">
+            <div className="bg-white/70 backdrop-blur-xl border-2 border-blue-200 p-8 rounded-2xl max-w-4xl mx-auto shadow-lg shadow-slate-200/50">
+              <p className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4">
                 Every missed call is a patient you'll{" "}
-                <span className="text-gold">never see again.</span>
+                <span className="text-blue-600">never see again.</span>
               </p>
-              <p className="text-xl text-foreground-muted">
+              <p className="text-xl text-slate-600">
                 They won't call back. They'll book with whoever picks up first.
               </p>
             </div>
@@ -364,7 +364,7 @@ export default function DentalClient() {
       </section>
 
       {/* Practice-Type Tabs */}
-      <section className="section relative bg-background-dark overflow-hidden">
+      <section className="section relative bg-white overflow-hidden">
         <div className="absolute inset-0 bg-mesh-premium opacity-20" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -373,7 +373,7 @@ export default function DentalClient() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-display-md font-display font-bold text-foreground mb-4"
+              className="text-display-md font-display font-bold text-slate-900 mb-4"
             >
               Every Specialty Loses Patients
             </motion.h2>
@@ -382,7 +382,7 @@ export default function DentalClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-foreground-muted max-w-3xl mx-auto"
+              className="text-xl text-slate-600 max-w-3xl mx-auto"
             >
               The cost of missed calls varies by practice type. All are expensive.
             </motion.p>
@@ -400,10 +400,10 @@ export default function DentalClient() {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => setSelectedPractice(practice.id)}
-                className={`px-6 py-4 rounded-xl font-semibold transition-all ${
+                className={`px-6 py-4 rounded-xl font-semibold transition-all duration-300 ${
                   selectedPractice === practice.id
-                    ? "glass-premium border-2 border-gold text-foreground shadow-glow-gold"
-                    : "glass-card text-foreground-muted hover:text-foreground hover:shadow-glow-gold-lg"
+                    ? "bg-gradient-to-r from-blue-50 to-cyan-50 border-2 border-blue-300 text-slate-900 shadow-lg shadow-slate-200/50"
+                    : "bg-white/70 backdrop-blur-xl border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-blue-200 hover:shadow-md"
                 }`}
               >
                 <span className="text-2xl mr-2">{practice.icon}</span>
@@ -420,50 +420,50 @@ export default function DentalClient() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
-              className="glass-premium p-8 sm:p-12 rounded-2xl max-w-4xl mx-auto border-2 border-gold/30"
+              className="bg-white/70 backdrop-blur-xl border-2 border-blue-200 p-8 sm:p-12 rounded-2xl max-w-4xl mx-auto shadow-xl shadow-slate-200/50"
             >
               <div className="flex items-start gap-4 mb-6">
                 <div className="text-5xl">{selectedPracticeData.icon}</div>
                 <div>
-                  <h3 className="text-3xl font-bold text-foreground mb-2">
+                  <h3 className="text-3xl font-bold text-slate-900 mb-2">
                     {selectedPracticeData.name}
                   </h3>
-                  <p className="text-xl text-gradient-gold-cyan font-semibold">
+                  <p className="text-xl text-blue-600 font-semibold">
                     Average Patient Lifetime Value: {selectedPracticeData.value}
                   </p>
                 </div>
               </div>
 
               <div className="mb-8">
-                <div className="inline-flex items-center gap-2 glass-card px-4 py-2 rounded-lg mb-4">
-                  <Clock className="w-5 h-5 text-gold" />
-                  <span className="text-sm font-semibold text-foreground">
+                <div className="inline-flex items-center gap-2 bg-slate-50 border border-slate-200 px-4 py-2 rounded-lg mb-4">
+                  <Clock className="w-5 h-5 text-blue-600" />
+                  <span className="text-sm font-semibold text-slate-900">
                     Real Scenario
                   </span>
                 </div>
-                <h4 className="text-xl font-bold text-foreground mb-3">
+                <h4 className="text-xl font-bold text-slate-900 mb-3">
                   {selectedPracticeData.scenario}
                 </h4>
-                <p className="text-lg text-foreground-muted leading-relaxed">
+                <p className="text-lg text-slate-600 leading-relaxed">
                   {selectedPracticeData.pain}
                 </p>
               </div>
 
-              <div className="glass-card p-6 rounded-xl">
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 p-6 rounded-xl">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-foreground-muted mb-1">
+                    <p className="text-sm text-slate-600 mb-1">
                       Cost of One Missed Call
                     </p>
-                    <p className="text-3xl font-bold text-gradient-gold-cyan">
+                    <p className="text-3xl font-bold text-blue-600">
                       {selectedPracticeData.value}
                     </p>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm text-foreground-muted mb-1">
+                    <p className="text-sm text-slate-600 mb-1">
                       Annual Impact (at 35% miss rate)
                     </p>
-                    <p className="text-3xl font-bold text-gold">
+                    <p className="text-3xl font-bold text-blue-600">
                       $100K-$150K
                     </p>
                   </div>
@@ -475,7 +475,7 @@ export default function DentalClient() {
       </section>
 
       {/* Integration Showcase */}
-      <section className="section relative bg-background">
+      <section className="section relative bg-slate-50">
         <div className="absolute inset-0 bg-mesh opacity-10" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -484,10 +484,10 @@ export default function DentalClient() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 glass-premium px-6 py-3 rounded-full mb-6"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 mb-6"
             >
-              <Zap className="w-5 h-5 text-gold" />
-              <span className="text-sm font-semibold text-foreground">
+              <Zap className="w-5 h-5 text-blue-600" />
+              <span className="text-sm font-semibold text-blue-600">
                 Seamless Practice Management Integration
               </span>
             </motion.div>
@@ -496,7 +496,7 @@ export default function DentalClient() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-display-md font-display font-bold text-foreground mb-4"
+              className="text-display-md font-display font-bold text-slate-900 mb-4"
             >
               Works With Your Existing Software
             </motion.h2>
@@ -505,7 +505,7 @@ export default function DentalClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-foreground-muted max-w-3xl mx-auto"
+              className="text-xl text-slate-600 max-w-3xl mx-auto"
             >
               Appointments sync directly to your schedule. No double-booking. No manual entry.
             </motion.p>
@@ -524,12 +524,12 @@ export default function DentalClient() {
                   y: -4,
                   transition: { duration: 0.2 }
                 }}
-                className="glass-premium p-6 rounded-xl text-center hover:shadow-glow-gold transition-all"
+                className="bg-white/70 backdrop-blur-xl border border-slate-200 p-6 rounded-xl text-center hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300"
               >
-                <div className="w-16 h-16 bg-white/10 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Shield className="w-8 h-8 text-gold" />
+                <div className="w-16 h-16 bg-blue-50 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Shield className="w-8 h-8 text-blue-600" />
                 </div>
-                <p className="text-sm font-semibold text-foreground">
+                <p className="text-sm font-semibold text-slate-900">
                   {platform.name}
                 </p>
               </motion.div>
@@ -540,15 +540,15 @@ export default function DentalClient() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-card p-8 rounded-2xl max-w-3xl mx-auto mt-12"
+            className="bg-white/70 backdrop-blur-xl border border-slate-200 p-8 rounded-2xl max-w-3xl mx-auto mt-12 shadow-lg shadow-slate-200/50"
           >
             <div className="flex items-start gap-4">
-              <CheckCircle2 className="w-6 h-6 text-gold flex-shrink-0 mt-1" />
+              <CheckCircle2 className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
               <div>
-                <h4 className="text-xl font-bold text-foreground mb-2">
+                <h4 className="text-xl font-bold text-slate-900 mb-2">
                   Real-Time Two-Way Sync
                 </h4>
-                <p className="text-foreground-muted leading-relaxed">
+                <p className="text-slate-600 leading-relaxed">
                   AI books appointments that appear instantly in your practice management system.
                   It sees your availability in real-time, so there's zero risk of double-booking.
                 </p>
@@ -559,7 +559,7 @@ export default function DentalClient() {
       </section>
 
       {/* ROI Calculator */}
-      <section className="section relative bg-background-dark overflow-hidden">
+      <section className="section relative bg-white overflow-hidden">
         <div className="absolute inset-0 bg-mesh-premium opacity-20" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -568,7 +568,7 @@ export default function DentalClient() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-display-md font-display font-bold text-foreground mb-4"
+              className="text-display-md font-display font-bold text-slate-900 mb-4"
             >
               Calculate Your Lost Revenue
             </motion.h2>
@@ -577,7 +577,7 @@ export default function DentalClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-foreground-muted max-w-3xl mx-auto"
+              className="text-xl text-slate-600 max-w-3xl mx-auto"
             >
               See exactly how much money is walking out the door every month
             </motion.p>
@@ -587,15 +587,15 @@ export default function DentalClient() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-premium p-8 sm:p-12 rounded-2xl max-w-4xl mx-auto border-2 border-gold/30"
+            className="bg-white/70 backdrop-blur-xl border-2 border-blue-200 p-8 sm:p-12 rounded-2xl max-w-4xl mx-auto shadow-xl shadow-slate-200/50"
           >
             {/* Monthly Calls Slider */}
             <div className="mb-10">
               <div className="flex items-center justify-between mb-4">
-                <label className="text-lg font-semibold text-foreground">
+                <label className="text-lg font-semibold text-slate-900">
                   Monthly Patient Calls
                 </label>
-                <span className="text-2xl font-bold text-gold">
+                <span className="text-2xl font-bold text-blue-600">
                   {monthlyCalls}
                 </span>
               </div>
@@ -605,9 +605,9 @@ export default function DentalClient() {
                 max="500"
                 value={monthlyCalls}
                 onChange={(e) => setMonthlyCalls(Number(e.target.value))}
-                className="w-full h-3 bg-white/10 rounded-lg appearance-none cursor-pointer accent-gold"
+                className="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
               />
-              <div className="flex justify-between text-sm text-foreground-muted mt-2">
+              <div className="flex justify-between text-sm text-slate-600 mt-2">
                 <span>30</span>
                 <span>500</span>
               </div>
@@ -616,10 +616,10 @@ export default function DentalClient() {
             {/* Average Patient Value Slider */}
             <div className="mb-10">
               <div className="flex items-center justify-between mb-4">
-                <label className="text-lg font-semibold text-foreground">
+                <label className="text-lg font-semibold text-slate-900">
                   Average New Patient Value
                 </label>
-                <span className="text-2xl font-bold text-gold">
+                <span className="text-2xl font-bold text-blue-600">
                   ${avgPatientValue}
                 </span>
               </div>
@@ -630,51 +630,51 @@ export default function DentalClient() {
                 step="100"
                 value={avgPatientValue}
                 onChange={(e) => setAvgPatientValue(Number(e.target.value))}
-                className="w-full h-3 bg-white/10 rounded-lg appearance-none cursor-pointer accent-gold"
+                className="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
               />
-              <div className="flex justify-between text-sm text-foreground-muted mt-2">
+              <div className="flex justify-between text-sm text-slate-600 mt-2">
                 <span>$500</span>
                 <span>$2,000</span>
               </div>
             </div>
 
             {/* Results */}
-            <div className="glass-card p-8 rounded-xl mb-8">
+            <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 p-8 rounded-xl mb-8">
               <div className="grid md:grid-cols-3 gap-6 mb-6">
                 <div className="text-center">
-                  <p className="text-sm text-foreground-muted mb-2">
+                  <p className="text-sm text-slate-600 mb-2">
                     Missed Calls/Month
                   </p>
-                  <p className="text-3xl font-bold text-gold">
+                  <p className="text-3xl font-bold text-red-600">
                     {Math.round(monthlyCalls * 0.35)}
                   </p>
-                  <p className="text-xs text-foreground-muted mt-1">
+                  <p className="text-xs text-slate-600 mt-1">
                     (35% miss rate)
                   </p>
                 </div>
                 <div className="text-center">
-                  <p className="text-sm text-foreground-muted mb-2">
+                  <p className="text-sm text-slate-600 mb-2">
                     Monthly Lost Revenue
                   </p>
-                  <p className="text-3xl font-bold text-gradient-gold-cyan">
+                  <p className="text-3xl font-bold text-blue-600">
                     ${Math.round(lostRevenue / 12).toLocaleString()}
                   </p>
                 </div>
                 <div className="text-center">
-                  <p className="text-sm text-foreground-muted mb-2">
+                  <p className="text-sm text-slate-600 mb-2">
                     Annual Lost Revenue
                   </p>
-                  <p className="text-3xl font-bold text-gold">
+                  <p className="text-3xl font-bold text-blue-600">
                     ${Math.round(lostRevenue).toLocaleString()}
                   </p>
                 </div>
               </div>
 
-              <div className="border-t border-white/10 pt-6">
-                <p className="text-center text-foreground-muted mb-2">
-                  AI answering service cost: <span className="font-bold text-foreground">$997/month</span>
+              <div className="border-t border-slate-200 pt-6">
+                <p className="text-center text-slate-600 mb-2">
+                  AI answering service cost: <span className="font-bold text-slate-900">$997/month</span>
                 </p>
-                <p className="text-center text-2xl font-bold text-gradient-gold-cyan">
+                <p className="text-center text-2xl font-bold text-blue-600">
                   ROI: {Math.round((lostRevenue / 12) / 997)}x return on investment
                 </p>
               </div>
@@ -686,11 +686,10 @@ export default function DentalClient() {
                 href="tel:865-346-6111"
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: "0 0 40px rgba(212, 175, 55, 0.6)",
                   transition: { duration: 0.2 }
                 }}
                 whileTap={{ scale: 0.98 }}
-                className="btn-gold px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 shadow-glow-gold-lg transition-all"
+                className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 transition-all"
               >
                 <Phone className="w-6 h-6" />
                 Stop Losing Money - Call Now
@@ -701,7 +700,7 @@ export default function DentalClient() {
       </section>
 
       {/* How It Works */}
-      <section className="section relative bg-background">
+      <section className="section relative bg-slate-50">
         <div className="absolute inset-0 bg-mesh opacity-10" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -710,7 +709,7 @@ export default function DentalClient() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-display-md font-display font-bold text-foreground mb-4"
+              className="text-display-md font-display font-bold text-slate-900 mb-4"
             >
               How It Works
             </motion.h2>
@@ -719,7 +718,7 @@ export default function DentalClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-foreground-muted max-w-3xl mx-auto"
+              className="text-xl text-slate-600 max-w-3xl mx-auto"
             >
               Set it up once. Never miss a patient again.
             </motion.p>
@@ -762,18 +761,18 @@ export default function DentalClient() {
                   y: -8,
                   transition: { duration: 0.3 }
                 }}
-                className="glass-premium p-8 rounded-2xl text-center relative hover:shadow-glow-gold-lg transition-shadow"
+                className="bg-white/70 backdrop-blur-xl border border-slate-200 p-8 rounded-2xl text-center relative hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300"
               >
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 bg-gold rounded-full flex items-center justify-center font-bold text-background-dark text-xl shadow-glow-gold">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-gold to-gold-600 rounded-full flex items-center justify-center font-bold text-black text-xl shadow-lg shadow-gold/50">
                   {item.step}
                 </div>
-                <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mx-auto mb-6 mt-4">
-                  <item.icon className="w-8 h-8 text-gold" />
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 mt-4">
+                  <item.icon className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
                   {item.title}
                 </h3>
-                <p className="text-foreground-muted leading-relaxed">
+                <p className="text-slate-600 leading-relaxed">
                   {item.description}
                 </p>
               </motion.div>
@@ -783,7 +782,7 @@ export default function DentalClient() {
       </section>
 
       {/* Testimonials */}
-      <section className="section relative bg-background-dark overflow-hidden">
+      <section className="section relative bg-white overflow-hidden">
         <div className="absolute inset-0 bg-mesh-premium opacity-20" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -792,7 +791,7 @@ export default function DentalClient() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-display-md font-display font-bold text-foreground mb-4"
+              className="text-display-md font-display font-bold text-slate-900 mb-4"
             >
               Real Practices, Real Results
             </motion.h2>
@@ -801,7 +800,7 @@ export default function DentalClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-xl text-foreground-muted max-w-3xl mx-auto"
+              className="text-xl text-slate-600 max-w-3xl mx-auto"
             >
               Dentists who stopped losing patients to missed calls
             </motion.p>
@@ -820,27 +819,27 @@ export default function DentalClient() {
                   scale: 1.02,
                   transition: { duration: 0.3 }
                 }}
-                className="glass-premium p-8 rounded-2xl hover:shadow-glow-gold-lg transition-shadow"
+                className="bg-white/70 backdrop-blur-xl border border-slate-200 p-8 rounded-2xl hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300"
               >
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-gold fill-gold" />
                   ))}
                 </div>
-                <div className="text-gold text-5xl mb-4">"</div>
-                <p className="text-foreground mb-6 leading-relaxed">
+                <div className="text-blue-600 text-5xl mb-4">"</div>
+                <p className="text-slate-900 mb-6 leading-relaxed">
                   {testimonial.quote}
                 </p>
-                <div className="flex items-center justify-between pt-6 border-t border-white/10">
+                <div className="flex items-center justify-between pt-6 border-t border-slate-200">
                   <div>
-                    <p className="font-bold text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-foreground-muted">{testimonial.business}</p>
+                    <p className="font-bold text-slate-900">{testimonial.name}</p>
+                    <p className="text-sm text-slate-600">{testimonial.business}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-2xl font-bold text-gradient-gold-cyan">
+                    <p className="text-2xl font-bold text-blue-600">
                       {testimonial.revenue}
                     </p>
-                    <p className="text-xs text-foreground-muted">{testimonial.metric}</p>
+                    <p className="text-xs text-slate-600">{testimonial.metric}</p>
                   </div>
                 </div>
               </motion.div>
@@ -850,7 +849,7 @@ export default function DentalClient() {
       </section>
 
       {/* Before/After Comparison */}
-      <section className="section relative bg-background">
+      <section className="section relative bg-slate-50">
         <div className="absolute inset-0 bg-mesh opacity-10" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -859,7 +858,7 @@ export default function DentalClient() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-display-md font-display font-bold text-foreground mb-4"
+              className="text-display-md font-display font-bold text-slate-900 mb-4"
             >
               Before vs. After
             </motion.h2>
@@ -876,39 +875,39 @@ export default function DentalClient() {
                 x: -4,
                 transition: { duration: 0.3 }
               }}
-              className="glass-card p-8 rounded-2xl border-2 border-red-500/30 hover:border-red-500/50 transition-all"
+              className="bg-white/70 backdrop-blur-xl border-2 border-red-200 p-8 rounded-2xl hover:border-red-300 hover:shadow-lg hover:shadow-red-200/50 transition-all duration-300"
             >
-              <div className="inline-block px-4 py-2 bg-red-500/20 rounded-lg mb-6">
-                <span className="text-red-400 font-bold">WITHOUT AI</span>
+              <div className="inline-block px-4 py-2 bg-red-50 border border-red-200 rounded-lg mb-6">
+                <span className="text-red-600 font-bold">WITHOUT AI</span>
               </div>
               <div className="space-y-6">
                 <div className="flex items-start gap-3">
-                  <div className="text-red-400 text-2xl">❌</div>
+                  <div className="text-red-600 text-2xl">❌</div>
                   <div>
-                    <p className="font-bold text-foreground mb-1">Calls go to voicemail</p>
-                    <p className="text-sm text-foreground-muted">35% of calls during busy hours, after hours, weekends</p>
+                    <p className="font-bold text-slate-900 mb-1">Calls go to voicemail</p>
+                    <p className="text-sm text-slate-600">35% of calls during busy hours, after hours, weekends</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="text-red-400 text-2xl">❌</div>
+                  <div className="text-red-600 text-2xl">❌</div>
                   <div>
-                    <p className="font-bold text-foreground mb-1">Patient books elsewhere</p>
-                    <p className="text-sm text-foreground-muted">Emergency patient finds competitor who answers</p>
+                    <p className="font-bold text-slate-900 mb-1">Patient books elsewhere</p>
+                    <p className="text-sm text-slate-600">Emergency patient finds competitor who answers</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="text-red-400 text-2xl">❌</div>
+                  <div className="text-red-600 text-2xl">❌</div>
                   <div>
-                    <p className="font-bold text-foreground mb-1">Lose $3,500 lifetime value</p>
-                    <p className="text-sm text-foreground-muted">Plus referrals they would have sent</p>
+                    <p className="font-bold text-slate-900 mb-1">Lose $3,500 lifetime value</p>
+                    <p className="text-sm text-slate-600">Plus referrals they would have sent</p>
                   </div>
                 </div>
               </div>
-              <div className="mt-8 pt-6 border-t border-white/10">
-                <p className="text-2xl font-bold text-red-400">
+              <div className="mt-8 pt-6 border-t border-slate-200">
+                <p className="text-2xl font-bold text-red-600">
                   -$100K-$150K/year
                 </p>
-                <p className="text-sm text-foreground-muted">Lost revenue</p>
+                <p className="text-sm text-slate-600">Lost revenue</p>
               </div>
             </motion.div>
 
@@ -922,39 +921,39 @@ export default function DentalClient() {
                 x: 4,
                 transition: { duration: 0.3 }
               }}
-              className="glass-premium p-8 rounded-2xl border-2 border-gold/50 hover:border-gold hover:shadow-glow-gold-lg transition-all"
+              className="bg-white/70 backdrop-blur-xl border-2 border-blue-300 p-8 rounded-2xl hover:border-blue-400 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300"
             >
-              <div className="inline-block px-4 py-2 bg-gold/20 rounded-lg mb-6">
-                <span className="text-gold font-bold">WITH AI</span>
+              <div className="inline-block px-4 py-2 bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 rounded-lg mb-6">
+                <span className="text-blue-600 font-bold">WITH AI</span>
               </div>
               <div className="space-y-6">
                 <div className="flex items-start gap-3">
-                  <div className="text-gold text-2xl">✓</div>
+                  <div className="text-blue-600 text-2xl">✓</div>
                   <div>
-                    <p className="font-bold text-foreground mb-1">AI answers every call</p>
-                    <p className="text-sm text-foreground-muted">24/7/365 - emergencies, weekends, holidays</p>
+                    <p className="font-bold text-slate-900 mb-1">AI answers every call</p>
+                    <p className="text-sm text-slate-600">24/7/365 - emergencies, weekends, holidays</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="text-gold text-2xl">✓</div>
+                  <div className="text-blue-600 text-2xl">✓</div>
                   <div>
-                    <p className="font-bold text-foreground mb-1">Books appointment instantly</p>
-                    <p className="text-sm text-foreground-muted">Real-time scheduling, confirmation sent</p>
+                    <p className="font-bold text-slate-900 mb-1">Books appointment instantly</p>
+                    <p className="text-sm text-slate-600">Real-time scheduling, confirmation sent</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
-                  <div className="text-gold text-2xl">✓</div>
+                  <div className="text-blue-600 text-2xl">✓</div>
                   <div>
-                    <p className="font-bold text-foreground mb-1">Patient becomes lifetime patient</p>
-                    <p className="text-sm text-foreground-muted">Plus family members and referrals</p>
+                    <p className="font-bold text-slate-900 mb-1">Patient becomes lifetime patient</p>
+                    <p className="text-sm text-slate-600">Plus family members and referrals</p>
                   </div>
                 </div>
               </div>
-              <div className="mt-8 pt-6 border-t border-white/10">
-                <p className="text-2xl font-bold text-gradient-gold-cyan">
+              <div className="mt-8 pt-6 border-t border-slate-200">
+                <p className="text-2xl font-bold text-blue-600">
                   +$100K-$150K/year
                 </p>
-                <p className="text-sm text-foreground-muted">Recovered revenue</p>
+                <p className="text-sm text-slate-600">Recovered revenue</p>
               </div>
             </motion.div>
           </div>
@@ -962,20 +961,13 @@ export default function DentalClient() {
       </section>
 
       {/* Final CTA */}
-      <section className="section relative bg-background-dark overflow-hidden">
+      <section className="section relative bg-white overflow-hidden">
         {/* Dramatic Glow Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-gold/20 via-transparent to-cyan-500/20" />
-        <motion.div
-          className="absolute inset-0 opacity-40"
-          animate={{
-            background: [
-              "radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.3) 0%, transparent 50%)",
-              "radial-gradient(circle at 80% 50%, rgba(0, 201, 255, 0.3) 0%, transparent 50%)",
-              "radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.3) 0%, transparent 50%)"
-            ]
-          }}
-          transition={{ duration: 10, repeat: Infinity }}
-        />
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50 to-white" />
+          <div className="absolute inset-0 bg-mesh-premium opacity-20" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[800px] bg-gradient-radial from-blue-200/40 via-cyan-100/20 to-transparent blur-3xl animate-pulse-glow" />
+        </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -985,12 +977,12 @@ export default function DentalClient() {
               viewport={{ once: true }}
               className="mb-8"
             >
-              <Sparkles className="w-16 h-16 text-gold mx-auto mb-6" />
-              <h2 className="text-display-lg lg:text-hero-xl font-display font-bold text-foreground mb-6">
+              <Sparkles className="w-16 h-16 text-blue-600 mx-auto mb-6" />
+              <h2 className="text-display-lg lg:text-hero-xl font-display font-bold text-slate-900 mb-6">
                 Start Booking More Patients{" "}
-                <span className="text-gradient-gold-cyan">Tonight</span>
+                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Tonight</span>
               </h2>
-              <p className="text-xl sm:text-2xl text-foreground-muted mb-8 leading-relaxed">
+              <p className="text-xl sm:text-2xl text-slate-600 mb-8 leading-relaxed">
                 Every hour you wait is another patient you'll never see.
               </p>
             </motion.div>
@@ -1005,11 +997,10 @@ export default function DentalClient() {
                 href="tel:865-346-6111"
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: "0 0 40px rgba(212, 175, 55, 0.6)",
                   transition: { duration: 0.2 }
                 }}
                 whileTap={{ scale: 0.98 }}
-                className="btn-gold px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 shadow-glow-gold-lg transition-all w-full sm:w-auto"
+                className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 transition-all w-full sm:w-auto"
               >
                 <Phone className="w-6 h-6" />
                 Call 865-346-6111
@@ -1021,7 +1012,7 @@ export default function DentalClient() {
               >
                 <Link
                   href="/demo"
-                  className="btn-ghost px-10 py-5 text-xl font-semibold rounded-xl inline-flex items-center gap-3 w-full"
+                  className="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 px-10 py-5 text-xl font-semibold rounded-xl inline-flex items-center gap-3 w-full"
                 >
                   Watch Demo
                   <ArrowRight className="w-5 h-5" />
@@ -1034,9 +1025,9 @@ export default function DentalClient() {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
-              className="glass-card p-6 rounded-xl inline-block"
+              className="bg-white/70 backdrop-blur-xl border border-slate-200 p-6 rounded-xl inline-block shadow-lg shadow-slate-200/50"
             >
-              <div className="flex items-center gap-2 text-gold">
+              <div className="flex items-center gap-2 text-blue-600">
                 <AlertCircle className="w-5 h-5" />
                 <span className="font-semibold">
                   Limited to 5 dental practices per month for quality onboarding

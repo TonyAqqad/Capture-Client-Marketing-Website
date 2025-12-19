@@ -141,12 +141,12 @@ export function MagneticButton({
       "hover:border-gold/30 hover:shadow-glow-gold-intense"
     ),
     secondary: clsx(
-      "bg-transparent border-2 border-surface-border text-foreground backdrop-blur-sm",
-      "hover:bg-surface/50 hover:border-primary/50"
+      "bg-white border-2 border-slate-200 text-slate-900 backdrop-blur-sm",
+      "hover:bg-slate-50 hover:border-slate-300"
     ),
     ghost: clsx(
-      "bg-white/5 border border-white/10 text-foreground backdrop-blur-sm",
-      "hover:bg-white/10 hover:border-white/20"
+      "bg-white/70 border border-slate-200 text-slate-900 backdrop-blur-sm",
+      "hover:bg-white hover:border-slate-300"
     ),
   };
 

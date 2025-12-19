@@ -117,17 +117,17 @@ export function CaseStudiesPreview() {
       ref={containerRef}
       className="section relative overflow-hidden w-full max-w-full py-24 md:py-32 lg:py-40"
     >
-      {/* Deep space black base */}
-      <div className="absolute inset-0 bg-[#030303]" />
+      {/* Light base */}
+      <div className="absolute inset-0 bg-slate-50" />
 
       {/* Mesh gradient background */}
       <div
         className="absolute inset-0 opacity-40"
         style={{
           backgroundImage: `
-            radial-gradient(ellipse 100% 100% at 20% 30%, #00C9FF12 0%, transparent 50%),
-            radial-gradient(ellipse 100% 100% at 80% 70%, #4A69E212 0%, transparent 50%),
-            radial-gradient(ellipse 80% 80% at 50% 50%, #D4AF3706 0%, transparent 50%)
+            radial-gradient(ellipse 100% 100% at 20% 30%, #00C9FF25 0%, transparent 50%),
+            radial-gradient(ellipse 100% 100% at 80% 70%, #4A69E225 0%, transparent 50%),
+            radial-gradient(ellipse 80% 80% at 50% 50%, #D4AF370F 0%, transparent 50%)
           `,
         }}
       />
@@ -146,8 +146,8 @@ export function CaseStudiesPreview() {
         }}
         style={{
           backgroundImage: `
-            radial-gradient(circle at 30% 40%, #00C9FF08 0%, transparent 40%),
-            radial-gradient(circle at 70% 60%, #4A69E208 0%, transparent 40%)
+            radial-gradient(circle at 30% 40%, #00C9FF15 0%, transparent 40%),
+            radial-gradient(circle at 70% 60%, #4A69E215 0%, transparent 40%)
           `,
           backgroundSize: '200% 200%',
         }}
@@ -162,7 +162,7 @@ export function CaseStudiesPreview() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
             {/* Subtle label */}
-            <p className="text-xs font-medium uppercase tracking-[0.25em] text-white/40 mb-6">
+            <p className="text-xs font-medium uppercase tracking-[0.25em] text-slate-500 mb-6">
               Real Results
             </p>
 
@@ -171,14 +171,14 @@ export function CaseStudiesPreview() {
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.1] mb-6 md:mb-8"
               style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
             >
-              <span className="text-white font-extralight" style={{ fontWeight: 200 }}>Success stories: </span>
+              <span className="text-slate-900 font-extralight" style={{ fontWeight: 200 }}>Success stories: </span>
               <span
                 className="font-extrabold bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] bg-clip-text text-transparent"
                 style={{ fontWeight: 800 }}
               >
                 before
               </span>
-              <span className="text-white font-extralight" style={{ fontWeight: 200 }}> & </span>
+              <span className="text-slate-900 font-extralight" style={{ fontWeight: 200 }}> & </span>
               <span
                 className="font-extrabold bg-gradient-to-r from-[#4A69E2] to-[#00C9FF] bg-clip-text text-transparent"
                 style={{ fontWeight: 800 }}
@@ -188,7 +188,7 @@ export function CaseStudiesPreview() {
             </h2>
 
             {/* Supporting copy */}
-            <p className="text-lg sm:text-xl md:text-2xl text-white/60 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
               See exactly how Capture Client transforms businesses like yours with measurable, dramatic results.
             </p>
           </motion.div>
@@ -215,7 +215,7 @@ export function CaseStudiesPreview() {
         >
           <Link
             href="/case-studies"
-            className="group inline-flex items-center gap-3 px-8 py-4 text-base font-semibold rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl text-white transition-all hover:bg-white/[0.04] hover:border-white/[0.12]"
+            className="group inline-flex items-center gap-3 px-8 py-4 text-base font-semibold rounded-xl border border-slate-200 bg-white backdrop-blur-xl text-slate-900 transition-all hover:bg-slate-50 hover:border-slate-300"
           >
             View All Case Studies
             <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -248,33 +248,33 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
       }}
       className="group"
     >
-      <div className="relative h-full p-8 sm:p-10 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl transition-all duration-500 hover:border-white/[0.12] hover:bg-white/[0.04]">
+      <div className="relative h-full p-6 sm:p-8 lg:p-10 rounded-2xl border border-slate-200 bg-white backdrop-blur-xl transition-all duration-500 hover:border-slate-300 hover:bg-slate-50">
         {/* Industry badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#00C9FF]/10 to-[#4A69E2]/10 border border-white/[0.06] mb-6">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#00C9FF]/10 to-[#4A69E2]/10 border border-slate-200 mb-6">
           <study.icon className="w-4 h-4 text-[#00C9FF]" />
-          <span className="text-sm font-medium text-white/80">{study.industry}</span>
+          <span className="text-sm font-medium text-slate-700">{study.industry}</span>
         </div>
 
         {/* Company */}
         <h3
-          className="text-xl sm:text-2xl font-bold text-white mb-4 leading-tight"
+          className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 mb-4 leading-tight"
           style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}
         >
           {study.company}
         </h3>
 
         {/* Challenge */}
-        <div className="mb-8">
-          <p className="text-xs uppercase tracking-[0.2em] text-white/40 font-medium mb-3">
+        <div className="mb-6 sm:mb-8">
+          <p className="text-xs uppercase tracking-[0.2em] text-slate-500 font-medium mb-2 sm:mb-3">
             The Challenge
           </p>
-          <p className="text-white/60 leading-relaxed text-sm sm:text-base">
+          <p className="text-slate-600 leading-relaxed text-sm">
             {study.problem}
           </p>
         </div>
 
         {/* Results - Before/After */}
-        <div className="space-y-4 mb-8">
+        <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
           {study.results.map((result, idx) => (
             <motion.div
               key={idx}
@@ -290,23 +290,23 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
               }}
               className="relative"
             >
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-xs uppercase tracking-wider text-white/40 font-medium">
+              <div className="flex items-center justify-between mb-2 gap-2">
+                <span className="text-xs uppercase tracking-wider text-slate-500 font-medium min-w-0 truncate">
                   {result.metric}
                 </span>
-                <span className="text-xs font-bold text-[#00C9FF]">
+                <span className="text-xs font-bold text-[#00C9FF] flex-shrink-0">
                   {result.improvement}
                 </span>
               </div>
-              <div className="flex items-center gap-3">
-                <div className="flex-1 bg-white/[0.03] rounded-lg p-2 text-center border border-white/[0.04]">
-                  <p className="text-white/40 text-sm line-through">
+              <div className="flex items-center gap-2 sm:gap-3">
+                <div className="flex-1 min-w-0 bg-slate-100 rounded-lg p-2 text-center border border-slate-200">
+                  <p className="text-slate-500 text-xs sm:text-sm line-through truncate">
                     {result.before}
                   </p>
                 </div>
-                <ArrowRight className="w-4 h-4 text-[#00C9FF] flex-shrink-0" />
-                <div className="flex-1 bg-gradient-to-r from-[#00C9FF]/10 to-[#4A69E2]/10 rounded-lg p-2 text-center border border-[#00C9FF]/20">
-                  <p className="text-[#00C9FF] font-bold text-sm">
+                <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-[#00C9FF] flex-shrink-0" />
+                <div className="flex-1 min-w-0 bg-gradient-to-r from-[#00C9FF]/10 to-[#4A69E2]/10 rounded-lg p-2 text-center border border-[#00C9FF]/20">
+                  <p className="text-[#00C9FF] font-bold text-xs sm:text-sm truncate">
                     {result.after}
                   </p>
                 </div>
@@ -318,7 +318,7 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
         {/* Read more link */}
         <Link
           href={`/case-studies#${study.id}`}
-          className="inline-flex items-center gap-2 text-sm font-medium text-white/60 hover:text-[#00C9FF] transition-colors group/link"
+          className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-[#00C9FF] transition-colors group/link"
         >
           Read Full Story
           <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />

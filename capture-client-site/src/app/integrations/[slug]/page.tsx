@@ -6,6 +6,7 @@ import { IntegrationHowItWorks } from "@/components/integrations/IntegrationHowI
 import { IntegrationBenefits } from "@/components/integrations/IntegrationBenefits";
 import { IntegrationRelated } from "@/components/integrations/IntegrationRelated";
 import { IntegrationCTA } from "@/components/integrations/IntegrationCTA";
+import { ScrollToTop } from "@/components/integrations/ScrollToTop";
 import {
   integrations,
   integrationCategories,
@@ -27,6 +28,9 @@ export async function generateStaticParams() {
     slug: integration.slug,
   }));
 }
+
+// Return true 404 for unknown slugs (prevents soft 404s)
+export const dynamicParams = false;
 
 /**
  * Generate dynamic SEO metadata for each integration
@@ -68,7 +72,7 @@ export async function generateMetadata({
       type: "website",
       images: [
         {
-          url: `https://captureclient.com/og-integration-${integration.slug}.jpg`,
+          url: `https://captureclient.com/og-image.png`,
           width: 1200,
           height: 630,
           alt: `${integration.name} Integration with Capture Client`,
@@ -79,7 +83,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: `${integration.name} Integration | Capture Client`,
       description: integration.shortDescription,
-      images: [`https://captureclient.com/og-integration-${integration.slug}.jpg`],
+      images: [`https://captureclient.com/og-image.png`],
     },
     alternates: {
       canonical: `https://captureclient.com/integrations/${integration.slug}`,
@@ -189,7 +193,10 @@ export default async function IntegrationDetailPage({
     : null;
 
   return (
-    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-background-dark">
+    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-white">
+      {/* Scroll to top on navigation */}
+      <ScrollToTop />
+
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"

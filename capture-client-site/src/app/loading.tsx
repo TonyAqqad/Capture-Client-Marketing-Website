@@ -1,6 +1,6 @@
 export default function Loading() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-background-dark to-background">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-slate-50">
       <div className="text-center">
         {/* Logo pulse animation */}
         <div className="relative mb-8">
@@ -9,10 +9,10 @@ export default function Loading() {
         </div>
 
         {/* Loading text */}
-        <h2 className="text-xl font-semibold text-white mb-2">
+        <h2 className="text-xl font-semibold text-slate-900 mb-2">
           Loading...
         </h2>
-        <p className="text-gray-400 text-sm">
+        <p className="text-slate-600 text-sm">
           Preparing your experience
         </p>
 

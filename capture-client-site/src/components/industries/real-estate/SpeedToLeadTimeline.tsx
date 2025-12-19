@@ -77,8 +77,8 @@ export function SpeedToLeadTimeline() {
       style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
     >
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-[#030303]" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#00C9FF]/5 to-transparent" />
+      <div className="absolute inset-0 bg-slate-50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -88,13 +88,13 @@ export function SpeedToLeadTimeline() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-6">
             <span style={{ fontWeight: 200 }}>Every </span>
-            <span className="text-[#00C9FF]" style={{ fontWeight: 800 }}>Minute</span>
+            <span className="text-blue-600" style={{ fontWeight: 800 }}>Minute</span>
             <span style={{ fontWeight: 200 }}> Costs You Leads</span>
           </h2>
-          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed" style={{ fontWeight: 300 }}>
-            Speed to lead isn't just important—it's <span className="text-white" style={{ fontWeight: 600 }}>everything</span>.
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" style={{ fontWeight: 300 }}>
+            Speed to lead isn't just important—it's <span className="text-slate-900" style={{ fontWeight: 600 }}>everything</span>.
             Here's what the data shows:
           </p>
         </motion.div>
@@ -125,18 +125,18 @@ export function SpeedToLeadTimeline() {
                     <p className={`text-4xl font-bold ${colors.text} mb-1`}>
                       {item.time}
                     </p>
-                    <p className="text-white/60 text-sm uppercase tracking-wider">Response Time</p>
+                    <p className="text-slate-600 text-sm uppercase tracking-wider">Response Time</p>
                   </div>
 
                   {/* Multiplier */}
-                  <div className="mb-3 py-3 px-4 bg-white/5 rounded-lg border border-white/10">
+                  <div className="mb-3 py-3 px-4 bg-slate-50 rounded-lg border border-slate-200">
                     <p className={`text-3xl font-black ${colors.text}`}>
                       {item.multiplier}
                     </p>
                   </div>
 
                   {/* Label */}
-                  <p className="text-white/80 font-medium leading-snug">
+                  <p className="text-slate-700 font-medium leading-snug">
                     {item.label}
                   </p>
 
@@ -160,14 +160,14 @@ export function SpeedToLeadTimeline() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center"
         >
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-[#00C9FF]/10 via-[#4A69E2]/5 to-[#00C9FF]/10 border border-white/[0.06] backdrop-blur-xl">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-6 sm:p-8 rounded-2xl bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50">
             <div className="flex items-center gap-3">
-              <Zap className="text-[#00C9FF] w-7 h-7" />
+              <Zap className="text-blue-600 w-7 h-7" />
               <div className="text-left">
-                <p className="text-2xl text-white" style={{ fontWeight: 700 }}>
-                  Be the <span className="text-[#00C9FF]">First Responder</span>
+                <p className="text-2xl text-slate-900" style={{ fontWeight: 700 }}>
+                  Be the <span className="text-blue-600">First Responder</span>
                 </p>
-                <p className="text-white/70" style={{ fontWeight: 400 }}>And win 78% more buyers</p>
+                <p className="text-slate-600" style={{ fontWeight: 400 }}>And win 78% more buyers</p>
               </div>
             </div>
           </div>

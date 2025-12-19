@@ -1,6 +1,7 @@
 ---
 description: Fix issues on an existing page to match established patterns
-model: claude-sonnet-4.5
+argument-hint: [/route/path]
+model: sonnet
 ---
 Fix issues on the page at: $ARGUMENTS
 
@@ -15,11 +16,12 @@ Read the page files and identify ALL issues:
 
 ### Common Issues to Look For
 
-**Styling Issues**
-- [ ] Not using `glass-premium` / `glass-card` classes
+**Styling Issues (LIGHT THEME)**
+- [ ] Using dark glass classes (`.glass-premium`, `.glass-card`) - should use `bg-white border-slate-200`
+- [ ] Using dark backgrounds (`bg-slate-900`, `#030303`) - should use `bg-white` or `bg-slate-50`
+- [ ] Using dark text (`text-white`) - should use `text-slate-900` or `text-slate-600`
+- [ ] Wrong button classes (`btn-gold`, `btn-ghost`) - should use blue gradient or white secondary
 - [ ] Custom colors instead of theme classes
-- [ ] Wrong button classes (should be `btn-gold` / `btn-ghost`)
-- [ ] Missing `text-gradient-gold-cyan` on stats
 
 **Layout Issues**  
 - [ ] Missing `relative z-10` on content over backgrounds
@@ -77,15 +79,15 @@ Shall I proceed with these fixes?
 ## Step 3: Fix Issues (After Approval)
 
 1. Make one category of fixes at a time
-2. Run `cd capture-client-site && pnpm typecheck` after each change
+2. Run `cd capture-client-site && npm run typecheck` after each change
 3. Explain each fix in simple terms
 4. Test mentally at mobile (375px) and desktop (1440px)
 
 ## Step 4: Verify
 
 After all fixes:
-1. Run `cd capture-client-site && pnpm typecheck`
-2. Run `cd capture-client-site && pnpm audit` if major changes
+1. Run `cd capture-client-site && npm run typecheck`
+2. Run `cd capture-client-site && npm run lint` if major changes
 3. List all changes made
 4. Suggest manual testing steps
 

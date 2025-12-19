@@ -83,7 +83,7 @@ const serviceThemes = {
 };
 
 const defaultTheme = {
-  gradient: "from-[#030303] via-[#0a0a0a] to-[#030303]",
+  gradient: "from-white via-slate-50 to-white",
   accentColor: "bg-[#00C9FF]",
   iconColor: "text-[#00C9FF]",
   icon: CheckCircle,
@@ -143,7 +143,7 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
   };
 
   return (
-    <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-20 sm:pt-24 md:pt-20" style={{ backgroundColor: '#030303' }}>
+    <section className="relative min-h-[80vh] md:min-h-[90vh] flex items-center overflow-hidden pt-20 sm:pt-24 md:pt-20 bg-gradient-to-b from-white to-slate-50">
       {/* Mesh Gradient Background */}
       <div className="absolute inset-0 bg-mesh-premium opacity-40" />
 
@@ -192,7 +192,7 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
             transition={{ delay: delay + 0.5, duration: 0.5 }}
           >
             <motion.div variants={floatingVariants} animate="float">
-              <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl flex items-center justify-center text-2xl md:text-3xl">
+              <div className="w-12 h-12 md:w-16 md:h-16 rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-xl flex items-center justify-center text-2xl md:text-3xl">
                 <FloatingIcon className={`w-6 h-6 md:w-8 md:h-8 ${theme.iconColor}`} />
               </div>
             </motion.div>
@@ -211,7 +211,7 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
           {/* Main Icon - Responsive sizing */}
           <motion.div variants={itemVariants} className="mb-4 sm:mb-6">
             <motion.div
-              className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-xl sm:rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl text-3xl sm:text-4xl md:text-5xl"
+              className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-xl sm:rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-xl text-3xl sm:text-4xl md:text-5xl"
               whileHover={{ scale: 1.1, rotate: 5 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
@@ -223,7 +223,7 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
           {hero.headline && (
             <motion.h1
               variants={itemVariants}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-4 sm:mb-6 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-slate-900 mb-4 sm:mb-6 leading-tight"
               style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
             >
               {hero.headline.split(" ").map((word, index) => (
@@ -244,7 +244,7 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
           {hero.subheadline && (
             <motion.p
               variants={itemVariants}
-              className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-100 mb-6 sm:mb-8 md:mb-10 max-w-3xl leading-relaxed"
+              className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 mb-6 sm:mb-8 md:mb-10 max-w-3xl leading-relaxed"
               style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}
             >
               {hero.subheadline}
@@ -280,7 +280,7 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
             {hero.cta_secondary && (
               <motion.a
                 href={hero.cta_secondary.action}
-                className="w-full sm:w-auto px-6 sm:px-8 py-4 min-h-[48px] border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl text-white rounded-full hover:bg-white/[0.05] transition-all flex items-center justify-center"
+                className="w-full sm:w-auto px-6 sm:px-8 py-4 min-h-[48px] border border-slate-200 bg-white/70 backdrop-blur-xl text-slate-700 rounded-full hover:bg-white/[0.95] transition-all flex items-center justify-center"
                 style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 500 }}
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
@@ -311,9 +311,9 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
                     animate="pulse"
                     style={{ animationDelay: `${index * 0.5}s` }}
                   />
-                  <div className="relative p-4 sm:p-6 border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl rounded-xl sm:rounded-2xl group-hover:border-white/[0.12] transition-all">
+                  <div className="relative p-4 sm:p-6 border border-slate-200 bg-white/70 backdrop-blur-xl rounded-xl sm:rounded-2xl group-hover:border-slate-300 transition-all">
                     <motion.div
-                      className="text-2xl sm:text-3xl md:text-4xl text-white mb-1"
+                      className="text-2xl sm:text-3xl md:text-4xl text-slate-900 mb-1"
                       style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
@@ -322,7 +322,7 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
                       {stat.value}
                     </motion.div>
                     <div
-                      className="text-sm sm:text-base text-gray-300"
+                      className="text-sm sm:text-base text-slate-600"
                       style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}
                     >
                       {stat.label}
@@ -345,12 +345,12 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-          className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2"
+          className="w-6 h-10 border-2 border-slate-300 rounded-full flex items-start justify-center p-2"
         >
           <motion.div
             animate={{ y: [0, 12, 0], opacity: [1, 0, 1] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-            className="w-1.5 h-1.5 bg-white rounded-full"
+            className="w-1.5 h-1.5 bg-slate-600 rounded-full"
           />
         </motion.div>
       </motion.div>

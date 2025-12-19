@@ -27,6 +27,9 @@ export async function generateStaticParams() {
   }));
 }
 
+// Return true 404 for unknown slugs (prevents soft 404s)
+export const dynamicParams = false;
+
 // Generate metadata for SEO
 export async function generateMetadata({ params }: IndustryPageProps): Promise<Metadata> {
   const { slug } = await params;
@@ -135,7 +138,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
     <>
       <JsonLd schema={faqSchema ? [pageSchema, serviceSchema, faqSchema] : [pageSchema, serviceSchema]} />
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="relative pt-24 sm:pt-28 lg:pt-32 pb-16 md:pb-24 overflow-hidden">
           {/* Background Image with Overlay */}
@@ -148,7 +151,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
               priority
               sizes="100vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/90 to-background" />
+            <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/90 to-white" />
           </div>
 
           {/* Mesh Background - Reduced on mobile for performance */}
@@ -157,21 +160,21 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
             <div className="max-w-4xl mx-auto">
               {/* Breadcrumb */}
-              <nav className="flex items-center gap-2 text-sm text-foreground-muted mb-8" aria-label="Breadcrumb">
+              <nav className="flex items-center gap-2 text-sm text-slate-600 mb-8" aria-label="Breadcrumb">
                 <a href="/who-we-serve" className="hover:text-gold-400 transition-colors">
                   Industries
                 </a>
                 <ChevronRight className="w-3 h-3" />
-                <span className="text-foreground">{industry.name}</span>
+                <span className="text-slate-900">{industry.name}</span>
               </nav>
 
               {/* Category Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white backdrop-blur-sm border border-slate-200 mb-6">
                 <span className="text-sm font-semibold text-gold-400">{industry.category}</span>
               </div>
 
               {/* Headline */}
-              <h1 className="font-heading text-5xl md:text-7xl font-bold text-foreground mb-6">
+              <h1 className="font-heading text-5xl md:text-7xl font-bold text-slate-900 mb-6">
                 {industry.name}
               </h1>
 
@@ -181,7 +184,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
               </p>
 
               {/* Description */}
-              <p className="text-xl text-foreground-muted mb-8 leading-relaxed">
+              <p className="text-xl text-slate-600 mb-8 leading-relaxed">
                 {industry.description}
               </p>
 
@@ -216,7 +219,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
 
         {/* Stats Section */}
         {industry.stats && industry.stats.length > 0 && (
-          <section className="py-12 md:py-16 bg-gradient-to-b from-background to-background-darker">
+          <section className="py-12 md:py-16 bg-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
                 {industry.stats.map((stat, index) => (
@@ -224,7 +227,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                     <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent mb-2">
                       {stat.value}
                     </div>
-                    <div className="text-sm text-foreground-muted">
+                    <div className="text-sm text-slate-600">
                       {stat.label}
                     </div>
                   </div>
@@ -244,17 +247,17 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
         )}
 
         {/* Pain Points Section */}
-        <section className="py-16 md:py-20 bg-background-darker">
+        <section className="py-16 md:py-20 bg-slate-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
+                <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
                   Challenges Facing{' '}
                   <span className="bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent">
                     {industry.name}
                   </span>
                 </h2>
-                <p className="text-xl text-foreground-muted">
+                <p className="text-xl text-slate-600">
                   We understand the unique pain points of your industry.
                 </p>
               </div>
@@ -263,10 +266,10 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                 {industry.painPoints.map((pain, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-4 p-6 rounded-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-gold-500/30 transition-all duration-300"
+                    className="flex items-start gap-4 p-6 rounded-2xl bg-white backdrop-blur-xl border border-slate-200 hover:border-gold-500/30 transition-all duration-300"
                   >
                     <AlertCircle className="text-gold-400 w-6 h-6 flex-shrink-0 mt-1" />
-                    <p className="text-foreground-muted leading-relaxed text-lg">
+                    <p className="text-slate-600 leading-relaxed text-lg">
                       {pain}
                     </p>
                   </div>
@@ -280,14 +283,14 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
         <IndustrySolutions solutions={industry.solutions} industryName={industry.name} />
 
         {/* Key Features Section */}
-        <section className="py-16 md:py-20 bg-background">
+        <section className="py-16 md:py-20 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
+                <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
                   Industry-Specific Features
                 </h2>
-                <p className="text-xl text-foreground-muted">
+                <p className="text-xl text-slate-600">
                   Everything you need to automate customer interactions in {industry.name.toLowerCase()}.
                 </p>
               </div>
@@ -296,10 +299,10 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                 {industry.keyFeatures.map((feature, index) => (
                   <div
                     key={index}
-                    className="flex items-center gap-3 p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-300"
+                    className="flex items-center gap-3 p-4 rounded-xl bg-slate-50 backdrop-blur-sm border border-slate-200 hover:bg-white transition-all duration-300"
                   >
                     <CheckCircle className="text-gold-400 w-4 h-4" />
-                    <span className="text-foreground">{feature}</span>
+                    <span className="text-slate-900">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -309,17 +312,17 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
 
         {/* ROI Calculator Section */}
         {industry.roiCalculation && (
-          <section className="py-16 md:py-20 bg-gradient-to-b from-background to-background-darker">
+          <section className="py-16 md:py-20 bg-white">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
               <div className="max-w-4xl mx-auto">
                 <div className="text-center mb-16">
-                  <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
+                  <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
                     The ROI is{' '}
                     <span className="bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent">
                       Undeniable
                     </span>
                   </h2>
-                  <p className="text-xl text-foreground-muted">
+                  <p className="text-xl text-slate-600">
                     See how much you could save by switching to AI.
                   </p>
                 </div>
@@ -329,8 +332,8 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                     {/* Comparison */}
                     <div className="grid md:grid-cols-3 gap-8 mb-8">
                       <div className="text-center">
-                        <div className="text-sm text-foreground-muted mb-2">Traditional Cost</div>
-                        <div className="text-4xl font-bold text-foreground-muted line-through">
+                        <div className="text-sm text-slate-600 mb-2">Traditional Cost</div>
+                        <div className="text-4xl font-bold text-slate-600 line-through">
                           {industry.roiCalculation.traditionalCost}
                         </div>
                       </div>
@@ -358,10 +361,10 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                     {/* Breakdown */}
                     <div className="space-y-4">
                       {industry.roiCalculation.breakdownItems.map((item, index) => (
-                        <div key={index} className="flex items-center justify-between p-4 rounded-xl bg-white/5">
-                          <span className="text-foreground">{item.item}</span>
+                        <div key={index} className="flex items-center justify-between p-4 rounded-xl bg-slate-50">
+                          <span className="text-slate-900">{item.item}</span>
                           <div className="flex items-center gap-4">
-                            <span className="text-foreground-muted line-through">{item.traditional}</span>
+                            <span className="text-slate-600 line-through">{item.traditional}</span>
                             <ArrowRight className="text-gold-400 w-3 h-3" />
                             <span className="text-gold-400 font-bold">{item.ai}</span>
                           </div>
@@ -377,7 +380,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
 
         {/* Testimonial Section */}
         {industry.testimonial && (
-          <section className="py-16 md:py-20 bg-background-darker">
+          <section className="py-16 md:py-20 bg-slate-50">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
               <div className="max-w-4xl mx-auto">
                 <GlassCard variant="premium">
@@ -397,12 +400,12 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                       <div className="flex-1">
                         <Quote className="text-gold-400 w-12 h-12 mb-4" />
 
-                        <p className="text-xl md:text-2xl text-foreground leading-relaxed mb-6 italic">
+                        <p className="text-xl md:text-2xl text-slate-900 leading-relaxed mb-6 italic">
                           "{industry.testimonial.quote}"
                         </p>
 
-                        <div className="border-t border-white/10 pt-6">
-                          <div className="font-bold text-foreground text-lg">
+                        <div className="border-t border-slate-200 pt-6">
+                          <div className="font-bold text-slate-900 text-lg">
                             {industry.testimonial.author}
                           </div>
                           <div className="text-gold-400">
@@ -442,7 +445,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
         )}
 
         {/* Final CTA */}
-        <section className="py-16 md:py-20 bg-gradient-to-br from-background-darker via-background to-background-darker relative overflow-hidden">
+        <section className="py-16 md:py-20 bg-white relative overflow-hidden">
           {/* Background - Performance optimized for mobile */}
           <div className="absolute inset-0 bg-mesh-premium opacity-20 md:opacity-40" />
           <div className="hidden md:block absolute top-10 left-10 w-72 h-72 bg-gold-500/20 rounded-full blur-3xl animate-float-slow" />
@@ -450,10 +453,10 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
+              <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
                 Ready to Transform Your {industry.name} Business?
               </h2>
-              <p className="text-xl text-foreground-muted mb-8">
+              <p className="text-xl text-slate-600 mb-8">
                 Join hundreds of {industry.category.toLowerCase()} businesses that never miss a call.
               </p>
 

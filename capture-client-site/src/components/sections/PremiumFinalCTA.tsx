@@ -5,7 +5,12 @@ import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import OptimizedLeadForm from "@/components/forms/OptimizedLeadForm";
 import Link from "next/link";
-import { ArrowRight, Phone, Shield, Zap, Users } from "lucide-react";
+import { ArrowRight, Phone, Shield, Zap, Users, Sparkles } from "lucide-react";
+
+// ============================================
+// PREMIUM FINAL CTA - Light Theme
+// Billion-dollar aesthetic with compelling conversion
+// ============================================
 
 export function PremiumFinalCTA() {
   const containerRef = useRef<HTMLElement>(null);
@@ -15,45 +20,36 @@ export function PremiumFinalCTA() {
     <section
       id="contact"
       ref={containerRef}
-      className="section relative overflow-hidden py-24 md:py-32 lg:py-40"
+      className="relative overflow-hidden py-24 md:py-32 lg:py-40 bg-gradient-to-b from-slate-50 via-white to-slate-50"
     >
-      {/* Deep space black base */}
-      <div
-        className="absolute inset-0 bg-[#030303]"
-      />
-
-      {/* Mesh gradient background */}
-      <div
-        className="absolute inset-0 opacity-40"
-        style={{
-          backgroundImage: `
-            radial-gradient(ellipse 100% 100% at 10% 20%, #00C9FF15 0%, transparent 50%),
-            radial-gradient(ellipse 100% 100% at 90% 80%, #4A69E215 0%, transparent 50%),
-            radial-gradient(ellipse 80% 80% at 50% 50%, #D4AF3708 0%, transparent 50%)
-          `,
-        }}
-      />
-
-      {/* Floating mesh animation */}
-      <motion.div
-        className="absolute inset-0 opacity-30"
-        animate={{
-          backgroundPosition: ['0% 0%', '100% 100%'],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          repeatType: 'reverse',
-          ease: 'linear',
-        }}
-        style={{
-          backgroundImage: `
-            radial-gradient(circle at 20% 30%, #00C9FF10 0%, transparent 40%),
-            radial-gradient(circle at 80% 70%, #4A69E210 0%, transparent 40%)
-          `,
-          backgroundSize: '200% 200%',
-        }}
-      />
+      {/* Premium gradient mesh background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div
+          className="absolute top-0 left-1/4 w-[700px] h-[700px] opacity-30"
+          style={{
+            background: "radial-gradient(circle at center, rgba(37, 99, 235, 0.12) 0%, transparent 60%)",
+            filter: "blur(80px)",
+          }}
+        />
+        <div
+          className="absolute bottom-0 right-1/4 w-[600px] h-[600px] opacity-25"
+          style={{
+            background: "radial-gradient(circle at center, rgba(14, 165, 233, 0.1) 0%, transparent 60%)",
+            filter: "blur(60px)",
+          }}
+        />
+        {/* Subtle grid pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(15,23,42,0.03) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(15,23,42,0.03) 1px, transparent 1px)
+            `,
+            backgroundSize: '48px 48px',
+          }}
+        />
+      </div>
 
       {/* Content container */}
       <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -61,53 +57,63 @@ export function PremiumFinalCTA() {
         {/* Main headline section */}
         <div className="max-w-4xl mx-auto text-center mb-16 md:mb-20">
 
-          {/* Editorial headline - extreme weight contrast */}
+          {/* Eyebrow badge */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-100 mb-8"
+          >
+            <Sparkles className="w-4 h-4 text-blue-600" />
+            <span
+              className="text-xs font-semibold text-blue-700 uppercase tracking-wider"
+              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+            >
+              Get Started Today
+            </span>
+          </motion.div>
+
+          {/* Editorial headline */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
           >
             <h2
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.1] mb-6 md:mb-8"
               style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
             >
-              <span className="text-white font-extralight" style={{ fontWeight: 200 }}>Every missed call is a </span>
-              <span
-                className="font-extrabold bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] bg-clip-text text-transparent"
-                style={{ fontWeight: 800 }}
-              >
+              <span className="text-slate-900 font-light">Every missed call is a </span>
+              <span className="font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                 client choosing
               </span>
               <br className="hidden sm:block" />
-              <span className="text-white font-extralight" style={{ fontWeight: 200 }}> your competitor.</span>
+              <span className="text-slate-900 font-light"> your competitor.</span>
             </h2>
           </motion.div>
 
-          {/* Supporting statement - clear value prop */}
+          {/* Supporting statement */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="text-lg sm:text-xl md:text-2xl text-white/70 max-w-2xl mx-auto leading-relaxed"
+            transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
+            className="text-lg sm:text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto leading-relaxed"
           >
             Capture Client answers every call, qualifies every lead, and books appointments 24/7.
             No more voicemail. No more lost revenue.
           </motion.p>
         </div>
 
-        {/* CTA buttons - clean and confident */}
+        {/* CTA buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.7, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 md:mb-20"
         >
           <Link
             href="#contact-form"
-            className="group relative flex items-center gap-3 px-8 py-4 text-lg font-semibold w-full sm:w-auto justify-center rounded-xl overflow-hidden transition-all hover:scale-[1.02]"
-            style={{
-              background: 'linear-gradient(135deg, #00C9FF 0%, #4A69E2 100%)',
-            }}
+            className="group relative flex items-center gap-3 px-8 py-4 text-lg font-semibold w-full sm:w-auto justify-center rounded-full overflow-hidden transition-all duration-300 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/35 hover:-translate-y-0.5"
           >
             <span className="relative z-10 text-white">Try Our AI Now</span>
             <ArrowRight className="relative z-10 w-5 h-5 text-white transition-transform group-hover:translate-x-1" />
@@ -115,19 +121,19 @@ export function PremiumFinalCTA() {
 
           <a
             href="tel:865-346-6111"
-            className="group flex items-center gap-3 px-8 py-4 text-lg font-semibold w-full sm:w-auto justify-center rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl transition-all hover:bg-white/[0.04] hover:border-white/[0.12]"
+            className="group flex items-center gap-3 px-8 py-4 text-lg font-semibold w-full sm:w-auto justify-center rounded-full border border-slate-200/80 bg-white/80 backdrop-blur-sm transition-all duration-300 hover:bg-white hover:border-blue-200 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-0.5"
           >
-            <Phone className="w-5 h-5 text-[#00C9FF]" />
-            <span className="text-white">(865) 346-6111</span>
+            <Phone className="w-5 h-5 text-blue-600 group-hover:text-blue-700 transition-colors" />
+            <span className="text-slate-700">(865) 346-6111</span>
           </a>
         </motion.div>
 
-        {/* Trust signals - genuine and simple */}
+        {/* Trust signals */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.7, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
-          className="flex flex-wrap items-center justify-center gap-6 md:gap-10 mb-20 md:mb-24"
+          transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-20 md:mb-24"
         >
           {[
             { icon: Zap, text: "Live in 48 hours" },
@@ -138,58 +144,84 @@ export function PremiumFinalCTA() {
               key={index}
               initial={{ opacity: 0, y: 10 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-              transition={{ duration: 0.5, delay: 0.35 + index * 0.1 }}
-              className="flex items-center gap-2 text-white/60"
+              transition={{ duration: 0.5, delay: 0.4 + index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-sm border border-slate-200/60"
             >
-              <item.icon className="w-4 h-4 text-[#00C9FF]" />
-              <span className="text-sm md:text-base">{item.text}</span>
+              <item.icon className="w-4 h-4 text-blue-600" />
+              <span className="text-sm md:text-base text-slate-700 font-medium">{item.text}</span>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Form section - clean glass treatment */}
+        {/* Form section */}
         <motion.div
           id="contact-form"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.7, delay: 0.45, ease: [0.22, 1, 0.36, 1] }}
+          initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
+          animate={isInView ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, y: 30, filter: "blur(10px)" }}
+          transition={{ duration: 0.7, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-xl mx-auto"
         >
-          <div className="bg-white/[0.02] backdrop-blur-xl p-8 md:p-10 rounded-2xl border border-white/[0.06]">
+          <div className="relative bg-white/70 backdrop-blur-xl p-8 md:p-10 rounded-2xl border border-slate-200/60 shadow-xl shadow-slate-900/[0.04] overflow-hidden">
+            {/* Decorative gradient */}
+            <div
+              className="absolute top-0 right-0 w-40 h-40 opacity-30 pointer-events-none"
+              style={{
+                background: "radial-gradient(circle at center, rgba(14, 165, 233, 0.15) 0%, transparent 60%)",
+                filter: "blur(40px)",
+              }}
+            />
+
             {/* Form header */}
-            <div className="text-center mb-8">
+            <div className="text-center mb-8 relative z-10">
               <h3
-                className="text-2xl md:text-3xl text-white mb-2"
+                className="text-2xl md:text-3xl text-slate-900 mb-2"
                 style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}
               >
-                Book Your Free Demo
+                Book Your{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                  Free Demo
+                </span>
               </h3>
-              <p className="text-white/60">
+              <p className="text-slate-600">
                 See how Capture Client works for your business in 30 minutes.
               </p>
             </div>
 
-            <OptimizedLeadForm source="homepage-final-cta" />
+            <div className="relative z-10">
+              <OptimizedLeadForm source="homepage-final-cta" />
+            </div>
 
-            {/* Form footer - subtle trust */}
-            <p className="text-center text-white/40 text-sm mt-6">
+            {/* Form footer */}
+            <p className="text-center text-slate-500 text-sm mt-6 relative z-10">
               No credit card required. Cancel anytime.
             </p>
+
+            {/* Bottom accent line */}
+            <div className="absolute bottom-0 left-8 right-8 h-[2px] rounded-full overflow-hidden">
+              <motion.div
+                className="h-full bg-gradient-to-r from-blue-500 to-cyan-400"
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                style={{ transformOrigin: "left" }}
+              />
+            </div>
           </div>
         </motion.div>
 
-        {/* Bottom section - contact alternative */}
+        {/* Bottom section */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
-          transition={{ duration: 0.7, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.7, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="text-center mt-16 md:mt-20"
         >
-          <p className="text-white/50 text-sm md:text-base">
+          <p className="text-slate-500 text-sm md:text-base">
             Prefer to talk? Call us at{" "}
             <a
               href="tel:865-346-6111"
-              className="text-[#00C9FF] hover:text-[#00C9FF]/80 transition-colors"
+              className="font-semibold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
             >
               (865) 346-6111
             </a>

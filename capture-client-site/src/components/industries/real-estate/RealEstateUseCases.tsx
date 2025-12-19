@@ -81,8 +81,8 @@ export function RealEstateUseCases() {
       style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
     >
       {/* Background */}
-      <div className="absolute inset-0 bg-[#030303]" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#00C9FF]/5 to-transparent" />
+      <div className="absolute inset-0 bg-white" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -92,17 +92,17 @@ export function RealEstateUseCases() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl mb-6">
-            <Drama className="text-[#00C9FF] w-5 h-5" />
-            <span className="text-sm text-[#00C9FF] uppercase tracking-wide" style={{ fontWeight: 600 }}>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200 mb-6">
+            <Drama className="text-blue-600 w-5 h-5" />
+            <span className="text-sm text-blue-600 uppercase tracking-wide" style={{ fontWeight: 600 }}>
               Real Scenarios
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-6">
             <span style={{ fontWeight: 200 }}>See It In </span>
-            <span className="text-[#00C9FF]" style={{ fontWeight: 800 }}>Action</span>
+            <span className="text-blue-600" style={{ fontWeight: 800 }}>Action</span>
           </h2>
-          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed" style={{ fontWeight: 300 }}>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" style={{ fontWeight: 300 }}>
             Real estate scenarios where AI voice agents turn missed opportunities into closed deals.
           </p>
         </motion.div>
@@ -119,24 +119,24 @@ export function RealEstateUseCases() {
             >
               <GlassCard
                 variant="premium"
-                className="h-full p-8 border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl group-hover:border-[#00C9FF]/30 transition-all duration-500 group-hover:shadow-[0_0_40px_rgba(0,201,255,0.2)]"
+                className="h-full p-8 bg-white/70 backdrop-blur-xl border border-slate-200 group-hover:border-blue-300 transition-all duration-500 group-hover:shadow-lg group-hover:shadow-blue-200/50"
               >
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#00C9FF] to-[#4A69E2] flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 transition-transform duration-300">
                       {(() => {
                         const IconComponent = iconMap[useCase.icon];
-                        return <IconComponent className="text-black w-6 h-6" />;
+                        return <IconComponent className="text-white w-6 h-6" />;
                       })()}
                     </div>
                     <div>
-                      <h3 className="text-xl text-white mb-1" style={{ fontWeight: 700 }}>
+                      <h3 className="text-xl text-slate-900 mb-1" style={{ fontWeight: 700 }}>
                         {useCase.scenario}
                       </h3>
-                      <div className="inline-flex items-center gap-1.5 px-3 py-1 border border-white/[0.06] bg-white/[0.02] rounded-full">
-                        <Timer className="text-[#00C9FF] w-3 h-3" />
-                        <span className="text-xs text-[#00C9FF]" style={{ fontWeight: 600 }}>
+                      <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/70 border border-slate-200 rounded-full">
+                        <Timer className="text-blue-600 w-3 h-3" />
+                        <span className="text-xs text-blue-600" style={{ fontWeight: 600 }}>
                           {useCase.time}
                         </span>
                       </div>
@@ -147,14 +147,14 @@ export function RealEstateUseCases() {
                 {/* Steps */}
                 <div className="space-y-4">
                   {/* Problem */}
-                  <div className="p-4 bg-red-500/5 border border-red-500/20 rounded-xl">
+                  <div className="p-4 bg-red-50 border border-red-200 rounded-xl">
                     <div className="flex items-start gap-3">
-                      <AlertCircle className="text-red-400 w-5 h-5 flex-shrink-0 mt-0.5" />
+                      <AlertCircle className="text-red-600 w-5 h-5 flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-xs text-red-400 uppercase tracking-wider mb-1" style={{ fontWeight: 700 }}>
+                        <p className="text-xs text-red-600 uppercase tracking-wider mb-1" style={{ fontWeight: 700 }}>
                           Problem
                         </p>
-                        <p className="text-white/80 text-sm leading-relaxed" style={{ fontWeight: 400 }}>
+                        <p className="text-slate-700 text-sm leading-relaxed" style={{ fontWeight: 400 }}>
                           {useCase.problem}
                         </p>
                       </div>
@@ -163,18 +163,18 @@ export function RealEstateUseCases() {
 
                   {/* Arrow */}
                   <div className="flex justify-center">
-                    <ArrowDown className="text-[#00C9FF] w-6 h-6" />
+                    <ArrowDown className="text-blue-600 w-6 h-6" />
                   </div>
 
                   {/* Solution */}
-                  <div className="p-4 bg-cyan-500/5 border border-cyan-500/20 rounded-xl">
+                  <div className="p-4 bg-blue-50 border border-blue-200 rounded-xl">
                     <div className="flex items-start gap-3">
-                      <Bot className="text-cyan-400 w-5 h-5 flex-shrink-0 mt-0.5" />
+                      <Bot className="text-blue-600 w-5 h-5 flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-xs text-cyan-400 uppercase tracking-wider mb-1" style={{ fontWeight: 700 }}>
+                        <p className="text-xs text-blue-600 uppercase tracking-wider mb-1" style={{ fontWeight: 700 }}>
                           AI Solution
                         </p>
-                        <p className="text-white/80 text-sm leading-relaxed" style={{ fontWeight: 400 }}>
+                        <p className="text-slate-700 text-sm leading-relaxed" style={{ fontWeight: 400 }}>
                           {useCase.solution}
                         </p>
                       </div>
@@ -183,18 +183,18 @@ export function RealEstateUseCases() {
 
                   {/* Arrow */}
                   <div className="flex justify-center">
-                    <ArrowDown className="text-[#00C9FF] w-6 h-6" />
+                    <ArrowDown className="text-blue-600 w-6 h-6" />
                   </div>
 
                   {/* Result */}
-                  <div className="p-4 bg-green-500/10 border-2 border-green-500/30 rounded-xl">
+                  <div className="p-4 bg-green-50 border-2 border-green-300 rounded-xl">
                     <div className="flex items-start gap-3">
-                      <CheckCircle className="text-green-400 w-5 h-5 flex-shrink-0 mt-0.5" />
+                      <CheckCircle className="text-green-600 w-5 h-5 flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-xs text-green-400 uppercase tracking-wider mb-1" style={{ fontWeight: 700 }}>
+                        <p className="text-xs text-green-600 uppercase tracking-wider mb-1" style={{ fontWeight: 700 }}>
                           Result
                         </p>
-                        <p className="text-white text-base leading-relaxed" style={{ fontWeight: 600 }}>
+                        <p className="text-slate-900 text-base leading-relaxed" style={{ fontWeight: 600 }}>
                           {useCase.result}
                         </p>
                       </div>
@@ -213,14 +213,14 @@ export function RealEstateUseCases() {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="text-center mt-12"
         >
-          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-8 rounded-2xl bg-gradient-to-br from-[#00C9FF]/10 via-[#4A69E2]/5 to-[#00C9FF]/10 border border-white/[0.06] backdrop-blur-xl">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 p-8 rounded-2xl bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50">
             <div className="flex items-center gap-4">
-              <Sparkles className="text-[#00C9FF] w-9 h-9" />
+              <Sparkles className="text-blue-600 w-9 h-9" />
               <div className="text-left">
-                <p className="text-2xl text-white" style={{ fontWeight: 700 }}>
-                  Turn Every Lead Into <span className="text-[#00C9FF]">Revenue</span>
+                <p className="text-2xl text-slate-900" style={{ fontWeight: 700 }}>
+                  Turn Every Lead Into <span className="text-blue-600">Revenue</span>
                 </p>
-                <p className="text-white/70" style={{ fontWeight: 400 }}>No more missed opportunities</p>
+                <p className="text-slate-600" style={{ fontWeight: 400 }}>No more missed opportunities</p>
               </div>
             </div>
           </div>

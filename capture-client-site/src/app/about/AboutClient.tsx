@@ -52,12 +52,12 @@ function StatCard({ value, label, delay, isNumeric = false, suffix = "" }: StatC
       viewport={{ once: true }}
       transition={{ duration: 0.6, delay }}
       onViewportEnter={isNumeric ? startCounting : undefined}
-      className="text-center glass-premium border border-gold/20 rounded-xl p-6 sm:p-8 hover:scale-105 hover:shadow-glow-gold-lg transition-all duration-300"
+      className="text-center bg-white/70 backdrop-blur-xl border border-slate-200 rounded-xl p-6 sm:p-8 hover:scale-105 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300"
     >
-      <div className="text-4xl sm:text-5xl font-bold text-gradient-gold-cyan mb-2">
+      <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2">
         {isNumeric ? `${count}${suffix}` : value}
       </div>
-      <p className="text-sm sm:text-base text-foreground-muted">{label}</p>
+      <p className="text-sm sm:text-base text-slate-600">{label}</p>
     </motion.div>
   );
 }
@@ -98,11 +98,11 @@ export default function AboutClient() {
   ];
 
   return (
-    <div className="min-h-screen bg-background-dark">
+    <div className="min-h-screen bg-gradient-to-b from-white to-slate-50">
       {/* Hero Section */}
       <div className="relative pt-24 sm:pt-28 md:pt-32 pb-16 sm:pb-20 md:pb-24 px-4 sm:px-6 lg:px-16 overflow-hidden">
         {/* Animated gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background-dark via-background-dark to-gold/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50 to-blue-50" />
 
         {/* Animated orb */}
         <motion.div
@@ -117,7 +117,7 @@ export default function AboutClient() {
             ease: "easeInOut",
           }}
         >
-          <div className="w-full h-full bg-gradient-radial from-gold/40 to-transparent blur-3xl" />
+          <div className="w-full h-full bg-gradient-radial from-blue-400/30 to-transparent blur-3xl" />
         </motion.div>
 
         <div className="container-custom relative z-10 text-center">
@@ -125,7 +125,7 @@ export default function AboutClient() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-foreground mb-4 sm:mb-6 leading-tight"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight"
           >
             About Capture Client
           </motion.h1>
@@ -133,7 +133,7 @@ export default function AboutClient() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-lg sm:text-xl md:text-2xl text-foreground-muted max-w-3xl mx-auto px-4"
+            className="text-lg sm:text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto px-4"
           >
             Automating leads and capturing clients for small businesses nationwide.
           </motion.p>
@@ -150,15 +150,15 @@ export default function AboutClient() {
             transition={{ duration: 0.6 }}
             className="mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4 sm:mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 sm:mb-6">
               Our Mission
             </h2>
-            <p className="text-base sm:text-lg text-foreground-muted leading-relaxed mb-4 sm:mb-6" style={{ lineHeight: '1.7' }}>
+            <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-4 sm:mb-6" style={{ lineHeight: '1.7' }}>
               At Capture Client, we believe small businesses shouldn't have to choose between
               answering phones and serving customers. We're on a mission to automate lead capture
               and qualification so business owners can focus on what they do best.
             </p>
-            <p className="text-base sm:text-lg text-foreground-muted leading-relaxed" style={{ lineHeight: '1.7' }}>
+            <p className="text-base sm:text-lg text-slate-700 leading-relaxed" style={{ lineHeight: '1.7' }}>
               Our AI-powered voice agents work 24/7 to answer every call, qualify leads instantly,
               and book appointments automatically. Combined with strategic paid advertising on
               Google and Facebook, we help service-based businesses capture more clients without
@@ -180,7 +180,7 @@ export default function AboutClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="text-3xl sm:text-4xl font-bold text-foreground mb-4 sm:mb-6"
+              className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 sm:mb-6"
             >
               What We Do
             </motion.h2>
@@ -192,12 +192,12 @@ export default function AboutClient() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="glass-premium border border-white/10 rounded-xl p-5 sm:p-6 hover:border-gold/30 hover:scale-[1.02] transition-all duration-300"
+                  className="bg-white/70 backdrop-blur-xl border border-slate-200 rounded-xl p-5 sm:p-6 hover:border-blue-300 hover:scale-[1.02] transition-all duration-300"
                 >
-                  <h3 className="text-xl sm:text-2xl font-bold text-gold mb-2 sm:mb-3">
+                  <h3 className="text-xl sm:text-2xl font-bold text-blue-600 mb-2 sm:mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-base sm:text-lg text-foreground-muted leading-relaxed" style={{ lineHeight: '1.7' }}>
+                  <p className="text-base sm:text-lg text-slate-700 leading-relaxed" style={{ lineHeight: '1.7' }}>
                     {service.description}
                   </p>
                 </motion.div>
@@ -212,7 +212,7 @@ export default function AboutClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="text-3xl sm:text-4xl font-bold text-foreground mb-4 sm:mb-6"
+              className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 sm:mb-6"
             >
               Why Choose Us
             </motion.h2>
@@ -224,14 +224,14 @@ export default function AboutClient() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="flex items-start gap-3 sm:gap-4 glass-premium border border-white/10 rounded-xl p-4 sm:p-5 hover:border-gold/30 hover:scale-105 transition-all duration-300"
+                  className="flex items-start gap-3 sm:gap-4 bg-white/70 backdrop-blur-xl border border-slate-200 rounded-xl p-4 sm:p-5 hover:border-blue-300 hover:scale-105 transition-all duration-300"
                 >
-                  <CheckCircle2 className="w-6 h-6 sm:w-7 sm:h-7 text-gold flex-shrink-0" />
+                  <CheckCircle2 className="w-6 h-6 sm:w-7 sm:h-7 text-blue-600 flex-shrink-0" />
                   <div>
-                    <h3 className="text-base sm:text-lg font-bold text-foreground mb-1">
+                    <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-1">
                       {value.title}
                     </h3>
-                    <p className="text-sm sm:text-base text-foreground-muted leading-relaxed">
+                    <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                       {value.description}
                     </p>
                   </div>
@@ -240,18 +240,18 @@ export default function AboutClient() {
             </div>
           </section>
 
-          {/* CTA Section - Gold Glow Effect */}
+          {/* CTA Section */}
           <motion.section
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center glass-premium rounded-2xl p-6 sm:p-8 md:p-12 border border-gold/30 shadow-glow-gold-lg"
+            className="text-center bg-white/70 backdrop-blur-xl rounded-2xl p-6 sm:p-8 md:p-12 border border-blue-200 shadow-lg shadow-slate-200/50"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-foreground mb-3 sm:mb-4">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3 sm:mb-4">
               Ready to Automate Your Leads?
             </h2>
-            <p className="text-base sm:text-lg text-foreground-muted mb-6 sm:mb-8">
+            <p className="text-base sm:text-lg text-slate-600 mb-6 sm:mb-8">
               Let's discuss how Capture Client can help your business grow.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
@@ -259,7 +259,7 @@ export default function AboutClient() {
                 href="tel:865-346-6111"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="btn-gold px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold inline-flex items-center justify-center gap-2 shadow-glow-gold-lg w-full sm:w-auto"
+                className="bg-blue-600 text-white hover:bg-blue-700 px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold inline-flex items-center justify-center gap-2 shadow-lg shadow-blue-200/50 w-full sm:w-auto transition-colors"
               >
                 <Phone className="w-5 h-5" />
                 Call 865-346-6111
@@ -267,7 +267,7 @@ export default function AboutClient() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                 <Link
                   href="/contact"
-                  className="btn-ghost px-6 sm:px-8 py-3 sm:py-4 rounded-xl inline-flex items-center justify-center w-full sm:w-auto"
+                  className="border border-slate-300 text-slate-700 hover:bg-slate-50 px-6 sm:px-8 py-3 sm:py-4 rounded-xl inline-flex items-center justify-center w-full sm:w-auto transition-colors"
                 >
                   Contact Us
                 </Link>

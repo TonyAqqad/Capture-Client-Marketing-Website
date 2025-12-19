@@ -1,8 +1,72 @@
 # Progress (lean)
-- Overall: ~98% complete (last updated 2025-12-09). Builds passing (228 pages).
-- Current focus: component consolidation (15 groups), button/container class standardization, service pages SEO polish, location pages expansion, perf/accessibility sweep.
+- Overall: ~99% complete (last updated 2025-12-17). Builds passing (228 pages).
+- Current focus: Button text consistency, ROI calculator verification, final lint cleanup, SEO verification codes, perf/accessibility sweep.
 
 ## Completed highlights
+- **COMPREHENSIVE LIGHT THEME MIGRATION COMPLETE** (2025-12-17):
+  - **Scope**: 30+ files converted from dark to light theme site-wide
+  - **Pages Converted**: Industries (all 10), Who-we-serve (all), Pricing package details, System pages (error/loading/not-found), Legal pages (terms/privacy)
+  - **Components Converted**: CRO components (ComparisonTable, ExitIntentPopup, UrgencyTimer), Integration components (all 8), Location components (all 3)
+  - **Pattern Applied**: Removed `#030303`, `bg-background`, `bg-slate-900` → Added `bg-white`, `text-slate-900`, `text-slate-600`, `border-slate-200`
+  - **Lint Cleanup**: Reduced warnings from 91 to ~46 (removed unused imports, fixed React Hook deps)
+  - **Validation**: TypeScript passes, Build passes (228 pages)
+  - **Files Modified**: 30+ across industries/, who-we-serve/, pricing/, components/cro/, components/integrations/, components/locations/
+- **LOGO + MOBILE FIXES COMPLETE** (2025-12-16):
+  - **Logo Fix**: Restored vector logo (logo-desktop-light.svg) with proper SVG paths from OLD version - was showing as black rectangle due to missing path data in CURRENT version
+  - **Mobile Dark Section Fix**: Fixed dark section on mobile homepage by changing motion.header → motion.div in PremiumTestimonials.tsx - prevented global CSS from targeting header elements with dark background
+  - **Light Theme Standard**: Set isLightMode = true in MegaMenu.tsx to standardize light theme across navigation
+  - **Brand Colors Documented**: Blue #2563EB (CAPTURE), Dark #0F172A (CLIENT), Cyan #17B4EF (accents)
+  - **Validation**: TypeScript passes, Build passes (228 pages)
+- **VOICE CHAT WIDGET + SEO AUDIT SESSION COMPLETE** (2025-12-15):
+  - **Voice Chat Integration**: Integrated Vapi voice chat widget in layout.tsx with dynamic import and Next.js compatibility fixes
+  - **SEO Audit Fixes**: Fixed 35+ files with SEO issues (title tags, meta descriptions, canonicals, JSON-LD)
+  - **Homepage Dark Theme Reversion**: Caught and fixed dark theme reversion by batch-fixer subagent
+    - Issue: batch-fixer replaced Light* components with Premium* components during SEO fixes
+    - Root Cause: Subagent lacked context about light theme standard
+    - Resolution: Restored LightHero, LightStats, LightHowItWorks, LightIntegrationCarousel
+  - **Light Theme Audit**: Deployed 5 audit agents to verify light theme consistency across site
+  - **Validation**: TypeScript passes, Build passes (228 pages)
+  - **Critical Learning**: Added LIGHT THEME STANDARD to state.md to prevent future reverts
+- **SITE-WIDE LIGHT THEME MIGRATION COMPLETE** (2025-12-15):
+  - **Root Cause Fix - Mobile Backdrop-Blur Fallback**: Fixed globals.css lines 2311-2323 - changed mobile backdrop-blur fallback from dark (`rgba(15, 20, 25, 0.97)`) to light (`rgba(255, 255, 255, 0.97)`)
+  - **Body Background**: Changed from `bg-background` (dark #0F172A) to `bg-white` in globals.css line 62
+  - **Button Conversions**: Fixed 11 btn-ghost instances across 6 files (CookieConsent, DentalClient, HomeServicesClient, CaseStudiesPageClient, IntegrationCTA, PremiumServices)
+  - **Section Components Converted** (7 files): HowItWorks, PremiumStats, PremiumFAQ, CaseStudiesPreview, ClientLogosCarousel, UrgencyTimer, ComparisonTable
+  - **Validation**: TypeScript passes, Build passes (229 pages)
+- **LIGHT THEME MOBILE OPTIMIZATION COMPLETE** (2025-12-15):
+  - **OptimizedLeadForm.tsx**: Converted from dark theme to light theme for use in light-themed CTA sections
+    - Labels: `text-white/90` → `text-slate-700`
+    - Inputs: `bg-white/[0.03] text-white` → `bg-white text-slate-900`
+    - Borders: `border-white/10` → `border-slate-200`
+    - Focus states: `focus:border-accent` → `focus:border-blue-500 focus:ring-blue-100`
+  - **MobileCTABar.tsx**: Converted sticky mobile CTA from dark to light theme
+    - Container: `bg-[#0F172A]/95` → `bg-white/95 border-slate-200 shadow-lg`
+    - Phone button: Dark navy → White with slate borders
+    - Primary CTA: Gold gradient → Blue-to-cyan brand gradient
+  - **LightHero.tsx trust badges**: Enhanced contrast and readability
+    - Backgrounds: `bg-white/60` → `bg-white` (solid)
+    - Text: `text-slate-800` → `text-slate-900 text-xs sm:text-sm`
+  - **Validation**: TypeScript passes, Build passes (229 pages)
+- **SEO OPTIMIZATION & CLEANUP COMPLETE** (2025-12-15):
+  - **Title Tag Optimization**: Shortened 14 title tags (avg -13 chars) to stay under 60 char Google SERP limit
+    - Files updated: pricing, contact, case-studies, features, home-services, integrations, locations, healthcare, real-estate, legal, automotive, restaurants, services
+    - Pattern applied: Front-load keywords, reduce redundancy, keep brand suffix (" | Capture Client" = 15 chars)
+  - **Pricing Standardization**: Fixed Growth plan mismatch - homepage $997/mo → $950/mo (matches pricing page)
+  - **Product Schema**: Added Product/Offer JSON-LD schema to homepage pricing section for rich snippets
+  - **www Redirect**: Implemented 301 permanent redirect from www.captureclient.com → captureclient.com in next.config.js
+  - **Google Search Console**: Verified already active since May 29, 2024 - no action needed
+  - **Twitter Handle**: @captureclient NOT claimed - available for brand registration
+  - **Sitemap Status**: Temporary processing error (normal for new sitemaps, resolves in 24-48h)
+- **COMPREHENSIVE SEO AUDIT COMPLETE** (2025-12-15):
+  - **Score**: 8.8/10 (Excellent) - Enterprise-grade SEO infrastructure
+  - **Coverage**: 100% metadata coverage across all 35 pages
+  - **Schema**: Comprehensive JSON-LD implementation (Organization, WebSite, LocalBusiness, BreadcrumbList, FAQPage, Service)
+  - **Domain Migration**: captureclientai.net → captureclient.com verified 99% complete
+  - **Canonicals**: All canonical URLs correctly point to captureclient.com
+  - **Infrastructure**: robots.ts, sitemap.ts, seo-config.ts are comprehensive and production-ready
+  - **Site Stats**: 35 pages, 116 components, 81 location JSON files, 98% complete
+  - **Build Status**: TypeScript passes, Build passes (228 pages)
+  - **Action Items Identified**: Title tag optimization (~40% over 60 chars), pricing mismatch fix, verification codes update, homepage pricing schema addition
 - **$100B HOMEPAGE AESTHETIC TRANSFORMATION COMPLETE** (2025-12-09):
   - **Transformation**: Homepage redesigned with Linear/Stripe $100B valuation aesthetic
   - **Design System**: Deep space black (#030303), cyan (#00C9FF) and indigo (#4A69E2) mesh gradients, Bricolage Grotesque font with editorial weight contrast (200-800), ultra-minimal glass morphism (border-white/[0.06] bg-white/[0.02])
@@ -128,8 +192,10 @@
 - /integrations-demo set to noindex; use-cases and integrations SEO done; multiple backup files removed.
 
 ## Outstanding (essentials)
+- **Search engine verification codes**: Update seo-config.ts (lines 702-706) with actual codes from Google/Bing/Pinterest webmaster tools (currently placeholders)
+- **Twitter setup**: Claim @captureclient handle (currently available), set up Twitter profile, link in footer/social
+- **Homepage pricing enhancements**: Add social proof badge + phone CTA above/below pricing cards
 - Component duplicates: 14 groups to merge (GlassCard, Hero, FAQ, Testimonials, CTA, etc.) - Phase 1 complete (calculators/schedulers/demos cleaned up).
 - ~~Icons: ~288 Material Icons remain → convert to lucide-react.~~ **DONE** (Phase 4)
 - Standardization: buttons (`btn-gold/ghost`), containers (`container-custom`), responsive padding.
-- SEO gaps: service pages refinement; location pages need coverage; ensure canonical/OG/JSON-LD where missing.
 - Performance/accessibility: run checks after consolidations.

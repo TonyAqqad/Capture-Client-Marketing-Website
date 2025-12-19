@@ -28,8 +28,7 @@ export default function PremiumLocationTestimonials({
 
   return (
     <section
-      className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16 relative overflow-hidden"
-      style={{ backgroundColor: '#030303' }}
+      className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16 relative overflow-hidden bg-gradient-to-b from-white to-slate-50"
     >
       {/* Background Effects - Mesh Gradients */}
       <div className="absolute inset-0">
@@ -51,7 +50,7 @@ export default function PremiumLocationTestimonials({
             </span>
           </div>
           <h2
-            className="text-2xl sm:text-3xl lg:text-4xl text-white mb-4"
+            className="text-2xl sm:text-3xl lg:text-4xl text-slate-900 mb-4"
             style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
           >
             What{" "}
@@ -61,7 +60,7 @@ export default function PremiumLocationTestimonials({
             Businesses Say
           </h2>
           <p
-            className="text-slate-400 text-base sm:text-lg"
+            className="text-slate-600 text-base sm:text-lg"
             style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}
           >
             Real results from real businesses in your area
@@ -82,7 +81,7 @@ export default function PremiumLocationTestimonials({
               <div className="absolute -inset-px bg-gradient-to-br from-[#00C9FF]/0 via-[#00C9FF]/20 to-[#4A69E2]/0 rounded-2xl opacity-0 group-hover:opacity-100 blur-lg transition-all duration-500" />
 
               {/* Card - Glass Morphism */}
-              <div className="relative h-full border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl rounded-2xl p-6 sm:p-8 shadow-[0_8px_32px_rgba(0,0,0,0.3)] group-hover:border-[#00C9FF]/30 group-hover:shadow-[0_8px_32px_rgba(0,201,255,0.15)] transition-all duration-500">
+              <div className="relative h-full border border-slate-200 bg-white/70 backdrop-blur-xl rounded-2xl p-6 sm:p-8 shadow-[0_8px_32px_rgba(0,0,0,0.3)] group-hover:border-[#00C9FF]/30 group-hover:shadow-[0_8px_32px_rgba(0,201,255,0.15)] transition-all duration-500">
                 {/* Quote Icon */}
                 <div className="relative mb-6">
                   <div className="absolute inset-0 bg-gradient-to-br from-[#00C9FF] to-[#4A69E2] rounded-xl blur-md opacity-20 group-hover:opacity-40 transition-opacity" />
@@ -94,7 +93,7 @@ export default function PremiumLocationTestimonials({
                 {/* Quote Text - Playfair Display Italic */}
                 <blockquote className="mb-6">
                   <p
-                    className="text-base sm:text-lg text-slate-200 leading-relaxed"
+                    className="text-base sm:text-lg text-slate-600 leading-relaxed"
                     style={{ fontFamily: 'var(--font-playfair)', fontStyle: 'italic' }}
                   >
                     "{testimonial.quote}"
@@ -102,7 +101,7 @@ export default function PremiumLocationTestimonials({
                 </blockquote>
 
                 {/* Divider */}
-                <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-6" />
+                <div className="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent mb-6" />
 
                 {/* Author Info */}
                 <div className="flex items-center gap-4">
@@ -125,13 +124,13 @@ export default function PremiumLocationTestimonials({
                   {/* Author Details */}
                   <div className="flex-1">
                     <div
-                      className="text-white text-base mb-0.5"
+                      className="text-slate-900 text-base mb-0.5"
                       style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}
                     >
                       {testimonial.author || testimonial.name}
                     </div>
                     <div
-                      className="text-sm text-slate-400"
+                      className="text-sm text-slate-600"
                       style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}
                     >
                       {testimonial.business || testimonial.company}
@@ -168,7 +167,7 @@ export default function PremiumLocationTestimonials({
 
         {/* Social Proof Stats - Glass Morphism with Bold Gradient Metrics */}
         <div className="mt-12 sm:mt-16 grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
-          <div className="text-center p-4 sm:p-6 border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl rounded-xl">
+          <div className="text-center p-4 sm:p-6 border border-slate-200 bg-white/70 backdrop-blur-xl rounded-xl">
             <div
               className="text-2xl sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] mb-1"
               style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
@@ -176,13 +175,13 @@ export default function PremiumLocationTestimonials({
               500+
             </div>
             <div
-              className="text-xs sm:text-sm text-slate-400"
+              className="text-xs sm:text-sm text-slate-600"
               style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}
             >
               Happy Clients
             </div>
           </div>
-          <div className="text-center p-4 sm:p-6 border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl rounded-xl">
+          <div className="text-center p-4 sm:p-6 border border-slate-200 bg-white/70 backdrop-blur-xl rounded-xl">
             <div
               className="text-2xl sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] mb-1"
               style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
@@ -190,13 +189,13 @@ export default function PremiumLocationTestimonials({
               4.9
             </div>
             <div
-              className="text-xs sm:text-sm text-slate-400"
+              className="text-xs sm:text-sm text-slate-600"
               style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}
             >
               Avg Rating
             </div>
           </div>
-          <div className="text-center p-4 sm:p-6 border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl rounded-xl">
+          <div className="text-center p-4 sm:p-6 border border-slate-200 bg-white/70 backdrop-blur-xl rounded-xl">
             <div
               className="text-2xl sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] mb-1"
               style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
@@ -204,13 +203,13 @@ export default function PremiumLocationTestimonials({
               15k+
             </div>
             <div
-              className="text-xs sm:text-sm text-slate-400"
+              className="text-xs sm:text-sm text-slate-600"
               style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}
             >
               Calls Handled
             </div>
           </div>
-          <div className="text-center p-4 sm:p-6 border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl rounded-xl">
+          <div className="text-center p-4 sm:p-6 border border-slate-200 bg-white/70 backdrop-blur-xl rounded-xl">
             <div
               className="text-2xl sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] mb-1"
               style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
@@ -218,7 +217,7 @@ export default function PremiumLocationTestimonials({
               24/7
             </div>
             <div
-              className="text-xs sm:text-sm text-slate-400"
+              className="text-xs sm:text-sm text-slate-600"
               style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}
             >
               Support

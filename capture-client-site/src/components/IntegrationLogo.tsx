@@ -172,7 +172,7 @@ function InitialsFallback({
         {initial}
       </div>
       {showName && (
-        <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+        <span className="text-sm font-medium text-gray-700">
           {name}
         </span>
       )}

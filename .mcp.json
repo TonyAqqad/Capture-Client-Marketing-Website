@@ -9,18 +9,6 @@
         "@playwright/mcp@latest"
       ],
       "env": {}
-    },
-    "bright-data": {
-      "command": "cmd",
-      "args": [
-        "/c",
-        "npx",
-        "-y",
-        "@brightdata/mcp"
-      ],
-      "env": {
-        "API_TOKEN": "5392293ed4ee8d4b4954ed939386e3d7f02ac54ed44d8c896742431a6280be"
-      }
     }
   }
 }

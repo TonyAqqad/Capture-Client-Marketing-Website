@@ -23,7 +23,7 @@ const categoryGradients: Record<string, string> = {
   scheduling: "linear-gradient(180deg, #06b6d4 0%, #10b981 100%)", // cyan to emerald
   "phone-systems": "linear-gradient(180deg, #3b82f6 0%, #06b6d4 100%)", // blue to cyan
   "home-services": "linear-gradient(180deg, #f59e0b 0%, #fbbf24 100%)", // amber to gold
-  legal: "linear-gradient(180deg, #374151 0%, #6b7280 100%)", // dark to gray
+  legal: "linear-gradient(180deg, #3b82f6 0%, #8b5cf6 100%)", // blue to purple
   healthcare: "linear-gradient(180deg, #06b6d4 0%, #ec4899 100%)", // cyan to pink
   "real-estate": "linear-gradient(180deg, #fbbf24 0%, #f59e0b 100%)", // gold to amber
   marketing: "linear-gradient(180deg, #8b5cf6 0%, #ec4899 100%)", // purple to pink
@@ -48,7 +48,7 @@ export function IntegrationHowItWorks({
     >
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background-dark to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white" />
         <div className="absolute top-1/2 left-1/4 w-80 h-80 bg-gradient-radial from-primary/10 to-transparent rounded-full blur-3xl" />
       </div>
 
@@ -61,10 +61,10 @@ export function IntegrationHowItWorks({
           transition={{ duration: 0.6 }}
           className="text-center mb-12 sm:mb-16 lg:mb-20"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-slate-900 mb-4">
             How It Works
           </h2>
-          <p className="text-lg text-foreground-muted max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Get started with {integrationName} in just a few simple steps
           </p>
         </motion.div>
@@ -136,10 +136,10 @@ export function IntegrationHowItWorks({
                       className={`relative ${isLeft ? "text-right" : "text-left direction-ltr"}`}
                     >
                       <div className="glass-premium-mobile p-6 lg:p-8 rounded-2xl hover:border-accent/30 transition-all duration-300 hover:shadow-glow">
-                        <h3 className="text-xl sm:text-2xl font-display font-bold text-foreground mb-3">
+                        <h3 className="text-xl sm:text-2xl font-display font-bold text-slate-900 mb-3">
                           {step.title}
                         </h3>
-                        <p className="text-base text-foreground-muted leading-relaxed">
+                        <p className="text-base text-slate-600 leading-relaxed">
                           {step.description}
                         </p>
                       </div>
@@ -217,10 +217,10 @@ export function IntegrationHowItWorks({
                     {/* Step Card */}
                     <div className="flex-1">
                       <div className="glass-premium-mobile p-4 sm:p-6 rounded-xl hover:border-accent/30 transition-all duration-300">
-                        <h3 className="text-lg sm:text-xl font-display font-bold text-foreground mb-2">
+                        <h3 className="text-lg sm:text-xl font-display font-bold text-slate-900 mb-2">
                           {step.title}
                         </h3>
-                        <p className="text-sm sm:text-base text-foreground-muted leading-relaxed">
+                        <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                           {step.description}
                         </p>
                       </div>
@@ -240,12 +240,12 @@ export function IntegrationHowItWorks({
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-16 sm:mt-20 text-center"
         >
-          <p className="text-foreground-muted mb-4">
+          <p className="text-slate-600 mb-4">
             Ready to connect {integrationName}?
           </p>
           <a
             href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-xl border border-white/20 hover:border-accent/50 text-foreground font-semibold transition-all duration-300 hover:shadow-glow"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-slate-100 hover:bg-slate-200 backdrop-blur-sm rounded-xl border border-slate-200 hover:border-accent/50 text-slate-900 font-semibold transition-all duration-300 hover:shadow-glow"
           >
             <Plug className="w-5 h-5 text-accent" />
             Get Started

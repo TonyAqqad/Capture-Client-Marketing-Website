@@ -73,8 +73,8 @@ export default function GrowthDashboard() {
         <div className="relative z-10">
           {/* Header */}
           <div className="flex items-center justify-between mb-3 sm:mb-4 md:mb-6">
-            <h4 className="text-foreground font-semibold text-sm sm:text-base md:text-lg">Growth Dashboard</h4>
-            <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2 text-[10px] sm:text-xs md:text-sm text-foreground-muted">
+            <h4 className="text-slate-900 font-semibold text-sm sm:text-base md:text-lg">Growth Dashboard</h4>
+            <div className="flex items-center gap-1 sm:gap-1.5 md:gap-2 text-[10px] sm:text-xs md:text-sm text-slate-600">
               <motion.span
                 animate={{
                   scale: [1, 1.2, 1],
@@ -146,9 +146,9 @@ export default function GrowthDashboard() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ delay: 0.4, duration: 0.6 }}
-            className="bg-surface/50 border border-surface-border rounded-xl p-2.5 sm:p-3 md:p-4 w-full max-w-full overflow-hidden"
+            className="bg-slate-50 border border-slate-200 rounded-xl p-2.5 sm:p-3 md:p-4 w-full min-w-0 overflow-hidden"
           >
-            <p className="text-foreground-muted text-[10px] sm:text-xs md:text-sm mb-2 sm:mb-2.5 md:mb-3">Recent Activity</p>
+            <p className="text-slate-600 text-[10px] sm:text-xs md:text-sm mb-2 sm:mb-2.5 md:mb-3">Recent Activity</p>
             <div className="space-y-1.5 sm:space-y-2 h-[70px] sm:h-[80px] md:h-[90px] relative overflow-hidden">
               {visibleActivities.map((activity, index) => (
                 <motion.div
@@ -157,7 +157,7 @@ export default function GrowthDashboard() {
                   animate={{ opacity: index === 0 ? 1 : 0.5, x: 0 }}
                   exit={{ opacity: 0, x: 20 }}
                   transition={{ duration: 0.5 }}
-                  className="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs md:text-sm w-full max-w-full"
+                  className="flex items-center gap-1.5 sm:gap-2 text-[10px] sm:text-xs md:text-sm w-full min-w-0"
                 >
                   <motion.div
                     animate={{
@@ -171,8 +171,8 @@ export default function GrowthDashboard() {
                       activity.icon === "accent" ? "bg-accent" : "bg-primary"
                     }`}
                   />
-                  <span className="text-foreground flex-1 truncate min-w-0">{activity.text}</span>
-                  <span className="text-foreground-muted text-[9px] sm:text-[10px] md:text-xs flex-shrink-0">{activity.time}</span>
+                  <span className="text-slate-900 flex-1 truncate min-w-0">{activity.text}</span>
+                  <span className="text-slate-600 text-[9px] sm:text-[10px] md:text-xs flex-shrink-0 whitespace-nowrap">{activity.time}</span>
                 </motion.div>
               ))}
             </div>
@@ -217,7 +217,7 @@ function StatCard({
       whileHover={{ scale: 1.05, y: -5 }}
       className={`bg-gradient-to-br ${gradient} border ${borderColor} rounded-xl p-2 sm:p-3 md:p-4 cursor-default w-full max-w-full`}
     >
-      <p className="text-foreground-muted text-[10px] sm:text-xs md:text-sm mb-0.5 sm:mb-1 truncate">{label}</p>
+      <p className="text-slate-600 text-[10px] sm:text-xs md:text-sm mb-0.5 sm:mb-1 truncate">{label}</p>
       <motion.p
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}

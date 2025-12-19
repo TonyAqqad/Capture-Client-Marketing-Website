@@ -413,9 +413,9 @@ export default function IntegrationPartners() {
       : partners.filter((p) => p.category === activeCategory);
 
   return (
-    <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden" style={{ backgroundColor: '#030303' }}>
+    <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden bg-gradient-to-b from-white to-slate-50">
       {/* Background */}
-      <div className="absolute inset-0" style={{ backgroundColor: '#030303' }}>
+      <div className="absolute inset-0 bg-gradient-to-b from-white to-slate-50">
         {/* Mesh gradient background */}
         <div
           className="absolute inset-0 opacity-40"
@@ -450,7 +450,7 @@ export default function IntegrationPartners() {
           className="text-center mb-12 sm:mb-16"
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-200 bg-white/70 backdrop-blur-xl mb-6">
             <Network className="w-5 h-5" style={{ color: '#00C9FF' }} />
             <span className="text-sm tracking-wide" style={{ color: '#00C9FF', fontWeight: 200 }}>
               50+ Seamless Integrations
@@ -458,7 +458,7 @@ export default function IntegrationPartners() {
           </div>
 
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl text-white mb-4"
+            className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-4"
             style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800, letterSpacing: '-0.02em' }}
           >
             Connects With Your
@@ -472,7 +472,7 @@ export default function IntegrationPartners() {
               Favorite Platforms
             </span>
           </h2>
-          <p className="text-lg max-w-2xl mx-auto" style={{ color: 'rgba(255, 255, 255, 0.5)', fontWeight: 200 }}>
+          <p className="text-lg max-w-2xl mx-auto text-slate-600" style={{ fontWeight: 200 }}>
             Our platform integrates seamlessly with industry-leading software to
             streamline your workflow and maximize efficiency.
           </p>
@@ -493,7 +493,7 @@ export default function IntegrationPartners() {
               className={`px-4 py-2 rounded-full text-sm transition-all duration-300 ${
                 activeCategory === category
                   ? "text-black"
-                  : "hover:bg-white/[0.04] hover:text-white"
+                  : "hover:bg-slate-50 hover:text-slate-900"
               }`}
               style={
                 activeCategory === category
@@ -502,9 +502,9 @@ export default function IntegrationPartners() {
                       fontWeight: 500
                     }
                   : {
-                      backgroundColor: 'rgba(255, 255, 255, 0.02)',
-                      color: 'rgba(255, 255, 255, 0.5)',
-                      border: '1px solid rgba(255, 255, 255, 0.06)',
+                      backgroundColor: 'rgba(255, 255, 255, 0.7)',
+                      color: 'rgb(71 85 105)',
+                      border: '1px solid rgb(226 232 240)',
                       fontWeight: 200
                     }
               }
@@ -535,10 +535,9 @@ export default function IntegrationPartners() {
                 whileHover={{ scale: 1.03, y: -4 }}
               >
               {/* Card */}
-              <div className="relative h-full backdrop-blur-xl rounded-2xl p-6 transition-all duration-300 overflow-hidden"
+              <div className="relative h-full backdrop-blur-xl rounded-2xl p-6 transition-all duration-300 overflow-hidden bg-white/70"
                 style={{
-                  backgroundColor: 'rgba(255, 255, 255, 0.02)',
-                  border: '1px solid rgba(255, 255, 255, 0.06)'
+                  border: '1px solid rgb(226 232 240)'
                 }}
               >
                 {/* Hover glow effect */}
@@ -602,12 +601,12 @@ export default function IntegrationPartners() {
                 {/* Partner info */}
                 <div className="text-center relative z-10">
                   <h3
-                    className="text-white text-sm mb-1 transition-colors duration-300"
+                    className="text-slate-900 text-sm mb-1 transition-colors duration-300"
                     style={{ fontWeight: 500 }}
                   >
                     {partner.name}
                   </h3>
-                  <p className="text-xs leading-tight" style={{ color: 'rgba(255, 255, 255, 0.4)', fontWeight: 200 }}>
+                  <p className="text-xs leading-tight text-slate-600" style={{ fontWeight: 200 }}>
                     {partner.description}
                   </p>
                 </div>
@@ -632,10 +631,9 @@ export default function IntegrationPartners() {
           className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto"
         >
           <div
-            className="text-center p-6 backdrop-blur-xl rounded-2xl"
+            className="text-center p-6 backdrop-blur-xl rounded-2xl bg-white/70"
             style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.02)',
-              border: '1px solid rgba(255, 255, 255, 0.06)'
+              border: '1px solid rgb(226 232 240)'
             }}
           >
             <div
@@ -648,13 +646,12 @@ export default function IntegrationPartners() {
             >
               50+
             </div>
-            <div className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.5)', fontWeight: 200 }}>Native Integrations</div>
+            <div className="text-sm text-slate-600" style={{ fontWeight: 200 }}>Native Integrations</div>
           </div>
           <div
-            className="text-center p-6 backdrop-blur-xl rounded-2xl"
+            className="text-center p-6 backdrop-blur-xl rounded-2xl bg-white/70"
             style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.02)',
-              border: '1px solid rgba(255, 255, 255, 0.06)'
+              border: '1px solid rgb(226 232 240)'
             }}
           >
             <div
@@ -667,13 +664,12 @@ export default function IntegrationPartners() {
             >
               5,000+
             </div>
-            <div className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.5)', fontWeight: 200 }}>Via Zapier & Make</div>
+            <div className="text-sm text-slate-600" style={{ fontWeight: 200 }}>Via Zapier & Make</div>
           </div>
           <div
-            className="text-center p-6 backdrop-blur-xl rounded-2xl"
+            className="text-center p-6 backdrop-blur-xl rounded-2xl bg-white/70"
             style={{
-              backgroundColor: 'rgba(255, 255, 255, 0.02)',
-              border: '1px solid rgba(255, 255, 255, 0.06)'
+              border: '1px solid rgb(226 232 240)'
             }}
           >
             <div
@@ -686,7 +682,7 @@ export default function IntegrationPartners() {
             >
               API
             </div>
-            <div className="text-sm" style={{ color: 'rgba(255, 255, 255, 0.5)', fontWeight: 200 }}>Custom Integrations</div>
+            <div className="text-sm text-slate-600" style={{ fontWeight: 200 }}>Custom Integrations</div>
           </div>
         </motion.div>
 
@@ -698,7 +694,7 @@ export default function IntegrationPartners() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-12 sm:mt-16"
         >
-          <p className="mb-4" style={{ color: 'rgba(255, 255, 255, 0.5)', fontWeight: 200 }}>
+          <p className="mb-4 text-slate-600" style={{ fontWeight: 200 }}>
             Don&apos;t see your platform? We can connect with virtually any tool
             via API or webhook.
           </p>

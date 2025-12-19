@@ -105,7 +105,7 @@ function StatCard({ stat, index, isInView }: StatCardProps) {
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : { opacity: 0 }}
         transition={{ delay: index * 0.1 + 0.5, duration: 0.6 }}
-        className="text-foreground-muted text-sm sm:text-sm lg:text-base"
+        className="text-slate-600 text-sm sm:text-sm lg:text-base"
       >
         {stat.label}
       </motion.p>

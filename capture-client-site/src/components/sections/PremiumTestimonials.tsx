@@ -4,7 +4,12 @@ import { useRef } from "react";
 import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import { Testimonial } from "@/types/content";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Quote } from "lucide-react";
+
+// ============================================
+// PREMIUM TESTIMONIALS - Light Theme
+// Billion-dollar aesthetic with glass morphism
+// ============================================
 
 interface EditorialTestimonial extends Testimonial {
   id: number;
@@ -63,178 +68,171 @@ export function PremiumTestimonials() {
   const isInView = useInView(containerRef, { threshold: 0.1 });
 
   return (
-    <section className="section relative overflow-hidden w-full py-20 sm:py-28 lg:py-36" style={{ backgroundColor: '#030303' }}>
-      {/* Mesh gradient background */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 via-transparent to-indigo-500/10" />
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl animate-float-delayed" />
+    <section className="relative overflow-hidden w-full py-20 sm:py-28 lg:py-36 bg-white">
+      {/* Premium gradient mesh background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div
+          className="absolute top-0 right-1/4 w-[600px] h-[600px] opacity-30"
+          style={{
+            background: "radial-gradient(circle at center, rgba(14, 165, 233, 0.1) 0%, transparent 60%)",
+            filter: "blur(80px)",
+          }}
+        />
+        <div
+          className="absolute bottom-0 left-1/4 w-[500px] h-[500px] opacity-25"
+          style={{
+            background: "radial-gradient(circle at center, rgba(37, 99, 235, 0.08) 0%, transparent 60%)",
+            filter: "blur(60px)",
+          }}
+        />
+        {/* Subtle grid pattern */}
+        <div
+          className="absolute inset-0 opacity-[0.02]"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(15,23,42,0.03) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(15,23,42,0.03) 1px, transparent 1px)
+            `,
+            backgroundSize: '48px 48px',
+          }}
+        />
       </div>
 
       <div ref={containerRef} className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
-        {/* Editorial header - $100B aesthetic */}
-        <motion.header
+        {/* Editorial header - using div to avoid mobile CSS override targeting header elements */}
+        <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-3xl mb-16 sm:mb-20 lg:mb-24"
         >
-          <p
-            className="text-xs font-medium uppercase tracking-[0.2em] mb-4"
-            style={{
-              color: '#00C9FF',
-              fontFamily: 'var(--font-bricolage-grotesque)',
-              fontWeight: 500
-            }}
-          >
-            Case Studies
-          </p>
-          <h2
-            className="text-3xl sm:text-4xl lg:text-6xl leading-[1.1] tracking-tight mb-6"
-            style={{
-              fontFamily: 'var(--font-bricolage-grotesque)',
-              fontWeight: 200,
-              color: '#ffffff'
-            }}
-          >
-            Real results from{" "}
+          {/* Eyebrow badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-100 mb-6">
+            <div className="w-1.5 h-1.5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500" />
             <span
-              style={{
-                fontWeight: 800,
-                background: 'linear-gradient(135deg, #00C9FF 0%, #4A69E2 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text'
-              }}
+              className="text-xs font-semibold text-blue-700 uppercase tracking-wider"
+              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
             >
+              Case Studies
+            </span>
+          </div>
+
+          <h2
+            className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-[1.1] tracking-tight text-slate-900 mb-6"
+            style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+          >
+            <span className="font-light">Real results from </span>
+            <span className="font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
               real businesses
             </span>
           </h2>
+
           <p
-            className="text-lg sm:text-xl leading-relaxed max-w-2xl"
-            style={{
-              color: 'rgba(255, 255, 255, 0.6)',
-              fontFamily: 'var(--font-bricolage-grotesque)',
-              fontWeight: 300
-            }}
+            className="text-lg sm:text-xl leading-relaxed text-slate-600 max-w-2xl"
+            style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 400 }}
           >
             See how service businesses use Capture Client to capture more leads and grow revenue.
           </p>
-        </motion.header>
+        </motion.div>
 
         {/* Editorial testimonial grid - asymmetric layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
           {/* Featured large card */}
           <motion.article
-            initial={{ opacity: 0, y: 32 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 32 }}
+            initial={{ opacity: 0, y: 32, filter: "blur(10px)" }}
+            animate={isInView ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, y: 32, filter: "blur(10px)" }}
             transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-7"
           >
-            <div
-              className="h-full p-8 sm:p-10 lg:p-12 rounded-2xl group transition-all duration-500"
-              style={{
-                background: 'rgba(255, 255, 255, 0.02)',
-                backdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255, 255, 255, 0.06)',
-                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)'
-              }}
+            <motion.div
+              whileHover={{ y: -4, scale: 1.01 }}
+              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+              className="relative h-full p-8 sm:p-10 lg:p-12 rounded-2xl bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg shadow-slate-900/[0.03] group overflow-hidden"
             >
+              {/* Hover glow effect */}
+              <div
+                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                style={{
+                  background: "radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.05) 0%, transparent 60%)",
+                }}
+              />
+
+              {/* Quote icon */}
+              <div className="absolute top-8 right-8 opacity-10">
+                <Quote className="w-16 h-16 text-blue-600" />
+              </div>
+
               {/* Industry tag */}
-              <div className="flex items-center justify-between mb-8">
+              <div className="flex items-center justify-between mb-8 relative z-10">
                 <span
-                  className="text-xs font-medium uppercase tracking-wider"
-                  style={{
-                    color: '#00C9FF',
-                    fontFamily: 'var(--font-bricolage-grotesque)',
-                    fontWeight: 500
-                  }}
+                  className="inline-flex items-center px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-100/60 text-xs font-semibold text-blue-700 uppercase tracking-wider"
+                  style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
                 >
                   {testimonials[0].industry}
                 </span>
-                <ArrowUpRight
-                  className="w-5 h-5 transition-all duration-300"
-                  style={{ color: 'rgba(255, 255, 255, 0.4)' }}
-                />
+                <ArrowUpRight className="w-5 h-5 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
               </div>
 
               {/* Big metric */}
-              <div className="mb-8">
+              <div className="mb-8 relative z-10">
                 <p
-                  className="text-5xl sm:text-6xl lg:text-7xl tracking-tight"
-                  style={{
-                    fontFamily: 'var(--font-bricolage-grotesque)',
-                    fontWeight: 800,
-                    background: 'linear-gradient(135deg, #00C9FF 0%, #4A69E2 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text'
-                  }}
+                  className="text-5xl sm:text-6xl lg:text-7xl tracking-tight font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+                  style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
                 >
                   {testimonials[0].metric}
                 </p>
                 <p
-                  className="text-sm sm:text-base mt-2"
-                  style={{
-                    color: 'rgba(255, 255, 255, 0.5)',
-                    fontFamily: 'var(--font-bricolage-grotesque)',
-                    fontWeight: 300
-                  }}
+                  className="text-sm sm:text-base mt-2 text-slate-500"
+                  style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 400 }}
                 >
                   {testimonials[0].metricLabel}
                 </p>
               </div>
 
-              {/* Quote - Playfair Display italic */}
+              {/* Quote */}
               <blockquote
-                className="text-lg sm:text-xl leading-relaxed mb-8"
-                style={{
-                  fontFamily: 'var(--font-playfair)',
-                  fontStyle: 'italic',
-                  color: 'rgba(255, 255, 255, 0.9)',
-                  fontWeight: 400
-                }}
+                className="text-lg sm:text-xl leading-relaxed mb-8 text-slate-700 relative z-10"
+                style={{ fontFamily: 'var(--font-playfair)', fontStyle: 'italic' }}
               >
                 "{testimonials[0].quote}"
               </blockquote>
 
               {/* Author */}
-              <footer className="flex items-center gap-4 pt-6" style={{ borderTop: '1px solid rgba(255, 255, 255, 0.06)' }}>
+              <footer className="flex items-center gap-4 pt-6 border-t border-slate-200/60 relative z-10">
                 <div
-                  className="w-12 h-12 rounded-full flex items-center justify-center text-sm"
-                  style={{
-                    background: 'linear-gradient(135deg, rgba(0, 201, 255, 0.15) 0%, rgba(74, 105, 226, 0.15) 100%)',
-                    color: '#ffffff',
-                    fontFamily: 'var(--font-bricolage-grotesque)',
-                    fontWeight: 600
-                  }}
+                  className="w-12 h-12 rounded-full flex items-center justify-center text-sm font-semibold text-white bg-gradient-to-br from-blue-600 to-cyan-500 shadow-lg shadow-blue-500/25"
+                  style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
                 >
                   {testimonials[0].image}
                 </div>
                 <div>
                   <p
-                    className="font-semibold"
-                    style={{
-                      color: '#ffffff',
-                      fontFamily: 'var(--font-bricolage-grotesque)',
-                      fontWeight: 600
-                    }}
+                    className="font-semibold text-slate-900"
+                    style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
                   >
                     {testimonials[0].name}
                   </p>
                   <p
-                    className="text-sm"
-                    style={{
-                      color: 'rgba(255, 255, 255, 0.5)',
-                      fontFamily: 'var(--font-bricolage-grotesque)',
-                      fontWeight: 300
-                    }}
+                    className="text-sm text-slate-500"
+                    style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 400 }}
                   >
                     {testimonials[0].role}, {testimonials[0].company}
                   </p>
                 </div>
               </footer>
-            </div>
+
+              {/* Bottom accent line */}
+              <div className="absolute bottom-0 left-8 right-8 h-[2px] rounded-full overflow-hidden">
+                <motion.div
+                  className="h-full bg-gradient-to-r from-blue-500 to-cyan-400"
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+                  style={{ transformOrigin: "left" }}
+                />
+              </div>
+            </motion.div>
           </motion.article>
 
           {/* Two stacked cards */}
@@ -242,139 +240,124 @@ export function PremiumTestimonials() {
             {testimonials.slice(1).map((testimonial, index) => (
               <motion.article
                 key={testimonial.id}
-                initial={{ opacity: 0, y: 32 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 32 }}
+                initial={{ opacity: 0, y: 32, filter: "blur(10px)" }}
+                animate={isInView ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, y: 32, filter: "blur(10px)" }}
                 transition={{
                   duration: 0.8,
                   delay: 0.25 + index * 0.1,
                   ease: [0.16, 1, 0.3, 1],
                 }}
               >
-                <div
-                  className="h-full p-6 sm:p-8 rounded-2xl group transition-all duration-500"
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.02)',
-                    backdropFilter: 'blur(20px)',
-                    border: '1px solid rgba(255, 255, 255, 0.06)',
-                    boxShadow: '0 8px 32px rgba(0, 0, 0, 0.2)'
-                  }}
+                <motion.div
+                  whileHover={{ y: -4, scale: 1.01 }}
+                  transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                  className="relative h-full p-6 sm:p-8 rounded-2xl bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg shadow-slate-900/[0.03] group overflow-hidden"
                 >
+                  {/* Hover glow effect */}
+                  <div
+                    className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                    style={{
+                      background: "radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.05) 0%, transparent 60%)",
+                    }}
+                  />
+
                   {/* Industry tag and metric row */}
-                  <div className="flex items-start justify-between mb-6">
+                  <div className="flex items-start justify-between mb-6 relative z-10">
                     <span
-                      className="text-xs font-medium uppercase tracking-wider"
-                      style={{
-                        color: '#00C9FF',
-                        fontFamily: 'var(--font-bricolage-grotesque)',
-                        fontWeight: 500
-                      }}
+                      className="inline-flex items-center px-3 py-1.5 rounded-full bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-100/60 text-xs font-semibold text-blue-700 uppercase tracking-wider"
+                      style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
                     >
                       {testimonial.industry}
                     </span>
                     <div className="text-right">
                       <p
-                        className="text-2xl sm:text-3xl"
-                        style={{
-                          fontFamily: 'var(--font-bricolage-grotesque)',
-                          fontWeight: 800,
-                          background: 'linear-gradient(135deg, #00C9FF 0%, #4A69E2 100%)',
-                          WebkitBackgroundClip: 'text',
-                          WebkitTextFillColor: 'transparent',
-                          backgroundClip: 'text'
-                        }}
+                        className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+                        style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
                       >
                         {testimonial.metric}
                         {testimonial.metric !== "15" && "%"}
                       </p>
                       <p
-                        className="text-xs mt-0.5"
-                        style={{
-                          color: 'rgba(255, 255, 255, 0.5)',
-                          fontFamily: 'var(--font-bricolage-grotesque)',
-                          fontWeight: 300
-                        }}
+                        className="text-xs mt-0.5 text-slate-500"
+                        style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 400 }}
                       >
                         {testimonial.metricLabel}
                       </p>
                     </div>
                   </div>
 
-                  {/* Quote - Playfair Display italic */}
+                  {/* Quote */}
                   <blockquote
-                    className="text-base sm:text-lg leading-relaxed mb-6"
-                    style={{
-                      fontFamily: 'var(--font-playfair)',
-                      fontStyle: 'italic',
-                      color: 'rgba(255, 255, 255, 0.9)',
-                      fontWeight: 400
-                    }}
+                    className="text-base sm:text-lg leading-relaxed mb-6 text-slate-700 relative z-10"
+                    style={{ fontFamily: 'var(--font-playfair)', fontStyle: 'italic' }}
                   >
                     "{testimonial.quote}"
                   </blockquote>
 
                   {/* Author - compact */}
-                  <footer className="flex items-center gap-3">
+                  <footer className="flex items-center gap-3 relative z-10">
                     <div
-                      className="w-10 h-10 rounded-full flex items-center justify-center text-xs"
-                      style={{
-                        background: 'linear-gradient(135deg, rgba(0, 201, 255, 0.15) 0%, rgba(74, 105, 226, 0.15) 100%)',
-                        color: '#ffffff',
-                        fontFamily: 'var(--font-bricolage-grotesque)',
-                        fontWeight: 600
-                      }}
+                      className="w-10 h-10 rounded-full flex items-center justify-center text-xs font-semibold text-white bg-gradient-to-br from-blue-600 to-cyan-500 shadow-md shadow-blue-500/20"
+                      style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
                     >
                       {testimonial.image}
                     </div>
                     <div>
                       <p
-                        className="text-sm"
-                        style={{
-                          color: '#ffffff',
-                          fontFamily: 'var(--font-bricolage-grotesque)',
-                          fontWeight: 600
-                        }}
+                        className="text-sm font-semibold text-slate-900"
+                        style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
                       >
                         {testimonial.name}
                       </p>
                       <p
-                        className="text-xs"
-                        style={{
-                          color: 'rgba(255, 255, 255, 0.5)',
-                          fontFamily: 'var(--font-bricolage-grotesque)',
-                          fontWeight: 300
-                        }}
+                        className="text-xs text-slate-500"
+                        style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 400 }}
                       >
                         {testimonial.company}
                       </p>
                     </div>
                   </footer>
-                </div>
+
+                  {/* Bottom accent line */}
+                  <div className="absolute bottom-0 left-6 right-6 h-[2px] rounded-full overflow-hidden">
+                    <motion.div
+                      className="h-full bg-gradient-to-r from-blue-500 to-cyan-400"
+                      initial={{ scaleX: 0 }}
+                      whileInView={{ scaleX: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.8, delay: 0.5 + index * 0.1, ease: [0.16, 1, 0.3, 1] }}
+                      style={{ transformOrigin: "left" }}
+                    />
+                  </div>
+                </motion.div>
               </motion.article>
             ))}
           </div>
         </div>
 
-        {/* Bottom proof strip - premium styling */}
+        {/* Bottom proof strip */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
           transition={{ duration: 0.8, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-16 sm:mt-20 pt-10"
-          style={{ borderTop: '1px solid rgba(255, 255, 255, 0.06)' }}
+          className="mt-16 sm:mt-20 pt-10 border-t border-slate-200/60"
         >
           <div
-            className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 text-sm"
-            style={{
-              fontFamily: 'var(--font-bricolage-grotesque)',
-              fontWeight: 400,
-              color: 'rgba(255, 255, 255, 0.5)'
-            }}
+            className="flex flex-wrap items-center justify-center gap-4 sm:gap-8"
+            style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
           >
-            <span>500+ active businesses</span>
-            <span className="hidden sm:inline" style={{ color: 'rgba(255, 255, 255, 0.15)' }}>|</span>
-            <span>1M+ calls handled</span>
-            <span className="hidden sm:inline" style={{ color: 'rgba(255, 255, 255, 0.15)' }}>|</span>
-            <span>4.9 average rating</span>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-sm border border-slate-200/60">
+              <span className="font-semibold text-slate-900 text-sm">500+</span>
+              <span className="text-slate-500 text-sm">active businesses</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-sm border border-slate-200/60">
+              <span className="font-semibold text-slate-900 text-sm">1M+</span>
+              <span className="text-slate-500 text-sm">calls handled</span>
+            </div>
+            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-sm border border-slate-200/60">
+              <span className="font-semibold text-slate-900 text-sm">4.9</span>
+              <span className="text-slate-500 text-sm">average rating</span>
+            </div>
           </div>
         </motion.div>
       </div>

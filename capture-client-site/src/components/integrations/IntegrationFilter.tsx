@@ -38,19 +38,19 @@ export function IntegrationFilter({
             transition-all duration-300 touch-manipulation
             ${
               activeCategory === category
-                ? "text-background-dark shadow-glow-gold-lg"
-                : "text-foreground-muted hover:text-foreground hover:bg-white/10 hover:shadow-glow"
+                ? "text-white shadow-lg shadow-blue-600/20"
+                : "text-slate-700 hover:text-slate-900 hover:bg-slate-100"
             }
           `}
           style={{
             background:
               activeCategory === category
-                ? "linear-gradient(135deg, #D4AF37 0%, #E7C96F 50%, #D4AF37 100%)"
-                : "rgba(255, 255, 255, 0.05)",
+                ? "linear-gradient(135deg, rgb(37, 99, 235) 0%, rgb(6, 182, 212) 100%)"
+                : "rgba(241, 245, 249, 0.7)",
             border:
               activeCategory === category
-                ? "1px solid rgba(212, 175, 55, 0.4)"
-                : "1px solid rgba(255, 255, 255, 0.1)",
+                ? "1px solid rgba(37, 99, 235, 0.4)"
+                : "1px solid rgba(148, 163, 184, 0.3)",
           }}
         >
           {/* Active category indicator */}
@@ -60,7 +60,7 @@ export function IntegrationFilter({
               className="absolute inset-0 rounded-full"
               style={{
                 background:
-                  "linear-gradient(135deg, #D4AF37 0%, #E7C96F 50%, #D4AF37 100%)",
+                  "linear-gradient(135deg, rgb(37, 99, 235) 0%, rgb(6, 182, 212) 100%)",
               }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             />

@@ -8,6 +8,11 @@ export default [
     ignores: [
       ".next/**",
       "node_modules/**",
+      "INTEGRATION_CODE_EXAMPLES.tsx",
+      "mobile-audit.js",
+      "performance-audit.js",
+      "visual-qa-test.js",
+      "scripts/**",
       "*.config.js",
       "*.config.mjs",
       "next.config.*.js",

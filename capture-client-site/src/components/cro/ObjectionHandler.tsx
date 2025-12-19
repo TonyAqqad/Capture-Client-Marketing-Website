@@ -63,10 +63,10 @@ export default function ObjectionHandler() {
         <h2 className="text-sm font-bold uppercase tracking-widest text-accent mb-4">
           Common Questions
         </h2>
-        <h3 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
+        <h3 className="text-3xl md:text-4xl font-heading font-bold text-slate-900 mb-4">
           Let's Address Your Concerns
         </h3>
-        <p className="text-lg text-foreground-muted max-w-2xl mx-auto">
+        <p className="text-lg text-slate-600 max-w-2xl mx-auto">
           We've helped hundreds of businesses overcome these exact objections. Here's the truth.
         </p>
       </div>
@@ -76,27 +76,27 @@ export default function ObjectionHandler() {
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="bg-surface/50 border border-surface-border rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/30"
+            className="bg-slate-50 border border-slate-200 rounded-xl overflow-hidden transition-all duration-300 hover:border-primary/30"
           >
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full px-6 py-5 flex items-center justify-between text-left transition-all duration-200 hover:bg-white/5"
+              className="w-full px-6 py-5 flex items-center justify-between text-left transition-all duration-200 hover:bg-slate-50"
             >
               <div className="flex items-center gap-4 flex-1">
                 <div
                   className={`flex items-center justify-center w-10 h-10 rounded-lg transition-all duration-300 ${
                     openIndex === index
                       ? "bg-accent/20 border border-accent/40"
-                      : "bg-white/5 border border-white/10"
+                      : "bg-slate-50 border border-slate-200"
                   }`}
                 >
                   <faq.Icon
                     className={`w-5 h-5 transition-colors duration-300 ${
-                      openIndex === index ? "text-accent" : "text-gray-400"
+                      openIndex === index ? "text-accent" : "text-slate-500"
                     }`}
                   />
                 </div>
-                <h4 className="text-base md:text-lg font-semibold text-foreground">
+                <h4 className="text-base md:text-lg font-semibold text-slate-900">
                   {faq.question}
                 </h4>
               </div>
@@ -113,7 +113,7 @@ export default function ObjectionHandler() {
               }`}
             >
               <div className="px-6 pb-5 pl-20">
-                <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
               </div>
             </div>
           </div>
@@ -122,7 +122,7 @@ export default function ObjectionHandler() {
 
       {/* CTA after FAQ */}
       <div className="text-center mt-10">
-        <p className="text-gray-400 mb-4">Still have questions?</p>
+        <p className="text-slate-500 mb-4">Still have questions?</p>
         <a
           href="tel:865-346-6111"
           className="inline-flex items-center gap-2 text-lg font-semibold text-accent hover:text-accent/80 transition-colors"

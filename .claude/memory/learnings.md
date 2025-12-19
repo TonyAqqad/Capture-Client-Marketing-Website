@@ -3,7 +3,7 @@
 - Responsive defaults: `flex-col md:flex-row`, `grid md:grid-cols-2 lg:grid-cols-3`, `px-4 sm:px-6 lg:px-8`, buttons `w-full sm:w-auto`.
 - Motion import must be `@/lib/motion`; include `viewport={{ once: true }}`.
 - Standard components/classes first; avoid new button/glass styles; no hardcoded colors.
-- Phone number: 865-346-3339 everywhere.
+- Phone number: 865-346-6111 everywhere.
 - Icons: use lucide-react only. Centralized mapping in `src/lib/icon-map.ts`.
 - SEO: keep server/client split; metadata + canonical + JSON-LD on pages; titles <60 chars, descriptions ~150-160.
 - Batch work: discovery agents in parallel; batch-fixer sequential per folder; verify with typecheck/build and quick audits.
@@ -67,3 +67,87 @@
   - **Z-index layering**: Background (0) → Aurora (0) → Noise (0) → Geometric shapes (0) → Content (10)
   - **Color palette consistency**: Gold (#D4AF37), Cyan (accent), Deep space (#070B14, #030508, #0A0E1A)
   - This pattern can be standardized across other premium pages (pricing, features, etc.)
+- **Enterprise SEO Infrastructure Pattern** (2025-12-15, Comprehensive SEO Audit): Lessons from achieving 8.8/10 SEO score:
+  - **robots.ts implementation**: Dynamic robots.txt generation with proper host detection, user-agent rules, sitemap reference
+  - **sitemap.ts strategy**: Automatic sitemap generation covering all routes (core pages, industries, services, locations), proper lastModified dates, change frequencies, priorities
+  - **seo-config.ts centralization**: Single source of truth for all SEO metadata including OpenGraph defaults, Twitter card settings, verification codes, JSON-LD schemas
+  - **Canonical URL pattern**: Always use `alternates: { canonical: 'https://captureclient.com/path' }` in metadata - critical for domain migrations
+  - **Metadata template**: title max 60 chars (40% of site needs optimization), description 150-160 chars, always include openGraph + twitter objects
+  - **JSON-LD schemas**: Comprehensive implementation across site (Organization, WebSite, LocalBusiness, BreadcrumbList, FAQPage, Service) for rich snippets
+  - **Domain migration verification**: Use systematic search (robots.ts, sitemap.ts, all metadata canonicals) to verify 100% migration completion
+  - **100% metadata coverage**: Every page must have metadata export with title, description, openGraph, twitter, alternates - no exceptions
+  - **Structured data benefits**: Proper JSON-LD enables rich snippets, knowledge panels, enhanced search results
+  - **Verification codes**: Keep placeholder values in seo-config.ts until actual verification codes obtained from Google/Bing/Pinterest
+- **Title Tag Optimization Pattern** (2025-12-15): Best practices for SEO-friendly title tags:
+  - **60 character limit**: Google typically displays first 50-60 chars in SERPs, rest gets truncated with "..."
+  - **Front-load keywords**: Put most important keywords at start of title (e.g., "AI Receptionist" before industry name)
+  - **Avoid redundancy**: Don't repeat words unnecessarily (e.g., "AI Voice Agent AI" is wasteful)
+  - **Brand suffix**: Use " | Capture Client" consistently (15 chars including spaces), leaving 45 chars for primary content
+  - **Industry pattern**: "Service for Industry | Capture Client" (e.g., "AI Receptionist for Legal | Capture Client")
+  - **Location pattern**: "Service in Location | Capture Client" (e.g., "AI Receptionist in Nashville | Capture Client")
+  - **Audit strategy**: Search for long titles using regex, calculate character counts, prioritize highest-traffic pages
+  - **Title vs H1**: Title tags can differ from H1 headings - optimize title for SERPs, H1 for on-page engagement
+- **Pricing Schema Implementation Pattern** (2025-12-15): Structured data for pricing sections:
+  - **Product schema**: Use `@type: "Product"` with `name`, `description`, `offers` array for each pricing tier
+  - **Offer schema**: Each tier needs `@type: "Offer"`, `price`, `priceCurrency: "USD"`, `priceValidUntil`, `availability`
+  - **Aggregate offers**: For multiple tiers, use `AggregateOffer` with `lowPrice` and `highPrice`
+  - **Benefits**: Enables rich snippets in Google Shopping, price comparison tools, enhanced SERP display
+  - **Homepage opportunity**: Current homepage pricing section lacks schema - adding it could improve visibility
+  - **Annual billing**: Consider toggle for annual vs monthly pricing with separate schema entries
+- **www Redirect Pattern in Next.js** (2025-12-15): Canonical domain enforcement via next.config.js:
+  - **Problem**: www vs non-www creates duplicate content issues, splits SEO authority
+  - **Solution**: Add 301 permanent redirect in next.config.js `async redirects()` function
+  - **Implementation**: Check if hostname starts with 'www.', redirect to non-www version preserving path and query params
+  - **Code pattern**:
+    ```javascript
+    async redirects() {
+      return [
+        {
+          source: '/:path*',
+          has: [{ type: 'host', value: 'www.captureclient.com' }],
+          destination: 'https://captureclient.com/:path*',
+          permanent: true, // 301 redirect
+        },
+      ];
+    }
+    ```
+  - **Verification**: Test both www and non-www URLs to ensure redirect works, check Google Search Console for duplicate indexing
+  - **Canonical tags**: Keep canonical URLs in metadata pointing to non-www version for consistency
+- **Form Theme Context Mismatch Pattern** (2025-12-15): Critical lesson for form component reusability:
+  - **Problem**: OptimizedLeadForm was designed for dark backgrounds (white text, transparent dark inputs) but used in light-themed PremiumFinalCTA section, making all form fields invisible
+  - **Symptoms**: Labels, inputs, placeholders all using `text-white`, `bg-white/[0.03]`, `border-white/10` - invisible on white backgrounds
+  - **Fix strategy**: Convert all dark theme styling to light theme equivalents:
+    - Text: `text-white` → `text-slate-900`
+    - Backgrounds: `bg-white/[0.03]` → `bg-white`
+    - Borders: `border-white/10` → `border-slate-200`
+    - Focus states: Accent colors → Blue theme (`focus:border-blue-500 focus:ring-blue-100`)
+  - **Design principle**: Forms should either be theme-agnostic (work on both light and dark) or have explicit theme variants
+  - **Prevention**: When creating reusable forms, test on both light and dark backgrounds before marking complete
+- **Mobile Trust Badge Contrast Pattern** (2025-12-15): Lessons for mobile readability optimization:
+  - **Problem**: Trust badges on mobile homepage used `bg-white/60` (60% opacity) with `text-slate-800`, creating poor contrast
+  - **Fix applied**:
+    - Solid backgrounds: `bg-white/60` → `bg-white` with `border-slate-200 shadow-sm`
+    - Stronger text: `text-slate-800` → `text-slate-900` for maximum contrast
+    - Responsive sizing: `text-xs` → `text-xs sm:text-sm` for better mobile legibility
+  - **Design principle**: On mobile, prefer solid backgrounds with proper shadows over transparent glass effects for critical UI elements
+  - **Contrast rule**: Text on white should be `text-slate-900` (not 800/700) for WCAG compliance on small screens
+- **Mobile Backdrop-Blur Fallback Pattern** (2025-12-15): Critical lesson for mobile CSS architecture:
+  - **Problem**: Mobile CSS (globals.css lines 2296-2324) disables backdrop-blur for performance, then compensates with solid background colors using `!important`
+  - **Original issue**: Used DARK fallback (`rgba(15, 20, 25, 0.97)`) which overrode ALL component-level light styling on mobile
+  - **Fix applied**: Changed fallback to LIGHT (`rgba(255, 255, 255, 0.97)`) for site-wide light theme
+  - **Affected elements**: Any element using `backdrop-blur-*` classes appears dark on mobile despite having `bg-white/70` in component
+  - **Debugging strategy**: When mobile differs from desktop, check globals.css for mobile-specific media queries with `!important` rules
+  - **Design principle**: Mobile fallback colors must match site theme - can't mix dark fallbacks with light-themed components
+- **Glass Morphism Light Theme Pattern** (2025-12-15): Converting glass effects for light backgrounds:
+  - **Dark glass classes** (DON'T use on light pages): `.glass`, `.glass-premium`, `.glass-card` - all use `bg-white/5` or lower opacity
+  - **Light alternative**: `.glass-card-light` exists in globals.css with `rgba(255, 255, 255, 0.7)` - 70% opacity white
+  - **Inline light glass**: `bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg`
+  - **Text colors on light glass**: `text-slate-900` (headings), `text-slate-600` (body), `text-slate-500` (muted)
+  - **Border pattern**: `border-slate-200` or `border-slate-200/60` instead of `border-white/10`
+- **Pricing Consistency Pattern** (2025-12-15): Avoiding homepage/pricing page mismatches:
+  - **Problem**: Homepage showed Growth plan at $997/mo, pricing page showed $950/mo - confusing for users, bad for trust
+  - **Root cause**: PricingCards.tsx hardcoded different value than pricing page data
+  - **Fix**: Update PricingCards.tsx to match canonical pricing page values
+  - **Prevention**: Single source of truth for pricing - consider extracting to data/pricing.ts file
+  - **Verification**: Search codebase for all price mentions (e.g., grep for "$997", "$950") to catch inconsistencies
+  - **Best practice**: All pricing displays should pull from same data source, avoid hardcoding prices in multiple places

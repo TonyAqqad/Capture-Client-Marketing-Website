@@ -11,7 +11,7 @@ import { PremiumTestimonials } from "@/components/sections/PremiumTestimonials";
 import { PremiumFAQ } from "@/components/sections/PremiumFAQ";
 
 export const metadata: Metadata = {
-  title: "AI Voice Agents for Real Estate | Speed to Lead | Capture Client",
+  title: "AI for Real Estate | Speed to Lead | Capture Client",
   description: "78% of buyers choose the first agent who responds. AI voice agents for real estate that respond in under 1 minute. Follow Up Boss & Zillow integration. Never miss a lead again.",
   keywords: [
     "AI voice agents for real estate",
@@ -29,23 +29,23 @@ export const metadata: Metadata = {
     "automated showing scheduling"
   ],
   openGraph: {
-    title: "AI Voice Agents for Real Estate | Speed to Lead | Capture Client",
+    title: "AI for Real Estate | Speed to Lead | Capture Client",
     description: "78% of buyers choose the first agent who responds. Be first. Every time. With AI voice agents that respond in under 1 minute.",
     url: "https://captureclient.com/industries/real-estate",
     siteName: "Capture Client",
     type: "website",
     images: [{
-      url: "https://captureclient.com/og-real-estate.jpg",
+      url: "https://captureclient.com/og-image.png",
       width: 1200,
       height: 630,
-      alt: "AI Voice Agents for Real Estate - Speed to Lead - Capture Client",
+      alt: "Capture Client - AI for Real Estate Agents",
     }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Voice Agents for Real Estate | Speed to Lead",
+    title: "AI for Real Estate | Speed to Lead | Capture Client",
     description: "78% of buyers choose the first agent who responds. AI voice agents that respond in under 1 minute.",
-    images: ["https://captureclient.com/og-real-estate.jpg"],
+    images: ["https://captureclient.com/og-image.png"],
   },
   alternates: {
     canonical: "https://captureclient.com/industries/real-estate",
@@ -118,7 +118,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://captureclient.com" },
-    { "@type": "ListItem", position: 2, name: "Industries", item: "https://captureclient.com/industries" },
+    { "@type": "ListItem", position: 2, name: "Who We Serve", item: "https://captureclient.com/who-we-serve" },
     { "@type": "ListItem", position: 3, name: "Real Estate", item: "https://captureclient.com/industries/real-estate" },
   ],
 };
@@ -138,7 +138,7 @@ export default function RealEstatePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <main className="min-h-screen bg-gradient-to-b from-background-darker via-background-dark to-background">
+      <main className="min-h-screen bg-gradient-to-b from-white to-slate-50">
         {/* Hero Section */}
         <RealEstateHero />
 

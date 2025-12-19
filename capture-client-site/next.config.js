@@ -107,6 +107,23 @@ const nextConfig = {
 
   // Power optimizations for bundle size
   poweredByHeader: false,
+
+  // SEO: Redirect www to non-www (canonical domain)
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.captureclient.com',
+          },
+        ],
+        destination: 'https://captureclient.com/:path*',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 module.exports = nextConfig;

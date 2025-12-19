@@ -75,7 +75,7 @@ export function FeatureGrid({
             <PremiumGlassCard
               variant="premium"
               hover={true}
-              glowColor="cyan"
+              glowColor="blue"
               className="h-full"
             >
               <div className="p-6 space-y-4">
@@ -94,12 +94,12 @@ export function FeatureGrid({
                 )}
 
                 {/* Title */}
-                <h3 className="font-display text-xl font-bold text-foreground">
+                <h3 className="font-display text-xl font-bold text-slate-900">
                   {feature.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-foreground-muted leading-relaxed">
+                <p className="text-slate-600 leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -123,7 +123,7 @@ export function FeatureGrid({
           <motion.div
             key={index}
             variants={itemVariants}
-            className="flex items-start gap-4 p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors duration-300"
+            className="flex items-start gap-4 p-6 rounded-xl bg-slate-50 border border-slate-200 hover:bg-slate-100 transition-colors duration-300"
           >
             {/* Icon */}
             {feature.icon && (
@@ -134,10 +134,10 @@ export function FeatureGrid({
 
             {/* Content */}
             <div className="flex-1 space-y-1">
-              <h3 className="font-display text-lg font-bold text-foreground">
+              <h3 className="font-display text-lg font-bold text-slate-900">
                 {feature.title}
               </h3>
-              <p className="text-sm text-foreground-muted leading-relaxed">
+              <p className="text-sm text-slate-600 leading-relaxed">
                 {feature.description}
               </p>
             </div>
@@ -170,12 +170,12 @@ export function FeatureGrid({
           )}
 
           {/* Title */}
-          <h3 className="font-display text-lg font-bold text-foreground">
+          <h3 className="font-display text-lg font-bold text-slate-900">
             {feature.title}
           </h3>
 
           {/* Description */}
-          <p className="text-foreground-muted leading-relaxed">
+          <p className="text-slate-600 leading-relaxed">
             {feature.description}
           </p>
         </motion.div>

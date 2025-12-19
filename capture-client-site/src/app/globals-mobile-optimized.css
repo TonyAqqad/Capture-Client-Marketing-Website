@@ -22,23 +22,66 @@
     -webkit-backdrop-filter: none !important;
   }
 
-  /* Replace blur with solid semi-transparent backgrounds for visibility */
+  /* ENHANCED MOBILE GLASS - Light blur + enhanced visuals for premium feel */
   .glass,
-  .glass-premium,
   .glass-card,
   .glass-surface {
-    background: rgba(15, 23, 42, 0.95) !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
+    background: linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.85) 0%,
+      rgba(15, 23, 42, 0.75) 50%,
+      rgba(20, 30, 50, 0.85) 100%
+    ) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(0, 201, 255, 0.05) !important;
   }
 
-  /* Header and fixed elements - solid background instead of blur */
-  header,
+  /* Premium glass gets extra glow and stronger blur */
+  .glass-premium {
+    background: linear-gradient(
+      135deg,
+      rgba(15, 23, 42, 0.8) 0%,
+      rgba(20, 30, 55, 0.7) 50%,
+      rgba(15, 23, 42, 0.8) 100%
+    ) !important;
+    backdrop-filter: blur(12px) !important;
+    -webkit-backdrop-filter: blur(12px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 0 20px rgba(0, 201, 255, 0.03),
+      0 8px 32px rgba(0, 0, 0, 0.5),
+      0 0 40px rgba(0, 201, 255, 0.08) !important;
+  }
+
+  /* Navigation header - solid background instead of blur */
+  /* Target only the site navigation header, not semantic section headers */
+  nav header,
+  header:has(nav),
+  banner header,
+  [role="banner"] header,
   .fixed-header,
   nav[class*="fixed"] {
     background: rgba(15, 23, 42, 0.98) !important;
     backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important;
+  }
+
+  /* Ensure section headers within main content stay transparent */
+  /* Using high specificity to override the navigation header rule */
+  main header,
+  main section header,
+  section header,
+  article header,
+  .container-custom header,
+  [class*="container"] header {
+    background: transparent !important;
+    background-color: transparent !important;
   }
 }
 
@@ -436,29 +479,47 @@
    ============================================================================= */
 
 @media (max-width: 768px) {
-  /* 3.1 Simplify Glass Cards - Remove gradient layers for cleaner look */
+  /* 3.1 EDGE-TO-EDGE GLASS CARDS - Maximum width on mobile for glassy feel */
   .glass,
   .glass-premium,
   .glass-card,
   .glass-surface {
-    background-image: none !important;
+    /* Allow the gradient backgrounds from Phase 1 to show */
+    margin-left: -0.5rem !important;
+    margin-right: -0.5rem !important;
+    border-radius: 1rem !important;
   }
 
-  /* 3.2 Reduce Shadow Complexity - Single clean shadow */
-  .card,
-  .glass-card,
-  [class*="shadow-glow"],
-  [class*="shadow-2xl"],
-  [class*="shadow-xl"],
-  [class*="shadow-lg"] {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  /* Cards within container should be wider */
+  .container-custom .glass-premium,
+  .container-custom .glass-card,
+  [class*="max-w-"] .glass-premium,
+  [class*="max-w-"] .glass-card {
+    margin-left: -0.25rem !important;
+    margin-right: -0.25rem !important;
   }
 
-  /* Remove glow shadows entirely on mobile */
+  /* 3.2 Premium shadow glow for glass cards */
+  .glass-premium {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 0 20px rgba(0, 201, 255, 0.03),
+      0 8px 32px rgba(0, 0, 0, 0.5),
+      0 0 40px rgba(0, 201, 255, 0.08) !important;
+  }
+
+  .glass-card {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 8px 32px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(0, 201, 255, 0.05) !important;
+  }
+
+  /* Keep subtle shadows on other elements */
   .shadow-glow,
   .shadow-glow-lg,
   .shadow-glow-sm {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 4px 20px rgba(0, 201, 255, 0.15) !important;
   }
 
   /* 3.3 Hide Decorative Elements - Free up GPU memory */

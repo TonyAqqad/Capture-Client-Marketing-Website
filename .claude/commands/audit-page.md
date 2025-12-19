@@ -1,6 +1,7 @@
 ---
 description: Audit a page against established patterns (no changes)
-model: claude-opus-4.5
+argument-hint: [/route/path]
+model: opus
 ---
 Audit the page at: $ARGUMENTS
 
@@ -23,13 +24,15 @@ This is a READ-ONLY audit. Do NOT make any changes.
 - [ ] Canonical URL set
 - [ ] Robots directives present
 
-### 3. Styling Patterns ✓/✗
-- [ ] Using `glass-premium` for cards
-- [ ] Using `btn-gold` / `btn-ghost` for buttons
+### 3. Styling Patterns ✓/✗ (LIGHT THEME)
+- [ ] Backgrounds: `bg-white`, `bg-slate-50`, or `bg-gray-50`
+- [ ] Cards: `bg-white border border-slate-200` or light glass `bg-white/70 backdrop-blur-xl`
+- [ ] Buttons: Blue gradient primary (`from-blue-600 to-cyan-500`), white secondary
+- [ ] Text: `text-slate-900` (headings), `text-slate-600` (body)
 - [ ] Using theme colors (not hardcoded)
-- [ ] Using `text-gradient-gold-cyan` for emphasis
 - [ ] Using `container-custom` for width
 - [ ] Using `px-4 sm:px-6 lg:px-8` padding
+- [ ] NOT using dark classes: `.glass-premium`, `.btn-gold`, `.btn-ghost`, `bg-background-dark`
 
 ### 4. Layout & Structure ✓/✗
 - [ ] Hero section follows pattern
@@ -58,7 +61,7 @@ This is a READ-ONLY audit. Do NOT make any changes.
 - [ ] Link from `next/link` for internal links
 
 ### 8. Content ✓/✗
-- [ ] Phone number is 865-346-3339
+- [ ] Phone number is 865-346-6111
 - [ ] CTA links work
 - [ ] No placeholder text
 - [ ] Consistent brand voice

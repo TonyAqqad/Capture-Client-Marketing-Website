@@ -6,7 +6,7 @@ import { generateCollectionPageSchema } from "@/lib/advanced-schemas";
 import { MapPin, Circle, ArrowRight, Globe, Phone } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Service Locations | Voice AI & Marketing Services | Capture Client",
+  title: "Service Locations | Voice AI & Marketing | Capture Client",
   description:
     "Serving businesses across TN, GA, NC, VA, and KY with Voice AI, Google Ads, and Facebook Ads management. Find your location.",
   keywords: [
@@ -21,14 +21,14 @@ export const metadata: Metadata = {
     "ai voice agents near me"
   ],
   openGraph: {
-    title: "Service Locations | Voice AI & Marketing Services | Capture Client",
+    title: "Service Locations | Voice AI & Marketing | Capture Client",
     description:
       "Serving businesses across TN, GA, NC, VA, and KY with Voice AI, Google Ads, and Facebook Ads management.",
     url: "https://captureclient.com/locations",
     type: "website",
     images: [
       {
-        url: "https://captureclient.com/og-image.jpg",
+        url: "https://captureclient.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "Capture Client Service Locations"
@@ -119,25 +119,25 @@ export default async function LocationsPage() {
         }}
       />
 
-      <div className="min-h-screen bg-gradient-to-b from-[#0A1628] via-[#0F1B2E] to-[#0A1628]">
+      <div className="min-h-screen bg-gradient-to-b from-white to-slate-50">
         {/* Hero Section */}
         <div className="relative pt-24 sm:pt-28 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-16 overflow-hidden">
           {/* Background gradient effects */}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-primary/5 pointer-events-none" />
-          <div className="absolute top-20 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-transparent to-blue-50/50 pointer-events-none" />
+          <div className="absolute top-20 left-1/4 w-96 h-96 bg-blue-100/30 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute bottom-10 right-1/4 w-80 h-80 bg-blue-100/50 rounded-full blur-3xl pointer-events-none" />
 
           <div className="container mx-auto text-center relative z-10">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200 mb-6">
               <div className="flex items-center justify-center w-5 h-5 shrink-0">
-                <MapPin className="text-primary w-4 h-4" />
+                <MapPin className="text-blue-600 w-4 h-4" />
               </div>
-              <span className="text-sm font-medium text-primary">Local Service Areas</span>
+              <span className="text-sm font-medium text-blue-600">Local Service Areas</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-slate-900 mb-6 leading-tight">
               Locations We Serve
             </h1>
-            <p className="text-base sm:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-base sm:text-lg lg:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed px-4">
               Bringing Voice AI and marketing automation to businesses across the Southeast.
               Local expertise, cutting-edge technology.
             </p>
@@ -151,19 +151,19 @@ export default async function LocationsPage() {
               {/* State Header - More Prominent */}
               <div className="relative flex items-center gap-2 sm:gap-4 mb-8 sm:mb-12">
                 {/* Animated gradient line */}
-                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-cyan-400/40 to-cyan-400/20" />
+                <div className="h-px flex-1 bg-gradient-to-r from-transparent via-blue-300/40 to-blue-300/20" />
 
                 {/* State name with glowing background */}
                 <div className="relative group">
-                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-blue-500/20 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
-                  <h2 className="relative text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-white px-4 sm:px-8 py-2 sm:py-3">
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-cyan-400 to-blue-400">
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-blue-200/50 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500" />
+                  <h2 className="relative text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-slate-900 px-4 sm:px-8 py-2 sm:py-3">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-blue-700 to-cyan-600">
                       {state}
                     </span>
                   </h2>
                 </div>
 
-                <div className="h-px flex-1 bg-gradient-to-l from-transparent via-cyan-400/40 to-cyan-400/20" />
+                <div className="h-px flex-1 bg-gradient-to-l from-transparent via-blue-300/40 to-blue-300/20" />
               </div>
 
               {/* Location Cards Grid - Staggered Layout */}
@@ -180,13 +180,13 @@ export default async function LocationsPage() {
                     {/* Glass Card with Layered Frame Effect */}
                     <div className="relative h-full">
                       {/* Glow effect on hover */}
-                      <div className="absolute -inset-px bg-gradient-to-r from-cyan-400/0 via-cyan-400/50 to-cyan-400/0 rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-all duration-500" />
+                      <div className="absolute -inset-px bg-gradient-to-r from-blue-400/0 via-blue-400/50 to-blue-400/0 rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-all duration-500" />
 
                       {/* Layered frame (desktop only) */}
-                      <div className="hidden sm:block absolute inset-0 border border-white/5 rounded-2xl translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform duration-300" />
+                      <div className="hidden sm:block absolute inset-0 border border-slate-200/60 rounded-2xl translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform duration-300" />
 
                       {/* Main card */}
-                      <div className="relative h-full p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.2)] group-hover:border-cyan-400/30 group-hover:shadow-[0_8px_32px_rgba(6,182,212,0.2)] transition-all duration-500 group-hover:translate-y-[-4px] touch-target">
+                      <div className="relative h-full p-6 sm:p-7 rounded-2xl bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 group-hover:border-blue-300 group-hover:shadow-xl group-hover:shadow-blue-200/50 transition-all duration-500 group-hover:translate-y-[-4px] touch-target">
                         {/* Mesh gradient background */}
                         <div className="absolute inset-0 bg-mesh-premium rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
@@ -196,17 +196,17 @@ export default async function LocationsPage() {
                           <div className="flex items-start gap-4 mb-5">
                             {/* Icon with gradient background */}
                             <div className="relative flex-shrink-0">
-                              <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl blur-md opacity-50 group-hover:opacity-80 transition-opacity duration-300" />
-                              <div className="relative flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-400/20 via-cyan-500/10 to-blue-500/20 border border-cyan-400/30 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
-                                <MapPin className="text-cyan-300 w-6 h-6 group-hover:scale-110 transition-transform" />
+                              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl blur-md opacity-50 group-hover:opacity-80 transition-opacity duration-300" />
+                              <div className="relative flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-blue-50 via-blue-100/50 to-cyan-50 border border-blue-300 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                                <MapPin className="text-blue-600 w-6 h-6 group-hover:scale-110 transition-transform" />
                               </div>
                             </div>
 
                             <div className="flex-1 min-w-0">
-                              <h3 className="text-xl sm:text-2xl font-black text-white mb-1.5 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-300 group-hover:to-cyan-400 transition-all duration-300 tracking-tight">
+                              <h3 className="text-xl sm:text-2xl font-black text-slate-900 mb-1.5 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-600 group-hover:to-cyan-500 transition-all duration-300 tracking-tight">
                                 {location.location.city}
                               </h3>
-                              <p className="text-sm font-bold text-cyan-400/80 uppercase tracking-wider">
+                              <p className="text-sm font-bold text-blue-600/80 uppercase tracking-wider">
                                 {location.location.state_abbr}
                               </p>
                             </div>
@@ -215,7 +215,7 @@ export default async function LocationsPage() {
                           {/* Service Area Badge */}
                           {location.location.service_area_radius && (
                             <div className="mb-4">
-                              <span className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-gradient-to-r from-cyan-400/15 to-blue-500/15 border border-cyan-400/30 text-xs font-bold text-cyan-300 group-hover:border-cyan-400/50 transition-colors">
+                              <span className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 text-xs font-bold text-blue-700 group-hover:border-blue-300 transition-colors">
                                 <Circle className="w-3 h-3" />
                                 {location.location.service_area_radius} radius
                               </span>
@@ -225,10 +225,10 @@ export default async function LocationsPage() {
                           {/* Nearby Areas */}
                           {location.location.nearby_areas && location.location.nearby_areas.length > 0 && (
                             <div className="mb-5">
-                              <p className="text-xs font-bold text-cyan-400/60 uppercase tracking-wider mb-2">
+                              <p className="text-xs font-bold text-blue-600/70 uppercase tracking-wider mb-2">
                                 Also Serving:
                               </p>
-                              <p className="text-sm text-slate-300 line-clamp-2 leading-relaxed">
+                              <p className="text-sm text-slate-600 line-clamp-2 leading-relaxed">
                                 {location.location.nearby_areas.slice(0, 3).join(", ")}
                                 {location.location.nearby_areas.length > 3 && "..."}
                               </p>
@@ -236,12 +236,12 @@ export default async function LocationsPage() {
                           )}
 
                           {/* Divider with gradient */}
-                          <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-5" />
+                          <div className="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent mb-5" />
 
                           {/* CTA with Arrow Animation */}
-                          <div className="flex items-center justify-between text-cyan-300 font-bold text-sm group-hover:text-cyan-200 transition-colors">
+                          <div className="flex items-center justify-between text-blue-600 font-bold text-sm group-hover:text-blue-700 transition-colors">
                             <span>View Services</span>
-                            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-cyan-400/10 border border-cyan-400/20 group-hover:bg-cyan-400/20 group-hover:border-cyan-400/40 group-hover:translate-x-1 transition-all duration-300">
+                            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-50 border border-blue-200 group-hover:bg-blue-100 group-hover:border-blue-300 group-hover:translate-x-1 transition-all duration-300">
                               <ArrowRight className="w-4 h-4" />
                             </div>
                           </div>
@@ -255,25 +255,25 @@ export default async function LocationsPage() {
           ))}
 
           {/* CTA Section - Don't See Your Location */}
-          <div className="mt-12 sm:mt-20 text-center bg-gradient-to-br from-[#0A1628] to-primary/5 rounded-2xl p-6 sm:p-8 lg:p-12 border border-white/10 relative overflow-hidden">
+          <div className="mt-12 sm:mt-20 text-center bg-gradient-to-br from-slate-50 to-blue-50/50 rounded-2xl p-6 sm:p-8 lg:p-12 border border-slate-200 relative overflow-hidden">
             {/* Background decoration */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-100/30 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-100/50 rounded-full blur-3xl pointer-events-none" />
 
             <div className="relative z-10">
-              <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-primary/10 border border-primary/20 mb-6">
-                <Globe className="text-primary w-6 h-6 sm:w-7 sm:h-7" />
+              <div className="inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-blue-50 border border-blue-200 mb-6">
+                <Globe className="text-blue-600 w-6 h-6 sm:w-7 sm:h-7" />
               </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
                 Don't see your location?
               </h2>
-              <p className="text-base sm:text-lg text-gray-400 mb-8 max-w-2xl mx-auto px-4">
+              <p className="text-base sm:text-lg text-slate-600 mb-8 max-w-2xl mx-auto px-4">
                 We serve businesses nationwide with our Voice AI and digital marketing services.
                 Let's discuss how we can help you grow.
               </p>
               <a
                 href="tel:865-346-6111"
-                className="inline-flex items-center justify-center gap-2 bg-primary text-black px-6 sm:px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,255,163,0.3)] min-h-[44px]"
+                className="inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-6 sm:px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-200 min-h-[44px]"
               >
                 <Phone className="w-5 h-5 sm:w-5 sm:h-5" />
                 <span className="hidden sm:inline">Call Us: </span>(865) 346-6111

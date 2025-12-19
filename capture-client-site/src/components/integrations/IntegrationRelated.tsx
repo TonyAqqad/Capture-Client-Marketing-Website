@@ -49,7 +49,7 @@ export function IntegrationRelated({
     <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background-dark to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white" />
         <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl">
           <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-gradient-radial from-accent/10 to-transparent rounded-full blur-3xl" />
         </div>
@@ -65,10 +65,10 @@ export function IntegrationRelated({
             transition={{ duration: 0.6 }}
             className="text-center mb-12 sm:mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-slate-900 mb-4">
               More {categoryName} Integrations
             </h2>
-            <p className="text-lg text-foreground-muted max-w-2xl mx-auto">
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
               Explore other powerful integrations in this category
             </p>
           </motion.div>
@@ -84,10 +84,10 @@ export function IntegrationRelated({
           }}
         >
           {/* Left Gradient Overlay */}
-          <div className="absolute left-0 top-0 bottom-0 w-32 sm:w-48 bg-gradient-to-r from-background to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-32 sm:w-48 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
 
           {/* Right Gradient Overlay */}
-          <div className="absolute right-0 top-0 bottom-0 w-32 sm:w-48 bg-gradient-to-l from-background to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-32 sm:w-48 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
           {/* Pause Indicator */}
           <AnimatePresence>
@@ -96,7 +96,7 @@ export function IntegrationRelated({
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
-                className="absolute top-4 right-4 z-20 px-3 py-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full text-xs font-semibold text-foreground-muted flex items-center gap-1.5"
+                className="absolute top-4 right-4 z-20 px-3 py-1.5 bg-white/70 backdrop-blur-sm border border-slate-200 rounded-full text-xs font-semibold text-slate-600 flex items-center gap-1.5"
               >
                 <Pause className="w-3.5 h-3.5" />
                 Paused
@@ -145,9 +145,9 @@ export function IntegrationRelated({
                       if (isDragging) e.preventDefault();
                     }}
                   >
-                    <div className="relative h-full min-h-[320px] p-6 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:border-accent/30 transition-all duration-300 hover:shadow-glow">
+                    <div className="relative h-full min-h-[320px] p-6 bg-white/70 backdrop-blur-sm rounded-xl border border-slate-200 hover:border-accent/30 transition-all duration-300 hover:shadow-glow">
                       {/* Logo */}
-                      <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-white/10 backdrop-blur-sm border border-white/20 p-3 group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-16 h-16 mx-auto mb-4 rounded-xl bg-white/70 backdrop-blur-sm border border-slate-200 p-3 group-hover:scale-110 transition-transform duration-300">
                         <Image
                           src={integration.logoUrl}
                           alt={`${integration.name} logo`}
@@ -160,7 +160,7 @@ export function IntegrationRelated({
                       {/* Badges */}
                       <div className="flex flex-wrap gap-2 justify-center mb-3">
                         {integration.popular && (
-                          <div className="px-2 py-1 bg-gold/10 border border-gold/20 rounded-full text-xs font-semibold text-gold flex items-center gap-1">
+                          <div className="px-2 py-1 bg-blue-500/10 border border-blue-500/20 rounded-full text-xs font-semibold text-blue-600 flex items-center gap-1">
                             <Star className="w-3 h-3" />
                             Popular
                           </div>
@@ -174,12 +174,12 @@ export function IntegrationRelated({
                       </div>
 
                       {/* Name */}
-                      <h3 className="text-lg font-display font-bold text-foreground text-center mb-2 hover:text-accent transition-colors">
+                      <h3 className="text-lg font-display font-bold text-slate-900 text-center mb-2 hover:text-accent transition-colors">
                         {integration.name}
                       </h3>
 
                       {/* Short Description */}
-                      <p className="text-sm text-foreground-muted text-center line-clamp-2 mb-4">
+                      <p className="text-sm text-slate-600 text-center line-clamp-2 mb-4">
                         {integration.shortDescription}
                       </p>
 
@@ -191,7 +191,7 @@ export function IntegrationRelated({
                             animate={{ opacity: 1, height: "auto" }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.2 }}
-                            className="mt-4 pt-4 border-t border-white/10"
+                            className="mt-4 pt-4 border-t border-slate-200"
                           >
                             {/* Key Features Preview */}
                             {integration.keyFeatures && integration.keyFeatures.length > 0 && (
@@ -203,7 +203,7 @@ export function IntegrationRelated({
                                   {integration.keyFeatures.slice(0, 3).map((feature, idx) => (
                                     <li
                                       key={idx}
-                                      className="text-xs text-foreground-muted flex items-start gap-1.5"
+                                      className="text-xs text-slate-600 flex items-start gap-1.5"
                                     >
                                       <CheckCircle2 className="w-3 h-3 text-accent mt-0.5 flex-shrink-0" />
                                       <span className="line-clamp-1">{feature}</span>
@@ -237,7 +237,7 @@ export function IntegrationRelated({
 
           {/* Mobile Swipe Hint */}
           <div className="lg:hidden text-center mt-4 px-4">
-            <p className="text-xs text-foreground-muted flex items-center justify-center gap-2">
+            <p className="text-xs text-slate-600 flex items-center justify-center gap-2">
               <MousePointer className="w-3.5 h-3.5" />
               Swipe to explore more integrations
             </p>
@@ -255,7 +255,7 @@ export function IntegrationRelated({
           >
             <Link
               href="/integrations"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-accent/20 via-accent/10 to-transparent hover:from-accent/30 hover:via-accent/20 backdrop-blur-sm rounded-xl border border-accent/30 hover:border-accent/50 text-foreground font-semibold transition-all duration-300 hover:shadow-glow hover:scale-105"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-accent/20 via-accent/10 to-transparent hover:from-accent/30 hover:via-accent/20 backdrop-blur-sm rounded-xl border border-accent/30 hover:border-accent/50 text-slate-900 font-semibold transition-all duration-300 hover:shadow-glow hover:scale-105"
             >
               <Grid3X3 className="w-5 h-5 text-accent" />
               Browse All Integrations

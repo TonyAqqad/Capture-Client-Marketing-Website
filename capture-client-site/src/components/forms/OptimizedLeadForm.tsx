@@ -88,25 +88,25 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
     return (
       <div className="relative group animate-fade-in">
         {/* Success glow effect */}
-        <div className="absolute -inset-6 bg-gradient-to-r from-accent/40 via-primary/40 to-accent/40 rounded-3xl blur-3xl opacity-60 animate-pulse" />
+        <div className="absolute -inset-6 bg-gradient-to-r from-blue-100/60 via-cyan-100/60 to-blue-100/60 rounded-3xl blur-3xl opacity-60 animate-pulse" />
 
-        <div className="relative glass-premium p-10 text-center rounded-2xl border border-accent/40">
+        <div className="relative bg-white p-10 text-center rounded-2xl border-2 border-blue-200 shadow-xl">
           {/* Animated checkmark */}
-          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-accent/20 border-2 border-accent mb-6 relative">
-            <div className="absolute inset-0 rounded-full bg-accent/20 animate-ping" />
-            <CheckCircle className="w-16 h-16 text-accent relative z-10" />
+          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-blue-100 border-2 border-blue-500 mb-6 relative">
+            <div className="absolute inset-0 rounded-full bg-blue-100 animate-ping" />
+            <CheckCircle className="w-16 h-16 text-blue-600 relative z-10" />
           </div>
 
-          <h3 className="text-3xl font-black text-white mb-3">
+          <h3 className="text-3xl font-black text-slate-900 mb-3">
             We Got Your Request!
           </h3>
-          <p className="text-lg text-white/80 mb-4">
-            A growth specialist will call you within <span className="text-accent font-bold">15 minutes</span>.
+          <p className="text-lg text-slate-700 mb-4">
+            A growth specialist will call you within <span className="text-blue-600 font-bold">15 minutes</span>.
           </p>
-          <div className="inline-flex items-center gap-2 bg-accent/10 border border-accent/30 rounded-full px-5 py-2.5">
-            <Phone className="w-5 h-5 text-accent" />
-            <p className="text-sm text-white/70">
-              Check your phone: <span className="text-accent font-bold text-base">{formData.phone}</span>
+          <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-5 py-2.5">
+            <Phone className="w-5 h-5 text-blue-600" />
+            <p className="text-sm text-slate-600">
+              Check your phone: <span className="text-blue-600 font-bold text-base">{formData.phone}</span>
             </p>
           </div>
         </div>
@@ -122,24 +122,24 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
           <div
             className={`h-2 w-20 rounded-full transition-all duration-500 ${
               step === 1
-                ? "bg-gradient-to-r from-accent to-primary shadow-[0_0_12px_rgba(0,201,255,0.5)]"
-                : "bg-accent/50"
+                ? "bg-gradient-to-r from-blue-600 to-cyan-500 shadow-lg shadow-blue-200"
+                : "bg-blue-400"
             }`}
           />
           {step === 1 && (
-            <div className="absolute inset-0 rounded-full bg-accent/30 animate-pulse" />
+            <div className="absolute inset-0 rounded-full bg-blue-300/50 animate-pulse" />
           )}
         </div>
         <div className="relative">
           <div
             className={`h-2 w-20 rounded-full transition-all duration-500 ${
               step === 2
-                ? "bg-gradient-to-r from-primary to-accent shadow-[0_0_12px_rgba(74,105,226,0.5)]"
-                : "bg-white/10"
+                ? "bg-gradient-to-r from-cyan-500 to-blue-600 shadow-lg shadow-blue-200"
+                : "bg-slate-200"
             }`}
           />
           {step === 2 && (
-            <div className="absolute inset-0 rounded-full bg-primary/30 animate-pulse" />
+            <div className="absolute inset-0 rounded-full bg-blue-300/50 animate-pulse" />
           )}
         </div>
       </div>
@@ -152,9 +152,9 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
             <div className="group">
               <label
                 htmlFor="name"
-                className="block text-sm font-semibold text-white/90 mb-2.5 transition-colors group-focus-within:text-accent"
+                className="block text-sm font-semibold text-slate-700 mb-2.5 transition-colors group-focus-within:text-blue-600"
               >
-                Your Name <span className="text-accent">*</span>
+                Your Name <span className="text-blue-600">*</span>
               </label>
               <div className="relative">
                 <input
@@ -169,17 +169,16 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                   required
                   autoComplete="name"
                   className="w-full min-h-[52px] px-5 py-4 text-base
-                             bg-white/[0.03] backdrop-blur-xl
-                             border-2 border-white/10 rounded-xl
-                             text-white placeholder-white/40
+                             bg-white
+                             border-2 border-slate-200 rounded-xl
+                             text-slate-900 placeholder-slate-400
                              transition-all duration-300
-                             hover:bg-white/[0.05] hover:border-white/20
-                             focus:outline-none focus:bg-white/[0.08]
-                             focus:border-accent focus:ring-4 focus:ring-accent/20
-                             focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]
+                             hover:border-slate-300
+                             focus:outline-none focus:bg-white
+                             focus:border-blue-500 focus:ring-4 focus:ring-blue-100
                              touch-manipulation"
                 />
-                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
               </div>
             </div>
 
@@ -187,9 +186,9 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
             <div className="group">
               <label
                 htmlFor="phone"
-                className="block text-sm font-semibold text-white/90 mb-2.5 transition-colors group-focus-within:text-accent"
+                className="block text-sm font-semibold text-slate-700 mb-2.5 transition-colors group-focus-within:text-blue-600"
               >
-                Phone Number <span className="text-accent">*</span>
+                Phone Number <span className="text-blue-600">*</span>
               </label>
               <div className="relative">
                 <input
@@ -203,17 +202,16 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                   autoComplete="tel"
                   minLength={10}
                   className="w-full min-h-[52px] px-5 py-4 text-base
-                             bg-white/[0.03] backdrop-blur-xl
-                             border-2 border-white/10 rounded-xl
-                             text-white placeholder-white/40
+                             bg-white
+                             border-2 border-slate-200 rounded-xl
+                             text-slate-900 placeholder-slate-400
                              transition-all duration-300
-                             hover:bg-white/[0.05] hover:border-white/20
-                             focus:outline-none focus:bg-white/[0.08]
-                             focus:border-accent focus:ring-4 focus:ring-accent/20
-                             focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]
+                             hover:border-slate-300
+                             focus:outline-none focus:bg-white
+                             focus:border-blue-500 focus:ring-4 focus:ring-blue-100
                              touch-manipulation"
                 />
-                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
               </div>
             </div>
 
@@ -221,9 +219,9 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
             <div className="group">
               <label
                 htmlFor="email"
-                className="block text-sm font-semibold text-white/90 mb-2.5 transition-colors group-focus-within:text-accent"
+                className="block text-sm font-semibold text-slate-700 mb-2.5 transition-colors group-focus-within:text-blue-600"
               >
-                Email <span className="text-white/40">(optional)</span>
+                Email <span className="text-slate-400">(optional)</span>
               </label>
               <div className="relative">
                 <input
@@ -234,46 +232,45 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   autoComplete="email"
                   className="w-full min-h-[52px] px-5 py-4 text-base
-                             bg-white/[0.03] backdrop-blur-xl
-                             border-2 border-white/10 rounded-xl
-                             text-white placeholder-white/40
+                             bg-white
+                             border-2 border-slate-200 rounded-xl
+                             text-slate-900 placeholder-slate-400
                              transition-all duration-300
-                             hover:bg-white/[0.05] hover:border-white/20
-                             focus:outline-none focus:bg-white/[0.08]
-                             focus:border-accent focus:ring-4 focus:ring-accent/20
-                             focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]
+                             hover:border-slate-300
+                             focus:outline-none focus:bg-white
+                             focus:border-blue-500 focus:ring-4 focus:ring-blue-100
                              touch-manipulation"
                 />
-                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
+                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
               </div>
             </div>
 
             {/* SMS Consent Checkbox - A2P 10DLC Compliant */}
             <div className="group">
-              <label className="flex items-start gap-3 cursor-pointer p-3 rounded-xl bg-white/[0.02] border border-white/5 hover:bg-white/[0.04] hover:border-white/10 transition-all">
+              <label className="flex items-start gap-3 cursor-pointer p-3 rounded-xl bg-slate-50 border border-slate-200 hover:bg-slate-100 hover:border-slate-300 transition-all">
                 <input
                   type="checkbox"
                   checked={formData.smsConsent}
                   onChange={(e) => setFormData({ ...formData, smsConsent: e.target.checked })}
-                  className="mt-1 w-5 h-5 rounded border-2 border-white/20 bg-white/5
-                             checked:bg-accent checked:border-accent
-                             focus:ring-2 focus:ring-accent/50 focus:ring-offset-0
+                  className="mt-1 w-5 h-5 rounded border-2 border-slate-300 bg-white
+                             checked:bg-blue-600 checked:border-blue-600
+                             focus:ring-2 focus:ring-blue-100 focus:ring-offset-0
                              cursor-pointer appearance-none
                              relative after:content-['✓'] after:absolute after:inset-0
                              after:flex after:items-center after:justify-center
-                             after:text-background-dark after:font-bold after:text-xs
+                             after:text-white after:font-bold after:text-xs
                              after:opacity-0 checked:after:opacity-100
                              transition-all"
                 />
-                <span className="text-sm text-white/70 leading-relaxed">
+                <span className="text-sm text-slate-600 leading-relaxed">
                   I agree to receive text messages from Capture Client at the phone number provided.
                   Message frequency varies. Message and data rates may apply.
                   Reply STOP to unsubscribe.{" "}
-                  <Link href="/privacy-policy" className="text-accent hover:underline">
+                  <Link href="/privacy-policy" className="text-blue-600 hover:underline">
                     Privacy Policy
                   </Link>{" "}
                   &{" "}
-                  <Link href="/terms-of-service" className="text-accent hover:underline">
+                  <Link href="/terms-of-service" className="text-blue-600 hover:underline">
                     Terms
                   </Link>
                 </span>
@@ -288,22 +285,22 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                        transition-all duration-300
                        hover:scale-[1.02] active:scale-[0.98]"
           >
-            {/* Animated gradient background */}
-            <div className="absolute inset-0 bg-gradient-to-r from-accent via-primary to-accent bg-[length:200%_100%] animate-gradient-shift" />
+            {/* Gradient background */}
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500" />
 
             {/* Hover glow */}
-            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/10" />
+            <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-blue-700 to-cyan-600" />
 
             {/* Button content */}
-            <span className="relative z-10 flex items-center justify-center gap-3 px-8 py-4 text-base sm:text-lg font-bold text-background-dark uppercase tracking-wider">
+            <span className="relative z-10 flex items-center justify-center gap-3 px-8 py-4 text-base sm:text-lg font-bold text-white uppercase tracking-wider">
               Continue
               <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" />
             </span>
           </button>
 
           {/* Trust badge */}
-          <p className="flex items-center justify-center gap-2 text-xs text-white/50">
-            <Lock className="w-3.5 h-3.5 text-accent" />
+          <p className="flex items-center justify-center gap-2 text-xs text-slate-500">
+            <Lock className="w-3.5 h-3.5 text-blue-600" />
             We respect your privacy. No spam, ever.
           </p>
         </form>
@@ -315,9 +312,9 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
           <div className="group">
             <label
               htmlFor="challenge"
-              className="block text-sm font-semibold text-white/90 mb-2.5 transition-colors group-focus-within:text-accent"
+              className="block text-sm font-semibold text-slate-700 mb-2.5 transition-colors group-focus-within:text-blue-600"
             >
-              What's your biggest challenge right now? <span className="text-accent">*</span>
+              What's your biggest challenge right now? <span className="text-blue-600">*</span>
             </label>
             <div className="relative">
               <select
@@ -326,16 +323,15 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                 onChange={(e) => setFormData({ ...formData, challenge: e.target.value })}
                 required
                 className="w-full min-h-[52px] px-5 py-4 text-base appearance-none
-                           bg-white/[0.03] backdrop-blur-xl
-                           border-2 border-white/10 rounded-xl
-                           text-white
+                           bg-white
+                           border-2 border-slate-200 rounded-xl
+                           text-slate-900
                            transition-all duration-300
-                           hover:bg-white/[0.05] hover:border-white/20
-                           focus:outline-none focus:bg-white/[0.08]
-                           focus:border-accent focus:ring-4 focus:ring-accent/20
-                           focus:shadow-[0_0_20px_rgba(0,201,255,0.15)]
+                           hover:border-slate-300
+                           focus:outline-none focus:bg-white
+                           focus:border-blue-500 focus:ring-4 focus:ring-blue-100
                            touch-manipulation
-                           [&>option]:bg-background-dark [&>option]:text-white"
+                           [&>option]:bg-white [&>option]:text-slate-900"
               >
                 <option value="">Select your main challenge...</option>
                 <option value="missing-calls">Missing too many customer calls</option>
@@ -346,8 +342,8 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                 <option value="other">Something else</option>
               </select>
               {/* Custom dropdown icon */}
-              <ChevronDown className="w-5 h-5 absolute right-4 top-1/2 -translate-y-1/2 text-white/40 pointer-events-none" />
-              <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
+              <ChevronDown className="w-5 h-5 absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
+              <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
             </div>
           </div>
 
@@ -357,10 +353,10 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
               type="button"
               onClick={() => setStep(1)}
               className="min-w-[56px] min-h-[56px] px-4 rounded-xl
-                         bg-white/[0.03] border-2 border-white/10
-                         text-white/80
+                         bg-white border-2 border-slate-200
+                         text-slate-600
                          transition-all duration-300
-                         hover:bg-white/[0.08] hover:border-white/20
+                         hover:bg-slate-50 hover:border-slate-300
                          touch-manipulation active:scale-95"
             >
               <ArrowLeft className="w-5 h-5" />
@@ -375,14 +371,14 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                          hover:scale-[1.02] active:scale-[0.98]
                          disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
             >
-              {/* Animated gradient background */}
-              <div className="absolute inset-0 bg-gradient-to-r from-accent via-primary to-accent bg-[length:200%_100%] animate-gradient-shift" />
+              {/* Gradient background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500" />
 
               {/* Hover glow */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/10" />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-r from-blue-700 to-cyan-600" />
 
               {/* Button content */}
-              <span className="relative z-10 flex items-center justify-center gap-3 px-8 py-4 text-base sm:text-lg font-bold text-background-dark uppercase tracking-wider">
+              <span className="relative z-10 flex items-center justify-center gap-3 px-8 py-4 text-base sm:text-lg font-bold text-white uppercase tracking-wider">
                 {isSubmitting ? (
                   <>
                     <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
@@ -416,26 +412,26 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
           {/* Trust signals near submit */}
           <div className="grid grid-cols-3 gap-2 pt-2">
             <div className="flex flex-col items-center gap-1 text-center">
-              <Shield className="w-5 h-5 text-accent" />
-              <span className="text-[10px] sm:text-xs text-white/60">No Credit Card</span>
+              <Shield className="w-5 h-5 text-blue-600" />
+              <span className="text-[10px] sm:text-xs text-slate-500">No Credit Card</span>
             </div>
             <div className="flex flex-col items-center gap-1 text-center">
-              <Clock className="w-5 h-5 text-accent" />
-              <span className="text-[10px] sm:text-xs text-white/60">15-min Setup</span>
+              <Clock className="w-5 h-5 text-blue-600" />
+              <span className="text-[10px] sm:text-xs text-slate-500">15-min Setup</span>
             </div>
             <div className="flex flex-col items-center gap-1 text-center">
-              <Headset className="w-5 h-5 text-accent" />
-              <span className="text-[10px] sm:text-xs text-white/60">Live Support</span>
+              <Headset className="w-5 h-5 text-blue-600" />
+              <span className="text-[10px] sm:text-xs text-slate-500">Live Support</span>
             </div>
           </div>
 
           {/* Call option */}
-          <div className="flex flex-col items-center gap-3 pt-2 border-t border-white/10">
-            <p className="text-xs text-white/50">
+          <div className="flex flex-col items-center gap-3 pt-2 border-t border-slate-200">
+            <p className="text-xs text-slate-500">
               Or call:{" "}
               <a
                 href="tel:865-346-6111"
-                className="text-accent hover:underline font-bold inline-flex items-center
+                className="text-blue-600 hover:underline font-bold inline-flex items-center
                            touch-manipulation active:scale-95 transition-transform duration-100
                            min-h-[48px]"
                 onClick={() => trackPhoneClick("865-346-6111", `optimized_form_${source}`)}

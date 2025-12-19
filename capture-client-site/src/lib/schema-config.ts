@@ -156,11 +156,11 @@ export const services = {
     },
     offers: {
       "@type": "Offer",
-      price: "999",
+      price: "950",
       priceCurrency: "USD",
       priceSpecification: {
         "@type": "UnitPriceSpecification",
-        price: "999",
+        price: "950",
         priceCurrency: "USD",
         unitText: "month",
       },

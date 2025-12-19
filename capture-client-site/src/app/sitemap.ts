@@ -48,6 +48,30 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.95, // Pricing page - high conversion
     },
+    {
+      url: `${baseUrl}/case-studies`,
+      lastModified: currentDate,
+      changeFrequency: "weekly",
+      priority: 0.8, // Case studies - social proof
+    },
+    {
+      url: `${baseUrl}/how-it-works`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.8, // How it works - education
+    },
+    {
+      url: `${baseUrl}/demo`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.7, // Demo - product trial
+    },
+    {
+      url: `${baseUrl}/use-cases`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.7, // Use cases - feature discovery
+    },
   ];
 
   // Service pages (high priority)
@@ -112,6 +136,67 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly" as const,
       priority: 0.8, // Industry pages - critical for vertical SEO
     })),
+    // Individual /industries/* pages (dedicated landing pages)
+    {
+      url: `${baseUrl}/industries/healthcare`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/industries/automotive`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/industries/home-services`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/industries/legal`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/industries/real-estate`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/industries/restaurants`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/industries/dental`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/industries/fitness`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/industries/med-spa`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/industries/martial-arts`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
   ];
 
   // National SEO pages (high priority)
@@ -189,12 +274,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 }
 
 /**
- * Total expected URLs: ~240+ pages
+ * Total expected URLs: ~270+ pages
  * - 1 homepage
+ * - 4 core conversion pages (case-studies, how-it-works, demo, use-cases)
  * - 4-5 service pages
  * - 90+ location pages (service × location combinations)
  * - 58 integration pages
- * - 12 industry pages
+ * - 12 /who-we-serve industry pages
+ * - 10 /industries/* dedicated landing pages
  * - 10-15 national SEO pages
  * - 3-5 package pages
  * - 6 supporting pages

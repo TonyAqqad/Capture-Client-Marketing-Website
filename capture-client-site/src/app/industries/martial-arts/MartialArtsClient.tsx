@@ -18,7 +18,6 @@ import {
   Target,
   ArrowRight,
   Star,
-  Award,
   Sparkles
 } from "lucide-react";
 
@@ -132,12 +131,12 @@ export default function MartialArtsClient() {
   }, [monthlyInquiries, membershipValue]);
 
   return (
-    <div className="min-h-screen bg-background-dark">
+    <div className="min-h-screen bg-white">
 
       {/* HERO SECTION */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Aurora Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background-dark via-gold-950/10 to-cyan-950/10" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50 to-white" />
 
         {/* Animated Gradient Orb */}
         <motion.div
@@ -154,7 +153,7 @@ export default function MartialArtsClient() {
             ease: "easeInOut"
           }}
         >
-          <div className="w-full h-full bg-gradient-radial from-gold-500/40 via-cyan-500/20 to-transparent blur-3xl" />
+          <div className="w-full h-full bg-gradient-radial from-blue-200/60 via-cyan-100/30 to-transparent blur-3xl" />
         </motion.div>
 
         {/* Content */}
@@ -166,10 +165,10 @@ export default function MartialArtsClient() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-premium border border-gold/30 mb-8"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200 mb-8"
             >
-              <Sparkles className="w-4 h-4 text-gold" />
-              <span className="text-sm font-semibold text-foreground">
+              <Sparkles className="w-4 h-4 text-blue-600" />
+              <span className="text-sm font-semibold text-slate-900">
                 For BJJ, Karate, Taekwondo & MMA Schools
               </span>
             </motion.div>
@@ -179,11 +178,11 @@ export default function MartialArtsClient() {
               initial={{ opacity: 0, y: 30, scale: 0.95 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className="text-display-lg lg:text-hero-xl font-display font-bold text-foreground mb-6"
+              className="text-display-lg lg:text-hero-xl font-display font-bold text-slate-900 mb-6"
             >
               Stop Losing{" "}
               <motion.span
-                className="text-gradient-gold-cyan inline-block"
+                className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent inline-block"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.4, ease: "backOut" }}
@@ -198,10 +197,10 @@ export default function MartialArtsClient() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xl sm:text-2xl lg:text-3xl text-foreground-muted mb-8 leading-relaxed max-w-4xl mx-auto"
+              className="text-xl sm:text-2xl lg:text-3xl text-slate-600 mb-8 leading-relaxed max-w-4xl mx-auto"
             >
               AI That Answers Every Inquiry, Books Every Trial Class.{" "}
-              <span className="text-foreground font-semibold">
+              <span className="text-slate-900 font-semibold">
                 Even During Your Busiest Training Hours.
               </span>
             </motion.p>
@@ -212,13 +211,13 @@ export default function MartialArtsClient() {
               animate={{ opacity: 1, scale: 1 }}
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="glass-premium p-6 rounded-2xl border-2 border-gold/30 mb-10 max-w-md mx-auto hover:shadow-glow-gold transition-all"
+              className="bg-white/70 backdrop-blur-xl p-6 rounded-2xl border border-slate-200 mb-10 max-w-md mx-auto hover:shadow-lg hover:shadow-slate-200/50 transition-all"
             >
-              <div className="text-sm text-foreground-muted mb-2">
+              <div className="text-sm text-slate-600 mb-2">
                 Average Studio Lost Revenue (Annual)
               </div>
               <motion.div
-                className="text-5xl font-bold text-gradient-gold-cyan"
+                className="text-5xl font-bold text-blue-600"
                 key={animatedRevenue}
                 initial={{ scale: 1.1, opacity: 0.8 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -226,7 +225,7 @@ export default function MartialArtsClient() {
               >
                 ${animatedRevenue.toLocaleString()}
               </motion.div>
-              <div className="text-xs text-foreground-muted mt-2">
+              <div className="text-xs text-slate-600 mt-2">
                 From missed calls during class time
               </div>
             </motion.div>
@@ -240,8 +239,8 @@ export default function MartialArtsClient() {
             >
               <motion.a
                 href="tel:865-346-6111"
-                className="btn-gold px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 shadow-glow-gold-lg w-full sm:w-auto"
-                whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(212, 175, 55, 0.6)" }}
+                className="bg-gradient-to-r from-gold to-gold-600 px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 hover:shadow-lg hover:shadow-gold/50 w-full sm:w-auto"
+                whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.2 }}
               >
@@ -256,7 +255,7 @@ export default function MartialArtsClient() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                 <Link
                   href="/demo"
-                  className="btn-ghost px-10 py-5 text-xl font-semibold rounded-xl inline-flex items-center gap-2 w-full sm:w-auto"
+                  className="bg-white/70 backdrop-blur-xl border border-slate-200 px-10 py-5 text-xl font-semibold rounded-xl inline-flex items-center gap-2 w-full sm:w-auto hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50 transition-all"
                 >
                   Watch Demo
                   <motion.div
@@ -274,9 +273,9 @@ export default function MartialArtsClient() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="mt-8 text-sm text-foreground-muted flex items-center justify-center gap-2"
+              className="mt-8 text-sm text-slate-600 flex items-center justify-center gap-2"
             >
-              <Shield className="w-4 h-4 text-gold" />
+              <Shield className="w-4 h-4 text-blue-600" />
               Trusted by 100+ martial arts studios nationwide
             </motion.div>
           </div>
@@ -292,15 +291,15 @@ export default function MartialArtsClient() {
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 border-2 border-gold/30 rounded-full flex items-start justify-center p-2"
+            className="w-6 h-10 border-2 border-blue-200 rounded-full flex items-start justify-center p-2"
           >
-            <div className="w-1.5 h-1.5 bg-gold rounded-full" />
+            <div className="w-1.5 h-1.5 bg-blue-600 rounded-full" />
           </motion.div>
         </motion.div>
       </section>
 
       {/* PROBLEM IMPACT SECTION */}
-      <section className="section relative bg-background">
+      <section className="section relative bg-slate-50">
         <div className="absolute inset-0 bg-mesh opacity-10" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -311,12 +310,12 @@ export default function MartialArtsClient() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-display-md font-display font-bold text-foreground mb-6">
+            <h2 className="text-display-md font-display font-bold text-slate-900 mb-6">
               How Many Families Are You Losing{" "}
-              <span className="text-gradient-gold-cyan">While You're on the Mat?</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">While You're on the Mat?</span>
             </h2>
-            <p className="text-xl text-foreground-muted max-w-3xl mx-auto">
-              Parents call during class. <span className="text-foreground font-semibold">70% of enrollments start with a phone call.</span>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Parents call during class. <span className="text-slate-900 font-semibold">70% of enrollments start with a phone call.</span>
             </p>
           </motion.div>
 
@@ -352,11 +351,11 @@ export default function MartialArtsClient() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15, duration: 0.5 }}
                 whileHover={{ y: -8, scale: 1.02 }}
-                className="glass-premium p-8 rounded-2xl relative hover:shadow-glow-gold-lg transition-all"
+                className="bg-white/70 backdrop-blur-xl p-8 rounded-2xl relative hover:shadow-lg hover:shadow-slate-200/50 border border-slate-200 hover:border-blue-300 transition-all"
               >
                 {/* Step Number */}
                 <motion.div
-                  className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-gold-500 to-amber-600 rounded-full flex items-center justify-center text-2xl font-bold shadow-glow-gold"
+                  className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-full flex items-center justify-center text-2xl font-bold text-white shadow-lg shadow-slate-200/50"
                   whileHover={{ rotate: 360, scale: 1.1 }}
                   transition={{ duration: 0.6 }}
                 >
@@ -366,10 +365,10 @@ export default function MartialArtsClient() {
                 <motion.div whileHover={{ scale: 1.1, rotate: 5 }} transition={{ duration: 0.3 }}>
                   <item.icon className={`w-12 h-12 ${item.color} mb-4`} />
                 </motion.div>
-                <h3 className="text-xl font-bold text-foreground mb-3">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
                   {item.title}
                 </h3>
-                <p className="text-foreground-muted leading-relaxed">
+                <p className="text-slate-600 leading-relaxed">
                   {item.description}
                 </p>
               </motion.div>
@@ -379,7 +378,7 @@ export default function MartialArtsClient() {
       </section>
 
       {/* MARTIAL ARTS STYLE TABS */}
-      <section className="section relative bg-background-dark">
+      <section className="section relative bg-white">
         <div className="absolute inset-0 bg-mesh-premium opacity-20" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -390,11 +389,11 @@ export default function MartialArtsClient() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-display-md font-display font-bold text-foreground mb-4">
+            <h2 className="text-display-md font-display font-bold text-slate-900 mb-4">
               Built for Every{" "}
-              <span className="text-gradient-gold-cyan">Martial Arts Discipline</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Martial Arts Discipline</span>
             </h2>
-            <p className="text-xl text-foreground-muted max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               See how AI saves enrollments across different martial arts programs
             </p>
           </motion.div>
@@ -419,8 +418,8 @@ export default function MartialArtsClient() {
                 whileTap={{ scale: 0.95 }}
                 className={`px-6 py-3 rounded-xl font-semibold transition-all ${
                   selectedStudio.id === studio.id
-                    ? "bg-gradient-to-r from-gold-500 to-amber-600 text-white shadow-glow-gold"
-                    : "glass-card text-foreground-muted hover:text-foreground hover:border-gold/30 border border-transparent"
+                    ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg shadow-slate-200/50"
+                    : "bg-white/70 backdrop-blur-xl border border-slate-200 text-slate-600 hover:text-slate-900 hover:border-blue-300"
                 }`}
               >
                 <motion.span
@@ -443,39 +442,39 @@ export default function MartialArtsClient() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.4 }}
-              className="glass-premium p-8 md:p-12 rounded-2xl border-2 border-gold/30 max-w-4xl mx-auto"
+              className="bg-white/70 backdrop-blur-xl p-8 md:p-12 rounded-2xl border border-slate-200 max-w-4xl mx-auto shadow-lg shadow-slate-200/50"
             >
               <div className="flex items-start gap-6 mb-6">
                 <div className="text-6xl">{selectedStudio.icon}</div>
                 <div className="flex-1">
-                  <h3 className="text-3xl font-bold text-foreground mb-2">
+                  <h3 className="text-3xl font-bold text-slate-900 mb-2">
                     {selectedStudio.name}
                   </h3>
-                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/30">
-                    <DollarSign className="w-5 h-5 text-gold" />
-                    <span className="text-gold font-bold">{selectedStudio.value}</span>
-                    <span className="text-foreground-muted text-sm">avg tuition</span>
+                  <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200">
+                    <DollarSign className="w-5 h-5 text-blue-600" />
+                    <span className="text-blue-600 font-bold">{selectedStudio.value}</span>
+                    <span className="text-slate-600 text-sm">avg tuition</span>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-red-500/10 border-l-4 border-red-500 p-6 rounded-lg mb-6">
-                <div className="text-sm font-semibold text-red-400 mb-2 uppercase">
+              <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg mb-6">
+                <div className="text-sm font-semibold text-red-600 mb-2 uppercase">
                   {selectedStudio.scenario}
                 </div>
-                <p className="text-foreground leading-relaxed">
+                <p className="text-slate-900 leading-relaxed">
                   {selectedStudio.pain}
                 </p>
               </div>
 
-              <div className="bg-green-500/10 border-l-4 border-green-500 p-6 rounded-lg">
-                <div className="text-sm font-semibold text-green-400 mb-2 uppercase flex items-center gap-2">
+              <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-lg">
+                <div className="text-sm font-semibold text-green-600 mb-2 uppercase flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5" />
                   With AI Answering
                 </div>
-                <p className="text-foreground leading-relaxed">
+                <p className="text-slate-900 leading-relaxed">
                   AI answers instantly. Parent feels heard. Trial class booked in 60 seconds.
-                  Student enrolls. <span className="font-bold text-gold">You capture the {selectedStudio.value} monthly revenue.</span>
+                  Student enrolls. <span className="font-bold text-blue-600">You capture the {selectedStudio.value} monthly revenue.</span>
                 </p>
               </div>
             </motion.div>
@@ -484,7 +483,7 @@ export default function MartialArtsClient() {
       </section>
 
       {/* INTEGRATION SHOWCASE */}
-      <section className="section relative bg-background">
+      <section className="section relative bg-slate-50">
         <div className="absolute inset-0 bg-mesh opacity-10" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -495,17 +494,17 @@ export default function MartialArtsClient() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-premium border border-cyan/30 mb-6">
-              <Zap className="w-4 h-4 text-cyan" />
-              <span className="text-sm font-semibold text-foreground">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200 mb-6">
+              <Zap className="w-4 h-4 text-blue-600" />
+              <span className="text-sm font-semibold text-slate-900">
                 Studio Management Integration
               </span>
             </div>
-            <h2 className="text-display-md font-display font-bold text-foreground mb-4">
+            <h2 className="text-display-md font-display font-bold text-slate-900 mb-4">
               Syncs With Your{" "}
-              <span className="text-gradient-gold-cyan">Existing Software</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Existing Software</span>
             </h2>
-            <p className="text-xl text-foreground-muted max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Trial classes and enrollments sync automatically to your member management system
             </p>
           </motion.div>
@@ -519,17 +518,17 @@ export default function MartialArtsClient() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.4 }}
                 whileHover={{ scale: 1.08, y: -4 }}
-                className="glass-premium p-8 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-gold/30 border border-transparent transition-all hover:shadow-glow-gold-lg cursor-pointer"
+                className="bg-white/70 backdrop-blur-xl p-8 rounded-2xl flex flex-col items-center justify-center gap-4 hover:border-blue-300 border border-slate-200 transition-all hover:shadow-lg hover:shadow-slate-200/50 cursor-pointer"
               >
                 <motion.div
-                  className="w-16 h-16 rounded-full bg-gradient-to-br from-gold-500 to-amber-600 flex items-center justify-center text-2xl font-bold shadow-glow-gold"
+                  className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-2xl font-bold text-white shadow-lg shadow-slate-200/50"
                   whileHover={{ rotate: 360 }}
                   transition={{ duration: 0.6 }}
                 >
                   {integration.logo}
                 </motion.div>
                 <div className="text-center">
-                  <div className="font-bold text-foreground mb-1">{integration.name}</div>
+                  <div className="font-bold text-slate-900 mb-1">{integration.name}</div>
                 </div>
               </motion.div>
             ))}
@@ -544,7 +543,7 @@ export default function MartialArtsClient() {
           >
             <Link
               href="/integrations"
-              className="inline-flex items-center gap-2 text-gold hover:text-gold-400 font-semibold transition-colors"
+              className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-500 font-semibold transition-colors"
             >
               View all integrations
               <ArrowRight className="w-5 h-5" />
@@ -554,7 +553,7 @@ export default function MartialArtsClient() {
       </section>
 
       {/* ROI CALCULATOR */}
-      <section className="section relative bg-background-dark">
+      <section className="section relative bg-white">
         <div className="absolute inset-0 bg-mesh-premium opacity-20" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -565,11 +564,11 @@ export default function MartialArtsClient() {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-display-md font-display font-bold text-foreground mb-4">
+            <h2 className="text-display-md font-display font-bold text-slate-900 mb-4">
               Calculate Your{" "}
-              <span className="text-gradient-gold-cyan">Lost Revenue</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Lost Revenue</span>
             </h2>
-            <p className="text-xl text-foreground-muted max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               See how much money missed calls cost your dojo
             </p>
           </motion.div>
@@ -579,15 +578,15 @@ export default function MartialArtsClient() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="glass-premium p-8 md:p-12 rounded-2xl border-2 border-gold/30 max-w-3xl mx-auto"
+            className="bg-white/70 backdrop-blur-xl p-8 md:p-12 rounded-2xl border border-slate-200 max-w-3xl mx-auto shadow-lg shadow-slate-200/50"
           >
             {/* Slider: Monthly Inquiries */}
             <div className="mb-10">
               <div className="flex justify-between items-center mb-4">
-                <label className="text-lg font-semibold text-foreground">
+                <label className="text-lg font-semibold text-slate-900">
                   Monthly Parent Inquiries
                 </label>
-                <span className="text-3xl font-bold text-gold">
+                <span className="text-3xl font-bold text-blue-600">
                   {monthlyInquiries}
                 </span>
               </div>
@@ -597,9 +596,9 @@ export default function MartialArtsClient() {
                 max="150"
                 value={monthlyInquiries}
                 onChange={(e) => setMonthlyInquiries(Number(e.target.value))}
-                className="w-full h-3 bg-white/10 rounded-lg appearance-none cursor-pointer slider-gold"
+                className="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
               />
-              <div className="flex justify-between text-sm text-foreground-muted mt-2">
+              <div className="flex justify-between text-sm text-slate-600 mt-2">
                 <span>10</span>
                 <span>150</span>
               </div>
@@ -608,10 +607,10 @@ export default function MartialArtsClient() {
             {/* Slider: Monthly Membership Value */}
             <div className="mb-10">
               <div className="flex justify-between items-center mb-4">
-                <label className="text-lg font-semibold text-foreground">
+                <label className="text-lg font-semibold text-slate-900">
                   Average Monthly Tuition
                 </label>
-                <span className="text-3xl font-bold text-gold">
+                <span className="text-3xl font-bold text-blue-600">
                   ${membershipValue}
                 </span>
               </div>
@@ -621,24 +620,24 @@ export default function MartialArtsClient() {
                 max="300"
                 value={membershipValue}
                 onChange={(e) => setMembershipValue(Number(e.target.value))}
-                className="w-full h-3 bg-white/10 rounded-lg appearance-none cursor-pointer slider-gold"
+                className="w-full h-3 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
               />
-              <div className="flex justify-between text-sm text-foreground-muted mt-2">
+              <div className="flex justify-between text-sm text-slate-600 mt-2">
                 <span>$100</span>
                 <span>$300</span>
               </div>
             </div>
 
             {/* Results */}
-            <div className="bg-gradient-to-br from-red-500/20 to-orange-500/20 border-2 border-red-500/50 p-8 rounded-2xl mb-8">
+            <div className="bg-gradient-to-br from-red-50 to-red-100 border-2 border-red-200 p-8 rounded-2xl mb-8">
               <div className="text-center">
-                <div className="text-sm font-semibold text-red-400 mb-2 uppercase">
+                <div className="text-sm font-semibold text-red-600 mb-2 uppercase">
                   Annual Lost Revenue from Missed Calls
                 </div>
-                <div className="text-6xl md:text-7xl font-bold text-gradient-gold-cyan mb-4">
+                <div className="text-6xl md:text-7xl font-bold text-blue-600 mb-4">
                   ${lostRevenue.toLocaleString()}
                 </div>
-                <div className="text-foreground-muted">
+                <div className="text-slate-600">
                   Based on 35% miss rate during class hours × 70% trial conversion
                 </div>
               </div>
@@ -661,7 +660,7 @@ export default function MartialArtsClient() {
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
-                  className="glass-card p-4 rounded-xl text-center"
+                  className="bg-white/70 backdrop-blur-xl border border-slate-200 p-4 rounded-xl text-center"
                   initial={{ opacity: 0, scale: 0.9 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
@@ -669,7 +668,7 @@ export default function MartialArtsClient() {
                   whileHover={{ scale: 1.05, y: -4 }}
                 >
                   <motion.div
-                    className="text-2xl font-bold text-gold mb-1"
+                    className="text-2xl font-bold text-blue-600 mb-1"
                     key={`${stat.value}-${stat.label}`}
                     initial={{ scale: 1.2, opacity: 0.5 }}
                     animate={{ scale: 1, opacity: 1 }}
@@ -677,7 +676,7 @@ export default function MartialArtsClient() {
                   >
                     {stat.value}
                   </motion.div>
-                  <div className="text-sm text-foreground-muted">
+                  <div className="text-sm text-slate-600">
                     {stat.label}
                   </div>
                 </motion.div>
@@ -686,7 +685,7 @@ export default function MartialArtsClient() {
 
             <Link
               href="/contact"
-              className="btn-gold w-full py-5 text-xl font-bold rounded-xl inline-flex items-center justify-center gap-3 shadow-glow-gold-lg hover:scale-105 transition-all"
+              className="bg-gradient-to-r from-gold to-gold-600 w-full py-5 text-xl font-bold rounded-xl inline-flex items-center justify-center gap-3 hover:shadow-lg hover:shadow-gold/50 hover:scale-105 transition-all"
             >
               <Target className="w-6 h-6" />
               Recover This Revenue Now
@@ -696,7 +695,7 @@ export default function MartialArtsClient() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="section relative bg-background">
+      <section className="section relative bg-slate-50">
         <div className="absolute inset-0 bg-mesh opacity-10" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -707,11 +706,11 @@ export default function MartialArtsClient() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-display-md font-display font-bold text-foreground mb-4">
+            <h2 className="text-display-md font-display font-bold text-slate-900 mb-4">
               How It{" "}
-              <span className="text-gradient-gold-cyan">Works</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Works</span>
             </h2>
-            <p className="text-xl text-foreground-muted max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               From missed call to new student in 4 simple steps
             </p>
           </motion.div>
@@ -750,10 +749,10 @@ export default function MartialArtsClient() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15, duration: 0.5 }}
                 whileHover={{ y: -8, scale: 1.02 }}
-                className="glass-premium p-8 rounded-2xl relative hover:shadow-glow-gold-lg transition-all"
+                className="bg-white/70 backdrop-blur-xl p-8 rounded-2xl relative hover:shadow-lg hover:shadow-slate-200/50 border border-slate-200 hover:border-blue-300 transition-all"
               >
                 <motion.div
-                  className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-gold-500 to-amber-600 rounded-full flex items-center justify-center text-2xl font-bold shadow-glow-gold"
+                  className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-full flex items-center justify-center text-2xl font-bold text-white shadow-lg shadow-slate-200/50"
                   whileHover={{ rotate: 360, scale: 1.1 }}
                   transition={{ duration: 0.6 }}
                 >
@@ -761,12 +760,12 @@ export default function MartialArtsClient() {
                 </motion.div>
 
                 <motion.div whileHover={{ scale: 1.1, rotate: 5 }} transition={{ duration: 0.3 }}>
-                  <item.icon className="w-12 h-12 text-gold mb-4" />
+                  <item.icon className="w-12 h-12 text-blue-600 mb-4" />
                 </motion.div>
-                <h3 className="text-xl font-bold text-foreground mb-3">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
                   {item.title}
                 </h3>
-                <p className="text-foreground-muted leading-relaxed">
+                <p className="text-slate-600 leading-relaxed">
                   {item.description}
                 </p>
               </motion.div>
@@ -776,7 +775,7 @@ export default function MartialArtsClient() {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="section relative bg-background-dark">
+      <section className="section relative bg-white">
         <div className="absolute inset-0 bg-mesh-premium opacity-20" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -787,11 +786,11 @@ export default function MartialArtsClient() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-display-md font-display font-bold text-foreground mb-4">
+            <h2 className="text-display-md font-display font-bold text-slate-900 mb-4">
               Martial Arts Studios{" "}
-              <span className="text-gradient-gold-cyan">Love Us</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Love Us</span>
             </h2>
-            <p className="text-xl text-foreground-muted max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Real results from real instructors
             </p>
           </motion.div>
@@ -805,35 +804,35 @@ export default function MartialArtsClient() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15, duration: 0.6 }}
                 whileHover={{ y: -8, scale: 1.02 }}
-                className="glass-premium p-8 rounded-2xl hover:shadow-glow-gold-lg transition-all"
+                className="bg-white/70 backdrop-blur-xl p-8 rounded-2xl hover:shadow-lg hover:shadow-slate-200/50 border border-slate-200 hover:border-blue-300 transition-all"
               >
                 <div className="flex items-center gap-4 mb-6">
                   <motion.div
-                    className="w-16 h-16 rounded-full bg-gradient-to-br from-gold-500 to-amber-600 flex items-center justify-center text-2xl font-bold shadow-glow-gold"
+                    className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center text-2xl font-bold text-white shadow-lg shadow-slate-200/50"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ duration: 0.3 }}
                   >
                     {testimonial.image}
                   </motion.div>
                   <div>
-                    <div className="font-bold text-foreground">{testimonial.name}</div>
-                    <div className="text-sm text-foreground-muted">{testimonial.business}</div>
+                    <div className="font-bold text-slate-900">{testimonial.name}</div>
+                    <div className="text-sm text-slate-600">{testimonial.business}</div>
                   </div>
                 </div>
 
                 <motion.div
-                  className="text-gold text-5xl mb-4"
+                  className="text-blue-600 text-5xl mb-4"
                   initial={{ opacity: 0.5 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: index * 0.15 + 0.3 }}
                 >
                   "
                 </motion.div>
-                <p className="text-foreground mb-6 leading-relaxed">
+                <p className="text-slate-900 mb-6 leading-relaxed">
                   {testimonial.quote}
                 </p>
 
-                <div className="flex items-center justify-between pt-6 border-t border-white/10">
+                <div className="flex items-center justify-between pt-6 border-t border-slate-200">
                   <div className="flex gap-1">
                     {[...Array(5)].map((_, i) => (
                       <motion.div
@@ -843,12 +842,12 @@ export default function MartialArtsClient() {
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.15 + i * 0.05 + 0.5 }}
                       >
-                        <Star className="w-5 h-5 fill-gold text-gold" />
+                        <Star className="w-5 h-5 fill-blue-600 text-blue-600" />
                       </motion.div>
                     ))}
                   </div>
                   <motion.div
-                    className="text-2xl font-bold text-gradient-gold-cyan"
+                    className="text-2xl font-bold text-blue-600"
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -864,7 +863,7 @@ export default function MartialArtsClient() {
       </section>
 
       {/* BEFORE/AFTER COMPARISON */}
-      <section className="section relative bg-background">
+      <section className="section relative bg-slate-50">
         <div className="absolute inset-0 bg-mesh opacity-10" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -875,9 +874,9 @@ export default function MartialArtsClient() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-display-md font-display font-bold text-foreground mb-4">
+            <h2 className="text-display-md font-display font-bold text-slate-900 mb-4">
               The Difference Is{" "}
-              <span className="text-gradient-gold-cyan">Night and Day</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Night and Day</span>
             </h2>
           </motion.div>
 
@@ -891,10 +890,10 @@ export default function MartialArtsClient() {
               className="bg-red-500/10 border-2 border-red-500/30 p-8 rounded-2xl"
             >
               <div className="text-center mb-6">
-                <div className="inline-block px-4 py-2 bg-red-500/20 rounded-full text-red-400 font-bold mb-4">
+                <div className="inline-block px-4 py-2 bg-red-100 rounded-full text-red-600 font-bold mb-4">
                   WITHOUT AI
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-2">
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">
                   Losing Students Daily
                 </h3>
               </div>
@@ -909,10 +908,10 @@ export default function MartialArtsClient() {
                   "Inconsistent follow-up on leads"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                       <div className="w-3 h-0.5 bg-red-500" />
                     </div>
-                    <span className="text-foreground">{item}</span>
+                    <span className="text-slate-900">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -924,13 +923,13 @@ export default function MartialArtsClient() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-green-500/10 border-2 border-green-500/30 p-8 rounded-2xl"
+              className="bg-green-50 border-2 border-green-200 p-8 rounded-2xl"
             >
               <div className="text-center mb-6">
-                <div className="inline-block px-4 py-2 bg-green-500/20 rounded-full text-green-400 font-bold mb-4">
+                <div className="inline-block px-4 py-2 bg-green-100 rounded-full text-green-600 font-bold mb-4">
                   WITH AI
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-2">
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">
                   Enrolling More Students
                 </h3>
               </div>
@@ -945,8 +944,8 @@ export default function MartialArtsClient() {
                   "100% consistent lead follow-up"
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-foreground font-semibold">{item}</span>
+                    <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-900 font-semibold">{item}</span>
                   </li>
                 ))}
               </ul>
@@ -956,10 +955,12 @@ export default function MartialArtsClient() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="section relative bg-background-dark overflow-hidden">
+      <section className="section relative bg-white overflow-hidden">
         {/* Dramatic Glow Background */}
         <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-gold-500/30 via-cyan-500/10 to-transparent blur-3xl" />
+          <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50 to-white" />
+          <div className="absolute inset-0 bg-mesh-premium opacity-20" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-blue-200/40 via-cyan-100/20 to-transparent blur-3xl" />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -968,7 +969,7 @@ export default function MartialArtsClient() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass-premium p-12 md:p-16 rounded-3xl border-2 border-gold/30 max-w-4xl mx-auto text-center"
+            className="bg-white/70 backdrop-blur-xl p-12 md:p-16 rounded-3xl border border-slate-200 max-w-4xl mx-auto text-center shadow-xl shadow-slate-200/50"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -976,31 +977,21 @@ export default function MartialArtsClient() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
             >
-              <h2 className="text-display-lg lg:text-hero font-display font-bold text-foreground mb-6">
+              <h2 className="text-display-lg lg:text-hero font-display font-bold text-slate-900 mb-6">
                 Start Enrolling More Students{" "}
-                <span className="text-gradient-gold-cyan">Tonight</span>
+                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Tonight</span>
               </h2>
-              <p className="text-xl md:text-2xl text-foreground-muted mb-10 max-w-2xl mx-auto">
+              <p className="text-xl md:text-2xl text-slate-600 mb-10 max-w-2xl mx-auto">
                 Join 100+ martial arts studios capturing every parent inquiry with AI
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
                 <motion.a
                   href="tel:865-346-6111"
-                  className="btn-gold px-12 py-6 text-xl font-bold rounded-xl inline-flex items-center gap-3 shadow-glow-gold-lg w-full sm:w-auto"
-                  whileHover={{ scale: 1.05, boxShadow: "0 0 50px rgba(212, 175, 55, 0.7)" }}
+                  className="bg-gradient-to-r from-gold to-gold-600 px-12 py-6 text-xl font-bold rounded-xl inline-flex items-center gap-3 hover:shadow-lg hover:shadow-gold/50 w-full sm:w-auto"
+                  whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
-                  animate={{
-                    boxShadow: [
-                      "0 0 30px rgba(212, 175, 55, 0.4)",
-                      "0 0 40px rgba(212, 175, 55, 0.6)",
-                      "0 0 30px rgba(212, 175, 55, 0.4)"
-                    ]
-                  }}
-                  transition={{
-                    boxShadow: { duration: 2, repeat: Infinity, ease: "easeInOut" },
-                    scale: { duration: 0.2 }
-                  }}
+                  transition={{ duration: 0.2 }}
                 >
                   <motion.div
                     animate={{ rotate: [0, 10, -10, 0] }}
@@ -1013,7 +1004,7 @@ export default function MartialArtsClient() {
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                   <Link
                     href="/demo"
-                    className="btn-ghost px-12 py-6 text-xl font-semibold rounded-xl inline-flex items-center gap-2 w-full sm:w-auto"
+                    className="bg-white/70 backdrop-blur-xl border border-slate-200 px-12 py-6 text-xl font-semibold rounded-xl inline-flex items-center gap-2 w-full sm:w-auto hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50 transition-all"
                   >
                     Watch Demo
                     <motion.div
@@ -1027,10 +1018,9 @@ export default function MartialArtsClient() {
               </div>
 
               <motion.div
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-red-500/20 border border-red-500/30"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-red-50 border border-red-200"
                 animate={{
-                  scale: [1, 1.02, 1],
-                  borderColor: ["rgba(239, 68, 68, 0.3)", "rgba(239, 68, 68, 0.5)", "rgba(239, 68, 68, 0.3)"]
+                  scale: [1, 1.02, 1]
                 }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               >
@@ -1038,9 +1028,9 @@ export default function MartialArtsClient() {
                   animate={{ rotate: [0, 360] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                 >
-                  <Clock className="w-5 h-5 text-red-400" />
+                  <Clock className="w-5 h-5 text-red-600" />
                 </motion.div>
-                <span className="text-red-400 font-semibold">
+                <span className="text-red-600 font-semibold">
                   Limited to 8 studios per month
                 </span>
               </motion.div>
@@ -1048,29 +1038,6 @@ export default function MartialArtsClient() {
           </motion.div>
         </div>
       </section>
-
-      {/* Custom Styles for Sliders */}
-      <style jsx global>{`
-        .slider-gold::-webkit-slider-thumb {
-          appearance: none;
-          width: 24px;
-          height: 24px;
-          border-radius: 50%;
-          background: linear-gradient(135deg, #D4AF37 0%, #FFD700 100%);
-          cursor: pointer;
-          box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
-        }
-
-        .slider-gold::-moz-range-thumb {
-          width: 24px;
-          height: 24px;
-          border-radius: 50%;
-          background: linear-gradient(135deg, #D4AF37 0%, #FFD700 100%);
-          cursor: pointer;
-          border: none;
-          box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
-        }
-      `}</style>
     </div>
   );
 }

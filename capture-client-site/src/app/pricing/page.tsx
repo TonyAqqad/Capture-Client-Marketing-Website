@@ -3,7 +3,7 @@ import PricingPageClient from './PricingPageClient';
 
 // SEO Metadata for Pricing Page
 export const metadata: Metadata = {
-  title: 'Pricing & Packages | AI Voice Agents & Lead Generation | Capture Client',
+  title: 'Pricing & Packages | AI Voice Agents | Capture Client',
   description: 'Transparent pricing for AI voice agents, Google Ads, and Facebook Ads management. Plans from $97/mo. No setup fees, no long-term contracts. See which package fits your business.',
   keywords: [
     'marketing agency pricing',
@@ -18,13 +18,13 @@ export const metadata: Metadata = {
     '24/7 call answering service cost',
   ],
   openGraph: {
-    title: 'Pricing & Packages | AI Voice Agents & Lead Generation | Capture Client',
+    title: 'Pricing & Packages | AI Voice Agents | Capture Client',
     description: 'Transparent pricing for AI voice agents and lead generation. Plans from $97/mo with no long-term contracts. No setup fees.',
     url: 'https://captureclient.com/pricing',
     type: 'website',
     images: [
       {
-        url: 'https://captureclient.com/og-image.jpg',
+        url: 'https://captureclient.com/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Capture Client Pricing - AI Voice Agents & Lead Generation',
@@ -78,7 +78,7 @@ export default function PricingPage() {
                   '@type': 'Offer',
                   price: '97',
                   priceCurrency: 'USD',
-                  priceValidUntil: '2025-12-31',
+                  priceValidUntil: '2026-12-31',
                   availability: 'https://schema.org/InStock',
                   url: 'https://captureclient.com/pricing/starter-package',
                   priceSpecification: {
@@ -107,14 +107,14 @@ export default function PricingPage() {
                 },
                 offers: {
                   '@type': 'Offer',
-                  price: '797',
+                  price: '950',
                   priceCurrency: 'USD',
-                  priceValidUntil: '2025-12-31',
+                  priceValidUntil: '2026-12-31',
                   availability: 'https://schema.org/InStock',
                   url: 'https://captureclient.com/pricing/growth-package',
                   priceSpecification: {
                     '@type': 'UnitPriceSpecification',
-                    price: '797',
+                    price: '950',
                     priceCurrency: 'USD',
                     unitText: 'MONTH',
                   },

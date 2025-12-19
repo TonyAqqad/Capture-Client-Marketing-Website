@@ -7,7 +7,7 @@ import { useTypewriter } from "@/hooks/useTypewriter";
 import { presets, ctaButton, stageTransitions, EASING } from "@/lib/simulator-animations";
 import AudioWaveform from "./AudioWaveform";
 import CRMCard from "./CRMCard";
-import { PhoneIncoming, PhoneCall, Headset, Bot, RefreshCw, Lock, CloudCheck, CheckCircle, Rocket, RotateCcw, ArrowRight } from "lucide-react";
+import { PhoneIncoming, PhoneCall, Headset, Bot, RefreshCw, Lock, CloudCheck, CheckCircle, Rocket, RotateCcw } from "lucide-react";
 
 // ============================================================================
 // CONSTANTS
@@ -43,13 +43,13 @@ export default function LeadRescueSimulator() {
   return (
     <section className="relative py-12 sm:py-16 md:py-24 lg:py-32 overflow-hidden">
       {/* ===== BACKGROUND ===== */}
-      <div className="absolute inset-0 bg-slate-950">
+      <div className="absolute inset-0 bg-gradient-to-b from-white to-slate-50">
         {/* Subtle grid pattern */}
         <div
           className="absolute inset-0 opacity-[0.015]"
           style={{
-            backgroundImage: `linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px)`,
+            backgroundImage: `linear-gradient(rgba(0,0,0,.1) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(0,0,0,.1) 1px, transparent 1px)`,
             backgroundSize: "64px 64px",
           }}
         />
@@ -78,14 +78,14 @@ export default function LeadRescueSimulator() {
                 initial="hidden"
                 animate="visible"
                 transition={{ delay: 0.1 }}
-                className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-sm mb-6 sm:mb-8"
+                className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-slate-100 border border-slate-200 backdrop-blur-sm mb-6 sm:mb-8"
               >
                 <motion.span
                   animate={{ scale: [1, 1.3, 1], opacity: [0.7, 1, 0.7] }}
                   transition={{ duration: 2, repeat: Infinity }}
                   className="w-2 h-2 rounded-full bg-cyan-400"
                 />
-                <span className="text-cyan-400 text-sm font-medium tracking-wide">
+                <span className="text-cyan-600 text-sm font-medium tracking-wide">
                   Live Demo
                 </span>
               </motion.div>
@@ -96,7 +96,7 @@ export default function LeadRescueSimulator() {
                 initial="hidden"
                 animate="visible"
                 transition={{ delay: 0.2 }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight tracking-tight px-2"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight tracking-tight px-2"
               >
                 Stop Losing New Members
                 <br />
@@ -111,7 +111,7 @@ export default function LeadRescueSimulator() {
                 initial="hidden"
                 animate="visible"
                 transition={{ delay: 0.3 }}
-                className="text-lg sm:text-xl md:text-2xl text-slate-400 mb-8 sm:mb-12 max-w-xl mx-auto leading-relaxed px-2"
+                className="text-lg sm:text-xl md:text-2xl text-slate-600 mb-8 sm:mb-12 max-w-xl mx-auto leading-relaxed px-2"
               >
                 See what happens when AI answers your gym phone 24/7.
               </motion.p>
@@ -208,7 +208,7 @@ export default function LeadRescueSimulator() {
                   />
                   <span
                     className={`text-sm font-mono font-semibold tracking-wider ${
-                      callState === "ringing" ? "text-orange-400" : "text-cyan-400"
+                      callState === "ringing" ? "text-orange-600" : "text-cyan-600"
                     }`}
                   >
                     {callState === "ringing" ? "INCOMING CALL..." : "AI AGENT CONNECTED"}
@@ -223,7 +223,7 @@ export default function LeadRescueSimulator() {
                   variants={presets.slideInLeft}
                   initial="hidden"
                   animate="visible"
-                  className="backdrop-blur-xl bg-white/[0.03] border border-white/10 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl"
+                  className="backdrop-blur-xl bg-white/70 border border-slate-200 rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 shadow-2xl"
                 >
                   {/* Phone Header - Mobile Optimized */}
                   <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-6 sm:mb-8">
@@ -248,8 +248,8 @@ export default function LeadRescueSimulator() {
                         )}
                       </motion.div>
                       <div className="min-w-0 flex-1">
-                        <p className="text-white font-semibold text-base sm:text-lg truncate">+1 (555) 892-4231</p>
-                        <p className="text-slate-400 text-xs sm:text-sm">Potential Member</p>
+                        <p className="text-slate-900 font-semibold text-base sm:text-lg truncate">+1 (555) 892-4231</p>
+                        <p className="text-slate-600 text-xs sm:text-sm">Potential Member</p>
                       </div>
                     </div>
                     <div className="text-left sm:text-right w-full sm:w-auto flex sm:flex-col items-center sm:items-end gap-2 sm:gap-1 justify-between sm:justify-start">
@@ -261,7 +261,7 @@ export default function LeadRescueSimulator() {
                   </div>
 
                   {/* Waveform Visualization */}
-                  <div className="mb-6 sm:mb-8 py-4 sm:py-6 px-3 sm:px-4 rounded-2xl bg-black/20 border border-white/5">
+                  <div className="mb-6 sm:mb-8 py-4 sm:py-6 px-3 sm:px-4 rounded-2xl bg-slate-50 border border-slate-200">
                     <AudioWaveform
                       isActive={callState === "connected"}
                       color={callState === "ringing" ? "orange" : "cyan"}
@@ -269,16 +269,16 @@ export default function LeadRescueSimulator() {
                   </div>
 
                   {/* Transcript */}
-                  <div className="backdrop-blur-sm bg-white/[0.02] border border-white/10 rounded-2xl p-4 sm:p-5">
+                  <div className="backdrop-blur-sm bg-slate-50 border border-slate-200 rounded-2xl p-4 sm:p-5">
                     <div className="flex items-start gap-2 sm:gap-3">
                       <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-br from-cyan-500/20 to-[#4A69E2]/20 border border-cyan-500/30 flex items-center justify-center flex-shrink-0 mt-0.5">
                         <Bot className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-cyan-400" />
                       </div>
                       <div className="flex-1 min-h-[60px] sm:min-h-[70px]">
-                        <p className="text-cyan-400/70 text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-1.5 sm:mb-2">
+                        <p className="text-cyan-600 text-[10px] sm:text-xs font-bold uppercase tracking-wider mb-1.5 sm:mb-2">
                           AI Voice Agent
                         </p>
-                        <p className="font-mono text-xs sm:text-sm text-slate-200 leading-relaxed">
+                        <p className="font-mono text-xs sm:text-sm text-slate-900 leading-relaxed">
                           {transcript.displayText}
                           {isTyping && !transcript.isComplete && (
                             <motion.span
@@ -307,7 +307,7 @@ export default function LeadRescueSimulator() {
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.8 }}
-                    className="mt-4 sm:mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-slate-500 text-xs"
+                    className="mt-4 sm:mt-6 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-slate-600 text-xs"
                   >
                     <span className="flex items-center gap-1.5 whitespace-nowrap">
                       <RefreshCw className="w-3.5 h-3.5 text-cyan-500/50" />
@@ -372,7 +372,7 @@ export default function LeadRescueSimulator() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.5, ease: EASING.smooth }}
-                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 sm:mb-6 tracking-tight px-2"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 sm:mb-6 tracking-tight px-2"
               >
                 New Member Captured.
               </motion.h3>
@@ -382,9 +382,9 @@ export default function LeadRescueSimulator() {
                 initial={{ opacity: 0, y: 25, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 transition={{ delay: 0.4, duration: 0.6, ease: EASING.smooth }}
-                className="backdrop-blur-xl bg-white/[0.03] border border-white/10 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 mb-8 sm:mb-10 shadow-2xl"
+                className="backdrop-blur-xl bg-white/70 border border-slate-200 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 mb-8 sm:mb-10 shadow-2xl"
               >
-                <p className="text-slate-400 text-sm sm:text-base lg:text-lg mb-2 sm:mb-3 px-2">
+                <p className="text-slate-600 text-sm sm:text-base lg:text-lg mb-2 sm:mb-3 px-2">
                   While your front desk was busy, our AI just captured a
                 </p>
                 <motion.div
@@ -396,32 +396,32 @@ export default function LeadRescueSimulator() {
                   <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-cyan-300 to-[#D4AF37]">
                     $1,200
                   </span>
-                  <span className="text-2xl sm:text-3xl md:text-4xl text-slate-400 font-medium">/yr</span>
+                  <span className="text-2xl sm:text-3xl md:text-4xl text-slate-600 font-medium">/yr</span>
                 </motion.div>
-                <p className="text-slate-400 text-sm sm:text-base lg:text-lg mt-2 sm:mt-3">membership</p>
+                <p className="text-slate-600 text-sm sm:text-base lg:text-lg mt-2 sm:mt-3">membership</p>
 
                 {/* Stats row - Mobile Optimized */}
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.9 }}
-                  className="grid grid-cols-3 gap-3 sm:gap-6 mt-6 sm:mt-10 pt-6 sm:pt-8 border-t border-white/10"
+                  className="grid grid-cols-3 gap-3 sm:gap-6 mt-6 sm:mt-10 pt-6 sm:pt-8 border-t border-slate-200"
                 >
                   <div>
                     <p className="text-2xl sm:text-3xl font-bold text-cyan-400">8s</p>
-                    <p className="text-slate-500 text-[10px] sm:text-xs uppercase tracking-wider mt-1">
+                    <p className="text-slate-600 text-[10px] sm:text-xs uppercase tracking-wider mt-1">
                       Response Time
                     </p>
                   </div>
                   <div>
                     <p className="text-2xl sm:text-3xl font-bold text-[#D4AF37]">100%</p>
-                    <p className="text-slate-500 text-[10px] sm:text-xs uppercase tracking-wider mt-1">
+                    <p className="text-slate-600 text-[10px] sm:text-xs uppercase tracking-wider mt-1">
                       Data Captured
                     </p>
                   </div>
                   <div>
                     <p className="text-2xl sm:text-3xl font-bold text-cyan-400">24/7</p>
-                    <p className="text-slate-500 text-[10px] sm:text-xs uppercase tracking-wider mt-1">
+                    <p className="text-slate-600 text-[10px] sm:text-xs uppercase tracking-wider mt-1">
                       Availability
                     </p>
                   </div>
@@ -451,7 +451,7 @@ export default function LeadRescueSimulator() {
                 </a>
                 <button
                   onClick={resetSimulation}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 rounded-xl font-semibold text-slate-300 bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 min-h-[56px] touch-manipulation active:scale-95"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 rounded-xl font-semibold text-slate-900 bg-slate-100 border border-slate-200 hover:bg-slate-200 hover:border-slate-300 transition-all duration-300 hover:scale-105 min-h-[56px] touch-manipulation active:scale-95"
                 >
                   <RotateCcw className="w-4 h-4 sm:w-5 sm:h-5" />
                   <span className="text-sm sm:text-base">Replay Simulation</span>
@@ -489,7 +489,7 @@ function SimulationTimer({ isRunning }: { isRunning: boolean }) {
   const secs = seconds % 60;
 
   return (
-    <p className="font-mono text-xl sm:text-2xl text-white tracking-wider">
+    <p className="font-mono text-xl sm:text-2xl text-slate-900 tracking-wider">
       {mins.toString().padStart(2, "0")}:{secs.toString().padStart(2, "0")}
     </p>
   );

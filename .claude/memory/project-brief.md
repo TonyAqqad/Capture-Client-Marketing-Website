@@ -6,4 +6,4 @@
 - Differentiators: Industry-trained AI, CRM/POS integrations, month-to-month (no long contracts).
 - Brand voice: Confident, practical, direct, premium.
 - Visuals: Dark + gold/cyan, glass/aurora, avoid AI slop.
-- Phone: 865-346-3339; Domain: captureclientai.net.
+- Phone: 865-346-6111; Domain: captureclient.com.

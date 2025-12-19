@@ -119,19 +119,20 @@ export function generateSoftwareApplicationSchema() {
 
     offers: {
       '@type': 'AggregateOffer',
-      lowPrice: '997',
-      highPrice: '3997',
+      lowPrice: '97',
+      highPrice: '950',
       priceCurrency: 'USD',
       offerCount: '3',
     },
 
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    // NOTE: Aggregate rating commented out until verifiable
+    // aggregateRating: {
+    //   '@type': 'AggregateRating',
+    //   ratingValue: '4.9',
+    //   reviewCount: '127',
+    //   bestRating: '5',
+    //   worstRating: '1',
+    // },
 
     featureList: [
       '24/7 AI Voice Agents',
@@ -267,14 +268,14 @@ export function generateLocationServiceSchema(locationData: {
       closes: '23:59',
     },
 
-    // Trust signals
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    // NOTE: Aggregate rating commented out until verifiable
+    // aggregateRating: {
+    //   '@type': 'AggregateRating',
+    //   ratingValue: '4.9',
+    //   reviewCount: '127',
+    //   bestRating: '5',
+    //   worstRating: '1',
+    // },
   };
 }
 
@@ -421,13 +422,14 @@ export function generateTestimonialsSchema(testimonials: Array<{
       }),
     })),
 
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: testimonials.length.toString(),
-      bestRating: '5',
-      worstRating: '1',
-    },
+    // NOTE: Aggregate rating commented out - should be calculated from real reviews
+    // aggregateRating: {
+    //   '@type': 'AggregateRating',
+    //   ratingValue: '4.9',
+    //   reviewCount: testimonials.length.toString(),
+    //   bestRating: '5',
+    //   worstRating: '1',
+    // },
   };
 }
 

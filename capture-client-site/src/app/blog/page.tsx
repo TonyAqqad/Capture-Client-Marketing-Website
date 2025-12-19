@@ -4,7 +4,7 @@ import { getAllBlogPosts } from "@/lib/data";
 import BlogContent from "./BlogContent";
 
 export const metadata: Metadata = {
-  title: "Blog | Marketing Tips & AI Insights",
+  title: "Blog | Marketing Tips & AI Insights | Capture Client",
   description:
     "Expert insights on AI voice agents, lead generation, Google Ads, Facebook Ads, and digital marketing strategies for small businesses. Free actionable tips.",
 
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
   // Open Graph
   openGraph: {
-    title: "Marketing Blog | AI & Lead Generation Insights",
+    title: "Blog | Marketing Tips & AI Insights | Capture Client",
     description:
       "Expert insights on AI voice agents, lead generation, Google Ads, Facebook Ads, and digital marketing strategies for small businesses.",
     url: `${SITE_CONFIG.url}/blog`,
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     siteName: SITE_CONFIG.name,
     images: [
       {
-        url: `${SITE_CONFIG.url}/og-image.jpg`,
+        url: `${SITE_CONFIG.url}/og-image.png`,
         width: 1200,
         height: 630,
         alt: `${SITE_CONFIG.name} Blog`,
@@ -50,10 +50,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@captureclient",
-    title: "Marketing Blog | AI & Lead Generation Insights",
+    title: "Blog | Marketing Tips & AI Insights | Capture Client",
     description:
       "Expert insights on AI voice agents, lead generation, Google Ads, and digital marketing strategies.",
-    images: [`${SITE_CONFIG.url}/og-image.jpg`],
+    images: [`${SITE_CONFIG.url}/og-image.png`],
   },
 
   // Robots

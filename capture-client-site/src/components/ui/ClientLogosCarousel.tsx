@@ -23,7 +23,7 @@ function LogoItem({ logo, index }: { logo: typeof integrationLogos[0]; index: nu
       key={`${logo.name}-${index}`}
       className="flex-shrink-0 group cursor-pointer"
     >
-      <div className="h-12 lg:h-14 w-28 lg:w-36 rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl flex items-center justify-center gap-2 opacity-60 hover:opacity-100 hover:border-[#00C9FF]/30 transition-all duration-300 px-3">
+      <div className="h-12 lg:h-14 w-28 lg:w-36 rounded-xl border border-slate-200 bg-white backdrop-blur-xl flex items-center justify-center gap-2 opacity-60 hover:opacity-100 hover:border-[#00C9FF]/30 transition-all duration-300 px-3">
         {!imageError ? (
           <Image
             src={logo.logo}
@@ -45,7 +45,7 @@ function LogoItem({ logo, index }: { logo: typeof integrationLogos[0]; index: nu
               </span>
             </div>
             <span
-              className="text-white/80 text-sm hidden sm:block"
+              className="text-slate-600 text-sm hidden sm:block"
               style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 500 }}
             >
               {logo.name}
@@ -59,10 +59,10 @@ function LogoItem({ logo, index }: { logo: typeof integrationLogos[0]; index: nu
 
 export function ClientLogosCarousel() {
   return (
-    <section className="py-12 lg:py-16 overflow-hidden bg-[#030303] border-y border-white/[0.06]">
+    <section className="py-12 lg:py-16 overflow-hidden bg-white border-y border-slate-200">
       <div className="container-custom mb-8">
         <p
-          className="text-center text-xs sm:text-sm uppercase tracking-[0.25em] text-white/40"
+          className="text-center text-xs sm:text-sm uppercase tracking-[0.25em] text-slate-600"
           style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 500 }}
         >
           Trusted by 500+ Growing Businesses • Integrates With Your Favorite Tools
@@ -72,10 +72,10 @@ export function ClientLogosCarousel() {
       {/* Infinite scroll container */}
       <div className="relative">
         {/* Gradient fade left */}
-        <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-[#030303] to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
 
         {/* Gradient fade right */}
-        <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-[#030303] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
         {/* Scrolling logos */}
         <motion.div

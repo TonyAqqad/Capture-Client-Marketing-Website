@@ -173,6 +173,18 @@ export const navigationData: Record<string, NavSection> = {
         description: "Reservations & takeout orders",
         icon: "restaurants",
       },
+      {
+        label: "Fitness & Gyms",
+        href: "/industries/fitness",
+        description: "Member management & bookings",
+        icon: "fitness",
+      },
+      {
+        label: "Martial Arts",
+        href: "/industries/martial-arts",
+        description: "Class scheduling & trials",
+        icon: "martial-arts",
+      },
     ],
   },
   resources: {

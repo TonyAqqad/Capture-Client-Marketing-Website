@@ -23,6 +23,9 @@ export async function generateStaticParams() {
   }));
 }
 
+// Return true 404 for unknown slugs (prevents soft 404s)
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: {
@@ -38,7 +41,7 @@ export async function generateMetadata({
   }
 
   const pageUrl = `${SITE_CONFIG.url}/services/${service.service.service_slug}`;
-  const ogImageUrl = service.hero?.hero_image?.url || `${SITE_CONFIG.url}/og-image.jpg`;
+  const ogImageUrl = service.hero?.hero_image?.url || `${SITE_CONFIG.url}/og-image.png`;
 
   return {
     title: service.seo.page_title,
@@ -143,7 +146,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const schemas = [serviceSchema, breadcrumbSchema, webPageSchema, faqSchema, howToSchema].filter(Boolean) as Array<Record<string, unknown>>;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background-dark via-[#1a1a3e] to-background-dark">
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50">
       {/* Inject JSON-LD structured data */}
       <JsonLd schema={schemas} />
 
@@ -163,8 +166,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           </div>
 
           <div className="max-w-4xl mx-auto relative">
-            <div className="bg-gradient-to-br from-white/[0.08] via-white/[0.04] to-white/[0.01] backdrop-blur-2xl border border-white/10 rounded-2xl p-6 sm:p-8 shadow-[0_20px_60px_rgba(0,0,0,0.2)]">
-              <p className="text-base sm:text-lg lg:text-xl text-white/80 leading-relaxed">
+            <div className="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8 shadow-[0_20px_60px_rgba(0,0,0,0.2)]">
+              <p className="text-base sm:text-lg lg:text-xl text-slate-600 leading-relaxed">
                 {service.intro.paragraph}
               </p>
             </div>
@@ -179,9 +182,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="absolute inset-0 bg-mesh-premium opacity-30 pointer-events-none" />
 
           <div className="container mx-auto relative z-10">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-black text-white text-center mb-8 sm:mb-12 px-4">
-              <span className="text-white/40 font-extralight">Key</span>{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-primary">Benefits</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-black text-slate-900 text-center mb-8 sm:mb-12 px-4">
+              <span className="text-slate-400 font-extralight">Key</span>{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-slate-900 to-primary">Benefits</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               {service.benefits.map((benefit: BenefitItem, index: number) => {
@@ -189,7 +192,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 return (
                   <div
                     key={index}
-                    className="group relative bg-gradient-to-br from-white/[0.08] via-white/[0.04] to-white/[0.01] backdrop-blur-2xl border border-white/10 rounded-2xl p-5 sm:p-6 transition-all duration-500 hover:border-accent/50 hover:shadow-[0_20px_60px_rgba(0,201,255,0.2)] hover:-translate-y-1"
+                    className="group relative bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 transition-all duration-500 hover:border-accent/50 hover:shadow-[0_20px_60px_rgba(0,201,255,0.2)] hover:-translate-y-1"
                   >
                     {/* Inner glow on hover */}
                     <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-accent/5 via-transparent to-primary/5" />
@@ -202,10 +205,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                       </div>
                     </div>
 
-                    <h3 className="relative text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-accent transition-all duration-500">
+                    <h3 className="relative text-lg sm:text-xl font-bold text-slate-900 mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-slate-900 group-hover:to-accent transition-all duration-500">
                       {benefit.title}
                     </h3>
-                    <p className="relative text-base text-white/70 leading-relaxed group-hover:text-white/85 transition-colors duration-300">{benefit.description}</p>
+                    <p className="relative text-base text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors duration-300">{benefit.description}</p>
                   </div>
                 );
               })}
@@ -216,20 +219,20 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
       {/* How It Works Section - Premium stepped process */}
       {service.how_it_works && service.how_it_works.length > 0 && (
-        <section className="relative py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-16 bg-gradient-to-b from-background-dark via-[#1a1a3e] to-background-dark">
+        <section className="relative py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-16 bg-gradient-to-b from-slate-50 via-white to-slate-50">
           {/* Mesh gradient background */}
           <div className="absolute inset-0 bg-mesh-gradient opacity-30 pointer-events-none" />
 
           <div className="container mx-auto relative z-10">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-black text-white text-center mb-8 sm:mb-12 px-4">
-              <span className="text-white/40 font-extralight">How It</span>{" "}
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-black text-slate-900 text-center mb-8 sm:mb-12 px-4">
+              <span className="text-slate-400 font-extralight">How It</span>{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary">Works</span>
             </h2>
             <div className="max-w-3xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8">
               {service.how_it_works.map((step: ProcessStep, index: number) => (
                 <div
                   key={step.step}
-                  className="group relative flex gap-4 sm:gap-6 bg-gradient-to-br from-white/[0.08] via-white/[0.04] to-white/[0.01] backdrop-blur-2xl border border-white/10 rounded-2xl p-4 sm:p-6 transition-all duration-500 hover:border-primary/50 hover:shadow-[0_20px_60px_rgba(74,105,226,0.2)] hover:-translate-y-1"
+                  className="group relative flex gap-4 sm:gap-6 bg-white border border-slate-200 rounded-2xl p-4 sm:p-6 transition-all duration-500 hover:border-primary/50 hover:shadow-[0_20px_60px_rgba(74,105,226,0.2)] hover:-translate-y-1"
                 >
                   {/* Connection line to next step (except last) */}
                   {index < service.how_it_works.length - 1 && (
@@ -248,10 +251,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   </div>
 
                   <div className="flex-1 min-w-0 relative">
-                    <h3 className="text-lg sm:text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-accent transition-all duration-500">
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-slate-900 group-hover:to-accent transition-all duration-500">
                       {step.title}
                     </h3>
-                    <p className="text-base text-white/70 leading-relaxed group-hover:text-white/85 transition-colors duration-300">{step.description}</p>
+                    <p className="text-base text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors duration-300">{step.description}</p>
                   </div>
                 </div>
               ))}
@@ -267,24 +270,24 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="absolute inset-0 bg-mesh-premium opacity-20 pointer-events-none" />
 
           <div className="container mx-auto max-w-4xl relative z-10">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-black text-white text-center mb-8 sm:mb-12 px-4">
-              <span className="text-white/40 font-extralight">Frequently Asked</span>{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-accent">Questions</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-black text-slate-900 text-center mb-8 sm:mb-12 px-4">
+              <span className="text-slate-400 font-extralight">Frequently Asked</span>{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-slate-900 to-accent">Questions</span>
             </h2>
             <div className="space-y-3 sm:space-y-4">
               {service.faq.map((item: { question: string; answer: string }, index: number) => (
                 <details
                   key={index}
-                  className="group bg-gradient-to-br from-white/[0.08] via-white/[0.04] to-white/[0.01] backdrop-blur-2xl border border-white/10 rounded-2xl p-4 sm:p-6 transition-all duration-500 hover:border-accent/50 hover:shadow-[0_20px_60px_rgba(0,201,255,0.15)] open:border-primary/50"
+                  className="group bg-white border border-slate-200 rounded-2xl p-4 sm:p-6 transition-all duration-500 hover:border-accent/50 hover:shadow-[0_20px_60px_rgba(0,201,255,0.15)] open:border-primary/50"
                 >
                   {/* Inner glow on hover */}
                   <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-accent/5 via-transparent to-primary/5" />
 
-                  <summary className="relative font-bold text-base sm:text-lg text-white cursor-pointer min-h-[44px] flex items-center list-none group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-accent transition-all duration-500">
+                  <summary className="relative font-bold text-base sm:text-lg text-slate-900 cursor-pointer min-h-[44px] flex items-center list-none group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-slate-900 group-hover:to-accent transition-all duration-500">
                     <span className="flex-1 pr-4">{item.question}</span>
                     <ChevronDown className="w-5 h-5 text-accent ml-4 group-open:rotate-180 transition-transform duration-300 drop-shadow-[0_4px_8px_rgba(0,201,255,0.5)]" />
                   </summary>
-                  <p className="relative mt-3 sm:mt-4 text-base text-white/70 leading-relaxed group-open:text-white/80 transition-colors duration-300">{item.answer}</p>
+                  <p className="relative mt-3 sm:mt-4 text-base text-slate-600 leading-relaxed group-open:text-slate-700 transition-colors duration-300">{item.answer}</p>
                 </details>
               ))}
             </div>
@@ -293,7 +296,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       )}
 
       {/* CTA Section with Lead Form - Premium glassy design */}
-      <section className="relative py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-16 bg-gradient-to-b from-background-dark via-[#1a1a3e] to-background-dark">
+      <section className="relative py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-16 bg-gradient-to-b from-slate-50 via-white to-slate-50">
         {/* Floating gradient orbs */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 right-20 w-96 h-96 rounded-full bg-accent/10 blur-3xl" />
@@ -301,7 +304,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         </div>
 
         <div className="container mx-auto max-w-4xl relative z-10">
-          <div className="relative bg-gradient-to-br from-white/[0.10] via-white/[0.05] to-white/[0.02] backdrop-blur-2xl rounded-3xl p-6 sm:p-8 md:p-12 border border-white/20 shadow-[0_20px_80px_rgba(0,0,0,0.3)] overflow-hidden">
+          <div className="relative bg-white rounded-3xl p-6 sm:p-8 md:p-12 border border-slate-200 shadow-[0_20px_80px_rgba(0,0,0,0.3)] overflow-hidden">
             {/* Inner mesh gradient */}
             <div className="absolute inset-0 bg-mesh-premium opacity-30 pointer-events-none" />
 
@@ -309,12 +312,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
             <div className="absolute -inset-px rounded-3xl opacity-50 bg-gradient-to-r from-accent via-primary to-accent blur-sm" />
 
             <div className="relative z-10">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-black text-white text-center mb-3 sm:mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-accent to-white">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-heading font-black text-slate-900 text-center mb-3 sm:mb-4">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-accent to-slate-900">
                   {service.cta_section?.headline || "Ready to Get Started?"}
                 </span>
               </h2>
-              <p className="text-center text-base sm:text-lg text-white/70 mb-6 sm:mb-8 max-w-2xl mx-auto">
+              <p className="text-center text-base sm:text-lg text-slate-600 mb-6 sm:mb-8 max-w-2xl mx-auto">
                 {service.cta_section?.subheadline ||
                   "Contact us today for a free consultation and see how we can help grow your business."}
               </p>
@@ -331,8 +334,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="absolute inset-0 bg-mesh-gradient opacity-20 pointer-events-none" />
 
           <div className="container mx-auto relative z-10">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-black text-white text-center mb-6 sm:mb-8 px-4">
-              <span className="text-white/40 font-extralight">Related</span>{" "}
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-black text-slate-900 text-center mb-6 sm:mb-8 px-4">
+              <span className="text-slate-400 font-extralight">Related</span>{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Services</span>
             </h2>
             <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
@@ -340,12 +343,12 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <Link
                   key={relatedSlug}
                   href={`/services/${relatedSlug}`}
-                  className="group relative px-5 sm:px-6 py-3 min-h-[44px] bg-gradient-to-br from-white/[0.10] to-white/[0.05] backdrop-blur-xl border border-white/20 text-white text-sm sm:text-base rounded-full transition-all duration-300 hover:border-accent/50 hover:shadow-[0_8px_24px_rgba(0,201,255,0.3)] hover:-translate-y-0.5 flex items-center justify-center overflow-hidden"
+                  className="group relative px-5 sm:px-6 py-3 min-h-[44px] bg-white border border-slate-200 text-slate-900 text-sm sm:text-base rounded-full transition-all duration-300 hover:border-accent/50 hover:shadow-[0_8px_24px_rgba(0,201,255,0.3)] hover:-translate-y-0.5 flex items-center justify-center overflow-hidden"
                 >
                   {/* Inner glow on hover */}
                   <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gradient-to-br from-accent/10 to-primary/10" />
 
-                  <span className="relative z-10 font-semibold group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-accent transition-all duration-300">
+                  <span className="relative z-10 font-semibold group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-slate-900 group-hover:to-accent transition-all duration-300">
                     {relatedSlug.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}
                   </span>
                 </Link>

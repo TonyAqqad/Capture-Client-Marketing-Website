@@ -71,7 +71,7 @@ export function HowItWorks() {
   return (
     <section
       ref={containerRef}
-      className="relative bg-[#030303] py-20 sm:py-28 lg:py-36 overflow-hidden"
+      className="relative bg-slate-50 py-20 sm:py-28 lg:py-36 overflow-hidden"
     >
       {/* Mesh gradient background */}
       <div className="absolute inset-0 opacity-40">
@@ -92,13 +92,13 @@ export function HowItWorks() {
             The Process
           </p>
           <h2 className="text-4xl sm:text-5xl lg:text-6xl leading-[1.08] mb-6" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
-            <span className="font-[200] text-white/90">Four steps to</span>
+            <span className="font-[200] text-slate-900">Four steps to</span>
             {' '}
-            <span className="font-[800] bg-gradient-to-r from-[#00C9FF] via-[#4A69E2] to-white bg-clip-text text-transparent block mt-2">
+            <span className="font-[800] bg-gradient-to-r from-[#00C9FF] via-[#4A69E2] to-slate-900 bg-clip-text text-transparent block mt-2">
               automated growth
             </span>
           </h2>
-          <p className="text-lg sm:text-xl text-white/60 leading-[1.6] font-light">
+          <p className="text-lg sm:text-xl text-slate-600 leading-[1.6] font-light">
             From strategy call to live AI agents capturing leads around the clock.
             Most businesses are fully operational within 48 hours.
           </p>
@@ -140,7 +140,7 @@ export function HowItWorks() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-16 sm:mt-20 lg:mt-24 text-center"
         >
-          <p className="text-white/50 mb-6 text-lg font-light" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+          <p className="text-slate-500 mb-6 text-lg font-light" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
             Ready to stop missing leads?
           </p>
           <a
@@ -192,20 +192,20 @@ function DesktopStepCard({ step, index, isInView, isLast }: StepCardProps) {
 
       {/* Step number - large, editorial */}
       <div className="flex items-center gap-4 mb-6">
-        <span className="text-5xl font-[800] text-white/[0.06]" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+        <span className="text-5xl font-[800] text-slate-200" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
           {step.number}
         </span>
-        <div className="w-12 h-12 rounded-2xl backdrop-blur-xl bg-white/[0.03] flex items-center justify-center border border-white/[0.06] group-hover:border-[#00C9FF]/30 group-hover:bg-[#00C9FF]/[0.05] transition-all duration-300">
+        <div className="w-12 h-12 rounded-2xl backdrop-blur-xl bg-white flex items-center justify-center border border-slate-200 group-hover:border-[#00C9FF]/30 group-hover:bg-[#00C9FF]/[0.05] transition-all duration-300">
           <IconComponent className="w-5 h-5 text-[#00C9FF]" />
         </div>
       </div>
 
       {/* Content */}
       <div>
-        <h3 className="text-xl font-[600] text-white/90 mb-3 group-hover:text-[#00C9FF] transition-colors duration-300" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+        <h3 className="text-xl font-[600] text-slate-900 mb-3 group-hover:text-[#00C9FF] transition-colors duration-300" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
           {step.title}
         </h3>
-        <p className="text-white/50 leading-[1.6] mb-4 text-sm font-light">
+        <p className="text-slate-600 leading-[1.6] mb-4 text-sm font-light">
           {step.description}
         </p>
 
@@ -230,16 +230,16 @@ function MobileStepCard({ step, index, isInView }: StepCardProps) {
         delay: index * 0.1,
         ease: [0.25, 0.1, 0.25, 1]
       }}
-      className="backdrop-blur-xl bg-white/[0.03] rounded-2xl p-6 border border-white/[0.06]"
+      className="backdrop-blur-xl bg-white rounded-2xl p-6 border border-slate-200"
     >
       <div className="flex items-start gap-4">
         {/* Number and Icon column */}
         <div className="flex-shrink-0">
           <div className="relative">
-            <span className="text-3xl font-[800] text-white/[0.06]" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+            <span className="text-3xl font-[800] text-slate-200" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
               {step.number}
             </span>
-            <div className="absolute -bottom-1 -right-1 w-8 h-8 rounded-lg backdrop-blur-xl bg-white/[0.03] flex items-center justify-center border border-white/[0.06]">
+            <div className="absolute -bottom-1 -right-1 w-8 h-8 rounded-lg backdrop-blur-xl bg-white flex items-center justify-center border border-slate-200">
               <IconComponent className="w-4 h-4 text-[#00C9FF]" />
             </div>
           </div>
@@ -247,10 +247,10 @@ function MobileStepCard({ step, index, isInView }: StepCardProps) {
 
         {/* Content */}
         <div className="flex-1 min-w-0">
-          <h3 className="text-lg font-[600] text-white/90 mb-2" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+          <h3 className="text-lg font-[600] text-slate-900 mb-2" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
             {step.title}
           </h3>
-          <p className="text-white/50 text-sm leading-[1.6] mb-3 font-light">
+          <p className="text-slate-600 text-sm leading-[1.6] mb-3 font-light">
             {step.description}
           </p>
           <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-[#00C9FF]/10 text-[#00C9FF] border border-[#00C9FF]/20" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>

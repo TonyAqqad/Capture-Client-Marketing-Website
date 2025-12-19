@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "defaultMode": "plan",
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(./capture-client-site/.env)",
+      "Read(./capture-client-site/.env.*)",
+      "Read(./secrets/**)",
+      "Read(**/node_modules/**)",
+      "Read(**/.next/**)",
+      "Read(**/.vercel/**)",
+      "Read(**/.playwright-mcp/**)",
+      "Read(**/playwright-report/**)",
+      "Read(**/test-results/**)",
+      "Read(**/tests/screenshots/**)",
+      "Read(./docs/_archive/**)"
+    ],
+    "allow": [
+      "Bash(cd capture-client-site && npm run dev)",
+      "Bash(cd capture-client-site && npm run typecheck)",
+      "Bash(cd capture-client-site && npm run lint)",
+      "Bash(cd capture-client-site && npm run build)",
+      "Bash(cd capture-client-site && npm run format)",
+      "Bash(cd capture-client-site && npm run test:e2e)",
+      "Bash(cd capture-client-site && npx playwright test:*)"
+    ]
+  },
+  "enabledMcpjsonServers": [
+    "playwright"
+  ]
+}

@@ -23,7 +23,7 @@ export function MobileHeroVisual() {
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-slate-950 rounded-b-3xl z-10" />
 
           {/* Screen content */}
-          <div className="relative bg-background-deep rounded-[2rem] overflow-hidden min-h-[480px]">
+          <div className="relative bg-slate-50 rounded-[2rem] overflow-hidden min-h-[480px]">
             {/* Call header */}
             <div className="absolute top-0 left-0 right-0 pt-8 px-6 pb-4 bg-gradient-to-b from-background-dark/95 to-transparent z-10">
               <div className="flex items-center justify-between">

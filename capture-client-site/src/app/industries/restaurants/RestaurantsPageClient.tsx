@@ -143,11 +143,11 @@ export default function RestaurantsPageClient() {
   const activeFeature = featureTabs.find(tab => tab.id === activeTab);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background-dark via-[#0A0F1C] to-background-dark">
+    <div className="min-h-screen bg-gradient-to-b from-white to-slate-50">
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-32 pb-20 px-4">
-        {/* Background aurora effect */}
-        <div className="absolute inset-0 bg-aurora-animated opacity-30" />
+        {/* Background gradient effect */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-cyan-50/30 to-transparent opacity-60" />
 
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
@@ -161,21 +161,21 @@ export default function RestaurantsPageClient() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 glass-badge mb-6"
+              className="inline-flex items-center gap-2 bg-white/70 backdrop-blur-xl border border-slate-200 rounded-full px-4 py-2 text-sm font-medium text-slate-700 mb-6"
             >
-              <ChefHat className="w-4 h-4" />
+              <ChefHat className="w-4 h-4 text-blue-600" />
               <span>Restaurant Industry Solution</span>
             </motion.div>
 
             {/* Hero headline - Bricolage Grotesque */}
-            <h1 className="text-display-lg md:text-hero-xl font-display text-white mb-6">
+            <h1 className="text-display-lg md:text-hero-xl font-display text-slate-900 mb-6">
               Kitchen&apos;s Busy. <br />
               Phone&apos;s Ringing. <br />
-              <span className="text-gradient-gold-cyan">AI Answers.</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">AI Answers.</span>
             </h1>
 
             {/* Subheadline - Syne */}
-            <p className="text-xl md:text-2xl font-accent text-foreground-muted max-w-3xl mx-auto mb-8">
+            <p className="text-xl md:text-2xl font-accent text-slate-600 max-w-3xl mx-auto mb-8">
               AI Voice Ordering & Reservations for Restaurants
             </p>
 
@@ -191,9 +191,9 @@ export default function RestaurantsPageClient() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 + idx * 0.1 }}
-                  className="flex items-center gap-2 text-white"
+                  className="flex items-center gap-2 text-slate-900"
                 >
-                  <stat.icon className="w-5 h-5 text-gold" />
+                  <stat.icon className="w-5 h-5 text-blue-600" />
                   <span className="text-lg font-semibold">{stat.label}</span>
                 </motion.div>
               ))}
@@ -208,8 +208,8 @@ export default function RestaurantsPageClient() {
             >
               <motion.a
                 href="tel:865-346-6111"
-                className="btn-gold text-lg px-8 py-4 inline-flex items-center justify-center gap-2 w-full sm:w-auto"
-                whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(245, 166, 35, 0.5)" }}
+                className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-4 rounded-xl inline-flex items-center justify-center gap-2 w-full sm:w-auto font-semibold shadow-lg shadow-blue-600/20 transition-colors"
+                whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(37, 99, 235, 0.4)" }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Phone className="w-5 h-5" />
@@ -217,7 +217,7 @@ export default function RestaurantsPageClient() {
               </motion.a>
               <motion.a
                 href="#calculator"
-                className="btn-gold-outline text-lg px-8 py-4 inline-flex items-center justify-center gap-2 w-full sm:w-auto"
+                className="bg-white border-2 border-blue-600 text-blue-600 hover:bg-blue-50 text-lg px-8 py-4 rounded-xl inline-flex items-center justify-center gap-2 w-full sm:w-auto font-semibold transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -237,14 +237,14 @@ export default function RestaurantsPageClient() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass-premium p-8 md:p-12 rounded-3xl"
+            className="bg-white/70 backdrop-blur-xl border border-slate-200 p-8 md:p-12 rounded-3xl shadow-lg shadow-slate-200/50"
           >
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
-                <h2 className="text-display-md font-display text-white mb-4">
+                <h2 className="text-display-md font-display text-slate-900 mb-4">
                   The $47K Problem
                 </h2>
-                <p className="text-lg text-foreground-muted mb-6">
+                <p className="text-lg text-slate-600 mb-6">
                   23% of phone orders go unanswered during rush hours. Those customers don&apos;t call back—they order from competitors.
                 </p>
                 <ul className="space-y-3">
@@ -260,20 +260,20 @@ export default function RestaurantsPageClient() {
                       whileInView={{ opacity: 1, x: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: idx * 0.1 }}
-                      className="flex items-start gap-3 text-foreground"
+                      className="flex items-start gap-3 text-slate-700"
                     >
-                      <div className="w-1.5 h-1.5 rounded-full bg-gold mt-2.5" />
+                      <div className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-2.5" />
                       {item}
                     </motion.li>
                   ))}
                 </ul>
               </div>
               <div className="relative">
-                <div className="glass-card p-6 rounded-2xl">
+                <div className="bg-white border border-slate-200 p-6 rounded-2xl shadow-lg shadow-slate-200/50">
                   <div className="text-center">
                     <div className="text-5xl mb-4">📞</div>
-                    <div className="text-6xl font-bold text-gold mb-2">23%</div>
-                    <p className="text-foreground-muted">Orders Lost During Rush</p>
+                    <div className="text-6xl font-bold text-blue-600 mb-2">23%</div>
+                    <p className="text-slate-600">Orders Lost During Rush</p>
                   </div>
                 </div>
               </div>
@@ -291,10 +291,10 @@ export default function RestaurantsPageClient() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-display-md font-display text-white mb-4">
-              Complete Restaurant <span className="text-gradient-gold-cyan">Automation</span>
+            <h2 className="text-display-md font-display text-slate-900 mb-4">
+              Complete Restaurant <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Automation</span>
             </h2>
-            <p className="text-xl text-foreground-muted max-w-2xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               AI handles every customer interaction while your team focuses on food quality
             </p>
           </motion.div>
@@ -312,8 +312,8 @@ export default function RestaurantsPageClient() {
                   className={cn(
                     "flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300",
                     activeTab === tab.id
-                      ? "bg-gold text-background-dark shadow-glow-gold"
-                      : "glass border border-white/10 text-foreground hover:border-gold/50 hover:shadow-glow-gold-sm"
+                      ? "bg-blue-600 text-white shadow-lg shadow-blue-600/20"
+                      : "bg-white border border-slate-200 text-slate-700 hover:border-blue-600/50 hover:shadow-md"
                   )}
                 >
                   <Icon className="w-5 h-5" />
@@ -329,14 +329,14 @@ export default function RestaurantsPageClient() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
-            className="glass-premium p-8 md:p-12 rounded-3xl"
+            className="bg-white/70 backdrop-blur-xl border border-slate-200 p-8 md:p-12 rounded-3xl shadow-lg shadow-slate-200/50"
           >
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h3 className="text-3xl font-display text-white mb-4">
+                <h3 className="text-3xl font-display text-slate-900 mb-4">
                   {activeFeature?.label}
                 </h3>
-                <p className="text-lg text-foreground-muted mb-6">
+                <p className="text-lg text-slate-600 mb-6">
                   {activeFeature?.description}
                 </p>
                 <ul className="space-y-3">
@@ -346,16 +346,16 @@ export default function RestaurantsPageClient() {
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: idx * 0.1 }}
-                      className="flex items-center gap-3 text-foreground"
+                      className="flex items-center gap-3 text-slate-700"
                     >
-                      <Check className="w-5 h-5 text-gold flex-shrink-0" />
+                      <Check className="w-5 h-5 text-blue-600 flex-shrink-0" />
                       {feature}
                     </motion.li>
                   ))}
                 </ul>
               </div>
               <div className="flex items-center justify-center">
-                <div className="text-8xl opacity-20">
+                <div className="text-8xl opacity-10 text-slate-400">
                   {activeFeature?.icon && <activeFeature.icon className="w-full h-full" />}
                 </div>
               </div>
@@ -365,7 +365,7 @@ export default function RestaurantsPageClient() {
       </section>
 
       {/* POS Integration Section */}
-      <section className="py-20 px-4 bg-white/[0.02]">
+      <section className="py-20 px-4 bg-slate-50">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -373,10 +373,10 @@ export default function RestaurantsPageClient() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-display-md font-display text-white mb-4">
-              Seamless POS <span className="text-gradient-gold-cyan">Integration</span>
+            <h2 className="text-display-md font-display text-slate-900 mb-4">
+              Seamless POS <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Integration</span>
             </h2>
-            <p className="text-xl text-foreground-muted">
+            <p className="text-xl text-slate-600">
               Orders go directly to your kitchen. No manual entry required.
             </p>
           </motion.div>
@@ -390,7 +390,7 @@ export default function RestaurantsPageClient() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
                 whileHover={{ y: -8, scale: 1.02 }}
-                className="glass-card p-8 text-center rounded-2xl transition-all duration-300 hover:shadow-glow-gold-lg hover:border-gold/30"
+                className="bg-white border border-slate-200 p-8 text-center rounded-2xl transition-all duration-300 hover:shadow-lg hover:shadow-blue-600/10 hover:border-blue-600/30"
               >
                 <motion.div
                   className="text-6xl mb-4"
@@ -399,8 +399,8 @@ export default function RestaurantsPageClient() {
                 >
                   {pos.logo}
                 </motion.div>
-                <h3 className="text-2xl font-bold text-white mb-2">{pos.name}</h3>
-                <p className="text-gold flex items-center justify-center gap-2">
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">{pos.name}</h3>
+                <p className="text-blue-600 flex items-center justify-center gap-2">
                   <Clock className="w-4 h-4" />
                   {pos.setupTime} setup
                 </p>
@@ -414,8 +414,8 @@ export default function RestaurantsPageClient() {
             viewport={{ once: true }}
             className="text-center mt-8"
           >
-            <p className="text-lg text-foreground-muted">
-              <Star className="w-5 h-5 inline text-gold" /> Orders sync in real-time to your POS system
+            <p className="text-lg text-slate-600">
+              <Star className="w-5 h-5 inline text-blue-600" /> Orders sync in real-time to your POS system
             </p>
           </motion.div>
         </div>
@@ -430,10 +430,10 @@ export default function RestaurantsPageClient() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-display-md font-display text-white mb-4">
-              Reservation Platform <span className="text-gradient-gold-cyan">Sync</span>
+            <h2 className="text-display-md font-display text-slate-900 mb-4">
+              Reservation Platform <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Sync</span>
             </h2>
-            <p className="text-xl text-foreground-muted">
+            <p className="text-xl text-slate-600">
               50% more bookings with AI-powered reservation management
             </p>
           </motion.div>
@@ -447,7 +447,7 @@ export default function RestaurantsPageClient() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="glass-premium p-8 text-center rounded-2xl hover:shadow-glow-gold-lg transition-shadow duration-300"
+                className="bg-white/70 backdrop-blur-xl border border-slate-200 p-8 text-center rounded-2xl hover:shadow-lg hover:shadow-blue-600/10 transition-shadow duration-300"
               >
                 <motion.div
                   className="text-6xl mb-4"
@@ -456,8 +456,8 @@ export default function RestaurantsPageClient() {
                 >
                   {platform.logo}
                 </motion.div>
-                <h3 className="text-2xl font-bold text-white mb-2">{platform.name}</h3>
-                <p className="text-gold">{platform.boost}</p>
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">{platform.name}</h3>
+                <p className="text-blue-600">{platform.boost}</p>
               </motion.div>
             ))}
           </div>
@@ -465,7 +465,7 @@ export default function RestaurantsPageClient() {
       </section>
 
       {/* ROI Calculator */}
-      <section id="calculator" className="py-20 px-4 bg-white/[0.02]">
+      <section id="calculator" className="py-20 px-4 bg-slate-50">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -473,82 +473,82 @@ export default function RestaurantsPageClient() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-display-md font-display text-white mb-4">
-              Calculate Your <span className="text-gradient-gold-cyan">Revenue Recovery</span>
+            <h2 className="text-display-md font-display text-slate-900 mb-4">
+              Calculate Your <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Revenue Recovery</span>
             </h2>
-            <p className="text-xl text-foreground-muted">
+            <p className="text-xl text-slate-600">
               See how much money you&apos;re losing to missed calls
             </p>
           </motion.div>
 
-          <div className="glass-premium p-8 md:p-12 rounded-3xl">
+          <div className="bg-white/70 backdrop-blur-xl border border-slate-200 p-8 md:p-12 rounded-3xl shadow-lg shadow-slate-200/50">
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               {/* Inputs */}
               <div className="space-y-6">
                 <div>
-                  <label className="block text-foreground mb-2 font-semibold">
+                  <label className="block text-slate-700 mb-2 font-semibold">
                     Daily Phone Orders
                   </label>
                   <input
                     type="number"
                     value={calcInputs.dailyOrders}
                     onChange={(e) => setCalcInputs({ ...calcInputs, dailyOrders: Number(e.target.value) })}
-                    className="glass-input w-full"
+                    className="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                     min="0"
                   />
                 </div>
                 <div>
-                  <label className="block text-foreground mb-2 font-semibold">
+                  <label className="block text-slate-700 mb-2 font-semibold">
                     % Missed During Rush
                   </label>
                   <input
                     type="number"
                     value={calcInputs.missedPercent}
                     onChange={(e) => setCalcInputs({ ...calcInputs, missedPercent: Number(e.target.value) })}
-                    className="glass-input w-full"
+                    className="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                     min="0"
                     max="100"
                   />
                 </div>
                 <div>
-                  <label className="block text-foreground mb-2 font-semibold">
+                  <label className="block text-slate-700 mb-2 font-semibold">
                     Average Order Value ($)
                   </label>
                   <input
                     type="number"
                     value={calcInputs.avgOrderValue}
                     onChange={(e) => setCalcInputs({ ...calcInputs, avgOrderValue: Number(e.target.value) })}
-                    className="glass-input w-full"
+                    className="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                     min="0"
                   />
                 </div>
               </div>
 
               {/* Results */}
-              <div className="glass-gold-accent p-6 rounded-2xl space-y-4">
-                <h3 className="text-2xl font-bold text-white mb-4">Your Potential Recovery</h3>
+              <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 p-6 rounded-2xl space-y-4">
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">Your Potential Recovery</h3>
                 <div className="space-y-3">
                   <div className="flex justify-between items-center">
-                    <span className="text-foreground-muted">Annual Revenue:</span>
-                    <span className="text-3xl font-bold text-gold">
+                    <span className="text-slate-600">Annual Revenue:</span>
+                    <span className="text-3xl font-bold text-blue-600">
                       ${roi.annualRevenue.toLocaleString()}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-foreground-muted">Monthly Revenue:</span>
-                    <span className="text-2xl font-bold text-white">
+                    <span className="text-slate-600">Monthly Revenue:</span>
+                    <span className="text-2xl font-bold text-slate-900">
                       ${roi.monthlyRevenue.toLocaleString()}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-foreground-muted">ROI:</span>
-                    <span className="text-2xl font-bold text-gold">
+                    <span className="text-slate-600">ROI:</span>
+                    <span className="text-2xl font-bold text-blue-600">
                       {roi.roi}%
                     </span>
                   </div>
-                  <div className="flex justify-between items-center pt-3 border-t border-white/10">
-                    <span className="text-foreground-muted">Payback Period:</span>
-                    <span className="text-xl font-bold text-white">
+                  <div className="flex justify-between items-center pt-3 border-t border-blue-200">
+                    <span className="text-slate-600">Payback Period:</span>
+                    <span className="text-xl font-bold text-slate-900">
                       {roi.paybackDays} days
                     </span>
                   </div>
@@ -559,8 +559,8 @@ export default function RestaurantsPageClient() {
             <div className="text-center">
               <motion.a
                 href="tel:865-346-6111"
-                className="btn-gold text-lg px-8 py-4 inline-flex items-center gap-2 w-full sm:w-auto"
-                whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(245, 166, 35, 0.5)" }}
+                className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-4 rounded-xl inline-flex items-center gap-2 w-full sm:w-auto font-semibold shadow-lg shadow-blue-600/20 transition-colors"
+                whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(37, 99, 235, 0.4)" }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Phone className="w-5 h-5" />
@@ -580,10 +580,10 @@ export default function RestaurantsPageClient() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-display-md font-display text-white mb-4">
-              Proven <span className="text-gradient-gold-cyan">Results</span>
+            <h2 className="text-display-md font-display text-slate-900 mb-4">
+              Proven <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Results</span>
             </h2>
-            <p className="text-xl text-foreground-muted">
+            <p className="text-xl text-slate-600">
               Real restaurants, real revenue recovery
             </p>
           </motion.div>
@@ -597,7 +597,7 @@ export default function RestaurantsPageClient() {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
                 whileHover={{ y: -10, scale: 1.03 }}
-                className="glass-card p-8 rounded-2xl hover:border-gold/50 hover:shadow-glow-gold-lg transition-all duration-300"
+                className="bg-white border border-slate-200 p-8 rounded-2xl hover:border-blue-600/50 hover:shadow-lg hover:shadow-blue-600/10 transition-all duration-300"
               >
                 <motion.div
                   className="text-6xl mb-4"
@@ -606,16 +606,16 @@ export default function RestaurantsPageClient() {
                 >
                   {study.icon}
                 </motion.div>
-                <h3 className="text-2xl font-bold text-white mb-2">{study.type}</h3>
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">{study.type}</h3>
                 <motion.div
-                  className="text-4xl font-bold text-gold mb-2"
+                  className="text-4xl font-bold text-blue-600 mb-2"
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 400 }}
                 >
                   {study.revenue}
                 </motion.div>
-                <p className="text-foreground-muted mb-1">{study.roi} ROI</p>
-                <p className="text-sm text-foreground-muted">{study.period}</p>
+                <p className="text-slate-600 mb-1">{study.roi} ROI</p>
+                <p className="text-sm text-slate-500">{study.period}</p>
               </motion.div>
             ))}
           </div>
@@ -623,27 +623,27 @@ export default function RestaurantsPageClient() {
       </section>
 
       {/* Rush Hour Section */}
-      <section className="py-20 px-4 bg-white/[0.02]">
+      <section className="py-20 px-4 bg-slate-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-premium p-8 md:p-12 rounded-3xl text-center"
+            className="bg-white/70 backdrop-blur-xl border border-slate-200 p-8 md:p-12 rounded-3xl text-center shadow-lg shadow-slate-200/50"
           >
             <div className="text-6xl mb-6">🔥</div>
-            <h2 className="text-display-md font-display text-white mb-6">
+            <h2 className="text-display-md font-display text-slate-900 mb-6">
               Friday 6-8 PM: 200 Calls. <br />
-              <span className="text-gradient-gold-cyan">Zero Missed with AI.</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Zero Missed with AI.</span>
             </h2>
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-12">
               <motion.div
-                className="glass-card p-6 rounded-2xl"
+                className="bg-white border border-slate-200 p-6 rounded-2xl shadow-lg shadow-slate-200/50"
                 whileHover={{ y: -5 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <h3 className="text-xl font-bold text-white mb-4">Before AI</h3>
-                <ul className="space-y-2 text-foreground-muted">
+                <h3 className="text-xl font-bold text-slate-900 mb-4">Before AI</h3>
+                <ul className="space-y-2 text-slate-600">
                   <li>❌ 46 missed calls</li>
                   <li>❌ Stressed staff</li>
                   <li>❌ Burned food</li>
@@ -651,12 +651,12 @@ export default function RestaurantsPageClient() {
                 </ul>
               </motion.div>
               <motion.div
-                className="glass-gold-accent p-6 rounded-2xl"
+                className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 p-6 rounded-2xl"
                 whileHover={{ y: -5, scale: 1.02 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <h3 className="text-xl font-bold text-white mb-4">With AI</h3>
-                <ul className="space-y-2 text-white">
+                <h3 className="text-xl font-bold text-slate-900 mb-4">With AI</h3>
+                <ul className="space-y-2 text-slate-900">
                   <li>✅ 200/200 calls answered</li>
                   <li>✅ Staff focused on food</li>
                   <li>✅ Perfect orders</li>
@@ -675,19 +675,19 @@ export default function RestaurantsPageClient() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="glass-cta-card text-center p-12 rounded-3xl"
+            className="bg-gradient-to-br from-blue-600 to-cyan-500 text-center p-12 rounded-3xl shadow-xl shadow-blue-600/20"
           >
             <h2 className="text-display-md font-display text-white mb-6">
               Never Miss a Phone Order Again
             </h2>
-            <p className="text-xl text-foreground-muted mb-8">
+            <p className="text-xl text-blue-50 mb-8">
               Join restaurants recovering $47K+ annually with AI phone automation
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.a
                 href="tel:865-346-6111"
-                className="btn-gold text-lg px-10 py-5 inline-flex items-center justify-center gap-2 w-full sm:w-auto"
-                whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(245, 166, 35, 0.6)" }}
+                className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-10 py-5 rounded-xl inline-flex items-center justify-center gap-2 w-full sm:w-auto font-semibold shadow-lg transition-colors"
+                whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(255, 255, 255, 0.3)" }}
                 whileTap={{ scale: 0.95 }}
               >
                 <Phone className="w-5 h-5" />
@@ -695,7 +695,7 @@ export default function RestaurantsPageClient() {
               </motion.a>
               <motion.a
                 href="/contact"
-                className="btn-gold-outline text-lg px-10 py-5 inline-flex items-center justify-center gap-2 w-full sm:w-auto"
+                className="bg-transparent border-2 border-white text-white hover:bg-white/10 text-lg px-10 py-5 rounded-xl inline-flex items-center justify-center gap-2 w-full sm:w-auto font-semibold transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >

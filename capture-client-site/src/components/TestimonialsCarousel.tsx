@@ -126,7 +126,7 @@ export default function TestimonialsCarousel() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={handlePrevious}
-            className="w-12 h-12 rounded-full glass border border-surface-border flex items-center justify-center text-foreground hover:border-accent transition-colors"
+            className="w-12 h-12 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg flex items-center justify-center text-foreground hover:border-accent transition-colors"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -165,7 +165,7 @@ export default function TestimonialsCarousel() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={handleNext}
-            className="w-12 h-12 rounded-full glass border border-surface-border flex items-center justify-center text-foreground hover:border-accent transition-colors"
+            className="w-12 h-12 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg flex items-center justify-center text-foreground hover:border-accent transition-colors"
             aria-label="Next testimonial"
           >
             <ChevronRight className="w-6 h-6" />
@@ -210,7 +210,7 @@ interface TestimonialCardProps {
 
 function TestimonialCard({ testimonial, isInView }: TestimonialCardProps) {
   return (
-    <div className="glass p-8 rounded-2xl h-full flex flex-col shadow-glow">
+    <div className="bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg p-8 rounded-2xl h-full flex flex-col">
       {/* Quote mark */}
       <motion.div
         initial={{ opacity: 0, scale: 0 }}

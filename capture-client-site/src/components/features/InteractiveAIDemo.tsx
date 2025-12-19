@@ -284,7 +284,7 @@ export default function InteractiveAIDemo() {
   // ============================================================================
 
   return (
-    <section className="relative py-20 sm:py-24 lg:py-32 overflow-hidden bg-slate-950">
+    <section className="relative py-20 sm:py-24 lg:py-32 overflow-hidden bg-gradient-to-b from-white to-slate-50">
       {/* Subtle background gradient */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-cyan-500/5 rounded-full blur-[150px]" />
@@ -300,13 +300,13 @@ export default function InteractiveAIDemo() {
           transition={{ duration: 0.5 }}
           className="max-w-2xl mx-auto text-center mb-12 lg:mb-16"
         >
-          <p className="text-cyan-400 text-sm font-medium tracking-wide uppercase mb-4">
+          <p className="text-cyan-600 text-sm font-medium tracking-wide uppercase mb-4">
             Live Demo
           </p>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 tracking-tight">
             See the AI in action
           </h2>
-          <p className="text-slate-400 text-lg max-w-xl mx-auto">
+          <p className="text-slate-600 text-lg max-w-xl mx-auto">
             Type like a customer would. Watch leads captured in real-time.
           </p>
         </motion.div>
@@ -328,7 +328,7 @@ export default function InteractiveAIDemo() {
                 ${
                   businessType === type
                     ? "bg-cyan-500 text-white"
-                    : "bg-white/5 text-slate-400 hover:bg-white/10 hover:text-white"
+                    : "bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900"
                 }
               `}
             >
@@ -347,16 +347,16 @@ export default function InteractiveAIDemo() {
         >
           {/* Chat Interface - 3 columns on desktop */}
           <div className="lg:col-span-3">
-            <div className="bg-slate-900/80 border border-white/10 rounded-2xl overflow-hidden">
+            <div className="bg-white/70 backdrop-blur-xl border border-slate-200 rounded-2xl overflow-hidden">
               {/* Chat Header */}
-              <div className="px-5 py-4 border-b border-white/10 flex items-center justify-between">
+              <div className="px-5 py-4 border-b border-slate-200 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                   <div className="w-2 h-2 rounded-full bg-emerald-400" />
-                  <span className="text-white font-medium text-sm">SMS Agent</span>
+                  <span className="text-slate-900 font-medium text-sm">SMS Agent</span>
                 </div>
                 <button
                   onClick={handleReset}
-                  className="p-2 rounded-lg text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+                  className="p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
                   aria-label="Reset conversation"
                 >
                   <RotateCcw className="w-4 h-4" />
@@ -386,7 +386,7 @@ export default function InteractiveAIDemo() {
                     animate={{ opacity: 1 }}
                     className="flex items-center gap-2"
                   >
-                    <div className="flex gap-1 px-4 py-3 rounded-2xl bg-white/5">
+                    <div className="flex gap-1 px-4 py-3 rounded-2xl bg-slate-100">
                       {[0, 1, 2].map((i) => (
                         <motion.div
                           key={i}
@@ -396,7 +396,7 @@ export default function InteractiveAIDemo() {
                             repeat: Infinity,
                             delay: i * 0.15,
                           }}
-                          className="w-1.5 h-1.5 rounded-full bg-slate-400"
+                          className="w-1.5 h-1.5 rounded-full bg-slate-600"
                         />
                       ))}
                     </div>
@@ -413,7 +413,7 @@ export default function InteractiveAIDemo() {
               </div>
 
               {/* Input */}
-              <div className="px-5 py-4 border-t border-white/10 bg-slate-900/50">
+              <div className="px-5 py-4 border-t border-slate-200 bg-white/70 backdrop-blur-xl">
                 <form
                   onSubmit={(e) => {
                     e.preventDefault();
@@ -427,7 +427,7 @@ export default function InteractiveAIDemo() {
                     onChange={(e) => setUserInput(e.target.value)}
                     placeholder="Type a message..."
                     disabled={isLoading}
-                    className="flex-1 px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white text-sm placeholder-slate-500 focus:outline-none focus:border-cyan-500/50 transition-colors disabled:opacity-50"
+                    className="flex-1 px-4 py-3 rounded-xl bg-white border border-slate-200 text-slate-900 text-sm placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors disabled:opacity-50"
                   />
                   <button
                     type="submit"
@@ -446,7 +446,7 @@ export default function InteractiveAIDemo() {
                       key={index}
                       onClick={() => handleQuestionClick(question)}
                       disabled={isLoading}
-                      className="px-3 py-2 text-xs rounded-lg bg-white/5 text-slate-400 hover:bg-white/10 hover:text-white transition-colors disabled:opacity-50 text-left"
+                      className="px-3 py-2 text-xs rounded-lg bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-900 transition-colors disabled:opacity-50 text-left"
                     >
                       {question}
                     </button>
@@ -502,7 +502,7 @@ function ChatMessage({ message, isLatest, typedText, isTyping }: ChatMessageProp
           max-w-[85%] px-4 py-3 rounded-2xl text-sm leading-relaxed
           ${
             isAI
-              ? "bg-white/5 text-white rounded-bl-md"
+              ? "bg-slate-100 text-slate-900 rounded-bl-md"
               : "bg-cyan-500 text-white rounded-br-md"
           }
         `}
@@ -544,21 +544,21 @@ function CRMPanel({ crmData }: CRMPanelProps) {
   const captureProgress = filledCount / fields.length;
 
   return (
-    <div className="bg-slate-900/80 border border-white/10 rounded-2xl overflow-hidden h-full">
+    <div className="bg-white/70 backdrop-blur-xl border border-slate-200 rounded-2xl overflow-hidden h-full">
       {/* Header */}
-      <div className="px-5 py-4 border-b border-white/10 flex items-center justify-between">
+      <div className="px-5 py-4 border-b border-slate-200 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-lg bg-cyan-500/10 flex items-center justify-center">
             <MessageCircle className="w-4 h-4 text-cyan-400" />
           </div>
           <div>
-            <h3 className="text-white font-medium text-sm">Lead Capture</h3>
+            <h3 className="text-slate-900 font-medium text-sm">Lead Capture</h3>
             <p className="text-slate-500 text-xs">Auto-extracted data</p>
           </div>
         </div>
         <div className="flex items-center gap-1">
           <Zap className="w-3 h-3 text-cyan-400" />
-          <span className="text-xs text-slate-400">Live</span>
+          <span className="text-xs text-slate-600">Live</span>
         </div>
       </div>
 
@@ -569,18 +569,18 @@ function CRMPanel({ crmData }: CRMPanelProps) {
         ))}
 
         {/* Lead Score */}
-        <div className="pt-4 mt-4 border-t border-white/10">
+        <div className="pt-4 mt-4 border-t border-slate-200">
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center gap-2">
               <TrendingUp className="w-4 h-4 text-slate-500" />
-              <span className="text-sm text-slate-400">Lead Score</span>
+              <span className="text-sm text-slate-600">Lead Score</span>
             </div>
-            <span className="text-lg font-semibold text-white">
+            <span className="text-lg font-semibold text-slate-900">
               {crmData.leadScore}
               <span className="text-slate-500 text-sm font-normal">/10</span>
             </span>
           </div>
-          <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
+          <div className="h-1.5 bg-slate-100 rounded-full overflow-hidden">
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: `${crmData.leadScore * 10}%` }}
@@ -596,7 +596,7 @@ function CRMPanel({ crmData }: CRMPanelProps) {
             <span>Data captured</span>
             <span>{filledCount}/{fields.length} fields</span>
           </div>
-          <div className="h-1 bg-white/5 rounded-full overflow-hidden">
+          <div className="h-1 bg-slate-100 rounded-full overflow-hidden">
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: `${captureProgress * 100}%` }}
@@ -630,7 +630,7 @@ function CRMField({ field }: CRMFieldProps) {
     <div
       className={`
         rounded-xl p-3 transition-all duration-300
-        ${filled ? "bg-cyan-500/10 border border-cyan-500/20" : "bg-white/[0.02] border border-white/5"}
+        ${filled ? "bg-cyan-500/10 border border-cyan-500/20" : "bg-slate-50 border border-slate-200"}
       `}
     >
       <div className="flex items-center gap-2 mb-1">
@@ -652,7 +652,7 @@ function CRMField({ field }: CRMFieldProps) {
               key="value"
               initial={{ opacity: 0, x: -8 }}
               animate={{ opacity: 1, x: 0 }}
-              className="text-sm text-white font-mono"
+              className="text-sm text-slate-900 font-mono"
             >
               {field.value}
             </motion.p>

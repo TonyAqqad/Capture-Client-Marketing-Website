@@ -5,7 +5,7 @@ import { IntegrationsCTA } from "@/components/integrations/IntegrationsCTA";
 
 // SEO Metadata for Integrations Page
 export const metadata: Metadata = {
-  title: "69+ Seamless Integrations | Connect Your Tech Stack | Capture Client",
+  title: "69+ Integrations | Connect Your Stack | Capture Client",
   description:
     "Capture Client integrates with 69+ platforms including HubSpot, Salesforce, Twilio, Zapier, ServiceTitan, Calendly, and more. Connect your entire tech stack in minutes with our native integrations or 5,000+ apps via Zapier.",
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     "workflow automation",
   ],
   openGraph: {
-    title: "69+ Seamless Integrations | Connect Your Tech Stack",
+    title: "69+ Integrations | Connect Your Stack | Capture Client",
     description:
       "Connect Capture Client with your favorite platforms. 69+ native integrations plus 5,000+ apps via Zapier. HubSpot, Salesforce, ServiceTitan, and more.",
     url: "https://captureclient.com/integrations",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://captureclient.com/og-integrations.jpg",
+        url: "https://captureclient.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "Capture Client - 69+ Seamless Integrations",
@@ -44,10 +44,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "69+ Seamless Integrations | Capture Client",
+    title: "69+ Integrations | Connect Your Stack | Capture Client",
     description:
       "Connect Capture Client with your favorite platforms. 69+ native integrations plus 5,000+ apps via Zapier.",
-    images: ["https://captureclient.com/og-integrations.jpg"],
+    images: ["https://captureclient.com/og-image.png"],
   },
   alternates: {
     canonical: "https://captureclient.com/integrations",
@@ -96,7 +96,7 @@ const softwareApplicationSchema = {
   operatingSystem: "Web",
   offers: {
     "@type": "Offer",
-    price: "497",
+    price: "97",
     priceCurrency: "USD",
   },
   aggregateRating: {
@@ -120,7 +120,7 @@ const softwareApplicationSchema = {
 
 export default function IntegrationsPage() {
   return (
-    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-background-dark">
+    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-white">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"

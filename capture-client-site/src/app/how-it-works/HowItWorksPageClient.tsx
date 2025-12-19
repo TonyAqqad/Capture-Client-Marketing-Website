@@ -125,21 +125,6 @@ const howToSchema = {
   totalTime: "PT2M"
 };
 
-// Step interface for the visual timeline
-interface ProcessStep {
-  number: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  icon: string;
-  illustration: "phone" | "ai" | "crm" | "close";
-  features: string[];
-  stat: {
-    value: string;
-    label: string;
-  };
-}
-
 const processSteps = [
   {
     number: "01",
@@ -273,7 +258,7 @@ export default function HowItWorksPageClient() {
   void processSteps;
 
   return (
-    <main className="relative min-h-screen bg-background-dark overflow-hidden">
+    <main className="relative min-h-screen bg-white overflow-hidden">
       {/* JSON-LD Structured Data */}
       <script
         type="application/ld+json"
@@ -286,9 +271,9 @@ export default function HowItWorksPageClient() {
 
       {/* Global background effects */}
       <div className="fixed inset-0 pointer-events-none">
-        <div className="absolute inset-0 bg-mesh-premium opacity-30" />
-        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gradient-radial from-accent/20 to-transparent blur-3xl animate-float-slow" />
-        <div className="absolute bottom-0 right-1/4 w-[800px] h-[800px] bg-gradient-radial from-primary/15 to-transparent blur-3xl animate-float-medium" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white to-slate-50" />
+        <div className="absolute top-0 left-1/4 w-[600px] h-[600px] bg-gradient-radial from-blue-600/10 to-transparent blur-3xl animate-float-slow" />
+        <div className="absolute bottom-0 right-1/4 w-[800px] h-[800px] bg-gradient-radial from-cyan-500/8 to-transparent blur-3xl animate-float-medium" />
       </div>
 
       {/* HERO SECTION */}
@@ -347,7 +332,7 @@ function HeroSection({ heroRef, heroY, heroOpacity, isMobile }: HeroSectionProps
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute top-1/4 left-1/3 w-[400px] h-[400px] bg-gradient-radial from-accent/30 to-transparent rounded-full blur-3xl"
+          className="absolute top-1/4 left-1/3 w-[400px] h-[400px] bg-gradient-radial from-blue-600/15 to-transparent rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -360,7 +345,7 @@ function HeroSection({ heroRef, heroY, heroOpacity, isMobile }: HeroSectionProps
             ease: "easeInOut",
             delay: 2
           }}
-          className="absolute bottom-1/4 right-1/3 w-[500px] h-[500px] bg-gradient-radial from-gold/20 to-transparent rounded-full blur-3xl"
+          className="absolute bottom-1/4 right-1/3 w-[500px] h-[500px] bg-gradient-radial from-cyan-500/10 to-transparent rounded-full blur-3xl"
         />
       </div>
 
@@ -370,10 +355,10 @@ function HeroSection({ heroRef, heroY, heroOpacity, isMobile }: HeroSectionProps
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 via-gold/10 to-transparent border border-accent/30 backdrop-blur-xl mb-8"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600/10 via-cyan-500/10 to-transparent border border-blue-600/30 backdrop-blur-xl mb-8"
         >
-          <Sparkles className="w-4 h-4 text-accent" />
-          <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent">
+          <Sparkles className="w-4 h-4 text-blue-600" />
+          <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-blue-600">
             How It Works
           </span>
         </motion.div>
@@ -383,7 +368,7 @@ function HeroSection({ heroRef, heroY, heroOpacity, isMobile }: HeroSectionProps
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-hero font-black text-foreground mb-6 leading-[1.1]"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-hero font-black text-slate-900 mb-6 leading-[1.1]"
           style={{ fontWeight: 900 }}
         >
           From{" "}
@@ -400,7 +385,7 @@ function HeroSection({ heroRef, heroY, heroOpacity, isMobile }: HeroSectionProps
           </span>
           <br />
           to{" "}
-          <span className="text-gradient bg-gradient-to-r from-gold via-accent to-gold bg-clip-text text-transparent">
+          <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
             Booked Appointments
           </span>
           <br />
@@ -412,7 +397,7 @@ function HeroSection({ heroRef, heroY, heroOpacity, isMobile }: HeroSectionProps
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg sm:text-xl md:text-2xl text-foreground-muted max-w-3xl mx-auto mb-10 leading-relaxed"
+          className="text-lg sm:text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed"
         >
           See how our AI voice agents transform your lead generation process—automatically capturing, qualifying, and scheduling leads while you sleep.
         </motion.p>
@@ -437,7 +422,7 @@ function HeroSection({ heroRef, heroY, heroOpacity, isMobile }: HeroSectionProps
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="inline-flex flex-col items-center gap-2 text-foreground-muted"
+            className="inline-flex flex-col items-center gap-2 text-slate-600"
           >
             <span className="text-sm font-medium">Scroll to explore</span>
             <ChevronDown className="w-5 h-5" />
@@ -456,9 +441,9 @@ function HeroIllustration() {
       <motion.div
         animate={{ scale: [1, 1.1, 1], rotate: [0, 5, 0, -5, 0] }}
         transition={{ duration: 3, repeat: Infinity }}
-        className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 backdrop-blur-xl flex items-center justify-center"
+        className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-blue-600/20 to-cyan-500/20 border border-blue-600/30 backdrop-blur-xl flex items-center justify-center shadow-lg shadow-slate-200/50"
       >
-        <Phone className="w-10 h-10 sm:w-12 sm:h-12 text-accent" />
+        <Phone className="w-10 h-10 sm:w-12 sm:h-12 text-blue-600" />
       </motion.div>
 
       {/* Arrow 1 */}
@@ -467,21 +452,21 @@ function HeroIllustration() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 1, repeat: Infinity, repeatDelay: 2 }}
       >
-        <ArrowRight className="w-8 h-8 sm:w-10 sm:h-10 text-gold" />
+        <ArrowRight className="w-8 h-8 sm:w-10 sm:h-10 text-blue-600" />
       </motion.div>
 
       {/* AI Icon */}
       <motion.div
         animate={{ scale: [1, 1.15, 1] }}
         transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-        className="w-24 h-24 sm:w-32 sm:h-32 rounded-3xl bg-gradient-to-br from-gold/30 to-gold/30 border-2 border-gold/40 backdrop-blur-xl flex items-center justify-center relative"
+        className="w-24 h-24 sm:w-32 sm:h-32 rounded-3xl bg-gradient-to-br from-blue-600/30 to-cyan-500/30 border-2 border-blue-600/40 backdrop-blur-xl flex items-center justify-center relative shadow-lg shadow-blue-200/50"
       >
-        <Sparkles className="w-12 h-12 sm:w-16 sm:h-16 text-gold" />
+        <Sparkles className="w-12 h-12 sm:w-16 sm:h-16 text-blue-600" />
         {/* Pulsing rings */}
         <motion.div
           animate={{ scale: [1, 1.5], opacity: [0.5, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="absolute inset-0 rounded-3xl border-2 border-gold/50"
+          className="absolute inset-0 rounded-3xl border-2 border-blue-600/50"
         />
       </motion.div>
 
@@ -491,16 +476,16 @@ function HeroIllustration() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1, delay: 1.5, repeat: Infinity, repeatDelay: 2 }}
       >
-        <ArrowRight className="w-8 h-8 sm:w-10 sm:h-10 text-accent" />
+        <ArrowRight className="w-8 h-8 sm:w-10 sm:h-10 text-cyan-500" />
       </motion.div>
 
       {/* Calendar Icon */}
       <motion.div
         animate={{ scale: [1, 1.1, 1], rotate: [0, -5, 0, 5, 0] }}
         transition={{ duration: 3, repeat: Infinity, delay: 1 }}
-        className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/30 backdrop-blur-xl flex items-center justify-center"
+        className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-600/20 border border-cyan-500/30 backdrop-blur-xl flex items-center justify-center shadow-lg shadow-slate-200/50"
       >
-        <CalendarCheck className="w-10 h-10 sm:w-12 sm:h-12 text-primary" />
+        <CalendarCheck className="w-10 h-10 sm:w-12 sm:h-12 text-cyan-500" />
       </motion.div>
     </div>
   );
@@ -535,17 +520,17 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 
 function FeatureIcon({ icon }: { icon: string }) {
   const IconComponent = iconMap[icon] || Settings;
-  return <IconComponent className="w-6 h-6 text-primary" />;
+  return <IconComponent className="w-6 h-6 text-blue-600" />;
 }
 
 function SetupIcon({ icon }: { icon: string }) {
   const IconComponent = iconMap[icon] || Settings;
-  return <IconComponent className="w-6 h-6 text-gold" />;
+  return <IconComponent className="w-6 h-6 text-blue-600" />;
 }
 
 function ProcessIcon({ icon, primary }: { icon: string; primary?: boolean }) {
   const IconComponent = iconMap[icon] || Settings;
-  return <IconComponent className={`w-6 h-6 ${primary ? 'text-primary' : 'text-foreground-muted'}`} />;
+  return <IconComponent className={`w-6 h-6 ${primary ? 'text-blue-600' : 'text-slate-600'}`} />;
 }
 
 // ==================== BEHIND THE SCENES ====================
@@ -594,19 +579,19 @@ function BehindTheScenes({ isMobile }: BehindTheScenesProps) {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-accent/10 border border-primary/30 backdrop-blur-xl mb-6">
-            <Settings className="w-4 h-4 text-primary" />
-            <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-primary">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600/10 to-cyan-500/10 border border-blue-600/30 backdrop-blur-xl mb-6">
+            <Settings className="w-4 h-4 text-blue-600" />
+            <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-blue-600">
               Behind the Scenes
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-hero font-black text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-hero font-black text-slate-900 mb-4">
             Powered by{" "}
-            <span className="text-gradient bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+            <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
               Advanced AI
             </span>
           </h2>
-          <p className="text-lg sm:text-xl text-foreground-muted max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto">
             See the cutting-edge technology that makes our AI voice agents so effective at capturing and qualifying leads.
           </p>
         </motion.div>
@@ -627,14 +612,14 @@ function BehindTheScenes({ isMobile }: BehindTheScenesProps) {
               whileHover={!isMobile ? { scale: 1.02, y: -5 } : {}}
               className="relative group"
             >
-              <div className="relative z-10 h-full p-6 sm:p-8 rounded-2xl bg-background-card/50 border border-surface-border/50 backdrop-blur-xl overflow-hidden hover:border-primary/50 transition-all duration-300 hover:shadow-glow-gold">
+              <div className="relative z-10 h-full p-6 sm:p-8 rounded-2xl bg-white/70 border border-slate-200/60 backdrop-blur-xl overflow-hidden hover:border-blue-600/50 transition-all duration-300 shadow-lg shadow-slate-200/50">
                 {/* Glow effect on hover (desktop only) */}
                 {!isMobile && (
                   <motion.div
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
                     transition={{ duration: 0.3 }}
-                    className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10"
+                    className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-cyan-500/5 to-blue-600/5"
                   />
                 )}
 
@@ -643,7 +628,7 @@ function BehindTheScenes({ isMobile }: BehindTheScenesProps) {
                   <motion.div
                     whileHover={!isMobile ? { rotate: 15, scale: 1.1 } : {}}
                     transition={{ type: "spring", stiffness: 300 }}
-                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-accent/20 border border-primary/30 flex items-center justify-center flex-shrink-0"
+                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600/10 to-cyan-500/10 border border-blue-600/30 flex items-center justify-center flex-shrink-0"
                   >
                     <FeatureIcon icon={feature.icon} />
                   </motion.div>
@@ -652,7 +637,7 @@ function BehindTheScenes({ isMobile }: BehindTheScenesProps) {
                       initial={{ opacity: 0 }}
                       animate={isInView ? { opacity: 1 } : {}}
                       transition={{ delay: idx * 0.15 + 0.3 }}
-                      className="text-xl font-bold text-foreground mb-2"
+                      className="text-xl font-bold text-slate-900 mb-2"
                     >
                       {feature.title}
                     </motion.h3>
@@ -664,7 +649,7 @@ function BehindTheScenes({ isMobile }: BehindTheScenesProps) {
                   initial={{ opacity: 0 }}
                   animate={isInView ? { opacity: 1 } : {}}
                   transition={{ delay: idx * 0.15 + 0.4 }}
-                  className="relative z-10 text-foreground-muted mb-6 leading-relaxed"
+                  className="relative z-10 text-slate-600 mb-6 leading-relaxed"
                 >
                   {feature.description}
                 </motion.p>
@@ -676,10 +661,10 @@ function BehindTheScenes({ isMobile }: BehindTheScenesProps) {
                   transition={{ delay: idx * 0.15 + 0.5, type: "spring" }}
                   className="relative z-10 flex items-baseline gap-2"
                 >
-                  <span className="text-3xl font-black text-gradient bg-gradient-to-r from-gold to-accent bg-clip-text text-transparent">
+                  <span className="text-3xl font-black text-gradient bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                     {feature.stat}
                   </span>
-                  <span className="text-sm text-foreground-subtle uppercase tracking-wide">
+                  <span className="text-sm text-slate-500 uppercase tracking-wide">
                     {feature.statLabel}
                   </span>
                 </motion.div>
@@ -695,14 +680,14 @@ function BehindTheScenes({ isMobile }: BehindTheScenesProps) {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="mt-16 relative"
         >
-          <div className="relative z-10 p-8 sm:p-12 rounded-3xl bg-gradient-to-br from-background-card/80 to-background-darker/80 border border-surface-border/50 backdrop-blur-xl overflow-hidden">
+          <div className="relative z-10 p-8 sm:p-12 rounded-3xl bg-white/70 border border-slate-200/60 backdrop-blur-xl overflow-hidden shadow-lg shadow-slate-200/50">
             {/* Background pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <div className="absolute inset-0 bg-mesh-premium" />
+            <div className="absolute inset-0 opacity-5">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-cyan-500" />
             </div>
 
             <div className="relative z-10 text-center">
-              <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-8">
+              <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8">
                 Real-Time AI Processing Pipeline
               </h3>
 
@@ -719,7 +704,7 @@ function BehindTheScenes({ isMobile }: BehindTheScenesProps) {
                 <ProcessNode icon="cloud_sync" label="CRM Sync" />
               </div>
 
-              <p className="mt-8 text-foreground-muted">
+              <p className="mt-8 text-slate-600">
                 Every interaction processed in under 2 seconds with 99.2% accuracy
               </p>
             </div>
@@ -735,12 +720,12 @@ function ProcessNode({ icon, label, primary }: { icon: string; label: string; pr
     <div className="flex flex-col items-center gap-2">
       <div className={`w-16 h-16 rounded-2xl flex items-center justify-center ${
         primary
-          ? 'bg-gradient-to-br from-primary/30 to-accent/30 border-2 border-primary/50'
-          : 'bg-background-card/80 border border-surface-border/50'
+          ? 'bg-gradient-to-br from-blue-600/20 to-cyan-500/20 border-2 border-blue-600/50'
+          : 'bg-white/70 border border-slate-200/60'
       }`}>
         <ProcessIcon icon={icon} primary={primary} />
       </div>
-      <span className="text-xs sm:text-sm font-medium text-foreground-subtle text-center max-w-[80px]">
+      <span className="text-xs sm:text-sm font-medium text-slate-500 text-center max-w-[80px]">
         {label}
       </span>
     </div>
@@ -757,7 +742,7 @@ function FlowArrow({ isMobile }: { isMobile: boolean }) {
       transition={{ duration: 2, repeat: Infinity }}
       className={isMobile ? 'rotate-90' : ''}
     >
-      <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-gold" />
+      <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
     </motion.div>
   );
 }
@@ -771,7 +756,7 @@ function IntegrationShowcase({ integrations, isMobile }: IntegrationShowcaseProp
     <section ref={sectionRef} className="relative py-24 overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-gradient-radial from-accent/10 to-transparent blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-gradient-radial from-blue-600/5 to-transparent blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
@@ -782,19 +767,19 @@ function IntegrationShowcase({ integrations, isMobile }: IntegrationShowcaseProp
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 to-primary/10 border border-accent/30 backdrop-blur-xl mb-6">
-            <Network className="w-4 h-4 text-accent" />
-            <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600/10 to-cyan-500/10 border border-blue-600/30 backdrop-blur-xl mb-6">
+            <Network className="w-4 h-4 text-blue-600" />
+            <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-blue-600">
               Seamless Integrations
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-hero font-black text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-hero font-black text-slate-900 mb-4">
             Connects with Your{" "}
-            <span className="text-gradient bg-gradient-to-r from-accent via-primary to-accent bg-clip-text text-transparent">
+            <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
               Existing Tools
             </span>
           </h2>
-          <p className="text-lg sm:text-xl text-foreground-muted max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto">
             No need to change your workflow. Our AI integrates seamlessly with the CRMs and tools you already use.
           </p>
         </motion.div>
@@ -820,11 +805,11 @@ function IntegrationShowcase({ integrations, isMobile }: IntegrationShowcaseProp
               whileHover={!isMobile ? { scale: 1.05, y: -8 } : {}}
               className="relative group"
             >
-              <div className="relative z-10 p-8 rounded-2xl bg-background-card/50 border border-surface-border/50 backdrop-blur-xl hover:border-accent/50 transition-all duration-300 flex flex-col items-center justify-center gap-4 h-32 hover:shadow-glow-gold overflow-hidden">
+              <div className="relative z-10 p-8 rounded-2xl bg-white/70 border border-slate-200/60 backdrop-blur-xl hover:border-blue-600/50 transition-all duration-300 flex flex-col items-center justify-center gap-4 h-32 shadow-lg shadow-slate-200/50 overflow-hidden">
                 {/* Hover glow effect */}
                 {!isMobile && (
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-br from-accent/10 via-primary/5 to-gold/10"
+                    className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-cyan-500/5 to-blue-600/5"
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
                     transition={{ duration: 0.3 }}
@@ -834,11 +819,11 @@ function IntegrationShowcase({ integrations, isMobile }: IntegrationShowcaseProp
                 <motion.div
                   whileHover={!isMobile ? { rotate: 360, scale: 1.15 } : {}}
                   transition={{ duration: 0.6, type: "spring" }}
-                  className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 flex items-center justify-center relative z-10"
+                  className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600/10 to-cyan-500/10 border border-blue-600/30 flex items-center justify-center relative z-10"
                 >
-                  <span className="text-lg font-black text-accent">{integration.logo}</span>
+                  <span className="text-lg font-black text-blue-600">{integration.logo}</span>
                 </motion.div>
-                <span className="text-sm font-semibold text-foreground text-center relative z-10">
+                <span className="text-sm font-semibold text-slate-900 text-center relative z-10">
                   {integration.name}
                 </span>
               </div>
@@ -853,12 +838,12 @@ function IntegrationShowcase({ integrations, isMobile }: IntegrationShowcaseProp
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center"
         >
-          <p className="text-foreground-muted mb-6">
+          <p className="text-slate-600 mb-6">
             Don't see your CRM? We can integrate with any platform that has an API.
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-accent/20 to-primary/20 border border-accent/30 hover:border-accent/50 text-foreground font-semibold transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600/10 to-cyan-500/10 border border-blue-600/30 hover:border-blue-600/50 text-slate-900 font-semibold transition-all duration-300 hover:scale-105"
           >
             <span>Request Custom Integration</span>
             <ArrowRight className="w-4 h-4" />
@@ -908,19 +893,19 @@ function SetupWizard({ isMobile }: SetupWizardProps) {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gold/20 to-accent/10 border border-gold/30 backdrop-blur-xl mb-6">
-            <Activity className="w-4 h-4 text-gold" />
-            <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-gold">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600/10 to-cyan-500/10 border border-blue-600/30 backdrop-blur-xl mb-6">
+            <Activity className="w-4 h-4 text-blue-600" />
+            <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-blue-600">
               Simple Setup Process
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-hero font-black text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-hero font-black text-slate-900 mb-4">
             Live in{" "}
-            <span className="text-gradient bg-gradient-to-r from-gold via-accent to-gold bg-clip-text text-transparent">
+            <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
               48 Hours
             </span>
           </h2>
-          <p className="text-lg sm:text-xl text-foreground-muted max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto">
             From signup to capturing leads—our streamlined setup gets you operational in less than 2 days.
           </p>
         </motion.div>
@@ -933,7 +918,7 @@ function SetupWizard({ isMobile }: SetupWizardProps) {
               initial={{ scaleY: 0 }}
               animate={isInView ? { scaleY: 1 } : {}}
               transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
-              className="absolute left-8 top-20 bottom-20 w-0.5 bg-gradient-to-b from-gold via-accent to-primary opacity-30 origin-top"
+              className="absolute left-8 top-20 bottom-20 w-0.5 bg-gradient-to-b from-blue-600 via-cyan-500 to-blue-600 opacity-20 origin-top"
             />
           )}
 
@@ -958,7 +943,7 @@ function SetupWizard({ isMobile }: SetupWizardProps) {
                       stiffness: 200
                     }}
                     whileHover={!isMobile ? { rotate: 360, scale: 1.1 } : {}}
-                    className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold/30 to-accent/30 border-2 border-gold/50 flex items-center justify-center relative z-10 cursor-pointer"
+                    className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600/20 to-cyan-500/20 border-2 border-blue-600/50 flex items-center justify-center relative z-10 cursor-pointer shadow-lg shadow-slate-200/50"
                   >
                     <SetupIcon icon={step.icon} />
                   </motion.div>
@@ -966,14 +951,14 @@ function SetupWizard({ isMobile }: SetupWizardProps) {
                   <motion.div
                     animate={{ scale: [1, 1.2, 1], opacity: [0.5, 0, 0.5] }}
                     transition={{ duration: 3, repeat: Infinity, delay: idx * 0.5 }}
-                    className="absolute inset-0 rounded-2xl bg-gold/20 blur-md"
+                    className="absolute inset-0 rounded-2xl bg-blue-600/10 blur-md"
                   />
-                  {/* Gold glow effect */}
+                  {/* Blue glow effect */}
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={isInView ? { opacity: [0, 0.6, 0] } : {}}
                     transition={{ duration: 2, repeat: Infinity, delay: idx * 0.3 }}
-                    className="absolute inset-0 rounded-2xl shadow-glow-gold"
+                    className="absolute inset-0 rounded-2xl shadow-lg shadow-blue-200/50"
                   />
                 </div>
 
@@ -989,7 +974,7 @@ function SetupWizard({ isMobile }: SetupWizardProps) {
                       initial={{ opacity: 0, x: -10 }}
                       animate={isInView ? { opacity: 1, x: 0 } : {}}
                       transition={{ duration: 0.5, delay: idx * 0.2 + 0.5 }}
-                      className="text-sm font-black text-gold uppercase tracking-widest"
+                      className="text-sm font-black text-blue-600 uppercase tracking-widest"
                     >
                       Step {step.number}
                     </motion.span>
@@ -997,7 +982,7 @@ function SetupWizard({ isMobile }: SetupWizardProps) {
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={isInView ? { opacity: 1, scale: 1 } : {}}
                       transition={{ duration: 0.5, delay: idx * 0.2 + 0.6 }}
-                      className="text-xs text-foreground-subtle px-3 py-1 rounded-full bg-background-card/50 border border-surface-border/30"
+                      className="text-xs text-slate-500 px-3 py-1 rounded-full bg-white/70 border border-slate-200/60"
                     >
                       {step.duration}
                     </motion.span>
@@ -1006,7 +991,7 @@ function SetupWizard({ isMobile }: SetupWizardProps) {
                     initial={{ opacity: 0 }}
                     animate={isInView ? { opacity: 1 } : {}}
                     transition={{ duration: 0.6, delay: idx * 0.2 + 0.7 }}
-                    className="text-2xl sm:text-3xl font-bold text-foreground mb-3"
+                    className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3"
                   >
                     {step.title}
                   </motion.h3>
@@ -1014,7 +999,7 @@ function SetupWizard({ isMobile }: SetupWizardProps) {
                     initial={{ opacity: 0 }}
                     animate={isInView ? { opacity: 1 } : {}}
                     transition={{ duration: 0.6, delay: idx * 0.2 + 0.8 }}
-                    className="text-foreground-muted leading-relaxed"
+                    className="text-slate-600 leading-relaxed"
                   >
                     {step.description}
                   </motion.p>
@@ -1031,11 +1016,11 @@ function SetupWizard({ isMobile }: SetupWizardProps) {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mt-16 text-center"
         >
-          <div className="inline-flex items-center gap-3 px-6 py-4 rounded-2xl bg-gradient-to-r from-background-card/50 to-background-darker/50 border border-gold/30 backdrop-blur-xl">
-            <Headphones className="w-8 h-8 text-gold" />
+          <div className="inline-flex items-center gap-3 px-6 py-4 rounded-2xl bg-white/70 border border-blue-600/30 backdrop-blur-xl shadow-lg shadow-slate-200/50">
+            <Headphones className="w-8 h-8 text-blue-600" />
             <div className="text-left">
-              <p className="text-sm font-semibold text-foreground">White-Glove Onboarding</p>
-              <p className="text-xs text-foreground-subtle">Dedicated setup specialist guides you every step</p>
+              <p className="text-sm font-semibold text-slate-900">White-Glove Onboarding</p>
+              <p className="text-xs text-slate-500">Dedicated setup specialist guides you every step</p>
             </div>
           </div>
         </motion.div>
@@ -1045,7 +1030,7 @@ function SetupWizard({ isMobile }: SetupWizardProps) {
 }
 
 // ==================== FAQ SECTION ====================
-function FAQSection({ faqs, isMobile }: FAQSectionProps) {
+function FAQSection({ faqs }: FAQSectionProps) {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -1060,19 +1045,19 @@ function FAQSection({ faqs, isMobile }: FAQSectionProps) {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 to-accent/10 border border-primary/30 backdrop-blur-xl mb-6">
-            <HelpCircle className="w-4 h-4 text-primary" />
-            <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-primary">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600/10 to-cyan-500/10 border border-blue-600/30 backdrop-blur-xl mb-6">
+            <HelpCircle className="w-4 h-4 text-blue-600" />
+            <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-blue-600">
               Common Questions
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-hero font-black text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-hero font-black text-slate-900 mb-4">
             Frequently Asked{" "}
-            <span className="text-gradient bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+            <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-clip-text text-transparent">
               Questions
             </span>
           </h2>
-          <p className="text-lg sm:text-xl text-foreground-muted">
+          <p className="text-lg sm:text-xl text-slate-600">
             Everything you need to know about our AI voice agents
           </p>
         </motion.div>
@@ -1091,10 +1076,10 @@ function FAQSection({ faqs, isMobile }: FAQSectionProps) {
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : idx)}
-                  className="w-full text-left p-6 rounded-2xl bg-background-card/50 border border-surface-border/50 hover:border-primary/50 backdrop-blur-xl transition-all duration-300 group"
+                  className="w-full text-left p-6 rounded-2xl bg-white/70 border border-slate-200/60 hover:border-blue-600/50 backdrop-blur-xl transition-all duration-300 group shadow-lg shadow-slate-200/50"
                 >
                   <div className="flex items-start justify-between gap-4">
-                    <h3 className="text-lg sm:text-xl font-bold text-foreground group-hover:text-primary transition-colors pr-4">
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors pr-4">
                       {faq.question}
                     </h3>
                     <motion.div
@@ -1102,7 +1087,7 @@ function FAQSection({ faqs, isMobile }: FAQSectionProps) {
                       transition={{ duration: 0.3 }}
                       className="flex-shrink-0"
                     >
-                      <ExpandMore className="w-5 h-5 text-primary" />
+                      <ExpandMore className="w-5 h-5 text-blue-600" />
                     </motion.div>
                   </div>
 
@@ -1116,7 +1101,7 @@ function FAQSection({ faqs, isMobile }: FAQSectionProps) {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <p className="text-foreground-muted leading-relaxed">
+                    <p className="text-slate-600 leading-relaxed">
                       {faq.answer}
                     </p>
                   </motion.div>
@@ -1133,10 +1118,10 @@ function FAQSection({ faqs, isMobile }: FAQSectionProps) {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="mt-12 text-center"
         >
-          <p className="text-foreground-muted mb-4">Still have questions?</p>
+          <p className="text-slate-600 mb-4">Still have questions?</p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-primary/20 to-accent/20 border border-primary/30 hover:border-primary/50 text-foreground font-semibold transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600/10 to-cyan-500/10 border border-blue-600/30 hover:border-blue-600/50 text-slate-900 font-semibold transition-all duration-300 hover:scale-105"
           >
             <span>Talk to Our Team</span>
             <ArrowRight className="w-4 h-4" />
@@ -1156,14 +1141,14 @@ function FinalCTA({ isMobile }: FinalCTAProps) {
     <section ref={sectionRef} className="relative py-24 overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-mesh-premium opacity-30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white to-slate-50" />
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3]
           }}
           transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-gradient-radial from-gold/20 via-accent/10 to-transparent blur-3xl"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-gradient-radial from-blue-600/10 via-cyan-500/5 to-transparent blur-3xl"
         />
       </div>
 
@@ -1175,9 +1160,9 @@ function FinalCTA({ isMobile }: FinalCTAProps) {
           className="relative"
         >
           {/* Glass card */}
-          <div className="relative p-8 sm:p-12 lg:p-16 rounded-3xl bg-gradient-to-br from-background-card/80 to-background-darker/80 border border-surface-border/50 backdrop-blur-xl overflow-hidden">
+          <div className="relative p-8 sm:p-12 lg:p-16 rounded-3xl bg-white/70 border border-slate-200/60 backdrop-blur-xl overflow-hidden shadow-lg shadow-slate-200/50">
             {/* Gradient overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-accent/10 opacity-50" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-transparent to-cyan-500/5 opacity-50" />
 
             {/* Content */}
             <div className="relative z-10 text-center">
@@ -1186,10 +1171,10 @@ function FinalCTA({ isMobile }: FinalCTAProps) {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={isInView ? { opacity: 1, scale: 1 } : {}}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gold/20 to-accent/10 border border-gold/30 backdrop-blur-xl mb-6"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600/10 to-cyan-500/10 border border-blue-600/30 backdrop-blur-xl mb-6"
               >
-                <Stars className="w-4 h-4 text-gold" />
-                <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-gold">
+                <Stars className="w-4 h-4 text-blue-600" />
+                <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-blue-600">
                   Start Capturing Leads Today
                 </span>
               </motion.div>
@@ -1199,7 +1184,7 @@ function FinalCTA({ isMobile }: FinalCTAProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-hero font-black text-foreground mb-6"
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-hero font-black text-slate-900 mb-6"
               >
                 Ready to Stop{" "}
                 <span className="text-gradient bg-gradient-to-r from-red-500 to-red-600 bg-clip-text text-transparent">
@@ -1213,12 +1198,12 @@ function FinalCTA({ isMobile }: FinalCTAProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.4 }}
-                className="text-lg sm:text-xl text-foreground-muted max-w-2xl mx-auto mb-10"
+                className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mb-10"
               >
                 Join hundreds of businesses using AI voice agents to capture, qualify, and convert more leads—24/7.
               </motion.p>
 
-              {/* CTAs with enhanced gold glow */}
+              {/* CTAs with enhanced blue glow */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -1232,7 +1217,7 @@ function FinalCTA({ isMobile }: FinalCTAProps) {
                 >
                   <Link
                     href="/demo"
-                    className="group relative px-8 py-4 rounded-xl bg-gradient-to-r from-gold to-accent text-background-darker font-bold text-lg shadow-glow-gold hover:shadow-glow-gold-intense transition-all duration-300 w-full sm:w-auto inline-block"
+                    className="group relative px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-lg shadow-lg shadow-blue-200/50 hover:shadow-xl hover:shadow-blue-300/50 transition-all duration-300 w-full sm:w-auto inline-block"
                   >
                     <span className="relative z-10 flex items-center justify-center gap-2">
                       Start Free Trial
@@ -1243,9 +1228,9 @@ function FinalCTA({ isMobile }: FinalCTAProps) {
                         <ArrowRight className="w-5 h-5" />
                       </motion.div>
                     </span>
-                    {/* Animated gold glow */}
+                    {/* Animated blue glow */}
                     <motion.div
-                      className="absolute inset-0 rounded-xl bg-gold/20 blur-xl"
+                      className="absolute inset-0 rounded-xl bg-blue-600/20 blur-xl"
                       animate={{
                         opacity: [0.5, 0.8, 0.5],
                         scale: [1, 1.05, 1]
@@ -1265,7 +1250,7 @@ function FinalCTA({ isMobile }: FinalCTAProps) {
                 >
                   <a
                     href="tel:865-346-6111"
-                    className="px-8 py-4 rounded-xl bg-background-card/50 border-2 border-primary/50 hover:border-primary text-foreground font-bold text-lg backdrop-blur-xl transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-2"
+                    className="px-8 py-4 rounded-xl bg-white/70 border-2 border-blue-600/50 hover:border-blue-600 text-slate-900 font-bold text-lg backdrop-blur-xl transition-all duration-300 w-full sm:w-auto flex items-center justify-center gap-2"
                   >
                     <Phone className="w-5 h-5" />
                     Call (865) 346-6111
@@ -1278,18 +1263,18 @@ function FinalCTA({ isMobile }: FinalCTAProps) {
                 initial={{ opacity: 0 }}
                 animate={isInView ? { opacity: 1 } : {}}
                 transition={{ duration: 0.8, delay: 0.6 }}
-                className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-foreground-muted"
+                className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-slate-600"
               >
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-accent" />
+                  <CheckCircle2 className="w-5 h-5 text-blue-600" />
                   <span>No long-term contract</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-accent" />
+                  <CheckCircle2 className="w-5 h-5 text-blue-600" />
                   <span>No credit card required</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-accent" />
+                  <CheckCircle2 className="w-5 h-5 text-blue-600" />
                   <span>Setup in 48 hours</span>
                 </div>
               </motion.div>
@@ -1301,12 +1286,12 @@ function FinalCTA({ isMobile }: FinalCTAProps) {
                 <motion.div
                   animate={{ rotate: 360 }}
                   transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="absolute -top-10 -left-10 w-40 h-40 bg-gradient-radial from-gold/20 to-transparent rounded-full blur-2xl"
+                  className="absolute -top-10 -left-10 w-40 h-40 bg-gradient-radial from-blue-600/10 to-transparent rounded-full blur-2xl"
                 />
                 <motion.div
                   animate={{ rotate: -360 }}
                   transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-                  className="absolute -bottom-10 -right-10 w-40 h-40 bg-gradient-radial from-accent/20 to-transparent rounded-full blur-2xl"
+                  className="absolute -bottom-10 -right-10 w-40 h-40 bg-gradient-radial from-cyan-500/10 to-transparent rounded-full blur-2xl"
                 />
               </>
             )}

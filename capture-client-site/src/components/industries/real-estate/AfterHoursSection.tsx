@@ -28,24 +28,24 @@ export function AfterHoursSection() {
       className="py-16 sm:py-20 lg:py-28 relative overflow-hidden"
       style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
     >
-      {/* Night/Day background effect */}
+      {/* Light background effect */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[#030303]" />
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#00C9FF]/10 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-white" />
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-50 via-transparent to-transparent" />
       </div>
 
-      {/* Stars effect */}
-      <div className="absolute inset-0 opacity-30">
+      {/* Sparkles effect */}
+      <div className="absolute inset-0 opacity-20">
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-white rounded-full"
+            className="absolute w-1 h-1 bg-blue-400 rounded-full"
             style={{
               top: `${Math.random() * 100}%`,
               left: `${Math.random() * 100}%`,
             }}
             animate={{
-              opacity: [0.2, 1, 0.2],
+              opacity: [0.2, 0.8, 0.2],
               scale: [1, 1.5, 1],
             }}
             transition={{
@@ -65,19 +65,19 @@ export function AfterHoursSection() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl mb-6">
-            <Moon className="text-[#00C9FF] w-5 h-5" />
-            <span className="text-sm text-[#00C9FF] uppercase tracking-wide" style={{ fontWeight: 600 }}>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200 mb-6">
+            <Moon className="text-blue-600 w-5 h-5" />
+            <span className="text-sm text-blue-600 uppercase tracking-wide" style={{ fontWeight: 600 }}>
               After Hours = Prime Time
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-6">
             <span style={{ fontWeight: 200 }}>Your AI ISA </span>
-            <span className="text-[#00C9FF]" style={{ fontWeight: 800 }}>Never Sleeps</span>
+            <span className="text-blue-600" style={{ fontWeight: 800 }}>Never Sleeps</span>
           </h2>
-          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed" style={{ fontWeight: 300 }}>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" style={{ fontWeight: 300 }}>
             77% of real estate inquiries happen after 5 PM. That's when buyers are researching,
-            comparing, and <span className="text-white" style={{ fontWeight: 600 }}>ready to commit</span>.
+            comparing, and <span className="text-slate-900" style={{ fontWeight: 600 }}>ready to commit</span>.
           </p>
         </motion.div>
 
@@ -92,21 +92,21 @@ export function AfterHoursSection() {
             >
               <GlassCard
                 variant="premium"
-                className="p-8 border border-white/[0.06] bg-gradient-to-br from-[#00C9FF]/10 to-[#4A69E2]/5 backdrop-blur-xl hover:shadow-[0_0_40px_rgba(0,201,255,0.3)] transition-all duration-500"
+                className="p-8 bg-white/70 backdrop-blur-xl border border-slate-200 hover:shadow-lg hover:shadow-blue-200/50 transition-all duration-500"
               >
                 <div className="text-center">
                   {(() => {
                     const IconComponent = iconMap[stat.icon];
                     return (
-                      <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-[#00C9FF] to-[#4A69E2] flex items-center justify-center">
-                        <IconComponent className="text-black w-7 h-7" />
+                      <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center">
+                        <IconComponent className="text-white w-7 h-7" />
                       </div>
                     );
                   })()}
-                  <p className="text-5xl text-[#00C9FF] mb-2" style={{ fontWeight: 800 }}>
+                  <p className="text-5xl text-blue-600 mb-2" style={{ fontWeight: 800 }}>
                     {stat.value}
                   </p>
-                  <p className="text-white/80" style={{ fontWeight: 500 }}>
+                  <p className="text-slate-700" style={{ fontWeight: 500 }}>
                     {stat.label}
                   </p>
                 </div>
@@ -125,41 +125,41 @@ export function AfterHoursSection() {
             {/* Without AI */}
             <GlassCard
               variant="premium"
-              className="p-8 border-2 border-red-500/20 bg-gradient-to-br from-red-500/5 to-red-500/10"
+              className="p-8 border-2 border-red-200 bg-gradient-to-br from-red-50 to-red-100"
             >
               <div className="flex items-center gap-3 mb-6">
-                <Ban className="text-red-400 w-7 h-7" />
-                <h3 className="text-2xl font-bold text-white">Without AI</h3>
+                <Ban className="text-red-600 w-7 h-7" />
+                <h3 className="text-2xl font-bold text-slate-900">Without AI</h3>
               </div>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <X className="text-red-400 w-5 h-5 mt-0.5" />
+                  <X className="text-red-600 w-5 h-5 mt-0.5" />
                   <div>
-                    <p className="text-white font-medium mb-1">10 PM Zillow Lead</p>
-                    <p className="text-white/60 text-sm">Gets voicemail. Calls competitor. You lose $18K commission.</p>
+                    <p className="text-slate-900 font-medium mb-1">10 PM Zillow Lead</p>
+                    <p className="text-slate-600 text-sm">Gets voicemail. Calls competitor. You lose $18K commission.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <X className="text-red-400 w-5 h-5 mt-0.5" />
+                  <X className="text-red-600 w-5 h-5 mt-0.5" />
                   <div>
-                    <p className="text-white font-medium mb-1">Saturday Open House</p>
-                    <p className="text-white/60 text-sm">50 sign-ins. Can't call back until Monday. 40 already chose agents.</p>
+                    <p className="text-slate-900 font-medium mb-1">Saturday Open House</p>
+                    <p className="text-slate-600 text-sm">50 sign-ins. Can't call back until Monday. 40 already chose agents.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <X className="text-red-400 w-5 h-5 mt-0.5" />
+                  <X className="text-red-600 w-5 h-5 mt-0.5" />
                   <div>
-                    <p className="text-white font-medium mb-1">Sunday Referral</p>
-                    <p className="text-white/60 text-sm">Friend-of-client calls. No answer. Relationship damaged.</p>
+                    <p className="text-slate-900 font-medium mb-1">Sunday Referral</p>
+                    <p className="text-slate-600 text-sm">Friend-of-client calls. No answer. Relationship damaged.</p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-6 pt-6 border-t border-red-500/20">
-                <p className="text-red-400 font-bold text-lg text-center">
+              <div className="mt-6 pt-6 border-t border-red-200">
+                <p className="text-red-600 font-bold text-lg text-center">
                   Lost Revenue: <span className="text-2xl">Thousands per month</span>
                 </p>
               </div>
@@ -168,41 +168,41 @@ export function AfterHoursSection() {
             {/* With AI */}
             <GlassCard
               variant="premium"
-              className="p-8 border-2 border-green-500/30 bg-gradient-to-br from-green-500/10 to-emerald-500/10"
+              className="p-8 border-2 border-green-300 bg-gradient-to-br from-green-50 to-emerald-50"
             >
               <div className="flex items-center gap-3 mb-6">
-                <CheckCircle className="text-green-400 w-7 h-7" />
-                <h3 className="text-2xl font-bold text-white">With AI Voice Agent</h3>
+                <CheckCircle className="text-green-600 w-7 h-7" />
+                <h3 className="text-2xl font-bold text-slate-900">With AI Voice Agent</h3>
               </div>
 
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Check className="text-green-400 w-5 h-5 mt-0.5" />
+                  <Check className="text-green-600 w-5 h-5 mt-0.5" />
                   <div>
-                    <p className="text-white font-medium mb-1">10 PM Zillow Lead</p>
-                    <p className="text-white/60 text-sm">AI answers in 30 seconds. Qualifies. Books showing. Deal closed.</p>
+                    <p className="text-slate-900 font-medium mb-1">10 PM Zillow Lead</p>
+                    <p className="text-slate-600 text-sm">AI answers in 30 seconds. Qualifies. Books showing. Deal closed.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="text-green-400 w-5 h-5 mt-0.5" />
+                  <Check className="text-green-600 w-5 h-5 mt-0.5" />
                   <div>
-                    <p className="text-white font-medium mb-1">Saturday Open House</p>
-                    <p className="text-white/60 text-sm">AI calls all 50 in 2 hours. 12 qualified. 8 appointments booked.</p>
+                    <p className="text-slate-900 font-medium mb-1">Saturday Open House</p>
+                    <p className="text-slate-600 text-sm">AI calls all 50 in 2 hours. 12 qualified. 8 appointments booked.</p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <Check className="text-green-400 w-5 h-5 mt-0.5" />
+                  <Check className="text-green-600 w-5 h-5 mt-0.5" />
                   <div>
-                    <p className="text-white font-medium mb-1">Sunday Referral</p>
-                    <p className="text-white/60 text-sm">AI greets by name. Captures details. Notifies you. Referral feels VIP.</p>
+                    <p className="text-slate-900 font-medium mb-1">Sunday Referral</p>
+                    <p className="text-slate-600 text-sm">AI greets by name. Captures details. Notifies you. Referral feels VIP.</p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-6 pt-6 border-t border-green-500/20">
-                <p className="text-green-400 font-bold text-lg text-center">
+              <div className="mt-6 pt-6 border-t border-green-200">
+                <p className="text-green-600 font-bold text-lg text-center">
                   Captured Revenue: <span className="text-2xl">Every single lead</span>
                 </p>
               </div>
@@ -217,13 +217,13 @@ export function AfterHoursSection() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center mt-12"
         >
-          <div className="inline-flex items-center gap-4 p-8 rounded-2xl bg-gradient-to-br from-[#00C9FF]/10 via-[#4A69E2]/5 to-[#00C9FF]/10 border border-white/[0.06] backdrop-blur-xl">
-            <Clock className="text-[#00C9FF] w-12 h-12" />
+          <div className="inline-flex items-center gap-4 p-8 rounded-2xl bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50">
+            <Clock className="text-blue-600 w-12 h-12" />
             <div className="text-left">
-              <p className="text-3xl text-white mb-1" style={{ fontWeight: 800 }}>
-                Every Hour = <span className="text-[#00C9FF]">More Revenue</span>
+              <p className="text-3xl text-slate-900 mb-1" style={{ fontWeight: 800 }}>
+                Every Hour = <span className="text-blue-600">More Revenue</span>
               </p>
-              <p className="text-white/70 text-lg" style={{ fontWeight: 400 }}>
+              <p className="text-slate-600 text-lg" style={{ fontWeight: 400 }}>
                 While competitors sleep, you're closing deals
               </p>
             </div>

@@ -182,14 +182,14 @@ function MiniROICalculator({ pkg, isAnnual }: MiniROICalculatorProps) {
       initial={{ opacity: 0, height: 0 }}
       animate={{ opacity: 1, height: "auto" }}
       exit={{ opacity: 0, height: 0 }}
-      className="mt-6 p-4 rounded-xl bg-gradient-to-br from-accent/10 to-primary/5 border border-accent/20"
+      className="mt-6 p-4 rounded-xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200"
     >
       <div className="text-center">
-        <p className="text-xs text-white/60 mb-2">Potential Monthly Return</p>
-        <div className="text-2xl font-bold text-gradient-gold-cyan mb-1">
+        <p className="text-xs text-slate-600 mb-2">Potential Monthly Return</p>
+        <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-1">
           <AnimatedCounter value={monthlyReturn} prefix="$" duration={800} />
         </div>
-        <p className="text-xs text-accent font-semibold">
+        <p className="text-xs text-blue-600 font-semibold">
           <AnimatedCounter value={roi} duration={600} />% ROI
         </p>
       </div>
@@ -228,26 +228,26 @@ export default function PricingPageClient() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#070B14] via-[#030508] to-[#0A0E1A] relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Floating currency symbols */}
         <motion.div
-          className="absolute top-20 left-[10%] text-6xl opacity-5 text-accent"
+          className="absolute top-20 left-[10%] text-6xl opacity-5 text-blue-600"
           animate={{ y: [0, -30, 0], rotate: [0, 10, 0] }}
           transition={{ duration: 8, repeat: Infinity }}
         >
           $
         </motion.div>
         <motion.div
-          className="absolute top-40 right-[15%] text-8xl opacity-5 text-primary"
+          className="absolute top-40 right-[15%] text-8xl opacity-5 text-cyan-500"
           animate={{ y: [0, 40, 0], rotate: [0, -15, 0] }}
           transition={{ duration: 10, repeat: Infinity }}
         >
           $
         </motion.div>
         <motion.div
-          className="absolute bottom-40 left-[20%] text-7xl opacity-5 text-accent"
+          className="absolute bottom-40 left-[20%] text-7xl opacity-5 text-blue-600"
           animate={{ y: [0, -35, 0], rotate: [0, 12, 0] }}
           transition={{ duration: 9, repeat: Infinity }}
         >
@@ -256,13 +256,13 @@ export default function PricingPageClient() {
 
         {/* Gradient orbs */}
         <motion.div
-          className="absolute -top-40 -right-40 w-96 h-96 bg-primary/20 rounded-full blur-3xl"
-          animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.3, 0.2] }}
+          className="absolute -top-40 -right-40 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl"
+          animate={{ scale: [1, 1.2, 1], opacity: [0.05, 0.08, 0.05] }}
           transition={{ duration: 8, repeat: Infinity }}
         />
         <motion.div
-          className="absolute -bottom-40 -left-40 w-96 h-96 bg-accent/20 rounded-full blur-3xl"
-          animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.3, 0.2] }}
+          className="absolute -bottom-40 -left-40 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl"
+          animate={{ scale: [1.2, 1, 1.2], opacity: [0.05, 0.08, 0.05] }}
           transition={{ duration: 10, repeat: Infinity }}
         />
       </div>
@@ -283,28 +283,28 @@ export default function PricingPageClient() {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6 }}
               >
-                <div className="w-8 md:w-12 h-px bg-gradient-to-r from-accent to-transparent" />
-                <span className="text-accent text-xs md:text-sm font-medium tracking-[0.2em] uppercase">
+                <div className="w-8 md:w-12 h-px bg-gradient-to-r from-blue-600 to-transparent" />
+                <span className="text-blue-600 text-xs md:text-sm font-medium tracking-[0.2em] uppercase">
                   Investment in Growth
                 </span>
               </motion.div>
 
               {/* Main Headline */}
               <motion.h1
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight sm:leading-[1.1] lg:leading-[0.95] mb-4 md:mb-6"
+                className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight sm:leading-[1.1] lg:leading-[0.95] mb-4 md:mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.1 }}
               >
-                <span className="text-white/60 font-light block mb-2">Pricing That</span>
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-white to-primary">
+                <span className="text-slate-600 font-light block mb-2">Pricing That</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-slate-900 to-cyan-500">
                   Pays for Itself
                 </span>
               </motion.h1>
 
               {/* Subheadline */}
               <motion.p
-                className="text-base md:text-xl text-white/60 max-w-xl mx-auto lg:mx-0 mb-6 md:mb-8 leading-relaxed"
+                className="text-base md:text-xl text-slate-600 max-w-xl mx-auto lg:mx-0 mb-6 md:mb-8 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -326,10 +326,10 @@ export default function PricingPageClient() {
                   { label: "Transparent Pricing", icon: "✓" }
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 py-1">
-                    <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-accent/20 text-accent flex items-center justify-center text-sm font-bold flex-shrink-0">
+                    <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-blue-600/10 text-blue-600 flex items-center justify-center text-sm font-bold flex-shrink-0">
                       {item.icon}
                     </span>
-                    <span className="text-white/80 text-sm sm:text-base">{item.label}</span>
+                    <span className="text-slate-700 text-sm sm:text-base">{item.label}</span>
                   </div>
                 ))}
               </motion.div>
@@ -345,12 +345,12 @@ export default function PricingPageClient() {
               <div className="relative">
                 {/* Layered card effect */}
                 <motion.div
-                  className="hidden lg:block absolute inset-0 bg-gradient-to-br from-accent/10 to-primary/10 backdrop-blur-xl rounded-3xl translate-x-6 translate-y-6"
+                  className="hidden lg:block absolute inset-0 bg-gradient-to-br from-blue-50/50 to-cyan-50/50 backdrop-blur-xl rounded-3xl translate-x-6 translate-y-6"
                   animate={{ scale: [1, 1.02, 1] }}
                   transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
                 />
                 <motion.div
-                  className="hidden md:block absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/15 backdrop-blur-xl rounded-3xl translate-x-3 translate-y-3"
+                  className="hidden md:block absolute inset-0 bg-gradient-to-br from-blue-50/70 to-cyan-50/70 backdrop-blur-xl rounded-3xl translate-x-3 translate-y-3"
                   animate={{ scale: [1, 1.01, 1] }}
                   transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
                 />
@@ -358,7 +358,7 @@ export default function PricingPageClient() {
                 {/* Main card */}
                 <div className="relative overflow-hidden rounded-3xl">
                   <motion.div
-                    className="absolute inset-0 bg-gradient-to-br from-accent/20 via-primary/20 to-accent/20"
+                    className="absolute inset-0 bg-gradient-to-br from-blue-100/50 via-cyan-100/50 to-blue-100/50"
                     animate={{ backgroundPosition: ['0% 0%', '100% 100%', '0% 0%'] }}
                     transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
                     style={{ backgroundSize: '200% 200%' }}
@@ -366,31 +366,31 @@ export default function PricingPageClient() {
 
                   {/* Floating orbs */}
                   <motion.div
-                    className="absolute top-0 right-0 w-40 h-40 bg-accent/30 rounded-full blur-3xl"
-                    animate={{ scale: [1, 1.4, 1], opacity: [0.3, 0.5, 0.3] }}
+                    className="absolute top-0 right-0 w-40 h-40 bg-blue-200/30 rounded-full blur-3xl"
+                    animate={{ scale: [1, 1.4, 1], opacity: [0.2, 0.3, 0.2] }}
                     transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
                   />
                   <motion.div
-                    className="absolute bottom-0 left-0 w-32 h-32 bg-primary/30 rounded-full blur-3xl"
-                    animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.5, 0.3] }}
+                    className="absolute bottom-0 left-0 w-32 h-32 bg-cyan-200/30 rounded-full blur-3xl"
+                    animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.3, 0.2] }}
                     transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
                   />
 
-                  <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-2xl rounded-3xl border-2 border-accent/30 p-8 md:p-10">
+                  <div className="relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-2xl rounded-3xl border-2 border-slate-200 p-8 md:p-10">
                     <div className="text-center">
                       <motion.div
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 to-primary/20 border border-accent/40 mb-6"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600/10 to-cyan-500/10 border border-blue-600/30 mb-6"
                         animate={{
                           boxShadow: [
-                            '0 0 20px rgba(0, 201, 255, 0.3)',
-                            '0 0 30px rgba(0, 201, 255, 0.5)',
-                            '0 0 20px rgba(0, 201, 255, 0.3)',
+                            '0 0 20px rgba(37, 99, 235, 0.2)',
+                            '0 0 30px rgba(37, 99, 235, 0.3)',
+                            '0 0 20px rgba(37, 99, 235, 0.2)',
                           ],
                         }}
                         transition={{ duration: 2, repeat: Infinity }}
                       >
-                        <TrendingUp className="w-4 h-4 text-accent" />
-                        <span className="text-accent text-xs sm:text-sm font-bold tracking-wider uppercase">
+                        <TrendingUp className="w-4 h-4 text-blue-600" />
+                        <span className="text-blue-600 text-xs sm:text-sm font-bold tracking-wider uppercase">
                           Average ROI
                         </span>
                       </motion.div>
@@ -400,35 +400,35 @@ export default function PricingPageClient() {
                         animate={{ scale: [1, 1.02, 1] }}
                         transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
                       >
-                        <div className="text-6xl sm:text-7xl md:text-8xl font-bold bg-gradient-to-br from-accent via-white to-primary bg-clip-text text-transparent leading-none mb-2">
+                        <div className="text-6xl sm:text-7xl md:text-8xl font-bold bg-gradient-to-br from-blue-600 via-slate-900 to-cyan-500 bg-clip-text text-transparent leading-none mb-2">
                           <span data-counter="580">0</span>%
                         </div>
                       </motion.div>
 
-                      <p className="text-white/80 text-sm sm:text-base mb-6 px-2 font-medium">
-                        Our clients see an average return of <span className="text-accent font-bold">5.8x</span> their investment
+                      <p className="text-slate-700 text-sm sm:text-base mb-6 px-2 font-medium">
+                        Our clients see an average return of <span className="text-blue-600 font-bold">5.8x</span> their investment
                       </p>
 
-                      <div className="grid grid-cols-2 gap-4 pt-6 border-t border-white/20">
+                      <div className="grid grid-cols-2 gap-4 pt-6 border-t border-slate-200">
                         <motion.div
-                          className="relative p-4 rounded-2xl bg-gradient-to-br from-accent/10 to-accent/5 border border-accent/20"
+                          className="relative p-4 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-50/50 border border-blue-200"
                           whileHover={{ scale: 1.05 }}
                           transition={{ type: 'spring', stiffness: 400 }}
                         >
-                          <div className="text-2xl sm:text-3xl font-bold text-white mb-1">
+                          <div className="text-2xl sm:text-3xl font-bold text-slate-900 mb-1">
                             <span data-counter="500">0</span>+
                           </div>
-                          <div className="text-xs sm:text-sm text-white/70 font-medium">Active Clients</div>
+                          <div className="text-xs sm:text-sm text-slate-600 font-medium">Active Clients</div>
                         </motion.div>
                         <motion.div
-                          className="relative p-4 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20"
+                          className="relative p-4 rounded-2xl bg-gradient-to-br from-cyan-50 to-cyan-50/50 border border-cyan-200"
                           whileHover={{ scale: 1.05 }}
                           transition={{ type: 'spring', stiffness: 400 }}
                         >
-                          <div className="text-2xl sm:text-3xl font-bold text-white mb-1">
+                          <div className="text-2xl sm:text-3xl font-bold text-slate-900 mb-1">
                             <span data-counter="24">0</span>/7
                           </div>
-                          <div className="text-xs sm:text-sm text-white/70 font-medium">AI Availability</div>
+                          <div className="text-xs sm:text-sm text-slate-600 font-medium">AI Availability</div>
                         </motion.div>
                       </div>
                     </div>
@@ -446,14 +446,14 @@ export default function PricingPageClient() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-4 p-2 bg-white/5 backdrop-blur-xl rounded-full border border-white/10"
+          className="inline-flex items-center gap-4 p-2 bg-white/90 backdrop-blur-xl rounded-full border border-slate-200"
         >
           <button
             onClick={() => setIsAnnual(false)}
             className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
               !isAnnual
-                ? 'bg-gradient-to-r from-gold to-gold-600 text-black shadow-glow'
-                : 'text-white/60 hover:text-white'
+                ? 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-600/20'
+                : 'text-slate-600 hover:text-slate-900'
             }`}
           >
             Monthly
@@ -462,12 +462,12 @@ export default function PricingPageClient() {
             onClick={() => setIsAnnual(true)}
             className={`px-6 py-3 rounded-full font-medium transition-all duration-300 relative ${
               isAnnual
-                ? 'bg-gradient-to-r from-gold to-gold-600 text-black shadow-glow'
-                : 'text-white/60 hover:text-white'
+                ? 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-600/20'
+                : 'text-slate-600 hover:text-slate-900'
             }`}
           >
             Annual
-            <span className="absolute -top-2 -right-2 px-2 py-0.5 bg-gradient-to-r from-gold to-gold-600 text-black text-xs font-bold rounded-full">
+            <span className="absolute -top-2 -right-2 px-2 py-0.5 bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-xs font-bold rounded-full">
               Save 20%
             </span>
           </button>
@@ -498,12 +498,12 @@ export default function PricingPageClient() {
         >
           <button
             onClick={() => setShowComparison(!showComparison)}
-            className="inline-flex items-center gap-3 px-6 md:px-8 py-4 min-h-[48px] rounded-full bg-gradient-to-r from-white/5 to-white/10 border border-white/20 text-white hover:bg-white/15 hover:border-accent/30 transition-all duration-300 shadow-lg hover:shadow-accent/10 touch-manipulation"
+            className="inline-flex items-center gap-3 px-6 md:px-8 py-4 min-h-[48px] rounded-full bg-gradient-to-r from-white/90 to-white border border-slate-200 text-slate-900 hover:bg-white hover:border-blue-600/30 transition-all duration-300 shadow-lg shadow-slate-200/50 hover:shadow-blue-600/10 touch-manipulation"
           >
-            <ArrowLeftRight className="w-5 h-5 md:w-6 md:h-6 text-accent" />
+            <ArrowLeftRight className="w-5 h-5 md:w-6 md:h-6 text-blue-600" />
             <span className="font-medium text-sm md:text-base">{showComparison ? 'Hide' : 'Show'} Feature Comparison</span>
             <motion.span
-              className="text-accent"
+              className="text-blue-600"
               animate={{ rotate: showComparison ? 180 : 0 }}
               transition={{ duration: 0.3 }}
             >
@@ -521,41 +521,41 @@ export default function PricingPageClient() {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="md:hidden text-center text-white/60 text-sm mb-3 flex items-center justify-center gap-2">
-              <MoveHorizontal className="w-5 h-5 text-accent animate-pulse" />
+            <div className="md:hidden text-center text-slate-600 text-sm mb-3 flex items-center justify-center gap-2">
+              <MoveHorizontal className="w-5 h-5 text-blue-600 animate-pulse" />
               <span>Swipe to see all features</span>
             </div>
 
-            <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0 scrollbar-thin scrollbar-thumb-accent/30 scrollbar-track-white/5">
+            <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0 scrollbar-thin scrollbar-thumb-blue-600/30 scrollbar-track-slate-100">
               <div className="min-w-[700px] md:min-w-full">
                 <div className="relative rounded-3xl overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-slate-800/80 via-slate-900/90 to-slate-950/95 backdrop-blur-2xl" />
-                  <div className="absolute inset-0 bg-mesh-premium opacity-30" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white to-slate-50/95 backdrop-blur-2xl" />
+                  <div className="absolute inset-0 bg-mesh-premium opacity-10" />
 
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-accent/20 via-primary/20 to-accent/20 p-[1px]">
-                    <div className="absolute inset-[1px] rounded-3xl bg-gradient-to-br from-slate-800/95 via-slate-900/98 to-slate-950" />
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-600/20 via-cyan-500/20 to-blue-600/20 p-[1px]">
+                    <div className="absolute inset-[1px] rounded-3xl bg-gradient-to-br from-white/95 via-white to-slate-50" />
                   </div>
 
                   <div className="relative">
                     <table className="w-full">
                       <thead>
-                        <tr className="border-b border-white/10">
-                          <th className="text-left p-4 md:p-6 text-white/60 font-semibold text-sm md:text-base sticky left-0 bg-gradient-to-r from-slate-800/95 to-slate-800/80 backdrop-blur-xl z-10">
+                        <tr className="border-b border-slate-200">
+                          <th className="text-left p-4 md:p-6 text-slate-600 font-semibold text-sm md:text-base sticky left-0 bg-gradient-to-r from-white/95 to-white/80 backdrop-blur-xl z-10">
                             Feature
                           </th>
                           <th className="text-center p-4 md:p-6">
-                            <span className="text-white font-semibold text-sm md:text-base">Starter</span>
+                            <span className="text-slate-900 font-semibold text-sm md:text-base">Starter</span>
                           </th>
                           <th className="text-center p-4 md:p-6">
                             <div className="inline-flex flex-col items-center gap-1">
-                              <div className="px-3 py-1 rounded-full bg-gradient-to-r from-accent/20 to-primary/20 border border-accent/30">
-                                <span className="text-accent font-bold text-sm md:text-base">Growth</span>
+                              <div className="px-3 py-1 rounded-full bg-gradient-to-r from-blue-600/10 to-cyan-500/10 border border-blue-600/30">
+                                <span className="text-blue-600 font-bold text-sm md:text-base">Growth</span>
                               </div>
-                              <span className="text-xs text-accent/60">Recommended</span>
+                              <span className="text-xs text-blue-600/60">Recommended</span>
                             </div>
                           </th>
                           <th className="text-center p-4 md:p-6">
-                            <span className="bg-gradient-to-r from-amber-400 to-amber-600 bg-clip-text text-transparent font-semibold text-sm md:text-base">Enterprise</span>
+                            <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent font-semibold text-sm md:text-base">Enterprise</span>
                           </th>
                         </tr>
                       </thead>
@@ -584,26 +584,26 @@ export default function PricingPageClient() {
                             return (
                           <motion.tr
                             key={i}
-                            className="border-b border-white/5 hover:bg-white/5 transition-all duration-300 group"
+                            className="border-b border-slate-200/50 hover:bg-slate-50/50 transition-all duration-300 group"
                             initial={{ opacity: 0, x: -20 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.05 }}
                           >
-                            <td className="p-4 md:p-6 sticky left-0 bg-gradient-to-r from-slate-800/95 to-slate-800/80 backdrop-blur-xl z-10">
+                            <td className="p-4 md:p-6 sticky left-0 bg-gradient-to-r from-white/95 to-white/80 backdrop-blur-xl z-10">
                               <div className="flex items-center gap-3">
-                                <IconComponent className="w-5 h-5 text-accent/60 group-hover:text-accent transition-colors" />
-                                <span className="text-white font-medium text-sm md:text-base">{row.feature}</span>
+                                <IconComponent className="w-5 h-5 text-blue-600/60 group-hover:text-blue-600 transition-colors" />
+                                <span className="text-slate-900 font-medium text-sm md:text-base">{row.feature}</span>
                               </div>
                             </td>
                             <td className="p-4 md:p-6 text-center">
-                              <span className="text-white/60 text-sm md:text-base">{row.starter}</span>
+                              <span className="text-slate-600 text-sm md:text-base">{row.starter}</span>
                             </td>
-                            <td className="p-4 md:p-6 text-center bg-accent/5">
-                              <span className="text-white font-semibold text-sm md:text-base">{row.growth}</span>
+                            <td className="p-4 md:p-6 text-center bg-blue-600/5">
+                              <span className="text-slate-900 font-semibold text-sm md:text-base">{row.growth}</span>
                             </td>
                             <td className="p-4 md:p-6 text-center">
-                              <span className="text-white/70 text-sm md:text-base">{row.enterprise}</span>
+                              <span className="text-slate-700 text-sm md:text-base">{row.enterprise}</span>
                             </td>
                           </motion.tr>
                             );
@@ -627,10 +627,10 @@ export default function PricingPageClient() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-4">
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-3 md:mb-4">
             What Others Pay vs What You Get
           </h2>
-          <p className="text-white/60 text-base md:text-xl max-w-3xl mx-auto px-4">
+          <p className="text-slate-600 text-base md:text-xl max-w-3xl mx-auto px-4">
             Traditional agencies charge 3-5x more for less capability
           </p>
         </motion.div>
@@ -661,8 +661,8 @@ export default function PricingPageClient() {
               key={i}
               className={`relative p-6 rounded-2xl border max-w-sm mx-auto md:max-w-none ${
                 option.highlight
-                  ? 'bg-gradient-to-br from-accent/10 to-primary/10 border-accent/50'
-                  : 'bg-white/5 border-white/10'
+                  ? 'bg-gradient-to-br from-blue-50 to-cyan-50 border-blue-200'
+                  : 'bg-white border-slate-200'
               }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -670,20 +670,20 @@ export default function PricingPageClient() {
               transition={{ delay: i * 0.1 }}
             >
               <div className={`inline-block px-3 py-1 rounded-full text-xs font-medium mb-4 ${
-                option.highlight ? 'bg-accent text-black' : 'bg-white/10 text-white/60'
+                option.highlight ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'
               }`}>
                 {option.badge}
               </div>
-              <h3 className="text-xl font-bold text-white mb-2">{option.title}</h3>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">{option.title}</h3>
               <div className={`text-2xl font-bold mb-4 ${
-                option.highlight ? 'text-accent' : 'text-white/60'
+                option.highlight ? 'text-blue-600' : 'text-slate-600'
               }`}>
                 {option.price}
               </div>
               <ul className="space-y-2">
                 {option.features.map((feature, j) => (
-                  <li key={j} className="flex items-start gap-2 text-sm text-white/60">
-                    <span className={option.highlight ? 'text-accent' : 'text-white/40'}>
+                  <li key={j} className="flex items-start gap-2 text-sm text-slate-600">
+                    <span className={option.highlight ? 'text-blue-600' : 'text-slate-400'}>
                       {option.highlight ? '✓' : '✗'}
                     </span>
                     <span>{feature}</span>
@@ -729,14 +729,14 @@ export default function PricingPageClient() {
                 transition={{ delay: i * 0.1 }}
               >
                 {/* Glass background */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-xl border border-white/10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-white/95 to-white backdrop-blur-xl border border-slate-200" />
 
                 {/* Gradient orb */}
                 <motion.div
-                  className={`absolute top-0 right-0 w-32 h-32 rounded-full blur-3xl opacity-20 ${
-                    signal.color === 'gold' ? 'bg-gold' : 'bg-cyan-500'
+                  className={`absolute top-0 right-0 w-32 h-32 rounded-full blur-3xl opacity-10 ${
+                    signal.color === 'gold' ? 'bg-blue-600' : 'bg-cyan-500'
                   }`}
-                  animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.3, 0.2] }}
+                  animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.15, 0.1] }}
                   transition={{ duration: 4, repeat: Infinity }}
                 />
 
@@ -745,18 +745,18 @@ export default function PricingPageClient() {
                   <motion.div
                     className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4 ${
                       signal.color === 'gold'
-                        ? 'bg-gradient-to-br from-gold/20 to-gold/10 border border-gold/30'
-                        : 'bg-gradient-to-br from-cyan-500/20 to-cyan-500/10 border border-cyan-500/30'
+                        ? 'bg-gradient-to-br from-blue-100 to-blue-50 border border-blue-200'
+                        : 'bg-gradient-to-br from-cyan-100 to-cyan-50 border border-cyan-200'
                     }`}
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ type: 'spring', stiffness: 400 }}
                   >
                     <Icon className={`w-8 h-8 ${
-                      signal.color === 'gold' ? 'text-gold' : 'text-cyan-500'
+                      signal.color === 'gold' ? 'text-blue-600' : 'text-cyan-500'
                     }`} />
                   </motion.div>
-                  <h3 className="text-xl font-bold text-white mb-2">{signal.title}</h3>
-                  <p className="text-white/60 text-sm">{signal.desc}</p>
+                  <h3 className="text-xl font-bold text-slate-900 mb-2">{signal.title}</h3>
+                  <p className="text-slate-600 text-sm">{signal.desc}</p>
                 </div>
               </motion.div>
             );
@@ -772,10 +772,10 @@ export default function PricingPageClient() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-4">
+          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-3 md:mb-4">
             Common Questions
           </h2>
-          <p className="text-white/60 text-base md:text-xl">
+          <p className="text-slate-600 text-base md:text-xl">
             Everything you need to know about our pricing
           </p>
         </motion.div>
@@ -813,14 +813,14 @@ export default function PricingPageClient() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <p className="text-white/60 mb-4 text-sm md:text-base">Still have questions?</p>
+          <p className="text-slate-600 mb-4 text-sm md:text-base">Still have questions?</p>
           <a
             href="tel:865-346-6111"
-            className="inline-flex items-center gap-3 px-6 md:px-8 py-4 min-h-[56px] rounded-full bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-all duration-300 touch-manipulation"
+            className="inline-flex items-center gap-3 px-6 md:px-8 py-4 min-h-[56px] rounded-full bg-white border border-slate-200 text-slate-900 hover:bg-slate-50 transition-all duration-300 shadow-lg shadow-slate-200/50 touch-manipulation"
           >
             <span className="text-xl md:text-2xl">📞</span>
             <div className="text-left">
-              <div className="text-xs md:text-sm text-white/60">Call us now</div>
+              <div className="text-xs md:text-sm text-slate-600">Call us now</div>
               <div className="font-bold text-sm md:text-base">(865) 346-6111</div>
             </div>
           </a>
@@ -836,45 +836,45 @@ export default function PricingPageClient() {
           viewport={{ once: true }}
         >
           <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary opacity-20"
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 opacity-10"
               style={{ backgroundSize: "200% 100%" }}
             />
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-primary/50 via-accent/50 to-primary/50"
+              className="absolute inset-0 bg-gradient-to-r from-blue-600/20 via-cyan-500/20 to-blue-600/20"
               animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
               transition={{ duration: 5, repeat: Infinity }}
               style={{ backgroundSize: "200% 100%" }}
             />
           </div>
 
-          <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 p-8 md:p-12 lg:p-16 text-center">
+          <div className="relative bg-gradient-to-br from-white/95 to-white backdrop-blur-xl border border-slate-200 p-8 md:p-12 lg:p-16 text-center">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-3 md:mb-4">
+              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-3 md:mb-4">
                 Ready to Stop Losing Leads?
               </h2>
-              <p className="text-base md:text-xl text-white/80 mb-6 md:mb-8 max-w-2xl mx-auto px-4">
-                Join 500+ businesses using AI to capture every opportunity.
-                Start with our risk-free 30-day guarantee.
+              <p className="text-base md:text-xl text-slate-700 mb-6 md:mb-8 max-w-2xl mx-auto px-4">
+                Join businesses using AI to capture every opportunity.
+                No long-term contracts. Cancel anytime.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 min-h-[56px] rounded-full bg-white text-primary font-bold text-base md:text-lg hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-white/20 w-full sm:w-auto sm:min-w-[200px] touch-manipulation"
+                  className="inline-flex items-center justify-center px-8 py-4 min-h-[56px] rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-base md:text-lg hover:scale-105 transition-all duration-300 shadow-2xl shadow-blue-600/20 hover:shadow-blue-600/30 w-full sm:w-auto sm:min-w-[200px] touch-manipulation"
                 >
                   Get Started Free
                 </Link>
                 <a
                   href="tel:865-346-6111"
-                  className="inline-flex items-center justify-center px-8 py-4 min-h-[56px] rounded-full border-2 border-white text-white font-bold text-base md:text-lg hover:bg-white hover:text-primary transition-all duration-300 w-full sm:w-auto sm:min-w-[200px] touch-manipulation"
+                  className="inline-flex items-center justify-center px-8 py-4 min-h-[56px] rounded-full border-2 border-slate-900 text-slate-900 font-bold text-base md:text-lg hover:bg-slate-900 hover:text-white transition-all duration-300 w-full sm:w-auto sm:min-w-[200px] touch-manipulation"
                 >
                   Call (865) 346-6111
                 </a>
               </div>
-              <p className="text-white/60 text-xs md:text-sm mt-4 md:mt-6 px-4">
+              <p className="text-slate-600 text-xs md:text-sm mt-4 md:mt-6 px-4">
                 ✓ No credit card required  ✓ Setup in 3-5 days  ✓ No long-term contract
               </p>
             </motion.div>
@@ -975,7 +975,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                   ],
                 }}
                 transition={{ duration: 2.5, repeat: Infinity, repeatType: 'reverse' }}
-                className="relative mx-auto px-4 sm:px-6 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-gold via-gold-300 to-gold bg-[length:200%_100%] border border-gold-200/50"
+                className="relative mx-auto px-4 sm:px-6 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-[length:200%_100%] border border-blue-200/50"
               >
                 <motion.div
                   animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] }}
@@ -990,40 +990,40 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                   >
                     ⭐
                   </motion.span>
-                  <span className="font-black text-xs sm:text-sm tracking-wider text-black uppercase">
+                  <span className="font-black text-xs sm:text-sm tracking-wider text-white uppercase">
                     Most Popular
                   </span>
                 </div>
               </motion.div>
             </motion.div>
 
-            {/* Animated gold border */}
+            {/* Animated blue border */}
             <motion.div
-              className="absolute -inset-1 bg-gradient-to-r from-gold via-gold-500 to-gold rounded-3xl opacity-75 group-hover:opacity-100 blur-md"
+              className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 rounded-3xl opacity-50 group-hover:opacity-75 blur-md"
               animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
               transition={{ duration: 3, repeat: Infinity }}
               style={{ backgroundSize: "200% 200%" }}
             />
 
-            {/* Floating gold orbs */}
+            {/* Floating blue orbs */}
             <div className="absolute inset-0 overflow-hidden rounded-3xl">
               <motion.div
-                className="absolute top-0 right-0 w-64 h-64 bg-gold/20 rounded-full blur-3xl"
-                animate={{ scale: [1, 1.2, 1], opacity: [0.2, 0.3, 0.2] }}
+                className="absolute top-0 right-0 w-64 h-64 bg-blue-200/30 rounded-full blur-3xl"
+                animate={{ scale: [1, 1.2, 1], opacity: [0.15, 0.25, 0.15] }}
                 transition={{ duration: 4, repeat: Infinity }}
               />
               <motion.div
-                className="absolute bottom-0 left-0 w-64 h-64 bg-gold-600/20 rounded-full blur-3xl"
-                animate={{ scale: [1.2, 1, 1.2], opacity: [0.2, 0.3, 0.2] }}
+                className="absolute bottom-0 left-0 w-64 h-64 bg-cyan-200/30 rounded-full blur-3xl"
+                animate={{ scale: [1.2, 1, 1.2], opacity: [0.15, 0.25, 0.15] }}
                 transition={{ duration: 5, repeat: Infinity }}
               />
             </div>
 
-            <div className="relative h-full bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 rounded-3xl border-2 border-gold/50 p-8 flex flex-col">
+            <div className="relative h-full bg-gradient-to-br from-white via-slate-50 to-white rounded-3xl border-2 border-blue-600/30 p-8 flex flex-col shadow-xl shadow-blue-600/10">
               {/* Save ribbon */}
               {isAnnual && (
                 <div className="absolute top-8 right-0">
-                  <div className="bg-gradient-to-r from-gold to-gold-600 text-black text-xs font-bold px-4 py-1 rounded-l-full shadow-lg">
+                  <div className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-xs font-bold px-4 py-1 rounded-l-full shadow-lg">
                     SAVE ${savings}/mo
                   </div>
                 </div>
@@ -1033,18 +1033,18 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
               <div className="mb-6">
                 <div className="flex items-center gap-2 mb-2">
                   <motion.div
-                    className="w-2 h-2 rounded-full bg-gold"
+                    className="w-2 h-2 rounded-full bg-blue-600"
                     animate={{ scale: [1, 1.5, 1], opacity: [1, 0.5, 1] }}
                     transition={{ duration: 2, repeat: Infinity }}
                   />
-                  <span className="text-gold text-xs font-medium tracking-wider uppercase">
+                  <span className="text-blue-600 text-xs font-medium tracking-wider uppercase">
                     Best Value
                   </span>
                 </div>
-                <h3 className="text-3xl font-bold bg-gradient-to-r from-gold via-white to-gold-500 bg-clip-text text-transparent mb-3">
+                <h3 className="text-3xl font-bold bg-gradient-to-r from-blue-600 via-slate-900 to-cyan-500 bg-clip-text text-transparent mb-3">
                   {pkg.name.replace(' Package', '')}
                 </h3>
-                <p className="text-white/80 text-sm leading-relaxed">
+                <p className="text-slate-700 text-sm leading-relaxed">
                   {pkg.tagline}
                 </p>
               </div>
@@ -1056,24 +1056,24 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                     key={price}
                     initial={{ scale: 1.2, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
-                    className="text-6xl font-bold bg-gradient-to-br from-gold to-gold-600 bg-clip-text text-transparent"
+                    className="text-6xl font-bold bg-gradient-to-br from-blue-600 to-cyan-500 bg-clip-text text-transparent"
                   >
                     ${price.toLocaleString()}
                   </motion.span>
-                  <span className="text-white/40">/mo</span>
+                  <span className="text-slate-400">/mo</span>
                 </div>
                 {isAnnual && (
-                  <p className="text-gold text-sm font-medium">
+                  <p className="text-blue-600 text-sm font-medium">
                     ${(price * 12).toLocaleString()}/year (save ${savings * 12})
                   </p>
                 )}
-                <div className="text-white/70 text-sm mt-2">{pkg.roi}</div>
+                <div className="text-slate-700 text-sm mt-2">{pkg.roi}</div>
               </div>
 
               {/* CTA */}
               <Link
                 href={`/pricing/${pkg.slug}`}
-                className="relative block w-full text-center px-6 py-4 min-h-[48px] rounded-full bg-gradient-to-r from-gold to-gold-600 text-black font-bold mb-6 transition-all duration-300 hover:scale-105 shadow-glow-gold-lg hover:shadow-2xl hover:shadow-gold/70 overflow-hidden group/btn touch-manipulation gold-shimmer"
+                className="relative block w-full text-center px-6 py-4 min-h-[48px] rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold mb-6 transition-all duration-300 hover:scale-105 shadow-lg shadow-blue-600/30 hover:shadow-xl hover:shadow-blue-600/40 overflow-hidden group/btn touch-manipulation"
               >
                 <span className="relative">Get Started Now</span>
               </Link>
@@ -1081,7 +1081,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
               {/* ROI Toggle Button */}
               <button
                 onClick={onToggleROI}
-                className="w-full text-center py-2 mb-6 text-sm text-gold hover:text-gold-300 transition-colors font-medium"
+                className="w-full text-center py-2 mb-6 text-sm text-blue-600 hover:text-cyan-500 transition-colors font-medium"
               >
                 {showROI ? '− Hide' : '+ Show'} Potential ROI
               </button>
@@ -1102,8 +1102,8 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.05 }}
                   >
-                    <CheckCircle2 className="w-5 h-5 text-gold flex-shrink-0 mt-0.5" />
-                    <span className="text-white text-sm font-medium">{feature}</span>
+                    <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-900 text-sm font-medium">{feature}</span>
                   </motion.div>
                 ))}
               </div>
@@ -1114,25 +1114,25 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
         {/* STARTER TIER */}
         {isStarter && (
           <>
-            <div className="absolute -inset-px bg-gradient-to-b from-white/20 to-white/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" />
+            <div className="absolute -inset-px bg-gradient-to-b from-slate-200/50 to-slate-100/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-sm" />
 
-            <div className="relative h-full bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 p-8 transition-all duration-500 group-hover:border-white/30 flex flex-col">
+            <div className="relative h-full bg-white backdrop-blur-xl rounded-2xl border border-slate-200 p-8 transition-all duration-500 group-hover:border-blue-600/30 flex flex-col shadow-lg shadow-slate-200/50">
               {isAnnual && (
                 <div className="absolute top-8 right-0">
-                  <div className="bg-white/10 text-white text-xs font-bold px-4 py-1 rounded-l-full">
+                  <div className="bg-slate-100 text-slate-900 text-xs font-bold px-4 py-1 rounded-l-full">
                     SAVE ${savings}/mo
                   </div>
                 </div>
               )}
 
               <div className="mb-6">
-                <div className="text-white/40 text-xs font-medium tracking-wider uppercase mb-2">
+                <div className="text-slate-500 text-xs font-medium tracking-wider uppercase mb-2">
                   Getting Started
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">
                   {pkg.name.replace(' Package', '')}
                 </h3>
-                <p className="text-white/60 text-sm leading-relaxed">
+                <p className="text-slate-600 text-sm leading-relaxed">
                   {pkg.tagline}
                 </p>
               </div>
@@ -1143,30 +1143,30 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                     key={price}
                     initial={{ scale: 1.2, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
-                    className="text-5xl font-bold text-white"
+                    className="text-5xl font-bold text-slate-900"
                   >
                     ${price.toLocaleString()}
                   </motion.span>
-                  <span className="text-white/40">/mo</span>
+                  <span className="text-slate-400">/mo</span>
                 </div>
                 {isAnnual && (
-                  <p className="text-accent text-sm">
+                  <p className="text-blue-600 text-sm">
                     ${(price * 12).toLocaleString()}/year (save ${savings * 12})
                   </p>
                 )}
-                <div className="text-accent text-sm mt-2">{pkg.roi}</div>
+                <div className="text-blue-600 text-sm mt-2">{pkg.roi}</div>
               </div>
 
               <Link
                 href={`/pricing/${pkg.slug}`}
-                className="block w-full text-center px-6 py-4 min-h-[48px] rounded-full bg-white/10 border border-white/20 text-white font-medium mb-6 transition-all duration-300 hover:bg-white/20 hover:border-white/40 touch-manipulation"
+                className="block w-full text-center px-6 py-4 min-h-[48px] rounded-full bg-slate-50 border border-slate-200 text-slate-900 font-medium mb-6 transition-all duration-300 hover:bg-slate-100 hover:border-slate-300 touch-manipulation"
               >
                 View Details
               </Link>
 
               <button
                 onClick={onToggleROI}
-                className="w-full text-center py-2 mb-6 text-sm text-white/60 hover:text-white transition-colors"
+                className="w-full text-center py-2 mb-6 text-sm text-slate-600 hover:text-slate-900 transition-colors"
               >
                 {showROI ? '− Hide' : '+ Show'} Potential ROI
               </button>
@@ -1178,8 +1178,8 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
               <div className="space-y-3 flex-grow">
                 {pkg.features.map((feature, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-gold/60 flex-shrink-0 mt-0.5" />
-                    <span className="text-white/70 text-sm">{feature}</span>
+                    <CheckCircle2 className="w-5 h-5 text-blue-600/60 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-700 text-sm">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -1190,31 +1190,31 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
         {/* ENTERPRISE TIER */}
         {isEnterprise && (
           <>
-            <div className="absolute -inset-px bg-gradient-to-b from-primary/30 to-primary/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md" />
+            <div className="absolute -inset-px bg-gradient-to-b from-cyan-200/50 to-cyan-100/30 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-md" />
 
-            <div className="relative h-full bg-gradient-to-br from-slate-950 to-slate-950 rounded-2xl border border-primary/30 p-8 transition-all duration-500 group-hover:border-primary/60 flex flex-col">
+            <div className="relative h-full bg-gradient-to-br from-white to-slate-50 rounded-2xl border border-cyan-500/30 p-8 transition-all duration-500 group-hover:border-cyan-500/60 flex flex-col shadow-lg shadow-cyan-500/10">
               <div className="absolute top-0 right-0 -mt-3 -mr-3">
-                <div className="w-16 h-16 bg-gradient-to-br from-primary to-accent rounded-full flex items-center justify-center shadow-xl">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-full flex items-center justify-center shadow-xl">
                   <span className="text-white text-2xl">👑</span>
                 </div>
               </div>
 
               {isAnnual && (
                 <div className="absolute top-8 right-0">
-                  <div className="bg-primary/20 text-primary text-xs font-bold px-4 py-1 rounded-l-full border border-primary/30">
+                  <div className="bg-cyan-50 text-cyan-700 text-xs font-bold px-4 py-1 rounded-l-full border border-cyan-200">
                     SAVE ${savings}/mo
                   </div>
                 </div>
               )}
 
               <div className="mb-6">
-                <div className="text-primary text-xs font-medium tracking-wider uppercase mb-2">
+                <div className="text-cyan-600 text-xs font-medium tracking-wider uppercase mb-2">
                   Premium
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-3">
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">
                   {pkg.name.replace(' Package', '')}
                 </h3>
-                <p className="text-white/60 text-sm leading-relaxed">
+                <p className="text-slate-600 text-sm leading-relaxed">
                   {pkg.tagline}
                 </p>
               </div>
@@ -1225,30 +1225,30 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                     key={price}
                     initial={{ scale: 1.2, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
-                    className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"
+                    className="text-5xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent"
                   >
                     ${price.toLocaleString()}
                   </motion.span>
-                  <span className="text-white/40">/mo</span>
+                  <span className="text-slate-400">/mo</span>
                 </div>
                 {isAnnual && (
-                  <p className="text-primary text-sm">
+                  <p className="text-cyan-600 text-sm">
                     ${(price * 12).toLocaleString()}/year (save ${savings * 12})
                   </p>
                 )}
-                <div className="text-primary text-sm font-medium mt-2">{pkg.roi}</div>
+                <div className="text-cyan-600 text-sm font-medium mt-2">{pkg.roi}</div>
               </div>
 
               <Link
                 href={`/pricing/${pkg.slug}`}
-                className="block w-full text-center px-6 py-4 min-h-[48px] rounded-full bg-gradient-to-r from-primary to-accent text-white font-bold mb-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-primary/50 touch-manipulation"
+                className="block w-full text-center px-6 py-4 min-h-[48px] rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold mb-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/50 touch-manipulation"
               >
                 Schedule Consultation
               </Link>
 
               <button
                 onClick={onToggleROI}
-                className="w-full text-center py-2 mb-6 text-sm text-primary hover:text-accent transition-colors"
+                className="w-full text-center py-2 mb-6 text-sm text-cyan-600 hover:text-blue-600 transition-colors"
               >
                 {showROI ? '− Hide' : '+ Show'} Potential ROI
               </button>
@@ -1261,15 +1261,15 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                 {pkg.features.map((feature, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <CheckCircle2 className="w-5 h-5 text-cyan-500 flex-shrink-0 mt-0.5" />
-                    <span className="text-white/80 text-sm">{feature}</span>
+                    <span className="text-slate-700 text-sm">{feature}</span>
                   </div>
                 ))}
               </div>
 
               {/* Premium border pattern */}
               <div className="absolute inset-0 rounded-2xl pointer-events-none">
-                <div className="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-primary/50 rounded-tl-2xl" />
-                <div className="absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 border-primary/50 rounded-br-2xl" />
+                <div className="absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 border-cyan-500/50 rounded-tl-2xl" />
+                <div className="absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 border-cyan-500/50 rounded-br-2xl" />
               </div>
             </div>
           </>
@@ -1288,7 +1288,7 @@ function FAQItem({ question, answer, index }: { question: string; answer: string
 
   return (
     <motion.div
-      className="bg-white/5 backdrop-blur-xl rounded-xl border border-white/10 overflow-hidden hover:border-white/20 transition-colors"
+      className="bg-white backdrop-blur-xl rounded-xl border border-slate-200 overflow-hidden hover:border-blue-600/30 transition-colors"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -1296,11 +1296,11 @@ function FAQItem({ question, answer, index }: { question: string; answer: string
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full p-4 md:p-6 min-h-[64px] flex items-center justify-between text-left hover:bg-white/5 transition-colors touch-manipulation"
+        className="w-full p-4 md:p-6 min-h-[64px] flex items-center justify-between text-left hover:bg-slate-50 transition-colors touch-manipulation"
       >
-        <span className="text-white font-medium pr-4 text-sm md:text-base">{question}</span>
+        <span className="text-slate-900 font-medium pr-4 text-sm md:text-base">{question}</span>
         <motion.span
-          className="text-accent text-xl md:text-2xl flex-shrink-0 w-8 h-8 flex items-center justify-center"
+          className="text-blue-600 text-xl md:text-2xl flex-shrink-0 w-8 h-8 flex items-center justify-center"
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.3 }}
         >
@@ -1316,7 +1316,7 @@ function FAQItem({ question, answer, index }: { question: string; answer: string
         transition={{ duration: 0.3 }}
         className="overflow-hidden"
       >
-        <div className="p-4 md:p-6 pt-0 text-white/70 leading-relaxed text-sm md:text-base">
+        <div className="p-4 md:p-6 pt-0 text-slate-700 leading-relaxed text-sm md:text-base">
           {answer}
         </div>
       </motion.div>

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://captureclient.com/og-how-it-works.jpg",
+        url: "https://captureclient.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "How Capture Client AI Voice Agents Work",
@@ -33,10 +33,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "How It Works | AI Voice Agent Process",
+    title: "How It Works | AI Voice Agent Process | Capture Client",
     description:
       "See the 4-step process that turns missed calls into booked appointments automatically.",
-    images: ["https://captureclient.com/og-how-it-works.jpg"],
+    images: ["https://captureclient.com/og-image.png"],
   },
   alternates: {
     canonical: "https://captureclient.com/how-it-works",

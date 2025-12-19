@@ -120,7 +120,7 @@
       "description": "Upgrade to Growth Package for unlimited calls, 2 AI agents, and Facebook Ads management.",
       "cta": {
         "text": "See Growth Package",
-        "action": "/packages/growth-package"
+        "action": "/pricing/growth-package"
       }
     },
     "compare_table": [
@@ -256,7 +256,7 @@
     },
     "secondary_cta": {
       "text": "Compare All Packages",
-      "action": "/packages/pricing"
+      "action": "/pricing"
     },
     "guarantee": "No setup fees. Cancel anytime."
   }

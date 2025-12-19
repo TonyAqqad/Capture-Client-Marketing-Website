@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "automated lead generation"
   ],
   openGraph: {
-    title: "Marketing Services for Small Business | Never Miss a Lead",
+    title: "Marketing Services | Voice AI & Lead Gen | Capture Client",
     description:
       "Voice AI agents that answer every call, Google Ads & Facebook Ads that generate qualified leads. Trusted by 500+ small businesses. Book your free consultation today.",
     url: "https://captureclient.com/services",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://captureclient.com/og-image.jpg",
+        url: "https://captureclient.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "Capture Client Marketing Services"
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marketing Services for Small Business | Voice AI & Lead Generation",
+    title: "Marketing Services | Voice AI & Lead Gen | Capture Client",
     description:
       "24/7 AI voice agents, professional Google Ads & Facebook Ads management. Trusted by 500+ businesses.",
-    images: ["https://captureclient.com/og-image.jpg"],
+    images: ["https://captureclient.com/og-image.png"],
   },
   alternates: {
     canonical: "https://captureclient.com/services",

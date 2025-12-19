@@ -93,7 +93,7 @@ export default function LocalMarketStats({
               Bleeding Revenue
             </span>
           </h2>
-          <p className="text-slate-400 text-base sm:text-lg">
+          <p className="text-slate-500 text-base sm:text-lg">
             Every missed call is a lost opportunity. Here's what's at stake.
           </p>
         </div>
@@ -122,7 +122,7 @@ export default function LocalMarketStats({
               </div>
 
               {/* Description */}
-              <p className="text-sm text-slate-400 leading-relaxed">
+              <p className="text-sm text-slate-500 leading-relaxed">
                 Average revenue lost by a single {city} business from missed calls annually
               </p>
             </div>
@@ -150,7 +150,7 @@ export default function LocalMarketStats({
               </div>
 
               {/* Description */}
-              <p className="text-sm text-slate-400 leading-relaxed">
+              <p className="text-sm text-slate-500 leading-relaxed">
                 Average percentage of inbound calls that go unanswered by contractors in {city}
               </p>
             </div>
@@ -178,7 +178,7 @@ export default function LocalMarketStats({
               </div>
 
               {/* Description */}
-              <p className="text-sm text-slate-400 leading-relaxed">
+              <p className="text-sm text-slate-500 leading-relaxed">
                 Estimated total revenue lost across all {city} businesses annually from missed calls
               </p>
             </div>
@@ -195,7 +195,7 @@ export default function LocalMarketStats({
                   <h3 className="text-xl sm:text-2xl font-black text-white mb-2">
                     Don't Let Your {city} Business Be Part of This Statistic
                   </h3>
-                  <p className="text-slate-400 text-sm sm:text-base">
+                  <p className="text-slate-500 text-sm sm:text-base">
                     Voice AI answers every call, qualifies leads, and books appointments 24/7
                   </p>
                 </div>

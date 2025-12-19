@@ -3,7 +3,7 @@ import HealthcarePageClient from "./HealthcarePageClient";
 
 // SEO Metadata (Server Component)
 export const metadata: Metadata = {
-  title: "AI Voice Agents for Healthcare | HIPAA Compliant | Capture Client",
+  title: "AI for Healthcare | HIPAA Compliant | Capture Client",
   description:
     "HIPAA-compliant AI receptionist for medical and dental practices. Reduce missed calls 80%, cut no-shows 72%. Integrates with Epic, Cerner, OpenDental.",
   keywords: [
@@ -27,25 +27,25 @@ export const metadata: Metadata = {
     "AI voice agents healthcare",
   ],
   openGraph: {
-    title: "AI Voice Agents for Healthcare | HIPAA Compliant",
+    title: "AI for Healthcare | HIPAA Compliant | Capture Client",
     description:
       "HIPAA-compliant AI receptionist for medical and dental practices. Reduce missed calls 80%, cut no-shows 72%.",
     type: "website",
     url: "https://captureclient.com/industries/healthcare",
     siteName: "Capture Client",
     images: [{
-      url: "https://captureclient.com/og-healthcare.jpg",
+      url: "https://captureclient.com/og-image.png",
       width: 1200,
       height: 630,
-      alt: "AI Voice Agents for Healthcare | HIPAA Compliant - Capture Client",
+      alt: "Capture Client - AI Voice Agents for Healthcare",
     }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Voice Agents for Healthcare | HIPAA Compliant",
+    title: "AI for Healthcare | HIPAA Compliant | Capture Client",
     description:
       "HIPAA-compliant AI receptionist for medical and dental practices. Reduce missed calls 80%, cut no-shows 72%.",
-    images: ["https://captureclient.com/og-healthcare.jpg"],
+    images: ["https://captureclient.com/og-image.png"],
   },
   alternates: {
     canonical: "https://captureclient.com/industries/healthcare",
@@ -118,7 +118,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://captureclient.com" },
-    { "@type": "ListItem", position: 2, name: "Industries", item: "https://captureclient.com/industries" },
+    { "@type": "ListItem", position: 2, name: "Who We Serve", item: "https://captureclient.com/who-we-serve" },
     { "@type": "ListItem", position: 3, name: "Healthcare", item: "https://captureclient.com/industries/healthcare" },
   ],
 };

@@ -47,7 +47,7 @@ export default function StickyPhoneCTA() {
           transition={{ type: "spring", stiffness: 100 }}
           className="fixed top-0 left-0 right-0 z-50 hidden md:block"
         >
-          <div className="bg-gradient-to-r from-background-dark/98 via-background-dark/95 to-background-dark/98 backdrop-blur-2xl border-b-2 border-accent/30 shadow-glow">
+          <div className="bg-gradient-to-r from-white/98 via-white/95 to-white/98 backdrop-blur-2xl border-b-2 border-slate-200 shadow-md">
             <div className="container-custom px-6 py-3">
               <div className="flex items-center justify-between">
                 {/* Left: Trust indicator */}
@@ -57,7 +57,7 @@ export default function StickyPhoneCTA() {
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
                     </div>
-                    <span className="text-sm font-semibold text-foreground">
+                    <span className="text-sm font-semibold text-slate-900">
                       <span className="text-accent">Live:</span> 500+ businesses using Capture
                       Client
                     </span>
@@ -67,7 +67,7 @@ export default function StickyPhoneCTA() {
                     {[1, 2, 3, 4, 5].map((star) => (
                       <Star key={star} className="text-yellow-400 w-3.5 h-3.5 fill-yellow-400" />
                     ))}
-                    <span className="text-sm text-foreground-muted ml-1">4.9/5 (1,200 reviews)</span>
+                    <span className="text-sm text-slate-600 ml-1">4.9/5 (1,200 reviews)</span>
                   </div>
                 </div>
 
@@ -113,7 +113,7 @@ export default function StickyPhoneCTA() {
                     href="#contact"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-2 min-h-[48px] border-2 border-accent/50 text-foreground font-bold px-6 py-3 rounded-xl hover:bg-accent/10 transition-all duration-300"
+                    className="flex items-center gap-2 min-h-[48px] border-2 border-accent/50 text-slate-900 font-bold px-6 py-3 rounded-xl hover:bg-accent/10 transition-all duration-300"
                   >
                     <Rocket className="text-accent w-5 h-5" />
                     <span className="text-sm">Try Our AI Now</span>

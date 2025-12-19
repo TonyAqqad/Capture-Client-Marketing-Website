@@ -21,4 +21,7 @@ build/
 # Test artifacts
 test-results/
 playwright-report/
+
+# Archive (large reports / legacy data)
+docs/_archive/
 nul

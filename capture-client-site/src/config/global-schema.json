@@ -14,8 +14,8 @@
         "height": 512,
         "caption": "Capture Client Logo"
       },
-      "image": "https://captureclient.com/og-image.jpg",
-      "description": "Capture Client is the enterprise-grade growth platform for small businesses, combining AI Voice Agents (24/7 call answering), Google & Facebook Ads management, built-in CRM, and real-time analytics. Trusted by 500+ businesses with 50,000+ calls handled and 97% customer satisfaction.",
+      "image": "https://captureclient.com/og-image.png",
+      "description": "Capture Client is the enterprise-grade growth platform for small businesses, combining AI Voice Agents (24/7 call answering), Google & Facebook Ads management, built-in CRM, and real-time analytics.",
       "foundingDate": "2023",
       "telephone": "+1-865-346-6111",
       "email": "team@captureclient.com",
@@ -95,19 +95,7 @@
           }
         ]
       },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "reviewCount": "127",
-        "bestRating": "5",
-        "worstRating": "1"
-      },
       "slogan": "Automate Leads. Capture Clients. Scale Effortlessly.",
-      "award": [
-        "Google Ads Partner",
-        "Meta Business Partner",
-        "BBB Accredited Business"
-      ],
       "numberOfEmployees": {
         "@type": "QuantitativeValue",
         "minValue": 10,

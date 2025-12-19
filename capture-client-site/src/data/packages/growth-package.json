@@ -4,21 +4,28 @@
   "package_info": {
     "name": "Growth Package",
     "slug": "growth-package",
-    "price": "$997",
+    "price": "$950",
     "period": "per month",
     "tagline": "Multi-channel marketing automation for ambitious growing businesses",
     "value_comparison": "Get AI voice agents + professional paid advertising management for what agencies charge for ads alone"
   },
   "seo": {
-    "title": "Growth Package - $997/mo | AI Voice Agents + Facebook Ads | Capture Client",
+    "title": "Growth Package - $950/mo | AI Voice Agents + Facebook Ads | Capture Client",
     "meta_description": "Scale faster with 2 AI Voice Agents (unlimited calls), dedicated account manager, and professional Facebook Ads management ($1K-$3K/month budget). Advanced lead qualification included.",
-    "keywords": ["ai voice agent growth", "facebook ads with ai", "facebook ads lead generation", "ai lead generation system", "dedicated account manager", "advanced lead qualification"]
+    "keywords": [
+      "ai voice agent growth",
+      "facebook ads with ai",
+      "facebook ads lead generation",
+      "ai lead generation system",
+      "dedicated account manager",
+      "advanced lead qualification"
+    ]
   },
   "hero": {
     "headline": "Scale Your Lead Generation with AI + Facebook Ads",
     "subheadline": "2 Custom AI Voice Agents + Professional Facebook Ads Management + Advanced Lead Qualification",
     "price_display": {
-      "amount": "$997",
+      "amount": "$950",
       "period": "per month",
       "note": "Ad spend managed: $1,000-$3,000/month"
     },
@@ -63,7 +70,7 @@
       "description": "Professional Facebook Ads management included. We create campaigns, write ad copy, design graphics, optimize targeting, and manage your budget daily.",
       "value": "Included"
     },
-        {
+    {
       "name": "Ad Spend: $1,000-$3,000/month",
       "description": "We manage ad spend between $1K-$3K monthly (ad spend billed separately by Facebook). Optimized for maximum lead generation.",
       "value": "$1K-$3K managed"
@@ -128,7 +135,7 @@
       "description": "Enterprise Package includes unlimited calls, unlimited AI agents, both advertising platforms, and a dedicated account manager.",
       "cta": {
         "text": "See Enterprise Package",
-        "action": "/packages/enterprise-package"
+        "action": "/pricing/enterprise-package"
       }
     },
     "downgrade_prompt": {
@@ -136,7 +143,7 @@
       "description": "Starter Package includes 1 AI agent and 50 calls/month for $97/mo - perfect if you're not ready for paid advertising yet.",
       "cta": {
         "text": "See Starter Package",
-        "action": "/packages/starter-package"
+        "action": "/pricing/starter-package"
       }
     },
     "compare_table": [
@@ -230,7 +237,7 @@
     },
     {
       "question": "Who pays for the actual ad spend?",
-      "answer": "The ad spend ($1K-$3K/month) is billed directly from Facebook to your credit card. Our $997/mo fee covers the management, optimization, creative, and AI system."
+      "answer": "The ad spend ($1K-$3K/month) is billed directly from Facebook to your credit card. Our $950/mo fee covers the management, optimization, creative, and AI system."
     },
     {
       "question": "Can I add Google Ads later?",
@@ -279,7 +286,7 @@
     "headline": "Ready to Scale Your Lead Generation?",
     "subheadline": "Join 300+ growing businesses using AI + Ads to capture more qualified leads.",
     "primary_cta": {
-      "text": "Start Growing for $997/mo",
+      "text": "Start Growing for $950/mo",
       "action": "/contact?package=growth"
     },
     "secondary_cta": {

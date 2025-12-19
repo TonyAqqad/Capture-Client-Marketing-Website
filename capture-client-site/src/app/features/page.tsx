@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "Capture Client",
     type: "website",
     images: [{
-      url: "https://captureclient.com/og-image.jpg",
+      url: "https://captureclient.com/og-image.png",
       width: 1200,
       height: 630,
       alt: "Capture Client Platform Features",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Platform Features | All-in-One Growth Hub | Capture Client",
     description: "Explore Capture Client's AI voice agent features for small businesses.",
-    images: ["https://captureclient.com/og-image.jpg"],
+    images: ["https://captureclient.com/og-image.png"],
   },
   alternates: {
     canonical: "https://captureclient.com/features",
@@ -175,8 +175,8 @@ const softwareSchema = {
   },
   offers: {
     "@type": "AggregateOffer",
-    lowPrice: "999",
-    highPrice: "3995",
+    lowPrice: "97",
+    highPrice: "950",
     priceCurrency: "USD",
     offerCount: 3,
   },

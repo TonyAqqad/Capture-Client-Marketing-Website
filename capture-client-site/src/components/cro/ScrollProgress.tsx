@@ -110,9 +110,9 @@ export default function ScrollProgress() {
             <motion.div
               initial={{ opacity: 0, x: 10 }}
               whileHover={{ opacity: 1, x: 0 }}
-              className="absolute right-full mr-3 px-4 py-2 bg-surface/95 backdrop-blur-xl border border-accent/30 rounded-lg shadow-glow whitespace-nowrap pointer-events-none"
+              className="absolute right-full mr-3 px-4 py-2 bg-white/95 backdrop-blur-xl border border-blue-500/30 rounded-lg shadow-glow whitespace-nowrap pointer-events-none"
             >
-              <p className="text-sm font-bold text-foreground">Get Started!</p>
+              <p className="text-sm font-bold text-slate-900">Get Started!</p>
             </motion.div>
           </motion.button>
 
@@ -121,7 +121,7 @@ export default function ScrollProgress() {
             onClick={scrollToTop}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-            className="group w-14 h-14 bg-surface/80 backdrop-blur-xl border-2 border-surface-border hover:border-accent/50 rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-glow relative overflow-hidden"
+            className="group w-14 h-14 bg-white/80 backdrop-blur-xl border-2 border-slate-200 hover:border-accent/50 rounded-full flex items-center justify-center transition-all duration-300 hover:shadow-glow relative overflow-hidden"
           >
             {/* Progress circle */}
             <svg className="absolute inset-0 w-full h-full -rotate-90">
@@ -148,7 +148,7 @@ export default function ScrollProgress() {
               />
             </svg>
 
-            <ChevronUp className="text-foreground group-hover:text-accent transition-colors relative z-10 w-6 h-6" />
+            <ChevronUp className="text-slate-900 group-hover:text-accent transition-colors relative z-10 w-6 h-6" />
           </motion.button>
         </motion.div>
       )}

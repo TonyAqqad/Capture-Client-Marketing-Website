@@ -44,6 +44,9 @@ export async function generateStaticParams() {
   }));
 }
 
+// Return true 404 for unknown slugs (prevents soft 404s)
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: {
@@ -59,7 +62,7 @@ export async function generateMetadata({
   }
 
   const pageUrl = `${SITE_CONFIG.url}/locations/${location.page_id}`;
-  const ogImageUrl = location.hero?.hero_image?.url || `${SITE_CONFIG.url}/og-image.jpg`;
+  const ogImageUrl = location.hero?.hero_image?.url || `${SITE_CONFIG.url}/og-image.png`;
 
   return {
     title: location.seo.page_title,
@@ -195,7 +198,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
   const localPhoneNumber = location.local_phone_number || "865-346-6111";
 
   return (
-    <div className="min-h-screen bg-slate-950">
+    <div className="min-h-screen bg-white">
       {/* Inject JSON-LD structured data for local SEO */}
       <JsonLd schema={schemas} />
 
@@ -204,9 +207,9 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       {/* LOCALIZED AURORA HERO - Premium animated background */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Aurora Animated Background */}
-        <div className="absolute inset-0 bg-slate-950">
+        <div className="absolute inset-0 bg-slate-50">
           {/* Base gradient layer */}
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950" />
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-slate-100 to-slate-50" />
 
           {/* Aurora effect - flowing animated gradients */}
           <div className="absolute inset-0 opacity-40">
@@ -239,7 +242,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
           )}
 
           {/* Bottom fade */}
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-slate-950" />
+          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-slate-50" />
         </div>
 
         {/* Hero Content */}
@@ -254,17 +257,17 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                 </div>
               </div>
               <div className="text-left">
-                <div className="text-xs text-cyan-200 uppercase tracking-[0.2em] font-bold">
+                <div className="text-xs text-cyan-600 uppercase tracking-[0.2em] font-bold">
                   Voice AI Agency in
                 </div>
-                <span className="text-cyan-300 font-black text-lg sm:text-2xl tracking-tight">
+                <span className="text-cyan-700 font-black text-lg sm:text-2xl tracking-tight">
                   {location.location.city}, {location.location.state_abbr}
                 </span>
               </div>
             </div>
 
             {/* Headline with local loss data */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-6 sm:mb-8 leading-[1.05] tracking-[-0.02em] animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 mb-6 sm:mb-8 leading-[1.05] tracking-[-0.02em] animate-in fade-in slide-in-from-bottom-6 duration-700 delay-150">
               Stop Losing{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-orange-500 to-amber-400">
                 ${location.estimated_missed_call_loss?.toLocaleString() || "47,000"}
@@ -273,7 +276,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             </h1>
 
             {/* Subheadline */}
-            <p className="text-lg sm:text-xl lg:text-2xl text-slate-200 max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
+            <p className="text-lg sm:text-xl lg:text-2xl text-slate-700 max-w-3xl mx-auto mb-8 sm:mb-12 leading-relaxed animate-in fade-in slide-in-from-bottom-8 duration-700 delay-300">
               {location.hero?.subheadline}
             </p>
 
@@ -295,7 +298,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               {location.hero?.cta_primary && (
                 <a
                   href={location.hero.cta_primary.action}
-                  className="group inline-flex items-center justify-center gap-3 bg-white/10 backdrop-blur-md text-white border-2 border-white/30 px-8 sm:px-10 py-6 sm:py-7 rounded-2xl font-bold text-base sm:text-lg transition-all duration-300 hover:bg-white/15 hover:border-cyan-400/70 hover:shadow-xl w-full sm:w-auto"
+                  className="group inline-flex items-center justify-center gap-3 bg-slate-900/10 backdrop-blur-md text-slate-900 border-2 border-slate-900/30 px-8 sm:px-10 py-6 sm:py-7 rounded-2xl font-bold text-base sm:text-lg transition-all duration-300 hover:bg-slate-900/15 hover:border-cyan-400/70 hover:shadow-xl w-full sm:w-auto"
                 >
                   <span className="relative z-10">{location.hero.cta_primary.text}</span>
                   <Calendar className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
@@ -306,15 +309,15 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             {/* Trust indicators */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 animate-in fade-in slide-in-from-bottom-12 duration-700 delay-600">
               <div className="inline-flex items-center gap-2 bg-green-500/15 border border-green-400/50 px-5 py-3 rounded-full">
-                <BadgeCheck className="text-green-300 w-4 h-4" />
-                <span className="font-bold text-green-200 text-sm">Free Strategy Call</span>
+                <BadgeCheck className="text-green-600 w-4 h-4" />
+                <span className="font-bold text-green-700 text-sm">Free Strategy Call</span>
               </div>
-              <div className="inline-flex items-center gap-2 text-slate-200">
-                <Zap className="text-cyan-300 w-4 h-4" />
+              <div className="inline-flex items-center gap-2 text-slate-700">
+                <Zap className="text-cyan-600 w-4 h-4" />
                 <span className="text-sm font-bold">15-Min Response Time</span>
               </div>
-              <div className="inline-flex items-center gap-2 text-slate-200">
-                <Headphones className="text-cyan-300 w-4 h-4" />
+              <div className="inline-flex items-center gap-2 text-slate-700">
+                <Headphones className="text-cyan-600 w-4 h-4" />
                 <span className="text-sm font-bold">Local {location.location.city} Support</span>
               </div>
             </div>
@@ -338,7 +341,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       {location.local_intro && (
         <div className="container mx-auto px-4 sm:px-6 lg:px-16 py-12 sm:py-16">
           <div className="max-w-4xl mx-auto">
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
               {location.local_intro.paragraph}
             </p>
           </div>
@@ -358,7 +361,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
       {/* Benefits Section - Why Choose Us */}
       {location.benefits && location.benefits.length > 0 && (
-        <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16 bg-slate-900/50 relative overflow-hidden">
+        <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16 bg-slate-50 relative overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-400/5 rounded-full blur-3xl" />
             <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" />
@@ -372,14 +375,14 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                   Why Choose Us
                 </span>
               </div>
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-4">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 mb-4">
                 Why{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-cyan-400">
                   {location.location.city}
                 </span>{" "}
                 Businesses Choose Us
               </h2>
-              <p className="text-slate-400 text-base sm:text-lg">
+              <p className="text-slate-600 text-base sm:text-lg">
                 Proven results for local businesses like yours
               </p>
             </div>
@@ -394,7 +397,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                     style={{ animationDelay: `${index * 80}ms` }}
                   >
                     <div className="absolute -inset-px bg-gradient-to-br from-cyan-400/0 via-cyan-400/40 to-cyan-400/0 rounded-2xl opacity-0 group-hover:opacity-100 blur-md transition-all duration-500" />
-                    <div className="relative h-full p-6 sm:p-7 rounded-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.15)] group-hover:border-cyan-400/30 transition-all duration-500 group-hover:translate-y-[-4px]">
+                    <div className="relative h-full p-6 sm:p-7 rounded-2xl bg-white backdrop-blur-xl border border-slate-200 shadow-[0_8px_32px_rgba(0,0,0,0.15)] group-hover:border-cyan-400/30 transition-all duration-500 group-hover:translate-y-[-4px]">
                       <div className="absolute inset-0 bg-mesh-premium rounded-2xl opacity-0 group-hover:opacity-40 transition-opacity duration-500 pointer-events-none" />
                       <div className="relative mb-5">
                         <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl blur-lg opacity-30 group-hover:opacity-60 transition-opacity" />
@@ -403,10 +406,10 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                         </div>
                       </div>
                       <div className="relative z-10">
-                        <h3 className="text-lg sm:text-xl font-black text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-300 group-hover:to-cyan-400 transition-all">
+                        <h3 className="text-lg sm:text-xl font-black text-slate-900 mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-300 group-hover:to-cyan-400 transition-all">
                           {benefit.title}
                         </h3>
-                        <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+                        <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
                           {benefit.description}
                         </p>
                       </div>
@@ -434,10 +437,10 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
         <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16">
           <div className="container mx-auto max-w-4xl">
             <div className="text-center mb-8 sm:mb-12">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
                 Success Stories from {location.location.city}
               </h2>
-              <p className="text-slate-400 text-base sm:text-lg">
+              <p className="text-slate-600 text-base sm:text-lg">
                 Real results from local businesses like yours
               </p>
             </div>
@@ -445,7 +448,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
               {location.local_use_cases.map((useCase: LocalUseCase, index: number) => (
                 <div
                   key={index}
-                  className="border border-slate-800 rounded-xl p-5 sm:p-6 lg:p-8 bg-slate-900/30 backdrop-blur-sm hover:border-cyan-400/30 hover:shadow-lg hover:shadow-cyan-400/5 transition-all duration-300"
+                  className="border border-slate-200 rounded-xl p-5 sm:p-6 lg:p-8 bg-white/60 backdrop-blur-sm hover:border-cyan-400/30 hover:shadow-lg hover:shadow-cyan-400/5 transition-all duration-300"
                 >
                   <div className="flex flex-col sm:flex-row items-start gap-4">
                     <div className="flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-lg bg-cyan-400/10 border border-cyan-400/20 shrink-0">
@@ -455,12 +458,12 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                       <h3 className="text-lg sm:text-xl font-semibold text-cyan-400 mb-3 sm:mb-4">
                         {useCase.business_type || useCase.industry}
                       </h3>
-                      <p className="text-sm sm:text-base text-slate-300 mb-3">
-                        <strong className="text-white font-medium">Challenge:</strong>{" "}
+                      <p className="text-sm sm:text-base text-slate-700 mb-3">
+                        <strong className="text-slate-900 font-medium">Challenge:</strong>{" "}
                         {useCase.scenario || useCase.example}
                       </p>
-                      <p className="text-sm sm:text-base text-slate-300">
-                        <strong className="text-green-400 font-medium">Result:</strong>{" "}
+                      <p className="text-sm sm:text-base text-slate-700">
+                        <strong className="text-green-600 font-medium">Result:</strong>{" "}
                         {useCase.result}
                       </p>
                     </div>
@@ -506,7 +509,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       </section>
 
       {/* CRO: Risk Reversal */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16 bg-slate-900/30">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16 bg-slate-50">
         <div className="container mx-auto max-w-4xl">
           <RiskReversal />
         </div>
@@ -515,12 +518,12 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       {/* CTA Section with Local Context */}
       <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16">
         <div className="container mx-auto max-w-4xl">
-          <div className="bg-slate-900/50 backdrop-blur-xl rounded-2xl p-6 sm:p-8 lg:p-12 border border-slate-800 shadow-2xl">
+          <div className="bg-white/70 backdrop-blur-xl rounded-2xl p-6 sm:p-8 lg:p-12 border border-slate-200 shadow-2xl">
             <div className="text-center mb-6 sm:mb-8">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-3 sm:mb-4">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 sm:mb-4">
                 Ready to Grow Your {location.location.city} Business?
               </h2>
-              <p className="text-base sm:text-lg text-slate-400 mb-2 px-4">
+              <p className="text-base sm:text-lg text-slate-700 mb-2 px-4">
                 Join {location.location.city} businesses using Voice AI to capture more leads 24/7.
               </p>
               <div className="inline-flex items-center gap-2 text-green-400 text-sm">
@@ -536,19 +539,19 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                 <div className="inline-flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-green-500/20 border border-green-500/40 mb-2">
                   <BadgeCheck className="text-green-400 w-5 h-5 sm:w-5 sm:h-5" />
                 </div>
-                <p className="text-xs text-slate-400">100% Secure</p>
+                <p className="text-xs text-slate-600">100% Secure</p>
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-green-500/20 border border-green-500/40 mb-2">
                   <Zap className="text-green-400 w-5 h-5 sm:w-5 sm:h-5" />
                 </div>
-                <p className="text-xs text-slate-400">15-Min Setup</p>
+                <p className="text-xs text-slate-600">15-Min Setup</p>
               </div>
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-green-500/20 border border-green-500/40 mb-2">
                   <Headphones className="text-green-400 w-5 h-5 sm:w-5 sm:h-5" />
                 </div>
-                <p className="text-xs text-slate-400">Local Support</p>
+                <p className="text-xs text-slate-600">Local Support</p>
               </div>
             </div>
           </div>
@@ -559,14 +562,14 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       {location.location.nearby_areas && location.location.nearby_areas.length > 0 && (
         <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16">
           <div className="container mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-bold text-white text-center mb-6 sm:mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 text-center mb-6 sm:mb-8">
               Also Serving Nearby Areas
             </h2>
             <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
               {location.location.nearby_areas.map((area: string, index: number) => (
                 <span
                   key={index}
-                  className="px-3 sm:px-4 py-2 bg-slate-900/30 border border-slate-700 text-slate-300 text-xs sm:text-sm rounded-full hover:border-cyan-400/50 hover:text-cyan-400 transition-all"
+                  className="px-3 sm:px-4 py-2 bg-slate-50 border border-slate-200 text-slate-700 text-xs sm:text-sm rounded-full hover:border-cyan-400/50 hover:text-cyan-600 transition-all"
                 >
                   {area}
                 </span>

@@ -67,16 +67,16 @@ export function LeadQualificationFeatures() {
 
   const colorClasses = {
     cyan: {
-      icon: "from-[#00C9FF] to-[#4A69E2]",
-      text: "text-[#00C9FF]",
-      border: "border-[#00C9FF]/30",
-      glow: "group-hover:shadow-[0_0_40px_rgba(0,201,255,0.3)]"
+      icon: "from-blue-600 to-cyan-500",
+      text: "text-blue-600",
+      border: "border-blue-200",
+      glow: "group-hover:shadow-lg group-hover:shadow-blue-200/50"
     },
     indigo: {
-      icon: "from-[#4A69E2] to-[#00C9FF]",
-      text: "text-[#4A69E2]",
-      border: "border-[#4A69E2]/30",
-      glow: "group-hover:shadow-[0_0_40px_rgba(74,105,226,0.3)]"
+      icon: "from-cyan-500 to-blue-600",
+      text: "text-blue-600",
+      border: "border-blue-200",
+      glow: "group-hover:shadow-lg group-hover:shadow-blue-200/50"
     }
   };
 
@@ -87,8 +87,8 @@ export function LeadQualificationFeatures() {
       style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
     >
       {/* Background accent */}
-      <div className="absolute inset-0 bg-[#030303]" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#00C9FF]/5 to-transparent" />
+      <div className="absolute inset-0 bg-white" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-blue-50 to-transparent" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -98,19 +98,19 @@ export function LeadQualificationFeatures() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl mb-6 hover:bg-white/[0.04] hover:border-[#00C9FF]/30 transition-all duration-300">
-            <ShieldCheck className="w-5 h-5 text-[#00C9FF]" />
-            <span className="text-sm text-[#00C9FF] uppercase tracking-wide" style={{ fontWeight: 600 }}>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200 mb-6 hover:border-blue-300 transition-all duration-300">
+            <ShieldCheck className="w-5 h-5 text-blue-600" />
+            <span className="text-sm text-blue-600 uppercase tracking-wide" style={{ fontWeight: 600 }}>
               AI-Powered Qualification
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-6">
             <span style={{ fontWeight: 200 }}>Not Just Fast. </span>
-            <span className="text-[#00C9FF]" style={{ fontWeight: 800 }}>Smart.</span>
+            <span className="text-blue-600" style={{ fontWeight: 800 }}>Smart.</span>
           </h2>
-          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed" style={{ fontWeight: 300 }}>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" style={{ fontWeight: 300 }}>
             Our AI doesn't just answer calls—it qualifies leads with natural conversation
-            that feels human, <span className="text-white" style={{ fontWeight: 600 }}>not robotic</span>.
+            that feels human, <span className="text-slate-900" style={{ fontWeight: 600 }}>not robotic</span>.
           </p>
         </motion.div>
 
@@ -134,13 +134,13 @@ export function LeadQualificationFeatures() {
                   {/* Icon */}
                   <div className="flex items-start gap-6 mb-6">
                     <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${colors.icon} flex items-center justify-center flex-shrink-0 shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
-                      <IconComponent className="w-8 h-8 text-black" />
+                      <IconComponent className="w-8 h-8 text-white" />
                     </div>
                     <div>
                       <h3 className={`text-2xl font-bold ${colors.text} mb-2`}>
                         {feature.title}
                       </h3>
-                      <p className="text-white/70 leading-relaxed">
+                      <p className="text-slate-600 leading-relaxed">
                         {feature.description}
                       </p>
                     </div>
@@ -154,10 +154,10 @@ export function LeadQualificationFeatures() {
                         initial={{ opacity: 0, x: -20 }}
                         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
                         transition={{ duration: 0.4, delay: index * 0.1 + qIndex * 0.1 }}
-                        className="flex items-center gap-3 p-3 bg-white/[0.03] rounded-lg border border-white/5 hover:bg-white/[0.06] hover:border-white/10 transition-all duration-300"
+                        className="flex items-center gap-3 p-3 bg-slate-50 rounded-lg border border-slate-200 hover:bg-white hover:border-blue-200 transition-all duration-300"
                       >
                         <CheckCircle className={`w-4 h-4 ${colors.text} flex-shrink-0`} />
-                        <span className="text-white/80 text-sm font-medium">
+                        <span className="text-slate-700 text-sm font-medium">
                           {question}
                         </span>
                       </motion.div>
@@ -176,16 +176,16 @@ export function LeadQualificationFeatures() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center"
         >
-          <div className="inline-flex items-center gap-4 p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10 hover:bg-white/10 hover:border-accent/30 hover:shadow-[0_0_40px_rgba(0,201,255,0.2)] transition-all duration-500">
+          <div className="inline-flex items-center gap-4 p-6 rounded-2xl bg-white/70 backdrop-blur-xl border border-slate-200 hover:border-blue-300 hover:shadow-lg hover:shadow-blue-200/50 transition-all duration-500">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-cyan-400 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                <Brain className="w-6 h-6 text-black" />
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <Brain className="w-6 h-6 text-white" />
               </div>
               <div className="text-left">
-                <p className="text-2xl font-bold text-white">
+                <p className="text-2xl font-bold text-slate-900">
                   Natural Language Processing
                 </p>
-                <p className="text-white/70">Conversations that feel human, not scripted</p>
+                <p className="text-slate-600">Conversations that feel human, not scripted</p>
               </div>
             </div>
           </div>

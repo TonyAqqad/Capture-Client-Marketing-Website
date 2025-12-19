@@ -3,22 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
 import {
-  TrendingUp,
-  TrendingDown,
-  Clock,
-  Infinity,
-  ThermometerSnowflake,
-  Shield,
-  PhoneMissed,
-  PhoneIncoming,
-  GraduationCap,
-  Zap,
-  FileEdit,
-  Wand2,
-  Languages,
-  Globe,
-  Smile,
-  BadgeCheck,
+	  TrendingUp,
   RocketIcon,
   Megaphone,
   Users,
@@ -58,7 +43,7 @@ const COMPARISONS: ComparisonMetric[] = [
     traditional: {
       value: "$3,200 - $4,800",
       icon: TrendingUp,
-      color: "text-white/30",
+      color: "text-slate-400",
     },
     voiceAI: {
       value: "$997/mo",
@@ -71,7 +56,7 @@ const COMPARISONS: ComparisonMetric[] = [
     traditional: {
       value: "8-10 hours/day",
       icon: X,
-      color: "text-white/30",
+      color: "text-slate-400",
     },
     voiceAI: {
       value: "24/7/365",
@@ -84,7 +69,7 @@ const COMPARISONS: ComparisonMetric[] = [
     traditional: {
       value: "5-10 days/year",
       icon: X,
-      color: "text-white/30",
+      color: "text-slate-400",
     },
     voiceAI: {
       value: "Zero downtime",
@@ -97,7 +82,7 @@ const COMPARISONS: ComparisonMetric[] = [
     traditional: {
       value: "Limited",
       icon: X,
-      color: "text-white/30",
+      color: "text-slate-400",
     },
     voiceAI: {
       value: "Unlimited",
@@ -110,7 +95,7 @@ const COMPARISONS: ComparisonMetric[] = [
     traditional: {
       value: "2-4 weeks",
       icon: X,
-      color: "text-white/30",
+      color: "text-slate-400",
     },
     voiceAI: {
       value: "Instant",
@@ -123,7 +108,7 @@ const COMPARISONS: ComparisonMetric[] = [
     traditional: {
       value: "Manual (errors)",
       icon: X,
-      color: "text-white/30",
+      color: "text-slate-400",
     },
     voiceAI: {
       value: "Auto (perfect)",
@@ -136,7 +121,7 @@ const COMPARISONS: ComparisonMetric[] = [
     traditional: {
       value: "1-2 languages",
       icon: X,
-      color: "text-white/30",
+      color: "text-slate-400",
     },
     voiceAI: {
       value: "100+ languages",
@@ -149,7 +134,7 @@ const COMPARISONS: ComparisonMetric[] = [
     traditional: {
       value: "Varies by mood",
       icon: X,
-      color: "text-white/30",
+      color: "text-slate-400",
     },
     voiceAI: {
       value: "Always perfect",
@@ -173,12 +158,12 @@ export default function VoiceAIvsReceptionist() {
   const annualSavings = TRADITIONAL_ANNUAL_COST - VOICE_AI_ANNUAL_COST;
 
   return (
-    <section className="section relative overflow-hidden" style={{ backgroundColor: '#030303' }}>
+    <section className="section relative overflow-hidden bg-gradient-to-b from-white to-slate-50">
       {/* Mesh gradient background */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute inset-0 bg-gradient-to-br from-[#00C9FF]/10 via-transparent to-[#4A69E2]/10" />
         <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.03) 1px, transparent 0)',
+          backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(226,232,240,0.5) 1px, transparent 0)',
           backgroundSize: '48px 48px'
         }} />
       </div>
@@ -208,7 +193,7 @@ export default function VoiceAIvsReceptionist() {
             style={{
               fontFamily: 'var(--font-bricolage-grotesque)',
               fontWeight: 800,
-              color: 'white'
+              color: 'rgb(15, 23, 42)'
             }}
           >
             Voice AI vs. Traditional Receptionist
@@ -222,7 +207,7 @@ export default function VoiceAIvsReceptionist() {
             style={{
               fontFamily: 'var(--font-bricolage-grotesque)',
               fontWeight: 200,
-              color: 'rgba(255,255,255,0.6)'
+              color: 'rgb(71, 85, 105)'
             }}
           >
             See the difference in real numbers
@@ -231,13 +216,13 @@ export default function VoiceAIvsReceptionist() {
 
         {/* View toggle */}
         <div className="max-w-md mx-auto mb-12">
-          <div className="flex gap-3 p-2 border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl rounded-xl">
+          <div className="flex gap-3 p-2 border border-slate-200 bg-white/70 backdrop-blur-xl rounded-xl">
             <button
               onClick={() => setSelectedView("comparison")}
               className={`flex-1 px-4 py-3 rounded-lg transition-all ${
                 selectedView === "comparison"
                   ? "text-white"
-                  : "text-white/40 hover:text-white/70"
+                  : "text-slate-600 hover:text-slate-900"
               }`}
               style={{
                 fontFamily: 'var(--font-bricolage-grotesque)',
@@ -252,7 +237,7 @@ export default function VoiceAIvsReceptionist() {
               className={`flex-1 px-4 py-3 rounded-lg transition-all ${
                 selectedView === "savings"
                   ? "text-white"
-                  : "text-white/40 hover:text-white/70"
+                  : "text-slate-600 hover:text-slate-900"
               }`}
               style={{
                 fontFamily: 'var(--font-bricolage-grotesque)',
@@ -278,21 +263,21 @@ export default function VoiceAIvsReceptionist() {
               {/* Comparison grid */}
               <div className="grid md:grid-cols-2 gap-6">
                 {/* Traditional receptionist column */}
-                <div className="p-6 border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl rounded-2xl">
+                <div className="p-6 border border-slate-200 bg-white/70 backdrop-blur-xl rounded-2xl">
                   <div className="flex items-center gap-3 mb-6">
-                    <div className="w-12 h-12 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-center justify-center">
-                      <User className="w-6 h-6 text-white/50" />
+                    <div className="w-12 h-12 rounded-xl bg-slate-50 border border-slate-200 flex items-center justify-center">
+                      <User className="w-6 h-6 text-slate-600" />
                     </div>
                     <div>
                       <h3 className="text-xl" style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 700,
-                        color: 'white'
+                        color: 'rgb(15, 23, 42)'
                       }}>Traditional Receptionist</h3>
                       <p className="text-sm" style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 200,
-                        color: 'rgba(255,255,255,0.5)'
+                        color: 'rgb(71, 85, 105)'
                       }}>In-house staff member</p>
                     </div>
                   </div>
@@ -305,13 +290,13 @@ export default function VoiceAIvsReceptionist() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.05 }}
-                        className="p-4 rounded-xl border border-white/[0.04] bg-white/[0.01]"
+                        className="p-4 rounded-xl border border-slate-200 bg-slate-50"
                       >
                         <div className="flex items-center justify-between mb-2">
                           <span className="text-xs uppercase tracking-wider" style={{
                             fontFamily: 'var(--font-bricolage-grotesque)',
                             fontWeight: 600,
-                            color: 'rgba(255,255,255,0.4)'
+                            color: 'rgb(148, 163, 184)'
                           }}>
                             {item.category}
                           </span>
@@ -320,7 +305,7 @@ export default function VoiceAIvsReceptionist() {
                         <p style={{
                           fontFamily: 'var(--font-bricolage-grotesque)',
                           fontWeight: 500,
-                          color: 'white'
+                          color: 'rgb(15, 23, 42)'
                         }}>{item.traditional.value}</p>
                       </motion.div>
                     ))}
@@ -355,12 +340,12 @@ export default function VoiceAIvsReceptionist() {
                       <h3 className="text-xl" style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 700,
-                        color: 'white'
+                        color: 'rgb(15, 23, 42)'
                       }}>Voice AI Agent</h3>
                       <p className="text-sm" style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 200,
-                        color: 'rgba(255,255,255,0.5)'
+                        color: 'rgb(71, 85, 105)'
                       }}>Intelligent automation</p>
                     </div>
                   </div>
@@ -382,7 +367,7 @@ export default function VoiceAIvsReceptionist() {
                           <span className="text-xs uppercase tracking-wider" style={{
                             fontFamily: 'var(--font-bricolage-grotesque)',
                             fontWeight: 600,
-                            color: 'rgba(255,255,255,0.4)'
+                            color: 'rgb(148, 163, 184)'
                           }}>
                             {item.category}
                           </span>
@@ -391,7 +376,7 @@ export default function VoiceAIvsReceptionist() {
                         <p style={{
                           fontFamily: 'var(--font-bricolage-grotesque)',
                           fontWeight: 500,
-                          color: 'white'
+                          color: 'rgb(15, 23, 42)'
                         }}>{item.voiceAI.value}</p>
                       </motion.div>
                     ))}
@@ -422,30 +407,30 @@ export default function VoiceAIvsReceptionist() {
               className="max-w-4xl mx-auto"
             >
               {/* Cost breakdown card */}
-              <div className="p-8 lg:p-12 border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl rounded-2xl">
+              <div className="p-8 lg:p-12 border border-slate-200 bg-white/70 backdrop-blur-xl rounded-2xl">
                 <h3 className="text-3xl text-center mb-12" style={{
                   fontFamily: 'var(--font-bricolage-grotesque)',
                   fontWeight: 800,
-                  color: 'white'
+                  color: 'rgb(15, 23, 42)'
                 }}>Annual Cost Analysis</h3>
 
                 {/* Traditional cost */}
                 <div className="mb-8">
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-lg bg-white/[0.03] border border-white/[0.06] flex items-center justify-center">
-                        <User className="w-5 h-5 text-white/50" />
+                      <div className="w-10 h-10 rounded-lg bg-slate-50 border border-slate-200 flex items-center justify-center">
+                        <User className="w-5 h-5 text-slate-600" />
                       </div>
                       <span style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 600,
-                        color: 'white'
+                        color: 'rgb(15, 23, 42)'
                       }}>Traditional Receptionist</span>
                     </div>
                     <span className="text-2xl" style={{
                       fontFamily: 'var(--font-bricolage-grotesque)',
                       fontWeight: 700,
-                      color: 'rgba(255,255,255,0.5)'
+                      color: 'rgb(71, 85, 105)'
                     }}>
                       ${TRADITIONAL_ANNUAL_COST.toLocaleString()}/year
                     </span>
@@ -457,55 +442,55 @@ export default function VoiceAIvsReceptionist() {
                       <span style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 200,
-                        color: 'rgba(255,255,255,0.5)'
+                        color: 'rgb(71, 85, 105)'
                       }}>Base salary</span>
                       <span style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 500,
-                        color: 'white'
+                        color: 'rgb(15, 23, 42)'
                       }}>$35,000</span>
                     </div>
                     <div className="flex justify-between text-sm">
                       <span style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 200,
-                        color: 'rgba(255,255,255,0.5)'
+                        color: 'rgb(71, 85, 105)'
                       }}>Benefits (health, 401k)</span>
                       <span style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 500,
-                        color: 'white'
+                        color: 'rgb(15, 23, 42)'
                       }}>$7,000</span>
                     </div>
                     <div className="flex justify-between text-sm">
                       <span style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 200,
-                        color: 'rgba(255,255,255,0.5)'
+                        color: 'rgb(71, 85, 105)'
                       }}>Payroll taxes</span>
                       <span style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 500,
-                        color: 'white'
+                        color: 'rgb(15, 23, 42)'
                       }}>$2,000</span>
                     </div>
                     <div className="flex justify-between text-sm">
                       <span style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 200,
-                        color: 'rgba(255,255,255,0.5)'
+                        color: 'rgb(71, 85, 105)'
                       }}>Training & supplies</span>
                       <span style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 500,
-                        color: 'white'
+                        color: 'rgb(15, 23, 42)'
                       }}>$1,000</span>
                     </div>
                   </div>
 
                   {/* Visual bar */}
-                  <div className="mt-4 h-3 rounded-full overflow-hidden" style={{ backgroundColor: 'rgba(255,255,255,0.05)' }}>
-                    <div className="h-full w-full" style={{ background: 'linear-gradient(to right, rgba(255,255,255,0.3), rgba(255,255,255,0.2))' }} />
+                  <div className="mt-4 h-3 rounded-full overflow-hidden" style={{ backgroundColor: 'rgb(241, 245, 249)' }}>
+                    <div className="h-full w-full" style={{ background: 'linear-gradient(to right, rgb(148, 163, 184), rgb(203, 213, 225))' }} />
                   </div>
                 </div>
 
@@ -522,7 +507,7 @@ export default function VoiceAIvsReceptionist() {
                       <span style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 600,
-                        color: 'white'
+                        color: 'rgb(15, 23, 42)'
                       }}>Voice AI Agent</span>
                     </div>
                     <span className="text-2xl" style={{
@@ -540,54 +525,54 @@ export default function VoiceAIvsReceptionist() {
                       <span style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 200,
-                        color: 'rgba(255,255,255,0.5)'
+                        color: 'rgb(71, 85, 105)'
                       }}>Monthly subscription</span>
                       <span style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 500,
-                        color: 'white'
+                        color: 'rgb(15, 23, 42)'
                       }}>$5,964</span>
                     </div>
                     <div className="flex justify-between text-sm">
                       <span style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 200,
-                        color: 'rgba(255,255,255,0.5)'
+                        color: 'rgb(71, 85, 105)'
                       }}>Setup & training</span>
                       <span style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 500,
-                        color: 'white'
+                        color: 'rgb(15, 23, 42)'
                       }}>$0</span>
                     </div>
                     <div className="flex justify-between text-sm">
                       <span style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 200,
-                        color: 'rgba(255,255,255,0.5)'
+                        color: 'rgb(71, 85, 105)'
                       }}>Sick days & coverage</span>
                       <span style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 500,
-                        color: 'white'
+                        color: 'rgb(15, 23, 42)'
                       }}>$0</span>
                     </div>
                     <div className="flex justify-between text-sm">
                       <span style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 200,
-                        color: 'rgba(255,255,255,0.5)'
+                        color: 'rgb(71, 85, 105)'
                       }}>Benefits & taxes</span>
                       <span style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 500,
-                        color: 'white'
+                        color: 'rgb(15, 23, 42)'
                       }}>$0</span>
                     </div>
                   </div>
 
                   {/* Visual bar */}
-                  <div className="mt-4 h-3 rounded-full overflow-hidden" style={{ backgroundColor: 'rgba(255,255,255,0.05)' }}>
+                  <div className="mt-4 h-3 rounded-full overflow-hidden" style={{ backgroundColor: 'rgb(241, 245, 249)' }}>
                     <motion.div
                       initial={{ width: 0 }}
                       animate={{ width: `${(VOICE_AI_ANNUAL_COST / TRADITIONAL_ANNUAL_COST) * 100}%` }}
@@ -599,7 +584,7 @@ export default function VoiceAIvsReceptionist() {
                 </div>
 
                 {/* Savings highlight */}
-                <div className="pt-8" style={{ borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+                <div className="pt-8" style={{ borderTop: '1px solid rgb(226, 232, 240)' }}>
                   <div className="text-center p-8 rounded-2xl" style={{
                     background: 'linear-gradient(135deg, rgba(0, 201, 255, 0.08) 0%, rgba(74, 105, 226, 0.08) 100%)',
                     border: '1px solid rgba(0, 201, 255, 0.2)'
@@ -607,7 +592,7 @@ export default function VoiceAIvsReceptionist() {
                     <p className="mb-2" style={{
                       fontFamily: 'var(--font-bricolage-grotesque)',
                       fontWeight: 200,
-                      color: 'rgba(255,255,255,0.6)'
+                      color: 'rgb(71, 85, 105)'
                     }}>Your Annual Savings</p>
                     <motion.p
                       initial={{ scale: 0.9 }}
@@ -628,7 +613,7 @@ export default function VoiceAIvsReceptionist() {
                     <p style={{
                       fontFamily: 'var(--font-bricolage-grotesque)',
                       fontWeight: 200,
-                      color: 'rgba(255,255,255,0.6)'
+                      color: 'rgb(71, 85, 105)'
                     }}>
                       That's <span style={{
                         color: '#00C9FF',
@@ -643,31 +628,31 @@ export default function VoiceAIvsReceptionist() {
                   <h4 className="text-lg text-center mb-6" style={{
                     fontFamily: 'var(--font-bricolage-grotesque)',
                     fontWeight: 700,
-                    color: 'white'
+                    color: 'rgb(15, 23, 42)'
                   }}>What You Could Do With $39K</h4>
                   <div className="grid sm:grid-cols-3 gap-4">
-                    <div className="p-4 rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl text-center">
+                    <div className="p-4 rounded-xl border border-slate-200 bg-white/70 backdrop-blur-xl text-center">
                       <Megaphone className="w-8 h-8 mx-auto mb-2" style={{ color: '#00C9FF' }} />
                       <p style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 600,
-                        color: 'white'
+                        color: 'rgb(15, 23, 42)'
                       }}>10x Your Ad Spend</p>
                     </div>
-                    <div className="p-4 rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl text-center">
+                    <div className="p-4 rounded-xl border border-slate-200 bg-white/70 backdrop-blur-xl text-center">
                       <Users className="w-8 h-8 mx-auto mb-2" style={{ color: '#00C9FF' }} />
                       <p style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 600,
-                        color: 'white'
+                        color: 'rgb(15, 23, 42)'
                       }}>Hire Another Technician</p>
                     </div>
-                    <div className="p-4 rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl text-center">
+                    <div className="p-4 rounded-xl border border-slate-200 bg-white/70 backdrop-blur-xl text-center">
                       <TrendingUp className="w-8 h-8 mx-auto mb-2" style={{ color: '#00C9FF' }} />
                       <p style={{
                         fontFamily: 'var(--font-bricolage-grotesque)',
                         fontWeight: 600,
-                        color: 'white'
+                        color: 'rgb(15, 23, 42)'
                       }}>Grow Your Business</p>
                     </div>
                   </div>

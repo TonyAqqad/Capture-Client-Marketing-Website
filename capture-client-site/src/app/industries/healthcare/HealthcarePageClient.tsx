@@ -4,13 +4,11 @@ import Link from "next/link";
 import { motion, useInView } from "@/lib/motion";
 import { useRef, useState, useEffect } from "react";
 import {
-  Phone, Clock, Calendar, Users, TrendingUp, Shield,
-  CheckCircle2, Building2, Heart,
-  Activity, Bell, UserPlus, History, BadgeCheck,
-  Headphones, Calculator, User, Smile, Hospital,
+  Phone, Clock, Bell, UserPlus, History, BadgeCheck,
+  Calculator, User, Smile, Hospital,
   Siren, ShieldCheck, Lock, Gavel, EyeOff, Moon,
   Brain, Stethoscope, Heart as HeartIcon, Pill, Syringe,
-  ArrowRight, Mail
+  ArrowRight, Mail, Shield, CheckCircle2
 } from "lucide-react";
 
 // ==================== INTERFACES ====================
@@ -63,10 +61,10 @@ function TrustBadge({ icon, label }: TrustBadgeProps) {
     <motion.div
       whileHover={{ scale: 1.05, y: -2 }}
       transition={{ duration: 0.2, ease: "easeOut" }}
-      className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 backdrop-blur-xl border border-cyan-500/30 shadow-lg hover:shadow-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300"
+      className="flex items-center gap-2 px-4 py-2 rounded-xl bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 hover:border-blue-300 transition-all duration-300"
     >
-      <div className="text-cyan">{icon}</div>
-      <span className="text-sm font-semibold text-foreground">{label}</span>
+      <div className="text-blue-600">{icon}</div>
+      <span className="text-sm font-semibold text-slate-900">{label}</span>
     </motion.div>
   );
 }
@@ -115,29 +113,29 @@ function PainPointCard({ icon, label, isNegative = false }: PainPointCardProps) 
       viewport={{ once: true }}
       transition={{ duration: 0.5 }}
       whileHover={{ scale: 1.02, y: -4 }}
-      className={`relative p-6 rounded-2xl backdrop-blur-xl border transition-all duration-300 ${
+      className={`relative p-6 rounded-2xl border transition-all duration-300 ${
         isNegative
-          ? "bg-red-500/10 border-red-500/30 hover:border-red-400/50 hover:shadow-lg hover:shadow-red-500/20"
-          : "bg-cyan-500/10 border-cyan-500/30 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/20"
+          ? "bg-red-50 border-red-200 hover:border-red-300 hover:shadow-lg hover:shadow-red-200/50"
+          : "bg-blue-50 border-blue-200 hover:border-blue-300 hover:shadow-lg hover:shadow-blue-200/50"
       }`}
     >
       <div className="flex flex-col items-center text-center gap-3">
         <div
           className={`w-16 h-16 rounded-full flex items-center justify-center transition-all duration-300 ${
             isNegative
-              ? "bg-gradient-to-br from-red-500/30 to-red-600/20"
-              : "bg-gradient-to-br from-cyan-500/30 to-accent/20"
+              ? "bg-gradient-to-br from-red-100 to-red-50"
+              : "bg-gradient-to-br from-blue-100 to-cyan-50"
           }`}
         >
           <span
             className={`text-4xl ${
-              isNegative ? "text-red-400" : "text-cyan"
+              isNegative ? "text-red-600" : "text-blue-600"
             }`}
           >
             {icon}
           </span>
         </div>
-        <p className="font-semibold text-foreground">{label}</p>
+        <p className="font-semibold text-slate-900">{label}</p>
       </div>
     </motion.div>
   );
@@ -241,17 +239,17 @@ function FeatureCard({ icon, title, description, delay = 0 }: FeatureCardProps) 
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.5, delay }}
       whileHover={{ scale: 1.02, y: -4 }}
-      className="group relative p-6 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-accent/10 backdrop-blur-xl border border-cyan-500/20 hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 cursor-pointer"
+      className="group relative p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-slate-200 hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300 cursor-pointer"
     >
       <motion.div
         whileHover={{ scale: 1.1, rotate: 5 }}
         transition={{ duration: 0.3 }}
-        className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500/30 to-accent/20 border border-cyan-400/30 flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-cyan-500/30 transition-all duration-300"
+        className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-100 to-cyan-100 border border-blue-200 flex items-center justify-center mb-4 group-hover:shadow-lg group-hover:shadow-blue-200/50 transition-all duration-300"
       >
-        <div className="text-cyan [&>svg]:w-6 [&>svg]:h-6">{icon}</div>
+        <div className="text-blue-600 [&>svg]:w-6 [&>svg]:h-6">{icon}</div>
       </motion.div>
-      <h3 className="text-xl font-heading font-bold text-foreground mb-2 group-hover:text-cyan transition-colors duration-300">{title}</h3>
-      <p className="text-foreground-muted leading-relaxed">{description}</p>
+      <h3 className="text-xl font-heading font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">{title}</h3>
+      <p className="text-slate-600 leading-relaxed">{description}</p>
     </motion.div>
   );
 }
@@ -271,14 +269,14 @@ function ROICalculator() {
   const annualRevenue = monthlyRevenue * 12;
 
   return (
-    <div className="glass-premium p-8 rounded-3xl border border-cyan-500/20 shadow-xl shadow-cyan-500/10">
-      <h3 className="text-2xl font-heading font-bold text-foreground mb-6 text-center">
+    <div className="bg-white/70 backdrop-blur-xl p-8 rounded-3xl border border-slate-200 shadow-xl shadow-slate-200/50">
+      <h3 className="text-2xl font-heading font-bold text-slate-900 mb-6 text-center">
         Calculate Your Revenue Recovery
       </h3>
 
       <div className="grid md:grid-cols-2 gap-6 mb-8">
         <div>
-          <label className="block text-sm font-semibold text-foreground mb-2">
+          <label className="block text-sm font-semibold text-slate-900 mb-2">
             Monthly Patient Calls
           </label>
           <input
@@ -287,15 +285,15 @@ function ROICalculator() {
             max="500"
             value={monthlyPatientCalls}
             onChange={(e) => setMonthlyPatientCalls(Number(e.target.value))}
-            className="w-full h-2 bg-surface rounded-lg appearance-none cursor-pointer accent-cyan"
+            className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
           />
-          <div className="text-2xl font-bold text-cyan mt-2">
+          <div className="text-2xl font-bold text-blue-600 mt-2">
             {monthlyPatientCalls} calls/month
           </div>
         </div>
 
         <div>
-          <label className="block text-sm font-semibold text-foreground mb-2">
+          <label className="block text-sm font-semibold text-slate-900 mb-2">
             Average Appointment Value
           </label>
           <input
@@ -305,46 +303,46 @@ function ROICalculator() {
             step="25"
             value={avgAppointmentValue}
             onChange={(e) => setAvgAppointmentValue(Number(e.target.value))}
-            className="w-full h-2 bg-surface rounded-lg appearance-none cursor-pointer accent-cyan"
+            className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
           />
-          <div className="text-2xl font-bold text-cyan mt-2">
+          <div className="text-2xl font-bold text-blue-600 mt-2">
             ${avgAppointmentValue}
           </div>
         </div>
       </div>
 
       <div className="space-y-4 mb-6">
-        <div className="p-4 rounded-xl bg-red-500/10 border border-red-500/30">
-          <div className="text-sm text-foreground-muted mb-1">Currently Missing Per Month</div>
-          <div className="text-2xl font-bold text-red-400">
+        <div className="p-4 rounded-xl bg-red-50 border border-red-200">
+          <div className="text-sm text-slate-600 mb-1">Currently Missing Per Month</div>
+          <div className="text-2xl font-bold text-red-600">
             {Math.round(missedCalls)} calls
           </div>
         </div>
 
-        <div className="p-4 rounded-xl bg-cyan-500/10 border border-cyan-500/30">
-          <div className="text-sm text-foreground-muted mb-1">Calls Recovered with AI</div>
-          <div className="text-2xl font-bold text-cyan">
+        <div className="p-4 rounded-xl bg-blue-50 border border-blue-200">
+          <div className="text-sm text-slate-600 mb-1">Calls Recovered with AI</div>
+          <div className="text-2xl font-bold text-blue-600">
             {Math.round(recoveredCalls)} calls
           </div>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 p-6 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-accent/20 border border-cyan-400/30">
+      <div className="grid md:grid-cols-2 gap-6 p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200">
         <div>
-          <div className="text-sm text-foreground-muted mb-1">Monthly Revenue Recovered</div>
-          <div className="text-3xl font-bold text-cyan">
+          <div className="text-sm text-slate-600 mb-1">Monthly Revenue Recovered</div>
+          <div className="text-3xl font-bold text-blue-600">
             ${Math.round(monthlyRevenue).toLocaleString()}
           </div>
         </div>
         <div>
-          <div className="text-sm text-foreground-muted mb-1">Annual Revenue Recovered</div>
-          <div className="text-4xl font-bold text-cyan">
+          <div className="text-sm text-slate-600 mb-1">Annual Revenue Recovered</div>
+          <div className="text-4xl font-bold text-blue-600">
             ${Math.round(annualRevenue).toLocaleString()}
           </div>
         </div>
       </div>
 
-      <p className="text-sm text-foreground-muted mt-4 text-center">
+      <p className="text-sm text-slate-600 mt-4 text-center">
         Based on industry averages: 27% missed call rate, 20% conversion rate, 80% AI recovery rate
       </p>
     </div>
@@ -360,25 +358,25 @@ function TestimonialCard({ quote, author, practice, location, results }: Testimo
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
       whileHover={{ y: -4, scale: 1.02 }}
-      className="glass-premium p-8 rounded-2xl border border-cyan-500/20 hover:border-cyan-400/40 hover:shadow-xl hover:shadow-cyan-500/20 transition-all duration-300"
+      className="bg-white/70 backdrop-blur-xl p-8 rounded-2xl border border-slate-200 hover:border-blue-300 hover:shadow-xl hover:shadow-slate-200/50 transition-all duration-300"
     >
       <div className="flex items-start gap-4 mb-4">
         <motion.div
           whileHover={{ rotate: 360, scale: 1.1 }}
           transition={{ duration: 0.5 }}
-          className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500/30 to-accent/20 flex items-center justify-center flex-shrink-0"
+          className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-100 to-cyan-100 flex items-center justify-center flex-shrink-0"
         >
-          <User className="w-5 h-5 text-cyan" />
+          <User className="w-5 h-5 text-blue-600" />
         </motion.div>
         <div>
-          <div className="font-semibold text-foreground">{author}</div>
-          <div className="text-sm text-foreground-muted">{practice}</div>
-          <div className="text-xs text-foreground-muted">{location}</div>
+          <div className="font-semibold text-slate-900">{author}</div>
+          <div className="text-sm text-slate-600">{practice}</div>
+          <div className="text-xs text-slate-500">{location}</div>
         </div>
       </div>
-      <p className="text-foreground-muted italic mb-4">&quot;{quote}&quot;</p>
-      <div className="px-4 py-3 rounded-lg bg-gradient-to-r from-cyan-500/20 to-accent/20 border border-cyan-400/30">
-        <div className="text-sm font-semibold text-cyan">{results}</div>
+      <p className="text-slate-600 italic mb-4">&quot;{quote}&quot;</p>
+      <div className="px-4 py-3 rounded-lg bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200">
+        <div className="text-sm font-semibold text-blue-600">{results}</div>
       </div>
     </motion.div>
   );
@@ -390,47 +388,47 @@ export default function HealthcarePageClient() {
   const activePractice = practiceTypes.find((p) => p.id === activeTab) || practiceTypes[0];
 
   return (
-    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-background-dark">
+    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-white">
       {/* ==================== AURORA HERO WITH MEDICAL THEME ==================== */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Aurora Background */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-background-dark via-cyan-950/20 to-background-dark" />
-          <div className="absolute inset-0 bg-mesh-premium opacity-40" />
+          <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50 to-white" />
+          <div className="absolute inset-0 bg-mesh-premium opacity-20" />
 
           {/* Medical-themed animated gradient orbs */}
           <motion.div
-            className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-30"
+            className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-20"
             animate={{
               scale: [1, 1.2, 1],
-              opacity: [0.3, 0.4, 0.3],
+              opacity: [0.2, 0.3, 0.2],
             }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
           >
-            <div className="w-full h-full bg-gradient-radial from-cyan-500/40 via-accent/20 to-transparent blur-3xl" />
+            <div className="w-full h-full bg-gradient-radial from-blue-200/60 via-cyan-100/30 to-transparent blur-3xl" />
           </motion.div>
 
           <motion.div
-            className="absolute bottom-0 left-0 w-[700px] h-[700px] rounded-full opacity-25"
+            className="absolute bottom-0 left-0 w-[700px] h-[700px] rounded-full opacity-15"
             animate={{
               scale: [1.1, 1, 1.1],
-              opacity: [0.25, 0.35, 0.25],
+              opacity: [0.15, 0.25, 0.15],
             }}
             transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2 }}
           >
-            <div className="w-full h-full bg-gradient-radial from-accent/30 via-cyan-500/15 to-transparent blur-3xl" />
+            <div className="w-full h-full bg-gradient-radial from-cyan-200/50 via-blue-100/20 to-transparent blur-3xl" />
           </motion.div>
 
           {/* Pulsing medical cross accent */}
           <motion.div
-            className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full opacity-20"
+            className="absolute top-1/4 left-1/4 w-[400px] h-[400px] rounded-full opacity-15"
             animate={{
               scale: [1, 1.15, 1],
-              opacity: [0.2, 0.3, 0.2],
+              opacity: [0.15, 0.25, 0.15],
             }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
           >
-            <div className="w-full h-full bg-gradient-radial from-cyan-400/40 to-transparent blur-2xl" />
+            <div className="w-full h-full bg-gradient-radial from-blue-300/50 to-transparent blur-2xl" />
           </motion.div>
         </div>
 
@@ -442,13 +440,13 @@ export default function HealthcarePageClient() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-accent/20 border border-cyan-500/30 mb-6 backdrop-blur-xl"
+              className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 mb-6"
             >
               <div className="relative flex h-3 w-3">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-3 w-3 bg-cyan-500"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-600 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-blue-600"></span>
               </div>
-              <span className="text-sm font-semibold text-cyan">
+              <span className="text-sm font-semibold text-blue-600">
                 For Medical, Dental, Mental Health & Urgent Care
               </span>
             </motion.div>
@@ -470,10 +468,10 @@ export default function HealthcarePageClient() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-foreground mb-6 leading-tight"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-slate-900 mb-6 leading-tight"
             >
               Never Miss a{" "}
-              <span className="text-gradient bg-gradient-to-r from-cyan-400 via-gold-400 to-cyan-500 bg-clip-text text-transparent">
+              <span className="text-gradient bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 bg-clip-text text-transparent">
                 Patient Call
               </span>{" "}
               Again
@@ -484,7 +482,7 @@ export default function HealthcarePageClient() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-xl sm:text-2xl font-accent text-foreground-muted mb-8 max-w-3xl mx-auto"
+              className="text-xl sm:text-2xl font-accent text-slate-600 mb-8 max-w-3xl mx-auto"
             >
               HIPAA-compliant AI voice agents that answer every call, schedule appointments, and
               recover lost revenue 24/7
@@ -495,15 +493,15 @@ export default function HealthcarePageClient() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="inline-block p-6 rounded-2xl bg-gradient-to-r from-red-500/20 to-red-600/20 border border-red-500/30 mb-8 backdrop-blur-xl"
+              className="inline-block p-6 rounded-2xl bg-gradient-to-r from-red-50 to-red-100 border border-red-200 mb-8"
             >
-              <div className="text-sm text-red-300 mb-2">
+              <div className="text-sm text-red-700 mb-2">
                 Average Practice Losing Annually:
               </div>
-              <div className="text-4xl sm:text-5xl font-bold text-red-400">
+              <div className="text-4xl sm:text-5xl font-bold text-red-600">
                 <AnimatedCounter end={127} prefix="$" suffix="K" duration={2500} />
               </div>
-              <div className="text-sm text-foreground-muted mt-1">
+              <div className="text-sm text-slate-600 mt-1">
                 to missed appointments and unanswered calls
               </div>
             </motion.div>
@@ -528,7 +526,7 @@ export default function HealthcarePageClient() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                 <Link
                   href="#calculator"
-                  className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white/5 backdrop-blur-xl border border-cyan-500/30 font-semibold text-foreground hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 w-full sm:w-auto"
+                  className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white/70 backdrop-blur-xl border border-slate-200 font-semibold text-slate-900 hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300 w-full sm:w-auto"
                 >
                   <Calculator className="w-5 h-5" />
                   Calculate ROI
@@ -541,7 +539,7 @@ export default function HealthcarePageClient() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="text-sm text-foreground-muted mt-6"
+              className="text-sm text-slate-600 mt-6"
             >
               Call us:{" "}
               <a
@@ -556,19 +554,19 @@ export default function HealthcarePageClient() {
       </section>
 
       {/* ==================== PAIN POINT FLOW ==================== */}
-      <section className="section bg-background relative overflow-hidden">
-        <div className="absolute inset-0 bg-mesh opacity-20" />
+      <section className="section bg-slate-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-mesh opacity-10" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-slate-900 mb-4">
                 The Patient{" "}
-                <span className="text-gradient bg-gradient-to-r from-red-400 to-red-600 bg-clip-text text-transparent">
+                <span className="text-gradient bg-gradient-to-r from-red-600 to-red-500 bg-clip-text text-transparent">
                   Loss Cycle
                 </span>
               </h2>
-              <p className="text-lg text-foreground-muted max-w-2xl mx-auto">
+              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                 Every missed call is a patient choosing your competitor
               </p>
             </div>
@@ -608,12 +606,12 @@ export default function HealthcarePageClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
-              className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-accent/20 border border-cyan-500/30 text-center"
+              className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 text-center"
             >
-              <p className="text-lg font-semibold text-foreground mb-2">
+              <p className="text-lg font-semibold text-slate-900 mb-2">
                 Our AI breaks this cycle
               </p>
-              <p className="text-foreground-muted">
+              <p className="text-slate-600">
                 Every call answered. Every patient scheduled. Zero lost revenue.
               </p>
             </motion.div>
@@ -622,19 +620,19 @@ export default function HealthcarePageClient() {
       </section>
 
       {/* ==================== PRACTICE TYPE TABS ==================== */}
-      <section className="section bg-background-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-mesh-premium opacity-30" />
+      <section className="section bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-mesh-premium opacity-20" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-slate-900 mb-4">
                 Built for Your{" "}
-                <span className="text-gradient bg-gradient-to-r from-cyan-400 to-gold-400 bg-clip-text text-transparent">
+                <span className="text-gradient bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                   Practice Type
                 </span>
               </h2>
-              <p className="text-lg text-foreground-muted max-w-2xl mx-auto">
+              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                 Specialized AI trained for your specific healthcare vertical
               </p>
             </div>
@@ -650,8 +648,8 @@ export default function HealthcarePageClient() {
                   transition={{ duration: 0.2 }}
                   className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                     activeTab === type.id
-                      ? "bg-gradient-to-r from-cyan-500/20 to-accent/20 border border-cyan-400/40 text-foreground shadow-lg shadow-cyan-500/20"
-                      : "bg-white/5 backdrop-blur-xl border border-white/10 text-foreground-muted hover:border-cyan-500/30 hover:shadow-md"
+                      ? "bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-300 text-slate-900 shadow-lg shadow-slate-200/50"
+                      : "bg-white/70 backdrop-blur-xl border border-slate-200 text-slate-600 hover:border-blue-200 hover:shadow-md"
                   }`}
                 >
                   {type.icon}
@@ -661,46 +659,46 @@ export default function HealthcarePageClient() {
             </div>
 
             {/* Tab Content */}
-            <div className="glass-premium p-8 sm:p-12 rounded-3xl border border-cyan-500/20">
+            <div className="bg-white/70 backdrop-blur-xl p-8 sm:p-12 rounded-3xl border border-slate-200 shadow-xl shadow-slate-200/50">
               {/* Practice Stat */}
-              <div className="text-center mb-8 p-6 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-accent/20 border border-cyan-400/30">
-                <div className="text-4xl font-bold text-cyan mb-2">
+              <div className="text-center mb-8 p-6 rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200">
+                <div className="text-4xl font-bold text-blue-600 mb-2">
                   {activePractice.stat}
                 </div>
-                <div className="text-foreground-muted">
+                <div className="text-slate-600">
                   {activePractice.statLabel}
                 </div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h3 className="text-2xl font-heading font-bold text-foreground mb-6 flex items-center gap-3">
-                    <div className="text-cyan [&>svg]:w-8 [&>svg]:h-8">
+                  <h3 className="text-2xl font-heading font-bold text-slate-900 mb-6 flex items-center gap-3">
+                    <div className="text-blue-600 [&>svg]:w-8 [&>svg]:h-8">
                       {activePractice.icon}
                     </div>
                     {activePractice.label}
                   </h3>
 
-                  <h4 className="text-lg font-semibold text-foreground mb-4">Use Cases:</h4>
+                  <h4 className="text-lg font-semibold text-slate-900 mb-4">Use Cases:</h4>
                   <ul className="space-y-3 mb-8">
                     {activePractice.useCases.map((useCase, idx) => (
                       <li key={idx} className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-cyan flex-shrink-0" />
-                        <span className="text-foreground-muted">{useCase}</span>
+                        <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                        <span className="text-slate-600">{useCase}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-semibold text-foreground mb-4">Key Benefits:</h4>
+                  <h4 className="text-lg font-semibold text-slate-900 mb-4">Key Benefits:</h4>
                   <div className="space-y-4">
                     {activePractice.benefits.map((benefit, idx) => (
                       <div
                         key={idx}
-                        className="p-4 rounded-xl bg-gradient-to-br from-cyan-500/10 to-accent/10 border border-cyan-400/30"
+                        className="p-4 rounded-xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200"
                       >
-                        <p className="text-foreground font-semibold">{benefit}</p>
+                        <p className="text-slate-900 font-semibold">{benefit}</p>
                       </div>
                     ))}
                   </div>
@@ -712,23 +710,23 @@ export default function HealthcarePageClient() {
       </section>
 
       {/* ==================== HIPAA COMPLIANCE SECTION ==================== */}
-      <section className="section bg-background relative overflow-hidden">
-        <div className="absolute inset-0 bg-mesh opacity-20" />
+      <section className="section bg-slate-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-mesh opacity-10" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-accent/20 border border-cyan-500/30 mb-6 backdrop-blur-xl">
-                <ShieldCheck className="w-5 h-5 text-cyan" />
-                <span className="font-semibold text-foreground">Enterprise-Grade Security</span>
+              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 mb-6">
+                <ShieldCheck className="w-5 h-5 text-blue-600" />
+                <span className="font-semibold text-slate-900">Enterprise-Grade Security</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-slate-900 mb-4">
                 HIPAA Compliance{" "}
-                <span className="text-gradient bg-gradient-to-r from-cyan-400 to-gold-400 bg-clip-text text-transparent">
+                <span className="text-gradient bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                   You Can Trust
                 </span>
               </h2>
-              <p className="text-lg text-foreground-muted max-w-2xl mx-auto">
+              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                 Your patients&apos; privacy is our top priority
               </p>
             </div>
@@ -740,21 +738,21 @@ export default function HealthcarePageClient() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
                 whileHover={{ scale: 1.02, y: -4 }}
-                className="p-6 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-accent/10 border border-cyan-500/20 hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
+                className="p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-slate-200 hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <motion.div
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
-                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/30 to-accent/20 flex items-center justify-center"
+                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-100 to-cyan-100 flex items-center justify-center"
                   >
-                    <Gavel className="w-6 h-6 text-cyan" />
+                    <Gavel className="w-6 h-6 text-blue-600" />
                   </motion.div>
-                  <h3 className="text-xl font-heading font-bold text-foreground">
+                  <h3 className="text-xl font-heading font-bold text-slate-900">
                     HIPAA Compliant
                   </h3>
                 </div>
-                <p className="text-foreground-muted leading-relaxed">
+                <p className="text-slate-600 leading-relaxed">
                   We sign a Business Associate Agreement (BAA) with every healthcare customer, ensuring full HIPAA compliance and clear liability protection.
                 </p>
               </motion.div>
@@ -765,21 +763,21 @@ export default function HealthcarePageClient() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
                 whileHover={{ scale: 1.02, y: -4 }}
-                className="p-6 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-accent/10 border border-cyan-500/20 hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
+                className="p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-slate-200 hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <motion.div
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
-                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/30 to-accent/20 flex items-center justify-center"
+                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-100 to-cyan-100 flex items-center justify-center"
                   >
-                    <Shield className="w-6 h-6 text-cyan" />
+                    <Shield className="w-6 h-6 text-blue-600" />
                   </motion.div>
-                  <h3 className="text-xl font-heading font-bold text-foreground">
+                  <h3 className="text-xl font-heading font-bold text-slate-900">
                     SOC 2 Type II
                   </h3>
                 </div>
-                <p className="text-foreground-muted leading-relaxed">
+                <p className="text-slate-600 leading-relaxed">
                   Independently audited security controls ensure your patient data is protected with enterprise-grade infrastructure.
                 </p>
               </motion.div>
@@ -790,21 +788,21 @@ export default function HealthcarePageClient() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
                 whileHover={{ scale: 1.02, y: -4 }}
-                className="p-6 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-accent/10 border border-cyan-500/20 hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
+                className="p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-slate-200 hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <motion.div
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
-                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/30 to-accent/20 flex items-center justify-center"
+                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-100 to-cyan-100 flex items-center justify-center"
                   >
-                    <Lock className="w-6 h-6 text-cyan" />
+                    <Lock className="w-6 h-6 text-blue-600" />
                   </motion.div>
-                  <h3 className="text-xl font-heading font-bold text-foreground">
+                  <h3 className="text-xl font-heading font-bold text-slate-900">
                     End-to-End Encrypted
                   </h3>
                 </div>
-                <p className="text-foreground-muted leading-relaxed">
+                <p className="text-slate-600 leading-relaxed">
                   All patient data encrypted at rest and in transit using military-grade AES-256 encryption standards.
                 </p>
               </motion.div>
@@ -815,21 +813,21 @@ export default function HealthcarePageClient() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
                 whileHover={{ scale: 1.02, y: -4 }}
-                className="p-6 rounded-2xl bg-gradient-to-br from-cyan-500/10 to-accent/10 border border-cyan-500/20 hover:border-cyan-400/40 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
+                className="p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-slate-200 hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <motion.div
                     whileHover={{ rotate: 360 }}
                     transition={{ duration: 0.6 }}
-                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/30 to-accent/20 flex items-center justify-center"
+                    className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-100 to-cyan-100 flex items-center justify-center"
                   >
-                    <EyeOff className="w-6 h-6 text-cyan" />
+                    <EyeOff className="w-6 h-6 text-blue-600" />
                   </motion.div>
-                  <h3 className="text-xl font-heading font-bold text-foreground">
+                  <h3 className="text-xl font-heading font-bold text-slate-900">
                     Zero-Retention Modes
                   </h3>
                 </div>
-                <p className="text-foreground-muted leading-relaxed">
+                <p className="text-slate-600 leading-relaxed">
                   Optional zero-retention mode ensures no voice recordings or transcripts are stored after processing.
                 </p>
               </motion.div>
@@ -839,18 +837,18 @@ export default function HealthcarePageClient() {
       </section>
 
       {/* ==================== EHR INTEGRATION SHOWCASE ==================== */}
-      <section className="section bg-background-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-mesh-premium opacity-30" />
+      <section className="section bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-mesh-premium opacity-20" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-slate-900 mb-6">
               Integrates with Your{" "}
-              <span className="text-gradient bg-gradient-to-r from-cyan-400 to-gold-400 bg-clip-text text-transparent">
+              <span className="text-gradient bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                 Existing Systems
               </span>
             </h2>
-            <p className="text-lg text-foreground-muted mb-12 max-w-3xl mx-auto">
+            <p className="text-lg text-slate-600 mb-12 max-w-3xl mx-auto">
               Seamless integration with leading EHR and practice management systems. No workflow disruption.
             </p>
 
@@ -863,25 +861,25 @@ export default function HealthcarePageClient() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
                   whileHover={{ scale: 1.05, y: -4 }}
-                  className="glass-premium p-6 rounded-2xl flex flex-col items-center justify-center gap-3 border border-cyan-500/20 hover:shadow-lg hover:shadow-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 cursor-pointer"
+                  className="bg-white/70 backdrop-blur-xl p-6 rounded-2xl flex flex-col items-center justify-center gap-3 border border-slate-200 hover:shadow-lg hover:shadow-slate-200/50 hover:border-blue-300 transition-all duration-300 cursor-pointer"
                 >
                   <motion.div
                     whileHover={{ rotate: [0, -10, 10, -10, 0] }}
                     transition={{ duration: 0.5 }}
-                    className="text-cyan"
+                    className="text-blue-600"
                   >
                     {ehr.logo}
                   </motion.div>
-                  <span className="text-sm font-semibold text-foreground">{ehr.name}</span>
+                  <span className="text-sm font-semibold text-slate-900">{ehr.name}</span>
                 </motion.div>
               ))}
             </div>
 
-            <div className="mt-12 p-6 rounded-2xl bg-gradient-to-r from-cyan-500/20 to-accent/20 border border-cyan-400/30">
-              <p className="text-lg font-semibold text-foreground mb-2">
+            <div className="mt-12 p-6 rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200">
+              <p className="text-lg font-semibold text-slate-900 mb-2">
                 Don&apos;t see your system?
               </p>
-              <p className="text-foreground-muted">
+              <p className="text-slate-600">
                 We integrate with 50+ healthcare systems. Contact us for custom integrations.
               </p>
             </div>
@@ -890,19 +888,19 @@ export default function HealthcarePageClient() {
       </section>
 
       {/* ==================== ROI CALCULATOR ==================== */}
-      <section id="calculator" className="section bg-background relative overflow-hidden">
-        <div className="absolute inset-0 bg-mesh opacity-20" />
+      <section id="calculator" className="section bg-slate-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-mesh opacity-10" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-slate-900 mb-4">
                 Calculate Your{" "}
-                <span className="text-gradient bg-gradient-to-r from-cyan-400 to-gold-400 bg-clip-text text-transparent">
+                <span className="text-gradient bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                   Revenue Recovery
                 </span>
               </h2>
-              <p className="text-lg text-foreground-muted max-w-2xl mx-auto">
+              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                 See exactly how much revenue your practice is losing to missed calls
               </p>
             </div>
@@ -913,15 +911,15 @@ export default function HealthcarePageClient() {
       </section>
 
       {/* ==================== FEATURES GRID ==================== */}
-      <section className="section bg-background-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-mesh-premium opacity-30" />
+      <section className="section bg-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-mesh-premium opacity-20" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-slate-900 mb-4">
                 Powerful Features for{" "}
-                <span className="text-gradient bg-gradient-to-r from-cyan-400 to-gold-400 bg-clip-text text-transparent">
+                <span className="text-gradient bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                   Healthcare
                 </span>
               </h2>
@@ -970,19 +968,19 @@ export default function HealthcarePageClient() {
       </section>
 
       {/* ==================== HEALTHCARE TESTIMONIALS ==================== */}
-      <section className="section bg-background relative overflow-hidden">
-        <div className="absolute inset-0 bg-mesh opacity-20" />
+      <section className="section bg-slate-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-mesh opacity-10" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-foreground mb-4">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-heading font-bold text-slate-900 mb-4">
                 Trusted by{" "}
-                <span className="text-gradient bg-gradient-to-r from-cyan-400 to-gold-400 bg-clip-text text-transparent">
+                <span className="text-gradient bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                   Healthcare Providers
                 </span>
               </h2>
-              <p className="text-lg text-foreground-muted max-w-2xl mx-auto">
+              <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                 Real results from real practices
               </p>
             </div>
@@ -1036,11 +1034,11 @@ export default function HealthcarePageClient() {
       </section>
 
       {/* ==================== FINAL CTA SECTION ==================== */}
-      <section className="section bg-background-dark relative overflow-hidden">
+      <section className="section bg-white relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-background-dark via-cyan-950/20 to-background-dark" />
-          <div className="absolute inset-0 bg-mesh-premium opacity-40" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[800px] bg-gradient-radial from-cyan-500/20 via-accent/15 to-transparent blur-3xl animate-pulse-glow" />
+          <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50 to-white" />
+          <div className="absolute inset-0 bg-mesh-premium opacity-20" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[800px] bg-gradient-radial from-blue-200/40 via-cyan-100/20 to-transparent blur-3xl animate-pulse-glow" />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -1051,13 +1049,13 @@ export default function HealthcarePageClient() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-foreground mb-6 leading-tight">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-slate-900 mb-6 leading-tight">
                 Start Recovering Lost{" "}
-                <span className="text-gradient bg-gradient-to-r from-cyan-400 to-gold-400 bg-clip-text text-transparent">
+                <span className="text-gradient bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                   Revenue Today
                 </span>
               </h2>
-              <p className="text-xl text-foreground-muted mb-12 max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
                 Join hundreds of healthcare practices reducing missed calls, eliminating no-shows, and recovering lost revenue with AI voice agents.
               </p>
 
@@ -1075,7 +1073,7 @@ export default function HealthcarePageClient() {
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white/5 backdrop-blur-xl border border-cyan-500/30 font-semibold text-foreground hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300 w-full sm:w-auto"
+                    className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-white/70 backdrop-blur-xl border border-slate-200 font-semibold text-slate-900 hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300 w-full sm:w-auto"
                   >
                     <Mail className="w-5 h-5" />
                     Request Demo
@@ -1083,17 +1081,17 @@ export default function HealthcarePageClient() {
                 </motion.div>
               </div>
 
-              <div className="flex flex-wrap justify-center gap-6 text-sm text-foreground-muted">
+              <div className="flex flex-wrap justify-center gap-6 text-sm text-slate-600">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-cyan" />
+                  <CheckCircle2 className="w-5 h-5 text-blue-600" />
                   HIPAA Compliant & BAA Included
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-cyan" />
+                  <CheckCircle2 className="w-5 h-5 text-blue-600" />
                   48-hour setup
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5 text-cyan" />
+                  <CheckCircle2 className="w-5 h-5 text-blue-600" />
                   Cancel anytime
                 </div>
               </div>

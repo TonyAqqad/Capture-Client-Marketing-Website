@@ -8,7 +8,7 @@ import React from "react";
  * Premium animated mesh gradient background inspired by Linear/Stripe's $100B aesthetic.
  * Features:
  * - CSS-based animated mesh gradients with subtle breathing motion
- * - Deep space color palette (near-black, indigo, violet, subtle gold)
+ * - Light gradient palette (white to slate with blue accents)
  * - Noise texture overlay for depth
  * - Subtle grid pattern overlay
  * - Highly performant (CSS transforms only, GPU-accelerated)
@@ -16,61 +16,61 @@ import React from "react";
 export default function MeshGradientBackground() {
   return (
     <div className="absolute inset-0 overflow-hidden">
-      {/* Base dark background */}
-      <div className="absolute inset-0 bg-[#050505]" />
+      {/* Base light gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-white to-slate-50" />
 
       {/* Animated mesh gradient layers */}
       <div className="absolute inset-0">
-        {/* Layer 1: Deep indigo top-right */}
+        {/* Layer 1: Light blue top-right */}
         <div
-          className="absolute inset-0 opacity-40"
+          className="absolute inset-0 opacity-20"
           style={{
-            background: "radial-gradient(circle at 80% 20%, #1e1b4b 0%, transparent 50%)",
+            background: "radial-gradient(circle at 80% 20%, #dbeafe 0%, transparent 50%)",
             animation: "mesh-float-1 20s ease-in-out infinite",
           }}
         />
 
-        {/* Layer 2: Violet center-left */}
+        {/* Layer 2: Soft cyan center-left */}
         <div
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 opacity-15"
           style={{
-            background: "radial-gradient(circle at 20% 50%, #4c1d95 0%, transparent 50%)",
+            background: "radial-gradient(circle at 20% 50%, #cffafe 0%, transparent 50%)",
             animation: "mesh-float-2 25s ease-in-out infinite",
           }}
         />
 
-        {/* Layer 3: Deep indigo bottom */}
+        {/* Layer 3: Light slate bottom */}
         <div
-          className="absolute inset-0 opacity-25"
+          className="absolute inset-0 opacity-12"
           style={{
-            background: "radial-gradient(circle at 50% 90%, #1e1b4b 0%, transparent 60%)",
+            background: "radial-gradient(circle at 50% 90%, #e2e8f0 0%, transparent 60%)",
             animation: "mesh-float-3 30s ease-in-out infinite",
           }}
         />
 
-        {/* Layer 4: Violet top-left accent */}
+        {/* Layer 4: Subtle blue top-left accent */}
         <div
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 opacity-10"
           style={{
-            background: "radial-gradient(circle at 10% 10%, #581c87 0%, transparent 40%)",
+            background: "radial-gradient(circle at 10% 10%, #bfdbfe 0%, transparent 40%)",
             animation: "mesh-float-4 22s ease-in-out infinite",
           }}
         />
 
-        {/* Layer 5: Subtle gold accent glow (very low opacity) */}
+        {/* Layer 5: Soft cyan accent glow */}
         <div
-          className="absolute inset-0 opacity-5"
+          className="absolute inset-0 opacity-8"
           style={{
-            background: "radial-gradient(circle at 60% 60%, #d4af37 0%, transparent 50%)",
+            background: "radial-gradient(circle at 60% 60%, #a5f3fc 0%, transparent 50%)",
             animation: "mesh-float-5 28s ease-in-out infinite",
           }}
         />
 
-        {/* Layer 6: Secondary indigo for depth */}
+        {/* Layer 6: Secondary slate for depth */}
         <div
-          className="absolute inset-0 opacity-15"
+          className="absolute inset-0 opacity-10"
           style={{
-            background: "radial-gradient(ellipse at 40% 30%, #312e81 0%, transparent 55%)",
+            background: "radial-gradient(ellipse at 40% 30%, #cbd5e1 0%, transparent 55%)",
             animation: "mesh-float-6 24s ease-in-out infinite",
           }}
         />
@@ -78,7 +78,7 @@ export default function MeshGradientBackground() {
 
       {/* Noise texture overlay */}
       <div
-        className="absolute inset-0 opacity-[0.025] mix-blend-overlay"
+        className="absolute inset-0 opacity-[0.015] mix-blend-overlay"
         style={{
           backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
           backgroundRepeat: "repeat",
@@ -87,21 +87,21 @@ export default function MeshGradientBackground() {
 
       {/* Grid pattern overlay (Linear-style) */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.04]"
         style={{
           backgroundImage: `
-            linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
+            linear-gradient(to right, rgba(100, 116, 139, 0.1) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(100, 116, 139, 0.1) 1px, transparent 1px)
           `,
           backgroundSize: "100px 100px",
         }}
       />
 
-      {/* Vignette effect for depth */}
+      {/* Subtle edge fade for depth */}
       <div
-        className="absolute inset-0 opacity-60"
+        className="absolute inset-0 opacity-30"
         style={{
-          background: "radial-gradient(circle at center, transparent 0%, rgba(5, 5, 5, 0.8) 100%)",
+          background: "radial-gradient(circle at center, transparent 0%, rgba(248, 250, 252, 0.6) 100%)",
         }}
       />
 

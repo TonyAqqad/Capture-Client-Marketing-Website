@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import { writeFileSync } from 'fs';
 
 const BASE_URL = 'http://localhost:3000';
 
@@ -294,8 +295,7 @@ test.describe('Production Validation Tests', () => {
     console.log('='.repeat(80));
 
     // Also save report to file
-    const fs = require('fs');
-    fs.writeFileSync(
+    writeFileSync(
       'production-validation-report.json',
       JSON.stringify(report, null, 2)
     );

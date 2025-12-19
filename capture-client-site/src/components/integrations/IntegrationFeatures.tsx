@@ -144,9 +144,9 @@ export function IntegrationFeatures({ keyFeatures, category, integrationName }: 
     <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-background-dark via-background to-background-dark" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white" />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-7xl">
-          <div className="absolute top-0 right-1/4 w-96 h-96 bg-gradient-radial from-gold/5 to-transparent rounded-full blur-3xl" />
+          <div className="absolute top-0 right-1/4 w-96 h-96 bg-gradient-radial from-blue-500/5 to-transparent rounded-full blur-3xl" />
         </div>
       </div>
 
@@ -159,10 +159,10 @@ export function IntegrationFeatures({ keyFeatures, category, integrationName }: 
           transition={{ duration: 0.6 }}
           className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-slate-900 mb-4">
             Key Features
           </h2>
-          <p className="text-lg text-foreground-muted max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Everything you need to power your workflow with {integrationName}
           </p>
         </motion.div>
@@ -236,7 +236,7 @@ export function IntegrationFeatures({ keyFeatures, category, integrationName }: 
 
                     {/* Feature Text */}
                     <p className={`
-                      text-foreground font-medium leading-relaxed
+                      text-slate-900 font-medium leading-relaxed
                       ${isFeatured ? 'text-lg sm:text-xl' : 'text-base sm:text-lg'}
                     `}>
                       {feature}
@@ -263,7 +263,7 @@ export function IntegrationFeatures({ keyFeatures, category, integrationName }: 
           transition={{ delay: 0.8, duration: 0.6 }}
           className="mt-12 text-center"
         >
-          <p className="text-sm text-foreground-muted">
+          <p className="text-sm text-slate-600">
             <span className="font-semibold text-accent">{keyFeatures.length}</span> powerful features
             {keyFeatures.length > 5 && ' to supercharge your workflow'}
           </p>

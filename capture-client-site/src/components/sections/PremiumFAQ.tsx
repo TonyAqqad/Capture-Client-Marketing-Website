@@ -85,16 +85,16 @@ export function PremiumFAQ() {
       ref={containerRef}
       className="section relative overflow-hidden w-full max-w-full py-24 md:py-32 lg:py-40"
     >
-      {/* Deep space black base */}
-      <div className="absolute inset-0 bg-[#030303]" />
+      {/* Light base */}
+      <div className="absolute inset-0 bg-white" />
 
       {/* Mesh gradient background */}
       <div
         className="absolute inset-0 opacity-30"
         style={{
           backgroundImage: `
-            radial-gradient(ellipse 80% 80% at 20% 20%, #00C9FF10 0%, transparent 50%),
-            radial-gradient(ellipse 80% 80% at 80% 80%, #4A69E210 0%, transparent 50%)
+            radial-gradient(ellipse 80% 80% at 20% 20%, #00C9FF20 0%, transparent 50%),
+            radial-gradient(ellipse 80% 80% at 80% 80%, #4A69E230 0%, transparent 50%)
           `,
         }}
       />
@@ -112,7 +112,7 @@ export function PremiumFAQ() {
           ease: "easeInOut"
         }}
         style={{
-          backgroundImage: `radial-gradient(ellipse 100% 100% at 30% 30%, #00C9FF08 0%, transparent 50%)`,
+          backgroundImage: `radial-gradient(ellipse 100% 100% at 30% 30%, #00C9FF15 0%, transparent 50%)`,
         }}
       />
 
@@ -125,7 +125,7 @@ export function PremiumFAQ() {
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
             {/* Subtle label */}
-            <p className="text-xs font-medium uppercase tracking-[0.25em] text-white/40 mb-6">
+            <p className="text-xs font-medium uppercase tracking-[0.25em] text-slate-500 mb-6">
               Common Questions
             </p>
 
@@ -134,7 +134,7 @@ export function PremiumFAQ() {
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.1] mb-6 md:mb-8"
               style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
             >
-              <span className="text-white font-extralight" style={{ fontWeight: 200 }}>Got questions? </span>
+              <span className="text-slate-900 font-extralight" style={{ fontWeight: 200 }}>Got questions? </span>
               <span
                 className="font-extrabold bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] bg-clip-text text-transparent"
                 style={{ fontWeight: 800 }}
@@ -144,7 +144,7 @@ export function PremiumFAQ() {
             </h2>
 
             {/* Supporting copy */}
-            <p className="text-lg sm:text-xl md:text-2xl text-white/60 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg sm:text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
               We've helped hundreds of businesses overcome these exact objections. Here's the truth.
             </p>
           </motion.div>
@@ -179,19 +179,19 @@ export function PremiumFAQ() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.7, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="text-center mt-16 md:mt-20 mx-auto p-8 md:p-10 rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl max-w-2xl"
+          className="text-center mt-16 md:mt-20 mx-auto p-8 md:p-10 rounded-2xl border border-slate-200 bg-slate-50 backdrop-blur-xl max-w-2xl"
         >
           <div className="mb-6">
             <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gradient-to-br from-[#00C9FF] to-[#4A69E2] mb-4">
               <Phone className="w-6 h-6 text-white" />
             </div>
             <h3
-              className="text-xl sm:text-2xl font-bold text-white mb-2"
+              className="text-xl sm:text-2xl font-bold text-slate-900 mb-2"
               style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
             >
               Still have questions?
             </h3>
-            <p className="text-sm sm:text-base text-white/60">
+            <p className="text-sm sm:text-base text-slate-600">
               Our team is here to help. Talk to a real human.
             </p>
           </div>
@@ -202,7 +202,7 @@ export function PremiumFAQ() {
             <PhoneCall className="w-5 h-5 group-hover:animate-pulse" />
             Call (865) 346-6111
           </a>
-          <p className="text-xs sm:text-sm text-white/40 mt-3">
+          <p className="text-xs sm:text-sm text-slate-500 mt-3">
             Monday-Friday, 9am-6pm EST
           </p>
         </motion.div>
@@ -222,8 +222,8 @@ function FAQItemComponent({ faq, isOpen, onClick }: FAQItemComponentProps) {
     <div
       className={`rounded-xl overflow-hidden transition-all duration-300 ${
         isOpen
-          ? "border border-[#00C9FF]/20 bg-white/[0.03]"
-          : "border border-white/[0.06] bg-white/[0.02] hover:border-white/[0.1]"
+          ? "border border-[#00C9FF]/30 bg-blue-50/50"
+          : "border border-slate-200 bg-white hover:border-slate-300"
       }`}
     >
       {/* Question button */}
@@ -237,12 +237,12 @@ function FAQItemComponent({ faq, isOpen, onClick }: FAQItemComponentProps) {
             className={`flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg flex-shrink-0 transition-all duration-300 ${
               isOpen
                 ? "bg-gradient-to-br from-[#00C9FF]/20 to-[#4A69E2]/20 border border-[#00C9FF]/30"
-                : "bg-white/[0.04] border border-white/[0.06]"
+                : "bg-slate-100 border border-slate-200"
             }`}
           >
             <faq.icon
               className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors duration-300 ${
-                isOpen ? "text-[#00C9FF]" : "text-white/50"
+                isOpen ? "text-[#00C9FF]" : "text-slate-400"
               }`}
             />
           </div>
@@ -250,7 +250,7 @@ function FAQItemComponent({ faq, isOpen, onClick }: FAQItemComponentProps) {
           {/* Question */}
           <h3
             className={`text-base sm:text-lg font-semibold transition-colors duration-300 pr-2 leading-tight ${
-              isOpen ? "text-white" : "text-white/80 group-hover:text-white"
+              isOpen ? "text-slate-900" : "text-slate-700 group-hover:text-slate-900"
             }`}
           >
             {faq.question}
@@ -265,7 +265,7 @@ function FAQItemComponent({ faq, isOpen, onClick }: FAQItemComponentProps) {
         >
           <ChevronDown
             className={`w-5 h-5 sm:w-6 sm:h-6 transition-colors duration-300 ${
-              isOpen ? "text-[#00C9FF]" : "text-white/40"
+              isOpen ? "text-[#00C9FF]" : "text-slate-400"
             }`}
           />
         </motion.div>
@@ -281,8 +281,8 @@ function FAQItemComponent({ faq, isOpen, onClick }: FAQItemComponentProps) {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="px-6 sm:px-8 pb-6 pl-16 sm:pl-24 border-t border-white/[0.04]">
-              <p className="text-white/60 text-base sm:text-lg leading-relaxed pt-5">
+            <div className="px-6 sm:px-8 pb-6 pl-16 sm:pl-24 border-t border-slate-100">
+              <p className="text-slate-600 text-base sm:text-lg leading-relaxed pt-5">
                 {faq.answer}
               </p>
             </div>

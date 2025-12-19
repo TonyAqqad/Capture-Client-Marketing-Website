@@ -85,7 +85,7 @@ export default function RootLayout({
   const websiteSchema = generateWebSiteSchema();
 
   return (
-    <html lang="en" className="dark scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <head>
         {/* CRITICAL: Preconnect to Google Fonts for faster font loading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -117,7 +117,7 @@ export default function RootLayout({
         <JsonLd schema={[organizationSchema, websiteSchema]} />
       </head>
       <body
-        className={`${inter.variable} ${bricolageGrotesque.variable} ${playfairDisplay.variable} font-body bg-background text-foreground antialiased overflow-x-hidden`}
+        className={`${inter.variable} ${bricolageGrotesque.variable} ${playfairDisplay.variable} font-body bg-white text-slate-900 antialiased overflow-x-hidden`}
       >
         {/* CRITICAL: Defer Material Icons loading until after initial render */}
         <Script
@@ -138,10 +138,18 @@ export default function RootLayout({
         <WebVitals />
         <ScrollDepthTracker />
 
+        {/* LeadConnector Voice Agent - Persistent Corner Chat Widget */}
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="6910948b33e99217846251a9"
+          strategy="afterInteractive"
+        />
+
         {/* Accessibility: Skip to main content link for keyboard navigation */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-accent text-background-dark px-6 py-3 rounded-lg font-bold z-50 focus-ring-premium transition-all duration-300"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-6 py-3 rounded-lg font-bold z-50 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-300"
         >
           Skip to main content
         </a>

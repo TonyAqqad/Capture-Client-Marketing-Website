@@ -54,7 +54,7 @@ export function IntegrationShowcase({
             viewport={{ once: true }}
             transition={{ delay: index * 0.05, duration: 0.3 }}
             whileHover={{ scale: 1.05 }}
-            className="group relative flex items-center justify-center p-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent/30 transition-all duration-300"
+            className="group relative flex items-center justify-center p-6 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 hover:border-accent/30 transition-all duration-300"
           >
             {/* Glow effect on hover */}
             <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-accent/0 to-accent/0 group-hover:from-accent/10 group-hover:to-primary/10 transition-all duration-300 pointer-events-none" />
@@ -82,8 +82,8 @@ export function IntegrationShowcase({
       onMouseLeave={() => setIsPaused(false)}
     >
       {/* Gradient overlays for fade effect */}
-      <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-background-dark to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-background-dark to-transparent z-10 pointer-events-none" />
+      <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
 
       {/* Scrolling container */}
       <div className="relative flex gap-8 py-8">
@@ -135,7 +135,7 @@ function IntegrationLogo({ integration }: { integration: Integration }) {
   return (
     <motion.div
       whileHover={{ scale: 1.1, y: -4 }}
-      className="group relative flex items-center justify-center w-32 h-16 px-6 rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 hover:border-accent/30 transition-all duration-300"
+      className="group relative flex items-center justify-center w-32 h-16 px-6 rounded-xl bg-white border border-slate-200 hover:bg-slate-50 hover:border-accent/30 transition-all duration-300"
     >
       {/* Glow effect */}
       <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 shadow-glow transition-opacity duration-300 pointer-events-none" />

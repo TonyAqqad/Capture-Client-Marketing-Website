@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://captureclient.com/og-image.jpg",
+        url: "https://captureclient.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "Capture Client AI Voice Agent Use Cases",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AI Voice Agent Use Cases | Capture Client",
     description: "Discover how AI voice agents transform businesses. 24/7 call answering, lead qualification, appointment booking. See real use cases across industries.",
-    images: ["https://captureclient.com/og-image.jpg"],
+    images: ["https://captureclient.com/og-image.png"],
   },
   alternates: {
     canonical: "https://captureclient.com/use-cases",

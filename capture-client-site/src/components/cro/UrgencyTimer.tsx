@@ -50,14 +50,14 @@ export default function UrgencyTimer({
   if (!timeLeft) {
     return (
       <div
-        className={`border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl rounded-2xl p-6 ${className}`}
+        className={`border border-slate-200 bg-white backdrop-blur-xl rounded-2xl p-6 ${className}`}
         style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
       >
         {/* Header */}
         <div className="flex items-center justify-center gap-2 mb-4">
           <Zap className="text-cyan-400 w-5 h-5" />
           <h3
-            className="text-base sm:text-lg text-white"
+            className="text-base sm:text-lg text-slate-900"
             style={{ fontWeight: 600 }}
           >
             Limited Time Offer
@@ -67,7 +67,7 @@ export default function UrgencyTimer({
 
         {/* Offer text */}
         <p
-          className="text-center text-sm text-white/60 mb-6 max-w-2xl mx-auto px-2"
+          className="text-center text-sm text-slate-600 mb-6 max-w-2xl mx-auto px-2"
           style={{ fontWeight: 300 }}
         >
           {offer}
@@ -76,9 +76,9 @@ export default function UrgencyTimer({
         {/* Loading state - matches the structure of the timer */}
         <div className="flex items-center justify-center gap-2 sm:gap-3 mb-6">
           <div className="animate-pulse flex gap-2 sm:gap-3">
-            <div className="border border-white/[0.06] bg-[#030303] backdrop-blur-xl rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] h-[80px] sm:h-[90px]"></div>
-            <div className="border border-white/[0.06] bg-[#030303] backdrop-blur-xl rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] h-[80px] sm:h-[90px]"></div>
-            <div className="border border-white/[0.06] bg-[#030303] backdrop-blur-xl rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] h-[80px] sm:h-[90px]"></div>
+            <div className="border border-slate-200 bg-white backdrop-blur-xl rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] h-[80px] sm:h-[90px]"></div>
+            <div className="border border-slate-200 bg-white backdrop-blur-xl rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] h-[80px] sm:h-[90px]"></div>
+            <div className="border border-slate-200 bg-white backdrop-blur-xl rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] h-[80px] sm:h-[90px]"></div>
           </div>
         </div>
 
@@ -96,7 +96,7 @@ export default function UrgencyTimer({
 
         {/* Fine print */}
         <p
-          className="text-xs text-center text-white/40 mt-4 px-2"
+          className="text-xs text-center text-slate-600 mt-4 px-2"
           style={{ fontWeight: 300 }}
         >
           Offer resets daily at midnight EST. Limited to first 10 bookings.
@@ -110,14 +110,14 @@ export default function UrgencyTimer({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
-      className={`border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl rounded-2xl p-6 ${className}`}
+      className={`border border-slate-200 bg-white backdrop-blur-xl rounded-2xl p-6 ${className}`}
       style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
     >
       {/* Header - using CSS animation instead of Framer Motion for performance */}
       <div className="flex items-center justify-center gap-2 mb-4">
         <Zap className="text-cyan-400 w-5 h-5 animate-pulse" />
         <h3
-          className="text-base sm:text-lg text-white"
+          className="text-base sm:text-lg text-slate-900"
           style={{ fontWeight: 600 }}
         >
           Limited Time Offer
@@ -127,7 +127,7 @@ export default function UrgencyTimer({
 
       {/* Offer text */}
       <p
-        className="text-center text-sm text-white/60 mb-6 max-w-2xl mx-auto px-2"
+        className="text-center text-sm text-slate-600 mb-6 max-w-2xl mx-auto px-2"
         style={{ fontWeight: 300 }}
       >
         {offer}
@@ -137,7 +137,7 @@ export default function UrgencyTimer({
       <div className="flex items-center justify-center gap-2 sm:gap-3 mb-6">
         {/* Hours */}
         <div className="flex flex-col items-center">
-          <div className="border border-white/[0.06] bg-[#030303] backdrop-blur-xl rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] text-center shadow-[0_0_20px_rgba(0,201,255,0.1)]">
+          <div className="border border-slate-200 bg-white backdrop-blur-xl rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] text-center shadow-[0_0_20px_rgba(0,201,255,0.1)]">
             <p
               className="text-2xl sm:text-3xl lg:text-4xl bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent tabular-nums"
               style={{ fontWeight: 800 }}
@@ -146,7 +146,7 @@ export default function UrgencyTimer({
             </p>
           </div>
           <p
-            className="text-xs text-white/40 mt-2 uppercase"
+            className="text-xs text-slate-600 mt-2 uppercase"
             style={{ fontWeight: 500 }}
           >
             Hours
@@ -162,7 +162,7 @@ export default function UrgencyTimer({
 
         {/* Minutes */}
         <div className="flex flex-col items-center">
-          <div className="border border-white/[0.06] bg-[#030303] backdrop-blur-xl rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] text-center shadow-[0_0_20px_rgba(0,201,255,0.1)]">
+          <div className="border border-slate-200 bg-white backdrop-blur-xl rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] text-center shadow-[0_0_20px_rgba(0,201,255,0.1)]">
             <p
               className="text-2xl sm:text-3xl lg:text-4xl bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent tabular-nums"
               style={{ fontWeight: 800 }}
@@ -171,7 +171,7 @@ export default function UrgencyTimer({
             </p>
           </div>
           <p
-            className="text-xs text-white/40 mt-2 uppercase"
+            className="text-xs text-slate-600 mt-2 uppercase"
             style={{ fontWeight: 500 }}
           >
             Minutes
@@ -187,7 +187,7 @@ export default function UrgencyTimer({
 
         {/* Seconds */}
         <div className="flex flex-col items-center">
-          <div className="border border-white/[0.06] bg-[#030303] backdrop-blur-xl rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] text-center shadow-[0_0_20px_rgba(0,201,255,0.1)]">
+          <div className="border border-slate-200 bg-white backdrop-blur-xl rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] text-center shadow-[0_0_20px_rgba(0,201,255,0.1)]">
             <p
               className="text-2xl sm:text-3xl lg:text-4xl bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent tabular-nums"
               style={{ fontWeight: 800 }}
@@ -196,7 +196,7 @@ export default function UrgencyTimer({
             </p>
           </div>
           <p
-            className="text-xs text-white/40 mt-2 uppercase"
+            className="text-xs text-slate-600 mt-2 uppercase"
             style={{ fontWeight: 500 }}
           >
             Seconds
@@ -218,7 +218,7 @@ export default function UrgencyTimer({
 
       {/* Fine print */}
       <p
-        className="text-xs text-center text-white/40 mt-4 px-2"
+        className="text-xs text-center text-slate-600 mt-4 px-2"
         style={{ fontWeight: 300 }}
       >
         Offer resets daily at midnight EST. Limited to first 10 bookings.

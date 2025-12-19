@@ -19,13 +19,13 @@ export function GlassCard({
   interactive = true
 }: GlassCardProps) {
   const variantClasses = {
-    default: "bg-surface/50 backdrop-blur-lg border border-surface-border",
-    premium: "bg-gradient-to-br from-white/[0.12] via-white/[0.06] to-white/[0.03] backdrop-blur-2xl border-2 border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.2),inset_0_1px_1px_rgba(255,255,255,0.1)]",
-    subtle: "bg-white/5 backdrop-blur-xl border border-white/10"
+    default: "bg-white/80 backdrop-blur-lg border border-slate-200",
+    premium: "bg-white/90 backdrop-blur-xl border border-slate-200 shadow-lg",
+    subtle: "bg-slate-50/80 backdrop-blur-lg border border-slate-200"
   };
 
   const hoverClasses = hover
-    ? "hover:border-primary/40 hover:shadow-[0_8px_32px_rgba(0,201,255,0.2)] hover:-translate-y-1"
+    ? "hover:border-blue-400 hover:shadow-[0_8px_32px_rgba(59,130,246,0.15)] hover:-translate-y-1"
     : "";
 
   const interactiveClasses = interactive ? "active:scale-[0.98]" : "";

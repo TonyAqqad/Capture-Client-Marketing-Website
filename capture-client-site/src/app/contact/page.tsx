@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import ContactPageClient from "./ContactPageClient";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Get Your Free Consultation | Capture Client",
+  title: "Contact Us | Free Consultation | Capture Client",
   description:
     "Contact Capture Client for Voice AI, Google Ads, and Facebook Ads services. Call (865) 346-6111 or fill out our form for a free consultation.",
   keywords: [
@@ -14,13 +14,13 @@ export const metadata: Metadata = {
     "lead generation inquiry"
   ],
   openGraph: {
-    title: "Contact Us | Get Your Free Consultation | Capture Client",
+    title: "Contact Us | Free Consultation | Capture Client",
     description: "Ready to stop missing calls? Contact Capture Client to try our AI voice agents. Call (865) 346-6111 or fill out our form.",
     url: "https://captureclient.com/contact",
     siteName: "Capture Client",
     type: "website",
     images: [{
-      url: "https://captureclient.com/og-image.jpg",
+      url: "https://captureclient.com/og-image.png",
       width: 1200,
       height: 630,
       alt: "Contact Capture Client",
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Us | Get Your Free Consultation | Capture Client",
+    title: "Contact Us | Free Consultation | Capture Client",
     description: "Ready to stop missing calls? Contact Capture Client to try our AI voice agents.",
-    images: ["https://captureclient.com/og-image.jpg"],
+    images: ["https://captureclient.com/og-image.png"],
   },
   alternates: {
     canonical: "https://captureclient.com/contact",

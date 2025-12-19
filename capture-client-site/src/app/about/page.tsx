@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Capture Client",
     type: "website",
     images: [{
-      url: "https://captureclient.com/og-image.jpg",
+      url: "https://captureclient.com/og-image.png",
       width: 1200,
       height: 630,
       alt: "Capture Client - AI Voice Agents & Marketing Automation",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "About Capture Client | Voice AI & Marketing Automation",
     description: "Learn how Capture Client helps small businesses grow with AI voice agents and marketing automation.",
-    images: ["https://captureclient.com/og-image.jpg"],
+    images: ["https://captureclient.com/og-image.png"],
   },
   alternates: {
     canonical: "https://captureclient.com/about",

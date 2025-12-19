@@ -89,19 +89,16 @@ export default function HomeServicesClient() {
   }, [calculatedLoss]);
 
   return (
-    <div className="relative min-h-screen w-full overflow-x-hidden bg-background-dark">
+    <div className="relative min-h-screen w-full overflow-x-hidden bg-white">
       {/* ==================== HERO SECTION ==================== */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
-        {/* Aurora background */}
-        <div className="absolute inset-0 bg-aurora-animated" />
-
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-b from-white to-slate-50">
         {/* Gradient orbs */}
         <motion.div
           className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-30"
           animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.4, 0.3] }}
           transition={{ duration: 8, repeat: Infinity }}
         >
-          <div className="w-full h-full bg-gradient-radial from-gold-500/40 via-gold-500/20 to-transparent blur-3xl" />
+          <div className="w-full h-full bg-gradient-radial from-blue-600/20 via-blue-600/10 to-transparent blur-3xl" />
         </motion.div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
@@ -110,10 +107,10 @@ export default function HomeServicesClient() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gold/20 via-gold/10 to-transparent border border-gold/30 backdrop-blur-xl mb-6"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600/10 via-blue-600/5 to-transparent border border-blue-600/20 backdrop-blur-xl mb-6"
             >
-              <div className="w-2 h-2 bg-gold rounded-full animate-pulse" />
-              <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-gold">
+              <div className="w-2 h-2 bg-blue-600 rounded-full animate-pulse" />
+              <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-blue-600">
                 For HVAC, Plumbing, Electrical & Roofing Contractors
               </span>
             </motion.div>
@@ -123,10 +120,10 @@ export default function HomeServicesClient() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
-              className="text-display-lg lg:text-hero-xl font-display font-bold text-foreground mb-6 leading-tight"
+              className="text-display-lg lg:text-hero-xl font-display font-bold text-slate-900 mb-6 leading-tight"
             >
               Stop Losing{" "}
-              <span className="text-gradient-gold-cyan">$69K/Year</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">$69K/Year</span>
               {" "}to Missed Calls
             </motion.h1>
 
@@ -135,7 +132,7 @@ export default function HomeServicesClient() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-lg sm:text-xl lg:text-2xl text-foreground-muted mb-8 max-w-3xl mx-auto leading-relaxed"
+              className="text-lg sm:text-xl lg:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed"
             >
               AI Voice Agents That Capture Every Emergency Call, 24/7. Never miss a 3 AM burst pipe or Saturday AC breakdown again.
             </motion.p>
@@ -145,13 +142,13 @@ export default function HomeServicesClient() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3 }}
-              className="glass-premium p-8 rounded-2xl mb-8 max-w-md mx-auto"
+              className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-8 rounded-2xl mb-8 max-w-md mx-auto"
             >
-              <div className="text-sm text-foreground-muted mb-2">You&apos;re losing approximately</div>
-              <div className="text-5xl font-bold text-gradient-gold-cyan mb-2">
+              <div className="text-sm text-slate-600 mb-2">You&apos;re losing approximately</div>
+              <div className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2">
                 ${lostRevenue.toLocaleString()}
               </div>
-              <div className="text-sm text-foreground-muted">per year to missed calls</div>
+              <div className="text-sm text-slate-600">per year to missed calls</div>
             </motion.div>
 
             {/* CTA */}
@@ -163,13 +160,13 @@ export default function HomeServicesClient() {
             >
               <Link
                 href="#roi-calculator"
-                className="btn-gold px-8 py-4 text-lg font-semibold rounded-xl shadow-glow-gold-lg hover:scale-105 transition-all w-full sm:w-auto"
+                className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 hover:scale-105 transition-all w-full sm:w-auto"
               >
                 Calculate Your Lost Revenue
               </Link>
               <a
                 href="tel:865-346-6111"
-                className="btn-ghost px-8 py-4 text-lg font-semibold rounded-xl w-full sm:w-auto"
+                className="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 px-8 py-4 text-lg font-semibold rounded-xl w-full sm:w-auto"
               >
                 Call 865-346-6111
               </a>
@@ -179,15 +176,15 @@ export default function HomeServicesClient() {
       </section>
 
       {/* ==================== PROBLEM IMPACT SECTION ==================== */}
-      <section className="section relative bg-background">
+      <section className="section relative bg-slate-50">
         <div className="absolute inset-0 bg-mesh opacity-20" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center mb-16">
-            <h2 className="text-display-md font-display font-bold text-foreground mb-6">
+            <h2 className="text-display-md font-display font-bold text-slate-900 mb-6">
               The $69K Problem Every Contractor Faces
             </h2>
-            <p className="text-xl text-foreground-muted leading-relaxed">
+            <p className="text-xl text-slate-600 leading-relaxed">
               27% of contractor calls go unanswered. 85% of missed callers NEVER call back. They call your competitor instead.
             </p>
           </div>
@@ -199,7 +196,7 @@ export default function HomeServicesClient() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               whileHover={{ scale: 1.03, y: -5 }}
-              className="glass-card p-8 text-center hover:shadow-glow-lg transition-all duration-300"
+              className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-8 text-center hover:shadow-xl transition-all duration-300"
             >
               <motion.div
                 className="text-6xl mb-4"
@@ -208,8 +205,8 @@ export default function HomeServicesClient() {
               >
                 📞
               </motion.div>
-              <h3 className="text-2xl font-bold text-foreground mb-2">Phone Rings</h3>
-              <p className="text-foreground-muted">3 AM emergency. Customer needs help NOW.</p>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">Phone Rings</h3>
+              <p className="text-slate-600">3 AM emergency. Customer needs help NOW.</p>
             </motion.div>
 
             <motion.div
@@ -218,11 +215,11 @@ export default function HomeServicesClient() {
               viewport={{ once: true }}
               transition={{ delay: 0.2 }}
               whileHover={{ scale: 1.03, y: -5 }}
-              className="glass-card p-8 text-center border-2 border-red-500/50 hover:border-red-500/70 transition-all duration-300"
+              className="bg-white/70 backdrop-blur-xl border-2 border-red-500/50 hover:border-red-500/70 shadow-lg shadow-slate-200/50 p-8 text-center transition-all duration-300"
             >
               <div className="text-6xl mb-4">❌</div>
-              <h3 className="text-2xl font-bold text-red-400 mb-2">No Answer</h3>
-              <p className="text-foreground-muted">You&apos;re sleeping. Call goes to voicemail.</p>
+              <h3 className="text-2xl font-bold text-red-500 mb-2">No Answer</h3>
+              <p className="text-slate-600">You&apos;re sleeping. Call goes to voicemail.</p>
             </motion.div>
 
             <motion.div
@@ -231,17 +228,17 @@ export default function HomeServicesClient() {
               viewport={{ once: true }}
               transition={{ delay: 0.4 }}
               whileHover={{ scale: 1.03, y: -5 }}
-              className="glass-card p-8 text-center hover:shadow-glow-lg transition-all duration-300"
+              className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-8 text-center hover:shadow-xl transition-all duration-300"
             >
               <div className="text-6xl mb-4">🏃</div>
-              <h3 className="text-2xl font-bold text-foreground mb-2">Customer Calls Competitor</h3>
-              <p className="text-foreground-muted">They answer. They win the $900 job.</p>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">Customer Calls Competitor</h3>
+              <p className="text-slate-600">They answer. They win the $900 job.</p>
             </motion.div>
           </div>
 
           <div className="text-center mt-12">
-            <div className="glass-premium inline-block px-8 py-4 rounded-xl">
-              <p className="text-2xl font-bold text-gold">
+            <div className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 inline-block px-8 py-4 rounded-xl">
+              <p className="text-2xl font-bold text-blue-600">
                 Your competitors are answering their 3 AM calls. Are you?
               </p>
             </div>
@@ -250,15 +247,15 @@ export default function HomeServicesClient() {
       </section>
 
       {/* ==================== TRADE-SPECIFIC TABS ==================== */}
-      <section className="section relative bg-background-dark overflow-hidden">
+      <section className="section relative bg-white overflow-hidden">
         <div className="absolute inset-0 bg-mesh-premium opacity-30" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-display-md font-display font-bold text-foreground mb-4">
+            <h2 className="text-display-md font-display font-bold text-slate-900 mb-4">
               Built for Your Trade
             </h2>
-            <p className="text-xl text-foreground-muted max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               See how AI voice agents capture emergency calls for your specific industry
             </p>
           </div>
@@ -271,8 +268,8 @@ export default function HomeServicesClient() {
                 onClick={() => setActiveTrade(trade.id)}
                 className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 ${
                   activeTrade === trade.id
-                    ? `glass-premium ${trade.borderColor} border-2 text-foreground shadow-glow-gold`
-                    : "glass text-foreground-muted hover:text-foreground hover:shadow-glow-lg hover:scale-105"
+                    ? `bg-white/70 backdrop-blur-xl border-2 ${trade.borderColor} shadow-lg shadow-slate-200/50 text-slate-900`
+                    : "bg-white/50 backdrop-blur-xl border border-slate-200 text-slate-600 hover:text-slate-900 hover:shadow-lg hover:scale-105"
                 }`}
               >
                 <span className="mr-2">{trade.icon}</span>
@@ -292,67 +289,67 @@ export default function HomeServicesClient() {
                 transition={{ duration: 0.3 }}
                 className="max-w-4xl mx-auto"
               >
-                <div className={`glass-premium p-8 sm:p-12 rounded-3xl bg-gradient-to-br ${trade.color}`}>
+                <div className={`bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-8 sm:p-12 rounded-3xl bg-gradient-to-br ${trade.color}`}>
                   <div className="grid md:grid-cols-2 gap-8 items-center">
                     <div>
                       <div className="text-6xl mb-4">{trade.icon}</div>
-                      <h3 className="text-3xl font-bold text-foreground mb-4">
+                      <h3 className="text-3xl font-bold text-slate-900 mb-4">
                         {trade.name} Emergency: {trade.scenario}
                       </h3>
-                      <p className="text-lg text-foreground-muted mb-6 leading-relaxed">
+                      <p className="text-lg text-slate-600 mb-6 leading-relaxed">
                         {trade.pain}
                       </p>
-                      <div className="glass p-6 rounded-xl">
-                        <div className="text-sm text-foreground-muted mb-2">Average Job Value</div>
-                        <div className="text-4xl font-bold text-gradient-gold-cyan">{trade.value}</div>
+                      <div className="bg-white/50 backdrop-blur-xl border border-slate-200 p-6 rounded-xl">
+                        <div className="text-sm text-slate-600 mb-2">Average Job Value</div>
+                        <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">{trade.value}</div>
                       </div>
                     </div>
 
                     <div className="space-y-4">
-                      <div className="glass-card p-6">
+                      <div className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-6">
                         <div className="flex items-start gap-4">
                           <div className="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
-                            <span className="text-green-400 font-bold">1</span>
+                            <span className="text-green-600 font-bold">1</span>
                           </div>
                           <div>
-                            <h4 className="font-bold text-foreground mb-1">AI Answers in 2 Rings</h4>
-                            <p className="text-sm text-foreground-muted">Professional greeting, captures emergency details</p>
+                            <h4 className="font-bold text-slate-900 mb-1">AI Answers in 2 Rings</h4>
+                            <p className="text-sm text-slate-600">Professional greeting, captures emergency details</p>
                           </div>
                         </div>
                       </div>
 
-                      <div className="glass-card p-6">
+                      <div className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-6">
                         <div className="flex items-start gap-4">
                           <div className="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
-                            <span className="text-green-400 font-bold">2</span>
+                            <span className="text-green-600 font-bold">2</span>
                           </div>
                           <div>
-                            <h4 className="font-bold text-foreground mb-1">Qualifies Urgency</h4>
-                            <p className="text-sm text-foreground-muted">Emergency vs. scheduled appointment</p>
+                            <h4 className="font-bold text-slate-900 mb-1">Qualifies Urgency</h4>
+                            <p className="text-sm text-slate-600">Emergency vs. scheduled appointment</p>
                           </div>
                         </div>
                       </div>
 
-                      <div className="glass-card p-6">
+                      <div className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-6">
                         <div className="flex items-start gap-4">
                           <div className="w-8 h-8 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
-                            <span className="text-green-400 font-bold">3</span>
+                            <span className="text-green-600 font-bold">3</span>
                           </div>
                           <div>
-                            <h4 className="font-bold text-foreground mb-1">Books Into Calendar</h4>
-                            <p className="text-sm text-foreground-muted">Syncs with ServiceTitan/Housecall Pro</p>
+                            <h4 className="font-bold text-slate-900 mb-1">Books Into Calendar</h4>
+                            <p className="text-sm text-slate-600">Syncs with ServiceTitan/Housecall Pro</p>
                           </div>
                         </div>
                       </div>
 
-                      <div className="glass-card p-6 bg-gradient-to-r from-gold/10 to-cyan-500/10">
+                      <div className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-6 bg-gradient-to-r from-blue-600/10 to-cyan-500/10">
                         <div className="flex items-start gap-4">
-                          <div className="w-8 h-8 rounded-lg bg-gold/30 flex items-center justify-center flex-shrink-0">
-                            <span className="text-gold font-bold">✓</span>
+                          <div className="w-8 h-8 rounded-lg bg-blue-600/30 flex items-center justify-center flex-shrink-0">
+                            <span className="text-blue-600 font-bold">✓</span>
                           </div>
                           <div>
-                            <h4 className="font-bold text-gold mb-1">You Win The Job</h4>
-                            <p className="text-sm text-foreground-muted">Revenue captured automatically</p>
+                            <h4 className="font-bold text-blue-600 mb-1">You Win The Job</h4>
+                            <p className="text-sm text-slate-600">Revenue captured automatically</p>
                           </div>
                         </div>
                       </div>
@@ -366,21 +363,21 @@ export default function HomeServicesClient() {
       </section>
 
       {/* ==================== FSM INTEGRATION SHOWCASE ==================== */}
-      <section className="section relative bg-background">
+      <section className="section relative bg-slate-50">
         <div className="absolute inset-0 bg-mesh opacity-20" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 via-primary/10 to-transparent border border-primary/30 backdrop-blur-xl mb-4">
-              <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span className="text-sm font-bold uppercase tracking-wider text-primary">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600/10 via-blue-600/5 to-transparent border border-blue-600/20 backdrop-blur-xl mb-4">
+              <div className="w-2 h-2 bg-blue-600 rounded-full animate-pulse" />
+              <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
                 Seamless Integration
               </span>
             </div>
-            <h2 className="text-display-md font-display font-bold text-foreground mb-4">
+            <h2 className="text-display-md font-display font-bold text-slate-900 mb-4">
               Works With Your FSM Platform
             </h2>
-            <p className="text-xl text-foreground-muted max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               AI automatically books jobs into your existing field service management software
             </p>
           </div>
@@ -394,49 +391,49 @@ export default function HomeServicesClient() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="glass-card p-6 text-center hover:shadow-glow-gold-lg transition-all duration-300 cursor-pointer"
+                className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-6 text-center hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
-                <h3 className="text-xl font-bold text-foreground mb-2">{platform.name}</h3>
-                <p className="text-sm text-foreground-muted">{platform.users}</p>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">{platform.name}</h3>
+                <p className="text-sm text-slate-600">{platform.users}</p>
               </motion.div>
             ))}
           </div>
 
-          <div className="glass-premium p-8 rounded-2xl max-w-3xl mx-auto text-center">
-            <p className="text-lg text-foreground mb-4">
-              <strong className="text-gold">Jobs booked directly into your schedule.</strong> Technician dispatched automatically. Zero manual data entry.
+          <div className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-8 rounded-2xl max-w-3xl mx-auto text-center">
+            <p className="text-lg text-slate-700 mb-4">
+              <strong className="text-blue-600">Jobs booked directly into your schedule.</strong> Technician dispatched automatically. Zero manual data entry.
             </p>
           </div>
         </div>
       </section>
 
       {/* ==================== INTERACTIVE ROI CALCULATOR ==================== */}
-      <section id="roi-calculator" className="section relative bg-background-dark overflow-hidden">
+      <section id="roi-calculator" className="section relative bg-white overflow-hidden">
         <div className="absolute inset-0 bg-mesh-premium opacity-40" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-gold/20 via-gold/10 to-transparent blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-blue-600/20 via-blue-600/10 to-transparent blur-3xl" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-gold/20 via-gold/10 to-transparent border border-gold/30 backdrop-blur-xl mb-4">
-                <div className="w-2 h-2 bg-gold rounded-full animate-pulse" />
-                <span className="text-sm font-bold uppercase tracking-wider text-gold">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600/10 via-blue-600/5 to-transparent border border-blue-600/20 backdrop-blur-xl mb-4">
+                <div className="w-2 h-2 bg-blue-600 rounded-full animate-pulse" />
+                <span className="text-sm font-bold uppercase tracking-wider text-blue-600">
                   ROI Calculator
                 </span>
               </div>
-              <h2 className="text-display-md font-display font-bold text-foreground mb-4">
+              <h2 className="text-display-md font-display font-bold text-slate-900 mb-4">
                 Calculate Your Lost Revenue
               </h2>
-              <p className="text-xl text-foreground-muted">
+              <p className="text-xl text-slate-600">
                 See exactly how much money you&apos;re leaving on the table
               </p>
             </div>
 
-            <div className="glass-premium p-8 sm:p-12 rounded-3xl">
+            <div className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-8 sm:p-12 rounded-3xl">
               <div className="space-y-8">
                 {/* Monthly Calls Input */}
                 <div>
-                  <label className="block text-foreground font-semibold mb-3">
+                  <label className="block text-slate-900 font-semibold mb-3">
                     Monthly Incoming Calls
                   </label>
                   <input
@@ -446,18 +443,18 @@ export default function HomeServicesClient() {
                     step="10"
                     value={monthlyCalls}
                     onChange={(e) => setMonthlyCalls(Number(e.target.value))}
-                    className="w-full h-2 bg-surface rounded-lg appearance-none cursor-pointer accent-gold"
+                    className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
                   />
                   <div className="flex justify-between mt-2">
-                    <span className="text-foreground-muted">20</span>
-                    <span className="text-2xl font-bold text-gold">{monthlyCalls}</span>
-                    <span className="text-foreground-muted">500</span>
+                    <span className="text-slate-600">20</span>
+                    <span className="text-2xl font-bold text-blue-600">{monthlyCalls}</span>
+                    <span className="text-slate-600">500</span>
                   </div>
                 </div>
 
                 {/* Average Job Value Input */}
                 <div>
-                  <label className="block text-foreground font-semibold mb-3">
+                  <label className="block text-slate-900 font-semibold mb-3">
                     Average Job Value ($)
                   </label>
                   <input
@@ -467,39 +464,39 @@ export default function HomeServicesClient() {
                     step="100"
                     value={avgJobValue}
                     onChange={(e) => setAvgJobValue(Number(e.target.value))}
-                    className="w-full h-2 bg-surface rounded-lg appearance-none cursor-pointer accent-gold"
+                    className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
                   />
                   <div className="flex justify-between mt-2">
-                    <span className="text-foreground-muted">$200</span>
-                    <span className="text-2xl font-bold text-gold">${avgJobValue.toLocaleString()}</span>
-                    <span className="text-foreground-muted">$5,000</span>
+                    <span className="text-slate-600">$200</span>
+                    <span className="text-2xl font-bold text-blue-600">${avgJobValue.toLocaleString()}</span>
+                    <span className="text-slate-600">$5,000</span>
                   </div>
                 </div>
 
                 {/* Results */}
-                <div className="glass p-8 rounded-2xl bg-gradient-to-br from-gold/10 to-red-500/10 border-2 border-gold/30">
+                <div className="bg-white/50 backdrop-blur-xl border-2 border-blue-600/30 shadow-lg shadow-slate-200/50 p-8 rounded-2xl bg-gradient-to-br from-blue-600/10 to-red-500/10">
                   <div className="text-center">
-                    <p className="text-foreground-muted mb-2">You&apos;re losing approximately</p>
+                    <p className="text-slate-600 mb-2">You&apos;re losing approximately</p>
                     <motion.div
                       key={lostRevenue}
                       initial={{ scale: 1.2, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
-                      className="text-6xl font-bold text-gradient-gold-cyan mb-2"
+                      className="text-6xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2"
                     >
                       ${lostRevenue.toLocaleString()}
                     </motion.div>
-                    <p className="text-foreground-muted mb-6">per year to missed calls</p>
+                    <p className="text-slate-600 mb-6">per year to missed calls</p>
 
                     <div className="grid sm:grid-cols-2 gap-4 text-left">
-                      <div className="glass p-4 rounded-xl">
-                        <p className="text-sm text-foreground-muted mb-1">Missed Calls/Month</p>
-                        <p className="text-2xl font-bold text-red-400">
+                      <div className="bg-white/50 backdrop-blur-xl border border-slate-200 p-4 rounded-xl">
+                        <p className="text-sm text-slate-600 mb-1">Missed Calls/Month</p>
+                        <p className="text-2xl font-bold text-red-500">
                           {Math.round(monthlyCalls * 0.27)}
                         </p>
                       </div>
-                      <div className="glass p-4 rounded-xl">
-                        <p className="text-sm text-foreground-muted mb-1">Lost Jobs/Year</p>
-                        <p className="text-2xl font-bold text-red-400">
+                      <div className="bg-white/50 backdrop-blur-xl border border-slate-200 p-4 rounded-xl">
+                        <p className="text-sm text-slate-600 mb-1">Lost Jobs/Year</p>
+                        <p className="text-2xl font-bold text-red-500">
                           {Math.round(monthlyCalls * 0.27 * 12)}
                         </p>
                       </div>
@@ -511,7 +508,7 @@ export default function HomeServicesClient() {
                 <div className="text-center">
                   <a
                     href="tel:865-346-6111"
-                    className="btn-gold px-8 py-4 text-lg font-semibold rounded-xl shadow-glow-gold-lg hover:scale-105 transition-all inline-block"
+                    className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 hover:scale-105 transition-all inline-block"
                   >
                     Stop The Bleeding - Call 865-346-6111
                   </a>
@@ -523,15 +520,15 @@ export default function HomeServicesClient() {
       </section>
 
       {/* ==================== HOW IT WORKS (4 STEPS) ==================== */}
-      <section className="section relative bg-background">
+      <section className="section relative bg-slate-50">
         <div className="absolute inset-0 bg-mesh opacity-20" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-display-md font-display font-bold text-foreground mb-4">
+            <h2 className="text-display-md font-display font-bold text-slate-900 mb-4">
               How It Works
             </h2>
-            <p className="text-xl text-foreground-muted max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               From missed call to captured revenue in 4 simple steps
             </p>
           </div>
@@ -570,18 +567,18 @@ export default function HomeServicesClient() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -8 }}
-                className="glass-card p-8 text-center hover:shadow-glow-gold-lg transition-all duration-300"
+                className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-8 text-center hover:shadow-xl transition-all duration-300"
               >
                 <motion.div
                   whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
                   transition={{ duration: 0.5 }}
-                  className="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold/20 to-cyan-500/20 border border-gold/30 flex items-center justify-center mx-auto mb-4 text-3xl"
+                  className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600/20 to-cyan-500/20 border border-blue-600/30 flex items-center justify-center mx-auto mb-4 text-3xl"
                 >
                   {item.icon}
                 </motion.div>
-                <div className="text-sm text-gold font-bold mb-2">STEP {item.step}</div>
-                <h3 className="text-xl font-bold text-foreground mb-3">{item.title}</h3>
-                <p className="text-foreground-muted">{item.description}</p>
+                <div className="text-sm text-blue-600 font-bold mb-2">STEP {item.step}</div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+                <p className="text-slate-600">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -589,12 +586,12 @@ export default function HomeServicesClient() {
       </section>
 
       {/* ==================== TESTIMONIALS ==================== */}
-      <section className="section relative bg-background-dark overflow-hidden">
+      <section className="section relative bg-white overflow-hidden">
         <div className="absolute inset-0 bg-mesh-premium opacity-30" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-display-md font-display font-bold text-foreground mb-4">
+            <h2 className="text-display-md font-display font-bold text-slate-900 mb-4">
               Real Contractors, Real Results
             </h2>
           </div>
@@ -627,16 +624,16 @@ export default function HomeServicesClient() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ scale: 1.03, y: -8 }}
-                className="glass-premium p-8 rounded-2xl hover:shadow-glow-gold-lg transition-all duration-300 cursor-pointer"
+                className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-8 rounded-2xl hover:shadow-xl transition-all duration-300 cursor-pointer"
               >
-                <div className="text-gold text-5xl mb-4">&quot;</div>
-                <p className="text-foreground mb-6 leading-relaxed">{testimonial.quote}</p>
+                <div className="text-blue-600 text-5xl mb-4">&quot;</div>
+                <p className="text-slate-900 mb-6 leading-relaxed">{testimonial.quote}</p>
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="font-bold text-foreground">{testimonial.name}</p>
-                    <p className="text-sm text-foreground-muted">{testimonial.trade}</p>
+                    <p className="font-bold text-slate-900">{testimonial.name}</p>
+                    <p className="text-sm text-slate-600">{testimonial.trade}</p>
                   </div>
-                  <div className="text-2xl font-bold text-gradient-gold-cyan">
+                  <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                     {testimonial.revenue}
                   </div>
                 </div>
@@ -647,69 +644,69 @@ export default function HomeServicesClient() {
       </section>
 
       {/* ==================== AFTER-HOURS SECTION ==================== */}
-      <section className="section relative bg-background">
+      <section className="section relative bg-slate-50">
         <div className="absolute inset-0 bg-mesh opacity-20" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-display-md font-display font-bold text-foreground mb-4">
+              <h2 className="text-display-md font-display font-bold text-slate-900 mb-4">
                 35-40% of Jobs Come After Hours
               </h2>
-              <p className="text-xl text-foreground-muted">
+              <p className="text-xl text-slate-600">
                 Emergencies don&apos;t wait for business hours. Neither should your answering system.
               </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-8">
               {/* Before */}
-              <div className="glass-card p-8 border-2 border-red-500/30">
+              <div className="bg-white/70 backdrop-blur-xl border-2 border-red-500/30 shadow-lg shadow-slate-200/50 p-8">
                 <div className="text-center mb-6">
                   <div className="text-6xl mb-4">😴</div>
-                  <h3 className="text-2xl font-bold text-red-400 mb-2">Before: Voicemail</h3>
+                  <h3 className="text-2xl font-bold text-red-500 mb-2">Before: Voicemail</h3>
                 </div>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <span className="text-red-400">❌</span>
-                    <span className="text-foreground-muted">Calls go to voicemail</span>
+                    <span className="text-red-500">❌</span>
+                    <span className="text-slate-600">Calls go to voicemail</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-red-400">❌</span>
-                    <span className="text-foreground-muted">85% never leave a message</span>
+                    <span className="text-red-500">❌</span>
+                    <span className="text-slate-600">85% never leave a message</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-red-400">❌</span>
-                    <span className="text-foreground-muted">Customer calls competitor</span>
+                    <span className="text-red-500">❌</span>
+                    <span className="text-slate-600">Customer calls competitor</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-red-400">❌</span>
-                    <span className="text-foreground-muted">You lose $900+ job</span>
+                    <span className="text-red-500">❌</span>
+                    <span className="text-slate-600">You lose $900+ job</span>
                   </li>
                 </ul>
               </div>
 
               {/* After */}
-              <div className="glass-premium p-8 border-2 border-green-500/30 bg-gradient-to-br from-green-500/10 to-gold/10">
+              <div className="bg-white/70 backdrop-blur-xl border-2 border-green-500/30 shadow-lg shadow-slate-200/50 p-8 bg-gradient-to-br from-green-500/10 to-blue-600/10">
                 <div className="text-center mb-6">
                   <div className="text-6xl mb-4">🤖</div>
-                  <h3 className="text-2xl font-bold text-green-400 mb-2">After: AI Answers</h3>
+                  <h3 className="text-2xl font-bold text-green-600 mb-2">After: AI Answers</h3>
                 </div>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <span className="text-green-400">✓</span>
-                    <span className="text-foreground">AI answers in 2 rings</span>
+                    <span className="text-green-600">✓</span>
+                    <span className="text-slate-900">AI answers in 2 rings</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-400">✓</span>
-                    <span className="text-foreground">Captures emergency details</span>
+                    <span className="text-green-600">✓</span>
+                    <span className="text-slate-900">Captures emergency details</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-400">✓</span>
-                    <span className="text-foreground">Books job into calendar</span>
+                    <span className="text-green-600">✓</span>
+                    <span className="text-slate-900">Books job into calendar</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-green-400">✓</span>
-                    <span className="text-foreground-gold">You win $900+ job</span>
+                    <span className="text-green-600">✓</span>
+                    <span className="text-blue-600 font-semibold">You win $900+ job</span>
                   </li>
                 </ul>
               </div>
@@ -719,9 +716,9 @@ export default function HomeServicesClient() {
       </section>
 
       {/* ==================== FINAL CTA ==================== */}
-      <section className="section relative bg-background-dark overflow-hidden">
+      <section className="section relative bg-white overflow-hidden">
         <div className="absolute inset-0 bg-mesh-premium opacity-40" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-gold/30 via-cyan-500/20 to-transparent blur-3xl animate-pulse-glow" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[1000px] bg-gradient-radial from-blue-600/30 via-cyan-500/20 to-transparent blur-3xl animate-pulse-glow" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -729,13 +726,13 @@ export default function HomeServicesClient() {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="glass-premium p-12 sm:p-16 rounded-3xl"
+              className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-12 sm:p-16 rounded-3xl"
             >
-              <h2 className="text-display-md lg:text-display-lg font-display font-bold text-foreground mb-6">
+              <h2 className="text-display-md lg:text-display-lg font-display font-bold text-slate-900 mb-6">
                 Start Capturing Emergency Calls{" "}
-                <span className="text-gradient-gold-cyan">Tonight</span>
+                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Tonight</span>
               </h2>
-              <p className="text-xl text-foreground-muted mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
                 Stop losing $69K/year to missed calls. AI voice agents answer every call, qualify every lead, book every job.
               </p>
 
@@ -744,7 +741,7 @@ export default function HomeServicesClient() {
                   href="tel:865-346-6111"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
-                  className="btn-gold px-10 py-5 text-xl font-bold rounded-xl shadow-glow-gold-intense transition-all w-full sm:w-auto"
+                  className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white px-10 py-5 text-xl font-bold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 transition-all w-full sm:w-auto"
                 >
                   📞 Call 865-346-6111
                 </motion.a>
@@ -755,16 +752,16 @@ export default function HomeServicesClient() {
                 >
                   <Link
                     href="/contact"
-                    className="btn-ghost px-10 py-5 text-xl font-semibold rounded-xl w-full sm:w-auto"
+                    className="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 px-10 py-5 text-xl font-semibold rounded-xl w-full sm:w-auto"
                   >
                     Try Our AI Now
                   </Link>
                 </motion.div>
               </div>
 
-              <div className="glass p-6 rounded-xl inline-block">
-                <p className="text-foreground-muted">
-                  <strong className="text-gold">Limited Spots:</strong> We only onboard 5 contractors per month to ensure quality.
+              <div className="bg-white/50 backdrop-blur-xl border border-slate-200 p-6 rounded-xl inline-block">
+                <p className="text-slate-600">
+                  <strong className="text-blue-600">Limited Spots:</strong> We only onboard 5 contractors per month to ensure quality.
                 </p>
               </div>
             </motion.div>

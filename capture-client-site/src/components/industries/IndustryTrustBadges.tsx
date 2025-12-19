@@ -123,7 +123,7 @@ export function IndustryTrustBadges({
       case "award":
         return "text-gold-400";
       default:
-        return "text-foreground";
+        return "text-slate-900";
     }
   };
 
@@ -151,7 +151,7 @@ export function IndustryTrustBadges({
   return (
     <section
       ref={ref}
-      className={`py-12 md:py-16 bg-gradient-to-b from-background to-background-darker ${className}`}
+      className={`py-12 md:py-16 bg-gradient-to-b from-white to-slate-50 ${className}`}
       aria-label="Trust signals and social proof"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
@@ -169,7 +169,7 @@ export function IndustryTrustBadges({
                   <div className="flex flex-col md:flex-row items-center justify-center gap-4">
                     <Users className="w-12 h-12 text-gold-400" />
                     <div className="text-center md:text-left">
-                      <div className="text-sm font-semibold text-foreground-muted uppercase tracking-wide mb-1">
+                      <div className="text-sm font-semibold text-slate-600 uppercase tracking-wide mb-1">
                         Trusted By
                       </div>
                       <div className="flex items-baseline gap-2">
@@ -179,7 +179,7 @@ export function IndustryTrustBadges({
                         >
                           {count.toLocaleString()}+
                         </motion.span>
-                        <span className="text-xl text-foreground">
+                        <span className="text-xl text-slate-900">
                           {industryName || "Businesses"}
                         </span>
                       </div>
@@ -198,13 +198,13 @@ export function IndustryTrustBadges({
             className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-12"
           >
             {/* Star Rating */}
-            <div className="flex items-center gap-3 p-6 rounded-2xl bg-white/[0.08] backdrop-blur-xl border border-white/10">
+            <div className="flex items-center gap-3 p-6 rounded-2xl bg-white/70 backdrop-blur-xl border border-slate-200">
               <div className="flex items-center gap-1" aria-label={`${rating} out of 5 stars`}>
                 {renderStars(rating)}
               </div>
-              <div className="border-l border-white/20 pl-3">
-                <div className="text-2xl font-bold text-foreground">{rating}/5</div>
-                <div className="text-xs text-foreground-muted">
+              <div className="border-l border-slate-200 pl-3">
+                <div className="text-2xl font-bold text-slate-900">{rating}/5</div>
+                <div className="text-xs text-slate-600">
                   {reviewCount.toLocaleString()}+ reviews
                 </div>
               </div>
@@ -214,8 +214,8 @@ export function IndustryTrustBadges({
             <div className="flex items-center gap-3 p-6 rounded-2xl bg-gradient-to-br from-accent-500/20 to-accent-600/10 backdrop-blur-xl border border-accent-500/30">
               <Clock className="w-8 h-8 text-accent-400" />
               <div>
-                <div className="text-lg font-bold text-foreground">24/7 Availability</div>
-                <div className="text-sm text-foreground-muted">Always On, Never Miss a Call</div>
+                <div className="text-lg font-bold text-slate-900">24/7 Availability</div>
+                <div className="text-sm text-slate-600">Always On, Never Miss a Call</div>
               </div>
             </div>
           </motion.div>
@@ -230,7 +230,7 @@ export function IndustryTrustBadges({
                 transition={{ duration: 0.4, delay: 0.2 + index * 0.05 }}
               >
                 <div
-                  className="group relative p-6 rounded-2xl bg-white/[0.05] backdrop-blur-xl border border-white/10 hover:bg-white/[0.08] hover:border-white/20 transition-all duration-300"
+                  className="group relative p-6 rounded-2xl bg-white/70 backdrop-blur-xl border border-slate-200 hover:bg-white/80 hover:border-slate-300 transition-all duration-300"
                   role="img"
                   aria-label={`${badge.label}${badge.value ? `: ${badge.value}` : ""}`}
                 >
@@ -246,7 +246,7 @@ export function IndustryTrustBadges({
 
                   {/* Label */}
                   <div className="text-center">
-                    <div className="text-sm font-bold text-foreground mb-1">
+                    <div className="text-sm font-bold text-slate-900 mb-1">
                       {badge.label}
                     </div>
                     {badge.value && (
@@ -255,14 +255,14 @@ export function IndustryTrustBadges({
                       </div>
                     )}
                     {badge.description && (
-                      <div className="text-xs text-foreground-muted mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="text-xs text-slate-600 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         {badge.description}
                       </div>
                     )}
                   </div>
 
                   {/* Type Badge */}
-                  <div className="absolute top-2 right-2 px-2 py-1 rounded-md bg-white/10 text-xs font-medium text-foreground-muted uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="absolute top-2 right-2 px-2 py-1 rounded-md bg-slate-100 text-xs font-medium text-slate-600 uppercase opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     {badge.type}
                   </div>
                 </div>
@@ -280,11 +280,11 @@ export function IndustryTrustBadges({
             >
               <div className="flex items-center justify-center gap-3 mb-2">
                 <ShieldCheck className="w-6 h-6 text-blue-400" />
-                <span className="text-lg font-bold text-foreground">
+                <span className="text-lg font-bold text-slate-900">
                   Enterprise-Grade Security & Compliance
                 </span>
               </div>
-              <p className="text-sm text-foreground-muted max-w-2xl mx-auto">
+              <p className="text-sm text-slate-600 max-w-2xl mx-auto">
                 Your data is protected with bank-level encryption, regular security audits, and full compliance with industry regulations.
               </p>
             </motion.div>

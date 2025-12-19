@@ -63,10 +63,10 @@ export function StatCard({
   };
 
   const glowColors = {
-    gold: "gold" as const,
-    cyan: "cyan" as const,
+    gold: "blue" as const,
+    cyan: "blue" as const,
     primary: "primary" as const,
-    success: "cyan" as const
+    success: "blue" as const
   };
 
   if (variant === "minimal") {
@@ -89,15 +89,15 @@ export function StatCard({
 
         {/* Value */}
         <div className="flex items-baseline gap-1">
-          <span className="text-sm text-foreground-muted">{prefix}</span>
+          <span className="text-sm text-slate-600">{prefix}</span>
           <motion.span className={cn("font-display text-4xl md:text-5xl font-bold", colorClasses[color])}>
             {display}
           </motion.span>
-          <span className="text-sm text-foreground-muted">{suffix}</span>
+          <span className="text-sm text-slate-600">{suffix}</span>
         </div>
 
         {/* Label */}
-        <p className="text-sm text-foreground-muted font-medium">
+        <p className="text-sm text-slate-600 font-medium">
           {label}
         </p>
 
@@ -140,16 +140,16 @@ export function StatCard({
 
           {/* Value */}
           <div className="flex items-baseline gap-1">
-            <span className="text-base text-foreground-muted">{prefix}</span>
+            <span className="text-base text-slate-600">{prefix}</span>
             <motion.span className={cn("font-display text-4xl md:text-5xl font-bold", colorClasses[color])}>
               {display}
             </motion.span>
-            <span className="text-base text-foreground-muted">{suffix}</span>
+            <span className="text-base text-slate-600">{suffix}</span>
           </div>
 
           {/* Label and Trend */}
           <div className="flex items-center justify-between">
-            <p className="text-sm text-foreground-muted font-medium">
+            <p className="text-sm text-slate-600 font-medium">
               {label}
             </p>
 

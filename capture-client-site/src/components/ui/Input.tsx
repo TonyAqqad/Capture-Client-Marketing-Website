@@ -24,8 +24,8 @@ export function Input({
   const [isFocused, setIsFocused] = useState(false);
 
   const variantClasses = {
-    default: "bg-surface/50 border-surface-border focus:border-primary/50",
-    glass: "bg-white/5 backdrop-blur-xl border-white/20 focus:border-accent/50 focus:bg-white/10 shadow-[0_4px_16px_rgba(0,0,0,0.1)]"
+    default: "bg-slate-50 border-slate-200 focus:border-primary/50",
+    glass: "bg-white/80 backdrop-blur-xl border-slate-200 focus:border-accent/50 focus:bg-white/10 shadow-[0_4px_16px_rgba(0,0,0,0.1)]"
   };
 
   const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
@@ -43,7 +43,7 @@ export function Input({
       {label && (
         <label
           className={`block text-sm font-semibold mb-2 transition-colors duration-200 ${
-            isFocused ? "text-accent" : "text-foreground"
+            isFocused ? "text-accent" : "text-slate-900"
           }`}
         >
           {label}
@@ -57,7 +57,7 @@ export function Input({
             <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
               <Icon
                 className={`transition-colors duration-200 ${
-                  isFocused ? "text-accent" : "text-foreground-muted"
+                  isFocused ? "text-accent" : "text-slate-500"
                 }`}
                 size={20}
                 aria-hidden="true"
@@ -72,7 +72,7 @@ export function Input({
         >
           <input
             {...props}
-            className={`w-full ${icon ? "pl-12" : "px-4"} pr-4 py-3.5 rounded-xl border-2 transition-all duration-300 text-foreground placeholder:text-foreground-muted focus:outline-none focus:ring-2 focus:ring-accent/30 ${variantClasses[variant]} ${className} touch-target`}
+            className={`w-full ${icon ? "pl-12" : "px-4"} pr-4 py-3.5 rounded-xl border-2 transition-all duration-300 text-slate-900 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-accent/30 ${variantClasses[variant]} ${className} touch-target`}
             onFocus={handleFocus}
             onBlur={handleBlur}
           />

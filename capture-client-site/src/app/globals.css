@@ -59,7 +59,7 @@
   }
 
   body {
-    @apply font-body bg-background text-foreground antialiased overflow-x-hidden;
+    @apply font-body bg-white text-slate-900 antialiased overflow-x-hidden;
     font-size: 1rem;
     line-height: 1.6;
   }
@@ -94,17 +94,17 @@
   }
 
   .btn-secondary {
-    @apply bg-transparent border border-surface-border text-foreground font-medium
+    @apply bg-white border border-slate-200 text-slate-900 font-medium
            px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl text-sm sm:text-base
            backdrop-blur-sm transition-all duration-300
-           hover:bg-surface/50 hover:border-primary/50 active:scale-[0.98];
+           hover:bg-slate-50 hover:border-slate-300 active:scale-[0.98];
   }
 
   .btn-ghost {
-    @apply bg-white/5 border border-white/10 text-foreground
+    @apply bg-white/70 border border-slate-200 text-slate-900
            px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl text-sm sm:text-base
-           backdrop-blur-sm transition-all duration-300
-           hover:bg-white/10 hover:border-white/20 active:scale-[0.98];
+           backdrop-blur-xl transition-all duration-300
+           hover:bg-white hover:border-slate-300 active:scale-[0.98];
   }
 
   /* Card Styles */
@@ -139,9 +139,9 @@
     @apply opacity-100;
   }
 
-  /* Glass morphism - Mobile-first with performance optimization */
+  /* Glass morphism - Mobile-first with performance optimization (Light theme) */
   .glass {
-    @apply bg-white/5 border border-white/10 rounded-2xl;
+    @apply bg-white/70 border border-slate-200 rounded-2xl;
     /* Only add blur on devices that support it AND don't prefer reduced motion */
   }
 
@@ -154,10 +154,10 @@
     }
   }
 
-  /* Mobile-specific glass with lighter blur */
+  /* Mobile-specific glass with lighter blur (Light theme) */
   @media (max-width: 768px) {
     .glass {
-      @apply bg-white/[0.08];
+      @apply bg-white/80;
       /* Lighter blur on mobile for better performance */
     }
 
@@ -172,9 +172,9 @@
   }
 
   .glass-premium {
-    @apply bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/20 rounded-2xl shadow-xl;
+    @apply bg-gradient-to-br from-white/90 to-white/70 border border-slate-200 rounded-2xl shadow-xl;
     background-image:
-      linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+      linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
   }
 
   @supports (backdrop-filter: blur(16px)) {
@@ -186,10 +186,10 @@
     }
   }
 
-  /* Mobile fallback for premium glass */
+  /* Mobile fallback for premium glass (Light theme) */
   @media (max-width: 768px) {
     .glass-premium {
-      @apply bg-gradient-to-br from-white/[0.12] to-white/[0.04] shadow-lg;
+      @apply bg-gradient-to-br from-white/95 to-white/80 shadow-lg;
     }
 
     @supports (backdrop-filter: blur(10px)) {
@@ -203,11 +203,11 @@
   }
 
   .glass-card {
-    @apply bg-surface/30 border border-white/10 rounded-2xl;
+    @apply bg-white/70 border border-slate-200 rounded-2xl;
     background: linear-gradient(
       135deg,
-      rgba(255, 255, 255, 0.08) 0%,
-      rgba(255, 255, 255, 0.02) 100%
+      rgba(255, 255, 255, 0.9) 0%,
+      rgba(255, 255, 255, 0.7) 100%
     );
   }
 
@@ -258,6 +258,76 @@
 
   .container-custom {
     @apply max-w-7xl mx-auto;
+  }
+
+  /* ============================================ */
+  /* LIGHT MODE COMPONENTS (Stripe/Linear style) */
+  /* ============================================ */
+
+  /* Light mode glass card */
+  .glass-card-light {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1.5rem;
+  }
+
+  @supports (backdrop-filter: blur(12px)) {
+    .glass-card-light {
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+  }
+
+  /* Light mode card (solid) */
+  .card-light {
+    @apply bg-white border border-slate-100 rounded-2xl shadow-light-md;
+    transition: all 0.3s ease;
+  }
+
+  .card-light:hover {
+    @apply shadow-light-lg border-slate-200;
+    transform: translateY(-2px);
+  }
+
+  /* Light mode primary button */
+  .btn-primary-light {
+    @apply inline-flex justify-center items-center px-8 py-4 text-base font-semibold text-white rounded-full;
+    background: linear-gradient(135deg, #2563EB 0%, #0EA5E9 100%);
+    box-shadow: 0 8px 24px rgba(37, 99, 235, 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary-light:hover {
+    box-shadow: 0 12px 32px rgba(37, 99, 235, 0.4);
+    transform: translateY(-2px);
+  }
+
+  .btn-primary-light:active {
+    transform: scale(0.98);
+  }
+
+  /* Light mode secondary/ghost button */
+  .btn-ghost-light {
+    @apply inline-flex justify-center items-center px-8 py-4 text-base font-semibold rounded-full;
+    @apply text-slate-700 bg-white border border-slate-200;
+    transition: all 0.3s ease;
+  }
+
+  .btn-ghost-light:hover {
+    @apply bg-slate-50 border-slate-300;
+  }
+
+  /* Light mode section padding */
+  .section-light {
+    @apply py-16 sm:py-20 md:py-24;
+  }
+
+  /* Light mesh gradient background */
+  .mesh-gradient-light {
+    background-color: #F8FAFC;
+    background-image:
+      radial-gradient(at 80% 0%, rgba(37, 99, 235, 0.08) 0px, transparent 50%),
+      radial-gradient(at 0% 50%, rgba(14, 165, 233, 0.06) 0px, transparent 50%);
   }
 }
 
@@ -2238,18 +2308,18 @@ select:focus-visible {
     -webkit-backdrop-filter: none !important;
   }
 
-  /* Compensate for loss of blur with slightly higher opacity */
+  /* Compensate for loss of blur with solid light backgrounds */
   .backdrop-blur-sm,
   .backdrop-blur,
   .backdrop-blur-md {
-    background-color: rgba(15, 20, 25, 0.95) !important;
+    background-color: rgba(255, 255, 255, 0.95) !important;
   }
 
   .backdrop-blur-lg,
   .backdrop-blur-xl,
   .backdrop-blur-2xl,
   .backdrop-blur-3xl {
-    background-color: rgba(15, 20, 25, 0.97) !important;
+    background-color: rgba(255, 255, 255, 0.97) !important;
   }
 }
 

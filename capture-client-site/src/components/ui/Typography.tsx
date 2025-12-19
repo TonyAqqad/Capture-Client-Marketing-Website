@@ -22,7 +22,7 @@ export function HeroHeadline({ children, className = "" }: TypographyProps) {
     <h1
       className={cn(
         "text-hero-xl font-hero font-bold",
-        "text-foreground tracking-tight leading-[1.1]",
+        "text-slate-900 tracking-tight leading-[1.1]",
         "text-balance", // Better text wrapping
         className
       )}
@@ -42,7 +42,7 @@ export function SectionHeadline({ children, className = "" }: TypographyProps) {
     <h2
       className={cn(
         "text-hero-lg font-heading font-bold",
-        "text-foreground tracking-tight leading-[1.15]",
+        "text-slate-900 tracking-tight leading-[1.15]",
         "text-balance",
         className
       )}
@@ -61,7 +61,7 @@ export function Subheadline({ children, className = "" }: TypographyProps) {
   return (
     <p
       className={cn(
-        "text-body-xl text-foreground-muted",
+        "text-body-xl text-slate-600",
         "leading-relaxed max-w-3xl",
         "text-balance",
         className
@@ -141,7 +141,7 @@ export function PremiumBody({ children, className = "" }: TypographyProps) {
   return (
     <p
       className={cn(
-        "text-body-md text-foreground",
+        "text-body-md text-slate-900",
         "leading-relaxed",
         className
       )}

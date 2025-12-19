@@ -13,6 +13,9 @@ export async function generateStaticParams() {
   }));
 }
 
+// Return true 404 for unknown slugs (prevents soft 404s)
+export const dynamicParams = false;
+
 export async function generateMetadata({
   params,
 }: {
@@ -28,7 +31,7 @@ export async function generateMetadata({
   }
 
   const pageUrl = `${SITE_CONFIG.url}/blog/${post.slug}`;
-  const ogImageUrl = post.featuredImage || `${SITE_CONFIG.url}/og-image.jpg`;
+  const ogImageUrl = post.featuredImage || `${SITE_CONFIG.url}/og-image.png`;
 
   // Optimize title length (50-60 chars ideal)
   const optimizedTitle = post.seo.title.length > 60
@@ -157,13 +160,13 @@ export default async function BlogPostPage({
   }
 
   return (
-    <div className="min-h-screen bg-background-light dark:bg-background-dark">
+    <div className="min-h-screen bg-white">
       {/* Inject JSON-LD structured data */}
       <JsonLd schema={schemas} />
 
       {/* Breadcrumb Navigation */}
       <section className="container mx-auto px-4 sm:px-8 lg:px-16 pt-8">
-        <nav className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+        <nav className="flex items-center gap-2 text-sm text-slate-600">
           <Link href="/" className="hover:text-primary transition-colors">
             Home
           </Link>
@@ -172,7 +175,7 @@ export default async function BlogPostPage({
             Blog
           </Link>
           <ChevronRight className="w-3 h-3" />
-          <span className="text-gray-900 dark:text-white">{post.title}</span>
+          <span className="text-slate-900">{post.title}</span>
         </nav>
       </section>
 
@@ -185,12 +188,12 @@ export default async function BlogPostPage({
           </div>
 
           {/* Title */}
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
+          <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight">
             {post.title}
           </h1>
 
           {/* Meta Info */}
-          <div className="flex flex-wrap items-center gap-6 text-gray-600 dark:text-gray-400 mb-8">
+          <div className="flex flex-wrap items-center gap-6 text-slate-600 mb-8">
             <div className="flex items-center gap-3">
               {post.author.avatar && (
                 <img
@@ -200,7 +203,7 @@ export default async function BlogPostPage({
                 />
               )}
               <div>
-                <div className="font-semibold text-gray-900 dark:text-white">
+                <div className="font-semibold text-slate-900">
                   {post.author.name}
                 </div>
                 <div className="text-sm">{post.author.role}</div>
@@ -226,7 +229,7 @@ export default async function BlogPostPage({
 
           {/* Featured Image */}
           {post.featuredImage && (
-            <div className="relative w-full h-[400px] md:h-[500px] rounded-xl overflow-hidden mb-12 border border-gray-200 dark:border-gray-800">
+            <div className="relative w-full h-[400px] md:h-[500px] rounded-xl overflow-hidden mb-12 border border-slate-200">
               <img
                 src={post.featuredImage}
                 alt={post.title}
@@ -240,21 +243,21 @@ export default async function BlogPostPage({
       {/* Blog Content */}
       <section className="container mx-auto px-4 sm:px-8 lg:px-16 pb-16">
         <div className="max-w-4xl mx-auto">
-          <article className="prose prose-lg prose-slate dark:prose-invert max-w-none">
+          <article className="prose prose-lg prose-slate max-w-none">
             <div
-              className="text-gray-700 dark:text-gray-300 leading-relaxed"
+              className="text-slate-900 leading-relaxed"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           </article>
 
           {/* Tags */}
           {post.tags && post.tags.length > 0 && (
-            <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+            <div className="mt-12 pt-8 border-t border-slate-200">
               <div className="flex flex-wrap gap-2">
                 {post.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm rounded-full"
+                    className="px-3 py-1 bg-slate-100 text-slate-800 text-sm rounded-full"
                   >
                     #{tag}
                   </span>
@@ -268,7 +271,7 @@ export default async function BlogPostPage({
       {/* Author Bio Section */}
       <section className="container mx-auto px-4 sm:px-8 lg:px-16 pb-16">
         <div className="max-w-4xl mx-auto">
-          <div className="border border-gray-200 dark:border-gray-800 rounded-xl p-8 bg-white dark:bg-gray-900/50">
+          <div className="border border-slate-200 rounded-xl p-8 bg-white">
             <div className="flex items-start gap-6">
               {post.author.avatar && (
                 <img
@@ -278,13 +281,13 @@ export default async function BlogPostPage({
                 />
               )}
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">
                   About {post.author.name}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                <p className="text-slate-600 mb-4">
                   {post.author.role}
                 </p>
-                <p className="text-gray-700 dark:text-gray-300">
+                <p className="text-slate-800">
                   {post.author.name} is a marketing expert specializing in helping small businesses grow through AI automation, lead generation, and digital advertising strategies.
                 </p>
               </div>
@@ -297,7 +300,7 @@ export default async function BlogPostPage({
       {relatedPosts.length > 0 && (
         <section className="container mx-auto px-4 sm:px-8 lg:px-16 pb-16">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+            <h2 className="text-3xl font-bold text-slate-900 mb-8">
               Related Articles
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
@@ -305,7 +308,7 @@ export default async function BlogPostPage({
                 <Link
                   key={relatedPost.slug}
                   href={`/blog/${relatedPost.slug}`}
-                  className="group border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden bg-white dark:bg-gray-900/50 hover:border-primary/50 hover:shadow-xl transition-all"
+                  className="group border border-slate-200 rounded-xl overflow-hidden bg-white hover:border-primary/50 hover:shadow-xl transition-all"
                 >
                   {relatedPost.featuredImage && (
                     <div className="relative w-full h-48 overflow-hidden">
@@ -320,10 +323,10 @@ export default async function BlogPostPage({
                     <div className="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-3">
                       {relatedPost.category}
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                    <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors line-clamp-2">
                       {relatedPost.title}
                     </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
+                    <p className="text-sm text-slate-600 line-clamp-2">
                       {relatedPost.excerpt}
                     </p>
                   </div>
@@ -335,12 +338,12 @@ export default async function BlogPostPage({
       )}
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-8 lg:px-16 bg-gray-50 dark:bg-black/20">
+      <section className="py-20 px-4 sm:px-8 lg:px-16 bg-slate-50">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
             Ready to Transform Your Business?
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-xl text-slate-600 mb-8">
             Discover how Capture Client can help you automate leads and grow your revenue with AI-powered solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -352,7 +355,7 @@ export default async function BlogPostPage({
             </Link>
             <a
               href="tel:865-346-6111"
-              className="bg-white/10 border border-white/20 text-gray-900 dark:text-white px-8 py-4 rounded-full backdrop-blur-sm hover:bg-white/20 transition-all duration-300"
+              className="bg-slate-100 border border-slate-300 text-slate-900 px-8 py-4 rounded-full hover:bg-slate-200 transition-all duration-300"
             >
               Call Us: (865) 346-6111
             </a>

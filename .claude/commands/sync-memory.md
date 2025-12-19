@@ -1,5 +1,6 @@
 ---
 description: Update memory bank files at end of session
+model: sonnet
 ---
 Update the memory bank with learnings from this session.
 
@@ -8,13 +9,18 @@ Update the memory bank with learnings from this session.
 Review the conversation and identify:
 
 ### 1. Progress Updates
+**File (primary)**: @.claude/memory/state.md
+
+- Update current priorities and “what’s true” (keep it short)
+
+### 2. Progress Updates (historical, only if needed)
 **File**: @.claude/memory/progress.md
 
 - Pages completed or status changed
 - Tasks finished from sprint list
 - New known issues discovered
 
-### 2. New Learnings
+### 3. New Learnings
 **File**: @.claude/memory/learnings.md
 
 - Bugs fixed and how
@@ -22,14 +28,14 @@ Review the conversation and identify:
 - Patterns that worked well
 - Mistakes to avoid
 
-### 3. Pattern Updates
+### 4. Pattern Updates
 **File**: @.claude/memory/patterns.md
 
 - New reusable patterns discovered
 - Better ways to do existing patterns
 - Anti-patterns to add
 
-### 4. Project Brief Updates
+### 5. Project Brief Updates
 **File**: @.claude/memory/project-brief.md
 
 - Scope changes

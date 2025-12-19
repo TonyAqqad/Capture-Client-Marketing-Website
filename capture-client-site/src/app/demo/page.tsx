@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import DemoContent from "./DemoContent";
 
 export const metadata: Metadata = {
-  title: "Interactive AI Voice Demo",
+  title: "Interactive AI Voice Demo | Capture Client",
   description: "Experience AI that sounds human. Watch real conversations between our AI voice agent and customers across dental, HVAC, law, and real estate industries. See how 24/7 AI answering can transform your business.",
   keywords: [
     "voice ai demo",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Capture Client AI Voice Demo - Interactive Call Simulations",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Interactive AI Voice Demo | Capture Client",
     description: "Watch AI handle calls for dental, HVAC, law & real estate businesses. Experience human-like conversations in real-time.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.png"],
   },
   alternates: {
     canonical: "https://captureclient.com/demo",

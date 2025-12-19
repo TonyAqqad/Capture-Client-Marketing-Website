@@ -159,7 +159,7 @@ function AnimatedWaveform({ isPlaying }: { isPlaying: boolean }) {
       {bars.map((bar) => (
         <motion.div
           key={bar}
-          className="w-0.5 md:w-1 bg-gradient-to-t from-accent via-primary to-accent rounded-full"
+          className="w-0.5 md:w-1 bg-gradient-to-t from-blue-600 via-cyan-500 to-blue-600 rounded-full"
           initial={{ height: 4 }}
           animate={
             isPlaying
@@ -186,7 +186,6 @@ function AnimatedWaveform({ isPlaying }: { isPlaying: boolean }) {
 function PhoneInterface({
   scenario,
   isPlaying,
-  currentTranscriptIndex,
 }: {
   scenario: ScenarioData;
   isPlaying: boolean;
@@ -196,7 +195,7 @@ function PhoneInterface({
     <div className="relative w-full max-w-md mx-auto">
       {/* Enhanced pulsing glow effect */}
       <motion.div
-        className="absolute inset-0 bg-gradient-to-br from-accent/40 via-gold/30 to-primary/40 rounded-3xl blur-2xl md:blur-3xl"
+        className="absolute inset-0 bg-gradient-to-br from-blue-600/20 via-cyan-500/15 to-cyan-500/20 rounded-3xl blur-2xl md:blur-3xl"
         animate={{
           opacity: [0.4, 0.7, 0.4],
           scale: [1, 1.05, 1],
@@ -206,23 +205,23 @@ function PhoneInterface({
 
       {/* Phone mockup with premium border */}
       <motion.div
-        className="relative glass-premium border-2 border-gold/30 rounded-[2rem] md:rounded-[2.5rem] p-3 md:p-4 shadow-glow-gold-lg"
+        className="relative bg-white/70 backdrop-blur-xl border-2 border-blue-500/30 rounded-[2rem] md:rounded-[2.5rem] p-3 md:p-4 shadow-lg shadow-blue-200/50"
         initial={{ scale: 0.9, opacity: 0, y: 20 }}
         animate={{ scale: 1, opacity: 1, y: 0 }}
         transition={{ duration: 0.6, type: "spring", bounce: 0.4 }}
       >
         {/* Phone notch */}
-        <div className="absolute top-4 md:top-6 left-1/2 -translate-x-1/2 w-24 md:w-32 h-5 md:h-6 bg-background-dark rounded-full border border-white/10" />
+        <div className="absolute top-4 md:top-6 left-1/2 -translate-x-1/2 w-24 md:w-32 h-5 md:h-6 bg-slate-100 rounded-full border border-slate-200" />
 
         {/* Screen */}
-        <div className="relative bg-gradient-to-br from-background-dark via-background to-background-dark rounded-[1.75rem] md:rounded-[2rem] overflow-hidden border border-white/10">
+        <div className="relative bg-gradient-to-br from-white via-slate-50 to-white rounded-[1.75rem] md:rounded-[2rem] overflow-hidden border border-slate-200">
           {/* Status bar */}
-          <div className="flex items-center justify-between px-4 md:px-8 py-3 md:py-4 border-b border-white/5">
+          <div className="flex items-center justify-between px-4 md:px-8 py-3 md:py-4 border-b border-slate-200/60">
             <div className="flex items-center gap-2">
-              <div className="w-1 h-1 bg-accent rounded-full animate-pulse" />
-              <span className="text-xs text-foreground-muted">Active Conversation</span>
+              <div className="w-1 h-1 bg-blue-600 rounded-full animate-pulse" />
+              <span className="text-xs text-slate-600">Active Conversation</span>
             </div>
-            <div className="flex items-center gap-1 text-foreground-muted text-xs">
+            <div className="flex items-center gap-1 text-slate-600 text-xs">
               <Signal className="w-4 h-4" />
               <Wifi className="w-4 h-4" />
               <Battery className="w-4 h-4" />
@@ -232,7 +231,7 @@ function PhoneInterface({
           {/* Conversation info */}
           <div className="p-6 md:p-8 text-center">
             <motion.div
-              className="relative w-20 h-20 md:w-24 md:h-24 mx-auto mb-4 md:mb-6 rounded-full bg-gradient-to-br from-accent/20 to-gold/20 border border-accent/30 flex items-center justify-center"
+              className="relative w-20 h-20 md:w-24 md:h-24 mx-auto mb-4 md:mb-6 rounded-full bg-gradient-to-br from-blue-600/20 to-cyan-500/20 border border-blue-500/30 flex items-center justify-center"
               animate={isPlaying ? {
                 scale: [1, 1.08, 1],
                 rotate: [0, 5, -5, 0],
@@ -242,7 +241,7 @@ function PhoneInterface({
               {/* Pulsing ring when playing */}
               {isPlaying && (
                 <motion.div
-                  className="absolute inset-0 rounded-full border-2 border-accent/50"
+                  className="absolute inset-0 rounded-full border-2 border-blue-600/50"
                   animate={{
                     scale: [1, 1.3, 1.5],
                     opacity: [0.8, 0.4, 0],
@@ -252,12 +251,12 @@ function PhoneInterface({
               )}
               {(() => {
                 const IconComponent = iconMap[scenario.icon];
-                return <IconComponent className="w-10 h-10 md:w-12 md:h-12 text-accent" />;
+                return <IconComponent className="w-10 h-10 md:w-12 md:h-12 text-blue-600" />;
               })()}
             </motion.div>
 
-            <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">{scenario.title}</h3>
-            <p className="text-xs md:text-sm text-foreground-muted mb-6 md:mb-8">{scenario.description}</p>
+            <h3 className="text-xl md:text-2xl font-bold text-slate-900 mb-2">{scenario.title}</h3>
+            <p className="text-xs md:text-sm text-slate-600 mb-6 md:mb-8">{scenario.description}</p>
 
             {/* Waveform */}
             <div className="mb-6 md:mb-8">
@@ -265,24 +264,24 @@ function PhoneInterface({
             </div>
 
             {/* Conversation duration */}
-            <div className="text-3xl md:text-4xl font-bold text-gradient bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent mb-6 md:mb-8">
+            <div className="text-3xl md:text-4xl font-bold text-gradient bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-6 md:mb-8">
               {scenario.stats.callDuration}
             </div>
           </div>
 
           {/* Bottom stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-4 p-4 md:p-6 border-t border-white/5 bg-white/[0.02]">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 md:gap-4 p-4 md:p-6 border-t border-slate-200/60 bg-white/70 backdrop-blur-xl">
             <div className="text-center">
-              <div className="text-xs text-foreground-muted mb-1">Duration</div>
-              <div className="text-xs md:text-sm font-bold text-foreground">{scenario.stats.callDuration}</div>
+              <div className="text-xs text-slate-600 mb-1">Duration</div>
+              <div className="text-xs md:text-sm font-bold text-slate-900">{scenario.stats.callDuration}</div>
             </div>
             <div className="text-center">
-              <div className="text-xs text-foreground-muted mb-1">Quality</div>
-              <div className="text-xs md:text-sm font-bold text-accent">{scenario.stats.leadQuality}</div>
+              <div className="text-xs text-slate-600 mb-1">Quality</div>
+              <div className="text-xs md:text-sm font-bold text-blue-600">{scenario.stats.leadQuality}</div>
             </div>
             <div className="text-center">
-              <div className="text-xs text-foreground-muted mb-1">Status</div>
-              <div className="text-xs md:text-sm font-bold text-primary truncate">{scenario.stats.outcome}</div>
+              <div className="text-xs text-slate-600 mb-1">Status</div>
+              <div className="text-xs md:text-sm font-bold text-cyan-600 truncate">{scenario.stats.outcome}</div>
             </div>
           </div>
         </div>
@@ -301,26 +300,26 @@ function TranscriptPanel({
   currentIndex: number;
 }) {
   return (
-    <div className="glass-premium rounded-2xl md:rounded-3xl p-4 md:p-8 h-full max-h-[500px] md:max-h-[600px] overflow-hidden border-2 border-accent/20 shadow-glow-lg">
-      <div className="flex items-center gap-3 mb-4 md:mb-6 pb-3 md:pb-4 border-b border-white/10">
+    <div className="bg-white/70 backdrop-blur-xl rounded-2xl md:rounded-3xl p-4 md:p-8 h-full max-h-[500px] md:max-h-[600px] overflow-hidden border-2 border-blue-500/20 shadow-lg shadow-blue-200/50">
+      <div className="flex items-center gap-3 mb-4 md:mb-6 pb-3 md:pb-4 border-b border-slate-200">
         <motion.div
-          className="w-10 h-10 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 flex items-center justify-center"
+          className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600/20 to-cyan-500/20 border border-blue-500/30 flex items-center justify-center"
           animate={{
             boxShadow: [
-              '0 0 10px rgba(0, 201, 255, 0.3)',
-              '0 0 20px rgba(0, 201, 255, 0.5)',
-              '0 0 10px rgba(0, 201, 255, 0.3)',
+              '0 0 10px rgba(37, 99, 235, 0.3)',
+              '0 0 20px rgba(37, 99, 235, 0.5)',
+              '0 0 10px rgba(37, 99, 235, 0.3)',
             ],
           }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <MessageSquare className="w-5 h-5 text-accent" />
+          <MessageSquare className="w-5 h-5 text-blue-600" />
         </motion.div>
         <div>
-          <h3 className="text-lg md:text-xl font-bold text-foreground">Live Transcript</h3>
+          <h3 className="text-lg md:text-xl font-bold text-slate-900">Live Transcript</h3>
           <div className="flex items-center gap-2">
-            <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-            <p className="text-xs md:text-sm text-foreground-muted">Real-time conversation</p>
+            <div className="w-2 h-2 bg-blue-600 rounded-full animate-pulse" />
+            <p className="text-xs md:text-sm text-slate-600">Real-time conversation</p>
           </div>
         </div>
       </div>
@@ -342,14 +341,14 @@ function TranscriptPanel({
               <div
                 className={`w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl flex items-center justify-center flex-shrink-0 ${
                   message.speaker === "AI"
-                    ? "bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30"
-                    : "bg-gradient-to-br from-gold/20 to-gold/10 border border-gold/30"
+                    ? "bg-gradient-to-br from-blue-600/20 to-cyan-500/20 border border-blue-500/30"
+                    : "bg-gradient-to-br from-blue-500/20 to-cyan-500/10 border border-blue-500/30"
                 }`}
               >
                 {message.speaker === "AI" ? (
-                  <Bot className="w-4 h-4 md:w-5 md:h-5 text-accent" />
+                  <Bot className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
                 ) : (
-                  <User className="w-4 h-4 md:w-5 md:h-5 text-gold" />
+                  <User className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
                 )}
               </div>
 
@@ -362,21 +361,21 @@ function TranscriptPanel({
                 <div className="flex items-center gap-2 mb-1">
                   <span
                     className={`text-xs font-semibold ${
-                      message.speaker === "AI" ? "text-accent" : "text-gold"
+                      message.speaker === "AI" ? "text-blue-600" : "text-blue-600"
                     }`}
                   >
                     {message.speaker}
                   </span>
-                  <span className="text-xs text-foreground-muted">{message.timestamp}</span>
+                  <span className="text-xs text-slate-600">{message.timestamp}</span>
                 </div>
                 <div
                   className={`inline-block px-3 md:px-4 py-2 md:py-3 rounded-xl md:rounded-2xl max-w-full ${
                     message.speaker === "AI"
-                      ? "bg-gradient-to-br from-accent/10 to-primary/5 border border-accent/20"
-                      : "bg-gradient-to-br from-gold/10 to-gold/5 border border-gold/20"
+                      ? "bg-gradient-to-br from-blue-600/10 to-cyan-500/5 border border-blue-500/20"
+                      : "bg-gradient-to-br from-blue-500/10 to-cyan-500/5 border border-blue-500/20"
                   }`}
                 >
-                  <p className="text-xs md:text-sm text-foreground leading-relaxed break-words">{message.text}</p>
+                  <p className="text-xs md:text-sm text-slate-900 leading-relaxed break-words">{message.text}</p>
                 </div>
               </div>
             </motion.div>
@@ -394,7 +393,7 @@ function BeforeAfterComparison() {
     <div className="grid md:grid-cols-2 gap-8">
       {/* WITHOUT Capture Client */}
       <motion.div
-        className="glass-card border-2 border-red-500/30 rounded-3xl p-8"
+        className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 border-2 border-red-500/30 rounded-3xl p-8"
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
@@ -405,8 +404,8 @@ function BeforeAfterComparison() {
             <X className="w-6 h-6 text-red-500" />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-foreground">Without Capture Client</h3>
-            <p className="text-sm text-foreground-muted">Traditional approach</p>
+            <h3 className="text-xl font-bold text-slate-900">Without Capture Client</h3>
+            <p className="text-sm text-slate-600">Traditional approach</p>
           </div>
         </div>
 
@@ -414,29 +413,29 @@ function BeforeAfterComparison() {
           <div className="flex items-start gap-3">
             <MinusCircle className="w-5 h-5 text-red-500 mt-1" />
             <div>
-              <p className="text-foreground font-semibold mb-1">Missed Calls</p>
-              <p className="text-sm text-foreground-muted">67% of calls go to voicemail after hours</p>
+              <p className="text-slate-900 font-semibold mb-1">Missed Calls</p>
+              <p className="text-sm text-slate-600">67% of calls go to voicemail after hours</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
             <MinusCircle className="w-5 h-5 text-red-500 mt-1" />
             <div>
-              <p className="text-foreground font-semibold mb-1">Lost Revenue</p>
-              <p className="text-sm text-foreground-muted">Average $12,000/month in missed opportunities</p>
+              <p className="text-slate-900 font-semibold mb-1">Lost Revenue</p>
+              <p className="text-sm text-slate-600">Average $12,000/month in missed opportunities</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
             <MinusCircle className="w-5 h-5 text-red-500 mt-1" />
             <div>
-              <p className="text-foreground font-semibold mb-1">Poor Experience</p>
-              <p className="text-sm text-foreground-muted">Frustrated customers call competitors instead</p>
+              <p className="text-slate-900 font-semibold mb-1">Poor Experience</p>
+              <p className="text-sm text-slate-600">Frustrated customers call competitors instead</p>
             </div>
           </div>
           <div className="flex items-start gap-3">
             <MinusCircle className="w-5 h-5 text-red-500 mt-1" />
             <div>
-              <p className="text-foreground font-semibold mb-1">Manual Follow-up</p>
-              <p className="text-sm text-foreground-muted">Hours wasted returning voicemails daily</p>
+              <p className="text-slate-900 font-semibold mb-1">Manual Follow-up</p>
+              <p className="text-sm text-slate-600">Hours wasted returning voicemails daily</p>
             </div>
           </div>
         </div>
@@ -444,70 +443,70 @@ function BeforeAfterComparison() {
         <div className="mt-8 p-4 rounded-xl bg-red-500/10 border border-red-500/20">
           <div className="text-center">
             <div className="text-3xl font-bold text-red-500 mb-1">-$144K</div>
-            <div className="text-sm text-foreground-muted">Average annual revenue loss</div>
+            <div className="text-sm text-slate-600">Average annual revenue loss</div>
           </div>
         </div>
       </motion.div>
 
       {/* WITH Capture Client */}
       <motion.div
-        className="glass-card border-2 border-accent/30 rounded-3xl p-8 relative overflow-hidden"
+        className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 border-2 border-blue-500/30 rounded-3xl p-8 relative overflow-hidden"
         initial={{ opacity: 0, x: 50 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
       >
         {/* Glow effect */}
-        <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-primary/5 to-transparent opacity-50" />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-cyan-500/5 to-transparent opacity-50" />
 
         <div className="relative z-10">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 flex items-center justify-center">
-              <CheckCircle2 className="w-6 h-6 text-accent" />
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600/20 to-cyan-500/20 border border-blue-500/30 flex items-center justify-center">
+              <CheckCircle2 className="w-6 h-6 text-blue-600" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-foreground">With Capture Client</h3>
-              <p className="text-sm text-foreground-muted">AI-powered solution</p>
+              <h3 className="text-xl font-bold text-slate-900">With Capture Client</h3>
+              <p className="text-sm text-slate-600">AI-powered solution</p>
             </div>
           </div>
 
           <div className="space-y-4">
             <div className="flex items-start gap-3">
-              <PlusCircle className="w-5 h-5 text-accent mt-1" />
+              <PlusCircle className="w-5 h-5 text-blue-600 mt-1" />
               <div>
-                <p className="text-foreground font-semibold mb-1">100% Call Coverage</p>
-                <p className="text-sm text-foreground-muted">AI answers instantly, 24/7/365</p>
+                <p className="text-slate-900 font-semibold mb-1">100% Call Coverage</p>
+                <p className="text-sm text-slate-600">AI answers instantly, 24/7/365</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <PlusCircle className="w-5 h-5 text-accent mt-1" />
+              <PlusCircle className="w-5 h-5 text-blue-600 mt-1" />
               <div>
-                <p className="text-foreground font-semibold mb-1">Maximized Revenue</p>
-                <p className="text-sm text-foreground-muted">Capture every lead automatically</p>
+                <p className="text-slate-900 font-semibold mb-1">Maximized Revenue</p>
+                <p className="text-sm text-slate-600">Capture every lead automatically</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <PlusCircle className="w-5 h-5 text-accent mt-1" />
+              <PlusCircle className="w-5 h-5 text-blue-600 mt-1" />
               <div>
-                <p className="text-foreground font-semibold mb-1">Premium Experience</p>
-                <p className="text-sm text-foreground-muted">Human-like conversations that impress</p>
+                <p className="text-slate-900 font-semibold mb-1">Premium Experience</p>
+                <p className="text-sm text-slate-600">Human-like conversations that impress</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <PlusCircle className="w-5 h-5 text-accent mt-1" />
+              <PlusCircle className="w-5 h-5 text-blue-600 mt-1" />
               <div>
-                <p className="text-foreground font-semibold mb-1">Zero Manual Work</p>
-                <p className="text-sm text-foreground-muted">Automatic transcripts and CRM updates</p>
+                <p className="text-slate-900 font-semibold mb-1">Zero Manual Work</p>
+                <p className="text-sm text-slate-600">Automatic transcripts and CRM updates</p>
               </div>
             </div>
           </div>
 
-          <div className="mt-8 p-4 rounded-xl bg-gradient-to-r from-accent/20 to-primary/20 border border-accent/30">
+          <div className="mt-8 p-4 rounded-xl bg-gradient-to-r from-blue-600/20 to-cyan-500/20 border border-blue-500/30">
             <div className="text-center">
-              <div className="text-3xl font-bold text-gradient bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent mb-1">
+              <div className="text-3xl font-bold text-gradient bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-1">
                 +$240K
               </div>
-              <div className="text-sm text-foreground-muted">Average annual revenue increase</div>
+              <div className="text-sm text-slate-600">Average annual revenue increase</div>
             </div>
           </div>
         </div>
@@ -556,12 +555,12 @@ function LiveStatsSection() {
           label: "Revenue Generated",
           value: `$${stats.revenue.toLocaleString()}`,
           icon: TrendingUp,
-          gradient: "from-gold to-gold-light",
+          gradient: "from-blue-600 to-cyan-500",
         },
       ].map((stat, idx) => (
         <motion.div
           key={stat.label}
-          className="glass-premium rounded-2xl p-6 text-center relative overflow-hidden"
+          className="bg-white/70 backdrop-blur-xl rounded-2xl p-6 text-center relative overflow-hidden border border-slate-200 shadow-lg shadow-slate-200/50"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -575,18 +574,18 @@ function LiveStatsSection() {
           />
 
           <div className="relative z-10">
-            <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${stat.gradient} bg-opacity-20 border border-white/20 flex items-center justify-center`}>
-              <stat.icon className="w-8 h-8 text-accent" />
+            <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${stat.gradient} bg-opacity-20 border border-blue-500/20 flex items-center justify-center`}>
+              <stat.icon className="w-8 h-8 text-blue-600" />
             </div>
             <motion.div
               key={stat.value}
               initial={{ scale: 1.2, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              className="text-4xl font-bold text-gradient bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent mb-2"
+              className="text-4xl font-bold text-gradient bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2"
             >
               {stat.value}
             </motion.div>
-            <div className="text-sm text-foreground-muted">{stat.label}</div>
+            <div className="text-sm text-slate-600">{stat.label}</div>
           </div>
         </motion.div>
       ))}
@@ -634,18 +633,18 @@ export default function DemoContent() {
   };
 
   return (
-    <div className="relative min-h-screen w-full bg-background-dark overflow-x-hidden">
+    <div className="relative min-h-screen w-full bg-white overflow-x-hidden">
       {/* Enhanced animated background with aurora effect */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-background-dark via-background to-background-dark" />
+        <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50 to-white" />
         <div className="absolute inset-0 bg-mesh-premium opacity-30" />
 
         {/* Aurora gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-primary/10 animate-pulse" style={{ animationDuration: '4s' }} />
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-transparent to-cyan-500/5 animate-pulse" style={{ animationDuration: '4s' }} />
 
         {/* Floating orbs - enhanced glow */}
         <motion.div
-          className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-gradient-radial from-accent/30 to-transparent rounded-full blur-xl md:blur-3xl"
+          className="absolute top-1/4 left-1/4 w-64 h-64 md:w-96 md:h-96 bg-gradient-radial from-blue-600/15 to-transparent rounded-full blur-xl md:blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3],
@@ -655,7 +654,7 @@ export default function DemoContent() {
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-gradient-radial from-gold/20 to-transparent rounded-full blur-xl md:blur-3xl"
+          className="absolute bottom-1/4 right-1/4 w-64 h-64 md:w-96 md:h-96 bg-gradient-radial from-cyan-500/10 to-transparent rounded-full blur-xl md:blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
             opacity: [0.5, 0.3, 0.5],
@@ -665,7 +664,7 @@ export default function DemoContent() {
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         />
         <motion.div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 md:w-[600px] md:h-[600px] bg-gradient-radial from-primary/20 to-transparent rounded-full blur-2xl md:blur-3xl"
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 md:w-[600px] md:h-[600px] bg-gradient-radial from-cyan-500/10 to-transparent rounded-full blur-2xl md:blur-3xl"
           animate={{
             scale: [1, 1.1, 1],
             opacity: [0.2, 0.4, 0.2],
@@ -688,13 +687,13 @@ export default function DemoContent() {
             >
               {/* Badge */}
               <motion.div
-                className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 via-accent/10 to-transparent border border-accent/30 backdrop-blur-xl mb-4 sm:mb-6"
+                className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gradient-to-r from-blue-600/20 via-blue-600/10 to-transparent border border-blue-500/30 backdrop-blur-xl mb-4 sm:mb-6"
                 initial={{ scale: 0 }}
                 animate={{ scale: 1 }}
                 transition={{ delay: 0.2, type: "spring" }}
               >
-                <div className="w-2 h-2 bg-accent rounded-full animate-pulse shadow-glow" />
-                <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent">
+                <div className="w-2 h-2 bg-blue-600 rounded-full animate-pulse shadow-glow" />
+                <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-blue-600">
                   Interactive Demo
                 </span>
               </motion.div>
@@ -703,11 +702,11 @@ export default function DemoContent() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 sm:mb-6 leading-tight tracking-tight">
                 Experience AI That
                 <br />
-                <span className="text-gradient-gold-cyan">Handles Every Conversation</span>
+                <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">Handles Every Conversation</span>
               </h1>
 
               {/* Subheadline - mobile optimized sizing */}
-              <p className="text-base sm:text-lg md:text-xl text-foreground-muted mb-6 sm:mb-8 leading-relaxed px-4 sm:px-0">
+              <p className="text-base sm:text-lg md:text-xl text-slate-600 mb-6 sm:mb-8 leading-relaxed px-4 sm:px-0">
                 See how our AI agents engage with customers via voice and SMS.
                 <br className="hidden sm:block" />
                 Choose a scenario below and watch the conversation unfold.
@@ -715,11 +714,11 @@ export default function DemoContent() {
 
               {/* Animated phone mockup decoration - mobile optimized */}
               <motion.div
-                className="inline-flex items-center gap-2 text-xs sm:text-sm text-foreground-muted px-4 sm:px-0"
+                className="inline-flex items-center gap-2 text-xs sm:text-sm text-slate-600 px-4 sm:px-0"
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
-                <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
+                <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
                 <span className="hidden sm:inline">Live AI conversation simulation - Voice & SMS capable</span>
                 <span className="sm:hidden">Voice & SMS AI Agent</span>
               </motion.div>
@@ -741,10 +740,10 @@ export default function DemoContent() {
                 <motion.button
                   key={scenario.id}
                   onClick={() => handleScenarioChange(scenario)}
-                  className={`glass-card p-4 sm:p-6 rounded-xl sm:rounded-2xl text-left transition-all duration-300 ${
+                  className={`bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-4 sm:p-6 rounded-xl sm:rounded-2xl text-left transition-all duration-300 ${
                     selectedScenario.id === scenario.id
-                      ? "border-2 border-accent shadow-glow-lg"
-                      : "border border-white/10 hover:border-accent/30 active:border-accent/50"
+                      ? "border-2 border-blue-500 shadow-lg shadow-blue-200/50"
+                      : "border border-slate-200 hover:border-blue-500/30 active:border-blue-500/50"
                   }`}
                   whileHover={{ scale: 1.02, y: -4 }}
                   whileTap={{ scale: 0.98 }}
@@ -753,8 +752,8 @@ export default function DemoContent() {
                     <div
                       className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl flex items-center justify-center ${
                         selectedScenario.id === scenario.id
-                          ? "bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30"
-                          : "bg-white/5 border border-white/10"
+                          ? "bg-gradient-to-br from-blue-600/20 to-cyan-500/20 border border-blue-500/30"
+                          : "bg-slate-50 border border-slate-200"
                       }`}
                     >
                       {(() => {
@@ -762,7 +761,7 @@ export default function DemoContent() {
                         return (
                           <IconComponent
                             className={`w-5 h-5 sm:w-6 sm:h-6 ${
-                              selectedScenario.id === scenario.id ? "text-accent" : "text-foreground-muted"
+                              selectedScenario.id === scenario.id ? "text-blue-600" : "text-slate-500"
                             }`}
                           />
                         );
@@ -772,14 +771,14 @@ export default function DemoContent() {
                       <motion.div
                         initial={{ scale: 0 }}
                         animate={{ scale: 1 }}
-                        className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-accent flex items-center justify-center"
+                        className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-blue-600 flex items-center justify-center"
                       >
-                        <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-background-dark" />
+                        <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                       </motion.div>
                     )}
                   </div>
-                  <h3 className="text-base sm:text-lg font-bold text-foreground mb-1">{scenario.title}</h3>
-                  <p className="text-xs sm:text-sm text-foreground-muted">{scenario.description}</p>
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900 mb-1">{scenario.title}</h3>
+                  <p className="text-xs sm:text-sm text-slate-600">{scenario.description}</p>
                 </motion.button>
               ))}
             </motion.div>
@@ -823,8 +822,8 @@ export default function DemoContent() {
             >
               <motion.button
                 onClick={togglePlayback}
-                className="w-full sm:w-auto flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-gradient-to-r from-accent via-primary to-accent text-white font-bold text-base sm:text-lg shadow-glow-intense backdrop-blur-xl border-2 border-accent/30 min-h-[56px] relative overflow-hidden"
-                whileHover={{ scale: 1.05, boxShadow: "0 0 50px rgba(0, 201, 255, 0.8)" }}
+                className="w-full sm:w-auto flex items-center justify-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 text-white font-bold text-base sm:text-lg shadow-lg shadow-blue-200/50 backdrop-blur-xl border-2 border-blue-500/30 min-h-[56px] relative overflow-hidden"
+                whileHover={{ scale: 1.05, boxShadow: "0 0 50px rgba(37, 99, 235, 0.8)" }}
                 whileTap={{ scale: 0.95 }}
               >
                 {/* Animated gradient overlay */}
@@ -850,7 +849,7 @@ export default function DemoContent() {
                   setIsPlaying(false);
                   setCurrentTranscriptIndex(0);
                 }}
-                className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-4 rounded-xl sm:rounded-2xl glass-card border border-white/20 text-foreground font-semibold hover:border-accent/30 active:border-accent/50 transition-all duration-300 min-h-[56px]"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 sm:px-6 py-3 sm:py-4 rounded-xl sm:rounded-2xl bg-white/70 backdrop-blur-xl border border-slate-200 text-slate-900 font-semibold hover:border-blue-500/30 active:border-blue-500/50 transition-all duration-300 min-h-[56px]"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -862,7 +861,7 @@ export default function DemoContent() {
         </section>
 
         {/* ==================== BEFORE/AFTER COMPARISON ==================== */}
-        <section className="section bg-background relative overflow-hidden">
+        <section className="section bg-slate-50 relative overflow-hidden">
           <div className="absolute inset-0 bg-mesh opacity-20" />
 
           <div className="container-custom px-4 sm:px-6 lg:px-8 relative z-10">
@@ -873,9 +872,9 @@ export default function DemoContent() {
               viewport={{ once: true }}
             >
               <h2 className="text-display-lg mb-4">
-                The Difference Is <span className="text-gradient-gold-cyan">Dramatic</span>
+                The Difference Is <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">Dramatic</span>
               </h2>
-              <p className="text-xl text-foreground-muted max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 max-w-2xl mx-auto">
                 See what happens when you miss calls vs. when AI answers every single one
               </p>
             </motion.div>
@@ -885,11 +884,11 @@ export default function DemoContent() {
         </section>
 
         {/* ==================== LIVE STATS SECTION ==================== */}
-        <section className="section bg-background-dark relative overflow-hidden">
+        <section className="section bg-white relative overflow-hidden">
           <div className="absolute inset-0">
             <div className="absolute inset-0 bg-mesh-premium opacity-25" />
             <motion.div
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-gradient-radial from-accent/15 to-transparent blur-3xl"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-gradient-radial from-blue-600/10 to-transparent blur-3xl"
               animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
               transition={{ duration: 6, repeat: Infinity }}
             />
@@ -902,17 +901,17 @@ export default function DemoContent() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 via-accent/10 to-transparent border border-accent/30 backdrop-blur-xl mb-4">
-                <div className="w-2 h-2 bg-accent rounded-full animate-pulse shadow-glow" />
-                <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-accent">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600/20 via-blue-600/10 to-transparent border border-blue-500/30 backdrop-blur-xl mb-4">
+                <div className="w-2 h-2 bg-blue-600 rounded-full animate-pulse shadow-glow" />
+                <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-blue-600">
                   Real-Time Performance
                 </span>
               </div>
 
               <h2 className="text-display-lg mb-4">
-                Watch The Numbers <span className="text-gradient-gold-cyan">Grow</span>
+                Watch The Numbers <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">Grow</span>
               </h2>
-              <p className="text-xl text-foreground-muted max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 max-w-2xl mx-auto">
                 Capture Client AI is working right now for businesses just like yours
               </p>
             </motion.div>
@@ -922,7 +921,7 @@ export default function DemoContent() {
         </section>
 
         {/* ==================== FEATURE HIGHLIGHTS & TRUST ==================== */}
-        <section className="section bg-background relative overflow-hidden">
+        <section className="section bg-slate-50 relative overflow-hidden">
           <div className="absolute inset-0 bg-mesh opacity-20" />
 
           <div className="container-custom px-4 sm:px-6 lg:px-8 relative z-10">
@@ -933,9 +932,9 @@ export default function DemoContent() {
               viewport={{ once: true }}
             >
               <h2 className="text-display-lg mb-4">
-                Enterprise-Grade AI <span className="text-gradient-gold-cyan">Technology</span>
+                Enterprise-Grade AI <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">Technology</span>
               </h2>
-              <p className="text-xl text-foreground-muted max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 max-w-2xl mx-auto">
                 Built for reliability, security, and performance at scale
               </p>
             </motion.div>
@@ -960,42 +959,42 @@ export default function DemoContent() {
               ].map((feature, idx) => (
                 <motion.div
                   key={feature.title}
-                  className="glass-premium rounded-2xl p-6 text-center"
+                  className="bg-white/70 backdrop-blur-xl rounded-2xl p-6 text-center border border-slate-200 shadow-lg shadow-slate-200/50"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
                 >
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-accent/20 to-gold/20 border border-accent/30 flex items-center justify-center">
-                    <feature.icon className="w-8 h-8 text-accent" />
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-blue-600/20 to-cyan-500/20 border border-blue-500/30 flex items-center justify-center">
+                    <feature.icon className="w-8 h-8 text-blue-600" />
                   </div>
-                  <h3 className="text-lg font-bold text-foreground mb-2">{feature.title}</h3>
-                  <p className="text-sm text-foreground-muted">{feature.description}</p>
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">{feature.title}</h3>
+                  <p className="text-sm text-slate-600">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
 
             {/* Prominent phone CTA */}
             <motion.div
-              className="glass-premium rounded-2xl p-8 border-2 border-gold/30 max-w-2xl mx-auto text-center"
+              className="bg-white/70 backdrop-blur-xl rounded-2xl p-8 border-2 border-blue-500/30 max-w-2xl mx-auto text-center shadow-lg shadow-blue-200/50"
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
             >
-              <p className="text-foreground-muted mb-4">
+              <p className="text-slate-600 mb-4">
                 Questions? Talk to our AI experts now
               </p>
               <a href="tel:865-346-6111">
                 <motion.button
-                  className="btn-gold px-10 py-5 rounded-2xl text-xl font-bold inline-flex items-center gap-3 shadow-glow-gold-lg w-full sm:w-auto"
-                  whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(245, 166, 35, 0.6)" }}
+                  className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-500/25 px-10 py-5 rounded-2xl text-xl font-bold inline-flex items-center gap-3 w-full sm:w-auto"
+                  whileHover={{ scale: 1.05, boxShadow: "0 0 40px rgba(37, 99, 235, 0.6)" }}
                   whileTap={{ scale: 0.95 }}
                 >
                   <Phone className="w-6 h-6" />
                   <span>Call 865-346-6111</span>
                 </motion.button>
               </a>
-              <p className="text-xs text-foreground-muted mt-3">
+              <p className="text-xs text-slate-600 mt-3">
                 Average response time: Under 30 seconds
               </p>
             </motion.div>
@@ -1005,10 +1004,10 @@ export default function DemoContent() {
         {/* ==================== CTA SECTION ==================== */}
         <section className="section relative overflow-hidden">
           <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-gradient-to-br from-background-dark via-background to-background-dark" />
+            <div className="absolute inset-0 bg-gradient-to-br from-white via-slate-50 to-white" />
             <div className="absolute inset-0 bg-mesh-premium opacity-40" />
             <motion.div
-              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[800px] bg-gradient-radial from-accent/25 via-primary/15 to-transparent blur-3xl"
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[800px] bg-gradient-radial from-blue-600/15 via-cyan-500/10 to-transparent blur-3xl"
               animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0.6, 0.4] }}
               transition={{ duration: 8, repeat: Infinity }}
             />
@@ -1016,24 +1015,24 @@ export default function DemoContent() {
 
           <div className="container-custom px-4 sm:px-6 lg:px-8 relative z-10">
             <motion.div
-              className="glass-premium rounded-3xl p-12 lg:p-16 text-center max-w-4xl mx-auto border-2 border-gold/20 shadow-glow-gold-lg"
+              className="bg-white/70 backdrop-blur-xl rounded-3xl p-12 lg:p-16 text-center max-w-4xl mx-auto border-2 border-blue-500/20 shadow-lg shadow-blue-200/50"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
               <motion.div
-                className="w-20 h-20 mx-auto mb-8 rounded-2xl bg-gradient-to-br from-accent/20 to-primary/20 border border-accent/30 flex items-center justify-center"
+                className="w-20 h-20 mx-auto mb-8 rounded-2xl bg-gradient-to-br from-blue-600/20 to-cyan-500/20 border border-blue-500/30 flex items-center justify-center"
                 animate={{ rotate: [0, 5, 0, -5, 0] }}
                 transition={{ duration: 4, repeat: Infinity }}
               >
-                <RocketIcon className="w-12 h-12 text-accent" />
+                <RocketIcon className="w-12 h-12 text-blue-600" />
               </motion.div>
 
               <h2 className="text-display-md mb-6">
-                Ready To Never Miss <span className="text-gradient-gold-cyan">Another Lead?</span>
+                Ready To Never Miss <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">Another Lead?</span>
               </h2>
 
-              <p className="text-xl text-foreground-muted mb-8 leading-relaxed max-w-2xl mx-auto">
+              <p className="text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto">
                 Join 500+ businesses using AI to capture every opportunity.
                 <br />
                 Setup takes less than 48 hours. No technical skills required.
@@ -1042,8 +1041,8 @@ export default function DemoContent() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link href="/contact">
                   <motion.button
-                    className="flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-accent via-primary to-accent text-white font-bold text-lg shadow-glow-intense border-2 border-accent/30 w-full sm:w-auto"
-                    whileHover={{ scale: 1.05, boxShadow: "0 0 60px rgba(0, 201, 255, 0.8)" }}
+                    className="flex items-center gap-3 px-10 py-5 rounded-2xl bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 text-white font-bold text-lg shadow-lg shadow-blue-200/50 border-2 border-blue-500/30 w-full sm:w-auto"
+                    whileHover={{ scale: 1.05, boxShadow: "0 0 60px rgba(37, 99, 235, 0.8)" }}
                     whileTap={{ scale: 0.95 }}
                   >
                     <span>Start Your Free Trial</span>
@@ -1053,7 +1052,7 @@ export default function DemoContent() {
 
                 <Link href="/contact">
                   <motion.button
-                    className="flex items-center gap-3 px-8 py-5 rounded-2xl glass-card border-2 border-white/20 text-foreground font-semibold hover:border-accent/30 transition-all duration-300 w-full sm:w-auto"
+                    className="flex items-center gap-3 px-8 py-5 rounded-2xl bg-white/70 backdrop-blur-xl border-2 border-slate-200 text-slate-900 font-semibold hover:border-blue-500/30 transition-all duration-300 w-full sm:w-auto"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -1064,30 +1063,30 @@ export default function DemoContent() {
 
                 <a href="tel:865-346-6111">
                   <motion.button
-                    className="flex items-center gap-3 px-8 py-5 rounded-2xl glass-card border-2 border-gold/30 text-foreground font-semibold hover:border-gold/50 hover:bg-gold/5 transition-all duration-300 w-full sm:w-auto"
+                    className="flex items-center gap-3 px-8 py-5 rounded-2xl bg-white/70 backdrop-blur-xl border-2 border-blue-500/30 text-slate-900 font-semibold hover:border-blue-500/50 hover:bg-blue-500/5 transition-all duration-300 w-full sm:w-auto"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <Phone className="w-5 h-5 text-gold" />
+                    <Phone className="w-5 h-5 text-blue-600" />
                     <span>Call (865) 346-6111</span>
                   </motion.button>
                 </a>
               </div>
 
               {/* Trust badges */}
-              <div className="mt-12 pt-8 border-t border-white/10">
+              <div className="mt-12 pt-8 border-t border-slate-200">
                 <div className="flex flex-wrap items-center justify-center gap-8 opacity-60">
                   <div className="flex items-center gap-2">
-                    <BadgeCheck className="w-5 h-5 text-gold" />
-                    <span className="text-sm text-foreground-muted">No Credit Card Required</span>
+                    <BadgeCheck className="w-5 h-5 text-blue-600" />
+                    <span className="text-sm text-slate-600">No Credit Card Required</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Clock className="w-5 h-5 text-gold" />
-                    <span className="text-sm text-foreground-muted">48-Hour Setup</span>
+                    <Clock className="w-5 h-5 text-blue-600" />
+                    <span className="text-sm text-slate-600">48-Hour Setup</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <HeadphonesIcon className="w-5 h-5 text-gold" />
-                    <span className="text-sm text-foreground-muted">24/7 Support Included</span>
+                    <HeadphonesIcon className="w-5 h-5 text-blue-600" />
+                    <span className="text-sm text-slate-600">24/7 Support Included</span>
                   </div>
                 </div>
               </div>

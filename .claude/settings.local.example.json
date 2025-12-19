@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd capture-client-site && npm run dev)",
+      "Bash(cd capture-client-site && npm run typecheck)",
+      "Bash(cd capture-client-site && npm run lint)",
+      "Bash(cd capture-client-site && npm run build)",
+      "Bash(cd capture-client-site && npx playwright test:*)"
+    ]
+  },
+  "enabledMcpjsonServers": ["playwright"]
+}

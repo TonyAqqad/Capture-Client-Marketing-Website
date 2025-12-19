@@ -26,9 +26,9 @@ interface VisualAuditReport {
 }
 
 test.describe('Homepage Visual Quality Audit - $5M Standard', () => {
-  let consoleErrors: string[] = [];
-  let consoleWarnings: string[] = [];
-  let consoleLogs: string[] = [];
+  const consoleErrors: string[] = [];
+  const consoleWarnings: string[] = [];
+  const consoleLogs: string[] = [];
 
   test('Complete Homepage Visual Audit', async ({ page }) => {
     // Increase timeout for this specific test
@@ -448,7 +448,7 @@ test.describe('Homepage Visual Quality Audit - $5M Standard', () => {
     ];
 
     // Penalize for console errors
-    let errorPenalty = Math.min(consoleErrors.length * 0.5, 2);
+    const errorPenalty = Math.min(consoleErrors.length * 0.5, 2);
 
     report.overall_score = Math.max(0, Math.round(
       (scores.reduce((a, b) => a + b, 0) / scores.length) - errorPenalty

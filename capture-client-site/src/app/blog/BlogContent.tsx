@@ -10,23 +10,23 @@ const getCategoryStyle = (category: string) => {
   const styles: { [key: string]: { gradient: string; categoryColor: string } } = {
     "Voice AI": {
       gradient: "from-gold/20 to-blue-500/20",
-      categoryColor: "bg-gold/10 text-gold border-gold/20",
+      categoryColor: "bg-gold/10 text-gold-600 border-gold/20",
     },
     "Google Ads": {
       gradient: "from-emerald-500/20 to-teal-500/20",
-      categoryColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+      categoryColor: "bg-emerald-500/10 text-emerald-600 border-emerald-500/20",
     },
     "Lead Generation": {
       gradient: "from-cyan-500/20 to-blue-500/20",
-      categoryColor: "bg-cyan-500/10 text-cyan-400 border-cyan-500/20",
+      categoryColor: "bg-cyan-500/10 text-cyan-600 border-cyan-500/20",
     },
     "Business Growth": {
       gradient: "from-orange-500/20 to-cyan-500/20",
-      categoryColor: "bg-orange-500/10 text-orange-400 border-orange-500/20",
+      categoryColor: "bg-orange-500/10 text-orange-600 border-orange-500/20",
     },
     "Automation": {
       gradient: "from-blue-500/20 to-gold/20",
-      categoryColor: "bg-blue-500/10 text-gold border-indigo-500/20",
+      categoryColor: "bg-blue-500/10 text-gold-600 border-indigo-500/20",
     },
   };
   return styles[category] || styles["Lead Generation"];
@@ -70,12 +70,12 @@ export default function BlogContent({ posts }: BlogContentProps) {
   const regularPosts = filteredPosts.slice(1);
 
   return (
-    <div className="min-h-screen bg-slate-900 relative overflow-hidden">
+    <div className="min-h-screen bg-white relative overflow-hidden">
       {/* Ambient Background Gradients */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-gold/20 rounded-full blur-3xl animate-pulse delay-2000" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-gold/5 rounded-full blur-3xl animate-pulse delay-2000" />
       </div>
 
       {/* Hero Section with Glass Card */}
@@ -86,7 +86,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="relative glass-premium rounded-3xl p-12 lg:p-16 shadow-2xl"
+            className="relative bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg rounded-3xl p-12 lg:p-16"
           >
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-3xl" />
@@ -97,7 +97,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 tracking-tight"
+                className="text-5xl md:text-7xl lg:text-8xl font-black text-slate-900 mb-6 tracking-tight"
               >
                 <span className="inline-block">Insights &</span>{" "}
                 <span className="inline-block bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
@@ -109,7 +109,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto mb-10"
+                className="text-xl md:text-2xl text-slate-700 max-w-3xl mx-auto mb-10"
               >
                 Marketing tips, AI insights, and growth strategies to help your small business
                 thrive.
@@ -136,8 +136,8 @@ export default function BlogContent({ posts }: BlogContentProps) {
                       backdrop-blur-md border transition-all duration-300
                       ${
                         selectedCategory === category
-                          ? "bg-white/20 border-white/30 text-white shadow-lg shadow-white/20 scale-105"
-                          : "bg-white/5 border-white/10 text-gray-300 hover:bg-white/10 hover:border-white/20"
+                          ? "bg-blue-600 text-white border-blue-600 shadow-lg shadow-blue-600/20 scale-105"
+                          : "bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100 hover:border-slate-300"
                       }
                     `}
                   >
@@ -166,7 +166,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                 <motion.div
                   whileHover={{ y: -8, scale: 1.01 }}
                   transition={{ duration: 0.3 }}
-                  className="relative glass-premium rounded-3xl overflow-hidden
+                  className="relative bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg rounded-3xl overflow-hidden
                            hover:border-cyan-500/30
                            transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/20"
                 >
@@ -189,7 +189,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6"
                         >
                           <Star className="w-4 h-4 text-cyan-500" />
-                          <span className="text-white font-bold text-sm">Featured Article</span>
+                          <span className="text-slate-900 font-bold text-sm">Featured Article</span>
                         </motion.div>
 
                         {/* Category */}
@@ -213,7 +213,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.4, delay: 0.2 }}
-                          className="text-3xl lg:text-5xl font-black text-white mb-4 group-hover:text-cyan-500 transition-colors duration-300"
+                          className="text-3xl lg:text-5xl font-black text-slate-900 mb-4 group-hover:text-cyan-500 transition-colors duration-300"
                         >
                           {featuredPost.title}
                         </motion.h2>
@@ -224,7 +224,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.4, delay: 0.25 }}
-                          className="text-lg text-gray-300 mb-6 leading-relaxed"
+                          className="text-lg text-slate-700 mb-6 leading-relaxed"
                         >
                           {featuredPost.excerpt}
                         </motion.p>
@@ -235,7 +235,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.4, delay: 0.3 }}
-                          className="flex items-center gap-6 text-gray-400"
+                          className="flex items-center gap-6 text-slate-600"
                         >
                           <div className="flex items-center gap-2">
                             <Calendar className="w-4 h-4" />
@@ -262,8 +262,8 @@ export default function BlogContent({ posts }: BlogContentProps) {
                         transition={{ duration: 0.4, delay: 0.35 }}
                         className="lg:ml-8"
                       >
-                        <div className="flex items-center justify-center w-16 h-16 rounded-full bg-white/10 border border-white/20 group-hover:bg-cyan-500/20 group-hover:border-cyan-500/50 transition-all duration-300">
-                          <ArrowRight className="w-8 h-8 text-white group-hover:translate-x-1 transition-transform duration-300" />
+                        <div className="flex items-center justify-center w-16 h-16 rounded-full bg-slate-100 border border-slate-200 group-hover:bg-cyan-500/20 group-hover:border-cyan-500/50 transition-all duration-300">
+                          <ArrowRight className="w-8 h-8 text-slate-900 group-hover:translate-x-1 transition-transform duration-300" />
                         </div>
                       </motion.div>
                     </div>
@@ -287,7 +287,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                   <motion.div
                     whileHover={{ y: -8, scale: 1.02 }}
                     transition={{ duration: 0.3 }}
-                    className="relative h-full glass-premium rounded-2xl overflow-hidden
+                    className="relative h-full bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg rounded-2xl overflow-hidden
                              hover:border-blue-500/30
                              transition-all duration-500 hover:shadow-xl hover:shadow-blue-500/20
                              min-h-[320px]"
@@ -320,7 +320,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.3, delay: index * 0.1 + 0.15 }}
-                        className="text-xl font-bold text-white mb-3 group-hover:text-cyan-500 transition-colors duration-300 line-clamp-2"
+                        className="text-xl font-bold text-slate-900 mb-3 group-hover:text-cyan-500 transition-colors duration-300 line-clamp-2"
                       >
                         {post.title}
                       </motion.h3>
@@ -331,7 +331,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.3, delay: index * 0.1 + 0.2 }}
-                        className="text-gray-300 text-sm mb-4 line-clamp-3 flex-grow"
+                        className="text-slate-700 text-sm mb-4 line-clamp-3 flex-grow"
                       >
                         {post.excerpt}
                       </motion.p>
@@ -342,7 +342,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.3, delay: index * 0.1 + 0.25 }}
-                        className="flex items-center justify-between text-xs text-gray-400 pt-4 border-t border-white/10"
+                        className="flex items-center justify-between text-xs text-slate-600 pt-4 border-t border-slate-200"
                       >
                         <div className="flex items-center gap-1.5">
                           <Calendar className="w-3 h-3" />
@@ -385,7 +385,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
             transition={{ duration: 0.6 }}
             className="mt-16"
           >
-            <div className="relative glass-premium rounded-3xl p-12 text-center shadow-2xl">
+            <div className="relative bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg rounded-3xl p-12 text-center">
               <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-cyan-500/10 rounded-3xl" />
 
               <div className="relative z-10">
@@ -394,7 +394,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-white/20 mb-6"
+                  className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-slate-200/60 mb-6"
                 >
                   <FileText className="w-10 h-10 text-cyan-500" />
                 </motion.div>
@@ -404,7 +404,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
-                  className="text-3xl font-black text-white mb-4"
+                  className="text-3xl font-black text-slate-900 mb-4"
                 >
                   More Articles Coming Soon
                 </motion.h3>
@@ -414,7 +414,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.4 }}
-                  className="text-gray-300 text-lg mb-8 max-w-2xl mx-auto"
+                  className="text-slate-700 text-lg mb-8 max-w-2xl mx-auto"
                 >
                   We're constantly adding new content to help you grow your business. Subscribe to
                   our newsletter to stay updated.
@@ -448,7 +448,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="relative glass-premium rounded-3xl p-12 lg:p-16 text-center shadow-2xl"
+            className="relative bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg rounded-3xl p-12 lg:p-16 text-center"
           >
             {/* Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-3xl" />
@@ -459,7 +459,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6"
+                className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6"
               >
                 Ready to Grow Your Business?
               </motion.h2>
@@ -469,7 +469,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto"
+                className="text-xl text-slate-700 mb-10 max-w-2xl mx-auto"
               >
                 Book a free demo and discover how Capture Client can help you automate leads and
                 capture more clients.
@@ -495,7 +495,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <a
                     href="tel:865-346-6111"
-                    className="inline-flex items-center justify-center gap-2 backdrop-blur-md bg-white/10 border border-white/20 text-white px-8 py-4 rounded-full font-bold hover:bg-white/20 hover:border-white/30 transition-all duration-300"
+                    className="inline-flex items-center justify-center gap-2 backdrop-blur-md bg-white/10 border border-slate-200 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-white/20 hover:border-slate-200/60 transition-all duration-300"
                   >
                     <Mail className="w-5 h-5" />
                     (865) 346-6111

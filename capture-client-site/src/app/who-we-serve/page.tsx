@@ -8,7 +8,7 @@ import JsonLd from '@/components/seo/JsonLd';
 import { SITE_CONFIG } from '@/lib/seo-config';
 
 export const metadata: Metadata = {
-  title: 'Industries We Serve | AI Voice Agents for Every Business',
+  title: 'Industries We Serve | AI Voice Agents for Every Business | Capture Client',
   description: 'Capture Client serves 12+ industries with AI voice agents, lead generation, and marketing automation. From legal to healthcare, real estate to restaurants - never miss a call again.',
   keywords: [
     'ai voice agents by industry',
@@ -21,11 +21,11 @@ export const metadata: Metadata = {
     'insurance quote ai',
   ],
   openGraph: {
-    title: 'Industries We Serve | AI Voice Agents for Every Business',
+    title: 'Industries We Serve | AI Voice Agents for Every Business | Capture Client',
     description: '12+ industries trust Capture Client for 24/7 AI voice agents, lead capture, and appointment booking.',
     images: [
       {
-        url: `${SITE_CONFIG.url}/og-image-industries.jpg`,
+        url: `${SITE_CONFIG.url}/og-image.png`,
         width: 1200,
         height: 630,
         alt: 'Capture Client Industries',
@@ -48,12 +48,12 @@ export default function WhoWeServePage() {
     <>
       <JsonLd schema={pageSchema} />
 
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="relative pt-24 sm:pt-28 lg:pt-32 pb-16 md:pb-24 overflow-hidden">
           {/* Background Effects - Performance optimized for mobile */}
           <div className="absolute inset-0 bg-mesh-premium opacity-20 md:opacity-40" />
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+          <div className="absolute inset-0 bg-gradient-to-b from-white via-white/95 to-white" />
 
           {/* Animated Orbs - Hidden on mobile for performance */}
           <div className="hidden md:block absolute top-20 left-10 w-72 h-72 bg-gold-500/20 rounded-full blur-3xl animate-float-slow" />
@@ -62,13 +62,13 @@ export default function WhoWeServePage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white backdrop-blur-sm border border-slate-200 mb-8">
                 <Briefcase className="text-gold-400 w-4 h-4" />
-                <span className="text-sm font-semibold text-foreground">12+ Industries Served</span>
+                <span className="text-sm font-semibold text-slate-900">12+ Industries Served</span>
               </div>
 
               {/* Headline */}
-              <h1 className="font-heading text-5xl md:text-7xl font-bold text-foreground mb-6">
+              <h1 className="font-heading text-5xl md:text-7xl font-bold text-slate-900 mb-6">
                 Your Industry.{' '}
                 <span className="bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent">
                   Our Expertise.
@@ -76,7 +76,7 @@ export default function WhoWeServePage() {
               </h1>
 
               {/* Subheadline */}
-              <p className="text-xl md:text-2xl text-foreground-muted mb-8 leading-relaxed">
+              <p className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed">
                 AI voice agents built for your industry's unique needs. From legal intake to emergency dispatch,
                 healthcare scheduling to restaurant reservations - we speak your language.
               </p>
@@ -111,13 +111,13 @@ export default function WhoWeServePage() {
         </section>
 
         {/* Categories Overview */}
-        <section className="py-12 md:py-16 bg-gradient-to-b from-background to-background-darker">
+        <section className="py-12 md:py-16 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             <div className="max-w-3xl mx-auto text-center mb-16">
-              <h2 className="font-heading text-4xl font-bold text-foreground mb-4">
+              <h2 className="font-heading text-4xl font-bold text-slate-900 mb-4">
                 Solutions for Every Sector
               </h2>
-              <p className="text-lg text-foreground-muted">
+              <p className="text-lg text-slate-600">
                 Whether you're managing a law firm, running a restaurant, or operating a home service business,
                 our AI adapts to your industry's specific workflows and terminology.
               </p>
@@ -125,7 +125,7 @@ export default function WhoWeServePage() {
 
             {/* Category Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6 max-w-5xl mx-auto mb-20">
-              {categories.map((category, index) => {
+              {categories.map((category) => {
                 const categoryCount = INDUSTRIES.filter(i => i.category === category).length;
                 const iconMap: Record<string, React.ComponentType<{className?: string}>> = {
                   'Professional Services': Briefcase,
@@ -139,15 +139,15 @@ export default function WhoWeServePage() {
                 return (
                   <div
                     key={category}
-                    className="group relative p-6 rounded-2xl bg-gradient-to-br from-white/[0.08] to-white/[0.02] backdrop-blur-xl border border-white/10 hover:border-gold-500/30 transition-all duration-500 hover:shadow-glow-gold text-center"
+                    className="group relative p-6 rounded-2xl bg-white backdrop-blur-xl border border-slate-200 hover:border-gold-500/30 transition-all duration-500 hover:shadow-glow-gold text-center"
                   >
                     <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-br from-gold-500/20 to-gold-600/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <IconComponent className="text-gold-400 w-6 h-6" />
                     </div>
-                    <h3 className="font-semibold text-foreground mb-2 group-hover:text-gold-400 transition-colors duration-300">
+                    <h3 className="font-semibold text-slate-900 mb-2 group-hover:text-gold-400 transition-colors duration-300">
                       {category}
                     </h3>
-                    <p className="text-sm text-foreground-muted">
+                    <p className="text-sm text-slate-600">
                       {categoryCount} {categoryCount === 1 ? 'industry' : 'industries'}
                     </p>
                   </div>
@@ -158,7 +158,7 @@ export default function WhoWeServePage() {
         </section>
 
         {/* Industries Grid */}
-        <section className="py-16 md:py-20 bg-background-darker">
+        <section className="py-16 md:py-20 bg-slate-50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {INDUSTRIES.map((industry, index) => (
@@ -169,50 +169,50 @@ export default function WhoWeServePage() {
         </section>
 
         {/* Why Industry-Specific Matters */}
-        <section className="py-16 md:py-20 bg-gradient-to-b from-background-darker to-background">
+        <section className="py-16 md:py-20 bg-white">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
+                <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
                   Why Industry-Specific{' '}
                   <span className="bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent">
                     AI Matters
                   </span>
                 </h2>
-                <p className="text-xl text-foreground-muted">
+                <p className="text-xl text-slate-600">
                   Generic answering services can't handle your industry's unique terminology, compliance needs, and workflows.
                 </p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
-                <div className="p-8 rounded-2xl bg-gradient-to-br from-white/[0.12] to-white/[0.03] backdrop-blur-2xl border border-white/20">
+                <div className="p-8 rounded-2xl bg-white backdrop-blur-2xl border border-slate-200">
                   <Globe className="w-10 h-10 text-gold-400 mb-4" />
-                  <h3 className="text-2xl font-bold text-foreground mb-3">Industry Vocabulary</h3>
-                  <p className="text-foreground-muted leading-relaxed">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-3">Industry Vocabulary</h3>
+                  <p className="text-slate-600 leading-relaxed">
                     Legal conflict checking. HVAC diagnostics. Real estate MLS terms. Our AI speaks your industry's language naturally.
                   </p>
                 </div>
 
-                <div className="p-8 rounded-2xl bg-gradient-to-br from-white/[0.12] to-white/[0.03] backdrop-blur-2xl border border-white/20">
+                <div className="p-8 rounded-2xl bg-white backdrop-blur-2xl border border-slate-200">
                   <ShieldCheck className="w-10 h-10 text-accent-400 mb-4" />
-                  <h3 className="text-2xl font-bold text-foreground mb-3">Compliance Ready</h3>
-                  <p className="text-foreground-muted leading-relaxed">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-3">Compliance Ready</h3>
+                  <p className="text-slate-600 leading-relaxed">
                     HIPAA for healthcare. Attorney-client privilege for law. SOC-II across the board. Industry-specific security baked in.
                   </p>
                 </div>
 
-                <div className="p-8 rounded-2xl bg-gradient-to-br from-white/[0.12] to-white/[0.03] backdrop-blur-2xl border border-white/20">
+                <div className="p-8 rounded-2xl bg-white backdrop-blur-2xl border border-slate-200">
                   <Puzzle className="w-10 h-10 text-primary-400 mb-4" />
-                  <h3 className="text-2xl font-bold text-foreground mb-3">Native Integrations</h3>
-                  <p className="text-foreground-muted leading-relaxed">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-3">Native Integrations</h3>
+                  <p className="text-slate-600 leading-relaxed">
                     Clio for legal. ServiceTitan for HVAC. Epic for healthcare. We integrate with the tools you already use.
                   </p>
                 </div>
 
-                <div className="p-8 rounded-2xl bg-gradient-to-br from-white/[0.12] to-white/[0.03] backdrop-blur-2xl border border-white/20">
+                <div className="p-8 rounded-2xl bg-white backdrop-blur-2xl border border-slate-200">
                   <Brain className="w-10 h-10 text-cyan-400 mb-4" />
-                  <h3 className="text-2xl font-bold text-foreground mb-3">Smart Workflows</h3>
-                  <p className="text-foreground-muted leading-relaxed">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-3">Smart Workflows</h3>
+                  <p className="text-slate-600 leading-relaxed">
                     Emergency triage for home services. Lead qualification for real estate. Symptom assessment for healthcare. Industry-tuned logic.
                   </p>
                 </div>
@@ -222,17 +222,17 @@ export default function WhoWeServePage() {
         </section>
 
         {/* Final CTA */}
-        <section className="py-16 md:py-20 bg-background relative overflow-hidden">
+        <section className="py-16 md:py-20 bg-white relative overflow-hidden">
           {/* Background - Performance optimized for mobile */}
-          <div className="absolute inset-0 bg-gradient-to-br from-gold-500/10 via-background to-accent-500/10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-gold-500/10 via-white to-accent-500/10" />
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-mesh-premium opacity-20 md:opacity-30" />
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
+              <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
                 Ready to See Your Industry in Action?
               </h2>
-              <p className="text-xl text-foreground-muted mb-8">
+              <p className="text-xl text-slate-600 mb-8">
                 Book a personalized demo with industry-specific examples from businesses like yours.
               </p>
 

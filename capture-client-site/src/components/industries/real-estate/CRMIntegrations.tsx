@@ -88,8 +88,8 @@ export function CRMIntegrations() {
       style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
     >
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-[#030303]" />
-      <div className="absolute inset-0 bg-gradient-to-br from-[#00C9FF]/10 via-transparent to-[#4A69E2]/10" />
+      <div className="absolute inset-0 bg-slate-50" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-transparent to-cyan-50" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section header */}
@@ -99,17 +99,17 @@ export function CRMIntegrations() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl mb-6">
-            <RefreshCw className="text-[#00C9FF] w-5 h-5" />
-            <span className="text-sm text-[#00C9FF] uppercase tracking-wide" style={{ fontWeight: 600 }}>
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200 mb-6">
+            <RefreshCw className="text-blue-600 w-5 h-5" />
+            <span className="text-sm text-blue-600 uppercase tracking-wide" style={{ fontWeight: 600 }}>
               Seamless Integration
             </span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-6">
             <span style={{ fontWeight: 200 }}>Works With Your </span>
-            <span className="text-[#00C9FF]" style={{ fontWeight: 800 }}>Existing CRM</span>
+            <span className="text-blue-600" style={{ fontWeight: 800 }}>Existing CRM</span>
           </h2>
-          <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed" style={{ fontWeight: 300 }}>
+          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" style={{ fontWeight: 300 }}>
             Leads flow directly into your workflow. Automatic lead scoring. Zero manual entry.
           </p>
         </motion.div>
@@ -128,15 +128,15 @@ export function CRMIntegrations() {
                 variant="premium"
                 className={`h-full p-6 border transition-all duration-500 ${
                   crm.popular
-                    ? "border-[#00C9FF]/40 bg-gradient-to-br from-[#00C9FF]/10 to-[#4A69E2]/5"
-                    : "border-white/[0.06] bg-white/[0.02]"
-                } backdrop-blur-xl group-hover:border-[#00C9FF]/40 group-hover:shadow-[0_0_40px_rgba(0,201,255,0.2)]`}
+                    ? "border-blue-300 bg-gradient-to-br from-blue-50 to-cyan-50"
+                    : "border-slate-200 bg-white/70"
+                } backdrop-blur-xl group-hover:border-blue-300 group-hover:shadow-lg group-hover:shadow-blue-200/50`}
               >
                 {/* Popular badge */}
                 {crm.popular && (
                   <div className="absolute top-4 right-4">
-                    <div className="px-3 py-1 bg-[#00C9FF] rounded-full">
-                      <span className="text-xs text-black uppercase tracking-wider" style={{ fontWeight: 700 }}>
+                    <div className="px-3 py-1 bg-blue-600 rounded-full">
+                      <span className="text-xs text-white uppercase tracking-wider" style={{ fontWeight: 700 }}>
                         Popular
                       </span>
                     </div>
@@ -144,20 +144,20 @@ export function CRMIntegrations() {
                 )}
 
                 {/* Logo placeholder */}
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#00C9FF]/20 to-[#4A69E2]/20 border-2 border-[#00C9FF]/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 border-2 border-blue-300 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                   {(() => {
                     const IconComponent = iconMap[crm.logo] || Building2;
-                    return <IconComponent className="text-[#00C9FF] w-7 h-7" />;
+                    return <IconComponent className="text-white w-7 h-7" />;
                   })()}
                 </div>
 
                 {/* Name */}
-                <h3 className="text-xl font-bold text-white mb-2">
+                <h3 className="text-xl font-bold text-slate-900 mb-2">
                   {crm.name}
                 </h3>
 
                 {/* Description */}
-                <p className="text-white/60 text-sm mb-4 leading-relaxed">
+                <p className="text-slate-600 text-sm mb-4 leading-relaxed">
                   {crm.description}
                 </p>
 
@@ -168,8 +168,8 @@ export function CRMIntegrations() {
                       key={fIndex}
                       className="flex items-center gap-2 text-sm"
                     >
-                      <CheckCircle className="text-[#00C9FF] w-4 h-4" />
-                      <span className="text-white/70" style={{ fontWeight: 400 }}>{feature}</span>
+                      <CheckCircle className="text-blue-600 w-4 h-4" />
+                      <span className="text-slate-700" style={{ fontWeight: 400 }}>{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -179,7 +179,7 @@ export function CRMIntegrations() {
                   initial={{ scaleX: 0 }}
                   animate={isInView ? { scaleX: 1 } : { scaleX: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 + 0.3 }}
-                  className="h-1 bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] mt-4 rounded-full origin-left"
+                  className="h-1 bg-gradient-to-r from-blue-600 to-cyan-500 mt-4 rounded-full origin-left"
                 />
               </GlassCard>
             </motion.div>
@@ -193,33 +193,33 @@ export function CRMIntegrations() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-6"
         >
-          <div className="flex items-center gap-4 p-6 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center flex-shrink-0">
-              <RefreshCcw className="text-black w-6 h-6" />
+          <div className="flex items-center gap-4 p-6 rounded-xl bg-white/70 backdrop-blur-xl border border-slate-200">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-600 to-emerald-600 flex items-center justify-center flex-shrink-0">
+              <RefreshCcw className="text-white w-6 h-6" />
             </div>
             <div>
-              <p className="font-bold text-white text-lg">Instant Sync</p>
-              <p className="text-white/60 text-sm">Real-time lead updates</p>
+              <p className="font-bold text-slate-900 text-lg">Instant Sync</p>
+              <p className="text-slate-600 text-sm">Real-time lead updates</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-4 p-6 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold to-gold-light flex items-center justify-center flex-shrink-0">
-              <Sparkles className="text-black w-6 h-6" />
+          <div className="flex items-center gap-4 p-6 rounded-xl bg-white/70 backdrop-blur-xl border border-slate-200">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-yellow-500 flex items-center justify-center flex-shrink-0">
+              <Sparkles className="text-white w-6 h-6" />
             </div>
             <div>
-              <p className="font-bold text-white text-lg">Auto-Scoring</p>
-              <p className="text-white/60 text-sm">AI prioritizes hot leads</p>
+              <p className="font-bold text-slate-900 text-lg">Auto-Scoring</p>
+              <p className="text-slate-600 text-sm">AI prioritizes hot leads</p>
             </div>
           </div>
 
-          <div className="flex items-center gap-4 p-6 rounded-xl bg-white/5 backdrop-blur-xl border border-white/10">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-accent to-cyan-400 flex items-center justify-center flex-shrink-0">
-              <PencilOff className="text-black w-6 h-6" />
+          <div className="flex items-center gap-4 p-6 rounded-xl bg-white/70 backdrop-blur-xl border border-slate-200">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center flex-shrink-0">
+              <PencilOff className="text-white w-6 h-6" />
             </div>
             <div>
-              <p className="font-bold text-white text-lg">Zero Data Entry</p>
-              <p className="text-white/60 text-sm">Fully automated workflow</p>
+              <p className="font-bold text-slate-900 text-lg">Zero Data Entry</p>
+              <p className="text-slate-600 text-sm">Fully automated workflow</p>
             </div>
           </div>
         </motion.div>

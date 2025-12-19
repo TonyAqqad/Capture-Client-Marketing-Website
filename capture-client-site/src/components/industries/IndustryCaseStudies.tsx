@@ -265,18 +265,18 @@ export default function IndustryCaseStudies({
   };
 
   return (
-    <section className="py-16 md:py-20 bg-gradient-to-b from-background to-background-darker">
+    <section className="py-16 md:py-20 bg-gradient-to-b from-white to-slate-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               Proven Results in{' '}
               <span className={`bg-gradient-to-r ${theme.gradient} bg-clip-text text-transparent`}>
                 {industryName}
               </span>
             </h2>
-            <p className="text-xl text-foreground-muted max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Real businesses in your industry achieving extraordinary results with Capture Client.
             </p>
           </div>
@@ -297,16 +297,16 @@ export default function IndustryCaseStudies({
                     <div className="p-8">
                       {/* Company Info */}
                       <div className="mb-6">
-                        <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border ${theme.border} mb-3`}>
+                        <div className={`inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 backdrop-blur-xl border ${theme.border} mb-3`}>
                           <Building2 className="w-3.5 h-3.5" />
-                          <span className="text-xs font-semibold text-foreground">
+                          <span className="text-xs font-semibold text-slate-900">
                             {caseStudy.industry}
                           </span>
                         </div>
-                        <h3 className="text-2xl font-bold text-foreground mb-2 group-hover:text-gold-400 transition-colors">
+                        <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-gold-400 transition-colors">
                           {caseStudy.company}
                         </h3>
-                        <div className="flex items-center gap-2 text-sm text-foreground-muted">
+                        <div className="flex items-center gap-2 text-sm text-slate-600">
                           <MapPin className="w-3.5 h-3.5" />
                           <span>{caseStudy.location}</span>
                         </div>
@@ -314,14 +314,14 @@ export default function IndustryCaseStudies({
 
                       {/* Top Result Highlight */}
                       <div className={`p-6 rounded-2xl ${theme.bg} border ${theme.border} mb-6`}>
-                        <div className="text-sm text-foreground-muted mb-2">
+                        <div className="text-sm text-slate-600 mb-2">
                           {topResult.metric}
                         </div>
                         <div className={`text-4xl font-bold ${theme.text} mb-2`}>
                           {topResult.improvement}
                         </div>
                         <div className="flex items-center justify-between text-sm">
-                          <span className="text-foreground-muted">
+                          <span className="text-slate-600">
                             {topResult.before}
                           </span>
                           <ArrowRight className="w-3.5 h-3.5 text-gold-400" />
@@ -336,7 +336,7 @@ export default function IndustryCaseStudies({
                         {caseStudy.results.slice(0, 2).map((result, idx) => (
                           result !== topResult && (
                             <div key={idx} className="flex items-center justify-between text-sm">
-                              <span className="text-foreground-muted">{result.metric}</span>
+                              <span className="text-slate-600">{result.metric}</span>
                               <span className={`font-bold ${theme.text}`}>
                                 {result.improvement}
                               </span>
@@ -346,10 +346,10 @@ export default function IndustryCaseStudies({
                       </div>
 
                       {/* ROI Badge */}
-                      <div className="flex items-center justify-between pt-4 border-t border-white/10">
+                      <div className="flex items-center justify-between pt-4 border-t border-slate-200">
                         <div className="flex items-center gap-2">
-                          <Clock className="w-4 h-4 text-foreground-muted" />
-                          <span className="text-sm text-foreground-muted">{caseStudy.duration}</span>
+                          <Clock className="w-4 h-4 text-slate-600" />
+                          <span className="text-sm text-slate-600">{caseStudy.duration}</span>
                         </div>
                         <div className={`px-3 py-1 rounded-full bg-gradient-to-r ${theme.gradient} bg-opacity-20 border ${theme.border}`}>
                           <span className={`text-sm font-bold ${theme.text}`}>

@@ -37,12 +37,12 @@ const CRMCard: React.FC<CRMCardProps> = ({ fields }) => {
       className="relative w-full max-w-md"
     >
       {/* Card Container with Glassmorphism */}
-      <div className="relative rounded-2xl backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl overflow-hidden">
+      <div className="relative rounded-2xl backdrop-blur-xl bg-slate-50 border border-slate-200 shadow-2xl overflow-hidden">
         {/* Subtle Inner Glow */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-transparent to-gold/5 pointer-events-none" />
 
         {/* Card Header */}
-        <div className="relative px-4 sm:px-6 py-4 sm:py-5 border-b border-white/10">
+        <div className="relative px-4 sm:px-6 py-4 sm:py-5 border-b border-slate-200">
           <div className="flex items-center gap-2 sm:gap-3">
             <motion.div
               initial={{ scale: 0, rotate: -180 }}
@@ -53,8 +53,8 @@ const CRMCard: React.FC<CRMCardProps> = ({ fields }) => {
               <UserPlus className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-400" />
             </motion.div>
             <div className="min-w-0">
-              <h3 className="text-base sm:text-lg font-semibold text-white tracking-tight truncate">New Lead Captured</h3>
-              <p className="text-[10px] sm:text-xs text-white/40 font-mono truncate">AI Voice Agent → CRM</p>
+              <h3 className="text-base sm:text-lg font-semibold text-slate-900 tracking-tight truncate">New Lead Captured</h3>
+              <p className="text-[10px] sm:text-xs text-slate-500 font-mono truncate">AI Voice Agent → CRM</p>
             </div>
           </div>
         </div>
@@ -124,7 +124,7 @@ const CRMField: React.FC<CRMFieldProps> = ({ field, index, icon }) => {
           ${
             filled
               ? `${colors.bg} border ${colors.border} shadow-lg ${colors.glow}`
-              : "bg-white/[0.02] border border-white/5"
+              : "bg-slate-50/50 border border-slate-200/50"
           }
         `}
       >
@@ -134,7 +134,7 @@ const CRMField: React.FC<CRMFieldProps> = ({ field, index, icon }) => {
             <div
               className={`
                 transition-colors duration-300 w-3.5 h-3.5 sm:w-4 sm:h-4 flex items-center justify-center
-                ${filled ? colors.text : "text-white/30"}
+                ${filled ? colors.text : "text-slate-400"}
               `}
             >
               {icon}
@@ -142,7 +142,7 @@ const CRMField: React.FC<CRMFieldProps> = ({ field, index, icon }) => {
             <span
               className={`
                 text-[9px] sm:text-[10px] font-bold uppercase tracking-wider transition-colors duration-300
-                ${filled ? colors.text : "text-white/30"}
+                ${filled ? colors.text : "text-slate-400"}
               `}
             >
               {label}
@@ -173,11 +173,11 @@ const CRMField: React.FC<CRMFieldProps> = ({ field, index, icon }) => {
                           repeat: Infinity,
                           delay: i * 0.2,
                         }}
-                        className="w-1.5 h-1.5 rounded-full bg-white/20"
+                        className="w-1.5 h-1.5 rounded-full bg-slate-300"
                       />
                     ))}
                   </div>
-                  <span className="text-xs sm:text-sm text-white/20 font-mono">Waiting...</span>
+                  <span className="text-xs sm:text-sm text-slate-400 font-mono">Waiting...</span>
                 </motion.div>
               ) : (
                 // Filled State with Flash Animation
@@ -205,7 +205,7 @@ const CRMField: React.FC<CRMFieldProps> = ({ field, index, icon }) => {
                     transition={{ delay: 0.2 }}
                     className={`
                       text-sm sm:text-base font-mono font-medium tracking-tight relative z-10 truncate
-                      ${urgent ? "text-red-100" : "text-white"}
+                      ${urgent ? "text-red-600" : "text-slate-900"}
                     `}
                   >
                     {value}

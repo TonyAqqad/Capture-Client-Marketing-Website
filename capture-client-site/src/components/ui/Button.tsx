@@ -29,13 +29,13 @@ export function Button({
   fullWidth = false,
   ariaLabel
 }: ButtonProps) {
-  const baseClasses = "relative inline-flex items-center justify-center gap-2 font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-accent/50 focus:ring-offset-2 focus:ring-offset-background overflow-hidden touch-target";
+  const baseClasses = "relative inline-flex items-center justify-center gap-2 font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:ring-offset-2 focus:ring-offset-white overflow-hidden touch-target";
 
   const variantClasses = {
-    primary: "bg-gradient-to-r from-accent via-primary to-accent text-white shadow-glow-lg hover:shadow-glow border-2 border-transparent hover:border-accent/30",
-    secondary: "bg-transparent border-2 border-surface-border text-foreground backdrop-blur-sm hover:bg-surface/50 hover:border-primary/50",
-    glass: "bg-white/10 backdrop-blur-lg border-2 border-white/20 text-foreground hover:bg-white/[0.15] hover:border-white/30 hover:shadow-glow-lg shadow-[0_4px_24px_rgba(0,0,0,0.2)]",
-    ghost: "bg-white/5 border border-white/10 text-foreground backdrop-blur-sm hover:bg-white/10 hover:border-white/20"
+    primary: "bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 border-2 border-transparent hover:border-blue-400/30",
+    secondary: "bg-white border-2 border-slate-200 text-slate-900 backdrop-blur-sm hover:bg-slate-50 hover:border-slate-300",
+    glass: "bg-white/80 backdrop-blur-xl border-2 border-slate-200 text-slate-900 hover:bg-white hover:border-slate-300 shadow-lg shadow-slate-200/50",
+    ghost: "bg-white/70 border border-slate-200 text-slate-900 backdrop-blur-sm hover:bg-white hover:border-slate-300"
   };
 
   const sizeClasses = {
@@ -70,8 +70,8 @@ export function Button({
       {/* Glass effect overlay (glass variant only) */}
       {variant === "glass" && (
         <>
-          <div className="absolute inset-0 bg-gradient-to-br from-white/[0.12] via-white/[0.06] to-white/[0.03] rounded-inherit" />
-          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/70 to-white/50 rounded-inherit" />
+          <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-slate-300/50 to-transparent" />
         </>
       )}
 

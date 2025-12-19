@@ -233,15 +233,13 @@ export function PremiumServices() {
     offset: ["start end", "end start"]
   });
 
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
   const floatY = useTransform(scrollYProgress, [0, 1], [0, -50]);
 
   return (
     <section
       id="services"
       ref={containerRef}
-      className="relative overflow-hidden w-full"
-      style={{ backgroundColor: '#030303' }}
+      className="relative overflow-hidden w-full bg-gradient-to-b from-white to-slate-50"
     >
       {/* ============================================================
           SECTION 1: THE PROBLEM - EDITORIAL OPENING
@@ -297,7 +295,7 @@ export function PremiumServices() {
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.08] mb-8 sm:mb-12"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-slate-900 leading-[1.08] mb-8 sm:mb-12"
               style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
             >
               <span style={{ fontWeight: 200 }}>Your competitors are </span>
@@ -316,11 +314,11 @@ export function PremiumServices() {
             >
               <div className="flex items-baseline gap-3">
                 <span className="text-5xl sm:text-6xl lg:text-7xl text-[#ff4444]" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}>27%</span>
-                <span className="text-gray-400 text-sm sm:text-base max-w-[120px] leading-tight" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>of calls go unanswered</span>
+                <span className="text-slate-600 text-sm sm:text-base max-w-[120px] leading-tight" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>of calls go unanswered</span>
               </div>
               <div className="flex items-baseline gap-3">
                 <span className="text-5xl sm:text-6xl lg:text-7xl text-[#ff4444]" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}>85%</span>
-                <span className="text-gray-400 text-sm sm:text-base max-w-[140px] leading-tight" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>never call back after voicemail</span>
+                <span className="text-slate-600 text-sm sm:text-base max-w-[140px] leading-tight" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>never call back after voicemail</span>
               </div>
             </motion.div>
 
@@ -329,11 +327,11 @@ export function PremiumServices() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="text-xl sm:text-2xl text-gray-400 max-w-3xl leading-relaxed"
+              className="text-xl sm:text-2xl text-slate-600 max-w-3xl leading-relaxed"
               style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}
             >
               Every missed call is revenue walking out the door. Every unanswered inquiry is a customer choosing your competitor.
-              <span className="text-white" style={{ fontWeight: 600 }}> It doesn&apos;t have to be this way.</span>
+              <span className="text-slate-900" style={{ fontWeight: 600 }}> It doesn&apos;t have to be this way.</span>
             </motion.p>
           </motion.div>
         </div>
@@ -371,9 +369,9 @@ export function PremiumServices() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-center mb-16 sm:mb-20"
           >
-            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/[0.06] backdrop-blur-sm" style={{ background: 'rgba(0, 201, 255, 0.05)' }}>
+            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-slate-200 backdrop-blur-sm" style={{ background: 'rgba(0, 201, 255, 0.08)' }}>
               <Zap className="w-4 h-4 text-[#00C9FF]" />
-              <span className="text-sm text-white" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}>The Solution</span>
+              <span className="text-sm text-slate-900" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}>The Solution</span>
             </span>
           </motion.div>
 
@@ -390,7 +388,7 @@ export function PremiumServices() {
               <div className="absolute -inset-4 bg-gradient-to-r from-[#00C9FF]/15 via-[#4A69E2]/10 to-[#00C9FF]/15 rounded-[2rem] blur-3xl opacity-40" />
 
               {/* Main card with ultra-subtle glass */}
-              <div className="relative rounded-3xl border border-white/[0.06] overflow-hidden" style={{ background: 'rgba(255, 255, 255, 0.02)', backdropFilter: 'blur(20px)' }}>
+              <div className="relative rounded-3xl border border-slate-200 overflow-hidden bg-white/70 backdrop-blur-xl">
                 {/* Top accent line */}
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#00C9FF]/40 to-transparent" />
 
@@ -404,7 +402,7 @@ export function PremiumServices() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.3 }}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/[0.08] mb-6"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-200 mb-6"
                         style={{ background: 'rgba(212, 175, 55, 0.08)' }}
                       >
                         <span className="w-2 h-2 bg-[#D4AF37] rounded-full animate-pulse" />
@@ -418,7 +416,7 @@ export function PremiumServices() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.4 }}
-                        className="text-3xl sm:text-4xl lg:text-5xl text-white mb-6 leading-tight"
+                        className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-6 leading-tight"
                         style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}
                       >
                         Voice AI Agents
@@ -429,7 +427,7 @@ export function PremiumServices() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.5 }}
-                        className="text-lg sm:text-xl text-gray-400 mb-8 leading-relaxed"
+                        className="text-lg sm:text-xl text-slate-600 mb-8 leading-relaxed"
                         style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}
                       >
                         AI-powered voice agents handle calls 24/7, qualify leads, book appointments, and answer questions - so you never miss an opportunity.
@@ -442,22 +440,20 @@ export function PremiumServices() {
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.5, delay: 0.6 }}
-                          className="p-5 rounded-xl border border-white/[0.06]"
-                          style={{ background: 'rgba(255, 255, 255, 0.02)' }}
+                          className="p-5 rounded-xl border border-slate-200 bg-slate-50"
                         >
                           <div className="text-3xl sm:text-4xl text-[#00C9FF] mb-1" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>24/7</div>
-                          <div className="text-sm text-gray-400" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>Always available</div>
+                          <div className="text-sm text-slate-600" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>Always available</div>
                         </motion.div>
                         <motion.div
                           initial={{ opacity: 0, y: 20 }}
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.5, delay: 0.7 }}
-                          className="p-5 rounded-xl border border-white/[0.06]"
-                          style={{ background: 'rgba(255, 255, 255, 0.02)' }}
+                          className="p-5 rounded-xl border border-slate-200 bg-slate-50"
                         >
                           <div className="text-3xl sm:text-4xl text-[#D4AF37] mb-1" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>3 sec</div>
-                          <div className="text-sm text-gray-400" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>Avg response time</div>
+                          <div className="text-sm text-slate-600" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>Avg response time</div>
                         </motion.div>
                       </div>
 
@@ -475,9 +471,9 @@ export function PremiumServices() {
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: 0.8 + idx * 0.1 }}
-                            className="flex items-center gap-3 text-white"
+                            className="flex items-center gap-3 text-slate-900"
                           >
-                            <div className="w-6 h-6 rounded-full border border-white/[0.08] flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(0, 201, 255, 0.1)' }}>
+                            <div className="w-6 h-6 rounded-full border border-slate-200 flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(0, 201, 255, 0.1)' }}>
                               <svg className="w-3.5 h-3.5 text-[#00C9FF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                               </svg>
@@ -557,13 +553,13 @@ export function PremiumServices() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="max-w-4xl mx-auto text-center mb-16 sm:mb-20"
           >
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl text-white mb-6 leading-tight" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+            <h3 className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-6 leading-tight" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
               <span style={{ fontWeight: 300 }}>Complete the </span>
               <span style={{ fontWeight: 800, background: 'linear-gradient(135deg, #D4AF37 0%, #00C9FF 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                 Growth Engine
               </span>
             </h3>
-            <p className="text-lg sm:text-xl text-gray-400" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>
+            <p className="text-lg sm:text-xl text-slate-600" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>
               Voice AI is just the beginning. Add targeted ads and unified lead management to build an unstoppable growth machine.
             </p>
           </motion.div>
@@ -579,8 +575,7 @@ export function PremiumServices() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 whileHover={{ y: -8 }}
-                className="group rounded-2xl p-8 sm:p-10 border border-white/[0.06] hover:border-[#D4AF37]/30 transition-all duration-500 cursor-pointer"
-                style={{ background: 'rgba(255, 255, 255, 0.02)', backdropFilter: 'blur(20px)' }}
+                className="group rounded-2xl p-8 sm:p-10 border border-slate-200 hover:border-[#D4AF37]/30 transition-all duration-500 cursor-pointer bg-white/70 backdrop-blur-xl"
               >
                 <div className="flex flex-col sm:flex-row gap-6 items-start">
                   {/* Icon */}
@@ -597,24 +592,24 @@ export function PremiumServices() {
                   {/* Content */}
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
-                      <h4 className="text-2xl sm:text-3xl text-white group-hover:text-[#D4AF37] transition-colors" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>
+                      <h4 className="text-2xl sm:text-3xl text-slate-900 group-hover:text-[#D4AF37] transition-colors" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>
                         Google Ads
                       </h4>
                       <TrendingUp className="w-5 h-5 text-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity" />
                     </div>
-                    <p className="text-gray-400 mb-6 leading-relaxed" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>
+                    <p className="text-slate-600 mb-6 leading-relaxed" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>
                       Precision-targeted search campaigns that capture high-intent buyers actively searching for your services right now.
                     </p>
 
                     {/* Key metrics */}
                     <div className="flex flex-wrap gap-4">
-                      <div className="px-4 py-2 rounded-lg border border-white/[0.06]" style={{ background: 'rgba(255, 255, 255, 0.02)' }}>
+                      <div className="px-4 py-2 rounded-lg border border-slate-200 bg-slate-50">
                         <span className="text-[#D4AF37]" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>4.2x</span>
-                        <span className="text-gray-400 text-sm ml-2" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>avg ROAS</span>
+                        <span className="text-slate-600 text-sm ml-2" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>avg ROAS</span>
                       </div>
-                      <div className="px-4 py-2 rounded-lg border border-white/[0.06]" style={{ background: 'rgba(255, 255, 255, 0.02)' }}>
+                      <div className="px-4 py-2 rounded-lg border border-slate-200 bg-slate-50">
                         <span className="text-[#D4AF37]" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>-40%</span>
-                        <span className="text-gray-400 text-sm ml-2" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>cost per lead</span>
+                        <span className="text-slate-600 text-sm ml-2" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>cost per lead</span>
                       </div>
                     </div>
                   </div>
@@ -628,8 +623,7 @@ export function PremiumServices() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 whileHover={{ y: -8 }}
-                className="group rounded-2xl p-8 sm:p-10 border border-white/[0.06] hover:border-[#00C9FF]/30 transition-all duration-500 cursor-pointer"
-                style={{ background: 'rgba(255, 255, 255, 0.02)', backdropFilter: 'blur(20px)' }}
+                className="group rounded-2xl p-8 sm:p-10 border border-slate-200 hover:border-[#00C9FF]/30 transition-all duration-500 cursor-pointer bg-white/70 backdrop-blur-xl"
               >
                 <div className="flex flex-col sm:flex-row gap-6 items-start">
                   {/* Icon */}
@@ -646,24 +640,24 @@ export function PremiumServices() {
                   {/* Content */}
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
-                      <h4 className="text-2xl sm:text-3xl text-white group-hover:text-[#00C9FF] transition-colors" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>
+                      <h4 className="text-2xl sm:text-3xl text-slate-900 group-hover:text-[#00C9FF] transition-colors" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>
                         Facebook Ads
                       </h4>
                       <Users className="w-5 h-5 text-[#00C9FF] opacity-0 group-hover:opacity-100 transition-opacity" />
                     </div>
-                    <p className="text-gray-400 mb-6 leading-relaxed" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>
+                    <p className="text-slate-600 mb-6 leading-relaxed" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>
                       Laser-focused social campaigns that reach your ideal customers based on demographics, interests, and behaviors.
                     </p>
 
                     {/* Key metrics */}
                     <div className="flex flex-wrap gap-4">
-                      <div className="px-4 py-2 rounded-lg border border-white/[0.06]" style={{ background: 'rgba(255, 255, 255, 0.02)' }}>
+                      <div className="px-4 py-2 rounded-lg border border-slate-200 bg-slate-50">
                         <span className="text-[#00C9FF]" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>3.8x</span>
-                        <span className="text-gray-400 text-sm ml-2" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>avg ROAS</span>
+                        <span className="text-slate-600 text-sm ml-2" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>avg ROAS</span>
                       </div>
-                      <div className="px-4 py-2 rounded-lg border border-white/[0.06]" style={{ background: 'rgba(255, 255, 255, 0.02)' }}>
+                      <div className="px-4 py-2 rounded-lg border border-slate-200 bg-slate-50">
                         <span className="text-[#00C9FF]" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>2.1M+</span>
-                        <span className="text-gray-400 text-sm ml-2" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>reach potential</span>
+                        <span className="text-slate-600 text-sm ml-2" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>reach potential</span>
                       </div>
                     </div>
                   </div>
@@ -677,8 +671,7 @@ export function PremiumServices() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="group relative overflow-hidden rounded-2xl border border-white/[0.06]"
-              style={{ background: 'rgba(255, 255, 255, 0.02)', backdropFilter: 'blur(20px)' }}
+              className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white/70 backdrop-blur-xl"
             >
               {/* Subtle mesh pattern */}
               <div
@@ -702,10 +695,10 @@ export function PremiumServices() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: 0.5 }}
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/[0.08] mb-6"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-200 mb-6"
                       style={{ background: 'rgba(212, 175, 55, 0.05)' }}
                     >
-                      <span className="text-xs uppercase tracking-wider text-gray-400" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}>
+                      <span className="text-xs uppercase tracking-wider text-slate-600" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}>
                         Everything Connected
                       </span>
                     </motion.div>
@@ -715,7 +708,7 @@ export function PremiumServices() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, delay: 0.6 }}
-                      className="text-3xl sm:text-4xl lg:text-5xl text-white mb-6 leading-tight"
+                      className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-6 leading-tight"
                       style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}
                     >
                       Complete Lead Generation System
@@ -726,7 +719,7 @@ export function PremiumServices() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, delay: 0.7 }}
-                      className="text-lg sm:text-xl text-gray-400 mb-8 leading-relaxed max-w-2xl"
+                      className="text-lg sm:text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl"
                       style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}
                     >
                       Unified CRM, analytics dashboard, and marketing automation - track every lead from first contact to closed deal in one seamless platform.
@@ -746,15 +739,14 @@ export function PremiumServices() {
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.5, delay: 0.8 + idx * 0.1 }}
-                          className="flex items-center gap-3 px-5 py-4 rounded-xl border border-white/[0.06] hover:border-[#D4AF37]/20 transition-colors"
-                          style={{ background: 'rgba(255, 255, 255, 0.02)' }}
+                          className="flex items-center gap-3 px-5 py-4 rounded-xl border border-slate-200 hover:border-[#D4AF37]/20 transition-colors bg-slate-50"
                         >
-                          <div className="w-10 h-10 rounded-lg border border-white/[0.08] flex items-center justify-center" style={{ background: 'rgba(212, 175, 55, 0.1)' }}>
+                          <div className="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center" style={{ background: 'rgba(212, 175, 55, 0.1)' }}>
                             <svg className="w-5 h-5 text-[#D4AF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
-                          <span className="text-white" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 500 }}>{feature.label}</span>
+                          <span className="text-slate-900" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 500 }}>{feature.label}</span>
                         </motion.div>
                       ))}
                     </div>
@@ -817,13 +809,13 @@ export function PremiumServices() {
             className="max-w-4xl mx-auto text-center"
           >
             {/* Value proposition */}
-            <div className="rounded-2xl p-10 sm:p-14 lg:p-16 border border-white/[0.06]" style={{ background: 'rgba(255, 255, 255, 0.02)', backdropFilter: 'blur(20px)' }}>
+            <div className="rounded-2xl p-10 sm:p-14 lg:p-16 border border-slate-200 bg-white/70 backdrop-blur-xl">
               <motion.h3
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-3xl sm:text-4xl lg:text-5xl text-white mb-6 leading-tight"
+                className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-6 leading-tight"
                 style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
               >
                 <span style={{ fontWeight: 300 }}>Ready to see it </span>
@@ -837,7 +829,7 @@ export function PremiumServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-lg sm:text-xl text-gray-400 mb-10 max-w-2xl mx-auto"
+                className="text-lg sm:text-xl text-slate-600 mb-10 max-w-2xl mx-auto"
                 style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}
               >
                 Join businesses capturing every lead with AI voice agents, targeted ads, and unified lead management.
@@ -854,7 +846,7 @@ export function PremiumServices() {
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                   <Link
                     href="/contact"
-                    className="btn-gold px-10 py-5 text-lg rounded-xl shadow-glow-gold-lg inline-flex items-center gap-3 w-full sm:w-auto justify-center group"
+                    className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white px-10 py-5 text-lg rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 inline-flex items-center gap-3 w-full sm:w-auto justify-center group"
                     style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}
                   >
                     Try Our AI Now
@@ -864,7 +856,7 @@ export function PremiumServices() {
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                   <a
                     href="tel:865-346-6111"
-                    className="btn-ghost px-10 py-5 text-lg rounded-xl inline-flex items-center gap-3 w-full sm:w-auto justify-center group"
+                    className="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 px-10 py-5 text-lg rounded-xl inline-flex items-center gap-3 w-full sm:w-auto justify-center group"
                     style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}
                   >
                     <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform" />
@@ -879,7 +871,7 @@ export function PremiumServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400"
+                className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-600"
                 style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 400 }}
               >
                 <div className="flex items-center gap-2">

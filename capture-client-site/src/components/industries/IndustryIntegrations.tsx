@@ -82,18 +82,18 @@ export function IndustryIntegrations({ industry, maxDisplay = 6 }: IndustryInteg
   const colors = CATEGORY_COLORS[industry.category] || CATEGORY_COLORS['Professional Services'];
 
   return (
-    <section className="py-16 md:py-20 bg-background">
+    <section className="py-16 md:py-20 bg-gradient-to-b from-white to-slate-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold text-foreground mb-6">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               Seamless{' '}
               <span className="bg-gradient-to-r from-gold-400 to-accent-400 bg-clip-text text-transparent">
                 Integrations
               </span>
             </h2>
-            <p className="text-xl text-foreground-muted max-w-3xl mx-auto">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Connect with the tools you already use. Our AI voice agent integrates seamlessly with your existing {industry.category.toLowerCase()} software.
             </p>
           </div>
@@ -138,28 +138,28 @@ export function IndustryIntegrations({ industry, maxDisplay = 6 }: IndustryInteg
                       </div>
 
                       {/* Integration Name */}
-                      <h3 className={`text-xl font-bold text-foreground mb-3 ${colors.textHover} transition-colors duration-300`}>
+                      <h3 className={`text-xl font-bold text-slate-900 mb-3 ${colors.textHover} transition-colors duration-300`}>
                         {integration.name}
                       </h3>
 
                       {/* Category Badge */}
                       <div className="mb-4">
-                        <span className="px-3 py-1 rounded-full text-xs font-semibold bg-white/10 text-foreground-muted border border-white/10">
+                        <span className="px-3 py-1 rounded-full text-xs font-semibold bg-white/70 text-slate-600 border border-slate-200">
                           {integration.category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
                         </span>
                       </div>
 
                       {/* Short Description */}
-                      <p className="text-foreground-muted leading-relaxed mb-6 line-clamp-3">
+                      <p className="text-slate-600 leading-relaxed mb-6 line-clamp-3">
                         {integration.shortDescription}
                       </p>
 
                       {/* Key Features Preview */}
-                      <div className="space-y-2 mb-6 pt-4 border-t border-white/10">
+                      <div className="space-y-2 mb-6 pt-4 border-t border-slate-200">
                         {integration.keyFeatures.slice(0, 3).map((feature, idx) => (
                           <div key={idx} className="flex items-start gap-2">
                             <CheckCircle className={`w-4 h-4 ${colors.accent} flex-shrink-0 mt-0.5`} />
-                            <span className="text-sm text-foreground-muted line-clamp-1">
+                            <span className="text-sm text-slate-600 line-clamp-1">
                               {feature}
                             </span>
                           </div>

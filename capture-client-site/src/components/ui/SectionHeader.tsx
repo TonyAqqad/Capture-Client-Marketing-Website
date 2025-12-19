@@ -93,7 +93,7 @@ export function SectionHeader({
         {...(animate && { variants: itemVariants })}
         className="space-y-2"
       >
-        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
           {heading}
         </h2>
 
@@ -107,7 +107,7 @@ export function SectionHeader({
       {subtitle && (
         <Item
           {...(animate && { variants: itemVariants })}
-          className="text-base md:text-lg text-foreground-muted leading-relaxed max-w-2xl"
+          className="text-base md:text-lg text-slate-600 leading-relaxed max-w-2xl"
         >
           {typeof subtitle === "string" ? <p>{subtitle}</p> : subtitle}
         </Item>

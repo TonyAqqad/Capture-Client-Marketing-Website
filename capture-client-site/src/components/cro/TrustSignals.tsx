@@ -62,7 +62,7 @@ export default function TrustSignals() {
             className={`group ${signal.bgColor} border ${signal.borderColor} rounded-xl p-5 sm:p-5 flex flex-col items-center justify-center text-center transition-all duration-500 hover:border-opacity-30 backdrop-blur-sm min-h-[120px] sm:min-h-[110px]`}
           >
             <signal.Icon className={`${signal.color} w-6 h-6 mb-2.5 transition-transform duration-500 group-hover:scale-110`} />
-            <p className="text-xs sm:text-sm font-medium text-foreground/80 leading-tight tracking-wide">{signal.label}</p>
+            <p className="text-xs sm:text-sm font-medium text-slate-800 leading-tight tracking-wide">{signal.label}</p>
           </div>
         ))}
       </div>
@@ -75,14 +75,14 @@ export default function TrustSignals() {
               <stat.Icon className="text-accent/60 w-5 h-5 transition-colors duration-300 group-hover:text-accent" />
               <p className="text-3xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-br from-foreground to-foreground/60 bg-clip-text text-transparent">{stat.value}</p>
             </div>
-            <p className="text-xs sm:text-sm text-foreground-muted uppercase tracking-wider font-medium">{stat.label}</p>
+            <p className="text-xs sm:text-sm text-slate-500 uppercase tracking-wider font-medium">{stat.label}</p>
           </div>
         ))}
       </div>
 
       {/* Trust statement - more understated */}
-      <div className="text-center bg-surface/20 rounded-xl p-4 sm:p-5 border border-surface-border/30 backdrop-blur-sm">
-        <p className="text-xs sm:text-sm text-foreground/70 flex items-center justify-center flex-wrap gap-2">
+      <div className="text-center bg-slate-50 rounded-xl p-4 sm:p-5 border border-slate-200 backdrop-blur-sm">
+        <p className="text-xs sm:text-sm text-slate-700 flex items-center justify-center flex-wrap gap-2">
           <BadgeCheck className="text-accent/70 w-4 h-4" />
           <span className="font-medium">Trusted by leading small businesses across Tennessee and beyond</span>
         </p>

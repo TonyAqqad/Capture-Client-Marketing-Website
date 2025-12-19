@@ -51,17 +51,16 @@ export function IntegrationCard({
         aria-label={`View ${integration.name} integration details`}
       >
         {/* Card Container - overflow-visible on parent to show badges above card */}
-        <div className="relative h-full glass-premium-mobile p-4 sm:p-6 rounded-2xl transition-all duration-300 hover:border-accent/30 hover:shadow-glow-lg overflow-visible">
+        <div className="relative h-full bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-4 sm:p-6 rounded-2xl transition-all duration-300 hover:border-blue-600/30 hover:shadow-xl hover:shadow-slate-200/60 overflow-visible">
           {/* Hover Glow Effect */}
           <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-primary/20" />
-            <div className="absolute inset-0 shadow-glow-accent" />
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-transparent to-cyan-500/5" />
           </div>
 
           {/* Featured Badge - positioned above card with high z-index */}
           {isFeatured && (
             <div className="absolute -top-3 -right-2 z-30">
-              <span className="inline-flex items-center gap-1 px-3 py-1.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-gold bg-gold/10 rounded-full border border-gold/30 shadow-lg backdrop-blur-sm min-h-[28px]">
+              <span className="inline-flex items-center gap-1 px-3 py-1.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-blue-600 bg-blue-600/10 rounded-full border border-blue-600/30 shadow-lg backdrop-blur-sm min-h-[28px]">
                 <Star className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
                 <span>Featured</span>
               </span>
@@ -71,7 +70,7 @@ export function IntegrationCard({
           {/* Category Badge - positioned above card with high z-index */}
           {!isFeatured && (
             <div className="absolute -top-3 -right-2 z-30">
-              <span className="inline-flex items-center px-3 py-1.5 text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-accent/80 bg-accent/10 rounded-full border border-accent/20 shadow-md backdrop-blur-sm min-h-[28px]">
+              <span className="inline-flex items-center px-3 py-1.5 text-[10px] sm:text-[11px] font-semibold uppercase tracking-wider text-blue-600 bg-blue-600/10 rounded-full border border-blue-600/20 shadow-md backdrop-blur-sm min-h-[28px]">
                 {integration.category}
               </span>
             </div>
@@ -79,7 +78,7 @@ export function IntegrationCard({
 
           {/* Logo Container */}
           <div className="relative flex items-center justify-center h-16 sm:h-20 mb-3 sm:mb-4">
-            <div className="relative w-full h-full flex items-center justify-center p-2 sm:p-3 rounded-xl bg-white/95 group-hover:bg-white transition-all duration-300 shadow-card-mobile overflow-hidden">
+            <div className="relative w-full h-full flex items-center justify-center p-2 sm:p-3 rounded-xl bg-white group-hover:bg-slate-50 transition-all duration-300 shadow-sm overflow-hidden">
               {!imageError && logoSrc ? (
                 <Image
                   src={logoSrc}
@@ -93,7 +92,7 @@ export function IntegrationCard({
                 />
               ) : (
                 <div className="flex items-center justify-center w-full h-full">
-                  <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br from-accent/20 to-primary/20 text-foreground font-bold text-xl">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br from-blue-600/10 to-cyan-500/10 text-slate-900 font-bold text-xl">
                     {integration.name.charAt(0)}
                   </div>
                 </div>
@@ -103,23 +102,23 @@ export function IntegrationCard({
 
           {/* Integration Info */}
           <div className="text-center relative z-10">
-            <h3 className="text-foreground font-semibold text-sm sm:text-base mb-1 sm:mb-2 group-hover:text-accent transition-colors duration-300 line-clamp-1">
+            <h3 className="text-slate-900 font-semibold text-sm sm:text-base mb-1 sm:mb-2 group-hover:text-blue-600 transition-colors duration-300 line-clamp-1">
               {integration.name}
             </h3>
-            <p className="text-foreground-muted text-xs sm:text-sm leading-snug line-clamp-2">
+            <p className="text-slate-600 text-xs sm:text-sm leading-snug line-clamp-2">
               {integration.description}
             </p>
           </div>
 
           {/* Arrow Indicator */}
           <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-x-2 group-hover:translate-x-0 pointer-events-none z-10">
-            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-accent" />
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
           </div>
 
-          {/* Premium gold border effect on hover */}
+          {/* Premium border effect on hover */}
           {isFeatured && (
             <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10">
-              <div className="absolute inset-0 rounded-2xl border-2 border-gold/40 shadow-glow-gold-lg" />
+              <div className="absolute inset-0 rounded-2xl border-2 border-blue-600/40" />
             </div>
           )}
         </div>
