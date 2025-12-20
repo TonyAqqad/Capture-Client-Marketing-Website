@@ -34,22 +34,22 @@ export default function CapacityIndicator({
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
       }`}
     >
-      <div className="relative bg-gradient-to-r from-amber-500/8 via-orange-500/8 to-amber-500/8 border border-amber-500/25 rounded-xl p-4 sm:p-4 backdrop-blur-sm overflow-hidden">
+      <div className="relative bg-gradient-to-r from-blue-500/8 via-cyan-500/8 to-blue-500/8 border border-blue-500/25 rounded-xl p-4 sm:p-4 backdrop-blur-sm overflow-hidden">
         {/* Subtle animated gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-500/5 to-transparent animate-pulse" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent animate-pulse" />
 
         <div className="relative flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4">
           {/* Refined pulse indicator - less aggressive */}
           <div className="relative flex-shrink-0">
-            <div className="w-2.5 h-2.5 bg-amber-500/80 rounded-full animate-pulse"></div>
-            <div className="absolute inset-0 w-2.5 h-2.5 bg-amber-500/40 rounded-full animate-ping"></div>
+            <div className="w-2.5 h-2.5 bg-blue-500/80 rounded-full animate-pulse"></div>
+            <div className="absolute inset-0 w-2.5 h-2.5 bg-blue-500/40 rounded-full animate-ping"></div>
           </div>
 
           {/* Text - more professional tone */}
           <div className="flex flex-wrap items-center justify-center gap-2.5 text-center">
-            <Clock className="w-5 h-5 text-amber-400/80" />
+            <Clock className="w-5 h-5 text-blue-400/80" />
             <p className="text-sm md:text-base font-semibold text-slate-800">
-              <span className="text-amber-400">{spotsLeft} onboarding spots</span> available this month
+              <span className="text-blue-400">{spotsLeft} onboarding spots</span> available this month
             </p>
           </div>
         </div>

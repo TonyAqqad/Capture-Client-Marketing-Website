@@ -619,8 +619,8 @@ export default function FitnessClient() {
                 </label>
                 <motion.span
                   key={monthlyLeads}
-                  initial={{ scale: 1.2, color: '#F5A623' }}
-                  animate={{ scale: 1, color: '#F5A623' }}
+                  initial={{ scale: 1.2, color: '#2563EB' }}
+                  animate={{ scale: 1, color: '#2563EB' }}
                   transition={{ duration: 0.3 }}
                   className="text-2xl font-bold text-blue-600"
                 >
@@ -646,8 +646,8 @@ export default function FitnessClient() {
                 </label>
                 <motion.span
                   key={membershipValue}
-                  initial={{ scale: 1.2, color: '#F5A623' }}
-                  animate={{ scale: 1, color: '#F5A623' }}
+                  initial={{ scale: 1.2, color: '#2563EB' }}
+                  animate={{ scale: 1, color: '#2563EB' }}
                   transition={{ duration: 0.3 }}
                   className="text-2xl font-bold text-blue-600"
                 >

@@ -100,7 +100,7 @@ export default function LeadRescueSimulator() {
               >
                 Stop Losing New Members
                 <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-cyan-300 to-[#D4AF37]">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-cyan-300 to-[#2563EB]">
                   to Voicemail.
                 </span>
               </motion.h2>
@@ -393,7 +393,7 @@ export default function LeadRescueSimulator() {
                   transition={{ delay: 0.7, type: "spring", stiffness: 150 }}
                   className="px-2"
                 >
-                  <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-cyan-300 to-[#D4AF37]">
+                  <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-cyan-300 to-[#2563EB]">
                     $1,200
                   </span>
                   <span className="text-2xl sm:text-3xl md:text-4xl text-slate-600 font-medium">/yr</span>
@@ -414,7 +414,7 @@ export default function LeadRescueSimulator() {
                     </p>
                   </div>
                   <div>
-                    <p className="text-2xl sm:text-3xl font-bold text-[#D4AF37]">100%</p>
+                    <p className="text-2xl sm:text-3xl font-bold text-[#2563EB]">100%</p>
                     <p className="text-slate-600 text-[10px] sm:text-xs uppercase tracking-wider mt-1">
                       Data Captured
                     </p>
@@ -437,7 +437,7 @@ export default function LeadRescueSimulator() {
               >
                 <a
                   href="/contact"
-                  className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-cyan-500 to-[#4A69E2] hover:from-cyan-400 hover:to-[#D4AF37] transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan-500/25 overflow-hidden min-h-[56px] touch-manipulation"
+                  className="w-full sm:w-auto group relative inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-cyan-500 to-[#4A69E2] hover:from-cyan-400 hover:to-[#2563EB] transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan-500/25 overflow-hidden min-h-[56px] touch-manipulation"
                 >
                   <motion.div
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity"

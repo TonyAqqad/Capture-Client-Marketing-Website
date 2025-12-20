@@ -18,18 +18,18 @@ interface IntegrationHowItWorksProps {
 
 // Category-specific Aurora gradients
 const categoryGradients: Record<string, string> = {
-  crm: "linear-gradient(180deg, #06b6d4 0%, #fbbf24 100%)", // cyan to gold
+  crm: "linear-gradient(180deg, #06b6d4 0%, #3b82f6 100%)", // cyan to blue
   automation: "linear-gradient(180deg, #8b5cf6 0%, #06b6d4 100%)", // purple to cyan
   scheduling: "linear-gradient(180deg, #06b6d4 0%, #10b981 100%)", // cyan to emerald
   "phone-systems": "linear-gradient(180deg, #3b82f6 0%, #06b6d4 100%)", // blue to cyan
-  "home-services": "linear-gradient(180deg, #f59e0b 0%, #fbbf24 100%)", // amber to gold
+  "home-services": "linear-gradient(180deg, #2563eb 0%, #3b82f6 100%)", // blue-600 to blue-500
   legal: "linear-gradient(180deg, #3b82f6 0%, #8b5cf6 100%)", // blue to purple
   healthcare: "linear-gradient(180deg, #06b6d4 0%, #ec4899 100%)", // cyan to pink
-  "real-estate": "linear-gradient(180deg, #fbbf24 0%, #f59e0b 100%)", // gold to amber
+  "real-estate": "linear-gradient(180deg, #3b82f6 0%, #2563eb 100%)", // blue-500 to blue-600
   marketing: "linear-gradient(180deg, #8b5cf6 0%, #ec4899 100%)", // purple to pink
   payments: "linear-gradient(180deg, #10b981 0%, #06b6d4 100%)", // emerald to cyan
-  "all-in-one": "linear-gradient(180deg, #06b6d4 0%, #fbbf24 100%)", // cyan to gold
-  default: "linear-gradient(180deg, #06b6d4 0%, #fbbf24 100%)", // cyan to gold
+  "all-in-one": "linear-gradient(180deg, #06b6d4 0%, #3b82f6 100%)", // cyan to blue
+  default: "linear-gradient(180deg, #06b6d4 0%, #3b82f6 100%)", // cyan to blue
 };
 
 export function IntegrationHowItWorks({

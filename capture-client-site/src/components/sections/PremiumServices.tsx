@@ -37,7 +37,7 @@ function VoiceAIIcon({ className = "" }: { className?: string }) {
       />
       <motion.path
         d="M70 60 Q75 50 80 60 T90 60"
-        stroke="#D4AF37"
+        stroke="#2563EB"
         strokeWidth="2.5"
         strokeLinecap="round"
         fill="none"
@@ -58,7 +58,7 @@ function VoiceAIIcon({ className = "" }: { className?: string }) {
       <defs>
         <linearGradient id="voiceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor="#00C9FF" />
-          <stop offset="100%" stopColor="#D4AF37" />
+          <stop offset="100%" stopColor="#2563EB" />
         </linearGradient>
       </defs>
     </svg>
@@ -98,7 +98,7 @@ function GoogleAdsIcon({ className = "" }: { className?: string }) {
       />
       <motion.path
         d="M31 85 L48 75 L65 60 L82 40"
-        stroke="#D4AF37"
+        stroke="#2563EB"
         strokeWidth="3"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -109,19 +109,19 @@ function GoogleAdsIcon({ className = "" }: { className?: string }) {
       />
       <motion.path
         d="M82 40 L78 46 L86 44 Z"
-        fill="#D4AF37"
+        fill="#2563EB"
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3, delay: 2 }}
       />
       <defs>
         <linearGradient id="googleGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#D4AF37" stopOpacity="0.8" />
-          <stop offset="100%" stopColor="#D4AF37" stopOpacity="0.3" />
+          <stop offset="0%" stopColor="#2563EB" stopOpacity="0.8" />
+          <stop offset="100%" stopColor="#2563EB" stopOpacity="0.3" />
         </linearGradient>
         <linearGradient id="googleGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#D4AF37" stopOpacity="0.9" />
-          <stop offset="100%" stopColor="#D4AF37" stopOpacity="0.4" />
+          <stop offset="0%" stopColor="#2563EB" stopOpacity="0.9" />
+          <stop offset="100%" stopColor="#2563EB" stopOpacity="0.4" />
         </linearGradient>
         <linearGradient id="googleGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
           <stop offset="0%" stopColor="#00C9FF" stopOpacity="0.9" />
@@ -151,7 +151,7 @@ function FacebookAdsIcon({ className = "" }: { className?: string }) {
       />
       <motion.circle
         cx="60" cy="60" r="32"
-        stroke="#D4AF37"
+        stroke="#2563EB"
         strokeWidth="2"
         fill="none"
         initial={{ scale: 0, opacity: 0 }}
@@ -168,14 +168,14 @@ function FacebookAdsIcon({ className = "" }: { className?: string }) {
         animate={{ scale: 1, opacity: 0.3 }}
         transition={{ duration: 0.6, delay: 0.6 }}
       />
-      <line x1="60" y1="10" x2="60" y2="50" stroke="#D4AF37" strokeWidth="2" opacity="0.7" />
-      <line x1="60" y1="70" x2="60" y2="110" stroke="#D4AF37" strokeWidth="2" opacity="0.7" />
-      <line x1="10" y1="60" x2="50" y2="60" stroke="#D4AF37" strokeWidth="2" opacity="0.7" />
-      <line x1="70" y1="60" x2="110" y2="60" stroke="#D4AF37" strokeWidth="2" opacity="0.7" />
+      <line x1="60" y1="10" x2="60" y2="50" stroke="#2563EB" strokeWidth="2" opacity="0.7" />
+      <line x1="60" y1="70" x2="60" y2="110" stroke="#2563EB" strokeWidth="2" opacity="0.7" />
+      <line x1="10" y1="60" x2="50" y2="60" stroke="#2563EB" strokeWidth="2" opacity="0.7" />
+      <line x1="70" y1="60" x2="110" y2="60" stroke="#2563EB" strokeWidth="2" opacity="0.7" />
       <motion.circle cx="40" cy="40" r="3" fill="#00C9FF" initial={{ scale: 0 }} animate={{ scale: [0, 1.2, 1] }} transition={{ duration: 0.5, delay: 0.8 }} />
       <motion.circle cx="80" cy="40" r="3" fill="#00C9FF" initial={{ scale: 0 }} animate={{ scale: [0, 1.2, 1] }} transition={{ duration: 0.5, delay: 1 }} />
-      <motion.circle cx="40" cy="80" r="3" fill="#D4AF37" initial={{ scale: 0 }} animate={{ scale: [0, 1.2, 1] }} transition={{ duration: 0.5, delay: 1.2 }} />
-      <motion.circle cx="80" cy="80" r="3" fill="#D4AF37" initial={{ scale: 0 }} animate={{ scale: [0, 1.2, 1] }} transition={{ duration: 0.5, delay: 1.4 }} />
+      <motion.circle cx="40" cy="80" r="3" fill="#2563EB" initial={{ scale: 0 }} animate={{ scale: [0, 1.2, 1] }} transition={{ duration: 0.5, delay: 1.2 }} />
+      <motion.circle cx="80" cy="80" r="3" fill="#2563EB" initial={{ scale: 0 }} animate={{ scale: [0, 1.2, 1] }} transition={{ duration: 0.5, delay: 1.4 }} />
     </svg>
   );
 }
@@ -187,9 +187,9 @@ function LeadGenIcon({ className = "" }: { className?: string }) {
       <path d="M45 55 L75 55 L68 75 L52 75 Z" fill="url(#funnelGradient2)" opacity="0.9" />
       <path d="M52 75 L68 75 L64 95 L56 95 Z" fill="url(#funnelGradient3)" />
       <motion.circle cx="60" cy="30" r="2.5" fill="#00C9FF" initial={{ cy: 30, opacity: 1 }} animate={{ cy: 95, opacity: 0 }} transition={{ duration: 2, repeat: Infinity, ease: "easeIn", delay: 0 }} />
-      <motion.circle cx="50" cy="30" r="2.5" fill="#D4AF37" initial={{ cy: 30, opacity: 1 }} animate={{ cy: 95, opacity: 0 }} transition={{ duration: 2.2, repeat: Infinity, ease: "easeIn", delay: 0.3 }} />
+      <motion.circle cx="50" cy="30" r="2.5" fill="#2563EB" initial={{ cy: 30, opacity: 1 }} animate={{ cy: 95, opacity: 0 }} transition={{ duration: 2.2, repeat: Infinity, ease: "easeIn", delay: 0.3 }} />
       <motion.circle cx="70" cy="30" r="2.5" fill="#00C9FF" initial={{ cy: 30, opacity: 1 }} animate={{ cy: 95, opacity: 0 }} transition={{ duration: 2.4, repeat: Infinity, ease: "easeIn", delay: 0.6 }} />
-      <motion.circle cx="55" cy="30" r="2" fill="#D4AF37" initial={{ cy: 30, opacity: 1 }} animate={{ cy: 95, opacity: 0 }} transition={{ duration: 2.1, repeat: Infinity, ease: "easeIn", delay: 0.9 }} />
+      <motion.circle cx="55" cy="30" r="2" fill="#2563EB" initial={{ cy: 30, opacity: 1 }} animate={{ cy: 95, opacity: 0 }} transition={{ duration: 2.1, repeat: Infinity, ease: "easeIn", delay: 0.9 }} />
       <motion.circle cx="65" cy="30" r="2" fill="#00C9FF" initial={{ cy: 30, opacity: 1 }} animate={{ cy: 95, opacity: 0 }} transition={{ duration: 2.3, repeat: Infinity, ease: "easeIn", delay: 1.2 }} />
       <defs>
         <linearGradient id="funnelGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -197,8 +197,8 @@ function LeadGenIcon({ className = "" }: { className?: string }) {
           <stop offset="100%" stopColor="#00C9FF" stopOpacity="0.3" />
         </linearGradient>
         <linearGradient id="funnelGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#D4AF37" stopOpacity="0.7" />
-          <stop offset="100%" stopColor="#D4AF37" stopOpacity="0.4" />
+          <stop offset="0%" stopColor="#2563EB" stopOpacity="0.7" />
+          <stop offset="100%" stopColor="#2563EB" stopOpacity="0.4" />
         </linearGradient>
         <linearGradient id="funnelGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
           <stop offset="0%" stopColor="#00C9FF" stopOpacity="0.9" />
@@ -256,7 +256,7 @@ export function PremiumServices() {
               backgroundImage: `
                 radial-gradient(at 20% 30%, rgba(0, 201, 255, 0.12) 0px, transparent 50%),
                 radial-gradient(at 80% 70%, rgba(74, 105, 226, 0.1) 0px, transparent 50%),
-                radial-gradient(at 50% 50%, rgba(212, 175, 55, 0.08) 0px, transparent 50%)
+                radial-gradient(at 50% 50%, rgba(37, 99, 235, 0.08) 0px, transparent 50%)
               `
             }}
           />
@@ -353,7 +353,7 @@ export function PremiumServices() {
                 backgroundImage: `
                   radial-gradient(at 40% 20%, rgba(0, 201, 255, 0.15) 0px, transparent 50%),
                   radial-gradient(at 80% 80%, rgba(74, 105, 226, 0.12) 0px, transparent 50%),
-                  radial-gradient(at 20% 80%, rgba(212, 175, 55, 0.1) 0px, transparent 50%)
+                  radial-gradient(at 20% 80%, rgba(37, 99, 235, 0.1) 0px, transparent 50%)
                 `
               }}
             />
@@ -403,10 +403,10 @@ export function PremiumServices() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.3 }}
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-200 mb-6"
-                        style={{ background: 'rgba(212, 175, 55, 0.08)' }}
+                        style={{ background: 'rgba(37, 99, 235, 0.08)' }}
                       >
-                        <span className="w-2 h-2 bg-[#D4AF37] rounded-full animate-pulse" />
-                        <span className="text-xs uppercase tracking-wider text-[#D4AF37]" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>
+                        <span className="w-2 h-2 bg-[#2563EB] rounded-full animate-pulse" />
+                        <span className="text-xs uppercase tracking-wider text-[#2563EB]" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>
                           Core Technology
                         </span>
                       </motion.div>
@@ -452,7 +452,7 @@ export function PremiumServices() {
                           transition={{ duration: 0.5, delay: 0.7 }}
                           className="p-5 rounded-xl border border-slate-200 bg-slate-50"
                         >
-                          <div className="text-3xl sm:text-4xl text-[#D4AF37] mb-1" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>3 sec</div>
+                          <div className="text-3xl sm:text-4xl text-[#2563EB] mb-1" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>3 sec</div>
                           <div className="text-sm text-slate-600" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>Avg response time</div>
                         </motion.div>
                       </div>
@@ -507,8 +507,8 @@ export function PremiumServices() {
                         <div
                           className="w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-3xl flex items-center justify-center relative"
                           style={{
-                            background: 'linear-gradient(135deg, rgba(0, 201, 255, 0.1) 0%, rgba(212, 175, 55, 0.1) 100%)',
-                            boxShadow: '0 0 60px rgba(0, 201, 255, 0.2), 0 0 120px rgba(212, 175, 55, 0.1), inset 0 0 60px rgba(255,255,255,0.02)'
+                            background: 'linear-gradient(135deg, rgba(0, 201, 255, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%)',
+                            boxShadow: '0 0 60px rgba(0, 201, 255, 0.2), 0 0 120px rgba(37, 99, 235, 0.1), inset 0 0 60px rgba(255,255,255,0.02)'
                           }}
                         >
                           <VoiceAIIcon className="w-3/4 h-3/4" />
@@ -536,7 +536,7 @@ export function PremiumServices() {
             className="absolute inset-0"
             style={{
               backgroundImage: `
-                radial-gradient(at 60% 40%, rgba(212, 175, 55, 0.12) 0px, transparent 50%),
+                radial-gradient(at 60% 40%, rgba(37, 99, 235, 0.12) 0px, transparent 50%),
                 radial-gradient(at 30% 70%, rgba(0, 201, 255, 0.1) 0px, transparent 50%),
                 radial-gradient(at 70% 80%, rgba(74, 105, 226, 0.08) 0px, transparent 50%)
               `
@@ -555,7 +555,7 @@ export function PremiumServices() {
           >
             <h3 className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-6 leading-tight" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
               <span style={{ fontWeight: 300 }}>Complete the </span>
-              <span style={{ fontWeight: 800, background: 'linear-gradient(135deg, #D4AF37 0%, #00C9FF 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              <span style={{ fontWeight: 800, background: 'linear-gradient(135deg, #2563EB 0%, #00C9FF 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                 Growth Engine
               </span>
             </h3>
@@ -575,15 +575,15 @@ export function PremiumServices() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 whileHover={{ y: -8 }}
-                className="group rounded-2xl p-8 sm:p-10 border border-slate-200 hover:border-[#D4AF37]/30 transition-all duration-500 cursor-pointer bg-white/70 backdrop-blur-xl"
+                className="group rounded-2xl p-8 sm:p-10 border border-slate-200 hover:border-[#2563EB]/30 transition-all duration-500 cursor-pointer bg-white/70 backdrop-blur-xl"
               >
                 <div className="flex flex-col sm:flex-row gap-6 items-start">
                   {/* Icon */}
                   <div
                     className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl flex items-center justify-center flex-shrink-0"
                     style={{
-                      background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%)',
-                      boxShadow: '0 10px 40px rgba(212, 175, 55, 0.15)'
+                      background: 'linear-gradient(135deg, rgba(37, 99, 235, 0.15) 0%, rgba(37, 99, 235, 0.05) 100%)',
+                      boxShadow: '0 10px 40px rgba(37, 99, 235, 0.15)'
                     }}
                   >
                     <GoogleAdsIcon className="w-3/4 h-3/4" />
@@ -592,10 +592,10 @@ export function PremiumServices() {
                   {/* Content */}
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
-                      <h4 className="text-2xl sm:text-3xl text-slate-900 group-hover:text-[#D4AF37] transition-colors" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>
+                      <h4 className="text-2xl sm:text-3xl text-slate-900 group-hover:text-[#2563EB] transition-colors" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>
                         Google Ads
                       </h4>
-                      <TrendingUp className="w-5 h-5 text-[#D4AF37] opacity-0 group-hover:opacity-100 transition-opacity" />
+                      <TrendingUp className="w-5 h-5 text-[#2563EB] opacity-0 group-hover:opacity-100 transition-opacity" />
                     </div>
                     <p className="text-slate-600 mb-6 leading-relaxed" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>
                       Precision-targeted search campaigns that capture high-intent buyers actively searching for your services right now.
@@ -604,11 +604,11 @@ export function PremiumServices() {
                     {/* Key metrics */}
                     <div className="flex flex-wrap gap-4">
                       <div className="px-4 py-2 rounded-lg border border-slate-200 bg-slate-50">
-                        <span className="text-[#D4AF37]" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>4.2x</span>
+                        <span className="text-[#2563EB]" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>4.2x</span>
                         <span className="text-slate-600 text-sm ml-2" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>avg ROAS</span>
                       </div>
                       <div className="px-4 py-2 rounded-lg border border-slate-200 bg-slate-50">
-                        <span className="text-[#D4AF37]" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>-40%</span>
+                        <span className="text-[#2563EB]" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>-40%</span>
                         <span className="text-slate-600 text-sm ml-2" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>cost per lead</span>
                       </div>
                     </div>
@@ -683,7 +683,7 @@ export function PremiumServices() {
               />
 
               {/* Glow effects */}
-              <div className="absolute top-0 right-1/4 w-96 h-96 bg-gradient-radial from-[#D4AF37]/08 to-transparent blur-3xl" />
+              <div className="absolute top-0 right-1/4 w-96 h-96 bg-gradient-radial from-[#2563EB]/08 to-transparent blur-3xl" />
               <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-radial from-[#00C9FF]/08 to-transparent blur-3xl" />
 
               <div className="relative p-8 sm:p-12 lg:p-16">
@@ -696,7 +696,7 @@ export function PremiumServices() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: 0.5 }}
                       className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-200 mb-6"
-                      style={{ background: 'rgba(212, 175, 55, 0.05)' }}
+                      style={{ background: 'rgba(37, 99, 235, 0.05)' }}
                     >
                       <span className="text-xs uppercase tracking-wider text-slate-600" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}>
                         Everything Connected
@@ -739,10 +739,10 @@ export function PremiumServices() {
                           whileInView={{ opacity: 1, y: 0 }}
                           viewport={{ once: true }}
                           transition={{ duration: 0.5, delay: 0.8 + idx * 0.1 }}
-                          className="flex items-center gap-3 px-5 py-4 rounded-xl border border-slate-200 hover:border-[#D4AF37]/20 transition-colors bg-slate-50"
+                          className="flex items-center gap-3 px-5 py-4 rounded-xl border border-slate-200 hover:border-[#2563EB]/20 transition-colors bg-slate-50"
                         >
-                          <div className="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center" style={{ background: 'rgba(212, 175, 55, 0.1)' }}>
-                            <svg className="w-5 h-5 text-[#D4AF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <div className="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center" style={{ background: 'rgba(37, 99, 235, 0.1)' }}>
+                            <svg className="w-5 h-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
@@ -764,8 +764,8 @@ export function PremiumServices() {
                       <div
                         className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-3xl flex items-center justify-center"
                         style={{
-                          background: 'linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(0, 201, 255, 0.1) 100%)',
-                          boxShadow: '0 0 80px rgba(212, 175, 55, 0.15), 0 0 120px rgba(0, 201, 255, 0.1)'
+                          background: 'linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(0, 201, 255, 0.1) 100%)',
+                          boxShadow: '0 0 80px rgba(37, 99, 235, 0.15), 0 0 120px rgba(0, 201, 255, 0.1)'
                         }}
                       >
                         <LeadGenIcon className="w-3/4 h-3/4" />
@@ -793,7 +793,7 @@ export function PremiumServices() {
             style={{
               backgroundImage: `
                 radial-gradient(at 50% 50%, rgba(0, 201, 255, 0.15) 0px, transparent 50%),
-                radial-gradient(at 30% 70%, rgba(212, 175, 55, 0.12) 0px, transparent 50%),
+                radial-gradient(at 30% 70%, rgba(37, 99, 235, 0.12) 0px, transparent 50%),
                 radial-gradient(at 70% 30%, rgba(74, 105, 226, 0.1) 0px, transparent 50%)
               `
             }}
@@ -819,7 +819,7 @@ export function PremiumServices() {
                 style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
               >
                 <span style={{ fontWeight: 300 }}>Ready to see it </span>
-                <span style={{ fontWeight: 800, background: 'linear-gradient(135deg, #D4AF37 0%, #00C9FF 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                <span style={{ fontWeight: 800, background: 'linear-gradient(135deg, #2563EB 0%, #00C9FF 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
                   all work together?
                 </span>
               </motion.h3>
@@ -875,19 +875,19 @@ export function PremiumServices() {
                 style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 400 }}
               >
                 <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-[#D4AF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>14-day free trial</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-[#D4AF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>No credit card required</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-[#D4AF37]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>Setup in 24 hours</span>

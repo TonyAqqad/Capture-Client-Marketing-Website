@@ -4,8 +4,8 @@ export default function Loading() {
       <div className="text-center">
         {/* Logo pulse animation */}
         <div className="relative mb-8">
-          <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-[#00C9FF] to-[#D4AF37] animate-pulse" />
-          <div className="absolute inset-0 w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-[#00C9FF] to-[#D4AF37] opacity-50 blur-xl animate-pulse" />
+          <div className="w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-[#00C9FF] to-[#2563EB] animate-pulse" />
+          <div className="absolute inset-0 w-16 h-16 mx-auto rounded-2xl bg-gradient-to-br from-[#00C9FF] to-[#2563EB] opacity-50 blur-xl animate-pulse" />
         </div>
 
         {/* Loading text */}
@@ -18,9 +18,9 @@ export default function Loading() {
 
         {/* Loading dots - using Tailwind animations */}
         <div className="mt-6 flex items-center justify-center gap-1.5">
-          <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#00C9FF] to-[#D4AF37] animate-bounce [animation-delay:-0.3s]" />
-          <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#00C9FF] to-[#D4AF37] animate-bounce [animation-delay:-0.15s]" />
-          <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#00C9FF] to-[#D4AF37] animate-bounce" />
+          <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#00C9FF] to-[#2563EB] animate-bounce [animation-delay:-0.3s]" />
+          <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#00C9FF] to-[#2563EB] animate-bounce [animation-delay:-0.15s]" />
+          <div className="w-2 h-2 rounded-full bg-gradient-to-r from-[#00C9FF] to-[#2563EB] animate-bounce" />
         </div>
       </div>
     </div>

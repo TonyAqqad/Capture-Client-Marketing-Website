@@ -401,8 +401,8 @@ export default function MedSpaClient() {
                   y: -3,
                   scale: 1.02,
                   boxShadow: selectedTreatment === treatment.id
-                    ? "0 0 30px rgba(245, 166, 35, 0.4)"
-                    : "0 0 20px rgba(245, 166, 35, 0.2)"
+                    ? "0 0 30px rgba(59, 130, 246, 0.4)"
+                    : "0 0 20px rgba(59, 130, 246, 0.2)"
                 }}
                 whileTap={{ scale: 0.98 }}
                 className={`px-6 py-4 rounded-xl font-semibold transition-all relative overflow-hidden ${
