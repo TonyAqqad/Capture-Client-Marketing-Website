@@ -26,7 +26,7 @@ export function Badge({
     accent: "bg-accent/10 border-accent/20 text-accent",
     success: "bg-green-500/10 border-green-500/20 text-green-400",
     warning: "bg-yellow-500/10 border-yellow-500/20 text-yellow-400",
-    glass: "bg-white/10 backdrop-blur-xl border-white/20 text-foreground shadow-[0_4px_16px_rgba(0,0,0,0.1)]"
+    glass: "bg-white/10 backdrop-blur-xl border-white/20 text-slate-900 shadow-[0_4px_16px_rgba(0,0,0,0.1)]"
   };
 
   const sizeClasses = {

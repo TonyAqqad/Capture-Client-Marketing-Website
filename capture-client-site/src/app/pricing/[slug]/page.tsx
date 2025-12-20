@@ -96,8 +96,8 @@ export default async function PackagePage({
             {/* Badge */}
             {pkg.hero?.badge && (
               <div className="inline-flex items-center gap-2 px-4 py-2 mb-8 rounded-full bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/30 backdrop-blur-sm">
-                <Star className="w-4 h-4 text-cyan-400" />
-                <span className="text-cyan-400 font-semibold text-sm tracking-wider">
+                <Star className="w-4 h-4 text-cyan-600" />
+                <span className="text-cyan-600 font-semibold text-sm tracking-wider">
                   {pkg.hero.badge}
                 </span>
               </div>
@@ -118,7 +118,7 @@ export default async function PackagePage({
               <div className="inline-block relative w-full max-w-md mx-auto">
                 <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-2xl blur-xl opacity-30"></div>
                 <div className="relative bg-white/80 border border-slate-200 rounded-2xl px-6 sm:px-8 md:px-12 py-6 sm:py-8">
-                  <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent mb-2">
+                  <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent mb-2">
                     {pkg.package.price}
                   </div>
                   <div className="text-slate-600 text-base sm:text-lg">{pkg.package.period}</div>
@@ -157,15 +157,15 @@ export default async function PackagePage({
             {/* Trust Signals */}
             <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-6 text-sm sm:text-base text-slate-600 px-4 sm:px-0">
               <div className="flex items-center gap-3 py-1">
-                <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
                 <span>No setup fees</span>
               </div>
               <div className="flex items-center gap-3 py-1">
-                <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
                 <span>Cancel anytime</span>
               </div>
               <div className="flex items-center gap-3 py-1">
-                <CheckCircle2 className="w-5 h-5 text-green-400 flex-shrink-0" />
+                <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
                 <span>No long-term contract</span>
               </div>
             </div>
@@ -194,7 +194,7 @@ export default async function PackagePage({
                   <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                   <div className="relative flex items-start gap-3 sm:gap-4">
                     <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center border border-cyan-500/30">
-                      <BadgeCheck className="w-5 h-5 text-cyan-400" />
+                      <BadgeCheck className="w-5 h-5 text-cyan-600" />
                     </div>
                     <p className="text-slate-700 text-sm sm:text-base leading-relaxed">{item}</p>
                   </div>
@@ -233,14 +233,14 @@ export default async function PackagePage({
                     <div className="flex flex-col sm:flex-row items-start justify-between mb-4 gap-3">
                       <div className="flex items-center gap-3 sm:gap-4">
                         <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center border border-cyan-500/30">
-                          <CheckCircle2 className="w-6 h-6 text-cyan-400" />
+                          <CheckCircle2 className="w-6 h-6 text-cyan-600" />
                         </div>
                         <h3 className="font-bold text-lg sm:text-xl text-slate-900">
                           {feature.name}
                         </h3>
                       </div>
                       {feature.value && (
-                        <span className="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-xs sm:text-sm font-semibold whitespace-nowrap self-start sm:self-auto">
+                        <span className="px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-600 text-xs sm:text-sm font-semibold whitespace-nowrap self-start sm:self-auto">
                           {feature.value}
                         </span>
                       )}
@@ -280,7 +280,7 @@ export default async function PackagePage({
                             href={`/pricing/${feature.available_in
                               .toLowerCase()
                               .replace(" ", "-")}`}
-                            className="text-cyan-400 hover:text-cyan-300 text-sm font-semibold inline-flex items-center gap-1"
+                            className="text-cyan-600 hover:text-cyan-700 text-sm font-semibold inline-flex items-center gap-1"
                           >
                             Available in {feature.available_in}
                             <ArrowRight className="w-4 h-4" />
@@ -329,7 +329,7 @@ export default async function PackagePage({
 
                   <div className="relative">
                     <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center border border-cyan-500/30 mb-6">
-                      <Star className="w-8 h-8 text-cyan-400" />
+                      <Star className="w-8 h-8 text-cyan-600" />
                     </div>
                     <h3 className="text-2xl font-bold text-slate-900 mb-4">
                       {benefit.title}
@@ -372,7 +372,7 @@ export default async function PackagePage({
                       Starter
                     </th>
                     <th className="text-center py-3 sm:py-4 px-3 sm:px-6">
-                      <div className="inline-block px-3 sm:px-4 py-1 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-400 font-semibold text-xs sm:text-sm">
+                      <div className="inline-block px-3 sm:px-4 py-1 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 text-cyan-600 font-semibold text-xs sm:text-sm">
                         Growth
                       </div>
                     </th>
@@ -394,7 +394,7 @@ export default async function PackagePage({
                         {row.starter}
                       </td>
                       <td className="py-3 sm:py-4 px-3 sm:px-6 text-center">
-                        <span className="text-cyan-400 font-semibold text-sm sm:text-base">{row.growth}</span>
+                        <span className="text-cyan-600 font-semibold text-sm sm:text-base">{row.growth}</span>
                       </td>
                       <td className="py-3 sm:py-4 px-3 sm:px-6 text-center text-slate-600 text-sm sm:text-base">
                         {row.enterprise}
@@ -440,7 +440,7 @@ export default async function PackagePage({
                   {/* Rating stars */}
                   <div className="flex gap-1 mb-6">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-blue-400 fill-blue-400" />
+                      <Star key={i} className="w-5 h-5 text-blue-600 fill-blue-600" />
                     ))}
                   </div>
 
@@ -462,7 +462,7 @@ export default async function PackagePage({
                     </div>
                     {testimonial.result && (
                       <div className="px-4 py-2 rounded-lg bg-green-500/10 border border-green-500/20">
-                        <div className="text-green-400 font-semibold text-sm text-right">
+                        <div className="text-green-600 font-semibold text-sm text-right">
                           {testimonial.result}
                         </div>
                       </div>
@@ -494,7 +494,7 @@ export default async function PackagePage({
                 >
                   <summary className="flex items-center justify-between cursor-pointer p-6 text-slate-900 font-bold text-lg">
                     <span>{item.question}</span>
-                    <ChevronDown className="w-5 h-5 text-cyan-400 group-open:rotate-180 transition-transform" />
+                    <ChevronDown className="w-5 h-5 text-cyan-600 group-open:rotate-180 transition-transform" />
                   </summary>
                   <div className="px-6 pb-6 text-slate-600 leading-relaxed border-t border-slate-200 pt-4">
                     {item.answer}
@@ -517,7 +517,7 @@ export default async function PackagePage({
                   className="text-center p-5 sm:p-6 rounded-xl bg-white border border-slate-200"
                 >
                   <div className="w-12 h-12 rounded-full bg-green-500/10 border border-green-500/20 flex items-center justify-center mx-auto mb-4">
-                    <BadgeCheck className="w-6 h-6 text-green-400" />
+                    <BadgeCheck className="w-6 h-6 text-green-600" />
                   </div>
                   <h4 className="font-bold text-slate-900 mb-2 text-base sm:text-lg">{signal.title}</h4>
                   <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">{signal.description}</p>
@@ -578,8 +578,8 @@ export default async function PackagePage({
             {/* Bonus */}
             {pkg.cta_footer?.bonus && (
               <div className="inline-flex items-center gap-2 px-6 py-3 mx-auto rounded-full bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20">
-                <Gift className="w-5 h-5 text-blue-400" />
-                <span className="text-blue-300 font-semibold">{pkg.cta_footer.bonus}</span>
+                <Gift className="w-5 h-5 text-blue-600" />
+                <span className="text-blue-600 font-semibold">{pkg.cta_footer.bonus}</span>
               </div>
             )}
 

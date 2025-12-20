@@ -745,7 +745,7 @@ export default function PricingPageClient() {
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ type: 'spring', stiffness: 400 }}
                   >
-                    <Icon className="w-8 h-8 text-cyan-500" />
+                    <Icon className="w-8 h-8 text-cyan-600" />
                   </motion.div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">{signal.title}</h3>
                   <p className="text-slate-600 text-sm">{signal.desc}</p>

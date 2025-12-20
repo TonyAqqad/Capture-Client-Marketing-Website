@@ -53,19 +53,19 @@ export function SpeedToLeadTimeline() {
     excellent: {
       bg: "from-green-500/20 to-emerald-500/10",
       border: "border-green-500/30",
-      text: "text-green-400",
+      text: "text-green-600",
       glow: "group-hover:shadow-[0_0_40px_rgba(34,197,94,0.3)]"
     },
     good: {
       bg: "from-cyan-500/20 to-blue-500/10",
       border: "border-cyan-500/30",
-      text: "text-cyan-400",
+      text: "text-cyan-600",
       glow: "group-hover:shadow-[0_0_40px_rgba(6,182,212,0.3)]"
     },
     poor: {
       bg: "from-red-500/20 to-red-400/10",
       border: "border-red-500/30",
-      text: "text-red-400",
+      text: "text-red-600",
       glow: "group-hover:shadow-[0_0_40px_rgba(239,68,68,0.3)]"
     }
   };

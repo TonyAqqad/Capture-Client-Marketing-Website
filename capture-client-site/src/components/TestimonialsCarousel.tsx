@@ -89,7 +89,7 @@ export default function TestimonialsCarousel() {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ duration: 0.6 }}
-        className="text-4xl md:text-5xl font-heading font-bold text-foreground text-center mb-12"
+        className="text-4xl md:text-5xl font-heading font-bold text-slate-900 text-center mb-12"
       >
         Trusted by Growing Businesses
       </motion.h2>
@@ -126,7 +126,7 @@ export default function TestimonialsCarousel() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={handlePrevious}
-            className="w-12 h-12 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg flex items-center justify-center text-foreground hover:border-accent transition-colors"
+            className="w-12 h-12 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg flex items-center justify-center text-slate-900 hover:border-accent transition-colors"
             aria-label="Previous testimonial"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -165,7 +165,7 @@ export default function TestimonialsCarousel() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={handleNext}
-            className="w-12 h-12 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg flex items-center justify-center text-foreground hover:border-accent transition-colors"
+            className="w-12 h-12 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg flex items-center justify-center text-slate-900 hover:border-accent transition-colors"
             aria-label="Next testimonial"
           >
             <ChevronRight className="w-6 h-6" />
@@ -248,7 +248,7 @@ function TestimonialCard({ testimonial, isInView }: TestimonialCardProps) {
         initial={{ opacity: 0, y: 20 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
         transition={{ delay: 0.4, duration: 0.6 }}
-        className="text-foreground text-lg mb-6 leading-relaxed flex-1 relative z-10"
+        className="text-slate-700 text-lg mb-6 leading-relaxed flex-1 relative z-10"
       >
         {testimonial.quote}
       </motion.p>
@@ -267,7 +267,7 @@ function TestimonialCard({ testimonial, isInView }: TestimonialCardProps) {
           <User className="w-6 h-6 text-primary" />
         </motion.div>
         <div>
-          <p className="text-foreground font-semibold">{testimonial.name}</p>
+          <p className="text-slate-900 font-semibold">{testimonial.name}</p>
           <p className="text-foreground-muted text-sm">{testimonial.role}</p>
         </div>
       </motion.div>

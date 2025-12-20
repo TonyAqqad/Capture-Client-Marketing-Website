@@ -88,7 +88,7 @@ export function FeatureCard({
           </motion.div>
 
           {/* Title with gradient on hover */}
-          <h3 className="text-lg sm:text-xl font-heading font-bold text-foreground mb-3 sm:mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-accent group-hover:to-primary transition-all duration-300 w-full">
+          <h3 className="text-lg sm:text-xl font-heading font-bold text-slate-900 mb-3 sm:mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-accent group-hover:to-primary transition-all duration-300 w-full">
             {title}
           </h3>
 

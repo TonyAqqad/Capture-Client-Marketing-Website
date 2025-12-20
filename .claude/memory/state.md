@@ -43,8 +43,8 @@
 15. ✅ **Duplicate metadata removed**: Cleaned up home-services/layout.tsx
 
 ## Gold→Blue Migration (2025-12-20)
-✅ **Complete visual audit** of all 15 pages
-✅ **HIGH priority fixes** (70 replacements across 8 files):
+✅ **Complete visual audit** of all 15 pages (8 parallel site-auditor agents)
+✅ **HIGH priority fixes** (70 replacements across 8 files, commit 8b89ec9):
 - `loading.tsx`: 5 replacements (gold borders/backgrounds)
 - `LeadRescueSimulator.tsx`: 4 replacements (gold text/shadows)
 - `PremiumServices.tsx`: 42 replacements (comprehensive gold removal)
@@ -54,18 +54,36 @@
 - `FitnessClient.tsx`: 4 replacements (gold text/borders)
 - `MedSpaClient.tsx`: 2 replacements (gold accents)
 
+✅ **MEDIUM priority fixes** (7 files, commit 987144a):
+- Industry pages, pricing components, homepage features
+- All gold→blue migration on main components complete
+
+✅ **Blog content light theme** (20 files, commit 27b3b3e):
+- `text-gray-300` → `text-slate-600`
+- `text-white` → `text-slate-900`
+- `text-amber-400` → `text-blue-600`
+- `bg-gray-800/50` → `bg-slate-50`
+- All blog articles now readable on light theme
+
 ✅ **Build passing**: 229 pages
-📝 **Remaining**: Minor conditional passes (Automotive, Pricing, Real Estate pages have intentional gold in specific contexts)
 
 ## P0 Blockers
 None - all critical issues resolved ✅
 
-## P1 (all resolved ✅)
-1. ✅ Replaced `btn-gold` with blue gradient on all industry pages (Legal, Dental, HomeServices, PremiumServices)
-2. ✅ Updated breadcrumb schema to use `/who-we-serve` across all 9 industry pages
-3. ✅ Fixed CRMCard dark text colors (`text-white` → `text-slate-900`)
-4. ✅ Removed duplicate metadata from `home-services/layout.tsx`
-5. ✅ Gold→Blue migration HIGH priority fixes complete (70 replacements across 8 files)
+## P1 (high-priority contrast fixes)
+1. ⚠️ **Pricing pages**: `text-cyan-400`, `text-green-400`, `text-blue-300` need better contrast
+2. ⚠️ **Automotive**: `text-green-400` in ROI calculator
+3. ⚠️ **Legal**: Urgency badges with -400 color variants
+4. ⚠️ **Fitness**: Step number badge contrast issue
+5. ⚠️ **SpeedToLeadTimeline**: -400 color variants need audit
+6. ⚠️ **Core components**: Legacy `text-foreground` token cleanup
+
+### Recently resolved:
+- ✅ Replaced `btn-gold` with blue gradient on all industry pages
+- ✅ Updated breadcrumb schema to use `/who-we-serve` across all 9 industry pages
+- ✅ Fixed CRMCard dark text colors (`text-white` → `text-slate-900`)
+- ✅ Removed duplicate metadata from `home-services/layout.tsx`
+- ✅ Gold→Blue migration (HIGH + MEDIUM priority, 15 files total)
 
 ## P2 (nice to have)
 1. Add focus-visible states to CTAs across site

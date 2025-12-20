@@ -745,7 +745,7 @@ export default function FitnessClient() {
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     className="absolute -top-4 -right-4 w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center shadow-lg shadow-blue-200/50"
                   >
-                    <span className="text-xl font-bold text-slate-900">{step.step}</span>
+                    <span className="text-xl font-bold text-white">{step.step}</span>
                   </motion.div>
 
                   {/* Icon */}

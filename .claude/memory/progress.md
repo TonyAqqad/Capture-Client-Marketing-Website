@@ -1,8 +1,23 @@
 # Progress (lean)
-- Overall: ~99% complete (last updated 2025-12-17). Builds passing (228 pages).
-- Current focus: Button text consistency, ROI calculator verification, final lint cleanup, SEO verification codes, perf/accessibility sweep.
+- Overall: ~99% complete (last updated 2025-12-20). Builds passing (229 pages).
+- Current focus: Typography contrast fixes (P1), text-foreground token cleanup, accessibility sweep.
 
 ## Completed highlights
+- **TYPOGRAPHY & CONTRAST AUDIT COMPLETE** (2025-12-20):
+  - **Audit**: Deployed 8 parallel site-auditor agents to audit all 15+ pages for typography & contrast issues
+  - **Blog Content Fixed** (commit 27b3b3e, 20 files):
+    - `text-gray-300` → `text-slate-600`
+    - `text-white` → `text-slate-900`
+    - `text-amber-400` → `text-blue-600`
+    - `bg-gray-800/50` → `bg-slate-50`
+    - All blog articles now readable on light theme
+  - **Gold→Blue Migration - HIGH Priority** (commit 8b89ec9, 8 files, 70 replacements):
+    - loading.tsx, LeadRescueSimulator.tsx, PremiumServices.tsx, CapacityIndicator.tsx
+    - HomeServicesClient.tsx, IntegrationHowItWorks.tsx, FitnessClient.tsx, MedSpaClient.tsx
+  - **Gold→Blue Migration - MEDIUM Priority** (commit 987144a, 7 files):
+    - Industry pages, pricing components, homepage features
+  - **Remaining P1**: Pricing pages contrast (cyan-400, green-400, blue-300), Automotive ROI, Legal badges, Fitness step numbers, SpeedToLeadTimeline, text-foreground cleanup
+  - **Validation**: TypeScript passes, Build passes (229 pages)
 - **COMPREHENSIVE LIGHT THEME MIGRATION COMPLETE** (2025-12-17):
   - **Scope**: 30+ files converted from dark to light theme site-wide
   - **Pages Converted**: Industries (all 10), Who-we-serve (all), Pricing package details, System pages (error/loading/not-found), Legal pages (terms/privacy)

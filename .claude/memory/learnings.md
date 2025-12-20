@@ -151,3 +151,25 @@
   - **Prevention**: Single source of truth for pricing - consider extracting to data/pricing.ts file
   - **Verification**: Search codebase for all price mentions (e.g., grep for "$997", "$950") to catch inconsistencies
   - **Best practice**: All pricing displays should pull from same data source, avoid hardcoding prices in multiple places
+- **Parallel Site Auditing Pattern** (2025-12-20): Efficient multi-page audit strategy using subagents:
+  - **Problem**: Need to audit typography/contrast across 15+ pages without overwhelming main thread context
+  - **Solution**: Deploy 8 parallel site-auditor subagents, each assigned 1-2 pages
+  - **Benefits**:
+    - Each agent runs independently (no context pollution)
+    - Audits complete in parallel (faster than sequential)
+    - Results aggregated without bloating main thread
+  - **Implementation**: Assign related pages to same agent (e.g., Pricing agent audits both /pricing and /pricing/[slug])
+  - **Result aggregation**: Create summary report of HIGH/MEDIUM/LOW priority issues across all agents
+  - **Follow-up pattern**: Fix HIGH priority issues first (batch by commit), then MEDIUM, then LOW
+  - **Lesson**: For site-wide audits, parallelize with subagents rather than reading all files in main thread
+- **Blog Content Dark-to-Light Migration Pattern** (2025-12-20): Converting JSON blog content for light theme:
+  - **Problem**: 20 blog JSON files had dark theme styles (text-gray-300, text-white, bg-gray-800/50) hardcoded in content
+  - **Detection strategy**: Search for dark color classes in JSON files: `text-gray-300`, `text-white`, `text-amber-400`, `bg-gray-800`
+  - **Light theme replacements**:
+    - Body text: `text-gray-300` → `text-slate-600`
+    - Headings: `text-white` → `text-slate-900`
+    - Links/CTAs: `text-amber-400` → `text-blue-600`
+    - Card backgrounds: `bg-gray-800/50` → `bg-slate-50`
+  - **Validation**: Check blog rendering on live site to ensure readability on white background
+  - **Batch approach**: Fixed all 20 blog files in single commit (27b3b3e) for atomic change
+  - **Lesson**: When migrating themes, don't forget data files (JSON/MD) that contain hardcoded styling classes

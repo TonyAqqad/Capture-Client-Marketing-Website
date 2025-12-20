@@ -161,7 +161,7 @@ export default function SocialProofWall() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-4"
+            className="text-4xl md:text-5xl font-heading font-bold text-slate-900 mb-4"
           >
             Real Results. Real Businesses.
           </motion.p>
@@ -215,7 +215,7 @@ function ReviewCard({ content }: { content: { [key: string]: string | number } }
       </div>
 
       {/* Review text */}
-      <p className="text-foreground mb-4 leading-relaxed">{content.text as string}</p>
+      <p className="text-slate-700 mb-4 leading-relaxed">{content.text as string}</p>
 
       {/* Author */}
       <div className="flex items-center gap-3">
@@ -225,7 +225,7 @@ function ReviewCard({ content }: { content: { [key: string]: string | number } }
           </span>
         </div>
         <div>
-          <p className="text-foreground font-semibold text-sm">{content.name as string}</p>
+          <p className="text-slate-900 font-semibold text-sm">{content.name as string}</p>
           <p className="text-foreground-muted text-xs">{content.business as string}</p>
         </div>
       </div>
@@ -240,7 +240,7 @@ function MetricCard({ content }: { content: { [key: string]: string | number } }
   return (
     <div className="card p-6 bg-gradient-to-br from-accent/5 to-primary/5 border-accent/20 hover:border-accent/40 transition-colors duration-300">
       <p className="text-5xl font-bold text-accent mb-2">{content.value as string}</p>
-      <p className="text-foreground font-semibold mb-1">{content.label as string}</p>
+      <p className="text-slate-900 font-semibold mb-1">{content.label as string}</p>
       <p className="text-foreground-muted text-sm">{content.period as string}</p>
       <div className="mt-4 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-accent/20 border border-accent/30">
         <TrendingUp className="w-4 h-4 text-accent" />
@@ -268,7 +268,7 @@ function VideoCard({ content }: { content: { [key: string]: string | number } })
 
       {/* Info */}
       <div className="p-4">
-        <p className="text-foreground font-semibold mb-2">{content.title as string}</p>
+        <p className="text-slate-900 font-semibold mb-2">{content.title as string}</p>
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center">
             <span className="text-primary font-bold text-xs">
@@ -276,7 +276,7 @@ function VideoCard({ content }: { content: { [key: string]: string | number } })
             </span>
           </div>
           <div>
-            <p className="text-foreground text-xs">{content.name as string}</p>
+            <p className="text-slate-700 text-xs">{content.name as string}</p>
             <p className="text-foreground-muted text-xs">{content.business as string}</p>
           </div>
         </div>
@@ -294,7 +294,7 @@ function BadgeCard({ content }: { content: { [key: string]: string | number | Re
         <IconComponent className="w-6 h-6 text-primary" />
       </div>
       <div>
-        <p className="text-foreground font-semibold">{content.title as string}</p>
+        <p className="text-slate-900 font-semibold">{content.title as string}</p>
         <p className="text-foreground-muted text-sm">{content.subtitle as string}</p>
       </div>
     </div>

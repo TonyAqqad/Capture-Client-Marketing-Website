@@ -767,7 +767,7 @@ export default function AutomotivePageClient() {
                   </div>
                   <div className="p-4 rounded-xl bg-green-500/10 border border-green-500/20">
                     <div className="text-sm text-slate-600 mb-1">+ No-Show Reduction Savings</div>
-                    <div className="text-2xl font-display font-bold text-green-400">
+                    <div className="text-2xl font-display font-bold text-green-600">
                       ${(noShowReduction / 1000).toFixed(0)}K/year
                     </div>
                   </div>
