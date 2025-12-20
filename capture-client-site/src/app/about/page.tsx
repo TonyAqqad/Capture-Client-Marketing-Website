@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "About Capture Client | Voice AI & Marketing Automation",
-    description: "Learn how Capture Client helps small businesses grow with AI voice agents and marketing automation. 500+ businesses trust our 24/7 lead capture solutions.",
+    description: "Meet the team behind Capture Client. We help small businesses capture more leads with AI-powered 24/7 voice agents and marketing automation.",
     url: "https://captureclient.com/about",
     siteName: "Capture Client",
     type: "website",

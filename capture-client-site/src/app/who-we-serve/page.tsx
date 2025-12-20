@@ -8,7 +8,7 @@ import JsonLd from '@/components/seo/JsonLd';
 import { SITE_CONFIG } from '@/lib/seo-config';
 
 export const metadata: Metadata = {
-  title: 'Industries We Serve | AI Voice Agents for Every Business | Capture Client',
+  title: 'Industries We Serve | AI Voice Agents | Capture Client',
   description: 'Capture Client serves 12+ industries with AI voice agents, lead generation, and marketing automation. From legal to healthcare, real estate to restaurants - never miss a call again.',
   keywords: [
     'ai voice agents by industry',
@@ -20,8 +20,11 @@ export const metadata: Metadata = {
     'property management ai',
     'insurance quote ai',
   ],
+  alternates: {
+    canonical: 'https://captureclient.com/who-we-serve',
+  },
   openGraph: {
-    title: 'Industries We Serve | AI Voice Agents for Every Business | Capture Client',
+    title: 'Industries We Serve | AI Voice Agents | Capture Client',
     description: '12+ industries trust Capture Client for 24/7 AI voice agents, lead capture, and appointment booking.',
     images: [
       {
@@ -194,7 +197,7 @@ export default function WhoWeServePage() {
                 </div>
 
                 <div className="p-8 rounded-2xl bg-white backdrop-blur-2xl border border-slate-200">
-                  <ShieldCheck className="w-10 h-10 text-accent-400 mb-4" />
+                  <ShieldCheck className="w-10 h-10 text-blue-600 mb-4" />
                   <h3 className="text-2xl font-bold text-slate-900 mb-3">Compliance Ready</h3>
                   <p className="text-slate-600 leading-relaxed">
                     HIPAA for healthcare. Attorney-client privilege for law. SOC-II across the board. Industry-specific security baked in.
@@ -202,7 +205,7 @@ export default function WhoWeServePage() {
                 </div>
 
                 <div className="p-8 rounded-2xl bg-white backdrop-blur-2xl border border-slate-200">
-                  <Puzzle className="w-10 h-10 text-primary-400 mb-4" />
+                  <Puzzle className="w-10 h-10 text-blue-600 mb-4" />
                   <h3 className="text-2xl font-bold text-slate-900 mb-3">Native Integrations</h3>
                   <p className="text-slate-600 leading-relaxed">
                     Clio for legal. ServiceTitan for HVAC. Epic for healthcare. We integrate with the tools you already use.
@@ -210,7 +213,7 @@ export default function WhoWeServePage() {
                 </div>
 
                 <div className="p-8 rounded-2xl bg-white backdrop-blur-2xl border border-slate-200">
-                  <Brain className="w-10 h-10 text-cyan-400 mb-4" />
+                  <Brain className="w-10 h-10 text-cyan-600 mb-4" />
                   <h3 className="text-2xl font-bold text-slate-900 mb-3">Smart Workflows</h3>
                   <p className="text-slate-600 leading-relaxed">
                     Emergency triage for home services. Lead qualification for real estate. Symptom assessment for healthcare. Industry-tuned logic.

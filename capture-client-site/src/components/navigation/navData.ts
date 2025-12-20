@@ -204,8 +204,8 @@ export const navigationData: Record<string, NavSection> = {
       },
       {
         label: "ROI Calculator",
-        href: "/roi-calculator",
-        description: "Calculate your revenue impact",
+        href: "/pricing",
+        description: "See pricing and calculate your ROI",
         icon: "roi-calculator",
       },
       {

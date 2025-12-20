@@ -168,7 +168,7 @@ export default function AboutClient() {
 
           {/* Stats Section - Animated Counters */}
           <section className="mb-12 sm:mb-16 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
-            <StatCard value={500} label="Businesses Served" delay={0.1} isNumeric suffix="+" />
+            <StatCard value="Growing" label="Client Base" delay={0.1} />
             <StatCard value="24/7" label="AI Availability" delay={0.2} />
             <StatCard value={3} label="More Clients Captured" delay={0.3} isNumeric suffix="x" />
           </section>

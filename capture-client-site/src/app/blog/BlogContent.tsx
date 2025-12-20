@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Star, Calendar, Clock, ArrowRight, FileText, Mail } from "lucide-react";
+import { Star, Calendar, Clock, ArrowRight, FileText, Mail, Phone } from "lucide-react";
 import { motion } from "@/lib/motion";
 
 // Category styling based on category name
@@ -497,7 +497,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
                     href="tel:865-346-6111"
                     className="inline-flex items-center justify-center gap-2 backdrop-blur-md bg-white/10 border border-slate-200 text-slate-900 px-8 py-4 rounded-full font-bold hover:bg-white/20 hover:border-slate-200/60 transition-all duration-300"
                   >
-                    <Mail className="w-5 h-5" />
+                    <Phone className="w-5 h-5" />
                     (865) 346-6111
                   </a>
                 </motion.div>

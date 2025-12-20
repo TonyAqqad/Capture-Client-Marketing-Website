@@ -88,7 +88,7 @@ export function IndustryCard({ industry, index = 0 }: IndustryCardProps) {
             )}
 
             {/* CTA */}
-            <div className="flex items-center text-accent-400 font-semibold group-hover:text-accent-300 transition-colors duration-300">
+            <div className="flex items-center text-blue-600 font-semibold group-hover:text-blue-500 transition-colors duration-300">
               <span>Learn More</span>
               <motion.div
                 className="ml-2"

@@ -78,7 +78,7 @@ export function generateOrganizationSchema() {
     logo: `${SITE_CONFIG.url}/logo-full.svg`,
     image: `${SITE_CONFIG.url}/og-image.png`,
     description:
-      'Capture Client is the enterprise-grade growth platform for small businesses, combining AI Voice Agents (24/7 call answering), Google & Facebook Ads management, built-in CRM, and real-time analytics. Trusted by 500+ businesses with 50,000+ calls handled and 97% customer satisfaction.',
+      'Capture Client is the enterprise-grade growth platform for small businesses, combining AI Voice Agents (24/7 call answering), Google & Facebook Ads management, built-in CRM, and real-time analytics. Based in Knoxville, TN.',
 
     foundingDate: SITE_CONFIG.foundingDate,
 

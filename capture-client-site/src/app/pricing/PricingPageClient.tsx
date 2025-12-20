@@ -1094,7 +1094,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.05 }}
                   >
-                    <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <span className="text-slate-900 text-sm font-medium">{feature}</span>
                   </motion.div>
                 ))}
@@ -1170,7 +1170,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
               <div className="space-y-3 flex-grow">
                 {pkg.features.map((feature, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-blue-600/60 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <span className="text-slate-700 text-sm">{feature}</span>
                   </div>
                 ))}
@@ -1252,7 +1252,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
               <div className="space-y-3 flex-grow">
                 {pkg.features.map((feature, i) => (
                   <div key={i} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-cyan-500 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <span className="text-slate-700 text-sm">{feature}</span>
                   </div>
                 ))}
