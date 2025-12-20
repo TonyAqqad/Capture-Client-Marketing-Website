@@ -24,7 +24,7 @@ const STUDIO_TYPES = [
     icon: "💪",
     value: "$200/mo",
     scenario: "7 PM class inquiry",
-    pain: "Prospect calls during evening class. Staff too busy coaching to answer. They sign up at the box down the street.",
+    pain: "Prospect calls during evening class. Staff too busy coaching to answer. They sign up at the CrossFit box down the street instead.",
     solution: "AI answers during WOD, qualifies lead, books intro session. Prospect shows up next day ready to join."
   },
   {
@@ -33,7 +33,7 @@ const STUDIO_TYPES = [
     icon: "🧘",
     value: "$150/mo",
     scenario: "Early morning call",
-    pain: "6 AM call about prenatal yoga. Studio opens at 9. Lead books with competitor who answered.",
+    pain: "6 AM call about prenatal yoga. Studio opens at 9. Lead books with competitor who answered the phone.",
     solution: "AI answers at 6 AM, discusses prenatal options, books trial class. Lead becomes unlimited member."
   },
   {
@@ -42,7 +42,7 @@ const STUDIO_TYPES = [
     icon: "🏋️",
     value: "$250/mo",
     scenario: "Weekend trial request",
-    pain: "Saturday 2 PM. Staff running class. Motivated lead lost to gym with 24/7 answering.",
+    pain: "Saturday 2 PM. Staff running class. Motivated lead lost to gym with 24/7 answering service.",
     solution: "AI handles Saturday rush, books Monday trial, sends confirmation text. Lead converts to 6-month package."
   },
   {
@@ -123,15 +123,21 @@ export default function FitnessClient() {
   const [selectedStudio, setSelectedStudio] = useState(STUDIO_TYPES[0]);
   const [monthlyLeads, setMonthlyLeads] = useState(100);
   const [membershipValue, setMembershipValue] = useState(150);
-  const [lostRevenue, setLostRevenue] = useState(0);
+
+  // Calculate initial lost revenue to prevent $0 flash
+  const calculateLostRevenue = (leads: number, value: number) => {
+    const missedLeads = leads * 0.30; // 30% miss rate
+    const conversionRate = 0.25; // 25% of answered leads convert
+    return Math.round(missedLeads * conversionRate * value * 12);
+  };
+
+  const [lostRevenue, setLostRevenue] = useState(calculateLostRevenue(100, 150));
   const [counter, setCounter] = useState(0);
 
   // ROI Calculator
   useEffect(() => {
-    const missedLeads = monthlyLeads * 0.30; // 30% miss rate
-    const conversionRate = 0.25; // 25% of answered leads convert
-    const annualLoss = missedLeads * conversionRate * membershipValue * 12;
-    setLostRevenue(Math.round(annualLoss));
+    const newLostRevenue = calculateLostRevenue(monthlyLeads, membershipValue);
+    setLostRevenue(newLostRevenue);
   }, [monthlyLeads, membershipValue]);
 
   // Money counter animation

@@ -763,7 +763,7 @@ export default function DentalClient() {
                 }}
                 className="bg-white/70 backdrop-blur-xl border border-slate-200 p-8 rounded-2xl text-center relative hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300"
               >
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-gold to-gold-600 rounded-full flex items-center justify-center font-bold text-black text-xl shadow-lg shadow-gold/50">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 bg-gradient-to-r from-blue-600 to-blue-500 rounded-full flex items-center justify-center font-bold text-white text-xl shadow-lg shadow-blue-500/50">
                   {item.step}
                 </div>
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 mt-4">
@@ -823,7 +823,7 @@ export default function DentalClient() {
               >
                 <div className="flex items-center gap-1 mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-gold fill-gold" />
+                    <Star key={i} className="w-5 h-5 text-amber-400 fill-amber-400" />
                   ))}
                 </div>
                 <div className="text-blue-600 text-5xl mb-4">"</div>

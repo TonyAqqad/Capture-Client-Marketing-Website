@@ -134,7 +134,7 @@ export default function HomeServicesClient() {
               transition={{ delay: 0.2 }}
               className="text-lg sm:text-xl lg:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed"
             >
-              AI Voice Agents That Capture Every Emergency Call, 24/7. Never miss a 3 AM burst pipe or Saturday AC breakdown again.
+              AI Voice Agents That Capture Every Emergency Call, 24/7. Never miss a 3 AM burst pipe emergency or Saturday AC breakdown call again.
             </motion.p>
 
             {/* Money counter */}
@@ -676,7 +676,7 @@ export default function HomeServicesClient() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-red-500">❌</span>
-                    <span className="text-slate-600">Customer calls competitor</span>
+                    <span className="text-slate-600">Customer calls your competitor next</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-red-500">❌</span>

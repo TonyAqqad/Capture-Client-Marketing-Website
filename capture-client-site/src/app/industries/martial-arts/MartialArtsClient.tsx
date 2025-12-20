@@ -47,7 +47,7 @@ const STUDIO_TYPES = [
     icon: "👊",
     value: "$180/mo",
     scenario: "Evening class inquiry",
-    pain: "Young professional wants MMA after work. 7 PM call. All trainers coaching. Lead joins competitor.",
+    pain: "Young professional wants MMA after work. 7 PM call. All trainers coaching. Lead joins competing gym.",
     color: "from-purple-500 to-pink-600"
   },
   {

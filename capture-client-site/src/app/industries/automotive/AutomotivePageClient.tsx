@@ -926,7 +926,7 @@ export default function AutomotivePageClient() {
                 name: "Sarah Chen",
                 role: "Service Director",
                 dealership: "Premium Motors",
-                quote: "No-shows dropped by 58% in the first month. Our service advisors love it because they get pre-qualified appointments.",
+                quote: "No-shows dropped by 58% in the first month. Our service advisors love it because they get pre-qualified appointments instead of time-wasters calling to 'just ask a question.'",
                 revenue: "-58% No-Shows"
               },
               {
@@ -1077,7 +1077,7 @@ export default function AutomotivePageClient() {
                 className="flex items-center gap-2"
               >
                 <CheckCircle2 className="w-4 h-4 text-blue-600" />
-                <span>No long-term contract</span>
+                <span>Cancel anytime</span>
               </motion.div>
             </motion.div>
           </motion.div>
