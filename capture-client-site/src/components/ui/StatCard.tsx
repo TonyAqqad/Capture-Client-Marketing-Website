@@ -15,7 +15,7 @@ interface StatCardProps {
     value: number;
     direction: "up" | "down";
   };
-  color?: "gold" | "cyan" | "primary" | "success";
+  color?: "blue" | "cyan" | "primary" | "success";
   variant?: "default" | "minimal";
   className?: string;
   animateOnView?: boolean;
@@ -32,7 +32,7 @@ export function StatCard({
   prefix = "",
   icon,
   trend,
-  color = "gold",
+  color = "blue",
   variant = "default",
   className = "",
   animateOnView = true
@@ -56,14 +56,14 @@ export function StatCard({
   }, [isInView, value, spring]);
 
   const colorClasses = {
-    gold: "text-gold",
+    blue: "text-blue-500",
     cyan: "text-accent",
     primary: "text-primary",
     success: "text-green-400"
   };
 
   const glowColors = {
-    gold: "blue" as const,
+    blue: "blue" as const,
     cyan: "blue" as const,
     primary: "primary" as const,
     success: "blue" as const

@@ -17,14 +17,14 @@ interface IndustryIntegrationsProps {
 // Category color mapping for theming
 const CATEGORY_COLORS: Record<string, { gradient: string; accent: string; accentDark: string; badgeBg: string; badgeBorder: string; textHover: string; glowFrom: string; glowTo: string }> = {
   'Professional Services': {
-    gradient: 'from-gold-500/20 to-gold-600/20',
-    accent: 'text-gold-400',
-    accentDark: 'text-gold-300',
-    badgeBg: 'bg-gold-400/20',
-    badgeBorder: 'border-gold-400/30',
-    textHover: 'group-hover:text-gold-400',
-    glowFrom: 'from-gold-400/0 group-hover:from-gold-400/20',
-    glowTo: 'to-gold-600/0 group-hover:to-gold-600/10',
+    gradient: 'from-blue-500/20 to-cyan-500/20',
+    accent: 'text-blue-400',
+    accentDark: 'text-blue-300',
+    badgeBg: 'bg-blue-400/20',
+    badgeBorder: 'border-blue-400/30',
+    textHover: 'group-hover:text-blue-400',
+    glowFrom: 'from-blue-400/0 group-hover:from-blue-400/20',
+    glowTo: 'to-cyan-600/0 group-hover:to-cyan-600/10',
   },
   'Home Services': {
     gradient: 'from-accent-500/20 to-accent-600/20',
@@ -57,14 +57,14 @@ const CATEGORY_COLORS: Record<string, { gradient: string; accent: string; accent
     glowTo: 'to-cyan-600/0 group-hover:to-cyan-600/10',
   },
   'Hospitality': {
-    gradient: 'from-gold-500/20 to-mocha-600/20',
-    accent: 'text-gold-400',
-    accentDark: 'text-gold-300',
-    badgeBg: 'bg-gold-400/20',
-    badgeBorder: 'border-gold-400/30',
-    textHover: 'group-hover:text-gold-400',
-    glowFrom: 'from-gold-400/0 group-hover:from-gold-400/20',
-    glowTo: 'to-mocha-600/0 group-hover:to-mocha-600/10',
+    gradient: 'from-blue-500/20 to-cyan-600/20',
+    accent: 'text-blue-400',
+    accentDark: 'text-blue-300',
+    badgeBg: 'bg-blue-400/20',
+    badgeBorder: 'border-blue-400/30',
+    textHover: 'group-hover:text-blue-400',
+    glowFrom: 'from-blue-400/0 group-hover:from-blue-400/20',
+    glowTo: 'to-cyan-600/0 group-hover:to-cyan-600/10',
   },
 };
 
@@ -89,7 +89,7 @@ export function IndustryIntegrations({ industry, maxDisplay = 6 }: IndustryInteg
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               Seamless{' '}
-              <span className="bg-gradient-to-r from-gold-400 to-accent-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Integrations
               </span>
             </h2>

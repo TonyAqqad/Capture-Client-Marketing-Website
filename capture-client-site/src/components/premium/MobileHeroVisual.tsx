@@ -53,7 +53,7 @@ export function MobileHeroVisual() {
                 </div>
 
                 {/* Avatar */}
-                <div className="relative w-28 h-28 rounded-full bg-gradient-to-br from-cyan-500 via-[#D4AF37] to-[#D4AF37]/80 flex items-center justify-center shadow-[0_8px_32px_rgba(0,201,255,0.4)]">
+                <div className="relative w-28 h-28 rounded-full bg-gradient-to-br from-cyan-500 via-blue-500 to-cyan-400 flex items-center justify-center shadow-[0_8px_32px_rgba(0,201,255,0.4)]">
                   <User className="text-white w-12 h-12" />
                 </div>
               </div>
@@ -69,7 +69,7 @@ export function MobileHeroVisual() {
             <div className="absolute bottom-32 left-4 right-4 z-10">
               <div className="glass-premium-mobile p-4 border-cyan-500/20 slide-up-fade">
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-cyan-500 to-[#D4AF37] flex items-center justify-center flex-shrink-0">
+                  <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center flex-shrink-0">
                     <Bot className="text-white w-4 h-4" />
                   </div>
                   <div className="flex-1 min-w-0">
@@ -87,10 +87,10 @@ export function MobileHeroVisual() {
               <div className="flex items-end justify-center gap-1.5 h-12">
                 <div className="w-1 bg-gradient-to-t from-cyan-400 to-cyan-500 rounded-full waveform-bar" style={{ animationDelay: '0ms' }} />
                 <div className="w-1 bg-gradient-to-t from-cyan-400 to-cyan-500 rounded-full waveform-bar" style={{ animationDelay: '100ms' }} />
-                <div className="w-1 bg-gradient-to-t from-[#D4AF37] to-[#D4AF37] rounded-full waveform-bar" style={{ animationDelay: '200ms' }} />
-                <div className="w-1 bg-gradient-to-t from-[#D4AF37] to-[#D4AF37] rounded-full waveform-bar" style={{ animationDelay: '300ms' }} />
+                <div className="w-1 bg-gradient-to-t from-blue-500 to-cyan-400 rounded-full waveform-bar" style={{ animationDelay: '200ms' }} />
+                <div className="w-1 bg-gradient-to-t from-blue-500 to-cyan-400 rounded-full waveform-bar" style={{ animationDelay: '300ms' }} />
                 <div className="w-1 bg-gradient-to-t from-cyan-400 to-cyan-500 rounded-full waveform-bar" style={{ animationDelay: '400ms' }} />
-                <div className="w-1 bg-gradient-to-t from-[#D4AF37] to-[#D4AF37] rounded-full waveform-bar" style={{ animationDelay: '500ms' }} />
+                <div className="w-1 bg-gradient-to-t from-blue-500 to-cyan-400 rounded-full waveform-bar" style={{ animationDelay: '500ms' }} />
                 <div className="w-1 bg-gradient-to-t from-cyan-400 to-cyan-500 rounded-full waveform-bar" style={{ animationDelay: '600ms' }} />
               </div>
             </div>
@@ -112,17 +112,17 @@ export function MobileHeroVisual() {
 
         {/* Decorative floating elements */}
         <div className="absolute -top-4 -right-4 w-20 h-20 rounded-full bg-gradient-radial from-cyan-500/20 to-transparent blur-2xl float-slow" />
-        <div className="absolute -bottom-4 -left-4 w-24 h-24 rounded-full bg-gradient-radial from-[#D4AF37]/20 to-transparent blur-2xl float-slow-delayed" />
+        <div className="absolute -bottom-4 -left-4 w-24 h-24 rounded-full bg-gradient-radial from-blue-500/20 to-transparent blur-2xl float-slow-delayed" />
 
         {/* LIVE NOW badge - floating on phone */}
         <div className="absolute -top-2 -right-2 z-20">
-          <div className="relative glass-badge px-3 py-1.5 shadow-[0_4px_20px_rgba(212,175,55,0.4)]">
+          <div className="relative glass-badge px-3 py-1.5 shadow-[0_4px_20px_rgba(59,130,246,0.4)]">
             <div className="flex items-center gap-1.5">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping-slow absolute inline-flex h-full w-full rounded-full bg-[#D4AF37] opacity-75" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#D4AF37] shadow-[0_0_6px_rgba(212,175,55,0.8)]" />
+                <span className="animate-ping-slow absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500 shadow-[0_0_6px_rgba(59,130,246,0.8)]" />
               </span>
-              <span className="text-[11px] font-bold text-[#D4AF37] uppercase tracking-wide">Live Now</span>
+              <span className="text-[11px] font-bold text-blue-500 uppercase tracking-wide">Live Now</span>
             </div>
           </div>
         </div>
@@ -133,7 +133,7 @@ export function MobileHeroVisual() {
         <div className="text-center">
           <div className="flex items-center justify-center gap-1 mb-1">
             <span className="text-2xl">📞</span>
-            <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-[#D4AF37] bg-clip-text text-transparent">4,273</span>
+            <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-400 bg-clip-text text-transparent">4,273</span>
           </div>
           <p className="text-xs text-white/60 font-medium">Calls Today</p>
         </div>
@@ -143,7 +143,7 @@ export function MobileHeroVisual() {
         <div className="text-center">
           <div className="flex items-center justify-center gap-1 mb-1">
             <span className="text-2xl">🎯</span>
-            <span className="text-xl font-bold bg-gradient-to-r from-gold to-gold-light bg-clip-text text-transparent">1,847</span>
+            <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">1,847</span>
           </div>
           <p className="text-xs text-white/60 font-medium">Leads Captured</p>
         </div>
@@ -152,13 +152,13 @@ export function MobileHeroVisual() {
       {/* Try Our AI Live CTA Section */}
       <div className="relative mt-6">
         {/* Glow ring */}
-        <div className="absolute inset-0 -m-1 rounded-2xl bg-gradient-to-r from-[#D4AF37]/30 via-cyan-500/30 to-[#D4AF37]/30 blur-xl glow-pulse" />
+        <div className="absolute inset-0 -m-1 rounded-2xl bg-gradient-to-r from-blue-500/30 via-cyan-500/30 to-blue-500/30 blur-xl glow-pulse" />
 
         {/* CTA Container */}
         <div className="relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-5 shadow-[0_8px_32px_rgba(0,0,0,0.3)]">
           {/* Header */}
           <div className="text-center mb-4">
-            <h3 className="text-lg font-bold bg-gradient-to-r from-[#D4AF37] via-cyan-400 to-[#D4AF37] bg-clip-text text-transparent mb-2 gradient-shimmer">
+            <h3 className="text-lg font-bold bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2 gradient-shimmer">
               Try Our AI Live!
             </h3>
             <div className="flex items-center justify-center gap-2">
@@ -175,7 +175,7 @@ export function MobileHeroVisual() {
             href="tel:865-346-6111"
             className="block text-center mb-4 group"
           >
-            <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-[#D4AF37] bg-clip-text text-transparent group-active:scale-95 transition-transform">
+            <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-400 bg-clip-text text-transparent group-active:scale-95 transition-transform">
               (865) 346-6111
             </div>
           </a>
@@ -186,9 +186,9 @@ export function MobileHeroVisual() {
             className="relative block w-full"
           >
             {/* Pulsing ring around button */}
-            <div className="absolute inset-0 -m-1 rounded-xl bg-gradient-to-r from-cyan-500 to-[#D4AF37] opacity-50 pulse-ring-button" />
+            <div className="absolute inset-0 -m-1 rounded-xl bg-gradient-to-r from-cyan-500 to-cyan-400 opacity-50 pulse-ring-button" />
 
-            <button className="relative w-full bg-gradient-to-r from-cyan-500 to-[#D4AF37] text-white font-bold py-3.5 px-6 rounded-xl shadow-[0_4px_20px_rgba(0,201,255,0.4)] active:scale-95 transition-transform flex items-center justify-center gap-2">
+            <button className="relative w-full bg-gradient-to-r from-cyan-500 to-cyan-400 text-white font-bold py-3.5 px-6 rounded-xl shadow-[0_4px_20px_rgba(0,201,255,0.4)] active:scale-95 transition-transform flex items-center justify-center gap-2">
               <Phone className="w-5 h-5" />
               <span>Call Now</span>
             </button>

@@ -161,7 +161,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
             <div className="max-w-4xl mx-auto">
               {/* Breadcrumb */}
               <nav className="flex items-center gap-2 text-sm text-slate-600 mb-8" aria-label="Breadcrumb">
-                <a href="/who-we-serve" className="hover:text-gold-400 transition-colors">
+                <a href="/who-we-serve" className="hover:text-blue-500 transition-colors">
                   Industries
                 </a>
                 <ChevronRight className="w-3 h-3" />
@@ -170,7 +170,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
 
               {/* Category Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white backdrop-blur-sm border border-slate-200 mb-6">
-                <span className="text-sm font-semibold text-gold-400">{industry.category}</span>
+                <span className="text-sm font-semibold text-blue-500">{industry.category}</span>
               </div>
 
               {/* Headline */}
@@ -179,7 +179,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
               </h1>
 
               {/* Tagline */}
-              <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent mb-6">
+              <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent mb-6">
                 {industry.tagline}
               </p>
 
@@ -224,7 +224,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
                 {industry.stats.map((stat, index) => (
                   <div key={index} className="text-center">
-                    <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent mb-2">
+                    <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent mb-2">
                       {stat.value}
                     </div>
                     <div className="text-sm text-slate-600">
@@ -253,7 +253,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
               <div className="text-center mb-16">
                 <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
                   Challenges Facing{' '}
-                  <span className="bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
                     {industry.name}
                   </span>
                 </h2>
@@ -266,9 +266,9 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                 {industry.painPoints.map((pain, index) => (
                   <div
                     key={index}
-                    className="flex items-start gap-4 p-6 rounded-2xl bg-white backdrop-blur-xl border border-slate-200 hover:border-gold-500/30 transition-all duration-300"
+                    className="flex items-start gap-4 p-6 rounded-2xl bg-white backdrop-blur-xl border border-slate-200 hover:border-blue-500/30 transition-all duration-300"
                   >
-                    <AlertCircle className="text-gold-400 w-6 h-6 flex-shrink-0 mt-1" />
+                    <AlertCircle className="text-blue-500 w-6 h-6 flex-shrink-0 mt-1" />
                     <p className="text-slate-600 leading-relaxed text-lg">
                       {pain}
                     </p>
@@ -301,7 +301,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                     key={index}
                     className="flex items-center gap-3 p-4 rounded-xl bg-slate-50 backdrop-blur-sm border border-slate-200 hover:bg-white transition-all duration-300"
                   >
-                    <CheckCircle className="text-gold-400 w-4 h-4" />
+                    <CheckCircle className="text-blue-500 w-4 h-4" />
                     <span className="text-slate-900">{feature}</span>
                   </div>
                 ))}
@@ -318,7 +318,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                 <div className="text-center mb-16">
                   <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
                     The ROI is{' '}
-                    <span className="bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
                       Undeniable
                     </span>
                   </h2>
@@ -339,21 +339,21 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                       </div>
 
                       <div className="flex items-center justify-center">
-                        <ArrowRight className="text-gold-400 w-9 h-9" />
+                        <ArrowRight className="text-blue-500 w-9 h-9" />
                       </div>
 
                       <div className="text-center">
-                        <div className="text-sm text-gold-400 mb-2">With Capture Client</div>
-                        <div className="text-4xl font-bold text-gold-400">
+                        <div className="text-sm text-blue-500 mb-2">With Capture Client</div>
+                        <div className="text-4xl font-bold text-blue-500">
                           {industry.roiCalculation.aiSolution}
                         </div>
                       </div>
                     </div>
 
                     {/* Savings */}
-                    <div className="text-center p-6 rounded-2xl bg-gradient-to-r from-gold-500/20 to-gold-600/10 border border-gold-500/30 mb-8">
-                      <div className="text-sm text-gold-400 mb-2">Your Annual Savings</div>
-                      <div className="text-5xl font-bold text-gold-400">
+                    <div className="text-center p-6 rounded-2xl bg-gradient-to-r from-blue-500/20 to-blue-600/10 border border-blue-500/30 mb-8">
+                      <div className="text-sm text-blue-500 mb-2">Your Annual Savings</div>
+                      <div className="text-5xl font-bold text-blue-500">
                         {industry.roiCalculation.annualSavings}
                       </div>
                     </div>
@@ -365,8 +365,8 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                           <span className="text-slate-900">{item.item}</span>
                           <div className="flex items-center gap-4">
                             <span className="text-slate-600 line-through">{item.traditional}</span>
-                            <ArrowRight className="text-gold-400 w-3 h-3" />
-                            <span className="text-gold-400 font-bold">{item.ai}</span>
+                            <ArrowRight className="text-blue-500 w-3 h-3" />
+                            <span className="text-blue-500 font-bold">{item.ai}</span>
                           </div>
                         </div>
                       ))}
@@ -398,7 +398,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                       )}
 
                       <div className="flex-1">
-                        <Quote className="text-gold-400 w-12 h-12 mb-4" />
+                        <Quote className="text-blue-500 w-12 h-12 mb-4" />
 
                         <p className="text-xl md:text-2xl text-slate-900 leading-relaxed mb-6 italic">
                           "{industry.testimonial.quote}"
@@ -408,7 +408,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
                           <div className="font-bold text-slate-900 text-lg">
                             {industry.testimonial.author}
                           </div>
-                          <div className="text-gold-400">
+                          <div className="text-blue-500">
                             {industry.testimonial.company}
                           </div>
                         </div>
@@ -426,7 +426,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
           <IndustryCaseStudies
             caseStudyIds={industry.relatedCaseStudies}
             industryName={industry.name}
-            industryTheme="gold"
+            industryTheme="accent"
           />
         )}
 
@@ -440,7 +440,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
           <IndustryFAQ
             faqs={faqs}
             industryName={industry.name}
-            categoryColor={industry.category === 'Healthcare' ? 'accent' : 'gold'}
+            categoryColor="accent"
           />
         )}
 
@@ -448,7 +448,7 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
         <section className="py-16 md:py-20 bg-white relative overflow-hidden">
           {/* Background - Performance optimized for mobile */}
           <div className="absolute inset-0 bg-mesh-premium opacity-20 md:opacity-40" />
-          <div className="hidden md:block absolute top-10 left-10 w-72 h-72 bg-gold-500/20 rounded-full blur-3xl animate-float-slow" />
+          <div className="hidden md:block absolute top-10 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-float-slow" />
           <div className="hidden md:block absolute bottom-10 right-10 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl animate-float-medium" />
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">

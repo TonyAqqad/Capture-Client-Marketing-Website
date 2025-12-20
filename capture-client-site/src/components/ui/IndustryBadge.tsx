@@ -60,9 +60,9 @@ export function IndustryBadge({
       glass: "bg-purple-500/10 backdrop-blur-xl border-purple-500/20 text-purple-300 shadow-[0_4px_16px_rgba(168,85,247,0.15)]"
     },
     default: {
-      solid: "bg-gold text-white border-gold-600",
-      outline: "bg-gold/10 text-gold border-gold/30",
-      glass: "bg-gold/10 backdrop-blur-xl border-gold/20 text-gold shadow-glow-gold"
+      solid: "bg-blue-500 text-white border-blue-600",
+      outline: "bg-blue-500/10 text-blue-500 border-blue-500/30",
+      glass: "bg-blue-500/10 backdrop-blur-xl border-blue-500/20 text-blue-500 shadow-lg shadow-blue-500/30"
     }
   };
 

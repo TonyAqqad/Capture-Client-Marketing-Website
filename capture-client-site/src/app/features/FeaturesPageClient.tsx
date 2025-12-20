@@ -84,21 +84,21 @@ export default function FeaturesPageClient() {
                 >
                   <Link
                     href="/contact"
-                    className="group relative px-8 py-4 sm:py-5 bg-gradient-to-r from-gold-500 to-amber-500 text-slate-900 font-bold text-base sm:text-lg rounded-full overflow-hidden transition-all hover:shadow-[0_0_40px_rgba(245,166,35,0.6)] min-h-[56px] flex items-center justify-center"
+                    className="group relative px-8 py-4 sm:py-5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-base sm:text-lg rounded-full overflow-hidden transition-all shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 min-h-[56px] flex items-center justify-center"
                   >
                     <span className="relative z-10 flex items-center gap-2">
                       Start Free Trial
                       <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 group-hover:translate-x-1 transition-transform" />
                     </span>
                     <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-amber-400 to-gold-400"
+                      className="absolute inset-0 bg-gradient-to-r from-blue-400 to-cyan-400"
                       initial={{ x: "-100%" }}
                       whileHover={{ x: "0%" }}
                       transition={{ duration: 0.3 }}
                     />
-                    {/* Gold glow pulse */}
+                    {/* Blue glow pulse */}
                     <motion.div
-                      className="absolute inset-0 bg-gold-500 rounded-full opacity-0"
+                      className="absolute inset-0 bg-blue-500 rounded-full opacity-0"
                       animate={{ opacity: [0, 0.2, 0] }}
                       transition={{ duration: 2, repeat: Infinity }}
                     />
@@ -793,7 +793,7 @@ export default function FeaturesPageClient() {
               >
                 <Link
                   href="/contact"
-                  className="group relative px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-gold-500 to-amber-500 text-slate-900 font-bold text-base sm:text-lg rounded-full overflow-hidden transition-all hover:shadow-[0_0_50px_rgba(245,166,35,0.8)] min-h-[56px] flex items-center justify-center"
+                  className="group relative px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold text-base sm:text-lg rounded-full overflow-hidden transition-all shadow-lg shadow-blue-500/40 hover:shadow-blue-500/60 min-h-[56px] flex items-center justify-center"
                 >
                   {/* Shine effect on hover */}
                   <motion.div
@@ -803,9 +803,9 @@ export default function FeaturesPageClient() {
                     transition={{ duration: 0.6 }}
                   />
 
-                  {/* Gold glow pulse */}
+                  {/* Blue glow pulse */}
                   <motion.div
-                    className="absolute inset-0 bg-gold-400 rounded-full opacity-0"
+                    className="absolute inset-0 bg-blue-400 rounded-full opacity-0"
                     animate={{ opacity: [0, 0.3, 0] }}
                     transition={{ duration: 2, repeat: Infinity }}
                   />

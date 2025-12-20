@@ -88,7 +88,7 @@ export function FeatureGrid({
 
                 {/* Badge */}
                 {feature.badge && (
-                  <span className="inline-block text-xs font-semibold uppercase tracking-wider text-gold bg-gold/10 px-3 py-1 rounded-full border border-gold/20">
+                  <span className="inline-block text-xs font-semibold uppercase tracking-wider text-blue-500 bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">
                     {feature.badge}
                   </span>
                 )}
@@ -164,7 +164,7 @@ export function FeatureGrid({
         >
           {/* Icon */}
           {feature.icon && (
-            <div className="w-8 h-8 text-gold">
+            <div className="w-8 h-8 text-blue-500">
               {feature.icon}
             </div>
           )}

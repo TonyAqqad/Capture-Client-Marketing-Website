@@ -1,5 +1,5 @@
 import { MetadataRoute } from "next";
-import { getAllServices, getAllLocations, getAllNationalPages, getAllPackages } from "@/lib/data";
+import { getAllServices, getAllLocations, getAllNationalPages, getAllPackages, getAllBlogPosts } from "@/lib/data";
 import { integrations } from "@/data/integrations";
 import { INDUSTRIES } from "@/data/industries";
 
@@ -21,11 +21,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const currentDate = new Date();
 
   // Fetch all dynamic content
-  const [services, locations, nationalPages, packages] = await Promise.all([
+  const [services, locations, nationalPages, packages, blogPosts] = await Promise.all([
     getAllServices(),
     getAllLocations(),
     getAllNationalPages(),
     getAllPackages(),
+    getAllBlogPosts(),
   ]);
 
   // Core pages (highest priority)
@@ -235,6 +236,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.7,
     },
+    // Individual blog posts
+    ...blogPosts.map(post => ({
+      url: `${baseUrl}/blog/${post.slug}`,
+      lastModified: new Date(post.updatedAt || post.publishedAt),
+      changeFrequency: "monthly" as const,
+      priority: 0.6,
+    })),
     {
       url: `${baseUrl}/faq`,
       lastModified: currentDate,
@@ -274,7 +282,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 }
 
 /**
- * Total expected URLs: ~270+ pages
+ * Total expected URLs: ~280+ pages
  * - 1 homepage
  * - 4 core conversion pages (case-studies, how-it-works, demo, use-cases)
  * - 4-5 service pages
@@ -284,7 +292,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
  * - 10 /industries/* dedicated landing pages
  * - 10-15 national SEO pages
  * - 3-5 package pages
- * - 6 supporting pages
+ * - 6 supporting pages (including blog index + individual blog posts)
  * - 2 legal pages
  *
  * Sitemap generation time: <1 second

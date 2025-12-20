@@ -27,7 +27,7 @@ interface CaseStudy {
 interface IndustryCaseStudiesProps {
   caseStudyIds: string[];
   industryName: string;
-  industryTheme?: 'gold' | 'accent' | 'success';
+  industryTheme?: 'accent' | 'success';
 }
 
 // Case studies data (imported from case studies page)
@@ -217,7 +217,7 @@ const CASE_STUDIES: CaseStudy[] = [
 export default function IndustryCaseStudies({
   caseStudyIds,
   industryName,
-  industryTheme = 'gold'
+  industryTheme = 'accent'
 }: IndustryCaseStudiesProps) {
   // Filter case studies by IDs
   const relevantCaseStudies = CASE_STUDIES.filter(cs => caseStudyIds.includes(cs.id));
@@ -228,13 +228,6 @@ export default function IndustryCaseStudies({
 
   // Theme color mapping
   const themeColors = {
-    gold: {
-      gradient: 'from-gold-400 to-gold-600',
-      border: 'border-gold-500/30',
-      text: 'text-gold-400',
-      bg: 'bg-gold-500/20',
-      hover: 'hover:border-gold-500/50',
-    },
     accent: {
       gradient: 'from-accent-400 to-accent-600',
       border: 'border-accent-500/30',
@@ -303,7 +296,7 @@ export default function IndustryCaseStudies({
                             {caseStudy.industry}
                           </span>
                         </div>
-                        <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-gold-400 transition-colors">
+                        <h3 className="text-2xl font-bold text-slate-900 mb-2 group-hover:text-blue-500 transition-colors">
                           {caseStudy.company}
                         </h3>
                         <div className="flex items-center gap-2 text-sm text-slate-600">
@@ -324,7 +317,7 @@ export default function IndustryCaseStudies({
                           <span className="text-slate-600">
                             {topResult.before}
                           </span>
-                          <ArrowRight className="w-3.5 h-3.5 text-gold-400" />
+                          <ArrowRight className="w-3.5 h-3.5 text-blue-500" />
                           <span className={`font-bold ${theme.text}`}>
                             {topResult.after}
                           </span>
@@ -359,7 +352,7 @@ export default function IndustryCaseStudies({
                       </div>
 
                       {/* View Full Story Link */}
-                      <div className="mt-6 flex items-center gap-2 text-sm text-gold-400 group-hover:gap-3 transition-all">
+                      <div className="mt-6 flex items-center gap-2 text-sm text-blue-500 group-hover:gap-3 transition-all">
                         <span>View Full Story</span>
                         <ArrowRight className="w-4 h-4" />
                       </div>

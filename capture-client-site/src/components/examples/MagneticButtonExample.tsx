@@ -125,16 +125,16 @@ export default function MagneticButtonExample() {
           </h3>
           <ul className="space-y-2 text-foreground-muted">
             <li>
-              <strong className="text-gold">Desktop:</strong> Hover over buttons to see magnetic cursor-following effect
+              <strong className="text-blue-500">Desktop:</strong> Hover over buttons to see magnetic cursor-following effect
             </li>
             <li>
-              <strong className="text-gold">Mobile:</strong> Magnetic effect automatically disabled for performance
+              <strong className="text-blue-500">Mobile:</strong> Magnetic effect automatically disabled for performance
             </li>
             <li>
-              <strong className="text-gold">Click:</strong> Ripple effect on all devices
+              <strong className="text-blue-500">Click:</strong> Ripple effect on all devices
             </li>
             <li>
-              <strong className="text-gold">Accessibility:</strong> Keyboard navigation with focus rings
+              <strong className="text-blue-500">Accessibility:</strong> Keyboard navigation with focus rings
             </li>
           </ul>
         </section>

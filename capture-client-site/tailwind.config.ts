@@ -38,34 +38,6 @@ const config: Config = {
           800: "#005066",
           900: "#002833",
         },
-        // PREMIUM: Luxe Gold - Primary accent for CTAs and highlights
-        gold: {
-          DEFAULT: "#D4AF37",
-          50: "#FBF6E7",
-          100: "#F7EDCF",
-          200: "#EFDB9F",
-          300: "#E7C96F",
-          400: "#DFB73F",
-          500: "#D4AF37",
-          600: "#B8942C",
-          700: "#8B7021",
-          800: "#5E4C16",
-          900: "#31280B",
-        },
-        // PREMIUM: Warm Mocha - Subtle tertiary accent
-        mocha: {
-          DEFAULT: "#8B7355",
-          50: "#F5F2EF",
-          100: "#EBE5DF",
-          200: "#D7CBBF",
-          300: "#C3B19F",
-          400: "#AF977F",
-          500: "#8B7355",
-          600: "#6F5C44",
-          700: "#534533",
-          800: "#372E22",
-          900: "#1B1711",
-        },
         // Cyan accent colors (matching reference design)
         cyan: {
           400: "#22d3ee",
@@ -146,10 +118,6 @@ const config: Config = {
         glow: "0 0 20px rgba(0, 201, 255, 0.3)",
         "glow-lg": "0 0 40px rgba(0, 201, 255, 0.4)",
         "glow-primary": "0 0 20px rgba(74, 105, 226, 0.3)",
-        // PREMIUM: Gold glow shadows for CTAs and highlights
-        "glow-gold": "0 0 20px rgba(212, 175, 55, 0.3)",
-        "glow-gold-lg": "0 0 40px rgba(212, 175, 55, 0.4)",
-        "glow-gold-intense": "0 0 30px rgba(212, 175, 55, 0.5), 0 0 60px rgba(212, 175, 55, 0.2)",
         card: "0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2)",
         "card-hover": "0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2)",
         // PREMIUM: Clean single shadow for mobile (GPU-friendly)
@@ -208,7 +176,6 @@ const config: Config = {
         "cinematic-fade": "cinematicFade 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards",
         "cinematic-scale": "cinematicScale 1s cubic-bezier(0.34, 1.56, 0.64, 1) forwards",
         "magnetic-hover": "magneticHover 0.3s ease-out forwards",
-        "gold-shimmer": "goldShimmer 3s ease-in-out infinite",
         "hero-entrance": "heroEntrance 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards",
         "stagger-1": "staggerFade 0.6s ease-out 0.1s forwards",
         "stagger-2": "staggerFade 0.6s ease-out 0.2s forwards",
@@ -330,19 +297,6 @@ const config: Config = {
         magneticHover: {
           "0%": { transform: "translate(0, 0)" },
           "100%": { transform: "translate(var(--magnetic-x, 0), var(--magnetic-y, 0))" }
-        },
-        goldShimmer: {
-          "0%": {
-            backgroundPosition: "-200% center",
-            opacity: "0.8"
-          },
-          "50%": {
-            opacity: "1"
-          },
-          "100%": {
-            backgroundPosition: "200% center",
-            opacity: "0.8"
-          }
         },
         heroEntrance: {
           "0%": {

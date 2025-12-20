@@ -516,7 +516,7 @@ export default function HealthcarePageClient() {
               <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                 <Link
                   href="tel:865-346-6111"
-                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-gold to-gold-600 font-semibold text-black hover:shadow-lg hover:shadow-gold/50 transition-all duration-300 w-full sm:w-auto"
+                  className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-400 font-semibold text-white hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 w-full sm:w-auto"
                 >
                   <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
                   Try Our AI Now
@@ -544,7 +544,7 @@ export default function HealthcarePageClient() {
               Call us:{" "}
               <a
                 href="tel:865-346-6111"
-                className="text-gold hover:underline font-semibold"
+                className="text-blue-500 hover:underline font-semibold"
               >
                 865-346-6111
               </a>
@@ -1063,7 +1063,7 @@ export default function HealthcarePageClient() {
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                   <Link
                     href="tel:865-346-6111"
-                    className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-gold to-gold-600 font-semibold text-black hover:shadow-lg hover:shadow-gold/50 transition-all duration-300 w-full sm:w-auto"
+                    className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-400 font-semibold text-white hover:shadow-lg hover:shadow-blue-500/50 transition-all duration-300 w-full sm:w-auto"
                   >
                     <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
                     Call 865-346-6111

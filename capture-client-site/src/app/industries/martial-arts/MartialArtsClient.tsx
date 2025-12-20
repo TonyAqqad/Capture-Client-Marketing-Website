@@ -30,7 +30,7 @@ const STUDIO_TYPES = [
     value: "$200/mo",
     scenario: "Adult trial inquiry",
     pain: "Adult wants to try BJJ. Calls during 6 PM class. Coach rolling on the mat. Lead signs up at competing gym.",
-    color: "from-gold-500 to-amber-600"
+    color: "from-blue-500 to-cyan-500"
   },
   {
     id: "karate",
@@ -239,7 +239,7 @@ export default function MartialArtsClient() {
             >
               <motion.a
                 href="tel:865-346-6111"
-                className="bg-gradient-to-r from-gold to-gold-600 px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 hover:shadow-lg hover:shadow-gold/50 w-full sm:w-auto"
+                className="bg-gradient-to-r from-blue-500 to-cyan-400 px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 hover:shadow-lg hover:shadow-blue-500/50 w-full sm:w-auto text-white"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ duration: 0.2 }}
@@ -341,7 +341,7 @@ export default function MartialArtsClient() {
                 icon: TrendingUp,
                 title: "Child Enrolls Elsewhere",
                 description: "Competitor answered. They booked a trial. You lost $3,600 lifetime value.",
-                color: "text-gold"
+                color: "text-blue-500"
               }
             ].map((item, index) => (
               <motion.div
@@ -685,7 +685,7 @@ export default function MartialArtsClient() {
 
             <Link
               href="/contact"
-              className="bg-gradient-to-r from-gold to-gold-600 w-full py-5 text-xl font-bold rounded-xl inline-flex items-center justify-center gap-3 hover:shadow-lg hover:shadow-gold/50 hover:scale-105 transition-all"
+              className="bg-gradient-to-r from-blue-500 to-cyan-400 w-full py-5 text-xl font-bold rounded-xl inline-flex items-center justify-center gap-3 hover:shadow-lg hover:shadow-blue-500/50 hover:scale-105 transition-all text-white"
             >
               <Target className="w-6 h-6" />
               Recover This Revenue Now
@@ -988,7 +988,7 @@ export default function MartialArtsClient() {
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
                 <motion.a
                   href="tel:865-346-6111"
-                  className="bg-gradient-to-r from-gold to-gold-600 px-12 py-6 text-xl font-bold rounded-xl inline-flex items-center gap-3 hover:shadow-lg hover:shadow-gold/50 w-full sm:w-auto"
+                  className="bg-gradient-to-r from-blue-500 to-cyan-400 px-12 py-6 text-xl font-bold rounded-xl inline-flex items-center gap-3 hover:shadow-lg hover:shadow-blue-500/50 w-full sm:w-auto text-white"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
                   transition={{ duration: 0.2 }}

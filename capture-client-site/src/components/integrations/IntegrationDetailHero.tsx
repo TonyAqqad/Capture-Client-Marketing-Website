@@ -133,7 +133,7 @@ export function IntegrationDetailHero({
             className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-slate-900 mb-6"
           >
             Connect Capture Client with{" "}
-            <span className="bg-gradient-to-r from-gold via-accent to-gold bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-500 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
               {name}
             </span>
           </motion.h1>
@@ -179,7 +179,7 @@ export function IntegrationDetailHero({
             className="flex flex-wrap gap-3 justify-center"
           >
             {popular && (
-              <div className="px-4 py-2 bg-gold/10 border border-gold/20 rounded-full text-sm font-semibold text-gold flex items-center gap-2">
+              <div className="px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full text-sm font-semibold text-blue-500 flex items-center gap-2">
                 <Star className="w-4 h-4" />
                 Popular
               </div>

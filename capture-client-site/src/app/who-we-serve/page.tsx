@@ -56,21 +56,21 @@ export default function WhoWeServePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-white via-white/95 to-white" />
 
           {/* Animated Orbs - Hidden on mobile for performance */}
-          <div className="hidden md:block absolute top-20 left-10 w-72 h-72 bg-gold-500/20 rounded-full blur-3xl animate-float-slow" />
+          <div className="hidden md:block absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-float-slow" />
           <div className="hidden md:block absolute bottom-20 right-10 w-96 h-96 bg-accent-500/20 rounded-full blur-3xl animate-float-medium" />
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               {/* Badge */}
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white backdrop-blur-sm border border-slate-200 mb-8">
-                <Briefcase className="text-gold-400 w-4 h-4" />
+                <Briefcase className="text-blue-500 w-4 h-4" />
                 <span className="text-sm font-semibold text-slate-900">12+ Industries Served</span>
               </div>
 
               {/* Headline */}
               <h1 className="font-heading text-5xl md:text-7xl font-bold text-slate-900 mb-6">
                 Your Industry.{' '}
-                <span className="bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
                   Our Expertise.
                 </span>
               </h1>
@@ -139,12 +139,12 @@ export default function WhoWeServePage() {
                 return (
                   <div
                     key={category}
-                    className="group relative p-6 rounded-2xl bg-white backdrop-blur-xl border border-slate-200 hover:border-gold-500/30 transition-all duration-500 hover:shadow-glow-gold text-center"
+                    className="group relative p-6 rounded-2xl bg-white backdrop-blur-xl border border-slate-200 hover:border-blue-500/30 transition-all duration-500 hover:shadow-lg shadow-blue-500/20 text-center"
                   >
-                    <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-br from-gold-500/20 to-gold-600/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <IconComponent className="text-gold-400 w-6 h-6" />
+                    <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-gradient-to-br from-blue-500/20 to-blue-600/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <IconComponent className="text-blue-500 w-6 h-6" />
                     </div>
-                    <h3 className="font-semibold text-slate-900 mb-2 group-hover:text-gold-400 transition-colors duration-300">
+                    <h3 className="font-semibold text-slate-900 mb-2 group-hover:text-blue-500 transition-colors duration-300">
                       {category}
                     </h3>
                     <p className="text-sm text-slate-600">
@@ -175,7 +175,7 @@ export default function WhoWeServePage() {
               <div className="text-center mb-16">
                 <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
                   Why Industry-Specific{' '}
-                  <span className="bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
                     AI Matters
                   </span>
                 </h2>
@@ -186,7 +186,7 @@ export default function WhoWeServePage() {
 
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="p-8 rounded-2xl bg-white backdrop-blur-2xl border border-slate-200">
-                  <Globe className="w-10 h-10 text-gold-400 mb-4" />
+                  <Globe className="w-10 h-10 text-blue-500 mb-4" />
                   <h3 className="text-2xl font-bold text-slate-900 mb-3">Industry Vocabulary</h3>
                   <p className="text-slate-600 leading-relaxed">
                     Legal conflict checking. HVAC diagnostics. Real estate MLS terms. Our AI speaks your industry's language naturally.
@@ -224,7 +224,7 @@ export default function WhoWeServePage() {
         {/* Final CTA */}
         <section className="py-16 md:py-20 bg-white relative overflow-hidden">
           {/* Background - Performance optimized for mobile */}
-          <div className="absolute inset-0 bg-gradient-to-br from-gold-500/10 via-white to-accent-500/10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-white to-accent-500/10" />
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-mesh-premium opacity-20 md:opacity-30" />
 
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative z-10">

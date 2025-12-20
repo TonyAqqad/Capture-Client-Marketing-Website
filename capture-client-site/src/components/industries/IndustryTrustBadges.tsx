@@ -121,7 +121,7 @@ export function IndustryTrustBadges({
       case "clients":
         return "text-accent-400";
       case "award":
-        return "text-gold-400";
+        return "text-blue-500";
       default:
         return "text-slate-900";
     }
@@ -167,14 +167,14 @@ export function IndustryTrustBadges({
               <GlassCard variant="premium" hover={false} interactive={false}>
                 <div className="p-8">
                   <div className="flex flex-col md:flex-row items-center justify-center gap-4">
-                    <Users className="w-12 h-12 text-gold-400" />
+                    <Users className="w-12 h-12 text-blue-500" />
                     <div className="text-center md:text-left">
                       <div className="text-sm font-semibold text-slate-600 uppercase tracking-wide mb-1">
                         Trusted By
                       </div>
                       <div className="flex items-baseline gap-2">
                         <motion.span
-                          className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-gold-400 to-gold-600 bg-clip-text text-transparent"
+                          className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent"
                           key={count}
                         >
                           {count.toLocaleString()}+
@@ -250,7 +250,7 @@ export function IndustryTrustBadges({
                       {badge.label}
                     </div>
                     {badge.value && (
-                      <div className="text-xs font-semibold text-gold-400">
+                      <div className="text-xs font-semibold text-blue-500">
                         {badge.value}
                       </div>
                     )}

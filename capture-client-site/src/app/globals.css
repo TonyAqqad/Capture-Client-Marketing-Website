@@ -16,23 +16,23 @@
   --color-surface-elevated: #1A1F26;
 
   /* PREMIUM: Gold + Cyan + Purple Accent System */
-  --color-gold: #D4AF37;
-  --color-gold-light: #E7C96F;
-  --color-gold-dark: #B8942C;
+  --color-gold: #2563eb;
+  --color-gold-light: #3b82f6;
+  --color-gold-dark: #1d4ed8;
   --color-cyan: #00C9FF;
   --color-purple: #8B5CF6;
   --color-indigo: #4F46E5;
-  --color-mocha: #8B7355;
+  --color-mocha: #0891b2;
 
   /* Aurora Gradient Colors */
   --aurora-1: #00C9FF;
   --aurora-2: #4F46E5;
   --aurora-3: #8B5CF6;
-  --aurora-4: #D4AF37;
+  --aurora-4: #2563eb;
 
   /* Glass Effect Variables (GPU-friendly) */
   --glass-bg: rgba(15, 20, 25, 0.9);
-  --glass-border: rgba(212, 175, 55, 0.12);
+  --glass-border: rgba(37, 99, 235, 0.12);
   --glass-highlight: rgba(255, 255, 255, 0.08);
 
   /* Text Hierarchy with Higher Contrast */
@@ -447,7 +447,7 @@
       radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0, 201, 255, 0.25), transparent),
       radial-gradient(ellipse 60% 40% at 80% 50%, rgba(79, 70, 229, 0.2), transparent),
       radial-gradient(ellipse 50% 60% at 20% 80%, rgba(139, 92, 246, 0.15), transparent),
-      radial-gradient(ellipse 40% 40% at 90% 90%, rgba(212, 175, 55, 0.1), transparent),
+      radial-gradient(ellipse 40% 40% at 90% 90%, rgba(37, 99, 235, 0.1), transparent),
       linear-gradient(180deg, var(--color-background-deep) 0%, var(--color-background) 100%);
   }
 
@@ -538,13 +538,13 @@
   /* Gold gradient text - Premium CTAs */
   .text-gradient-gold {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, #D4AF37 0%, #E7C96F 50%, #D4AF37 100%);
+    background-image: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #2563eb 100%);
   }
 
   /* Gold + Cyan + Purple gradient - $1M brand feel */
   .text-gradient-gold-cyan {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, #D4AF37 0%, #00C9FF 100%);
+    background-image: linear-gradient(135deg, #2563eb 0%, #00C9FF 100%);
   }
 
   /* Gradient text */
@@ -1183,10 +1183,10 @@
     background: var(--glass-bg);
     background-image: linear-gradient(
       135deg,
-      rgba(212, 175, 55, 0.08) 0%,
+      rgba(37, 99, 235, 0.08) 0%,
       rgba(255, 255, 255, 0.02) 100%
     );
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(37, 99, 235, 0.2);
     border-radius: 16px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
     transform: translateZ(0);
@@ -1198,16 +1198,16 @@
 
   .btn-gold {
     @apply relative overflow-hidden font-semibold px-6 py-3 rounded-xl;
-    background: linear-gradient(135deg, #D4AF37 0%, #E7C96F 50%, #D4AF37 100%);
+    background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #2563eb 100%);
     background-size: 200% 200%;
     color: #0F1419;
-    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.3);
     transition: all 0.3s ease;
     transform: translateZ(0);
   }
 
   .btn-gold:hover {
-    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
+    box-shadow: 0 8px 30px rgba(37, 99, 235, 0.5);
     transform: translateY(-2px) translateZ(0);
   }
 
@@ -1219,15 +1219,15 @@
   .btn-gold-outline {
     @apply relative font-semibold px-6 py-3 rounded-xl;
     background: transparent;
-    border: 2px solid #D4AF37;
-    color: #D4AF37;
+    border: 2px solid #2563eb;
+    color: #2563eb;
     transition: all 0.3s ease;
     transform: translateZ(0);
   }
 
   .btn-gold-outline:hover {
-    background: rgba(212, 175, 55, 0.1);
-    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.2);
+    background: rgba(37, 99, 235, 0.1);
+    box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2);
   }
 
   /* ============================================ */
@@ -1301,7 +1301,7 @@
   }
 
   .hover-glow-gold:hover {
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.4);
   }
 }
 
@@ -1561,7 +1561,7 @@ select:focus-visible {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(212, 175, 55, 0.4) 50%,
+    rgba(37, 99, 235, 0.4) 50%,
     transparent 100%
   );
   animation: goldShimmerSweep 3s ease-in-out infinite;
@@ -1609,10 +1609,10 @@ select:focus-visible {
   border-radius: 1.5rem;
   background: linear-gradient(
     135deg,
-    rgba(212, 175, 55, 0.05) 0%,
+    rgba(37, 99, 235, 0.05) 0%,
     rgba(15, 20, 25, 0.95) 100%
   );
-  border: 1px solid rgba(212, 175, 55, 0.2);
+  border: 1px solid rgba(37, 99, 235, 0.2);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
@@ -1624,7 +1624,7 @@ select:focus-visible {
   padding: 1px;
   background: linear-gradient(
     135deg,
-    rgba(212, 175, 55, 0.3) 0%,
+    rgba(37, 99, 235, 0.3) 0%,
     transparent 50%,
     rgba(0, 201, 255, 0.2) 100%
   );
@@ -1641,7 +1641,7 @@ select:focus-visible {
   font-weight: 700;
   font-size: clamp(2.5rem, 8vw, 4rem);
   letter-spacing: -0.03em;
-  background: linear-gradient(135deg, #D4AF37 0%, #E7C96F 50%, #FFFFFF 100%);
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #FFFFFF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1656,7 +1656,7 @@ select:focus-visible {
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(212, 175, 55, 0.5) 50%,
+    rgba(37, 99, 235, 0.5) 50%,
     transparent 100%
   );
 }
@@ -1671,7 +1671,7 @@ select:focus-visible {
   height: 6px;
   background: var(--color-gold);
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
 }
 
 /* Counter Spin Animation - Decorative rings */
@@ -1690,8 +1690,8 @@ select:focus-visible {
   display: inline-flex;
   padding: 0.5rem 1rem;
   border-radius: 9999px;
-  background: rgba(212, 175, 55, 0.1);
-  border: 1px solid rgba(212, 175, 55, 0.3);
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.3);
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--color-gold);
@@ -1702,7 +1702,7 @@ select:focus-visible {
   position: absolute;
   inset: -2px;
   border-radius: inherit;
-  background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.2) 0%, transparent 70%);
   z-index: -1;
 }
 
@@ -1722,7 +1722,7 @@ select:focus-visible {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 20% 0%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 20% 0%, rgba(37, 99, 235, 0.08) 0%, transparent 50%),
     radial-gradient(ellipse at 80% 100%, rgba(0, 201, 255, 0.06) 0%, transparent 50%);
   pointer-events: none;
 }
@@ -1743,8 +1743,8 @@ select:focus-visible {
 .card-5m:hover {
   box-shadow:
     0 30px 80px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(212, 175, 55, 0.2),
-    0 0 60px rgba(212, 175, 55, 0.1);
+    0 0 0 1px rgba(37, 99, 235, 0.2),
+    0 0 60px rgba(37, 99, 235, 0.1);
   transform: translateY(-8px) scale(1.02);
 }
 
@@ -2465,7 +2465,7 @@ select:focus-visible {
 }
 
 .glow-hover:hover {
-  box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+  box-shadow: 0 0 30px rgba(37, 99, 235, 0.4);
   transform: translateY(-2px);
 }
 
@@ -2510,7 +2510,7 @@ select:focus-visible {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(212, 175, 55, 0.3),
+    rgba(37, 99, 235, 0.3),
     transparent
   );
   animation: shimmer 3s infinite;
@@ -2568,7 +2568,7 @@ select:focus-visible {
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0.8) 0%,
-    rgba(212, 175, 55, 1) 50%,
+    rgba(37, 99, 235, 1) 50%,
     rgba(255, 255, 255, 0.8) 100%
   );
   background-size: 200% auto;
@@ -2661,10 +2661,10 @@ select:focus-visible {
 
 @keyframes glowPulse {
   0%, 100% {
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3), 0 0 40px rgba(212, 175, 55, 0.1);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3), 0 0 40px rgba(37, 99, 235, 0.1);
   }
   50% {
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.5), 0 0 60px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.5), 0 0 60px rgba(37, 99, 235, 0.2);
   }
 }
 
@@ -2789,7 +2789,7 @@ select:focus-visible {
 .bg-premium-overlay {
   background: linear-gradient(
     135deg,
-    rgba(212, 175, 55, 0.08) 0%,
+    rgba(37, 99, 235, 0.08) 0%,
     rgba(15, 20, 25, 0.92) 50%,
     rgba(0, 201, 255, 0.06) 100%
   );
@@ -2799,7 +2799,7 @@ select:focus-visible {
 /* Premium matte finish - No glass, pure elegance */
 .bg-premium-matte {
   background: rgba(20, 25, 35, 0.98);
-  border: 1px solid rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(37, 99, 235, 0.15);
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.4),
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -2841,9 +2841,9 @@ select:focus-visible {
 
 .shadow-glow-gold {
   box-shadow:
-    0 0 20px rgba(212, 175, 55, 0.15),
-    0 0 40px rgba(212, 175, 55, 0.1),
-    0 0 60px rgba(212, 175, 55, 0.05);
+    0 0 20px rgba(37, 99, 235, 0.15),
+    0 0 40px rgba(37, 99, 235, 0.1),
+    0 0 60px rgba(37, 99, 235, 0.05);
 }
 
 .shadow-glow-cyan {
@@ -2884,8 +2884,8 @@ select:focus-visible {
   outline: none;
   box-shadow:
     0 0 0 2px var(--background),
-    0 0 0 4px rgba(212, 175, 55, 0.5),
-    0 0 20px rgba(212, 175, 55, 0.3);
+    0 0 0 4px rgba(37, 99, 235, 0.5),
+    0 0 20px rgba(37, 99, 235, 0.3);
 }
 
 /* Cyan focus ring variant */

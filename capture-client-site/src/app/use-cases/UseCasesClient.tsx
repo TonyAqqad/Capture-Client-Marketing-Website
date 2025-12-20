@@ -71,7 +71,7 @@ const industries: Industry[] = [
     name: "Healthcare & Medical",
     icon: "medical_services",
     route: "/industries/healthcare",
-    gradient: "from-cyan-500/20 via-blue-500/20 to-[#D4AF37]/20",
+    gradient: "from-cyan-500/20 via-blue-500/20 to-blue-500/20",
     iconBg: "from-cyan-500 to-blue-500",
     color: "cyan",
     useCases: [
@@ -86,9 +86,9 @@ const industries: Industry[] = [
     name: "Home Services",
     icon: "home_repair_service",
     route: "/industries/home-services",
-    gradient: "from-gold/20 via-gold/15 to-gold/10",
-    iconBg: "from-gold to-gold-600",
-    color: "gold",
+    gradient: "from-blue-500/20 via-blue-400/15 to-blue-500/10",
+    iconBg: "from-blue-500 to-blue-600",
+    color: "blue",
     useCases: [
       "HVAC, plumbing & electrical emergency dispatch",
       "Service quote generation & technician routing",
@@ -101,8 +101,8 @@ const industries: Industry[] = [
     name: "Legal Services",
     icon: "gavel",
     route: "/industries/legal",
-    gradient: "from-[#D4AF37]/20 via-[#4A69E2]/20 to-blue-500/20",
-    iconBg: "from-[#D4AF37] to-[#4A69E2]",
+    gradient: "from-blue-500/20 via-blue-400/20 to-blue-500/20",
+    iconBg: "from-blue-500 to-blue-600",
     color: "purple",
     useCases: [
       "Initial case intake & client qualification",
@@ -131,9 +131,9 @@ const industries: Industry[] = [
     name: "Automotive",
     icon: "directions_car",
     route: "/industries/automotive",
-    gradient: "from-gold/20 via-gold-600/15 to-gold/10",
-    iconBg: "from-gold-600 to-gold",
-    color: "gold",
+    gradient: "from-blue-500/20 via-blue-600/15 to-blue-500/10",
+    iconBg: "from-blue-600 to-blue-500",
+    color: "blue",
     useCases: [
       "Service appointment booking for dealerships",
       "Test drive scheduling & trade-in evaluation",
@@ -290,12 +290,12 @@ export default function UseCasesClient() {
           <motion.div
             animate={{ scale: [1.2, 1, 1.2], x: [0, -50, 0] }}
             transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-gradient-radial from-[#D4AF37]/20 to-transparent blur-3xl"
+            className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-gradient-radial from-blue-500/20 to-transparent blur-3xl"
           />
           <motion.div
             animate={{ scale: [1, 1.3, 1], rotate: [0, 90, 0] }}
             transition={{ duration: 30, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-radial from-gold/15 to-transparent blur-3xl"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-radial from-blue-500/15 to-transparent blur-3xl"
           />
 
           {/* Grid overlay */}
@@ -324,7 +324,7 @@ export default function UseCasesClient() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500/10 via-[#D4AF37]/10 to-gold/10 border border-slate-200/60 backdrop-blur-xl mb-8"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-blue-500/10 border border-slate-200/60 backdrop-blur-xl mb-8"
           >
             <Briefcase className="w-5 h-5 text-cyan-400" />
             <span className="text-sm font-bold text-slate-900 uppercase tracking-wider">Industry Solutions</span>
@@ -340,7 +340,7 @@ export default function UseCasesClient() {
             <span className="block text-slate-900 mb-4">
               One AI.
             </span>
-            <span className="block bg-gradient-to-r from-gold via-cyan-400 to-[#D4AF37] bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Endless Possibilities.
             </span>
           </motion.h1>
@@ -363,7 +363,7 @@ export default function UseCasesClient() {
           >
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-3 px-10 py-6 rounded-2xl bg-gradient-to-r from-gold via-gold-light to-gold font-bold text-lg text-black overflow-hidden relative hover:shadow-[0_0_60px_rgba(212,175,55,0.5)] transition-all duration-500 hover:scale-[1.02]"
+              className="group inline-flex items-center gap-3 px-10 py-6 rounded-2xl bg-gradient-to-r from-blue-500 via-blue-400 to-blue-500 font-bold text-lg text-white overflow-hidden relative shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-500 hover:scale-[1.02]"
             >
               <span className="relative z-10">Find Your Solution</span>
               <motion.div
@@ -418,7 +418,7 @@ export default function UseCasesClient() {
             <motion.div
               animate={{ y: [0, 12, 0], opacity: [1, 0, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
-              className="w-1.5 h-3 bg-gold rounded-full"
+              className="w-1.5 h-3 bg-blue-500 rounded-full"
             />
           </motion.div>
         </motion.div>
@@ -457,7 +457,7 @@ export default function UseCasesClient() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-slate-900 mb-6"
             >
-              Your Industry, <span className="bg-gradient-to-r from-gold to-cyan-400 bg-clip-text text-transparent">Solved</span>
+              Your Industry, <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">Solved</span>
             </motion.h2>
 
             <motion.p
@@ -564,8 +564,8 @@ export default function UseCasesClient() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-slate-900 mb-6">
-              The <span className="bg-gradient-to-r from-gold-600 to-gold bg-clip-text text-transparent">Old Way</span> vs{" "}
-              <span className="bg-gradient-to-r from-gold to-cyan-400 bg-clip-text text-transparent">Capture Client</span>
+              The <span className="bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">Old Way</span> vs{" "}
+              <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">Capture Client</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               See how we transform the frustrating status quo into a lead-capturing machine
@@ -624,11 +624,11 @@ export default function UseCasesClient() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="relative"
             >
-              <div className="bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg p-8 rounded-3xl border-2 border-gold/30 bg-gradient-to-br from-gold/10 via-cyan-500/5 to-transparent shadow-[0_0_60px_rgba(212,175,55,0.2)]">
+              <div className="bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg p-8 rounded-3xl border-2 border-blue-500/30 bg-gradient-to-br from-blue-500/10 via-cyan-500/5 to-transparent shadow-lg shadow-blue-500/20">
                 {/* Header */}
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-gold to-cyan-400 flex items-center justify-center shadow-glow-gold">
-                    <CheckCircle2 className="w-6 h-6 text-black" />
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center shadow-lg shadow-blue-500/30">
+                    <CheckCircle2 className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900">The Capture Client Way</h3>
                 </div>
@@ -644,21 +644,21 @@ export default function UseCasesClient() {
                     "Zero leads lost, ever"
                   ].map((solution, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <CheckCircle2 className="w-5 h-5 text-gold mt-1 flex-shrink-0" />
+                      <CheckCircle2 className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
                       <p className="text-slate-900 font-medium">{solution}</p>
                     </div>
                   ))}
                 </div>
 
                 {/* Stat */}
-                <div className="mt-8 p-4 rounded-xl bg-gradient-to-r from-gold/20 to-cyan-400/20 border border-gold/30">
-                  <p className="text-3xl font-bold bg-gradient-to-r from-gold to-cyan-400 bg-clip-text text-transparent mb-1">100%</p>
+                <div className="mt-8 p-4 rounded-xl bg-gradient-to-r from-blue-500/20 to-cyan-400/20 border border-blue-500/30">
+                  <p className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent mb-1">100%</p>
                   <p className="text-sm text-slate-700 font-medium">of leads captured & qualified</p>
                 </div>
               </div>
 
               {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-cyan-400/10 blur-3xl -z-10" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-400/10 blur-3xl -z-10" />
             </motion.div>
           </div>
         </div>
@@ -687,7 +687,7 @@ export default function UseCasesClient() {
             </div>
 
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-slate-900 mb-6">
-              Real Results from <span className="bg-gradient-to-r from-gold to-cyan-400 bg-clip-text text-transparent">Real Businesses</span>
+              Real Results from <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">Real Businesses</span>
             </h2>
           </motion.div>
 
@@ -710,7 +710,7 @@ export default function UseCasesClient() {
                     transition={{ delay: 0.2, duration: 0.4 }}
                     className="flex flex-col items-center lg:items-start"
                   >
-                    <div className="w-32 h-32 rounded-2xl overflow-hidden mb-4 ring-4 ring-gold/30">
+                    <div className="w-32 h-32 rounded-2xl overflow-hidden mb-4 ring-4 ring-blue-500/30">
                       <img
                         src={testimonials[currentTestimonial].avatar}
                         alt={testimonials[currentTestimonial].author}
@@ -731,12 +731,12 @@ export default function UseCasesClient() {
                     transition={{ delay: 0.3, duration: 0.5 }}
                     className="lg:col-span-2"
                   >
-                    <Quote className="w-12 h-12 text-gold mb-4 opacity-30" />
+                    <Quote className="w-12 h-12 text-blue-500 mb-4 opacity-30" />
                     <p className="text-2xl sm:text-3xl text-slate-700 leading-relaxed mb-6 font-light italic">
                       "{testimonials[currentTestimonial].quote}"
                     </p>
-                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-gold/20 to-cyan-400/20 border border-gold/30">
-                      <TrendingUp className="w-5 h-5 text-gold" />
+                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-500/20 to-cyan-400/20 border border-blue-500/30">
+                      <TrendingUp className="w-5 h-5 text-blue-500" />
                       <span className="text-lg font-bold text-slate-900">{testimonials[currentTestimonial].metric}</span>
                     </div>
                   </motion.div>
@@ -752,7 +752,7 @@ export default function UseCasesClient() {
                   onClick={() => setCurrentTestimonial(i)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
                     i === currentTestimonial
-                      ? "bg-gold w-8"
+                      ? "bg-blue-500 w-8"
                       : "bg-slate-300 hover:bg-slate-400"
                   }`}
                   aria-label={`Go to testimonial ${i + 1}`}
@@ -780,7 +780,7 @@ export default function UseCasesClient() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-slate-900 mb-6">
-              Works for <span className="bg-gradient-to-r from-gold to-cyan-400 bg-clip-text text-transparent">Every Business</span>
+              Works for <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">Every Business</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               These core benefits apply no matter your industry
@@ -829,7 +829,7 @@ export default function UseCasesClient() {
           <motion.div
             animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 0] }}
             transition={{ duration: 20, repeat: Infinity }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[800px] bg-gradient-radial from-gold/20 via-cyan-400/10 to-transparent blur-3xl"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[800px] bg-gradient-radial from-blue-500/20 via-cyan-400/10 to-transparent blur-3xl"
           />
         </div>
 
@@ -839,9 +839,9 @@ export default function UseCasesClient() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-gold/20 to-cyan-400/20 border border-gold/30 backdrop-blur-xl mb-8"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-400/20 border border-blue-500/30 backdrop-blur-xl mb-8"
           >
-            <Rocket className="w-5 h-5 text-gold" />
+            <Rocket className="w-5 h-5 text-blue-500" />
             <span className="text-sm font-bold text-slate-900 uppercase tracking-wider">Ready to Transform?</span>
           </motion.div>
 
@@ -853,7 +853,7 @@ export default function UseCasesClient() {
             transition={{ delay: 0.1 }}
             className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold text-slate-900 mb-8 leading-tight"
           >
-            Find Your <span className="bg-gradient-to-r from-gold via-cyan-400 to-[#D4AF37] bg-clip-text text-transparent">Perfect Solution</span>
+            Find Your <span className="bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500 bg-clip-text text-transparent">Perfect Solution</span>
           </motion.h2>
 
           {/* Description */}
@@ -878,7 +878,7 @@ export default function UseCasesClient() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
               <Link
                 href="/contact"
-                className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-6 rounded-2xl bg-gradient-to-r from-gold via-gold-light to-gold font-bold text-lg text-black overflow-hidden relative hover:shadow-[0_0_80px_rgba(212,175,55,0.6)] transition-shadow duration-500"
+                className="group w-full sm:w-auto inline-flex items-center justify-center gap-3 px-10 py-6 rounded-2xl bg-gradient-to-r from-blue-500 via-blue-400 to-blue-500 font-bold text-lg text-white overflow-hidden relative shadow-lg shadow-blue-500/40 hover:shadow-blue-500/60 transition-shadow duration-500"
               >
                 <span className="relative z-10">Try Our AI Now</span>
                 <motion.div
@@ -911,12 +911,12 @@ export default function UseCasesClient() {
             className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 mt-12 text-slate-600"
           >
             <div className="flex items-center gap-2">
-              <ShieldCheck className="w-5 h-5 text-gold" />
+              <ShieldCheck className="w-5 h-5 text-blue-500" />
               <span className="text-sm font-medium">500+ Active Clients</span>
             </div>
             <div className="w-px h-5 bg-slate-300 hidden sm:block" />
             <div className="flex items-center gap-2">
-              <Star className="w-5 h-5 text-gold" />
+              <Star className="w-5 h-5 text-blue-500" />
               <span className="text-sm font-medium">4.9/5 Average Rating</span>
             </div>
             <div className="w-px h-5 bg-slate-300 hidden sm:block" />

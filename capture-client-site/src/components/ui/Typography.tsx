@@ -93,15 +93,15 @@ export function Eyebrow({ children, className = "" }: TypographyProps) {
 }
 
 /**
- * GoldGradientText - Premium gold gradient effect
+ * GoldGradientText - Premium blue/cyan gradient effect
  * Usage: Highlight key phrases, CTAs, value propositions
- * Features: Animated gold gradient, high contrast
+ * Features: Animated blue/cyan gradient, high contrast
  */
 export function GoldGradientText({ children, className = "" }: TypographyProps) {
   return (
     <span
       className={cn(
-        "bg-gradient-to-r from-gold via-gold-light to-gold",
+        "bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500",
         "bg-clip-text text-transparent",
         "font-bold",
         className

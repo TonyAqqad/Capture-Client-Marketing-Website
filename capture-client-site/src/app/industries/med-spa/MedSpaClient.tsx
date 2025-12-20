@@ -215,7 +215,7 @@ export default function MedSpaClient() {
             >
               <motion.a
                 href="tel:865-346-6111"
-                className="bg-gradient-to-r from-gold to-gold-600 px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 shadow-lg shadow-gold/50 w-full sm:w-auto group relative overflow-hidden text-black hover:shadow-xl hover:shadow-gold/60 transition-all"
+                className="bg-gradient-to-r from-blue-500 to-cyan-400 px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 shadow-lg shadow-blue-500/50 w-full sm:w-auto group relative overflow-hidden text-white hover:shadow-xl hover:shadow-blue-500/60 transition-all"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -654,7 +654,7 @@ export default function MedSpaClient() {
 
                 <Link
                   href="/contact"
-                  className="bg-gradient-to-r from-gold to-gold-600 w-full py-4 rounded-xl font-bold text-lg inline-flex items-center justify-center gap-2 shadow-lg shadow-gold/50 hover:scale-105 transition-all text-black"
+                  className="bg-gradient-to-r from-blue-500 to-cyan-400 w-full py-4 rounded-xl font-bold text-lg inline-flex items-center justify-center gap-2 shadow-lg shadow-blue-500/50 hover:scale-105 transition-all text-white"
                 >
                   <Zap className="w-5 h-5" />
                   Stop Losing Money Today
@@ -959,7 +959,7 @@ export default function MedSpaClient() {
             >
               <motion.a
                 href="tel:865-346-6111"
-                className="bg-gradient-to-r from-gold to-gold-600 px-12 py-6 text-2xl font-bold rounded-xl inline-flex items-center gap-3 shadow-lg shadow-gold/50 w-full sm:w-auto relative overflow-hidden group text-black hover:shadow-xl hover:shadow-gold/60 transition-all"
+                className="bg-gradient-to-r from-blue-500 to-cyan-400 px-12 py-6 text-2xl font-bold rounded-xl inline-flex items-center gap-3 shadow-lg shadow-blue-500/50 w-full sm:w-auto relative overflow-hidden group text-white hover:shadow-xl hover:shadow-blue-500/60 transition-all"
                 whileHover={{
                   scale: 1.05
                 }}
@@ -972,7 +972,7 @@ export default function MedSpaClient() {
                   transition={{ duration: 0.8, ease: "easeInOut" }}
                 />
                 <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-gold-400/0 via-gold-200/20 to-gold-400/0"
+                  className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-blue-200/20 to-blue-400/0"
                   animate={{
                     x: ["-100%", "100%"]
                   }}

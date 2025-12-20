@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Turbopack configuration
+  turbopack: {
+    root: __dirname,
+  },
+
   // CRITICAL: Experimental optimizations for better FCP
   experimental: {
     optimizePackageImports: ["lucide-react", "framer-motion"],

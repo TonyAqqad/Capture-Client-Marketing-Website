@@ -10,7 +10,7 @@ interface SectionHeaderProps {
   subtitle?: string | ReactNode;
   alignment?: "left" | "center" | "right";
   showDecorator?: boolean;
-  decoratorColor?: "gold" | "cyan" | "primary";
+  decoratorColor?: "blue" | "cyan" | "primary";
   className?: string;
   animate?: boolean;
 }
@@ -25,7 +25,7 @@ export function SectionHeader({
   subtitle,
   alignment = "center",
   showDecorator = true,
-  decoratorColor = "gold",
+  decoratorColor = "blue",
   className = "",
   animate = true
 }: SectionHeaderProps) {
@@ -36,7 +36,7 @@ export function SectionHeader({
   };
 
   const decoratorColors = {
-    gold: "bg-gradient-to-r from-transparent via-gold/60 to-transparent",
+    blue: "bg-gradient-to-r from-transparent via-blue-500/60 to-transparent",
     cyan: "bg-gradient-to-r from-transparent via-accent/60 to-transparent",
     primary: "bg-gradient-to-r from-transparent via-primary/60 to-transparent"
   };
@@ -82,7 +82,7 @@ export function SectionHeader({
           {...(animate && { variants: itemVariants })}
           className="inline-flex items-center gap-2"
         >
-          <span className="text-xs md:text-sm font-bold uppercase tracking-wider text-gold bg-gold/10 px-4 py-1.5 rounded-full border border-gold/20">
+          <span className="text-xs md:text-sm font-bold uppercase tracking-wider text-blue-500 bg-blue-500/10 px-4 py-1.5 rounded-full border border-blue-500/20">
             {overline}
           </span>
         </Item>

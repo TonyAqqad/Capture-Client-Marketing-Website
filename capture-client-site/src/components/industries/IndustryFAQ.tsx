@@ -18,11 +18,6 @@ interface IndustryFAQProps {
 
 // Static color mapping for Tailwind production build
 const ACCENT_COLORS = {
-  gold: {
-    gradient: "from-gold-400 to-gold-600",
-    text: "text-gold-400",
-    textHover: "text-gold-400 hover:text-gold-300",
-  },
   accent: {
     gradient: "from-accent-400 to-accent-600",
     text: "text-accent-400",
@@ -35,7 +30,7 @@ const ACCENT_COLORS = {
   },
 } as const;
 
-export function IndustryFAQ({ faqs, industryName, categoryColor = "gold" }: IndustryFAQProps) {
+export function IndustryFAQ({ faqs, industryName, categoryColor = "accent" }: IndustryFAQProps) {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
@@ -43,7 +38,7 @@ export function IndustryFAQ({ faqs, industryName, categoryColor = "gold" }: Indu
   };
 
   // Get static color classes based on category
-  const colorClasses = ACCENT_COLORS[categoryColor as keyof typeof ACCENT_COLORS] || ACCENT_COLORS.gold;
+  const colorClasses = ACCENT_COLORS[categoryColor as keyof typeof ACCENT_COLORS] || ACCENT_COLORS.accent;
 
   return (
     <section className="py-16 md:py-20 bg-gradient-to-b from-white to-slate-50">
@@ -118,7 +113,7 @@ export function IndustryFAQ({ faqs, industryName, categoryColor = "gold" }: Indu
           {/* Still Have Questions CTA */}
           <div className="mt-12 text-center">
             <div className="inline-flex items-center gap-2 px-6 py-4 rounded-2xl bg-gradient-to-r from-slate-50 to-white backdrop-blur-sm border border-slate-200">
-              <HelpCircle className="w-5 h-5 text-gold-400" />
+              <HelpCircle className="w-5 h-5 text-blue-500" />
               <span className="text-slate-600">
                 Still have questions?{" "}
                 <a

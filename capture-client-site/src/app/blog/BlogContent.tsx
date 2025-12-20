@@ -9,8 +9,8 @@ import { motion } from "@/lib/motion";
 const getCategoryStyle = (category: string) => {
   const styles: { [key: string]: { gradient: string; categoryColor: string } } = {
     "Voice AI": {
-      gradient: "from-gold/20 to-blue-500/20",
-      categoryColor: "bg-gold/10 text-gold-600 border-gold/20",
+      gradient: "from-blue-500/20 to-blue-500/20",
+      categoryColor: "bg-blue-500/10 text-blue-600 border-blue-500/20",
     },
     "Google Ads": {
       gradient: "from-emerald-500/20 to-teal-500/20",
@@ -25,8 +25,8 @@ const getCategoryStyle = (category: string) => {
       categoryColor: "bg-orange-500/10 text-orange-600 border-orange-500/20",
     },
     "Automation": {
-      gradient: "from-blue-500/20 to-gold/20",
-      categoryColor: "bg-blue-500/10 text-gold-600 border-indigo-500/20",
+      gradient: "from-blue-500/20 to-cyan-400/20",
+      categoryColor: "bg-blue-500/10 text-blue-600 border-indigo-500/20",
     },
   };
   return styles[category] || styles["Lead Generation"];
@@ -75,7 +75,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/5 rounded-full blur-3xl animate-pulse" />
         <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse delay-1000" />
-        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-gold/5 rounded-full blur-3xl animate-pulse delay-2000" />
+        <div className="absolute bottom-0 left-1/2 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-2000" />
       </div>
 
       {/* Hero Section with Glass Card */}
@@ -386,7 +386,7 @@ export default function BlogContent({ posts }: BlogContentProps) {
             className="mt-16"
           >
             <div className="relative bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg rounded-3xl p-12 text-center">
-              <div className="absolute inset-0 bg-gradient-to-br from-gold/10 to-cyan-500/10 rounded-3xl" />
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-3xl" />
 
               <div className="relative z-10">
                 <motion.div

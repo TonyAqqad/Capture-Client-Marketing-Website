@@ -137,8 +137,8 @@ export function MagneticButton({
   const variantClasses = {
     primary: clsx(
       "bg-gradient-to-r from-accent via-primary to-accent text-white",
-      "shadow-glow-lg hover:shadow-glow-gold-lg border-2 border-transparent",
-      "hover:border-gold/30 hover:shadow-glow-gold-intense"
+      "shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 border-2 border-transparent",
+      "hover:border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/50"
     ),
     secondary: clsx(
       "bg-white border-2 border-slate-200 text-slate-900 backdrop-blur-sm",
@@ -177,9 +177,9 @@ export function MagneticButton({
         />
       )}
 
-      {/* Gold glow overlay for primary variant */}
+      {/* Blue glow overlay for primary variant */}
       {variant === "primary" && !disabled && (
-        <div className="absolute inset-0 bg-gradient-to-r from-gold/0 via-gold/10 to-gold/0 opacity-0 hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-blue-500/10 to-blue-500/0 opacity-0 hover:opacity-100 transition-opacity duration-300" />
       )}
 
       {/* Ripple effects */}
