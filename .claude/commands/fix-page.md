@@ -91,6 +91,14 @@ After all fixes:
 3. List all changes made
 4. Suggest manual testing steps
 
+## Step 4.5: Visual Verification (Chrome)
+
+After fixes, use Chrome MCP to visually confirm:
+1. Navigate to the fixed page: `mcp__claude-in-chrome__navigate` to `http://localhost:3000{route}`
+2. Check for visual regressions using `mcp__claude-in-chrome__read_page`
+3. Verify text isn't truncated
+4. Test at mobile width (375px) using `mcp__claude-in-chrome__resize_window`
+
 ## Step 5: Document
 
 Offer to update:

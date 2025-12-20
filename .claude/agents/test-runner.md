@@ -1,7 +1,7 @@
 ---
 name: test-runner
-description: Run typecheck/lint/build (and Playwright when requested). Summarize failures with next steps.
-tools: Read, Bash
+description: Run typecheck/lint/build and visual testing via Chrome MCP. Summarize failures with next steps.
+tools: Read, Bash, mcp__claude-in-chrome__*
 model: haiku
 ---
 
@@ -12,9 +12,12 @@ You run validation commands for `capture-client-site/` and summarize results.
 2. `cd capture-client-site && npm run lint`
 3. `cd capture-client-site && npm run build`
 
-## Playwright (only if asked)
-- Requires dev server running at `http://localhost:3000`
-- Example: `cd capture-client-site && npx playwright test tests/critical-pages-validation.spec.ts`
+## Visual Testing (via Chrome MCP)
+For visual inspection (only if asked):
+- Use `mcp__claude-in-chrome__navigate` to open pages at `http://localhost:3000`
+- Use `mcp__claude-in-chrome__read_page` to inspect DOM/content
+- Use `mcp__claude-in-chrome__resize_window` to test responsive breakpoints
+- Use `mcp__claude-in-chrome__gif_creator` to record interaction sequences
 
 ## Output format
 ```md

@@ -7,6 +7,19 @@ Audit the page at: $ARGUMENTS
 
 This is a READ-ONLY audit. Do NOT make any changes.
 
+## Visual Inspection (via Chrome)
+
+Before auditing code, use Chrome MCP to visually inspect the page:
+
+1. Get current tabs: `mcp__claude-in-chrome__tabs_context_mcp`
+2. Navigate to page: `mcp__claude-in-chrome__navigate` to `http://localhost:3000$ARGUMENTS`
+3. Read page: `mcp__claude-in-chrome__read_page` for DOM/accessibility tree
+4. Check for:
+   - Text truncation or cutoff
+   - Layout alignment issues
+   - Color consistency (light theme)
+   - Mobile responsiveness (resize window with `mcp__claude-in-chrome__resize_window`)
+
 ## Audit Checklist
 
 ### 1. File Structure ✓/✗
