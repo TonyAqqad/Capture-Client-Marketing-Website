@@ -440,7 +440,7 @@ export default async function PackagePage({
                   {/* Rating stars */}
                   <div className="flex gap-1 mb-6">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                      <Star key={i} className="w-5 h-5 text-blue-400 fill-blue-400" />
                     ))}
                   </div>
 
@@ -577,9 +577,9 @@ export default async function PackagePage({
 
             {/* Bonus */}
             {pkg.cta_footer?.bonus && (
-              <div className="inline-flex items-center gap-2 px-6 py-3 mx-auto rounded-full bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border border-yellow-500/20">
-                <Gift className="w-5 h-5 text-yellow-400" />
-                <span className="text-yellow-300 font-semibold">{pkg.cta_footer.bonus}</span>
+              <div className="inline-flex items-center gap-2 px-6 py-3 mx-auto rounded-full bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-500/20">
+                <Gift className="w-5 h-5 text-blue-400" />
+                <span className="text-blue-300 font-semibold">{pkg.cta_footer.bonus}</span>
               </div>
             )}
 

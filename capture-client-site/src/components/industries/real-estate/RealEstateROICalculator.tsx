@@ -197,7 +197,7 @@ export function RealEstateROICalculator() {
             </GlassCard>
 
             <div className="flex justify-center">
-              <ArrowDown className="w-10 h-10 text-amber-500 animate-bounce" />
+              <ArrowDown className="w-10 h-10 text-blue-500 animate-bounce" />
             </div>
 
             <GlassCard variant="premium" className="p-8 border-2 border-green-300 bg-gradient-to-br from-green-50 to-emerald-50 hover:border-green-400 hover:shadow-lg hover:shadow-green-200/50 transition-all duration-500">

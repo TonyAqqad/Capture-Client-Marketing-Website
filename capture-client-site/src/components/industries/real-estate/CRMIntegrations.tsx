@@ -204,7 +204,7 @@ export function CRMIntegrations() {
           </div>
 
           <div className="flex items-center gap-4 p-6 rounded-xl bg-white/70 backdrop-blur-xl border border-slate-200">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-yellow-500 flex items-center justify-center flex-shrink-0">
+            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center flex-shrink-0">
               <Sparkles className="text-white w-6 h-6" />
             </div>
             <div>

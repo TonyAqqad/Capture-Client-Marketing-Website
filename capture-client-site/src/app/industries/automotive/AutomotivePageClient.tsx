@@ -945,7 +945,7 @@ export default function AutomotivePageClient() {
                 transition={{ delay: idx * 0.15, duration: 0.5 }}
                 whileHover={{ y: -8, scale: 1.02 }}
               >
-                <GlassCard variant="premium" className="p-6 h-full transition-all duration-300 hover:shadow-lg hover:shadow-slate-200/50-gold">
+                <GlassCard variant="premium" className="p-6 h-full transition-all duration-300 hover:shadow-lg hover:shadow-slate-200/50">
                   <div className="flex items-center gap-3 mb-4">
                     <motion.div
                       className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-100 to-cyan-100 flex items-center justify-center"

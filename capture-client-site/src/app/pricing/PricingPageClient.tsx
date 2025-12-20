@@ -703,7 +703,7 @@ export default function PricingPageClient() {
               icon: Shield,
               title: "No Long-Term Contract",
               desc: "Month-to-month billing. Cancel anytime.",
-              color: "gold"
+              color: "cyan"
             },
             {
               icon: TrendingUp,
@@ -715,7 +715,7 @@ export default function PricingPageClient() {
               icon: CheckCircle2,
               title: "Setup in 3-5 Days",
               desc: "Go live fast with expert onboarding",
-              color: "gold"
+              color: "cyan"
             }
           ].map((signal, i) => {
             const Icon = signal.icon;
@@ -733,9 +733,7 @@ export default function PricingPageClient() {
 
                 {/* Gradient orb */}
                 <motion.div
-                  className={`absolute top-0 right-0 w-32 h-32 rounded-full blur-3xl opacity-10 ${
-                    signal.color === 'gold' ? 'bg-blue-600' : 'bg-cyan-500'
-                  }`}
+                  className="absolute top-0 right-0 w-32 h-32 rounded-full blur-3xl opacity-10 bg-cyan-500"
                   animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.15, 0.1] }}
                   transition={{ duration: 4, repeat: Infinity }}
                 />
@@ -743,17 +741,11 @@ export default function PricingPageClient() {
                 {/* Content */}
                 <div className="relative text-center">
                   <motion.div
-                    className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4 ${
-                      signal.color === 'gold'
-                        ? 'bg-gradient-to-br from-blue-100 to-blue-50 border border-blue-200'
-                        : 'bg-gradient-to-br from-cyan-100 to-cyan-50 border border-cyan-200'
-                    }`}
+                    className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4 bg-gradient-to-br from-cyan-100 to-cyan-50 border border-cyan-200"
                     whileHover={{ scale: 1.1, rotate: 5 }}
                     transition={{ type: 'spring', stiffness: 400 }}
                   >
-                    <Icon className={`w-8 h-8 ${
-                      signal.color === 'gold' ? 'text-blue-600' : 'text-cyan-500'
-                    }`} />
+                    <Icon className="w-8 h-8 text-cyan-500" />
                   </motion.div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">{signal.title}</h3>
                   <p className="text-slate-600 text-sm">{signal.desc}</p>
@@ -955,10 +947,10 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
           transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
         }}
       >
-        {/* GROWTH TIER - GOLD PREMIUM */}
+        {/* GROWTH TIER - BLUE PREMIUM */}
         {isGrowth && (
           <>
-            {/* Most Popular Badge - Premium Gold */}
+            {/* Most Popular Badge - Premium Blue */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -969,9 +961,9 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                 animate={{
                   y: [0, -6, 0],
                   boxShadow: [
-                    '0 0 20px rgba(212, 175, 55, 0.5)',
-                    '0 0 40px rgba(212, 175, 55, 0.9)',
-                    '0 0 20px rgba(212, 175, 55, 0.5)',
+                    '0 0 20px rgba(37, 99, 235, 0.5)',
+                    '0 0 40px rgba(37, 99, 235, 0.9)',
+                    '0 0 20px rgba(37, 99, 235, 0.5)',
                   ],
                 }}
                 transition={{ duration: 2.5, repeat: Infinity, repeatType: 'reverse' }}

@@ -63,7 +63,7 @@ export function SpeedToLeadTimeline() {
       glow: "group-hover:shadow-[0_0_40px_rgba(6,182,212,0.3)]"
     },
     poor: {
-      bg: "from-red-500/20 to-orange-500/10",
+      bg: "from-red-500/20 to-red-400/10",
       border: "border-red-500/30",
       text: "text-red-400",
       glow: "group-hover:shadow-[0_0_40px_rgba(239,68,68,0.3)]"
