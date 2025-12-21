@@ -271,7 +271,7 @@ export function GoogleReviews({ data = fallbackData }: GoogleReviewsProps) {
           className="text-center mt-12"
         >
           <a
-            href="https://g.page/r/YOUR_REVIEW_LINK/review"
+            href="https://maps.app.goo.gl/PNoQ4CeqL9GSpHHu8"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white border border-slate-200 text-sm font-medium text-slate-700 hover:border-blue-200 hover:bg-blue-50 hover:text-blue-600 transition-all duration-300 shadow-sm"

@@ -16,7 +16,7 @@ export const SITE_CONFIG = {
   url: 'https://captureclient.com',
   phone: '(865) 346-6111',
   phoneRaw: '+18653466111',
-  email: 'info@captureclient.com',
+  email: 'team@captureclient.com',
   foundingDate: '2023',
 
   // Primary business location

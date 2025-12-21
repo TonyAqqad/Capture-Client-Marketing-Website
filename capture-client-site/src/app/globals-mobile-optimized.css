@@ -417,6 +417,27 @@
     overflow-x: clip;
   }
 
+  /* EXCEPTION: Allow horizontal scrollable containers to work */
+  .overflow-x-auto {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Parents of scrollable containers need visible overflow */
+  .overflow-x-auto,
+  .overflow-x-auto > * {
+    max-width: none;
+  }
+
+  /* Utility class to allow overflow in parent containers - must override .container rule */
+  .container.allow-overflow-x,
+  .container-custom.allow-overflow-x,
+  div.allow-overflow-x,
+  .allow-overflow-x {
+    overflow-x: visible !important;
+    overflow: visible !important;
+  }
+
   /* Images must be responsive */
   img,
   svg,

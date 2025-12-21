@@ -229,7 +229,7 @@ export default function PricingPageClient() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 relative overflow-x-clip overflow-y-visible">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Floating currency symbols */}
@@ -476,7 +476,7 @@ export default function PricingPageClient() {
       </div>
 
       {/* Pricing Cards - 3D PREMIUM */}
-      <div className="container mx-auto px-4 md:px-8 lg:px-16 py-8 md:py-16">
+      <div className="container mx-auto px-4 md:px-8 lg:px-16 py-8 md:py-16 allow-overflow-x">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
           {PACKAGES.map((pkg, index) => (
             <PricingCard3D
@@ -513,7 +513,7 @@ export default function PricingPageClient() {
           </button>
         </motion.div>
 
-        {/* Feature Comparison Table */}
+        {/* Feature Comparison Table - Moved outside clipped container for mobile scroll */}
         {showComparison && (
           <motion.div
             className="mt-8 md:mt-12 max-w-7xl mx-auto"
@@ -527,8 +527,9 @@ export default function PricingPageClient() {
               <span>Swipe to see all features</span>
             </div>
 
-            <div className="overflow-x-auto -mx-4 px-4 md:mx-0 md:px-0 scrollbar-thin scrollbar-thumb-blue-600/30 scrollbar-track-slate-100">
-              <div className="min-w-[700px] md:min-w-full">
+            {/* Mobile: Use touch-pan-x to enable horizontal swiping, ensure no parent clips */}
+            <div className="overflow-x-auto overscroll-x-contain touch-pan-x -mx-4 px-4 md:mx-0 md:px-0 scrollbar-thin scrollbar-thumb-blue-600/30 scrollbar-track-slate-100" style={{ WebkitOverflowScrolling: 'touch' }}>
+              <div className="min-w-[800px] md:min-w-full">
                 <div className="relative rounded-3xl overflow-hidden">
                   <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white to-slate-50/95 backdrop-blur-2xl" />
                   <div className="absolute inset-0 bg-mesh-premium opacity-10" />

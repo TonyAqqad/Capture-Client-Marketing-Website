@@ -25,7 +25,7 @@ export default function ComparisonTable() {
           className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-3 sm:mb-4"
           style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
         >
-          Why Choose <span className="text-gradient-gold-cyan">Capture Client</span>?
+          Why Choose <span className="text-gradient-blue-cyan">Capture Client</span>?
         </h3>
         <p
           className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto"

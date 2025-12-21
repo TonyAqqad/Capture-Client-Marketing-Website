@@ -60,15 +60,15 @@
 
 - **Background**: Dark navy `#0F172A` with 95% opacity + backdrop blur
 - **Border**: White 10% opacity (`border-white/10`)
-- **Primary Button**: Gold gradient (`btn-gold`)
+- **Primary Button**: Blue gradient (`btn-blue`)
 - **Secondary Button**: White/5 background (`btn-ghost`)
-- **Links**: Cyan `#00C9FF` hover to gold `#D4AF37`
+- **Links**: Cyan `#00C9FF` hover to blue `#2563eb`
 - **Text**: White for headings, gray-300 for body
 
 ## Animations
 
 1. **Initial Appearance**: Slides up from bottom with fade-in (0.4s)
-2. **Button Hovers**: Scale 105% on btn-gold
+2. **Button Hovers**: Scale 105% on btn-blue
 3. **Toggle Switches**: Smooth color transition + scale on hover
 4. **Exit**: Slides down with fade-out
 

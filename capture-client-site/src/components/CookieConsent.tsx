@@ -140,7 +140,7 @@ export default function CookieConsent() {
                       We use cookies to enhance your browsing experience, analyze site traffic, and personalize content.
                       By clicking "Accept All", you consent to our use of cookies.{" "}
                       <a
-                        href="/privacy"
+                        href="/privacy-policy"
                         className="text-cyan-600 hover:text-blue-600 transition-colors underline"
                       >
                         Learn more

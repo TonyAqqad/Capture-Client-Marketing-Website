@@ -532,17 +532,17 @@
   }
 
   /* ============================================ */
-  /* PREMIUM GOLD GRADIENTS & ACCENTS            */
+  /* PREMIUM BLUE GRADIENTS & ACCENTS            */
   /* ============================================ */
 
-  /* Gold gradient text - Premium CTAs */
-  .text-gradient-gold {
+  /* Blue gradient text - Premium CTAs */
+  .text-gradient-blue {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #2563eb 100%);
   }
 
-  /* Gold + Cyan + Purple gradient - $1M brand feel */
-  .text-gradient-gold-cyan {
+  /* Blue + Cyan + Purple gradient - $1M brand feel */
+  .text-gradient-blue-cyan {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(135deg, #2563eb 0%, #00C9FF 100%);
   }
@@ -1193,10 +1193,10 @@
   }
 
   /* ============================================ */
-  /* PREMIUM GOLD BUTTONS                        */
+  /* PREMIUM BLUE BUTTONS                        */
   /* ============================================ */
 
-  .btn-gold {
+  .btn-blue {
     @apply relative overflow-hidden font-semibold px-6 py-3 rounded-xl;
     background: linear-gradient(135deg, #2563eb 0%, #3b82f6 50%, #2563eb 100%);
     background-size: 200% 200%;
@@ -1206,17 +1206,17 @@
     transform: translateZ(0);
   }
 
-  .btn-gold:hover {
+  .btn-blue:hover {
     box-shadow: 0 8px 30px rgba(37, 99, 235, 0.5);
     transform: translateY(-2px) translateZ(0);
   }
 
-  .btn-gold:active {
+  .btn-blue:active {
     transform: scale(0.98) translateZ(0);
   }
 
-  /* Gold outline button variant */
-  .btn-gold-outline {
+  /* Blue outline button variant */
+  .btn-blue-outline {
     @apply relative font-semibold px-6 py-3 rounded-xl;
     background: transparent;
     border: 2px solid #2563eb;
@@ -1225,7 +1225,7 @@
     transform: translateZ(0);
   }
 
-  .btn-gold-outline:hover {
+  .btn-blue-outline:hover {
     background: rgba(37, 99, 235, 0.1);
     box-shadow: 0 4px 20px rgba(37, 99, 235, 0.2);
   }
@@ -1597,7 +1597,7 @@ select:focus-visible {
   top: -0.5rem;
   font-size: 4rem;
   font-family: var(--font-playfair), Georgia, serif;
-  color: var(--color-gold);
+  color: #2563eb;
   opacity: 0.5;
   line-height: 1;
 }
@@ -1669,7 +1669,7 @@ select:focus-visible {
   transform: translateX(-50%);
   width: 6px;
   height: 6px;
-  background: var(--color-gold);
+  background: #2563eb;
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
 }
@@ -1694,7 +1694,7 @@ select:focus-visible {
   border: 1px solid rgba(37, 99, 235, 0.3);
   font-size: 0.875rem;
   font-weight: 600;
-  color: var(--color-gold);
+  color: #2563eb;
 }
 
 .badge-glow::after {
