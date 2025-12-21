@@ -134,7 +134,7 @@ export function GradientCard({
     <motion.div
       className={`
         relative rounded-2xl overflow-hidden transition-all duration-500
-        bg-premium-card
+        bg-white/90
         ${variantClasses[variant][intensity]}
         border ${borderColors[variant]}
         ${hoverClasses}
@@ -145,7 +145,7 @@ export function GradientCard({
       whileTap={interactive ? { scale: 0.98 } : {}}
     >
       {/* Gradient overlay for depth (NOT backdrop-blur) */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/[0.05] via-transparent to-black/[0.05] pointer-events-none rounded-2xl" />
+      <div className="absolute inset-0 bg-gradient-to-br from-white/[0.05] via-transparent to-slate-100/10 pointer-events-none rounded-2xl" />
 
       {/* Top highlight edge */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />

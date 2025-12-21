@@ -135,7 +135,7 @@ export function IntegrationHowItWorks({
                     <div
                       className={`relative ${isLeft ? "text-right" : "text-left direction-ltr"}`}
                     >
-                      <div className="glass-premium-mobile p-6 lg:p-8 rounded-2xl hover:border-accent/30 transition-all duration-300 hover:shadow-glow">
+                      <div className="bg-white/80 backdrop-blur-sm border border-slate-200/60 shadow-sm p-6 lg:p-8 rounded-2xl hover:border-accent/30 transition-all duration-300 hover:shadow-glow">
                         <h3 className="text-xl sm:text-2xl font-display font-bold text-slate-900 mb-3">
                           {step.title}
                         </h3>
@@ -172,7 +172,7 @@ export function IntegrationHowItWorks({
                         className="relative w-20 h-20 rounded-full flex items-center justify-center shadow-2xl"
                         style={{ background: gradient }}
                       >
-                        <span className="text-3xl font-bold text-black relative z-10">
+                        <span className="text-3xl font-bold text-white relative z-10">
                           {step.step}
                         </span>
                         {/* Pulsing glow ring */}
@@ -209,14 +209,14 @@ export function IntegrationHowItWorks({
                       className="relative flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center shadow-xl"
                       style={{ background: gradient }}
                     >
-                      <span className="text-2xl font-bold text-black">
+                      <span className="text-2xl font-bold text-white">
                         {step.step}
                       </span>
                     </motion.div>
 
                     {/* Step Card */}
                     <div className="flex-1">
-                      <div className="glass-premium-mobile p-4 sm:p-6 rounded-xl hover:border-accent/30 transition-all duration-300">
+                      <div className="bg-white/80 backdrop-blur-sm border border-slate-200/60 shadow-sm p-4 sm:p-6 rounded-xl hover:border-accent/30 transition-all duration-300">
                         <h3 className="text-lg sm:text-xl font-display font-bold text-slate-900 mb-2">
                           {step.title}
                         </h3>

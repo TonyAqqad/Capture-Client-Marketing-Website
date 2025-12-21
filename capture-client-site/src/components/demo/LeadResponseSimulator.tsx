@@ -144,17 +144,31 @@ function useTypewriter(text: string, speed: number = 25) {
 
 // ==================== MAIN COMPONENT ====================
 
+interface ConversationMessage {
+  role: 'user' | 'ai';
+  content: string;
+  intent?: Intent;
+  leadScore?: number;
+  crmData?: ExtractedCRMData;
+}
+
 export function LeadResponseSimulator({ personalization }: LeadResponseSimulatorProps) {
   const [selectedIndustry, setSelectedIndustry] = useState<BusinessType>("plumbing");
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [response, setResponse] = useState<DemoResponse | null>(null);
+  const [conversationHistory, setConversationHistory] = useState<ConversationMessage[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [showDropdown, setShowDropdown] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const conversationEndRef = useRef<HTMLDivElement>(null);
 
   const selectedIndustryData = INDUSTRIES.find((i) => i.id === selectedIndustry)!;
-  const { displayedText, isComplete } = useTypewriter(response?.response || "", 20);
+
+  // Get the last AI message for typewriter effect
+  const lastAiMessage = conversationHistory.length > 0 && conversationHistory[conversationHistory.length - 1].role === 'ai'
+    ? conversationHistory[conversationHistory.length - 1]
+    : null;
+  const { displayedText, isComplete } = useTypewriter(lastAiMessage?.content || "", 20);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -167,19 +181,48 @@ export function LeadResponseSimulator({ personalization }: LeadResponseSimulator
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // Sync personalization industry to selected industry
+  useEffect(() => {
+    if (personalization?.industry) {
+      const industryMap: Record<string, BusinessType> = {
+        "Legal / Law Firms": "law",
+        "Plumbing": "plumbing",
+        "HVAC": "hvac",
+        "Martial Arts / BJJ": "general",
+        "Fitness / Gyms": "general",
+        "Roofing": "general",
+        "General Contracting": "general",
+        "Other": "general",
+      };
+      const mappedIndustry = industryMap[personalization.industry] || "general";
+      setSelectedIndustry(mappedIndustry);
+    }
+  }, [personalization?.industry]);
+
+  // Auto-scroll to bottom of conversation
+  useEffect(() => {
+    if (conversationEndRef.current) {
+      conversationEndRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [conversationHistory, displayedText]);
+
   const handleSubmit = useCallback(async () => {
     if (!message.trim() || isLoading) return;
 
+    const userMessage = message.trim();
+
+    // Add user message to conversation
+    setConversationHistory(prev => [...prev, { role: 'user', content: userMessage }]);
+    setMessage(""); // Clear input immediately
     setIsLoading(true);
     setError(null);
-    setResponse(null);
 
     try {
       const res = await fetch("/api/demo-response", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          userMessage: message,
+          userMessage: userMessage,
           businessType: selectedIndustry,
           personalization: personalization || undefined,
         }),
@@ -195,23 +238,29 @@ export function LeadResponseSimulator({ personalization }: LeadResponseSimulator
       }
 
       const data: DemoResponse = await res.json();
-      setResponse(data);
+
+      // Add AI response to conversation
+      setConversationHistory(prev => [...prev, {
+        role: 'ai',
+        content: data.response,
+        intent: data.intent,
+        leadScore: data.leadScore,
+        crmData: data.suggestedCrmFields,
+      }]);
     } catch {
       setError("Something went wrong. Please try again.");
     } finally {
       setIsLoading(false);
     }
-  }, [message, selectedIndustry, isLoading]);
+  }, [message, selectedIndustry, personalization, isLoading]);
 
   const handleExampleClick = (example: string) => {
     setMessage(example);
-    setResponse(null);
-    setError(null);
   };
 
   const handleReset = () => {
     setMessage("");
-    setResponse(null);
+    setConversationHistory([]);
     setError(null);
   };
 
@@ -285,7 +334,6 @@ export function LeadResponseSimulator({ personalization }: LeadResponseSimulator
                         onClick={() => {
                           setSelectedIndustry(industry.id);
                           setShowDropdown(false);
-                          setResponse(null);
                         }}
                         className={`w-full flex items-center gap-3 px-4 py-3 hover:bg-slate-50 transition-colors ${
                           selectedIndustry === industry.id ? "bg-blue-50" : ""
@@ -303,34 +351,122 @@ export function LeadResponseSimulator({ personalization }: LeadResponseSimulator
             </div>
           </div>
 
+          {/* Conversation History */}
+          {conversationHistory.length > 0 && (
+            <div className="space-y-4 max-h-96 overflow-y-auto px-2">
+              {conversationHistory.map((msg, idx) => {
+                const isLastAi = msg.role === 'ai' && idx === conversationHistory.length - 1;
+                const textToShow = isLastAi ? displayedText : msg.content;
+
+                return (
+                  <motion.div
+                    key={idx}
+                    className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    {msg.role === 'user' ? (
+                      <div className="max-w-[80%] px-4 py-3 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md">
+                        <p className="text-sm leading-relaxed">{msg.content}</p>
+                      </div>
+                    ) : (
+                      <div className="max-w-[85%] flex items-start gap-3">
+                        <div className="flex-shrink-0">
+                          <div className="relative">
+                            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center shadow-lg">
+                              <Bot className="w-5 h-5 text-white" />
+                            </div>
+                            {isLastAi && !isComplete && (
+                              <div className="absolute -bottom-1 -right-1 w-3 h-3 bg-emerald-500 rounded-full border-2 border-white animate-pulse" />
+                            )}
+                          </div>
+                        </div>
+                        <div className="flex-1">
+                          <div className="px-4 py-3 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                            <div className="flex items-center gap-2 mb-1">
+                              <span className="text-xs font-semibold text-blue-700">Capture AI</span>
+                              {msg.intent && <IntentBadge intent={msg.intent} animate={!isLastAi || isComplete} />}
+                            </div>
+                            <p className="text-sm text-slate-800 leading-relaxed">
+                              &ldquo;{textToShow}&rdquo;
+                              {isLastAi && !isComplete && (
+                                <span className="inline-block w-0.5 h-4 bg-blue-600 ml-0.5 animate-pulse" />
+                              )}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </motion.div>
+                );
+              })}
+              <div ref={conversationEndRef} />
+            </div>
+          )}
+
+          {/* Lead Intelligence Panel - Show after last AI message */}
+          {lastAiMessage && isComplete && (
+            <motion.div
+              className="grid md:grid-cols-2 gap-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+              {/* Lead Score */}
+              <div className="p-5 rounded-xl bg-white border border-slate-200 shadow-sm">
+                <LeadScoreIndicator score={lastAiMessage.leadScore || 0} />
+              </div>
+
+              {/* CRM Fields */}
+              <div className="p-5 rounded-xl bg-white border border-slate-200 shadow-sm">
+                <CRMFieldsDisplay data={lastAiMessage.crmData || {}} />
+              </div>
+            </motion.div>
+          )}
+
           {/* Message Input */}
           <div>
             <label className="block text-sm font-medium text-slate-700 mb-2">
-              Paste a lead message, email, or voicemail transcript
+              {conversationHistory.length > 0
+                ? "Continue the conversation"
+                : "Paste a lead message, email, or voicemail transcript"}
             </label>
             <textarea
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              placeholder={selectedIndustryData.examples[0]}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && !e.shiftKey) {
+                  e.preventDefault();
+                  handleSubmit();
+                }
+              }}
+              placeholder={
+                personalization?.businessName
+                  ? `Type your test message for ${personalization.businessName}...`
+                  : selectedIndustryData.examples[0]
+              }
               rows={4}
               className="w-full px-4 py-3 rounded-xl bg-white border border-slate-200 hover:border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all resize-none text-slate-900 placeholder:text-slate-400"
             />
 
-            {/* Example prompts */}
-            <div className="mt-3 flex flex-wrap gap-2">
-              <span className="text-xs text-slate-500">Try an example:</span>
-              {selectedIndustryData.examples.map((example, idx) => (
-                <button
-                  key={idx}
-                  type="button"
-                  onClick={() => handleExampleClick(example)}
-                  className="text-xs px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-700 transition-colors truncate max-w-[200px]"
-                  title={example}
-                >
-                  {example.slice(0, 35)}...
-                </button>
-              ))}
-            </div>
+            {/* Example prompts - hide when personalized */}
+            {!personalization?.businessName && (
+              <div className="mt-3 flex flex-wrap gap-2">
+                <span className="text-xs text-slate-500">Try an example:</span>
+                {selectedIndustryData.examples.map((example, idx) => (
+                  <button
+                    key={idx}
+                    type="button"
+                    onClick={() => handleExampleClick(example)}
+                    className="text-xs px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 hover:bg-slate-200 hover:text-slate-700 transition-colors truncate max-w-[200px]"
+                    title={example}
+                  >
+                    {example.slice(0, 35)}...
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           {/* Submit Button */}
@@ -356,7 +492,7 @@ export function LeadResponseSimulator({ personalization }: LeadResponseSimulator
               )}
             </motion.button>
 
-            {response && (
+            {conversationHistory.length > 0 && (
               <button
                 type="button"
                 onClick={handleReset}
@@ -377,71 +513,6 @@ export function LeadResponseSimulator({ personalization }: LeadResponseSimulator
                 exit={{ opacity: 0, y: -10 }}
               >
                 {error}
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          {/* Response Section */}
-          <AnimatePresence>
-            {response && (
-              <motion.div
-                className="space-y-6"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                {/* AI Response */}
-                <div className="p-5 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-100">
-                  <div className="flex items-start gap-4">
-                    {/* Avatar */}
-                    <div className="flex-shrink-0">
-                      <div className="relative">
-                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center shadow-lg">
-                          <Bot className="w-6 h-6 text-white" />
-                        </div>
-                        {!isComplete && (
-                          <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald-500 rounded-full border-2 border-white animate-pulse" />
-                        )}
-                      </div>
-                    </div>
-
-                    {/* Response Text */}
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="font-semibold text-blue-700">Capture AI</span>
-                        <IntentBadge intent={response.intent} animate={isComplete} />
-                      </div>
-                      <p className="text-slate-800 leading-relaxed">
-                        &ldquo;{displayedText}&rdquo;
-                        {!isComplete && (
-                          <span className="inline-block w-0.5 h-5 bg-blue-600 ml-0.5 animate-pulse" />
-                        )}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Lead Intelligence Panel */}
-                <AnimatePresence>
-                  {isComplete && (
-                    <motion.div
-                      className="grid md:grid-cols-2 gap-6"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.2 }}
-                    >
-                      {/* Lead Score */}
-                      <div className="p-5 rounded-xl bg-white border border-slate-200 shadow-sm">
-                        <LeadScoreIndicator score={response.leadScore} />
-                      </div>
-
-                      {/* CRM Fields */}
-                      <div className="p-5 rounded-xl bg-white border border-slate-200 shadow-sm">
-                        <CRMFieldsDisplay data={response.suggestedCrmFields} />
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
               </motion.div>
             )}
           </AnimatePresence>
