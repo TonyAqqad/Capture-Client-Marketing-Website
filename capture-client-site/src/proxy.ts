@@ -1,10 +1,10 @@
 /**
- * Next.js Middleware - Global Rate Limiting
+ * Next.js Proxy - Global Rate Limiting
  *
  * Applies rate limiting to all API routes before they execute.
- * Runs on Edge Runtime for optimal performance.
+ * Runs on Node.js runtime (Next.js 16+ proxy convention).
  *
- * @see https://nextjs.org/docs/app/building-your-application/routing/middleware
+ * @see https://nextjs.org/docs/app/api-reference/file-conventions/proxy
  */
 
 import { NextResponse } from "next/server";
@@ -17,7 +17,7 @@ import {
 } from "@/lib/rate-limit";
 
 // ==========================================
-// MIDDLEWARE CONFIGURATION
+// PROXY CONFIGURATION
 // ==========================================
 
 export const config = {
@@ -28,10 +28,10 @@ export const config = {
 };
 
 // ==========================================
-// MAIN MIDDLEWARE HANDLER
+// MAIN PROXY HANDLER
 // ==========================================
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Get client identifier (IP address)
