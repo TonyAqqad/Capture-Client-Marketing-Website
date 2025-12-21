@@ -1,8 +1,22 @@
 # Progress (lean)
-- Overall: ~99% complete (last updated 2025-12-20). Builds passing (229 pages).
-- Current focus: Typography contrast fixes (P1), text-foreground token cleanup, accessibility sweep.
+- Overall: ~99% complete (last updated 2025-12-21). Builds passing (229 pages).
+- Current focus: Mobile UX enhancements, scroll fixes, preparing for Lead Response Simulator feature.
 
 ## Completed highlights
+- **MOBILE UX ENHANCEMENTS + SCROLL FIXES COMPLETE** (2025-12-21):
+  - **Mobile Hero Improvements**:
+    - Centered layout on mobile (headlines, CTAs, badges)
+    - Added 3 subtle floating accent dots for visual depth
+    - Enhanced CTA shadows with stronger blue glow
+    - Added mobile integration strip with 6 key integrations (HubSpot, Slack, Google Calendar, Zapier, Stripe, Salesforce)
+  - **Scroll Fixes**:
+    - Fixed LightTextDemo chat scroll trap (removed fixed height on mobile + added touch-action: pan-y)
+    - Fixed ROICalculator range sliders blocking scroll (touch-action: pan-y on inputs)
+    - Fixed How It Works step badges cut-off on mobile (positioning: -right-3 → top-4 right-4)
+    - Added global CSS fallbacks for touch handling
+  - **New Shared Utilities**: Created `src/lib/depth-utils.ts` with useIsMobile, use3DTilt, cardShadow helpers
+  - **Files Modified**: page.tsx, LightTextDemo.tsx, ROICalculator.tsx, HowItWorksLight.tsx, globals.css
+  - **Validation**: TypeScript passes, Build passes (229 pages)
 - **TYPOGRAPHY & CONTRAST AUDIT COMPLETE** (2025-12-20):
   - **Audit**: Deployed 8 parallel site-auditor agents to audit all 15+ pages for typography & contrast issues
   - **Blog Content Fixed** (commit 27b3b3e, 20 files):

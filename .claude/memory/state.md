@@ -67,6 +67,13 @@
 
 ✅ **Build passing**: 229 pages
 
+## Recent fixes (2025-12-21)
+1. ✅ **Mobile hero enhancements**: Centered layout, 3 floating accent dots, stronger CTA shadows
+2. ✅ **Mobile integration strip**: Added 6 key integrations (HubSpot, Slack, Google Calendar, Zapier, Stripe, Salesforce)
+3. ✅ **Scroll fixes**: Fixed LightTextDemo chat scroll trap + ROICalculator range sliders blocking scroll
+4. ✅ **How It Works step badges**: Fixed cut-off on mobile (changed positioning from `-right-3` to `top-4 right-4`)
+5. ✅ **New shared utilities**: Created `src/lib/depth-utils.ts` for 3D depth effects (useIsMobile, use3DTilt, cardShadow)
+
 ## P0 Blockers
 None - all critical issues resolved ✅
 
@@ -74,16 +81,23 @@ None - all critical issues resolved ✅
 1. ⚠️ **Pricing pages**: `text-cyan-400`, `text-green-400`, `text-blue-300` need better contrast
 2. ⚠️ **Automotive**: `text-green-400` in ROI calculator
 3. ⚠️ **Legal**: Urgency badges with -400 color variants
-4. ⚠️ **Fitness**: Step number badge contrast issue
-5. ⚠️ **SpeedToLeadTimeline**: -400 color variants need audit
-6. ⚠️ **Core components**: Legacy `text-foreground` token cleanup
+4. ⚠️ **SpeedToLeadTimeline**: -400 color variants need audit
+5. ⚠️ **Core components**: Legacy `text-foreground` token cleanup
 
 ### Recently resolved:
+- ✅ Fitness: Step number badge contrast issue (2025-12-21)
 - ✅ Replaced `btn-gold` with blue gradient on all industry pages
 - ✅ Updated breadcrumb schema to use `/who-we-serve` across all 9 industry pages
 - ✅ Fixed CRMCard dark text colors (`text-white` → `text-slate-900`)
 - ✅ Removed duplicate metadata from `home-services/layout.tsx`
 - ✅ Gold→Blue migration (HIGH + MEDIUM priority, 15 files total)
+
+## Next up (Planned Features)
+1. **Lead Response Simulator** (next priority)
+   - User pastes lead inquiry → gets AI response showing what Capture Client would say
+   - Uses Anthropic Claude API
+   - Will be added to `/demo` page
+2. **Scenario Builder** (after Lead Response Simulator)
 
 ## P2 (nice to have)
 1. Add focus-visible states to CTAs across site

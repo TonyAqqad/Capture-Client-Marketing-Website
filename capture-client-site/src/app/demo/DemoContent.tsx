@@ -30,6 +30,7 @@ import {
   RocketIcon,
   HeadphonesIcon,
 } from "lucide-react";
+import { LeadResponseSimulator } from "@/components/demo/LeadResponseSimulator";
 
 // ==================== TYPES ====================
 
@@ -857,6 +858,40 @@ export default function DemoContent() {
                 <span>Restart</span>
               </motion.button>
             </motion.div>
+          </div>
+        </section>
+
+        {/* ==================== TRY IT YOURSELF - LEAD RESPONSE SIMULATOR ==================== */}
+        <section className="section bg-gradient-to-b from-white via-slate-50 to-white relative overflow-hidden">
+          {/* Decorative background */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-radial from-blue-600/5 to-transparent rounded-full blur-3xl" />
+            <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-gradient-radial from-cyan-500/5 to-transparent rounded-full blur-3xl" />
+          </div>
+
+          <div className="container-custom px-4 sm:px-6 lg:px-8 relative z-10">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-emerald-600/20 via-emerald-600/10 to-transparent border border-emerald-500/30 backdrop-blur-xl mb-4">
+                <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+                <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-emerald-600">
+                  Try It Yourself
+                </span>
+              </div>
+
+              <h2 className="text-display-lg mb-4">
+                Test Our AI With <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">Your Lead</span>
+              </h2>
+              <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+                Paste any lead inquiry and watch our AI respond in real-time. See the lead score, detected intent, and extracted CRM data.
+              </p>
+            </motion.div>
+
+            <LeadResponseSimulator />
           </div>
         </section>
 
