@@ -583,7 +583,7 @@ export default function DemoContent() {
               </h2>
 
               <p className="text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto">
-                Join 500+ businesses using AI to capture every opportunity.
+                Join growing businesses using AI to capture every opportunity.
                 <br />
                 Setup takes less than 48 hours. No technical skills required.
               </p>

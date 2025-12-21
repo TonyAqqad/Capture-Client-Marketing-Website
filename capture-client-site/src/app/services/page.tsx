@@ -7,7 +7,7 @@ import { generateCollectionPageSchema } from "@/lib/advanced-schemas";
 export const metadata: Metadata = {
   title: "Marketing Services | Voice AI & Lead Gen | Capture Client",
   description:
-    "Never miss a lead again. 24/7 AI voice agents, ROI-focused Google Ads, and Facebook Ads services for small businesses. Trusted by 500+ companies.",
+    "Never miss a lead again. 24/7 AI voice agents, ROI-focused Google Ads, and Facebook Ads services for small businesses. Trusted by growing businesses.",
   keywords: [
     "marketing services small business",
     "voice ai for business",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Marketing Services | Voice AI & Lead Gen | Capture Client",
     description:
-      "Voice AI agents that answer every call, Google Ads & Facebook Ads that generate qualified leads. Trusted by 500+ small businesses. Book your free consultation today.",
+      "Voice AI agents that answer every call, Google Ads & Facebook Ads that generate qualified leads. Trusted by growing businesses. Book your free consultation today.",
     url: "https://captureclient.com/services",
     siteName: "Capture Client",
     type: "website",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Marketing Services | Voice AI & Lead Gen | Capture Client",
     description:
-      "24/7 AI voice agents, professional Google Ads & Facebook Ads management. Trusted by 500+ businesses.",
+      "24/7 AI voice agents, professional Google Ads & Facebook Ads management. Trusted by growing businesses.",
     images: ["https://captureclient.com/og-image.png"],
   },
   alternates: {

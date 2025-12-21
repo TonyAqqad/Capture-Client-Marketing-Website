@@ -3,8 +3,32 @@
 - Current focus: Missed Call Calculator + Demo Personalization complete. All P0/P1 items resolved.
 
 ## Completed highlights
+- **LEAD RESPONSE SIMULATOR ENHANCEMENTS COMPLETE** (2025-12-21):
+  - **Conversation Tracking** (commit 81a4d8d):
+    - Added ConversationMessage interface with role, content, timestamp, intent, score
+    - User messages appear on right (blue bubbles), AI responses on left (white bubbles)
+    - Intent badges on AI messages (booking, info-request, objection, price-inquiry, qualified, scheduling)
+    - Input field clears after submission, messages persist in conversation history
+    - Typewriter effect only on latest AI message, older messages static for performance
+    - Lead score indicator and CRM fields panels show after conversation starts
+    - Improved UX: Multi-turn conversations feel natural and chat-like
+  - **Personalization Sync** (commit 81a4d8d):
+    - Industry auto-sync via useEffect when personalization changes
+    - Mapped personalization industries to simulator BusinessType enum (Plumbing, Dental, HVAC, Automotive, Legal, General)
+    - Hide "Try an example" section when personalized (reduces UI clutter)
+    - Dynamic placeholder text: "Type your test message for {businessName}..." when personalized
+    - "Personalized" badge indicator shows when form is filled
+    - Better integration between PersonalizationForm and LeadResponseSimulator
+  - **Integration Pages Light Theme Fix** (commit 81a4d8d):
+    - GradientCard.tsx: Changed bg-premium-card (dark) to bg-white/90 (light)
+    - GradientCard.tsx: Changed overlay from to-black/[0.05] to to-slate-100/10
+    - IntegrationHowItWorks.tsx: Replaced glass-premium-mobile with light theme bg-white/80
+    - IntegrationHowItWorks.tsx: Fixed step number badges (text-black → text-white for contrast)
+    - All integration pages now consistent with site-wide light theme
+  - **Files Modified**: LeadResponseSimulator.tsx, GradientCard.tsx, IntegrationHowItWorks.tsx
+  - **Validation**: TypeScript passes, Build passes
 - **MISSED CALL CALCULATOR + DEMO PERSONALIZATION COMPLETE** (2025-12-21):
-  - **Missed Call Cost Calculator** (commit TBD):
+  - **Missed Call Cost Calculator** (commit 2475dac):
     - Created `/tools/missed-call-calculator` route with server page + client component architecture
     - Created `src/data/industry-benchmarks.ts` with 8 industries (Martial Arts, Fitness, Legal, Plumbing, HVAC, Roofing, Construction, Other)
     - MissedCallCalculatorClient.tsx: Industry dropdown with auto-fill, 3 sliders (calls/week, answer rate, lead value), 3 animated result cards (Monthly Lost, AI Capturable, Annual Impact)
@@ -13,7 +37,7 @@
     - 3 JSON-LD schemas (SoftwareApplication, FAQ, Breadcrumb) for SEO
     - FAQ section at bottom for additional SEO value
     - Updated sitemap.ts with new tools section
-  - **Demo Personalization** (commit TBD):
+  - **Demo Personalization** (commit 2475dac):
     - Created PersonalizationForm.tsx: Collapsible accordion UI (collapsed by default to reduce friction)
     - Business name + industry (required), phone + location (optional)
     - SessionStorage persistence so data survives page refreshes

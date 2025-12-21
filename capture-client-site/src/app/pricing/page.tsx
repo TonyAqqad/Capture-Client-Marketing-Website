@@ -88,13 +88,6 @@ export default function PricingPage() {
                     unitText: 'MONTH',
                   },
                 },
-                aggregateRating: {
-                  '@type': 'AggregateRating',
-                  ratingValue: '5.0',
-                  reviewCount: '27',
-                  bestRating: '5',
-                  worstRating: '1',
-                },
               },
               {
                 '@type': 'Product',
@@ -119,13 +112,6 @@ export default function PricingPage() {
                     unitText: 'MONTH',
                   },
                 },
-                aggregateRating: {
-                  '@type': 'AggregateRating',
-                  ratingValue: '5.0',
-                  reviewCount: '27',
-                  bestRating: '5',
-                  worstRating: '1',
-                },
               },
               {
                 '@type': 'Product',
@@ -148,13 +134,6 @@ export default function PricingPage() {
                     priceCurrency: 'USD',
                     unitText: 'MONTH',
                   },
-                },
-                aggregateRating: {
-                  '@type': 'AggregateRating',
-                  ratingValue: '5.0',
-                  reviewCount: '27',
-                  bestRating: '5',
-                  worstRating: '1',
                 },
               },
             ],

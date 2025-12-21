@@ -1,6 +1,6 @@
 "use client";
 
-import { Phone, Bot, Zap, User, Clock } from "lucide-react";
+import { Bot, Zap, User, Clock } from "lucide-react";
 
 export function MobileHeroVisualLight() {
   return (

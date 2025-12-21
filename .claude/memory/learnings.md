@@ -220,3 +220,59 @@
   - **Visual indicators**: Show "Personalized" badge or dynamic subtitle when personalization is active
   - **Required vs Optional fields**: Only require minimums (business name + industry), make phone/location optional to reduce friction
   - **Lesson**: For demo/trial features, use sessionStorage + collapsible UI to balance personalization value with low friction
+- **Conversation History Pattern for Chat Simulators** (2025-12-21): Building multi-turn conversation UIs:
+  - **Problem**: Need to display conversation history in chat UI while maintaining typewriter effect for new messages
+  - **Solution**: Store messages in array state, show typewriter only on latest AI message
+  - **Message interface**: Include role (user/assistant), content, timestamp, optional metadata (intent, score)
+  - **Visual pattern**: User messages on right (blue bubbles), AI messages on left (white bubbles)
+  - **Performance**: Only animate latest message, render older messages statically to avoid re-rendering animations
+  - **UX enhancements**:
+    - Clear input field after submission (better affordance)
+    - Show intent badges on AI responses (booking, info-request, objection, etc.)
+    - Display lead score + CRM fields after conversation starts (not before)
+  - **State management**: Add message to array on submit, update latest message when API responds
+  - **Example structure**:
+    ```typescript
+    interface ConversationMessage {
+      role: 'user' | 'assistant';
+      content: string;
+      timestamp: Date;
+      intent?: string;
+      score?: number;
+    }
+    ```
+  - **Lesson**: For chat simulators, separate conversation history (static) from active message (animated) for better performance and UX
+- **Cross-Component Personalization Sync Pattern** (2025-12-21): Syncing state between sibling components:
+  - **Problem**: PersonalizationForm and LeadResponseSimulator are siblings, need to sync industry selection
+  - **Solution**: Lift state to parent (DemoContent), pass data as props, use useEffect for side effects
+  - **Industry mapping**: Create explicit mapping between form industries and simulator enum values
+  - **UX considerations**:
+    - Hide redundant UI when personalized (e.g., "Try an example" section)
+    - Show visual indicators of personalization (badges, dynamic text)
+    - Update placeholder text to reference business name
+  - **Implementation pattern**:
+    ```typescript
+    // Parent component
+    const [personalization, setPersonalization] = useState<PersonalizationData | null>(null);
+
+    // Child 1: Form
+    <PersonalizationForm onUpdate={setPersonalization} />
+
+    // Child 2: Simulator with sync effect
+    useEffect(() => {
+      if (personalization?.industry) {
+        setSelectedIndustry(mapIndustryToEnum(personalization.industry));
+      }
+    }, [personalization]);
+    ```
+  - **Lesson**: When sibling components need to stay in sync, lift state to parent and use useEffect in children for derived state
+- **Light Theme Migration for Integration Cards** (2025-12-21): Converting dark-themed card components to light:
+  - **Problem**: GradientCard and IntegrationHowItWorks used dark theme classes (bg-premium-card, glass-premium-mobile) incompatible with light theme pages
+  - **Root cause**: Components designed for dark backgrounds now used on white pages
+  - **Fix pattern**:
+    - Replace semantic dark tokens: `bg-premium-card` → `bg-white/90`
+    - Adjust overlays: `to-black/[0.05]` → `to-slate-100/10` (light tint instead of dark)
+    - Replace dark glass: `glass-premium-mobile` → `bg-white/80 backdrop-blur-md border-slate-200/60`
+    - Fix text contrast: `text-black` → `text-white` on colored backgrounds (e.g., blue step badges)
+  - **Validation**: Check all integration pages to ensure consistent light theme
+  - **Lesson**: When migrating to light theme, audit all card/glass components for dark-specific styling, especially semantic tokens that may hide dark backgrounds

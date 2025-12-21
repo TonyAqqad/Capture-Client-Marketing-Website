@@ -58,7 +58,7 @@ export default function StickyPhoneCTA() {
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
                     </div>
                     <span className="text-sm font-semibold text-slate-900">
-                      <span className="text-accent">Live:</span> 500+ businesses using Capture
+                      <span className="text-accent">Live:</span> Growing businesses using Capture
                       Client
                     </span>
                   </div>

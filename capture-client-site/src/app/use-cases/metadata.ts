@@ -3,7 +3,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Use Cases & Industry Solutions | AI Voice Agents for Every Business | Capture Client",
   description:
-    "Discover how Capture Client's AI Voice Agents transform healthcare, home services, legal, real estate, automotive, and more. See real results from 500+ businesses across 8+ industries.",
+    "Discover how Capture Client's AI Voice Agents transform healthcare, home services, legal, real estate, automotive, and more. See real results from growing businesses across 8+ industries.",
   keywords: [
     "AI voice agent use cases",
     "industry-specific AI solutions",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Use Cases & Industry Solutions | AI Voice Agents for Every Business",
     description:
-      "See how AI Voice Agents capture leads 24/7 across healthcare, home services, legal, real estate, and more. Real results from 500+ businesses.",
+      "See how AI Voice Agents capture leads 24/7 across healthcare, home services, legal, real estate, and more. Real results from growing businesses.",
     url: "https://captureclient.com/use-cases",
     siteName: "Capture Client",
     type: "website",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Use Cases & Industry Solutions | AI Voice Agents",
     description:
-      "See how AI Voice Agents capture leads 24/7 across 8+ industries. Real results from 500+ businesses.",
+      "See how AI Voice Agents capture leads 24/7 across 8+ industries. Real results from growing businesses.",
     images: ["https://captureclient.com/og-image.png"],
   },
   alternates: {

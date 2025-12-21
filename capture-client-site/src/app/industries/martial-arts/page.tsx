@@ -60,69 +60,18 @@ export const metadata: Metadata = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
+  "@id": "https://captureclient.com/industries/martial-arts#service",
   "name": "AI Receptionist for Martial Arts Studios",
   "description": "24/7 AI phone answering service designed specifically for BJJ academies, karate schools, taekwondo dojos, and MMA gyms. Answers parent inquiries, books trial classes, and integrates with studio management software.",
   "provider": {
     "@type": "Organization",
     "name": "Capture Client",
-    "url": "https://captureclient.com",
-    "logo": "https://captureclient.com/logo-full.svg",
-    "telephone": "865-346-6111"
+    "url": "https://captureclient.com"
   },
-  "areaServed": "United States",
   "serviceType": "AI Phone Answering Service",
-  "audience": {
-    "@type": "Audience",
-    "audienceType": "Martial Arts Studios, BJJ Academies, Karate Schools, Taekwondo Dojos, MMA Gyms"
-  },
-  "offers": {
-    "@type": "AggregateOffer",
-    "priceCurrency": "USD",
-    "lowPrice": "97",
-    "highPrice": "2997",
-    "offerCount": "3",
-    "availability": "https://schema.org/InStock"
-  },
-  "potentialAction": {
-    "@type": "CommunicateAction",
-    "target": {
-      "@type": "EntryPoint",
-      "urlTemplate": "tel:865-346-6111",
-      "actionPlatform": [
-        "http://schema.org/DesktopWebPlatform",
-        "http://schema.org/MobileWebPlatform"
-      ]
-    }
-  },
-  "hasOfferCatalog": {
-    "@type": "OfferCatalog",
-    "name": "Martial Arts Studio AI Services",
-    "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "24/7 Phone Answering",
-          "description": "AI answers every parent and student inquiry, even during peak class hours"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Trial Class Booking",
-          "description": "Automatically schedule trial classes and sync to your studio management system"
-        }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "CRM Integration",
-          "description": "Seamless integration with Kicksite, Zen Planner, Spark Membership, and iClassPro"
-        }
-      }
-    ]
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
   }
 };
 

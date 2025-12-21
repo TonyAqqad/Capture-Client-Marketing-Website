@@ -25,7 +25,7 @@ const ExitIntentPopup = dynamic(
 export const metadata: Metadata = {
   title: "AI Voice Agents for Small Business | Capture Client",
   description:
-    "Never miss a lead again. AI voice agents answer calls 24/7, qualify leads, and book appointments. Trusted by 500+ businesses.",
+    "Never miss a lead again. AI voice agents answer calls 24/7, qualify leads, and book appointments. Trusted by growing businesses.",
   keywords: [
     "AI voice agents",
     "lead generation",
@@ -204,12 +204,6 @@ const pricingSchema = {
         "url": "https://captureclient.com/pricing"
       }
     ]
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "27",
-    "bestRating": "5"
   }
 };
 

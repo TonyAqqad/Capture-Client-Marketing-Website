@@ -99,11 +99,6 @@ const softwareApplicationSchema = {
     price: "97",
     priceCurrency: "USD",
   },
-  aggregateRating: {
-    "@type": "AggregateRating",
-    ratingValue: "5.0",
-    reviewCount: "27",
-  },
   featureList: [
     "Stripe Payment Integration",
     "Twilio SMS & Voice Integration",

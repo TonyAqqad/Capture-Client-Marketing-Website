@@ -92,7 +92,7 @@ export function IntegrationCTA({ integrationName }: IntegrationCTAProps) {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto"
               >
-                Join 500+ businesses using Capture Client to automate calls, qualify leads, and book appointments 24/7. Set up your {integrationName} integration in minutes.
+                Join growing businesses using Capture Client to automate calls, qualify leads, and book appointments 24/7. Set up your {integrationName} integration in minutes.
               </motion.p>
 
               {/* Buttons */}
@@ -129,7 +129,7 @@ export function IntegrationCTA({ integrationName }: IntegrationCTAProps) {
               >
                 <div className="flex items-center gap-2">
                   <BadgeCheck className="w-5 h-5 text-blue-600" />
-                  <span>500+ Businesses</span>
+                  <span>Growing Businesses</span>
                 </div>
                 <div className="w-px h-4 bg-white/20 hidden sm:block" />
                 <div className="flex items-center gap-2">

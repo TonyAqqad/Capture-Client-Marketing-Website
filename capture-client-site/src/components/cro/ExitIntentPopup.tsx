@@ -136,7 +136,7 @@ export default function ExitIntentPopup() {
 
                 {/* Subheadline - value-focused */}
                 <p className="text-base sm:text-lg text-center text-slate-600 mb-6 max-w-lg mx-auto">
-                  See how 500+ businesses are capturing{" "}
+                  See how growing businesses are capturing{" "}
                   <span className="text-blue-600 font-semibold">10x more leads</span> with AI-powered automation.
                 </p>
 

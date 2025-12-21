@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
-import { Input } from "@/components/ui/Input";
 import { Button } from "@/components/ui/Button";
 import {
   ChevronDown,

@@ -276,7 +276,7 @@ export default function MartialArtsClient() {
               className="mt-8 text-sm text-slate-600 flex items-center justify-center gap-2"
             >
               <Shield className="w-4 h-4 text-blue-600" />
-              Trusted by 100+ martial arts studios nationwide
+              Trusted by martial arts studios nationwide
             </motion.div>
           </div>
         </div>

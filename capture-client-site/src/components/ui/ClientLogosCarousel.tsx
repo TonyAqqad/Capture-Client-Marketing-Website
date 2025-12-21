@@ -65,7 +65,7 @@ export function ClientLogosCarousel() {
           className="text-center text-xs sm:text-sm uppercase tracking-[0.25em] text-slate-600"
           style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 500 }}
         >
-          Trusted by 500+ Growing Businesses • Integrates With Your Favorite Tools
+          Trusted by Growing Businesses • Integrates With Your Favorite Tools
         </p>
       </div>
 

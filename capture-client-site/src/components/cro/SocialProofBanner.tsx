@@ -30,7 +30,7 @@ export default function SocialProofBanner() {
             className="text-slate-900 text-lg sm:text-xl tracking-tight mb-1"
             style={{ fontWeight: 600 }}
           >
-            500+ businesses trust Capture Client
+            Growing businesses trust Capture Client
           </p>
           <p
             className="text-slate-600 text-sm sm:text-base"

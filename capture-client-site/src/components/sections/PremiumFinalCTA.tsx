@@ -6,7 +6,7 @@ import { useInView } from "@/hooks/useInView";
 import OptimizedLeadForm from "@/components/forms/OptimizedLeadForm";
 import Link from "next/link";
 import { ArrowRight, Phone, Shield, Zap, Users, Sparkles } from "lucide-react";
-import { use3DTilt, cardShadow, perspectiveContainer, transform3D, depthSpring } from "@/lib/depth-utils";
+import { use3DTilt, cardShadow, perspectiveContainer, transform3D } from "@/lib/depth-utils";
 import { useIsMobile } from "@/lib/responsive";
 
 // ============================================
@@ -146,7 +146,7 @@ export function PremiumFinalCTA() {
           {[
             { icon: Zap, text: "Live in 48 hours" },
             { icon: Shield, text: "No long-term contracts" },
-            { icon: Users, text: "500+ businesses served" },
+            { icon: Users, text: "Growing businesses served" },
           ].map((item, index) => (
             <motion.div
               key={index}

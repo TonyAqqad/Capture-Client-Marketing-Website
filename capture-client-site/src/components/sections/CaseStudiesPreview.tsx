@@ -129,7 +129,7 @@ export function CaseStudiesPreview() {
           backgroundImage: `
             radial-gradient(ellipse 100% 100% at 20% 30%, #00C9FF25 0%, transparent 50%),
             radial-gradient(ellipse 100% 100% at 80% 70%, #4A69E225 0%, transparent 50%),
-            radial-gradient(ellipse 80% 80% at 50% 50%, #D4AF370F 0%, transparent 50%)
+            radial-gradient(ellipse 80% 80% at 50% 50%, #2563EB0F 0%, transparent 50%)
           `,
         }}
       />

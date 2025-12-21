@@ -83,7 +83,7 @@ export default function MegaMenu() {
             {/* Desktop Logo */}
             <div className="hidden sm:block relative h-12 w-auto">
               <img
-                src="/logo-desktop-light.svg"
+                src="/Capture-client-deskto-logo-latest-aligned-with-light.png"
                 alt="Capture Client"
                 className="h-12 w-auto object-contain transition-all group-hover:drop-shadow-[0_0_8px_rgba(0,201,255,0.3)] duration-500"
               />

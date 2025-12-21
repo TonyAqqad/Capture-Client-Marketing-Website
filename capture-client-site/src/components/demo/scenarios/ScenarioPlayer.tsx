@@ -225,7 +225,7 @@ interface MessageBubbleProps {
   isNew: boolean;
 }
 
-function MessageBubble({ message, isNew }: MessageBubbleProps) {
+function MessageBubble({ message }: MessageBubbleProps) {
   const isAI = message.speaker === "AI";
 
   return (

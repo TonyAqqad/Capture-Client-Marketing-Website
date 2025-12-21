@@ -143,12 +143,12 @@ export function generateOrganizationSchema() {
  * Essential for local SEO and Google Maps visibility
  */
 export function generateLocalBusinessSchema(locationData: LocationData) {
-  const { location, service, seo } = locationData;
+  const { page_id, location, service, seo } = locationData;
 
   return {
     '@context': 'https://schema.org',
     '@type': 'ProfessionalService',
-    '@id': `${SITE_CONFIG.url}/locations/${location.slug}#localbusiness`,
+    '@id': `${SITE_CONFIG.url}/locations/${page_id}#localbusiness`,
 
     name: `${SITE_CONFIG.name} - ${location.city}, ${location.state_abbr}`,
     description: seo.meta_description,
@@ -174,7 +174,7 @@ export function generateLocalBusinessSchema(locationData: LocationData) {
     // Contact
     telephone: SITE_CONFIG.phoneRaw,
     email: SITE_CONFIG.email,
-    url: `${SITE_CONFIG.url}/locations/${location.slug}`,
+    url: `${SITE_CONFIG.url}/locations/${page_id}`,
 
     // Service offered in this location
     hasOfferCatalog: {

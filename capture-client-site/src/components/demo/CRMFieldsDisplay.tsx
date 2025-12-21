@@ -44,7 +44,7 @@ const URGENCY_COLORS = {
 
 export function CRMFieldsDisplay({ data, animate = true }: CRMFieldsDisplayProps) {
   // Filter out empty fields
-  const fields = Object.entries(data).filter(([_, value]) => value !== undefined && value !== "");
+  const fields = Object.entries(data).filter(([, value]) => value !== undefined && value !== "");
 
   if (fields.length === 0) {
     return (

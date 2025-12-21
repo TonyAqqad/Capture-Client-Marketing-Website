@@ -69,6 +69,15 @@ export async function generateMetadata({ params }: IndustryPageProps): Promise<M
         },
       ],
     },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [industry.heroImage],
+    },
+    alternates: {
+      canonical: `https://captureclient.com/who-we-serve/${slug}`,
+    },
   };
 }
 
@@ -134,9 +143,35 @@ export default async function IndustryPage({ params }: IndustryPageProps) {
     })),
   } : null;
 
+  // BreadcrumbList schema
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://captureclient.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Industries',
+        item: 'https://captureclient.com/who-we-serve',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: industry.name,
+        item: `https://captureclient.com/who-we-serve/${slug}`,
+      },
+    ],
+  };
+
   return (
     <>
-      <JsonLd schema={faqSchema ? [pageSchema, serviceSchema, faqSchema] : [pageSchema, serviceSchema]} />
+      <JsonLd schema={faqSchema ? [pageSchema, serviceSchema, faqSchema, breadcrumbSchema] : [pageSchema, serviceSchema, breadcrumbSchema]} />
 
       <div className="min-h-screen bg-white">
         {/* Hero Section */}

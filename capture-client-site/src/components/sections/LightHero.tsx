@@ -338,7 +338,7 @@ export function LightHero() {
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
                   <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
-                  <span className="font-semibold text-slate-900 text-xs">4.9★ • 500+ businesses</span>
+                  <span className="font-semibold text-slate-900 text-xs">4.9★ • Growing businesses</span>
                 </motion.div>
 
                 {/* User avatars + businesses */}
@@ -357,7 +357,7 @@ export function LightHero() {
                     <div className="w-7 h-7 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 border-2 border-white shadow-md" />
                     <div className="w-7 h-7 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 border-2 border-white shadow-md" />
                   </div>
-                  <span className="font-semibold text-slate-900 text-xs sm:text-sm">500+ businesses</span>
+                  <span className="font-semibold text-slate-900 text-xs sm:text-sm">Growing businesses</span>
                 </motion.div>
 
                 {/* Rating */}
