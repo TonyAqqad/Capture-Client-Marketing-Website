@@ -23,6 +23,7 @@ import {
 import { LeadResponseSimulator } from "@/components/demo/LeadResponseSimulator";
 import { ScenarioBuilder } from "@/components/demo/scenarios";
 import { GoogleReviews } from "@/components/sections/GoogleReviews";
+import { PersonalizationForm, type PersonalizationData } from "@/components/demo/PersonalizationForm";
 
 // ==================== BEFORE/AFTER COMPARISON ====================
 
@@ -234,6 +235,8 @@ function LiveStatsSection() {
 // ==================== MAIN PAGE COMPONENT ====================
 
 export default function DemoContent() {
+  const [personalization, setPersonalization] = useState<PersonalizationData | null>(null);
+
   return (
     <div className="relative min-h-screen w-full bg-white overflow-x-hidden">
       {/* Enhanced animated background with aurora effect */}
@@ -358,7 +361,15 @@ export default function DemoContent() {
               </p>
             </motion.div>
 
-            <LeadResponseSimulator />
+            {/* Personalization Form */}
+            <div className="mb-8">
+              <PersonalizationForm
+                onPersonalizationChange={setPersonalization}
+                initialData={personalization}
+              />
+            </div>
+
+            <LeadResponseSimulator personalization={personalization} />
           </div>
         </section>
 

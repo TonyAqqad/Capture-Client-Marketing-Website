@@ -1,8 +1,29 @@
 # Progress (lean)
-- Overall: ~99% complete (last updated 2025-12-21). Builds passing (229 pages).
-- Current focus: Lead Response Simulator + Scenario Builder features complete. All P0/P1 items resolved.
+- Overall: ~99% complete (last updated 2025-12-21). Builds passing (230 pages).
+- Current focus: Missed Call Calculator + Demo Personalization complete. All P0/P1 items resolved.
 
 ## Completed highlights
+- **MISSED CALL CALCULATOR + DEMO PERSONALIZATION COMPLETE** (2025-12-21):
+  - **Missed Call Cost Calculator** (commit TBD):
+    - Created `/tools/missed-call-calculator` route with server page + client component architecture
+    - Created `src/data/industry-benchmarks.ts` with 8 industries (Martial Arts, Fitness, Legal, Plumbing, HVAC, Roofing, Construction, Other)
+    - MissedCallCalculatorClient.tsx: Industry dropdown with auto-fill, 3 sliders (calls/week, answer rate, lead value), 3 animated result cards (Monthly Lost, AI Capturable, Annual Impact)
+    - 3D tilt effects on desktop via use3DTilt hook (disabled on mobile)
+    - useCountUp for animated number counters
+    - 3 JSON-LD schemas (SoftwareApplication, FAQ, Breadcrumb) for SEO
+    - FAQ section at bottom for additional SEO value
+    - Updated sitemap.ts with new tools section
+  - **Demo Personalization** (commit TBD):
+    - Created PersonalizationForm.tsx: Collapsible accordion UI (collapsed by default to reduce friction)
+    - Business name + industry (required), phone + location (optional)
+    - SessionStorage persistence so data survives page refreshes
+    - 8 industry options with Lucide icons (Building2, Briefcase, Home, etc.)
+    - Modified LeadResponseSimulator.tsx: Added personalization prop interface, integrated in API call body, dynamic subtitle when personalized, "Personalized" badge indicator
+    - Modified DemoContent.tsx: Added personalization state, integrated form above simulator, passed data to LeadResponseSimulator
+    - Personalization data sent to `/api/demo-response` Claude endpoint for industry-specific responses
+  - **Files Created**: industry-benchmarks.ts, missed-call-calculator/page.tsx, MissedCallCalculatorClient.tsx, PersonalizationForm.tsx
+  - **Files Modified**: sitemap.ts, LeadResponseSimulator.tsx, DemoContent.tsx
+  - **Validation**: TypeScript passes, Build passes (230 pages)
 - **LEAD RESPONSE SIMULATOR + SCENARIO BUILDER COMPLETE** (2025-12-21):
   - **Lead Response Simulator** (commit a81f51a):
     - Created 4 new components: LeadResponseSimulator, LeadScoreIndicator, IntentBadge, CRMFieldsDisplay

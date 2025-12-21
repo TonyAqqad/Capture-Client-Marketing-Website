@@ -251,6 +251,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
+  // Tools pages (free value calculators)
+  const toolsPages: MetadataRoute.Sitemap = [
+    {
+      url: `${baseUrl}/tools/missed-call-calculator`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.75, // Free tool - good for engagement
+    },
+  ];
+
   // Legal pages (low priority but necessary)
   const legalPages: MetadataRoute.Sitemap = [
     {
@@ -277,6 +287,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...nationalSeoPages, // National SEO pages
     ...packagePages, // Packages
     ...supportPages, // Supporting content
+    ...toolsPages, // Tools pages (free calculators)
     ...legalPages, // Legal pages last
   ];
 }
@@ -293,6 +304,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
  * - 10-15 national SEO pages
  * - 3-5 package pages
  * - 6 supporting pages (including blog index + individual blog posts)
+ * - 1 tool page (missed call calculator)
  * - 2 legal pages
  *
  * Sitemap generation time: <1 second

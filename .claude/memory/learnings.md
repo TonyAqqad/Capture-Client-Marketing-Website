@@ -173,3 +173,50 @@
   - **Validation**: Check blog rendering on live site to ensure readability on white background
   - **Batch approach**: Fixed all 20 blog files in single commit (27b3b3e) for atomic change
   - **Lesson**: When migrating themes, don't forget data files (JSON/MD) that contain hardcoded styling classes
+- **Industry Benchmark Data Pattern** (2025-12-21): Creating reusable industry data structures for calculators:
+  - **Problem**: Need industry-specific default values for ROI/cost calculators without hardcoding in components
+  - **Solution**: Create centralized data file (e.g., `src/data/industry-benchmarks.ts`) with typed interface
+  - **Structure**: Each industry object contains name, icon (Lucide component name as string), and benchmark metrics
+  - **Benefits**:
+    - Single source of truth for industry data
+    - Type-safe with TypeScript interfaces
+    - Easy to maintain/update benchmarks
+    - Reusable across multiple calculator components
+  - **Example structure**:
+    ```typescript
+    export interface IndustryBenchmark {
+      name: string;
+      icon: string; // Lucide icon name
+      avgLeadValue: number;
+      avgCallsPerWeek: number;
+      avgAnswerRate: number;
+    }
+    ```
+  - **Usage pattern**: Import benchmarks array, map to dropdown options, auto-fill calculator inputs on industry selection
+  - **Lesson**: Centralize domain-specific data (industry benchmarks, pricing tiers, feature sets) in `/data` directory rather than component files
+- **Calculator UX Pattern with 3D Effects** (2025-12-21): Best practices for interactive calculators:
+  - **Desktop enhancement**: Use 3D tilt effects (react-tilt-tsx or custom useHover hooks) on result cards for premium feel
+  - **Mobile optimization**: Disable 3D effects on mobile with `useIsMobile` hook to avoid performance issues + awkward touch interactions
+  - **Animated counters**: Use react-countup or custom useCountUp hook for number animations when results update
+  - **Visual hierarchy**: 3 result cards pattern works well - Monthly Impact → AI Opportunity → Annual Impact
+  - **Input types**: Sliders work better than text inputs for range-based values (feels more interactive, prevents invalid input)
+  - **Auto-fill pattern**: When user selects industry from dropdown, auto-populate sliders with benchmark defaults
+  - **FAQ section**: Add calculator-related FAQ at bottom for SEO value + user education
+  - **Schema markup**: Include SoftwareApplication JSON-LD schema with calculator features for rich snippets
+  - **Lesson**: Calculators should feel playful and interactive on desktop, but stay performant and touch-friendly on mobile
+- **Demo Personalization Pattern with SessionStorage** (2025-12-21): Persisting user input across page interactions:
+  - **Problem**: Demo personalization data (business name, industry) should persist across page refreshes but not permanently
+  - **Solution**: Use sessionStorage (not localStorage) for temporary persistence within browser session
+  - **Implementation**: Save to sessionStorage on input change, load on component mount
+  - **Benefits of sessionStorage over localStorage**:
+    - Clears automatically when user closes tab/browser
+    - Better for privacy (doesn't persist indefinitely)
+    - Appropriate for demo/trial data that shouldn't be permanent
+  - **UX pattern**: Collapsible accordion UI (collapsed by default) reduces friction:
+    - Users can try demo immediately without filling form
+    - Power users can expand to personalize experience
+    - Shows/hides based on accordion state
+  - **API integration**: Pass personalization data in POST body to Claude API for industry-specific responses
+  - **Visual indicators**: Show "Personalized" badge or dynamic subtitle when personalization is active
+  - **Required vs Optional fields**: Only require minimums (business name + industry), make phone/location optional to reduce friction
+  - **Lesson**: For demo/trial features, use sessionStorage + collapsible UI to balance personalization value with low friction

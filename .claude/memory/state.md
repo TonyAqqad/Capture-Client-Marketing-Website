@@ -112,7 +112,26 @@ None - all critical issues resolved ✅
 - ✅ Gold→Blue migration (HIGH + MEDIUM priority, 15 files total)
 
 ## Recently completed features (2025-12-21)
-1. ✅ **Lead Response Simulator** (commit a81f51a)
+1. ✅ **Missed Call Cost Calculator** (commit TBD)
+   - Created `/tools/missed-call-calculator` route with full SEO
+   - Created `src/data/industry-benchmarks.ts` with 8 industries
+   - MissedCallCalculatorClient.tsx: Industry dropdown, 3 sliders, 3 animated result cards
+   - 3D tilt effects on desktop (disabled on mobile)
+   - useCountUp for animated number counters
+   - 3 JSON-LD schemas (SoftwareApplication, FAQ, Breadcrumb)
+   - FAQ section for SEO
+   - Added tools section to sitemap.ts
+
+2. ✅ **Demo Personalization** (commit TBD)
+   - Created PersonalizationForm.tsx: Collapsible accordion UI (collapsed by default)
+   - Business name, industry (required), phone, location (optional)
+   - SessionStorage persistence
+   - 8 industry options with Lucide icons
+   - Modified LeadResponseSimulator.tsx: Added personalization prop, dynamic subtitle, "Personalized" badge
+   - Modified DemoContent.tsx: Integrated form above simulator
+   - Personalization data sent to `/api/demo-response` Claude endpoint
+
+3. ✅ **Lead Response Simulator** (commit a81f51a)
    - Created 4 new components in `src/components/demo/`
    - LeadResponseSimulator.tsx with industry selector + typewriter effect
    - LeadScoreIndicator.tsx (visual 1-10 meter)
@@ -121,7 +140,7 @@ None - all critical issues resolved ✅
    - Integrated with existing `/api/demo-response` Claude API endpoint
    - Added "Try It Yourself" section on demo page
 
-2. ✅ **Scenario Builder** (commit 0242a26)
+4. ✅ **Scenario Builder** (commit 0242a26)
    - Created 7 new files in `src/components/demo/scenarios/`
    - scenarios.ts: 18 pre-built scenarios across 6 industries
    - ScenarioCard.tsx: Premium glass morphism cards with mobile touch targets
@@ -134,7 +153,7 @@ None - all critical issues resolved ✅
    - Mobile UX: Bottom sheet, swipe gestures, 44px touch targets, collapsible filters
 
 ## Next up (Planned Features)
-None active - both simulator features complete
+None active - demo + calculator features complete
 
 ## P2 (nice to have)
 1. Add focus-visible states to CTAs across site

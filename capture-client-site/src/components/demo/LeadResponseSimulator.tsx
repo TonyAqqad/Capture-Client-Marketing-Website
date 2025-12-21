@@ -41,6 +41,15 @@ interface DemoResponse {
   suggestedCrmFields: ExtractedCRMData;
 }
 
+interface LeadResponseSimulatorProps {
+  personalization?: {
+    businessName: string;
+    industry: string;
+    phoneNumber?: string;
+    location?: string;
+  } | null;
+}
+
 // ==================== DATA ====================
 
 const INDUSTRIES = [
@@ -135,7 +144,7 @@ function useTypewriter(text: string, speed: number = 25) {
 
 // ==================== MAIN COMPONENT ====================
 
-export function LeadResponseSimulator() {
+export function LeadResponseSimulator({ personalization }: LeadResponseSimulatorProps) {
   const [selectedIndustry, setSelectedIndustry] = useState<BusinessType>("plumbing");
   const [message, setMessage] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -172,6 +181,7 @@ export function LeadResponseSimulator() {
         body: JSON.stringify({
           userMessage: message,
           businessType: selectedIndustry,
+          personalization: personalization || undefined,
         }),
       });
 
@@ -221,12 +231,19 @@ export function LeadResponseSimulator() {
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-500 flex items-center justify-center shadow-lg shadow-blue-500/25">
               <Sparkles className="w-5 h-5 text-white" />
             </div>
+            {personalization?.businessName && (
+              <span className="ml-2 px-2 py-0.5 text-xs font-medium bg-emerald-100 text-emerald-700 rounded-full">
+                Personalized
+              </span>
+            )}
             <div>
               <h3 className="font-bold text-slate-900" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
                 Lead Response Simulator
               </h3>
               <p className="text-sm text-slate-500">
-                Paste any lead message and watch our AI respond instantly
+                {personalization?.businessName
+                  ? `See how Capture AI responds for ${personalization.businessName}`
+                  : "Paste any lead message and watch our AI respond instantly"}
               </p>
             </div>
           </div>
