@@ -31,6 +31,7 @@ import {
   HeadphonesIcon,
 } from "lucide-react";
 import { LeadResponseSimulator } from "@/components/demo/LeadResponseSimulator";
+import { ScenarioBuilder } from "@/components/demo/scenarios";
 
 // ==================== TYPES ====================
 
@@ -892,6 +893,40 @@ export default function DemoContent() {
             </motion.div>
 
             <LeadResponseSimulator />
+          </div>
+        </section>
+
+        {/* ==================== SCENARIO BUILDER ==================== */}
+        <section className="section bg-white relative overflow-hidden">
+          {/* Decorative background */}
+          <div className="absolute inset-0">
+            <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-gradient-radial from-cyan-500/5 to-transparent rounded-full blur-3xl" />
+            <div className="absolute bottom-1/3 left-1/4 w-[500px] h-[500px] bg-gradient-radial from-blue-600/5 to-transparent rounded-full blur-3xl" />
+          </div>
+
+          <div className="container-custom px-4 sm:px-6 lg:px-8 relative z-10">
+            <motion.div
+              className="text-center mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-indigo-600/20 via-indigo-600/10 to-transparent border border-indigo-500/30 backdrop-blur-xl mb-4">
+                <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse" />
+                <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-indigo-600">
+                  Scenario Library
+                </span>
+              </div>
+
+              <h2 className="text-display-lg mb-4">
+                Watch AI Handle <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">Real Scenarios</span>
+              </h2>
+              <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+                Browse 18 pre-built scenarios across 6 industries. See how AI navigates emergencies, pricing questions, complaints, and more.
+              </p>
+            </motion.div>
+
+            <ScenarioBuilder />
           </div>
         </section>
 
