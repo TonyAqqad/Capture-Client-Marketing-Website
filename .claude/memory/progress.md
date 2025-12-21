@@ -1,8 +1,27 @@
 # Progress (lean)
 - Overall: ~99% complete (last updated 2025-12-21). Builds passing (229 pages).
-- Current focus: Mobile UX enhancements, scroll fixes, preparing for Lead Response Simulator feature.
+- Current focus: Lead Response Simulator + Scenario Builder features complete. All P0/P1 items resolved.
 
 ## Completed highlights
+- **LEAD RESPONSE SIMULATOR + SCENARIO BUILDER COMPLETE** (2025-12-21):
+  - **Lead Response Simulator** (commit a81f51a):
+    - Created 4 new components: LeadResponseSimulator, LeadScoreIndicator, IntentBadge, CRMFieldsDisplay
+    - Industry selector with 6 industries (plumbing, dental, hvac, auto, law, general)
+    - Real-time typewriter effect for AI responses
+    - Visual lead score meter (1-10 scale)
+    - Integrated with existing `/api/demo-response` Claude API endpoint
+    - Added "Try It Yourself" section on demo page
+  - **Scenario Builder** (commit 0242a26):
+    - Created 7 new files in `src/components/demo/scenarios/`
+    - 18 pre-built scenarios across 6 industries (3 scenarios per industry)
+    - ScenarioCard.tsx: Premium glass morphism cards with hover effects
+    - ScenarioLibrary.tsx: Filterable grid with industry filter pills
+    - ScenarioPlayer.tsx: Cinematic conversation playback with message bubbles
+    - ScenarioOutcome.tsx: Animated lead score + CRM data display
+    - ScenarioBuilder.tsx: Main orchestration component
+    - Added "Scenario Library" section on demo page
+  - **Files Modified**: src/app/demo/DemoContent.tsx (added both new sections)
+  - **Validation**: TypeScript passes, Build passes (229 pages)
 - **MOBILE UX ENHANCEMENTS + SCROLL FIXES COMPLETE** (2025-12-21):
   - **Mobile Hero Improvements**:
     - Centered layout on mobile (headlines, CTAs, badges)

@@ -7,7 +7,7 @@ import { generateCollectionPageSchema } from "@/lib/advanced-schemas";
 export const metadata: Metadata = {
   title: "Marketing Services | Voice AI & Lead Gen | Capture Client",
   description:
-    "Never miss a lead again. 24/7 AI voice agents, ROI-focused Google Ads, Facebook Ads, and lead generation services for small businesses. Trusted by 500+ companies. Free consultation: (865) 346-6111",
+    "Never miss a lead again. 24/7 AI voice agents, ROI-focused Google Ads, and Facebook Ads services for small businesses. Trusted by 500+ companies.",
   keywords: [
     "marketing services small business",
     "voice ai for business",

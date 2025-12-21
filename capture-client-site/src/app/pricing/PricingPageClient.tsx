@@ -17,6 +17,7 @@ import {
   CheckCircle2,
   Shield
 } from "lucide-react";
+import { GoogleReviews } from "@/components/sections/GoogleReviews";
 
 // ============================================================================
 // TYPES
@@ -755,6 +756,9 @@ export default function PricingPageClient() {
           })}
         </div>
       </div>
+
+      {/* Google Reviews - Real 5.0 rating trust signal before FAQ */}
+      <GoogleReviews />
 
       {/* FAQ Section */}
       <div className="container mx-auto px-4 md:px-8 lg:px-16 py-8 md:py-16">

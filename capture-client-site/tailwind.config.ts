@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
-  darkMode: ["class"],
+  // Light theme only - no dark mode
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -50,13 +50,12 @@ const config: Config = {
           900: "#0f172a",
           950: "#020617",
         },
-        // Background colors
+        // Background colors (light theme)
         background: {
-          DEFAULT: "#0F172A",
-          dark: "#0F172A",
-          darker: "#0A0F1C",
-          card: "#1E293B",
-          light: "#1A1A2E",
+          DEFAULT: "#FFFFFF",
+          surface: "#F8FAFC",
+          card: "#FFFFFF",
+          muted: "#F1F5F9",
         },
         // NEW: Light theme colors (Stripe/Linear style)
         light: {
@@ -73,17 +72,17 @@ const config: Config = {
           muted: "#64748B",
           subtle: "#94A3B8",
         },
-        // Text colors
+        // Text colors (light theme - dark text on light backgrounds)
         foreground: {
-          DEFAULT: "#F8FAFC",
-          muted: "#94A3B8",
-          subtle: "#64748B",
+          DEFAULT: "#0F172A",
+          muted: "#64748B",
+          subtle: "#94A3B8",
         },
-        // Surface colors for cards/elements
+        // Surface colors for cards/elements (light theme)
         surface: {
-          DEFAULT: "#1E293B",
-          light: "#334155",
-          border: "#334155",
+          DEFAULT: "#FFFFFF",
+          elevated: "#F8FAFC",
+          border: "#E2E8F0",
         },
       },
       fontFamily: {
@@ -135,7 +134,7 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "gradient-primary": "linear-gradient(135deg, #4A69E2 0%, #00C9FF 100%)",
-        "gradient-dark": "linear-gradient(180deg, #0F172A 0%, #1A1A2E 100%)",
+        "gradient-light": "linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%)",
         "mesh-gradient": "radial-gradient(at 40% 20%, rgba(74, 105, 226, 0.15) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(0, 201, 255, 0.1) 0px, transparent 50%), radial-gradient(at 0% 50%, rgba(74, 105, 226, 0.1) 0px, transparent 50%)",
         "mesh-premium": "radial-gradient(at 27% 37%, rgba(74, 105, 226, 0.2) 0px, transparent 50%), radial-gradient(at 97% 21%, rgba(0, 201, 255, 0.15) 0px, transparent 50%), radial-gradient(at 52% 99%, rgba(74, 105, 226, 0.12) 0px, transparent 50%), radial-gradient(at 10% 29%, rgba(0, 201, 255, 0.1) 0px, transparent 50%), radial-gradient(at 97% 96%, rgba(74, 105, 226, 0.08) 0px, transparent 50%)",
         "gradient-angular": "linear-gradient(135deg, #4A69E2 0%, #00C9FF 50%, #4A69E2 100%)",

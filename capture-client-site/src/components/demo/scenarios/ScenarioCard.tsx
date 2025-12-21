@@ -46,7 +46,7 @@ const categoryConfig: Record<ScenarioCategory, { icon: React.ElementType; color:
   pricing: { icon: DollarSign, color: "text-amber-600", bgColor: "bg-amber-50 border-amber-200" },
   scheduling: { icon: Calendar, color: "text-emerald-600", bgColor: "bg-emerald-50 border-emerald-200" },
   complaint: { icon: MessageSquareWarning, color: "text-orange-600", bgColor: "bg-orange-50 border-orange-200" },
-  after_hours: { icon: Moon, color: "text-indigo-600", bgColor: "bg-indigo-50 border-indigo-200" },
+  after_hours: { icon: Moon, color: "text-blue-600", bgColor: "bg-blue-50 border-blue-200" },
 };
 
 // Business type colors
@@ -55,7 +55,7 @@ const businessColors: Record<BusinessType, string> = {
   dental: "from-cyan-500 to-teal-500",
   hvac: "from-orange-500 to-amber-500",
   auto: "from-slate-600 to-slate-500",
-  law: "from-indigo-600 to-purple-500",
+  law: "from-blue-600 to-blue-500",
   general: "from-blue-500 to-blue-400",
 };
 
@@ -141,8 +141,8 @@ export function ScenarioCard({ scenario, onClick, isSelected }: ScenarioCardProp
           {/* Play indicator */}
           <div className="flex items-center gap-2 text-blue-600">
             <span className="text-sm font-medium">Watch</span>
-            <div className="w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center">
-              <Play className="w-4 h-4 ml-0.5" />
+            <div className="w-11 h-11 rounded-full bg-blue-50 flex items-center justify-center">
+              <Play className="w-5 h-5 ml-0.5" />
             </div>
           </div>
         </div>

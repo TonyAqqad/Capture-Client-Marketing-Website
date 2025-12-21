@@ -243,7 +243,7 @@ export function LeadResponseSimulator() {
               <button
                 type="button"
                 onClick={() => setShowDropdown(!showDropdown)}
-                className="w-full sm:w-auto flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-white border border-slate-200 hover:border-slate-300 transition-colors"
+                className="w-full sm:w-auto flex items-center justify-between gap-3 px-4 py-3 rounded-xl bg-white border border-slate-200 hover:border-slate-300 transition-colors min-h-[48px]"
               >
                 <div className="flex items-center gap-3">
                   <selectedIndustryData.icon className="w-5 h-5 text-blue-600" />
@@ -343,7 +343,7 @@ export function LeadResponseSimulator() {
               <button
                 type="button"
                 onClick={handleReset}
-                className="px-4 py-3 rounded-xl text-slate-600 hover:text-slate-800 hover:bg-slate-100 transition-colors font-medium"
+                className="px-4 py-3 rounded-xl text-slate-600 hover:text-slate-800 hover:bg-slate-100 transition-colors font-medium active:scale-95 focus:ring-2 focus:ring-blue-500/20"
               >
                 Reset
               </button>

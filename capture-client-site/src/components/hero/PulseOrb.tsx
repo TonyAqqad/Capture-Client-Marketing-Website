@@ -48,21 +48,21 @@ export default function PulseOrb({ className = "" }: PulseOrbProps) {
           </filter>
 
           {/* Gradients */}
-          <radialGradient id="gradient-indigo-violet" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#4f46e5" stopOpacity="0.9" />
-            <stop offset="50%" stopColor="#7c3aed" stopOpacity="0.7" />
+          <radialGradient id="gradient-blue-cyan" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.9" />
+            <stop offset="50%" stopColor="#0ea5e9" stopOpacity="0.7" />
             <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.3" />
           </radialGradient>
 
-          <radialGradient id="gradient-violet-cyan" cx="50%" cy="50%" r="50%">
-            <stop offset="0%" stopColor="#7c3aed" stopOpacity="0.8" />
+          <radialGradient id="gradient-cyan-light" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="#0ea5e9" stopOpacity="0.8" />
             <stop offset="100%" stopColor="#06b6d4" stopOpacity="0.2" />
           </radialGradient>
 
           <radialGradient id="gradient-core" cx="50%" cy="50%" r="50%">
             <stop offset="0%" stopColor="#ffffff" stopOpacity="0.8" />
-            <stop offset="30%" stopColor="#4f46e5" stopOpacity="0.9" />
-            <stop offset="100%" stopColor="#7c3aed" stopOpacity="0.6" />
+            <stop offset="30%" stopColor="#3b82f6" stopOpacity="0.9" />
+            <stop offset="100%" stopColor="#0ea5e9" stopOpacity="0.6" />
           </radialGradient>
         </defs>
 
@@ -71,7 +71,7 @@ export default function PulseOrb({ className = "" }: PulseOrbProps) {
           cx="200"
           cy="200"
           r="180"
-          fill="url(#gradient-indigo-violet)"
+          fill="url(#gradient-blue-cyan)"
           opacity="0.15"
           filter="url(#glow-soft)"
           className="animate-pulse-slow"
@@ -83,7 +83,7 @@ export default function PulseOrb({ className = "" }: PulseOrbProps) {
           cy="200"
           r="140"
           fill="none"
-          stroke="url(#gradient-violet-cyan)"
+          stroke="url(#gradient-cyan-light)"
           strokeWidth="2"
           opacity="0.4"
           filter="url(#glow-primary)"
@@ -96,7 +96,7 @@ export default function PulseOrb({ className = "" }: PulseOrbProps) {
           cy="200"
           r="100"
           fill="none"
-          stroke="url(#gradient-indigo-violet)"
+          stroke="url(#gradient-blue-cyan)"
           strokeWidth="3"
           opacity="0.5"
           filter="url(#glow-primary)"
@@ -109,7 +109,7 @@ export default function PulseOrb({ className = "" }: PulseOrbProps) {
           cy="200"
           r="70"
           fill="none"
-          stroke="#4f46e5"
+          stroke="#3b82f6"
           strokeWidth="2"
           opacity="0.6"
           filter="url(#glow-primary)"
@@ -144,7 +144,7 @@ export default function PulseOrb({ className = "" }: PulseOrbProps) {
           cx="200"
           cy="200"
           r="2.5"
-          fill="#7c3aed"
+          fill="#0ea5e9"
           opacity="0.7"
           filter="url(#glow-primary)"
           className="animate-orbit-2"
@@ -156,7 +156,7 @@ export default function PulseOrb({ className = "" }: PulseOrbProps) {
           cx="200"
           cy="200"
           r="3.5"
-          fill="#4f46e5"
+          fill="#3b82f6"
           opacity="0.6"
           filter="url(#glow-primary)"
           className="animate-orbit-3"

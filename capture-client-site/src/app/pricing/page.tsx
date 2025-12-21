@@ -90,8 +90,8 @@ export default function PricingPage() {
                 },
                 aggregateRating: {
                   '@type': 'AggregateRating',
-                  ratingValue: '4.9',
-                  reviewCount: '127',
+                  ratingValue: '5.0',
+                  reviewCount: '27',
                   bestRating: '5',
                   worstRating: '1',
                 },
@@ -121,8 +121,8 @@ export default function PricingPage() {
                 },
                 aggregateRating: {
                   '@type': 'AggregateRating',
-                  ratingValue: '4.9',
-                  reviewCount: '127',
+                  ratingValue: '5.0',
+                  reviewCount: '27',
                   bestRating: '5',
                   worstRating: '1',
                 },
@@ -151,8 +151,8 @@ export default function PricingPage() {
                 },
                 aggregateRating: {
                   '@type': 'AggregateRating',
-                  ratingValue: '4.9',
-                  reviewCount: '127',
+                  ratingValue: '5.0',
+                  reviewCount: '27',
                   bestRating: '5',
                   worstRating: '1',
                 },

@@ -86,7 +86,7 @@ export default function UrgencyTimer({
         <div className="text-center">
           <a
             href="#contact"
-            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-indigo-500 text-white px-8 py-4 rounded-xl hover:shadow-[0_0_30px_rgba(0,201,255,0.3)] transition-all duration-300 hover:scale-105 text-base min-h-[56px]"
+            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl hover:shadow-[0_0_30px_rgba(0,201,255,0.3)] transition-all duration-300 hover:scale-105 text-base min-h-[56px]"
             style={{ fontWeight: 600 }}
           >
             <span>Claim Your Bonus Now</span>
@@ -139,7 +139,7 @@ export default function UrgencyTimer({
         <div className="flex flex-col items-center">
           <div className="border border-slate-200 bg-white backdrop-blur-xl rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] text-center shadow-[0_0_20px_rgba(0,201,255,0.1)]">
             <p
-              className="text-2xl sm:text-3xl lg:text-4xl bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent tabular-nums"
+              className="text-2xl sm:text-3xl lg:text-4xl bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent tabular-nums"
               style={{ fontWeight: 800 }}
             >
               {String(timeLeft.hours).padStart(2, "0")}
@@ -164,7 +164,7 @@ export default function UrgencyTimer({
         <div className="flex flex-col items-center">
           <div className="border border-slate-200 bg-white backdrop-blur-xl rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] text-center shadow-[0_0_20px_rgba(0,201,255,0.1)]">
             <p
-              className="text-2xl sm:text-3xl lg:text-4xl bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent tabular-nums"
+              className="text-2xl sm:text-3xl lg:text-4xl bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent tabular-nums"
               style={{ fontWeight: 800 }}
             >
               {String(timeLeft.minutes).padStart(2, "0")}
@@ -189,7 +189,7 @@ export default function UrgencyTimer({
         <div className="flex flex-col items-center">
           <div className="border border-slate-200 bg-white backdrop-blur-xl rounded-xl px-4 py-3 min-w-[70px] sm:min-w-[80px] text-center shadow-[0_0_20px_rgba(0,201,255,0.1)]">
             <p
-              className="text-2xl sm:text-3xl lg:text-4xl bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent tabular-nums"
+              className="text-2xl sm:text-3xl lg:text-4xl bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent tabular-nums"
               style={{ fontWeight: 800 }}
             >
               {String(timeLeft.seconds).padStart(2, "0")}
@@ -208,7 +208,7 @@ export default function UrgencyTimer({
       <div className="text-center">
         <a
           href="#contact"
-          className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-indigo-500 text-white px-8 py-4 rounded-xl hover:shadow-[0_0_30px_rgba(0,201,255,0.3)] transition-all duration-300 hover:scale-105 text-base min-h-[56px]"
+          className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-8 py-4 rounded-xl hover:shadow-[0_0_30px_rgba(0,201,255,0.3)] transition-all duration-300 hover:scale-105 text-base min-h-[56px]"
           style={{ fontWeight: 600 }}
         >
           <span>Claim Your Bonus Now</span>

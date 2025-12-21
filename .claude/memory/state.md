@@ -73,18 +73,37 @@
 3. ✅ **Scroll fixes**: Fixed LightTextDemo chat scroll trap + ROICalculator range sliders blocking scroll
 4. ✅ **How It Works step badges**: Fixed cut-off on mobile (changed positioning from `-right-3` to `top-4 right-4`)
 5. ✅ **New shared utilities**: Created `src/lib/depth-utils.ts` for 3D depth effects (useIsMobile, use3DTilt, cardShadow)
+6. ✅ **Demo page mobile UX**: Bottom sheet modal, swipe gestures, collapsible filters, 44px touch targets
+7. ✅ **P1 SEO fixes**: Absolute OG URLs, Twitter metadata, canonical/robots on legal pages, trimmed descriptions
+8. ✅ **Orphaned pages deleted**: Removed `/demo-text` and `/integrations-demo` (no links found)
+9. ✅ **Dark mode cleanup** (12+ files): MegaMenu, PulseOrb, MobileHeroVisual, ScenarioCard, DemoContent, BlogContent, categoryThemes, UrgencyTimer, ServicesPageClient, TestimonialsCarousel, SocialProofWall, MagneticButtonExample
+   - Indigo/violet/purple → blue/cyan gradients
+   - `text-foreground-muted` → `text-slate-500/600`
+   - `bg-background-dark` → `bg-slate-900`
+   - Removed unused `isLightMode` variables
+10. ✅ **Health check endpoint**: Created `/api/health` for monitoring
+11. ✅ **Sentry config ready**: Config files created (needs `npm install @sentry/nextjs` + SENTRY_DSN)
 
 ## P0 Blockers
 None - all critical issues resolved ✅
 
-## P1 (high-priority contrast fixes)
+## P1 (high-priority items)
 1. ⚠️ **Pricing pages**: `text-cyan-400`, `text-green-400`, `text-blue-300` need better contrast
 2. ⚠️ **Automotive**: `text-green-400` in ROI calculator
 3. ⚠️ **Legal**: Urgency badges with -400 color variants
 4. ⚠️ **SpeedToLeadTimeline**: -400 color variants need audit
 5. ⚠️ **Core components**: Legacy `text-foreground` token cleanup
 
+### Pending Decisions (awaiting approval):
+1. ⚠️ **Sentry setup**: Run `npm install @sentry/nextjs` and add SENTRY_DSN to .env.local (config files ready)
+2. ⚠️ **Protected files dark mode cleanup**: Strip dark mode from tailwind.config.ts and globals.css
+3. ⚠️ **Google Business Profile integration**: Real-time reviews API integration
+4. ⚠️ **Color token standardization**: Protected files (ui/**, globals.css, tailwind.config)
+
 ### Recently resolved:
+- ✅ Orphaned pages (`/demo-text`, `/integrations-demo`) deleted
+- ✅ Dark mode cleanup in 12+ component files (indigo/violet/purple → blue/cyan)
+- ✅ Health check endpoint created (`/api/health`)
 - ✅ Fitness: Step number badge contrast issue (2025-12-21)
 - ✅ Replaced `btn-gold` with blue gradient on all industry pages
 - ✅ Updated breadcrumb schema to use `/who-we-serve` across all 9 industry pages
@@ -92,12 +111,30 @@ None - all critical issues resolved ✅
 - ✅ Removed duplicate metadata from `home-services/layout.tsx`
 - ✅ Gold→Blue migration (HIGH + MEDIUM priority, 15 files total)
 
+## Recently completed features (2025-12-21)
+1. ✅ **Lead Response Simulator** (commit a81f51a)
+   - Created 4 new components in `src/components/demo/`
+   - LeadResponseSimulator.tsx with industry selector + typewriter effect
+   - LeadScoreIndicator.tsx (visual 1-10 meter)
+   - IntentBadge.tsx (intent type badges)
+   - CRMFieldsDisplay.tsx (extracted CRM data display)
+   - Integrated with existing `/api/demo-response` Claude API endpoint
+   - Added "Try It Yourself" section on demo page
+
+2. ✅ **Scenario Builder** (commit 0242a26)
+   - Created 7 new files in `src/components/demo/scenarios/`
+   - scenarios.ts: 18 pre-built scenarios across 6 industries
+   - ScenarioCard.tsx: Premium glass morphism cards with mobile touch targets
+   - ScenarioLibrary.tsx: Filterable grid with collapsible mobile filters
+   - ScenarioPlayer.tsx: Cinematic conversation playback
+   - ScenarioOutcome.tsx: Animated lead score + CRM display
+   - ScenarioBuilder.tsx: Bottom sheet modal on mobile with swipe-to-dismiss
+   - Added "Scenario Library" section on demo page
+   - 18 scenarios: 3 per industry (plumbing, dental, hvac, auto, law, general)
+   - Mobile UX: Bottom sheet, swipe gestures, 44px touch targets, collapsible filters
+
 ## Next up (Planned Features)
-1. **Lead Response Simulator** (next priority)
-   - User pastes lead inquiry → gets AI response showing what Capture Client would say
-   - Uses Anthropic Claude API
-   - Will be added to `/demo` page
-2. **Scenario Builder** (after Lead Response Simulator)
+None active - both simulator features complete
 
 ## P2 (nice to have)
 1. Add focus-visible states to CTAs across site

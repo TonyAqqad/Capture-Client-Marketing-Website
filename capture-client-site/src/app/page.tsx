@@ -10,6 +10,7 @@ import ROICalculator from "@/components/ROICalculator";
 import { PremiumTestimonials } from "@/components/sections/PremiumTestimonials";
 import { PremiumFinalCTA } from "@/components/sections/PremiumFinalCTA";
 import { CaseStudiesPreview } from "@/components/sections/CaseStudiesPreview";
+import { GoogleReviews } from "@/components/sections/GoogleReviews";
 
 // Lazy load ExitIntentPopup for code splitting (component has early-return optimization)
 const ExitIntentPopup = dynamic(
@@ -206,8 +207,8 @@ const pricingSchema = {
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.9",
-    "reviewCount": "500",
+    "ratingValue": "5.0",
+    "reviewCount": "27",
     "bestRating": "5"
   }
 };
@@ -268,6 +269,10 @@ export default function HomePage() {
 
       {/* ==================== SECTION 5: TESTIMONIALS ==================== */}
       <PremiumTestimonials />
+
+      {/* ==================== SECTION 5.5: GOOGLE REVIEWS ==================== */}
+      {/* Real Google reviews - 5.0 rating, 27 reviews - high trust signal before CTA */}
+      <GoogleReviews />
 
       {/* ==================== SECTION 6: FINAL CTA ==================== */}
       <PremiumFinalCTA />

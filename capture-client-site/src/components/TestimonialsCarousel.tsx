@@ -268,7 +268,7 @@ function TestimonialCard({ testimonial, isInView }: TestimonialCardProps) {
         </motion.div>
         <div>
           <p className="text-slate-900 font-semibold">{testimonial.name}</p>
-          <p className="text-foreground-muted text-sm">{testimonial.role}</p>
+          <p className="text-slate-500 text-sm">{testimonial.role}</p>
         </div>
       </motion.div>
 

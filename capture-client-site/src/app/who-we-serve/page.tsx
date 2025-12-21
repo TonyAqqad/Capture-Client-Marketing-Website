@@ -35,6 +35,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Industries We Serve | AI Voice Agents | Capture Client',
+    description: '12+ industries trust Capture Client for 24/7 AI voice agents, lead capture, and appointment booking.',
+    images: ['https://captureclient.com/og-image.png'],
+  },
 };
 
 export default function WhoWeServePage() {

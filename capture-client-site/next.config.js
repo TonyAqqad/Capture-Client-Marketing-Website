@@ -10,6 +10,8 @@ const nextConfig = {
     optimizePackageImports: ["lucide-react", "framer-motion"],
     // Enable optimized font loading
     optimizeCss: true,
+    // Note: instrumentationHook is no longer needed in Next.js 16+
+    // instrumentation.ts is automatically detected
   },
 
   // Image optimization - AVIF first, then WebP for better compression

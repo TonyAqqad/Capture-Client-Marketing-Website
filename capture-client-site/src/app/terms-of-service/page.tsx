@@ -4,6 +4,17 @@ export const metadata: Metadata = {
   title: "Terms of Service | Capture Client",
   description:
     "Read Capture Client's terms of service to understand the rules and guidelines for using our platform and services.",
+  alternates: {
+    canonical: "https://captureclient.com/terms-of-service",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
 };
 
 export default function TermsOfServicePage() {

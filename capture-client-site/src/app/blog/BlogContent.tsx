@@ -26,7 +26,7 @@ const getCategoryStyle = (category: string) => {
     },
     "Automation": {
       gradient: "from-blue-500/20 to-cyan-400/20",
-      categoryColor: "bg-blue-500/10 text-blue-600 border-indigo-500/20",
+      categoryColor: "bg-blue-500/10 text-blue-600 border-blue-500/20",
     },
   };
   return styles[category] || styles["Lead Generation"];

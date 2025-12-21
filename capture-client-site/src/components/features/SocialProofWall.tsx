@@ -170,7 +170,7 @@ export default function SocialProofWall() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-lg text-foreground-muted max-w-2xl mx-auto"
+            className="text-lg text-slate-500 max-w-2xl mx-auto"
           >
             See what business owners are saying about Capture Client
           </motion.p>
@@ -226,12 +226,12 @@ function ReviewCard({ content }: { content: { [key: string]: string | number } }
         </div>
         <div>
           <p className="text-slate-900 font-semibold text-sm">{content.name as string}</p>
-          <p className="text-foreground-muted text-xs">{content.business as string}</p>
+          <p className="text-slate-500 text-xs">{content.business as string}</p>
         </div>
       </div>
 
       {/* Date */}
-      <p className="text-foreground-muted text-xs mt-4">{content.date as string}</p>
+      <p className="text-slate-500 text-xs mt-4">{content.date as string}</p>
     </div>
   );
 }
@@ -241,7 +241,7 @@ function MetricCard({ content }: { content: { [key: string]: string | number } }
     <div className="card p-6 bg-gradient-to-br from-accent/5 to-primary/5 border-accent/20 hover:border-accent/40 transition-colors duration-300">
       <p className="text-5xl font-bold text-accent mb-2">{content.value as string}</p>
       <p className="text-slate-900 font-semibold mb-1">{content.label as string}</p>
-      <p className="text-foreground-muted text-sm">{content.period as string}</p>
+      <p className="text-slate-500 text-sm">{content.period as string}</p>
       <div className="mt-4 inline-flex items-center gap-1 px-3 py-1 rounded-full bg-accent/20 border border-accent/30">
         <TrendingUp className="w-4 h-4 text-accent" />
         <span className="text-accent text-xs font-bold">{content.trend as string}</span>
@@ -277,7 +277,7 @@ function VideoCard({ content }: { content: { [key: string]: string | number } })
           </div>
           <div>
             <p className="text-slate-700 text-xs">{content.name as string}</p>
-            <p className="text-foreground-muted text-xs">{content.business as string}</p>
+            <p className="text-slate-500 text-xs">{content.business as string}</p>
           </div>
         </div>
       </div>
@@ -295,7 +295,7 @@ function BadgeCard({ content }: { content: { [key: string]: string | number | Re
       </div>
       <div>
         <p className="text-slate-900 font-semibold">{content.title as string}</p>
-        <p className="text-foreground-muted text-sm">{content.subtitle as string}</p>
+        <p className="text-slate-500 text-sm">{content.subtitle as string}</p>
       </div>
     </div>
   );

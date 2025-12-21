@@ -114,10 +114,10 @@ export function ScenarioPlayer({ scenario, onComplete, autoPlay = true }: Scenar
         />
       </div>
 
-      {/* Transcript */}
+      {/* Transcript - scrollable within flex container */}
       <div
         ref={scrollRef}
-        className="flex-1 overflow-y-auto p-6 space-y-4 min-h-[300px] max-h-[400px] bg-gradient-to-b from-white to-slate-50"
+        className="flex-1 min-h-0 overflow-y-auto p-6 space-y-4 bg-gradient-to-b from-white to-slate-50"
       >
         <AnimatePresence mode="popLayout">
           {visibleMessages.map((message, index) => (

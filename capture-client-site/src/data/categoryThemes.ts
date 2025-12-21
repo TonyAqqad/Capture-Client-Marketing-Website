@@ -45,21 +45,21 @@ export const categoryThemes: Record<string, CategoryTheme> = {
     borderClass: 'border-amber-500/30',
   },
 
-  // Automation: Purple theme - Innovation, power, automation
+  // Automation: Blue theme - Innovation, power, automation
   automation: {
     id: 'automation',
     name: 'Automation & Workflows',
-    primary: '#8B5CF6',
-    gradient: 'from-purple-500 via-violet-600 to-purple-700',
-    gradientFrom: '#8B5CF6',
-    gradientTo: '#8B5CF6',
-    bgClass: 'bg-gradient-to-br from-purple-500/10 via-violet-600/10 to-purple-700/10',
-    iconBg: 'bg-gradient-to-br from-purple-500 to-purple-700',
-    badgeClass: 'bg-purple-500/10 text-purple-300 border-purple-500/20',
-    accentGlow: 'shadow-[0_0_30px_rgba(139,92,246,0.3)]',
-    timelineGradient: 'linear-gradient(180deg, #8B5CF6 0%, #8B5CF6 100%)',
-    hoverGlow: 'hover:shadow-[0_0_40px_rgba(139,92,246,0.4)]',
-    borderClass: 'border-purple-500/30',
+    primary: '#3B82F6',
+    gradient: 'from-blue-500 via-cyan-500 to-blue-600',
+    gradientFrom: '#3B82F6',
+    gradientTo: '#0EA5E9',
+    bgClass: 'bg-gradient-to-br from-blue-500/10 via-cyan-500/10 to-blue-600/10',
+    iconBg: 'bg-gradient-to-br from-blue-500 to-blue-600',
+    badgeClass: 'bg-blue-500/10 text-blue-300 border-blue-500/20',
+    accentGlow: 'shadow-[0_0_30px_rgba(59,130,246,0.3)]',
+    timelineGradient: 'linear-gradient(180deg, #3B82F6 0%, #0EA5E9 100%)',
+    hoverGlow: 'hover:shadow-[0_0_40px_rgba(59,130,246,0.4)]',
+    borderClass: 'border-blue-500/30',
   },
 
   // Scheduling: Cyan theme - Growth, time, efficiency
@@ -113,21 +113,21 @@ export const categoryThemes: Record<string, CategoryTheme> = {
     borderClass: 'border-amber-500/30',
   },
 
-  // Legal: Indigo/Midnight theme - Professional, serious, authoritative
+  // Legal: Blue theme - Professional, serious, authoritative
   legal: {
     id: 'legal',
     name: 'Legal Practice Management',
-    primary: '#4F46E5',
-    gradient: 'from-indigo-600 via-blue-700 to-indigo-800',
-    gradientFrom: '#4F46E5',
-    gradientTo: '#3730A3',
-    bgClass: 'bg-gradient-to-br from-indigo-600/10 via-blue-700/10 to-indigo-800/10',
-    iconBg: 'bg-gradient-to-br from-indigo-600 to-indigo-800',
-    badgeClass: 'bg-indigo-500/10 text-indigo-300 border-indigo-500/20',
-    accentGlow: 'shadow-[0_0_30px_rgba(79,70,229,0.3)]',
-    timelineGradient: 'linear-gradient(180deg, #4F46E5 0%, #3730A3 100%)',
-    hoverGlow: 'hover:shadow-[0_0_40px_rgba(79,70,229,0.4)]',
-    borderClass: 'border-indigo-500/30',
+    primary: '#2563EB',
+    gradient: 'from-blue-600 via-blue-700 to-blue-800',
+    gradientFrom: '#2563EB',
+    gradientTo: '#1E40AF',
+    bgClass: 'bg-gradient-to-br from-blue-600/10 via-blue-700/10 to-blue-800/10',
+    iconBg: 'bg-gradient-to-br from-blue-600 to-blue-800',
+    badgeClass: 'bg-blue-500/10 text-blue-300 border-blue-500/20',
+    accentGlow: 'shadow-[0_0_30px_rgba(37,99,235,0.3)]',
+    timelineGradient: 'linear-gradient(180deg, #2563EB 0%, #1E40AF 100%)',
+    hoverGlow: 'hover:shadow-[0_0_40px_rgba(37,99,235,0.4)]',
+    borderClass: 'border-blue-500/30',
   },
 
   // Healthcare: Purple theme - Caring, health, compassion
@@ -198,21 +198,21 @@ export const categoryThemes: Record<string, CategoryTheme> = {
     borderClass: 'border-cyan-600/30',
   },
 
-  // All-in-One: Aurora rainbow theme - Comprehensive, complete, powerful
+  // All-in-One: Blue/cyan rainbow theme - Comprehensive, complete, powerful
   'all-in-one': {
     id: 'all-in-one',
     name: 'All-in-One Platforms',
-    primary: '#8B5CF6',
-    gradient: 'from-violet-500 via-purple-600 to-fuchsia-600',
-    gradientFrom: '#8B5CF6',
-    gradientTo: '#C026D3',
-    bgClass: 'bg-gradient-to-br from-violet-500/10 via-purple-600/10 to-fuchsia-600/10',
-    iconBg: 'bg-gradient-to-br from-violet-500 to-fuchsia-600',
-    badgeClass: 'bg-violet-500/10 text-violet-300 border-violet-500/20',
-    accentGlow: 'shadow-[0_0_30px_rgba(139,92,246,0.3)]',
-    timelineGradient: 'linear-gradient(180deg, #8B5CF6 0%, #C026D3 100%)',
-    hoverGlow: 'hover:shadow-[0_0_40px_rgba(139,92,246,0.4)]',
-    borderClass: 'border-violet-500/30',
+    primary: '#3B82F6',
+    gradient: 'from-blue-500 via-cyan-500 to-blue-600',
+    gradientFrom: '#3B82F6',
+    gradientTo: '#0EA5E9',
+    bgClass: 'bg-gradient-to-br from-blue-500/10 via-cyan-500/10 to-blue-600/10',
+    iconBg: 'bg-gradient-to-br from-blue-500 to-blue-600',
+    badgeClass: 'bg-blue-500/10 text-blue-300 border-blue-500/20',
+    accentGlow: 'shadow-[0_0_30px_rgba(59,130,246,0.3)]',
+    timelineGradient: 'linear-gradient(180deg, #3B82F6 0%, #0EA5E9 100%)',
+    hoverGlow: 'hover:shadow-[0_0_40px_rgba(59,130,246,0.4)]',
+    borderClass: 'border-blue-500/30',
   },
 };
 
