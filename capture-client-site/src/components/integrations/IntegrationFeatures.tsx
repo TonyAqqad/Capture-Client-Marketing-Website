@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "@/lib/motion";
-import { GradientCard, getGradientByCategory } from "@/components/ui/GradientCard";
 import {
   RefreshCw,
   Sparkles,
@@ -48,7 +47,6 @@ const iconMap: Record<string, LucideIcon> = {
   assessment: ClipboardList,
   account_tree: GitBranch,
   check_circle: CheckCircle2,
-  stars: Sparkles, // For the "Key Feature" badge
 };
 
 /**
@@ -78,70 +76,9 @@ const detectFeatureIcon = (featureText: string): LucideIcon => {
   return iconMap.check_circle;
 };
 
-/**
- * Calculate Bento Grid layout based on feature count
- * Returns array of layout configs for each feature
- */
-interface BentoLayout {
-  cols: 1 | 2;
-  featured?: boolean;
-}
-
-const getBentoLayout = (count: number): BentoLayout[] => {
-  if (count <= 2) {
-    // 1-2 features: single column
-    return Array(count).fill({ cols: 1 });
-  }
-
-  if (count === 3) {
-    // 3 features: featured first, then 2 normal
-    return [
-      { cols: 2, featured: true },
-      { cols: 1 },
-      { cols: 1 }
-    ];
-  }
-
-  if (count === 4) {
-    // 4 features: featured first, then 3 normal in 2-column grid
-    return [
-      { cols: 2, featured: true },
-      { cols: 1 },
-      { cols: 1 },
-      { cols: 2 }
-    ];
-  }
-
-  if (count === 5) {
-    // 5 features: featured, 2 normal, featured at end
-    return [
-      { cols: 2, featured: true },
-      { cols: 1 },
-      { cols: 1 },
-      { cols: 1 },
-      { cols: 2, featured: true }
-    ];
-  }
-
-  // 6+ features: alternating pattern
-  const layout: BentoLayout[] = [{ cols: 2, featured: true }];
-  for (let i = 1; i < count; i++) {
-    if (i % 4 === 0) {
-      layout.push({ cols: 2, featured: true });
-    } else {
-      layout.push({ cols: 1 });
-    }
-  }
-
-  return layout;
-};
-
-export function IntegrationFeatures({ keyFeatures, category, integrationName }: IntegrationFeaturesProps) {
-  const gradientVariant = getGradientByCategory(category);
-  const bentoLayout = getBentoLayout(keyFeatures.length);
-
+export function IntegrationFeatures({ keyFeatures, integrationName }: IntegrationFeaturesProps) {
   return (
-    <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden">
+    <section className="relative py-12 sm:py-16 lg:py-20 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white" />
@@ -157,99 +94,46 @@ export function IntegrationFeatures({ keyFeatures, category, integrationName }: 
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12 sm:mb-16"
+          className="text-center mb-10 sm:mb-12"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-slate-900 mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-display font-bold text-slate-900 mb-3">
             Key Features
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-base text-slate-600 max-w-2xl mx-auto">
             Everything you need to power your workflow with {integrationName}
           </p>
         </motion.div>
 
-        {/* Bento Grid - Asymmetric Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 auto-rows-fr">
+        {/* Simple 3-column grid with equal-sized cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto">
           {keyFeatures.map((feature, index) => {
-            const layout = bentoLayout[index];
             const FeatureIcon = detectFeatureIcon(feature);
-            const isFeatured = layout?.featured;
 
             return (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{
-                  duration: 0.6,
-                  delay: index * 0.08,
-                  ease: [0.22, 1, 0.36, 1] // Custom easing for premium feel
+                  duration: 0.5,
+                  delay: index * 0.06,
+                  ease: [0.22, 1, 0.36, 1]
                 }}
-                className={`
-                  relative
-                  ${layout?.cols === 2 ? 'sm:col-span-2 lg:col-span-2' : 'col-span-1'}
-                `}
+                className="group"
               >
-                <GradientCard
-                  variant={gradientVariant}
-                  hover={true}
-                  interactive={true}
-                  intensity={isFeatured ? "medium" : "subtle"}
-                  className="h-full"
-                >
-                  <div className={`
-                    p-6 sm:p-8 h-full flex flex-col
-                    ${isFeatured ? 'lg:p-10' : ''}
-                  `}>
-                    {/* Featured Badge */}
-                    {index === 0 && (
-                      <motion.div
-                        initial={{ scale: 0.8, opacity: 0 }}
-                        whileInView={{ scale: 1, opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.3, duration: 0.4 }}
-                        className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-xs font-semibold mb-4 w-fit"
-                      >
-                        <Sparkles className="w-3.5 h-3.5" />
-                        <span>Key Feature</span>
-                      </motion.div>
-                    )}
-
-                    {/* Icon with hover animation */}
-                    <motion.div
-                      className={`
-                        rounded-xl bg-gradient-to-br from-accent/20 to-primary/20
-                        flex items-center justify-center mb-5 flex-shrink-0
-                        ${isFeatured ? 'w-16 h-16 sm:w-20 sm:h-20' : 'w-14 h-14 sm:w-16 sm:h-16'}
-                      `}
-                      whileHover={{
-                        scale: 1.15,
-                        rotate: [0, -5, 5, 0],
-                        transition: { duration: 0.4 }
-                      }}
-                    >
-                      <FeatureIcon className={`
-                        text-accent flex-shrink-0
-                        ${isFeatured ? 'w-8 h-8 sm:w-10 sm:h-10' : 'w-6 h-6 sm:w-8 sm:h-8'}
-                      `} />
-                    </motion.div>
-
-                    {/* Feature Text */}
-                    <p className={`
-                      text-slate-900 font-medium leading-relaxed
-                      ${isFeatured ? 'text-lg sm:text-xl' : 'text-base sm:text-lg'}
-                    `}>
-                      {feature}
-                    </p>
-
-                    {/* Decorative corner accent for featured cards */}
-                    {isFeatured && (
-                      <div className="absolute top-0 right-0 w-32 h-32 opacity-10 pointer-events-none">
-                        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-accent via-primary to-transparent rounded-bl-full" />
-                      </div>
-                    )}
+                {/* Card with blue/cyan theme */}
+                <div className="h-full p-5 rounded-xl bg-white border border-slate-200 hover:border-blue-300 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 hover:-translate-y-1">
+                  {/* Icon */}
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-100 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                    <FeatureIcon className="w-5 h-5 text-blue-600" />
                   </div>
-                </GradientCard>
+
+                  {/* Feature Text */}
+                  <p className="text-slate-900 font-medium text-sm leading-relaxed">
+                    {feature}
+                  </p>
+                </div>
               </motion.div>
             );
           })}
@@ -260,18 +144,14 @@ export function IntegrationFeatures({ keyFeatures, category, integrationName }: 
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.8, duration: 0.6 }}
-          className="mt-12 text-center"
+          transition={{ delay: 0.6, duration: 0.5 }}
+          className="mt-8 text-center"
         >
-          <p className="text-sm text-slate-600">
-            <span className="font-semibold text-accent">{keyFeatures.length}</span> powerful features
-            {keyFeatures.length > 5 && ' to supercharge your workflow'}
+          <p className="text-sm text-slate-500">
+            <span className="font-semibold text-blue-600">{keyFeatures.length}</span> powerful features
           </p>
         </motion.div>
       </div>
-
-      {/* Divider */}
-      <div className="absolute bottom-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent" />
     </section>
   );
 }
