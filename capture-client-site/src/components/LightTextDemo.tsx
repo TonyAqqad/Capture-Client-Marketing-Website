@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "@/lib/motion";
+import { motion, useMotionValue, useTransform, useSpring } from "@/lib/motion";
 import { Send, Bot, Sparkles, Phone } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import Script from "next/script";
@@ -8,8 +8,12 @@ import { useInteractiveDemo, type BusinessType } from "@/hooks/useInteractiveDem
 
 // ============================================
 // LIGHT TEXT DEMO - Interactive AI Chat
+// $1B Aesthetic with 3D Tilt & Layered Shadows
 // Billion-dollar aesthetic with real Claude integration
 // ============================================
+
+// Spring config for smooth, organic tilt
+const tiltSpringConfig = { stiffness: 300, damping: 30 };
 
 // Industry options for selector
 const INDUSTRIES: { value: BusinessType; label: string; emoji: string }[] = [
@@ -58,8 +62,41 @@ const QUICK_PROMPTS: Record<BusinessType, string[]> = {
 export function LightTextDemo() {
   const [inputValue, setInputValue] = useState("");
   const [selectedIndustry, setSelectedIndustry] = useState<BusinessType>("general");
+  const [isHovered, setIsHovered] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const messagesContainerRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  // Mouse position for 3D tilt effect
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  // Transform mouse position to subtle rotation (±3 degrees)
+  const rotateX = useSpring(
+    useTransform(mouseY, [-200, 200], [3, -3]),
+    tiltSpringConfig
+  );
+  const rotateY = useSpring(
+    useTransform(mouseX, [-300, 300], [-3, 3]),
+    tiltSpringConfig
+  );
+
+  // Handle mouse move for tilt effect
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (!cardRef.current) return;
+    const rect = cardRef.current.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
+    mouseX.set(e.clientX - centerX);
+    mouseY.set(e.clientY - centerY);
+  };
+
+  // Reset tilt on mouse leave
+  const handleMouseLeave = () => {
+    mouseX.set(0);
+    mouseY.set(0);
+    setIsHovered(false);
+  };
 
   // Use the interactive demo hook
   const { state, controls } = useInteractiveDemo(selectedIndustry);
@@ -127,29 +164,66 @@ export function LightTextDemo() {
         strategy="afterInteractive"
       />
 
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="relative w-full max-w-2xl mx-auto"
-      >
-      {/* Floating animation */}
-      <motion.div
-        animate={{ y: [0, -8, 0] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-      >
-        {/* Glow effect */}
-        <div
-          className="absolute inset-0 rounded-[2rem] opacity-10"
-          style={{
-            background:
-              "radial-gradient(circle at center, rgba(37, 99, 235, 0.4) 0%, transparent 70%)",
-            filter: "blur(40px)",
+      {/* Perspective container for 3D effect */}
+      <div style={{ perspective: "1500px" }} className="relative w-full max-w-2xl mx-auto">
+        <motion.div
+          ref={cardRef}
+          initial={{ opacity: 0, y: 30, rotateX: 5 }}
+          animate={{ opacity: 1, y: 0, rotateX: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+            delay: 0.2
           }}
-        />
+          style={{
+            transformStyle: "preserve-3d",
+            rotateX,
+            rotateY,
+          }}
+          onMouseMove={handleMouseMove}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={handleMouseLeave}
+        >
+          {/* Floating animation */}
+          <motion.div
+            animate={{ y: [0, -8, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          >
+            {/* Glow effect - enhanced on hover */}
+            <motion.div
+              className="absolute inset-0 rounded-[2rem] pointer-events-none"
+              animate={{
+                opacity: isHovered ? 0.2 : 0.1,
+                scale: isHovered ? 1.02 : 1,
+              }}
+              transition={{ duration: 0.3 }}
+              style={{
+                background:
+                  "radial-gradient(circle at center, rgba(37, 99, 235, 0.5) 0%, rgba(14, 165, 233, 0.2) 40%, transparent 70%)",
+                filter: "blur(40px)",
+              }}
+            />
 
-        {/* Main card */}
-        <div className="relative bg-white rounded-[2rem] border border-slate-200 shadow-2xl shadow-blue-500/10 overflow-hidden">
+            {/* Main card with layered shadows */}
+            <motion.div
+              className="relative bg-white rounded-[2rem] border border-slate-200 overflow-hidden"
+              animate={{
+                boxShadow: isHovered
+                  ? `
+                      0 35px 60px -15px rgba(37, 99, 235, 0.2),
+                      0 20px 40px -10px rgba(0, 0, 0, 0.08),
+                      0 0 0 1px rgba(37, 99, 235, 0.08) inset,
+                      0 -20px 40px -20px rgba(14, 165, 233, 0.1) inset
+                    `
+                  : `
+                      0 25px 50px -12px rgba(37, 99, 235, 0.12),
+                      0 12px 24px -8px rgba(0, 0, 0, 0.05),
+                      0 0 0 1px rgba(37, 99, 235, 0.05) inset
+                    `,
+              }}
+              transition={{ duration: 0.3 }}
+            >
           {/* Header */}
           <div className="relative px-6 sm:px-8 pt-6 sm:pt-8 pb-5 bg-gradient-to-br from-blue-50/80 to-cyan-50/80 border-b border-slate-200">
             {/* Top Row: Eyebrow + AI Status */}
@@ -224,7 +298,10 @@ export function LightTextDemo() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="relative -mx-6 sm:mx-0"
             >
-              <div className="flex gap-2 px-6 sm:px-0 overflow-x-auto pb-2 sm:pb-0 scrollbar-hide sm:flex-wrap">
+              <div
+                className="flex gap-2 px-6 sm:px-0 overflow-x-auto pb-2 sm:pb-0 scrollbar-hide sm:flex-wrap"
+                style={{ touchAction: 'pan-x pan-y' }}
+              >
                 {INDUSTRIES.map((industry) => (
                   <button
                     key={industry.value}
@@ -256,7 +333,11 @@ export function LightTextDemo() {
           {/* Chat interface with scrollable messages */}
           <div
             ref={messagesContainerRef}
-            className="px-6 sm:px-8 py-6 space-y-4 max-h-[400px] overflow-y-auto scroll-smooth"
+            className="px-6 sm:px-8 py-6 space-y-4 max-h-none sm:max-h-[400px] sm:overflow-y-auto scroll-smooth"
+            style={{
+              overscrollBehaviorY: 'contain',
+              touchAction: 'pan-y'
+            }}
           >
             {/* Error message */}
             {error && (
@@ -417,9 +498,10 @@ export function LightTextDemo() {
               </span>
             </div>
           </motion.div>
-        </div>
-      </motion.div>
-    </motion.div>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+      </div>
     </>
   );
 }

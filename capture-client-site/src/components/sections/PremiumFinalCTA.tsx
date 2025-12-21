@@ -6,6 +6,8 @@ import { useInView } from "@/hooks/useInView";
 import OptimizedLeadForm from "@/components/forms/OptimizedLeadForm";
 import Link from "next/link";
 import { ArrowRight, Phone, Shield, Zap, Users, Sparkles } from "lucide-react";
+import { use3DTilt, cardShadow, perspectiveContainer, transform3D, depthSpring } from "@/lib/depth-utils";
+import { useIsMobile } from "@/lib/responsive";
 
 // ============================================
 // PREMIUM FINAL CTA - Light Theme
@@ -15,6 +17,10 @@ import { ArrowRight, Phone, Shield, Zap, Users, Sparkles } from "lucide-react";
 export function PremiumFinalCTA() {
   const containerRef = useRef<HTMLElement>(null);
   const isInView = useInView(containerRef, { threshold: 0.2 });
+  const isMobile = useIsMobile();
+
+  // 3D tilt for form container
+  const formTilt = use3DTilt(3);
 
   return (
     <section
@@ -111,13 +117,15 @@ export function PremiumFinalCTA() {
           transition={{ duration: 0.7, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 md:mb-20"
         >
-          <Link
-            href="#contact-form"
-            className="group relative flex items-center gap-3 px-8 py-4 text-lg font-semibold w-full sm:w-auto justify-center rounded-full overflow-hidden transition-all duration-300 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/35 hover:-translate-y-0.5"
-          >
-            <span className="relative z-10 text-white">Try Our AI Now</span>
-            <ArrowRight className="relative z-10 w-5 h-5 text-white transition-transform group-hover:translate-x-1" />
-          </Link>
+          <motion.div whileHover={{ scale: 1.02 }} transition={{ duration: 0.3 }}>
+            <Link
+              href="#contact-form"
+              className="group relative flex items-center gap-3 px-8 py-4 text-lg font-semibold w-full sm:w-auto justify-center rounded-full overflow-hidden transition-all duration-300 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/35 hover:-translate-y-0.5"
+            >
+              <span className="relative z-10 text-white">Try Our AI Now</span>
+              <ArrowRight className="relative z-10 w-5 h-5 text-white transition-transform group-hover:translate-x-1" />
+            </Link>
+          </motion.div>
 
           <a
             href="tel:865-346-6111"
@@ -128,7 +136,7 @@ export function PremiumFinalCTA() {
           </a>
         </motion.div>
 
-        {/* Trust signals */}
+        {/* Trust signals with micro hover effects */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -145,7 +153,8 @@ export function PremiumFinalCTA() {
               initial={{ opacity: 0, y: 10 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
               transition={{ duration: 0.5, delay: 0.4 + index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-sm border border-slate-200/60"
+              whileHover={{ scale: 1.05, y: -2 }}
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/60 backdrop-blur-sm border border-slate-200/60 cursor-default"
             >
               <item.icon className="w-4 h-4 text-blue-600" />
               <span className="text-sm md:text-base text-slate-700 font-medium">{item.text}</span>
@@ -153,7 +162,7 @@ export function PremiumFinalCTA() {
           ))}
         </motion.div>
 
-        {/* Form section */}
+        {/* Form section with 3D tilt and gentle floating */}
         <motion.div
           id="contact-form"
           initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
@@ -161,7 +170,20 @@ export function PremiumFinalCTA() {
           transition={{ duration: 0.7, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-xl mx-auto"
         >
-          <div className="relative bg-white/70 backdrop-blur-xl p-8 md:p-10 rounded-2xl border border-slate-200/60 shadow-xl shadow-slate-900/[0.04] overflow-hidden">
+          <div style={isMobile ? {} : perspectiveContainer}>
+            <motion.div
+              style={isMobile ? {} : { ...transform3D, rotateX: formTilt.rotateX, rotateY: formTilt.rotateY }}
+              animate={{
+                y: [0, -6, 0],
+                boxShadow: formTilt.isHovered ? cardShadow.hover : cardShadow.rest,
+              }}
+              transition={{
+                y: { duration: 5, repeat: Infinity, ease: "easeInOut" },
+                boxShadow: { duration: 0.3 },
+              }}
+              {...formTilt.handlers}
+              className="relative bg-white/70 backdrop-blur-xl p-8 md:p-10 rounded-2xl border border-slate-200/60 overflow-hidden"
+            >
             {/* Decorative gradient */}
             <div
               className="absolute top-0 right-0 w-40 h-40 opacity-30 pointer-events-none"
@@ -207,6 +229,7 @@ export function PremiumFinalCTA() {
                 style={{ transformOrigin: "left" }}
               />
             </div>
+            </motion.div>
           </div>
         </motion.div>
 

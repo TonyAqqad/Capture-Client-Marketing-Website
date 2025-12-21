@@ -6,6 +6,8 @@ import { useInView } from "@/hooks/useInView";
 import { useCountUp } from "@/hooks/useCountUp";
 import { ArrowRight, TrendingUp, DollarSign, Calculator } from "lucide-react";
 import Link from "next/link";
+import { use3DTilt, cardShadow, perspectiveContainer, transform3D, depthSpring } from "@/lib/depth-utils";
+import { useIsMobile } from "@/lib/responsive";
 
 interface Industry {
   label: string;
@@ -29,6 +31,10 @@ const industries: Industry[] = [
 export default function ROICalculator() {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { threshold: 0.2 });
+  const isMobile = useIsMobile();
+
+  // 3D tilt for main calculator card
+  const { rotateX, rotateY, isHovered, handlers } = use3DTilt(3);
 
   // State
   const [selectedIndustry, setSelectedIndustry] = useState(industries[0]);
@@ -46,32 +52,41 @@ export default function ROICalculator() {
   const monthlyCaptured = Math.round(monthlyLost * 0.85);
   const annualSavings = monthlyCaptured * 12;
 
-  // Animated counters
+  // Animated counters with enhanced spring physics
   const animatedMonthlyLost = useCountUp({
     end: monthlyLost,
-    duration: 1500,
+    duration: 1800,
     isActive: isInView,
   });
 
   const animatedMonthlyCaptured = useCountUp({
     end: monthlyCaptured,
-    duration: 1500,
+    duration: 1800,
     isActive: isInView,
   });
 
   const animatedAnnualSavings = useCountUp({
     end: annualSavings,
-    duration: 2000,
+    duration: 2200,
     isActive: isInView,
   });
 
   return (
-    <div ref={containerRef} className="w-full max-w-6xl mx-auto">
+    <div ref={containerRef} className="w-full max-w-6xl mx-auto" style={isMobile ? {} : perspectiveContainer}>
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg p-8 sm:p-10 lg:p-12 rounded-3xl relative overflow-hidden"
+        style={isMobile ? {
+          boxShadow: isHovered ? cardShadow.hover : cardShadow.rest,
+        } : {
+          ...transform3D,
+          rotateX,
+          rotateY,
+          boxShadow: isHovered ? cardShadow.hover : cardShadow.rest,
+        }}
+        className="bg-white/70 backdrop-blur-xl border border-slate-200/60 p-8 sm:p-10 lg:p-12 rounded-3xl relative overflow-hidden"
+        {...handlers}
       >
         {/* Animated background gradient */}
         <motion.div
@@ -164,18 +179,20 @@ export default function ROICalculator() {
                     ${jobValue.toLocaleString()}
                   </span>
                 </div>
-                <input
-                  type="range"
-                  min="100"
-                  max="10000"
-                  step="100"
-                  value={jobValue}
-                  onChange={(e) => setJobValue(Number(e.target.value))}
-                  className="w-full h-2 rounded-full appearance-none cursor-pointer"
-                  style={{
-                    background: `linear-gradient(to right, #2563eb 0%, #2563eb ${((jobValue - 100) / 9900) * 100}%, #e2e8f0 ${((jobValue - 100) / 9900) * 100}%, #e2e8f0 100%)`,
-                  }}
-                />
+                <div style={{ touchAction: 'pan-y' }}>
+                  <input
+                    type="range"
+                    min="100"
+                    max="10000"
+                    step="100"
+                    value={jobValue}
+                    onChange={(e) => setJobValue(Number(e.target.value))}
+                    className="w-full h-2 rounded-full appearance-none cursor-pointer"
+                    style={{
+                      background: `linear-gradient(to right, #2563eb 0%, #2563eb ${((jobValue - 100) / 9900) * 100}%, #e2e8f0 ${((jobValue - 100) / 9900) * 100}%, #e2e8f0 100%)`,
+                    }}
+                  />
+                </div>
                 <div className="flex justify-between text-xs text-slate-500 mt-2">
                   <span>$100</span>
                   <span>$10,000</span>
@@ -192,18 +209,20 @@ export default function ROICalculator() {
                     {missedCalls}
                   </span>
                 </div>
-                <input
-                  type="range"
-                  min="1"
-                  max="50"
-                  step="1"
-                  value={missedCalls}
-                  onChange={(e) => setMissedCalls(Number(e.target.value))}
-                  className="w-full h-2 rounded-full appearance-none cursor-pointer"
-                  style={{
-                    background: `linear-gradient(to right, #2563eb 0%, #2563eb ${((missedCalls - 1) / 49) * 100}%, #e2e8f0 ${((missedCalls - 1) / 49) * 100}%, #e2e8f0 100%)`,
-                  }}
-                />
+                <div style={{ touchAction: 'pan-y' }}>
+                  <input
+                    type="range"
+                    min="1"
+                    max="50"
+                    step="1"
+                    value={missedCalls}
+                    onChange={(e) => setMissedCalls(Number(e.target.value))}
+                    className="w-full h-2 rounded-full appearance-none cursor-pointer"
+                    style={{
+                      background: `linear-gradient(to right, #2563eb 0%, #2563eb ${((missedCalls - 1) / 49) * 100}%, #e2e8f0 ${((missedCalls - 1) / 49) * 100}%, #e2e8f0 100%)`,
+                    }}
+                  />
+                </div>
                 <div className="flex justify-between text-xs text-slate-500 mt-2">
                   <span>1</span>
                   <span>50</span>
@@ -227,7 +246,12 @@ export default function ROICalculator() {
               className="space-y-6"
             >
               {/* Monthly Lost Revenue */}
-              <div className="bg-gradient-to-br from-red-500/10 to-red-600/5 border border-red-500/20 rounded-2xl p-6">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                transition={{ delay: 0.7, duration: 0.6, type: "spring", ...depthSpring }}
+                className="bg-gradient-to-br from-red-500/10 to-red-600/5 border border-red-500/20 rounded-2xl p-6"
+              >
                 <div className="flex items-center gap-2 mb-2">
                   <TrendingUp className="w-5 h-5 text-red-400 rotate-180" />
                   <span className="text-sm font-semibold text-red-400 uppercase tracking-wide">
@@ -243,10 +267,15 @@ export default function ROICalculator() {
                 <p className="text-sm text-slate-600 mt-2">
                   Revenue lost to missed calls
                 </p>
-              </div>
+              </motion.div>
 
               {/* Monthly Captured */}
-              <div className="bg-gradient-to-br from-blue-500/10 to-cyan-500/5 border border-blue-500/20 rounded-2xl p-6">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                transition={{ delay: 0.8, duration: 0.6, type: "spring", ...depthSpring }}
+                className="bg-gradient-to-br from-blue-500/10 to-cyan-500/5 border border-blue-500/20 rounded-2xl p-6"
+              >
                 <div className="flex items-center gap-2 mb-2">
                   <TrendingUp className="w-5 h-5 text-blue-600" />
                   <span className="text-sm font-semibold text-blue-600 uppercase tracking-wide">
@@ -262,10 +291,15 @@ export default function ROICalculator() {
                 <p className="text-sm text-slate-600 mt-2">
                   Per month (85% answer rate)
                 </p>
-              </div>
+              </motion.div>
 
               {/* Annual Savings */}
-              <div className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 border border-emerald-500/20 rounded-2xl p-6">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                transition={{ delay: 0.9, duration: 0.6, type: "spring", ...depthSpring }}
+                className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 border border-emerald-500/20 rounded-2xl p-6"
+              >
                 <div className="flex items-center gap-2 mb-2">
                   <DollarSign className="w-5 h-5 text-emerald-400" />
                   <span className="text-sm font-semibold text-emerald-400 uppercase tracking-wide">
@@ -281,7 +315,7 @@ export default function ROICalculator() {
                 <p className="text-sm text-slate-600 mt-2">
                   Total first-year projection
                 </p>
-              </div>
+              </motion.div>
             </motion.div>
           </div>
 
@@ -289,16 +323,22 @@ export default function ROICalculator() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ delay: 0.8, duration: 0.6 }}
+            transition={{ delay: 1.0, duration: 0.6 }}
             className="text-center"
           >
-            <Link
-              href="/contact"
-              className="group inline-flex items-center justify-center gap-3 px-10 py-5 rounded-xl text-lg font-bold text-white overflow-hidden transition-all duration-300 relative bg-gradient-to-r from-blue-600 to-cyan-500 hover:shadow-lg hover:shadow-blue-500/25"
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", ...depthSpring }}
             >
-              <span className="relative z-10">Capture This Revenue</span>
-              <ArrowRight className="w-6 h-6 relative z-10 group-hover:translate-x-2 transition-transform duration-300" />
-            </Link>
+              <Link
+                href="/contact"
+                className="group inline-flex items-center justify-center gap-3 px-10 py-5 rounded-xl text-lg font-bold text-white overflow-hidden transition-all duration-300 relative bg-gradient-to-r from-blue-600 to-cyan-500 hover:shadow-xl hover:shadow-blue-500/30"
+              >
+                <span className="relative z-10">Capture This Revenue</span>
+                <ArrowRight className="w-6 h-6 relative z-10 group-hover:translate-x-2 transition-transform duration-300" />
+              </Link>
+            </motion.div>
 
             <p className="text-sm text-slate-600 mt-4">
               Start your free 14-day trial • No credit card required

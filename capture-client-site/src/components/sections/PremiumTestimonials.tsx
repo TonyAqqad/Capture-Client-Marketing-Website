@@ -5,6 +5,8 @@ import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import { Testimonial } from "@/types/content";
 import { ArrowUpRight, Quote } from "lucide-react";
+import { use3DTilt, cardShadow, perspectiveContainer, transform3D, depthSpring } from "@/lib/depth-utils";
+import { useIsMobile } from "@/lib/responsive";
 
 // ============================================
 // PREMIUM TESTIMONIALS - Light Theme
@@ -66,6 +68,14 @@ const testimonials: EditorialTestimonial[] = [
 export function PremiumTestimonials() {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { threshold: 0.1 });
+  const isMobile = useIsMobile();
+
+  // 3D tilt for featured card (larger tilt range)
+  const featuredTilt = use3DTilt(5);
+
+  // 3D tilt for smaller cards
+  const card1Tilt = use3DTilt(4);
+  const card2Tilt = use3DTilt(4);
 
   return (
     <section className="relative overflow-hidden w-full py-20 sm:py-28 lg:py-36 bg-white">
@@ -144,11 +154,14 @@ export function PremiumTestimonials() {
             transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-7"
           >
-            <motion.div
-              whileHover={{ y: -4, scale: 1.01 }}
-              transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-              className="relative h-full p-8 sm:p-10 lg:p-12 rounded-2xl bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg shadow-slate-900/[0.03] group overflow-hidden"
-            >
+            <div style={isMobile ? {} : perspectiveContainer}>
+              <motion.div
+                style={isMobile ? {} : { ...transform3D, rotateX: featuredTilt.rotateX, rotateY: featuredTilt.rotateY }}
+                animate={{ boxShadow: featuredTilt.isHovered ? cardShadow.hover : cardShadow.rest }}
+                transition={{ duration: 0.3 }}
+                {...featuredTilt.handlers}
+                className="relative h-full p-8 sm:p-10 lg:p-12 rounded-2xl bg-white/70 backdrop-blur-xl border border-slate-200/60 group overflow-hidden"
+              >
               {/* Hover glow effect */}
               <div
                 className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
@@ -157,10 +170,14 @@ export function PremiumTestimonials() {
                 }}
               />
 
-              {/* Quote icon */}
-              <div className="absolute top-8 right-8 opacity-10">
+              {/* Quote icon with subtle shift on hover */}
+              <motion.div
+                className="absolute top-8 right-8 opacity-10"
+                animate={{ y: featuredTilt.isHovered ? -4 : 0, x: featuredTilt.isHovered ? 4 : 0 }}
+                transition={{ duration: 0.3 }}
+              >
                 <Quote className="w-16 h-16 text-blue-600" />
-              </div>
+              </motion.div>
 
               {/* Industry tag */}
               <div className="flex items-center justify-between mb-8 relative z-10">
@@ -173,8 +190,13 @@ export function PremiumTestimonials() {
                 <ArrowUpRight className="w-5 h-5 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
               </div>
 
-              {/* Big metric */}
-              <div className="mb-8 relative z-10">
+              {/* Big metric with spring bounce entrance */}
+              <motion.div
+                className="mb-8 relative z-10"
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
+                transition={{ duration: 0.6, delay: 0.3, ...depthSpring }}
+              >
                 <p
                   className="text-5xl sm:text-6xl lg:text-7xl tracking-tight font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
                   style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
@@ -187,7 +209,7 @@ export function PremiumTestimonials() {
                 >
                   {testimonials[0].metricLabel}
                 </p>
-              </div>
+              </motion.div>
 
               {/* Quote */}
               <blockquote
@@ -232,27 +254,35 @@ export function PremiumTestimonials() {
                   style={{ transformOrigin: "left" }}
                 />
               </div>
-            </motion.div>
+              </motion.div>
+            </div>
           </motion.article>
 
           {/* Two stacked cards */}
           <div className="lg:col-span-5 flex flex-col gap-6 lg:gap-8">
-            {testimonials.slice(1).map((testimonial, index) => (
-              <motion.article
-                key={testimonial.id}
-                initial={{ opacity: 0, y: 32, filter: "blur(10px)" }}
-                animate={isInView ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, y: 32, filter: "blur(10px)" }}
-                transition={{
-                  duration: 0.8,
-                  delay: 0.25 + index * 0.1,
-                  ease: [0.16, 1, 0.3, 1],
-                }}
-              >
-                <motion.div
-                  whileHover={{ y: -4, scale: 1.01 }}
-                  transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                  className="relative h-full p-6 sm:p-8 rounded-2xl bg-white/70 backdrop-blur-xl border border-slate-200/60 shadow-lg shadow-slate-900/[0.03] group overflow-hidden"
+            {testimonials.slice(1).map((testimonial, index) => {
+              // Use the appropriate tilt hook for each card
+              const cardTilt = index === 0 ? card1Tilt : card2Tilt;
+
+              return (
+                <motion.article
+                  key={testimonial.id}
+                  initial={{ opacity: 0, y: 32, filter: "blur(10px)" }}
+                  animate={isInView ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, y: 32, filter: "blur(10px)" }}
+                  transition={{
+                    duration: 0.8,
+                    delay: 0.25 + index * 0.1,
+                    ease: [0.16, 1, 0.3, 1],
+                  }}
                 >
+                  <div style={isMobile ? {} : perspectiveContainer}>
+                    <motion.div
+                      style={isMobile ? {} : { ...transform3D, rotateX: cardTilt.rotateX, rotateY: cardTilt.rotateY }}
+                      animate={{ boxShadow: cardTilt.isHovered ? cardShadow.hover : cardShadow.rest }}
+                      transition={{ duration: 0.3 }}
+                      {...cardTilt.handlers}
+                      className="relative h-full p-6 sm:p-8 rounded-2xl bg-white/70 backdrop-blur-xl border border-slate-200/60 group overflow-hidden"
+                    >
                   {/* Hover glow effect */}
                   <div
                     className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
@@ -269,7 +299,13 @@ export function PremiumTestimonials() {
                     >
                       {testimonial.industry}
                     </span>
-                    <div className="text-right">
+                    {/* Metric with spring bounce entrance */}
+                    <motion.div
+                      className="text-right"
+                      initial={{ scale: 0.8, opacity: 0 }}
+                      animate={isInView ? { scale: 1, opacity: 1 } : { scale: 0.8, opacity: 0 }}
+                      transition={{ duration: 0.6, delay: 0.4 + index * 0.1, ...depthSpring }}
+                    >
                       <p
                         className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
                         style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
@@ -283,7 +319,7 @@ export function PremiumTestimonials() {
                       >
                         {testimonial.metricLabel}
                       </p>
-                    </div>
+                    </motion.div>
                   </div>
 
                   {/* Quote */}
@@ -329,9 +365,11 @@ export function PremiumTestimonials() {
                       style={{ transformOrigin: "left" }}
                     />
                   </div>
-                </motion.div>
-              </motion.article>
-            ))}
+                    </motion.div>
+                  </div>
+                </motion.article>
+              );
+            })}
           </div>
         </div>
 

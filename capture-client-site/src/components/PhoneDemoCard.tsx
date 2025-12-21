@@ -2,6 +2,7 @@
 
 import { motion } from "@/lib/motion";
 import { Phone, CheckCircle, Bot, Sparkles } from "lucide-react";
+import { cardShadow, depthSpring } from "@/lib/depth-utils";
 
 // ============================================
 // PHONE DEMO CARD - Premium Transformation
@@ -17,10 +18,16 @@ export default function PhoneDemoCard() {
       transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
       className="relative w-full max-w-md mx-auto"
     >
-      {/* Floating animation wrapper */}
+      {/* Enhanced floating animation with subtle x oscillation */}
       <motion.div
-        animate={{ y: [0, -6, 0] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        animate={{
+          y: [0, -6, 0],
+          x: [0, 2, 0, -2, 0],
+        }}
+        transition={{
+          y: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+          x: { duration: 8, repeat: Infinity, ease: "easeInOut" },
+        }}
       >
         {/* Ambient glow effect */}
         <div
@@ -31,8 +38,13 @@ export default function PhoneDemoCard() {
           }}
         />
 
-        {/* Main card */}
-        <div className="relative bg-white/80 backdrop-blur-xl rounded-[2rem] p-8 border border-slate-200/60 shadow-xl shadow-slate-900/[0.04] overflow-hidden">
+        {/* Main card with layered shadow */}
+        <motion.div
+          className="relative bg-white/80 backdrop-blur-xl rounded-[2rem] p-8 border border-slate-200/60 overflow-hidden"
+          style={{ boxShadow: cardShadow.rest }}
+          whileHover={{ boxShadow: cardShadow.hover }}
+          transition={{ duration: 0.3 }}
+        >
           {/* Decorative gradient mesh background */}
           <div className="absolute inset-0 pointer-events-none">
             <div
@@ -131,15 +143,19 @@ export default function PhoneDemoCard() {
               </div>
             </div>
 
-            {/* Premium Audio Visualizer */}
+            {/* Premium Audio Visualizer with slight depth effect */}
             <div className="flex justify-center items-center gap-1.5 h-14 mb-3 px-4">
               {[...Array(8)].map((_, i) => (
                 <motion.div
                   key={i}
-                  className="w-1.5 bg-gradient-to-t from-blue-600 to-cyan-400 rounded-full shadow-sm"
+                  className="w-1.5 bg-gradient-to-t from-blue-600 to-cyan-400 rounded-full"
+                  style={{
+                    boxShadow: "0 2px 8px rgba(37, 99, 235, 0.3)",
+                  }}
                   animate={{
                     height: ["16%", "90%", "16%"],
                     opacity: [0.6, 1, 0.6],
+                    scaleX: [1, 1.1, 1],
                   }}
                   transition={{
                     duration: 1.4,
@@ -178,16 +194,30 @@ export default function PhoneDemoCard() {
               No setup needed.
             </p>
 
-            {/* Feature badges */}
+            {/* Feature badges with spring pop entrance */}
             <div className="flex flex-wrap items-center gap-3">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200/60 text-xs font-medium text-slate-600">
+              <motion.div
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200/60 text-xs font-medium text-slate-600"
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3, ...depthSpring }}
+                whileHover={{ scale: 1.05 }}
+              >
                 <CheckCircle className="w-3.5 h-3.5 text-emerald-500" />
                 24/7 Available
-              </div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200/60 text-xs font-medium text-slate-600">
+              </motion.div>
+              <motion.div
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200/60 text-xs font-medium text-slate-600"
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4, ...depthSpring }}
+                whileHover={{ scale: 1.05 }}
+              >
                 <CheckCircle className="w-3.5 h-3.5 text-emerald-500" />
                 Instant Response
-              </div>
+              </motion.div>
             </div>
           </div>
 
@@ -202,7 +232,7 @@ export default function PhoneDemoCard() {
               style={{ transformOrigin: "left" }}
             />
           </div>
-        </div>
+        </motion.div>
       </motion.div>
     </motion.div>
   );

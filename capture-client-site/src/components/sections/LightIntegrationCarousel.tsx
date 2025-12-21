@@ -3,6 +3,7 @@
 import { motion } from "@/lib/motion";
 import Image from "next/image";
 import Link from "next/link";
+import { cardShadowLight } from "@/lib/depth-utils";
 
 // ============================================
 // LIGHT INTEGRATION CAROUSEL
@@ -62,31 +63,42 @@ export function LightIntegrationCarousel() {
             }}
           >
             {duplicatedLogos.map((partner, index) => (
-              <Link
+              <motion.div
                 key={`${partner.name}-${index}`}
-                href={`/integrations/${partner.slug}`}
-                className="group relative flex items-center justify-center min-w-[140px] min-h-[64px] px-5 py-4 bg-white/80 backdrop-blur-sm rounded-xl border border-slate-100 shadow-sm hover:shadow-md hover:border-blue-100 hover:bg-white transition-all duration-300 cursor-pointer touch-manipulation focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                whileHover={{ y: -4, scale: 1.05 }}
+                transition={{ duration: 0.3 }}
                 style={{ flexShrink: 0 }}
               >
-                <Image
-                  src={partner.logo}
-                  alt={`${partner.name} integration`}
-                  width={partner.width}
-                  height={40}
-                  className="h-8 w-auto object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
-                  unoptimized
-                />
+                <motion.div
+                  initial={{ boxShadow: cardShadowLight.rest }}
+                  whileHover={{ boxShadow: cardShadowLight.hover }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Link
+                    href={`/integrations/${partner.slug}`}
+                    className="group relative flex items-center justify-center min-w-[140px] min-h-[64px] px-5 py-4 bg-white/80 backdrop-blur-sm rounded-xl border border-slate-100 hover:border-blue-100 hover:bg-white transition-all duration-300 cursor-pointer touch-manipulation focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
+                  >
+                    <Image
+                      src={partner.logo}
+                      alt={`${partner.name} integration`}
+                      width={partner.width}
+                      height={40}
+                      className="h-8 w-auto object-contain filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300"
+                      unoptimized
+                    />
 
-                {/* Hover glow effect */}
-                <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div
-                    className="absolute inset-0 rounded-xl"
-                    style={{
-                      background: "radial-gradient(circle at center, rgba(37, 99, 235, 0.03) 0%, transparent 70%)",
-                    }}
-                  />
-                </div>
-              </Link>
+                    {/* Hover glow effect */}
+                    <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                      <div
+                        className="absolute inset-0 rounded-xl"
+                        style={{
+                          background: "radial-gradient(circle at center, rgba(37, 99, 235, 0.03) 0%, transparent 70%)",
+                        }}
+                      />
+                    </div>
+                  </Link>
+                </motion.div>
+              </motion.div>
             ))}
           </motion.div>
         </div>

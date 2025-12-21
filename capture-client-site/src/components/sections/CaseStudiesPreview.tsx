@@ -5,6 +5,8 @@ import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import Link from "next/link";
 import { Snowflake, Stethoscope, Wrench, ArrowRight } from "lucide-react";
+import { use3DTilt, cardShadow, perspectiveContainer, transform3D, depthSpring } from "@/lib/depth-utils";
+import { useIsMobile } from "@/lib/responsive";
 
 interface CaseStudy {
   id: string;
@@ -233,6 +235,10 @@ interface CaseStudyCardProps {
 }
 
 function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
+  const isMobile = useIsMobile();
+  // 3D tilt for each card
+  const { rotateX, rotateY, isHovered, handlers } = use3DTilt(4);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -247,13 +253,29 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
         ease: [0.22, 1, 0.36, 1],
       }}
       className="group"
+      style={isMobile ? {} : perspectiveContainer}
     >
-      <div className="relative h-full p-6 sm:p-8 lg:p-10 rounded-2xl border border-slate-200 bg-white backdrop-blur-xl transition-all duration-500 hover:border-slate-300 hover:bg-slate-50">
+      <motion.div
+        className="relative h-full p-6 sm:p-8 lg:p-10 rounded-2xl border border-slate-200 bg-white backdrop-blur-xl"
+        style={isMobile ? {
+          boxShadow: isHovered ? cardShadow.hover : cardShadow.rest,
+        } : {
+          ...transform3D,
+          rotateX,
+          rotateY,
+          boxShadow: isHovered ? cardShadow.hover : cardShadow.rest,
+        }}
+        {...handlers}
+      >
         {/* Industry badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#00C9FF]/10 to-[#4A69E2]/10 border border-slate-200 mb-6">
+        <motion.div
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#00C9FF]/10 to-[#4A69E2]/10 border border-slate-200 mb-6"
+          whileHover={{ rotateY: 5 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+        >
           <study.icon className="w-4 h-4 text-[#00C9FF]" />
           <span className="text-sm font-medium text-slate-700">{study.industry}</span>
-        </div>
+        </motion.div>
 
         {/* Company */}
         <h3
@@ -287,6 +309,8 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
               transition={{
                 duration: 0.5,
                 delay: index * 0.15 + idx * 0.1 + 0.3,
+                type: "spring",
+                ...depthSpring,
               }}
               className="relative"
             >
@@ -294,22 +318,52 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
                 <span className="text-xs uppercase tracking-wider text-slate-500 font-medium min-w-0 truncate">
                   {result.metric}
                 </span>
-                <span className="text-xs font-bold text-[#00C9FF] flex-shrink-0">
+                <motion.span
+                  className="text-xs font-bold text-[#00C9FF] flex-shrink-0"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                  transition={{
+                    duration: 0.4,
+                    delay: index * 0.15 + idx * 0.1 + 0.5,
+                    type: "spring",
+                    ...depthSpring,
+                  }}
+                >
                   {result.improvement}
-                </span>
+                </motion.span>
               </div>
               <div className="flex items-center gap-2 sm:gap-3">
-                <div className="flex-1 min-w-0 bg-slate-100 rounded-lg p-2 text-center border border-slate-200">
+                <motion.div
+                  className="flex-1 min-w-0 bg-slate-100 rounded-lg p-2 text-center border border-slate-200"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+                  transition={{
+                    duration: 0.4,
+                    delay: index * 0.15 + idx * 0.1 + 0.35,
+                    type: "spring",
+                    ...depthSpring,
+                  }}
+                >
                   <p className="text-slate-500 text-xs sm:text-sm line-through truncate">
                     {result.before}
                   </p>
-                </div>
+                </motion.div>
                 <ArrowRight className="w-3 h-3 sm:w-4 sm:h-4 text-[#00C9FF] flex-shrink-0" />
-                <div className="flex-1 min-w-0 bg-gradient-to-r from-[#00C9FF]/10 to-[#4A69E2]/10 rounded-lg p-2 text-center border border-[#00C9FF]/20">
+                <motion.div
+                  className="flex-1 min-w-0 bg-gradient-to-r from-[#00C9FF]/10 to-[#4A69E2]/10 rounded-lg p-2 text-center border border-[#00C9FF]/20"
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.95 }}
+                  transition={{
+                    duration: 0.4,
+                    delay: index * 0.15 + idx * 0.1 + 0.45,
+                    type: "spring",
+                    ...depthSpring,
+                  }}
+                >
                   <p className="text-[#00C9FF] font-bold text-xs sm:text-sm truncate">
                     {result.after}
                   </p>
-                </div>
+                </motion.div>
               </div>
             </motion.div>
           ))}
@@ -326,7 +380,7 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
 
         {/* Subtle glow on hover */}
         <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none bg-gradient-to-br from-[#00C9FF]/[0.02] via-transparent to-[#4A69E2]/[0.02]" />
-      </div>
+      </motion.div>
     </motion.div>
   );
 }
