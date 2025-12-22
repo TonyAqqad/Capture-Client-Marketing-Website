@@ -8,7 +8,7 @@
   },
   "location": {
     "city": "Alexandria",
-    "state": "VA",
+    "state_abbr": "VA",
     "state_full": "Virginia",
     "slug": "alexandria-va",
     "nearby_areas": [

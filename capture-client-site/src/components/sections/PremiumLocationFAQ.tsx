@@ -167,7 +167,7 @@ export default function PremiumLocationFAQ({ faqs, cityName }: PremiumLocationFA
             </div>
             <a
               href="tel:865-346-6111"
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] text-black px-6 py-3 rounded-xl transition-all duration-300 hover:shadow-[0_8px_24px_rgba(0,201,255,0.4)] hover:scale-105 touch-target"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] text-white px-6 py-3 rounded-xl transition-all duration-300 hover:shadow-[0_8px_24px_rgba(0,201,255,0.4)] hover:scale-105 touch-target"
               style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}
             >
               <Phone className="w-5 h-5" />

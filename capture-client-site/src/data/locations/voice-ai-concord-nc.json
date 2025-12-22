@@ -2,19 +2,20 @@
   "page_id": "voice-ai-concord-nc",
   "page_type": "service-location",
   "service": {
-    "name": "Voice AI",
-    "slug": "voice-ai",
+    "service_name": "Voice AI",
+    "service_slug": "voice-ai",
     "category": "automation"
   },
   "location": {
     "city": "Concord",
-    "state": "NC",
-    "state_full": "North Carolina"
+    "state_abbr": "NC",
+    "state_full": "North Carolina",
+    "service_area_radius": "30 miles"
   },
   "seo": {
-    "title": "Voice AI Agency in Concord, NC | Capture Client",
+    "page_title": "Voice AI Agency in Concord, NC | Capture Client",
     "meta_description": "Concord businesses use Voice AI to capture leads 24/7. Automated phone answering, instant lead qualification, and appointment booking. Start your free trial!",
-    "h1": "Voice AI Technology for Concord Businesses",
+    "h1_heading": "Voice AI Technology for Concord Businesses",
     "keywords": [
       "voice ai concord",
       "ai phone concord nc",

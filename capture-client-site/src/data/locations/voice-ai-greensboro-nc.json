@@ -2,19 +2,20 @@
   "page_id": "voice-ai-greensboro-nc",
   "page_type": "service-location",
   "service": {
-    "name": "Voice AI",
-    "slug": "voice-ai",
+    "service_name": "Voice AI",
+    "service_slug": "voice-ai",
     "category": "automation"
   },
   "location": {
     "city": "Greensboro",
-    "state": "NC",
-    "state_full": "North Carolina"
+    "state_abbr": "NC",
+    "state_full": "North Carolina",
+    "service_area_radius": "30 miles"
   },
   "seo": {
-    "title": "Voice AI Agency in Greensboro, NC | Capture Client",
+    "page_title": "Voice AI Agency in Greensboro, NC | Capture Client",
     "meta_description": "Greensboro businesses trust our Voice AI to answer calls 24/7, qualify leads automatically, and book appointments. Never miss another opportunity!",
-    "h1": "Voice AI Solutions for Greensboro, North Carolina",
+    "h1_heading": "Voice AI Solutions for Greensboro, North Carolina",
     "keywords": [
       "voice ai greensboro",
       "ai answering service greensboro nc",

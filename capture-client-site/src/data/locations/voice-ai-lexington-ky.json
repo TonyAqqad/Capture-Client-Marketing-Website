@@ -2,20 +2,21 @@
   "page_id": "voice-ai-lexington-ky",
   "page_type": "service-location",
   "service": {
-    "name": "Voice AI",
-    "slug": "voice-ai",
+    "service_name": "Voice AI",
+    "service_slug": "voice-ai",
     "category": "automation"
   },
   "location": {
     "city": "Lexington",
     "slug": "lexington",
-    "state": "KY",
-    "state_full": "Kentucky"
+    "state_abbr": "KY",
+    "state_full": "Kentucky",
+    "service_area_radius": "30 miles"
   },
   "seo": {
-    "title": "Voice AI Agency in Lexington, KY | Capture Client",
+    "page_title": "Voice AI Agency in Lexington, KY | Capture Client",
     "meta_description": "In the heart of the Bluegrass, from Nicholasville Road to CentrePointe, Lexington businesses never miss a lead. Trusted by Commerce Lexington members. Call 865-346-6111!",
-    "h1": "Voice AI Solutions for Lexington, Kentucky Businesses",
+    "h1_heading": "Voice AI Solutions for Lexington, Kentucky Businesses",
     "keywords": [
       "voice ai lexington",
       "ai voice agents lexington ky",

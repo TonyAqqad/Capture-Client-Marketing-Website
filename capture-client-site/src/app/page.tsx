@@ -227,40 +227,7 @@ export default function HomePage() {
   return (
     <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-white">
       {/* JSON-LD Structured Data - Page-specific schemas only */}
-      {/* Organization schema is rendered globally in layout.tsx */}
-
-      {/* WebSite Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: "Capture Client",
-            url: "https://captureclient.com",
-            description: "AI Voice Agents for Business - Never miss a lead again"
-          })
-        }}
-      />
-
-      {/* SoftwareApplication Schema */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            name: "Capture Client AI Voice Agent",
-            applicationCategory: "BusinessApplication",
-            operatingSystem: "Web, iOS, Android",
-            offers: {
-              "@type": "Offer",
-              price: "297",
-              priceCurrency: "USD"
-            }
-          })
-        }}
-      />
+      {/* Organization + WebSite schemas are rendered globally in layout.tsx */}
 
       <script
         type="application/ld+json"

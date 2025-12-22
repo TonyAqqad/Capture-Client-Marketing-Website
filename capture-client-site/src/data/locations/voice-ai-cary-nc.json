@@ -2,19 +2,20 @@
   "page_id": "voice-ai-cary-nc",
   "page_type": "service-location",
   "service": {
-    "name": "Voice AI",
-    "slug": "voice-ai",
+    "service_name": "Voice AI",
+    "service_slug": "voice-ai",
     "category": "automation"
   },
   "location": {
     "city": "Cary",
-    "state": "NC",
-    "state_full": "North Carolina"
+    "state_abbr": "NC",
+    "state_full": "North Carolina",
+    "service_area_radius": "30 miles"
   },
   "seo": {
-    "title": "Voice AI Agency in Cary, NC | Capture Client",
+    "page_title": "Voice AI Agency in Cary, NC | Capture Client",
     "meta_description": "Cary businesses leverage Voice AI for 24/7 lead capture. Automate phone calls, qualify prospects, book appointments instantly. Get your free demo today!",
-    "h1": "Voice AI Solutions for Cary, North Carolina",
+    "h1_heading": "Voice AI Solutions for Cary, North Carolina",
     "keywords": [
       "voice ai cary",
       "ai phone system cary nc",

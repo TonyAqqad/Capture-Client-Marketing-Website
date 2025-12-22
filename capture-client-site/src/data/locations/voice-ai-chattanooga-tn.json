@@ -2,26 +2,27 @@
   "page_id": "voice-ai-chattanooga-tn",
   "page_type": "service-location",
   "service": {
-    "name": "Voice AI",
-    "slug": "voice-ai",
+    "service_name": "Voice AI",
+    "service_slug": "voice-ai",
     "category": "automation"
   },
   "location": {
     "city": "Chattanooga",
     "slug": "chattanooga",
-    "state": "Tennessee",
     "state_abbr": "TN",
+    "state_full": "Tennessee",
     "nearby_areas": [
       "Cleveland",
       "East Ridge",
       "Red Bank",
       "Signal Mountain"
-    ]
+    ],
+    "service_area_radius": "30 miles"
   },
   "seo": {
     "page_title": "Voice AI Agency in Chattanooga, TN | Capture Client",
     "meta_description": "Chattanooga businesses automate calls with Capture Client's Voice AI. 24/7 lead capture, appointment booking, and customer service. Call 865-346-6111 today.",
-    "h1": "Voice AI Agency in Chattanooga, Tennessee",
+    "h1_heading": "Voice AI Agency in Chattanooga, Tennessee",
     "keywords": [
       "voice ai chattanooga",
       "ai voice agents chattanooga tn",

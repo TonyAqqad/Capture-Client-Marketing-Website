@@ -8,7 +8,7 @@
   },
   "location": {
     "city": "Fredericksburg",
-    "state": "VA",
+    "state_abbr": "VA",
     "state_full": "Virginia",
     "slug": "fredericksburg-va",
     "nearby_areas": [

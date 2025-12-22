@@ -2,20 +2,21 @@
   "page_id": "voice-ai-louisville-ky",
   "page_type": "service-location",
   "service": {
-    "name": "Voice AI",
-    "slug": "voice-ai",
+    "service_name": "Voice AI",
+    "service_slug": "voice-ai",
     "category": "automation"
   },
   "location": {
     "city": "Louisville",
     "slug": "louisville",
-    "state": "KY",
-    "state_full": "Kentucky"
+    "state_abbr": "KY",
+    "state_full": "Kentucky",
+    "service_area_radius": "30 miles"
   },
   "seo": {
-    "title": "Voice AI Agency in Louisville, KY | Capture Client",
+    "page_title": "Voice AI Agency in Louisville, KY | Capture Client",
     "meta_description": "Louisville businesses from Medical Center Row to the Highlands: Never miss a call with AI voice agents. Trusted by Greater Louisville Inc. members. Call 865-346-6111!",
-    "h1": "Voice AI Solutions for Louisville, Kentucky Businesses",
+    "h1_heading": "Voice AI Solutions for Louisville, Kentucky Businesses",
     "keywords": [
       "voice ai louisville",
       "ai voice agents kentucky",

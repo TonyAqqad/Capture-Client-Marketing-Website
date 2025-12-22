@@ -2,19 +2,20 @@
   "page_id": "voice-ai-winston-salem-nc",
   "page_type": "service-location",
   "service": {
-    "name": "Voice AI",
-    "slug": "voice-ai",
+    "service_name": "Voice AI",
+    "service_slug": "voice-ai",
     "category": "automation"
   },
   "location": {
     "city": "Winston-Salem",
-    "state": "NC",
-    "state_full": "North Carolina"
+    "state_abbr": "NC",
+    "state_full": "North Carolina",
+    "service_area_radius": "30 miles"
   },
   "seo": {
-    "title": "Voice AI Agency in Winston-Salem, NC | Capture Client",
+    "page_title": "Voice AI Agency in Winston-Salem, NC | Capture Client",
     "meta_description": "Winston-Salem's trusted Voice AI solution. Automate phone calls, capture leads 24/7, qualify prospects instantly. Free consultation - call now!",
-    "h1": "Voice AI Solutions for Winston-Salem Businesses",
+    "h1_heading": "Voice AI Solutions for Winston-Salem Businesses",
     "keywords": [
       "voice ai winston salem",
       "ai phone winston salem nc",

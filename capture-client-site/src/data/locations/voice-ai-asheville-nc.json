@@ -2,19 +2,20 @@
   "page_id": "voice-ai-asheville-nc",
   "page_type": "service-location",
   "service": {
-    "name": "Voice AI",
-    "slug": "voice-ai",
+    "service_name": "Voice AI",
+    "service_slug": "voice-ai",
     "category": "automation"
   },
   "location": {
     "city": "Asheville",
-    "state": "NC",
-    "state_full": "North Carolina"
+    "state_abbr": "NC",
+    "state_full": "North Carolina",
+    "service_area_radius": "30 miles"
   },
   "seo": {
-    "title": "Voice AI Agency in Asheville, NC | Capture Client",
+    "page_title": "Voice AI Agency in Asheville, NC | Capture Client",
     "meta_description": "Asheville businesses use Voice AI to answer calls 24/7, capture tourism and local leads automatically. Perfect for hospitality, tourism & local services!",
-    "h1": "Voice AI Technology for Asheville, NC Businesses",
+    "h1_heading": "Voice AI Technology for Asheville, NC Businesses",
     "keywords": [
       "voice ai asheville",
       "ai phone asheville nc",

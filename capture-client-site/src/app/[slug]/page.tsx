@@ -5,6 +5,7 @@ import Image from "next/image";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import { Benefit, FAQItem, HowItWorksStep, UseCase } from "@/types/content";
 import { getIcon } from "@/lib/icon-map";
+import JsonLd from "@/components/seo/JsonLd";
 
 export async function generateStaticParams() {
   const nationalPages = await getAllNationalPages();
@@ -60,8 +61,64 @@ export default async function NationalPage({ params }: { params: Promise<{ slug:
     notFound();
   }
 
+  // Build JSON-LD schemas
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": page.seo.page_title.split('|')[0]?.trim() || page.keyword.primary_keyword,
+    "description": page.seo.meta_description,
+    "provider": {
+      "@type": "Organization",
+      "name": "Capture Client",
+      "url": "https://captureclient.com"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "url": `https://captureclient.com/${resolvedParams.slug}`
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://captureclient.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": page.keyword.primary_keyword,
+        "item": `https://captureclient.com/${resolvedParams.slug}`
+      }
+    ]
+  };
+
+  const faqSchema = page.faq && page.faq.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": page.faq.map((item: FAQItem) => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  } : null;
+
+  const schemas = faqSchema
+    ? [serviceSchema, breadcrumbSchema, faqSchema]
+    : [serviceSchema, breadcrumbSchema];
+
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd schema={schemas} />
+
       {/* Hero Section */}
       <div className="relative py-24 px-8 lg:px-16 bg-gradient-to-br from-slate-50 via-white to-primary/10">
         {page.hero?.hero_image && (
@@ -85,7 +142,7 @@ export default async function NationalPage({ params }: { params: Promise<{ slug:
             {page.hero?.cta_primary && (
               <a
                 href={page.hero.cta_primary.action}
-                className="bg-primary text-black px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm transition-all duration-300 hover:scale-105 glowing-button"
+                className="bg-primary text-white px-8 py-4 rounded-full font-bold uppercase tracking-wider text-sm transition-all duration-300 hover:scale-105 glowing-button"
               >
                 {page.hero.cta_primary.text}
               </a>

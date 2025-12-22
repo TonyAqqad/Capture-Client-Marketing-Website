@@ -2,20 +2,21 @@
   "page_id": "voice-ai-covington-ky",
   "page_type": "service-location",
   "service": {
-    "name": "Voice AI",
-    "slug": "voice-ai",
+    "service_name": "Voice AI",
+    "service_slug": "voice-ai",
     "category": "automation"
   },
   "location": {
     "city": "Covington",
     "slug": "covington",
-    "state": "KY",
-    "state_full": "Kentucky"
+    "state_abbr": "KY",
+    "state_full": "Kentucky",
+    "service_area_radius": "30 miles"
   },
   "seo": {
-    "title": "Voice AI Agency in Covington, KY | Capture Client",
+    "page_title": "Voice AI Agency in Covington, KY | Capture Client",
     "meta_description": "Covington & Northern Kentucky businesses from Mainstrasse to RiverCenter: Capture every lead 24/7 with AI. Trusted by NKY Chamber. Call 865-346-6111!",
-    "h1": "Voice AI Solutions for Covington, Kentucky Businesses",
+    "h1_heading": "Voice AI Solutions for Covington, Kentucky Businesses",
     "keywords": [
       "voice ai covington",
       "ai voice agents covington ky",

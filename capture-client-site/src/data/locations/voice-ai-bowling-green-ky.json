@@ -2,20 +2,21 @@
   "page_id": "voice-ai-bowling-green-ky",
   "page_type": "service-location",
   "service": {
-    "name": "Voice AI",
-    "slug": "voice-ai",
+    "service_name": "Voice AI",
+    "service_slug": "voice-ai",
     "category": "automation"
   },
   "location": {
     "city": "Bowling Green",
     "slug": "bowling-green",
-    "state": "KY",
-    "state_full": "Kentucky"
+    "state_abbr": "KY",
+    "state_full": "Kentucky",
+    "service_area_radius": "30 miles"
   },
   "seo": {
-    "title": "Voice AI Agency in Bowling Green, KY | Capture Client",
+    "page_title": "Voice AI Agency in Bowling Green, KY | Capture Client",
     "meta_description": "Bowling Green businesses from Scottsville Road to the Corvette plant: Capture every lead with 24/7 AI. Trusted by Chamber members. Call 865-346-6111!",
-    "h1": "Voice AI Solutions for Bowling Green, Kentucky Businesses",
+    "h1_heading": "Voice AI Solutions for Bowling Green, Kentucky Businesses",
     "keywords": [
       "voice ai bowling green",
       "ai receptionist bowling green ky",

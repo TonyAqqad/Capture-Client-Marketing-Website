@@ -8,7 +8,7 @@
   },
   "location": {
     "city": "Arlington",
-    "state": "VA",
+    "state_abbr": "VA",
     "state_full": "Virginia",
     "slug": "arlington-va",
     "nearby_areas": [

@@ -8,7 +8,7 @@
   },
   "location": {
     "city": "Newport News",
-    "state": "VA",
+    "state_abbr": "VA",
     "state_full": "Virginia",
     "slug": "newport-news-va",
     "nearby_areas": [

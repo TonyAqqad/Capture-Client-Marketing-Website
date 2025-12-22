@@ -40,14 +40,17 @@ Never use:
 - Some code/docs still contain legacy colors (`#00C9FF`, `#4A69E2`, `#D4AF37`). Don’t introduce new instances; converge toward the canonical palette above.
 - Some archived templates still describe dark/gold styling. Treat as legacy only.
 
-## Deployment Readiness (2025-12-21)
-Comprehensive 7-phase audit completed with 16+ parallel agents. **All blocking issues resolved.**
+## Production Readiness Push (2025-12-22)
+Final push to get from 75% → 95%+ production-ready. **All P0/P1 issues resolved.**
 
-### Fixed This Session (commit 8875f3b)
-- ✅ Mobile pricing tables (responsive stacked cards)
-- ✅ Cookie consent compliance (Cookie Settings in footer)
-- ✅ WCAG contrast (26 instances across 6 files)
-- ✅ Tooltip light theme conversion
+### Completed
+- ✅ 32+ location JSON files: Fixed field names (`state_abbr`, `page_title`, `h1_heading`, etc.)
+- ✅ 3 package JSON files: Fixed `seo.title` → `seo.page_title`
+- ✅ 3 CTA contrast fixes: `text-black` → `text-white` (WCAG AA compliance)
+- ✅ 6 favicon/PWA icons generated from SVG source
+- ✅ Homepage schema deduplication (removed inline WebSite + SoftwareApplication)
+- ✅ JSON-LD added to `/pricing/[slug]` (Product, Breadcrumb, FAQ schemas)
+- ✅ JSON-LD added to `/[slug]` national pages (Service, Breadcrumb, FAQ schemas)
 
 ### Remaining Optimizations (non-blocking)
 - Performance: LCP 8-14s (target <2.5s) - lazy load heavy components

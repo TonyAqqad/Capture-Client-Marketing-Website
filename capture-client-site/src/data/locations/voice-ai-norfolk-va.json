@@ -8,7 +8,7 @@
   },
   "location": {
     "city": "Norfolk",
-    "state": "VA",
+    "state_abbr": "VA",
     "state_full": "Virginia",
     "slug": "norfolk-va",
     "nearby_areas": [

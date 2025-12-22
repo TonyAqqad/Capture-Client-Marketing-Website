@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 import Link from "next/link";
+import JsonLd from "@/components/seo/JsonLd";
 import {
   Benefit,
   FAQItem,
@@ -79,8 +80,74 @@ export default async function PackagePage({
     notFound();
   }
 
+  // Build JSON-LD schemas
+  const priceNumber = pkg.package.price.replace(/[^0-9.]/g, '');
+
+  const productSchema = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": pkg.package.package_name,
+    "description": pkg.seo.meta_description,
+    "brand": {
+      "@type": "Brand",
+      "name": "Capture Client"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": priceNumber,
+      "priceCurrency": "USD",
+      "priceValidUntil": new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
+      "availability": "https://schema.org/InStock",
+      "url": `https://captureclient.com/pricing/${resolvedParams.slug}`
+    }
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://captureclient.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Pricing",
+        "item": "https://captureclient.com/pricing"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": pkg.package.package_name,
+        "item": `https://captureclient.com/pricing/${resolvedParams.slug}`
+      }
+    ]
+  };
+
+  const faqSchema = pkg.faq && pkg.faq.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": pkg.faq.map((item: FAQItem) => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  } : null;
+
+  const schemas = faqSchema
+    ? [productSchema, breadcrumbSchema, faqSchema]
+    : [productSchema, breadcrumbSchema];
+
   return (
     <div className="min-h-screen bg-white">
+      <JsonLd schema={schemas} />
+
       {/* Premium Hero Section */}
       <section className="relative overflow-hidden">
         {/* Animated gradient background */}

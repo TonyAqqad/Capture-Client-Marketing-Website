@@ -8,7 +8,7 @@
   },
   "location": {
     "city": "Roanoke",
-    "state": "VA",
+    "state_abbr": "VA",
     "state_full": "Virginia",
     "slug": "roanoke-va",
     "nearby_areas": [

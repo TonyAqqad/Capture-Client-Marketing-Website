@@ -8,7 +8,7 @@
   },
   "location": {
     "city": "Hampton",
-    "state": "VA",
+    "state_abbr": "VA",
     "state_full": "Virginia",
     "slug": "hampton-va",
     "nearby_areas": [

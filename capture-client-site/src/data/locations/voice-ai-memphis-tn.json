@@ -2,26 +2,27 @@
   "page_id": "voice-ai-memphis-tn",
   "page_type": "service-location",
   "service": {
-    "name": "Voice AI",
-    "slug": "voice-ai",
+    "service_name": "Voice AI",
+    "service_slug": "voice-ai",
     "category": "automation"
   },
   "location": {
     "city": "Memphis",
     "slug": "memphis",
-    "state": "Tennessee",
     "state_abbr": "TN",
+    "state_full": "Tennessee",
     "nearby_areas": [
       "Germantown",
       "Collierville",
       "Bartlett",
       "Cordova"
-    ]
+    ],
+    "service_area_radius": "30 miles"
   },
   "seo": {
     "page_title": "Voice AI Agency in Memphis, TN | Capture Client",
     "meta_description": "Memphis businesses capture more leads with Voice AI from Capture Client. 24/7 automated phone answering and appointment booking. Free demo available.",
-    "h1": "Voice AI Agency in Memphis, Tennessee",
+    "h1_heading": "Voice AI Agency in Memphis, Tennessee",
     "keywords": [
       "voice ai memphis",
       "ai voice agents memphis tn",

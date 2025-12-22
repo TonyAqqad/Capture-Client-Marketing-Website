@@ -8,7 +8,7 @@
   },
   "location": {
     "city": "Suffolk",
-    "state": "VA",
+    "state_abbr": "VA",
     "state_full": "Virginia",
     "slug": "suffolk-va",
     "nearby_areas": [

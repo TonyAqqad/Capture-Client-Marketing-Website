@@ -8,7 +8,7 @@
   },
   "location": {
     "city": "Lynchburg",
-    "state": "VA",
+    "state_abbr": "VA",
     "state_full": "Virginia",
     "slug": "lynchburg-va",
     "nearby_areas": [

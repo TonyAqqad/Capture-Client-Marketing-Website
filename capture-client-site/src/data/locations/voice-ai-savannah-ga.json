@@ -8,7 +8,7 @@
   },
   "location": {
     "city": "Savannah",
-    "state": "GA",
+    "state_abbr": "GA",
     "state_full": "Georgia",
     "slug": "savannah-ga",
     "nearby_areas": [

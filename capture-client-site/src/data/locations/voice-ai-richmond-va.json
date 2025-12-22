@@ -8,7 +8,7 @@
   },
   "location": {
     "city": "Richmond",
-    "state": "VA",
+    "state_abbr": "VA",
     "state_full": "Virginia",
     "slug": "richmond-va",
     "nearby_areas": [

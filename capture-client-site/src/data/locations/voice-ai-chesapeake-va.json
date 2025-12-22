@@ -8,7 +8,7 @@
   },
   "location": {
     "city": "Chesapeake",
-    "state": "VA",
+    "state_abbr": "VA",
     "state_full": "Virginia",
     "slug": "chesapeake-va",
     "nearby_areas": [

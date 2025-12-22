@@ -8,7 +8,7 @@
   },
   "location": {
     "city": "Virginia Beach",
-    "state": "VA",
+    "state_abbr": "VA",
     "state_full": "Virginia",
     "slug": "virginia-beach-va",
     "nearby_areas": [
