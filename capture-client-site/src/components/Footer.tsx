@@ -201,6 +201,18 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
+                    href="/locations"
+                    className="text-slate-600 hover:text-blue-600 text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
+                    style={{ fontWeight: 400 }}
+                  >
+                    <span className="w-1 h-1 rounded-full bg-blue-600 group-hover:bg-cyan-500 transition-colors duration-300" />
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">
+                      Locations
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href="/blog"
                     className="text-slate-600 hover:text-blue-600 text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
                     style={{ fontWeight: 400 }}
@@ -268,6 +280,18 @@ export default function Footer() {
                     <span className="w-1 h-1 rounded-full bg-blue-600 group-hover:bg-cyan-500 transition-colors duration-300" />
                     <span className="group-hover:translate-x-1 transition-transform duration-300">
                       FAQ
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/tools/missed-call-calculator"
+                    className="text-slate-600 hover:text-blue-600 text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
+                    style={{ fontWeight: 400 }}
+                  >
+                    <span className="w-1 h-1 rounded-full bg-blue-600 group-hover:bg-cyan-500 transition-colors duration-300" />
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">
+                      ROI Calculator
                     </span>
                   </Link>
                 </li>

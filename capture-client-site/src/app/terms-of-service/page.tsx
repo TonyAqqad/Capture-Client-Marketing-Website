@@ -17,6 +17,18 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
+  openGraph: {
+    title: "Terms of Service | Capture Client",
+    description: "Read Capture Client's terms of service to understand the rules and guidelines for using our platform and services.",
+    url: "https://captureclient.com/terms-of-service",
+    siteName: "Capture Client",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Service | Capture Client",
+    description: "Read Capture Client's terms of service to understand the rules and guidelines for using our platform and services.",
+  },
 };
 
 export default function TermsOfServicePage() {

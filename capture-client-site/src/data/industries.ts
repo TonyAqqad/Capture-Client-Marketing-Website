@@ -392,6 +392,32 @@ export const INDUSTRIES: Industry[] = [
     relatedIntegrations: ['athenahealth', 'kareo', 'nextgen', 'drchrono'],
     relatedCaseStudies: ['dental', 'medical-spa'],
     ctaText: 'Try Our AI Now',
+    faqs: [
+      {
+        question: 'Is your AI voice agent HIPAA compliant for healthcare practices?',
+        answer: 'Yes, our system is fully HIPAA compliant with SOC-II Type 2 certification. All patient communications are encrypted end-to-end (AES-256), call recordings are stored on secure HIPAA-compliant servers, and we provide a Business Associate Agreement (BAA) with every healthcare client. Our platform undergoes annual security audits and maintains strict access controls to protect Protected Health Information (PHI).',
+      },
+      {
+        question: 'Can the AI handle patient appointment scheduling and integrate with our EHR system?',
+        answer: 'Absolutely. Our AI integrates seamlessly with major EHR systems including Epic, Athenahealth, Kareo, NextGen, and DrChrono. Patients can book, reschedule, or cancel appointments 24/7 based on real-time provider availability. The AI syncs directly with your calendar, sends automated reminders via phone/SMS/email, and reduces no-shows by up to 60%.',
+      },
+      {
+        question: 'How does the AI triage emergency vs. routine patient calls?',
+        answer: 'The AI uses intelligent symptom assessment to categorize calls by urgency: Emergency (chest pain, severe bleeding - immediate escalation to on-call provider), Urgent (high fever, injury - same-day appointment), Routine (annual physical, medication refill - scheduled appointment), or Administrative (billing, insurance - routed to staff). You define the triage protocols, and the AI follows them precisely every time.',
+      },
+      {
+        question: 'What happens if a patient calls after hours with a medical concern?',
+        answer: 'Our AI provides 24/7 after-hours support. For emergencies, it immediately alerts your on-call physician via phone and SMS. For urgent matters, it schedules next-day appointments and provides symptom management guidance. For routine questions (prescription refills, appointment scheduling), it handles them completely without disturbing your staff. This eliminates expensive nurse hotline fees ($50-$100 per call) while providing better patient care.',
+      },
+      {
+        question: 'Can the AI help with prescription refill requests and patient portal support?',
+        answer: 'Yes. The AI handles routine prescription refill requests by gathering medication name, pharmacy details, and patient information, then creates a task in your EHR for provider approval. It also guides patients through portal registration, password resets, viewing test results, and accessing medical records. This frees your front desk staff to focus on in-person patient care instead of answering repetitive administrative questions.',
+      },
+      {
+        question: 'How quickly can we set up the AI for our medical practice?',
+        answer: 'Most healthcare practices are live within 48-72 hours. Setup includes: (1) EHR integration and calendar sync, (2) Customizing triage protocols and appointment types, (3) HIPAA compliance configuration and BAA execution, (4) Training the AI on your practice-specific workflows, (5) Testing with your team. Our healthcare specialists handle the technical setup, and we provide staff training to ensure a smooth transition.',
+      },
+    ],
     trustBadges: [
       { type: 'compliance', label: 'HIPAA Compliant', icon: 'health_and_safety', description: 'Full PHI protection' },
       { type: 'compliance', label: 'SOC-II Type 2', icon: 'security', description: 'Annual audits & validation' },
@@ -465,6 +491,32 @@ export const INDUSTRIES: Industry[] = [
     },
     relatedIntegrations: ['connectwise', 'autotask', 'kaseya', 'syncro'],
     ctaText: 'Try IT Support AI',
+    faqs: [
+      {
+        question: 'How does the AI handle technical support ticket triage and prioritization?',
+        answer: 'The AI automatically categorizes incoming support requests by severity (P1: Server Down, P2: Service Degraded, P3: Minor Issue, P4: Request) based on keywords, client SLA tier, and business impact. Critical P1 issues are immediately escalated to on-call engineers via SMS and phone, while P3/P4 tickets are routed to the next available technician. The AI creates detailed tickets in your PSA with all relevant information (client, affected systems, error messages) to speed resolution.',
+      },
+      {
+        question: 'Can the AI integrate with our PSA system like ConnectWise or Autotask?',
+        answer: 'Yes, we offer native integrations with ConnectWise Manage, Autotask PSA, Kaseya BMS, and Syncro. The AI automatically creates tickets with proper categorization, assigns to technicians based on skills and availability, logs all call details, and updates ticket status in real-time. Client-specific configurations (SLA terms, escalation contacts, billing codes) sync directly from your PSA to ensure accurate routing and time tracking.',
+      },
+      {
+        question: 'What happens when a client calls with a complex technical question the AI can\'t answer?',
+        answer: 'The AI is trained to recognize when issues exceed its knowledge base (custom configurations, complex networking, security incidents) and smoothly escalates to a human technician. It captures all troubleshooting details attempted, creates a comprehensive ticket with screenshots or error codes if provided, and immediately transfers the call or schedules an urgent callback based on your escalation rules. For known complex issues, you can configure automatic routing to specialized engineers.',
+      },
+      {
+        question: 'How does after-hours emergency support work for MSPs with multiple clients?',
+        answer: 'The AI provides 24/7 coverage for all your clients with client-specific greetings and escalation protocols. When emergencies occur (server outages, ransomware, network failures), the AI identifies the severity, notifies the on-call engineer immediately, and provides clients with expected response times based on their SLA. Non-urgent after-hours calls are ticketed for next business day, while critical issues trigger your defined emergency response workflow. You define what constitutes an "emergency" for each client tier.',
+      },
+      {
+        question: 'Can the AI provide self-service support for common Level 1 issues?',
+        answer: 'Absolutely. The AI walks users through common fixes like password resets, MFA setup, printer configuration, VPN connection troubleshooting, and software installation. It references your internal knowledge base and provides step-by-step instructions with confirmation at each stage. If self-service fails, the AI creates a ticket with all troubleshooting steps already documented, saving your technicians time. This reduces Level 1 ticket volume by 40-60%, freeing engineers for billable work.',
+      },
+      {
+        question: 'How does the AI ensure SLA compliance and response time tracking?',
+        answer: 'The AI tracks SLA response commitments (15-minute, 1-hour, 4-hour, next business day) for each client based on their service agreement in your PSA. It monitors elapsed time from initial call and automatically escalates tickets approaching SLA breach to management. Real-time dashboards show SLA compliance by client, and the AI sends proactive alerts if response times are at risk. All call timestamps and ticket creation times are logged for audit trails and performance reporting.',
+      },
+    ],
   },
   {
     id: 'automotive',
@@ -527,6 +579,32 @@ export const INDUSTRIES: Industry[] = [
     },
     relatedIntegrations: ['cdk-global', 'reynolds-reynolds', 'dealertrack', 'eleads'],
     ctaText: 'Try Our AI Now',
+    faqs: [
+      {
+        question: 'How does the AI handle service appointment booking for dealerships and repair shops?',
+        answer: 'The AI checks your service advisor calendar in real-time and books oil changes, tire rotations, inspections, and repairs directly into available time slots. It asks about vehicle make/model, current mileage, reason for service, and preferred date/time. Customers receive instant confirmation via SMS with appointment details, service advisor name, and what to bring. The AI syncs with your DMS (CDK, Reynolds & Reynolds, Dealertrack) to pull service history and recommend overdue maintenance.',
+      },
+      {
+        question: 'Can the AI answer parts availability inquiries and process parts orders?',
+        answer: 'Yes. The AI checks parts inventory in real-time, provides pricing, and reserves parts for customer pickup or installation. For out-of-stock items, it provides estimated arrival dates and offers to call the customer when parts arrive. The AI can also handle warranty parts lookups, cross-reference part numbers, and suggest alternative compatible parts if originals are unavailable. All parts reservations sync with your parts department system.',
+      },
+      {
+        question: 'How does the AI qualify sales leads from after-hours callers?',
+        answer: 'The AI captures detailed lead information including vehicle interest (new/used, make/model), trade-in details (year, make, model, mileage, condition), financing needs, timeline to purchase, and contact preferences. It sends vehicle inventory photos, pricing, and available incentives via text, then schedules test drives or sales appointments. Hot leads (ready to buy within 7 days) are immediately flagged and sent to your sales manager for priority follow-up.',
+      },
+      {
+        question: 'Does the AI integrate with DMS systems like CDK Global and Reynolds & Reynolds?',
+        answer: 'Yes, we offer native integrations with CDK Global, Reynolds & Reynolds, Dealertrack, and Eleads. The AI automatically creates service appointments in your DMS, pulls customer and vehicle service history via VIN lookup, updates parts inventory levels, logs sales inquiries, and creates lead records with complete interaction history. All customer communication (calls, texts, confirmations) is recorded in the DMS for compliance and CRM purposes.',
+      },
+      {
+        question: 'How does the AI handle weekend and after-hours service booking?',
+        answer: 'The AI operates 24/7, allowing customers to book service appointments at any time, including evenings and weekends when your service desk is closed. It checks service bay availability for the upcoming week, offers early morning drop-off slots, and coordinates loaner car reservations if available. For urgent issues (check engine light, overheating, brake problems), the AI can identify emergency situations and route to your on-call service manager or recommend nearby 24-hour repair facilities.',
+      },
+      {
+        question: 'Can the AI send automated service reminders and maintenance notifications?',
+        answer: 'Absolutely. The AI proactively calls customers when they\'re due for oil changes (every 3,000-5,000 miles), tire rotations, state inspections, or manufacturer-recommended maintenance based on service history and mileage. It offers convenient appointment times, sends booking confirmations, and provides reminders 24 hours before the appointment. This automated outreach increases service retention rates by 40-60% and fills service bays during slower periods.',
+      },
+    ],
   },
   {
     id: 'financial-services',
@@ -589,6 +667,32 @@ export const INDUSTRIES: Industry[] = [
     },
     relatedIntegrations: ['redtail', 'wealthbox', 'salesforce-financial', 'morningstar'],
     ctaText: 'Try Our AI Now',
+    faqs: [
+      {
+        question: 'Is your AI voice agent SEC and FINRA compliant for financial advisory firms?',
+        answer: 'Yes, our platform is fully compliant with SEC and FINRA regulations. All client calls are automatically recorded, encrypted with AES-256, and stored with tamper-proof audit trails for regulatory reviews. We provide searchable call transcripts, retention policies that meet compliance requirements, and SOC-II Type 2 certification. Our system ensures that every client interaction is documented and accessible for audits.',
+      },
+      {
+        question: 'How does the AI verify client identity without compromising security?',
+        answer: 'The AI uses multi-factor identity verification by asking for account-specific information (last four digits of account, date of birth, security questions) without ever disclosing sensitive details like full account numbers or balances. For high-security requests (wire transfers, beneficiary changes), the AI routes calls to your team for manual verification. All verification attempts are logged for compliance and fraud prevention.',
+      },
+      {
+        question: 'Can the AI schedule appointments with financial advisors and sync with our CRM?',
+        answer: 'Absolutely. The AI integrates seamlessly with Redtail, Wealthbox, Salesforce Financial Services Cloud, and Morningstar to access advisor calendars in real-time. Clients can book portfolio reviews, tax planning sessions, quarterly meetings, or urgent consultations based on availability. The AI sends appointment confirmations, reminders, and syncs all client interactions directly to your CRM with full call transcripts and notes.',
+      },
+      {
+        question: 'How does the AI handle sensitive client conversations about accounts and investments?',
+        answer: 'The AI is trained to handle financial conversations with professionalism and discretion. It can answer general questions about account access, statement availability, upcoming seminars, and appointment scheduling without disclosing specific account values or investment details. For market-related questions or investment advice, the AI schedules callbacks with your advisors and captures the client\'s concerns for follow-up. All calls are encrypted and stored securely.',
+      },
+      {
+        question: 'Can the AI handle high-net-worth clients and urgent market-related calls?',
+        answer: 'Yes. You can designate VIP clients who receive priority handling. The AI recognizes these clients (via caller ID or account verification) and offers immediate escalation to your advisors during market hours or on-call support after hours. During market volatility, the AI can identify urgent concerns and immediately alert your team via SMS or phone, ensuring white-glove service for your most valuable relationships.',
+      },
+      {
+        question: 'How does call recording work for compliance and what retention policies are supported?',
+        answer: 'Every call is automatically recorded in compliance with SEC Rule 17a-4 and FINRA regulations. Recordings are encrypted, stored on secure servers with redundant backups, and retained according to your firm\'s policy (typically 7 years for advisory firms). The system provides searchable transcripts, metadata tagging, and audit-ready export capabilities. You can filter calls by client, advisor, date, or topic for quick retrieval during regulatory exams.',
+      },
+    ],
     trustBadges: [
       { type: 'compliance', label: 'SEC Compliant', icon: 'account_balance', description: 'Securities & Exchange Commission' },
       { type: 'compliance', label: 'FINRA Approved', icon: 'gavel', description: 'Financial Industry Regulatory Authority' },
@@ -662,6 +766,32 @@ export const INDUSTRIES: Industry[] = [
     },
     relatedIntegrations: ['applied-epic', 'ams360', 'hawksoft', 'agency-matrix'],
     ctaText: 'Try Our AI Now',
+    faqs: [
+      {
+        question: 'How does the AI handle insurance quote requests?',
+        answer: 'The AI gathers essential information (driver details, vehicle info, current coverage, property details) and generates preliminary quotes instantly using your agency\'s rating engine integration. For complex multi-line quotes, the AI collects all necessary data and creates a quote request in your AMS for agent review. Leads receive quotes in minutes instead of hours, dramatically improving conversion rates.',
+      },
+      {
+        question: 'Can the AI process claims intake calls?',
+        answer: 'Yes. The AI captures First Notice of Loss (FNOL) details including accident date/time/location, parties involved, police report information, injuries, and vehicle damage descriptions. For urgent claims (injuries, total loss, liability concerns), the AI immediately routes to your claims department. All information is automatically logged in your AMS and carrier portals, reducing data entry time by 80%.',
+      },
+      {
+        question: 'How does the AI route policy questions to the right person?',
+        answer: 'The AI uses intelligent routing based on question type: simple policy changes (address update, add driver, payment methods) are handled automatically; coverage questions are answered using your agency\'s knowledge base; complex endorsements are routed to licensed agents; billing/payment issues go to your CSR team. You define the routing rules, and the AI ensures every inquiry reaches the right resource.',
+      },
+      {
+        question: 'Does the AI integrate with Applied Epic, Hawksoft, and AMS360?',
+        answer: 'Yes, we offer native integrations with Applied Epic, AMS360, Hawksoft, and Agency Matrix. The AI automatically creates leads, updates client records, logs activity notes, generates quote requests, and syncs policy changes bidirectionally. All call recordings and transcripts are attached to client files for compliance and training purposes. Setup typically takes 2-3 business days with our integration team.',
+      },
+      {
+        question: 'Is the AI compliant with insurance industry regulations and disclosure requirements?',
+        answer: 'Absolutely. Our system provides required disclosures (TCPA consent, state-specific notices, recording notifications) at call start. All conversations are recorded, encrypted, and stored for regulatory compliance with state insurance departments. The AI never provides licensed advice—it gathers information and routes to licensed agents when regulatory requirements demand it. We maintain SOC-II Type 2 certification and provide audit trails for E&O insurers.',
+      },
+      {
+        question: 'How does the AI qualify insurance leads before wasting agent time?',
+        answer: 'The AI pre-qualifies by asking key questions: current coverage status, reason for shopping, buying timeline (immediate vs. renewal date), budget expectations, and qualifying factors (DUI, SR-22, lapse in coverage). Leads are scored and prioritized—hot leads (ready to buy, good risk profile) go to agents immediately, warm leads are nurtured with email quotes, and unqualified leads (outside service area, price shoppers) are handled without agent involvement.',
+      },
+    ],
   },
   {
     id: 'property-management',
@@ -724,6 +854,32 @@ export const INDUSTRIES: Industry[] = [
     },
     relatedIntegrations: ['appfolio', 'buildium', 'yardi', 'rent-manager'],
     ctaText: 'Try Property Management AI',
+    faqs: [
+      {
+        question: 'How does the AI handle maintenance requests from tenants?',
+        answer: 'The AI categorizes maintenance requests by urgency (emergency, urgent, routine) and type (plumbing, HVAC, electrical, appliance, etc.), creates work orders in your property management software, and automatically dispatches the appropriate vendor based on trade, availability, and property location. For emergencies like burst pipes or gas leaks, it immediately notifies you and dispatches 24/7 emergency vendors.',
+      },
+      {
+        question: 'Can the AI help with tenant screening and qualification?',
+        answer: 'Yes. The AI pre-qualifies prospective tenants by asking about income verification, credit score range, rental history, move-in timeline, and reasons for moving. It collects employment details, references, and pet information before scheduling tours. This ensures your team only spends time on qualified prospects who meet your screening criteria, saving hours of administrative work.',
+      },
+      {
+        question: 'How does the AI answer lease and rent payment questions?',
+        answer: 'The AI guides tenants through common questions about rent payment methods (online portal, ACH, check), due dates, late fees, grace periods, lease renewal options, and guest parking policies. It can walk tenants through your online payment portal, send payment links via SMS, and explain lease terms without requiring property manager intervention for routine inquiries.',
+      },
+      {
+        question: 'Does the AI integrate with AppFolio, Buildium, Yardi, and other property management software?',
+        answer: 'We offer native integrations with AppFolio, Buildium, Yardi, Rent Manager, and other major property management platforms. The AI automatically creates maintenance work orders, logs tenant calls, schedules property tours, updates unit availability, syncs vendor information, and tracks all communications in your existing system. Setup typically takes 2-4 business days with our integration team.',
+      },
+      {
+        question: 'How does the AI handle emergency after-hours calls?',
+        answer: 'The AI is trained to identify true emergencies (flooding, no heat in winter, gas leaks, lockouts, security issues) and immediately escalate to your on-call property manager or emergency vendor. It provides safety instructions to tenants while help is dispatched. Non-emergency calls are handled with information, troubleshooting, or scheduled for next-day follow-up, ensuring you only get woken up for actual emergencies.',
+      },
+      {
+        question: 'Can the AI schedule property tours and capture prospect information?',
+        answer: 'Absolutely. The AI checks unit availability, schedules self-guided or agent-assisted tours based on your calendar, provides lockbox codes for self-showings, sends property details and floor plans via SMS, and captures complete prospect information including income, desired move-in date, and unit preferences. It can also answer questions about amenities, utilities, pet policies, and lease terms to qualify leads before tours.',
+      },
+    ],
   },
   {
     id: 'cleaning-services',

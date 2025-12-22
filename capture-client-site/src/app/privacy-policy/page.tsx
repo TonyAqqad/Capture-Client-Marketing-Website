@@ -17,6 +17,18 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
+  openGraph: {
+    title: "Privacy Policy | Capture Client",
+    description: "Read Capture Client's privacy policy to understand how we collect, use, and protect your personal information.",
+    url: "https://captureclient.com/privacy-policy",
+    siteName: "Capture Client",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | Capture Client",
+    description: "Read Capture Client's privacy policy to understand how we collect, use, and protect your personal information.",
+  },
 };
 
 export default function PrivacyPolicyPage() {
