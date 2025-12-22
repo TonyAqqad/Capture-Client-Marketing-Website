@@ -35,6 +35,25 @@ Final push to fix data issues, missing assets, CTA contrast, and add JSON-LD cov
 - `/pricing/[slug]`: Added Product, Breadcrumb, FAQ schemas
 - `/[slug]` national: Added Service, Breadcrumb, FAQ schemas
 
+**Lighthouse Performance Optimizations (commit df4801f):**
+- LeadConnector chat widget: deferred to `lazyOnload` (saves 314KB transfer)
+- Font weights: reduced from 16 to 8 variants (100/200/300/900 removed)
+- ROI Calculator accessibility: added labels, aria-label, aria-describedby
+
+**CSS Cleanup (commit 28873d1):**
+- Removed 55+ unused classes (~600 lines, ~12KB savings)
+- Removed legacy light-mode variants, gold theme remnants
+- Fixed dark scrollbar colors → light theme
+- Replaced deprecated `text-foreground` selectors with `text-slate-900`
+
+**CLS Optimizations (commit 0bd0eca):**
+- Added `pt-[72px]` to main for fixed header offset (prevents layout shift)
+- Added `data-scroll-behavior="smooth"` to html element
+- Header: transition-all → specific properties only (transition-colors/shadow)
+- Desktop logo: raw img → Next.js Image with explicit dimensions (243x60)
+- Hero: Removed all Y-axis transforms (opacity/scale only, no translateY)
+- MobileCTABar: y-transform → opacity-only fade (prevents bottom shift)
+
 **Build Status:** TypeScript clean, 230/230 pages
 
 ---

@@ -51,9 +51,12 @@ Final push to get from 75% → 95%+ production-ready. **All P0/P1 issues resolve
 - ✅ Homepage schema deduplication (removed inline WebSite + SoftwareApplication)
 - ✅ JSON-LD added to `/pricing/[slug]` (Product, Breadcrumb, FAQ schemas)
 - ✅ JSON-LD added to `/[slug]` national pages (Service, Breadcrumb, FAQ schemas)
+- ✅ Lighthouse optimizations: LeadConnector lazy load, font reduction (16→8 weights)
+- ✅ CSS cleanup: 55+ unused classes removed (~600 lines, ~12KB savings)
+- ✅ CLS fixes: Header spacing, logo dimensions, animation cleanup (target <0.1)
 
 ### Remaining Optimizations (non-blocking)
-- Performance: LCP 8-14s (target <2.5s) - lazy load heavy components
+- Performance: LCP 8-14s (target <2.5s) - heavy component lazy loading
 - Content: 69 integrations missing howItWorks, 6 industries missing FAQs
 - SEO: /pricing missing from sitemap, Search Console verification
 
