@@ -25,7 +25,7 @@ const ExitIntentPopup = dynamic(
 export const metadata: Metadata = {
   title: "AI Voice Agents for Small Business | Capture Client",
   description:
-    "Never miss a lead again. AI voice agents answer calls 24/7, qualify leads, and book appointments. Trusted by growing businesses.",
+    "Never miss a lead again. AI voice agents answer calls 24/7, qualify leads, and book appointments automatically. Transform missed calls into revenue.",
   keywords: [
     "AI voice agents",
     "lead generation",

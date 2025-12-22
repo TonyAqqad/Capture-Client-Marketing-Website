@@ -104,7 +104,7 @@ export function generateVideoSchema(videoData: {
  * Generate SoftwareApplication Schema
  * For the platform/dashboard features page
  */
-export function generateSoftwareApplicationSchema() {
+export function generatePlatformSoftwareApplicationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',

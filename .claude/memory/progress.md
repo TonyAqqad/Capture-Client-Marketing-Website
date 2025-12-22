@@ -1,294 +1,36 @@
 # Progress (lean)
-- Overall: ~99% complete (last updated 2025-12-21). Builds passing (230 pages).
-- Current focus: Missed Call Calculator + Demo Personalization complete. All P0/P1 items resolved.
 
-## Completed highlights
-- **LEAD RESPONSE SIMULATOR ENHANCEMENTS COMPLETE** (2025-12-21):
-  - **Conversation Tracking** (commit 81a4d8d):
-    - Added ConversationMessage interface with role, content, timestamp, intent, score
-    - User messages appear on right (blue bubbles), AI responses on left (white bubbles)
-    - Intent badges on AI messages (booking, info-request, objection, price-inquiry, qualified, scheduling)
-    - Input field clears after submission, messages persist in conversation history
-    - Typewriter effect only on latest AI message, older messages static for performance
-    - Lead score indicator and CRM fields panels show after conversation starts
-    - Improved UX: Multi-turn conversations feel natural and chat-like
-  - **Personalization Sync** (commit 81a4d8d):
-    - Industry auto-sync via useEffect when personalization changes
-    - Mapped personalization industries to simulator BusinessType enum (Plumbing, Dental, HVAC, Automotive, Legal, General)
-    - Hide "Try an example" section when personalized (reduces UI clutter)
-    - Dynamic placeholder text: "Type your test message for {businessName}..." when personalized
-    - "Personalized" badge indicator shows when form is filled
-    - Better integration between PersonalizationForm and LeadResponseSimulator
-  - **Integration Pages Light Theme Fix** (commit 81a4d8d):
-    - GradientCard.tsx: Changed bg-premium-card (dark) to bg-white/90 (light)
-    - GradientCard.tsx: Changed overlay from to-black/[0.05] to to-slate-100/10
-    - IntegrationHowItWorks.tsx: Replaced glass-premium-mobile with light theme bg-white/80
-    - IntegrationHowItWorks.tsx: Fixed step number badges (text-black → text-white for contrast)
-    - All integration pages now consistent with site-wide light theme
-  - **Files Modified**: LeadResponseSimulator.tsx, GradientCard.tsx, IntegrationHowItWorks.tsx
-  - **Validation**: TypeScript passes, Build passes
-- **MISSED CALL CALCULATOR + DEMO PERSONALIZATION COMPLETE** (2025-12-21):
-  - **Missed Call Cost Calculator** (commit 2475dac):
-    - Created `/tools/missed-call-calculator` route with server page + client component architecture
-    - Created `src/data/industry-benchmarks.ts` with 8 industries (Martial Arts, Fitness, Legal, Plumbing, HVAC, Roofing, Construction, Other)
-    - MissedCallCalculatorClient.tsx: Industry dropdown with auto-fill, 3 sliders (calls/week, answer rate, lead value), 3 animated result cards (Monthly Lost, AI Capturable, Annual Impact)
-    - 3D tilt effects on desktop via use3DTilt hook (disabled on mobile)
-    - useCountUp for animated number counters
-    - 3 JSON-LD schemas (SoftwareApplication, FAQ, Breadcrumb) for SEO
-    - FAQ section at bottom for additional SEO value
-    - Updated sitemap.ts with new tools section
-  - **Demo Personalization** (commit 2475dac):
-    - Created PersonalizationForm.tsx: Collapsible accordion UI (collapsed by default to reduce friction)
-    - Business name + industry (required), phone + location (optional)
-    - SessionStorage persistence so data survives page refreshes
-    - 8 industry options with Lucide icons (Building2, Briefcase, Home, etc.)
-    - Modified LeadResponseSimulator.tsx: Added personalization prop interface, integrated in API call body, dynamic subtitle when personalized, "Personalized" badge indicator
-    - Modified DemoContent.tsx: Added personalization state, integrated form above simulator, passed data to LeadResponseSimulator
-    - Personalization data sent to `/api/demo-response` Claude endpoint for industry-specific responses
-  - **Files Created**: industry-benchmarks.ts, missed-call-calculator/page.tsx, MissedCallCalculatorClient.tsx, PersonalizationForm.tsx
-  - **Files Modified**: sitemap.ts, LeadResponseSimulator.tsx, DemoContent.tsx
-  - **Validation**: TypeScript passes, Build passes (230 pages)
-- **LEAD RESPONSE SIMULATOR + SCENARIO BUILDER COMPLETE** (2025-12-21):
-  - **Lead Response Simulator** (commit a81f51a):
-    - Created 4 new components: LeadResponseSimulator, LeadScoreIndicator, IntentBadge, CRMFieldsDisplay
-    - Industry selector with 6 industries (plumbing, dental, hvac, auto, law, general)
-    - Real-time typewriter effect for AI responses
-    - Visual lead score meter (1-10 scale)
-    - Integrated with existing `/api/demo-response` Claude API endpoint
-    - Added "Try It Yourself" section on demo page
-  - **Scenario Builder** (commit 0242a26):
-    - Created 7 new files in `src/components/demo/scenarios/`
-    - 18 pre-built scenarios across 6 industries (3 scenarios per industry)
-    - ScenarioCard.tsx: Premium glass morphism cards with hover effects
-    - ScenarioLibrary.tsx: Filterable grid with industry filter pills
-    - ScenarioPlayer.tsx: Cinematic conversation playback with message bubbles
-    - ScenarioOutcome.tsx: Animated lead score + CRM data display
-    - ScenarioBuilder.tsx: Main orchestration component
-    - Added "Scenario Library" section on demo page
-  - **Files Modified**: src/app/demo/DemoContent.tsx (added both new sections)
-  - **Validation**: TypeScript passes, Build passes (229 pages)
-- **MOBILE UX ENHANCEMENTS + SCROLL FIXES COMPLETE** (2025-12-21):
-  - **Mobile Hero Improvements**:
-    - Centered layout on mobile (headlines, CTAs, badges)
-    - Added 3 subtle floating accent dots for visual depth
-    - Enhanced CTA shadows with stronger blue glow
-    - Added mobile integration strip with 6 key integrations (HubSpot, Slack, Google Calendar, Zapier, Stripe, Salesforce)
-  - **Scroll Fixes**:
-    - Fixed LightTextDemo chat scroll trap (removed fixed height on mobile + added touch-action: pan-y)
-    - Fixed ROICalculator range sliders blocking scroll (touch-action: pan-y on inputs)
-    - Fixed How It Works step badges cut-off on mobile (positioning: -right-3 → top-4 right-4)
-    - Added global CSS fallbacks for touch handling
-  - **New Shared Utilities**: Created `src/lib/depth-utils.ts` with useIsMobile, use3DTilt, cardShadow helpers
-  - **Files Modified**: page.tsx, LightTextDemo.tsx, ROICalculator.tsx, HowItWorksLight.tsx, globals.css
-  - **Validation**: TypeScript passes, Build passes (229 pages)
-- **TYPOGRAPHY & CONTRAST AUDIT COMPLETE** (2025-12-20):
-  - **Audit**: Deployed 8 parallel site-auditor agents to audit all 15+ pages for typography & contrast issues
-  - **Blog Content Fixed** (commit 27b3b3e, 20 files):
-    - `text-gray-300` → `text-slate-600`
-    - `text-white` → `text-slate-900`
-    - `text-amber-400` → `text-blue-600`
-    - `bg-gray-800/50` → `bg-slate-50`
-    - All blog articles now readable on light theme
-  - **Gold→Blue Migration - HIGH Priority** (commit 8b89ec9, 8 files, 70 replacements):
-    - loading.tsx, LeadRescueSimulator.tsx, PremiumServices.tsx, CapacityIndicator.tsx
-    - HomeServicesClient.tsx, IntegrationHowItWorks.tsx, FitnessClient.tsx, MedSpaClient.tsx
-  - **Gold→Blue Migration - MEDIUM Priority** (commit 987144a, 7 files):
-    - Industry pages, pricing components, homepage features
-  - **Remaining P1**: Pricing pages contrast (cyan-400, green-400, blue-300), Automotive ROI, Legal badges, Fitness step numbers, SpeedToLeadTimeline, text-foreground cleanup
-  - **Validation**: TypeScript passes, Build passes (229 pages)
-- **COMPREHENSIVE LIGHT THEME MIGRATION COMPLETE** (2025-12-17):
-  - **Scope**: 30+ files converted from dark to light theme site-wide
-  - **Pages Converted**: Industries (all 10), Who-we-serve (all), Pricing package details, System pages (error/loading/not-found), Legal pages (terms/privacy)
-  - **Components Converted**: CRO components (ComparisonTable, ExitIntentPopup, UrgencyTimer), Integration components (all 8), Location components (all 3)
-  - **Pattern Applied**: Removed `#030303`, `bg-background`, `bg-slate-900` → Added `bg-white`, `text-slate-900`, `text-slate-600`, `border-slate-200`
-  - **Lint Cleanup**: Reduced warnings from 91 to ~46 (removed unused imports, fixed React Hook deps)
-  - **Validation**: TypeScript passes, Build passes (228 pages)
-  - **Files Modified**: 30+ across industries/, who-we-serve/, pricing/, components/cro/, components/integrations/, components/locations/
-- **LOGO + MOBILE FIXES COMPLETE** (2025-12-16):
-  - **Logo Fix**: Restored vector logo (logo-desktop-light.svg) with proper SVG paths from OLD version - was showing as black rectangle due to missing path data in CURRENT version
-  - **Mobile Dark Section Fix**: Fixed dark section on mobile homepage by changing motion.header → motion.div in PremiumTestimonials.tsx - prevented global CSS from targeting header elements with dark background
-  - **Light Theme Standard**: Set isLightMode = true in MegaMenu.tsx to standardize light theme across navigation
-  - **Brand Colors Documented**: Blue #2563EB (CAPTURE), Dark #0F172A (CLIENT), Cyan #17B4EF (accents)
-  - **Validation**: TypeScript passes, Build passes (228 pages)
-- **VOICE CHAT WIDGET + SEO AUDIT SESSION COMPLETE** (2025-12-15):
-  - **Voice Chat Integration**: Integrated Vapi voice chat widget in layout.tsx with dynamic import and Next.js compatibility fixes
-  - **SEO Audit Fixes**: Fixed 35+ files with SEO issues (title tags, meta descriptions, canonicals, JSON-LD)
-  - **Homepage Dark Theme Reversion**: Caught and fixed dark theme reversion by batch-fixer subagent
-    - Issue: batch-fixer replaced Light* components with Premium* components during SEO fixes
-    - Root Cause: Subagent lacked context about light theme standard
-    - Resolution: Restored LightHero, LightStats, LightHowItWorks, LightIntegrationCarousel
-  - **Light Theme Audit**: Deployed 5 audit agents to verify light theme consistency across site
-  - **Validation**: TypeScript passes, Build passes (228 pages)
-  - **Critical Learning**: Added LIGHT THEME STANDARD to state.md to prevent future reverts
-- **SITE-WIDE LIGHT THEME MIGRATION COMPLETE** (2025-12-15):
-  - **Root Cause Fix - Mobile Backdrop-Blur Fallback**: Fixed globals.css lines 2311-2323 - changed mobile backdrop-blur fallback from dark (`rgba(15, 20, 25, 0.97)`) to light (`rgba(255, 255, 255, 0.97)`)
-  - **Body Background**: Changed from `bg-background` (dark #0F172A) to `bg-white` in globals.css line 62
-  - **Button Conversions**: Fixed 11 btn-ghost instances across 6 files (CookieConsent, DentalClient, HomeServicesClient, CaseStudiesPageClient, IntegrationCTA, PremiumServices)
-  - **Section Components Converted** (7 files): HowItWorks, PremiumStats, PremiumFAQ, CaseStudiesPreview, ClientLogosCarousel, UrgencyTimer, ComparisonTable
-  - **Validation**: TypeScript passes, Build passes (229 pages)
-- **LIGHT THEME MOBILE OPTIMIZATION COMPLETE** (2025-12-15):
-  - **OptimizedLeadForm.tsx**: Converted from dark theme to light theme for use in light-themed CTA sections
-    - Labels: `text-white/90` → `text-slate-700`
-    - Inputs: `bg-white/[0.03] text-white` → `bg-white text-slate-900`
-    - Borders: `border-white/10` → `border-slate-200`
-    - Focus states: `focus:border-accent` → `focus:border-blue-500 focus:ring-blue-100`
-  - **MobileCTABar.tsx**: Converted sticky mobile CTA from dark to light theme
-    - Container: `bg-[#0F172A]/95` → `bg-white/95 border-slate-200 shadow-lg`
-    - Phone button: Dark navy → White with slate borders
-    - Primary CTA: Gold gradient → Blue-to-cyan brand gradient
-  - **LightHero.tsx trust badges**: Enhanced contrast and readability
-    - Backgrounds: `bg-white/60` → `bg-white` (solid)
-    - Text: `text-slate-800` → `text-slate-900 text-xs sm:text-sm`
-  - **Validation**: TypeScript passes, Build passes (229 pages)
-- **SEO OPTIMIZATION & CLEANUP COMPLETE** (2025-12-15):
-  - **Title Tag Optimization**: Shortened 14 title tags (avg -13 chars) to stay under 60 char Google SERP limit
-    - Files updated: pricing, contact, case-studies, features, home-services, integrations, locations, healthcare, real-estate, legal, automotive, restaurants, services
-    - Pattern applied: Front-load keywords, reduce redundancy, keep brand suffix (" | Capture Client" = 15 chars)
-  - **Pricing Standardization**: Fixed Growth plan mismatch - homepage $997/mo → $950/mo (matches pricing page)
-  - **Product Schema**: Added Product/Offer JSON-LD schema to homepage pricing section for rich snippets
-  - **www Redirect**: Implemented 301 permanent redirect from www.captureclient.com → captureclient.com in next.config.js
-  - **Google Search Console**: Verified already active since May 29, 2024 - no action needed
-  - **Twitter Handle**: @captureclient NOT claimed - available for brand registration
-  - **Sitemap Status**: Temporary processing error (normal for new sitemaps, resolves in 24-48h)
-- **COMPREHENSIVE SEO AUDIT COMPLETE** (2025-12-15):
-  - **Score**: 8.8/10 (Excellent) - Enterprise-grade SEO infrastructure
-  - **Coverage**: 100% metadata coverage across all 35 pages
-  - **Schema**: Comprehensive JSON-LD implementation (Organization, WebSite, LocalBusiness, BreadcrumbList, FAQPage, Service)
-  - **Domain Migration**: captureclientai.net → captureclient.com verified 99% complete
-  - **Canonicals**: All canonical URLs correctly point to captureclient.com
-  - **Infrastructure**: robots.ts, sitemap.ts, seo-config.ts are comprehensive and production-ready
-  - **Site Stats**: 35 pages, 116 components, 81 location JSON files, 98% complete
-  - **Build Status**: TypeScript passes, Build passes (228 pages)
-  - **Action Items Identified**: Title tag optimization (~40% over 60 chars), pricing mismatch fix, verification codes update, homepage pricing schema addition
-- **$100B HOMEPAGE AESTHETIC TRANSFORMATION COMPLETE** (2025-12-09):
-  - **Transformation**: Homepage redesigned with Linear/Stripe $100B valuation aesthetic
-  - **Design System**: Deep space black (#030303), cyan (#00C9FF) and indigo (#4A69E2) mesh gradients, Bricolage Grotesque font with editorial weight contrast (200-800), ultra-minimal glass morphism (border-white/[0.06] bg-white/[0.02])
-  - **NO PURPLE RULE**: Purple removed from standalone usage, only in gradients
-  - **Components Transformed** (25+ files):
-    - PricingCards.tsx - Three-tier pricing with glass morphism
-    - PremiumHero.tsx - Hero with mesh gradient backgrounds
-    - PremiumFAQ.tsx - FAQ with smooth accordion animations
-    - PremiumStats.tsx - Stats with cyan/indigo accents
-    - ComparisonTable.tsx - Feature comparison table
-    - Footer.tsx - Footer with new color palette
-    - ExitIntentPopup.tsx - Exit intent modal
-    - IntegrationPartners.tsx - Partner logos grid
-    - RiskReversal.tsx - Risk reversal section
-    - CompetitorComparison.tsx - Competitor comparison
-    - VoiceAIvsReceptionist.tsx - Voice AI comparison
-    - MegaMenu.tsx + MegaMenuMobile.tsx - Navigation menus
-    - ClientLogosCarousel.tsx - Client logo carousel
-    - And 10+ more component files
-  - **Pricing Section Overhaul**: All pricing page buttons fixed, "Get Started" links functional, tier-specific pricing pages working
-  - **Pattern Documentation**: New design system documented in patterns.md (typography, glass morphism, color palette, motion patterns, section labels)
-  - **Deprecated**: Robot mascot plan removed (file already deleted)
-  - **Validation**: TypeScript passes, Build passes (228 pages)
-  - **Files modified**: 25+ components across pricing, features, navigation, CRO, and industry pages
-- **COMPONENT CONSOLIDATION - Phase 1 COMPLETE** (2025-12-08):
-  - **Discovery**: Identified 9 orphaned component files to delete
-  - **Verification**: Confirmed 3 components still in use (InteractiveAIDemo, ExitIntentPopup, RealEstateROICalculator)
-  - **Deleted files** (9 total):
-    - `src/components/features/IndustryDemo.tsx` - unused demo component
-    - `src/components/features/SmartDemoScheduler.tsx` - duplicate scheduler
-    - `src/components/features/SmartScheduler.tsx` - duplicate scheduler
-    - `src/components/features/LeadTicker.tsx` - duplicate ticker
-    - `src/components/cro/LiveLeadTicker.tsx` - unused ticker variant
-    - `src/components/features/ROICalculator.tsx` - duplicate calculator
-    - `src/components/features/MissedCallCalculator.tsx` - duplicate calculator
-    - `src/components/features/MoneyLossCalculator.tsx` - duplicate calculator
-    - `src/components/features/EnhancedROICalculator.tsx` - duplicate calculator
-    - Also removed: `CALCULATOR_PAGE_EXAMPLE.tsx` (example/documentation file)
-  - **Components kept** (verified usage):
-    - `InteractiveAIDemo` - Homepage (dynamic import)
-    - `ExitIntentPopup` - Homepage (already integrated)
-    - `RealEstateROICalculator` - Real estate industry page
-  - **Enhancement**: Added optional email field to `OptimizedLeadForm.tsx` for flexibility
-  - **Documentation**: Created canonical components reference in patterns.md
-  - **Result**: 10 files removed, codebase cleaner, no functionality lost
-  - **Remaining work**: 14 component duplicate groups still to consolidate
-- **$10M HERO TRANSFORMATION COMPLETE** (2025-12-08):
-  - **Phase 1 - Background Layers**: Added 5 floating aurora orbs with parallax, 5 geometric shapes (cubes, circles, diamonds), 30 floating particles with glow, enhanced noise texture via inline SVG, boosted aurora opacity to 40%
-  - **Phase 2 - Typography**: New 3-line headline ("Your Business" / "Deserves More" / "Clients"), gold gradient + cyan gradient text, glowing animated underline with `boxShadow: 0 0 30px #D4AF37`, colored keywords in subheadline (cyan/purple/gold)
-  - **Phase 3 - Layout**: Scarcity badge at top ("Limited: Only X Spots Left This Month"), premium gold gradient CTA with pulsing glow effect, glass phone CTA with cyan accent border
-  - **Phase 4 - Interactivity**: Pulsing glow animation on primary CTA, all decorative elements hidden on mobile for performance
-  - **Validation**: TypeScript passes, Build passes (228 pages), Desktop (1440px) + Mobile (375px) tested
-  - **Files modified**: `capture-client-site/src/components/sections/PremiumHero.tsx`
-- **BRAND COLOR OPTIMIZATION COMPLETE** (2025-12-08):
-  - **Audit**: Found 143+ off-brand color instances across 35+ files using parallel subagents
-  - **categoryThemes.ts**: Fixed root cause - replaced all rainbow colors with brand palette (gold/cyan/purple)
-  - **Healthcare page**: Converted 40+ blue instances to cyan/gold (blue-500 → cyan, blue CTAs → gold)
-  - **Homepage components**: Removed purple overuse from PremiumHero, HowItWorks, PremiumFinalCTA
-    - Aurora orbs: Purple → Gold/Cyan
-    - Timeline gradient: 4-color → 2-color (cyan to gold)
-    - Particles: Purple → Gold
-    - Geometric shapes: Purple → Gold/Cyan
-  - **Legal page**: Removed standalone purple/indigo, kept only in gradients
-  - **Pricing page**: Fixed toggle from blue to gold, updated badges from amber to brand gold
-  - **UseCases page**: Removed rainbow carnival (orange/green/red/pink/lime) → gold/cyan only
-  - **Brand Rules Enforced**:
-    - Gold (#D4AF37) = Primary CTAs, premium highlights
-    - Cyan (#00C9FF) = Secondary accent, tech feel
-    - Purple (#8B5CF6, #4F46E5) = Gradients ONLY, never standalone
-    - Deep Space (#070B14, #030508, #0A0E1A) = Backgrounds
-  - **Validation**: TypeScript passes, Build passes (228 pages)
-- **MOBILE HERO OPTIMIZATION COMPLETE** (2025-12-08):
-  - **Problem**: Hero text was too small on mobile (375px) - clamp() CSS function calculated poorly
-  - **Typography Fix**: Replaced `clamp(2.8rem, 10vw, 6.5rem)` with explicit Tailwind responsive classes:
-    - "Your Business": `text-[2.5rem]` (40px) on mobile → `xl:text-8xl` on desktop
-    - "Deserves More": `text-[2.5rem]` (40px) on mobile → `xl:text-8xl` on desktop
-    - "Clients": `text-[3rem]` (48px) on mobile → `xl:text-9xl` on desktop (largest for emphasis)
-  - **CTA Optimization**: Full-width buttons on mobile (`w-full sm:w-auto`) for thumb-friendly tapping
-  - **Trust Indicators**: Added glass background (`bg-white/5 backdrop-blur-sm`) for better contrast
-  - **Vertical Spacing**: Tightened margins (`mt-3` → `mt-2`) for better visual grouping
-  - **Validation**: TypeScript passes, Build passes (228 pages), Mobile screenshot verified
-- **Homepage Aesthetic Upgrade COMPLETE** (2025-12-08):
-  - **Phase 0 (Quick Wins)**:
-    - Fixed purple gradients to gold (#7B2CBF → #D4AF37) in error/loading/not-found pages
-    - Added ARIA dialog role to ExitIntentPopup.tsx
-    - Completed SEO metadata for [slug]/page.tsx and pricing/[slug]/page.tsx
-  - **Phase 1-4 (Homepage PremiumFinalCTA Pattern)**:
-    - Applied deep space aesthetic to all homepage sections in page.tsx
-    - Deep space gradients: `linear-gradient(135deg, #070B14, #030508, #0A0E1A)`
-    - Aurora overlays: `bg-aurora-animated` with proper z-index layering
-    - Noise textures: SVG turbulence filter for depth
-    - Cyan/gold grid patterns for visual interest
-    - Floating geometric shapes (hidden on mobile for performance)
-    - Animated glow underlines on headings
-    - Enhanced glass borders: `border-accent/20`, `border-gold/20`
-    - Pulsing glow animations: `animate-pulse-glow`
-  - **Validation**: TypeScript passes, Build passes (228 pages)
-  - **Next**: Standardization of this pattern to other pages will follow later
-- **Phase 4 (12-Phase Plan) - Material Icons to Lucide COMPLETE** (2025-12-07, commit 90d3d0f):
-  - Created centralized icon mapping utility (`src/lib/icon-map.ts`) with 178+ icon mappings
-  - Converted ~288 Material Icons to Lucide React across entire codebase
-  - Fixed Next.js 14+ serialization issues ("Functions cannot be passed to Client Components"):
-    - Pattern: Pass icon NAME (string) to client components, resolve to Lucide component internally
-    - Created IndustrySolutions.tsx client component for who-we-serve dynamic icon rendering
-    - IntegrationDetailHero.tsx resolves categoryIcon string to Lucide component
-  - Updated 165 files, 2618 insertions, 1256 deletions
-  - All 228 pages build successfully with no icon-related errors
-- **Phase 3 (12-Phase Plan) - Code Cleanup COMPLETE** (2025-12-07, commit 69196f2):
-  - Removed 29 unused imports/variables across 16 files:
-    - Industry pages (6 files): 13 unused imports removed
-    - Core pages (6 files): 9 unused imports removed
-    - Components (4 files): 7 unused imports/variables removed
-  - Verified all remaining imports are actually used in code
-  - Build passed (228+ pages), TypeCheck passed
-- **Phase 2 (12-Phase Plan) - Asset Optimization COMPLETE** (2025-12-07, commit a24873b):
-  - Logo optimization: Created SVG versions (logo-full.svg, logo-official.svg) at 2.5KB each, replacing PNG versions (259KB + 109KB). 99% size reduction, ~365KB saved.
-  - CSS cleanup: Removed 4 unused CSS files (1,233 lines total): critical.css, mobile-typography-enhanced.css, touch_targets_addition.css, desktop-polish.css.
-  - Updated 8 JSON-LD files to reference .svg logos instead of .png.
-  - Build passed (228 pages), TypeCheck passed.
-- All 10 industry pages: premium UI + full SEO + JSON-LD.
-- Core pages (Home, About, Contact, FAQ, Features, Pricing, Demo, How It Works): premium UI, metadata done, color and motion alignment.
-- Premium micro-interactions rolled out to ~23 pages; ROI pricing standardized; hardcoded colors largely removed; 177 Material Icons converted (~38%).
-- /integrations-demo set to noindex; use-cases and integrations SEO done; multiple backup files removed.
+> Entries older than 1 week are archived to `progress-archive.md`.
+
+- Overall: ~99% complete (last updated 2025-12-21). Builds passing (230 pages).
+- Current focus: Orchestration system improvements. All P0/P1 items resolved.
+
+## Recent (Dec 20-21, 2025)
+
+### LEAD RESPONSE SIMULATOR ENHANCEMENTS (2025-12-21)
+- Conversation tracking with multi-turn chat UI (commit 81a4d8d)
+- Personalization sync between form and simulator
+- Integration pages light theme fix (GradientCard, IntegrationHowItWorks)
+
+### MISSED CALL CALCULATOR + DEMO PERSONALIZATION (2025-12-21)
+- Created `/tools/missed-call-calculator` with industry benchmarks (commit 2475dac)
+- PersonalizationForm.tsx with sessionStorage persistence
+- 3D tilt effects, animated counters, 3 JSON-LD schemas
+
+### LEAD RESPONSE SIMULATOR + SCENARIO BUILDER (2025-12-21)
+- 4 new components: LeadResponseSimulator, LeadScoreIndicator, IntentBadge, CRMFieldsDisplay
+- 18 pre-built scenarios across 6 industries (commit 0242a26)
+
+### MOBILE UX + SCROLL FIXES (2025-12-21)
+- Mobile hero improvements (centered layout, accent dots, integration strip)
+- Fixed scroll traps in LightTextDemo, ROICalculator, HowItWorks
+
+### TYPOGRAPHY & CONTRAST AUDIT (2025-12-20)
+- Blog content fixed (20 files): text-gray-300 → text-slate-600
+- Gold→Blue migration (15 files, 70+ replacements)
 
 ## Outstanding (essentials)
-- **Search engine verification codes**: Update seo-config.ts (lines 702-706) with actual codes from Google/Bing/Pinterest webmaster tools (currently placeholders)
-- **Twitter setup**: Claim @captureclient handle (currently available), set up Twitter profile, link in footer/social
-- **Homepage pricing enhancements**: Add social proof badge + phone CTA above/below pricing cards
-- Component duplicates: 14 groups to merge (GlassCard, Hero, FAQ, Testimonials, CTA, etc.) - Phase 1 complete (calculators/schedulers/demos cleaned up).
-- ~~Icons: ~288 Material Icons remain → convert to lucide-react.~~ **DONE** (Phase 4)
-- Standardization: buttons (`btn-gold/ghost`), containers (`container-custom`), responsive padding.
-- Performance/accessibility: run checks after consolidations.
+- **Search engine verification codes**: Update seo-config.ts (lines 702-706)
+- **Twitter setup**: Claim @captureclient handle
+- Component duplicates: 14 groups to merge
+- Standardization: buttons, containers, responsive padding

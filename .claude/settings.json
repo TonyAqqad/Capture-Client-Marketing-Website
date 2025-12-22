@@ -20,5 +20,5 @@
       "Bash(cd capture-client-site && npm run format)"
     ]
   },
-  "enabledMcpjsonServers": []
+  "enabledMcpjsonServers": ["brightdata"]
 }

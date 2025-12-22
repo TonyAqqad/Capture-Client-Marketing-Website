@@ -153,4 +153,4 @@ TypeScript catches errors before they break the site. When you see red squiggly 
 | `tailwind.config.ts` | Custom colors, fonts, sizes |
 | `tsconfig.json` | TypeScript settings |
 | `next.config.js` | Next.js settings |
-| `middleware.ts` | Runs before every page load |
+| `src/proxy.ts` | Runs before API routes (rate limiting) |

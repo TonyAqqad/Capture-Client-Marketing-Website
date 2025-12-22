@@ -71,7 +71,7 @@ interface IndustrySolutionsProps {
 
 /**
  * Icon map for industry solutions - defined inside component to avoid serialization issues
- * This mirrors the iconMap.tsx mapping
+ * This mirrors the canonical Material→Lucide mappings in `src/lib/icon-map.ts`
  */
 const ICON_MAP: Record<string, LucideIcon> = {
   // Legal/Professional

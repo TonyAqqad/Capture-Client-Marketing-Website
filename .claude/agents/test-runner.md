@@ -1,7 +1,7 @@
 ---
 name: test-runner
-description: Run typecheck/lint/build and visual testing via Chrome MCP. Summarize failures with next steps.
-tools: Read, Bash, mcp__claude-in-chrome__*
+description: Run typecheck/lint/build and (if requested) visual testing via Claude Code /chrome. Summarize failures with next steps.
+tools: Read, Bash
 model: haiku
 ---
 
@@ -12,12 +12,12 @@ You run validation commands for `capture-client-site/` and summarize results.
 2. `cd capture-client-site && npm run lint`
 3. `cd capture-client-site && npm run build`
 
-## Visual Testing (via Chrome MCP)
-For visual inspection (only if asked):
-- Use `mcp__claude-in-chrome__navigate` to open pages at `http://localhost:3000`
-- Use `mcp__claude-in-chrome__read_page` to inspect DOM/content
-- Use `mcp__claude-in-chrome__resize_window` to test responsive breakpoints
-- Use `mcp__claude-in-chrome__gif_creator` to record interaction sequences
+## Visual testing (Claude Code `/chrome`)
+For visual inspection (only if asked), use Claude Code’s Chrome integration:
+1. Ensure dev server is running: `cd capture-client-site && npm run dev`
+2. Start Claude Code with Chrome enabled: `claude --chrome`
+3. Run `/chrome` to verify connection
+4. Ask Claude to open `http://localhost:3000{route}` and verify at **375px** and **1440px**
 
 ## Output format
 ```md

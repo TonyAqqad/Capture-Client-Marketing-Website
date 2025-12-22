@@ -7,18 +7,23 @@ Audit the page at: $ARGUMENTS
 
 This is a READ-ONLY audit. Do NOT make any changes.
 
-## Visual Inspection (via Chrome)
+## Visual inspection (Claude Code `/chrome`)
 
-Before auditing code, use Chrome MCP to visually inspect the page:
+Before auditing code, visually inspect the page using Claude Code’s Chrome integration (beta), not MCP.
 
-1. Get current tabs: `mcp__claude-in-chrome__tabs_context_mcp`
-2. Navigate to page: `mcp__claude-in-chrome__navigate` to `http://localhost:3000$ARGUMENTS`
-3. Read page: `mcp__claude-in-chrome__read_page` for DOM/accessibility tree
-4. Check for:
+Prereqs:
+- Start dev server: `cd capture-client-site && npm run dev`
+- Start Claude Code with Chrome enabled: `claude --chrome`
+- Run `/chrome` to verify connection (reconnect if needed)
+- Note: WSL is not supported for Chrome integration; run Claude Code on the host OS.
+
+Steps:
+1. Open: `http://localhost:3000$ARGUMENTS`
+2. Check for:
    - Text truncation or cutoff
    - Layout alignment issues
    - Color consistency (light theme)
-   - Mobile responsiveness (resize window with `mcp__claude-in-chrome__resize_window`)
+   - Mobile responsiveness (resize to **375px** width; then **1440px** width)
 
 ## Audit Checklist
 
@@ -69,7 +74,7 @@ Before auditing code, use Chrome MCP to visually inspect the page:
 
 ### 7. Components ✓/✗
 - [ ] Icons from `lucide-react` only
-- [ ] Using existing shared components
+- [ ] Using existing shared components (use `component-finder` agent to verify)
 - [ ] Not duplicating existing component functionality
 - [ ] Link from `next/link` for internal links
 
@@ -105,7 +110,13 @@ Closest match: `/industries/home-services`
 Differences: list them
 ```
 
+## Related Tools
+- Use `component-finder` agent to check if custom components duplicate existing ones
+- Use `/check-palette` to scan for legacy colors
+- Use `/frontend-design` skill for desktop UI patterns
+- Use `/mobile-frontend` command for mobile responsiveness
+
 ## Notes
 - This audit does NOT modify any files
-- Use `/project:fix-page` to apply fixes
+- Use `/fix-page` to apply fixes
 - Severity levels: High (broken), Medium (visual), Low (polish)

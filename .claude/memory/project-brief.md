@@ -5,5 +5,5 @@
 - Secondary: Drive demo bookings/calls; showcase AI voice; trust via case studies/testimonials.
 - Differentiators: Industry-trained AI, CRM/POS integrations, month-to-month (no long contracts).
 - Brand voice: Confident, practical, direct, premium.
-- Visuals: Dark + gold/cyan, glass/aurora, avoid AI slop.
+- Visuals: Light theme only (white + slate surfaces) with blue/cyan accents; subtle light glass/aurora; avoid dark/gold legacy and “AI slop”.
 - Phone: 865-346-6111; Domain: captureclient.com.

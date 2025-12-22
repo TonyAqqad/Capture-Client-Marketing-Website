@@ -1,4 +1,13 @@
-# Industry Page Structure Template (Gold Standard)
+# LEGACY: Industry Page Structure Template (Dark + Gold) — Deprecated
+
+⚠️ This template describes the **pre–light theme migration** (dark/gold system). **Do not copy** these classes/patterns into new work.
+
+Use the current sources of truth instead:
+- `.claude/memory/patterns.md` (light theme patterns + canonical components)
+- `.claude/memory/state.md` (light theme + brand constraints)
+
+<details>
+<summary>Archived dark/gold template (historical reference)</summary>
 
 Based on HomeServicesClient.tsx - the proven pattern for industry pages.
 
@@ -139,3 +148,5 @@ whileInView={{ opacity: 1, scale: 1 }}
 - Parent inquiry scenarios
 - Trial class booking flows
 - Family-focused messaging
+
+</details>

@@ -46,8 +46,9 @@ Read the page files and identify ALL issues:
 - [ ] Missing OG/Twitter tags
 
 **Component Issues**
-- [ ] Using custom components when standard ones exist
+- [ ] Using custom components when standard ones exist (use `component-finder` agent)
 - [ ] Duplicate functionality from other components
+- [ ] Legacy colors present (run `/check-palette` on the file)
 
 ## Step 2: Present Findings
 
@@ -93,14 +94,20 @@ After all fixes:
 
 ## Step 4.5: Visual Verification (Chrome)
 
-After fixes, use Chrome MCP to visually confirm:
-1. Navigate to the fixed page: `mcp__claude-in-chrome__navigate` to `http://localhost:3000{route}`
-2. Check for visual regressions using `mcp__claude-in-chrome__read_page`
-3. Verify text isn't truncated
-4. Test at mobile width (375px) using `mcp__claude-in-chrome__resize_window`
+After fixes, use Claude Code’s Chrome integration (beta) to visually confirm:
+1. Ensure dev server is running: `cd capture-client-site && npm run dev`
+2. Start Claude Code with Chrome enabled: `claude --chrome` and run `/chrome` to verify connection
+3. Open the fixed route at `http://localhost:3000{route}`
+4. Verify no truncation/overlap and that the page matches light-theme patterns at **375px** and **1440px** widths
 
 ## Step 5: Document
 
 Offer to update:
 - @.claude/memory/learnings.md with any new patterns discovered
 - @.claude/memory/progress.md with page status change
+
+## Related Tools
+- Use `component-finder` agent to find existing components before creating new ones
+- Use `/check-palette` to scan for legacy colors
+- Use `/frontend-design` skill for desktop UI patterns
+- Use `/mobile-frontend` command for mobile responsiveness

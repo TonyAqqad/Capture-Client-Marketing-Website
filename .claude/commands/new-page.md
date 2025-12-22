@@ -11,15 +11,20 @@ Create a new page at the specified route: $ARGUMENTS
    - Read @.claude/memory/patterns.md completely
    - Identify the closest Gold Standard page to copy from
 
-2. **Check if page exists**
+2. **Check existing components**
+   - Use `component-finder` agent to find reusable components
+   - Do NOT create new components if similar ones exist
+
+3. **Check if page exists**
    - Search for existing page at this route
    - If exists, ask user if they want to modify instead
 
-3. **Understand the page type**
+4. **Understand the page type**
    - Is this an industry page? Use `/industries/home-services` pattern
-   - Is this a service page? Use `/services/*` pattern  
+   - Is this a service page? Use `/services/*` pattern
    - Is this a use case page? Use `/use-cases/*` pattern
    - Is this a location page? Check if it should use dynamic [slug] route
+   - Is this an integration page? See @.claude/memory/integration-patterns.md
 
 ## Creation Steps
 
@@ -64,3 +69,10 @@ Create a new page at the specified route: $ARGUMENTS
 2. Explain to user what was created and why
 3. Suggest testing the page in browser
 4. Offer to update progress.md with new page status
+
+## Related Tools
+- Use `component-finder` agent before creating any new components
+- Use `schema-builder` agent for JSON-LD structured data
+- Use `/frontend-design` skill for desktop UI patterns
+- Use `/mobile-frontend` command for mobile optimization
+- For integration pages, see @.claude/memory/integration-patterns.md
