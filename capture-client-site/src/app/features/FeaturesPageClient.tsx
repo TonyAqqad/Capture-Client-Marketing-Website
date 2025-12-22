@@ -1,12 +1,22 @@
 "use client";
 
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "@/lib/motion";
 import AudioWaveform from "@/components/AudioWaveform";
 import CRMCard from "@/components/CRMCard";
-import GrowthDashboard from "@/components/GrowthDashboard";
 import { ArrowRight, Phone, CheckCircle2, Sparkles, Target, ThumbsUp, Inbox, Calendar, FileText, Zap, Activity, TrendingUp, Users } from "lucide-react";
 import { useState } from "react";
+
+const GrowthDashboard = dynamic(
+  () => import("@/components/GrowthDashboard"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="w-full h-80 bg-slate-100 animate-pulse rounded-2xl" />
+    ),
+  }
+);
 
 
 export default function FeaturesPageClient() {

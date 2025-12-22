@@ -8,8 +8,8 @@
   },
   "location": {
     "city": "Atlanta",
-    "state": "GA",
-    "state_full": "Georgia",
+    "state": "Georgia",
+    "state_abbr": "GA",
     "slug": "atlanta-ga",
     "nearby_areas": [
       "Sandy Springs",
@@ -121,7 +121,7 @@
       "Johns Creek"
     ]
   },
-  "testimonials": [
+  "local_testimonials": [
     {
       "quote": "We were missing 20 calls a week from Buckhead and Midtown. Since Voice AI, booking rate up 40%.",
       "author": "Marcus Thompson",
@@ -158,11 +158,6 @@
     }
   ],
   "images": {
-    "hero_image": {
-      "url": "https://images.unsplash.com/photo-1758599543129-bec77e427ac6?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "Business call Atlanta",
-      "caption": "24/7 AI Voice for Atlanta"
-    },
     "gallery": [
       {
         "url": "https://images.unsplash.com/photo-1674027444485-cec3da58eef4?ixlib=rb-4.0.3&w=1200&q=80",

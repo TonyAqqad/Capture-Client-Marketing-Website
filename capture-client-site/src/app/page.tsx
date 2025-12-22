@@ -4,8 +4,6 @@ import { LightHero } from "@/components/sections/LightHero";
 import { LightStats } from "@/components/sections/LightStats";
 import { LightIntegrationCarousel } from "@/components/sections/LightIntegrationCarousel";
 import { LightHowItWorks } from "@/components/sections/LightHowItWorks";
-import PhoneDemoCard from "@/components/PhoneDemoCard";
-import ROICalculator from "@/components/ROICalculator";
 import { PremiumTestimonials } from "@/components/sections/PremiumTestimonials";
 import { PremiumFinalCTA } from "@/components/sections/PremiumFinalCTA";
 import { CaseStudiesPreview } from "@/components/sections/CaseStudiesPreview";
@@ -16,6 +14,25 @@ const ExitIntentPopup = dynamic(
   () => import("@/components/cro/ExitIntentPopup"),
   {
     loading: () => null, // Don't show anything while loading
+  }
+);
+
+// Lazy load heavy below-the-fold components to improve LCP
+const PhoneDemoCard = dynamic(
+  () => import("@/components/PhoneDemoCard"),
+  {
+    loading: () => (
+      <div className="w-full h-[500px] bg-slate-100 animate-pulse rounded-2xl" />
+    ),
+  }
+);
+
+const ROICalculator = dynamic(
+  () => import("@/components/ROICalculator"),
+  {
+    loading: () => (
+      <div className="w-full h-96 bg-slate-100 animate-pulse rounded-2xl" />
+    ),
   }
 );
 

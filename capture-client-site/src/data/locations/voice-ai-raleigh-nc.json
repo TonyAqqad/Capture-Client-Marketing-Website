@@ -2,33 +2,54 @@
   "page_id": "voice-ai-raleigh-nc",
   "page_type": "service-location",
   "service": {
-    "name": "Voice AI",
-    "slug": "voice-ai",
-    "category": "automation"
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
   },
   "location": {
     "city": "Raleigh",
-    "state": "NC",
-    "state_full": "North Carolina"
+    "state": "North Carolina",
+    "state_abbr": "NC",
+    "slug": "raleigh-nc",
+    "nearby_areas": [
+      "Cary",
+      "Durham",
+      "Chapel Hill",
+      "Apex",
+      "Wake Forest"
+    ],
+    "service_area_radius": "30 miles"
   },
   "seo": {
-    "title": "Voice AI Agency in Raleigh, NC | Capture Client",
+    "page_title": "Voice AI Agency in Raleigh, NC | Capture Client",
     "meta_description": "In the heart of Research Triangle Park, where innovation meets opportunity, smart Raleigh businesses are automating lead capture. Trusted by Greater Raleigh Chamber members—capture leads 24/7!",
-    "h1": "Voice AI Technology for Raleigh Businesses",
+    "h1_heading": "Voice AI Technology for Raleigh Businesses",
     "keywords": [
       "voice ai raleigh",
       "ai phone system raleigh nc",
       "automated receptionist raleigh",
       "ai call handling raleigh"
-    ]
+    ],
+    "canonical_url": "/voice-ai-raleigh-nc"
   },
   "hero": {
     "headline": "Transform Your Raleigh Business with Voice AI",
     "subheadline": "Intelligent Phone Automation That Captures Every Lead, Books Appointments & Works 24/7",
-    "cta_primary": "Try Our AI Now",
-    "cta_secondary": "View Pricing"
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-6111",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1758626038030-96f813504d15?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "AI technology smartphone showing modern voice automation",
+      "credit": {
+        "photographer": "Jo Lin",
+        "unsplash_url": "https://unsplash.com/photos/QcBw8kdAk9o"
+      }
+    }
   },
-  "intro": {
+  "local_intro": {
     "paragraph": "In the heart of Research Triangle Park, where innovation meets opportunity, smart businesses are automating their lead capture. From tech startups in downtown Raleigh to established firms in North Hills and Crabtree Valley, our AI voice agents help Triangle businesses never miss a call. Raleigh is North Carolina's capital of innovation and technology, and your business deserves cutting-edge solutions to stay competitive. Whether you're in the Midtown business district, near Centennial Campus, or serving the broader Wake County area, Voice AI technology ensures you never miss a revenue opportunity while reducing operational costs. Trusted by members of the Greater Raleigh Chamber of Commerce and the Raleigh-Durham Tech Corridor Alliance."
   },
   "benefits": [
@@ -58,53 +79,71 @@
       "icon": "BarChart"
     }
   ],
-  "how_it_works": {
-    "headline": "Your Path to AI-Powered Phone Automation",
-    "steps": [
-      {
-        "step": 1,
-        "title": "Discovery Call",
-        "description": "We learn about your Raleigh business, current challenges, and specific needs to design the perfect AI solution."
-      },
-      {
-        "step": 2,
-        "title": "AI Configuration",
-        "description": "We train your Voice AI with your services, pricing, FAQs, and Triangle-area information for accurate responses."
-      },
-      {
-        "step": 3,
-        "title": "Testing & Refinement",
-        "description": "We test the AI extensively with real scenarios, refining responses until it represents your brand perfectly."
-      },
-      {
-        "step": 4,
-        "title": "Launch & Support",
-        "description": "Go live and start capturing more leads immediately. We provide ongoing support and optimization based on performance data."
-      }
-    ]
-  },
-  "use_cases": [
+  "how_it_works": [
     {
-      "industry": "Technology Companies",
-      "description": "Raleigh tech startups and established companies in RTP use Voice AI to handle product inquiries, schedule demos, and qualify leads from the Research Triangle."
+      "step": 1,
+      "title": "Discovery Call",
+      "description": "We learn about your Raleigh business, current challenges, and specific needs to design the perfect AI solution."
     },
     {
-      "industry": "Healthcare Providers",
-      "description": "Medical practices throughout Raleigh and near NC State automate appointment scheduling, answer patient questions, and reduce administrative burden with Voice AI."
+      "step": 2,
+      "title": "AI Configuration",
+      "description": "We train your Voice AI with your services, pricing, FAQs, and Triangle-area information for accurate responses."
     },
     {
-      "industry": "Professional Services",
-      "description": "Accounting, consulting, and legal firms in downtown Raleigh and North Hills use AI to screen clients, schedule consultations, and provide initial information 24/7."
+      "step": 3,
+      "title": "Testing & Refinement",
+      "description": "We test the AI extensively with real scenarios, refining responses until it represents your brand perfectly."
     },
     {
-      "industry": "Home Services",
-      "description": "Raleigh contractors, landscapers, and home service providers throughout Wake County capture every service request and schedule estimates automatically."
-    },
-    {
-      "industry": "Retail & E-commerce",
-      "description": "Local Raleigh retailers near Crabtree Valley and Midtown use Voice AI to answer product questions, check inventory, and provide store information to customers."
+      "step": 4,
+      "title": "Launch & Support",
+      "description": "Go live and start capturing more leads immediately. We provide ongoing support and optimization based on performance data."
     }
   ],
+  "local_use_cases": [
+    {
+      "business_type": "Technology Companies in Raleigh",
+      "scenario": "Tech startups in RTP needed to handle high volume of product inquiries and demos.",
+      "result": "Voice AI schedules demos automatically, qualifying leads 24/7 for the sales team."
+    },
+    {
+      "business_type": "Healthcare Providers in Raleigh",
+      "scenario": "Medical practices near NC State overwhelmed with appointment scheduling calls.",
+      "result": "Automated scheduling reduced admin burden by 60%, improved patient satisfaction scores."
+    },
+    {
+      "business_type": "Professional Services in North Hills",
+      "scenario": "Law firm needed to screen potential clients before attorney consultations.",
+      "result": "AI pre-qualifies all callers, attorneys now spend 70% more time on billable work."
+    },
+    {
+      "business_type": "Home Services in Wake County",
+      "scenario": "Contractor missing service requests during busy season.",
+      "result": "Captures 100% of calls, increased revenue by $45,000 in first quarter."
+    },
+    {
+      "business_type": "Retail in Crabtree Valley",
+      "scenario": "Local retailer wanted to provide after-hours support for customers.",
+      "result": "Voice AI answers product questions 24/7, boosting online orders by 35%."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Raleigh and Surrounding Areas",
+    "description": "We provide Voice AI services throughout Wake County and the greater Research Triangle area.",
+    "areas_list": [
+      "Downtown Raleigh",
+      "North Raleigh",
+      "North Hills",
+      "Crabtree Valley",
+      "Cary",
+      "Durham",
+      "Chapel Hill",
+      "Apex",
+      "Wake Forest",
+      "Research Triangle Park"
+    ]
+  },
   "faq": [
     {
       "question": "Is Voice AI suitable for Raleigh's tech-focused market?",
@@ -131,56 +170,52 @@
       "answer": "Yes! We offer a demo where you can call and interact with a sample Voice AI agent. We can also provide case studies from other Raleigh businesses and discuss a trial period during your consultation."
     }
   ],
-  "testimonials": [
+  "local_testimonials": [
     {
-      "name": "David Chen",
-      "business": "TechStart Solutions",
-      "location": "Raleigh, NC",
       "quote": "As a tech company in Raleigh near RTP, we needed an intelligent solution for handling inbound leads. Voice AI has been incredible - it qualifies leads instantly and books demos automatically. Our sales team is way more productive now.",
-      "rating": 5
+      "author": "David Chen",
+      "business": "TechStart Solutions",
+      "location": "Raleigh, NC"
     },
     {
-      "name": "Patricia Thompson",
-      "business": "Triangle Medical Associates",
-      "location": "Raleigh, NC",
       "quote": "Our patients in North Raleigh love being able to schedule appointments 24/7. The AI handles routine questions perfectly, freeing our staff to focus on in-office patient care. It's been transformative for our practice.",
-      "rating": 5
+      "author": "Patricia Thompson",
+      "business": "Triangle Medical Associates",
+      "location": "Raleigh, NC"
     }
   ],
-  "images": [
-    {
-      "url": "https://images.unsplash.com/photo-1758626038030-96f813504d15?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "AI technology smartphone showing modern voice automation",
-      "caption": "Cutting-edge Voice AI for Raleigh's innovative businesses",
-      "credit": {
-        "photographer": "Jo Lin",
-        "unsplashUrl": "https://unsplash.com/photos/QcBw8kdAk9o"
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1633431299600-270e216d365d?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Business professional on phone call",
+        "caption": "Professional communication solutions for Raleigh businesses"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1714079761488-e0c9b9ac4138?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Professional using headphones for customer service",
+        "caption": "Superior customer service through Voice AI automation"
       }
-    },
-    {
-      "url": "https://images.unsplash.com/photo-1633431299600-270e216d365d?ixlib=rb-4.0.3&w=1200&q=80",
-      "alt": "Business professional on phone call",
-      "caption": "Professional communication solutions for Raleigh businesses",
-      "credit": {
-        "photographer": "Zest Tea",
-        "unsplashUrl": "https://unsplash.com/photos/HrYyJUsKpTo"
-      }
-    },
-    {
-      "url": "https://images.unsplash.com/photo-1714079761488-e0c9b9ac4138?ixlib=rb-4.0.3&w=1200&q=80",
-      "alt": "Professional using headphones for customer service",
-      "caption": "Superior customer service through Voice AI automation",
-      "credit": {
-        "photographer": "Vagaro",
-        "unsplashUrl": "https://unsplash.com/photos/LSOIjuBiIuQ"
-      }
-    }
-  ],
-  "cta": {
+    ]
+  },
+  "cta_section": {
     "headline": "Ready to Lead Raleigh with Voice AI?",
     "subheadline": "Join forward-thinking Raleigh businesses automating calls and capturing more leads",
-    "button_text": "Try Our AI Now",
-    "phone": "865-346-6111",
-    "email": "team@captureclient.com"
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-6111",
+      "action": "tel:865-346-6111",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-cary-nc",
+      "voice-ai-durham-nc",
+      "voice-ai-chapel-hill-nc"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
   }
 }

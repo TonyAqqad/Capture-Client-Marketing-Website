@@ -2,33 +2,54 @@
   "page_id": "voice-ai-charlotte-nc",
   "page_type": "service-location",
   "service": {
-    "name": "Voice AI",
-    "slug": "voice-ai",
-    "category": "automation"
+    "service_id": "voice-ai",
+    "service_name": "Voice AI Services",
+    "service_slug": "voice-ai"
   },
   "location": {
     "city": "Charlotte",
-    "state": "NC",
-    "state_full": "North Carolina"
+    "state": "North Carolina",
+    "state_abbr": "NC",
+    "slug": "charlotte-nc",
+    "nearby_areas": [
+      "Ballantyne",
+      "Myers Park",
+      "SouthPark",
+      "University City",
+      "South End"
+    ],
+    "service_area_radius": "30 miles"
   },
   "seo": {
-    "title": "Voice AI Agency in Charlotte, NC | Capture Client",
+    "page_title": "Voice AI Agency in Charlotte, NC | Capture Client",
     "meta_description": "Leading Voice AI agency in Charlotte helping Queen City businesses from Uptown to Ballantyne automate calls, capture leads 24/7, and never miss opportunities. Trusted by Charlotte Regional Business Alliance members!",
-    "h1": "Voice AI Solutions for Charlotte Businesses",
+    "h1_heading": "Voice AI Solutions for Charlotte Businesses",
     "keywords": [
       "voice ai charlotte",
       "ai phone system charlotte nc",
       "automated answering charlotte",
       "ai receptionist charlotte"
-    ]
+    ],
+    "canonical_url": "/voice-ai-charlotte-nc"
   },
   "hero": {
     "headline": "Never Miss Another Lead in Charlotte",
     "subheadline": "AI Voice Agents That Answer Every Call, Qualify Leads & Book Appointments 24/7",
-    "cta_primary": "Get Free Consultation",
-    "cta_secondary": "See How It Works"
+    "cta_primary": {
+      "text": "Get Your Free Consultation",
+      "action": "tel:865-346-6111",
+      "type": "phone"
+    },
+    "hero_image": {
+      "url": "https://images.unsplash.com/photo-1763568258557-515962e11f38?ixlib=rb-4.0.3&w=1920&q=80",
+      "alt": "AI technology helping Charlotte businesses capture leads",
+      "credit": {
+        "photographer": "Daniil Komov",
+        "unsplash_url": "https://unsplash.com/photos/lP8rWtbFFxU"
+      }
+    }
   },
-  "intro": {
+  "local_intro": {
     "paragraph": "From the towering offices in Uptown Charlotte to the thriving businesses along SouthPark and Ballantyne Corporate Park, Queen City entrepreneurs are embracing AI-powered lead capture. Charlotte's fast-paced banking, healthcare, and professional services sectors demand immediate response times—missing a single call can mean losing a customer to your competitor. Our Voice AI technology ensures your Charlotte business never misses an opportunity, whether you're serving Myers Park homeowners, University City professionals, or South End startups. Answer every call professionally, qualify leads instantly, and book appointments automatically, even at 3 AM. Proudly serving members of the Charlotte Regional Business Alliance and businesses across the Charlotte metro."
   },
   "benefits": [
@@ -58,53 +79,54 @@
       "icon": "Award"
     }
   ],
-  "how_it_works": {
-    "headline": "How Voice AI Works for Your Charlotte Business",
-    "steps": [
-      {
-        "step": 1,
-        "title": "Free Strategy Call",
-        "description": "We discuss your Charlotte business needs, call volume, and how AI can help you capture more leads and save time."
-      },
-      {
-        "step": 2,
-        "title": "Custom AI Training",
-        "description": "We build your AI agent with your business knowledge, FAQs, pricing, and Charlotte-specific information."
-      },
-      {
-        "step": 3,
-        "title": "Launch & Test",
-        "description": "Go live with your AI voice agent and watch it handle calls professionally while you monitor performance in real-time."
-      },
-      {
-        "step": 4,
-        "title": "Optimize & Scale",
-        "description": "We continuously improve your AI based on real call data to maximize lead capture and customer satisfaction."
-      }
-    ]
-  },
-  "use_cases": [
+  "how_it_works": [
     {
-      "industry": "Home Services",
-      "description": "HVAC, plumbing, and electrical companies throughout Charlotte—from Steele Creek to University City—use our AI to schedule service calls, provide quotes, and handle emergency requests 24/7."
+      "step": 1,
+      "title": "Free Strategy Call",
+      "description": "We discuss your Charlotte business needs, call volume, and how AI can help you capture more leads and save time."
     },
     {
-      "industry": "Medical Practices",
-      "description": "Charlotte healthcare providers near Novant and Atrium Health use Voice AI to schedule appointments, answer common questions, and reduce front desk workload."
+      "step": 2,
+      "title": "Custom AI Training",
+      "description": "We build your AI agent with your business knowledge, FAQs, pricing, and Charlotte-specific information."
     },
     {
-      "industry": "Real Estate",
-      "description": "Charlotte realtors serving Myers Park, Ballantyne, and South End never miss a buyer inquiry with AI handling property questions, scheduling showings, and qualifying leads instantly."
-    },
-    {
-      "industry": "Law Firms",
-      "description": "Legal practices in Uptown Charlotte use AI to screen potential clients, schedule consultations, and provide initial case information."
-    },
-    {
-      "industry": "Contractors",
-      "description": "Construction and renovation companies capture every project inquiry and schedule estimates automatically, even during business hours when teams are on job sites throughout the Charlotte metro."
+      "step": 3,
+      "title": "Launch & Monitor",
+      "description": "Go live with your AI voice agent and watch it handle calls professionally while you monitor performance in real-time."
     }
   ],
+  "local_use_cases": [
+    {
+      "business_type": "Home Services Charlotte",
+      "scenario": "HVAC, plumbing, and electrical companies throughout Charlotte—from Steele Creek to University City—missing calls during service appointments.",
+      "result": "AI schedules service calls, provides quotes, and handles emergency requests 24/7 while teams are in the field."
+    },
+    {
+      "business_type": "Medical Practices Charlotte",
+      "scenario": "Healthcare providers near Novant and Atrium Health overwhelmed with appointment scheduling and common questions.",
+      "result": "Voice AI reduced front desk workload by 60%, improved patient satisfaction scores."
+    },
+    {
+      "business_type": "Real Estate Charlotte",
+      "scenario": "Realtors serving Myers Park, Ballantyne, and South End missing buyer inquiries during showings.",
+      "result": "AI handles property questions, schedules showings, and qualifies leads instantly. Never miss an opportunity."
+    }
+  ],
+  "service_area": {
+    "heading": "Serving Charlotte and Surrounding Areas",
+    "description": "We provide Voice AI services throughout Mecklenburg County and the greater Charlotte metro area.",
+    "areas_list": [
+      "Uptown Charlotte",
+      "South End",
+      "Myers Park",
+      "Ballantyne",
+      "SouthPark",
+      "University City",
+      "Steele Creek",
+      "Dilworth"
+    ]
+  },
   "faq": [
     {
       "question": "How does Voice AI work for Charlotte businesses?",
@@ -131,56 +153,52 @@
       "answer": "If the AI encounters a question it can't answer or the caller requests to speak with a person, the call is immediately transferred to you or your team. You maintain full control and can monitor all calls in real-time through our dashboard."
     }
   ],
-  "testimonials": [
+  "local_testimonials": [
     {
-      "name": "Michael Rodriguez",
-      "business": "Rodriguez HVAC Services",
-      "location": "Charlotte, NC",
       "quote": "Since implementing Voice AI, we've captured 40% more leads in Charlotte. The AI answers calls when we're on job sites from Ballantyne to University City, and customers love getting immediate responses. Best investment we've made.",
-      "rating": 5
+      "author": "Michael Rodriguez",
+      "business": "Rodriguez HVAC Services",
+      "location": "Charlotte, NC"
     },
     {
-      "name": "Jennifer Williams",
-      "business": "Williams Law Group",
-      "location": "Charlotte, NC",
       "quote": "Our Uptown Charlotte practice was missing too many potential clients after hours. Now our AI handles initial consultations 24/7. We've seen a 60% increase in qualified leads, and our intake process is seamless.",
-      "rating": 5
+      "author": "Jennifer Williams",
+      "business": "Williams Law Group",
+      "location": "Charlotte, NC"
     }
   ],
-  "images": [
-    {
-      "url": "https://images.unsplash.com/photo-1763568258557-515962e11f38?ixlib=rb-4.0.3&w=1920&q=80",
-      "alt": "AI technology helping Charlotte businesses capture leads",
-      "caption": "Advanced Voice AI technology for Charlotte businesses",
-      "credit": {
-        "photographer": "Daniil Komov",
-        "unsplashUrl": "https://unsplash.com/photos/lP8rWtbFFxU"
+  "images": {
+    "gallery": [
+      {
+        "url": "https://images.unsplash.com/photo-1600275669177-176b3c586d22?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Business professional using phone technology in Charlotte",
+        "caption": "Professional call handling for Charlotte businesses"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1712159018726-4564d92f3ec2?ixlib=rb-4.0.3&w=1200&q=80",
+        "alt": "Customer service representative using headset and technology",
+        "caption": "24/7 professional call answering for Charlotte businesses"
       }
-    },
-    {
-      "url": "https://images.unsplash.com/photo-1600275669177-176b3c586d22?ixlib=rb-4.0.3&w=1200&q=80",
-      "alt": "Business professional using phone technology in Charlotte",
-      "caption": "Professional call handling for Charlotte businesses",
-      "credit": {
-        "photographer": "Daria Pimkina",
-        "unsplashUrl": "https://unsplash.com/photos/SnfgiYqQKhI"
-      }
-    },
-    {
-      "url": "https://images.unsplash.com/photo-1712159018726-4564d92f3ec2?ixlib=rb-4.0.3&w=1200&q=80",
-      "alt": "Customer service representative using headset and technology",
-      "caption": "24/7 professional call answering for Charlotte businesses",
-      "credit": {
-        "photographer": "Vagaro",
-        "unsplashUrl": "https://unsplash.com/photos/5skDrjF5EMw"
-      }
-    }
-  ],
-  "cta": {
+    ]
+  },
+  "cta_section": {
     "headline": "Ready to Never Miss Another Charlotte Lead?",
     "subheadline": "Join Charlotte businesses already using Voice AI to capture more leads and grow revenue",
-    "button_text": "Get Free Consultation",
-    "phone": "865-346-6111",
-    "email": "team@captureclient.com"
+    "cta_primary": {
+      "text": "Call Us Now: 865-346-6111",
+      "action": "tel:865-346-6111",
+      "type": "phone"
+    }
+  },
+  "related_pages": {
+    "nearby_locations": [
+      "voice-ai-ballantyne-nc",
+      "voice-ai-university-city-nc",
+      "voice-ai-south-end-nc"
+    ],
+    "packages": [
+      "starter-package",
+      "growth-package"
+    ]
   }
 }
