@@ -30,14 +30,14 @@ export default function PremiumLocationFAQ({ faqs, cityName }: PremiumLocationFA
             <HelpCircle className="w-3.5 h-3.5 text-cyan-400" />
             <span
               className="text-xs uppercase tracking-wider text-slate-600"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 500 }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 500 }}
             >
               FAQ
             </span>
           </div>
           <h2
             className="text-2xl sm:text-3xl lg:text-4xl text-slate-900 mb-4"
-            style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
+            style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 800 }}
           >
             Common Questions About{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00C9FF] to-[#4A69E2]">
@@ -46,7 +46,7 @@ export default function PremiumLocationFAQ({ faqs, cityName }: PremiumLocationFA
           </h2>
           <p
             className="text-slate-600 text-base sm:text-lg"
-            style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}
+            style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 200 }}
           >
             Everything you need to know about our services in your area
           </p>
@@ -58,10 +58,7 @@ export default function PremiumLocationFAQ({ faqs, cityName }: PremiumLocationFA
             const isOpen = openIndex === index;
 
             return (
-              <div
-                key={index}
-                className="group relative"
-              >
+              <div key={index} className="group relative">
                 {/* Glow effect when open - cyan accent */}
                 {isOpen && (
                   <div className="absolute -inset-px bg-gradient-to-r from-[#00C9FF]/20 via-[#00C9FF]/30 to-[#4A69E2]/20 rounded-2xl blur-sm" />
@@ -81,11 +78,13 @@ export default function PremiumLocationFAQ({ faqs, cityName }: PremiumLocationFA
                   >
                     {/* Icon */}
                     <div className="flex-shrink-0 mt-1">
-                      <div className={`flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-300 ${
-                        isOpen
-                          ? 'bg-gradient-to-br from-[#00C9FF]/20 to-[#4A69E2]/20 border border-[#00C9FF]/40'
-                          : 'bg-white/70 backdrop-blur-xl border border-slate-200'
-                      }`}>
+                      <div
+                        className={`flex items-center justify-center w-10 h-10 rounded-xl transition-all duration-300 ${
+                          isOpen
+                            ? "bg-gradient-to-br from-[#00C9FF]/20 to-[#4A69E2]/20 border border-[#00C9FF]/40"
+                            : "bg-white/70 backdrop-blur-xl border border-slate-200"
+                        }`}
+                      >
                         {isOpen ? (
                           <Minus className="w-5 h-5 text-[#00C9FF] transition-all duration-300" />
                         ) : (
@@ -99,10 +98,10 @@ export default function PremiumLocationFAQ({ faqs, cityName }: PremiumLocationFA
                       <h3
                         className={`text-base sm:text-lg transition-colors duration-300 ${
                           isOpen
-                            ? 'text-transparent bg-clip-text bg-gradient-to-r from-[#00C9FF] to-[#4A69E2]'
-                            : 'text-slate-900 group-hover:text-[#00C9FF]'
+                            ? "text-transparent bg-clip-text bg-gradient-to-r from-[#00C9FF] to-[#4A69E2]"
+                            : "text-slate-900 group-hover:text-[#00C9FF]"
                         }`}
-                        style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}
+                        style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 600 }}
                       >
                         {faq.question}
                       </h3>
@@ -110,12 +109,16 @@ export default function PremiumLocationFAQ({ faqs, cityName }: PremiumLocationFA
 
                     {/* Expand/Collapse Arrow - cyan when open */}
                     <div className="flex-shrink-0">
-                      <div className={`flex items-center justify-center w-8 h-8 rounded-lg bg-white/70 backdrop-blur-xl transition-all duration-300 ${
-                        isOpen ? 'rotate-180' : 'rotate-0'
-                      }`}>
-                        <ChevronDown className={`w-5 h-5 transition-colors duration-300 ${
-                          isOpen ? 'text-[#00C9FF]' : 'text-slate-600'
-                        }`} />
+                      <div
+                        className={`flex items-center justify-center w-8 h-8 rounded-lg bg-white/70 backdrop-blur-xl transition-all duration-300 ${
+                          isOpen ? "rotate-180" : "rotate-0"
+                        }`}
+                      >
+                        <ChevronDown
+                          className={`w-5 h-5 transition-colors duration-300 ${
+                            isOpen ? "text-[#00C9FF]" : "text-slate-600"
+                          }`}
+                        />
                       </div>
                     </div>
                   </button>
@@ -123,7 +126,7 @@ export default function PremiumLocationFAQ({ faqs, cityName }: PremiumLocationFA
                   {/* Answer Panel */}
                   <div
                     className={`relative z-10 overflow-hidden transition-all duration-500 ease-in-out ${
-                      isOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
+                      isOpen ? "max-h-[600px] opacity-100" : "max-h-0 opacity-0"
                     }`}
                   >
                     <div className="px-5 sm:px-6 pb-5 sm:pb-6 pl-[70px] sm:pl-[88px]">
@@ -133,7 +136,7 @@ export default function PremiumLocationFAQ({ faqs, cityName }: PremiumLocationFA
                       {/* Answer Text */}
                       <p
                         className="text-sm sm:text-base text-slate-600 leading-relaxed"
-                        style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}
+                        style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 300 }}
                       >
                         {faq.answer}
                       </p>
@@ -154,13 +157,13 @@ export default function PremiumLocationFAQ({ faqs, cityName }: PremiumLocationFA
             <div className="text-center sm:text-left flex-1">
               <h3
                 className="text-lg text-slate-900 mb-1"
-                style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}
+                style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 600 }}
               >
                 Still have questions?
               </h3>
               <p
                 className="text-sm text-slate-600"
-                style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}
+                style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 300 }}
               >
                 Our team is here to help. Give us a call or send a message.
               </p>
@@ -168,7 +171,7 @@ export default function PremiumLocationFAQ({ faqs, cityName }: PremiumLocationFA
             <a
               href="tel:865-346-6111"
               className="inline-flex items-center gap-3 bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] text-white px-6 py-3 rounded-xl transition-all duration-300 hover:shadow-[0_8px_24px_rgba(0,201,255,0.4)] hover:scale-105 touch-target"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 600 }}
             >
               <Phone className="w-5 h-5" />
               <span>(865) 346-6111</span>

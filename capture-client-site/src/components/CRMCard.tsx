@@ -53,8 +53,12 @@ const CRMCard: React.FC<CRMCardProps> = ({ fields }) => {
               <UserPlus className="w-5 h-5 sm:w-6 sm:h-6 text-cyan-400" />
             </motion.div>
             <div className="min-w-0">
-              <h3 className="text-base sm:text-lg font-semibold text-slate-900 tracking-tight truncate">New Lead Captured</h3>
-              <p className="text-[10px] sm:text-xs text-slate-500 font-mono truncate">AI Voice Agent → CRM</p>
+              <h3 className="text-base sm:text-lg font-semibold text-slate-900 tracking-tight truncate">
+                New Lead Captured
+              </h3>
+              <p className="text-[10px] sm:text-xs text-slate-500 font-mono truncate">
+                AI Voice Agent → CRM
+              </p>
             </div>
           </div>
         </div>

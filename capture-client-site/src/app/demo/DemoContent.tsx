@@ -23,7 +23,10 @@ import {
 import { LeadResponseSimulator } from "@/components/demo/LeadResponseSimulator";
 import { ScenarioBuilder } from "@/components/demo/scenarios";
 import { GoogleReviews } from "@/components/sections/GoogleReviews";
-import { PersonalizationForm, type PersonalizationData } from "@/components/demo/PersonalizationForm";
+import {
+  PersonalizationForm,
+  type PersonalizationData,
+} from "@/components/demo/PersonalizationForm";
 
 // ==================== BEFORE/AFTER COMPARISON ====================
 
@@ -60,14 +63,18 @@ function BeforeAfterComparison() {
             <MinusCircle className="w-5 h-5 text-red-500 mt-1" />
             <div>
               <p className="text-slate-900 font-semibold mb-1">Lost Revenue</p>
-              <p className="text-sm text-slate-600">Average $12,000/month in missed opportunities</p>
+              <p className="text-sm text-slate-600">
+                Average $12,000/month in missed opportunities
+              </p>
             </div>
           </div>
           <div className="flex items-start gap-3">
             <MinusCircle className="w-5 h-5 text-red-500 mt-1" />
             <div>
               <p className="text-slate-900 font-semibold mb-1">Poor Experience</p>
-              <p className="text-sm text-slate-600">Frustrated customers call competitors instead</p>
+              <p className="text-sm text-slate-600">
+                Frustrated customers call competitors instead
+              </p>
             </div>
           </div>
           <div className="flex items-start gap-3">
@@ -213,7 +220,9 @@ function LiveStatsSection() {
           />
 
           <div className="relative z-10">
-            <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${stat.gradient} bg-opacity-20 border border-blue-500/20 flex items-center justify-center`}>
+            <div
+              className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${stat.gradient} bg-opacity-20 border border-blue-500/20 flex items-center justify-center`}
+            >
               <stat.icon className="w-8 h-8 text-blue-600" />
             </div>
             <motion.div
@@ -245,7 +254,10 @@ export default function DemoContent() {
         <div className="absolute inset-0 bg-mesh-premium opacity-30" />
 
         {/* Aurora gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-transparent to-cyan-500/5 animate-pulse" style={{ animationDuration: '4s' }} />
+        <div
+          className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-transparent to-cyan-500/5 animate-pulse"
+          style={{ animationDuration: "4s" }}
+        />
 
         {/* Floating orbs - enhanced glow */}
         <motion.div
@@ -307,7 +319,9 @@ export default function DemoContent() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-4 sm:mb-6 leading-tight tracking-tight">
                 Experience AI That
                 <br />
-                <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">Handles Every Conversation</span>
+                <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">
+                  Handles Every Conversation
+                </span>
               </h1>
 
               {/* Subheadline - mobile optimized sizing */}
@@ -324,7 +338,9 @@ export default function DemoContent() {
                 transition={{ duration: 2, repeat: Infinity }}
               >
                 <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
-                <span className="hidden sm:inline">Live AI conversation simulation - Voice & SMS capable</span>
+                <span className="hidden sm:inline">
+                  Live AI conversation simulation - Voice & SMS capable
+                </span>
                 <span className="sm:hidden">Voice & SMS AI Agent</span>
               </motion.div>
             </motion.div>
@@ -354,10 +370,14 @@ export default function DemoContent() {
               </div>
 
               <h2 className="text-display-lg mb-4">
-                Test Our AI With <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">Your Lead</span>
+                Test Our AI With{" "}
+                <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">
+                  Your Lead
+                </span>
               </h2>
               <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                Paste any lead inquiry and watch our AI respond in real-time. See the lead score, detected intent, and extracted CRM data.
+                Paste any lead inquiry and watch our AI respond in real-time. See the lead score,
+                detected intent, and extracted CRM data.
               </p>
             </motion.div>
 
@@ -396,10 +416,14 @@ export default function DemoContent() {
               </div>
 
               <h2 className="text-display-lg mb-4">
-                Watch AI Handle <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">Real Scenarios</span>
+                Watch AI Handle{" "}
+                <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">
+                  Real Scenarios
+                </span>
               </h2>
               <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                Browse 18 pre-built scenarios across 6 industries. See how AI navigates emergencies, pricing questions, complaints, and more.
+                Browse 18 pre-built scenarios across 6 industries. See how AI navigates emergencies,
+                pricing questions, complaints, and more.
               </p>
             </motion.div>
 
@@ -419,7 +443,10 @@ export default function DemoContent() {
               viewport={{ once: true }}
             >
               <h2 className="text-display-lg mb-4">
-                The Difference Is <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">Dramatic</span>
+                The Difference Is{" "}
+                <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">
+                  Dramatic
+                </span>
               </h2>
               <p className="text-xl text-slate-600 max-w-2xl mx-auto">
                 See what happens when you miss calls vs. when AI answers every single one
@@ -456,7 +483,10 @@ export default function DemoContent() {
               </div>
 
               <h2 className="text-display-lg mb-4">
-                Watch The Numbers <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">Grow</span>
+                Watch The Numbers{" "}
+                <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">
+                  Grow
+                </span>
               </h2>
               <p className="text-xl text-slate-600 max-w-2xl mx-auto">
                 Capture Client AI is working right now for businesses just like yours
@@ -479,7 +509,10 @@ export default function DemoContent() {
               viewport={{ once: true }}
             >
               <h2 className="text-display-lg mb-4">
-                Enterprise-Grade AI <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">Technology</span>
+                Enterprise-Grade AI{" "}
+                <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">
+                  Technology
+                </span>
               </h2>
               <p className="text-xl text-slate-600 max-w-2xl mx-auto">
                 Built for reliability, security, and performance at scale
@@ -528,9 +561,7 @@ export default function DemoContent() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
             >
-              <p className="text-slate-600 mb-4">
-                Questions? Talk to our AI experts now
-              </p>
+              <p className="text-slate-600 mb-4">Questions? Talk to our AI experts now</p>
               <a href="tel:865-346-6111">
                 <motion.button
                   className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-500/25 px-10 py-5 rounded-2xl text-xl font-bold inline-flex items-center gap-3 w-full sm:w-auto"
@@ -541,9 +572,7 @@ export default function DemoContent() {
                   <span>Call 865-346-6111</span>
                 </motion.button>
               </a>
-              <p className="text-xs text-slate-600 mt-3">
-                Average response time: Under 30 seconds
-              </p>
+              <p className="text-xs text-slate-600 mt-3">Average response time: Under 30 seconds</p>
             </motion.div>
           </div>
         </section>
@@ -579,7 +608,10 @@ export default function DemoContent() {
               </motion.div>
 
               <h2 className="text-display-md mb-6">
-                Ready To Never Miss <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">Another Lead?</span>
+                Ready To Never Miss{" "}
+                <span className="text-gradient bg-gradient-to-r from-blue-600 via-cyan-500 to-cyan-500 bg-clip-text text-transparent">
+                  Another Lead?
+                </span>
               </h2>
 
               <p className="text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto">

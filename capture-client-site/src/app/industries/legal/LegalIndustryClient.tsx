@@ -16,7 +16,7 @@ import {
   Users,
   PhoneCall,
   Calendar,
-  ChevronRight
+  ChevronRight,
 } from "lucide-react";
 
 // Practice area type definitions
@@ -51,7 +51,7 @@ export default function LegalIndustryClient() {
     setIsClient(true);
     // Live stat ticker
     const interval = setInterval(() => {
-      setCallsMissed(prev => prev + Math.floor(Math.random() * 3));
+      setCallsMissed((prev) => prev + Math.floor(Math.random() * 3));
     }, 5000);
     return () => clearInterval(interval);
   }, []);
@@ -69,9 +69,9 @@ export default function LegalIndustryClient() {
         "When did the arrest occur?",
         "Is the client still in custody?",
         "Have they been read their rights?",
-        "Do they have a prior record?"
+        "Do they have a prior record?",
       ],
-      responseTime: "Immediate - 24/7"
+      responseTime: "Immediate - 24/7",
     },
     {
       id: "personal-injury",
@@ -84,9 +84,9 @@ export default function LegalIndustryClient() {
         "When did the injury happen?",
         "What injuries were sustained?",
         "Was medical treatment received?",
-        "Are there any witnesses?"
+        "Are there any witnesses?",
       ],
-      responseTime: "Within 1 hour"
+      responseTime: "Within 1 hour",
     },
     {
       id: "family",
@@ -99,9 +99,9 @@ export default function LegalIndustryClient() {
         "Are there children involved?",
         "Is there immediate danger?",
         "Previous court orders?",
-        "Preferred consultation date?"
+        "Preferred consultation date?",
       ],
-      responseTime: "Same day"
+      responseTime: "Same day",
     },
     {
       id: "immigration",
@@ -114,9 +114,9 @@ export default function LegalIndustryClient() {
         "Type of visa/petition needed?",
         "Any deportation proceedings?",
         "Timeline concerns?",
-        "Country of origin?"
+        "Country of origin?",
       ],
-      responseTime: "Within 4 hours"
+      responseTime: "Within 4 hours",
     },
     {
       id: "estate",
@@ -129,9 +129,9 @@ export default function LegalIndustryClient() {
         "Estate size/value?",
         "Existing will or trust?",
         "Number of beneficiaries?",
-        "Tax planning concerns?"
+        "Tax planning concerns?",
       ],
-      responseTime: "Within 24 hours"
+      responseTime: "Within 24 hours",
     },
     {
       id: "business",
@@ -144,10 +144,10 @@ export default function LegalIndustryClient() {
         "Contract review or dispute?",
         "Business entity type?",
         "Transaction timeline?",
-        "Opposing party involved?"
+        "Opposing party involved?",
       ],
-      responseTime: "Within 24 hours"
-    }
+      responseTime: "Within 24 hours",
+    },
   ];
 
   const legalSoftware: LegalSoftware[] = [
@@ -155,33 +155,41 @@ export default function LegalIndustryClient() {
     { name: "MyCase", logo: "MyCase", popular: true },
     { name: "Filevine", logo: "Filevine", popular: false },
     { name: "Lawmatics", logo: "Lawmatics", popular: false },
-    { name: "PracticePanther", logo: "PracticePanther", popular: false }
+    { name: "PracticePanther", logo: "PracticePanther", popular: false },
   ];
 
   const problemStats: Stat[] = [
     { value: "48%", label: "Law firms unreachable by phone", highlight: true },
     { value: "33%", label: "Reply to client emails", highlight: false },
     { value: "40%", label: "Answer incoming calls", highlight: false },
-    { value: "3", label: "Firms a client calls before hiring", highlight: true }
+    { value: "3", label: "Firms a client calls before hiring", highlight: true },
   ];
 
-  const activePractice = practiceAreas.find(p => p.id === activeTab) || practiceAreas[0];
+  const activePractice = practiceAreas.find((p) => p.id === activeTab) || practiceAreas[0];
 
   const getUrgencyColor = (urgency: string) => {
     switch (urgency) {
-      case "critical": return "from-red-500 to-orange-500";
-      case "high": return "from-orange-500 to-yellow-500";
-      case "medium": return "from-blue-500 to-cyan-500";
-      default: return "from-gray-500 to-gray-600";
+      case "critical":
+        return "from-red-500 to-orange-500";
+      case "high":
+        return "from-orange-500 to-yellow-500";
+      case "medium":
+        return "from-blue-500 to-cyan-500";
+      default:
+        return "from-gray-500 to-gray-600";
     }
   };
 
   const getUrgencyBadge = (urgency: string) => {
     switch (urgency) {
-      case "critical": return "bg-red-500/20 text-red-600 border-red-500/30";
-      case "high": return "bg-orange-500/20 text-orange-600 border-orange-500/30";
-      case "medium": return "bg-blue-500/20 text-blue-600 border-blue-500/30";
-      default: return "bg-slate-500/20 text-slate-500 border-slate-300";
+      case "critical":
+        return "bg-red-500/20 text-red-600 border-red-500/30";
+      case "high":
+        return "bg-orange-500/20 text-orange-600 border-orange-500/30";
+      case "medium":
+        return "bg-blue-500/20 text-blue-600 border-blue-500/30";
+      default:
+        return "bg-slate-500/20 text-slate-500 border-slate-300";
     }
   };
 
@@ -200,7 +208,7 @@ export default function LegalIndustryClient() {
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.4, 0.3],
-            rotate: [0, 90, 0]
+            rotate: [0, 90, 0],
           }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         >
@@ -209,10 +217,14 @@ export default function LegalIndustryClient() {
 
         {/* Animated grid overlay */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0" style={{
-            backgroundImage: 'linear-gradient(rgba(59, 130, 246, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.2) 1px, transparent 1px)',
-            backgroundSize: '100px 100px'
-          }} />
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(59, 130, 246, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.2) 1px, transparent 1px)",
+              backgroundSize: "100px 100px",
+            }}
+          />
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -259,12 +271,8 @@ export default function LegalIndustryClient() {
                 <div className="flex items-center gap-4">
                   <DollarSign className="w-12 h-12 text-blue-600" />
                   <div className="text-left">
-                    <div className="text-4xl md:text-5xl font-bold text-blue-600">
-                      $250K+
-                    </div>
-                    <div className="text-sm text-slate-600">
-                      Per Year in Lost Retainers
-                    </div>
+                    <div className="text-4xl md:text-5xl font-bold text-blue-600">$250K+</div>
+                    <div className="text-sm text-slate-600">Per Year in Lost Retainers</div>
                   </div>
                 </div>
               </motion.div>
@@ -282,7 +290,9 @@ export default function LegalIndustryClient() {
               <div className="flex flex-wrap items-center justify-center gap-6">
                 <div className="flex items-center gap-2 bg-white/70 backdrop-blur-xl px-4 py-2 rounded-xl border border-blue-200 shadow-lg shadow-slate-200/50">
                   <Lock className="w-5 h-5 text-blue-600" />
-                  <span className="text-sm font-semibold text-slate-900">Attorney-Client Privilege</span>
+                  <span className="text-sm font-semibold text-slate-900">
+                    Attorney-Client Privilege
+                  </span>
                 </div>
                 <div className="flex items-center gap-2 bg-white/70 backdrop-blur-xl px-4 py-2 rounded-xl border border-blue-200 shadow-lg shadow-slate-200/50">
                   <Shield className="w-5 h-5 text-blue-600" />
@@ -350,10 +360,14 @@ export default function LegalIndustryClient() {
               className="text-center space-y-6 mb-16"
             >
               <h2 className="text-display-md md:text-display-lg font-display text-slate-900">
-                The First Firm to Answer <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Wins the Case</span>
+                The First Firm to Answer{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                  Wins the Case
+                </span>
               </h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                Potential clients call an average of 3 firms. If you don&apos;t answer, your competitor will.
+                Potential clients call an average of 3 firms. If you don&apos;t answer, your
+                competitor will.
               </p>
             </motion.div>
 
@@ -459,17 +473,21 @@ export default function LegalIndustryClient() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className={`bg-white/70 backdrop-blur-xl p-8 rounded-2xl text-center cursor-pointer shadow-lg ${
-                    stat.highlight ? 'border-2 border-red-200 bg-red-50 hover:border-red-300 hover:shadow-red-200/50' : 'border border-slate-200 hover:border-blue-200 hover:shadow-slate-200/50'
+                    stat.highlight
+                      ? "border-2 border-red-200 bg-red-50 hover:border-red-300 hover:shadow-red-200/50"
+                      : "border border-slate-200 hover:border-blue-200 hover:shadow-slate-200/50"
                   }`}
                 >
-                  <div className={`text-5xl md:text-6xl font-bold mb-3 ${
-                    stat.highlight ? 'bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent' : 'text-slate-900'
-                  }`}>
+                  <div
+                    className={`text-5xl md:text-6xl font-bold mb-3 ${
+                      stat.highlight
+                        ? "bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+                        : "text-slate-900"
+                    }`}
+                  >
                     {stat.value}
                   </div>
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    {stat.label}
-                  </p>
+                  <p className="text-slate-600 text-sm leading-relaxed">{stat.label}</p>
                 </motion.div>
               ))}
             </div>
@@ -518,7 +536,10 @@ export default function LegalIndustryClient() {
               className="text-center space-y-4 mb-12"
             >
               <h2 className="text-display-md md:text-display-lg font-display text-slate-900">
-                Specialized Intake for <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Every Practice Area</span>
+                Specialized Intake for{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                  Every Practice Area
+                </span>
               </h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
                 Custom intake questions and response protocols for your specific legal practice.
@@ -535,27 +556,29 @@ export default function LegalIndustryClient() {
                   whileTap={{ scale: 0.98 }}
                   className={`px-6 py-3 rounded-xl font-semibold transition-all duration-300 inline-flex items-center gap-2 relative ${
                     activeTab === area.id
-                      ? 'bg-gradient-to-r ' + getUrgencyColor(area.urgency) + ' text-white shadow-lg shadow-slate-200/50 scale-105'
-                      : 'bg-white/70 backdrop-blur-xl border border-slate-200 text-slate-700 hover:border-slate-300 hover:shadow-lg hover:shadow-slate-200/50'
+                      ? "bg-gradient-to-r " +
+                        getUrgencyColor(area.urgency) +
+                        " text-white shadow-lg shadow-slate-200/50 scale-105"
+                      : "bg-white/70 backdrop-blur-xl border border-slate-200 text-slate-700 hover:border-slate-300 hover:shadow-lg hover:shadow-slate-200/50"
                   }`}
                 >
                   {/* Urgency Pulse Indicator */}
-                  {area.urgency === 'critical' && (
+                  {area.urgency === "critical" && (
                     <div className="absolute -top-1 -right-1 w-3 h-3">
                       <div className="w-full h-full bg-red-500 rounded-full animate-pulse" />
                       <div className="absolute inset-0 w-full h-full bg-red-500 rounded-full animate-ping" />
                     </div>
                   )}
-                  {area.urgency === 'high' && (
+                  {area.urgency === "high" && (
                     <div className="absolute -top-1 -right-1 w-3 h-3">
                       <div className="w-full h-full bg-orange-500 rounded-full animate-pulse" />
                     </div>
                   )}
                   {area.icon}
                   <span className="hidden sm:inline">{area.name}</span>
-                  <span className="sm:hidden">{area.name.split(' ')[0]}</span>
+                  <span className="sm:hidden">{area.name.split(" ")[0]}</span>
                   {/* Speed to Lead Badge for Personal Injury */}
-                  {area.id === 'personal-injury' && activeTab === area.id && (
+                  {area.id === "personal-injury" && activeTab === area.id && (
                     <span className="hidden lg:inline text-xs bg-white/20 px-2 py-0.5 rounded-full">
                       Speed to lead wins 67%
                     </span>
@@ -576,21 +599,23 @@ export default function LegalIndustryClient() {
                 {/* Left: Practice Details */}
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <div className={`p-3 rounded-xl bg-gradient-to-br ${getUrgencyColor(activePractice.urgency)}`}>
+                    <div
+                      className={`p-3 rounded-xl bg-gradient-to-br ${getUrgencyColor(activePractice.urgency)}`}
+                    >
                       {activePractice.icon}
                     </div>
                     <div className="flex-1">
                       <h3 className="text-3xl font-bold text-slate-900 mb-2">
                         {activePractice.name}
                       </h3>
-                      <p className="text-slate-600 text-lg">
-                        {activePractice.description}
-                      </p>
+                      <p className="text-slate-600 text-lg">{activePractice.description}</p>
                     </div>
                   </div>
 
                   <div className="flex items-center gap-3">
-                    <span className={`px-4 py-2 rounded-full text-sm font-semibold border ${getUrgencyBadge(activePractice.urgency)}`}>
+                    <span
+                      className={`px-4 py-2 rounded-full text-sm font-semibold border ${getUrgencyBadge(activePractice.urgency)}`}
+                    >
                       {activePractice.urgency.toUpperCase()} URGENCY
                     </span>
                     <span className="flex items-center gap-2 text-slate-600">
@@ -635,7 +660,9 @@ export default function LegalIndustryClient() {
                         </div>
                         <div>
                           <p className="text-slate-900 font-semibold">Confidential Intake</p>
-                          <p className="text-sm text-slate-600">Custom questions for {activePractice.name.toLowerCase()}</p>
+                          <p className="text-sm text-slate-600">
+                            Custom questions for {activePractice.name.toLowerCase()}
+                          </p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
@@ -644,7 +671,9 @@ export default function LegalIndustryClient() {
                         </div>
                         <div>
                           <p className="text-slate-900 font-semibold">Conflict Check</p>
-                          <p className="text-sm text-slate-600">Automatic screening before intake</p>
+                          <p className="text-sm text-slate-600">
+                            Automatic screening before intake
+                          </p>
                         </div>
                       </div>
                       <div className="flex items-start gap-3">
@@ -667,8 +696,8 @@ export default function LegalIndustryClient() {
                           Confidentiality Guaranteed
                         </h4>
                         <p className="text-sm text-slate-600 leading-relaxed">
-                          All conversations are attorney-client privileged, encrypted, and never stored
-                          beyond your CRM. HIPAA compliant for personal injury practices.
+                          All conversations are attorney-client privileged, encrypted, and never
+                          stored beyond your CRM. HIPAA compliant for personal injury practices.
                         </p>
                       </div>
                     </div>
@@ -696,10 +725,15 @@ export default function LegalIndustryClient() {
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 backdrop-blur-xl border border-blue-200 bg-gradient-to-r from-blue-50 to-cyan-50 mb-4 shadow-lg shadow-slate-200/50">
                 <Shield className="w-5 h-5 text-blue-600" />
-                <span className="text-sm font-semibold text-blue-600">Enterprise-Grade Security</span>
+                <span className="text-sm font-semibold text-blue-600">
+                  Enterprise-Grade Security
+                </span>
               </div>
               <h2 className="text-display-md md:text-display-lg font-display text-slate-900">
-                Built for <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Legal Compliance</span>
+                Built for{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                  Legal Compliance
+                </span>
               </h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
                 Every feature designed with attorney-client privilege and legal ethics in mind.
@@ -738,12 +772,8 @@ export default function LegalIndustryClient() {
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl flex items-center justify-center">
                   <Scale className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">
-                  Bar Association Approved
-                </h3>
-                <p className="text-sm text-slate-600">
-                  Compliant with ABA Model Rules
-                </p>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">Bar Association Approved</h3>
+                <p className="text-sm text-slate-600">Compliant with ABA Model Rules</p>
               </motion.div>
 
               <motion.div
@@ -760,9 +790,7 @@ export default function LegalIndustryClient() {
                 <h3 className="text-lg font-bold text-slate-900 mb-2">
                   Conflict Check Integration
                 </h3>
-                <p className="text-sm text-slate-600">
-                  Automatic screening before intake
-                </p>
+                <p className="text-sm text-slate-600">Automatic screening before intake</p>
               </motion.div>
 
               <motion.div
@@ -776,12 +804,8 @@ export default function LegalIndustryClient() {
                 <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-blue-100 to-blue-50 rounded-2xl flex items-center justify-center">
                   <Shield className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">
-                  HIPAA Compliant
-                </h3>
-                <p className="text-sm text-slate-600">
-                  For personal injury practices
-                </p>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">HIPAA Compliant</h3>
+                <p className="text-sm text-slate-600">For personal injury practices</p>
               </motion.div>
             </div>
 
@@ -827,10 +851,14 @@ export default function LegalIndustryClient() {
               className="text-center space-y-4 mb-16"
             >
               <h2 className="text-display-md md:text-display-lg font-display text-slate-900">
-                Seamless Integration with <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Your Legal Software</span>
+                Seamless Integration with{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                  Your Legal Software
+                </span>
               </h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-                Cases created automatically in your practice management system. No manual data entry.
+                Cases created automatically in your practice management system. No manual data
+                entry.
               </p>
             </motion.div>
 
@@ -845,7 +873,9 @@ export default function LegalIndustryClient() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   className={`bg-white/70 backdrop-blur-xl p-6 rounded-xl flex items-center justify-center transition-all duration-300 group cursor-pointer shadow-lg ${
-                    software.popular ? 'border-2 border-blue-200 bg-gradient-to-r from-blue-50 to-cyan-50 hover:border-blue-300 hover:shadow-blue-200/50' : 'border border-slate-200 hover:border-slate-300 hover:shadow-slate-200/50'
+                    software.popular
+                      ? "border-2 border-blue-200 bg-gradient-to-r from-blue-50 to-cyan-50 hover:border-blue-300 hover:shadow-blue-200/50"
+                      : "border border-slate-200 hover:border-slate-300 hover:shadow-slate-200/50"
                   }`}
                 >
                   <div className="text-center">
@@ -923,7 +953,10 @@ export default function LegalIndustryClient() {
               className="text-center space-y-4 mb-16"
             >
               <h2 className="text-display-md md:text-display-lg font-display text-slate-900">
-                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">$38,912</span> in Annual Savings
+                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                  $38,912
+                </span>{" "}
+                in Annual Savings
               </h2>
               <p className="text-xl text-slate-600">
                 Replace a $35K-$50K/year receptionist with AI for $299/month
@@ -941,7 +974,9 @@ export default function LegalIndustryClient() {
                 className="bg-white/70 backdrop-blur-xl p-8 rounded-2xl border border-slate-200 shadow-lg shadow-slate-200/50"
               >
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Traditional Receptionist</h3>
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">
+                    Traditional Receptionist
+                  </h3>
                   <div className="text-5xl font-bold text-red-600 mb-2">$42,500</div>
                   <p className="text-slate-600">per year</p>
                 </div>
@@ -952,7 +987,7 @@ export default function LegalIndustryClient() {
                     "Training required",
                     "Benefits & payroll taxes",
                     "Human error risk",
-                    "Can only handle 1 call at a time"
+                    "Can only handle 1 call at a time",
                   ].map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3 text-slate-600">
                       <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
@@ -977,7 +1012,9 @@ export default function LegalIndustryClient() {
                 </div>
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">AI Receptionist</h3>
-                  <div className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2">$3,588</div>
+                  <div className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2">
+                    $3,588
+                  </div>
                   <p className="text-slate-600">per year ($299/mo)</p>
                 </div>
                 <ul className="space-y-3">
@@ -987,7 +1024,7 @@ export default function LegalIndustryClient() {
                     "Pre-trained for legal intake",
                     "No benefits or taxes",
                     "Perfect consistency",
-                    "Unlimited simultaneous calls"
+                    "Unlimited simultaneous calls",
                   ].map((item, idx) => (
                     <li key={idx} className="flex items-start gap-3 text-slate-900">
                       <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
@@ -1008,12 +1045,19 @@ export default function LegalIndustryClient() {
             >
               <DollarSign className="w-16 h-16 text-blue-600 mx-auto mb-4" />
               <h3 className="text-3xl font-bold text-slate-900 mb-2">
-                Save <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">$38,912 per year</span>
+                Save{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                  $38,912 per year
+                </span>
               </h3>
               <p className="text-slate-600 text-lg mb-6">
                 That&apos;s enough to hire another attorney or invest in marketing
               </p>
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="inline-block">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-block"
+              >
                 <Link
                   href="tel:865-346-6111"
                   className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white px-8 py-4 rounded-xl font-semibold inline-flex items-center gap-2 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 group w-full sm:w-auto justify-center"
@@ -1047,7 +1091,10 @@ export default function LegalIndustryClient() {
               </div>
 
               <h2 className="text-display-md md:text-display-lg font-display text-slate-900">
-                Arrests Don&apos;t Happen <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">9 to 5</span>
+                Arrests Don&apos;t Happen{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                  9 to 5
+                </span>
               </h2>
 
               <p className="text-xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
@@ -1110,7 +1157,10 @@ export default function LegalIndustryClient() {
               className="text-center space-y-4 mb-16"
             >
               <h2 className="text-display-md md:text-display-lg font-display text-slate-900">
-                Trusted by <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">500+ Law Firms</span>
+                Trusted by{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                  500+ Law Firms
+                </span>
               </h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
                 From solo practitioners to national firms - see the results they&apos;re achieving.
@@ -1136,7 +1186,9 @@ export default function LegalIndustryClient() {
                   <p className="text-sm text-slate-600">In New Retainers Captured</p>
                 </div>
                 <p className="text-slate-600 mb-6 italic leading-relaxed">
-                  &quot;We were losing cases to competitors who answered first. Now our AI picks up every call instantly. We&apos;ve closed $380K in new retainers we would have missed.&quot;
+                  &quot;We were losing cases to competitors who answered first. Now our AI picks up
+                  every call instantly. We&apos;ve closed $380K in new retainers we would have
+                  missed.&quot;
                 </p>
                 <div className="pt-6 border-t border-slate-200">
                   <p className="text-slate-900 font-semibold">Michael Peterson</p>
@@ -1161,7 +1213,9 @@ export default function LegalIndustryClient() {
                   <p className="text-sm text-slate-600">Qualified While In Court</p>
                 </div>
                 <p className="text-slate-600 mb-6 italic leading-relaxed">
-                  &quot;As a solo practitioner, I can&apos;t answer my phone during trials. The AI qualified 23 criminal defense cases while I was in court. Every single one converted to a consultation.&quot;
+                  &quot;As a solo practitioner, I can&apos;t answer my phone during trials. The AI
+                  qualified 23 criminal defense cases while I was in court. Every single one
+                  converted to a consultation.&quot;
                 </p>
                 <div className="pt-6 border-t border-slate-200">
                   <p className="text-slate-900 font-semibold">Sarah Martinez, Esq.</p>
@@ -1186,7 +1240,9 @@ export default function LegalIndustryClient() {
                   <p className="text-sm text-slate-600">Increase in Consultation Bookings</p>
                 </div>
                 <p className="text-slate-600 mb-6 italic leading-relaxed">
-                  &quot;We&apos;re a 5-attorney firm. The AI handles overflow calls, after-hours emergencies, and weekends. Our consultation bookings increased 35% in the first month.&quot;
+                  &quot;We&apos;re a 5-attorney firm. The AI handles overflow calls, after-hours
+                  emergencies, and weekends. Our consultation bookings increased 35% in the first
+                  month.&quot;
                 </p>
                 <div className="pt-6 border-t border-slate-200">
                   <p className="text-slate-900 font-semibold">David Thompson</p>
@@ -1238,12 +1294,16 @@ export default function LegalIndustryClient() {
               className="bg-white/70 backdrop-blur-xl p-12 rounded-3xl border-2 border-blue-200 text-center space-y-8 shadow-lg shadow-slate-200/50"
             >
               <h2 className="text-display-md md:text-display-lg font-display text-slate-900">
-                Never Miss a <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Client Call</span> Again
+                Never Miss a{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                  Client Call
+                </span>{" "}
+                Again
               </h2>
 
               <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                Join 500+ law firms using AI to capture every lead, 24/7.
-                No contracts. Cancel anytime.
+                Join 500+ law firms using AI to capture every lead, 24/7. No contracts. Cancel
+                anytime.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

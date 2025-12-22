@@ -145,9 +145,7 @@ export interface FieldValidation {
  * Validate multiple fields at once
  * Returns object with field names as keys and error messages as values
  */
-export function validateFields(
-  fields: Record<string, FieldValidation>
-): FormValidationErrors {
+export function validateFields(fields: Record<string, FieldValidation>): FormValidationErrors {
   const errors: FormValidationErrors = {};
 
   for (const [fieldName, { value, validate }] of Object.entries(fields)) {

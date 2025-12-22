@@ -33,7 +33,8 @@ export default function PhoneDemoCard() {
         <div
           className="absolute -inset-4 rounded-[2.5rem] opacity-40"
           style={{
-            background: "radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 70%)",
+            background:
+              "radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.15) 0%, transparent 70%)",
             filter: "blur(30px)",
           }}
         />
@@ -50,14 +51,16 @@ export default function PhoneDemoCard() {
             <div
               className="absolute top-0 right-0 w-40 h-40 opacity-30"
               style={{
-                background: "radial-gradient(circle at center, rgba(14, 165, 233, 0.12) 0%, transparent 60%)",
+                background:
+                  "radial-gradient(circle at center, rgba(14, 165, 233, 0.12) 0%, transparent 60%)",
                 filter: "blur(40px)",
               }}
             />
             <div
               className="absolute bottom-0 left-0 w-32 h-32 opacity-20"
               style={{
-                background: "radial-gradient(circle at center, rgba(37, 99, 235, 0.1) 0%, transparent 60%)",
+                background:
+                  "radial-gradient(circle at center, rgba(37, 99, 235, 0.1) 0%, transparent 60%)",
                 filter: "blur(30px)",
               }}
             />
@@ -81,7 +84,7 @@ export default function PhoneDemoCard() {
 
               <h2
                 className="text-2xl font-bold text-slate-900"
-                style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+                style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
               >
                 Experience It{" "}
                 <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
@@ -115,7 +118,8 @@ export default function PhoneDemoCard() {
             <div
               className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
               style={{
-                background: "radial-gradient(circle at 50% 30%, rgba(37, 99, 235, 0.06) 0%, transparent 60%)",
+                background:
+                  "radial-gradient(circle at 50% 30%, rgba(37, 99, 235, 0.06) 0%, transparent 60%)",
               }}
             />
 
@@ -136,7 +140,7 @@ export default function PhoneDemoCard() {
                 <a
                   href="tel:865-346-6111"
                   className="text-xl font-bold text-slate-900 hover:text-blue-600 transition-colors duration-300 tracking-tight"
-                  style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+                  style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
                 >
                   (865) 346-6111
                 </a>
@@ -190,8 +194,7 @@ export default function PhoneDemoCard() {
               <span className="font-semibold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                 Try it now:
               </span>{" "}
-              Call the number above to speak with our AI. It answers in 3 rings.
-              No setup needed.
+              Call the number above to speak with our AI. It answers in 3 rings. No setup needed.
             </p>
 
             {/* Feature badges with spring pop entrance */}

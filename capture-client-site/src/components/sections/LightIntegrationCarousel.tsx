@@ -12,12 +12,27 @@ import { cardShadowLight } from "@/lib/depth-utils";
 // ============================================
 
 const INTEGRATION_PARTNERS = [
-  { name: "Salesforce", logo: "/images/integrations/salesforce.svg", width: 120, slug: "salesforce" },
+  {
+    name: "Salesforce",
+    logo: "/images/integrations/salesforce.svg",
+    width: 120,
+    slug: "salesforce",
+  },
   { name: "HubSpot", logo: "/images/integrations/hubspot.svg", width: 100, slug: "hubspot" },
-  { name: "Google Calendar", logo: "/images/integrations/google-calendar.svg", width: 110, slug: "google-calendar" },
+  {
+    name: "Google Calendar",
+    logo: "/images/integrations/google-calendar.svg",
+    width: 110,
+    slug: "google-calendar",
+  },
   { name: "Zapier", logo: "/images/integrations/zapier.svg", width: 90, slug: "zapier" },
   { name: "Twilio", logo: "/images/integrations/twilio.svg", width: 100, slug: "twilio" },
-  { name: "QuickBooks", logo: "/images/integrations/quickbooks-online.svg", width: 110, slug: "quickbooks-online" },
+  {
+    name: "QuickBooks",
+    logo: "/images/integrations/quickbooks-online.svg",
+    width: 110,
+    slug: "quickbooks-online",
+  },
   { name: "Calendly", logo: "/images/integrations/calendly.svg", width: 100, slug: "calendly" },
   { name: "Stripe", logo: "/images/integrations/stripe.svg", width: 80, slug: "stripe" },
   { name: "Mailchimp", logo: "/images/integrations/mailchimp.svg", width: 110, slug: "mailchimp" },
@@ -92,7 +107,8 @@ export function LightIntegrationCarousel() {
                       <div
                         className="absolute inset-0 rounded-xl"
                         style={{
-                          background: "radial-gradient(circle at center, rgba(37, 99, 235, 0.03) 0%, transparent 70%)",
+                          background:
+                            "radial-gradient(circle at center, rgba(37, 99, 235, 0.03) 0%, transparent 70%)",
                         }}
                       />
                     </div>

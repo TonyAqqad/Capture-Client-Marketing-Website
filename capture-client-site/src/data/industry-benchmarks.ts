@@ -30,7 +30,7 @@ export const INDUSTRY_BENCHMARKS: IndustryBenchmark[] = [
     name: "Fitness / Gyms",
     icon: "Dumbbell",
     defaultLeadValue: 1200,
-    conversionRate: 0.40,
+    conversionRate: 0.4,
     typicalMissedRate: 30,
     avgCallsPerWeek: 25,
     description: "Avg membership LTV ~$1,200. Peak calls during workout hours.",
@@ -40,7 +40,7 @@ export const INDUSTRY_BENCHMARKS: IndustryBenchmark[] = [
     name: "Legal / Law Firms",
     icon: "Scale",
     defaultLeadValue: 5000,
-    conversionRate: 0.20,
+    conversionRate: 0.2,
     typicalMissedRate: 30,
     avgCallsPerWeek: 20,
     description: "High-value cases $5K-$100K. Every lead matters.",
@@ -50,7 +50,7 @@ export const INDUSTRY_BENCHMARKS: IndustryBenchmark[] = [
     name: "Plumbing",
     icon: "Wrench",
     defaultLeadValue: 3500,
-    conversionRate: 0.30,
+    conversionRate: 0.3,
     typicalMissedRate: 40,
     avgCallsPerWeek: 25,
     description: "Avg job $350-$3,500. Emergency calls are highest value.",
@@ -60,7 +60,7 @@ export const INDUSTRY_BENCHMARKS: IndustryBenchmark[] = [
     name: "HVAC",
     icon: "Thermometer",
     defaultLeadValue: 4000,
-    conversionRate: 0.30,
+    conversionRate: 0.3,
     typicalMissedRate: 40,
     avgCallsPerWeek: 25,
     description: "Avg job $400-$4,000. Seasonal peaks create missed calls.",
@@ -99,7 +99,7 @@ export const INDUSTRY_BENCHMARKS: IndustryBenchmark[] = [
 
 // Helper to get benchmark by ID
 export function getBenchmarkById(id: string): IndustryBenchmark | undefined {
-  return INDUSTRY_BENCHMARKS.find(b => b.id === id);
+  return INDUSTRY_BENCHMARKS.find((b) => b.id === id);
 }
 
 // Helper to get default benchmark (martial arts - first in list)

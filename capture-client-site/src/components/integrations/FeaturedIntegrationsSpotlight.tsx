@@ -66,13 +66,7 @@ export function FeaturedIntegrationsSpotlight({
 }
 
 // Featured Card Component
-function FeaturedCard({
-  integration,
-  index,
-}: {
-  integration: Integration;
-  index: number;
-}) {
+function FeaturedCard({ integration, index }: { integration: Integration; index: number }) {
   const [imageError, setImageError] = useState(false);
 
   return (
@@ -143,9 +137,7 @@ function FeaturedCard({
               {/* Category Badge */}
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-600/10 border border-blue-600/20">
                 <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-                <span className="text-xs font-semibold text-blue-600">
-                  {integration.category}
-                </span>
+                <span className="text-xs font-semibold text-blue-600">{integration.category}</span>
               </div>
             </div>
 

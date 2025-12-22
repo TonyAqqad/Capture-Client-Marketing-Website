@@ -11,13 +11,7 @@
     "keyword_slug": "google-ads-lead-generation"
   },
   "industry_focus": {
-    "industries": [
-      "Legal Services",
-      "Home Services",
-      "Healthcare",
-      "Financial Services",
-      "B2B"
-    ],
+    "industries": ["Legal Services", "Home Services", "Healthcare", "Financial Services", "B2B"],
     "business_types": [
       "Legal Services companies",
       "Home Services companies",
@@ -126,13 +120,7 @@
   "nationwide_coverage": {
     "heading": "Serving Businesses Nationwide",
     "description": "We work with businesses across all 50 states from small local operations to multi-location enterprises.",
-    "regions_highlighted": [
-      "East Coast",
-      "West Coast",
-      "Midwest",
-      "South",
-      "Southwest"
-    ]
+    "regions_highlighted": ["East Coast", "West Coast", "Midwest", "South", "Southwest"]
   },
   "testimonials": [
     {
@@ -226,13 +214,7 @@
     "urgency_text": "Limited slots available for new clients"
   },
   "related_pages": {
-    "related_national_keywords": [
-      "voice-ai-small-business",
-      "lead-generation-agency"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "related_national_keywords": ["voice-ai-small-business", "lead-generation-agency"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

@@ -32,7 +32,9 @@ export function MobileHeroVisual() {
                     <span className="animate-ping-slow absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
                     <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.8)]" />
                   </span>
-                  <span className="text-xs font-bold text-green-400 uppercase tracking-wider">Active Call</span>
+                  <span className="text-xs font-bold text-green-400 uppercase tracking-wider">
+                    Active Call
+                  </span>
                 </div>
                 <div className="flex items-center gap-1.5 px-2.5 py-1 bg-white/5 rounded-lg border border-white/10">
                   <Clock className="text-white/60 w-3.5 h-3.5" />
@@ -85,13 +87,34 @@ export function MobileHeroVisual() {
             {/* Waveform animation at bottom */}
             <div className="absolute bottom-16 left-0 right-0 px-8">
               <div className="flex items-end justify-center gap-1.5 h-12">
-                <div className="w-1 bg-gradient-to-t from-cyan-400 to-cyan-500 rounded-full waveform-bar" style={{ animationDelay: '0ms' }} />
-                <div className="w-1 bg-gradient-to-t from-cyan-400 to-cyan-500 rounded-full waveform-bar" style={{ animationDelay: '100ms' }} />
-                <div className="w-1 bg-gradient-to-t from-blue-500 to-cyan-400 rounded-full waveform-bar" style={{ animationDelay: '200ms' }} />
-                <div className="w-1 bg-gradient-to-t from-blue-500 to-cyan-400 rounded-full waveform-bar" style={{ animationDelay: '300ms' }} />
-                <div className="w-1 bg-gradient-to-t from-cyan-400 to-cyan-500 rounded-full waveform-bar" style={{ animationDelay: '400ms' }} />
-                <div className="w-1 bg-gradient-to-t from-blue-500 to-cyan-400 rounded-full waveform-bar" style={{ animationDelay: '500ms' }} />
-                <div className="w-1 bg-gradient-to-t from-cyan-400 to-cyan-500 rounded-full waveform-bar" style={{ animationDelay: '600ms' }} />
+                <div
+                  className="w-1 bg-gradient-to-t from-cyan-400 to-cyan-500 rounded-full waveform-bar"
+                  style={{ animationDelay: "0ms" }}
+                />
+                <div
+                  className="w-1 bg-gradient-to-t from-cyan-400 to-cyan-500 rounded-full waveform-bar"
+                  style={{ animationDelay: "100ms" }}
+                />
+                <div
+                  className="w-1 bg-gradient-to-t from-blue-500 to-cyan-400 rounded-full waveform-bar"
+                  style={{ animationDelay: "200ms" }}
+                />
+                <div
+                  className="w-1 bg-gradient-to-t from-blue-500 to-cyan-400 rounded-full waveform-bar"
+                  style={{ animationDelay: "300ms" }}
+                />
+                <div
+                  className="w-1 bg-gradient-to-t from-cyan-400 to-cyan-500 rounded-full waveform-bar"
+                  style={{ animationDelay: "400ms" }}
+                />
+                <div
+                  className="w-1 bg-gradient-to-t from-blue-500 to-cyan-400 rounded-full waveform-bar"
+                  style={{ animationDelay: "500ms" }}
+                />
+                <div
+                  className="w-1 bg-gradient-to-t from-cyan-400 to-cyan-500 rounded-full waveform-bar"
+                  style={{ animationDelay: "600ms" }}
+                />
               </div>
             </div>
 
@@ -122,7 +145,9 @@ export function MobileHeroVisual() {
                 <span className="animate-ping-slow absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500 shadow-[0_0_6px_rgba(59,130,246,0.8)]" />
               </span>
-              <span className="text-[11px] font-bold text-blue-500 uppercase tracking-wide">Live Now</span>
+              <span className="text-[11px] font-bold text-blue-500 uppercase tracking-wide">
+                Live Now
+              </span>
             </div>
           </div>
         </div>
@@ -133,7 +158,9 @@ export function MobileHeroVisual() {
         <div className="text-center">
           <div className="flex items-center justify-center gap-1 mb-1">
             <span className="text-2xl">📞</span>
-            <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-400 bg-clip-text text-transparent">4,273</span>
+            <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-400 bg-clip-text text-transparent">
+              4,273
+            </span>
           </div>
           <p className="text-xs text-white/60 font-medium">Calls Today</p>
         </div>
@@ -143,7 +170,9 @@ export function MobileHeroVisual() {
         <div className="text-center">
           <div className="flex items-center justify-center gap-1 mb-1">
             <span className="text-2xl">🎯</span>
-            <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">1,847</span>
+            <span className="text-xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+              1,847
+            </span>
           </div>
           <p className="text-xs text-white/60 font-medium">Leads Captured</p>
         </div>
@@ -166,25 +195,21 @@ export function MobileHeroVisual() {
                 <span className="animate-ping-slow absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.8)]" />
               </span>
-              <span className="text-xs font-semibold text-green-400 uppercase tracking-wide">AI Agent Online</span>
+              <span className="text-xs font-semibold text-green-400 uppercase tracking-wide">
+                AI Agent Online
+              </span>
             </div>
           </div>
 
           {/* Phone Number */}
-          <a
-            href="tel:865-346-6111"
-            className="block text-center mb-4 group"
-          >
+          <a href="tel:865-346-6111" className="block text-center mb-4 group">
             <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-400 bg-clip-text text-transparent group-active:scale-95 transition-transform">
               (865) 346-6111
             </div>
           </a>
 
           {/* Call Button */}
-          <a
-            href="tel:865-346-6111"
-            className="relative block w-full"
-          >
+          <a href="tel:865-346-6111" className="relative block w-full">
             {/* Pulsing ring around button */}
             <div className="absolute inset-0 -m-1 rounded-xl bg-gradient-to-r from-cyan-500 to-cyan-400 opacity-50 pulse-ring-button" />
 
@@ -209,7 +234,8 @@ export function MobileHeroVisual() {
         }
 
         @keyframes pulse-ring {
-          0%, 100% {
+          0%,
+          100% {
             opacity: 1;
             transform: scale(1);
           }
@@ -225,7 +251,8 @@ export function MobileHeroVisual() {
         }
 
         @keyframes ping {
-          75%, 100% {
+          75%,
+          100% {
             transform: scale(1.5);
             opacity: 0;
           }
@@ -238,7 +265,8 @@ export function MobileHeroVisual() {
         }
 
         @keyframes waveform {
-          0%, 100% {
+          0%,
+          100% {
             height: 8px;
           }
           50% {
@@ -262,7 +290,9 @@ export function MobileHeroVisual() {
         }
 
         @keyframes dot-pulse {
-          0%, 60%, 100% {
+          0%,
+          60%,
+          100% {
             opacity: 0.3;
             transform: scale(0.8);
           }
@@ -299,7 +329,8 @@ export function MobileHeroVisual() {
         }
 
         @keyframes float-slow {
-          0%, 100% {
+          0%,
+          100% {
             transform: translateY(0) scale(1);
           }
           50% {
@@ -309,7 +340,8 @@ export function MobileHeroVisual() {
 
         /* Call timer increment simulation (visual only) */
         @keyframes timer-pulse {
-          0%, 100% {
+          0%,
+          100% {
             opacity: 1;
           }
           50% {
@@ -327,7 +359,8 @@ export function MobileHeroVisual() {
         }
 
         @keyframes glow-pulse {
-          0%, 100% {
+          0%,
+          100% {
             opacity: 0.5;
             transform: scale(1);
           }
@@ -343,7 +376,8 @@ export function MobileHeroVisual() {
         }
 
         @keyframes pulse-ring-button {
-          0%, 100% {
+          0%,
+          100% {
             opacity: 0.3;
             transform: scale(1);
           }

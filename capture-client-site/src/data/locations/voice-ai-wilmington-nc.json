@@ -11,11 +11,7 @@
     "state": "NC",
     "state_full": "North Carolina",
     "slug": "wilmington-nc",
-    "nearby_areas": [
-      "Wrightsville Beach",
-      "Carolina Beach",
-      "Leland"
-    ],
+    "nearby_areas": ["Wrightsville Beach", "Carolina Beach", "Leland"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -211,19 +207,8 @@
     "urgency_text": "Limited spots available for Wilmington businesses this month"
   },
   "related_pages": {
-    "other_services_in_location": [
-      "google-ads",
-      "facebook-ads"
-    ],
-    "nearby_locations": [
-      "wrightsville-beach-nc",
-      "carolina-beach-nc",
-      "raleigh-nc"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package",
-      "enterprise-package"
-    ]
+    "other_services_in_location": ["google-ads", "facebook-ads"],
+    "nearby_locations": ["wrightsville-beach-nc", "carolina-beach-nc", "raleigh-nc"],
+    "packages": ["starter-package", "growth-package", "enterprise-package"]
   }
 }

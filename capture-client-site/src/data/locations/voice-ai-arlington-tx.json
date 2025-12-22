@@ -11,13 +11,7 @@
     "state": "Texas",
     "state_abbr": "TX",
     "slug": "arlington-tx",
-    "nearby_areas": [
-      "Grand Prairie",
-      "Mansfield",
-      "Euless",
-      "Bedford",
-      "Pantego"
-    ],
+    "nearby_areas": ["Grand Prairie", "Mansfield", "Euless", "Bedford", "Pantego"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -187,9 +181,6 @@
       "voice-ai-mansfield-tx",
       "voice-ai-fort-worth-tx"
     ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "packages": ["starter-package", "growth-package"]
   }
 }

@@ -10,7 +10,7 @@
  * - SoftwareApplication: https://schema.org/SoftwareApplication
  */
 
-import { SITE_CONFIG } from './seo-config';
+import { SITE_CONFIG } from "./seo-config";
 
 /**
  * Generate HowTo JSON-LD Schema
@@ -25,9 +25,9 @@ export function generateHowToSchema(howToData: {
   url?: string;
 }) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    '@id': howToData.url ? `${howToData.url}#howto` : `${SITE_CONFIG.url}/#howto`,
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "@id": howToData.url ? `${howToData.url}#howto` : `${SITE_CONFIG.url}/#howto`,
 
     name: howToData.name,
     description: howToData.description,
@@ -38,7 +38,7 @@ export function generateHowToSchema(howToData: {
     // Cost estimate (optional)
     ...(howToData.estimatedCost && {
       estimatedCost: {
-        '@type': 'MonetaryAmount',
+        "@type": "MonetaryAmount",
         currency: howToData.estimatedCost.currency,
         value: howToData.estimatedCost.value,
       },
@@ -46,13 +46,13 @@ export function generateHowToSchema(howToData: {
 
     // Steps array
     step: howToData.steps.map((s) => ({
-      '@type': 'HowToStep',
+      "@type": "HowToStep",
       position: s.step,
       name: s.title,
       text: s.description,
       ...(s.image && {
         image: {
-          '@type': 'ImageObject',
+          "@type": "ImageObject",
           url: s.image,
         },
       }),
@@ -60,8 +60,8 @@ export function generateHowToSchema(howToData: {
 
     // Tools needed for AI Voice setup
     tool: [
-      { '@type': 'HowToTool', name: 'AI Voice Agent Platform' },
-      { '@type': 'HowToTool', name: 'Business Phone Number' },
+      { "@type": "HowToTool", name: "AI Voice Agent Platform" },
+      { "@type": "HowToTool", name: "Business Phone Number" },
     ],
   };
 }
@@ -80,8 +80,8 @@ export function generateVideoSchema(videoData: {
   embedUrl?: string;
 }) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'VideoObject',
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
 
     name: videoData.name,
     description: videoData.description,
@@ -93,9 +93,9 @@ export function generateVideoSchema(videoData: {
     ...(videoData.embedUrl && { embedUrl: videoData.embedUrl }),
 
     publisher: {
-      '@type': 'Organization',
+      "@type": "Organization",
       name: SITE_CONFIG.name,
-      '@id': `${SITE_CONFIG.url}/#organization`,
+      "@id": `${SITE_CONFIG.url}/#organization`,
     },
   };
 }
@@ -106,23 +106,23 @@ export function generateVideoSchema(videoData: {
  */
 export function generatePlatformSoftwareApplicationSchema() {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    '@id': `${SITE_CONFIG.url}/#software`,
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": `${SITE_CONFIG.url}/#software`,
 
     name: `${SITE_CONFIG.name} Platform`,
-    applicationCategory: 'BusinessApplication',
-    operatingSystem: 'Web-based',
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web-based",
 
     description:
-      'AI-powered marketing automation platform with Voice AI agents, CRM, Google & Facebook Ads management, and real-time analytics.',
+      "AI-powered marketing automation platform with Voice AI agents, CRM, Google & Facebook Ads management, and real-time analytics.",
 
     offers: {
-      '@type': 'AggregateOffer',
-      lowPrice: '97',
-      highPrice: '950',
-      priceCurrency: 'USD',
-      offerCount: '3',
+      "@type": "AggregateOffer",
+      lowPrice: "97",
+      highPrice: "950",
+      priceCurrency: "USD",
+      offerCount: "3",
     },
 
     // NOTE: Aggregate rating commented out until verifiable
@@ -135,19 +135,19 @@ export function generatePlatformSoftwareApplicationSchema() {
     // },
 
     featureList: [
-      '24/7 AI Voice Agents',
-      'Lead Qualification',
-      'Appointment Scheduling',
-      'CRM Integration',
-      'Google Ads Management',
-      'Facebook Ads Management',
-      'Real-time Analytics',
-      'Call Transcription',
+      "24/7 AI Voice Agents",
+      "Lead Qualification",
+      "Appointment Scheduling",
+      "CRM Integration",
+      "Google Ads Management",
+      "Facebook Ads Management",
+      "Real-time Analytics",
+      "Call Transcription",
     ],
 
     publisher: {
-      '@type': 'Organization',
-      '@id': `${SITE_CONFIG.url}/#organization`,
+      "@type": "Organization",
+      "@id": `${SITE_CONFIG.url}/#organization`,
     },
   };
 }
@@ -162,30 +162,30 @@ export function generateCollectionPageSchema(data: {
   items: Array<{ name: string; url: string }>;
 }) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'CollectionPage',
-    '@id': `${data.url}#collectionpage`,
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${data.url}#collectionpage`,
 
     name: data.name,
     description: data.description,
     url: data.url,
 
     isPartOf: {
-      '@type': 'WebSite',
-      '@id': `${SITE_CONFIG.url}/#website`,
+      "@type": "WebSite",
+      "@id": `${SITE_CONFIG.url}/#website`,
     },
 
     mainEntity: {
-      '@type': 'ItemList',
+      "@type": "ItemList",
       itemListElement: data.items.map((item, index) => ({
-        '@type': 'ListItem',
+        "@type": "ListItem",
         position: index + 1,
         name: item.name,
         url: item.url,
       })),
     },
 
-    inLanguage: 'en-US',
+    inLanguage: "en-US",
   };
 }
 
@@ -203,9 +203,9 @@ export function generateLocationServiceSchema(locationData: {
   benefits?: Array<{ title: string; description: string }>;
 }) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    '@id': `${locationData.pageUrl}#service`,
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${locationData.pageUrl}#service`,
 
     name: `${locationData.serviceName} in ${locationData.city}, ${locationData.stateAbbr}`,
     description: locationData.serviceDescription,
@@ -214,25 +214,25 @@ export function generateLocationServiceSchema(locationData: {
     serviceType: locationData.serviceName,
 
     provider: {
-      '@type': 'LocalBusiness',
+      "@type": "LocalBusiness",
       name: `${SITE_CONFIG.name} - ${locationData.city}`,
-      '@id': `${locationData.pageUrl}#localbusiness`,
+      "@id": `${locationData.pageUrl}#localbusiness`,
       address: {
-        '@type': 'PostalAddress',
+        "@type": "PostalAddress",
         addressLocality: locationData.city,
         addressRegion: locationData.stateAbbr,
-        addressCountry: 'US',
+        addressCountry: "US",
       },
       parentOrganization: {
-        '@id': `${SITE_CONFIG.url}/#organization`,
+        "@id": `${SITE_CONFIG.url}/#organization`,
       },
     },
 
     areaServed: {
-      '@type': 'City',
+      "@type": "City",
       name: locationData.city,
       containedInPlace: {
-        '@type': 'State',
+        "@type": "State",
         name: locationData.state,
       },
     },
@@ -241,10 +241,10 @@ export function generateLocationServiceSchema(locationData: {
     ...(locationData.benefits &&
       locationData.benefits.length > 0 && {
         hasOfferCatalog: {
-          '@type': 'OfferCatalog',
+          "@type": "OfferCatalog",
           name: `${locationData.serviceName} Features`,
           itemListElement: locationData.benefits.slice(0, 5).map((benefit, index) => ({
-            '@type': 'Offer',
+            "@type": "Offer",
             name: benefit.title,
             description: benefit.description,
             position: index + 1,
@@ -254,18 +254,10 @@ export function generateLocationServiceSchema(locationData: {
 
     // 24/7 availability for AI services
     hoursAvailable: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: [
-        'Monday',
-        'Tuesday',
-        'Wednesday',
-        'Thursday',
-        'Friday',
-        'Saturday',
-        'Sunday',
-      ],
-      opens: '00:00',
-      closes: '23:59',
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: "00:00",
+      closes: "23:59",
     },
 
     // NOTE: Aggregate rating commented out until verifiable
@@ -296,42 +288,42 @@ export function generateEventSchema(eventData: {
   const isOnline = eventData.isOnline ?? true;
 
   return {
-    '@context': 'https://schema.org',
-    '@type': isOnline ? 'VirtualEvent' : 'Event',
+    "@context": "https://schema.org",
+    "@type": isOnline ? "VirtualEvent" : "Event",
 
     name: eventData.name,
     description: eventData.description,
     startDate: eventData.startDate,
     ...(eventData.endDate && { endDate: eventData.endDate }),
 
-    eventStatus: 'https://schema.org/EventScheduled',
+    eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: isOnline
-      ? 'https://schema.org/OnlineEventAttendanceMode'
-      : 'https://schema.org/OfflineEventAttendanceMode',
+      ? "https://schema.org/OnlineEventAttendanceMode"
+      : "https://schema.org/OfflineEventAttendanceMode",
 
     location: isOnline
       ? {
-          '@type': 'VirtualLocation',
+          "@type": "VirtualLocation",
           url: SITE_CONFIG.url,
         }
       : {
-          '@type': 'Place',
+          "@type": "Place",
           name: eventData.locationName || SITE_CONFIG.name,
           ...(eventData.locationUrl && { url: eventData.locationUrl }),
         },
 
     organizer: {
-      '@type': 'Organization',
+      "@type": "Organization",
       name: SITE_CONFIG.name,
       url: SITE_CONFIG.url,
     },
 
     ...(eventData.price && {
       offers: {
-        '@type': 'Offer',
+        "@type": "Offer",
         price: eventData.price,
-        priceCurrency: eventData.currency || 'USD',
-        availability: 'https://schema.org/InStock',
+        priceCurrency: eventData.currency || "USD",
+        availability: "https://schema.org/InStock",
         url: `${SITE_CONFIG.url}/contact`,
       },
     }),
@@ -351,8 +343,8 @@ export function generateSpecialAnnouncementSchema(data: {
   url?: string;
 }) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'SpecialAnnouncement',
+    "@context": "https://schema.org",
+    "@type": "SpecialAnnouncement",
 
     name: data.name,
     text: data.text,
@@ -363,13 +355,13 @@ export function generateSpecialAnnouncementSchema(data: {
     url: data.url || SITE_CONFIG.url,
 
     announcementLocation: {
-      '@type': 'CovidTestingFacility', // Generic location type
+      "@type": "CovidTestingFacility", // Generic location type
       name: SITE_CONFIG.name,
       url: SITE_CONFIG.url,
     },
 
     spatialCoverage: SITE_CONFIG.serviceArea.regions.map((region) => ({
-      '@type': 'State',
+      "@type": "State",
       name: region,
     })),
   };
@@ -379,32 +371,34 @@ export function generateSpecialAnnouncementSchema(data: {
  * Generate Testimonial/Review collection schema
  * For pages showcasing customer testimonials
  */
-export function generateTestimonialsSchema(testimonials: Array<{
-  author: string;
-  business?: string;
-  location?: string;
-  quote: string;
-  rating?: number;
-}>) {
+export function generateTestimonialsSchema(
+  testimonials: Array<{
+    author: string;
+    business?: string;
+    location?: string;
+    quote: string;
+    rating?: number;
+  }>
+) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    '@id': `${SITE_CONFIG.url}/#organization`,
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${SITE_CONFIG.url}/#organization`,
     name: SITE_CONFIG.name,
 
     review: testimonials.map((testimonial, index) => ({
-      '@type': 'Review',
-      '@id': `${SITE_CONFIG.url}/#review-${index + 1}`,
+      "@type": "Review",
+      "@id": `${SITE_CONFIG.url}/#review-${index + 1}`,
       author: {
-        '@type': 'Person',
+        "@type": "Person",
         name: testimonial.author,
         ...(testimonial.business && {
           worksFor: {
-            '@type': 'Organization',
+            "@type": "Organization",
             name: testimonial.business,
             ...(testimonial.location && {
               address: {
-                '@type': 'PostalAddress',
+                "@type": "PostalAddress",
                 addressLocality: testimonial.location,
               },
             }),
@@ -414,7 +408,7 @@ export function generateTestimonialsSchema(testimonials: Array<{
       reviewBody: testimonial.quote,
       ...(testimonial.rating && {
         reviewRating: {
-          '@type': 'Rating',
+          "@type": "Rating",
           ratingValue: testimonial.rating,
           bestRating: 5,
           worstRating: 1,
@@ -438,35 +432,35 @@ export function generateTestimonialsSchema(testimonials: Array<{
  * Ready to use on Voice AI service pages
  */
 export const VoiceAIHowToSchema = generateHowToSchema({
-  name: 'How to Set Up Voice AI for Your Business',
+  name: "How to Set Up Voice AI for Your Business",
   description:
-    'Complete guide to implementing AI Voice Agents that answer calls, qualify leads, and book appointments 24/7.',
-  totalTime: 'P2W', // 2 weeks
-  estimatedCost: { currency: 'USD', value: '997' },
+    "Complete guide to implementing AI Voice Agents that answer calls, qualify leads, and book appointments 24/7.",
+  totalTime: "P2W", // 2 weeks
+  estimatedCost: { currency: "USD", value: "997" },
   steps: [
     {
       step: 1,
-      title: 'Schedule Free Strategy Call',
+      title: "Schedule Free Strategy Call",
       description:
         "Book a 15-minute call with our team to discuss your business needs and how Voice AI can help you capture more clients. We'll analyze your current call volume and missed opportunities.",
     },
     {
       step: 2,
-      title: 'Custom AI Training',
+      title: "Custom AI Training",
       description:
-        'We train your AI voice agent with your specific business information, FAQs, service offerings, and qualification criteria. The AI learns to represent your brand professionally.',
+        "We train your AI voice agent with your specific business information, FAQs, service offerings, and qualification criteria. The AI learns to represent your brand professionally.",
     },
     {
       step: 3,
-      title: 'Integration Setup',
+      title: "Integration Setup",
       description:
-        'Connect your existing phone system, CRM, and calendar. We handle all technical setup including call forwarding, lead routing, and appointment scheduling integration.',
+        "Connect your existing phone system, CRM, and calendar. We handle all technical setup including call forwarding, lead routing, and appointment scheduling integration.",
     },
     {
       step: 4,
-      title: 'Launch & Monitor',
+      title: "Launch & Monitor",
       description:
-        'Go live with your AI voice agent. Monitor calls in real-time, review transcriptions, and track lead quality. We continuously optimize based on call data.',
+        "Go live with your AI voice agent. Monitor calls in real-time, review transcriptions, and track lead quality. We continuously optimize based on call data.",
     },
   ],
   url: `${SITE_CONFIG.url}/services/voice-ai`,
@@ -476,40 +470,40 @@ export const VoiceAIHowToSchema = generateHowToSchema({
  * Pre-built Lead Generation HowTo Schema
  */
 export const LeadGenerationHowToSchema = generateHowToSchema({
-  name: 'How to Generate Qualified Leads for Your Business',
+  name: "How to Generate Qualified Leads for Your Business",
   description:
-    'Step-by-step process for implementing a complete lead generation system with Google Ads, Facebook Ads, and AI qualification.',
-  totalTime: 'P1M', // 1 month
+    "Step-by-step process for implementing a complete lead generation system with Google Ads, Facebook Ads, and AI qualification.",
+  totalTime: "P1M", // 1 month
   steps: [
     {
       step: 1,
-      title: 'Market Analysis & Strategy',
+      title: "Market Analysis & Strategy",
       description:
-        'We analyze your target market, competitor landscape, and customer demographics to develop a customized lead generation strategy.',
+        "We analyze your target market, competitor landscape, and customer demographics to develop a customized lead generation strategy.",
     },
     {
       step: 2,
-      title: 'Campaign Setup',
+      title: "Campaign Setup",
       description:
-        'Create optimized Google Ads and Facebook Ads campaigns targeting high-intent keywords and audiences in your service area.',
+        "Create optimized Google Ads and Facebook Ads campaigns targeting high-intent keywords and audiences in your service area.",
     },
     {
       step: 3,
-      title: 'Landing Page Optimization',
+      title: "Landing Page Optimization",
       description:
-        'Build conversion-optimized landing pages with clear CTAs, trust signals, and lead capture forms that convert visitors into leads.',
+        "Build conversion-optimized landing pages with clear CTAs, trust signals, and lead capture forms that convert visitors into leads.",
     },
     {
       step: 4,
-      title: 'AI Lead Qualification',
+      title: "AI Lead Qualification",
       description:
-        'Connect AI Voice Agents to automatically qualify incoming leads, book appointments, and route hot leads to your sales team.',
+        "Connect AI Voice Agents to automatically qualify incoming leads, book appointments, and route hot leads to your sales team.",
     },
     {
       step: 5,
-      title: 'Optimize & Scale',
+      title: "Optimize & Scale",
       description:
-        'Continuously analyze campaign performance, A/B test ad creatives, and scale successful campaigns to maximize ROI.',
+        "Continuously analyze campaign performance, A/B test ad creatives, and scale successful campaigns to maximize ROI.",
     },
   ],
   url: `${SITE_CONFIG.url}/services/lead-generation`,

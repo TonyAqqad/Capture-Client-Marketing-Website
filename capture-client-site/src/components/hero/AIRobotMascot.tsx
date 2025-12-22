@@ -27,8 +27,9 @@ export function AIRobotMascot({ className = "" }: AIRobotMascotProps) {
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] opacity-30"
           style={{
-            background: "radial-gradient(circle, rgba(0, 201, 255, 0.5) 0%, rgba(95, 227, 255, 0.2) 30%, transparent 60%)",
-            filter: "blur(60px)"
+            background:
+              "radial-gradient(circle, rgba(0, 201, 255, 0.5) 0%, rgba(95, 227, 255, 0.2) 30%, transparent 60%)",
+            filter: "blur(60px)",
           }}
         />
         {/* Inner focused glow */}
@@ -36,7 +37,7 @@ export function AIRobotMascot({ className = "" }: AIRobotMascotProps) {
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[300px] opacity-50"
           style={{
             background: "radial-gradient(ellipse, rgba(0, 201, 255, 0.4) 0%, transparent 50%)",
-            filter: "blur(40px)"
+            filter: "blur(40px)",
           }}
         />
       </div>
@@ -46,7 +47,8 @@ export function AIRobotMascot({ className = "" }: AIRobotMascotProps) {
         viewBox="0 0 320 400"
         className="relative w-full h-auto max-w-[380px] mx-auto"
         style={{
-          filter: "drop-shadow(0 0 40px rgba(0, 201, 255, 0.35)) drop-shadow(0 0 80px rgba(0, 201, 255, 0.15)) drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3))"
+          filter:
+            "drop-shadow(0 0 40px rgba(0, 201, 255, 0.35)) drop-shadow(0 0 80px rgba(0, 201, 255, 0.15)) drop-shadow(0 20px 40px rgba(0, 0, 0, 0.3))",
         }}
         animate={{ y: [0, -10, 0] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
@@ -145,23 +147,10 @@ export function AIRobotMascot({ className = "" }: AIRobotMascotProps) {
         />
 
         {/* Main capsule body - larger and more refined */}
-        <ellipse
-          cx="160"
-          cy="230"
-          rx="85"
-          ry="120"
-          fill="url(#premiumBodyGradient)"
-        />
+        <ellipse cx="160" cy="230" rx="85" ry="120" fill="url(#premiumBodyGradient)" />
 
         {/* Body metallic highlight - creates 3D depth */}
-        <ellipse
-          cx="135"
-          cy="190"
-          rx="45"
-          ry="65"
-          fill="url(#metallicHighlight)"
-          opacity="0.8"
-        />
+        <ellipse cx="135" cy="190" rx="45" ry="65" fill="url(#metallicHighlight)" opacity="0.8" />
 
         {/* Rim light on edges */}
         <ellipse
@@ -175,14 +164,7 @@ export function AIRobotMascot({ className = "" }: AIRobotMascotProps) {
         />
 
         {/* Inner depth shadow */}
-        <ellipse
-          cx="160"
-          cy="260"
-          rx="75"
-          ry="100"
-          fill="url(#innerShadow)"
-          opacity="0.3"
-        />
+        <ellipse cx="160" cy="260" rx="75" ry="100" fill="url(#innerShadow)" opacity="0.3" />
 
         {/* ===== ARMS ===== */}
         {/* Left arm with animation */}
@@ -191,22 +173,9 @@ export function AIRobotMascot({ className = "" }: AIRobotMascotProps) {
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
           style={{ transformOrigin: "90px 220px" }}
         >
-          <ellipse
-            cx="60"
-            cy="240"
-            rx="22"
-            ry="35"
-            fill="url(#armGradient)"
-          />
+          <ellipse cx="60" cy="240" rx="22" ry="35" fill="url(#armGradient)" />
           {/* Arm highlight */}
-          <ellipse
-            cx="55"
-            cy="232"
-            rx="10"
-            ry="18"
-            fill="url(#metallicHighlight)"
-            opacity="0.6"
-          />
+          <ellipse cx="55" cy="232" rx="10" ry="18" fill="url(#metallicHighlight)" opacity="0.6" />
         </motion.g>
 
         {/* Right arm with animation */}
@@ -215,43 +184,16 @@ export function AIRobotMascot({ className = "" }: AIRobotMascotProps) {
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
           style={{ transformOrigin: "230px 220px" }}
         >
-          <ellipse
-            cx="260"
-            cy="240"
-            rx="22"
-            ry="35"
-            fill="url(#armGradient)"
-          />
+          <ellipse cx="260" cy="240" rx="22" ry="35" fill="url(#armGradient)" />
           {/* Arm highlight */}
-          <ellipse
-            cx="255"
-            cy="232"
-            rx="10"
-            ry="18"
-            fill="url(#metallicHighlight)"
-            opacity="0.6"
-          />
+          <ellipse cx="255" cy="232" rx="10" ry="18" fill="url(#metallicHighlight)" opacity="0.6" />
         </motion.g>
 
         {/* ===== ANTENNA ===== */}
         {/* Antenna stem */}
-        <rect
-          x="154"
-          y="95"
-          width="12"
-          height="30"
-          rx="6"
-          fill="#4ECDC4"
-        />
+        <rect x="154" y="95" width="12" height="30" rx="6" fill="#4ECDC4" />
         {/* Antenna stem highlight */}
-        <rect
-          x="155"
-          y="97"
-          width="4"
-          height="25"
-          rx="2"
-          fill="rgba(255,255,255,0.4)"
-        />
+        <rect x="155" y="97" width="4" height="25" rx="2" fill="rgba(255,255,255,0.4)" />
 
         {/* Antenna ball with pulsing glow */}
         <motion.g
@@ -269,32 +211,14 @@ export function AIRobotMascot({ className = "" }: AIRobotMascotProps) {
             filter="url(#premiumGlow)"
           />
           {/* Main antenna ball */}
-          <circle
-            cx="160"
-            cy="82"
-            r="15"
-            fill="url(#antennaGlow)"
-            filter="url(#eyeInnerGlow)"
-          />
+          <circle cx="160" cy="82" r="15" fill="url(#antennaGlow)" filter="url(#eyeInnerGlow)" />
           {/* Highlight */}
-          <circle
-            cx="155"
-            cy="77"
-            r="5"
-            fill="rgba(255,255,255,0.7)"
-          />
+          <circle cx="155" cy="77" r="5" fill="rgba(255,255,255,0.7)" />
         </motion.g>
 
         {/* ===== FACE SCREEN ===== */}
         {/* Face screen background - larger and more prominent */}
-        <rect
-          x="100"
-          y="155"
-          width="120"
-          height="90"
-          rx="25"
-          fill="url(#premiumFaceGradient)"
-        />
+        <rect x="100" y="155" width="120" height="90" rx="25" fill="url(#premiumFaceGradient)" />
 
         {/* Screen bezel/frame effect */}
         <rect
@@ -328,7 +252,7 @@ export function AIRobotMascot({ className = "" }: AIRobotMascotProps) {
             duration: 4,
             repeat: Infinity,
             times: [0, 0.46, 0.5, 0.54, 1],
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
           style={{ transformOrigin: "135px 185px" }}
         >
@@ -349,19 +273,9 @@ export function AIRobotMascot({ className = "" }: AIRobotMascotProps) {
             filter="url(#eyeInnerGlow)"
           />
           {/* Eye highlight - larger for more life */}
-          <circle
-            cx="130"
-            cy="180"
-            r="5"
-            fill="rgba(255,255,255,0.8)"
-          />
+          <circle cx="130" cy="180" r="5" fill="rgba(255,255,255,0.8)" />
           {/* Secondary highlight */}
-          <circle
-            cx="138"
-            cy="188"
-            r="2"
-            fill="rgba(255,255,255,0.4)"
-          />
+          <circle cx="138" cy="188" r="2" fill="rgba(255,255,255,0.4)" />
         </motion.g>
 
         {/* Right eye */}
@@ -371,7 +285,7 @@ export function AIRobotMascot({ className = "" }: AIRobotMascotProps) {
             duration: 4,
             repeat: Infinity,
             times: [0, 0.46, 0.5, 0.54, 1],
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
           style={{ transformOrigin: "185px 185px" }}
         >
@@ -392,19 +306,9 @@ export function AIRobotMascot({ className = "" }: AIRobotMascotProps) {
             filter="url(#eyeInnerGlow)"
           />
           {/* Eye highlight */}
-          <circle
-            cx="180"
-            cy="180"
-            r="5"
-            fill="rgba(255,255,255,0.8)"
-          />
+          <circle cx="180" cy="180" r="5" fill="rgba(255,255,255,0.8)" />
           {/* Secondary highlight */}
-          <circle
-            cx="188"
-            cy="188"
-            r="2"
-            fill="rgba(255,255,255,0.4)"
-          />
+          <circle cx="188" cy="188" r="2" fill="rgba(255,255,255,0.4)" />
         </motion.g>
 
         {/* ===== SMILE ===== */}
@@ -433,7 +337,7 @@ export function AIRobotMascot({ className = "" }: AIRobotMascotProps) {
         <motion.g
           animate={{
             opacity: [0.7, 1, 0.7],
-            scale: [1, 1.08, 1]
+            scale: [1, 1.08, 1],
           }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         >
@@ -454,12 +358,7 @@ export function AIRobotMascot({ className = "" }: AIRobotMascotProps) {
             filter="url(#eyeInnerGlow)"
           />
           {/* Light highlight */}
-          <circle
-            cx="157"
-            cy="292"
-            r="3"
-            fill="rgba(255,255,255,0.7)"
-          />
+          <circle cx="157" cy="292" r="3" fill="rgba(255,255,255,0.7)" />
         </motion.g>
 
         {/* ===== DECORATIVE DETAILS ===== */}

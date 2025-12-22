@@ -11,13 +11,7 @@
     "state": "North Carolina",
     "state_abbr": "NC",
     "slug": "charlotte-nc",
-    "nearby_areas": [
-      "Ballantyne",
-      "Myers Park",
-      "SouthPark",
-      "University City",
-      "South End"
-    ],
+    "nearby_areas": ["Ballantyne", "Myers Park", "SouthPark", "University City", "South End"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -196,9 +190,6 @@
       "voice-ai-university-city-nc",
       "voice-ai-south-end-nc"
     ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "packages": ["starter-package", "growth-package"]
   }
 }

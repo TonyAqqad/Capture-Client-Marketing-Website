@@ -16,7 +16,19 @@ import LocalIndustriesServed from "@/components/locations/LocalIndustriesServed"
 import ServiceAreaMap from "@/components/locations/ServiceAreaMap";
 import CompetitorComparison from "@/components/locations/CompetitorComparison";
 import { Benefit, FAQItem } from "@/types/content";
-import { MapPin, Phone, ArrowRight, Calendar, BadgeCheck, Zap, Headphones, Award, Building2, Clock, CheckCircle } from "lucide-react";
+import {
+  MapPin,
+  Phone,
+  ArrowRight,
+  Calendar,
+  BadgeCheck,
+  Zap,
+  Headphones,
+  Award,
+  Building2,
+  Clock,
+  CheckCircle,
+} from "lucide-react";
 import { getIcon } from "@/lib/icon-map";
 import {
   SITE_CONFIG,
@@ -158,19 +170,22 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
   });
 
   // Generate HowTo schema from how_it_works data if available
-  const howToSchema = location.how_it_works && location.how_it_works.length > 0
-    ? generateHowToSchema({
-        name: `How to Get Started with ${location.service.service_name} in ${location.location.city}`,
-        description: `Step-by-step guide to implementing ${location.service.service_name} for your ${location.location.city} business. Quick setup, immediate results.`,
-        totalTime: 'P2W',
-        steps: location.how_it_works.map((step: { step?: number; title: string; description: string }, index: number) => ({
-          step: step.step || index + 1,
-          title: step.title,
-          description: step.description,
-        })),
-        url: `${SITE_CONFIG.url}/locations/${location.page_id}`,
-      })
-    : null;
+  const howToSchema =
+    location.how_it_works && location.how_it_works.length > 0
+      ? generateHowToSchema({
+          name: `How to Get Started with ${location.service.service_name} in ${location.location.city}`,
+          description: `Step-by-step guide to implementing ${location.service.service_name} for your ${location.location.city} business. Quick setup, immediate results.`,
+          totalTime: "P2W",
+          steps: location.how_it_works.map(
+            (step: { step?: number; title: string; description: string }, index: number) => ({
+              step: step.step || index + 1,
+              title: step.title,
+              description: step.description,
+            })
+          ),
+          url: `${SITE_CONFIG.url}/locations/${location.page_id}`,
+        })
+      : null;
 
   // Generate enhanced Location-Service schema
   const locationServiceSchema = generateLocationServiceSchema({
@@ -180,7 +195,10 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
     state: location.location.state,
     stateAbbr: location.location.state_abbr,
     pageUrl: `${SITE_CONFIG.url}/locations/${location.page_id}`,
-    benefits: location.benefits?.map((b: Benefit) => ({ title: b.title, description: b.description })),
+    benefits: location.benefits?.map((b: Benefit) => ({
+      title: b.title,
+      description: b.description,
+    })),
   });
 
   // Generate LocalBusiness schema with address for local SEO
@@ -195,13 +213,13 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       "@type": "PostalAddress",
       addressLocality: location.location.city,
       addressRegion: location.location.state_abbr,
-      addressCountry: "US"
+      addressCountry: "US",
     },
     areaServed: {
       "@type": "City",
-      name: location.location.city
+      name: location.location.city,
     },
-    priceRange: "$$"
+    priceRange: "$$",
   };
 
   // Combine all schemas (filter out nulls)
@@ -235,15 +253,9 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
           {/* Aurora effect - flowing animated gradients */}
           <div className="absolute inset-0 opacity-40">
-            <div
-              className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-gradient-to-br from-cyan-400/30 via-blue-500/20 to-transparent rounded-full blur-[120px] animate-aurora-1"
-            />
-            <div
-              className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-gradient-to-bl from-blue-600/20 via-cyan-500/30 to-transparent rounded-full blur-[100px] animate-aurora-2"
-            />
-            <div
-              className="absolute bottom-0 left-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-cyan-300/20 via-blue-400/20 to-transparent rounded-full blur-[110px] animate-aurora-3"
-            />
+            <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-gradient-to-br from-cyan-400/30 via-blue-500/20 to-transparent rounded-full blur-[120px] animate-aurora-1" />
+            <div className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-gradient-to-bl from-blue-600/20 via-cyan-500/30 to-transparent rounded-full blur-[100px] animate-aurora-2" />
+            <div className="absolute bottom-0 left-1/2 w-[700px] h-[700px] bg-gradient-to-tr from-cyan-300/20 via-blue-400/20 to-transparent rounded-full blur-[110px] animate-aurora-3" />
           </div>
 
           {/* Overlay grid pattern for depth */}
@@ -305,14 +317,18 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             {/* Local Phone CTA - Prominent */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 sm:mb-12 animate-in fade-in slide-in-from-bottom-10 duration-700 delay-450">
               <a
-                href={`tel:${localPhoneNumber.replace(/\D/g, '')}`}
+                href={`tel:${localPhoneNumber.replace(/\D/g, "")}`}
                 className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-cyan-400 via-cyan-500 to-blue-500 text-slate-950 px-10 sm:px-12 py-6 sm:py-7 rounded-2xl font-black text-lg sm:text-xl transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-400/50 hover:scale-[1.03] overflow-hidden w-full sm:w-auto"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
                 <Phone className="w-6 h-6 relative z-10" />
                 <div className="relative z-10 text-left">
-                  <div className="text-sm font-bold opacity-90">Call Our {location.location.city} Team</div>
-                  <div className="text-xl sm:text-2xl font-black tracking-tight">{localPhoneNumber}</div>
+                  <div className="text-sm font-bold opacity-90">
+                    Call Our {location.location.city} Team
+                  </div>
+                  <div className="text-xl sm:text-2xl font-black tracking-tight">
+                    {localPhoneNumber}
+                  </div>
                 </div>
                 <ArrowRight className="w-6 h-6 relative z-10 group-hover:translate-x-2 transition-transform duration-300" />
               </a>
@@ -373,12 +389,30 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
       {/* LOCAL INDUSTRIES SERVED - Interactive tabs/cards */}
       <LocalIndustriesServed
         city={location.location.city}
-        popularIndustries={location.popular_industries || [
-          { name: "HVAC & Home Services", icon: "build", description: "24/7 call answering for emergency calls" },
-          { name: "Legal & Law Firms", icon: "gavel", description: "Pre-qualify leads before attorney consultation" },
-          { name: "Medical & Healthcare", icon: "local_hospital", description: "HIPAA-compliant appointment scheduling" },
-          { name: "Real Estate", icon: "home", description: "Qualify buyers and schedule property showings" }
-        ]}
+        popularIndustries={
+          location.popular_industries || [
+            {
+              name: "HVAC & Home Services",
+              icon: "build",
+              description: "24/7 call answering for emergency calls",
+            },
+            {
+              name: "Legal & Law Firms",
+              icon: "gavel",
+              description: "Pre-qualify leads before attorney consultation",
+            },
+            {
+              name: "Medical & Healthcare",
+              icon: "local_hospital",
+              description: "HIPAA-compliant appointment scheduling",
+            },
+            {
+              name: "Real Estate",
+              icon: "home",
+              description: "Qualify buyers and schedule property showings",
+            },
+          ]
+        }
       />
 
       {/* Benefits Section - Why Choose Us */}
@@ -517,10 +551,7 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
 
       {/* Premium FAQ Section */}
       {location.faq && location.faq.length > 0 && (
-        <PremiumLocationFAQ
-          faqs={location.faq}
-          cityName={location.location.city}
-        />
+        <PremiumLocationFAQ faqs={location.faq} cityName={location.location.city} />
       )}
 
       {/* CRO: Objection Handler */}

@@ -10,18 +10,14 @@
     "state": "Tennessee",
     "state_abbr": "TN",
     "slug": "farragut-tn",
-    "nearby_areas": [
-      "Knoxville"
-    ],
+    "nearby_areas": ["Knoxville"],
     "service_area_radius": "25 miles"
   },
   "seo": {
     "page_title": "Voice AI in Farragut, TN | Capture Client",
     "meta_description": "Farragut businesses automate calls. Call 865-346-6111!",
     "h1_heading": "Voice AI in Farragut, Tennessee",
-    "keywords": [
-      "voice ai farragut"
-    ],
+    "keywords": ["voice ai farragut"],
     "canonical_url": "/voice-ai-farragut-tn"
   },
   "hero": {
@@ -78,9 +74,7 @@
   ],
   "service_area": {
     "heading": "Serving Farragut",
-    "areas_list": [
-      "Farragut"
-    ]
+    "areas_list": ["Farragut"]
   },
   "local_testimonials": [
     {
@@ -113,11 +107,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "voice-ai-knoxville-tn"
-    ],
-    "packages": [
-      "starter-package"
-    ]
+    "nearby_locations": ["voice-ai-knoxville-tn"],
+    "packages": ["starter-package"]
   }
 }

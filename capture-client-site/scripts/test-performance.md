@@ -14,6 +14,7 @@
 8. Check for **red bars** (frame drops) - should be minimal
 
 **Expected Results:**
+
 - ✅ Green FPS bars (60fps)
 - ✅ No red bars (dropped frames)
 - ✅ Smooth scrolling experience
@@ -35,6 +36,7 @@ npx lighthouse https://your-site.vercel.app --view
 ```
 
 **Expected Results:**
+
 - ✅ Performance Score: 90+
 - ✅ LCP < 2.5s
 - ✅ FID < 100ms
@@ -51,6 +53,7 @@ npx lighthouse https://your-site.vercel.app --view
 5. Test interactive elements (buttons, forms)
 
 **Expected Results:**
+
 - ✅ Instant, smooth scrolling
 - ✅ No lag on touch events
 - ✅ Buttons respond immediately
@@ -69,6 +72,7 @@ npm run build
 ```
 
 **Expected Results:**
+
 - ✅ Main bundle < 200KB
 - ✅ No duplicate dependencies
 - ✅ Code splitting working
@@ -99,6 +103,7 @@ After deploying to production:
 ## Performance Checklist
 
 ### Before Deployment:
+
 - [ ] Run Lighthouse (score > 90)
 - [ ] Test scroll performance (60fps)
 - [ ] Test on mobile device
@@ -106,6 +111,7 @@ After deploying to production:
 - [ ] Verify images optimized
 
 ### After Deployment:
+
 - [ ] Monitor Core Web Vitals in Search Console
 - [ ] Check Vercel Analytics
 - [ ] Test on multiple devices
@@ -117,21 +123,25 @@ After deploying to production:
 ## Common Performance Issues
 
 ### Slow Scrolling:
+
 - Check for unthrottled scroll listeners
 - Verify GPU acceleration enabled
 - Disable heavy animations on mobile
 
 ### Long LCP:
+
 - Optimize hero image
 - Preload critical fonts
 - Remove render-blocking resources
 
 ### High FID:
+
 - Reduce JavaScript execution time
 - Code split heavy components
 - Defer non-critical scripts
 
 ### Layout Shifts (CLS):
+
 - Set image dimensions
 - Reserve space for dynamic content
 - Use font-display: swap

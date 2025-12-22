@@ -11,13 +11,7 @@
     "keyword_slug": "ai-call-answering-service"
   },
   "industry_focus": {
-    "industries": [
-      "Medical Offices",
-      "Law Firms",
-      "Home Services",
-      "Salons",
-      "Retail"
-    ],
+    "industries": ["Medical Offices", "Law Firms", "Home Services", "Salons", "Retail"],
     "business_types": [
       "Medical Offices companies",
       "Law Firms companies",
@@ -28,11 +22,7 @@
     "page_title": "AI Call Answering Service | Never Miss Important Calls",
     "meta_description": "AI call answering service that works 24/7. Professional call handling appointment booking and lead qualification without hiring staff.",
     "h1_heading": "AI Call Answering Service for Businesses",
-    "keywords": [
-      "ai call answering service",
-      "capture client",
-      "automation"
-    ]
+    "keywords": ["ai call answering service", "capture client", "automation"]
   },
   "hero": {
     "headline": "Every Call Answered. Every Lead Captured.",
@@ -114,13 +104,7 @@
   "nationwide_coverage": {
     "heading": "Serving Businesses Nationwide",
     "description": "We work with businesses across all 50 states from small local operations to multi-location enterprises.",
-    "regions_highlighted": [
-      "East Coast",
-      "West Coast",
-      "Midwest",
-      "South",
-      "Southwest"
-    ]
+    "regions_highlighted": ["East Coast", "West Coast", "Midwest", "South", "Southwest"]
   },
   "testimonials": [
     {
@@ -198,13 +182,7 @@
     "urgency_text": "Limited slots available for new clients"
   },
   "related_pages": {
-    "related_national_keywords": [
-      "voice-ai-small-business",
-      "lead-generation-agency"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "related_national_keywords": ["voice-ai-small-business", "lead-generation-agency"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

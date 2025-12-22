@@ -187,9 +187,6 @@
       "voice-ai-orange-park-fl",
       "voice-ai-st-augustine-fl"
     ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "packages": ["starter-package", "growth-package"]
   }
 }

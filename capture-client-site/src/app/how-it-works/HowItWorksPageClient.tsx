@@ -27,7 +27,7 @@ import {
   Headphones,
   Database,
   MessageSquare,
-  Network
+  Network,
 } from "lucide-react";
 
 // FAQ Schema for rich snippets
@@ -40,50 +40,50 @@ const faqSchema = {
       name: "How long does setup take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most clients are fully operational within 48 hours. We handle everything: AI configuration, phone number setup, CRM integration, and custom script training. You'll get personalized onboarding and training sessions to ensure you're comfortable with the platform."
-      }
+        text: "Most clients are fully operational within 48 hours. We handle everything: AI configuration, phone number setup, CRM integration, and custom script training. You'll get personalized onboarding and training sessions to ensure you're comfortable with the platform.",
+      },
     },
     {
       "@type": "Question",
       name: "Will my customers know they're talking to AI?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Only if you want them to! Our AI is designed to sound remarkably human, with natural speech patterns, appropriate emotion, and context awareness. Many clients choose to disclose it ('Hi, I'm your AI assistant'), while others prefer a seamless experience. Either way, 96% of callers report high satisfaction."
-      }
+        text: "Only if you want them to! Our AI is designed to sound remarkably human, with natural speech patterns, appropriate emotion, and context awareness. Many clients choose to disclose it ('Hi, I'm your AI assistant'), while others prefer a seamless experience. Either way, 96% of callers report high satisfaction.",
+      },
     },
     {
       "@type": "Question",
       name: "What if the AI can't answer a question?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The AI is trained to gracefully escalate. If it encounters a question beyond its knowledge, it will collect the caller's info and schedule a callback with your team. You maintain full control over which scenarios require human intervention."
-      }
+        text: "The AI is trained to gracefully escalate. If it encounters a question beyond its knowledge, it will collect the caller's info and schedule a callback with your team. You maintain full control over which scenarios require human intervention.",
+      },
     },
     {
       "@type": "Question",
       name: "Can I customize what the AI says?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Absolutely. You have full control over scripts, responses, qualification questions, and tone. Want it formal? Casual? Industry-specific? We'll train your AI to match your brand voice perfectly."
-      }
+        text: "Absolutely. You have full control over scripts, responses, qualification questions, and tone. Want it formal? Casual? Industry-specific? We'll train your AI to match your brand voice perfectly.",
+      },
     },
     {
       "@type": "Question",
       name: "Does this work with my existing CRM?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes! We integrate with all major CRMs including GoHighLevel, Salesforce, HubSpot, and many more. If your CRM has an API, we can connect to it. Our team handles all the technical setup."
-      }
+        text: "Yes! We integrate with all major CRMs including GoHighLevel, Salesforce, HubSpot, and many more. If your CRM has an API, we can connect to it. Our team handles all the technical setup.",
+      },
     },
     {
       "@type": "Question",
       name: "What's your uptime guarantee?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We maintain 99.9% uptime with redundant systems and 24/7 monitoring. If an issue arises, calls are automatically routed to your backup number. You'll never lose a lead due to system downtime."
-      }
-    }
-  ]
+        text: "We maintain 99.9% uptime with redundant systems and 24/7 monitoring. If an issue arises, calls are automatically routed to your backup number. You'll never lose a lead due to system downtime.",
+      },
+    },
+  ],
 };
 
 // HowTo Schema
@@ -91,38 +91,39 @@ const howToSchema = {
   "@context": "https://schema.org",
   "@type": "HowTo",
   name: "How AI Voice Agents Capture Leads Automatically",
-  description: "A step-by-step guide showing how AI voice agents answer calls, qualify leads, and sync data to your CRM automatically.",
+  description:
+    "A step-by-step guide showing how AI voice agents answer calls, qualify leads, and sync data to your CRM automatically.",
   step: [
     {
       "@type": "HowToStep",
       position: 1,
       name: "Customer Calls Your Business",
       text: "A potential customer calls your business at any time—even at 2 AM or during busy hours. The AI answers instantly in under 2 seconds.",
-      image: "https://captureclient.com/step-1-call.jpg"
+      image: "https://captureclient.com/step-1-call.jpg",
     },
     {
       "@type": "HowToStep",
       position: 2,
       name: "AI Answers Instantly",
       text: "Our GPT-4 powered AI engages in natural conversation, understands context, answers questions, and builds rapport with 96% caller satisfaction.",
-      image: "https://captureclient.com/step-2-ai.jpg"
+      image: "https://captureclient.com/step-2-ai.jpg",
     },
     {
       "@type": "HowToStep",
       position: 3,
       name: "Lead Captured & Qualified",
       text: "The AI extracts contact info, qualifies the lead based on your criteria, and syncs all data automatically to your CRM with 99.2% accuracy.",
-      image: "https://captureclient.com/step-3-crm.jpg"
+      image: "https://captureclient.com/step-3-crm.jpg",
     },
     {
       "@type": "HowToStep",
       position: 4,
       name: "You Follow Up & Close",
       text: "Qualified leads land in your inbox instantly with complete context, transcripts, and priority scores—ready to close with 3.2x better conversion rates.",
-      image: "https://captureclient.com/step-4-close.jpg"
-    }
+      image: "https://captureclient.com/step-4-close.jpg",
+    },
   ],
-  totalTime: "PT2M"
+  totalTime: "PT2M",
 };
 
 const processSteps = [
@@ -130,74 +131,78 @@ const processSteps = [
     number: "01",
     title: "Customer Calls Your Business",
     subtitle: "Even at 2 AM or during your busiest hours",
-    description: "A potential customer reaches out when they need you most. Whether it's midnight or during lunch rush, the phone rings.",
+    description:
+      "A potential customer reaches out when they need you most. Whether it's midnight or during lunch rush, the phone rings.",
     icon: "call",
     illustration: "phone",
     features: [
       "Works 24/7/365 - never misses a call",
       "Handles unlimited simultaneous calls",
       "Instant pickup - no waiting on hold",
-      "Smart routing to appropriate department"
+      "Smart routing to appropriate department",
     ],
     stat: {
       value: "< 2 sec",
-      label: "Average pickup time"
-    }
+      label: "Average pickup time",
+    },
   },
   {
     number: "02",
     title: "AI Answers Instantly",
     subtitle: "Natural conversation that sounds human",
-    description: "Our advanced AI voice agent engages in natural, contextual conversation. It understands intent, answers questions, and builds rapport—just like your best employee would.",
+    description:
+      "Our advanced AI voice agent engages in natural, contextual conversation. It understands intent, answers questions, and builds rapport—just like your best employee would.",
     icon: "auto_awesome",
     illustration: "ai",
     features: [
       "GPT-4 powered conversational AI",
       "Natural language understanding",
       "Handles complex questions & objections",
-      "Adapts tone based on caller sentiment"
+      "Adapts tone based on caller sentiment",
     ],
     stat: {
       value: "96%",
-      label: "Caller satisfaction rate"
-    }
+      label: "Caller satisfaction rate",
+    },
   },
   {
     number: "03",
     title: "Lead Captured & Qualified",
     subtitle: "Information flows directly to your CRM",
-    description: "The AI extracts critical information—name, contact details, needs, budget, timeline—and qualifies the lead based on your custom criteria. All data syncs automatically to your CRM.",
+    description:
+      "The AI extracts critical information—name, contact details, needs, budget, timeline—and qualifies the lead based on your custom criteria. All data syncs automatically to your CRM.",
     icon: "database",
     illustration: "crm",
     features: [
       "Automatic lead scoring & qualification",
       "Captures contact info + custom fields",
       "Real-time CRM integration",
-      "Full call transcription with AI summary"
+      "Full call transcription with AI summary",
     ],
     stat: {
       value: "99.2%",
-      label: "Data capture accuracy"
-    }
+      label: "Data capture accuracy",
+    },
   },
   {
     number: "04",
     title: "You Follow Up & Close",
     subtitle: "Hot leads ready for your team",
-    description: "Qualified leads land in your inbox instantly with complete context. Your team follows up armed with transcripts, sentiment analysis, and priority scores—ready to close.",
+    description:
+      "Qualified leads land in your inbox instantly with complete context. Your team follows up armed with transcripts, sentiment analysis, and priority scores—ready to close.",
     icon: "trending_up",
     illustration: "close",
     features: [
       "Instant notification for hot leads",
       "Complete conversation context",
       "Automated appointment scheduling",
-      "Lead priority scoring & routing"
+      "Lead priority scoring & routing",
     ],
     stat: {
       value: "3.2x",
-      label: "Conversion rate increase"
-    }
-  }
+      label: "Conversion rate increase",
+    },
+  },
 ];
 
 // Integration logos
@@ -207,35 +212,41 @@ const integrations = [
   { name: "HubSpot", logo: "HS" },
   { name: "Zapier", logo: "ZAP" },
   { name: "Google Calendar", logo: "GC" },
-  { name: "Slack", logo: "SL" }
+  { name: "Slack", logo: "SL" },
 ];
 
 // FAQ data
 const faqs = [
   {
     question: "How long does setup take?",
-    answer: "Most clients are fully operational within 48 hours. We handle everything: AI configuration, phone number setup, CRM integration, and custom script training. You'll get personalized onboarding and training sessions to ensure you're comfortable with the platform."
+    answer:
+      "Most clients are fully operational within 48 hours. We handle everything: AI configuration, phone number setup, CRM integration, and custom script training. You'll get personalized onboarding and training sessions to ensure you're comfortable with the platform.",
   },
   {
     question: "Will my customers know they're talking to AI?",
-    answer: "Only if you want them to! Our AI is designed to sound remarkably human, with natural speech patterns, appropriate emotion, and context awareness. Many clients choose to disclose it ('Hi, I'm your AI assistant'), while others prefer a seamless experience. Either way, 96% of callers report high satisfaction."
+    answer:
+      "Only if you want them to! Our AI is designed to sound remarkably human, with natural speech patterns, appropriate emotion, and context awareness. Many clients choose to disclose it ('Hi, I'm your AI assistant'), while others prefer a seamless experience. Either way, 96% of callers report high satisfaction.",
   },
   {
     question: "What if the AI can't answer a question?",
-    answer: "The AI is trained to gracefully escalate. If it encounters a question beyond its knowledge, it will collect the caller's info and schedule a callback with your team. You maintain full control over which scenarios require human intervention."
+    answer:
+      "The AI is trained to gracefully escalate. If it encounters a question beyond its knowledge, it will collect the caller's info and schedule a callback with your team. You maintain full control over which scenarios require human intervention.",
   },
   {
     question: "Can I customize what the AI says?",
-    answer: "Absolutely. You have full control over scripts, responses, qualification questions, and tone. Want it formal? Casual? Industry-specific? We'll train your AI to match your brand voice perfectly."
+    answer:
+      "Absolutely. You have full control over scripts, responses, qualification questions, and tone. Want it formal? Casual? Industry-specific? We'll train your AI to match your brand voice perfectly.",
   },
   {
     question: "Does this work with my existing CRM?",
-    answer: "Yes! We integrate with all major CRMs including GoHighLevel, Salesforce, HubSpot, and many more. If your CRM has an API, we can connect to it. Our team handles all the technical setup."
+    answer:
+      "Yes! We integrate with all major CRMs including GoHighLevel, Salesforce, HubSpot, and many more. If your CRM has an API, we can connect to it. Our team handles all the technical setup.",
   },
   {
     question: "What's your uptime guarantee?",
-    answer: "We maintain 99.9% uptime with redundant systems and 24/7 monitoring. If an issue arises, calls are automatically routed to your backup number. You'll never lose a lead due to system downtime."
-  }
+    answer:
+      "We maintain 99.9% uptime with redundant systems and 24/7 monitoring. If an issue arises, calls are automatically routed to your backup number. You'll never lose a lead due to system downtime.",
+  },
 ];
 
 export default function HowItWorksPageClient() {
@@ -277,12 +288,7 @@ export default function HowItWorksPageClient() {
       </div>
 
       {/* HERO SECTION */}
-      <HeroSection
-        heroRef={heroRef}
-        heroY={heroY}
-        heroOpacity={heroOpacity}
-        isMobile={isMobile}
-      />
+      <HeroSection heroRef={heroRef} heroY={heroY} heroOpacity={heroOpacity} isMobile={isMobile} />
 
       {/* ANIMATED PROCESS TIMELINE - Using the actual HowItWorks component */}
       <HowItWorks />
@@ -325,25 +331,25 @@ function HeroSection({ heroRef, heroY, heroOpacity, isMobile }: HeroSectionProps
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3]
+            opacity: [0.3, 0.5, 0.3],
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
           className="absolute top-1/4 left-1/3 w-[400px] h-[400px] bg-gradient-radial from-blue-600/15 to-transparent rounded-full blur-3xl"
         />
         <motion.div
           animate={{
             scale: [1, 1.3, 1],
-            opacity: [0.2, 0.4, 0.2]
+            opacity: [0.2, 0.4, 0.2],
           }}
           transition={{
             duration: 10,
             repeat: Infinity,
             ease: "easeInOut",
-            delay: 2
+            delay: 2,
           }}
           className="absolute bottom-1/4 right-1/3 w-[500px] h-[500px] bg-gradient-radial from-cyan-500/10 to-transparent rounded-full blur-3xl"
         />
@@ -399,7 +405,8 @@ function HeroSection({ heroRef, heroY, heroOpacity, isMobile }: HeroSectionProps
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg sm:text-xl md:text-2xl text-slate-600 max-w-3xl mx-auto mb-10 leading-relaxed"
         >
-          See how our AI voice agents transform your lead generation process—automatically capturing, qualifying, and scheduling leads while you sleep.
+          See how our AI voice agents transform your lead generation process—automatically
+          capturing, qualifying, and scheduling leads while you sleep.
         </motion.p>
 
         {/* Animated Illustration */}
@@ -494,11 +501,23 @@ function HeroIllustration() {
 // ==================== REMAINING COMPONENT IMPLEMENTATIONS ====================
 // These sections complete the How It Works page experience
 
-interface BehindTheScenesProps { isMobile: boolean; }
-interface IntegrationShowcaseProps { integrations: Array<{ name: string; logo: string }>; isMobile: boolean; }
-interface SetupWizardProps { isMobile: boolean; }
-interface FAQSectionProps { faqs: Array<{ question: string; answer: string }>; isMobile: boolean; }
-interface FinalCTAProps { isMobile: boolean; }
+interface BehindTheScenesProps {
+  isMobile: boolean;
+}
+interface IntegrationShowcaseProps {
+  integrations: Array<{ name: string; logo: string }>;
+  isMobile: boolean;
+}
+interface SetupWizardProps {
+  isMobile: boolean;
+}
+interface FAQSectionProps {
+  faqs: Array<{ question: string; answer: string }>;
+  isMobile: boolean;
+}
+interface FinalCTAProps {
+  isMobile: boolean;
+}
 
 // Icon mapping helper
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -515,7 +534,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   rocket_launch: Rocket,
   support_agent: Headphones,
   help_outline: HelpCircle,
-  stars: Stars
+  stars: Stars,
 };
 
 function FeatureIcon({ icon }: { icon: string }) {
@@ -530,7 +549,7 @@ function SetupIcon({ icon }: { icon: string }) {
 
 function ProcessIcon({ icon, primary }: { icon: string; primary?: boolean }) {
   const IconComponent = iconMap[icon] || Settings;
-  return <IconComponent className={`w-6 h-6 ${primary ? 'text-blue-600' : 'text-slate-600'}`} />;
+  return <IconComponent className={`w-6 h-6 ${primary ? "text-blue-600" : "text-slate-600"}`} />;
 }
 
 // ==================== BEHIND THE SCENES ====================
@@ -544,29 +563,29 @@ function BehindTheScenes({ isMobile }: BehindTheScenesProps) {
       title: "GPT-4 Language Model",
       description: "Advanced natural language processing with contextual understanding",
       stat: "99.2%",
-      statLabel: "Accuracy"
+      statLabel: "Accuracy",
     },
     {
       icon: "hearing",
       title: "Real-Time Speech Recognition",
       description: "Instant audio transcription with accent & dialect support",
       stat: "< 200ms",
-      statLabel: "Latency"
+      statLabel: "Latency",
     },
     {
       icon: "timeline",
       title: "Intent Classification",
       description: "AI analyzes caller sentiment and routes to optimal response",
       stat: "96%",
-      statLabel: "Intent Match"
+      statLabel: "Intent Match",
     },
     {
       icon: "integration_instructions",
       title: "CRM Auto-Sync",
       description: "Real-time data synchronization with bidirectional updates",
       stat: "2-way",
-      statLabel: "Sync"
-    }
+      statLabel: "Sync",
+    },
   ];
 
   return (
@@ -592,7 +611,8 @@ function BehindTheScenes({ isMobile }: BehindTheScenesProps) {
             </span>
           </h2>
           <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto">
-            See the cutting-edge technology that makes our AI voice agents so effective at capturing and qualifying leads.
+            See the cutting-edge technology that makes our AI voice agents so effective at capturing
+            and qualifying leads.
           </p>
         </motion.div>
 
@@ -607,7 +627,7 @@ function BehindTheScenes({ isMobile }: BehindTheScenesProps) {
                 duration: 0.6,
                 delay: idx * 0.15,
                 type: "spring",
-                stiffness: 100
+                stiffness: 100,
               }}
               whileHover={!isMobile ? { scale: 1.02, y: -5 } : {}}
               className="relative group"
@@ -718,11 +738,13 @@ function BehindTheScenes({ isMobile }: BehindTheScenesProps) {
 function ProcessNode({ icon, label, primary }: { icon: string; label: string; primary?: boolean }) {
   return (
     <div className="flex flex-col items-center gap-2">
-      <div className={`w-16 h-16 rounded-2xl flex items-center justify-center ${
-        primary
-          ? 'bg-gradient-to-br from-blue-600/20 to-cyan-500/20 border-2 border-blue-600/50'
-          : 'bg-white/70 border border-slate-200/60'
-      }`}>
+      <div
+        className={`w-16 h-16 rounded-2xl flex items-center justify-center ${
+          primary
+            ? "bg-gradient-to-br from-blue-600/20 to-cyan-500/20 border-2 border-blue-600/50"
+            : "bg-white/70 border border-slate-200/60"
+        }`}
+      >
         <ProcessIcon icon={icon} primary={primary} />
       </div>
       <span className="text-xs sm:text-sm font-medium text-slate-500 text-center max-w-[80px]">
@@ -737,10 +759,10 @@ function FlowArrow({ isMobile }: { isMobile: boolean }) {
     <motion.div
       animate={{
         x: isMobile ? 0 : [0, 5, 0],
-        y: isMobile ? [0, 5, 0] : 0
+        y: isMobile ? [0, 5, 0] : 0,
       }}
       transition={{ duration: 2, repeat: Infinity }}
-      className={isMobile ? 'rotate-90' : ''}
+      className={isMobile ? "rotate-90" : ""}
     >
       <ArrowRight className="w-5 h-5 sm:w-6 sm:h-6 text-blue-600" />
     </motion.div>
@@ -780,7 +802,8 @@ function IntegrationShowcase({ integrations, isMobile }: IntegrationShowcaseProp
             </span>
           </h2>
           <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto">
-            No need to change your workflow. Our AI integrates seamlessly with the CRMs and tools you already use.
+            No need to change your workflow. Our AI integrates seamlessly with the CRMs and tools
+            you already use.
           </p>
         </motion.div>
 
@@ -800,7 +823,7 @@ function IntegrationShowcase({ integrations, isMobile }: IntegrationShowcaseProp
                 duration: 0.5,
                 delay: 0.3 + idx * 0.1,
                 type: "spring",
-                stiffness: 150
+                stiffness: 150,
               }}
               whileHover={!isMobile ? { scale: 1.05, y: -8 } : {}}
               className="relative group"
@@ -863,24 +886,27 @@ function SetupWizard({ isMobile }: SetupWizardProps) {
     {
       number: "01",
       title: "Configure Your AI",
-      description: "Customize scripts, tone, qualification questions, and escalation rules. We'll train the AI to sound exactly like your brand.",
+      description:
+        "Customize scripts, tone, qualification questions, and escalation rules. We'll train the AI to sound exactly like your brand.",
       icon: "tune",
-      duration: "15-30 minutes"
+      duration: "15-30 minutes",
     },
     {
       number: "02",
       title: "Connect Your CRM",
-      description: "We handle the technical integration with your CRM. Map custom fields, set up workflows, and configure data sync.",
+      description:
+        "We handle the technical integration with your CRM. Map custom fields, set up workflows, and configure data sync.",
       icon: "cable",
-      duration: "15 minutes"
+      duration: "15 minutes",
     },
     {
       number: "03",
       title: "Go Live",
-      description: "Test with sample calls, review transcripts, make final tweaks, and launch. Start capturing leads 24/7 within 48 hours.",
+      description:
+        "Test with sample calls, review transcripts, make final tweaks, and launch. Start capturing leads 24/7 within 48 hours.",
       icon: "rocket_launch",
-      duration: "24-48 hours"
-    }
+      duration: "24-48 hours",
+    },
   ];
 
   return (
@@ -906,7 +932,8 @@ function SetupWizard({ isMobile }: SetupWizardProps) {
             </span>
           </h2>
           <p className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto">
-            From signup to capturing leads—our streamlined setup gets you operational in less than 2 days.
+            From signup to capturing leads—our streamlined setup gets you operational in less than 2
+            days.
           </p>
         </motion.div>
 
@@ -940,7 +967,7 @@ function SetupWizard({ isMobile }: SetupWizardProps) {
                       duration: 0.8,
                       delay: idx * 0.2 + 0.3,
                       type: "spring",
-                      stiffness: 200
+                      stiffness: 200,
                     }}
                     whileHover={!isMobile ? { rotate: 360, scale: 1.1 } : {}}
                     className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600/20 to-cyan-500/20 border-2 border-blue-600/50 flex items-center justify-center relative z-10 cursor-pointer shadow-lg shadow-slate-200/50"
@@ -1020,7 +1047,9 @@ function SetupWizard({ isMobile }: SetupWizardProps) {
             <Headphones className="w-8 h-8 text-blue-600" />
             <div className="text-left">
               <p className="text-sm font-semibold text-slate-900">White-Glove Onboarding</p>
-              <p className="text-xs text-slate-500">Dedicated setup specialist guides you every step</p>
+              <p className="text-xs text-slate-500">
+                Dedicated setup specialist guides you every step
+              </p>
             </div>
           </div>
         </motion.div>
@@ -1094,16 +1123,14 @@ function FAQSection({ faqs }: FAQSectionProps) {
                   <motion.div
                     initial={false}
                     animate={{
-                      height: isOpen ? 'auto' : 0,
+                      height: isOpen ? "auto" : 0,
                       opacity: isOpen ? 1 : 0,
-                      marginTop: isOpen ? 16 : 0
+                      marginTop: isOpen ? 16 : 0,
                     }}
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <p className="text-slate-600 leading-relaxed">
-                      {faq.answer}
-                    </p>
+                    <p className="text-slate-600 leading-relaxed">{faq.answer}</p>
                   </motion.div>
                 </button>
               </motion.div>
@@ -1145,7 +1172,7 @@ function FinalCTA({ isMobile }: FinalCTAProps) {
         <motion.div
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3]
+            opacity: [0.3, 0.5, 0.3],
           }}
           transition={{ duration: 8, repeat: Infinity }}
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-4xl h-96 bg-gradient-radial from-blue-600/10 via-cyan-500/5 to-transparent blur-3xl"
@@ -1200,7 +1227,8 @@ function FinalCTA({ isMobile }: FinalCTAProps) {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto mb-10"
               >
-                Join hundreds of businesses using AI voice agents to capture, qualify, and convert more leads—24/7.
+                Join hundreds of businesses using AI voice agents to capture, qualify, and convert
+                more leads—24/7.
               </motion.p>
 
               {/* CTAs with enhanced blue glow */}
@@ -1233,12 +1261,12 @@ function FinalCTA({ isMobile }: FinalCTAProps) {
                       className="absolute inset-0 rounded-xl bg-blue-600/20 blur-xl"
                       animate={{
                         opacity: [0.5, 0.8, 0.5],
-                        scale: [1, 1.05, 1]
+                        scale: [1, 1.05, 1],
                       }}
                       transition={{
                         duration: 2,
                         repeat: Infinity,
-                        ease: "easeInOut"
+                        ease: "easeInOut",
                       }}
                     />
                   </Link>

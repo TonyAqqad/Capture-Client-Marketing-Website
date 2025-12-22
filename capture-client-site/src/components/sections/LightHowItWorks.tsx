@@ -29,21 +29,24 @@ const steps: Step[] = [
     icon: PhoneIncoming,
     number: "01",
     title: "Missed Call Captured",
-    description: "When you can't answer, our AI picks up instantly within 3 rings—no customer ever hears voicemail again.",
+    description:
+      "When you can't answer, our AI picks up instantly within 3 rings—no customer ever hears voicemail again.",
     accent: "from-blue-500 to-cyan-400",
   },
   {
     icon: MessageSquare,
     number: "02",
     title: "AI Qualifies Lead",
-    description: "Natural conversation that answers questions, gathers information, and qualifies leads based on your criteria.",
+    description:
+      "Natural conversation that answers questions, gathers information, and qualifies leads based on your criteria.",
     accent: "from-cyan-500 to-blue-400",
   },
   {
     icon: CalendarCheck,
     number: "03",
     title: "Appointment Booked",
-    description: "Qualified leads are scheduled directly into your calendar with a full transcript sent to your inbox.",
+    description:
+      "Qualified leads are scheduled directly into your calendar with a full transcript sent to your inbox.",
     accent: "from-blue-600 to-cyan-500",
   },
 ];
@@ -95,7 +98,8 @@ function StepCard({ step, index }: { step: Step; index: number }) {
         <div
           className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
           style={{
-            background: "radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.05) 0%, transparent 60%)",
+            background:
+              "radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.05) 0%, transparent 60%)",
           }}
         />
 
@@ -128,13 +132,11 @@ function StepCard({ step, index }: { step: Step; index: number }) {
         {/* Content */}
         <h3
           className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-900 transition-colors duration-300"
-          style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+          style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
         >
           {step.title}
         </h3>
-        <p className="text-slate-600 leading-relaxed text-[15px]">
-          {step.description}
-        </p>
+        <p className="text-slate-600 leading-relaxed text-[15px]">{step.description}</p>
 
         {/* Bottom accent line */}
         <div className="absolute bottom-0 left-8 right-8 h-[2px] rounded-full overflow-hidden">
@@ -163,14 +165,16 @@ export function LightHowItWorks() {
         <div
           className="absolute top-0 right-1/4 w-[600px] h-[600px] opacity-30"
           style={{
-            background: "radial-gradient(circle at center, rgba(14, 165, 233, 0.08) 0%, transparent 60%)",
+            background:
+              "radial-gradient(circle at center, rgba(14, 165, 233, 0.08) 0%, transparent 60%)",
             filter: "blur(80px)",
           }}
         />
         <div
           className="absolute bottom-0 left-1/4 w-[500px] h-[500px] opacity-25"
           style={{
-            background: "radial-gradient(circle at center, rgba(37, 99, 235, 0.06) 0%, transparent 60%)",
+            background:
+              "radial-gradient(circle at center, rgba(37, 99, 235, 0.06) 0%, transparent 60%)",
             filter: "blur(60px)",
           }}
         />
@@ -183,7 +187,7 @@ export function LightHowItWorks() {
               linear-gradient(rgba(15,23,42,0.03) 1px, transparent 1px),
               linear-gradient(90deg, rgba(15,23,42,0.03) 1px, transparent 1px)
             `,
-            backgroundSize: '48px 48px',
+            backgroundSize: "48px 48px",
           }}
         />
       </div>
@@ -211,7 +215,7 @@ export function LightHowItWorks() {
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
             className="text-4xl md:text-5xl font-bold text-slate-900 mb-6"
-            style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+            style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
           >
             Turn missed calls into{" "}
             <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
@@ -226,13 +230,16 @@ export function LightHowItWorks() {
             transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="text-lg md:text-xl text-slate-600 leading-relaxed"
           >
-            Our AI seamlessly integrates into your workflow, capturing every opportunity while you focus on what matters.
+            Our AI seamlessly integrates into your workflow, capturing every opportunity while you
+            focus on what matters.
           </motion.p>
         </div>
 
         {/* Steps grid */}
         <div className="grid md:grid-cols-3 gap-6 lg:gap-8 px-2 md:px-0">
-          {steps.map((step, index) => <StepCard key={step.title} step={step} index={index} />)}
+          {steps.map((step, index) => (
+            <StepCard key={step.title} step={step} index={index} />
+          ))}
         </div>
       </div>
     </section>

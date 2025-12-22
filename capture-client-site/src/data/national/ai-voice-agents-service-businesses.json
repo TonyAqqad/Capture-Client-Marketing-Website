@@ -11,28 +11,14 @@
     "keyword_slug": "ai-voice-agents-service-businesses"
   },
   "industry_focus": {
-    "industries": [
-      "HVAC",
-      "Plumbing",
-      "Electrical",
-      "Roofing",
-      "Landscaping"
-    ],
-    "business_types": [
-      "HVAC companies",
-      "Plumbing companies",
-      "Electrical companies"
-    ]
+    "industries": ["HVAC", "Plumbing", "Electrical", "Roofing", "Landscaping"],
+    "business_types": ["HVAC companies", "Plumbing companies", "Electrical companies"]
   },
   "seo": {
     "page_title": "AI Voice Agents for Service Businesses | 24/7 Lead Capture",
     "meta_description": "AI voice agents for service businesses answer calls 24/7 qualify leads and book appointments. Perfect for HVAC plumbing electrical and home services.",
     "h1_heading": "AI Voice Agents for Service Businesses",
-    "keywords": [
-      "ai voice agents for service businesses",
-      "capture client",
-      "automation"
-    ]
+    "keywords": ["ai voice agents for service businesses", "capture client", "automation"]
   },
   "hero": {
     "headline": "Your Service Business Never Sleeps. Neither Should Your Phone System.",
@@ -114,13 +100,7 @@
   "nationwide_coverage": {
     "heading": "Serving Businesses Nationwide",
     "description": "We work with businesses across all 50 states from small local operations to multi-location enterprises.",
-    "regions_highlighted": [
-      "East Coast",
-      "West Coast",
-      "Midwest",
-      "South",
-      "Southwest"
-    ]
+    "regions_highlighted": ["East Coast", "West Coast", "Midwest", "South", "Southwest"]
   },
   "testimonials": [
     {
@@ -198,13 +178,7 @@
     "urgency_text": "Limited slots available for new clients"
   },
   "related_pages": {
-    "related_national_keywords": [
-      "voice-ai-small-business",
-      "lead-generation-agency"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "related_national_keywords": ["voice-ai-small-business", "lead-generation-agency"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

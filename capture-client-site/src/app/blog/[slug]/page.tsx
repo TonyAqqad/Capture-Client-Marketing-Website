@@ -2,7 +2,13 @@ import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/data";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { SITE_CONFIG, generateBlogPostingSchema, generateBreadcrumbSchema, generateWebPageSchema, generateFAQSchema } from "@/lib/seo-config";
+import {
+  SITE_CONFIG,
+  generateBlogPostingSchema,
+  generateBreadcrumbSchema,
+  generateWebPageSchema,
+  generateFAQSchema,
+} from "@/lib/seo-config";
 import JsonLd from "@/components/seo/JsonLd";
 import { ChevronRight, Calendar, Clock } from "lucide-react";
 
@@ -34,14 +40,14 @@ export async function generateMetadata({
   const ogImageUrl = post.featuredImage || `${SITE_CONFIG.url}/og-image.png`;
 
   // Optimize title length (50-60 chars ideal)
-  const optimizedTitle = post.seo.title.length > 60
-    ? `${post.seo.title.substring(0, 57)}...`
-    : post.seo.title;
+  const optimizedTitle =
+    post.seo.title.length > 60 ? `${post.seo.title.substring(0, 57)}...` : post.seo.title;
 
   // Optimize description length (150-160 chars ideal)
-  const optimizedDescription = post.seo.description.length > 160
-    ? `${post.seo.description.substring(0, 157)}...`
-    : post.seo.description;
+  const optimizedDescription =
+    post.seo.description.length > 160
+      ? `${post.seo.description.substring(0, 157)}...`
+      : post.seo.description;
 
   return {
     title: optimizedTitle,
@@ -80,7 +86,7 @@ export async function generateMetadata({
           width: 1200,
           height: 630,
           alt: `${post.title} - ${SITE_CONFIG.name}`,
-          type: 'image/jpeg',
+          type: "image/jpeg",
         },
       ],
     },
@@ -103,19 +109,15 @@ export async function generateMetadata({
       googleBot: {
         index: true,
         follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large' as const,
-        'max-snippet': -1,
+        "max-video-preview": -1,
+        "max-image-preview": "large" as const,
+        "max-snippet": -1,
       },
     },
   };
 }
 
-export default async function BlogPostPage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
   const post = await getBlogPostBySlug(resolvedParams.slug);
 
@@ -149,7 +151,11 @@ export default async function BlogPostPage({
     dateModified: post.updatedAt || post.publishedAt,
   });
 
-  const schemas: Array<Record<string, unknown>> = [blogPostingSchema, breadcrumbSchema, webPageSchema];
+  const schemas: Array<Record<string, unknown>> = [
+    blogPostingSchema,
+    breadcrumbSchema,
+    webPageSchema,
+  ];
 
   // Add FAQ schema if post has FAQ section
   if (post.faq && post.faq.length > 0) {
@@ -203,9 +209,7 @@ export default async function BlogPostPage({
                 />
               )}
               <div>
-                <div className="font-semibold text-slate-900">
-                  {post.author.name}
-                </div>
+                <div className="font-semibold text-slate-900">{post.author.name}</div>
                 <div className="text-sm">{post.author.role}</div>
               </div>
             </div>
@@ -281,14 +285,11 @@ export default async function BlogPostPage({
                 />
               )}
               <div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">
-                  About {post.author.name}
-                </h3>
-                <p className="text-slate-600 mb-4">
-                  {post.author.role}
-                </p>
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">About {post.author.name}</h3>
+                <p className="text-slate-600 mb-4">{post.author.role}</p>
                 <p className="text-slate-800">
-                  {post.author.name} is a marketing expert specializing in helping small businesses grow through AI automation, lead generation, and digital advertising strategies.
+                  {post.author.name} is a marketing expert specializing in helping small businesses
+                  grow through AI automation, lead generation, and digital advertising strategies.
                 </p>
               </div>
             </div>
@@ -300,9 +301,7 @@ export default async function BlogPostPage({
       {relatedPosts.length > 0 && (
         <section className="container mx-auto px-4 sm:px-8 lg:px-16 pb-16">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-slate-900 mb-8">
-              Related Articles
-            </h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-8">Related Articles</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {relatedPosts.map((relatedPost) => (
                 <Link
@@ -326,9 +325,7 @@ export default async function BlogPostPage({
                     <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-primary transition-colors line-clamp-2">
                       {relatedPost.title}
                     </h3>
-                    <p className="text-sm text-slate-600 line-clamp-2">
-                      {relatedPost.excerpt}
-                    </p>
+                    <p className="text-sm text-slate-600 line-clamp-2">{relatedPost.excerpt}</p>
                   </div>
                 </Link>
               ))}
@@ -344,7 +341,8 @@ export default async function BlogPostPage({
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-slate-600 mb-8">
-            Discover how Capture Client can help you automate leads and grow your revenue with AI-powered solutions.
+            Discover how Capture Client can help you automate leads and grow your revenue with
+            AI-powered solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

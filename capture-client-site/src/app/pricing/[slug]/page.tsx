@@ -12,15 +12,7 @@ import {
   ComparisonRow,
   PackageFeature,
 } from "@/types/content";
-import {
-  Star,
-  ArrowRight,
-  CheckCircle2,
-  BadgeCheck,
-  X,
-  ChevronDown,
-  Gift
-} from "lucide-react";
+import { Star, ArrowRight, CheckCircle2, BadgeCheck, X, ChevronDown, Gift } from "lucide-react";
 
 export async function generateStaticParams() {
   const packages = await getAllPackages();
@@ -68,11 +60,7 @@ export async function generateMetadata({
   };
 }
 
-export default async function PackagePage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+export default async function PackagePage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
   const pkg = await getPackageBySlug(resolvedParams.slug);
 
@@ -81,64 +69,69 @@ export default async function PackagePage({
   }
 
   // Build JSON-LD schemas
-  const priceNumber = pkg.package.price.replace(/[^0-9.]/g, '');
+  const priceNumber = pkg.package.price.replace(/[^0-9.]/g, "");
 
   const productSchema = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": pkg.package.package_name,
-    "description": pkg.seo.meta_description,
-    "brand": {
+    name: pkg.package.package_name,
+    description: pkg.seo.meta_description,
+    brand: {
       "@type": "Brand",
-      "name": "Capture Client"
+      name: "Capture Client",
     },
-    "offers": {
+    offers: {
       "@type": "Offer",
-      "price": priceNumber,
-      "priceCurrency": "USD",
-      "priceValidUntil": new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
-      "availability": "https://schema.org/InStock",
-      "url": `https://captureclient.com/pricing/${resolvedParams.slug}`
-    }
+      price: priceNumber,
+      priceCurrency: "USD",
+      priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1))
+        .toISOString()
+        .split("T")[0],
+      availability: "https://schema.org/InStock",
+      url: `https://captureclient.com/pricing/${resolvedParams.slug}`,
+    },
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
+    itemListElement: [
       {
         "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://captureclient.com"
+        position: 1,
+        name: "Home",
+        item: "https://captureclient.com",
       },
       {
         "@type": "ListItem",
-        "position": 2,
-        "name": "Pricing",
-        "item": "https://captureclient.com/pricing"
+        position: 2,
+        name: "Pricing",
+        item: "https://captureclient.com/pricing",
       },
       {
         "@type": "ListItem",
-        "position": 3,
-        "name": pkg.package.package_name,
-        "item": `https://captureclient.com/pricing/${resolvedParams.slug}`
-      }
-    ]
+        position: 3,
+        name: pkg.package.package_name,
+        item: `https://captureclient.com/pricing/${resolvedParams.slug}`,
+      },
+    ],
   };
 
-  const faqSchema = pkg.faq && pkg.faq.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": pkg.faq.map((item: FAQItem) => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer
-      }
-    }))
-  } : null;
+  const faqSchema =
+    pkg.faq && pkg.faq.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: pkg.faq.map((item: FAQItem) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.answer,
+            },
+          })),
+        }
+      : null;
 
   const schemas = faqSchema
     ? [productSchema, breadcrumbSchema, faqSchema]
@@ -334,10 +327,7 @@ export default async function PackagePage({
               </h3>
               <div className="grid md:grid-cols-2 gap-4">
                 {pkg.features_not_included.map((feature: PackageFeature, index: number) => (
-                  <div
-                    key={index}
-                    className="rounded-xl bg-white border border-slate-200 p-6"
-                  >
+                  <div key={index} className="rounded-xl bg-white border border-slate-200 p-6">
                     <div className="flex items-start gap-4">
                       <X className="w-5 h-5 text-slate-600 flex-shrink-0" />
                       <div className="flex-1">
@@ -398,12 +388,8 @@ export default async function PackagePage({
                     <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 flex items-center justify-center border border-cyan-500/30 mb-6">
                       <Star className="w-8 h-8 text-cyan-600" />
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-slate-600 leading-relaxed text-lg">
-                      {benefit.description}
-                    </p>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-4">{benefit.title}</h3>
+                    <p className="text-slate-600 leading-relaxed text-lg">{benefit.description}</p>
                   </div>
                 </div>
               ))}
@@ -485,7 +471,9 @@ export default async function PackagePage({
                         {row.starter}
                       </td>
                       <td className="py-3 sm:py-4 px-3 sm:px-6 text-center">
-                        <span className="text-cyan-600 font-semibold text-sm sm:text-base">{row.growth}</span>
+                        <span className="text-cyan-600 font-semibold text-sm sm:text-base">
+                          {row.growth}
+                        </span>
                       </td>
                       <td className="py-3 sm:py-4 px-3 sm:px-6 text-center text-slate-600 text-sm sm:text-base">
                         {row.enterprise}
@@ -544,12 +532,8 @@ export default async function PackagePage({
                   <div className="flex items-center justify-between">
                     <div>
                       <div className="font-bold text-slate-900">{testimonial.author}</div>
-                      <div className="text-slate-600 text-sm">
-                        {testimonial.business}
-                      </div>
-                      <div className="text-slate-600 text-sm">
-                        {testimonial.location}
-                      </div>
+                      <div className="text-slate-600 text-sm">{testimonial.business}</div>
+                      <div className="text-slate-600 text-sm">{testimonial.location}</div>
                     </div>
                     {testimonial.result && (
                       <div className="px-4 py-2 rounded-lg bg-green-500/10 border border-green-500/20">
@@ -610,8 +594,12 @@ export default async function PackagePage({
                   <div className="w-12 h-12 rounded-full bg-green-500/10 border border-green-500/20 flex items-center justify-center mx-auto mb-4">
                     <BadgeCheck className="w-6 h-6 text-green-600" />
                   </div>
-                  <h4 className="font-bold text-slate-900 mb-2 text-base sm:text-lg">{signal.title}</h4>
-                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">{signal.description}</p>
+                  <h4 className="font-bold text-slate-900 mb-2 text-base sm:text-lg">
+                    {signal.title}
+                  </h4>
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    {signal.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -629,10 +617,12 @@ export default async function PackagePage({
           <div className="rounded-3xl bg-gradient-to-br from-white/80 to-slate-50/80 border border-slate-200 p-12 backdrop-blur-sm">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">
-                {pkg.cta_footer?.headline || `Ready to Get Started with ${pkg.package.package_name}?`}
+                {pkg.cta_footer?.headline ||
+                  `Ready to Get Started with ${pkg.package.package_name}?`}
               </h2>
               <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-                {pkg.cta_footer?.subheadline || "Contact us today to activate your package and start automating your leads."}
+                {pkg.cta_footer?.subheadline ||
+                  "Contact us today to activate your package and start automating your leads."}
               </p>
             </div>
 

@@ -11,13 +11,7 @@
     "state": "Texas",
     "state_abbr": "TX",
     "slug": "irving-tx",
-    "nearby_areas": [
-      "Coppell",
-      "Grapevine",
-      "Grand Prairie",
-      "Farmers Branch",
-      "Carrollton"
-    ],
+    "nearby_areas": ["Coppell", "Grapevine", "Grand Prairie", "Farmers Branch", "Carrollton"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -182,14 +176,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "voice-ai-coppell-tx",
-      "voice-ai-grapevine-tx",
-      "voice-ai-dallas-tx"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "nearby_locations": ["voice-ai-coppell-tx", "voice-ai-grapevine-tx", "voice-ai-dallas-tx"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

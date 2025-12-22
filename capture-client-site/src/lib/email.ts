@@ -1,9 +1,9 @@
-import { Resend } from 'resend';
-import { getLeadNotificationEmailHtml } from './email-templates';
+import { Resend } from "resend";
+import { getLeadNotificationEmailHtml } from "./email-templates";
 
 // Email configuration from environment variables
-const FROM_EMAIL = process.env.FROM_EMAIL || 'onboarding@resend.dev';
-const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL || '';
+const FROM_EMAIL = process.env.FROM_EMAIL || "onboarding@resend.dev";
+const NOTIFICATION_EMAIL = process.env.NOTIFICATION_EMAIL || "";
 
 // Initialize Resend lazily to avoid build-time errors if API key is missing
 let resendInstance: Resend | null = null;
@@ -43,21 +43,19 @@ interface EmailResult {
  * Send lead notification email to the agency
  * Non-blocking: errors are logged but don't fail the request
  */
-export async function sendLeadNotification(
-  leadData: LeadData
-): Promise<EmailResult> {
+export async function sendLeadNotification(leadData: LeadData): Promise<EmailResult> {
   try {
     // Get Resend client (returns null if API key not configured)
     const resend = getResendClient();
 
     if (!resend) {
-      console.warn('[email] RESEND_API_KEY not configured - skipping email notification');
-      return { success: false, error: 'RESEND_API_KEY not configured' };
+      console.warn("[email] RESEND_API_KEY not configured - skipping email notification");
+      return { success: false, error: "RESEND_API_KEY not configured" };
     }
 
     if (!NOTIFICATION_EMAIL) {
-      console.warn('[email] NOTIFICATION_EMAIL not configured - skipping email notification');
-      return { success: false, error: 'NOTIFICATION_EMAIL not configured' };
+      console.warn("[email] NOTIFICATION_EMAIL not configured - skipping email notification");
+      return { success: false, error: "NOTIFICATION_EMAIL not configured" };
     }
 
     // Add timestamp if not provided
@@ -73,14 +71,15 @@ export async function sendLeadNotification(
     let subject = `New Lead: ${enrichedLeadData.name}`;
     if (enrichedLeadData.challenge) {
       const challengeLabels: Record<string, string> = {
-        'missing-calls': 'Missing Calls',
-        'not-enough-leads': 'Not Enough Leads',
-        'poor-roi': 'Poor ROI',
-        'no-system': 'No Lead System',
-        'overwhelmed': 'Overwhelmed',
-        'other': 'Other Challenge',
+        "missing-calls": "Missing Calls",
+        "not-enough-leads": "Not Enough Leads",
+        "poor-roi": "Poor ROI",
+        "no-system": "No Lead System",
+        overwhelmed: "Overwhelmed",
+        other: "Other Challenge",
       };
-      const challengeText = challengeLabels[enrichedLeadData.challenge] || enrichedLeadData.challenge;
+      const challengeText =
+        challengeLabels[enrichedLeadData.challenge] || enrichedLeadData.challenge;
       subject += ` - ${challengeText}`;
     } else if (enrichedLeadData.service) {
       subject += ` - ${enrichedLeadData.service}`;
@@ -95,18 +94,18 @@ export async function sendLeadNotification(
     });
 
     if (response.error) {
-      console.error('[email] Failed to send notification:', response.error);
+      console.error("[email] Failed to send notification:", response.error);
       return { success: false, error: response.error.message };
     }
 
-    console.log('[email] Lead notification sent successfully:', response.data?.id);
+    console.log("[email] Lead notification sent successfully:", response.data?.id);
     return { success: true, messageId: response.data?.id };
   } catch (error) {
     // Log error but don't throw - we don't want email failures to break lead capture
-    console.error('[email] Error sending lead notification:', error);
+    console.error("[email] Error sending lead notification:", error);
     return {
       success: false,
-      error: error instanceof Error ? error.message : 'Unknown error',
+      error: error instanceof Error ? error.message : "Unknown error",
     };
   }
 }
@@ -132,7 +131,7 @@ export function calculateLeadScore(leadData: LeadData): number {
   if (leadData.challenge) {
     score += 25;
     // High-intent challenges get bonus
-    if (['missing-calls', 'not-enough-leads', 'poor-roi'].includes(leadData.challenge)) {
+    if (["missing-calls", "not-enough-leads", "poor-roi"].includes(leadData.challenge)) {
       score += 10;
     }
   }
@@ -155,12 +154,12 @@ export function getLeadPriority(score: number): {
   emoji: string;
 } {
   if (score >= 80) {
-    return { label: 'HOT', color: '#FF6B35', emoji: '🔥' };
+    return { label: "HOT", color: "#FF6B35", emoji: "🔥" };
   } else if (score >= 60) {
-    return { label: 'WARM', color: '#FFA500', emoji: '⚡' };
+    return { label: "WARM", color: "#FFA500", emoji: "⚡" };
   } else if (score >= 40) {
-    return { label: 'QUALIFIED', color: '#4CAF50', emoji: '✓' };
+    return { label: "QUALIFIED", color: "#4CAF50", emoji: "✓" };
   } else {
-    return { label: 'COLD', color: '#666666', emoji: '❄️' };
+    return { label: "COLD", color: "#666666", emoji: "❄️" };
   }
 }

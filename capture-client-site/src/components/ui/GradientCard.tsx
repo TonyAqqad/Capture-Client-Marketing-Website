@@ -20,16 +20,16 @@ interface GradientCardProps {
   children: ReactNode;
   className?: string;
   variant?:
-    | "aurora"     // Cyan/Purple/Violet - Brand gradient
-    | "sunset"     // Orange/Yellow - Warm energy
-    | "ocean"      // Blue tones - Professional calm
-    | "royal"      // Purple spectrum - Luxury
-    | "forest"     // Green tones - Growth/stability
-    | "rose"       // Pink/coral - Modern feminine
-    | "midnight"   // Deep blue - Sophisticated
-    | "ember";     // Red/orange - Bold/urgent
-  hover?: boolean;        // Enable hover effects
-  interactive?: boolean;  // Enable tap/press feedback
+    | "aurora" // Cyan/Purple/Violet - Brand gradient
+    | "sunset" // Orange/Yellow - Warm energy
+    | "ocean" // Blue tones - Professional calm
+    | "royal" // Purple spectrum - Luxury
+    | "forest" // Green tones - Growth/stability
+    | "rose" // Pink/coral - Modern feminine
+    | "midnight" // Deep blue - Sophisticated
+    | "ember"; // Red/orange - Bold/urgent
+  hover?: boolean; // Enable hover effects
+  interactive?: boolean; // Enable tap/press feedback
   intensity?: "subtle" | "medium" | "bold"; // Gradient intensity
 }
 
@@ -54,50 +54,50 @@ export function GradientCard({
   variant = "aurora",
   hover = true,
   interactive = true,
-  intensity = "medium"
+  intensity = "medium",
 }: GradientCardProps) {
   // Gradient backgrounds with subtle overlay (NO backdrop-blur for performance)
   const variantClasses = {
     aurora: {
       subtle: "bg-gradient-to-br from-accent/5 via-primary/5 to-accent/5",
       medium: "bg-gradient-to-br from-accent/10 via-primary/8 to-accent/10",
-      bold: "bg-gradient-aurora opacity-20"
+      bold: "bg-gradient-aurora opacity-20",
     },
     sunset: {
       subtle: "bg-gradient-to-br from-orange-500/5 via-amber-500/5 to-yellow-400/5",
       medium: "bg-gradient-to-br from-orange-500/10 via-amber-500/8 to-yellow-400/10",
-      bold: "bg-gradient-sunset opacity-20"
+      bold: "bg-gradient-sunset opacity-20",
     },
     ocean: {
       subtle: "bg-gradient-to-br from-blue-600/5 via-cyan-500/5 to-blue-300/5",
       medium: "bg-gradient-to-br from-blue-600/10 via-cyan-500/8 to-blue-300/10",
-      bold: "bg-gradient-ocean opacity-20"
+      bold: "bg-gradient-ocean opacity-20",
     },
     royal: {
       subtle: "bg-gradient-to-br from-purple-700/5 via-purple-500/5 to-purple-400/5",
       medium: "bg-gradient-to-br from-purple-700/10 via-purple-500/8 to-purple-400/10",
-      bold: "bg-gradient-royal opacity-20"
+      bold: "bg-gradient-royal opacity-20",
     },
     forest: {
       subtle: "bg-gradient-to-br from-green-900/5 via-green-700/5 to-green-500/5",
       medium: "bg-gradient-to-br from-green-900/10 via-green-700/8 to-green-500/10",
-      bold: "bg-gradient-forest opacity-20"
+      bold: "bg-gradient-forest opacity-20",
     },
     rose: {
       subtle: "bg-gradient-to-br from-rose-500/5 via-pink-400/5 to-pink-300/5",
       medium: "bg-gradient-to-br from-rose-500/10 via-pink-400/8 to-pink-300/10",
-      bold: "bg-gradient-rose opacity-20"
+      bold: "bg-gradient-rose opacity-20",
     },
     midnight: {
       subtle: "bg-gradient-to-br from-slate-900/5 via-slate-700/5 to-slate-600/5",
       medium: "bg-gradient-to-br from-slate-900/10 via-slate-700/8 to-slate-600/10",
-      bold: "bg-gradient-midnight opacity-20"
+      bold: "bg-gradient-midnight opacity-20",
     },
     ember: {
       subtle: "bg-gradient-to-br from-red-700/5 via-orange-600/5 to-amber-500/5",
       medium: "bg-gradient-to-br from-red-700/10 via-orange-600/8 to-amber-500/10",
-      bold: "bg-gradient-ember opacity-20"
-    }
+      bold: "bg-gradient-ember opacity-20",
+    },
   };
 
   // Border colors matching each gradient
@@ -109,7 +109,7 @@ export function GradientCard({
     forest: "border-green-600/20",
     rose: "border-rose-500/20",
     midnight: "border-slate-600/20",
-    ember: "border-red-600/20"
+    ember: "border-red-600/20",
   };
 
   // Hover glow colors
@@ -121,7 +121,7 @@ export function GradientCard({
     forest: "hover:shadow-[0_8px_32px_rgba(27,67,50,0.2)]",
     rose: "hover:shadow-[0_8px_32px_rgba(255,77,109,0.2)]",
     midnight: "hover:shadow-[0_8px_32px_rgba(13,27,42,0.2)]",
-    ember: "hover:shadow-[0_8px_32px_rgba(208,0,0,0.2)]"
+    ember: "hover:shadow-[0_8px_32px_rgba(208,0,0,0.2)]",
   };
 
   const hoverClasses = hover
@@ -156,23 +156,22 @@ export function GradientCard({
           className="absolute inset-0 opacity-0 hover:opacity-100 pointer-events-none"
           initial={false}
           whileHover={{
-            backgroundPosition: ['0% 50%', '100% 50%']
+            backgroundPosition: ["0% 50%", "100% 50%"],
           }}
           transition={{
             duration: 1.5,
-            ease: "linear"
+            ease: "linear",
           }}
           style={{
-            background: 'linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.08) 50%, transparent 100%)',
-            backgroundSize: '200% 100%'
+            background:
+              "linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.08) 50%, transparent 100%)",
+            backgroundSize: "200% 100%",
           }}
         />
       )}
 
       {/* Content */}
-      <div className="relative z-10">
-        {children}
-      </div>
+      <div className="relative z-10">{children}</div>
     </motion.div>
   );
 }
@@ -184,9 +183,8 @@ export function GradientCard({
  * const gradientVariant = getGradientByCategory(integration.category);
  * <GradientCard variant={gradientVariant}>...</GradientCard>
  */
-export function getGradientByCategory(
-  category: string
-): GradientCardProps["variant"] {
+export function getGradientByCategory(category: string): GradientCardProps["variant"] {
   const normalized = category.toLowerCase().replace(/\s+/g, "-");
-  return (categoryGradients[normalized as keyof typeof categoryGradients] || "aurora") as GradientCardProps["variant"];
+  return (categoryGradients[normalized as keyof typeof categoryGradients] ||
+    "aurora") as GradientCardProps["variant"];
 }

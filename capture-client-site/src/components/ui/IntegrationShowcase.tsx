@@ -7,8 +7,8 @@ import Image from "next/image";
 
 export interface Integration {
   name: string;
-  logo?: string;      // Backward compatibility
-  logoUrl?: string;   // Canonical field
+  logo?: string; // Backward compatibility
+  logoUrl?: string; // Canonical field
   description?: string;
   category?: string;
 }
@@ -32,7 +32,7 @@ export function IntegrationShowcase({
   autoScroll = true,
   scrollSpeed = 30,
   columns = 6,
-  className = ""
+  className = "",
 }: IntegrationShowcaseProps) {
   const [isPaused, setIsPaused] = useState(false);
 
@@ -40,7 +40,7 @@ export function IntegrationShowcase({
     3: "grid-cols-2 md:grid-cols-3",
     4: "grid-cols-2 md:grid-cols-4",
     5: "grid-cols-3 md:grid-cols-5",
-    6: "grid-cols-3 md:grid-cols-6"
+    6: "grid-cols-3 md:grid-cols-6",
   };
 
   if (variant === "grid") {
@@ -91,15 +91,15 @@ export function IntegrationShowcase({
         <motion.div
           className="flex gap-8 flex-shrink-0"
           animate={{
-            x: autoScroll && !isPaused ? [0, -100 * integrations.length] : 0
+            x: autoScroll && !isPaused ? [0, -100 * integrations.length] : 0,
           }}
           transition={{
             x: {
               repeat: Infinity,
               repeatType: "loop",
               duration: scrollSpeed,
-              ease: "linear"
-            }
+              ease: "linear",
+            },
           }}
         >
           {integrations.map((integration, index) => (
@@ -111,15 +111,15 @@ export function IntegrationShowcase({
         <motion.div
           className="flex gap-8 flex-shrink-0"
           animate={{
-            x: autoScroll && !isPaused ? [0, -100 * integrations.length] : 0
+            x: autoScroll && !isPaused ? [0, -100 * integrations.length] : 0,
           }}
           transition={{
             x: {
               repeat: Infinity,
               repeatType: "loop",
               duration: scrollSpeed,
-              ease: "linear"
-            }
+              ease: "linear",
+            },
           }}
         >
           {integrations.map((integration, index) => (

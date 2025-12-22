@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "ai voice agents",
     "small business marketing",
     "24/7 call answering",
-    "automated lead generation"
+    "automated lead generation",
   ],
   openGraph: {
     title: "Marketing Services | Voice AI & Lead Gen | Capture Client",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
         url: "https://captureclient.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Capture Client Marketing Services"
-      }
-    ]
+        alt: "Capture Client Marketing Services",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -64,7 +64,8 @@ export default async function ServicesPage() {
   // Generate CollectionPage schema for SEO
   const collectionSchema = generateCollectionPageSchema({
     name: "Marketing Services for Small Business",
-    description: "24/7 AI voice agents, Google Ads, Facebook Ads, and lead generation services for small businesses.",
+    description:
+      "24/7 AI voice agents, Google Ads, Facebook Ads, and lead generation services for small businesses.",
     url: `${SITE_CONFIG.url}/services`,
     items: services.map((service) => ({
       name: service.service.service_name,

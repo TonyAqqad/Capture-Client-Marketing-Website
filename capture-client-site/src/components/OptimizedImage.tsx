@@ -3,7 +3,7 @@
 import Image, { ImageProps } from "next/image";
 import { useState } from "react";
 
-interface OptimizedImageProps extends Omit<ImageProps, 'placeholder' | 'blurDataURL'> {
+interface OptimizedImageProps extends Omit<ImageProps, "placeholder" | "blurDataURL"> {
   /**
    * Whether this image is above the fold and should be prioritized for loading
    * This affects LCP (Largest Contentful Paint)
@@ -57,11 +57,8 @@ export default function OptimizedImage({
   const [isLoading, setIsLoading] = useState(true);
 
   // Generate proper sizes attribute if not provided
-  const responsiveSizes = sizes || (
-    props.fill
-      ? "100vw"
-      : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-  );
+  const responsiveSizes =
+    sizes || (props.fill ? "100vw" : "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw");
 
   return (
     <div className={`relative overflow-hidden ${className}`}>

@@ -26,7 +26,14 @@ export interface DemoRequest {
 
 export type BusinessType = "plumbing" | "dental" | "auto" | "hvac" | "law" | "general";
 
-export type Intent = "emergency" | "service_request" | "inquiry" | "schedule" | "pricing" | "complaint" | "general";
+export type Intent =
+  | "emergency"
+  | "service_request"
+  | "inquiry"
+  | "schedule"
+  | "pricing"
+  | "complaint"
+  | "general";
 
 export interface ExtractedCRMData {
   name?: string;
@@ -189,7 +196,9 @@ function detectIntent(userMessage: string, aiResponse: string): Intent {
   const lowerResponse = aiResponse.toLowerCase();
 
   // Check for inquiry patterns first (to avoid false emergency detection)
-  const isInquiry = /\b(do you|can you|offer|provide|available|what do you|tell me about)\b/i.test(lowerMessage);
+  const isInquiry = /\b(do you|can you|offer|provide|available|what do you|tell me about)\b/i.test(
+    lowerMessage
+  );
 
   // Emergency intent (highest priority) - but not if it's just an inquiry
   if (
@@ -220,12 +229,18 @@ function detectIntent(userMessage: string, aiResponse: string): Intent {
   }
 
   // Pricing intent
-  if (/\b(cost|price|how much|expensive|cheap|rate|fee|charge|quote|estimate)\b/i.test(lowerMessage)) {
+  if (
+    /\b(cost|price|how much|expensive|cheap|rate|fee|charge|quote|estimate)\b/i.test(lowerMessage)
+  ) {
     return "pricing";
   }
 
   // Complaint intent
-  if (/\b(complaint|problem|issue|not working|unhappy|disappointed|refund|angry)\b/i.test(lowerMessage)) {
+  if (
+    /\b(complaint|problem|issue|not working|unhappy|disappointed|refund|angry)\b/i.test(
+      lowerMessage
+    )
+  ) {
     return "complaint";
   }
 
@@ -503,7 +518,12 @@ export async function POST(request: NextRequest) {
     const intent = detectIntent(body.userMessage, aiResponse);
 
     // Calculate lead score
-    const leadScore = calculateLeadScore(body.userMessage, body.conversationHistory, extractedData, intent);
+    const leadScore = calculateLeadScore(
+      body.userMessage,
+      body.conversationHistory,
+      extractedData,
+      intent
+    );
 
     // Build response
     const response: DemoResponse = {

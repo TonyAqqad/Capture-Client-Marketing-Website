@@ -22,7 +22,7 @@ export function RealEstateHero() {
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end start"]
+    offset: ["start start", "end start"],
   });
 
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
@@ -35,7 +35,7 @@ export function RealEstateHero() {
   useEffect(() => {
     if (disableAnimations) return;
     const interval = setInterval(() => {
-      setTargetTime(prev => prev === 0.8 ? 0.9 : 0.8);
+      setTargetTime((prev) => (prev === 0.8 ? 0.9 : 0.8));
     }, 2000);
     return () => clearInterval(interval);
   }, [disableAnimations]);
@@ -44,7 +44,7 @@ export function RealEstateHero() {
     <section
       ref={containerRef}
       className="relative min-h-screen flex items-center overflow-hidden"
-      style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+      style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
       suppressHydrationWarning
     >
       {/* Light Background with Gradient Orbs */}
@@ -74,7 +74,7 @@ export function RealEstateHero() {
           style={{
             backgroundImage: `linear-gradient(rgb(148, 163, 184, 0.1) 1px, transparent 1px),
                              linear-gradient(90deg, rgb(148, 163, 184, 0.1) 1px, transparent 1px)`,
-            backgroundSize: '80px 80px'
+            backgroundSize: "80px 80px",
           }}
         />
       </div>
@@ -97,8 +97,14 @@ export function RealEstateHero() {
               className="inline-flex items-center gap-2 mb-8 px-5 py-3 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200 hover:border-blue-300 transition-all duration-300"
             >
               <Zap className="w-5 h-5 text-blue-600" />
-              <span className="text-sm sm:text-base font-medium text-slate-900" style={{ fontWeight: 500 }}>
-                Industry Average Response: <span className="text-red-600" style={{ fontWeight: 700 }}>47 Hours</span>
+              <span
+                className="text-sm sm:text-base font-medium text-slate-900"
+                style={{ fontWeight: 500 }}
+              >
+                Industry Average Response:{" "}
+                <span className="text-red-600" style={{ fontWeight: 700 }}>
+                  47 Hours
+                </span>
               </span>
             </motion.div>
 
@@ -113,7 +119,10 @@ export function RealEstateHero() {
                 78% of Buyers Choose
               </span>
               <span className="block relative">
-                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent" style={{ fontWeight: 800 }}>
+                <span
+                  className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+                  style={{ fontWeight: 800 }}
+                >
                   The First Agent Who Responds
                 </span>
                 <motion.div
@@ -133,7 +142,11 @@ export function RealEstateHero() {
               className="text-xl sm:text-2xl lg:text-3xl text-slate-600 max-w-4xl mx-auto mb-4 leading-relaxed"
               style={{ fontWeight: 300 }}
             >
-              Be First. <span className="text-slate-900" style={{ fontWeight: 600 }}>Every Time.</span> With AI Voice Agents.
+              Be First.{" "}
+              <span className="text-slate-900" style={{ fontWeight: 600 }}>
+                Every Time.
+              </span>{" "}
+              With AI Voice Agents.
             </motion.p>
 
             {/* Speed comparison */}
@@ -145,7 +158,9 @@ export function RealEstateHero() {
             >
               <div className="flex items-center gap-2 px-5 py-3 bg-red-50 border border-red-200 rounded-xl backdrop-blur-sm hover:bg-red-100 transition-all duration-300">
                 <Clock className="w-5 h-5 text-red-600" />
-                <span className="text-red-600 font-semibold line-through">{avgResponseTime} hours</span>
+                <span className="text-red-600 font-semibold line-through">
+                  {avgResponseTime} hours
+                </span>
               </div>
               <ArrowRight className="w-5 h-5 text-slate-400" />
               <div className="flex items-center gap-2 px-5 py-3 bg-green-50 border border-green-200 rounded-xl backdrop-blur-sm hover:bg-green-100 hover:shadow-lg hover:shadow-green-200/50 transition-all duration-300">
@@ -199,17 +214,23 @@ export function RealEstateHero() {
             >
               <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
                 <CheckCircle className="w-5 h-5 text-blue-600" />
-                <span className="text-sm text-slate-600" style={{ fontWeight: 400 }}>Follow Up Boss Integration</span>
+                <span className="text-sm text-slate-600" style={{ fontWeight: 400 }}>
+                  Follow Up Boss Integration
+                </span>
               </div>
               <div className="w-px h-5 bg-slate-200 hidden sm:block" />
               <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
                 <CheckCircle className="w-5 h-5 text-blue-600" />
-                <span className="text-sm text-slate-600" style={{ fontWeight: 400 }}>kvCORE & Zillow Ready</span>
+                <span className="text-sm text-slate-600" style={{ fontWeight: 400 }}>
+                  kvCORE & Zillow Ready
+                </span>
               </div>
               <div className="w-px h-5 bg-slate-200 hidden sm:block" />
               <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
                 <CheckCircle className="w-5 h-5 text-blue-600" />
-                <span className="text-sm text-slate-600" style={{ fontWeight: 400 }}>24/7 Lead Response</span>
+                <span className="text-sm text-slate-600" style={{ fontWeight: 400 }}>
+                  24/7 Lead Response
+                </span>
               </div>
             </motion.div>
           </div>
@@ -223,7 +244,12 @@ export function RealEstateHero() {
         transition={{ duration: 0.6, delay: 1.5 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-3 hidden sm:flex"
       >
-        <span className="text-xs text-slate-500 uppercase tracking-widest" style={{ fontWeight: 400 }}>See the impact</span>
+        <span
+          className="text-xs text-slate-500 uppercase tracking-widest"
+          style={{ fontWeight: 400 }}
+        >
+          See the impact
+        </span>
         <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}

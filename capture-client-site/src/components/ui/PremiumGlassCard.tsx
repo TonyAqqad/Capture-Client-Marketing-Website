@@ -27,17 +27,17 @@ export function PremiumGlassCard({
   className = "",
   variant = "premium",
   hover = true,
-  glowColor = "blue"
+  glowColor = "blue",
 }: PremiumGlassCardProps) {
   const variantClasses = {
     default: "bg-white/80 backdrop-blur-lg border border-slate-200",
     premium: "bg-white/90 backdrop-blur-xl border border-slate-200 shadow-lg",
-    subtle: "bg-slate-50/80 backdrop-blur-lg border border-slate-200"
+    subtle: "bg-slate-50/80 backdrop-blur-lg border border-slate-200",
   };
 
   const glowClasses = {
     blue: "hover:shadow-[0_8px_32px_rgba(59,130,246,0.15)] hover:border-blue-400",
-    primary: "hover:shadow-[0_8px_32px_rgba(59,130,246,0.15)] hover:border-blue-400"
+    primary: "hover:shadow-[0_8px_32px_rgba(59,130,246,0.15)] hover:border-blue-400",
   };
 
   return (
@@ -63,38 +63,26 @@ export function PremiumGlassCard({
 
       {/* Content wrapper */}
       <div className="relative z-10">
-        {header && (
-          <div className="px-6 py-5 border-b border-slate-200/50">
-            {header}
-          </div>
-        )}
+        {header && <div className="px-6 py-5 border-b border-slate-200/50">{header}</div>}
 
-        {body && (
-          <div className="px-6 py-6">
-            {body}
-          </div>
-        )}
+        {body && <div className="px-6 py-6">{body}</div>}
 
         {/* If no slots used, render children directly */}
-        {!header && !body && !footer && children && (
-          <div className="p-6">
-            {children}
-          </div>
-        )}
+        {!header && !body && !footer && children && <div className="p-6">{children}</div>}
 
         {footer && (
-          <div className="px-6 py-4 border-t border-slate-200/50 bg-slate-50/50">
-            {footer}
-          </div>
+          <div className="px-6 py-4 border-t border-slate-200/50 bg-slate-50/50">{footer}</div>
         )}
       </div>
 
       {/* Bottom glow on hover */}
       {hover && (
-        <div className={cn(
-          "absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300",
-          glowColor === "blue" ? "via-blue-400/50" : "via-blue-500/50"
-        )} />
+        <div
+          className={cn(
+            "absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300",
+            glowColor === "blue" ? "via-blue-400/50" : "via-blue-500/50"
+          )}
+        />
       )}
     </motion.div>
   );

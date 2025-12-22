@@ -273,8 +273,10 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
             Your Name <span className="text-blue-600">*</span>
           </label>
           {/* Decorative accent line */}
-          <div className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent to-transparent transition-all duration-300
-                          ${errors.name && touched.name ? "via-red-500 opacity-100" : "via-blue-600 opacity-0 group-focus-within:opacity-100"}`} />
+          <div
+            className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent to-transparent transition-all duration-300
+                          ${errors.name && touched.name ? "via-red-500 opacity-100" : "via-blue-600 opacity-0 group-focus-within:opacity-100"}`}
+          />
         </div>
         {/* Validation message */}
         {errors.name && touched.name && (
@@ -327,8 +329,10 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
           >
             Email Address <span className="text-blue-600">*</span>
           </label>
-          <div className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent to-transparent transition-all duration-300
-                          ${errors.email && touched.email ? "via-red-500 opacity-100" : "via-blue-600 opacity-0 group-focus-within:opacity-100"}`} />
+          <div
+            className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent to-transparent transition-all duration-300
+                          ${errors.email && touched.email ? "via-red-500 opacity-100" : "via-blue-600 opacity-0 group-focus-within:opacity-100"}`}
+          />
         </div>
         {errors.email && touched.email && (
           <motion.div
@@ -381,8 +385,10 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
           >
             Phone Number <span className="text-blue-600">*</span>
           </label>
-          <div className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent to-transparent transition-all duration-300
-                          ${errors.phone && touched.phone ? "via-red-500 opacity-100" : "via-blue-600 opacity-0 group-focus-within:opacity-100"}`} />
+          <div
+            className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent to-transparent transition-all duration-300
+                          ${errors.phone && touched.phone ? "via-red-500 opacity-100" : "via-blue-600 opacity-0 group-focus-within:opacity-100"}`}
+          />
         </div>
         {errors.phone && touched.phone && (
           <motion.div
@@ -436,8 +442,10 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
             Service Interested In <span className="text-blue-600">*</span>
           </label>
           <ChevronDown className="w-5 h-5 absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none" />
-          <div className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent to-transparent transition-all duration-300
-                          ${errors.service && touched.service ? "via-red-500 opacity-100" : "via-blue-600 opacity-0 group-focus-within:opacity-100"}`} />
+          <div
+            className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent to-transparent transition-all duration-300
+                          ${errors.service && touched.service ? "via-red-500 opacity-100" : "via-blue-600 opacity-0 group-focus-within:opacity-100"}`}
+          />
         </div>
         {errors.service && touched.service && (
           <motion.div
@@ -514,8 +522,7 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
           />
           <span className="text-sm text-slate-600 leading-relaxed">
             I agree to receive text messages from Capture Client at the phone number provided.
-            Message frequency varies. Message and data rates may apply.
-            Reply STOP to unsubscribe.{" "}
+            Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe.{" "}
             <Link href="/privacy-policy" className="text-blue-600 hover:underline">
               Privacy Policy
             </Link>{" "}
@@ -555,8 +562,20 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
           {isSubmitting ? (
             <>
               <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
-                <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
-                <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                <circle
+                  className="opacity-25"
+                  cx="12"
+                  cy="12"
+                  r="10"
+                  stroke="currentColor"
+                  strokeWidth="4"
+                  fill="none"
+                />
+                <path
+                  className="opacity-75"
+                  fill="currentColor"
+                  d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                />
               </svg>
               Submitting...
             </>

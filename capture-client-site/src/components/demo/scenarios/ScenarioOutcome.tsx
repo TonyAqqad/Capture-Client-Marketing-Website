@@ -58,7 +58,7 @@ export function ScenarioOutcome({ outcome, animate = true }: ScenarioOutcomeProp
         </motion.div>
         <h3
           className="text-xl font-bold text-slate-900 mb-1"
-          style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+          style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
         >
           {outcome.actionTaken}
         </h3>
@@ -77,9 +77,7 @@ export function ScenarioOutcome({ outcome, animate = true }: ScenarioOutcomeProp
             <TrendingUp className={`w-5 h-5 ${scoreConfig.color}`} />
             <span className="font-medium text-slate-700">Lead Score</span>
           </div>
-          <span className={`text-sm font-semibold ${scoreConfig.color}`}>
-            {scoreConfig.label}
-          </span>
+          <span className={`text-sm font-semibold ${scoreConfig.color}`}>{scoreConfig.label}</span>
         </div>
 
         {/* Score Display */}
@@ -138,13 +136,31 @@ export function ScenarioOutcome({ outcome, animate = true }: ScenarioOutcomeProp
         </div>
         <div className="flex flex-wrap gap-2">
           {outcome.crmFields.name && (
-            <CRMTag icon={User} label="Name" value={outcome.crmFields.name} delay={0.7} animate={animate} />
+            <CRMTag
+              icon={User}
+              label="Name"
+              value={outcome.crmFields.name}
+              delay={0.7}
+              animate={animate}
+            />
           )}
           {outcome.crmFields.phone && (
-            <CRMTag icon={Phone} label="Phone" value={outcome.crmFields.phone} delay={0.75} animate={animate} />
+            <CRMTag
+              icon={Phone}
+              label="Phone"
+              value={outcome.crmFields.phone}
+              delay={0.75}
+              animate={animate}
+            />
           )}
           {outcome.crmFields.service && (
-            <CRMTag icon={Wrench} label="Service" value={outcome.crmFields.service} delay={0.8} animate={animate} />
+            <CRMTag
+              icon={Wrench}
+              label="Service"
+              value={outcome.crmFields.service}
+              delay={0.8}
+              animate={animate}
+            />
           )}
           {outcome.crmFields.urgency && (
             <CRMTag
@@ -157,7 +173,13 @@ export function ScenarioOutcome({ outcome, animate = true }: ScenarioOutcomeProp
             />
           )}
           {outcome.crmFields.appointmentTime && (
-            <CRMTag icon={Clock} label="Appointment" value={outcome.crmFields.appointmentTime} delay={0.9} animate={animate} />
+            <CRMTag
+              icon={Clock}
+              label="Appointment"
+              value={outcome.crmFields.appointmentTime}
+              delay={0.9}
+              animate={animate}
+            />
           )}
         </div>
       </motion.div>
@@ -170,8 +192,8 @@ export function ScenarioOutcome({ outcome, animate = true }: ScenarioOutcomeProp
         transition={{ delay: 0.9 }}
       >
         <p className="text-sm text-blue-700">
-          <span className="font-semibold">This could be your business.</span>{" "}
-          AI handling calls 24/7, capturing every lead.
+          <span className="font-semibold">This could be your business.</span> AI handling calls
+          24/7, capturing every lead.
         </p>
       </motion.div>
     </motion.div>
@@ -198,7 +220,9 @@ function CRMTag({ icon: Icon, label, value, delay, animate, urgency }: CRMTagPro
     high: "bg-red-50 border-red-200 text-red-700",
   };
 
-  const colorClass = urgency ? urgencyColors[urgency] : "bg-slate-50 border-slate-200 text-slate-700";
+  const colorClass = urgency
+    ? urgencyColors[urgency]
+    : "bg-slate-50 border-slate-200 text-slate-700";
 
   return (
     <motion.div

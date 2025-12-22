@@ -1,4 +1,4 @@
-import { Compass, MapPin, ShieldCheck, Headset, ArrowRight } from 'lucide-react';
+import { Compass, MapPin, ShieldCheck, Headset, ArrowRight } from "lucide-react";
 
 interface ServiceAreaMapProps {
   city: string;
@@ -59,11 +59,11 @@ export default function ServiceAreaMap({
                   <div className="absolute w-full h-full rounded-full border-2 border-cyan-400/20 animate-pulse" />
                   <div
                     className="absolute w-[75%] h-[75%] rounded-full border-2 border-cyan-400/30 animate-pulse"
-                    style={{ animationDelay: '0.5s' }}
+                    style={{ animationDelay: "0.5s" }}
                   />
                   <div
                     className="absolute w-[50%] h-[50%] rounded-full border-2 border-cyan-400/40 animate-pulse"
-                    style={{ animationDelay: '1s' }}
+                    style={{ animationDelay: "1s" }}
                   />
                 </div>
 
@@ -97,7 +97,7 @@ export default function ServiceAreaMap({
                       style={{
                         left: `${x}%`,
                         top: `${y}%`,
-                        transform: 'translate(-50%, -50%)',
+                        transform: "translate(-50%, -50%)",
                       }}
                     >
                       <div className="relative">
@@ -138,10 +138,7 @@ export default function ServiceAreaMap({
             {/* Areas Grid */}
             <div className="grid grid-cols-2 gap-3">
               {allAreas.map((area, index) => (
-                <div
-                  key={index}
-                  className="group relative"
-                >
+                <div key={index} className="group relative">
                   <div className="absolute -inset-px bg-gradient-to-r from-cyan-400/0 via-cyan-400/30 to-cyan-400/0 rounded-lg opacity-0 group-hover:opacity-100 blur-sm transition-opacity" />
                   <div className="relative flex items-center gap-3 px-4 py-3 bg-white/60 backdrop-blur-sm border border-slate-200 rounded-lg group-hover:border-cyan-400/50 transition-all">
                     <MapPin className="w-4 h-4 text-cyan-400" />
@@ -160,9 +157,7 @@ export default function ServiceAreaMap({
                   <Headset className="w-6 h-6 text-cyan-600" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-black text-slate-900 mb-2">
-                    Don't See Your Area?
-                  </h4>
+                  <h4 className="text-lg font-black text-slate-900 mb-2">Don't See Your Area?</h4>
                   <p className="text-sm text-slate-700 mb-3">
                     We're expanding fast! Contact us to check if we can serve your location.
                   </p>

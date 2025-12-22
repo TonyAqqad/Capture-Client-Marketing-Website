@@ -7,10 +7,7 @@ interface LiveIndicatorProps {
   callsToday?: number;
 }
 
-export default function LiveIndicator({
-  className = "",
-  callsToday = 0
-}: LiveIndicatorProps) {
+export default function LiveIndicator({ className = "", callsToday = 0 }: LiveIndicatorProps) {
   // Staggered animation delays for waveform bars
   const barDelays = [0, 0.15, 0.3, 0.15, 0];
   const barHeights = [8, 12, 16, 12, 8]; // Base heights for visual rhythm

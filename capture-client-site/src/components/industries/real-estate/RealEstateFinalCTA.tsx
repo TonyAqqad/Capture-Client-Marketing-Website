@@ -14,7 +14,7 @@ export function RealEstateFinalCTA() {
     <section
       ref={containerRef}
       className="py-20 sm:py-24 lg:py-32 relative overflow-hidden"
-      style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+      style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
     >
       {/* Light background */}
       <div className="absolute inset-0 bg-gradient-to-b from-slate-50 to-white" />
@@ -51,7 +51,10 @@ export function RealEstateFinalCTA() {
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200 mb-8 hover:border-blue-300 hover:scale-105 transition-all duration-300"
           >
             <Trophy className="w-6 h-6 text-blue-600" />
-            <span className="text-base text-blue-600 uppercase tracking-wide" style={{ fontWeight: 700 }}>
+            <span
+              className="text-base text-blue-600 uppercase tracking-wide"
+              style={{ fontWeight: 700 }}
+            >
               Become the Fastest Agent in Your Market
             </span>
           </motion.div>
@@ -64,7 +67,9 @@ export function RealEstateFinalCTA() {
             className="text-4xl sm:text-5xl lg:text-6xl text-slate-900 mb-6"
           >
             <span style={{ fontWeight: 200 }}>Ready to Win </span>
-            <span className="text-blue-600" style={{ fontWeight: 800 }}>78% More Buyers?</span>
+            <span className="text-blue-600" style={{ fontWeight: 800 }}>
+              78% More Buyers?
+            </span>
           </motion.h2>
 
           {/* Subheadline */}
@@ -77,7 +82,9 @@ export function RealEstateFinalCTA() {
           >
             Join 500+ real estate professionals who never miss a lead.
             <br />
-            <span className="text-slate-900" style={{ fontWeight: 600 }}>Speed to lead starts today.</span>
+            <span className="text-slate-900" style={{ fontWeight: 600 }}>
+              Speed to lead starts today.
+            </span>
           </motion.p>
 
           {/* CTAs - Blue gradient */}
@@ -119,22 +126,30 @@ export function RealEstateFinalCTA() {
           >
             <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
               <CheckCircle className="w-5 h-5 text-blue-600" />
-              <span className="text-sm" style={{ fontWeight: 400 }}>No Setup Fees</span>
+              <span className="text-sm" style={{ fontWeight: 400 }}>
+                No Setup Fees
+              </span>
             </div>
             <div className="w-px h-5 bg-slate-200 hidden sm:block" />
             <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
               <CheckCircle className="w-5 h-5 text-blue-600" />
-              <span className="text-sm" style={{ fontWeight: 400 }}>Cancel Anytime</span>
+              <span className="text-sm" style={{ fontWeight: 400 }}>
+                Cancel Anytime
+              </span>
             </div>
             <div className="w-px h-5 bg-slate-200 hidden sm:block" />
             <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
               <CheckCircle className="w-5 h-5 text-blue-600" />
-              <span className="text-sm" style={{ fontWeight: 400 }}>Live in 48 Hours</span>
+              <span className="text-sm" style={{ fontWeight: 400 }}>
+                Live in 48 Hours
+              </span>
             </div>
             <div className="w-px h-5 bg-slate-200 hidden sm:block" />
             <div className="flex items-center gap-2 hover:scale-105 transition-transform duration-300">
               <CheckCircle className="w-5 h-5 text-blue-600" />
-              <span className="text-sm" style={{ fontWeight: 400 }}>Follow Up Boss Certified</span>
+              <span className="text-sm" style={{ fontWeight: 400 }}>
+                Follow Up Boss Certified
+              </span>
             </div>
           </motion.div>
 
@@ -151,7 +166,8 @@ export function RealEstateFinalCTA() {
                 <span className="relative inline-flex rounded-full h-4 w-4 bg-green-600" />
               </div>
               <span className="text-slate-700 font-medium">
-                <span className="text-green-600 font-bold">328 agents</span> using Capture Client right now
+                <span className="text-green-600 font-bold">328 agents</span> using Capture Client
+                right now
               </span>
             </div>
           </motion.div>

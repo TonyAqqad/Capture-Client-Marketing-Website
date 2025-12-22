@@ -16,18 +16,14 @@ export default function ScrollDepthTracker() {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
       const docHeight =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
+        document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrollPercent = (scrollTop / docHeight) * 100;
 
       // Define milestones
       const milestones = [25, 50, 75, 100] as const;
 
       milestones.forEach((milestone) => {
-        if (
-          scrollPercent >= milestone &&
-          !trackedDepths.current.has(milestone)
-        ) {
+        if (scrollPercent >= milestone && !trackedDepths.current.has(milestone)) {
           trackScrollDepth(milestone);
           trackedDepths.current.add(milestone);
         }

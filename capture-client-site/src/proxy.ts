@@ -9,12 +9,7 @@
 
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import {
-  checkRateLimit,
-  getClientIP,
-  getRateLimitConfig,
-  formatResetTime,
-} from "@/lib/rate-limit";
+import { checkRateLimit, getClientIP, getRateLimitConfig, formatResetTime } from "@/lib/rate-limit";
 
 // ==========================================
 // PROXY CONFIGURATION

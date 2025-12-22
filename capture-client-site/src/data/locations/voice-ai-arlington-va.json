@@ -11,13 +11,7 @@
     "state_abbr": "VA",
     "state_full": "Virginia",
     "slug": "arlington-va",
-    "nearby_areas": [
-      "Alexandria",
-      "Falls Church",
-      "McLean",
-      "Washington DC",
-      "Fairfax"
-    ],
+    "nearby_areas": ["Alexandria", "Falls Church", "McLean", "Washington DC", "Fairfax"],
     "service_area_radius": "20 miles"
   },
   "seo": {
@@ -163,17 +157,8 @@
     }
   },
   "related_pages": {
-    "other_services_in_location": [
-      "google-ads"
-    ],
-    "nearby_locations": [
-      "alexandria-va",
-      "fredericksburg-va",
-      "richmond-va"
-    ],
-    "packages": [
-      "growth-package",
-      "enterprise-package"
-    ]
+    "other_services_in_location": ["google-ads"],
+    "nearby_locations": ["alexandria-va", "fredericksburg-va", "richmond-va"],
+    "packages": ["growth-package", "enterprise-package"]
   }
 }

@@ -14,8 +14,8 @@ export function useIsMobile(): boolean {
 
   useEffect(() => {
     // Check both viewport width and touch capability
-    const viewportCheck = window.matchMedia('(max-width: 768px)');
-    const touchCheck = window.matchMedia('(hover: none)');
+    const viewportCheck = window.matchMedia("(max-width: 768px)");
+    const touchCheck = window.matchMedia("(hover: none)");
 
     const checkMobile = () => {
       setIsMobile(viewportCheck.matches || touchCheck.matches);
@@ -25,12 +25,12 @@ export function useIsMobile(): boolean {
     checkMobile();
 
     // Listen for changes
-    viewportCheck.addEventListener('change', checkMobile);
-    touchCheck.addEventListener('change', checkMobile);
+    viewportCheck.addEventListener("change", checkMobile);
+    touchCheck.addEventListener("change", checkMobile);
 
     return () => {
-      viewportCheck.removeEventListener('change', checkMobile);
-      touchCheck.removeEventListener('change', checkMobile);
+      viewportCheck.removeEventListener("change", checkMobile);
+      touchCheck.removeEventListener("change", checkMobile);
     };
   }, []);
 
@@ -48,13 +48,17 @@ export const cardShadow = {
     0 20px 40px -12px rgba(37, 99, 235, 0.1),
     0 8px 16px -6px rgba(0, 0, 0, 0.05),
     0 0 0 1px rgba(37, 99, 235, 0.03) inset
-  `.trim().replace(/\s+/g, ' '),
+  `
+    .trim()
+    .replace(/\s+/g, " "),
   hover: `
     0 30px 60px -12px rgba(37, 99, 235, 0.18),
     0 15px 30px -8px rgba(0, 0, 0, 0.08),
     0 0 0 1px rgba(37, 99, 235, 0.06) inset,
     0 -15px 30px -15px rgba(14, 165, 233, 0.06) inset
-  `.trim().replace(/\s+/g, ' '),
+  `
+    .trim()
+    .replace(/\s+/g, " "),
 };
 
 // Lighter shadow variant for smaller cards
@@ -63,13 +67,17 @@ export const cardShadowLight = {
     0 10px 25px -8px rgba(37, 99, 235, 0.08),
     0 4px 10px -4px rgba(0, 0, 0, 0.04),
     0 0 0 1px rgba(37, 99, 235, 0.02) inset
-  `.trim().replace(/\s+/g, ' '),
+  `
+    .trim()
+    .replace(/\s+/g, " "),
   hover: `
     0 20px 40px -10px rgba(37, 99, 235, 0.15),
     0 10px 20px -6px rgba(0, 0, 0, 0.06),
     0 0 0 1px rgba(37, 99, 235, 0.04) inset,
     0 -10px 20px -10px rgba(14, 165, 233, 0.05) inset
-  `.trim().replace(/\s+/g, ' '),
+  `
+    .trim()
+    .replace(/\s+/g, " "),
 };
 
 // Reusable 3D tilt hook (mobile-aware)
@@ -93,14 +101,17 @@ export function use3DTilt(maxTilt: number = 3) {
   );
 
   // Mouse move handler (no-op on mobile but keeps hover state working)
-  const handleMouseMove = useCallback((e: React.MouseEvent<HTMLElement>) => {
-    if (isMobile) return; // Don't set motion values on mobile
-    const rect = e.currentTarget.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
-    mouseX.set(e.clientX - centerX);
-    mouseY.set(e.clientY - centerY);
-  }, [mouseX, mouseY, isMobile]);
+  const handleMouseMove = useCallback(
+    (e: React.MouseEvent<HTMLElement>) => {
+      if (isMobile) return; // Don't set motion values on mobile
+      const rect = e.currentTarget.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      mouseX.set(e.clientX - centerX);
+      mouseY.set(e.clientY - centerY);
+    },
+    [mouseX, mouseY, isMobile]
+  );
 
   // Mouse leave handler - reset to center
   const handleMouseLeave = useCallback(() => {
@@ -136,14 +147,8 @@ export function useMobileDisabled3DTilt() {
   const mouseY = useMotionValue(0);
 
   // Always return 0 rotations
-  const rotateX = useSpring(
-    useTransform(mouseY, [-200, 200], [0, 0]),
-    depthSpring
-  );
-  const rotateY = useSpring(
-    useTransform(mouseX, [-200, 200], [0, 0]),
-    depthSpring
-  );
+  const rotateX = useSpring(useTransform(mouseY, [-200, 200], [0, 0]), depthSpring);
+  const rotateY = useSpring(useTransform(mouseX, [-200, 200], [0, 0]), depthSpring);
 
   // Handlers that only manage hover state
   const handleMouseMove = useCallback(() => {}, []);

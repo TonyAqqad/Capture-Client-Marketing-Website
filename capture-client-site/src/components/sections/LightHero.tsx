@@ -34,22 +34,37 @@ function LightMeshBackground() {
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 1024);
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   // Scroll-based parallax
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end start"]
+    offset: ["start start", "end start"],
   });
 
   // Different parallax speeds for depth layers
-  const y1 = useSpring(useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [0, 150]), springConfig);
-  const y2 = useSpring(useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [0, 250]), springConfig);
-  const y3 = useSpring(useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [0, 100]), springConfig);
-  const scale1 = useSpring(useTransform(scrollYProgress, [0, 0.5], isMobile ? [1, 1] : [1, 1.15]), springConfig);
-  const scale2 = useSpring(useTransform(scrollYProgress, [0, 0.5], isMobile ? [1, 1] : [1, 1.1]), springConfig);
+  const y1 = useSpring(
+    useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [0, 150]),
+    springConfig
+  );
+  const y2 = useSpring(
+    useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [0, 250]),
+    springConfig
+  );
+  const y3 = useSpring(
+    useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [0, 100]),
+    springConfig
+  );
+  const scale1 = useSpring(
+    useTransform(scrollYProgress, [0, 0.5], isMobile ? [1, 1] : [1, 1.15]),
+    springConfig
+  );
+  const scale2 = useSpring(
+    useTransform(scrollYProgress, [0, 0.5], isMobile ? [1, 1] : [1, 1.1]),
+    springConfig
+  );
   const opacity1 = useTransform(scrollYProgress, [0, 0.8], isMobile ? [1, 1] : [1, 0.3]);
   const opacity2 = useTransform(scrollYProgress, [0, 0.8], isMobile ? [1, 1] : [1, 0.4]);
 
@@ -65,7 +80,8 @@ function LightMeshBackground() {
           y: y1,
           scale: scale1,
           opacity: opacity1,
-          background: "radial-gradient(circle at center, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0.04) 40%, transparent 70%)",
+          background:
+            "radial-gradient(circle at center, rgba(37, 99, 235, 0.1) 0%, rgba(37, 99, 235, 0.04) 40%, transparent 70%)",
           filter: "blur(60px)",
         }}
       />
@@ -77,7 +93,8 @@ function LightMeshBackground() {
           y: y2,
           scale: scale2,
           opacity: opacity2,
-          background: "radial-gradient(circle at center, rgba(14, 165, 233, 0.08) 0%, transparent 60%)",
+          background:
+            "radial-gradient(circle at center, rgba(14, 165, 233, 0.08) 0%, transparent 60%)",
           filter: "blur(80px)",
         }}
       />
@@ -87,7 +104,8 @@ function LightMeshBackground() {
         className="absolute top-[30%] right-[5%] w-[200px] sm:w-[300px] md:w-[400px] lg:w-[500px] h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] will-change-transform"
         style={{
           y: y3,
-          background: "radial-gradient(circle at center, rgba(59, 130, 246, 0.05) 0%, transparent 60%)",
+          background:
+            "radial-gradient(circle at center, rgba(59, 130, 246, 0.05) 0%, transparent 60%)",
           filter: "blur(100px)",
         }}
       />
@@ -101,7 +119,7 @@ function LightMeshBackground() {
             linear-gradient(rgba(15,23,42,0.04) 1px, transparent 1px),
             linear-gradient(90deg, rgba(15,23,42,0.04) 1px, transparent 1px)
           `,
-          backgroundSize: '60px 60px',
+          backgroundSize: "60px 60px",
         }}
       />
 
@@ -110,19 +128,19 @@ function LightMeshBackground() {
         {/* Mobile: 3 subtle accent dots */}
         <motion.div
           className="lg:hidden absolute w-2 h-2 rounded-full bg-gradient-to-br from-blue-500/30 to-cyan-400/20"
-          style={{ top: '15%', right: '10%', filter: 'blur(0.5px)' }}
+          style={{ top: "15%", right: "10%", filter: "blur(0.5px)" }}
           animate={{ y: [0, -12, 0], opacity: [0.4, 0.7, 0.4] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
           className="lg:hidden absolute w-1.5 h-1.5 rounded-full bg-gradient-to-br from-cyan-500/25 to-blue-400/15"
-          style={{ top: '45%', left: '8%', filter: 'blur(0.5px)' }}
+          style={{ top: "45%", left: "8%", filter: "blur(0.5px)" }}
           animate={{ y: [0, -8, 0], x: [0, 4, 0], opacity: [0.3, 0.6, 0.3] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         />
         <motion.div
           className="lg:hidden absolute w-2.5 h-2.5 rounded-full bg-gradient-to-br from-blue-400/20 to-cyan-500/10"
-          style={{ bottom: '25%', right: '15%', filter: 'blur(1px)' }}
+          style={{ bottom: "25%", right: "15%", filter: "blur(1px)" }}
           animate={{ y: [0, -10, 0], opacity: [0.25, 0.5, 0.25] }}
           transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }}
         />
@@ -137,7 +155,7 @@ function LightMeshBackground() {
               height: `${4 + i * 2}px`,
               left: `${15 + i * 15}%`,
               top: `${20 + i * 10}%`,
-              filter: 'blur(1px)',
+              filter: "blur(1px)",
             }}
             animate={{
               y: [0, -20 - i * 5, 0],
@@ -156,7 +174,6 @@ function LightMeshBackground() {
     </div>
   );
 }
-
 
 export function LightHero() {
   // Spring-based animation variants for organic feel
@@ -211,10 +228,8 @@ export function LightHero() {
         <div className="container-custom">
           {/* Two-column layout on desktop */}
           <div className="grid lg:grid-cols-2 gap-16 lg:gap-12 items-center">
-
             {/* LEFT: Content */}
             <div className="order-1">
-
               {/* Premium eyebrow badge */}
               <motion.div
                 variants={itemVariants}
@@ -242,7 +257,7 @@ export function LightHero() {
               <motion.h1
                 variants={itemVariants}
                 className="text-center lg:text-left mb-6"
-                style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+                style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
               >
                 {/* Line 1 */}
                 <motion.span
@@ -261,10 +276,10 @@ export function LightHero() {
                   animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                   transition={{ ...springTransition, delay: 0.25 }}
                   style={{
-                    background: 'linear-gradient(135deg, #2563EB 0%, #0EA5E9 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
+                    background: "linear-gradient(135deg, #2563EB 0%, #0EA5E9 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
                   }}
                 >
                   client to voicemail.
@@ -276,8 +291,8 @@ export function LightHero() {
                 variants={itemVariants}
                 className="text-center lg:text-left text-lg sm:text-xl text-slate-600 max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed"
               >
-                Meet the AI voice agents that answer every call, qualify leads instantly,
-                and book appointments 24/7. Capture every opportunity without lifting a finger.
+                Meet the AI voice agents that answer every call, qualify leads instantly, and book
+                appointments 24/7. Capture every opportunity without lifting a finger.
               </motion.p>
 
               {/* CTAs - side by side on desktop, stacked on mobile */}
@@ -290,7 +305,7 @@ export function LightHero() {
                   className="w-full sm:w-auto"
                   whileHover={{
                     y: -3,
-                    transition: { type: "spring", stiffness: 400, damping: 25 }
+                    transition: { type: "spring", stiffness: 400, damping: 25 },
                   }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -317,7 +332,7 @@ export function LightHero() {
                   whileHover={{
                     y: -3,
                     boxShadow: "0 15px 40px -15px rgba(37, 99, 235, 0.15)",
-                    transition: { type: "spring", stiffness: 400, damping: 25 }
+                    transition: { type: "spring", stiffness: 400, damping: 25 },
                   }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -338,7 +353,9 @@ export function LightHero() {
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
                   <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
-                  <span className="font-semibold text-slate-900 text-xs">4.9★ • Growing businesses</span>
+                  <span className="font-semibold text-slate-900 text-xs">
+                    4.9★ • Growing businesses
+                  </span>
                 </motion.div>
 
                 {/* User avatars + businesses */}
@@ -357,7 +374,9 @@ export function LightHero() {
                     <div className="w-7 h-7 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 border-2 border-white shadow-md" />
                     <div className="w-7 h-7 rounded-full bg-gradient-to-br from-blue-500 to-cyan-600 border-2 border-white shadow-md" />
                   </div>
-                  <span className="font-semibold text-slate-900 text-xs sm:text-sm">Growing businesses</span>
+                  <span className="font-semibold text-slate-900 text-xs sm:text-sm">
+                    Growing businesses
+                  </span>
                 </motion.div>
 
                 {/* Rating */}
@@ -371,7 +390,9 @@ export function LightHero() {
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
                   <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
-                  <span className="font-semibold text-slate-900 text-xs sm:text-sm">4.9/5 Rating</span>
+                  <span className="font-semibold text-slate-900 text-xs sm:text-sm">
+                    4.9/5 Rating
+                  </span>
                 </motion.div>
 
                 {/* Live badge */}
@@ -385,7 +406,9 @@ export function LightHero() {
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
                   <Zap className="w-4 h-4 text-emerald-500 fill-emerald-500" />
-                  <span className="font-semibold text-slate-900 text-xs sm:text-sm">Live in 48h</span>
+                  <span className="font-semibold text-slate-900 text-xs sm:text-sm">
+                    Live in 48h
+                  </span>
                 </motion.div>
               </motion.div>
 
@@ -412,7 +435,7 @@ export function LightHero() {
                         type: "spring",
                         stiffness: 200,
                         damping: 20,
-                        delay: 0.7 + idx * 0.05
+                        delay: 0.7 + idx * 0.05,
                       }}
                       className="flex items-center justify-center p-3 h-12 rounded-xl bg-white/80 border border-slate-200/60 shadow-sm backdrop-blur-sm"
                     >
@@ -428,7 +451,6 @@ export function LightHero() {
                   ))}
                 </div>
               </motion.div>
-
             </div>
 
             {/* RIGHT: Desktop Demo */}

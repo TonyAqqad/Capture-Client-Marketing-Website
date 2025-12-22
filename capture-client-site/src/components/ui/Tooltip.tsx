@@ -20,13 +20,13 @@ export function Tooltip({
   content,
   position = "top",
   delay = 0.3,
-  disabled = false
+  disabled = false,
 }: TooltipProps) {
   const [isVisible, setIsVisible] = useState(false);
 
   // Disable on touch devices and small screens
-  const isTouchDevice = typeof window !== "undefined" &&
-    ("ontouchstart" in window || navigator.maxTouchPoints > 0);
+  const isTouchDevice =
+    typeof window !== "undefined" && ("ontouchstart" in window || navigator.maxTouchPoints > 0);
   const isMobile = typeof window !== "undefined" && window.innerWidth < 1024;
 
   if (disabled || isTouchDevice || isMobile) {
@@ -37,14 +37,14 @@ export function Tooltip({
     top: "bottom-full left-1/2 -translate-x-1/2 mb-2",
     bottom: "top-full left-1/2 -translate-x-1/2 mt-2",
     left: "right-full top-1/2 -translate-y-1/2 mr-2",
-    right: "left-full top-1/2 -translate-y-1/2 ml-2"
+    right: "left-full top-1/2 -translate-y-1/2 ml-2",
   };
 
   const arrowClasses = {
     top: "top-full left-1/2 -translate-x-1/2 -translate-y-1/2",
     bottom: "bottom-full left-1/2 -translate-x-1/2 translate-y-1/2",
     left: "left-full top-1/2 -translate-x-1/2 -translate-y-1/2",
-    right: "right-full top-1/2 translate-x-1/2 -translate-y-1/2"
+    right: "right-full top-1/2 translate-x-1/2 -translate-y-1/2",
   };
 
   return (
@@ -58,7 +58,11 @@ export function Tooltip({
       <AnimatePresence>
         {isVisible && (
           <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: position === "top" ? 5 : position === "bottom" ? -5 : 0 }}
+            initial={{
+              opacity: 0,
+              scale: 0.9,
+              y: position === "top" ? 5 : position === "bottom" ? -5 : 0,
+            }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.15, delay }}

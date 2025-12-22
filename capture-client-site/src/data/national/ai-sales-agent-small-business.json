@@ -11,28 +11,14 @@
     "keyword_slug": "ai-sales-agent-small-business"
   },
   "industry_focus": {
-    "industries": [
-      "B2B Services",
-      "SaaS",
-      "Consulting",
-      "Insurance",
-      "Financial Services"
-    ],
-    "business_types": [
-      "B2B Services companies",
-      "SaaS companies",
-      "Consulting companies"
-    ]
+    "industries": ["B2B Services", "SaaS", "Consulting", "Insurance", "Financial Services"],
+    "business_types": ["B2B Services companies", "SaaS companies", "Consulting companies"]
   },
   "seo": {
     "page_title": "AI Sales Agent for Small Business | Close More Deals",
     "meta_description": "AI sales agent that qualifies leads follows up persistently and books sales calls. Never lose a lead to slow follow-up again.",
     "h1_heading": "AI Sales Agent for Small Business",
-    "keywords": [
-      "ai sales agent for small business",
-      "capture client",
-      "automation"
-    ]
+    "keywords": ["ai sales agent for small business", "capture client", "automation"]
   },
   "hero": {
     "headline": "A Sales Agent That Never Sleeps",
@@ -114,13 +100,7 @@
   "nationwide_coverage": {
     "heading": "Serving Businesses Nationwide",
     "description": "We work with businesses across all 50 states from small local operations to multi-location enterprises.",
-    "regions_highlighted": [
-      "East Coast",
-      "West Coast",
-      "Midwest",
-      "South",
-      "Southwest"
-    ]
+    "regions_highlighted": ["East Coast", "West Coast", "Midwest", "South", "Southwest"]
   },
   "testimonials": [
     {
@@ -198,13 +178,7 @@
     "urgency_text": "Limited slots available for new clients"
   },
   "related_pages": {
-    "related_national_keywords": [
-      "voice-ai-small-business",
-      "lead-generation-agency"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "related_national_keywords": ["voice-ai-small-business", "lead-generation-agency"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

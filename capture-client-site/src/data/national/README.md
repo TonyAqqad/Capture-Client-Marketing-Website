@@ -1,13 +1,15 @@
 # National SEO Pages - Capture Client
 
 ## Overview
+
 This directory contains 15 national SEO keyword pages designed to rank for high-value search terms nationwide.
 
 ## Generated Pages
 
 ### Voice AI & Automation Pages
+
 1. **voice-ai-small-business.json** - Voice AI for Small Business
-2. **ai-voice-agents-service-businesses.json** - AI Voice Agents for Service Businesses  
+2. **ai-voice-agents-service-businesses.json** - AI Voice Agents for Service Businesses
 3. **voice-ai-home-services.json** - Voice AI for Home Services
 4. **ai-receptionist-small-business.json** - AI Receptionist for Small Business
 5. **ai-phone-answering-service.json** - AI Phone Answering Service
@@ -16,6 +18,7 @@ This directory contains 15 national SEO keyword pages designed to rank for high-
 8. **ai-sales-agent-small-business.json** - AI Sales Agent for Small Business
 
 ### Lead Generation & Marketing Pages
+
 9. **lead-generation-agency.json** - Lead Generation Agency
 10. **facebook-ads-contractors.json** - Facebook Ads for Contractors
 11. **google-ads-service-businesses.json** - Google Ads for Service Businesses
@@ -25,7 +28,9 @@ This directory contains 15 national SEO keyword pages designed to rank for high-
 15. **google-ads-lead-generation.json** - Google Ads Lead Generation
 
 ## Page Structure
+
 Each page includes:
+
 - **SEO Metadata**: Optimized titles, meta descriptions, H1 headings
 - **Hero Section**: Compelling headline, subheadline, CTA, hero image
 - **Introduction**: 300+ word intro paragraph explaining the service
@@ -39,13 +44,16 @@ Each page includes:
 - **CTA Section**: Final conversion section with urgency
 
 ## Image Sources
+
 All images sourced from Unsplash (free to use):
+
 - AI/Technology images
-- Business/Marketing images  
+- Business/Marketing images
 - Small business owner images
 - Phone call/communication images
 
 ## Agency Information
+
 - **Name**: Capture Client
 - **Phone**: 865-346-6111
 - **Email**: team@captureclient.net
@@ -53,6 +61,7 @@ All images sourced from Unsplash (free to use):
 - **Serves**: Nationwide (all 50 states)
 
 ## Target Industries
+
 - Home Services (HVAC, Plumbing, Electrical)
 - Healthcare (Medical, Dental)
 - Professional Services (Law, Accounting, Consulting)
@@ -61,6 +70,7 @@ All images sourced from Unsplash (free to use):
 - B2B Services
 
 ## Key Features
+
 - All pages follow national-seo schema structure
 - SEO-optimized with high-value keywords
 - Conversion-focused content
@@ -70,13 +80,16 @@ All images sourced from Unsplash (free to use):
 - Real business results and testimonials
 
 ## Next Steps
+
 These JSON pages are ready to be:
+
 1. Imported into NextJS dynamic routing
 2. Used for SEO landing pages
 3. Converted to static HTML
 4. Integrated with marketing automation
 
 ---
+
 Generated: November 27, 2025
 Total Pages: 15
 Average File Size: 7.5 KB

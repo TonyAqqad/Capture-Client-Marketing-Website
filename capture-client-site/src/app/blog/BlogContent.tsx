@@ -24,7 +24,7 @@ const getCategoryStyle = (category: string) => {
       gradient: "from-orange-500/20 to-cyan-500/20",
       categoryColor: "bg-orange-500/10 text-orange-600 border-orange-500/20",
     },
-    "Automation": {
+    Automation: {
       gradient: "from-blue-500/20 to-cyan-400/20",
       categoryColor: "bg-blue-500/10 text-blue-600 border-blue-500/20",
     },

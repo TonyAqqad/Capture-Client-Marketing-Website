@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 import { motion } from "@/lib/motion";
 import {
   Phone,
@@ -14,111 +14,111 @@ import {
   Calculator,
   ChefHat,
   Truck,
-  Star
-} from 'lucide-react';
-import { cn } from '@/lib/utils';
+  Star,
+} from "lucide-react";
+import { cn } from "@/lib/utils";
 
 // Feature tabs data
 const featureTabs = [
   {
-    id: 'orders',
-    label: 'Phone Orders',
+    id: "orders",
+    label: "Phone Orders",
     icon: Phone,
     features: [
-      'Complete menu knowledge',
-      'Order accuracy & verification',
-      'Intelligent upselling',
-      'Special requests handling',
-      'Real-time POS sync'
+      "Complete menu knowledge",
+      "Order accuracy & verification",
+      "Intelligent upselling",
+      "Special requests handling",
+      "Real-time POS sync",
     ],
-    description: "AI takes phone orders with perfect accuracy during your busiest hours."
+    description: "AI takes phone orders with perfect accuracy during your busiest hours.",
   },
   {
-    id: 'reservations',
-    label: 'Reservations',
+    id: "reservations",
+    label: "Reservations",
     icon: Calendar,
     features: [
-      'Real-time availability',
-      'Party size management',
-      'Wait time quotes',
-      'Confirmation calls',
-      'OpenTable/Resy sync'
+      "Real-time availability",
+      "Party size management",
+      "Wait time quotes",
+      "Confirmation calls",
+      "OpenTable/Resy sync",
     ],
-    description: "Automated reservation management that integrates with your existing systems."
+    description: "Automated reservation management that integrates with your existing systems.",
   },
   {
-    id: 'catering',
-    label: 'Catering',
+    id: "catering",
+    label: "Catering",
     icon: Users,
     features: [
-      'Large order handling',
-      'Custom quote generation',
-      'Event details capture',
-      'Follow-up automation',
-      'Order confirmation'
+      "Large order handling",
+      "Custom quote generation",
+      "Event details capture",
+      "Follow-up automation",
+      "Order confirmation",
     ],
-    description: "Capture every catering opportunity without interrupting kitchen flow."
+    description: "Capture every catering opportunity without interrupting kitchen flow.",
   },
   {
-    id: 'delivery',
-    label: 'Delivery',
+    id: "delivery",
+    label: "Delivery",
     icon: Truck,
     features: [
-      'DoorDash integration',
-      'UberEats connection',
-      'Grubhub sync',
-      'Order status tracking',
-      'Unified dashboard'
+      "DoorDash integration",
+      "UberEats connection",
+      "Grubhub sync",
+      "Order status tracking",
+      "Unified dashboard",
     ],
-    description: "Manage all delivery platforms from one intelligent system."
-  }
+    description: "Manage all delivery platforms from one intelligent system.",
+  },
 ];
 
 // POS Integration logos
 const posIntegrations = [
-  { name: 'Toast', setupTime: '60 minutes', logo: '🍞' },
-  { name: 'Square', setupTime: '45 minutes', logo: '⬛' },
-  { name: 'Clover', setupTime: '50 minutes', logo: '🍀' }
+  { name: "Toast", setupTime: "60 minutes", logo: "🍞" },
+  { name: "Square", setupTime: "45 minutes", logo: "⬛" },
+  { name: "Clover", setupTime: "50 minutes", logo: "🍀" },
 ];
 
 // Reservation platforms
 const reservationPlatforms = [
-  { name: 'OpenTable', boost: '50% more bookings', logo: '📅' },
-  { name: 'Resy', boost: 'Real-time sync', logo: '🍽️' },
-  { name: 'Yelp', boost: 'Review integration', logo: '⭐' }
+  { name: "OpenTable", boost: "50% more bookings", logo: "📅" },
+  { name: "Resy", boost: "Real-time sync", logo: "🍽️" },
+  { name: "Yelp", boost: "Review integration", logo: "⭐" },
 ];
 
 // Case studies
 const caseStudies = [
   {
-    type: 'Pizza Shop',
-    revenue: '$66K',
-    roi: '1,012%',
-    period: 'Annual',
-    icon: '🍕'
+    type: "Pizza Shop",
+    revenue: "$66K",
+    roi: "1,012%",
+    period: "Annual",
+    icon: "🍕",
   },
   {
-    type: 'Casual Dining',
-    revenue: '25% ticket increase',
-    roi: '780%',
-    period: '6 months',
-    icon: '🍽️'
+    type: "Casual Dining",
+    revenue: "25% ticket increase",
+    roi: "780%",
+    period: "6 months",
+    icon: "🍽️",
   },
   {
-    type: 'QSR',
-    revenue: '$47K recovered',
-    roi: '890%',
-    period: '6-week payback',
-    icon: '🍔'
-  }
+    type: "QSR",
+    revenue: "$47K recovered",
+    roi: "890%",
+    period: "6-week payback",
+    icon: "🍔",
+  },
 ];
 
 export default function RestaurantsPageClient() {
-  const [activeTab, setActiveTab] = useState('orders');
+  const [activeTab, setActiveTab] = useState("orders");
   const [calcInputs, setCalcInputs] = useState({
     dailyOrders: 50,
     missedPercent: 23,
-    avgOrderValue: 35
+    avgOrderValue: 35,
   });
 
   // Calculate ROI
@@ -129,18 +129,18 @@ export default function RestaurantsPageClient() {
     const annualRevenueLost = dailyRevenueLost * 365;
     const monthlyRevenueLost = dailyRevenueLost * 30;
     const aiCost = 997; // Monthly subscription
-    const paybackDays = Math.ceil((aiCost / dailyRevenueLost));
+    const paybackDays = Math.ceil(aiCost / dailyRevenueLost);
 
     return {
       annualRevenue: Math.round(annualRevenueLost),
       monthlyRevenue: Math.round(monthlyRevenueLost),
       paybackDays,
-      roi: Math.round((annualRevenueLost / (aiCost * 12)) * 100)
+      roi: Math.round((annualRevenueLost / (aiCost * 12)) * 100),
     };
   };
 
   const roi = calculateROI();
-  const activeFeature = featureTabs.find(tab => tab.id === activeTab);
+  const activeFeature = featureTabs.find((tab) => tab.id === activeTab);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-slate-50">
@@ -171,7 +171,9 @@ export default function RestaurantsPageClient() {
             <h1 className="text-display-lg md:text-hero-xl font-display text-slate-900 mb-6">
               Kitchen&apos;s Busy. <br />
               Phone&apos;s Ringing. <br />
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">AI Answers.</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                AI Answers.
+              </span>
             </h1>
 
             {/* Subheadline - Syne */}
@@ -182,9 +184,9 @@ export default function RestaurantsPageClient() {
             {/* Stats row */}
             <div className="flex flex-wrap justify-center gap-6 md:gap-12 mb-10">
               {[
-                { label: '23% orders lost', icon: TrendingUp },
-                { label: '$47K/year cost', icon: DollarSign },
-                { label: '760% ROI', icon: Percent }
+                { label: "23% orders lost", icon: TrendingUp },
+                { label: "$47K/year cost", icon: DollarSign },
+                { label: "760% ROI", icon: Percent },
               ].map((stat, idx) => (
                 <motion.div
                   key={stat.label}
@@ -245,14 +247,15 @@ export default function RestaurantsPageClient() {
                   The $47K Problem
                 </h2>
                 <p className="text-lg text-slate-600 mb-6">
-                  23% of phone orders go unanswered during rush hours. Those customers don&apos;t call back—they order from competitors.
+                  23% of phone orders go unanswered during rush hours. Those customers don&apos;t
+                  call back—they order from competitors.
                 </p>
                 <ul className="space-y-3">
                   {[
-                    'Friday 6-8 PM: 50+ missed calls',
-                    'Lunch rush: Staff too busy to answer',
-                    'Customers hang up after 3 rings',
-                    'Lost orders = Lost revenue'
+                    "Friday 6-8 PM: 50+ missed calls",
+                    "Lunch rush: Staff too busy to answer",
+                    "Customers hang up after 3 rings",
+                    "Lost orders = Lost revenue",
                   ].map((item, idx) => (
                     <motion.li
                       key={item}
@@ -292,7 +295,10 @@ export default function RestaurantsPageClient() {
             className="text-center mb-12"
           >
             <h2 className="text-display-md font-display text-slate-900 mb-4">
-              Complete Restaurant <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Automation</span>
+              Complete Restaurant{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                Automation
+              </span>
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
               AI handles every customer interaction while your team focuses on food quality
@@ -336,9 +342,7 @@ export default function RestaurantsPageClient() {
                 <h3 className="text-3xl font-display text-slate-900 mb-4">
                   {activeFeature?.label}
                 </h3>
-                <p className="text-lg text-slate-600 mb-6">
-                  {activeFeature?.description}
-                </p>
+                <p className="text-lg text-slate-600 mb-6">{activeFeature?.description}</p>
                 <ul className="space-y-3">
                   {activeFeature?.features.map((feature, idx) => (
                     <motion.li
@@ -374,7 +378,10 @@ export default function RestaurantsPageClient() {
             className="text-center mb-12"
           >
             <h2 className="text-display-md font-display text-slate-900 mb-4">
-              Seamless POS <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Integration</span>
+              Seamless POS{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                Integration
+              </span>
             </h2>
             <p className="text-xl text-slate-600">
               Orders go directly to your kitchen. No manual entry required.
@@ -415,7 +422,8 @@ export default function RestaurantsPageClient() {
             className="text-center mt-8"
           >
             <p className="text-lg text-slate-600">
-              <Star className="w-5 h-5 inline text-blue-600" /> Orders sync in real-time to your POS system
+              <Star className="w-5 h-5 inline text-blue-600" /> Orders sync in real-time to your POS
+              system
             </p>
           </motion.div>
         </div>
@@ -431,7 +439,10 @@ export default function RestaurantsPageClient() {
             className="text-center mb-12"
           >
             <h2 className="text-display-md font-display text-slate-900 mb-4">
-              Reservation Platform <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Sync</span>
+              Reservation Platform{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                Sync
+              </span>
             </h2>
             <p className="text-xl text-slate-600">
               50% more bookings with AI-powered reservation management
@@ -474,7 +485,10 @@ export default function RestaurantsPageClient() {
             className="text-center mb-12"
           >
             <h2 className="text-display-md font-display text-slate-900 mb-4">
-              Calculate Your <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Revenue Recovery</span>
+              Calculate Your{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                Revenue Recovery
+              </span>
             </h2>
             <p className="text-xl text-slate-600">
               See how much money you&apos;re losing to missed calls
@@ -492,7 +506,9 @@ export default function RestaurantsPageClient() {
                   <input
                     type="number"
                     value={calcInputs.dailyOrders}
-                    onChange={(e) => setCalcInputs({ ...calcInputs, dailyOrders: Number(e.target.value) })}
+                    onChange={(e) =>
+                      setCalcInputs({ ...calcInputs, dailyOrders: Number(e.target.value) })
+                    }
                     className="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                     min="0"
                   />
@@ -504,7 +520,9 @@ export default function RestaurantsPageClient() {
                   <input
                     type="number"
                     value={calcInputs.missedPercent}
-                    onChange={(e) => setCalcInputs({ ...calcInputs, missedPercent: Number(e.target.value) })}
+                    onChange={(e) =>
+                      setCalcInputs({ ...calcInputs, missedPercent: Number(e.target.value) })
+                    }
                     className="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                     min="0"
                     max="100"
@@ -517,7 +535,9 @@ export default function RestaurantsPageClient() {
                   <input
                     type="number"
                     value={calcInputs.avgOrderValue}
-                    onChange={(e) => setCalcInputs({ ...calcInputs, avgOrderValue: Number(e.target.value) })}
+                    onChange={(e) =>
+                      setCalcInputs({ ...calcInputs, avgOrderValue: Number(e.target.value) })
+                    }
                     className="w-full px-4 py-3 bg-white border border-slate-200 rounded-xl text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
                     min="0"
                   />
@@ -542,15 +562,11 @@ export default function RestaurantsPageClient() {
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-slate-600">ROI:</span>
-                    <span className="text-2xl font-bold text-blue-600">
-                      {roi.roi}%
-                    </span>
+                    <span className="text-2xl font-bold text-blue-600">{roi.roi}%</span>
                   </div>
                   <div className="flex justify-between items-center pt-3 border-t border-blue-200">
                     <span className="text-slate-600">Payback Period:</span>
-                    <span className="text-xl font-bold text-slate-900">
-                      {roi.paybackDays} days
-                    </span>
+                    <span className="text-xl font-bold text-slate-900">{roi.paybackDays} days</span>
                   </div>
                 </div>
               </div>
@@ -581,11 +597,12 @@ export default function RestaurantsPageClient() {
             className="text-center mb-12"
           >
             <h2 className="text-display-md font-display text-slate-900 mb-4">
-              Proven <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Results</span>
+              Proven{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                Results
+              </span>
             </h2>
-            <p className="text-xl text-slate-600">
-              Real restaurants, real revenue recovery
-            </p>
+            <p className="text-xl text-slate-600">Real restaurants, real revenue recovery</p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -634,7 +651,9 @@ export default function RestaurantsPageClient() {
             <div className="text-6xl mb-6">🔥</div>
             <h2 className="text-display-md font-display text-slate-900 mb-6">
               Friday 6-8 PM: 200 Calls. <br />
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Zero Missed with AI.</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                Zero Missed with AI.
+              </span>
             </h2>
             <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-12">
               <motion.div

@@ -7,7 +7,18 @@ import { useTypewriter } from "@/hooks/useTypewriter";
 import { presets, ctaButton, stageTransitions, EASING } from "@/lib/simulator-animations";
 import AudioWaveform from "./AudioWaveform";
 import CRMCard from "./CRMCard";
-import { PhoneIncoming, PhoneCall, Headset, Bot, RefreshCw, Lock, CloudCheck, CheckCircle, Rocket, RotateCcw } from "lucide-react";
+import {
+  PhoneIncoming,
+  PhoneCall,
+  Headset,
+  Bot,
+  RefreshCw,
+  Lock,
+  CloudCheck,
+  CheckCircle,
+  Rocket,
+  RotateCcw,
+} from "lucide-react";
 
 // ============================================================================
 // CONSTANTS
@@ -85,9 +96,7 @@ export default function LeadRescueSimulator() {
                   transition={{ duration: 2, repeat: Infinity }}
                   className="w-2 h-2 rounded-full bg-cyan-400"
                 />
-                <span className="text-cyan-600 text-sm font-medium tracking-wide">
-                  Live Demo
-                </span>
+                <span className="text-cyan-600 text-sm font-medium tracking-wide">Live Demo</span>
               </motion.div>
 
               {/* Headline */}
@@ -230,11 +239,13 @@ export default function LeadRescueSimulator() {
                     <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
                       <motion.div
                         animate={
-                          callState === "ringing"
-                            ? { rotate: [0, -10, 10, -10, 10, 0] }
-                            : {}
+                          callState === "ringing" ? { rotate: [0, -10, 10, -10, 10, 0] } : {}
                         }
-                        transition={{ duration: 0.5, repeat: callState === "ringing" ? Infinity : 0, repeatDelay: 0.5 }}
+                        transition={{
+                          duration: 0.5,
+                          repeat: callState === "ringing" ? Infinity : 0,
+                          repeatDelay: 0.5,
+                        }}
                         className={`w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center flex-shrink-0 ${
                           callState === "ringing"
                             ? "bg-orange-500/20 border border-orange-500/30"
@@ -248,7 +259,9 @@ export default function LeadRescueSimulator() {
                         )}
                       </motion.div>
                       <div className="min-w-0 flex-1">
-                        <p className="text-slate-900 font-semibold text-base sm:text-lg truncate">+1 (555) 892-4231</p>
+                        <p className="text-slate-900 font-semibold text-base sm:text-lg truncate">
+                          +1 (555) 892-4231
+                        </p>
                         <p className="text-slate-600 text-xs sm:text-sm">Potential Member</p>
                       </div>
                     </div>
@@ -396,9 +409,13 @@ export default function LeadRescueSimulator() {
                   <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-cyan-300 to-[#2563EB]">
                     $1,200
                   </span>
-                  <span className="text-2xl sm:text-3xl md:text-4xl text-slate-600 font-medium">/yr</span>
+                  <span className="text-2xl sm:text-3xl md:text-4xl text-slate-600 font-medium">
+                    /yr
+                  </span>
                 </motion.div>
-                <p className="text-slate-600 text-sm sm:text-base lg:text-lg mt-2 sm:mt-3">membership</p>
+                <p className="text-slate-600 text-sm sm:text-base lg:text-lg mt-2 sm:mt-3">
+                  membership
+                </p>
 
                 {/* Stats row - Mobile Optimized */}
                 <motion.div
@@ -447,7 +464,9 @@ export default function LeadRescueSimulator() {
                     }}
                   />
                   <Rocket className="w-4 h-4 sm:w-5 sm:h-5 relative z-10" />
-                  <span className="relative z-10 text-sm sm:text-base">Get This for My Business</span>
+                  <span className="relative z-10 text-sm sm:text-base">
+                    Get This for My Business
+                  </span>
                 </a>
                 <button
                   onClick={resetSimulation}

@@ -11,13 +11,7 @@
     "keyword_slug": "voice-ai-small-business"
   },
   "industry_focus": {
-    "industries": [
-      "Home Services",
-      "Healthcare",
-      "Professional Services",
-      "Retail",
-      "Real Estate"
-    ],
+    "industries": ["Home Services", "Healthcare", "Professional Services", "Retail", "Real Estate"],
     "business_types": [
       "HVAC companies",
       "Plumbers",
@@ -30,11 +24,7 @@
     "page_title": "Voice AI for Small Business | Never Miss a Call Again",
     "meta_description": "Voice AI for small businesses automates calls, qualifies leads, and books appointments 24/7. Save time and capture more leads with AI voice agents.",
     "h1_heading": "Voice AI for Small Business: Automate Calls & Capture Every Lead",
-    "keywords": [
-      "voice AI for small business",
-      "AI phone answering",
-      "small business automation"
-    ]
+    "keywords": ["voice AI for small business", "AI phone answering", "small business automation"]
   },
   "hero": {
     "headline": "Stop Missing Calls. Start Capturing Every Lead.",
@@ -222,9 +212,6 @@
       "ai-voice-agents-service-businesses",
       "ai-receptionist-small-business"
     ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "packages": ["starter-package", "growth-package"]
   }
 }

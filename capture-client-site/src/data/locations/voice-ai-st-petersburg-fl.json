@@ -11,13 +11,7 @@
     "state": "Florida",
     "state_abbr": "FL",
     "slug": "st-petersburg-fl",
-    "nearby_areas": [
-      "Clearwater",
-      "Largo",
-      "Pinellas Park",
-      "Gulfport",
-      "Treasure Island"
-    ],
+    "nearby_areas": ["Clearwater", "Largo", "Pinellas Park", "Gulfport", "Treasure Island"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -182,14 +176,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "voice-ai-clearwater-fl",
-      "voice-ai-largo-fl",
-      "voice-ai-tampa-fl"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "nearby_locations": ["voice-ai-clearwater-fl", "voice-ai-largo-fl", "voice-ai-tampa-fl"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

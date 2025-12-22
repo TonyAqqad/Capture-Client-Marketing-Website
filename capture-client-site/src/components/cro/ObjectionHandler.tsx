@@ -2,7 +2,16 @@
 
 import { useState } from "react";
 import type { FAQItem } from "@/types/content";
-import { ChevronDown, Phone, Headphones, Brain, Clock, LogOut, Calculator, Smartphone } from "lucide-react";
+import {
+  ChevronDown,
+  Phone,
+  Headphones,
+  Brain,
+  Clock,
+  LogOut,
+  Calculator,
+  Smartphone,
+} from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 // Extended FAQ interface for ObjectionHandler component with icon field

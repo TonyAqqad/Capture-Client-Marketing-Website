@@ -133,7 +133,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       ? generateHowToSchema({
           name: `How to Get Started with ${service.service.service_name}`,
           description: `Step-by-step guide to implementing ${service.service.service_name} for your business with Capture Client.`,
-          totalTime: 'P2W', // 2 weeks typical setup
+          totalTime: "P2W", // 2 weeks typical setup
           steps: service.process.steps.map((step: ProcessStep, index: number) => ({
             step: index + 1,
             title: step.title,
@@ -143,7 +143,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         })
       : null;
 
-  const schemas = [serviceSchema, breadcrumbSchema, webPageSchema, faqSchema, howToSchema].filter(Boolean) as Array<Record<string, unknown>>;
+  const schemas = [serviceSchema, breadcrumbSchema, webPageSchema, faqSchema, howToSchema].filter(
+    Boolean
+  ) as Array<Record<string, unknown>>;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 via-white to-slate-50">
@@ -184,7 +186,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="container mx-auto relative z-10">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-black text-slate-900 text-center mb-8 sm:mb-12 px-4">
               <span className="text-slate-400 font-extralight">Key</span>{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-slate-900 to-primary">Benefits</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-slate-900 to-primary">
+                Benefits
+              </span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               {service.benefits.map((benefit: BenefitItem, index: number) => {
@@ -208,7 +212,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     <h3 className="relative text-lg sm:text-xl font-bold text-slate-900 mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-slate-900 group-hover:to-accent transition-all duration-500">
                       {benefit.title}
                     </h3>
-                    <p className="relative text-base text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors duration-300">{benefit.description}</p>
+                    <p className="relative text-base text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors duration-300">
+                      {benefit.description}
+                    </p>
                   </div>
                 );
               })}
@@ -226,7 +232,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="container mx-auto relative z-10">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-black text-slate-900 text-center mb-8 sm:mb-12 px-4">
               <span className="text-slate-400 font-extralight">How It</span>{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary">Works</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary">
+                Works
+              </span>
             </h2>
             <div className="max-w-3xl mx-auto space-y-4 sm:space-y-6 lg:space-y-8">
               {service.how_it_works.map((step: ProcessStep, index: number) => (
@@ -246,7 +254,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   <div className="relative flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 z-10">
                     <div className="absolute inset-0 bg-gradient-to-br from-primary/40 to-accent/30 rounded-full blur-md" />
                     <div className="relative w-full h-full rounded-full bg-gradient-to-br from-primary/90 to-accent/90 backdrop-blur-xl border-2 border-white/20 flex items-center justify-center shadow-[0_8px_24px_rgba(74,105,226,0.4)] group-hover:shadow-[0_12px_32px_rgba(0,201,255,0.6)] transition-shadow duration-500">
-                      <span className="text-lg sm:text-xl font-black text-white drop-shadow-lg">{step.step}</span>
+                      <span className="text-lg sm:text-xl font-black text-white drop-shadow-lg">
+                        {step.step}
+                      </span>
                     </div>
                   </div>
 
@@ -254,7 +264,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-slate-900 group-hover:to-accent transition-all duration-500">
                       {step.title}
                     </h3>
-                    <p className="text-base text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors duration-300">{step.description}</p>
+                    <p className="text-base text-slate-600 leading-relaxed group-hover:text-slate-700 transition-colors duration-300">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
               ))}
@@ -272,7 +284,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="container mx-auto max-w-4xl relative z-10">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-black text-slate-900 text-center mb-8 sm:mb-12 px-4">
               <span className="text-slate-400 font-extralight">Frequently Asked</span>{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-slate-900 to-accent">Questions</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-slate-900 to-accent">
+                Questions
+              </span>
             </h2>
             <div className="space-y-3 sm:space-y-4">
               {service.faq.map((item: { question: string; answer: string }, index: number) => (
@@ -287,7 +301,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                     <span className="flex-1 pr-4">{item.question}</span>
                     <ChevronDown className="w-5 h-5 text-accent ml-4 group-open:rotate-180 transition-transform duration-300 drop-shadow-[0_4px_8px_rgba(0,201,255,0.5)]" />
                   </summary>
-                  <p className="relative mt-3 sm:mt-4 text-base text-slate-600 leading-relaxed group-open:text-slate-700 transition-colors duration-300">{item.answer}</p>
+                  <p className="relative mt-3 sm:mt-4 text-base text-slate-600 leading-relaxed group-open:text-slate-700 transition-colors duration-300">
+                    {item.answer}
+                  </p>
                 </details>
               ))}
             </div>
@@ -336,7 +352,9 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
           <div className="container mx-auto relative z-10">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-black text-slate-900 text-center mb-6 sm:mb-8 px-4">
               <span className="text-slate-400 font-extralight">Related</span>{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">Services</span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+                Services
+              </span>
             </h2>
             <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
               {service.related_pages.services.map((relatedSlug: string) => (

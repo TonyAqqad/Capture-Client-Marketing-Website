@@ -4,7 +4,17 @@ import { useRef } from "react";
 import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import { GlassCard } from "@/components/ui/GlassCard";
-import { Moon, Calendar, CircleDot, Ban, X, CheckCircle, Check, Clock, type LucideIcon } from "lucide-react";
+import {
+  Moon,
+  Calendar,
+  CircleDot,
+  Ban,
+  X,
+  CheckCircle,
+  Check,
+  Clock,
+  type LucideIcon,
+} from "lucide-react";
 
 export function AfterHoursSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -19,14 +29,14 @@ export function AfterHoursSection() {
   const stats = [
     { value: "77%", label: "Inquiries After 5 PM", icon: "nightlight" as const },
     { value: "63%", label: "Weekend Leads", icon: "weekend" as const },
-    { value: "24/7", label: "AI Availability", icon: "all_inclusive" as const }
+    { value: "24/7", label: "AI Availability", icon: "all_inclusive" as const },
   ];
 
   return (
     <section
       ref={containerRef}
       className="py-16 sm:py-20 lg:py-28 relative overflow-hidden"
-      style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+      style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
     >
       {/* Light background effect */}
       <div className="absolute inset-0">
@@ -67,17 +77,29 @@ export function AfterHoursSection() {
         >
           <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200 mb-6">
             <Moon className="text-blue-600 w-5 h-5" />
-            <span className="text-sm text-blue-600 uppercase tracking-wide" style={{ fontWeight: 600 }}>
+            <span
+              className="text-sm text-blue-600 uppercase tracking-wide"
+              style={{ fontWeight: 600 }}
+            >
               After Hours = Prime Time
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-6">
             <span style={{ fontWeight: 200 }}>Your AI ISA </span>
-            <span className="text-blue-600" style={{ fontWeight: 800 }}>Never Sleeps</span>
+            <span className="text-blue-600" style={{ fontWeight: 800 }}>
+              Never Sleeps
+            </span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" style={{ fontWeight: 300 }}>
+          <p
+            className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed"
+            style={{ fontWeight: 300 }}
+          >
             77% of real estate inquiries happen after 5 PM. That's when buyers are researching,
-            comparing, and <span className="text-slate-900" style={{ fontWeight: 600 }}>ready to commit</span>.
+            comparing, and{" "}
+            <span className="text-slate-900" style={{ fontWeight: 600 }}>
+              ready to commit
+            </span>
+            .
           </p>
         </motion.div>
 
@@ -137,7 +159,9 @@ export function AfterHoursSection() {
                   <X className="text-red-600 w-5 h-5 mt-0.5" />
                   <div>
                     <p className="text-slate-900 font-medium mb-1">10 PM Zillow Lead</p>
-                    <p className="text-slate-600 text-sm">Gets voicemail. Calls competitor. You lose $18K commission.</p>
+                    <p className="text-slate-600 text-sm">
+                      Gets voicemail. Calls competitor. You lose $18K commission.
+                    </p>
                   </div>
                 </div>
 
@@ -145,7 +169,9 @@ export function AfterHoursSection() {
                   <X className="text-red-600 w-5 h-5 mt-0.5" />
                   <div>
                     <p className="text-slate-900 font-medium mb-1">Saturday Open House</p>
-                    <p className="text-slate-600 text-sm">50 sign-ins. Can't call back until Monday. 40 already chose agents.</p>
+                    <p className="text-slate-600 text-sm">
+                      50 sign-ins. Can't call back until Monday. 40 already chose agents.
+                    </p>
                   </div>
                 </div>
 
@@ -153,7 +179,9 @@ export function AfterHoursSection() {
                   <X className="text-red-600 w-5 h-5 mt-0.5" />
                   <div>
                     <p className="text-slate-900 font-medium mb-1">Sunday Referral</p>
-                    <p className="text-slate-600 text-sm">Friend-of-client calls. No answer. Relationship damaged.</p>
+                    <p className="text-slate-600 text-sm">
+                      Friend-of-client calls. No answer. Relationship damaged.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -180,7 +208,9 @@ export function AfterHoursSection() {
                   <Check className="text-green-600 w-5 h-5 mt-0.5" />
                   <div>
                     <p className="text-slate-900 font-medium mb-1">10 PM Zillow Lead</p>
-                    <p className="text-slate-600 text-sm">AI answers in 30 seconds. Qualifies. Books showing. Deal closed.</p>
+                    <p className="text-slate-600 text-sm">
+                      AI answers in 30 seconds. Qualifies. Books showing. Deal closed.
+                    </p>
                   </div>
                 </div>
 
@@ -188,7 +218,9 @@ export function AfterHoursSection() {
                   <Check className="text-green-600 w-5 h-5 mt-0.5" />
                   <div>
                     <p className="text-slate-900 font-medium mb-1">Saturday Open House</p>
-                    <p className="text-slate-600 text-sm">AI calls all 50 in 2 hours. 12 qualified. 8 appointments booked.</p>
+                    <p className="text-slate-600 text-sm">
+                      AI calls all 50 in 2 hours. 12 qualified. 8 appointments booked.
+                    </p>
                   </div>
                 </div>
 
@@ -196,7 +228,9 @@ export function AfterHoursSection() {
                   <Check className="text-green-600 w-5 h-5 mt-0.5" />
                   <div>
                     <p className="text-slate-900 font-medium mb-1">Sunday Referral</p>
-                    <p className="text-slate-600 text-sm">AI greets by name. Captures details. Notifies you. Referral feels VIP.</p>
+                    <p className="text-slate-600 text-sm">
+                      AI greets by name. Captures details. Notifies you. Referral feels VIP.
+                    </p>
                   </div>
                 </div>
               </div>

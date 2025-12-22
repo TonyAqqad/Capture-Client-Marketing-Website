@@ -41,7 +41,8 @@ export default function IntegrationNotFound() {
         </h2>
 
         <p className="text-lg text-slate-600 mb-8 max-w-lg mx-auto">
-          Sorry, the integration you're looking for doesn't exist or has been moved. Let's get you back on track.
+          Sorry, the integration you're looking for doesn't exist or has been moved. Let's get you
+          back on track.
         </p>
 
         {/* Action Buttons */}

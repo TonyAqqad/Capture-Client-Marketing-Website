@@ -10,32 +10,18 @@ import { CaseStudiesPreview } from "@/components/sections/CaseStudiesPreview";
 import { GoogleReviews } from "@/components/sections/GoogleReviews";
 
 // Lazy load ExitIntentPopup for code splitting (component has early-return optimization)
-const ExitIntentPopup = dynamic(
-  () => import("@/components/cro/ExitIntentPopup"),
-  {
-    loading: () => null, // Don't show anything while loading
-  }
-);
+const ExitIntentPopup = dynamic(() => import("@/components/cro/ExitIntentPopup"), {
+  loading: () => null, // Don't show anything while loading
+});
 
 // Lazy load heavy below-the-fold components to improve LCP
-const PhoneDemoCard = dynamic(
-  () => import("@/components/PhoneDemoCard"),
-  {
-    loading: () => (
-      <div className="w-full h-[500px] bg-slate-100 animate-pulse rounded-2xl" />
-    ),
-  }
-);
+const PhoneDemoCard = dynamic(() => import("@/components/PhoneDemoCard"), {
+  loading: () => <div className="w-full h-[500px] bg-slate-100 animate-pulse rounded-2xl" />,
+});
 
-const ROICalculator = dynamic(
-  () => import("@/components/ROICalculator"),
-  {
-    loading: () => (
-      <div className="w-full h-96 bg-slate-100 animate-pulse rounded-2xl" />
-    ),
-  }
-);
-
+const ROICalculator = dynamic(() => import("@/components/ROICalculator"), {
+  loading: () => <div className="w-full h-96 bg-slate-100 animate-pulse rounded-2xl" />,
+});
 
 // SEO Metadata for Homepage
 export const metadata: Metadata = {
@@ -188,39 +174,40 @@ const localBusinessSchema = {
 const pricingSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
-  "name": "Capture Client AI Voice Agent",
-  "description": "24/7 AI voice agents that answer calls, qualify leads, and book appointments for small businesses",
-  "brand": {
+  name: "Capture Client AI Voice Agent",
+  description:
+    "24/7 AI voice agents that answer calls, qualify leads, and book appointments for small businesses",
+  brand: {
     "@type": "Brand",
-    "name": "Capture Client"
+    name: "Capture Client",
   },
-  "offers": {
+  offers: {
     "@type": "AggregateOffer",
-    "priceCurrency": "USD",
-    "lowPrice": "97",
-    "highPrice": "950",
-    "offerCount": "2",
-    "offers": [
+    priceCurrency: "USD",
+    lowPrice: "97",
+    highPrice: "950",
+    offerCount: "2",
+    offers: [
       {
         "@type": "Offer",
-        "name": "Starter",
-        "price": "97",
-        "priceCurrency": "USD",
-        "priceValidUntil": "2026-12-31",
-        "availability": "https://schema.org/InStock",
-        "url": "https://captureclient.com/pricing"
+        name: "Starter",
+        price: "97",
+        priceCurrency: "USD",
+        priceValidUntil: "2026-12-31",
+        availability: "https://schema.org/InStock",
+        url: "https://captureclient.com/pricing",
       },
       {
         "@type": "Offer",
-        "name": "Growth",
-        "price": "950",
-        "priceCurrency": "USD",
-        "priceValidUntil": "2026-12-31",
-        "availability": "https://schema.org/InStock",
-        "url": "https://captureclient.com/pricing"
-      }
-    ]
-  }
+        name: "Growth",
+        price: "950",
+        priceCurrency: "USD",
+        priceValidUntil: "2026-12-31",
+        availability: "https://schema.org/InStock",
+        url: "https://captureclient.com/pricing",
+      },
+    ],
+  },
 };
 
 export default function HomePage() {

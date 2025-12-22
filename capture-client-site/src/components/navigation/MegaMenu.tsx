@@ -70,7 +70,9 @@ export default function MegaMenu() {
     : "bg-white/80 backdrop-blur-md border-b border-slate-100";
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${scrolledClass}`}>
+    <header
+      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${scrolledClass}`}
+    >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
         <div className="flex items-center justify-between relative z-[110]">
           {/* Logo */}
@@ -114,7 +116,7 @@ export default function MegaMenu() {
               >
                 <button
                   className="relative px-4 py-3 min-h-[44px] text-sm font-medium transition-all duration-300 group flex items-center gap-1 text-slate-700 hover:text-blue-600"
-                  style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+                  style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
                   aria-haspopup="true"
                   aria-expanded={openDropdown === key}
                 >
@@ -123,7 +125,7 @@ export default function MegaMenu() {
                   {/* Chevron indicator */}
                   <svg
                     className={`w-4 h-4 transition-transform duration-300 ${
-                      openDropdown === key ? 'rotate-180 text-blue-600' : ''
+                      openDropdown === key ? "rotate-180 text-blue-600" : ""
                     }`}
                     fill="none"
                     viewBox="0 0 24 24"
@@ -142,9 +144,7 @@ export default function MegaMenu() {
                 </button>
 
                 {/* Invisible hover bridge to prevent gap issues - larger area */}
-                {openDropdown === key && (
-                  <div className="absolute -left-4 -right-4 h-8 top-full" />
-                )}
+                {openDropdown === key && <div className="absolute -left-4 -right-4 h-8 top-full" />}
 
                 {/* Dropdown Panel */}
                 <MegaMenuDropdown
@@ -164,7 +164,7 @@ export default function MegaMenu() {
             <a
               href="tel:865-346-6111"
               className="relative group transition-all duration-300 text-sm font-medium flex items-center gap-2 px-4 py-3 min-h-[44px] rounded-lg border text-slate-700 hover:text-blue-600 hover:bg-slate-50 border-slate-200 hover:border-blue-300"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
               onClick={() => trackPhoneClick("865-346-6111", "header")}
             >
               <svg
@@ -192,7 +192,7 @@ export default function MegaMenu() {
               target="_blank"
               rel="noopener noreferrer"
               className="relative group overflow-hidden px-6 py-3 min-h-[48px] rounded-lg font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 border flex items-center bg-blue-600 hover:bg-blue-700 text-white hover:shadow-lg hover:shadow-blue-600/30 border-blue-700"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
               onClick={() => trackCTAClick("Sign In", "header", "https://app.captureclient.com/")}
             >
               <span className="relative z-10 flex items-center gap-2">
@@ -223,7 +223,7 @@ export default function MegaMenu() {
           >
             <svg
               className={`w-6 h-6 transition-all duration-300 ${
-                mobileMenuOpen ? 'rotate-90 text-blue-600' : 'text-slate-700'
+                mobileMenuOpen ? "rotate-90 text-blue-600" : "text-slate-700"
               }`}
               fill="none"
               viewBox="0 0 24 24"
@@ -250,10 +250,7 @@ export default function MegaMenu() {
       </nav>
 
       {/* Mobile Menu */}
-      <MegaMenuMobile
-        isOpen={mobileMenuOpen}
-        onClose={() => setMobileMenuOpen(false)}
-      />
+      <MegaMenuMobile isOpen={mobileMenuOpen} onClose={() => setMobileMenuOpen(false)} />
     </header>
   );
 }

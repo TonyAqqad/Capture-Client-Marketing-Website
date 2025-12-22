@@ -11,28 +11,14 @@
     "keyword_slug": "voice-ai-home-services"
   },
   "industry_focus": {
-    "industries": [
-      "HVAC",
-      "Plumbing",
-      "Electrical",
-      "Appliance Repair",
-      "Locksmith"
-    ],
-    "business_types": [
-      "HVAC companies",
-      "Plumbing companies",
-      "Electrical companies"
-    ]
+    "industries": ["HVAC", "Plumbing", "Electrical", "Appliance Repair", "Locksmith"],
+    "business_types": ["HVAC companies", "Plumbing companies", "Electrical companies"]
   },
   "seo": {
     "page_title": "Voice AI for Home Services | Never Miss Emergency Calls",
     "meta_description": "Voice AI for home services answers emergency calls 24/7. Perfect for HVAC plumbing electrical and contractors who need after-hours coverage.",
     "h1_heading": "Voice AI for Home Services Businesses",
-    "keywords": [
-      "voice ai for home services",
-      "capture client",
-      "automation"
-    ]
+    "keywords": ["voice ai for home services", "capture client", "automation"]
   },
   "hero": {
     "headline": "Capture Every Emergency Call Even At 2 AM",
@@ -114,13 +100,7 @@
   "nationwide_coverage": {
     "heading": "Serving Businesses Nationwide",
     "description": "We work with businesses across all 50 states from small local operations to multi-location enterprises.",
-    "regions_highlighted": [
-      "East Coast",
-      "West Coast",
-      "Midwest",
-      "South",
-      "Southwest"
-    ]
+    "regions_highlighted": ["East Coast", "West Coast", "Midwest", "South", "Southwest"]
   },
   "testimonials": [
     {
@@ -198,13 +178,7 @@
     "urgency_text": "Limited slots available for new clients"
   },
   "related_pages": {
-    "related_national_keywords": [
-      "voice-ai-small-business",
-      "lead-generation-agency"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "related_national_keywords": ["voice-ai-small-business", "lead-generation-agency"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

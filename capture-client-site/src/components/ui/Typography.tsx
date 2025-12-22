@@ -139,14 +139,6 @@ export function CyanGradientText({ children, className = "" }: TypographyProps) 
  */
 export function PremiumBody({ children, className = "" }: TypographyProps) {
   return (
-    <p
-      className={cn(
-        "text-body-md text-slate-900",
-        "leading-relaxed",
-        className
-      )}
-    >
-      {children}
-    </p>
+    <p className={cn("text-body-md text-slate-900", "leading-relaxed", className)}>{children}</p>
   );
 }

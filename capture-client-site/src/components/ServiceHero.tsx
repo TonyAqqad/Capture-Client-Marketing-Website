@@ -224,7 +224,7 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
             <motion.h1
               variants={itemVariants}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-slate-900 mb-4 sm:mb-6 leading-tight"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 800 }}
             >
               {hero.headline.split(" ").map((word, index) => (
                 <motion.span
@@ -245,19 +245,22 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
             <motion.p
               variants={itemVariants}
               className="text-base sm:text-lg md:text-xl lg:text-2xl text-slate-600 mb-6 sm:mb-8 md:mb-10 max-w-3xl leading-relaxed"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 200 }}
             >
               {hero.subheadline}
             </motion.p>
           )}
 
           {/* CTAs - Full-width on mobile */}
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-10 md:mb-12">
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8 sm:mb-10 md:mb-12"
+          >
             {hero.cta_primary && (
               <motion.a
                 href={hero.cta_primary.action}
                 className={`group relative w-full sm:w-auto px-6 sm:px-8 py-4 min-h-[48px] ${theme.accentColor} text-black rounded-full overflow-hidden shadow-2xl flex items-center justify-center`}
-                style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}
+                style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 600 }}
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -281,7 +284,7 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
               <motion.a
                 href={hero.cta_secondary.action}
                 className="w-full sm:w-auto px-6 sm:px-8 py-4 min-h-[48px] border border-slate-200 bg-white/70 backdrop-blur-xl text-slate-700 rounded-full hover:bg-white/[0.95] transition-all flex items-center justify-center"
-                style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 500 }}
+                style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 500 }}
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -314,7 +317,7 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
                   <div className="relative p-4 sm:p-6 border border-slate-200 bg-white/70 backdrop-blur-xl rounded-xl sm:rounded-2xl group-hover:border-slate-300 transition-all">
                     <motion.div
                       className="text-2xl sm:text-3xl md:text-4xl text-slate-900 mb-1"
-                      style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}
+                      style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 700 }}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       transition={{ delay: index * 0.15 + 1, duration: 0.5 }}
@@ -323,7 +326,7 @@ export default function ServiceHero({ service, hero, stats }: ServiceHeroProps) 
                     </motion.div>
                     <div
                       className="text-sm sm:text-base text-slate-600"
-                      style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}
+                      style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 300 }}
                     >
                       {stat.label}
                     </div>

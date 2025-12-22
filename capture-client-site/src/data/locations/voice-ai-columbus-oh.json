@@ -11,13 +11,7 @@
     "state": "Ohio",
     "state_abbr": "OH",
     "slug": "columbus-oh",
-    "nearby_areas": [
-      "Dublin",
-      "Westerville",
-      "Grove City",
-      "Hilliard",
-      "Gahanna"
-    ],
+    "nearby_areas": ["Dublin", "Westerville", "Grove City", "Hilliard", "Gahanna"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -182,14 +176,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "voice-ai-dublin-oh",
-      "voice-ai-westerville-oh",
-      "voice-ai-hilliard-oh"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "nearby_locations": ["voice-ai-dublin-oh", "voice-ai-westerville-oh", "voice-ai-hilliard-oh"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

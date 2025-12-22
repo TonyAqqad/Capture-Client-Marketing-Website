@@ -11,13 +11,7 @@
     "state": "Ohio",
     "state_abbr": "OH",
     "slug": "cleveland-oh",
-    "nearby_areas": [
-      "Lakewood",
-      "Parma",
-      "Strongsville",
-      "Mentor",
-      "Westlake"
-    ],
+    "nearby_areas": ["Lakewood", "Parma", "Strongsville", "Mentor", "Westlake"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -182,14 +176,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "voice-ai-lakewood-oh",
-      "voice-ai-parma-oh",
-      "voice-ai-strongsville-oh"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "nearby_locations": ["voice-ai-lakewood-oh", "voice-ai-parma-oh", "voice-ai-strongsville-oh"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

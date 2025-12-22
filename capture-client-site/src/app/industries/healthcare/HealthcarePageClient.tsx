@@ -4,11 +4,31 @@ import Link from "next/link";
 import { motion, useInView } from "@/lib/motion";
 import { useRef, useState, useEffect } from "react";
 import {
-  Phone, Clock, Bell, UserPlus, History, BadgeCheck,
-  Calculator, User, Smile, Hospital,
-  Siren, ShieldCheck, Lock, Gavel, EyeOff, Moon,
-  Brain, Stethoscope, Heart as HeartIcon, Pill, Syringe,
-  ArrowRight, Mail, Shield, CheckCircle2
+  Phone,
+  Clock,
+  Bell,
+  UserPlus,
+  History,
+  BadgeCheck,
+  Calculator,
+  User,
+  Smile,
+  Hospital,
+  Siren,
+  ShieldCheck,
+  Lock,
+  Gavel,
+  EyeOff,
+  Moon,
+  Brain,
+  Stethoscope,
+  Heart as HeartIcon,
+  Pill,
+  Syringe,
+  ArrowRight,
+  Mail,
+  Shield,
+  CheckCircle2,
 } from "lucide-react";
 
 // ==================== INTERFACES ====================
@@ -127,11 +147,7 @@ function PainPointCard({ icon, label, isNegative = false }: PainPointCardProps) 
               : "bg-gradient-to-br from-blue-100 to-cyan-50"
           }`}
         >
-          <span
-            className={`text-4xl ${
-              isNegative ? "text-red-600" : "text-blue-600"
-            }`}
-          >
+          <span className={`text-4xl ${isNegative ? "text-red-600" : "text-blue-600"}`}>
             {icon}
           </span>
         </div>
@@ -248,7 +264,9 @@ function FeatureCard({ icon, title, description, delay = 0 }: FeatureCardProps) 
       >
         <div className="text-blue-600 [&>svg]:w-6 [&>svg]:h-6">{icon}</div>
       </motion.div>
-      <h3 className="text-xl font-heading font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">{title}</h3>
+      <h3 className="text-xl font-heading font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors duration-300">
+        {title}
+      </h3>
       <p className="text-slate-600 leading-relaxed">{description}</p>
     </motion.div>
   );
@@ -305,25 +323,19 @@ function ROICalculator() {
             onChange={(e) => setAvgAppointmentValue(Number(e.target.value))}
             className="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-blue-600"
           />
-          <div className="text-2xl font-bold text-blue-600 mt-2">
-            ${avgAppointmentValue}
-          </div>
+          <div className="text-2xl font-bold text-blue-600 mt-2">${avgAppointmentValue}</div>
         </div>
       </div>
 
       <div className="space-y-4 mb-6">
         <div className="p-4 rounded-xl bg-red-50 border border-red-200">
           <div className="text-sm text-slate-600 mb-1">Currently Missing Per Month</div>
-          <div className="text-2xl font-bold text-red-600">
-            {Math.round(missedCalls)} calls
-          </div>
+          <div className="text-2xl font-bold text-red-600">{Math.round(missedCalls)} calls</div>
         </div>
 
         <div className="p-4 rounded-xl bg-blue-50 border border-blue-200">
           <div className="text-sm text-slate-600 mb-1">Calls Recovered with AI</div>
-          <div className="text-2xl font-bold text-blue-600">
-            {Math.round(recoveredCalls)} calls
-          </div>
+          <div className="text-2xl font-bold text-blue-600">{Math.round(recoveredCalls)} calls</div>
         </div>
       </div>
 
@@ -495,9 +507,7 @@ export default function HealthcarePageClient() {
               transition={{ duration: 0.6, delay: 0.4 }}
               className="inline-block p-6 rounded-2xl bg-gradient-to-r from-red-50 to-red-100 border border-red-200 mb-8"
             >
-              <div className="text-sm text-red-700 mb-2">
-                Average Practice Losing Annually:
-              </div>
+              <div className="text-sm text-red-700 mb-2">Average Practice Losing Annually:</div>
               <div className="text-4xl sm:text-5xl font-bold text-red-600">
                 <AnimatedCounter end={127} prefix="$" suffix="K" duration={2500} />
               </div>
@@ -542,10 +552,7 @@ export default function HealthcarePageClient() {
               className="text-sm text-slate-600 mt-6"
             >
               Call us:{" "}
-              <a
-                href="tel:865-346-6111"
-                className="text-blue-500 hover:underline font-semibold"
-              >
+              <a href="tel:865-346-6111" className="text-blue-500 hover:underline font-semibold">
                 865-346-6111
               </a>
             </motion.p>
@@ -597,7 +604,11 @@ export default function HealthcarePageClient() {
               </div>
 
               <div className="md:col-span-2">
-                <PainPointCard icon="🏃" label="Patient Books with Competitor (85% won't call back)" isNegative />
+                <PainPointCard
+                  icon="🏃"
+                  label="Patient Books with Competitor (85% won't call back)"
+                  isNegative
+                />
               </div>
             </div>
 
@@ -608,9 +619,7 @@ export default function HealthcarePageClient() {
               transition={{ duration: 0.6 }}
               className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 text-center"
             >
-              <p className="text-lg font-semibold text-slate-900 mb-2">
-                Our AI breaks this cycle
-              </p>
+              <p className="text-lg font-semibold text-slate-900 mb-2">Our AI breaks this cycle</p>
               <p className="text-slate-600">
                 Every call answered. Every patient scheduled. Zero lost revenue.
               </p>
@@ -662,12 +671,8 @@ export default function HealthcarePageClient() {
             <div className="bg-white/70 backdrop-blur-xl p-8 sm:p-12 rounded-3xl border border-slate-200 shadow-xl shadow-slate-200/50">
               {/* Practice Stat */}
               <div className="text-center mb-8 p-6 rounded-2xl bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200">
-                <div className="text-4xl font-bold text-blue-600 mb-2">
-                  {activePractice.stat}
-                </div>
-                <div className="text-slate-600">
-                  {activePractice.statLabel}
-                </div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">{activePractice.stat}</div>
+                <div className="text-slate-600">{activePractice.statLabel}</div>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8">
@@ -748,12 +753,11 @@ export default function HealthcarePageClient() {
                   >
                     <Gavel className="w-6 h-6 text-blue-600" />
                   </motion.div>
-                  <h3 className="text-xl font-heading font-bold text-slate-900">
-                    HIPAA Compliant
-                  </h3>
+                  <h3 className="text-xl font-heading font-bold text-slate-900">HIPAA Compliant</h3>
                 </div>
                 <p className="text-slate-600 leading-relaxed">
-                  We sign a Business Associate Agreement (BAA) with every healthcare customer, ensuring full HIPAA compliance and clear liability protection.
+                  We sign a Business Associate Agreement (BAA) with every healthcare customer,
+                  ensuring full HIPAA compliance and clear liability protection.
                 </p>
               </motion.div>
 
@@ -773,12 +777,11 @@ export default function HealthcarePageClient() {
                   >
                     <Shield className="w-6 h-6 text-blue-600" />
                   </motion.div>
-                  <h3 className="text-xl font-heading font-bold text-slate-900">
-                    SOC 2 Type II
-                  </h3>
+                  <h3 className="text-xl font-heading font-bold text-slate-900">SOC 2 Type II</h3>
                 </div>
                 <p className="text-slate-600 leading-relaxed">
-                  Independently audited security controls ensure your patient data is protected with enterprise-grade infrastructure.
+                  Independently audited security controls ensure your patient data is protected with
+                  enterprise-grade infrastructure.
                 </p>
               </motion.div>
 
@@ -803,7 +806,8 @@ export default function HealthcarePageClient() {
                   </h3>
                 </div>
                 <p className="text-slate-600 leading-relaxed">
-                  All patient data encrypted at rest and in transit using military-grade AES-256 encryption standards.
+                  All patient data encrypted at rest and in transit using military-grade AES-256
+                  encryption standards.
                 </p>
               </motion.div>
 
@@ -828,7 +832,8 @@ export default function HealthcarePageClient() {
                   </h3>
                 </div>
                 <p className="text-slate-600 leading-relaxed">
-                  Optional zero-retention mode ensures no voice recordings or transcripts are stored after processing.
+                  Optional zero-retention mode ensures no voice recordings or transcripts are stored
+                  after processing.
                 </p>
               </motion.div>
             </div>
@@ -849,7 +854,8 @@ export default function HealthcarePageClient() {
               </span>
             </h2>
             <p className="text-lg text-slate-600 mb-12 max-w-3xl mx-auto">
-              Seamless integration with leading EHR and practice management systems. No workflow disruption.
+              Seamless integration with leading EHR and practice management systems. No workflow
+              disruption.
             </p>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
@@ -1056,7 +1062,8 @@ export default function HealthcarePageClient() {
                 </span>
               </h2>
               <p className="text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
-                Join hundreds of healthcare practices reducing missed calls, eliminating no-shows, and recovering lost revenue with AI voice agents.
+                Join hundreds of healthcare practices reducing missed calls, eliminating no-shows,
+                and recovering lost revenue with AI voice agents.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

@@ -5,22 +5,32 @@ import dynamic from "next/dynamic";
 import { motion, AnimatePresence } from "@/lib/motion";
 import AudioWaveform from "@/components/AudioWaveform";
 import CRMCard from "@/components/CRMCard";
-import { ArrowRight, Phone, CheckCircle2, Sparkles, Target, ThumbsUp, Inbox, Calendar, FileText, Zap, Activity, TrendingUp, Users } from "lucide-react";
+import {
+  ArrowRight,
+  Phone,
+  CheckCircle2,
+  Sparkles,
+  Target,
+  ThumbsUp,
+  Inbox,
+  Calendar,
+  FileText,
+  Zap,
+  Activity,
+  TrendingUp,
+  Users,
+} from "lucide-react";
 import { useState } from "react";
 
-const GrowthDashboard = dynamic(
-  () => import("@/components/GrowthDashboard"),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="w-full h-80 bg-slate-100 animate-pulse rounded-2xl" />
-    ),
-  }
-);
-
+const GrowthDashboard = dynamic(() => import("@/components/GrowthDashboard"), {
+  ssr: false,
+  loading: () => <div className="w-full h-80 bg-slate-100 animate-pulse rounded-2xl" />,
+});
 
 export default function FeaturesPageClient() {
-  const [activeTab, setActiveTab] = useState<"automation" | "analytics" | "engagement">("automation");
+  const [activeTab, setActiveTab] = useState<"automation" | "analytics" | "engagement">(
+    "automation"
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-slate-50 overflow-hidden">
@@ -39,7 +49,7 @@ export default function FeaturesPageClient() {
                 radial-gradient(at 20% 30%, rgba(37, 99, 235, 0.08) 0%, transparent 50%),
                 radial-gradient(at 80% 70%, rgba(6, 182, 212, 0.06) 0%, transparent 50%),
                 radial-gradient(at 50% 50%, rgba(59, 130, 246, 0.04) 0%, transparent 70%)
-              `
+              `,
             }}
           />
 
@@ -51,7 +61,7 @@ export default function FeaturesPageClient() {
                 linear-gradient(rgba(148, 163, 184, 0.15) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(148, 163, 184, 0.15) 1px, transparent 1px)
               `,
-              backgroundSize: '50px 50px'
+              backgroundSize: "50px 50px",
             }}
           />
         </div>
@@ -82,7 +92,8 @@ export default function FeaturesPageClient() {
               </h1>
 
               <p className="text-base sm:text-lg md:text-xl text-slate-600 max-w-xl mb-8 sm:mb-12 leading-relaxed">
-                One platform. Unlimited growth. AI voice agents, CRM, analytics, ads management—all working together to capture more leads and close more deals.
+                One platform. Unlimited growth. AI voice agents, CRM, analytics, ads management—all
+                working together to capture more leads and close more deals.
               </p>
 
               {/* CTA Group - Mobile optimized touch targets */}
@@ -150,7 +161,7 @@ export default function FeaturesPageClient() {
                 animate={{
                   y: [0, -20, 0],
                   rotate: [0, 5, 0],
-                  scale: [1, 1.1, 1]
+                  scale: [1, 1.1, 1],
                 }}
                 transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -top-8 -right-8 w-32 h-32 bg-cyan-500/20 rounded-full blur-3xl"
@@ -159,7 +170,7 @@ export default function FeaturesPageClient() {
                 animate={{
                   y: [0, 20, 0],
                   rotate: [0, -5, 0],
-                  scale: [1, 1.15, 1]
+                  scale: [1, 1.15, 1],
                 }}
                 transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
                 className="absolute -bottom-8 -left-8 w-40 h-40 bg-blue-500/20 rounded-full blur-3xl"
@@ -186,7 +197,10 @@ export default function FeaturesPageClient() {
               </span>
             </div>
             <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl font-black text-slate-900 mb-4 sm:mb-6">
-              See Our Platform <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">In Action</span>
+              See Our Platform{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
+                In Action
+              </span>
             </h2>
             <p className="text-slate-600 text-base sm:text-lg md:text-xl max-w-2xl mx-auto">
               Explore our capabilities by category
@@ -274,7 +288,11 @@ export default function FeaturesPageClient() {
                     Customer Engagement
                   </h3>
                   <div className="space-y-6 sm:space-y-8">
-                    <CapabilityMeter label="Multi-Channel Communication" percentage={96} color="blue" />
+                    <CapabilityMeter
+                      label="Multi-Channel Communication"
+                      percentage={96}
+                      color="blue"
+                    />
                     <CapabilityMeter label="Response Time" percentage={99} color="cyan" />
                     <CapabilityMeter label="Customer Satisfaction" percentage={93} color="blue" />
                     <CapabilityMeter label="Personalization" percentage={91} color="cyan" />
@@ -309,7 +327,9 @@ export default function FeaturesPageClient() {
                 Never miss a call again
               </p>
               <p className="text-slate-600 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
-                24/7 AI-powered voice agents that handle unlimited calls, qualify leads, book appointments, and answer questions with natural conversation. Your business never sleeps.
+                24/7 AI-powered voice agents that handle unlimited calls, qualify leads, book
+                appointments, and answer questions with natural conversation. Your business never
+                sleeps.
               </p>
 
               {/* Feature list with checkmarks */}
@@ -318,7 +338,7 @@ export default function FeaturesPageClient() {
                   "Natural conversation AI that sounds human",
                   "Automatic call transcription and CRM sync",
                   "Multi-language support for global reach",
-                  "Sentiment analysis and lead scoring"
+                  "Sentiment analysis and lead scoring",
                 ].map((feature, i) => (
                   <motion.div
                     key={i}
@@ -335,7 +355,9 @@ export default function FeaturesPageClient() {
                     >
                       <CheckCircle2 className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600 flex-shrink-0 mt-1 group-hover/item:drop-shadow-[0_0_8px_rgba(37,99,235,0.6)]" />
                     </motion.div>
-                    <span className="text-slate-700 text-sm sm:text-base leading-relaxed group-hover/item:text-slate-900 transition-colors">{feature}</span>
+                    <span className="text-slate-700 text-sm sm:text-base leading-relaxed group-hover/item:text-slate-900 transition-colors">
+                      {feature}
+                    </span>
                   </motion.div>
                 ))}
               </div>
@@ -361,7 +383,7 @@ export default function FeaturesPageClient() {
                 <motion.div
                   className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                   style={{
-                    boxShadow: "0 20px 60px rgba(37, 99, 235, 0.2)"
+                    boxShadow: "0 20px 60px rgba(37, 99, 235, 0.2)",
                   }}
                 />
 
@@ -370,7 +392,9 @@ export default function FeaturesPageClient() {
 
                   <div className="mt-6 sm:mt-8 text-center">
                     <p className="text-slate-500 text-xs sm:text-sm mb-2">Live Call Status</p>
-                    <p className="text-slate-900 text-lg sm:text-xl font-bold">Qualifying Lead...</p>
+                    <p className="text-slate-900 text-lg sm:text-xl font-bold">
+                      Qualifying Lead...
+                    </p>
                   </div>
                 </div>
 
@@ -378,7 +402,7 @@ export default function FeaturesPageClient() {
                 <motion.div
                   animate={{
                     scale: [1, 1.2, 1],
-                    opacity: [0.05, 0.1, 0.05]
+                    opacity: [0.05, 0.1, 0.05],
                   }}
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                   className="absolute top-0 right-0 w-24 h-24 sm:w-32 sm:h-32 bg-blue-500/10 rounded-full blur-3xl"
@@ -405,16 +429,14 @@ export default function FeaturesPageClient() {
                 className="relative"
               >
                 {/* Hover glow effect */}
-                <motion.div
-                  className="absolute -inset-4 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500"
-                />
+                <motion.div className="absolute -inset-4 bg-gradient-to-r from-blue-500/30 to-purple-500/30 rounded-3xl opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500" />
 
                 <div className="relative">
                   <CRMCard
                     fields={[
                       { label: "Lead Name", value: "Sarah Thompson", filled: true },
                       { label: "Business Type", value: "HVAC Services", filled: true },
-                      { label: "Appointment", value: "Wed 2PM", filled: true, urgent: false }
+                      { label: "Appointment", value: "Wed 2PM", filled: true, urgent: false },
                     ]}
                   />
                 </div>
@@ -439,7 +461,8 @@ export default function FeaturesPageClient() {
                 All your contacts, one place
               </p>
               <p className="text-slate-600 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
-                Manage all client interactions, track conversations, and organize your sales pipeline in one unified system. No more juggling multiple tools.
+                Manage all client interactions, track conversations, and organize your sales
+                pipeline in one unified system. No more juggling multiple tools.
               </p>
 
               <div className="space-y-3 sm:space-y-4">
@@ -447,7 +470,7 @@ export default function FeaturesPageClient() {
                   "Contact management with full history",
                   "Visual pipeline tracking and stages",
                   "Activity timeline for every lead",
-                  "Team collaboration and assignments"
+                  "Team collaboration and assignments",
                 ].map((feature, i) => (
                   <motion.div
                     key={i}
@@ -464,7 +487,9 @@ export default function FeaturesPageClient() {
                     >
                       <CheckCircle2 className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600 flex-shrink-0 mt-1 group-hover/item:drop-shadow-[0_0_8px_rgba(37,99,235,0.6)]" />
                     </motion.div>
-                    <span className="text-slate-700 text-sm sm:text-base leading-relaxed group-hover/item:text-slate-900 transition-colors">{feature}</span>
+                    <span className="text-slate-700 text-sm sm:text-base leading-relaxed group-hover/item:text-slate-900 transition-colors">
+                      {feature}
+                    </span>
                   </motion.div>
                 ))}
               </div>
@@ -492,7 +517,8 @@ export default function FeaturesPageClient() {
                 Data-driven decisions
               </p>
               <p className="text-slate-600 text-base sm:text-lg mb-6 sm:mb-8 leading-relaxed">
-                Track every metric that matters with beautiful, real-time dashboards showing campaign performance, ROI, and growth trends. Make smarter decisions, faster.
+                Track every metric that matters with beautiful, real-time dashboards showing
+                campaign performance, ROI, and growth trends. Make smarter decisions, faster.
               </p>
 
               <div className="space-y-3 sm:space-y-4">
@@ -500,7 +526,7 @@ export default function FeaturesPageClient() {
                   "Live performance tracking across all channels",
                   "Custom reports and data visualization",
                   "Accurate ROI calculation per campaign",
-                  "Predictive analytics and forecasting"
+                  "Predictive analytics and forecasting",
                 ].map((feature, i) => (
                   <motion.div
                     key={i}
@@ -517,7 +543,9 @@ export default function FeaturesPageClient() {
                     >
                       <CheckCircle2 className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600 flex-shrink-0 mt-1 group-hover/item:drop-shadow-[0_0_8px_rgba(37,99,235,0.6)]" />
                     </motion.div>
-                    <span className="text-slate-700 text-sm sm:text-base leading-relaxed group-hover/item:text-slate-900 transition-colors">{feature}</span>
+                    <span className="text-slate-700 text-sm sm:text-base leading-relaxed group-hover/item:text-slate-900 transition-colors">
+                      {feature}
+                    </span>
                   </motion.div>
                 ))}
               </div>
@@ -577,7 +605,11 @@ export default function FeaturesPageClient() {
 
       {/* Angular Divider */}
       <div className="relative h-24 overflow-hidden">
-        <svg className="absolute w-full h-full text-white" preserveAspectRatio="none" viewBox="0 0 100 100">
+        <svg
+          className="absolute w-full h-full text-white"
+          preserveAspectRatio="none"
+          viewBox="0 0 100 100"
+        >
           <polygon points="0,0 100,100 100,0" fill="currentColor" />
         </svg>
       </div>
@@ -678,7 +710,7 @@ export default function FeaturesPageClient() {
             background: `
               radial-gradient(at 20% 50%, rgba(37, 99, 235, 0.06) 0%, transparent 50%),
               radial-gradient(at 80% 50%, rgba(6, 182, 212, 0.05) 0%, transparent 50%)
-            `
+            `,
           }}
         />
 
@@ -690,7 +722,10 @@ export default function FeaturesPageClient() {
               viewport={{ once: true }}
             >
               <h2 className="font-heading text-3xl sm:text-4xl font-black text-slate-900 mb-3 sm:mb-4 px-4">
-                Seamless <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Integrations</span>
+                Seamless{" "}
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
+                  Integrations
+                </span>
               </h2>
               <p className="text-slate-600 text-base sm:text-lg px-4">
                 Connect with the tools you already use
@@ -719,16 +754,17 @@ export default function FeaturesPageClient() {
                   <motion.div
                     className="absolute inset-0 opacity-0 group-hover:opacity-100"
                     animate={{
-                      backgroundPosition: ['0% 0%', '100% 100%']
+                      backgroundPosition: ["0% 0%", "100% 100%"],
                     }}
                     transition={{
                       duration: 1.5,
                       repeat: Infinity,
-                      ease: "linear"
+                      ease: "linear",
                     }}
                     style={{
-                      background: 'linear-gradient(135deg, transparent 0%, rgba(37, 99, 235, 0.15) 50%, transparent 100%)',
-                      backgroundSize: '200% 200%'
+                      background:
+                        "linear-gradient(135deg, transparent 0%, rgba(37, 99, 235, 0.15) 50%, transparent 100%)",
+                      backgroundSize: "200% 200%",
                     }}
                   />
 
@@ -770,7 +806,7 @@ export default function FeaturesPageClient() {
                 linear-gradient(rgba(148, 163, 184, 0.2) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(148, 163, 184, 0.2) 1px, transparent 1px)
               `,
-              backgroundSize: '60px 60px'
+              backgroundSize: "60px 60px",
             }}
           />
         </div>
@@ -791,7 +827,8 @@ export default function FeaturesPageClient() {
             </h2>
 
             <p className="text-base sm:text-lg md:text-xl text-slate-600 mb-8 sm:mb-12 max-w-2xl mx-auto px-4 leading-relaxed">
-              Book a free demo and see how Capture Client can transform your business with AI-powered growth tools.
+              Book a free demo and see how Capture Client can transform your business with
+              AI-powered growth tools.
             </p>
 
             {/* Premium CTA buttons with enhanced effects */}
@@ -835,9 +872,7 @@ export default function FeaturesPageClient() {
                   {/* Glass shimmer effect */}
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                  <span className="relative z-10">
-                    Call Us: (865) 346-6111
-                  </span>
+                  <span className="relative z-10">Call Us: (865) 346-6111</span>
                 </a>
               </motion.div>
             </div>
@@ -869,22 +904,29 @@ interface SecondaryFeatureCardProps {
   number: string;
 }
 
-function SecondaryFeatureCard({ icon, title, description, color, delay, number }: SecondaryFeatureCardProps) {
+function SecondaryFeatureCard({
+  icon,
+  title,
+  description,
+  color,
+  delay,
+  number,
+}: SecondaryFeatureCardProps) {
   const colorClasses = {
     cyan: {
       border: "border-blue-200",
       bg: "from-blue-50 to-transparent",
       glow: "group-hover:shadow-lg group-hover:shadow-blue-200/50",
       icon: "text-blue-600",
-      badge: "bg-blue-50 border-blue-200 text-blue-600"
+      badge: "bg-blue-50 border-blue-200 text-blue-600",
     },
     blue: {
       border: "border-blue-200",
       bg: "from-blue-50 to-transparent",
       glow: "group-hover:shadow-lg group-hover:shadow-blue-200/50",
       icon: "text-blue-600",
-      badge: "bg-blue-50 border-blue-200 text-blue-600"
-    }
+      badge: "bg-blue-50 border-blue-200 text-blue-600",
+    },
   };
 
   const colors = colorClasses[color];
@@ -902,11 +944,15 @@ function SecondaryFeatureCard({ icon, title, description, color, delay, number }
       <div className="absolute inset-0 border border-slate-200 translate-x-1.5 translate-y-1.5 rounded-xl sm:rounded-2xl" />
 
       {/* Glow effect on hover */}
-      <div className={`absolute -inset-px bg-gradient-to-r ${colors.border} rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500`} />
+      <div
+        className={`absolute -inset-px bg-gradient-to-r ${colors.border} rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 blur-sm transition-opacity duration-500`}
+      />
 
       <div className="relative bg-white/90 backdrop-blur-xl border border-slate-200 rounded-xl sm:rounded-2xl p-6 sm:p-8 h-full transition-all duration-300 group-hover:-translate-y-2 shadow-sm">
         {/* Number badge - positioned top-left */}
-        <div className={`absolute -top-3 -left-3 w-10 h-10 sm:w-12 sm:h-12 ${colors.badge} border rounded-full flex items-center justify-center font-black text-sm sm:text-base shadow-lg`}>
+        <div
+          className={`absolute -top-3 -left-3 w-10 h-10 sm:w-12 sm:h-12 ${colors.badge} border rounded-full flex items-center justify-center font-black text-sm sm:text-base shadow-lg`}
+        >
           {number}
         </div>
 
@@ -924,7 +970,7 @@ function SecondaryFeatureCard({ icon, title, description, color, delay, number }
             className={`absolute -inset-2 bg-gradient-to-r ${colors.bg} rounded-2xl blur-lg opacity-0 group-hover:opacity-40`}
             animate={{
               scale: [1, 1.2, 1],
-              opacity: [0, 0.4, 0]
+              opacity: [0, 0.4, 0],
             }}
             transition={{ duration: 2, repeat: Infinity }}
           />
@@ -950,12 +996,12 @@ function SecondaryFeatureCard({ icon, title, description, color, delay, number }
           {title}
         </h3>
 
-        <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">
-          {description}
-        </p>
+        <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-4">{description}</p>
 
         {/* Animated arrow link - touch-friendly */}
-        <div className={`inline-flex items-center gap-2 mt-2 sm:mt-4 ${colors.icon} font-medium group-hover:gap-4 transition-all min-h-[44px]`}>
+        <div
+          className={`inline-flex items-center gap-2 mt-2 sm:mt-4 ${colors.icon} font-medium group-hover:gap-4 transition-all min-h-[44px]`}
+        >
           Learn more
           <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
         </div>
@@ -990,29 +1036,30 @@ function SupportingFeature({ icon, title, description }: SupportingFeatureProps)
         className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none"
         initial={false}
         animate={{
-          backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+          backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
         }}
         transition={{
           duration: 2,
           repeat: Infinity,
-          ease: "linear"
+          ease: "linear",
         }}
         style={{
-          background: 'linear-gradient(90deg, transparent 0%, rgba(37, 99, 235, 0.08) 50%, transparent 100%)',
-          backgroundSize: '200% 100%'
+          background:
+            "linear-gradient(90deg, transparent 0%, rgba(37, 99, 235, 0.08) 50%, transparent 100%)",
+          backgroundSize: "200% 100%",
         }}
       />
 
       <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0 group-hover:scale-110 transition-transform border border-blue-200">
         {/* Inner glow */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-100/50 to-transparent rounded-lg sm:rounded-xl" />
-        <div className="relative z-10">
-          {icon}
-        </div>
+        <div className="relative z-10">{icon}</div>
       </div>
 
       <div className="flex-1 relative z-10">
-        <h4 className="font-heading text-slate-900 font-bold mb-1 text-sm sm:text-base group-hover:text-blue-600 transition-colors">{title}</h4>
+        <h4 className="font-heading text-slate-900 font-bold mb-1 text-sm sm:text-base group-hover:text-blue-600 transition-colors">
+          {title}
+        </h4>
         <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">{description}</p>
       </div>
 
@@ -1073,13 +1120,13 @@ function CapabilityMeter({ label, percentage, color }: CapabilityMeterProps) {
     blue: {
       gradient: "from-blue-600 to-blue-500",
       glow: "shadow-blue-500/30",
-      text: "text-blue-600"
+      text: "text-blue-600",
     },
     cyan: {
       gradient: "from-cyan-500 to-blue-600",
       glow: "shadow-cyan-500/30",
-      text: "text-cyan-600"
-    }
+      text: "text-cyan-600",
+    },
   };
 
   const colors = colorClasses[color];
@@ -1108,13 +1155,13 @@ function CapabilityMeter({ label, percentage, color }: CapabilityMeterProps) {
           {/* Shimmer effect */}
           <motion.div
             animate={{
-              x: ["-100%", "200%"]
+              x: ["-100%", "200%"],
             }}
             transition={{
               duration: 2,
               repeat: Infinity,
               ease: "linear",
-              repeatDelay: 1
+              repeatDelay: 1,
             }}
             className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent"
             style={{ width: "50%" }}
@@ -1125,12 +1172,12 @@ function CapabilityMeter({ label, percentage, color }: CapabilityMeterProps) {
         <motion.div
           className={`absolute inset-y-0 left-0 bg-gradient-to-r ${colors.gradient} rounded-full opacity-0 group-hover:opacity-20`}
           animate={{
-            width: [`${percentage}%`, `${Math.min(percentage + 5, 100)}%`, `${percentage}%`]
+            width: [`${percentage}%`, `${Math.min(percentage + 5, 100)}%`, `${percentage}%`],
           }}
           transition={{
             duration: 1.5,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
         />
       </div>

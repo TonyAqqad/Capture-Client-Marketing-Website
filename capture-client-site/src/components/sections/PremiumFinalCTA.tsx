@@ -33,14 +33,16 @@ export function PremiumFinalCTA() {
         <div
           className="absolute top-0 left-1/4 w-[700px] h-[700px] opacity-30"
           style={{
-            background: "radial-gradient(circle at center, rgba(37, 99, 235, 0.12) 0%, transparent 60%)",
+            background:
+              "radial-gradient(circle at center, rgba(37, 99, 235, 0.12) 0%, transparent 60%)",
             filter: "blur(80px)",
           }}
         />
         <div
           className="absolute bottom-0 right-1/4 w-[600px] h-[600px] opacity-25"
           style={{
-            background: "radial-gradient(circle at center, rgba(14, 165, 233, 0.1) 0%, transparent 60%)",
+            background:
+              "radial-gradient(circle at center, rgba(14, 165, 233, 0.1) 0%, transparent 60%)",
             filter: "blur(60px)",
           }}
         />
@@ -52,17 +54,15 @@ export function PremiumFinalCTA() {
               linear-gradient(rgba(15,23,42,0.03) 1px, transparent 1px),
               linear-gradient(90deg, rgba(15,23,42,0.03) 1px, transparent 1px)
             `,
-            backgroundSize: '48px 48px',
+            backgroundSize: "48px 48px",
           }}
         />
       </div>
 
       {/* Content container */}
       <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
-
         {/* Main headline section */}
         <div className="max-w-4xl mx-auto text-center mb-16 md:mb-20">
-
           {/* Eyebrow badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -73,7 +73,7 @@ export function PremiumFinalCTA() {
             <Sparkles className="w-4 h-4 text-blue-600" />
             <span
               className="text-xs font-semibold text-blue-700 uppercase tracking-wider"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
             >
               Get Started Today
             </span>
@@ -87,7 +87,7 @@ export function PremiumFinalCTA() {
           >
             <h2
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.1] mb-6 md:mb-8"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
             >
               <span className="text-slate-900 font-light">Every missed call is a </span>
               <span className="font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
@@ -105,8 +105,8 @@ export function PremiumFinalCTA() {
             transition={{ duration: 0.7, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
             className="text-lg sm:text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto leading-relaxed"
           >
-            Capture Client answers every call, qualifies every lead, and books appointments 24/7.
-            No more voicemail. No more lost revenue.
+            Capture Client answers every call, qualifies every lead, and books appointments 24/7. No
+            more voicemail. No more lost revenue.
           </motion.p>
         </div>
 
@@ -166,13 +166,21 @@ export function PremiumFinalCTA() {
         <motion.div
           id="contact-form"
           initial={{ opacity: 0, y: 30, filter: "blur(10px)" }}
-          animate={isInView ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, y: 30, filter: "blur(10px)" }}
+          animate={
+            isInView
+              ? { opacity: 1, y: 0, filter: "blur(0px)" }
+              : { opacity: 0, y: 30, filter: "blur(10px)" }
+          }
           transition={{ duration: 0.7, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-xl mx-auto"
         >
           <div style={isMobile ? {} : perspectiveContainer}>
             <motion.div
-              style={isMobile ? {} : { ...transform3D, rotateX: formTilt.rotateX, rotateY: formTilt.rotateY }}
+              style={
+                isMobile
+                  ? {}
+                  : { ...transform3D, rotateX: formTilt.rotateX, rotateY: formTilt.rotateY }
+              }
               animate={{
                 y: [0, -6, 0],
                 boxShadow: formTilt.isHovered ? cardShadow.hover : cardShadow.rest,
@@ -184,51 +192,52 @@ export function PremiumFinalCTA() {
               {...formTilt.handlers}
               className="relative bg-white/70 backdrop-blur-xl p-8 md:p-10 rounded-2xl border border-slate-200/60 overflow-hidden"
             >
-            {/* Decorative gradient */}
-            <div
-              className="absolute top-0 right-0 w-40 h-40 opacity-30 pointer-events-none"
-              style={{
-                background: "radial-gradient(circle at center, rgba(14, 165, 233, 0.15) 0%, transparent 60%)",
-                filter: "blur(40px)",
-              }}
-            />
-
-            {/* Form header */}
-            <div className="text-center mb-8 relative z-10">
-              <h3
-                className="text-2xl md:text-3xl text-slate-900 mb-2"
-                style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}
-              >
-                Book Your{" "}
-                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
-                  Free Demo
-                </span>
-              </h3>
-              <p className="text-slate-600">
-                See how Capture Client works for your business in 30 minutes.
-              </p>
-            </div>
-
-            <div className="relative z-10">
-              <OptimizedLeadForm source="homepage-final-cta" />
-            </div>
-
-            {/* Form footer */}
-            <p className="text-center text-slate-500 text-sm mt-6 relative z-10">
-              No credit card required. Cancel anytime.
-            </p>
-
-            {/* Bottom accent line */}
-            <div className="absolute bottom-0 left-8 right-8 h-[2px] rounded-full overflow-hidden">
-              <motion.div
-                className="h-full bg-gradient-to-r from-blue-500 to-cyan-400"
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
-                style={{ transformOrigin: "left" }}
+              {/* Decorative gradient */}
+              <div
+                className="absolute top-0 right-0 w-40 h-40 opacity-30 pointer-events-none"
+                style={{
+                  background:
+                    "radial-gradient(circle at center, rgba(14, 165, 233, 0.15) 0%, transparent 60%)",
+                  filter: "blur(40px)",
+                }}
               />
-            </div>
+
+              {/* Form header */}
+              <div className="text-center mb-8 relative z-10">
+                <h3
+                  className="text-2xl md:text-3xl text-slate-900 mb-2"
+                  style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 600 }}
+                >
+                  Book Your{" "}
+                  <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                    Free Demo
+                  </span>
+                </h3>
+                <p className="text-slate-600">
+                  See how Capture Client works for your business in 30 minutes.
+                </p>
+              </div>
+
+              <div className="relative z-10">
+                <OptimizedLeadForm source="homepage-final-cta" />
+              </div>
+
+              {/* Form footer */}
+              <p className="text-center text-slate-500 text-sm mt-6 relative z-10">
+                No credit card required. Cancel anytime.
+              </p>
+
+              {/* Bottom accent line */}
+              <div className="absolute bottom-0 left-8 right-8 h-[2px] rounded-full overflow-hidden">
+                <motion.div
+                  className="h-full bg-gradient-to-r from-blue-500 to-cyan-400"
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                  style={{ transformOrigin: "left" }}
+                />
+              </div>
             </motion.div>
           </div>
         </motion.div>
@@ -247,8 +256,8 @@ export function PremiumFinalCTA() {
               className="font-semibold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent hover:opacity-80 transition-opacity"
             >
               (865) 346-6111
-            </a>
-            {" "}— we answer every call.
+            </a>{" "}
+            — we answer every call.
           </p>
         </motion.div>
       </div>

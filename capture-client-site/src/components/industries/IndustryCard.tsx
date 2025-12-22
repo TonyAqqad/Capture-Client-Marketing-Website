@@ -4,7 +4,15 @@ import { motion } from "@/lib/motion";
 import Link from "next/link";
 import { Industry } from "@/data/industries";
 import { GlassCard } from "@/components/ui/GlassCard";
-import { Briefcase, Wrench, Home, Stethoscope, UtensilsCrossed, ArrowRight, type LucideIcon } from "lucide-react";
+import {
+  Briefcase,
+  Wrench,
+  Home,
+  Stethoscope,
+  UtensilsCrossed,
+  ArrowRight,
+  type LucideIcon,
+} from "lucide-react";
 
 interface IndustryCardProps {
   industry: Industry;
@@ -12,24 +20,25 @@ interface IndustryCardProps {
 }
 
 const CATEGORY_ICONS: Record<string, LucideIcon> = {
-  'Professional Services': Briefcase,
-  'Home Services': Wrench,
-  'Real Estate & Property': Home,
-  'Healthcare': Stethoscope,
-  'Hospitality': UtensilsCrossed,
+  "Professional Services": Briefcase,
+  "Home Services": Wrench,
+  "Real Estate & Property": Home,
+  Healthcare: Stethoscope,
+  Hospitality: UtensilsCrossed,
 };
 
 const CATEGORY_COLORS: Record<string, string> = {
-  'Professional Services': 'from-blue-500/20 to-blue-600/20',
-  'Home Services': 'from-accent-500/20 to-accent-600/20',
-  'Real Estate & Property': 'from-primary-500/20 to-primary-600/20',
-  'Healthcare': 'from-cyan-500/20 to-cyan-600/20',
-  'Hospitality': 'from-blue-500/20 to-cyan-600/20',
+  "Professional Services": "from-blue-500/20 to-blue-600/20",
+  "Home Services": "from-accent-500/20 to-accent-600/20",
+  "Real Estate & Property": "from-primary-500/20 to-primary-600/20",
+  Healthcare: "from-cyan-500/20 to-cyan-600/20",
+  Hospitality: "from-blue-500/20 to-cyan-600/20",
 };
 
 export function IndustryCard({ industry, index = 0 }: IndustryCardProps) {
   const CategoryIcon = CATEGORY_ICONS[industry.category] || Briefcase;
-  const categoryGradient = CATEGORY_COLORS[industry.category] || 'from-accent-500/20 to-primary-600/20';
+  const categoryGradient =
+    CATEGORY_COLORS[industry.category] || "from-accent-500/20 to-primary-600/20";
 
   return (
     <motion.div
@@ -43,7 +52,9 @@ export function IndustryCard({ industry, index = 0 }: IndustryCardProps) {
           <div className="p-8">
             {/* Icon & Category Badge */}
             <div className="flex items-start justify-between mb-6">
-              <div className={`relative w-16 h-16 rounded-2xl bg-gradient-to-br ${categoryGradient} flex items-center justify-center flex-shrink-0`}>
+              <div
+                className={`relative w-16 h-16 rounded-2xl bg-gradient-to-br ${categoryGradient} flex items-center justify-center flex-shrink-0`}
+              >
                 <CategoryIcon className="w-9 h-9 text-blue-500 group-hover:text-blue-400 transition-colors duration-300 flex-shrink-0" />
 
                 {/* Subtle glow effect */}
@@ -62,9 +73,7 @@ export function IndustryCard({ industry, index = 0 }: IndustryCardProps) {
             </h3>
 
             {/* Tagline */}
-            <p className="text-blue-500 font-semibold mb-4 text-lg">
-              {industry.tagline}
-            </p>
+            <p className="text-blue-500 font-semibold mb-4 text-lg">{industry.tagline}</p>
 
             {/* Description */}
             <p className="text-slate-600 leading-relaxed mb-6 line-clamp-3">
@@ -76,12 +85,8 @@ export function IndustryCard({ industry, index = 0 }: IndustryCardProps) {
               <div className="grid grid-cols-2 gap-4 mb-6 pt-6 border-t border-slate-200">
                 {industry.stats.slice(0, 2).map((stat, idx) => (
                   <div key={idx}>
-                    <div className="text-2xl font-bold text-blue-500 mb-1">
-                      {stat.value}
-                    </div>
-                    <div className="text-sm text-slate-600">
-                      {stat.label}
-                    </div>
+                    <div className="text-2xl font-bold text-blue-500 mb-1">{stat.value}</div>
+                    <div className="text-sm text-slate-600">{stat.label}</div>
                   </div>
                 ))}
               </div>

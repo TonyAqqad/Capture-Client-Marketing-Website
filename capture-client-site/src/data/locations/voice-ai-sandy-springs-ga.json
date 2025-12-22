@@ -11,22 +11,14 @@
     "state": "GA",
     "state_full": "Georgia",
     "slug": "sandy-springs-ga",
-    "nearby_areas": [
-      "Dunwoody",
-      "Roswell",
-      "Brookhaven",
-      "Atlanta"
-    ],
+    "nearby_areas": ["Dunwoody", "Roswell", "Brookhaven", "Atlanta"],
     "service_area_radius": "15 miles"
   },
   "seo": {
     "page_title": "Voice AI Agency in Sandy Springs, GA | Capture Client",
     "meta_description": "Premium Voice AI for Sandy Springs businesses at Perimeter Center, Riverside, and City Springs. White-glove AI service for North Fulton. Call 865-346-6111!",
     "h1_heading": "Voice AI Agency in Sandy Springs, Georgia",
-    "keywords": [
-      "voice ai sandy springs ga",
-      "ai receptionist sandy springs"
-    ],
+    "keywords": ["voice ai sandy springs ga", "ai receptionist sandy springs"],
     "canonical_url": "/voice-ai-sandy-springs-ga"
   },
   "hero": {
@@ -182,14 +174,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "atlanta-ga",
-      "roswell-ga",
-      "alpharetta-ga"
-    ],
-    "packages": [
-      "growth-package",
-      "enterprise-package"
-    ]
+    "nearby_locations": ["atlanta-ga", "roswell-ga", "alpharetta-ga"],
+    "packages": ["growth-package", "enterprise-package"]
   }
 }

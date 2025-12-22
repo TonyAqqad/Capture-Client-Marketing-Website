@@ -26,7 +26,7 @@ export function IntegrationSearch({
           duration: 0.3,
           type: "spring",
           stiffness: 300,
-          damping: 25
+          damping: 25,
         }}
         className={`
           relative bg-white/70 backdrop-blur-xl border shadow-lg shadow-slate-200/50 rounded-2xl transition-all duration-300
@@ -35,9 +35,11 @@ export function IntegrationSearch({
       >
         {/* Search Icon */}
         <div className="absolute left-4 sm:left-6 top-1/2 -translate-y-1/2 pointer-events-none">
-          <Search className={`w-6 h-6 transition-colors duration-300 ${
-            isFocused ? "text-blue-600" : "text-slate-600"
-          }`} />
+          <Search
+            className={`w-6 h-6 transition-colors duration-300 ${
+              isFocused ? "text-blue-600" : "text-slate-600"
+            }`}
+          />
         </div>
 
         {/* Input */}
@@ -91,8 +93,7 @@ export function IntegrationSearch({
           <p className="text-sm text-slate-600">
             {resultsCount > 0 ? (
               <>
-                Found{" "}
-                <span className="text-blue-600 font-bold">{resultsCount}</span>{" "}
+                Found <span className="text-blue-600 font-bold">{resultsCount}</span>{" "}
                 {resultsCount === 1 ? "integration" : "integrations"}
               </>
             ) : (
@@ -136,9 +137,7 @@ export function IntegrationSearch({
           className="mt-6"
         >
           <div className="bg-white/70 backdrop-blur-xl border border-slate-200 p-6 rounded-2xl text-center">
-            <p className="text-slate-600 mb-4">
-              Can't find your platform? We'll build it.
-            </p>
+            <p className="text-slate-600 mb-4">Can't find your platform? We'll build it.</p>
             <a
               href="/contact"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold bg-gradient-to-r from-blue-600 to-cyan-500 text-white hover:shadow-lg hover:shadow-blue-600/20 transition-all duration-300 touch-manipulation"

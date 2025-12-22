@@ -11,12 +11,7 @@
     "state_abbr": "VA",
     "state_full": "Virginia",
     "slug": "chesapeake-va",
-    "nearby_areas": [
-      "Norfolk",
-      "Virginia Beach",
-      "Portsmouth",
-      "Suffolk"
-    ],
+    "nearby_areas": ["Norfolk", "Virginia Beach", "Portsmouth", "Suffolk"],
     "service_area_radius": "25 miles"
   },
   "seo": {
@@ -147,18 +142,8 @@
     }
   },
   "related_pages": {
-    "other_services_in_location": [
-      "google-ads",
-      "facebook-ads"
-    ],
-    "nearby_locations": [
-      "norfolk-va",
-      "virginia-beach-va",
-      "suffolk-va"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "other_services_in_location": ["google-ads", "facebook-ads"],
+    "nearby_locations": ["norfolk-va", "virginia-beach-va", "suffolk-va"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

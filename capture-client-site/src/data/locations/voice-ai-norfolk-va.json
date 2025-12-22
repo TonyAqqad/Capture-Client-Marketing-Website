@@ -11,13 +11,7 @@
     "state_abbr": "VA",
     "state_full": "Virginia",
     "slug": "norfolk-va",
-    "nearby_areas": [
-      "Virginia Beach",
-      "Chesapeake",
-      "Portsmouth",
-      "Suffolk",
-      "Hampton"
-    ],
+    "nearby_areas": ["Virginia Beach", "Chesapeake", "Portsmouth", "Suffolk", "Hampton"],
     "service_area_radius": "25 miles"
   },
   "seo": {
@@ -183,18 +177,8 @@
     }
   },
   "related_pages": {
-    "other_services_in_location": [
-      "google-ads",
-      "facebook-ads"
-    ],
-    "nearby_locations": [
-      "virginia-beach-va",
-      "chesapeake-va",
-      "portsmouth-va"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "other_services_in_location": ["google-ads", "facebook-ads"],
+    "nearby_locations": ["virginia-beach-va", "chesapeake-va", "portsmouth-va"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

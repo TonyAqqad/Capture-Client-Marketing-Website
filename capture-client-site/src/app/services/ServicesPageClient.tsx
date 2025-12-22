@@ -186,22 +186,24 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
 
   useEffect(() => {
     const checkMobile = () => {
-      if (typeof window === 'undefined') return;
+      if (typeof window === "undefined") return;
       setIsMobile(window.innerWidth < 768);
     };
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   // Map services to configs
-  const enhancedServices = services.map((service) => {
-    const config = SERVICE_CONFIGS[service.service.service_slug as keyof typeof SERVICE_CONFIGS];
-    return {
-      ...service,
-      config,
-    };
-  }).filter(s => s.config); // Only show services with configs
+  const enhancedServices = services
+    .map((service) => {
+      const config = SERVICE_CONFIGS[service.service.service_slug as keyof typeof SERVICE_CONFIGS];
+      return {
+        ...service,
+        config,
+      };
+    })
+    .filter((s) => s.config); // Only show services with configs
 
   const activeConfig = SERVICE_CONFIGS[activeService as keyof typeof SERVICE_CONFIGS];
 
@@ -291,8 +293,20 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
                 href="tel:865-346-6111"
                 className="group relative px-10 py-5 min-h-[64px] bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-lg md:text-xl rounded-2xl overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_50px_rgba(37,99,235,0.7)] shadow-xl shadow-blue-600/30 flex items-center justify-center gap-3 w-full sm:w-auto"
               >
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="flex-shrink-0">
-                  <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="flex-shrink-0"
+                >
+                  <path
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
                 <span className="relative z-10">Call: (865) 346-6111</span>
               </a>
@@ -301,8 +315,20 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
                 className="px-10 py-5 min-h-[64px] bg-white text-slate-900 text-lg md:text-xl font-semibold rounded-2xl border-2 border-slate-200 hover:border-blue-600/50 hover:bg-blue-50 hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-3 w-full sm:w-auto"
               >
                 <span>Get Free Consultation</span>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" className="flex-shrink-0">
-                  <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  className="flex-shrink-0"
+                >
+                  <path
+                    d="M4 10H16M16 10L10 4M16 10L10 16"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </Link>
             </motion.div>
@@ -322,7 +348,10 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
               viewport={{ once: true }}
             >
               <h2 className="text-display-md md:text-display-lg font-hero font-black text-slate-900 mb-4">
-                Choose Your <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Weapon</span>
+                Choose Your{" "}
+                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                  Weapon
+                </span>
               </h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
                 Each service is a precision tool designed to capture clients and grow revenue
@@ -363,7 +392,9 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
                 className="max-w-6xl mx-auto"
               >
                 {/* Main content card */}
-                <div className={`bg-white/70 backdrop-blur-xl border border-slate-200 p-8 md:p-12 rounded-3xl bg-gradient-to-br ${activeConfig.color} mb-8`}>
+                <div
+                  className={`bg-white/70 backdrop-blur-xl border border-slate-200 p-8 md:p-12 rounded-3xl bg-gradient-to-br ${activeConfig.color} mb-8`}
+                >
                   <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                     {/* Left: Scenario & Value Prop */}
                     <div>
@@ -382,7 +413,9 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
                       </p>
                       <div className="bg-white/70 backdrop-blur-xl border border-slate-200 p-6 rounded-2xl">
                         <div className="text-sm text-slate-600 mb-2">Proven Results</div>
-                        <div className={`text-4xl md:text-5xl font-black bg-gradient-to-r ${activeConfig.textGradient} bg-clip-text text-transparent`}>
+                        <div
+                          className={`text-4xl md:text-5xl font-black bg-gradient-to-r ${activeConfig.textGradient} bg-clip-text text-transparent`}
+                        >
                           {activeConfig.value}
                         </div>
                       </div>
@@ -400,14 +433,22 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
                           className="bg-white/70 backdrop-blur-xl border border-slate-200 p-6 hover:shadow-lg hover:shadow-slate-200/50 hover:border-blue-600/30 transition-all duration-300"
                         >
                           <div className="flex items-start gap-4">
-                            <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${activeConfig.color} border ${activeConfig.borderColor} flex items-center justify-center flex-shrink-0`}>
-                              <span className={`font-black text-lg bg-gradient-to-r ${activeConfig.textGradient} bg-clip-text text-transparent`}>
+                            <div
+                              className={`w-10 h-10 rounded-xl bg-gradient-to-br ${activeConfig.color} border ${activeConfig.borderColor} flex items-center justify-center flex-shrink-0`}
+                            >
+                              <span
+                                className={`font-black text-lg bg-gradient-to-r ${activeConfig.textGradient} bg-clip-text text-transparent`}
+                              >
                                 {step.step}
                               </span>
                             </div>
                             <div>
-                              <h4 className="font-bold text-lg text-slate-900 mb-1">{step.title}</h4>
-                              <p className="text-sm text-slate-600 leading-relaxed">{step.description}</p>
+                              <h4 className="font-bold text-lg text-slate-900 mb-1">
+                                {step.title}
+                              </h4>
+                              <p className="text-sm text-slate-600 leading-relaxed">
+                                {step.description}
+                              </p>
                             </div>
                           </div>
                         </motion.div>
@@ -433,12 +474,12 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
                       <div className="text-sm text-slate-600 mb-2 uppercase tracking-wider">
                         {stat.label}
                       </div>
-                      <div className={`text-4xl md:text-5xl font-black bg-gradient-to-r ${activeConfig.textGradient} bg-clip-text text-transparent mb-1`}>
+                      <div
+                        className={`text-4xl md:text-5xl font-black bg-gradient-to-r ${activeConfig.textGradient} bg-clip-text text-transparent mb-1`}
+                      >
                         {stat.value}
                       </div>
-                      <div className="text-xs text-slate-600">
-                        {stat.description}
-                      </div>
+                      <div className="text-xs text-slate-600">{stat.description}</div>
                     </motion.div>
                   ))}
                 </motion.div>
@@ -458,8 +499,20 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
               className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-lg md:text-xl px-10 py-5 rounded-2xl shadow-lg shadow-blue-600/30 hover:shadow-[0_0_50px_rgba(37,99,235,0.7)] hover:scale-105 transition-all duration-500 font-bold"
             >
               Try Our AI Now
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="w-6 h-6 group-hover:translate-x-1 transition-transform">
-                <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                className="w-6 h-6 group-hover:translate-x-1 transition-transform"
+              >
+                <path
+                  d="M5 12H19M19 12L12 5M19 12L12 19"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
               </svg>
             </Link>
           </motion.div>
@@ -513,10 +566,14 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
                       className={`bg-white h-full min-h-[450px] p-8 lg:p-10 rounded-3xl shadow-lg hover:shadow-2xl border-2 border-slate-100 hover:border-blue-500/30 transition-all duration-500 relative overflow-hidden flex flex-col`}
                     >
                       {/* Gradient background overlay */}
-                      <div className={`absolute inset-0 bg-gradient-to-br ${config.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                      <div
+                        className={`absolute inset-0 bg-gradient-to-br ${config.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                      />
 
                       {/* Subtle gradient accent on left edge */}
-                      <div className={`absolute top-0 left-0 w-1 h-full bg-gradient-to-b ${config.textGradient} opacity-60 group-hover:w-2 transition-all duration-500`} />
+                      <div
+                        className={`absolute top-0 left-0 w-1 h-full bg-gradient-to-b ${config.textGradient} opacity-60 group-hover:w-2 transition-all duration-500`}
+                      />
 
                       {/* Number badge - enhanced */}
                       <div className="absolute -top-5 -right-5 w-20 h-20 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-full border-4 border-white shadow-xl flex items-center justify-center z-10 group-hover:scale-110 transition-transform duration-500">
@@ -528,7 +585,9 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
                       {/* Content wrapper with relative positioning */}
                       <div className="relative z-10 flex flex-col h-full">
                         {/* Icon with enhanced visual treatment */}
-                        <div className={`inline-flex w-24 h-24 mb-6 items-center justify-center rounded-2xl bg-gradient-to-br ${config.color} border-2 ${config.borderColor} shadow-lg group-hover:shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}>
+                        <div
+                          className={`inline-flex w-24 h-24 mb-6 items-center justify-center rounded-2xl bg-gradient-to-br ${config.color} border-2 ${config.borderColor} shadow-lg group-hover:shadow-xl group-hover:scale-110 group-hover:rotate-3 transition-all duration-500`}
+                        >
                           <div className="text-6xl">{config.icon}</div>
                         </div>
 
@@ -554,8 +613,12 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
                                 transition={{ delay: 0.1 * i }}
                                 className="flex items-start gap-3 group/benefit"
                               >
-                                <div className={`w-6 h-6 rounded-full bg-gradient-to-br ${config.color} border-2 ${config.borderColor} flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/benefit:scale-110 transition-transform`}>
-                                  <div className={`w-2.5 h-2.5 rounded-full bg-gradient-to-r ${config.textGradient}`} />
+                                <div
+                                  className={`w-6 h-6 rounded-full bg-gradient-to-br ${config.color} border-2 ${config.borderColor} flex items-center justify-center flex-shrink-0 mt-0.5 group-hover/benefit:scale-110 transition-transform`}
+                                >
+                                  <div
+                                    className={`w-2.5 h-2.5 rounded-full bg-gradient-to-r ${config.textGradient}`}
+                                  />
                                 </div>
                                 <span className="text-sm md:text-base text-slate-700 font-medium line-clamp-2 group-hover/benefit:text-slate-900 transition-colors">
                                   {benefit.title}
@@ -566,7 +629,9 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
                         )}
 
                         {/* CTA with arrow - pinned to bottom */}
-                        <div className={`flex items-center gap-3 font-bold text-base md:text-lg bg-gradient-to-r ${config.textGradient} bg-clip-text text-transparent group-hover:gap-4 transition-all mt-auto pt-4 border-t border-slate-100`}>
+                        <div
+                          className={`flex items-center gap-3 font-bold text-base md:text-lg bg-gradient-to-r ${config.textGradient} bg-clip-text text-transparent group-hover:gap-4 transition-all mt-auto pt-4 border-t border-slate-100`}
+                        >
                           <span>Explore Service</span>
                           <svg
                             width="24"
@@ -617,7 +682,13 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
               className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 mb-8 shadow-lg shadow-blue-600/30"
             >
               <svg width="40" height="40" viewBox="0 0 24 24" fill="none" className="text-white">
-                <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <path
+                  d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
               </svg>
             </motion.div>
 
@@ -639,8 +710,20 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
                 href="tel:865-346-6111"
                 className="group relative w-full sm:w-auto px-12 py-6 min-h-[72px] bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold text-xl md:text-2xl rounded-2xl overflow-hidden transition-all duration-500 hover:scale-105 hover:shadow-[0_0_60px_rgba(37,99,235,0.8)] shadow-xl shadow-blue-600/30 flex items-center justify-center gap-4"
               >
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" className="flex-shrink-0">
-                  <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                <svg
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="flex-shrink-0"
+                >
+                  <path
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
                 <span>(865) 346-6111</span>
               </a>
@@ -650,8 +733,20 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
                 className="w-full sm:w-auto px-12 py-6 min-h-[72px] bg-white text-slate-900 text-xl md:text-2xl font-semibold rounded-2xl border-2 border-slate-200 hover:border-blue-600/50 hover:bg-blue-50 hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-4"
               >
                 <span>Free Consultation</span>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="flex-shrink-0">
-                  <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="flex-shrink-0"
+                >
+                  <path
+                    d="M5 12H19M19 12L12 5M19 12L12 19"
+                    stroke="currentColor"
+                    strokeWidth="2.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                 </svg>
               </Link>
             </div>
@@ -666,8 +761,20 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
             >
               <div className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-white/50 border border-slate-200 backdrop-blur-sm">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600/20 to-cyan-500/20 flex items-center justify-center">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-blue-600">
-                    <path d="M20 7L9 18L4 13" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="text-blue-600"
+                  >
+                    <path
+                      d="M20 7L9 18L4 13"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                 </div>
                 <div className="text-2xl md:text-3xl font-black text-slate-900">500+</div>
@@ -676,8 +783,20 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
 
               <div className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-white/50 border border-slate-200 backdrop-blur-sm">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600/20 to-cyan-500/20 flex items-center justify-center">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-blue-600">
-                    <path d="M20 7L9 18L4 13" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="text-blue-600"
+                  >
+                    <path
+                      d="M20 7L9 18L4 13"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                 </div>
                 <div className="text-2xl md:text-3xl font-black text-slate-900">15,847</div>
@@ -686,8 +805,20 @@ export default function ServicesPageClient({ services }: ServicesPageClientProps
 
               <div className="flex flex-col items-center gap-3 p-6 rounded-2xl bg-white/50 border border-slate-200 backdrop-blur-sm">
                 <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600/20 to-cyan-500/20 flex items-center justify-center">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-blue-600">
-                    <path d="M20 7L9 18L4 13" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    className="text-blue-600"
+                  >
+                    <path
+                      d="M20 7L9 18L4 13"
+                      stroke="currentColor"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                 </div>
                 <div className="text-2xl md:text-3xl font-black text-slate-900">4.2x</div>

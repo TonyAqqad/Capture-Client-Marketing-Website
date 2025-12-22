@@ -101,14 +101,16 @@ export default function MeshGradientBackground() {
       <div
         className="absolute inset-0 opacity-30"
         style={{
-          background: "radial-gradient(circle at center, transparent 0%, rgba(248, 250, 252, 0.6) 100%)",
+          background:
+            "radial-gradient(circle at center, transparent 0%, rgba(248, 250, 252, 0.6) 100%)",
         }}
       />
 
       {/* CSS Animations */}
       <style jsx>{`
         @keyframes mesh-float-1 {
-          0%, 100% {
+          0%,
+          100% {
             transform: translate(0, 0) scale(1);
           }
           33% {
@@ -120,7 +122,8 @@ export default function MeshGradientBackground() {
         }
 
         @keyframes mesh-float-2 {
-          0%, 100% {
+          0%,
+          100% {
             transform: translate(0, 0) scale(1);
           }
           33% {
@@ -132,7 +135,8 @@ export default function MeshGradientBackground() {
         }
 
         @keyframes mesh-float-3 {
-          0%, 100% {
+          0%,
+          100% {
             transform: translate(0, 0) scale(1);
           }
           33% {
@@ -144,7 +148,8 @@ export default function MeshGradientBackground() {
         }
 
         @keyframes mesh-float-4 {
-          0%, 100% {
+          0%,
+          100% {
             transform: translate(0, 0) scale(1);
           }
           33% {
@@ -156,7 +161,8 @@ export default function MeshGradientBackground() {
         }
 
         @keyframes mesh-float-5 {
-          0%, 100% {
+          0%,
+          100% {
             transform: translate(0, 0) scale(1);
           }
           33% {
@@ -168,7 +174,8 @@ export default function MeshGradientBackground() {
         }
 
         @keyframes mesh-float-6 {
-          0%, 100% {
+          0%,
+          100% {
             transform: translate(0, 0) scale(1);
           }
           33% {

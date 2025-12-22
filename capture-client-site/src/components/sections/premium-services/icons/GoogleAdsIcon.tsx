@@ -6,28 +6,40 @@ export function GoogleAdsIcon({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 120 120" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
       <motion.rect
-        x="25" y="70" width="12" height="20"
+        x="25"
+        y="70"
+        width="12"
+        height="20"
         fill="url(#googleGradient1)"
         initial={{ height: 0, y: 90 }}
         animate={{ height: 20, y: 70 }}
         transition={{ duration: 0.8, delay: 0.2 }}
       />
       <motion.rect
-        x="42" y="60" width="12" height="30"
+        x="42"
+        y="60"
+        width="12"
+        height="30"
         fill="url(#googleGradient2)"
         initial={{ height: 0, y: 90 }}
         animate={{ height: 30, y: 60 }}
         transition={{ duration: 0.8, delay: 0.4 }}
       />
       <motion.rect
-        x="59" y="45" width="12" height="45"
+        x="59"
+        y="45"
+        width="12"
+        height="45"
         fill="url(#googleGradient3)"
         initial={{ height: 0, y: 90 }}
         animate={{ height: 45, y: 45 }}
         transition={{ duration: 0.8, delay: 0.6 }}
       />
       <motion.rect
-        x="76" y="30" width="12" height="60"
+        x="76"
+        y="30"
+        width="12"
+        height="60"
         fill="url(#googleGradient4)"
         initial={{ height: 0, y: 90 }}
         animate={{ height: 60, y: 30 }}

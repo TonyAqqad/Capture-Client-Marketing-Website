@@ -8,58 +8,58 @@
  * - E-E-A-T Guidelines: Experience, Expertise, Authoritativeness, Trustworthiness
  */
 
-import { LocationData, ServiceData, PackageData } from './data';
+import { LocationData, ServiceData, PackageData } from "./data";
 
 export const SITE_CONFIG = {
-  name: 'Capture Client',
-  legalName: 'Capture Client LLC',
-  url: 'https://captureclient.com',
-  phone: '(865) 346-6111',
-  phoneRaw: '+18653466111',
-  email: 'team@captureclient.com',
-  foundingDate: '2023',
+  name: "Capture Client",
+  legalName: "Capture Client LLC",
+  url: "https://captureclient.com",
+  phone: "(865) 346-6111",
+  phoneRaw: "+18653466111",
+  email: "team@captureclient.com",
+  foundingDate: "2023",
 
   // Primary business location
   address: {
-    streetAddress: '',  // Add if public
-    addressLocality: 'Knoxville',
-    addressRegion: 'TN',
-    postalCode: '',  // Add if public
-    addressCountry: 'US',
+    streetAddress: "", // Add if public
+    addressLocality: "Knoxville",
+    addressRegion: "TN",
+    postalCode: "", // Add if public
+    addressCountry: "US",
   },
 
   // Service area coverage
   serviceArea: {
-    regions: ['Tennessee', 'Georgia', 'North Carolina', 'Kentucky', 'Virginia'],
-    type: 'ServiceArea', // Not a physical location, service area business
+    regions: ["Tennessee", "Georgia", "North Carolina", "Kentucky", "Virginia"],
+    type: "ServiceArea", // Not a physical location, service area business
   },
 
   // Social profiles for E-E-A-T signals
   socialProfiles: [
-    'https://www.facebook.com/captureclient',
-    'https://twitter.com/captureclient',
-    'https://www.linkedin.com/company/captureclient',
+    "https://www.facebook.com/captureclient",
+    "https://twitter.com/captureclient",
+    "https://www.linkedin.com/company/captureclient",
   ],
 
   // Core services
   services: [
-    'Voice AI Agents',
-    'Lead Generation',
-    'Google Ads Management',
-    'Facebook Ads Management',
-    'CRM Solutions',
-    'Marketing Automation',
+    "Voice AI Agents",
+    "Lead Generation",
+    "Google Ads Management",
+    "Facebook Ads Management",
+    "CRM Solutions",
+    "Marketing Automation",
   ],
 
   // Target audience
-  audience: 'Small Business Owners',
+  audience: "Small Business Owners",
 
   // Brand values for E-E-A-T (keep claims verifiable)
   values: {
-    experience: 'Serving small businesses with AI-powered solutions',
-    expertise: 'Advanced AI voice technology and marketing automation',
-    authority: 'Modern AI voice technology with high customer satisfaction',
-    trust: 'Transparent pricing, dedicated support',
+    experience: "Serving small businesses with AI-powered solutions",
+    expertise: "Advanced AI voice technology and marketing automation",
+    authority: "Modern AI voice technology with high customer satisfaction",
+    trust: "Transparent pricing, dedicated support",
   },
 };
 
@@ -69,16 +69,16 @@ export const SITE_CONFIG = {
  */
 export function generateOrganizationSchema() {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
-    '@id': `${SITE_CONFIG.url}/#organization`,
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": `${SITE_CONFIG.url}/#organization`,
     name: SITE_CONFIG.name,
     legalName: SITE_CONFIG.legalName,
     url: SITE_CONFIG.url,
     logo: `${SITE_CONFIG.url}/logo-full.svg`,
     image: `${SITE_CONFIG.url}/og-image.png`,
     description:
-      'Capture Client is the enterprise-grade growth platform for small businesses, combining AI Voice Agents (24/7 call answering), Google & Facebook Ads management, built-in CRM, and real-time analytics. Based in Knoxville, TN.',
+      "Capture Client is the enterprise-grade growth platform for small businesses, combining AI Voice Agents (24/7 call answering), Google & Facebook Ads management, built-in CRM, and real-time analytics. Based in Knoxville, TN.",
 
     foundingDate: SITE_CONFIG.foundingDate,
 
@@ -88,7 +88,7 @@ export function generateOrganizationSchema() {
 
     // Address (for local SEO - use areaServed for service area businesses)
     areaServed: SITE_CONFIG.serviceArea.regions.map((region) => ({
-      '@type': 'State',
+      "@type": "State",
       name: region,
     })),
 
@@ -97,12 +97,12 @@ export function generateOrganizationSchema() {
 
     // Services offered
     hasOfferCatalog: {
-      '@type': 'OfferCatalog',
-      name: 'Marketing Services',
+      "@type": "OfferCatalog",
+      name: "Marketing Services",
       itemListElement: SITE_CONFIG.services.map((service, index) => ({
-        '@type': 'Offer',
+        "@type": "Offer",
         itemOffered: {
-          '@type': 'Service',
+          "@type": "Service",
           name: service,
         },
         position: index + 1,
@@ -120,7 +120,7 @@ export function generateOrganizationSchema() {
     // },
 
     // Trust signals
-    slogan: 'Automate Leads. Capture Clients. Scale Effortlessly.',
+    slogan: "Automate Leads. Capture Clients. Scale Effortlessly.",
 
     // NOTE: Awards commented out until officially verified
     // Uncomment when certifications are obtained and can be linked
@@ -132,9 +132,9 @@ export function generateOrganizationSchema() {
     // ],
 
     // Business attributes
-    priceRange: '$$',
-    paymentAccepted: 'Credit Card, Debit Card, ACH',
-    currenciesAccepted: 'USD',
+    priceRange: "$$",
+    paymentAccepted: "Credit Card, Debit Card, ACH",
+    currenciesAccepted: "USD",
   };
 }
 
@@ -146,19 +146,19 @@ export function generateLocalBusinessSchema(locationData: LocationData) {
   const { page_id, location, service, seo } = locationData;
 
   return {
-    '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
-    '@id': `${SITE_CONFIG.url}/locations/${page_id}#localbusiness`,
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": `${SITE_CONFIG.url}/locations/${page_id}#localbusiness`,
 
     name: `${SITE_CONFIG.name} - ${location.city}, ${location.state_abbr}`,
     description: seo.meta_description,
 
     // Service area specification
     areaServed: {
-      '@type': 'City',
+      "@type": "City",
       name: location.city,
       containedInPlace: {
-        '@type': 'State',
+        "@type": "State",
         name: location.state,
         abbreviation: location.state_abbr,
       },
@@ -166,9 +166,9 @@ export function generateLocalBusinessSchema(locationData: LocationData) {
 
     // Parent organization
     parentOrganization: {
-      '@type': 'Organization',
+      "@type": "Organization",
       name: SITE_CONFIG.name,
-      '@id': `${SITE_CONFIG.url}/#organization`,
+      "@id": `${SITE_CONFIG.url}/#organization`,
     },
 
     // Contact
@@ -178,17 +178,17 @@ export function generateLocalBusinessSchema(locationData: LocationData) {
 
     // Service offered in this location
     hasOfferCatalog: {
-      '@type': 'OfferCatalog',
+      "@type": "OfferCatalog",
       name: `${service.service_name} in ${location.city}`,
       itemListElement: [
         {
-          '@type': 'Offer',
+          "@type": "Offer",
           itemOffered: {
-            '@type': 'Service',
+            "@type": "Service",
             name: service.service_name,
             description: seo.meta_description,
             areaServed: {
-              '@type': 'City',
+              "@type": "City",
               name: location.city,
             },
           },
@@ -207,7 +207,7 @@ export function generateLocalBusinessSchema(locationData: LocationData) {
     //   reviewCount: '127',
     // },
 
-    priceRange: '$$',
+    priceRange: "$$",
   };
 }
 
@@ -219,34 +219,34 @@ export function generateServiceSchema(serviceData: ServiceData) {
   const { service, seo, benefits } = serviceData;
 
   return {
-    '@context': 'https://schema.org',
-    '@type': 'Service',
-    '@id': `${SITE_CONFIG.url}/services/${service.service_slug}#service`,
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${SITE_CONFIG.url}/services/${service.service_slug}#service`,
 
     name: service.service_name,
     description: seo.meta_description,
     url: `${SITE_CONFIG.url}/services/${service.service_slug}`,
 
     provider: {
-      '@type': 'Organization',
+      "@type": "Organization",
       name: SITE_CONFIG.name,
-      '@id': `${SITE_CONFIG.url}/#organization`,
+      "@id": `${SITE_CONFIG.url}/#organization`,
     },
 
     serviceType: service.service_name,
 
     // Service area
     areaServed: SITE_CONFIG.serviceArea.regions.map((region) => ({
-      '@type': 'State',
+      "@type": "State",
       name: region,
     })),
 
     // Benefits as features
     hasOfferCatalog: {
-      '@type': 'OfferCatalog',
+      "@type": "OfferCatalog",
       name: `${service.service_name} Benefits`,
       itemListElement: benefits.slice(0, 5).map((benefit, index) => ({
-        '@type': 'Offer',
+        "@type": "Offer",
         name: benefit.title,
         description: benefit.description,
         position: index + 1,
@@ -256,18 +256,10 @@ export function generateServiceSchema(serviceData: ServiceData) {
     // Availability
     hoursAvailable: [
       {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: [
-          'Monday',
-          'Tuesday',
-          'Wednesday',
-          'Thursday',
-          'Friday',
-          'Saturday',
-          'Sunday',
-        ],
-        opens: '00:00',
-        closes: '23:59',
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        opens: "00:00",
+        closes: "23:59",
       },
     ],
 
@@ -288,13 +280,13 @@ export function generateFAQSchema(faqs: Array<{ question: string; answer: string
   if (!faqs || faqs.length === 0) return null;
 
   return {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
     mainEntity: faqs.map((faq) => ({
-      '@type': 'Question',
+      "@type": "Question",
       name: faq.question,
       acceptedAnswer: {
-        '@type': 'Answer',
+        "@type": "Answer",
         text: faq.answer,
       },
     })),
@@ -307,10 +299,10 @@ export function generateFAQSchema(faqs: Array<{ question: string; answer: string
  */
 export function generateBreadcrumbSchema(breadcrumbs: Array<{ name: string; url: string }>) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
     itemListElement: breadcrumbs.map((crumb, index) => ({
-      '@type': 'ListItem',
+      "@type": "ListItem",
       position: index + 1,
       name: crumb.name,
       item: crumb.url,
@@ -326,30 +318,30 @@ export function generateProductSchema(packageData: PackageData) {
   const { package: pkg, seo } = packageData;
 
   return {
-    '@context': 'https://schema.org',
-    '@type': 'Product',
-    '@id': `${SITE_CONFIG.url}/pricing/${pkg.package_slug}#product`,
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "@id": `${SITE_CONFIG.url}/pricing/${pkg.package_slug}#product`,
 
     name: pkg.package_name,
     description: seo.meta_description,
     url: `${SITE_CONFIG.url}/pricing/${pkg.package_slug}`,
 
     brand: {
-      '@type': 'Brand',
+      "@type": "Brand",
       name: SITE_CONFIG.name,
     },
 
     offers: {
-      '@type': 'Offer',
-      price: pkg.price.replace(/[^0-9.]/g, ''),
-      priceCurrency: 'USD',
+      "@type": "Offer",
+      price: pkg.price.replace(/[^0-9.]/g, ""),
+      priceCurrency: "USD",
       priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1))
         .toISOString()
-        .split('T')[0],
-      availability: 'https://schema.org/InStock',
+        .split("T")[0],
+      availability: "https://schema.org/InStock",
       url: `${SITE_CONFIG.url}/pricing/${pkg.package_slug}`,
       seller: {
-        '@type': 'Organization',
+        "@type": "Organization",
         name: SITE_CONFIG.name,
       },
     },
@@ -369,16 +361,16 @@ export function generateProductSchema(packageData: PackageData) {
  */
 export function generateWebSiteSchema() {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    '@id': `${SITE_CONFIG.url}/#website`,
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_CONFIG.url}/#website`,
 
     name: SITE_CONFIG.name,
     url: SITE_CONFIG.url,
 
     publisher: {
-      '@type': 'Organization',
-      '@id': `${SITE_CONFIG.url}/#organization`,
+      "@type": "Organization",
+      "@id": `${SITE_CONFIG.url}/#organization`,
     },
 
     // SearchAction removed - no /search page implemented
@@ -398,54 +390,56 @@ export function generateWebPageSchema(pageData: {
   dateModified?: string;
 }) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    '@id': `${pageData.url}#webpage`,
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${pageData.url}#webpage`,
 
     url: pageData.url,
     name: pageData.title,
     description: pageData.description,
 
     isPartOf: {
-      '@type': 'WebSite',
-      '@id': `${SITE_CONFIG.url}/#website`,
+      "@type": "WebSite",
+      "@id": `${SITE_CONFIG.url}/#website`,
     },
 
     about: {
-      '@type': 'Organization',
-      '@id': `${SITE_CONFIG.url}/#organization`,
+      "@type": "Organization",
+      "@id": `${SITE_CONFIG.url}/#organization`,
     },
 
     datePublished: pageData.datePublished || new Date().toISOString(),
     dateModified: pageData.dateModified || new Date().toISOString(),
 
-    inLanguage: 'en-US',
+    inLanguage: "en-US",
   };
 }
 
 /**
  * Generate Review Schema (for testimonials)
  */
-export function generateReviewSchema(reviews: Array<{
-  author: string;
-  rating: number;
-  reviewBody: string;
-  datePublished: string;
-}>) {
+export function generateReviewSchema(
+  reviews: Array<{
+    author: string;
+    rating: number;
+    reviewBody: string;
+    datePublished: string;
+  }>
+) {
   return reviews.map((review) => ({
-    '@context': 'https://schema.org',
-    '@type': 'Review',
+    "@context": "https://schema.org",
+    "@type": "Review",
     itemReviewed: {
-      '@type': 'Organization',
+      "@type": "Organization",
       name: SITE_CONFIG.name,
-      '@id': `${SITE_CONFIG.url}/#organization`,
+      "@id": `${SITE_CONFIG.url}/#organization`,
     },
     author: {
-      '@type': 'Person',
+      "@type": "Person",
       name: review.author,
     },
     reviewRating: {
-      '@type': 'Rating',
+      "@type": "Rating",
       ratingValue: review.rating,
       bestRating: 5,
       worstRating: 1,
@@ -478,12 +472,12 @@ export function generateBlogPostingSchema(post: {
   tags: string[];
 }) {
   // Extract word count for reading time estimation
-  const wordCount = post.content.replace(/<[^>]*>/g, '').split(/\s+/).length;
+  const wordCount = post.content.replace(/<[^>]*>/g, "").split(/\s+/).length;
 
   return {
-    '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    '@id': `${SITE_CONFIG.url}/blog/${post.slug}#blogposting`,
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `${SITE_CONFIG.url}/blog/${post.slug}#blogposting`,
 
     // Required properties for Article rich results
     headline: post.title,
@@ -491,7 +485,7 @@ export function generateBlogPostingSchema(post: {
 
     // Enhanced image object with multiple sizes
     image: {
-      '@type': 'ImageObject',
+      "@type": "ImageObject",
       url: post.featuredImage,
       width: 1200,
       height: 630,
@@ -502,7 +496,7 @@ export function generateBlogPostingSchema(post: {
 
     // Enhanced author information with E-E-A-T signals
     author: {
-      '@type': 'Person',
+      "@type": "Person",
       name: post.author.name,
       jobTitle: post.author.role,
       image: post.author.avatar,
@@ -512,11 +506,11 @@ export function generateBlogPostingSchema(post: {
 
     // Publisher with required logo
     publisher: {
-      '@type': 'Organization',
+      "@type": "Organization",
       name: SITE_CONFIG.name,
-      '@id': `${SITE_CONFIG.url}/#organization`,
+      "@id": `${SITE_CONFIG.url}/#organization`,
       logo: {
-        '@type': 'ImageObject',
+        "@type": "ImageObject",
         url: `${SITE_CONFIG.url}/logo-full.svg`,
         width: 600,
         height: 60,
@@ -530,34 +524,34 @@ export function generateBlogPostingSchema(post: {
 
     // Main entity
     mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': `${SITE_CONFIG.url}/blog/${post.slug}`,
+      "@type": "WebPage",
+      "@id": `${SITE_CONFIG.url}/blog/${post.slug}`,
     },
 
     // Content details
     articleSection: post.category,
     articleBody: post.excerpt,
-    keywords: post.tags.join(', '),
+    keywords: post.tags.join(", "),
     wordCount: wordCount,
 
     // Language
-    inLanguage: 'en-US',
+    inLanguage: "en-US",
 
     // Additional E-E-A-T signals
     isAccessibleForFree: true,
     isPartOf: {
-      '@type': 'Blog',
-      '@id': `${SITE_CONFIG.url}/blog#blog`,
+      "@type": "Blog",
+      "@id": `${SITE_CONFIG.url}/blog#blog`,
       name: `${SITE_CONFIG.name} Blog`,
       publisher: {
-        '@type': 'Organization',
-        '@id': `${SITE_CONFIG.url}/#organization`,
+        "@type": "Organization",
+        "@id": `${SITE_CONFIG.url}/#organization`,
       },
     },
 
     // Creator for authorship
     creator: {
-      '@type': 'Person',
+      "@type": "Person",
       name: post.author.name,
     },
   };
@@ -567,34 +561,37 @@ export function generateBlogPostingSchema(post: {
  * Generate Blog/CollectionPage JSON-LD Schema
  * For blog listing pages
  */
-export function generateBlogSchema(posts: Array<{
-  title: string;
-  slug: string;
-  publishedAt: string;
-}>) {
+export function generateBlogSchema(
+  posts: Array<{
+    title: string;
+    slug: string;
+    publishedAt: string;
+  }>
+) {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'Blog',
-    '@id': `${SITE_CONFIG.url}/blog#blog`,
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": `${SITE_CONFIG.url}/blog#blog`,
 
     name: `${SITE_CONFIG.name} Blog`,
-    description: 'Marketing tips, AI insights, and growth strategies to help your small business thrive.',
+    description:
+      "Marketing tips, AI insights, and growth strategies to help your small business thrive.",
     url: `${SITE_CONFIG.url}/blog`,
 
     publisher: {
-      '@type': 'Organization',
-      '@id': `${SITE_CONFIG.url}/#organization`,
+      "@type": "Organization",
+      "@id": `${SITE_CONFIG.url}/#organization`,
     },
 
-    blogPost: posts.slice(0, 10).map(post => ({
-      '@type': 'BlogPosting',
-      '@id': `${SITE_CONFIG.url}/blog/${post.slug}#blogposting`,
+    blogPost: posts.slice(0, 10).map((post) => ({
+      "@type": "BlogPosting",
+      "@id": `${SITE_CONFIG.url}/blog/${post.slug}#blogposting`,
       headline: post.title,
       url: `${SITE_CONFIG.url}/blog/${post.slug}`,
       datePublished: post.publishedAt,
     })),
 
-    inLanguage: 'en-US',
+    inLanguage: "en-US",
   };
 }
 
@@ -612,29 +609,29 @@ export function getDefaultMetadata() {
     },
 
     description:
-      'Enterprise-grade growth platform for small businesses. Automate leads with 24/7 AI voice agents, professional Google/Facebook Ads management, built-in CRM, and real-time analytics. Free consultation available.',
+      "Enterprise-grade growth platform for small businesses. Automate leads with 24/7 AI voice agents, professional Google/Facebook Ads management, built-in CRM, and real-time analytics. Free consultation available.",
 
     keywords: [
-      'voice ai',
-      'ai voice agents',
-      'ai receptionist',
-      '24/7 call answering',
-      'lead generation',
-      'facebook ads',
-      'google ads',
-      'marketing automation',
-      'crm software',
-      'small business marketing',
-      'lead capture',
-      'marketing dashboard',
-      'business phone automation',
-      'virtual receptionist',
-      'ai answering service',
-      'conversational ai',
-      'appointment scheduling ai',
-      'lead qualification',
-      'call center ai',
-      'real-time transcription'
+      "voice ai",
+      "ai voice agents",
+      "ai receptionist",
+      "24/7 call answering",
+      "lead generation",
+      "facebook ads",
+      "google ads",
+      "marketing automation",
+      "crm software",
+      "small business marketing",
+      "lead capture",
+      "marketing dashboard",
+      "business phone automation",
+      "virtual receptionist",
+      "ai answering service",
+      "conversational ai",
+      "appointment scheduling ai",
+      "lead qualification",
+      "call center ai",
+      "real-time transcription",
     ],
 
     // Authors and ownership
@@ -643,7 +640,7 @@ export function getDefaultMetadata() {
     publisher: SITE_CONFIG.name,
 
     // Category
-    category: 'Marketing Technology',
+    category: "Marketing Technology",
 
     // Robots
     robots: {
@@ -652,21 +649,21 @@ export function getDefaultMetadata() {
       googleBot: {
         index: true,
         follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large' as const,
-        'max-snippet': -1,
+        "max-video-preview": -1,
+        "max-image-preview": "large" as const,
+        "max-snippet": -1,
       },
     },
 
     // Open Graph
     openGraph: {
-      type: 'website',
-      locale: 'en_US',
+      type: "website",
+      locale: "en_US",
       url: SITE_CONFIG.url,
       siteName: SITE_CONFIG.name,
       title: `${SITE_CONFIG.name} | Enterprise AI Voice Agents & Lead Generation Platform`,
       description:
-        'Enterprise-grade platform for small businesses. 24/7 AI voice agents, professional ads management, built-in CRM, real-time analytics. Free consultation available.',
+        "Enterprise-grade platform for small businesses. 24/7 AI voice agents, professional ads management, built-in CRM, real-time analytics. Free consultation available.",
       images: [
         {
           url: `${SITE_CONFIG.url}/og-image.png`,
@@ -679,12 +676,11 @@ export function getDefaultMetadata() {
 
     // Twitter Card
     twitter: {
-      card: 'summary_large_image',
-      site: '@captureclient',
-      creator: '@captureclient',
+      card: "summary_large_image",
+      site: "@captureclient",
+      creator: "@captureclient",
       title: `${SITE_CONFIG.name} | The All-in-One Growth Hub for Small Business`,
-      description:
-        'Voice AI, Lead Generation & Marketing Automation for Small Businesses.',
+      description: "Voice AI, Lead Generation & Marketing Automation for Small Businesses.",
       images: [`${SITE_CONFIG.url}/og-image.png`],
     },
 
@@ -702,33 +698,31 @@ export function getDefaultMetadata() {
     alternates: {
       canonical: SITE_CONFIG.url,
       languages: {
-        'en-US': SITE_CONFIG.url,
+        "en-US": SITE_CONFIG.url,
       },
     },
 
     // Icons - Optimized favicon configuration
     icons: {
       icon: [
-        { url: '/favicon.ico', sizes: '32x32' },
-        { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-        { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-        { url: '/favicon-optimized.svg', type: 'image/svg+xml' },
+        { url: "/favicon.ico", sizes: "32x32" },
+        { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+        { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+        { url: "/favicon-optimized.svg", type: "image/svg+xml" },
       ],
-      shortcut: '/favicon.ico',
-      apple: [
-        { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
-      ],
+      shortcut: "/favicon.ico",
+      apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
       other: [
         {
-          rel: 'mask-icon',
-          url: '/favicon-optimized.svg',
-          color: '#0EA5E9',
+          rel: "mask-icon",
+          url: "/favicon-optimized.svg",
+          color: "#0EA5E9",
         },
       ],
     },
 
     // Web App Manifest
-    manifest: '/site.webmanifest',
+    manifest: "/site.webmanifest",
   };
 }
 
@@ -742,52 +736,52 @@ export function getDefaultMetadata() {
  */
 export function generateSoftwareApplicationSchema() {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'SoftwareApplication',
-    '@id': `${SITE_CONFIG.url}/#software`,
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "@id": `${SITE_CONFIG.url}/#software`,
 
     name: SITE_CONFIG.name,
-    applicationCategory: 'BusinessApplication',
-    applicationSubCategory: 'Marketing Automation Software',
+    applicationCategory: "BusinessApplication",
+    applicationSubCategory: "Marketing Automation Software",
 
     // Platform availability
-    operatingSystem: 'Web Browser',
-    browserRequirements: 'Requires JavaScript. Requires HTML5.',
+    operatingSystem: "Web Browser",
+    browserRequirements: "Requires JavaScript. Requires HTML5.",
 
     // Description for rich snippets
     description:
-      'Enterprise-grade marketing automation platform with AI Voice Agents, Google & Facebook Ads management, built-in CRM, and real-time analytics. Automate lead capture 24/7 with natural-sounding AI that handles calls, schedules appointments, and qualifies leads.',
+      "Enterprise-grade marketing automation platform with AI Voice Agents, Google & Facebook Ads management, built-in CRM, and real-time analytics. Automate lead capture 24/7 with natural-sounding AI that handles calls, schedules appointments, and qualifies leads.",
 
     // Offers/Pricing - shows in rich results
     offers: {
-      '@type': 'AggregateOffer',
-      lowPrice: '97',
-      highPrice: '950',
-      priceCurrency: 'USD',
-      offerCount: '3',
+      "@type": "AggregateOffer",
+      lowPrice: "97",
+      highPrice: "950",
+      priceCurrency: "USD",
+      offerCount: "3",
       offers: [
         {
-          '@type': 'Offer',
-          name: 'Starter',
-          price: '97',
-          priceCurrency: 'USD',
-          description: 'AI Voice Agent + CRM essentials for growing businesses',
+          "@type": "Offer",
+          name: "Starter",
+          price: "97",
+          priceCurrency: "USD",
+          description: "AI Voice Agent + CRM essentials for growing businesses",
           url: `${SITE_CONFIG.url}/pricing`,
         },
         {
-          '@type': 'Offer',
-          name: 'Growth',
-          price: '950',
-          priceCurrency: 'USD',
-          description: 'Voice AI + Google/Facebook Ads management + full CRM',
+          "@type": "Offer",
+          name: "Growth",
+          price: "950",
+          priceCurrency: "USD",
+          description: "Voice AI + Google/Facebook Ads management + full CRM",
           url: `${SITE_CONFIG.url}/pricing`,
         },
         {
-          '@type': 'Offer',
-          name: 'Enterprise',
-          price: '2997',
-          priceCurrency: 'USD',
-          description: 'Full platform access with dedicated account manager',
+          "@type": "Offer",
+          name: "Enterprise",
+          price: "2997",
+          priceCurrency: "USD",
+          description: "Full platform access with dedicated account manager",
           url: `${SITE_CONFIG.url}/pricing`,
         },
       ],
@@ -806,16 +800,16 @@ export function generateSoftwareApplicationSchema() {
 
     // Feature list
     featureList: [
-      '24/7 AI Voice Agent - Natural-sounding call handling',
-      'Automatic Lead Capture - Never miss a call again',
-      'CRM Integration - All contacts in one place',
-      'Google Ads Management - Professional PPC campaigns',
-      'Facebook Ads Management - Targeted social advertising',
-      'Real-Time Analytics Dashboard',
-      'Appointment Scheduling AI',
-      'Lead Qualification & Scoring',
-      'Call Recording & Transcription',
-      'SMS & Email Follow-up Automation',
+      "24/7 AI Voice Agent - Natural-sounding call handling",
+      "Automatic Lead Capture - Never miss a call again",
+      "CRM Integration - All contacts in one place",
+      "Google Ads Management - Professional PPC campaigns",
+      "Facebook Ads Management - Targeted social advertising",
+      "Real-Time Analytics Dashboard",
+      "Appointment Scheduling AI",
+      "Lead Qualification & Scoring",
+      "Call Recording & Transcription",
+      "SMS & Email Follow-up Automation",
     ],
 
     // NOTE: Screenshots commented out until real assets are created
@@ -834,22 +828,22 @@ export function generateSoftwareApplicationSchema() {
     // ],
 
     // Software requirements
-    softwareRequirements: 'Modern web browser (Chrome, Firefox, Safari, Edge)',
-    memoryRequirements: '2GB RAM recommended',
-    storageRequirements: 'Cloud-based - no local storage required',
+    softwareRequirements: "Modern web browser (Chrome, Firefox, Safari, Edge)",
+    memoryRequirements: "2GB RAM recommended",
+    storageRequirements: "Cloud-based - no local storage required",
 
     // Author/Provider
     author: {
-      '@type': 'Organization',
+      "@type": "Organization",
       name: SITE_CONFIG.name,
-      '@id': `${SITE_CONFIG.url}/#organization`,
+      "@id": `${SITE_CONFIG.url}/#organization`,
     },
 
     // Provider
     provider: {
-      '@type': 'Organization',
+      "@type": "Organization",
       name: SITE_CONFIG.name,
-      '@id': `${SITE_CONFIG.url}/#organization`,
+      "@id": `${SITE_CONFIG.url}/#organization`,
     },
 
     // URLs
@@ -858,18 +852,17 @@ export function generateSoftwareApplicationSchema() {
     downloadUrl: `${SITE_CONFIG.url}/contact`,
 
     // Release info
-    softwareVersion: '2.0',
-    datePublished: '2023-01-01',
-    dateModified: new Date().toISOString().split('T')[0],
+    softwareVersion: "2.0",
+    datePublished: "2023-01-01",
+    dateModified: new Date().toISOString().split("T")[0],
 
     // Additional properties
     isAccessibleForFree: false,
-    countriesSupported: 'US',
+    countriesSupported: "US",
     availableLanguage: {
-      '@type': 'Language',
-      name: 'English',
-      alternateName: 'en',
+      "@type": "Language",
+      name: "English",
+      alternateName: "en",
     },
   };
 }
-

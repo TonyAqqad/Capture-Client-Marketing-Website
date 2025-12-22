@@ -149,10 +149,7 @@ export function PersonalizationForm({
               Make this demo about YOUR business
             </span>
           </div>
-          <motion.div
-            animate={{ rotate: isExpanded ? 180 : 0 }}
-            transition={{ duration: 0.3 }}
-          >
+          <motion.div animate={{ rotate: isExpanded ? 180 : 0 }} transition={{ duration: 0.3 }}>
             <ChevronDown className="w-5 h-5 text-slate-500" aria-hidden="true" />
           </motion.div>
         </div>
@@ -209,11 +206,7 @@ export function PersonalizationForm({
                   </label>
                   <div className="relative">
                     <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
-                      <IndustryIcon
-                        className="text-slate-500"
-                        size={20}
-                        aria-hidden="true"
-                      />
+                      <IndustryIcon className="text-slate-500" size={20} aria-hidden="true" />
                     </div>
                     <select
                       id="industry"
@@ -265,9 +258,7 @@ export function PersonalizationForm({
                     placeholder="e.g., (555) 123-4567"
                     className="w-full px-4 py-3.5 rounded-xl border-2 border-slate-200 transition-all duration-300 text-slate-900 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500/50 bg-white touch-target"
                   />
-                  <p className="text-xs text-slate-500 mt-1">
-                    For display in caller ID preview
-                  </p>
+                  <p className="text-xs text-slate-500 mt-1">For display in caller ID preview</p>
                 </div>
 
                 {/* Location (Optional) */}

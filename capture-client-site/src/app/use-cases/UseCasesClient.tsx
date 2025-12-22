@@ -23,7 +23,7 @@ import {
   ShieldCheck,
   X,
   RocketIcon as Rocket,
-  Star
+  Star,
 } from "lucide-react";
 
 // Industry data structure
@@ -41,28 +41,28 @@ interface Industry {
 
 // Icon component mapping
 const iconMap: { [key: string]: any } = {
-  "medical_services": Stethoscope,
-  "home_repair_service": Wrench,
-  "gavel": Scale,
-  "apartment": Home,
-  "directions_car": Car,
-  "restaurant": UtensilsCrossed,
-  "fitness_center": Dumbbell,
-  "account_balance": Building2,
-  "business_center": Briefcase,
-  "check_circle": CheckCircle2,
-  "trending_up": TrendingUp,
-  "format_quote": Quote,
-  "arrow_forward": ArrowRight,
-  "schedule": Clock,
-  "speed": Zap,
-  "verified": ShieldCheck,
-  "integration_instructions": Building2,
-  "close": X,
-  "cancel": X,
-  "rocket_launch": Rocket,
-  "phone": Phone,
-  "star": Star
+  medical_services: Stethoscope,
+  home_repair_service: Wrench,
+  gavel: Scale,
+  apartment: Home,
+  directions_car: Car,
+  restaurant: UtensilsCrossed,
+  fitness_center: Dumbbell,
+  account_balance: Building2,
+  business_center: Briefcase,
+  check_circle: CheckCircle2,
+  trending_up: TrendingUp,
+  format_quote: Quote,
+  arrow_forward: ArrowRight,
+  schedule: Clock,
+  speed: Zap,
+  verified: ShieldCheck,
+  integration_instructions: Building2,
+  close: X,
+  cancel: X,
+  rocket_launch: Rocket,
+  phone: Phone,
+  star: Star,
 };
 
 const industries: Industry[] = [
@@ -77,9 +77,9 @@ const industries: Industry[] = [
     useCases: [
       "24/7 appointment scheduling for dental & medical offices",
       "Patient follow-up reminders & prescription refills",
-      "Emergency triage & routing to on-call providers"
+      "Emergency triage & routing to on-call providers",
     ],
-    stat: "42% more appointments booked"
+    stat: "42% more appointments booked",
   },
   {
     id: "home-services",
@@ -92,9 +92,9 @@ const industries: Industry[] = [
     useCases: [
       "HVAC, plumbing & electrical emergency dispatch",
       "Service quote generation & technician routing",
-      "Follow-up surveys & maintenance scheduling"
+      "Follow-up surveys & maintenance scheduling",
     ],
-    stat: "35% faster response times"
+    stat: "35% faster response times",
   },
   {
     id: "legal",
@@ -107,9 +107,9 @@ const industries: Industry[] = [
     useCases: [
       "Initial case intake & client qualification",
       "Consultation scheduling with attorneys",
-      "Document reminder & deadline notifications"
+      "Document reminder & deadline notifications",
     ],
-    stat: "63% increase in qualified leads"
+    stat: "63% increase in qualified leads",
   },
   {
     id: "real-estate",
@@ -122,9 +122,9 @@ const industries: Industry[] = [
     useCases: [
       "Property inquiry capture & showing scheduling",
       "Lead qualification by budget & location",
-      "Follow-up campaigns for hot prospects"
+      "Follow-up campaigns for hot prospects",
     ],
-    stat: "58% more showings scheduled"
+    stat: "58% more showings scheduled",
   },
   {
     id: "automotive",
@@ -137,9 +137,9 @@ const industries: Industry[] = [
     useCases: [
       "Service appointment booking for dealerships",
       "Test drive scheduling & trade-in evaluation",
-      "Parts inquiry & availability checks"
+      "Parts inquiry & availability checks",
     ],
-    stat: "49% increase in service bookings"
+    stat: "49% increase in service bookings",
   },
   {
     id: "hospitality",
@@ -152,9 +152,9 @@ const industries: Industry[] = [
     useCases: [
       "Reservation management & waitlist automation",
       "Catering inquiry & event booking",
-      "Delivery order support & special requests"
+      "Delivery order support & special requests",
     ],
-    stat: "31% more reservations"
+    stat: "31% more reservations",
   },
   {
     id: "fitness",
@@ -167,9 +167,9 @@ const industries: Industry[] = [
     useCases: [
       "Class registration & membership inquiries",
       "Personal training session scheduling",
-      "Equipment availability & gym tour booking"
+      "Equipment availability & gym tour booking",
     ],
-    stat: "44% boost in trial sign-ups"
+    stat: "44% boost in trial sign-ups",
   },
   {
     id: "financial",
@@ -182,68 +182,75 @@ const industries: Industry[] = [
     useCases: [
       "Mortgage pre-qualification & consultation booking",
       "Insurance quote generation & policy inquiries",
-      "Investment advisor appointment scheduling"
+      "Investment advisor appointment scheduling",
     ],
-    stat: "52% more qualified consultations"
-  }
+    stat: "52% more qualified consultations",
+  },
 ];
 
 const testimonials = [
   {
-    quote: "We went from missing 40% of after-hours calls to capturing every single lead. Our revenue is up 6 figures in 8 months.",
+    quote:
+      "We went from missing 40% of after-hours calls to capturing every single lead. Our revenue is up 6 figures in 8 months.",
     author: "Dr. Marcus Chen",
     role: "Dental Practice Owner",
     industry: "Healthcare",
-    avatar: "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&auto=format&fit=crop",
-    metric: "+$180K Revenue"
+    avatar:
+      "https://images.unsplash.com/photo-1537368910025-700350fe46c7?w=400&auto=format&fit=crop",
+    metric: "+$180K Revenue",
   },
   {
-    quote: "The AI handles emergency dispatches better than our old answering service. Customers love the instant response.",
+    quote:
+      "The AI handles emergency dispatches better than our old answering service. Customers love the instant response.",
     author: "Sarah Martinez",
     role: "HVAC Company Owner",
     industry: "Home Services",
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&auto=format&fit=crop",
-    metric: "35% Faster Dispatch"
+    avatar:
+      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&auto=format&fit=crop",
+    metric: "35% Faster Dispatch",
   },
   {
-    quote: "Client intake that used to take 20 minutes now happens automatically. We can focus on billable work, not admin.",
+    quote:
+      "Client intake that used to take 20 minutes now happens automatically. We can focus on billable work, not admin.",
     author: "James Thompson",
     role: "Managing Partner",
     industry: "Legal",
     avatar: "https://images.unsplash.com/photo-1556157382-97eda2d62296?w=400&auto=format&fit=crop",
-    metric: "63% More Clients"
+    metric: "63% More Clients",
   },
   {
-    quote: "I can finally take weekends off knowing every property inquiry gets captured and qualified instantly.",
+    quote:
+      "I can finally take weekends off knowing every property inquiry gets captured and qualified instantly.",
     author: "Lisa Rodriguez",
     role: "Real Estate Broker",
     industry: "Real Estate",
-    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop",
-    metric: "58% More Showings"
-  }
+    avatar:
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&auto=format&fit=crop",
+    metric: "58% More Showings",
+  },
 ];
 
 const benefits = [
   {
     icon: "schedule",
     title: "24/7 Availability",
-    description: "Never miss a client, even at 3am on a holiday"
+    description: "Never miss a client, even at 3am on a holiday",
   },
   {
     icon: "speed",
     title: "Instant Response",
-    description: "Answer calls in under 2 rings, every time"
+    description: "Answer calls in under 2 rings, every time",
   },
   {
     icon: "verified",
     title: "Lead Qualification",
-    description: "Only high-quality prospects reach your team"
+    description: "Only high-quality prospects reach your team",
   },
   {
     icon: "integration_instructions",
     title: "CRM Integration",
-    description: "Seamlessly sync with your existing tools"
-  }
+    description: "Seamlessly sync with your existing tools",
+  },
 ];
 
 export default function UseCasesClient() {
@@ -258,7 +265,7 @@ export default function UseCasesClient() {
   // Scroll animations
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end end"]
+    offset: ["start start", "end end"],
   });
 
   const heroY = useTransform(scrollYProgress, [0, 0.2], ["0%", "50%"]);
@@ -274,7 +281,10 @@ export default function UseCasesClient() {
   }, [isClient]);
 
   return (
-    <div ref={containerRef} className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-white">
+    <div
+      ref={containerRef}
+      className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-white"
+    >
       {/* ==================== HERO SECTION ==================== */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Aurora Background */}
@@ -305,7 +315,7 @@ export default function UseCasesClient() {
               style={{
                 backgroundImage: `linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
                                  linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px)`,
-                backgroundSize: '80px 80px'
+                backgroundSize: "80px 80px",
               }}
             />
           </div>
@@ -327,7 +337,9 @@ export default function UseCasesClient() {
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500/10 via-blue-500/10 to-blue-500/10 border border-slate-200/60 backdrop-blur-xl mb-8"
           >
             <Briefcase className="w-5 h-5 text-cyan-400" />
-            <span className="text-sm font-bold text-slate-900 uppercase tracking-wider">Industry Solutions</span>
+            <span className="text-sm font-bold text-slate-900 uppercase tracking-wider">
+              Industry Solutions
+            </span>
           </motion.div>
 
           {/* Headline */}
@@ -337,9 +349,7 @@ export default function UseCasesClient() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold mb-8 leading-[1.1]"
           >
-            <span className="block text-slate-900 mb-4">
-              One AI.
-            </span>
+            <span className="block text-slate-900 mb-4">One AI.</span>
             <span className="block bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Endless Possibilities.
             </span>
@@ -352,7 +362,9 @@ export default function UseCasesClient() {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-xl sm:text-2xl lg:text-3xl text-slate-600 max-w-4xl mx-auto mb-12 leading-relaxed font-light"
           >
-            From healthcare to home services, our AI Voice Agents adapt to <span className="text-slate-900 font-medium">any industry</span> to capture more clients and automate client communication.
+            From healthcare to home services, our AI Voice Agents adapt to{" "}
+            <span className="text-slate-900 font-medium">any industry</span> to capture more clients
+            and automate client communication.
           </motion.p>
 
           {/* CTA */}
@@ -394,7 +406,9 @@ export default function UseCasesClient() {
                   whileHover={{ scale: 1.2, rotate: 5 }}
                   className="flex items-center justify-center"
                 >
-                  <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br ${industry.iconBg} opacity-20 hover:opacity-100 flex items-center justify-center transition-all duration-300 cursor-pointer`}>
+                  <div
+                    className={`w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br ${industry.iconBg} opacity-20 hover:opacity-100 flex items-center justify-center transition-all duration-300 cursor-pointer`}
+                  >
                     <IconComponent className="w-6 h-6 text-white" />
                   </div>
                 </motion.div>
@@ -447,7 +461,9 @@ export default function UseCasesClient() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-accent/20 via-accent/10 to-transparent border border-accent/20 backdrop-blur-xl mb-6"
             >
               <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-              <span className="text-sm font-bold uppercase tracking-widest text-accent">Industry Solutions</span>
+              <span className="text-sm font-bold uppercase tracking-widest text-accent">
+                Industry Solutions
+              </span>
             </motion.div>
 
             <motion.h2
@@ -457,7 +473,10 @@ export default function UseCasesClient() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-slate-900 mb-6"
             >
-              Your Industry, <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">Solved</span>
+              Your Industry,{" "}
+              <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+                Solved
+              </span>
             </motion.h2>
 
             <motion.p
@@ -488,7 +507,9 @@ export default function UseCasesClient() {
                   {/* Card */}
                   <div className="relative h-full bg-white backdrop-blur-2xl border border-slate-200/60 rounded-3xl overflow-hidden hover:border-slate-300 transition-all duration-500 hover:shadow-lg">
                     {/* Gradient overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${industry.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
+                    <div
+                      className={`absolute inset-0 bg-gradient-to-br ${industry.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
+                    />
 
                     {/* Top shine */}
                     <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent" />
@@ -514,7 +535,10 @@ export default function UseCasesClient() {
                       {/* Use cases */}
                       <ul className="space-y-3 mb-6">
                         {industry.useCases.map((useCase, idx) => (
-                          <li key={idx} className="flex items-start gap-2 text-sm text-slate-600 leading-relaxed">
+                          <li
+                            key={idx}
+                            className="flex items-start gap-2 text-sm text-slate-600 leading-relaxed"
+                          >
                             <CheckCircle2 className="w-4 h-4 text-cyan-400 mt-0.5 flex-shrink-0" />
                             <span>{useCase}</span>
                           </li>
@@ -564,8 +588,14 @@ export default function UseCasesClient() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-slate-900 mb-6">
-              The <span className="bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">Old Way</span> vs{" "}
-              <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">Capture Client</span>
+              The{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-blue-500 bg-clip-text text-transparent">
+                Old Way
+              </span>{" "}
+              vs{" "}
+              <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+                Capture Client
+              </span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               See how we transform the frustrating status quo into a lead-capturing machine
@@ -599,7 +629,7 @@ export default function UseCasesClient() {
                     "Manual lead qualification wastes time",
                     "No visibility into call quality or conversion",
                     "Expensive answering services with no AI",
-                    "Leads slip through the cracks constantly"
+                    "Leads slip through the cracks constantly",
                   ].map((problem, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <X className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
@@ -641,7 +671,7 @@ export default function UseCasesClient() {
                     "Automatic CRM sync & follow-up triggers",
                     "Full call transcripts & sentiment analysis",
                     "Appointment booking without human touch",
-                    "Zero leads lost, ever"
+                    "Zero leads lost, ever",
                   ].map((solution, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-blue-500 mt-1 flex-shrink-0" />
@@ -652,8 +682,12 @@ export default function UseCasesClient() {
 
                 {/* Stat */}
                 <div className="mt-8 p-4 rounded-xl bg-gradient-to-r from-blue-500/20 to-cyan-400/20 border border-blue-500/30">
-                  <p className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent mb-1">100%</p>
-                  <p className="text-sm text-slate-700 font-medium">of leads captured & qualified</p>
+                  <p className="text-3xl font-bold bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent mb-1">
+                    100%
+                  </p>
+                  <p className="text-sm text-slate-700 font-medium">
+                    of leads captured & qualified
+                  </p>
                 </div>
               </div>
 
@@ -683,11 +717,16 @@ export default function UseCasesClient() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-primary/20 via-primary/10 to-transparent border border-primary/20 backdrop-blur-xl mb-6">
               <div className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-              <span className="text-sm font-bold uppercase tracking-widest text-primary">Success Stories</span>
+              <span className="text-sm font-bold uppercase tracking-widest text-primary">
+                Success Stories
+              </span>
             </div>
 
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-slate-900 mb-6">
-              Real Results from <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">Real Businesses</span>
+              Real Results from{" "}
+              <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+                Real Businesses
+              </span>
             </h2>
           </motion.div>
 
@@ -717,10 +756,16 @@ export default function UseCasesClient() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <h4 className="text-xl font-bold text-slate-900 text-center lg:text-left">{testimonials[currentTestimonial].author}</h4>
-                    <p className="text-slate-600 text-center lg:text-left">{testimonials[currentTestimonial].role}</p>
+                    <h4 className="text-xl font-bold text-slate-900 text-center lg:text-left">
+                      {testimonials[currentTestimonial].author}
+                    </h4>
+                    <p className="text-slate-600 text-center lg:text-left">
+                      {testimonials[currentTestimonial].role}
+                    </p>
                     <div className="mt-3 px-3 py-1.5 rounded-lg bg-cyan-500/10 border border-cyan-500/20">
-                      <p className="text-sm font-semibold text-cyan-400">{testimonials[currentTestimonial].industry}</p>
+                      <p className="text-sm font-semibold text-cyan-400">
+                        {testimonials[currentTestimonial].industry}
+                      </p>
                     </div>
                   </motion.div>
 
@@ -737,7 +782,9 @@ export default function UseCasesClient() {
                     </p>
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-blue-500/20 to-cyan-400/20 border border-blue-500/30">
                       <TrendingUp className="w-5 h-5 text-blue-500" />
-                      <span className="text-lg font-bold text-slate-900">{testimonials[currentTestimonial].metric}</span>
+                      <span className="text-lg font-bold text-slate-900">
+                        {testimonials[currentTestimonial].metric}
+                      </span>
                     </div>
                   </motion.div>
                 </div>
@@ -751,9 +798,7 @@ export default function UseCasesClient() {
                   key={i}
                   onClick={() => setCurrentTestimonial(i)}
                   className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                    i === currentTestimonial
-                      ? "bg-blue-500 w-8"
-                      : "bg-slate-300 hover:bg-slate-400"
+                    i === currentTestimonial ? "bg-blue-500 w-8" : "bg-slate-300 hover:bg-slate-400"
                   }`}
                   aria-label={`Go to testimonial ${i + 1}`}
                 />
@@ -780,7 +825,10 @@ export default function UseCasesClient() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-slate-900 mb-6">
-              Works for <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">Every Business</span>
+              Works for{" "}
+              <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+                Every Business
+              </span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               These core benefits apply no matter your industry
@@ -842,7 +890,9 @@ export default function UseCasesClient() {
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-400/20 border border-blue-500/30 backdrop-blur-xl mb-8"
           >
             <Rocket className="w-5 h-5 text-blue-500" />
-            <span className="text-sm font-bold text-slate-900 uppercase tracking-wider">Ready to Transform?</span>
+            <span className="text-sm font-bold text-slate-900 uppercase tracking-wider">
+              Ready to Transform?
+            </span>
           </motion.div>
 
           {/* Headline */}
@@ -853,7 +903,10 @@ export default function UseCasesClient() {
             transition={{ delay: 0.1 }}
             className="text-5xl sm:text-6xl lg:text-7xl font-display font-bold text-slate-900 mb-8 leading-tight"
           >
-            Find Your <span className="bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500 bg-clip-text text-transparent">Perfect Solution</span>
+            Find Your{" "}
+            <span className="bg-gradient-to-r from-blue-500 via-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              Perfect Solution
+            </span>
           </motion.h2>
 
           {/* Description */}

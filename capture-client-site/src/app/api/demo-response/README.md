@@ -24,12 +24,12 @@ POST /api/demo-response
 ```typescript
 interface DemoRequest {
   userMessage: string;
-  businessType: 'plumbing' | 'dental' | 'auto' | 'hvac' | 'law' | 'general';
+  businessType: "plumbing" | "dental" | "auto" | "hvac" | "law" | "general";
   conversationHistory?: ConversationMessage[];
 }
 
 interface ConversationMessage {
-  role: 'user' | 'assistant';
+  role: "user" | "assistant";
   content: string;
 }
 ```
@@ -54,14 +54,14 @@ interface DemoResponse {
   suggestedCrmFields: ExtractedCRMData; // Extracted contact/service data
 }
 
-type Intent = 'inquiry' | 'schedule' | 'pricing' | 'complaint' | 'general';
+type Intent = "inquiry" | "schedule" | "pricing" | "complaint" | "general";
 
 interface ExtractedCRMData {
   name?: string;
   phone?: string;
   email?: string;
   service?: string;
-  urgency?: 'low' | 'medium' | 'high';
+  urgency?: "low" | "medium" | "high";
   preferredTime?: string;
   location?: string;
 }
@@ -85,31 +85,37 @@ interface ExtractedCRMData {
 ## Business Types
 
 ### Plumbing
+
 - Context: Emergency leaks, drain cleaning, water heater repairs, installations
 - Pricing: $95 service call, $150/hr labor
 - Emergency rate: 1.5x
 
 ### Dental
+
 - Context: Cleanings, fillings, cosmetic dentistry, emergencies
 - Pricing: $99 new patient exam (includes X-rays, cleaning)
 - Hours: M-F 8am-6pm
 
 ### Auto Repair
+
 - Context: Oil changes, brake repairs, diagnostics, inspections
 - Pricing: $39.99 oil change, brake service from $199
 - Features: Free multi-point inspection
 
 ### HVAC
+
 - Context: AC repair, heating service, installations, maintenance plans
 - Pricing: $79 service call, maintenance plans from $199/year
 - Availability: 24/7 emergency service
 
 ### Law Firm
+
 - Context: Personal injury, family law, estate planning consultations
 - Pricing: Free initial consultation
 - Model: No fees unless we win
 
 ### General
+
 - Context: Professional service business
 - Focus: Friendly assistance and lead capture
 
@@ -194,10 +200,10 @@ async function sendMessage(
   businessType: BusinessType,
   history: ConversationMessage[] = []
 ) {
-  const response = await fetch('/api/demo-response', {
-    method: 'POST',
+  const response = await fetch("/api/demo-response", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       userMessage: message,
@@ -207,7 +213,7 @@ async function sendMessage(
   });
 
   if (!response.ok) {
-    throw new Error('Failed to get response');
+    throw new Error("Failed to get response");
   }
 
   const data: DemoResponse = await response.json();
@@ -284,16 +290,19 @@ Example test scenarios:
 ## Troubleshooting
 
 ### "ANTHROPIC_API_KEY not configured"
+
 - Add API key to `.env.local`
 - Restart Next.js dev server
 - Fallback responses will be used until configured
 
 ### Rate limit exceeded
+
 - Wait 60 seconds
 - Consider implementing authenticated rate limits
 - Use Redis for production-grade rate limiting
 
 ### Slow responses
+
 - Claude API typically responds in 1-2 seconds
 - Check network connectivity
 - Consider implementing timeout handling

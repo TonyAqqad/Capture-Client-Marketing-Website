@@ -190,7 +190,8 @@ export default function PulseOrb({ className = "" }: PulseOrbProps) {
       {/* CSS Animations */}
       <style jsx>{`
         @keyframes pulse-slow {
-          0%, 100% {
+          0%,
+          100% {
             opacity: 0.1;
             transform: scale(0.95);
           }
@@ -201,7 +202,8 @@ export default function PulseOrb({ className = "" }: PulseOrbProps) {
         }
 
         @keyframes pulse-ring-1 {
-          0%, 100% {
+          0%,
+          100% {
             opacity: 0.3;
             transform: scale(0.98);
           }
@@ -212,7 +214,8 @@ export default function PulseOrb({ className = "" }: PulseOrbProps) {
         }
 
         @keyframes pulse-ring-2 {
-          0%, 100% {
+          0%,
+          100% {
             opacity: 0.4;
             transform: scale(0.96);
           }
@@ -223,7 +226,8 @@ export default function PulseOrb({ className = "" }: PulseOrbProps) {
         }
 
         @keyframes pulse-ring-3 {
-          0%, 100% {
+          0%,
+          100% {
             opacity: 0.5;
             transform: scale(0.94);
           }
@@ -234,7 +238,8 @@ export default function PulseOrb({ className = "" }: PulseOrbProps) {
         }
 
         @keyframes pulse-core {
-          0%, 100% {
+          0%,
+          100% {
             opacity: 0.9;
             transform: scale(0.98);
           }
@@ -245,7 +250,8 @@ export default function PulseOrb({ className = "" }: PulseOrbProps) {
         }
 
         @keyframes pulse-core-hover {
-          0%, 100% {
+          0%,
+          100% {
             opacity: 0.95;
             transform: scale(1);
           }

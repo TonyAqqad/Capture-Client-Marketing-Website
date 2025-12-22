@@ -6,7 +6,14 @@ import { cn } from "@/lib/utils";
 
 interface IndustryBadgeProps {
   children: ReactNode;
-  category?: "healthcare" | "automotive" | "realestate" | "legal" | "homeservices" | "restaurant" | "default";
+  category?:
+    | "healthcare"
+    | "automotive"
+    | "realestate"
+    | "legal"
+    | "homeservices"
+    | "restaurant"
+    | "default";
   icon?: ReactNode;
   size?: "sm" | "md" | "lg";
   variant?: "solid" | "outline" | "glass";
@@ -25,57 +32,64 @@ export function IndustryBadge({
   size = "md",
   variant = "glass",
   pulse = false,
-  className = ""
+  className = "",
 }: IndustryBadgeProps) {
   // Color schemes for different industries
   const categoryColors = {
     healthcare: {
       solid: "bg-blue-500 text-white border-blue-600",
       outline: "bg-blue-500/10 text-blue-600 border-blue-500/30",
-      glass: "bg-blue-500/10 backdrop-blur-xl border-blue-500/20 text-blue-600 shadow-[0_4px_16px_rgba(59,130,246,0.15)]"
+      glass:
+        "bg-blue-500/10 backdrop-blur-xl border-blue-500/20 text-blue-600 shadow-[0_4px_16px_rgba(59,130,246,0.15)]",
     },
     automotive: {
       solid: "bg-red-500 text-white border-red-600",
       outline: "bg-red-500/10 text-red-600 border-red-500/30",
-      glass: "bg-red-500/10 backdrop-blur-xl border-red-500/20 text-red-600 shadow-[0_4px_16px_rgba(239,68,68,0.15)]"
+      glass:
+        "bg-red-500/10 backdrop-blur-xl border-red-500/20 text-red-600 shadow-[0_4px_16px_rgba(239,68,68,0.15)]",
     },
     realestate: {
       solid: "bg-green-500 text-white border-green-600",
       outline: "bg-green-500/10 text-green-600 border-green-500/30",
-      glass: "bg-green-500/10 backdrop-blur-xl border-green-500/20 text-green-600 shadow-[0_4px_16px_rgba(34,197,94,0.15)]"
+      glass:
+        "bg-green-500/10 backdrop-blur-xl border-green-500/20 text-green-600 shadow-[0_4px_16px_rgba(34,197,94,0.15)]",
     },
     legal: {
       solid: "bg-amber-500 text-white border-amber-600",
       outline: "bg-amber-500/10 text-amber-600 border-amber-500/30",
-      glass: "bg-amber-500/10 backdrop-blur-xl border-amber-500/20 text-amber-600 shadow-[0_4px_16px_rgba(245,158,11,0.15)]"
+      glass:
+        "bg-amber-500/10 backdrop-blur-xl border-amber-500/20 text-amber-600 shadow-[0_4px_16px_rgba(245,158,11,0.15)]",
     },
     homeservices: {
       solid: "bg-orange-500 text-white border-orange-600",
       outline: "bg-orange-500/10 text-orange-600 border-orange-500/30",
-      glass: "bg-orange-500/10 backdrop-blur-xl border-orange-500/20 text-orange-600 shadow-[0_4px_16px_rgba(249,115,22,0.15)]"
+      glass:
+        "bg-orange-500/10 backdrop-blur-xl border-orange-500/20 text-orange-600 shadow-[0_4px_16px_rgba(249,115,22,0.15)]",
     },
     restaurant: {
       solid: "bg-purple-500 text-white border-purple-600",
       outline: "bg-purple-500/10 text-purple-600 border-purple-500/30",
-      glass: "bg-purple-500/10 backdrop-blur-xl border-purple-500/20 text-purple-600 shadow-[0_4px_16px_rgba(168,85,247,0.15)]"
+      glass:
+        "bg-purple-500/10 backdrop-blur-xl border-purple-500/20 text-purple-600 shadow-[0_4px_16px_rgba(168,85,247,0.15)]",
     },
     default: {
       solid: "bg-blue-500 text-white border-blue-600",
       outline: "bg-blue-500/10 text-blue-500 border-blue-500/30",
-      glass: "bg-blue-500/10 backdrop-blur-xl border-blue-500/20 text-blue-500 shadow-lg shadow-blue-500/30"
-    }
+      glass:
+        "bg-blue-500/10 backdrop-blur-xl border-blue-500/20 text-blue-500 shadow-lg shadow-blue-500/30",
+    },
   };
 
   const sizeClasses = {
     sm: "px-2.5 py-1 text-xs rounded-lg gap-1",
     md: "px-3 py-1.5 text-sm rounded-lg gap-1.5",
-    lg: "px-4 py-2 text-base rounded-xl gap-2"
+    lg: "px-4 py-2 text-base rounded-xl gap-2",
   };
 
   const iconSizes = {
     sm: "w-3 h-3",
     md: "w-4 h-4",
-    lg: "w-5 h-5"
+    lg: "w-5 h-5",
   };
 
   return (

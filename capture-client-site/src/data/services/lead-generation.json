@@ -172,10 +172,6 @@
     }
   },
   "related_pages": {
-    "services": [
-      "google-ads",
-      "facebook-ads",
-      "voice-ai"
-    ]
+    "services": ["google-ads", "facebook-ads", "voice-ai"]
   }
 }

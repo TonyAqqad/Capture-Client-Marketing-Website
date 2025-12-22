@@ -17,31 +17,35 @@ const steps: Step[] = [
   {
     number: "01",
     title: "Book Your Strategy Call",
-    description: "We analyze your business, identify growth opportunities, and design a custom plan tailored to your goals.",
+    description:
+      "We analyze your business, identify growth opportunities, and design a custom plan tailored to your goals.",
     icon: "phone",
-    highlight: "Free 30-min consultation"
+    highlight: "Free 30-min consultation",
   },
   {
     number: "02",
     title: "We Build & Launch",
-    description: "Our team sets up your AI agents, configures campaigns, and integrates everything into one seamless platform.",
+    description:
+      "Our team sets up your AI agents, configures campaigns, and integrates everything into one seamless platform.",
     icon: "rocket",
-    highlight: "48-hour setup"
+    highlight: "48-hour setup",
   },
   {
     number: "03",
     title: "AI Captures Leads 24/7",
-    description: "Your AI voice agents answer every call, qualify leads, and book appointments while you focus on running your business.",
+    description:
+      "Your AI voice agents answer every call, qualify leads, and book appointments while you focus on running your business.",
     icon: "bot",
-    highlight: "Never miss a lead"
+    highlight: "Never miss a lead",
   },
   {
     number: "04",
     title: "Watch Your Business Grow",
-    description: "Track performance in real-time, see exactly where your leads come from, and scale what works.",
+    description:
+      "Track performance in real-time, see exactly where your leads come from, and scale what works.",
     icon: "growth",
-    highlight: "Real-time analytics"
-  }
+    highlight: "Real-time analytics",
+  },
 ];
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -58,14 +62,14 @@ export function HowItWorks() {
 
   useEffect(() => {
     const checkMobile = () => {
-      if (typeof window === 'undefined') return;
+      if (typeof window === "undefined") return;
       setIsMobile(window.innerWidth < 768);
     };
 
     checkMobile();
-    window.addEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
 
-    return () => window.removeEventListener('resize', checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   return (
@@ -88,19 +92,24 @@ export function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="max-w-3xl mb-16 sm:mb-20 lg:mb-24"
         >
-          <p className="text-xs font-medium tracking-[0.2em] uppercase text-[#00C9FF] mb-6" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+          <p
+            className="text-xs font-medium tracking-[0.2em] uppercase text-[#00C9FF] mb-6"
+            style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
+          >
             The Process
           </p>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl leading-[1.08] mb-6" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
-            <span className="font-[200] text-slate-900">Four steps to</span>
-            {' '}
+          <h2
+            className="text-4xl sm:text-5xl lg:text-6xl leading-[1.08] mb-6"
+            style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
+          >
+            <span className="font-[200] text-slate-900">Four steps to</span>{" "}
             <span className="font-[800] bg-gradient-to-r from-[#00C9FF] via-[#4A69E2] to-slate-900 bg-clip-text text-transparent block mt-2">
               automated growth
             </span>
           </h2>
           <p className="text-lg sm:text-xl text-slate-600 leading-[1.6] font-light">
-            From strategy call to live AI agents capturing leads around the clock.
-            Most businesses are fully operational within 48 hours.
+            From strategy call to live AI agents capturing leads around the clock. Most businesses
+            are fully operational within 48 hours.
           </p>
         </motion.div>
 
@@ -123,12 +132,7 @@ export function HowItWorks() {
         <div className="lg:hidden">
           <div className="space-y-6">
             {steps.map((step, index) => (
-              <MobileStepCard
-                key={step.number}
-                step={step}
-                index={index}
-                isInView={isInView}
-              />
+              <MobileStepCard key={step.number} step={step} index={index} isInView={isInView} />
             ))}
           </div>
         </div>
@@ -140,13 +144,16 @@ export function HowItWorks() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-16 sm:mt-20 lg:mt-24 text-center"
         >
-          <p className="text-slate-500 mb-6 text-lg font-light" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+          <p
+            className="text-slate-500 mb-6 text-lg font-light"
+            style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
+          >
             Ready to stop missing leads?
           </p>
           <a
             href="#contact"
             className="inline-flex items-center gap-3 text-base px-8 py-4 rounded-full bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] text-white font-medium hover:shadow-[0_0_30px_rgba(0,201,255,0.3)] transition-all duration-300"
-            style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+            style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
           >
             Book Your Strategy Call
             <ArrowRight className="w-5 h-5" />
@@ -174,7 +181,7 @@ function DesktopStepCard({ step, index, isInView, isLast }: StepCardProps) {
       transition={{
         duration: 0.5,
         delay: index * 0.12,
-        ease: [0.25, 0.1, 0.25, 1]
+        ease: [0.25, 0.1, 0.25, 1],
       }}
       className="relative group"
     >
@@ -192,7 +199,10 @@ function DesktopStepCard({ step, index, isInView, isLast }: StepCardProps) {
 
       {/* Step number - large, editorial */}
       <div className="flex items-center gap-4 mb-6">
-        <span className="text-5xl font-[800] text-slate-200" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+        <span
+          className="text-5xl font-[800] text-slate-200"
+          style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
+        >
           {step.number}
         </span>
         <div className="w-12 h-12 rounded-2xl backdrop-blur-xl bg-white flex items-center justify-center border border-slate-200 group-hover:border-[#00C9FF]/30 group-hover:bg-[#00C9FF]/[0.05] transition-all duration-300">
@@ -202,15 +212,19 @@ function DesktopStepCard({ step, index, isInView, isLast }: StepCardProps) {
 
       {/* Content */}
       <div>
-        <h3 className="text-xl font-[600] text-slate-900 mb-3 group-hover:text-[#00C9FF] transition-colors duration-300" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+        <h3
+          className="text-xl font-[600] text-slate-900 mb-3 group-hover:text-[#00C9FF] transition-colors duration-300"
+          style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
+        >
           {step.title}
         </h3>
-        <p className="text-slate-600 leading-[1.6] mb-4 text-sm font-light">
-          {step.description}
-        </p>
+        <p className="text-slate-600 leading-[1.6] mb-4 text-sm font-light">{step.description}</p>
 
         {/* Highlight badge */}
-        <span className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-[#00C9FF]/10 text-[#00C9FF] border border-[#00C9FF]/20" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+        <span
+          className="inline-flex items-center px-3 py-1.5 rounded-full text-xs font-medium bg-[#00C9FF]/10 text-[#00C9FF] border border-[#00C9FF]/20"
+          style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
+        >
           {step.highlight}
         </span>
       </div>
@@ -228,7 +242,7 @@ function MobileStepCard({ step, index, isInView }: StepCardProps) {
       transition={{
         duration: 0.4,
         delay: index * 0.1,
-        ease: [0.25, 0.1, 0.25, 1]
+        ease: [0.25, 0.1, 0.25, 1],
       }}
       className="backdrop-blur-xl bg-white rounded-2xl p-6 border border-slate-200"
     >
@@ -236,7 +250,10 @@ function MobileStepCard({ step, index, isInView }: StepCardProps) {
         {/* Number and Icon column */}
         <div className="flex-shrink-0">
           <div className="relative">
-            <span className="text-3xl font-[800] text-slate-200" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+            <span
+              className="text-3xl font-[800] text-slate-200"
+              style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
+            >
               {step.number}
             </span>
             <div className="absolute -bottom-1 -right-1 w-8 h-8 rounded-lg backdrop-blur-xl bg-white flex items-center justify-center border border-slate-200">
@@ -247,13 +264,17 @@ function MobileStepCard({ step, index, isInView }: StepCardProps) {
 
         {/* Content */}
         <div className="flex-1 min-w-0">
-          <h3 className="text-lg font-[600] text-slate-900 mb-2" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+          <h3
+            className="text-lg font-[600] text-slate-900 mb-2"
+            style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
+          >
             {step.title}
           </h3>
-          <p className="text-slate-600 text-sm leading-[1.6] mb-3 font-light">
-            {step.description}
-          </p>
-          <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-[#00C9FF]/10 text-[#00C9FF] border border-[#00C9FF]/20" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+          <p className="text-slate-600 text-sm leading-[1.6] mb-3 font-light">{step.description}</p>
+          <span
+            className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-[#00C9FF]/10 text-[#00C9FF] border border-[#00C9FF]/20"
+            style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
+          >
             {step.highlight}
           </span>
         </div>

@@ -14,8 +14,8 @@
 
 "use client";
 
-import { useState } from 'react';
-import { Mail } from 'lucide-react';
+import { useState } from "react";
+import { Mail } from "lucide-react";
 
 interface ObfuscatedEmailProps {
   /** Email address to obfuscate (e.g., "team@captureclient.com") */
@@ -37,7 +37,7 @@ interface ObfuscatedEmailProps {
  * Example: "team" -> "maet"
  */
 function reverseString(str: string): string {
-  return str.split('').reverse().join('');
+  return str.split("").reverse().join("");
 }
 
 /**
@@ -45,13 +45,13 @@ function reverseString(str: string): string {
  * Example: "team@captureclient.com" -> { user: "team", domain: "captureclient.com" }
  */
 function parseEmail(email: string): { user: string; domain: string } {
-  const [user, domain] = email.split('@');
+  const [user, domain] = email.split("@");
   return { user, domain };
 }
 
 export default function ObfuscatedEmail({
   email,
-  className = '',
+  className = "",
   asLink = true,
   showIcon = false,
   onClick,
@@ -93,7 +93,10 @@ export default function ObfuscatedEmail({
               <div className="absolute inset-0 bg-gradient-to-r from-[#4A69E2]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
               {showIcon && (
-                <Mail className="text-[#4A69E2] group-hover:text-[#00C9FF] w-5 h-5 transition-colors duration-300 relative z-10" aria-hidden="true" />
+                <Mail
+                  className="text-[#4A69E2] group-hover:text-[#00C9FF] w-5 h-5 transition-colors duration-300 relative z-10"
+                  aria-hidden="true"
+                />
               )}
               <span className="text-[#94A3B8] group-hover:text-[#00C9FF] font-body text-base sm:text-sm transition-colors duration-300 break-all relative z-10">
                 <span
@@ -106,9 +109,7 @@ export default function ObfuscatedEmail({
                 <span className="sr-only">{email}</span>
               </span>
               {copied && (
-                <span className="ml-2 text-xs text-green-500 animate-fade-in">
-                  Copied!
-                </span>
+                <span className="ml-2 text-xs text-green-500 animate-fade-in">Copied!</span>
               )}
             </>
           )}
@@ -139,7 +140,10 @@ export default function ObfuscatedEmail({
         title="Click to copy"
       >
         {showIcon && (
-          <Mail className="text-current mr-2 inline-block align-middle w-4 h-4" aria-hidden="true" />
+          <Mail
+            className="text-current mr-2 inline-block align-middle w-4 h-4"
+            aria-hidden="true"
+          />
         )}
         <span
           className="email-obfuscated inline-block"
@@ -149,11 +153,7 @@ export default function ObfuscatedEmail({
         />
         {/* Screen reader accessible text */}
         <span className="sr-only">{email}</span>
-        {copied && (
-          <span className="ml-2 text-xs text-green-500 animate-fade-in">
-            Copied!
-          </span>
-        )}
+        {copied && <span className="ml-2 text-xs text-green-500 animate-fade-in">Copied!</span>}
       </button>
       <style jsx>{`
         .email-obfuscated {
@@ -177,7 +177,7 @@ export default function ObfuscatedEmail({
  */
 export function ObfuscatedEmailText({
   email,
-  className = '',
+  className = "",
 }: {
   email: string;
   className?: string;

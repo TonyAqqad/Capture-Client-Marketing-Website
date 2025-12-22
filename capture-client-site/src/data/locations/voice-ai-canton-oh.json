@@ -11,13 +11,7 @@
     "state": "Ohio",
     "state_abbr": "OH",
     "slug": "canton-oh",
-    "nearby_areas": [
-      "Massillon",
-      "North Canton",
-      "Alliance",
-      "Louisville",
-      "Plain Township"
-    ],
+    "nearby_areas": ["Massillon", "North Canton", "Alliance", "Louisville", "Plain Township"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -187,9 +181,6 @@
       "voice-ai-north-canton-oh",
       "voice-ai-alliance-oh"
     ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "packages": ["starter-package", "growth-package"]
   }
 }

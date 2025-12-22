@@ -11,13 +11,7 @@
     "state": "Ohio",
     "state_abbr": "OH",
     "slug": "dayton-oh",
-    "nearby_areas": [
-      "Kettering",
-      "Beavercreek",
-      "Centerville",
-      "Huber Heights",
-      "Fairborn"
-    ],
+    "nearby_areas": ["Kettering", "Beavercreek", "Centerville", "Huber Heights", "Fairborn"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -187,9 +181,6 @@
       "voice-ai-beavercreek-oh",
       "voice-ai-centerville-oh"
     ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "packages": ["starter-package", "growth-package"]
   }
 }

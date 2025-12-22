@@ -30,12 +30,12 @@ export function FeatureGrid({
   columns = 3,
   variant = "cards",
   className = "",
-  staggerDelay = 0.1
+  staggerDelay = 0.1,
 }: FeatureGridProps) {
   const gridColumns = {
     2: "grid-cols-1 md:grid-cols-2",
     3: "grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
-    4: "grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+    4: "grid-cols-1 md:grid-cols-2 lg:grid-cols-4",
   };
 
   const containerVariants = {
@@ -44,9 +44,9 @@ export function FeatureGrid({
       opacity: 1,
       transition: {
         staggerChildren: staggerDelay,
-        delayChildren: 0.1
-      }
-    }
+        delayChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
@@ -56,9 +56,9 @@ export function FeatureGrid({
       y: 0,
       transition: {
         duration: 0.5,
-        ease: [0.25, 0.1, 0.25, 1] as const
-      }
-    }
+        ease: [0.25, 0.1, 0.25, 1] as const,
+      },
+    },
   };
 
   if (variant === "cards") {
@@ -72,12 +72,7 @@ export function FeatureGrid({
       >
         {features.map((feature, index) => (
           <motion.div key={index} variants={itemVariants}>
-            <PremiumGlassCard
-              variant="premium"
-              hover={true}
-              glowColor="blue"
-              className="h-full"
-            >
+            <PremiumGlassCard variant="premium" hover={true} glowColor="blue" className="h-full">
               <div className="p-6 space-y-4">
                 {/* Icon */}
                 {feature.icon && (
@@ -94,14 +89,10 @@ export function FeatureGrid({
                 )}
 
                 {/* Title */}
-                <h3 className="font-display text-xl font-bold text-slate-900">
-                  {feature.title}
-                </h3>
+                <h3 className="font-display text-xl font-bold text-slate-900">{feature.title}</h3>
 
                 {/* Description */}
-                <p className="text-slate-600 leading-relaxed">
-                  {feature.description}
-                </p>
+                <p className="text-slate-600 leading-relaxed">{feature.description}</p>
               </div>
             </PremiumGlassCard>
           </motion.div>
@@ -134,12 +125,8 @@ export function FeatureGrid({
 
             {/* Content */}
             <div className="flex-1 space-y-1">
-              <h3 className="font-display text-lg font-bold text-slate-900">
-                {feature.title}
-              </h3>
-              <p className="text-sm text-slate-600 leading-relaxed">
-                {feature.description}
-              </p>
+              <h3 className="font-display text-lg font-bold text-slate-900">{feature.title}</h3>
+              <p className="text-sm text-slate-600 leading-relaxed">{feature.description}</p>
             </div>
           </motion.div>
         ))}
@@ -157,27 +144,15 @@ export function FeatureGrid({
       variants={containerVariants}
     >
       {features.map((feature, index) => (
-        <motion.div
-          key={index}
-          variants={itemVariants}
-          className="space-y-3"
-        >
+        <motion.div key={index} variants={itemVariants} className="space-y-3">
           {/* Icon */}
-          {feature.icon && (
-            <div className="w-8 h-8 text-blue-500">
-              {feature.icon}
-            </div>
-          )}
+          {feature.icon && <div className="w-8 h-8 text-blue-500">{feature.icon}</div>}
 
           {/* Title */}
-          <h3 className="font-display text-lg font-bold text-slate-900">
-            {feature.title}
-          </h3>
+          <h3 className="font-display text-lg font-bold text-slate-900">{feature.title}</h3>
 
           {/* Description */}
-          <p className="text-slate-600 leading-relaxed">
-            {feature.description}
-          </p>
+          <p className="text-slate-600 leading-relaxed">{feature.description}</p>
         </motion.div>
       ))}
     </motion.div>

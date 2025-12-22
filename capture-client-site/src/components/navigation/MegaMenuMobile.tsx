@@ -12,10 +12,7 @@ interface MegaMenuMobileProps {
   onClose: () => void;
 }
 
-export default function MegaMenuMobile({
-  isOpen,
-  onClose,
-}: MegaMenuMobileProps) {
+export default function MegaMenuMobile({ isOpen, onClose }: MegaMenuMobileProps) {
   // Auto-expand first section by default so content is visible
   const [expandedSection, setExpandedSection] = useState<string | null>("Solutions");
 
@@ -52,7 +49,7 @@ export default function MegaMenuMobile({
             exit={{ x: "100%" }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
             className="fixed top-0 right-0 bottom-0 w-full sm:w-[380px] bg-white border-l border-slate-200 z-[105] flex flex-col"
-            style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+            style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
           >
             {/* Header with close button */}
             <div className="relative bg-white border-b border-slate-200 px-6 py-5 flex-shrink-0">
@@ -134,9 +131,7 @@ export default function MegaMenuMobile({
                       >
                         <div className="border-t border-slate-200 bg-slate-50 p-3 space-y-1">
                           {section.items.map((item, itemIndex) => {
-                            const IconComponent = item.icon
-                              ? navIcons[item.icon]
-                              : null;
+                            const IconComponent = item.icon ? navIcons[item.icon] : null;
 
                             return (
                               <motion.div

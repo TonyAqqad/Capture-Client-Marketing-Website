@@ -11,21 +11,14 @@
     "state": "GA",
     "state_full": "Georgia",
     "slug": "roswell-ga",
-    "nearby_areas": [
-      "Alpharetta",
-      "Sandy Springs",
-      "Milton",
-      "Johns Creek"
-    ],
+    "nearby_areas": ["Alpharetta", "Sandy Springs", "Milton", "Johns Creek"],
     "service_area_radius": "20 miles"
   },
   "seo": {
     "page_title": "Voice AI Agency in Roswell, GA | Capture Client",
     "meta_description": "Voice AI for Roswell businesses on Canton Street, East Roswell, and Historic District. AI receptionist for North Fulton. Call 865-346-6111!",
     "h1_heading": "Voice AI Agency in Roswell, Georgia",
-    "keywords": [
-      "voice ai roswell ga"
-    ],
+    "keywords": ["voice ai roswell ga"],
     "canonical_url": "/voice-ai-roswell-ga"
   },
   "hero": {
@@ -102,13 +95,7 @@
   "service_area": {
     "heading": "Serving Roswell and North Fulton",
     "description": "Voice AI for historic and modern Roswell, including Canton Street, East Roswell, and Crabapple.",
-    "areas_list": [
-      "Roswell",
-      "Alpharetta",
-      "Sandy Springs",
-      "Milton",
-      "Johns Creek"
-    ]
+    "areas_list": ["Roswell", "Alpharetta", "Sandy Springs", "Milton", "Johns Creek"]
   },
   "testimonials": [
     {
@@ -175,15 +162,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "atlanta-ga",
-      "alpharetta-ga",
-      "sandy-springs-ga",
-      "marietta-ga"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "nearby_locations": ["atlanta-ga", "alpharetta-ga", "sandy-springs-ga", "marietta-ga"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

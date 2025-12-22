@@ -11,13 +11,7 @@
     "state": "Texas",
     "state_abbr": "TX",
     "slug": "el-paso-tx",
-    "nearby_areas": [
-      "Socorro",
-      "Horizon City",
-      "Fort Bliss",
-      "Sunland Park",
-      "Anthony"
-    ],
+    "nearby_areas": ["Socorro", "Horizon City", "Fort Bliss", "Sunland Park", "Anthony"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -187,9 +181,6 @@
       "voice-ai-horizon-city-tx",
       "voice-ai-las-cruces-nm"
     ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "packages": ["starter-package", "growth-package"]
   }
 }

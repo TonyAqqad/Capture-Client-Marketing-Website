@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 interface UseTypingEffectOptions {
   text: string;
@@ -11,11 +11,11 @@ export function useTypingEffect({
   speed = 50,
   isActive = true,
 }: UseTypingEffectOptions): string {
-  const [displayedText, setDisplayedText] = useState('');
+  const [displayedText, setDisplayedText] = useState("");
 
   useEffect(() => {
     if (!text) {
-      setDisplayedText('');
+      setDisplayedText("");
       return;
     }
 
@@ -25,7 +25,7 @@ export function useTypingEffect({
     }
 
     // Reset to empty when text changes
-    setDisplayedText('');
+    setDisplayedText("");
     let currentIndex = 0;
 
     const intervalId = setInterval(() => {

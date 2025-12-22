@@ -11,13 +11,7 @@
     "state_abbr": "VA",
     "state_full": "Virginia",
     "slug": "roanoke-va",
-    "nearby_areas": [
-      "Salem",
-      "Cave Spring",
-      "Vinton",
-      "Hollins",
-      "Christiansburg"
-    ],
+    "nearby_areas": ["Salem", "Cave Spring", "Vinton", "Hollins", "Christiansburg"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -153,17 +147,8 @@
     }
   },
   "related_pages": {
-    "other_services_in_location": [
-      "google-ads",
-      "facebook-ads"
-    ],
-    "nearby_locations": [
-      "lynchburg-va",
-      "richmond-va"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "other_services_in_location": ["google-ads", "facebook-ads"],
+    "nearby_locations": ["lynchburg-va", "richmond-va"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

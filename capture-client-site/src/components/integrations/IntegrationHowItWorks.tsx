@@ -42,10 +42,7 @@ export function IntegrationHowItWorks({
   const gradient = categoryGradients[category] || categoryGradients.default;
 
   return (
-    <section
-      ref={containerRef}
-      className="relative py-16 sm:py-20 lg:py-24 overflow-hidden"
-    >
+    <section ref={containerRef} className="relative py-16 sm:py-20 lg:py-24 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white" />
@@ -158,7 +155,9 @@ export function IntegrationHowItWorks({
                     </div>
 
                     {/* Step Number (center) */}
-                    <div className={`flex ${isLeft ? "justify-start" : "justify-end direction-ltr"}`}>
+                    <div
+                      className={`flex ${isLeft ? "justify-start" : "justify-end direction-ltr"}`}
+                    >
                       <motion.div
                         initial={{ scale: 0 }}
                         whileInView={{ scale: 1 }}
@@ -209,9 +208,7 @@ export function IntegrationHowItWorks({
                       className="relative flex-shrink-0 w-16 h-16 rounded-full flex items-center justify-center shadow-xl"
                       style={{ background: gradient }}
                     >
-                      <span className="text-2xl font-bold text-white">
-                        {step.step}
-                      </span>
+                      <span className="text-2xl font-bold text-white">{step.step}</span>
                     </motion.div>
 
                     {/* Step Card */}
@@ -240,9 +237,7 @@ export function IntegrationHowItWorks({
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-16 sm:mt-20 text-center"
         >
-          <p className="text-slate-600 mb-4">
-            Ready to connect {integrationName}?
-          </p>
+          <p className="text-slate-600 mb-4">Ready to connect {integrationName}?</p>
           <a
             href="/contact"
             className="inline-flex items-center gap-2 px-6 py-3 bg-slate-100 hover:bg-slate-200 backdrop-blur-sm rounded-xl border border-slate-200 hover:border-accent/50 text-slate-900 font-semibold transition-all duration-300 hover:shadow-glow"

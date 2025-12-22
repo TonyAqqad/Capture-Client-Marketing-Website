@@ -11,13 +11,7 @@
     "state": "Texas",
     "state_abbr": "TX",
     "slug": "san-antonio-tx",
-    "nearby_areas": [
-      "New Braunfels",
-      "Boerne",
-      "Schertz",
-      "Universal City",
-      "Helotes"
-    ],
+    "nearby_areas": ["New Braunfels", "Boerne", "Schertz", "Universal City", "Helotes"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -182,14 +176,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "voice-ai-new-braunfels-tx",
-      "voice-ai-boerne-tx",
-      "voice-ai-schertz-tx"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "nearby_locations": ["voice-ai-new-braunfels-tx", "voice-ai-boerne-tx", "voice-ai-schertz-tx"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

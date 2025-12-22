@@ -11,13 +11,7 @@
     "state": "Florida",
     "state_abbr": "FL",
     "slug": "tampa-fl",
-    "nearby_areas": [
-      "St. Petersburg",
-      "Clearwater",
-      "Brandon",
-      "Temple Terrace",
-      "Plant City"
-    ],
+    "nearby_areas": ["St. Petersburg", "Clearwater", "Brandon", "Temple Terrace", "Plant City"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -187,9 +181,6 @@
       "voice-ai-clearwater-fl",
       "voice-ai-brandon-fl"
     ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "packages": ["starter-package", "growth-package"]
   }
 }

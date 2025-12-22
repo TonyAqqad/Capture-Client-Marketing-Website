@@ -11,12 +11,7 @@
     "state_abbr": "VA",
     "state_full": "Virginia",
     "slug": "alexandria-va",
-    "nearby_areas": [
-      "Arlington",
-      "Old Town Alexandria",
-      "Del Ray",
-      "Eisenhower Valley"
-    ],
+    "nearby_areas": ["Arlington", "Old Town Alexandria", "Del Ray", "Eisenhower Valley"],
     "service_area_radius": "25 miles"
   },
   "seo": {
@@ -203,19 +198,8 @@
     "urgency_text": "Limited spots available for Alexandria businesses this month"
   },
   "related_pages": {
-    "other_services_in_location": [
-      "google-ads",
-      "facebook-ads"
-    ],
-    "nearby_locations": [
-      "arlington",
-      "richmond",
-      "norfolk"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package",
-      "enterprise-package"
-    ]
+    "other_services_in_location": ["google-ads", "facebook-ads"],
+    "nearby_locations": ["arlington", "richmond", "norfolk"],
+    "packages": ["starter-package", "growth-package", "enterprise-package"]
   }
 }

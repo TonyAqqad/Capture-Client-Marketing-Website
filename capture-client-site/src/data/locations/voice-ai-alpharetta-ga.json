@@ -11,22 +11,14 @@
     "state": "GA",
     "state_full": "Georgia",
     "slug": "alpharetta-ga",
-    "nearby_areas": [
-      "Johns Creek",
-      "Roswell",
-      "Milton",
-      "Cumming"
-    ],
+    "nearby_areas": ["Johns Creek", "Roswell", "Milton", "Cumming"],
     "service_area_radius": "20 miles"
   },
   "seo": {
     "page_title": "Voice AI Agency in Alpharetta, GA | Capture Client",
     "meta_description": "Voice AI for Alpharetta tech businesses at Avalon, Technology Park, and Windward Parkway. Automate calls for the Technology City of the South. Call 865-346-6111!",
     "h1_heading": "Voice AI Agency in Alpharetta, Georgia",
-    "keywords": [
-      "voice ai alpharetta ga",
-      "ai receptionist alpharetta"
-    ],
+    "keywords": ["voice ai alpharetta ga", "ai receptionist alpharetta"],
     "canonical_url": "/voice-ai-alpharetta-ga"
   },
   "hero": {
@@ -108,14 +100,7 @@
   "service_area": {
     "heading": "Serving Alpharetta and North Fulton",
     "description": "Voice AI for Alpharetta tech corridor, including Avalon, Technology Park, Windward, and Alpha Loop.",
-    "areas_list": [
-      "Alpharetta",
-      "Johns Creek",
-      "Milton",
-      "Roswell",
-      "Cumming",
-      "Windward"
-    ]
+    "areas_list": ["Alpharetta", "Johns Creek", "Milton", "Roswell", "Cumming", "Windward"]
   },
   "testimonials": [
     {
@@ -182,14 +167,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "atlanta-ga",
-      "roswell-ga",
-      "sandy-springs-ga"
-    ],
-    "packages": [
-      "growth-package",
-      "enterprise-package"
-    ]
+    "nearby_locations": ["atlanta-ga", "roswell-ga", "sandy-springs-ga"],
+    "packages": ["growth-package", "enterprise-package"]
   }
 }

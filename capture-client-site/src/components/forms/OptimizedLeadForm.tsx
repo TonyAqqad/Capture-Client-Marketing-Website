@@ -3,7 +3,19 @@
 import { useState } from "react";
 import Link from "next/link";
 import { trackFormStart, trackFormSubmission, trackPhoneClick } from "@/lib/analytics";
-import { CheckCircle, Phone, Lock, ArrowRight, Rocket, ArrowLeft, Shield, Clock, Headset, ChevronDown, AlertCircle } from "lucide-react";
+import {
+  CheckCircle,
+  Phone,
+  Lock,
+  ArrowRight,
+  Rocket,
+  ArrowLeft,
+  Shield,
+  Clock,
+  Headset,
+  ChevronDown,
+  AlertCircle,
+} from "lucide-react";
 import {
   validateName,
   validatePhone,
@@ -135,16 +147,16 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
             <CheckCircle className="w-16 h-16 text-blue-600 relative z-10" />
           </div>
 
-          <h3 className="text-3xl font-black text-slate-900 mb-3">
-            We Got Your Request!
-          </h3>
+          <h3 className="text-3xl font-black text-slate-900 mb-3">We Got Your Request!</h3>
           <p className="text-lg text-slate-700 mb-4">
-            A growth specialist will call you within <span className="text-blue-600 font-bold">15 minutes</span>.
+            A growth specialist will call you within{" "}
+            <span className="text-blue-600 font-bold">15 minutes</span>.
           </p>
           <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 rounded-full px-5 py-2.5">
             <Phone className="w-5 h-5 text-blue-600" />
             <p className="text-sm text-slate-600">
-              Check your phone: <span className="text-blue-600 font-bold text-base">{formData.phone}</span>
+              Check your phone:{" "}
+              <span className="text-blue-600 font-bold text-base">{formData.phone}</span>
             </p>
           </div>
         </div>
@@ -221,8 +233,10 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                              touch-manipulation
                              ${errors.name && touched.name ? "border-red-400 focus:border-red-500" : "border-slate-200 focus:border-blue-500"}`}
                 />
-                <div className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent to-transparent transition-opacity duration-300
-                                ${errors.name && touched.name ? "via-red-500 opacity-100" : "via-blue-500 opacity-0 group-focus-within:opacity-100"}`} />
+                <div
+                  className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent to-transparent transition-opacity duration-300
+                                ${errors.name && touched.name ? "via-red-500 opacity-100" : "via-blue-500 opacity-0 group-focus-within:opacity-100"}`}
+                />
               </div>
               {errors.name && touched.name && (
                 <div className="flex items-center gap-1.5 mt-2 text-sm text-red-600">
@@ -267,8 +281,10 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                              touch-manipulation
                              ${errors.phone && touched.phone ? "border-red-400 focus:border-red-500" : "border-slate-200 focus:border-blue-500"}`}
                 />
-                <div className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent to-transparent transition-opacity duration-300
-                                ${errors.phone && touched.phone ? "via-red-500 opacity-100" : "via-blue-500 opacity-0 group-focus-within:opacity-100"}`} />
+                <div
+                  className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent to-transparent transition-opacity duration-300
+                                ${errors.phone && touched.phone ? "via-red-500 opacity-100" : "via-blue-500 opacity-0 group-focus-within:opacity-100"}`}
+                />
               </div>
               {errors.phone && touched.phone && (
                 <div className="flex items-center gap-1.5 mt-2 text-sm text-red-600">
@@ -327,8 +343,8 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                 />
                 <span className="text-sm text-slate-600 leading-relaxed">
                   I agree to receive text messages from Capture Client at the phone number provided.
-                  Message frequency varies. Message and data rates may apply.
-                  Reply STOP to unsubscribe.{" "}
+                  Message frequency varies. Message and data rates may apply. Reply STOP to
+                  unsubscribe.{" "}
                   <Link href="/privacy-policy" className="text-blue-600 hover:underline">
                     Privacy Policy
                   </Link>{" "}

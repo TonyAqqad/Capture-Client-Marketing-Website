@@ -1,44 +1,47 @@
-import type { Metadata } from 'next';
-import RestaurantsPageClient from './RestaurantsPageClient';
+import type { Metadata } from "next";
+import RestaurantsPageClient from "./RestaurantsPageClient";
 
 // SEO Metadata
 export const metadata: Metadata = {
   title: "AI Phone Ordering for Restaurants | Capture Client",
-  description: "Stop losing 23% of phone orders. AI voice ordering and reservations for restaurants. Toast, Square, OpenTable integration. 760% ROI, 90-day payback.",
+  description:
+    "Stop losing 23% of phone orders. AI voice ordering and reservations for restaurants. Toast, Square, OpenTable integration. 760% ROI, 90-day payback.",
   keywords: [
-    'restaurant phone ordering AI',
-    'AI voice ordering system',
-    'restaurant reservation automation',
-    'Toast POS integration',
-    'Square restaurant integration',
-    'OpenTable AI booking',
-    'phone order automation',
-    'restaurant call handling',
-    'missed restaurant orders',
-    'AI restaurant receptionist'
+    "restaurant phone ordering AI",
+    "AI voice ordering system",
+    "restaurant reservation automation",
+    "Toast POS integration",
+    "Square restaurant integration",
+    "OpenTable AI booking",
+    "phone order automation",
+    "restaurant call handling",
+    "missed restaurant orders",
+    "AI restaurant receptionist",
   ],
   openGraph: {
     title: "AI Phone Ordering for Restaurants | Capture Client",
-    description: "Stop losing 23% of phone orders during rush. AI handles ordering, reservations, and catering. Toast, Square, OpenTable integration. 760% ROI proven.",
-    url: 'https://captureclient.com/industries/restaurants',
-    siteName: 'Capture Client',
-    type: 'website',
+    description:
+      "Stop losing 23% of phone orders during rush. AI handles ordering, reservations, and catering. Toast, Square, OpenTable integration. 760% ROI proven.",
+    url: "https://captureclient.com/industries/restaurants",
+    siteName: "Capture Client",
+    type: "website",
     images: [
       {
-        url: 'https://captureclient.com/og-image.png',
+        url: "https://captureclient.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: 'Capture Client - AI Phone Ordering for Restaurants',
+        alt: "Capture Client - AI Phone Ordering for Restaurants",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'AI Phone Ordering for Restaurants | Capture Client',
-    description: 'Stop losing 23% of phone orders. AI voice ordering with Toast, Square, OpenTable integration. 760% ROI proven.',
+    card: "summary_large_image",
+    title: "AI Phone Ordering for Restaurants | Capture Client",
+    description:
+      "Stop losing 23% of phone orders. AI voice ordering with Toast, Square, OpenTable integration. 760% ROI proven.",
   },
   alternates: {
-    canonical: 'https://captureclient.com/industries/restaurants',
+    canonical: "https://captureclient.com/industries/restaurants",
   },
   robots: {
     index: true,
@@ -46,96 +49,97 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
 };
 
 // JSON-LD Schemas
 const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  '@id': 'https://captureclient.com/industries/restaurants#service',
-  name: 'AI Phone Ordering for Restaurants',
-  serviceType: 'Restaurant Automation',
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://captureclient.com/industries/restaurants#service",
+  name: "AI Phone Ordering for Restaurants",
+  serviceType: "Restaurant Automation",
   provider: {
-    '@type': 'Organization',
-    name: 'Capture Client',
-    url: 'https://captureclient.com',
-    telephone: '865-346-6111',
+    "@type": "Organization",
+    name: "Capture Client",
+    url: "https://captureclient.com",
+    telephone: "865-346-6111",
   },
   areaServed: {
-    '@type': 'Country',
-    name: 'United States',
+    "@type": "Country",
+    name: "United States",
   },
-  description: 'AI voice ordering and reservation system for restaurants. Integrates with Toast, Square, and OpenTable. Never miss a phone order again.',
+  description:
+    "AI voice ordering and reservation system for restaurants. Integrates with Toast, Square, and OpenTable. Never miss a phone order again.",
   offers: {
-    '@type': 'Offer',
-    price: '997',
-    priceCurrency: 'USD',
+    "@type": "Offer",
+    price: "997",
+    priceCurrency: "USD",
     priceSpecification: {
-      '@type': 'UnitPriceSpecification',
-      price: '997',
-      priceCurrency: 'USD',
-      unitText: 'MONTH',
+      "@type": "UnitPriceSpecification",
+      price: "997",
+      priceCurrency: "USD",
+      unitText: "MONTH",
     },
   },
 };
 
 const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
   mainEntity: [
     {
-      '@type': 'Question',
-      name: 'How much do restaurants lose to missed phone orders?',
+      "@type": "Question",
+      name: "How much do restaurants lose to missed phone orders?",
       acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'On average, restaurants lose 23% of phone orders during peak hours when staff are too busy to answer. This can represent $50,000+ in lost revenue annually for a single location.',
+        "@type": "Answer",
+        text: "On average, restaurants lose 23% of phone orders during peak hours when staff are too busy to answer. This can represent $50,000+ in lost revenue annually for a single location.",
       },
     },
     {
-      '@type': 'Question',
-      name: 'Does the AI integrate with Toast POS?',
+      "@type": "Question",
+      name: "Does the AI integrate with Toast POS?",
       acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes! Our AI voice ordering system integrates seamlessly with Toast, Square, OpenTable, Resy, and other popular restaurant management platforms. Orders flow directly into your POS system.',
+        "@type": "Answer",
+        text: "Yes! Our AI voice ordering system integrates seamlessly with Toast, Square, OpenTable, Resy, and other popular restaurant management platforms. Orders flow directly into your POS system.",
       },
     },
     {
-      '@type': 'Question',
-      name: 'Can the AI handle complex menu modifications?',
+      "@type": "Question",
+      name: "Can the AI handle complex menu modifications?",
       acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Absolutely. Our AI is trained on your specific menu and can handle modifications, substitutions, allergies, and special requests just like your best staff member.',
+        "@type": "Answer",
+        text: "Absolutely. Our AI is trained on your specific menu and can handle modifications, substitutions, allergies, and special requests just like your best staff member.",
       },
     },
   ],
 };
 
 const breadcrumbSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'BreadcrumbList',
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
   itemListElement: [
     {
-      '@type': 'ListItem',
+      "@type": "ListItem",
       position: 1,
-      name: 'Home',
-      item: 'https://captureclient.com',
+      name: "Home",
+      item: "https://captureclient.com",
     },
     {
-      '@type': 'ListItem',
+      "@type": "ListItem",
       position: 2,
-      name: 'Who We Serve',
-      item: 'https://captureclient.com/who-we-serve',
+      name: "Who We Serve",
+      item: "https://captureclient.com/who-we-serve",
     },
     {
-      '@type': 'ListItem',
+      "@type": "ListItem",
       position: 3,
-      name: 'Restaurants',
-      item: 'https://captureclient.com/industries/restaurants',
+      name: "Restaurants",
+      item: "https://captureclient.com/industries/restaurants",
     },
   ],
 };

@@ -22,10 +22,7 @@ interface IntegrationRelatedProps {
   categoryName: string;
 }
 
-export function IntegrationRelated({
-  integrations,
-  categoryName,
-}: IntegrationRelatedProps) {
+export function IntegrationRelated({ integrations, categoryName }: IntegrationRelatedProps) {
   const [isPaused, setIsPaused] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -34,11 +31,7 @@ export function IntegrationRelated({
   if (integrations.length === 0) return null;
 
   // Duplicate integrations for seamless infinite loop
-  const duplicatedIntegrations = [
-    ...integrations,
-    ...integrations,
-    ...integrations,
-  ];
+  const duplicatedIntegrations = [...integrations, ...integrations, ...integrations];
 
   // Calculate total width for animation
   const cardWidth = 280; // Base card width

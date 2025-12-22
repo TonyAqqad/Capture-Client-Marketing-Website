@@ -11,28 +11,14 @@
     "keyword_slug": "voice-ai-appointment-scheduling"
   },
   "industry_focus": {
-    "industries": [
-      "Healthcare",
-      "Salons",
-      "Consulting",
-      "Legal",
-      "Home Services"
-    ],
-    "business_types": [
-      "Healthcare companies",
-      "Salons companies",
-      "Consulting companies"
-    ]
+    "industries": ["Healthcare", "Salons", "Consulting", "Legal", "Home Services"],
+    "business_types": ["Healthcare companies", "Salons companies", "Consulting companies"]
   },
   "seo": {
     "page_title": "Voice AI Appointment Scheduling | Book While You Sleep",
     "meta_description": "Voice AI appointment scheduling that books customers 24/7. No more phone tag or missed booking opportunities. Integrates with your calendar.",
     "h1_heading": "Voice AI Appointment Scheduling System",
-    "keywords": [
-      "voice ai appointment scheduling",
-      "capture client",
-      "automation"
-    ]
+    "keywords": ["voice ai appointment scheduling", "capture client", "automation"]
   },
   "hero": {
     "headline": "Your Calendar Fills Automatically",
@@ -114,13 +100,7 @@
   "nationwide_coverage": {
     "heading": "Serving Businesses Nationwide",
     "description": "We work with businesses across all 50 states from small local operations to multi-location enterprises.",
-    "regions_highlighted": [
-      "East Coast",
-      "West Coast",
-      "Midwest",
-      "South",
-      "Southwest"
-    ]
+    "regions_highlighted": ["East Coast", "West Coast", "Midwest", "South", "Southwest"]
   },
   "testimonials": [
     {
@@ -198,13 +178,7 @@
     "urgency_text": "Limited slots available for new clients"
   },
   "related_pages": {
-    "related_national_keywords": [
-      "voice-ai-small-business",
-      "lead-generation-agency"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "related_national_keywords": ["voice-ai-small-business", "lead-generation-agency"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

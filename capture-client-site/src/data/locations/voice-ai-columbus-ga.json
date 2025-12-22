@@ -12,13 +12,7 @@
     "state_abbr": "GA",
     "state_full": "Georgia",
     "slug": "columbus-ga",
-    "nearby_areas": [
-      "Phenix City",
-      "Fort Moore",
-      "Midland",
-      "Harris County",
-      "Fortson"
-    ],
+    "nearby_areas": ["Phenix City", "Fort Moore", "Midland", "Harris County", "Fortson"],
     "service_area_radius": "25 miles"
   },
   "seo": {
@@ -213,19 +207,8 @@
     "urgency_text": "Free consultation for Columbus businesses—schedule today"
   },
   "related_pages": {
-    "other_services_in_location": [
-      "google-ads-columbus-ga",
-      "facebook-ads-columbus-ga"
-    ],
-    "nearby_locations": [
-      "atlanta-ga",
-      "macon-ga",
-      "phenix-city-al"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package",
-      "enterprise-package"
-    ]
+    "other_services_in_location": ["google-ads-columbus-ga", "facebook-ads-columbus-ga"],
+    "nearby_locations": ["atlanta-ga", "macon-ga", "phenix-city-al"],
+    "packages": ["starter-package", "growth-package", "enterprise-package"]
   }
 }

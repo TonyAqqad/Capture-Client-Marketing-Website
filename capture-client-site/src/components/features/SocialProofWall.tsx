@@ -186,9 +186,15 @@ export default function SocialProofWall() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
             >
-              {item.type === "review" && <ReviewCard content={item.content as { [key: string]: string | number }} />}
-              {item.type === "metric" && <MetricCard content={item.content as { [key: string]: string | number }} />}
-              {item.type === "video" && <VideoCard content={item.content as { [key: string]: string | number }} />}
+              {item.type === "review" && (
+                <ReviewCard content={item.content as { [key: string]: string | number }} />
+              )}
+              {item.type === "metric" && (
+                <MetricCard content={item.content as { [key: string]: string | number }} />
+              )}
+              {item.type === "video" && (
+                <VideoCard content={item.content as { [key: string]: string | number }} />
+              )}
               {item.type === "badge" && <BadgeCard content={item.content} />}
             </motion.div>
           ))}
@@ -285,7 +291,11 @@ function VideoCard({ content }: { content: { [key: string]: string | number } })
   );
 }
 
-function BadgeCard({ content }: { content: { [key: string]: string | number | React.ComponentType<{ className?: string }> } }) {
+function BadgeCard({
+  content,
+}: {
+  content: { [key: string]: string | number | React.ComponentType<{ className?: string }> };
+}) {
   const IconComponent = content.icon as React.ComponentType<{ className?: string }>;
 
   return (

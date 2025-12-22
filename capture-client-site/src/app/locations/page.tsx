@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "voice ai kentucky",
     "voice ai virginia",
     "local marketing agency",
-    "ai voice agents near me"
+    "ai voice agents near me",
   ],
   openGraph: {
     title: "Service Locations | Voice AI & Marketing | Capture Client",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
         url: "https://captureclient.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Capture Client Service Locations"
-      }
-    ]
+        alt: "Capture Client Service Locations",
+      },
+    ],
   },
   alternates: {
     canonical: "https://captureclient.com/locations",
@@ -46,7 +46,8 @@ export default async function LocationsPage() {
   // Generate CollectionPage schema for locations
   const collectionSchema = generateCollectionPageSchema({
     name: "Voice AI & Marketing Service Locations",
-    description: "Serving businesses across Tennessee, Georgia, North Carolina, Kentucky, and Virginia with Voice AI and marketing services.",
+    description:
+      "Serving businesses across Tennessee, Georgia, North Carolina, Kentucky, and Virginia with Voice AI and marketing services.",
     url: `${SITE_CONFIG.url}/locations`,
     items: locations.map((loc) => ({
       name: `${loc.location.city}, ${loc.location.state_abbr}`,
@@ -138,8 +139,8 @@ export default async function LocationsPage() {
               Locations We Serve
             </h1>
             <p className="text-base sm:text-lg lg:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed px-4">
-              Bringing Voice AI and marketing automation to businesses across the Southeast.
-              Local expertise, cutting-edge technology.
+              Bringing Voice AI and marketing automation to businesses across the Southeast. Local
+              expertise, cutting-edge technology.
             </p>
           </div>
         </div>
@@ -174,7 +175,7 @@ export default async function LocationsPage() {
                     href={`/locations/${location.page_id}`}
                     className="group block h-full"
                     style={{
-                      animationDelay: `${index * 50}ms`
+                      animationDelay: `${index * 50}ms`,
                     }}
                   >
                     {/* Glass Card with Layered Frame Effect */}
@@ -223,17 +224,18 @@ export default async function LocationsPage() {
                           )}
 
                           {/* Nearby Areas */}
-                          {location.location.nearby_areas && location.location.nearby_areas.length > 0 && (
-                            <div className="mb-5">
-                              <p className="text-xs font-bold text-blue-600/70 uppercase tracking-wider mb-2">
-                                Also Serving:
-                              </p>
-                              <p className="text-sm text-slate-600 line-clamp-2 leading-relaxed">
-                                {location.location.nearby_areas.slice(0, 3).join(", ")}
-                                {location.location.nearby_areas.length > 3 && "..."}
-                              </p>
-                            </div>
-                          )}
+                          {location.location.nearby_areas &&
+                            location.location.nearby_areas.length > 0 && (
+                              <div className="mb-5">
+                                <p className="text-xs font-bold text-blue-600/70 uppercase tracking-wider mb-2">
+                                  Also Serving:
+                                </p>
+                                <p className="text-sm text-slate-600 line-clamp-2 leading-relaxed">
+                                  {location.location.nearby_areas.slice(0, 3).join(", ")}
+                                  {location.location.nearby_areas.length > 3 && "..."}
+                                </p>
+                              </div>
+                            )}
 
                           {/* Divider with gradient */}
                           <div className="h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent mb-5" />

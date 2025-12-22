@@ -27,12 +27,30 @@ const callScenarios: CallScenario[] = [
     business: "Plumbing Services",
     messages: [
       { id: 1, type: "ai", text: "Thank you for calling! How can I help you today?" },
-      { id: 2, type: "caller", text: "Hi, I need help with my website's SEO. We're not showing up on Google." },
-      { id: 3, type: "ai", text: "I'd be happy to help with that. Let me connect you with our SEO specialist. What's the best time for a consultation?" },
+      {
+        id: 2,
+        type: "caller",
+        text: "Hi, I need help with my website's SEO. We're not showing up on Google.",
+      },
+      {
+        id: 3,
+        type: "ai",
+        text: "I'd be happy to help with that. Let me connect you with our SEO specialist. What's the best time for a consultation?",
+      },
       { id: 4, type: "caller", text: "Tomorrow afternoon would be great." },
-      { id: 5, type: "ai", text: "Perfect! I've scheduled a call for tomorrow at 2 PM. You'll receive a confirmation email shortly." },
+      {
+        id: 5,
+        type: "ai",
+        text: "Perfect! I've scheduled a call for tomorrow at 2 PM. You'll receive a confirmation email shortly.",
+      },
     ],
-    statuses: ["Call Answered", "Qualifying Lead", "Interest Confirmed", "Booking Appointment", "Appointment Booked"],
+    statuses: [
+      "Call Answered",
+      "Qualifying Lead",
+      "Interest Confirmed",
+      "Booking Appointment",
+      "Appointment Booked",
+    ],
   },
   {
     caller: "Sarah's Dental Clinic",
@@ -40,12 +58,30 @@ const callScenarios: CallScenario[] = [
     business: "Dental Practice",
     messages: [
       { id: 1, type: "ai", text: "Hello! Thanks for reaching out. How may I assist you?" },
-      { id: 2, type: "caller", text: "I'm looking for help with Facebook ads for my dental practice." },
-      { id: 3, type: "ai", text: "Excellent! We specialize in Facebook ads for healthcare businesses. May I ask what your current marketing challenges are?" },
+      {
+        id: 2,
+        type: "caller",
+        text: "I'm looking for help with Facebook ads for my dental practice.",
+      },
+      {
+        id: 3,
+        type: "ai",
+        text: "Excellent! We specialize in Facebook ads for healthcare businesses. May I ask what your current marketing challenges are?",
+      },
       { id: 4, type: "caller", text: "We need more new patient appointments." },
-      { id: 5, type: "ai", text: "Understood. I'm booking a strategy session with our ads expert. They'll show you how we've helped similar practices increase patient bookings by 40%." },
+      {
+        id: 5,
+        type: "ai",
+        text: "Understood. I'm booking a strategy session with our ads expert. They'll show you how we've helped similar practices increase patient bookings by 40%.",
+      },
     ],
-    statuses: ["Call Answered", "Qualifying Lead", "Needs Assessment", "Solution Presented", "Appointment Booked"],
+    statuses: [
+      "Call Answered",
+      "Qualifying Lead",
+      "Needs Assessment",
+      "Solution Presented",
+      "Appointment Booked",
+    ],
   },
   {
     caller: "Tom's Auto Repair",
@@ -53,12 +89,30 @@ const callScenarios: CallScenario[] = [
     business: "Auto Repair Shop",
     messages: [
       { id: 1, type: "ai", text: "Good afternoon! How can I help you today?" },
-      { id: 2, type: "caller", text: "I want to get more customers through Google. Can you help with that?" },
-      { id: 3, type: "ai", text: "Absolutely! We offer both Google Ads and local SEO services. Based on your industry, I'd recommend starting with local SEO to dominate Google Maps. Sound good?" },
+      {
+        id: 2,
+        type: "caller",
+        text: "I want to get more customers through Google. Can you help with that?",
+      },
+      {
+        id: 3,
+        type: "ai",
+        text: "Absolutely! We offer both Google Ads and local SEO services. Based on your industry, I'd recommend starting with local SEO to dominate Google Maps. Sound good?",
+      },
       { id: 4, type: "caller", text: "Yes, that sounds perfect!" },
-      { id: 5, type: "ai", text: "Great! I'm scheduling a free audit call where we'll analyze your current Google presence and create a custom growth plan. Does Wednesday at 10 AM work?" },
+      {
+        id: 5,
+        type: "ai",
+        text: "Great! I'm scheduling a free audit call where we'll analyze your current Google presence and create a custom growth plan. Does Wednesday at 10 AM work?",
+      },
     ],
-    statuses: ["Call Answered", "Qualifying Lead", "Recommending Solution", "Interest Confirmed", "Scheduling Audit"],
+    statuses: [
+      "Call Answered",
+      "Qualifying Lead",
+      "Recommending Solution",
+      "Interest Confirmed",
+      "Scheduling Audit",
+    ],
   },
 ];
 
@@ -135,7 +189,14 @@ export default function AIVoiceVisual() {
 
       return () => clearTimeout(timer);
     }
-  }, [displayedText, currentMessage, currentMessageIndex, currentScenario, currentScenarioIndex, isTyping]);
+  }, [
+    displayedText,
+    currentMessage,
+    currentMessageIndex,
+    currentScenario,
+    currentScenarioIndex,
+    isTyping,
+  ]);
 
   return (
     <div ref={containerRef} className="relative">
@@ -199,19 +260,19 @@ export default function AIVoiceVisual() {
               transition={{ duration: 0.2 }}
               className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-accent/10 border border-accent/30"
             >
-            <motion.div
-              animate={{
-                scale: [1, 1.2, 1],
-              }}
-              transition={{
-                duration: 1,
-                repeat: Infinity,
-              }}
-              className="w-2 h-2 rounded-full bg-accent"
-            />
-            <span className="text-accent font-semibold text-xs sm:text-sm">{currentStatus}</span>
-          </motion.div>
-        </AnimatePresence>
+              <motion.div
+                animate={{
+                  scale: [1, 1.2, 1],
+                }}
+                transition={{
+                  duration: 1,
+                  repeat: Infinity,
+                }}
+                className="w-2 h-2 rounded-full bg-accent"
+              />
+              <span className="text-accent font-semibold text-xs sm:text-sm">{currentStatus}</span>
+            </motion.div>
+          </AnimatePresence>
         </div>
 
         {/* Conversation - FIXED: Use fixed height to prevent layout shift/jumping */}

@@ -15,7 +15,7 @@ import {
   User,
   Headphones,
   CheckCircle2,
-  Shield
+  Shield,
 } from "lucide-react";
 import { GoogleReviews } from "@/components/sections/GoogleReviews";
 
@@ -60,12 +60,12 @@ const PACKAGES: Package[] = [
       "Email Notifications",
       "1 CRM Integration",
       "Monthly Reports",
-      "Email Support"
+      "Email Support",
     ],
     slug: "starter-package",
     roi: "Capture just 5 extra leads/month = $1,000+ ROI",
     missedCallsHandled: 50,
-    avgMonthlyReturn: 2500
+    avgMonthlyReturn: 2500,
   },
   {
     id: "growth",
@@ -85,12 +85,12 @@ const PACKAGES: Package[] = [
       "Advanced Lead Qualification",
       "Weekly Performance Reports",
       "Priority Email Support",
-      "Multiple CRM Integrations"
+      "Multiple CRM Integrations",
     ],
     slug: "growth-package",
     roi: "87 leads in 60 days (actual client result)",
     missedCallsHandled: 999,
-    avgMonthlyReturn: 12000
+    avgMonthlyReturn: 12000,
   },
   {
     id: "enterprise",
@@ -109,13 +109,13 @@ const PACKAGES: Package[] = [
       "Dedicated Account Manager",
       "24/7 Priority Support",
       "Real-Time Dashboard",
-      "Bi-Weekly Strategy Calls"
+      "Bi-Weekly Strategy Calls",
     ],
     slug: "enterprise-package",
     roi: "$180K+ monthly new business (real client)",
     missedCallsHandled: 999,
-    avgMonthlyReturn: 45000
-  }
+    avgMonthlyReturn: 45000,
+  },
 ];
 
 // ============================================================================
@@ -129,7 +129,12 @@ interface AnimatedCounterProps {
   duration?: number;
 }
 
-function AnimatedCounter({ value, prefix = "", suffix = "", duration = 1000 }: AnimatedCounterProps) {
+function AnimatedCounter({
+  value,
+  prefix = "",
+  suffix = "",
+  duration = 1000,
+}: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -211,9 +216,9 @@ export default function PricingPageClient() {
 
   useEffect(() => {
     // Counter animation for prices
-    const counters = document.querySelectorAll('[data-counter]');
+    const counters = document.querySelectorAll("[data-counter]");
     counters.forEach((counter) => {
-      const target = parseInt(counter.getAttribute('data-counter') || '0');
+      const target = parseInt(counter.getAttribute("data-counter") || "0");
       let current = 0;
       const increment = target / 50;
       const timer = setInterval(() => {
@@ -310,8 +315,8 @@ export default function PricingPageClient() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                Every package is designed to generate more revenue than it costs.
-                No hidden fees. No surprises. Just transparent pricing that grows with your business.
+                Every package is designed to generate more revenue than it costs. No hidden fees. No
+                surprises. Just transparent pricing that grows with your business.
               </motion.p>
 
               {/* Trust signals */}
@@ -324,7 +329,7 @@ export default function PricingPageClient() {
                 {[
                   { label: "No Setup Fees", icon: "✓" },
                   { label: "Cancel Anytime", icon: "✓" },
-                  { label: "Transparent Pricing", icon: "✓" }
+                  { label: "Transparent Pricing", icon: "✓" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 py-1">
                     <span className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-blue-600/10 text-blue-600 flex items-center justify-center text-sm font-bold flex-shrink-0">
@@ -341,40 +346,40 @@ export default function PricingPageClient() {
               className="col-span-12 lg:col-span-5 mt-8 lg:mt-0"
               initial={{ opacity: 0, scale: 0.9, y: 30 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.4, type: 'spring', stiffness: 100 }}
+              transition={{ duration: 0.9, delay: 0.4, type: "spring", stiffness: 100 }}
             >
               <div className="relative">
                 {/* Layered card effect */}
                 <motion.div
                   className="hidden lg:block absolute inset-0 bg-gradient-to-br from-blue-50/50 to-cyan-50/50 backdrop-blur-xl rounded-3xl translate-x-6 translate-y-6"
                   animate={{ scale: [1, 1.02, 1] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 />
                 <motion.div
                   className="hidden md:block absolute inset-0 bg-gradient-to-br from-blue-50/70 to-cyan-50/70 backdrop-blur-xl rounded-3xl translate-x-3 translate-y-3"
                   animate={{ scale: [1, 1.01, 1] }}
-                  transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
                 />
 
                 {/* Main card */}
                 <div className="relative overflow-hidden rounded-3xl">
                   <motion.div
                     className="absolute inset-0 bg-gradient-to-br from-blue-100/50 via-cyan-100/50 to-blue-100/50"
-                    animate={{ backgroundPosition: ['0% 0%', '100% 100%', '0% 0%'] }}
-                    transition={{ duration: 8, repeat: Infinity, ease: 'linear' }}
-                    style={{ backgroundSize: '200% 200%' }}
+                    animate={{ backgroundPosition: ["0% 0%", "100% 100%", "0% 0%"] }}
+                    transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                    style={{ backgroundSize: "200% 200%" }}
                   />
 
                   {/* Floating orbs */}
                   <motion.div
                     className="absolute top-0 right-0 w-40 h-40 bg-blue-200/30 rounded-full blur-3xl"
                     animate={{ scale: [1, 1.4, 1], opacity: [0.2, 0.3, 0.2] }}
-                    transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                   />
                   <motion.div
                     className="absolute bottom-0 left-0 w-32 h-32 bg-cyan-200/30 rounded-full blur-3xl"
                     animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.3, 0.2] }}
-                    transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
                   />
 
                   <div className="relative bg-gradient-to-br from-white/90 to-white/70 backdrop-blur-2xl rounded-3xl border-2 border-slate-200 p-8 md:p-10">
@@ -383,9 +388,9 @@ export default function PricingPageClient() {
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600/10 to-cyan-500/10 border border-blue-600/30 mb-6"
                         animate={{
                           boxShadow: [
-                            '0 0 20px rgba(37, 99, 235, 0.2)',
-                            '0 0 30px rgba(37, 99, 235, 0.3)',
-                            '0 0 20px rgba(37, 99, 235, 0.2)',
+                            "0 0 20px rgba(37, 99, 235, 0.2)",
+                            "0 0 30px rgba(37, 99, 235, 0.3)",
+                            "0 0 20px rgba(37, 99, 235, 0.2)",
                           ],
                         }}
                         transition={{ duration: 2, repeat: Infinity }}
@@ -399,7 +404,7 @@ export default function PricingPageClient() {
                       <motion.div
                         className="mb-4"
                         animate={{ scale: [1, 1.02, 1] }}
-                        transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+                        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                       >
                         <div className="text-6xl sm:text-7xl md:text-8xl font-bold bg-gradient-to-br from-blue-600 via-slate-900 to-cyan-500 bg-clip-text text-transparent leading-none mb-2">
                           <span data-counter="580">0</span>%
@@ -407,29 +412,34 @@ export default function PricingPageClient() {
                       </motion.div>
 
                       <p className="text-slate-700 text-sm sm:text-base mb-6 px-2 font-medium">
-                        Our clients see an average return of <span className="text-blue-600 font-bold">5.8x</span> their investment
+                        Our clients see an average return of{" "}
+                        <span className="text-blue-600 font-bold">5.8x</span> their investment
                       </p>
 
                       <div className="grid grid-cols-2 gap-4 pt-6 border-t border-slate-200">
                         <motion.div
                           className="relative p-4 rounded-2xl bg-gradient-to-br from-blue-50 to-blue-50/50 border border-blue-200"
                           whileHover={{ scale: 1.05 }}
-                          transition={{ type: 'spring', stiffness: 400 }}
+                          transition={{ type: "spring", stiffness: 400 }}
                         >
                           <div className="text-2xl sm:text-3xl font-bold text-slate-900 mb-1">
                             <span data-counter="500">0</span>+
                           </div>
-                          <div className="text-xs sm:text-sm text-slate-600 font-medium">Active Clients</div>
+                          <div className="text-xs sm:text-sm text-slate-600 font-medium">
+                            Active Clients
+                          </div>
                         </motion.div>
                         <motion.div
                           className="relative p-4 rounded-2xl bg-gradient-to-br from-cyan-50 to-cyan-50/50 border border-cyan-200"
                           whileHover={{ scale: 1.05 }}
-                          transition={{ type: 'spring', stiffness: 400 }}
+                          transition={{ type: "spring", stiffness: 400 }}
                         >
                           <div className="text-2xl sm:text-3xl font-bold text-slate-900 mb-1">
                             <span data-counter="24">0</span>/7
                           </div>
-                          <div className="text-xs sm:text-sm text-slate-600 font-medium">AI Availability</div>
+                          <div className="text-xs sm:text-sm text-slate-600 font-medium">
+                            AI Availability
+                          </div>
                         </motion.div>
                       </div>
                     </div>
@@ -453,8 +463,8 @@ export default function PricingPageClient() {
             onClick={() => setIsAnnual(false)}
             className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
               !isAnnual
-                ? 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-600/20'
-                : 'text-slate-600 hover:text-slate-900'
+                ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-600/20"
+                : "text-slate-600 hover:text-slate-900"
             }`}
           >
             Monthly
@@ -463,8 +473,8 @@ export default function PricingPageClient() {
             onClick={() => setIsAnnual(true)}
             className={`px-6 py-3 rounded-full font-medium transition-all duration-300 relative ${
               isAnnual
-                ? 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-600/20'
-                : 'text-slate-600 hover:text-slate-900'
+                ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-600/20"
+                : "text-slate-600 hover:text-slate-900"
             }`}
           >
             Annual
@@ -502,7 +512,9 @@ export default function PricingPageClient() {
             className="inline-flex items-center gap-3 px-6 md:px-8 py-4 min-h-[48px] rounded-full bg-gradient-to-r from-white/90 to-white border border-slate-200 text-slate-900 hover:bg-white hover:border-blue-600/30 transition-all duration-300 shadow-lg shadow-slate-200/50 hover:shadow-blue-600/10 touch-manipulation"
           >
             <ArrowLeftRight className="w-5 h-5 md:w-6 md:h-6 text-blue-600" />
-            <span className="font-medium text-sm md:text-base">{showComparison ? 'Hide' : 'Show'} Feature Comparison</span>
+            <span className="font-medium text-sm md:text-base">
+              {showComparison ? "Hide" : "Show"} Feature Comparison
+            </span>
             <motion.span
               className="text-blue-600"
               animate={{ rotate: showComparison ? 180 : 0 }}
@@ -532,17 +544,59 @@ export default function PricingPageClient() {
                   web: Globe,
                   assessment: FileText,
                   person: User,
-                  support_agent: Headphones
+                  support_agent: Headphones,
                 };
 
                 const features = [
-                  { feature: "AI Voice Agents", starter: "1 agent", growth: "2 agents", enterprise: "Unlimited", icon: "smart_toy" },
-                  { feature: "Monthly Calls", starter: "50 calls", growth: "Unlimited", enterprise: "Unlimited", icon: "call" },
-                  { feature: "Advertising Platforms", starter: "—", growth: "Google OR Facebook", enterprise: "Both + LinkedIn", icon: "campaign" },
-                  { feature: "Landing Pages", starter: "—", growth: "Optimization", enterprise: "Custom built", icon: "web" },
-                  { feature: "Reports", starter: "Monthly", growth: "Weekly", enterprise: "Real-time", icon: "assessment" },
-                  { feature: "Account Manager", starter: "—", growth: "—", enterprise: "Dedicated", icon: "person" },
-                  { feature: "Support", starter: "Email", growth: "Priority (4hr)", enterprise: "24/7", icon: "support_agent" }
+                  {
+                    feature: "AI Voice Agents",
+                    starter: "1 agent",
+                    growth: "2 agents",
+                    enterprise: "Unlimited",
+                    icon: "smart_toy",
+                  },
+                  {
+                    feature: "Monthly Calls",
+                    starter: "50 calls",
+                    growth: "Unlimited",
+                    enterprise: "Unlimited",
+                    icon: "call",
+                  },
+                  {
+                    feature: "Advertising Platforms",
+                    starter: "—",
+                    growth: "Google OR Facebook",
+                    enterprise: "Both + LinkedIn",
+                    icon: "campaign",
+                  },
+                  {
+                    feature: "Landing Pages",
+                    starter: "—",
+                    growth: "Optimization",
+                    enterprise: "Custom built",
+                    icon: "web",
+                  },
+                  {
+                    feature: "Reports",
+                    starter: "Monthly",
+                    growth: "Weekly",
+                    enterprise: "Real-time",
+                    icon: "assessment",
+                  },
+                  {
+                    feature: "Account Manager",
+                    starter: "—",
+                    growth: "—",
+                    enterprise: "Dedicated",
+                    icon: "person",
+                  },
+                  {
+                    feature: "Support",
+                    starter: "Email",
+                    growth: "Priority (4hr)",
+                    enterprise: "24/7",
+                    icon: "support_agent",
+                  },
                 ];
 
                 return features.map((row, i) => {
@@ -558,7 +612,9 @@ export default function PricingPageClient() {
                     >
                       <div className="flex items-center gap-3 mb-4 pb-3 border-b border-slate-200">
                         <IconComponent className="w-5 h-5 text-blue-600" />
-                        <span className="text-slate-900 font-semibold text-base">{row.feature}</span>
+                        <span className="text-slate-900 font-semibold text-base">
+                          {row.feature}
+                        </span>
                       </div>
                       <div className="grid grid-cols-3 gap-3 text-sm">
                         <div className="text-center">
@@ -592,83 +648,142 @@ export default function PricingPageClient() {
 
                 <div className="relative">
                   <table className="w-full">
-                      <thead>
-                        <tr className="border-b border-slate-200">
-                          <th className="text-left p-4 md:p-6 text-slate-600 font-semibold text-sm md:text-base sticky left-0 bg-gradient-to-r from-white/95 to-white/80 backdrop-blur-xl z-10">
-                            Feature
-                          </th>
-                          <th className="text-center p-4 md:p-6">
-                            <span className="text-slate-900 font-semibold text-sm md:text-base">Starter</span>
-                          </th>
-                          <th className="text-center p-4 md:p-6">
-                            <div className="inline-flex flex-col items-center gap-1">
-                              <div className="px-3 py-1 rounded-full bg-gradient-to-r from-blue-600/10 to-cyan-500/10 border border-blue-600/30">
-                                <span className="text-blue-600 font-bold text-sm md:text-base">Growth</span>
-                              </div>
-                              <span className="text-xs text-blue-600/60">Recommended</span>
+                    <thead>
+                      <tr className="border-b border-slate-200">
+                        <th className="text-left p-4 md:p-6 text-slate-600 font-semibold text-sm md:text-base sticky left-0 bg-gradient-to-r from-white/95 to-white/80 backdrop-blur-xl z-10">
+                          Feature
+                        </th>
+                        <th className="text-center p-4 md:p-6">
+                          <span className="text-slate-900 font-semibold text-sm md:text-base">
+                            Starter
+                          </span>
+                        </th>
+                        <th className="text-center p-4 md:p-6">
+                          <div className="inline-flex flex-col items-center gap-1">
+                            <div className="px-3 py-1 rounded-full bg-gradient-to-r from-blue-600/10 to-cyan-500/10 border border-blue-600/30">
+                              <span className="text-blue-600 font-bold text-sm md:text-base">
+                                Growth
+                              </span>
                             </div>
-                          </th>
-                          <th className="text-center p-4 md:p-6">
-                            <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent font-semibold text-sm md:text-base">Enterprise</span>
-                          </th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {(() => {
-                          const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-                            smart_toy: Bot,
-                            call: Phone,
-                            campaign: Megaphone,
-                            web: Globe,
-                            assessment: FileText,
-                            person: User,
-                            support_agent: Headphones
-                          };
+                            <span className="text-xs text-blue-600/60">Recommended</span>
+                          </div>
+                        </th>
+                        <th className="text-center p-4 md:p-6">
+                          <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent font-semibold text-sm md:text-base">
+                            Enterprise
+                          </span>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {(() => {
+                        const iconMap: Record<
+                          string,
+                          React.ComponentType<{ className?: string }>
+                        > = {
+                          smart_toy: Bot,
+                          call: Phone,
+                          campaign: Megaphone,
+                          web: Globe,
+                          assessment: FileText,
+                          person: User,
+                          support_agent: Headphones,
+                        };
 
-                          return [
-                            { feature: "AI Voice Agents", starter: "1 agent", growth: "2 agents", enterprise: "Unlimited", icon: "smart_toy" },
-                            { feature: "Monthly Calls", starter: "50 calls", growth: "Unlimited", enterprise: "Unlimited", icon: "call" },
-                            { feature: "Advertising Platforms", starter: "—", growth: "Google OR Facebook", enterprise: "Both + LinkedIn", icon: "campaign" },
-                            { feature: "Landing Pages", starter: "—", growth: "Optimization", enterprise: "Custom built", icon: "web" },
-                            { feature: "Reports", starter: "Monthly", growth: "Weekly", enterprise: "Real-time", icon: "assessment" },
-                            { feature: "Account Manager", starter: "—", growth: "—", enterprise: "Dedicated", icon: "person" },
-                            { feature: "Support", starter: "Email", growth: "Priority (4hr)", enterprise: "24/7", icon: "support_agent" }
-                          ].map((row, i) => {
-                            const IconComponent = iconMap[row.icon];
-                            return (
-                              <motion.tr
-                                key={i}
-                                className="border-b border-slate-200/50 hover:bg-slate-50/50 transition-all duration-300 group"
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.05 }}
-                              >
-                                <td className="p-4 md:p-6 sticky left-0 bg-gradient-to-r from-white/95 to-white/80 backdrop-blur-xl z-10">
-                                  <div className="flex items-center gap-3">
-                                    <IconComponent className="w-5 h-5 text-blue-600/60 group-hover:text-blue-600 transition-colors" />
-                                    <span className="text-slate-900 font-medium text-sm md:text-base">{row.feature}</span>
-                                  </div>
-                                </td>
-                                <td className="p-4 md:p-6 text-center">
-                                  <span className="text-slate-600 text-sm md:text-base">{row.starter}</span>
-                                </td>
-                                <td className="p-4 md:p-6 text-center bg-blue-600/5">
-                                  <span className="text-slate-900 font-semibold text-sm md:text-base">{row.growth}</span>
-                                </td>
-                                <td className="p-4 md:p-6 text-center">
-                                  <span className="text-slate-700 text-sm md:text-base">{row.enterprise}</span>
-                                </td>
-                              </motion.tr>
-                            );
-                          });
-                        })()}
-                      </tbody>
-                    </table>
-                  </div>
+                        return [
+                          {
+                            feature: "AI Voice Agents",
+                            starter: "1 agent",
+                            growth: "2 agents",
+                            enterprise: "Unlimited",
+                            icon: "smart_toy",
+                          },
+                          {
+                            feature: "Monthly Calls",
+                            starter: "50 calls",
+                            growth: "Unlimited",
+                            enterprise: "Unlimited",
+                            icon: "call",
+                          },
+                          {
+                            feature: "Advertising Platforms",
+                            starter: "—",
+                            growth: "Google OR Facebook",
+                            enterprise: "Both + LinkedIn",
+                            icon: "campaign",
+                          },
+                          {
+                            feature: "Landing Pages",
+                            starter: "—",
+                            growth: "Optimization",
+                            enterprise: "Custom built",
+                            icon: "web",
+                          },
+                          {
+                            feature: "Reports",
+                            starter: "Monthly",
+                            growth: "Weekly",
+                            enterprise: "Real-time",
+                            icon: "assessment",
+                          },
+                          {
+                            feature: "Account Manager",
+                            starter: "—",
+                            growth: "—",
+                            enterprise: "Dedicated",
+                            icon: "person",
+                          },
+                          {
+                            feature: "Support",
+                            starter: "Email",
+                            growth: "Priority (4hr)",
+                            enterprise: "24/7",
+                            icon: "support_agent",
+                          },
+                        ].map((row, i) => {
+                          const IconComponent = iconMap[row.icon];
+                          return (
+                            <motion.tr
+                              key={i}
+                              className="border-b border-slate-200/50 hover:bg-slate-50/50 transition-all duration-300 group"
+                              initial={{ opacity: 0, x: -20 }}
+                              whileInView={{ opacity: 1, x: 0 }}
+                              viewport={{ once: true }}
+                              transition={{ delay: i * 0.05 }}
+                            >
+                              <td className="p-4 md:p-6 sticky left-0 bg-gradient-to-r from-white/95 to-white/80 backdrop-blur-xl z-10">
+                                <div className="flex items-center gap-3">
+                                  <IconComponent className="w-5 h-5 text-blue-600/60 group-hover:text-blue-600 transition-colors" />
+                                  <span className="text-slate-900 font-medium text-sm md:text-base">
+                                    {row.feature}
+                                  </span>
+                                </div>
+                              </td>
+                              <td className="p-4 md:p-6 text-center">
+                                <span className="text-slate-600 text-sm md:text-base">
+                                  {row.starter}
+                                </span>
+                              </td>
+                              <td className="p-4 md:p-6 text-center bg-blue-600/5">
+                                <span className="text-slate-900 font-semibold text-sm md:text-base">
+                                  {row.growth}
+                                </span>
+                              </td>
+                              <td className="p-4 md:p-6 text-center">
+                                <span className="text-slate-700 text-sm md:text-base">
+                                  {row.enterprise}
+                                </span>
+                              </td>
+                            </motion.tr>
+                          );
+                        });
+                      })()}
+                    </tbody>
+                  </table>
                 </div>
               </div>
-            </motion.div>
+            </div>
+          </motion.div>
         )}
       </div>
 
@@ -693,51 +808,70 @@ export default function PricingPageClient() {
             {
               title: "Traditional Agency",
               price: "$5,000-$10,000/mo",
-              features: ["Manual lead follow-up", "9-5 availability", "Slow response times", "Limited reporting"],
-              badge: "Old Way"
+              features: [
+                "Manual lead follow-up",
+                "9-5 availability",
+                "Slow response times",
+                "Limited reporting",
+              ],
+              badge: "Old Way",
             },
             {
               title: "Hiring In-House",
               price: "$6,000-$12,000/mo",
-              features: ["Salaries + benefits", "Training required", "Limited to business hours", "Vacation/sick days"],
-              badge: "Expensive"
+              features: [
+                "Salaries + benefits",
+                "Training required",
+                "Limited to business hours",
+                "Vacation/sick days",
+              ],
+              badge: "Expensive",
             },
             {
               title: "Capture Client",
               price: isAnnual ? "Starting at $77/mo" : "Starting at $97/mo",
-              features: ["AI-powered automation", "24/7 availability", "Instant lead response", "Real-time analytics"],
+              features: [
+                "AI-powered automation",
+                "24/7 availability",
+                "Instant lead response",
+                "Real-time analytics",
+              ],
               badge: "Smart Choice",
-              highlight: true
-            }
+              highlight: true,
+            },
           ].map((option, i) => (
             <motion.div
               key={i}
               className={`relative p-6 rounded-2xl border max-w-sm mx-auto md:max-w-none ${
                 option.highlight
-                  ? 'bg-gradient-to-br from-blue-50 to-cyan-50 border-blue-200'
-                  : 'bg-white border-slate-200'
+                  ? "bg-gradient-to-br from-blue-50 to-cyan-50 border-blue-200"
+                  : "bg-white border-slate-200"
               }`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
             >
-              <div className={`inline-block px-3 py-1 rounded-full text-xs font-medium mb-4 ${
-                option.highlight ? 'bg-blue-600 text-white' : 'bg-slate-100 text-slate-600'
-              }`}>
+              <div
+                className={`inline-block px-3 py-1 rounded-full text-xs font-medium mb-4 ${
+                  option.highlight ? "bg-blue-600 text-white" : "bg-slate-100 text-slate-600"
+                }`}
+              >
                 {option.badge}
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-2">{option.title}</h3>
-              <div className={`text-2xl font-bold mb-4 ${
-                option.highlight ? 'text-blue-600' : 'text-slate-600'
-              }`}>
+              <div
+                className={`text-2xl font-bold mb-4 ${
+                  option.highlight ? "text-blue-600" : "text-slate-600"
+                }`}
+              >
                 {option.price}
               </div>
               <ul className="space-y-2">
                 {option.features.map((feature, j) => (
                   <li key={j} className="flex items-start gap-2 text-sm text-slate-600">
-                    <span className={option.highlight ? 'text-blue-600' : 'text-slate-400'}>
-                      {option.highlight ? '✓' : '✗'}
+                    <span className={option.highlight ? "text-blue-600" : "text-slate-400"}>
+                      {option.highlight ? "✓" : "✗"}
                     </span>
                     <span>{feature}</span>
                   </li>
@@ -756,20 +890,20 @@ export default function PricingPageClient() {
               icon: Shield,
               title: "No Long-Term Contract",
               desc: "Month-to-month billing. Cancel anytime.",
-              color: "cyan"
+              color: "cyan",
             },
             {
               icon: TrendingUp,
               title: "Average 580% ROI",
               desc: "Our clients see 5.8x return on investment",
-              color: "cyan"
+              color: "cyan",
             },
             {
               icon: CheckCircle2,
               title: "Setup in 3-5 Days",
               desc: "Go live fast with expert onboarding",
-              color: "cyan"
-            }
+              color: "cyan",
+            },
           ].map((signal, i) => {
             const Icon = signal.icon;
             return (
@@ -796,7 +930,7 @@ export default function PricingPageClient() {
                   <motion.div
                     className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-4 bg-gradient-to-br from-cyan-100 to-cyan-50 border border-cyan-200"
                     whileHover={{ scale: 1.1, rotate: 5 }}
-                    transition={{ type: 'spring', stiffness: 400 }}
+                    transition={{ type: "spring", stiffness: 400 }}
                   >
                     <Icon className="w-8 h-8 text-cyan-600" />
                   </motion.div>
@@ -832,24 +966,29 @@ export default function PricingPageClient() {
           {[
             {
               question: "Can I switch packages later?",
-              answer: "Absolutely! Upgrade or downgrade anytime. Changes take effect at your next billing cycle. Most clients start with Starter, see results, then upgrade to Growth."
+              answer:
+                "Absolutely! Upgrade or downgrade anytime. Changes take effect at your next billing cycle. Most clients start with Starter, see results, then upgrade to Growth.",
             },
             {
               question: "Are there any setup fees or hidden costs?",
-              answer: "Zero setup fees. The price you see is what you pay. Your only additional cost is ad spend if you choose Growth or Enterprise packages (billed directly by Google/Facebook)."
+              answer:
+                "Zero setup fees. The price you see is what you pay. Your only additional cost is ad spend if you choose Growth or Enterprise packages (billed directly by Google/Facebook).",
             },
             {
               question: "What if I go over my call limit?",
-              answer: "We'll notify you before you hit your limit. You can upgrade to the next tier or purchase additional call bundles. Starter: $2/call, Growth: $1.50/call, Enterprise: unlimited."
+              answer:
+                "We'll notify you before you hit your limit. You can upgrade to the next tier or purchase additional call bundles. Starter: $2/call, Growth: $1.50/call, Enterprise: unlimited.",
             },
             {
               question: "How quickly will I see ROI?",
-              answer: "Most clients see their first qualified lead within 24-48 hours of going live. Full ROI typically happens within the first 30-60 days as the AI learns and optimizes."
+              answer:
+                "Most clients see their first qualified lead within 24-48 hours of going live. Full ROI typically happens within the first 30-60 days as the AI learns and optimizes.",
             },
             {
               question: "Do you require a long-term contract?",
-              answer: "No! All packages are month-to-month. Cancel anytime with 30 days notice. We earn your business every month through results, not contracts."
-            }
+              answer:
+                "No! All packages are month-to-month. Cancel anytime with 30 days notice. We earn your business every month through results, not contracts.",
+            },
           ].map((faq, i) => (
             <FAQItem key={i} question={faq.question} answer={faq.answer} index={i} />
           ))}
@@ -884,7 +1023,8 @@ export default function PricingPageClient() {
           viewport={{ once: true }}
         >
           <div className="absolute inset-0">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 opacity-10"
+            <div
+              className="absolute inset-0 bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 opacity-10"
               style={{ backgroundSize: "200% 100%" }}
             />
             <motion.div
@@ -905,8 +1045,8 @@ export default function PricingPageClient() {
                 Ready to Stop Losing Leads?
               </h2>
               <p className="text-base md:text-xl text-slate-700 mb-6 md:mb-8 max-w-2xl mx-auto px-4">
-                Join businesses using AI to capture every opportunity.
-                No long-term contracts. Cancel anytime.
+                Join businesses using AI to capture every opportunity. No long-term contracts.
+                Cancel anytime.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-stretch sm:items-center">
                 <Link
@@ -923,7 +1063,7 @@ export default function PricingPageClient() {
                 </a>
               </div>
               <p className="text-slate-600 text-xs md:text-sm mt-4 md:mt-6 px-4">
-                ✓ No credit card required  ✓ Setup in 3-5 days  ✓ No long-term contract
+                ✓ No credit card required ✓ Setup in 3-5 days ✓ No long-term contract
               </p>
             </motion.div>
           </div>
@@ -981,7 +1121,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
 
   return (
     <motion.div
-      className={`relative max-w-sm mx-auto lg:max-w-none ${isGrowth ? 'lg:-mt-8 lg:mb-8 lg:z-10' : ''}`}
+      className={`relative max-w-sm mx-auto lg:max-w-none ${isGrowth ? "lg:-mt-8 lg:mb-8 lg:z-10" : ""}`}
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
@@ -994,12 +1134,12 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
         animate={{
           rotateX,
           rotateY,
-          scale: isHovered ? (isGrowth ? 1.05 : 1.02) : (isGrowth ? 1.03 : 1),
+          scale: isHovered ? (isGrowth ? 1.05 : 1.02) : isGrowth ? 1.03 : 1,
         }}
-        transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-        className={`relative group h-full min-h-[600px] rounded-3xl cursor-pointer ${isGrowth ? '' : 'overflow-hidden'}`}
+        transition={{ type: "spring", stiffness: 300, damping: 25 }}
+        className={`relative group h-full min-h-[600px] rounded-3xl cursor-pointer ${isGrowth ? "" : "overflow-hidden"}`}
         style={{
-          transformStyle: 'preserve-3d',
+          transformStyle: "preserve-3d",
           transform: `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
         }}
       >
@@ -1017,23 +1157,23 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                 animate={{
                   y: [0, -6, 0],
                   boxShadow: [
-                    '0 0 20px rgba(37, 99, 235, 0.5)',
-                    '0 0 40px rgba(37, 99, 235, 0.9)',
-                    '0 0 20px rgba(37, 99, 235, 0.5)',
+                    "0 0 20px rgba(37, 99, 235, 0.5)",
+                    "0 0 40px rgba(37, 99, 235, 0.9)",
+                    "0 0 20px rgba(37, 99, 235, 0.5)",
                   ],
                 }}
-                transition={{ duration: 2.5, repeat: Infinity, repeatType: 'reverse' }}
+                transition={{ duration: 2.5, repeat: Infinity, repeatType: "reverse" }}
                 className="relative mx-auto px-4 sm:px-6 py-2 sm:py-2.5 rounded-full bg-gradient-to-r from-blue-600 via-cyan-500 to-blue-600 bg-[length:200%_100%] border border-blue-200/50"
               >
                 <motion.div
-                  animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] }}
-                  transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
+                  animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
                   className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent bg-[length:200%_100%] rounded-full"
                 />
                 <div className="relative flex items-center justify-center gap-1.5 sm:gap-2">
                   <motion.span
                     animate={{ rotate: [0, 360] }}
-                    transition={{ duration: 3, repeat: Infinity, ease: 'linear' }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
                     className="text-sm sm:text-lg flex-shrink-0"
                   >
                     ⭐
@@ -1090,11 +1230,9 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                   </span>
                 </div>
                 <h3 className="text-3xl font-bold bg-gradient-to-r from-blue-600 via-slate-900 to-cyan-500 bg-clip-text text-transparent mb-3">
-                  {pkg.name.replace(' Package', '')}
+                  {pkg.name.replace(" Package", "")}
                 </h3>
-                <p className="text-slate-700 text-sm leading-relaxed">
-                  {pkg.tagline}
-                </p>
+                <p className="text-slate-700 text-sm leading-relaxed">{pkg.tagline}</p>
               </div>
 
               {/* Price */}
@@ -1131,7 +1269,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                 onClick={onToggleROI}
                 className="w-full text-center py-2 mb-6 text-sm text-blue-600 hover:text-cyan-500 transition-colors font-medium"
               >
-                {showROI ? '− Hide' : '+ Show'} Potential ROI
+                {showROI ? "− Hide" : "+ Show"} Potential ROI
               </button>
 
               {/* Mini ROI Calculator */}
@@ -1178,11 +1316,9 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                   Getting Started
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                  {pkg.name.replace(' Package', '')}
+                  {pkg.name.replace(" Package", "")}
                 </h3>
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  {pkg.tagline}
-                </p>
+                <p className="text-slate-600 text-sm leading-relaxed">{pkg.tagline}</p>
               </div>
 
               <div className="mb-6">
@@ -1216,7 +1352,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                 onClick={onToggleROI}
                 className="w-full text-center py-2 mb-6 text-sm text-slate-600 hover:text-slate-900 transition-colors"
               >
-                {showROI ? '− Hide' : '+ Show'} Potential ROI
+                {showROI ? "− Hide" : "+ Show"} Potential ROI
               </button>
 
               <AnimatePresence>
@@ -1260,11 +1396,9 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                   Premium
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                  {pkg.name.replace(' Package', '')}
+                  {pkg.name.replace(" Package", "")}
                 </h3>
-                <p className="text-slate-600 text-sm leading-relaxed">
-                  {pkg.tagline}
-                </p>
+                <p className="text-slate-600 text-sm leading-relaxed">{pkg.tagline}</p>
               </div>
 
               <div className="mb-6">
@@ -1298,7 +1432,7 @@ function PricingCard3D({ pkg, index, isAnnual, showROI, onToggleROI }: PricingCa
                 onClick={onToggleROI}
                 className="w-full text-center py-2 mb-6 text-sm text-cyan-600 hover:text-blue-600 transition-colors"
               >
-                {showROI ? '− Hide' : '+ Show'} Potential ROI
+                {showROI ? "− Hide" : "+ Show"} Potential ROI
               </button>
 
               <AnimatePresence>
@@ -1359,7 +1493,7 @@ function FAQItem({ question, answer, index }: { question: string; answer: string
         initial={false}
         animate={{
           height: isOpen ? "auto" : 0,
-          opacity: isOpen ? 1 : 0
+          opacity: isOpen ? 1 : 0,
         }}
         transition={{ duration: 0.3 }}
         className="overflow-hidden"

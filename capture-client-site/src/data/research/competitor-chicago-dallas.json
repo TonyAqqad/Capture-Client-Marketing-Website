@@ -79,12 +79,7 @@
       "review_count": 25,
       "phone": "(312) 896-3005",
       "address": "222 W Merchandise Mart Plaza #1212, Chicago, IL",
-      "services": [
-        "Internet Marketing Services",
-        "Digital Marketing",
-        "SEO",
-        "PPC"
-      ],
+      "services": ["Internet Marketing Services", "Digital Marketing", "SEO", "PPC"],
       "packages": [],
       "unique_selling_points": [
         "5.0 star rating on Google",
@@ -101,15 +96,9 @@
       "review_count": 29,
       "phone": "(773) 904-2700",
       "address": "2540 W North Ave, Chicago, IL",
-      "services": [
-        "Digital Marketing",
-        "Marketing Agency Services"
-      ],
+      "services": ["Digital Marketing", "Marketing Agency Services"],
       "packages": [],
-      "unique_selling_points": [
-        "Delivers on promised ROI",
-        "Focus on measurable results"
-      ]
+      "unique_selling_points": ["Delivers on promised ROI", "Focus on measurable results"]
     },
     {
       "name": "Agency Creative",
@@ -161,10 +150,7 @@
       "review_count": 113,
       "phone": "(972) 243-2211",
       "address": "2711 Valley View Ln, Dallas, TX",
-      "services": [
-        "Marketing Agency Services",
-        "Advertising"
-      ],
+      "services": ["Marketing Agency Services", "Advertising"],
       "packages": [],
       "unique_selling_points": [
         "Quick response times",
@@ -181,13 +167,7 @@
       "review_count": 74,
       "phone": "(972) 362-9333",
       "address": "2626 Cole Ave #488, Dallas, TX",
-      "services": [
-        "Internet Marketing Services",
-        "Digital Marketing",
-        "SEO",
-        "PPC",
-        "Web Design"
-      ],
+      "services": ["Internet Marketing Services", "Digital Marketing", "SEO", "PPC", "Web Design"],
       "packages": [],
       "unique_selling_points": [
         "White-glove service",

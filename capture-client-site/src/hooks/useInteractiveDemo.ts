@@ -1,21 +1,15 @@
-import { useState, useCallback, useRef, useEffect } from 'react';
-import { TYPEWRITER_CONFIG } from './useTypewriter';
+import { useState, useCallback, useRef, useEffect } from "react";
+import { TYPEWRITER_CONFIG } from "./useTypewriter";
 
 // ============================================================================
 // TYPE DEFINITIONS
 // ============================================================================
 
-export type BusinessType =
-  | 'plumbing'
-  | 'dental'
-  | 'auto'
-  | 'hvac'
-  | 'law'
-  | 'general';
+export type BusinessType = "plumbing" | "dental" | "auto" | "hvac" | "law" | "general";
 
 export interface Message {
   id: string;
-  role: 'ai' | 'user';
+  role: "ai" | "user";
   text: string;
   timestamp: Date;
 }
@@ -53,7 +47,7 @@ export interface DemoControls {
 // ============================================================================
 
 const API_CONFIG = {
-  ENDPOINT: '/api/demo-response',
+  ENDPOINT: "/api/demo-response",
   TIMEOUT_MS: 10000,
   MAX_RETRIES: 2,
   RETRY_DELAY_MS: 1000,
@@ -69,30 +63,30 @@ const DEMO_TIMING = {
 // Initial CRM field structure
 const INITIAL_CRM_FIELDS: CRMField[] = [
   {
-    id: 'name',
-    label: 'Contact Name',
-    value: '',
+    id: "name",
+    label: "Contact Name",
+    value: "",
     isFilled: false,
     isFlashing: false,
   },
   {
-    id: 'phone',
-    label: 'Phone Number',
-    value: '',
+    id: "phone",
+    label: "Phone Number",
+    value: "",
     isFilled: false,
     isFlashing: false,
   },
   {
-    id: 'service',
-    label: 'Service Needed',
-    value: '',
+    id: "service",
+    label: "Service Needed",
+    value: "",
     isFilled: false,
     isFlashing: false,
   },
   {
-    id: 'urgency',
-    label: 'Lead Priority',
-    value: '',
+    id: "urgency",
+    label: "Lead Priority",
+    value: "",
     isFilled: false,
     isFlashing: false,
     isUrgent: true,
@@ -120,8 +114,8 @@ const createInitialState = (businessType: BusinessType): DemoState => ({
   businessType,
   conversationHistory: [
     {
-      id: 'ai-greeting',
-      role: 'ai',
+      id: "ai-greeting",
+      role: "ai",
       text: AI_GREETINGS[businessType],
       timestamp: new Date(),
     },
@@ -131,7 +125,7 @@ const createInitialState = (businessType: BusinessType): DemoState => ({
   crmFields: INITIAL_CRM_FIELDS,
   leadScore: 0,
   isTyping: false,
-  currentAiResponse: '',
+  currentAiResponse: "",
   isTypingComplete: true,
 });
 
@@ -193,7 +187,7 @@ function extractCRMData(responseData: {
     phone?: string;
     email?: string;
     service?: string;
-    urgency?: 'low' | 'medium' | 'high';
+    urgency?: "low" | "medium" | "high";
     preferredTime?: string;
     location?: string;
   };
@@ -205,7 +199,7 @@ function extractCRMData(responseData: {
   // Map extracted data to CRM fields
   if (suggestedCrmFields.name) {
     updates.push({
-      id: 'name',
+      id: "name",
       value: suggestedCrmFields.name,
       isFilled: true,
       isFlashing: true,
@@ -214,7 +208,7 @@ function extractCRMData(responseData: {
 
   if (suggestedCrmFields.phone) {
     updates.push({
-      id: 'phone',
+      id: "phone",
       value: suggestedCrmFields.phone,
       isFilled: true,
       isFlashing: true,
@@ -223,7 +217,7 @@ function extractCRMData(responseData: {
 
   if (suggestedCrmFields.service) {
     updates.push({
-      id: 'service',
+      id: "service",
       value: suggestedCrmFields.service,
       isFilled: true,
       isFlashing: true,
@@ -232,17 +226,17 @@ function extractCRMData(responseData: {
 
   if (suggestedCrmFields.urgency) {
     const urgencyMap = {
-      low: 'MEDIUM - Schedule Within Week',
-      medium: 'HIGH - Respond Within 24 Hours',
-      high: 'EMERGENCY - Immediate Response Required',
+      low: "MEDIUM - Schedule Within Week",
+      medium: "HIGH - Respond Within 24 Hours",
+      high: "EMERGENCY - Immediate Response Required",
     };
 
     updates.push({
-      id: 'urgency',
+      id: "urgency",
       value: urgencyMap[suggestedCrmFields.urgency],
       isFilled: true,
       isFlashing: true,
-      isUrgent: suggestedCrmFields.urgency === 'high',
+      isUrgent: suggestedCrmFields.urgency === "high",
     });
   }
 
@@ -266,26 +260,23 @@ async function callDemoAPI(
     phone?: string;
     email?: string;
     service?: string;
-    urgency?: 'low' | 'medium' | 'high';
+    urgency?: "low" | "medium" | "high";
     preferredTime?: string;
     location?: string;
   };
 }> {
   try {
     const controller = new AbortController();
-    const timeoutId = setTimeout(
-      () => controller.abort(),
-      API_CONFIG.TIMEOUT_MS
-    );
+    const timeoutId = setTimeout(() => controller.abort(), API_CONFIG.TIMEOUT_MS);
 
     const response = await fetch(API_CONFIG.ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         userMessage: message,
         businessType,
         conversationHistory: conversationHistory.map((msg) => ({
-          role: msg.role === 'ai' ? 'assistant' : 'user',
+          role: msg.role === "ai" ? "assistant" : "user",
           content: msg.text,
         })),
       }),
@@ -310,7 +301,7 @@ async function callDemoAPI(
     }
 
     // Fallback to demo response on persistent failure
-    console.warn('Demo API failed, using fallback response:', error);
+    console.warn("Demo API failed, using fallback response:", error);
     return getFallbackResponse(message, businessType);
   }
 }
@@ -329,7 +320,7 @@ function getFallbackResponse(
     name?: string;
     phone?: string;
     service?: string;
-    urgency?: 'low' | 'medium' | 'high';
+    urgency?: "low" | "medium" | "high";
   };
 } {
   const lowerMessage = message.toLowerCase();
@@ -339,20 +330,19 @@ function getFallbackResponse(
   const name = nameMatch ? nameMatch[1] : undefined;
 
   // Extract potential phone
-  const phoneMatch = message.match(
-    /(\d{3}[-.\s]?\d{3}[-.\s]?\d{4}|\(\d{3}\)\s*\d{3}[-.\s]?\d{4})/
-  );
+  const phoneMatch = message.match(/(\d{3}[-.\s]?\d{3}[-.\s]?\d{4}|\(\d{3}\)\s*\d{3}[-.\s]?\d{4})/);
   const phone = phoneMatch ? phoneMatch[1] : undefined;
 
   // Determine urgency
-  const urgency = lowerMessage.includes('emergency') ||
-    lowerMessage.includes('urgent') ||
-    lowerMessage.includes('asap') ||
-    lowerMessage.includes('right away')
-    ? 'high'
-    : lowerMessage.includes('soon') || lowerMessage.includes('today')
-    ? 'medium'
-    : 'low';
+  const urgency =
+    lowerMessage.includes("emergency") ||
+    lowerMessage.includes("urgent") ||
+    lowerMessage.includes("asap") ||
+    lowerMessage.includes("right away")
+      ? "high"
+      : lowerMessage.includes("soon") || lowerMessage.includes("today")
+        ? "medium"
+        : "low";
 
   // Business-specific responses
   const responses: Record<BusinessType, string> = {
@@ -370,17 +360,17 @@ function getFallbackResponse(
   const suggestedCrmFields: {
     name?: string;
     phone?: string;
-    urgency?: 'low' | 'medium' | 'high';
+    urgency?: "low" | "medium" | "high";
   } = {};
 
   if (name) suggestedCrmFields.name = name;
   if (phone) suggestedCrmFields.phone = phone;
-  if (urgency !== 'low') suggestedCrmFields.urgency = urgency;
+  if (urgency !== "low") suggestedCrmFields.urgency = urgency;
 
   return {
     response: responses[businessType],
-    intent: 'inquiry',
-    leadScore: urgency === 'high' ? 9 : urgency === 'medium' ? 7 : 5,
+    intent: "inquiry",
+    leadScore: urgency === "high" ? 9 : urgency === "medium" ? 7 : 5,
     suggestedCrmFields: Object.keys(suggestedCrmFields).length > 0 ? suggestedCrmFields : undefined,
   };
 }
@@ -389,12 +379,11 @@ function getFallbackResponse(
 // MAIN HOOK: useInteractiveDemo
 // ============================================================================
 
-export function useInteractiveDemo(
-  initialBusinessType: BusinessType = 'plumbing'
-): { state: DemoState; controls: DemoControls } {
-  const [state, setState] = useState<DemoState>(
-    () => createInitialState(initialBusinessType)
-  );
+export function useInteractiveDemo(initialBusinessType: BusinessType = "plumbing"): {
+  state: DemoState;
+  controls: DemoControls;
+} {
+  const [state, setState] = useState<DemoState>(() => createInitialState(initialBusinessType));
 
   const timeoutsRef = useRef<NodeJS.Timeout[]>([]);
   const typingCleanupRef = useRef<(() => void) | null>(null);
@@ -463,7 +452,7 @@ export function useInteractiveDemo(
       // Add user message immediately
       const userMessage: Message = {
         id: generateMessageId(),
-        role: 'user',
+        role: "user",
         text: message.trim(),
         timestamp: new Date(),
       };
@@ -473,7 +462,7 @@ export function useInteractiveDemo(
         conversationHistory: [...prev.conversationHistory, userMessage],
         isLoading: true,
         error: null,
-        currentAiResponse: '',
+        currentAiResponse: "",
         isTyping: false,
         isTypingComplete: false,
       }));
@@ -504,7 +493,7 @@ export function useInteractiveDemo(
           setState((prev) => ({
             ...prev,
             isTyping: true,
-            currentAiResponse: '',
+            currentAiResponse: "",
           }));
 
           typingCleanupRef.current = simulateTyping(
@@ -516,7 +505,7 @@ export function useInteractiveDemo(
               // Typing complete - add to conversation history
               const aiMessage: Message = {
                 id: generateMessageId(),
-                role: 'ai',
+                role: "ai",
                 text: responseData.response,
                 timestamp: new Date(),
               };
@@ -525,7 +514,7 @@ export function useInteractiveDemo(
                 ...prev,
                 conversationHistory: [...prev.conversationHistory, aiMessage],
                 isTyping: false,
-                currentAiResponse: '',
+                currentAiResponse: "",
                 isTypingComplete: true,
               }));
 
@@ -539,9 +528,7 @@ export function useInteractiveDemo(
           ...prev,
           isLoading: false,
           error:
-            error instanceof Error
-              ? error.message
-              : 'Failed to get response. Please try again.',
+            error instanceof Error ? error.message : "Failed to get response. Please try again.",
         }));
       }
     },
@@ -558,14 +545,17 @@ export function useInteractiveDemo(
   // SET BUSINESS TYPE
   // ============================================================================
 
-  const setBusinessType = useCallback((type: BusinessType) => {
-    clearAllTimeouts();
-    if (typingCleanupRef.current) {
-      typingCleanupRef.current();
-      typingCleanupRef.current = null;
-    }
-    setState(createInitialState(type));
-  }, [clearAllTimeouts]);
+  const setBusinessType = useCallback(
+    (type: BusinessType) => {
+      clearAllTimeouts();
+      if (typingCleanupRef.current) {
+        typingCleanupRef.current();
+        typingCleanupRef.current = null;
+      }
+      setState(createInitialState(type));
+    },
+    [clearAllTimeouts]
+  );
 
   // ============================================================================
   // RESET DEMO
@@ -588,7 +578,7 @@ export function useInteractiveDemo(
     (transcriptId: string) => {
       // This would load a pre-defined conversation transcript
       // For now, reset to initial state
-      console.info('Loading transcript:', transcriptId);
+      console.info("Loading transcript:", transcriptId);
       resetDemo();
     },
     [resetDemo]

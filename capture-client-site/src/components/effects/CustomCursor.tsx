@@ -49,7 +49,9 @@ export function CustomCursor() {
     window.addEventListener("mousemove", moveCursor);
 
     // Add cursor states to interactive elements
-    const interactiveElements = document.querySelectorAll("a, button, [role='button'], input, textarea");
+    const interactiveElements = document.querySelectorAll(
+      "a, button, [role='button'], input, textarea"
+    );
     interactiveElements.forEach((el) => {
       el.addEventListener("mouseenter", handleMouseEnter);
       el.addEventListener("mouseleave", handleMouseLeave);
@@ -84,7 +86,7 @@ export function CustomCursor() {
         x: cursorXSpring,
         y: cursorYSpring,
         translateX: "-50%",
-        translateY: "-50%"
+        translateY: "-50%",
       }}
     >
       {/* Dot */}

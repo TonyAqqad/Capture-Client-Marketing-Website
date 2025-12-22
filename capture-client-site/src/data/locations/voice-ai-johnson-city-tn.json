@@ -10,18 +10,14 @@
     "state": "Tennessee",
     "state_abbr": "TN",
     "slug": "johnson-city-tn",
-    "nearby_areas": [
-      "Knoxville"
-    ],
+    "nearby_areas": ["Knoxville"],
     "service_area_radius": "25 miles"
   },
   "seo": {
     "page_title": "Voice AI in Johnson City, TN | Capture Client",
     "meta_description": "Johnson City businesses automate calls. Call 865-346-6111!",
     "h1_heading": "Voice AI in Johnson City, Tennessee",
-    "keywords": [
-      "voice ai johnson-city"
-    ],
+    "keywords": ["voice ai johnson-city"],
     "canonical_url": "/voice-ai-johnson-city-tn"
   },
   "hero": {
@@ -78,9 +74,7 @@
   ],
   "service_area": {
     "heading": "Serving Johnson City",
-    "areas_list": [
-      "Johnson City"
-    ]
+    "areas_list": ["Johnson City"]
   },
   "local_testimonials": [
     {
@@ -113,11 +107,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "voice-ai-knoxville-tn"
-    ],
-    "packages": [
-      "starter-package"
-    ]
+    "nearby_locations": ["voice-ai-knoxville-tn"],
+    "packages": ["starter-package"]
   }
 }

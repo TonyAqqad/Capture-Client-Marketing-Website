@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "AI appointment scheduling",
     "business automation by industry",
     "vertical AI solutions",
-    "industry-specific chatbots"
+    "industry-specific chatbots",
   ],
   openGraph: {
     title: "Use Cases & Industry Solutions | AI Voice Agents for Every Business",
@@ -59,10 +59,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function UseCasesLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function UseCasesLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }

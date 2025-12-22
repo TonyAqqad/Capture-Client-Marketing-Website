@@ -11,13 +11,7 @@
     "state_abbr": "VA",
     "state_full": "Virginia",
     "slug": "virginia-beach-va",
-    "nearby_areas": [
-      "Norfolk",
-      "Chesapeake",
-      "Portsmouth",
-      "Hampton",
-      "Suffolk"
-    ],
+    "nearby_areas": ["Norfolk", "Chesapeake", "Portsmouth", "Hampton", "Suffolk"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -131,14 +125,7 @@
       "Pembroke",
       "Princess Anne"
     ],
-    "nearby_cities": [
-      "Norfolk",
-      "Chesapeake",
-      "Portsmouth",
-      "Hampton",
-      "Newport News",
-      "Suffolk"
-    ]
+    "nearby_cities": ["Norfolk", "Chesapeake", "Portsmouth", "Hampton", "Newport News", "Suffolk"]
   },
   "local_testimonials": [
     {
@@ -193,18 +180,8 @@
     }
   },
   "related_pages": {
-    "other_services_in_location": [
-      "google-ads",
-      "facebook-ads"
-    ],
-    "nearby_locations": [
-      "norfolk-va",
-      "chesapeake-va",
-      "richmond-va"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "other_services_in_location": ["google-ads", "facebook-ads"],
+    "nearby_locations": ["norfolk-va", "chesapeake-va", "richmond-va"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

@@ -11,21 +11,14 @@
     "state": "Tennessee",
     "state_abbr": "TN",
     "slug": "murfreesboro-tn",
-    "nearby_areas": [
-      "Smyrna",
-      "La Vergne",
-      "Nashville"
-    ],
+    "nearby_areas": ["Smyrna", "La Vergne", "Nashville"],
     "service_area_radius": "25 miles"
   },
   "seo": {
     "page_title": "Voice AI Agency in Murfreesboro, TN | Capture Client",
     "meta_description": "Murfreesboro businesses automate calls with Voice AI. Rutherford County lead generation. Call 865-346-6111!",
     "h1_heading": "Voice AI Services in Murfreesboro, Tennessee",
-    "keywords": [
-      "voice ai murfreesboro",
-      "ai receptionist murfreesboro tn"
-    ],
+    "keywords": ["voice ai murfreesboro", "ai receptionist murfreesboro tn"],
     "canonical_url": "/voice-ai-murfreesboro-tn"
   },
   "hero": {
@@ -87,11 +80,7 @@
   ],
   "service_area": {
     "heading": "Serving Murfreesboro",
-    "areas_list": [
-      "Murfreesboro",
-      "Smyrna",
-      "Nashville"
-    ]
+    "areas_list": ["Murfreesboro", "Smyrna", "Nashville"]
   },
   "local_testimonials": [
     {
@@ -124,11 +113,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "voice-ai-nashville-tn"
-    ],
-    "packages": [
-      "starter-package"
-    ]
+    "nearby_locations": ["voice-ai-nashville-tn"],
+    "packages": ["starter-package"]
   }
 }

@@ -5,15 +5,15 @@
  * to create an interactive AI voice demo component.
  */
 
-'use client';
+"use client";
 
-import React from 'react';
-import { useInteractiveDemo, BusinessType } from './useInteractiveDemo';
-import { motion, AnimatePresence } from '@/lib/motion';
+import React from "react";
+import { useInteractiveDemo, BusinessType } from "./useInteractiveDemo";
+import { motion, AnimatePresence } from "@/lib/motion";
 
 export default function InteractiveDemoExample() {
-  const { state, controls } = useInteractiveDemo('plumbing');
-  const [userInput, setUserInput] = React.useState('');
+  const { state, controls } = useInteractiveDemo("plumbing");
+  const [userInput, setUserInput] = React.useState("");
 
   // Handle sending a message
   const handleSendMessage = async (e: React.FormEvent) => {
@@ -21,7 +21,7 @@ export default function InteractiveDemoExample() {
     if (!userInput.trim()) return;
 
     await controls.sendMessage(userInput);
-    setUserInput(''); // Clear input after sending
+    setUserInput(""); // Clear input after sending
   };
 
   // Handle business type change
@@ -34,9 +34,7 @@ export default function InteractiveDemoExample() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-4">
-            Interactive AI Voice Demo
-          </h1>
+          <h1 className="text-4xl font-bold mb-4">Interactive AI Voice Demo</h1>
           <p className="text-slate-400">
             Experience how our AI receptionist handles real conversations
           </p>
@@ -44,19 +42,17 @@ export default function InteractiveDemoExample() {
 
         {/* Business Type Selector */}
         <div className="mb-6">
-          <label className="block text-sm font-medium mb-2">
-            Select Business Type:
-          </label>
+          <label className="block text-sm font-medium mb-2">Select Business Type:</label>
           <div className="flex flex-wrap gap-2">
-            {(['plumbing', 'dental', 'auto', 'hvac', 'law', 'general'] as BusinessType[]).map(
+            {(["plumbing", "dental", "auto", "hvac", "law", "general"] as BusinessType[]).map(
               (type) => (
                 <button
                   key={type}
                   onClick={() => handleBusinessTypeChange(type)}
                   className={`px-4 py-2 rounded-lg font-medium transition-colors ${
                     state.businessType === type
-                      ? 'bg-cyan-500 text-white'
-                      : 'bg-slate-700 text-slate-300 hover:bg-slate-600'
+                      ? "bg-cyan-500 text-white"
+                      : "bg-slate-700 text-slate-300 hover:bg-slate-600"
                   }`}
                 >
                   {type.charAt(0).toUpperCase() + type.slice(1)}
@@ -88,13 +84,13 @@ export default function InteractiveDemoExample() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     className={`p-4 rounded-lg ${
-                      message.role === 'ai'
-                        ? 'bg-cyan-500/10 border border-cyan-500/20'
-                        : 'bg-slate-700'
+                      message.role === "ai"
+                        ? "bg-cyan-500/10 border border-cyan-500/20"
+                        : "bg-slate-700"
                     }`}
                   >
                     <div className="text-xs text-slate-400 mb-1">
-                      {message.role === 'ai' ? 'AI Assistant' : 'Customer'}
+                      {message.role === "ai" ? "AI Assistant" : "Customer"}
                     </div>
                     <div className="text-sm">{message.text}</div>
                   </motion.div>
@@ -136,7 +132,7 @@ export default function InteractiveDemoExample() {
                 disabled={state.isLoading || state.isTyping || !userInput.trim()}
                 className="w-full px-4 py-3 bg-cyan-500 hover:bg-cyan-600 disabled:bg-slate-700 disabled:text-slate-500 rounded-lg font-medium transition-colors"
               >
-                {state.isLoading ? 'Sending...' : 'Send Message'}
+                {state.isLoading ? "Sending..." : "Send Message"}
               </button>
             </form>
 
@@ -163,17 +159,13 @@ export default function InteractiveDemoExample() {
 
           {/* CRM Panel */}
           <div className="bg-slate-800 rounded-xl p-6">
-            <h2 className="text-xl font-semibold mb-4">
-              CRM Data (Auto-Captured)
-            </h2>
+            <h2 className="text-xl font-semibold mb-4">CRM Data (Auto-Captured)</h2>
 
             {/* Lead Score */}
             <div className="mb-6 p-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-lg border border-cyan-500/30">
               <div className="text-sm text-slate-400 mb-2">Lead Score</div>
               <div className="flex items-end gap-2">
-                <div className="text-4xl font-bold text-cyan-400">
-                  {state.leadScore}
-                </div>
+                <div className="text-4xl font-bold text-cyan-400">{state.leadScore}</div>
                 <div className="text-slate-400 mb-1">/100</div>
               </div>
               <div className="mt-2 h-2 bg-slate-700 rounded-full overflow-hidden">
@@ -194,26 +186,28 @@ export default function InteractiveDemoExample() {
                   animate={{
                     scale: field.isFlashing ? [1, 1.02, 1] : 1,
                     borderColor: field.isFlashing
-                      ? ['rgba(6, 182, 212, 0.3)', 'rgba(6, 182, 212, 0.8)', 'rgba(6, 182, 212, 0.3)']
+                      ? [
+                          "rgba(6, 182, 212, 0.3)",
+                          "rgba(6, 182, 212, 0.8)",
+                          "rgba(6, 182, 212, 0.3)",
+                        ]
                       : field.isFilled
-                      ? 'rgba(6, 182, 212, 0.3)'
-                      : 'rgba(71, 85, 105, 0.5)',
+                        ? "rgba(6, 182, 212, 0.3)"
+                        : "rgba(71, 85, 105, 0.5)",
                   }}
                   transition={{ duration: 0.3 }}
                   className={`p-4 rounded-lg border ${
                     field.isUrgent && field.isFilled
-                      ? 'bg-orange-500/10'
+                      ? "bg-orange-500/10"
                       : field.isFilled
-                      ? 'bg-cyan-500/5'
-                      : 'bg-slate-700/50'
+                        ? "bg-cyan-500/5"
+                        : "bg-slate-700/50"
                   }`}
                 >
                   <div className="text-xs text-slate-400 mb-1">{field.label}</div>
                   {field.isFilled ? (
                     <div
-                      className={`font-medium ${
-                        field.isUrgent ? 'text-orange-400' : 'text-white'
-                      }`}
+                      className={`font-medium ${field.isUrgent ? "text-orange-400" : "text-white"}`}
                     >
                       {field.value}
                     </div>
@@ -231,24 +225,22 @@ export default function InteractiveDemoExample() {
                 <span
                   className={`px-2 py-1 rounded text-xs font-medium ${
                     state.isLoading
-                      ? 'bg-yellow-500/20 text-yellow-400'
+                      ? "bg-yellow-500/20 text-yellow-400"
                       : state.isTyping
-                      ? 'bg-cyan-500/20 text-cyan-400'
-                      : 'bg-green-500/20 text-green-400'
+                        ? "bg-cyan-500/20 text-cyan-400"
+                        : "bg-green-500/20 text-green-400"
                   }`}
                 >
                   {state.isLoading
-                    ? 'Processing...'
+                    ? "Processing..."
                     : state.isTyping
-                    ? 'AI Responding...'
-                    : 'Ready'}
+                      ? "AI Responding..."
+                      : "Ready"}
                 </span>
               </div>
               <div className="flex items-center justify-between text-sm">
                 <span className="text-slate-400">Messages:</span>
-                <span className="text-white">
-                  {state.conversationHistory.length}
-                </span>
+                <span className="text-white">{state.conversationHistory.length}</span>
               </div>
             </div>
           </div>
@@ -261,19 +253,22 @@ export default function InteractiveDemoExample() {
             <div>
               <div className="text-cyan-400 font-medium mb-2">1. Real-time Processing</div>
               <p className="text-slate-400">
-                Messages are sent to our Claude-powered API that understands context and extracts lead data.
+                Messages are sent to our Claude-powered API that understands context and extracts
+                lead data.
               </p>
             </div>
             <div>
               <div className="text-cyan-400 font-medium mb-2">2. Auto CRM Population</div>
               <p className="text-slate-400">
-                As the AI converses, it automatically populates CRM fields with extracted information.
+                As the AI converses, it automatically populates CRM fields with extracted
+                information.
               </p>
             </div>
             <div>
               <div className="text-cyan-400 font-medium mb-2">3. Lead Scoring</div>
               <p className="text-slate-400">
-                Each interaction updates the lead score based on urgency, engagement, and information provided.
+                Each interaction updates the lead score based on urgency, engagement, and
+                information provided.
               </p>
             </div>
           </div>

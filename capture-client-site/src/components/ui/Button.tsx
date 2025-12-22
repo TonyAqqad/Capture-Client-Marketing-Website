@@ -27,21 +27,26 @@ export function Button({
   icon: Icon,
   iconPosition = "right",
   fullWidth = false,
-  ariaLabel
+  ariaLabel,
 }: ButtonProps) {
-  const baseClasses = "relative inline-flex items-center justify-center gap-2 font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:ring-offset-2 focus:ring-offset-white overflow-hidden touch-target";
+  const baseClasses =
+    "relative inline-flex items-center justify-center gap-2 font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:ring-offset-2 focus:ring-offset-white overflow-hidden touch-target";
 
   const variantClasses = {
-    primary: "bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 border-2 border-transparent hover:border-blue-400/30",
-    secondary: "bg-white border-2 border-slate-200 text-slate-900 backdrop-blur-sm hover:bg-slate-50 hover:border-slate-300",
-    glass: "bg-white/80 backdrop-blur-xl border-2 border-slate-200 text-slate-900 hover:bg-white hover:border-slate-300 shadow-lg shadow-slate-200/50",
-    ghost: "bg-white/70 border border-slate-200 text-slate-900 backdrop-blur-sm hover:bg-white hover:border-slate-300"
+    primary:
+      "bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 border-2 border-transparent hover:border-blue-400/30",
+    secondary:
+      "bg-white border-2 border-slate-200 text-slate-900 backdrop-blur-sm hover:bg-slate-50 hover:border-slate-300",
+    glass:
+      "bg-white/80 backdrop-blur-xl border-2 border-slate-200 text-slate-900 hover:bg-white hover:border-slate-300 shadow-lg shadow-slate-200/50",
+    ghost:
+      "bg-white/70 border border-slate-200 text-slate-900 backdrop-blur-sm hover:bg-white hover:border-slate-300",
   };
 
   const sizeClasses = {
     sm: "px-5 py-3 text-sm rounded-lg min-h-[48px]",
     md: "px-6 py-3.5 text-base rounded-xl min-h-[48px]",
-    lg: "px-8 py-4 text-lg rounded-2xl min-h-[52px]"
+    lg: "px-8 py-4 text-lg rounded-2xl min-h-[52px]",
   };
 
   const widthClass = fullWidth ? "w-full" : "";
@@ -50,9 +55,9 @@ export function Button({
 
   // Extract text content for default aria-label
   const getTextContent = (node: ReactNode): string => {
-    if (typeof node === 'string') return node;
-    if (typeof node === 'number') return node.toString();
-    return '';
+    if (typeof node === "string") return node;
+    if (typeof node === "number") return node.toString();
+    return "";
   };
 
   const content = (
@@ -77,9 +82,7 @@ export function Button({
 
       {/* Content */}
       <span className="relative z-10 flex items-center gap-2">
-        {Icon && iconPosition === "left" && (
-          <Icon className="w-4 h-4" aria-hidden="true" />
-        )}
+        {Icon && iconPosition === "left" && <Icon className="w-4 h-4" aria-hidden="true" />}
         {children}
         {Icon && iconPosition === "right" && (
           <motion.div

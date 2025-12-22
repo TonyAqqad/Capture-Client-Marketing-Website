@@ -5,7 +5,13 @@ import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import Link from "next/link";
 import { Snowflake, Stethoscope, Wrench, ArrowRight } from "lucide-react";
-import { use3DTilt, cardShadow, perspectiveContainer, transform3D, depthSpring } from "@/lib/depth-utils";
+import {
+  use3DTilt,
+  cardShadow,
+  perspectiveContainer,
+  transform3D,
+  depthSpring,
+} from "@/lib/depth-utils";
 import { useIsMobile } from "@/lib/responsive";
 
 interface CaseStudy {
@@ -28,27 +34,29 @@ const caseStudies: CaseStudy[] = [
     id: "hvac",
     industry: "HVAC Services",
     company: "Elite Climate Solutions",
-    problem: "Missing 60% of inbound calls during peak season, losing $15K/month in potential revenue",
-    solution: "Implemented AI voice agents to handle all calls 24/7 with automatic lead qualification and booking",
+    problem:
+      "Missing 60% of inbound calls during peak season, losing $15K/month in potential revenue",
+    solution:
+      "Implemented AI voice agents to handle all calls 24/7 with automatic lead qualification and booking",
     results: [
       {
         metric: "Call Answer Rate",
         before: "40%",
         after: "100%",
-        improvement: "+150%"
+        improvement: "+150%",
       },
       {
         metric: "Monthly Revenue",
         before: "$45K",
         after: "$156K",
-        improvement: "+247%"
+        improvement: "+247%",
       },
       {
         metric: "Response Time",
         before: "2 hours",
         after: "< 2 min",
-        improvement: "60x faster"
-      }
+        improvement: "60x faster",
+      },
     ],
     icon: Snowflake,
   },
@@ -57,26 +65,27 @@ const caseStudies: CaseStudy[] = [
     industry: "Dental Practice",
     company: "Bright Smile Dental",
     problem: "Low marketing ROI with scattered tools and no clear visibility into what was working",
-    solution: "Unified platform with integrated ads, CRM, and analytics dashboard for complete visibility",
+    solution:
+      "Unified platform with integrated ads, CRM, and analytics dashboard for complete visibility",
     results: [
       {
         metric: "Marketing ROI",
         before: "180%",
         after: "612%",
-        improvement: "+340%"
+        improvement: "+340%",
       },
       {
         metric: "Cost Per Lead",
         before: "$127",
         after: "$38",
-        improvement: "-70%"
+        improvement: "-70%",
       },
       {
         metric: "New Patients",
         before: "12/mo",
         after: "47/mo",
-        improvement: "+292%"
-      }
+        improvement: "+292%",
+      },
     ],
     icon: Stethoscope,
   },
@@ -91,23 +100,23 @@ const caseStudies: CaseStudy[] = [
         metric: "Response Time",
         before: "2 hours",
         after: "< 2 min",
-        improvement: "60x faster"
+        improvement: "60x faster",
       },
       {
         metric: "After-Hours Conversions",
         before: "5%",
         after: "42%",
-        improvement: "+740%"
+        improvement: "+740%",
       },
       {
         metric: "Customer Satisfaction",
         before: "3.8/5",
         after: "4.9/5",
-        improvement: "+29%"
-      }
+        improvement: "+29%",
+      },
     ],
     icon: Wrench,
-  }
+  },
 ];
 
 export function CaseStudiesPreview() {
@@ -138,20 +147,20 @@ export function CaseStudiesPreview() {
       <motion.div
         className="absolute inset-0 opacity-25"
         animate={{
-          backgroundPosition: ['0% 0%', '100% 100%'],
+          backgroundPosition: ["0% 0%", "100% 100%"],
         }}
         transition={{
           duration: 25,
           repeat: Infinity,
-          repeatType: 'reverse',
-          ease: 'linear',
+          repeatType: "reverse",
+          ease: "linear",
         }}
         style={{
           backgroundImage: `
             radial-gradient(circle at 30% 40%, #00C9FF15 0%, transparent 40%),
             radial-gradient(circle at 70% 60%, #4A69E215 0%, transparent 40%)
           `,
-          backgroundSize: '200% 200%',
+          backgroundSize: "200% 200%",
         }}
       />
 
@@ -171,16 +180,21 @@ export function CaseStudiesPreview() {
             {/* Editorial headline - extreme weight contrast */}
             <h2
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.1] mb-6 md:mb-8"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
             >
-              <span className="text-slate-900 font-extralight" style={{ fontWeight: 200 }}>Success stories: </span>
+              <span className="text-slate-900 font-extralight" style={{ fontWeight: 200 }}>
+                Success stories:{" "}
+              </span>
               <span
                 className="font-extrabold bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] bg-clip-text text-transparent"
                 style={{ fontWeight: 800 }}
               >
                 before
               </span>
-              <span className="text-slate-900 font-extralight" style={{ fontWeight: 200 }}> & </span>
+              <span className="text-slate-900 font-extralight" style={{ fontWeight: 200 }}>
+                {" "}
+                &{" "}
+              </span>
               <span
                 className="font-extrabold bg-gradient-to-r from-[#4A69E2] to-[#00C9FF] bg-clip-text text-transparent"
                 style={{ fontWeight: 800 }}
@@ -191,7 +205,8 @@ export function CaseStudiesPreview() {
 
             {/* Supporting copy */}
             <p className="text-lg sm:text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto leading-relaxed">
-              See exactly how Capture Client transforms businesses like yours with measurable, dramatic results.
+              See exactly how Capture Client transforms businesses like yours with measurable,
+              dramatic results.
             </p>
           </motion.div>
         </div>
@@ -199,12 +214,7 @@ export function CaseStudiesPreview() {
         {/* Case studies grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-16 md:mb-20">
           {caseStudies.map((study, index) => (
-            <CaseStudyCard
-              key={study.id}
-              study={study}
-              index={index}
-              isInView={isInView}
-            />
+            <CaseStudyCard key={study.id} study={study} index={index} isInView={isInView} />
           ))}
         </div>
 
@@ -242,11 +252,7 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 40 }}
-      animate={
-        isInView
-          ? { opacity: 1, y: 0 }
-          : { opacity: 0, y: 40 }
-      }
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
       transition={{
         duration: 0.7,
         delay: index * 0.15,
@@ -257,14 +263,18 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
     >
       <motion.div
         className="relative h-full p-6 sm:p-8 lg:p-10 rounded-2xl border border-slate-200 bg-white backdrop-blur-xl"
-        style={isMobile ? {
-          boxShadow: isHovered ? cardShadow.hover : cardShadow.rest,
-        } : {
-          ...transform3D,
-          rotateX,
-          rotateY,
-          boxShadow: isHovered ? cardShadow.hover : cardShadow.rest,
-        }}
+        style={
+          isMobile
+            ? {
+                boxShadow: isHovered ? cardShadow.hover : cardShadow.rest,
+              }
+            : {
+                ...transform3D,
+                rotateX,
+                rotateY,
+                boxShadow: isHovered ? cardShadow.hover : cardShadow.rest,
+              }
+        }
         {...handlers}
       >
         {/* Industry badge */}
@@ -280,7 +290,7 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
         {/* Company */}
         <h3
           className="text-lg sm:text-xl lg:text-2xl font-bold text-slate-900 mb-4 leading-tight"
-          style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}
+          style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 700 }}
         >
           {study.company}
         </h3>
@@ -290,9 +300,7 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
           <p className="text-xs uppercase tracking-[0.2em] text-slate-500 font-medium mb-2 sm:mb-3">
             The Challenge
           </p>
-          <p className="text-slate-600 leading-relaxed text-sm">
-            {study.problem}
-          </p>
+          <p className="text-slate-600 leading-relaxed text-sm">{study.problem}</p>
         </div>
 
         {/* Results - Before/After */}
@@ -301,11 +309,7 @@ function CaseStudyCard({ study, index, isInView }: CaseStudyCardProps) {
             <motion.div
               key={idx}
               initial={{ opacity: 0, x: -20 }}
-              animate={
-                isInView
-                  ? { opacity: 1, x: 0 }
-                  : { opacity: 0, x: -20 }
-              }
+              animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
               transition={{
                 duration: 0.5,
                 delay: index * 0.15 + idx * 0.1 + 0.3,

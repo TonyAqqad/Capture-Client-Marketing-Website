@@ -1,5 +1,11 @@
 import { MetadataRoute } from "next";
-import { getAllServices, getAllLocations, getAllNationalPages, getAllPackages, getAllBlogPosts } from "@/lib/data";
+import {
+  getAllServices,
+  getAllLocations,
+  getAllNationalPages,
+  getAllPackages,
+  getAllBlogPosts,
+} from "@/lib/data";
 import { integrations } from "@/data/integrations";
 import { INDUSTRIES } from "@/data/industries";
 
@@ -237,7 +243,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.7,
     },
     // Individual blog posts
-    ...blogPosts.map(post => ({
+    ...blogPosts.map((post) => ({
       url: `${baseUrl}/blog/${post.slug}`,
       lastModified: new Date(post.updatedAt || post.publishedAt),
       changeFrequency: "monthly" as const,

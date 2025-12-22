@@ -7,9 +7,7 @@ import { IntegrationCard } from "./IntegrationCard";
 import { IntegrationFilter } from "./IntegrationFilter";
 import { IntegrationSearch } from "./IntegrationSearch";
 import { FeaturedIntegrationsSpotlight } from "./FeaturedIntegrationsSpotlight";
-import {
-  integrations as centralizedIntegrations,
-} from "@/data/integrations";
+import { integrations as centralizedIntegrations } from "@/data/integrations";
 
 // Category mapping from centralized data to display format
 const categoryDisplayMap: Record<string, string> = {
@@ -168,10 +166,7 @@ export function IntegrationsGrid() {
                 {filteredIntegrations.length} integration
                 {filteredIntegrations.length !== 1 ? "s" : ""} found
                 {searchQuery && (
-                  <span className="text-blue-600 font-semibold">
-                    {" "}
-                    for "{searchQuery}"
-                  </span>
+                  <span className="text-blue-600 font-semibold"> for "{searchQuery}"</span>
                 )}
               </p>
             </div>

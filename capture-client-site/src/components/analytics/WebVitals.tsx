@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect } from 'react';
-import { useReportWebVitals } from 'next/web-vitals';
-import { reportWebVitals, initWebVitals, PERFORMANCE_THRESHOLDS } from '@/lib/performance';
-import type { Metric } from 'web-vitals';
+import { useEffect } from "react";
+import { useReportWebVitals } from "next/web-vitals";
+import { reportWebVitals, initWebVitals, PERFORMANCE_THRESHOLDS } from "@/lib/performance";
+import type { Metric } from "web-vitals";
 
 /**
  * Enhanced Web Vitals Tracking Component
@@ -35,17 +35,17 @@ export function WebVitals() {
   useReportWebVitals((metric) => {
     // Extended metric type from Next.js
     interface ExtendedMetric {
-      navigationType?: 'navigate' | 'reload' | 'back-forward' | 'prerender';
+      navigationType?: "navigate" | "reload" | "back-forward" | "prerender";
     }
 
     // Convert Next.js metric to web-vitals Metric format
     const webVitalsMetric: Metric = {
-      name: metric.name as Metric['name'],
+      name: metric.name as Metric["name"],
       value: metric.value,
-      rating: metric.rating as Metric['rating'],
+      rating: metric.rating as Metric["rating"],
       delta: metric.delta,
       id: metric.id,
-      navigationType: (metric as ExtendedMetric).navigationType || 'navigate',
+      navigationType: (metric as ExtendedMetric).navigationType || "navigate",
       entries: [],
     };
 
@@ -53,7 +53,7 @@ export function WebVitals() {
     reportWebVitals(webVitalsMetric);
 
     // Additional development-only insights
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === "development") {
       const threshold = PERFORMANCE_THRESHOLDS[metric.name as keyof typeof PERFORMANCE_THRESHOLDS];
 
       if (threshold) {
@@ -62,10 +62,10 @@ export function WebVitals() {
         const percentOfGood = ((value / threshold.good) * 100).toFixed(0);
 
         console.log(`📊 [Web Vitals Analysis] ${metric.name}`, {
-          value: `${metric.name === 'CLS' ? value.toFixed(3) : Math.round(value)}${metric.name === 'CLS' ? '' : 'ms'}`,
+          value: `${metric.name === "CLS" ? value.toFixed(3) : Math.round(value)}${metric.name === "CLS" ? "" : "ms"}`,
           rating: metric.rating,
-          target: `${threshold.target}${metric.name === 'CLS' ? '' : 'ms'}`,
-          good: `${threshold.good}${metric.name === 'CLS' ? '' : 'ms'}`,
+          target: `${threshold.target}${metric.name === "CLS" ? "" : "ms"}`,
+          good: `${threshold.good}${metric.name === "CLS" ? "" : "ms"}`,
           percentOfTarget: `${percentOfTarget}%`,
           percentOfGood: `${percentOfGood}%`,
           delta: metric.delta,
@@ -75,22 +75,22 @@ export function WebVitals() {
         if (value > threshold.poor) {
           console.error(
             `🚨 CRITICAL: ${metric.name} is ${Math.round((value / threshold.poor) * 100)}% of poor threshold!`,
-            '\nImmediate action required. This will hurt SEO rankings and conversions.'
+            "\nImmediate action required. This will hurt SEO rankings and conversions."
           );
         } else if (value > threshold.good) {
           console.warn(
             `⚠️ WARNING: ${metric.name} needs improvement (${Math.round((value / threshold.good) * 100)}% of good threshold)`,
-            '\nOptimize to improve user experience and Core Web Vitals score.'
+            "\nOptimize to improve user experience and Core Web Vitals score."
           );
         } else if (value > threshold.target) {
           console.info(
             `ℹ️ INFO: ${metric.name} is good but not excellent (${Math.round((value / threshold.target) * 100)}% of target)`,
-            '\nRoom for optimization to achieve competitive advantage.'
+            "\nRoom for optimization to achieve competitive advantage."
           );
         } else {
           console.log(
             `🚀 EXCELLENT: ${metric.name} meets or exceeds target!`,
-            '\nKeep monitoring to maintain this performance level.'
+            "\nKeep monitoring to maintain this performance level."
           );
         }
       }

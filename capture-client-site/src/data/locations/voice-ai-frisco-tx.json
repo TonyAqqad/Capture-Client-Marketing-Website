@@ -11,13 +11,7 @@
     "state": "Texas",
     "state_abbr": "TX",
     "slug": "frisco-tx",
-    "nearby_areas": [
-      "Little Elm",
-      "Prosper",
-      "McKinney",
-      "The Colony",
-      "Plano"
-    ],
+    "nearby_areas": ["Little Elm", "Prosper", "McKinney", "The Colony", "Plano"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -182,14 +176,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "voice-ai-plano-tx",
-      "voice-ai-mckinney-tx",
-      "voice-ai-prosper-tx"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "nearby_locations": ["voice-ai-plano-tx", "voice-ai-mckinney-tx", "voice-ai-prosper-tx"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

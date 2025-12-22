@@ -1,6 +1,6 @@
 "use client";
 
-import { GlassCard } from '@/components/ui/GlassCard';
+import { GlassCard } from "@/components/ui/GlassCard";
 import {
   Scale,
   ShieldCheck,
@@ -56,7 +56,7 @@ import {
   BadgeCheck,
   Award,
   type LucideIcon,
-} from 'lucide-react';
+} from "lucide-react";
 
 interface Solution {
   icon: string;
@@ -171,7 +171,7 @@ export function IndustrySolutions({ solutions }: IndustrySolutionsProps) {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              How We{' '}
+              How We{" "}
               <span className="bg-gradient-to-r from-accent-400 to-accent-600 bg-clip-text text-transparent">
                 Solve It
               </span>
@@ -191,13 +191,9 @@ export function IndustrySolutions({ solutions }: IndustrySolutionsProps) {
                       <IconComponent className="text-accent-400 w-9 h-9" />
                     </div>
 
-                    <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                      {solution.title}
-                    </h3>
+                    <h3 className="text-2xl font-bold text-slate-900 mb-4">{solution.title}</h3>
 
-                    <p className="text-slate-600 leading-relaxed text-lg">
-                      {solution.description}
-                    </p>
+                    <p className="text-slate-600 leading-relaxed text-lg">{solution.description}</p>
                   </div>
                 </GlassCard>
               );

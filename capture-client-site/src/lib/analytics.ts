@@ -7,15 +7,11 @@
 
 // Extend Window interface to include gtag
 // Using the official Gtag.js function signature
-type GtagCommand = 'config' | 'set' | 'event' | 'consent' | 'get';
+type GtagCommand = "config" | "set" | "event" | "consent" | "get";
 
 declare global {
   interface Window {
-    gtag?: (
-      command: GtagCommand,
-      targetId: string,
-      config?: Record<string, unknown>
-    ) => void;
+    gtag?: (command: GtagCommand, targetId: string, config?: Record<string, unknown>) => void;
   }
 }
 
@@ -89,11 +85,7 @@ export function trackFormStart(formName: string) {
  * @param location - Where on the page the CTA appears (e.g., 'hero', 'footer', 'sidebar')
  * @param destination - URL or action destination (optional)
  */
-export function trackCTAClick(
-  ctaName: string,
-  location: string,
-  destination?: string
-) {
+export function trackCTAClick(ctaName: string, location: string, destination?: string) {
   trackEvent("cta_click", {
     cta_name: ctaName,
     cta_location: location,
@@ -202,10 +194,7 @@ export function trackSearch(searchTerm: string, resultCount?: number) {
  * @param serviceName - Name of the service the user is interested in
  * @param interactionType - How they showed interest (view, click, etc.)
  */
-export function trackServiceInterest(
-  serviceName: string,
-  interactionType: string
-) {
+export function trackServiceInterest(serviceName: string, interactionType: string) {
   trackEvent("service_interest", {
     service_name: serviceName,
     interaction_type: interactionType,

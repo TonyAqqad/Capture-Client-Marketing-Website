@@ -79,7 +79,7 @@ export function IntegrationsHero() {
               delay: 0.1,
               type: "spring",
               stiffness: 200,
-              damping: 15
+              damping: 15,
             }}
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-blue-600/10 via-blue-600/5 to-transparent border border-blue-600/30 backdrop-blur-xl mb-8"
           >
@@ -101,7 +101,7 @@ export function IntegrationsHero() {
               delay: 0.2,
               type: "spring",
               stiffness: 100,
-              damping: 15
+              damping: 15,
             }}
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold text-slate-900 mb-6 leading-tight tracking-tight"
           >
@@ -119,9 +119,7 @@ export function IntegrationsHero() {
             className="text-lg sm:text-xl lg:text-2xl text-slate-600 max-w-3xl mx-auto mb-12 leading-relaxed font-accent"
           >
             Seamlessly integrate with your CRM, phone system, calendar, and all your favorite tools.{" "}
-            <span className="text-blue-600 font-semibold">
-              No coding required.
-            </span>
+            <span className="text-blue-600 font-semibold">No coding required.</span>
           </motion.p>
 
           {/* Animated Logo Carousel */}
@@ -190,9 +188,7 @@ export function IntegrationsHero() {
               <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2">
                 5,000+
               </div>
-              <div className="text-xs sm:text-sm text-slate-600 font-medium">
-                Via Zapier/Make
-              </div>
+              <div className="text-xs sm:text-sm text-slate-600 font-medium">Via Zapier/Make</div>
             </motion.div>
 
             {/* Stat 3 */}
@@ -204,9 +200,7 @@ export function IntegrationsHero() {
               <div className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2">
                 &lt; 5m
               </div>
-              <div className="text-xs sm:text-sm text-slate-600 font-medium">
-                Setup Time
-              </div>
+              <div className="text-xs sm:text-sm text-slate-600 font-medium">Setup Time</div>
             </motion.div>
           </motion.div>
         </motion.div>

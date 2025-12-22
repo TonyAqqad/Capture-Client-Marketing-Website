@@ -5,10 +5,10 @@ import { Star, Quote, MapPin } from "lucide-react";
 interface Testimonial {
   quote: string;
   // Support both data formats
-  name?: string;      // from LocationData
-  author?: string;    // legacy format
-  company?: string;   // from LocationData
-  business?: string;  // legacy format
+  name?: string; // from LocationData
+  author?: string; // legacy format
+  company?: string; // from LocationData
+  business?: string; // legacy format
   role?: string;
   location?: string;
   image?: string;
@@ -27,9 +27,7 @@ export default function PremiumLocationTestimonials({
   if (!testimonials || testimonials.length === 0) return null;
 
   return (
-    <section
-      className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16 relative overflow-hidden bg-gradient-to-b from-white to-slate-50"
-    >
+    <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-16 relative overflow-hidden bg-gradient-to-b from-white to-slate-50">
       {/* Background Effects - Mesh Gradients */}
       <div className="absolute inset-0">
         <div className="absolute top-20 right-0 w-[500px] h-[500px] bg-gradient-to-br from-[#00C9FF]/10 to-transparent rounded-full blur-3xl" />
@@ -44,14 +42,14 @@ export default function PremiumLocationTestimonials({
             <Star className="w-3.5 h-3.5 text-[#00C9FF] fill-[#00C9FF]" />
             <span
               className="text-xs uppercase tracking-wider text-[#00C9FF]"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 600 }}
             >
               Client Success Stories
             </span>
           </div>
           <h2
             className="text-2xl sm:text-3xl lg:text-4xl text-slate-900 mb-4"
-            style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
+            style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 800 }}
           >
             What{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00C9FF] to-[#4A69E2]">
@@ -61,7 +59,7 @@ export default function PremiumLocationTestimonials({
           </h2>
           <p
             className="text-slate-600 text-base sm:text-lg"
-            style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}
+            style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 200 }}
           >
             Real results from real businesses in your area
           </p>
@@ -94,7 +92,7 @@ export default function PremiumLocationTestimonials({
                 <blockquote className="mb-6">
                   <p
                     className="text-base sm:text-lg text-slate-600 leading-relaxed"
-                    style={{ fontFamily: 'var(--font-playfair)', fontStyle: 'italic' }}
+                    style={{ fontFamily: "var(--font-playfair)", fontStyle: "italic" }}
                   >
                     "{testimonial.quote}"
                   </p>
@@ -111,7 +109,7 @@ export default function PremiumLocationTestimonials({
                     <div className="relative flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-[#00C9FF]/20 to-[#4A69E2]/20 border-2 border-[#00C9FF]/30">
                       <span
                         className="text-[#00C9FF] text-sm"
-                        style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
+                        style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 800 }}
                       >
                         {(testimonial.author || testimonial.name || "")
                           .split(" ")
@@ -125,13 +123,13 @@ export default function PremiumLocationTestimonials({
                   <div className="flex-1">
                     <div
                       className="text-slate-900 text-base mb-0.5"
-                      style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}
+                      style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 600 }}
                     >
                       {testimonial.author || testimonial.name}
                     </div>
                     <div
                       className="text-sm text-slate-600"
-                      style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}
+                      style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 200 }}
                     >
                       {testimonial.business || testimonial.company}
                       {testimonial.role && ` • ${testimonial.role}`}
@@ -139,7 +137,7 @@ export default function PremiumLocationTestimonials({
                     {testimonial.location && (
                       <div
                         className="flex items-center gap-1 text-xs text-[#00C9FF] mt-1"
-                        style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 400 }}
+                        style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 400 }}
                       >
                         <MapPin className="w-3 h-3" />
                         <span>{testimonial.location}</span>
@@ -150,10 +148,7 @@ export default function PremiumLocationTestimonials({
                   {/* Star Rating - Cyan */}
                   <div className="hidden sm:flex items-center gap-0.5 flex-shrink-0">
                     {[...Array(testimonial.rating || 5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="w-4 h-4 text-[#00C9FF] fill-[#00C9FF]"
-                      />
+                      <Star key={i} className="w-4 h-4 text-[#00C9FF] fill-[#00C9FF]" />
                     ))}
                   </div>
                 </div>
@@ -170,13 +165,13 @@ export default function PremiumLocationTestimonials({
           <div className="text-center p-4 sm:p-6 border border-slate-200 bg-white/70 backdrop-blur-xl rounded-xl">
             <div
               className="text-2xl sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] mb-1"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 800 }}
             >
               500+
             </div>
             <div
               className="text-xs sm:text-sm text-slate-600"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 200 }}
             >
               Happy Clients
             </div>
@@ -184,13 +179,13 @@ export default function PremiumLocationTestimonials({
           <div className="text-center p-4 sm:p-6 border border-slate-200 bg-white/70 backdrop-blur-xl rounded-xl">
             <div
               className="text-2xl sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] mb-1"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 800 }}
             >
               4.9
             </div>
             <div
               className="text-xs sm:text-sm text-slate-600"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 200 }}
             >
               Avg Rating
             </div>
@@ -198,13 +193,13 @@ export default function PremiumLocationTestimonials({
           <div className="text-center p-4 sm:p-6 border border-slate-200 bg-white/70 backdrop-blur-xl rounded-xl">
             <div
               className="text-2xl sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] mb-1"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 800 }}
             >
               15k+
             </div>
             <div
               className="text-xs sm:text-sm text-slate-600"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 200 }}
             >
               Calls Handled
             </div>
@@ -212,13 +207,13 @@ export default function PremiumLocationTestimonials({
           <div className="text-center p-4 sm:p-6 border border-slate-200 bg-white/70 backdrop-blur-xl rounded-xl">
             <div
               className="text-2xl sm:text-3xl text-transparent bg-clip-text bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] mb-1"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 800 }}
             >
               24/7
             </div>
             <div
               className="text-xs sm:text-sm text-slate-600"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 200 }}
             >
               Support
             </div>

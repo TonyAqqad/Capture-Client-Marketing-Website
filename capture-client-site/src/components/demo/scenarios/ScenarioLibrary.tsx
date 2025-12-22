@@ -74,14 +74,15 @@ export function ScenarioLibrary({ onSelectScenario, selectedScenarioId }: Scenar
     };
 
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   // Filter scenarios
   const filteredScenarios = useMemo(() => {
     return scenarios.filter((scenario) => {
-      const matchesBusiness = activeBusinessType === "all" || scenario.businessType === activeBusinessType;
+      const matchesBusiness =
+        activeBusinessType === "all" || scenario.businessType === activeBusinessType;
       const matchesCategory = activeCategory === "all" || scenario.category === activeCategory;
       return matchesBusiness && matchesCategory;
     });
@@ -104,10 +105,10 @@ export function ScenarioLibrary({ onSelectScenario, selectedScenarioId }: Scenar
           <button
             onClick={() => setFiltersExpanded(!filtersExpanded)}
             className="w-full mb-4 flex items-center justify-between px-4 py-3 bg-white border-2 border-slate-200 rounded-xl text-slate-900 font-medium hover:bg-slate-50 hover:border-slate-300 transition-all duration-200"
-            style={{ minHeight: '44px' }}
+            style={{ minHeight: "44px" }}
           >
             <span className="flex items-center gap-2">
-              {filtersExpanded ? 'Hide filters' : 'Show filters'}
+              {filtersExpanded ? "Hide filters" : "Show filters"}
               {!filtersExpanded && activeFilterCount > 0 && (
                 <span className="inline-flex items-center justify-center w-6 h-6 text-xs font-semibold bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-full">
                   {activeFilterCount}
@@ -152,10 +153,10 @@ export function ScenarioLibrary({ onSelectScenario, selectedScenarioId }: Scenar
           {(!isMobile || filtersExpanded) && (
             <motion.div
               initial={isMobile ? { height: 0, opacity: 0 } : false}
-              animate={{ height: 'auto', opacity: 1 }}
+              animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
-              transition={{ duration: 0.3, ease: 'easeInOut' }}
-              style={isMobile ? { overflow: 'hidden' } : undefined}
+              transition={{ duration: 0.3, ease: "easeInOut" }}
+              style={isMobile ? { overflow: "hidden" } : undefined}
             >
               <div className="space-y-4">
                 {/* Business Type Filter */}
@@ -210,7 +211,8 @@ export function ScenarioLibrary({ onSelectScenario, selectedScenarioId }: Scenar
       {/* Results count */}
       <div className="flex items-center justify-between">
         <p className="text-sm text-slate-500">
-          Showing <span className="font-semibold text-slate-700">{filteredScenarios.length}</span> scenarios
+          Showing <span className="font-semibold text-slate-700">{filteredScenarios.length}</span>{" "}
+          scenarios
         </p>
         {(activeBusinessType !== "all" || activeCategory !== "all") && (
           <button
@@ -238,7 +240,7 @@ export function ScenarioLibrary({ onSelectScenario, selectedScenarioId }: Scenar
               transition={{
                 duration: 0.3,
                 delay: index * 0.05,
-                layout: { type: "spring", stiffness: 300, damping: 30 }
+                layout: { type: "spring", stiffness: 300, damping: 30 },
               }}
             >
               <ScenarioCard
@@ -262,9 +264,7 @@ export function ScenarioLibrary({ onSelectScenario, selectedScenarioId }: Scenar
             <Search className="w-8 h-8 text-slate-400" />
           </div>
           <h3 className="text-lg font-semibold text-slate-900 mb-2">No scenarios found</h3>
-          <p className="text-slate-600 mb-4">
-            Try adjusting your filters to see more scenarios.
-          </p>
+          <p className="text-slate-600 mb-4">Try adjusting your filters to see more scenarios.</p>
           <button
             onClick={() => {
               setActiveBusinessType("all");
@@ -298,9 +298,10 @@ function FilterPill({ icon: Icon, label, isActive, onClick }: FilterPillProps) {
       className={`
         inline-flex items-center gap-2 px-4 py-3 rounded-full text-sm font-medium min-h-[44px]
         transition-all duration-200 border
-        ${isActive
-          ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white border-transparent shadow-lg shadow-blue-500/25"
-          : "bg-white text-slate-600 border-slate-200 hover:border-blue-300 hover:text-blue-600 hover:bg-blue-50"
+        ${
+          isActive
+            ? "bg-gradient-to-r from-blue-600 to-cyan-500 text-white border-transparent shadow-lg shadow-blue-500/25"
+            : "bg-white text-slate-600 border-slate-200 hover:border-blue-300 hover:text-blue-600 hover:bg-blue-50"
         }
       `}
       whileHover={{ scale: 1.02 }}

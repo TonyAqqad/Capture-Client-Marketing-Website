@@ -11,13 +11,7 @@
     "keyword_slug": "ai-receptionist-small-business"
   },
   "industry_focus": {
-    "industries": [
-      "Medical Practices",
-      "Law Firms",
-      "Accounting Firms",
-      "Consulting",
-      "Salons"
-    ],
+    "industries": ["Medical Practices", "Law Firms", "Accounting Firms", "Consulting", "Salons"],
     "business_types": [
       "Medical Practices companies",
       "Law Firms companies",
@@ -28,11 +22,7 @@
     "page_title": "AI Receptionist for Small Business | 24/7 Phone Answering",
     "meta_description": "AI receptionist for small business that answers calls 24/7 books appointments and qualifies leads. Affordable alternative to hiring staff.",
     "h1_heading": "AI Receptionist for Small Business",
-    "keywords": [
-      "ai receptionist for small business",
-      "capture client",
-      "automation"
-    ]
+    "keywords": ["ai receptionist for small business", "capture client", "automation"]
   },
   "hero": {
     "headline": "Professional Reception Without The Payroll",
@@ -114,13 +104,7 @@
   "nationwide_coverage": {
     "heading": "Serving Businesses Nationwide",
     "description": "We work with businesses across all 50 states from small local operations to multi-location enterprises.",
-    "regions_highlighted": [
-      "East Coast",
-      "West Coast",
-      "Midwest",
-      "South",
-      "Southwest"
-    ]
+    "regions_highlighted": ["East Coast", "West Coast", "Midwest", "South", "Southwest"]
   },
   "testimonials": [
     {
@@ -198,13 +182,7 @@
     "urgency_text": "Limited slots available for new clients"
   },
   "related_pages": {
-    "related_national_keywords": [
-      "voice-ai-small-business",
-      "lead-generation-agency"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "related_national_keywords": ["voice-ai-small-business", "lead-generation-agency"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

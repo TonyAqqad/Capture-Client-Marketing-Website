@@ -13,7 +13,7 @@ export function GlowCard({
   children,
   className = "",
   glassEffect = true,
-  interactiveGlow = true
+  interactiveGlow = true,
 }: GlowCardProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -22,12 +22,12 @@ export function GlowCard({
 
   useEffect(() => {
     const checkMobile = () => {
-      if (typeof window === 'undefined') return;
+      if (typeof window === "undefined") return;
       setIsMobile(window.innerWidth < 768);
     };
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   const updatePosition = (clientX: number, clientY: number) => {
@@ -35,7 +35,7 @@ export function GlowCard({
     const rect = ref.current.getBoundingClientRect();
     setPosition({
       x: clientX - rect.left,
-      y: clientY - rect.top
+      y: clientY - rect.top,
     });
   };
 
@@ -101,24 +101,23 @@ export function GlowCard({
           className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none"
           initial={false}
           animate={{
-            backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
+            backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
           }}
           transition={{
             duration: 3,
             repeat: Infinity,
-            ease: "linear"
+            ease: "linear",
           }}
           style={{
-            background: 'linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.08) 50%, transparent 100%)',
-            backgroundSize: '200% 100%'
+            background:
+              "linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.08) 50%, transparent 100%)",
+            backgroundSize: "200% 100%",
           }}
         />
       )}
 
       {/* Content */}
-      <div className="relative z-10">
-        {children}
-      </div>
+      <div className="relative z-10">{children}</div>
 
       {/* Pressed state overlay */}
       {isPressed && (

@@ -12,20 +12,23 @@ export const metadata: Metadata = {
     "lead qualification ai",
     "appointment scheduling",
     "crm integration",
-    "24/7 phone answering"
+    "24/7 phone answering",
   ],
   openGraph: {
     title: "Platform Features | All-in-One Growth Hub | Capture Client",
-    description: "Explore Capture Client's AI voice agent features: 24/7 call answering, lead qualification, appointment booking, CRM integration, and more.",
+    description:
+      "Explore Capture Client's AI voice agent features: 24/7 call answering, lead qualification, appointment booking, CRM integration, and more.",
     url: "https://captureclient.com/features",
     siteName: "Capture Client",
     type: "website",
-    images: [{
-      url: "https://captureclient.com/og-image.png",
-      width: 1200,
-      height: 630,
-      alt: "Capture Client Platform Features",
-    }],
+    images: [
+      {
+        url: "https://captureclient.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Capture Client Platform Features",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -192,11 +195,7 @@ export default function FeaturesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([
-            webPageSchema,
-            itemListSchema,
-            softwareSchema,
-          ]),
+          __html: JSON.stringify([webPageSchema, itemListSchema, softwareSchema]),
         }}
       />
       <FeaturesPageClient />

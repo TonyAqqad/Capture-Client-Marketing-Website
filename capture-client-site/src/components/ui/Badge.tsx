@@ -19,20 +19,21 @@ export function Badge({
   size = "md",
   icon,
   pulse = false,
-  className = ""
+  className = "",
 }: BadgeProps) {
   const variantClasses = {
     primary: "bg-primary/10 border-primary/20 text-primary",
     accent: "bg-accent/10 border-accent/20 text-accent",
     success: "bg-green-500/10 border-green-500/20 text-green-400",
     warning: "bg-yellow-500/10 border-yellow-500/20 text-yellow-400",
-    glass: "bg-white/10 backdrop-blur-xl border-white/20 text-slate-900 shadow-[0_4px_16px_rgba(0,0,0,0.1)]"
+    glass:
+      "bg-white/10 backdrop-blur-xl border-white/20 text-slate-900 shadow-[0_4px_16px_rgba(0,0,0,0.1)]",
   };
 
   const sizeClasses = {
     sm: "px-2.5 py-1 text-xs rounded-lg",
     md: "px-3 py-1.5 text-sm rounded-lg",
-    lg: "px-4 py-2 text-base rounded-xl"
+    lg: "px-4 py-2 text-base rounded-xl",
   };
 
   return (
@@ -51,16 +52,17 @@ export function Badge({
         </>
       )}
 
-      {icon && (() => {
-        const Icon = icon;
-        return (
-          <Icon
-            className="text-current"
-            aria-hidden="true"
-            size={size === "sm" ? 14 : size === "md" ? 16 : 18}
-          />
-        );
-      })()}
+      {icon &&
+        (() => {
+          const Icon = icon;
+          return (
+            <Icon
+              className="text-current"
+              aria-hidden="true"
+              size={size === "sm" ? 14 : size === "md" ? 16 : 18}
+            />
+          );
+        })()}
 
       <span className="relative z-10">{children}</span>
 

@@ -1,15 +1,7 @@
 "use client";
 
 import { motion } from "@/lib/motion";
-import {
-  User,
-  Phone,
-  Mail,
-  Wrench,
-  AlertCircle,
-  Clock,
-  MapPin,
-} from "lucide-react";
+import { User, Phone, Mail, Wrench, AlertCircle, Clock, MapPin } from "lucide-react";
 
 interface ExtractedCRMData {
   name?: string;
@@ -56,9 +48,7 @@ export function CRMFieldsDisplay({ data, animate = true }: CRMFieldsDisplayProps
 
   return (
     <div className="space-y-2">
-      <p className="text-sm font-medium text-slate-700 mb-3">
-        Extracted CRM Data
-      </p>
+      <p className="text-sm font-medium text-slate-700 mb-3">Extracted CRM Data</p>
       <div className="flex flex-wrap gap-2">
         {fields.map(([key, value], index) => {
           const config = FIELD_CONFIG[key as keyof typeof FIELD_CONFIG];
@@ -66,15 +56,15 @@ export function CRMFieldsDisplay({ data, animate = true }: CRMFieldsDisplayProps
 
           const Icon = config.icon;
           const isUrgency = key === "urgency";
-          const urgencyClass = isUrgency ? URGENCY_COLORS[value as keyof typeof URGENCY_COLORS] : "";
+          const urgencyClass = isUrgency
+            ? URGENCY_COLORS[value as keyof typeof URGENCY_COLORS]
+            : "";
 
           return (
             <motion.div
               key={key}
               className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border ${
-                isUrgency
-                  ? urgencyClass
-                  : "bg-slate-50 border-slate-200 text-slate-700"
+                isUrgency ? urgencyClass : "bg-slate-50 border-slate-200 text-slate-700"
               }`}
               initial={animate ? { scale: 0.8, opacity: 0, y: 10 } : undefined}
               animate={animate ? { scale: 1, opacity: 1, y: 0 } : undefined}
@@ -89,9 +79,7 @@ export function CRMFieldsDisplay({ data, animate = true }: CRMFieldsDisplayProps
               <span className="text-xs font-medium uppercase tracking-wide opacity-60">
                 {config.label}:
               </span>
-              <span className="text-sm font-semibold capitalize">
-                {String(value)}
-              </span>
+              <span className="text-sm font-semibold capitalize">{String(value)}</span>
             </motion.div>
           );
         })}

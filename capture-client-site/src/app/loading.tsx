@@ -9,12 +9,8 @@ export default function Loading() {
         </div>
 
         {/* Loading text */}
-        <h2 className="text-xl font-semibold text-slate-900 mb-2">
-          Loading...
-        </h2>
-        <p className="text-slate-600 text-sm">
-          Preparing your experience
-        </p>
+        <h2 className="text-xl font-semibold text-slate-900 mb-2">Loading...</h2>
+        <p className="text-slate-600 text-sm">Preparing your experience</p>
 
         {/* Loading dots - using Tailwind animations */}
         <div className="mt-6 flex items-center justify-center gap-1.5">

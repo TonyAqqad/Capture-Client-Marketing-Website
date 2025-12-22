@@ -49,9 +49,7 @@ export default function MegaMenuDropdown({
               {/* Content Grid - 2 columns */}
               <div className="grid grid-cols-2 gap-1 p-4">
                 {section.items.map((item, index) => {
-                  const IconComponent = item.icon
-                    ? navIcons[item.icon]
-                    : null;
+                  const IconComponent = item.icon ? navIcons[item.icon] : null;
 
                   return (
                     <motion.div
@@ -64,7 +62,7 @@ export default function MegaMenuDropdown({
                         href={item.href}
                         className="group relative flex items-start gap-3 p-3.5 rounded-xl hover:bg-slate-50 border border-transparent hover:border-slate-200 transition-all duration-200"
                         onClick={onClose}
-                        style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+                        style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
                       >
                         {/* Icon Container */}
                         {IconComponent && (

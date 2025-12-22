@@ -5,11 +5,28 @@ import { motion, AnimatePresence } from "@/lib/motion";
 import { GlassCard } from "@/components/ui/GlassCard";
 import { Button } from "@/components/ui/Button";
 import {
-  Calendar, TrendingUp, ShieldCheck,
-  CheckCircle2, Car, Wrench, Package,
-  ShoppingBag, ArrowLeftRight, Moon, DollarSign, RefreshCcw,
-  Calculator, User, AlertTriangle, Search, BarChart,
-  ArrowDownUp, Headphones, Bot, Phone, ArrowRight
+  Calendar,
+  TrendingUp,
+  ShieldCheck,
+  CheckCircle2,
+  Car,
+  Wrench,
+  Package,
+  ShoppingBag,
+  ArrowLeftRight,
+  Moon,
+  DollarSign,
+  RefreshCcw,
+  Calculator,
+  User,
+  AlertTriangle,
+  Search,
+  BarChart,
+  ArrowDownUp,
+  Headphones,
+  Bot,
+  Phone,
+  ArrowRight,
 } from "lucide-react";
 
 type ToggleMode = "sales" | "service";
@@ -20,14 +37,14 @@ export default function AutomotivePageClient() {
     monthlyCalls: 500,
     missedPercent: 33,
     avgSaleValue: 30000,
-    avgServiceValue: 500
+    avgServiceValue: 500,
   });
 
   // ROI Calculations
   const missedCalls = (calculatorInputs.monthlyCalls * calculatorInputs.missedPercent) / 100;
   const annualMissedCalls = missedCalls * 12;
-  const salesRecovery = (annualMissedCalls * 0.15 * calculatorInputs.avgSaleValue);
-  const serviceRecovery = (annualMissedCalls * 0.25 * calculatorInputs.avgServiceValue);
+  const salesRecovery = annualMissedCalls * 0.15 * calculatorInputs.avgSaleValue;
+  const serviceRecovery = annualMissedCalls * 0.25 * calculatorInputs.avgServiceValue;
   const totalRecovery = salesRecovery + serviceRecovery;
   const noShowReduction = 176000; // Conservative estimate
 
@@ -37,15 +54,23 @@ export default function AutomotivePageClient() {
       <section className="relative overflow-hidden pt-32 pb-16 sm:pt-40 sm:pb-24 lg:pt-48 lg:pb-32 bg-gradient-to-b from-white to-slate-50">
         {/* Premium Background - Clean Light Aesthetic */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0" style={{
-            background: 'radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.04) 0%, transparent 50%)'
-          }} />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 50%), radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.04) 0%, transparent 50%)",
+            }}
+          />
 
           {/* Mesh gradient overlay */}
-          <div className="absolute inset-0 opacity-20" style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.15) 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }} />
+          <div
+            className="absolute inset-0 opacity-20"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.15) 1px, transparent 0)",
+              backgroundSize: "40px 40px",
+            }}
+          />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -58,10 +83,13 @@ export default function AutomotivePageClient() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200 mb-6"
             >
               <div className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-              <span className="text-xs sm:text-sm uppercase tracking-widest text-blue-600" style={{
-                fontFamily: 'var(--font-bricolage-grotesque)',
-                fontWeight: 600
-              }}>
+              <span
+                className="text-xs sm:text-sm uppercase tracking-widest text-blue-600"
+                style={{
+                  fontFamily: "var(--font-bricolage-grotesque)",
+                  fontWeight: 600,
+                }}
+              >
                 Automotive AI Solutions
               </span>
             </motion.div>
@@ -72,12 +100,15 @@ export default function AutomotivePageClient() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-slate-900 mb-6 leading-tight"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
             >
               <span style={{ fontWeight: 200 }}>Your Sales Floor is Busy. </span>
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent" style={{
-                fontWeight: 800
-              }}>
+              <span
+                className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+                style={{
+                  fontWeight: 800,
+                }}
+              >
                 AI Answers.
               </span>
             </motion.h1>
@@ -89,8 +120,8 @@ export default function AutomotivePageClient() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl sm:text-2xl mb-8 max-w-3xl mx-auto leading-relaxed text-slate-600"
               style={{
-                fontFamily: 'var(--font-bricolage-grotesque)',
-                fontWeight: 300
+                fontFamily: "var(--font-bricolage-grotesque)",
+                fontWeight: 300,
               }}
             >
               AI BDC Agents for Car Dealerships - Sales & Service
@@ -108,33 +139,63 @@ export default function AutomotivePageClient() {
                 transition={{ duration: 0.2 }}
                 className="p-4 sm:p-6 h-full bg-white/70 backdrop-blur-xl border border-slate-200 rounded-2xl shadow-lg shadow-slate-200/50"
               >
-                <div className="text-3xl sm:text-4xl mb-1 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent" style={{
-                  fontFamily: 'var(--font-bricolage-grotesque)',
-                  fontWeight: 800
-                }}>$49K</div>
-                <div className="text-sm text-slate-600" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>Lost Per Year to Missed Calls</div>
+                <div
+                  className="text-3xl sm:text-4xl mb-1 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+                  style={{
+                    fontFamily: "var(--font-bricolage-grotesque)",
+                    fontWeight: 800,
+                  }}
+                >
+                  $49K
+                </div>
+                <div
+                  className="text-sm text-slate-600"
+                  style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 300 }}
+                >
+                  Lost Per Year to Missed Calls
+                </div>
               </motion.div>
               <motion.div
                 whileHover={{ y: -4, scale: 1.02 }}
                 transition={{ duration: 0.2 }}
                 className="p-4 sm:p-6 h-full bg-white/70 backdrop-blur-xl border border-slate-200 rounded-2xl shadow-lg shadow-slate-200/50"
               >
-                <div className="text-3xl sm:text-4xl mb-1 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent" style={{
-                  fontFamily: 'var(--font-bricolage-grotesque)',
-                  fontWeight: 800
-                }}>80%</div>
-                <div className="text-sm text-slate-600" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>Planning AI Investment</div>
+                <div
+                  className="text-3xl sm:text-4xl mb-1 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+                  style={{
+                    fontFamily: "var(--font-bricolage-grotesque)",
+                    fontWeight: 800,
+                  }}
+                >
+                  80%
+                </div>
+                <div
+                  className="text-sm text-slate-600"
+                  style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 300 }}
+                >
+                  Planning AI Investment
+                </div>
               </motion.div>
               <motion.div
                 whileHover={{ y: -4, scale: 1.02 }}
                 transition={{ duration: 0.2 }}
                 className="p-4 sm:p-6 h-full bg-white/70 backdrop-blur-xl border border-slate-200 rounded-2xl shadow-lg shadow-slate-200/50"
               >
-                <div className="text-3xl sm:text-4xl mb-1 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent" style={{
-                  fontFamily: 'var(--font-bricolage-grotesque)',
-                  fontWeight: 800
-                }}>&lt;3 Mo</div>
-                <div className="text-sm text-slate-600" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>40% See ROI</div>
+                <div
+                  className="text-3xl sm:text-4xl mb-1 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+                  style={{
+                    fontFamily: "var(--font-bricolage-grotesque)",
+                    fontWeight: 800,
+                  }}
+                >
+                  &lt;3 Mo
+                </div>
+                <div
+                  className="text-sm text-slate-600"
+                  style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 300 }}
+                >
+                  40% See ROI
+                </div>
               </motion.div>
             </motion.div>
 
@@ -150,8 +211,8 @@ export default function AutomotivePageClient() {
                 href="tel:865-346-6111"
                 className="inline-flex items-center gap-3 px-8 py-4 rounded-xl text-lg sm:text-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-200/50 transition-all"
                 style={{
-                  fontFamily: 'var(--font-bricolage-grotesque)',
-                  fontWeight: 700
+                  fontFamily: "var(--font-bricolage-grotesque)",
+                  fontWeight: 700,
                 }}
               >
                 <Phone className="w-5 h-5" />
@@ -165,10 +226,14 @@ export default function AutomotivePageClient() {
       {/* ==================== SALES VS SERVICE TOGGLE ==================== */}
       <section className="section relative overflow-hidden bg-slate-50">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-30" style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }} />
+          <div
+            className="absolute inset-0 opacity-30"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)",
+              backgroundSize: "40px 40px",
+            }}
+          />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -181,18 +246,27 @@ export default function AutomotivePageClient() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200 mb-4">
               <div className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-              <span className="text-xs sm:text-sm uppercase tracking-widest text-blue-600" style={{
-                fontFamily: 'var(--font-bricolage-grotesque)',
-                fontWeight: 600
-              }}>
+              <span
+                className="text-xs sm:text-sm uppercase tracking-widest text-blue-600"
+                style={{
+                  fontFamily: "var(--font-bricolage-grotesque)",
+                  fontWeight: 600,
+                }}
+              >
                 Dual-Mode AI
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl text-slate-900 mb-4" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+            <h2
+              className="text-3xl sm:text-4xl md:text-5xl text-slate-900 mb-4"
+              style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
+            >
               <span style={{ fontWeight: 200 }}>Sales & Service in </span>
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent" style={{
-                fontWeight: 800
-              }}>
+              <span
+                className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
+                style={{
+                  fontWeight: 800,
+                }}
+              >
                 One System
               </span>
             </h2>
@@ -217,8 +291,8 @@ export default function AutomotivePageClient() {
                     : "text-slate-500"
                 }`}
                 style={{
-                  fontFamily: 'var(--font-bricolage-grotesque)',
-                  fontWeight: mode === "sales" ? 700 : 600
+                  fontFamily: "var(--font-bricolage-grotesque)",
+                  fontWeight: mode === "sales" ? 700 : 600,
                 }}
               >
                 <span className="flex items-center gap-2">
@@ -236,8 +310,8 @@ export default function AutomotivePageClient() {
                     : "text-slate-500"
                 }`}
                 style={{
-                  fontFamily: 'var(--font-bricolage-grotesque)',
-                  fontWeight: mode === "service" ? 700 : 600
+                  fontFamily: "var(--font-bricolage-grotesque)",
+                  fontWeight: mode === "service" ? 700 : 600,
                 }}
               >
                 <span className="flex items-center gap-2">
@@ -263,33 +337,33 @@ export default function AutomotivePageClient() {
                   {
                     icon: ShieldCheck,
                     title: "Lead Qualification",
-                    desc: "AI pre-qualifies buyers based on budget, timeline, and trade-in value"
+                    desc: "AI pre-qualifies buyers based on budget, timeline, and trade-in value",
                   },
                   {
                     icon: Car,
                     title: "Test Drive Scheduling",
-                    desc: "Books test drives directly into your calendar with customer preferences"
+                    desc: "Books test drives directly into your calendar with customer preferences",
                   },
                   {
                     icon: ArrowLeftRight,
                     title: "Trade-In Inquiries",
-                    desc: "Captures VIN, mileage, condition for instant trade-in quotes"
+                    desc: "Captures VIN, mileage, condition for instant trade-in quotes",
                   },
                   {
                     icon: Package,
                     title: "Inventory Questions",
-                    desc: "Checks live inventory: 'Do you have a red Camry?' - Instant answer"
+                    desc: "Checks live inventory: 'Do you have a red Camry?' - Instant answer",
                   },
                   {
                     icon: Moon,
                     title: "After-Hours Sales",
-                    desc: "35-40% of AI-captured deals come from after-hours calls"
+                    desc: "35-40% of AI-captured deals come from after-hours calls",
                   },
                   {
                     icon: TrendingUp,
                     title: "CRM Integration",
-                    desc: "Every lead logged automatically in your DMS with full context"
-                  }
+                    desc: "Every lead logged automatically in your DMS with full context",
+                  },
                 ].map((feature, idx) => {
                   const IconComponent = feature.icon;
                   return (
@@ -308,16 +382,22 @@ export default function AutomotivePageClient() {
                       >
                         <IconComponent className="w-6 h-6 text-blue-600" />
                       </motion.div>
-                      <h3 className="text-xl text-slate-900 mb-2" style={{
-                        fontFamily: 'var(--font-bricolage-grotesque)',
-                        fontWeight: 700
-                      }}>
+                      <h3
+                        className="text-xl text-slate-900 mb-2"
+                        style={{
+                          fontFamily: "var(--font-bricolage-grotesque)",
+                          fontWeight: 700,
+                        }}
+                      >
                         {feature.title}
                       </h3>
-                      <p className="leading-relaxed text-slate-600" style={{
-                        fontFamily: 'var(--font-bricolage-grotesque)',
-                        fontWeight: 300
-                      }}>
+                      <p
+                        className="leading-relaxed text-slate-600"
+                        style={{
+                          fontFamily: "var(--font-bricolage-grotesque)",
+                          fontWeight: 300,
+                        }}
+                      >
                         {feature.desc}
                       </p>
                     </motion.div>
@@ -337,33 +417,33 @@ export default function AutomotivePageClient() {
                   {
                     icon: Calendar,
                     title: "Service Appointment Booking",
-                    desc: "Books oil changes, repairs, recalls - directly into your service scheduler"
+                    desc: "Books oil changes, repairs, recalls - directly into your service scheduler",
                   },
                   {
                     icon: AlertTriangle,
                     title: "Recall Notifications",
-                    desc: "Proactive outreach for open recalls with instant appointment booking"
+                    desc: "Proactive outreach for open recalls with instant appointment booking",
                   },
                   {
                     icon: Headphones,
                     title: "Service Advisor Routing",
-                    desc: "Complex issues routed to the right advisor with full context"
+                    desc: "Complex issues routed to the right advisor with full context",
                   },
                   {
                     icon: Car,
                     title: "Loaner Car Scheduling",
-                    desc: "Coordinates loaner vehicle availability with service appointments"
+                    desc: "Coordinates loaner vehicle availability with service appointments",
                   },
                   {
                     icon: DollarSign,
                     title: "No-Show Prevention",
-                    desc: "Automated reminders reduce no-shows by up to 60%"
+                    desc: "Automated reminders reduce no-shows by up to 60%",
                   },
                   {
                     icon: RefreshCcw,
                     title: "DMS Sync",
-                    desc: "All service appointments sync to CDK, Reynolds, DealerSocket, or Tekion"
-                  }
+                    desc: "All service appointments sync to CDK, Reynolds, DealerSocket, or Tekion",
+                  },
                 ].map((feature, idx) => {
                   const IconComponent = feature.icon;
                   return (
@@ -382,16 +462,22 @@ export default function AutomotivePageClient() {
                       >
                         <IconComponent className="w-6 h-6 text-cyan-600" />
                       </motion.div>
-                      <h3 className="text-xl text-slate-900 mb-2" style={{
-                        fontFamily: 'var(--font-bricolage-grotesque)',
-                        fontWeight: 700
-                      }}>
+                      <h3
+                        className="text-xl text-slate-900 mb-2"
+                        style={{
+                          fontFamily: "var(--font-bricolage-grotesque)",
+                          fontWeight: 700,
+                        }}
+                      >
                         {feature.title}
                       </h3>
-                      <p className="leading-relaxed text-slate-600" style={{
-                        fontFamily: 'var(--font-bricolage-grotesque)',
-                        fontWeight: 300
-                      }}>
+                      <p
+                        className="leading-relaxed text-slate-600"
+                        style={{
+                          fontFamily: "var(--font-bricolage-grotesque)",
+                          fontWeight: 300,
+                        }}
+                      >
                         {feature.desc}
                       </p>
                     </motion.div>
@@ -406,10 +492,14 @@ export default function AutomotivePageClient() {
       {/* ==================== PROBLEM STATS SECTION ==================== */}
       <section className="section relative overflow-hidden bg-white">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-30" style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }} />
+          <div
+            className="absolute inset-0 opacity-30"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)",
+              backgroundSize: "40px 40px",
+            }}
+          />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -419,12 +509,17 @@ export default function AutomotivePageClient() {
             viewport={{ once: true }}
             className="text-center mb-12"
           >
-            <h2 className="text-3xl sm:text-4xl md:text-5xl text-slate-900 mb-4" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+            <h2
+              className="text-3xl sm:text-4xl md:text-5xl text-slate-900 mb-4"
+              style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
+            >
               <span style={{ fontWeight: 200 }}>The Cost of </span>
-              <span style={{
-                fontWeight: 800,
-                color: '#EF4444'
-              }}>
+              <span
+                style={{
+                  fontWeight: 800,
+                  color: "#EF4444",
+                }}
+              >
                 Missed Opportunities
               </span>
             </h2>
@@ -439,19 +534,34 @@ export default function AutomotivePageClient() {
               whileHover={{ y: -6, scale: 1.02 }}
               className="p-8 text-center h-full transition-all duration-300 bg-white/70 backdrop-blur-xl border border-red-200 rounded-2xl shadow-lg shadow-red-200/50"
             >
-              <div className="text-5xl mb-3" style={{
-                fontFamily: 'var(--font-bricolage-grotesque)',
-                fontWeight: 800,
-                color: '#EF4444'
-              }}>$49K</div>
-              <div className="text-xl text-slate-900 mb-2" style={{
-                fontFamily: 'var(--font-bricolage-grotesque)',
-                fontWeight: 600
-              }}>Per Year</div>
-              <div className="text-slate-600" style={{
-                fontFamily: 'var(--font-bricolage-grotesque)',
-                fontWeight: 300
-              }}>Lost revenue from missed sales calls per dealership</div>
+              <div
+                className="text-5xl mb-3"
+                style={{
+                  fontFamily: "var(--font-bricolage-grotesque)",
+                  fontWeight: 800,
+                  color: "#EF4444",
+                }}
+              >
+                $49K
+              </div>
+              <div
+                className="text-xl text-slate-900 mb-2"
+                style={{
+                  fontFamily: "var(--font-bricolage-grotesque)",
+                  fontWeight: 600,
+                }}
+              >
+                Per Year
+              </div>
+              <div
+                className="text-slate-600"
+                style={{
+                  fontFamily: "var(--font-bricolage-grotesque)",
+                  fontWeight: 300,
+                }}
+              >
+                Lost revenue from missed sales calls per dealership
+              </div>
             </motion.div>
 
             <motion.div
@@ -462,19 +572,34 @@ export default function AutomotivePageClient() {
               whileHover={{ y: -6, scale: 1.02 }}
               className="p-8 text-center h-full transition-all duration-300 bg-white/70 backdrop-blur-xl border border-red-200 rounded-2xl shadow-lg shadow-red-200/50"
             >
-              <div className="text-5xl mb-3" style={{
-                fontFamily: 'var(--font-bricolage-grotesque)',
-                fontWeight: 800,
-                color: '#EF4444'
-              }}>$176K-$332K</div>
-              <div className="text-xl text-slate-900 mb-2" style={{
-                fontFamily: 'var(--font-bricolage-grotesque)',
-                fontWeight: 600
-              }}>Per Year</div>
-              <div className="text-slate-600" style={{
-                fontFamily: 'var(--font-bricolage-grotesque)',
-                fontWeight: 300
-              }}>Lost revenue from service appointment no-shows</div>
+              <div
+                className="text-5xl mb-3"
+                style={{
+                  fontFamily: "var(--font-bricolage-grotesque)",
+                  fontWeight: 800,
+                  color: "#EF4444",
+                }}
+              >
+                $176K-$332K
+              </div>
+              <div
+                className="text-xl text-slate-900 mb-2"
+                style={{
+                  fontFamily: "var(--font-bricolage-grotesque)",
+                  fontWeight: 600,
+                }}
+              >
+                Per Year
+              </div>
+              <div
+                className="text-slate-600"
+                style={{
+                  fontFamily: "var(--font-bricolage-grotesque)",
+                  fontWeight: 300,
+                }}
+              >
+                Lost revenue from service appointment no-shows
+              </div>
             </motion.div>
 
             <motion.div
@@ -485,19 +610,34 @@ export default function AutomotivePageClient() {
               whileHover={{ y: -6, scale: 1.02 }}
               className="p-8 text-center h-full transition-all duration-300 bg-white/70 backdrop-blur-xl border border-red-200 rounded-2xl shadow-lg shadow-red-200/50"
             >
-              <div className="text-5xl mb-3" style={{
-                fontFamily: 'var(--font-bricolage-grotesque)',
-                fontWeight: 800,
-                color: '#EF4444'
-              }}>33%</div>
-              <div className="text-xl text-slate-900 mb-2" style={{
-                fontFamily: 'var(--font-bricolage-grotesque)',
-                fontWeight: 600
-              }}>Unanswered</div>
-              <div className="text-slate-600" style={{
-                fontFamily: 'var(--font-bricolage-grotesque)',
-                fontWeight: 300
-              }}>Of all dealership calls go to voicemail</div>
+              <div
+                className="text-5xl mb-3"
+                style={{
+                  fontFamily: "var(--font-bricolage-grotesque)",
+                  fontWeight: 800,
+                  color: "#EF4444",
+                }}
+              >
+                33%
+              </div>
+              <div
+                className="text-xl text-slate-900 mb-2"
+                style={{
+                  fontFamily: "var(--font-bricolage-grotesque)",
+                  fontWeight: 600,
+                }}
+              >
+                Unanswered
+              </div>
+              <div
+                className="text-slate-600"
+                style={{
+                  fontFamily: "var(--font-bricolage-grotesque)",
+                  fontWeight: 300,
+                }}
+              >
+                Of all dealership calls go to voicemail
+              </div>
             </motion.div>
           </div>
         </div>
@@ -506,10 +646,14 @@ export default function AutomotivePageClient() {
       {/* ==================== DMS INTEGRATION SHOWCASE ==================== */}
       <section className="section relative overflow-hidden bg-slate-50">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-30" style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }} />
+          <div
+            className="absolute inset-0 opacity-30"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)",
+              backgroundSize: "40px 40px",
+            }}
+          />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -521,11 +665,17 @@ export default function AutomotivePageClient() {
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200 mb-4">
               <div className="w-2 h-2 bg-blue-600 rounded-full animate-pulse" />
-              <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-blue-600" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+              <span
+                className="text-xs sm:text-sm font-bold uppercase tracking-widest text-blue-600"
+                style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
+              >
                 Native Integrations
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl text-slate-900 mb-4" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>
+            <h2
+              className="text-3xl sm:text-4xl md:text-5xl text-slate-900 mb-4"
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 700 }}
+            >
               Works With Your{" "}
               <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                 Existing DMS
@@ -542,14 +692,13 @@ export default function AutomotivePageClient() {
                 { name: "CDK Global", color: "text-blue-600" },
                 { name: "Reynolds & Reynolds", color: "text-green-600" },
                 { name: "DealerSocket", color: "text-blue-600" },
-                { name: "Tekion", color: "text-orange-600" }
+                { name: "Tekion", color: "text-orange-600" },
               ].map((dms) => (
-                <motion.div
-                  key={dms.name}
-                  whileHover={{ scale: 1.05 }}
-                  className="text-center"
-                >
-                  <div className={`text-4xl font-bold ${dms.color} mb-2`} style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+                <motion.div key={dms.name} whileHover={{ scale: 1.05 }} className="text-center">
+                  <div
+                    className={`text-4xl font-bold ${dms.color} mb-2`}
+                    style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
+                  >
                     {dms.name.split(" ")[0]}
                   </div>
                   <div className="text-sm text-slate-600">{dms.name}</div>
@@ -563,10 +712,14 @@ export default function AutomotivePageClient() {
       {/* ==================== AFTER-HOURS REVENUE ==================== */}
       <section className="section relative overflow-hidden bg-white">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-30" style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }} />
+          <div
+            className="absolute inset-0 opacity-30"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)",
+              backgroundSize: "40px 40px",
+            }}
+          />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -591,7 +744,8 @@ export default function AutomotivePageClient() {
               </h2>
 
               <p className="text-xl text-slate-600 mb-6 leading-relaxed">
-                35-40% of AI-captured deals come from after-hours calls. While your competition sleeps, you're closing deals.
+                35-40% of AI-captured deals come from after-hours calls. While your competition
+                sleeps, you're closing deals.
               </p>
 
               <div className="space-y-4">
@@ -601,7 +755,9 @@ export default function AutomotivePageClient() {
                   </div>
                   <div>
                     <div className="font-semibold text-slate-900 mb-1">Weekend Warriors</div>
-                    <div className="text-slate-600">Buyers browsing late Friday/Saturday nights</div>
+                    <div className="text-slate-600">
+                      Buyers browsing late Friday/Saturday nights
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -634,7 +790,9 @@ export default function AutomotivePageClient() {
               <GlassCard variant="premium" className="p-8">
                 <div className="text-center mb-6">
                   <div className="text-6xl mb-4">🌙</div>
-                  <div className="text-2xl font-display font-bold text-slate-900 mb-2">After-Hours Impact</div>
+                  <div className="text-2xl font-display font-bold text-slate-900 mb-2">
+                    After-Hours Impact
+                  </div>
                 </div>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center p-4 rounded-xl bg-slate-50 border border-slate-200">
@@ -659,10 +817,14 @@ export default function AutomotivePageClient() {
       {/* ==================== ROI CALCULATOR ==================== */}
       <section className="section relative overflow-hidden bg-slate-50">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-30" style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }} />
+          <div
+            className="absolute inset-0 opacity-30"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)",
+              backgroundSize: "40px 40px",
+            }}
+          />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -698,7 +860,12 @@ export default function AutomotivePageClient() {
                     <input
                       type="number"
                       value={calculatorInputs.monthlyCalls}
-                      onChange={(e) => setCalculatorInputs({ ...calculatorInputs, monthlyCalls: parseInt(e.target.value) || 0 })}
+                      onChange={(e) =>
+                        setCalculatorInputs({
+                          ...calculatorInputs,
+                          monthlyCalls: parseInt(e.target.value) || 0,
+                        })
+                      }
                       className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
                     />
                   </div>
@@ -709,7 +876,12 @@ export default function AutomotivePageClient() {
                     <input
                       type="number"
                       value={calculatorInputs.missedPercent}
-                      onChange={(e) => setCalculatorInputs({ ...calculatorInputs, missedPercent: parseInt(e.target.value) || 0 })}
+                      onChange={(e) =>
+                        setCalculatorInputs({
+                          ...calculatorInputs,
+                          missedPercent: parseInt(e.target.value) || 0,
+                        })
+                      }
                       className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
                     />
                   </div>
@@ -720,7 +892,12 @@ export default function AutomotivePageClient() {
                     <input
                       type="number"
                       value={calculatorInputs.avgSaleValue}
-                      onChange={(e) => setCalculatorInputs({ ...calculatorInputs, avgSaleValue: parseInt(e.target.value) || 0 })}
+                      onChange={(e) =>
+                        setCalculatorInputs({
+                          ...calculatorInputs,
+                          avgSaleValue: parseInt(e.target.value) || 0,
+                        })
+                      }
                       className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
                     />
                   </div>
@@ -731,7 +908,12 @@ export default function AutomotivePageClient() {
                     <input
                       type="number"
                       value={calculatorInputs.avgServiceValue}
-                      onChange={(e) => setCalculatorInputs({ ...calculatorInputs, avgServiceValue: parseInt(e.target.value) || 0 })}
+                      onChange={(e) =>
+                        setCalculatorInputs({
+                          ...calculatorInputs,
+                          avgServiceValue: parseInt(e.target.value) || 0,
+                        })
+                      }
                       className="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all"
                     />
                   </div>
@@ -775,12 +957,7 @@ export default function AutomotivePageClient() {
               </div>
 
               <div className="text-center pt-6 border-t border-white/10">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  href="tel:865-346-6111"
-                  icon={Phone}
-                >
+                <Button variant="primary" size="lg" href="tel:865-346-6111" icon={Phone}>
                   Get Your Custom ROI Analysis
                 </Button>
               </div>
@@ -792,10 +969,14 @@ export default function AutomotivePageClient() {
       {/* ==================== INVENTORY LOOKUP FEATURE ==================== */}
       <section className="section relative overflow-hidden bg-white">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-30" style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }} />
+          <div
+            className="absolute inset-0 opacity-30"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)",
+              backgroundSize: "40px 40px",
+            }}
+          />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -820,7 +1001,8 @@ export default function AutomotivePageClient() {
               </h2>
 
               <p className="text-xl text-slate-600 mb-6 leading-relaxed">
-                AI checks your live inventory and answers instantly - no "let me check" or "can I call you back."
+                AI checks your live inventory and answers instantly - no "let me check" or "can I
+                call you back."
               </p>
 
               <div className="space-y-4">
@@ -829,7 +1011,9 @@ export default function AutomotivePageClient() {
                     <Search className="w-5 h-5 text-cyan-600" />
                   </div>
                   <div>
-                    <div className="font-semibold text-slate-900 mb-1">Real-Time Inventory Check</div>
+                    <div className="font-semibold text-slate-900 mb-1">
+                      Real-Time Inventory Check
+                    </div>
                     <div className="text-slate-600">Color, trim, features, availability</div>
                   </div>
                 </div>
@@ -866,7 +1050,9 @@ export default function AutomotivePageClient() {
                       <User className="w-5 h-5 text-blue-600 mt-1" />
                       <div>
                         <div className="font-semibold text-slate-900 mb-1">Customer</div>
-                        <div className="text-slate-600">"Do you have a 2024 Toyota Camry in red?"</div>
+                        <div className="text-slate-600">
+                          "Do you have a 2024 Toyota Camry in red?"
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -878,7 +1064,11 @@ export default function AutomotivePageClient() {
                       <Bot className="w-5 h-5 text-cyan-600 mt-1" />
                       <div>
                         <div className="font-semibold text-slate-900 mb-1">AI Agent</div>
-                        <div className="text-slate-600">"Yes! We have 2 in stock: a 2024 Camry XLE in Supersonic Red with navigation, and a 2024 Camry SE in Ruby Flare Pearl. Both available for test drive today. Would you like to schedule?"</div>
+                        <div className="text-slate-600">
+                          "Yes! We have 2 in stock: a 2024 Camry XLE in Supersonic Red with
+                          navigation, and a 2024 Camry SE in Ruby Flare Pearl. Both available for
+                          test drive today. Would you like to schedule?"
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -892,10 +1082,14 @@ export default function AutomotivePageClient() {
       {/* ==================== TESTIMONIALS ==================== */}
       <section className="section relative overflow-hidden bg-white">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-30" style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }} />
+          <div
+            className="absolute inset-0 opacity-30"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)",
+              backgroundSize: "40px 40px",
+            }}
+          />
         </div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
@@ -919,23 +1113,26 @@ export default function AutomotivePageClient() {
                 name: "Mike Rodriguez",
                 role: "Dealer Principal",
                 dealership: "Rodriguez Auto Group",
-                quote: "We went from losing $50K/year in missed calls to capturing an extra $180K in sales. The AI pays for itself 15x over.",
-                revenue: "+$180K"
+                quote:
+                  "We went from losing $50K/year in missed calls to capturing an extra $180K in sales. The AI pays for itself 15x over.",
+                revenue: "+$180K",
               },
               {
                 name: "Sarah Chen",
                 role: "Service Director",
                 dealership: "Premium Motors",
-                quote: "No-shows dropped by 58% in the first month. Our service advisors love it because they get pre-qualified appointments instead of time-wasters calling to 'just ask a question.'",
-                revenue: "-58% No-Shows"
+                quote:
+                  "No-shows dropped by 58% in the first month. Our service advisors love it because they get pre-qualified appointments instead of time-wasters calling to 'just ask a question.'",
+                revenue: "-58% No-Shows",
               },
               {
                 name: "David Thompson",
                 role: "Sales Manager",
                 dealership: "Thompson Automotive",
-                quote: "The after-hours capture is incredible. We're selling cars at 11 PM on Saturday nights. That's pure profit we never had before.",
-                revenue: "+40% Weekend Sales"
-              }
+                quote:
+                  "The after-hours capture is incredible. We're selling cars at 11 PM on Saturday nights. That's pure profit we never had before.",
+                revenue: "+40% Weekend Sales",
+              },
             ].map((testimonial, idx) => (
               <motion.div
                 key={testimonial.name}
@@ -945,7 +1142,10 @@ export default function AutomotivePageClient() {
                 transition={{ delay: idx * 0.15, duration: 0.5 }}
                 whileHover={{ y: -8, scale: 1.02 }}
               >
-                <GlassCard variant="premium" className="p-6 h-full transition-all duration-300 hover:shadow-lg hover:shadow-slate-200/50">
+                <GlassCard
+                  variant="premium"
+                  className="p-6 h-full transition-all duration-300 hover:shadow-lg hover:shadow-slate-200/50"
+                >
                   <div className="flex items-center gap-3 mb-4">
                     <motion.div
                       className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-100 to-cyan-100 flex items-center justify-center"
@@ -953,7 +1153,10 @@ export default function AutomotivePageClient() {
                       transition={{ duration: 0.3 }}
                     >
                       <span className="text-xl font-bold text-blue-600">
-                        {testimonial.name.split(" ").map(n => n[0]).join("")}
+                        {testimonial.name
+                          .split(" ")
+                          .map((n) => n[0])
+                          .join("")}
                       </span>
                     </motion.div>
                     <div>
@@ -961,14 +1164,20 @@ export default function AutomotivePageClient() {
                       <div className="text-sm text-slate-600">{testimonial.role}</div>
                     </div>
                   </div>
-                  <div className="text-xs text-blue-600 font-semibold mb-3">{testimonial.dealership}</div>
-                  <p className="text-slate-600 mb-4 leading-relaxed italic">"{testimonial.quote}"</p>
+                  <div className="text-xs text-blue-600 font-semibold mb-3">
+                    {testimonial.dealership}
+                  </div>
+                  <p className="text-slate-600 mb-4 leading-relaxed italic">
+                    "{testimonial.quote}"
+                  </p>
                   <motion.div
                     className="inline-block px-4 py-2 rounded-lg bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200"
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <div className="text-2xl font-display font-bold text-blue-600">{testimonial.revenue}</div>
+                    <div className="text-2xl font-display font-bold text-blue-600">
+                      {testimonial.revenue}
+                    </div>
                   </motion.div>
                 </GlassCard>
               </motion.div>
@@ -980,10 +1189,14 @@ export default function AutomotivePageClient() {
       {/* ==================== FINAL CTA ==================== */}
       <section className="section relative overflow-hidden bg-gradient-to-b from-slate-50 to-white">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-30" style={{
-            backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)',
-            backgroundSize: '40px 40px'
-          }} />
+          <div
+            className="absolute inset-0 opacity-30"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 1px 1px, rgba(148, 163, 184, 0.2) 1px, transparent 0)",
+              backgroundSize: "40px 40px",
+            }}
+          />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-gradient-radial from-blue-100/40 via-cyan-100/20 to-transparent blur-3xl" />
         </div>
 
@@ -1012,10 +1225,7 @@ export default function AutomotivePageClient() {
               transition={{ delay: 0.3 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8"
             >
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-              >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                 <Button
                   variant="primary"
                   size="lg"
@@ -1026,10 +1236,7 @@ export default function AutomotivePageClient() {
                   Call Now: 865-346-6111
                 </Button>
               </motion.div>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-              >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                 <Button
                   variant="glass"
                   size="lg"

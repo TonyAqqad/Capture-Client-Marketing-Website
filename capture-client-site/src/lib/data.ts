@@ -1,5 +1,5 @@
-import { promises as fs } from 'fs';
-import path from 'path';
+import { promises as fs } from "fs";
+import path from "path";
 
 // Generic types for dynamic JSON data
 export interface HeroSection {
@@ -316,17 +316,17 @@ export interface BlogPost {
   }>;
 }
 
-const dataDir = path.join(process.cwd(), 'src', 'data');
+const dataDir = path.join(process.cwd(), "src", "data");
 
 export async function getAllServices(): Promise<ServiceData[]> {
-  const servicesDir = path.join(dataDir, 'services');
+  const servicesDir = path.join(dataDir, "services");
   const files = await fs.readdir(servicesDir);
 
   const services = await Promise.all(
     files
-      .filter(file => file.endsWith('.json'))
+      .filter((file) => file.endsWith(".json"))
       .map(async (file) => {
-        const content = await fs.readFile(path.join(servicesDir, file), 'utf-8');
+        const content = await fs.readFile(path.join(servicesDir, file), "utf-8");
         return JSON.parse(content) as ServiceData;
       })
   );
@@ -336,8 +336,8 @@ export async function getAllServices(): Promise<ServiceData[]> {
 
 export async function getServiceBySlug(slug: string): Promise<ServiceData | null> {
   try {
-    const filePath = path.join(dataDir, 'services', `${slug}.json`);
-    const content = await fs.readFile(filePath, 'utf-8');
+    const filePath = path.join(dataDir, "services", `${slug}.json`);
+    const content = await fs.readFile(filePath, "utf-8");
     return JSON.parse(content) as ServiceData;
   } catch {
     return null;
@@ -345,14 +345,14 @@ export async function getServiceBySlug(slug: string): Promise<ServiceData | null
 }
 
 export async function getAllLocations(): Promise<LocationData[]> {
-  const locationsDir = path.join(dataDir, 'locations');
+  const locationsDir = path.join(dataDir, "locations");
   const files = await fs.readdir(locationsDir);
 
   const locations = await Promise.all(
     files
-      .filter(file => file.endsWith('.json') && file !== '.gitkeep')
+      .filter((file) => file.endsWith(".json") && file !== ".gitkeep")
       .map(async (file) => {
-        const content = await fs.readFile(path.join(locationsDir, file), 'utf-8');
+        const content = await fs.readFile(path.join(locationsDir, file), "utf-8");
         return JSON.parse(content) as LocationData;
       })
   );
@@ -362,8 +362,8 @@ export async function getAllLocations(): Promise<LocationData[]> {
 
 export async function getLocationBySlug(slug: string): Promise<LocationData | null> {
   try {
-    const filePath = path.join(dataDir, 'locations', `${slug}.json`);
-    const content = await fs.readFile(filePath, 'utf-8');
+    const filePath = path.join(dataDir, "locations", `${slug}.json`);
+    const content = await fs.readFile(filePath, "utf-8");
     return JSON.parse(content) as LocationData;
   } catch {
     return null;
@@ -371,14 +371,14 @@ export async function getLocationBySlug(slug: string): Promise<LocationData | nu
 }
 
 export async function getAllNationalPages(): Promise<NationalData[]> {
-  const nationalDir = path.join(dataDir, 'national');
+  const nationalDir = path.join(dataDir, "national");
   const files = await fs.readdir(nationalDir);
 
   const pages = await Promise.all(
     files
-      .filter(file => file.endsWith('.json'))
+      .filter((file) => file.endsWith(".json"))
       .map(async (file) => {
-        const content = await fs.readFile(path.join(nationalDir, file), 'utf-8');
+        const content = await fs.readFile(path.join(nationalDir, file), "utf-8");
         return JSON.parse(content) as NationalData;
       })
   );
@@ -388,8 +388,8 @@ export async function getAllNationalPages(): Promise<NationalData[]> {
 
 export async function getNationalBySlug(slug: string): Promise<NationalData | null> {
   try {
-    const filePath = path.join(dataDir, 'national', `${slug}.json`);
-    const content = await fs.readFile(filePath, 'utf-8');
+    const filePath = path.join(dataDir, "national", `${slug}.json`);
+    const content = await fs.readFile(filePath, "utf-8");
     return JSON.parse(content) as NationalData;
   } catch {
     return null;
@@ -397,16 +397,16 @@ export async function getNationalBySlug(slug: string): Promise<NationalData | nu
 }
 
 export async function getAllPackages(): Promise<PackageData[]> {
-  const packagesDir = path.join(dataDir, 'packages');
+  const packagesDir = path.join(dataDir, "packages");
   try {
     const files = await fs.readdir(packagesDir);
 
     const packages = await Promise.all(
       files
-        .filter(file => file.endsWith('.json') && file !== 'test.json' && file !== 'pricing.json')
+        .filter((file) => file.endsWith(".json") && file !== "test.json" && file !== "pricing.json")
         .map(async (file) => {
           try {
-            const content = await fs.readFile(path.join(packagesDir, file), 'utf-8');
+            const content = await fs.readFile(path.join(packagesDir, file), "utf-8");
             const data = JSON.parse(content);
             // Handle both package_info and package formats
             if (data.package_info && !data.package) {
@@ -434,8 +434,8 @@ export async function getAllPackages(): Promise<PackageData[]> {
 
 export async function getPackageBySlug(slug: string): Promise<PackageData | null> {
   try {
-    const filePath = path.join(dataDir, 'packages', `${slug}.json`);
-    const content = await fs.readFile(filePath, 'utf-8');
+    const filePath = path.join(dataDir, "packages", `${slug}.json`);
+    const content = await fs.readFile(filePath, "utf-8");
     const data = JSON.parse(content);
     // Handle both package_info and package formats
     if (data.package_info && !data.package) {
@@ -456,8 +456,8 @@ export async function getPackageBySlug(slug: string): Promise<PackageData | null
 
 export async function getPricingData(): Promise<PricingData | null> {
   try {
-    const filePath = path.join(dataDir, 'packages', 'pricing.json');
-    const content = await fs.readFile(filePath, 'utf-8');
+    const filePath = path.join(dataDir, "packages", "pricing.json");
+    const content = await fs.readFile(filePath, "utf-8");
     return JSON.parse(content) as PricingData;
   } catch {
     return null;
@@ -465,16 +465,16 @@ export async function getPricingData(): Promise<PricingData | null> {
 }
 
 export async function getAllBlogPosts(): Promise<BlogPost[]> {
-  const blogDir = path.join(dataDir, 'blog');
+  const blogDir = path.join(dataDir, "blog");
   try {
     const files = await fs.readdir(blogDir);
 
     const posts = await Promise.all(
       files
-        .filter(file => file.endsWith('.json'))
+        .filter((file) => file.endsWith(".json"))
         .map(async (file) => {
           try {
-            const content = await fs.readFile(path.join(blogDir, file), 'utf-8');
+            const content = await fs.readFile(path.join(blogDir, file), "utf-8");
             return JSON.parse(content) as BlogPost;
           } catch {
             return null;
@@ -493,8 +493,8 @@ export async function getAllBlogPosts(): Promise<BlogPost[]> {
 
 export async function getBlogPostBySlug(slug: string): Promise<BlogPost | null> {
   try {
-    const filePath = path.join(dataDir, 'blog', `${slug}.json`);
-    const content = await fs.readFile(filePath, 'utf-8');
+    const filePath = path.join(dataDir, "blog", `${slug}.json`);
+    const content = await fs.readFile(filePath, "utf-8");
     return JSON.parse(content) as BlogPost;
   } catch {
     return null;

@@ -4,11 +4,29 @@ import { useRef, useState, useEffect } from "react";
 import { motion } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import { useCountUp } from "@/hooks/useCountUp";
-import { ArrowRight, TrendingUp, TrendingDown, DollarSign, Calculator, Phone, Percent } from "lucide-react";
+import {
+  ArrowRight,
+  TrendingUp,
+  TrendingDown,
+  DollarSign,
+  Calculator,
+  Phone,
+  Percent,
+} from "lucide-react";
 import Link from "next/link";
-import { use3DTilt, cardShadow, perspectiveContainer, transform3D, depthSpring } from "@/lib/depth-utils";
+import {
+  use3DTilt,
+  cardShadow,
+  perspectiveContainer,
+  transform3D,
+  depthSpring,
+} from "@/lib/depth-utils";
 import { useIsMobile } from "@/lib/responsive";
-import { INDUSTRY_BENCHMARKS, getDefaultBenchmark, type IndustryBenchmark } from "@/data/industry-benchmarks";
+import {
+  INDUSTRY_BENCHMARKS,
+  getDefaultBenchmark,
+  type IndustryBenchmark,
+} from "@/data/industry-benchmarks";
 
 export default function MissedCallCalculatorClient() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -19,7 +37,8 @@ export default function MissedCallCalculatorClient() {
   const { rotateX, rotateY, isHovered, handlers } = use3DTilt(3);
 
   // State
-  const [selectedIndustry, setSelectedIndustry] = useState<IndustryBenchmark>(getDefaultBenchmark());
+  const [selectedIndustry, setSelectedIndustry] =
+    useState<IndustryBenchmark>(getDefaultBenchmark());
   const [callsPerWeek, setCallsPerWeek] = useState(20);
   const [answerRate, setAnswerRate] = useState(60); // % currently answered (inverse of missed rate)
   const [avgLeadValue, setAvgLeadValue] = useState(3500);
@@ -33,13 +52,23 @@ export default function MissedCallCalculatorClient() {
 
   // Calculations
   const missedCallsPerMonth = Math.round(callsPerWeek * 4 * ((100 - answerRate) / 100));
-  const monthlyLostRevenue = Math.round(missedCallsPerMonth * avgLeadValue * selectedIndustry.conversionRate);
+  const monthlyLostRevenue = Math.round(
+    missedCallsPerMonth * avgLeadValue * selectedIndustry.conversionRate
+  );
   const aiCapturedRevenue = Math.round(monthlyLostRevenue * 0.85); // 85% AI capture rate
   const annualImpact = aiCapturedRevenue * 12;
 
   // Animated counters
-  const animatedMonthlyLost = useCountUp({ end: monthlyLostRevenue, duration: 1800, isActive: isInView });
-  const animatedCaptured = useCountUp({ end: aiCapturedRevenue, duration: 1800, isActive: isInView });
+  const animatedMonthlyLost = useCountUp({
+    end: monthlyLostRevenue,
+    duration: 1800,
+    isActive: isInView,
+  });
+  const animatedCaptured = useCountUp({
+    end: aiCapturedRevenue,
+    duration: 1800,
+    isActive: isInView,
+  });
   const animatedAnnual = useCountUp({ end: annualImpact, duration: 2200, isActive: isInView });
 
   return (
@@ -77,26 +106,35 @@ export default function MissedCallCalculatorClient() {
             transition={{ delay: 0.2, duration: 0.6 }}
             className="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto"
           >
-            See exactly how much revenue you&apos;re losing to missed calls—and how much an AI voice agent can recover.
+            See exactly how much revenue you&apos;re losing to missed calls—and how much an AI voice
+            agent can recover.
           </motion.p>
         </div>
       </section>
 
       {/* Calculator Section */}
       <section className="py-12 px-4 sm:px-6 lg:px-8">
-        <div ref={containerRef} className="max-w-6xl mx-auto" style={isMobile ? {} : perspectiveContainer}>
+        <div
+          ref={containerRef}
+          className="max-w-6xl mx-auto"
+          style={isMobile ? {} : perspectiveContainer}
+        >
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            style={isMobile ? {
-              boxShadow: isHovered ? cardShadow.hover : cardShadow.rest,
-            } : {
-              ...transform3D,
-              rotateX,
-              rotateY,
-              boxShadow: isHovered ? cardShadow.hover : cardShadow.rest,
-            }}
+            style={
+              isMobile
+                ? {
+                    boxShadow: isHovered ? cardShadow.hover : cardShadow.rest,
+                  }
+                : {
+                    ...transform3D,
+                    rotateX,
+                    rotateY,
+                    boxShadow: isHovered ? cardShadow.hover : cardShadow.rest,
+                  }
+            }
             className="bg-white/70 backdrop-blur-xl border border-slate-200/60 p-8 sm:p-10 lg:p-12 rounded-3xl relative overflow-hidden"
             {...handlers}
           >
@@ -117,7 +155,7 @@ export default function MissedCallCalculatorClient() {
                   <select
                     value={selectedIndustry.id}
                     onChange={(e) => {
-                      const industry = INDUSTRY_BENCHMARKS.find(i => i.id === e.target.value);
+                      const industry = INDUSTRY_BENCHMARKS.find((i) => i.id === e.target.value);
                       if (industry) setSelectedIndustry(industry);
                     }}
                     className="w-full px-5 py-4 rounded-xl bg-white border border-slate-200 text-slate-900 text-base font-medium focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all cursor-pointer"
@@ -140,7 +178,7 @@ export default function MissedCallCalculatorClient() {
                     </label>
                     <span className="text-2xl font-bold text-blue-600">{callsPerWeek}</span>
                   </div>
-                  <div style={{ touchAction: 'pan-y' }}>
+                  <div style={{ touchAction: "pan-y" }}>
                     <input
                       type="range"
                       min="5"
@@ -169,7 +207,7 @@ export default function MissedCallCalculatorClient() {
                     </label>
                     <span className="text-2xl font-bold text-blue-600">{answerRate}%</span>
                   </div>
-                  <div style={{ touchAction: 'pan-y' }}>
+                  <div style={{ touchAction: "pan-y" }}>
                     <input
                       type="range"
                       min="20"
@@ -196,9 +234,11 @@ export default function MissedCallCalculatorClient() {
                       <DollarSign className="w-4 h-4 text-slate-500" />
                       Average Lead Value
                     </label>
-                    <span className="text-2xl font-bold text-blue-600">${avgLeadValue.toLocaleString()}</span>
+                    <span className="text-2xl font-bold text-blue-600">
+                      ${avgLeadValue.toLocaleString()}
+                    </span>
                   </div>
-                  <div style={{ touchAction: 'pan-y' }}>
+                  <div style={{ touchAction: "pan-y" }}>
                     <input
                       type="range"
                       min="100"
@@ -221,8 +261,9 @@ export default function MissedCallCalculatorClient() {
                 {/* Assumption Note */}
                 <div className="bg-slate-50 border border-slate-200 rounded-xl p-4">
                   <p className="text-sm text-slate-600">
-                    <span className="font-semibold text-slate-900">Assumptions:</span> {Math.round(selectedIndustry.conversionRate * 100)}% conversion rate,
-                    85% answer rate with Capture Client AI
+                    <span className="font-semibold text-slate-900">Assumptions:</span>{" "}
+                    {Math.round(selectedIndustry.conversionRate * 100)}% conversion rate, 85% answer
+                    rate with Capture Client AI
                   </p>
                 </div>
               </motion.div>
@@ -261,9 +302,7 @@ export default function MissedCallCalculatorClient() {
                   >
                     ${animatedMonthlyLost.toLocaleString()}
                   </p>
-                  <p className="text-sm text-slate-600 mt-2">
-                    Revenue lost to missed calls
-                  </p>
+                  <p className="text-sm text-slate-600 mt-2">Revenue lost to missed calls</p>
                 </motion.div>
 
                 {/* AI Captured Revenue */}
@@ -285,9 +324,7 @@ export default function MissedCallCalculatorClient() {
                   >
                     ${animatedCaptured.toLocaleString()}
                   </p>
-                  <p className="text-sm text-slate-600 mt-2">
-                    Per month with 85% answer rate
-                  </p>
+                  <p className="text-sm text-slate-600 mt-2">Per month with 85% answer rate</p>
                 </motion.div>
 
                 {/* Annual Impact */}
@@ -307,11 +344,12 @@ export default function MissedCallCalculatorClient() {
                     className="text-4xl sm:text-5xl font-bold text-emerald-400"
                     style={{ fontFeatureSettings: '"tnum" 1' }}
                   >
-                    ${animatedAnnual >= 1000 ? `${Math.round(animatedAnnual / 1000)}K` : animatedAnnual.toLocaleString()}
+                    $
+                    {animatedAnnual >= 1000
+                      ? `${Math.round(animatedAnnual / 1000)}K`
+                      : animatedAnnual.toLocaleString()}
                   </p>
-                  <p className="text-sm text-slate-600 mt-2">
-                    First-year projection
-                  </p>
+                  <p className="text-sm text-slate-600 mt-2">First-year projection</p>
                 </motion.div>
               </motion.div>
             </div>
@@ -351,12 +389,16 @@ export default function MissedCallCalculatorClient() {
                 border-radius: 50%;
                 background: #2563eb;
                 cursor: pointer;
-                box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2), 0 4px 12px rgba(37, 99, 235, 0.4);
+                box-shadow:
+                  0 0 0 4px rgba(37, 99, 235, 0.2),
+                  0 4px 12px rgba(37, 99, 235, 0.4);
                 transition: all 0.2s;
               }
               input[type="range"]::-webkit-slider-thumb:hover {
                 transform: scale(1.1);
-                box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.3), 0 6px 16px rgba(37, 99, 235, 0.5);
+                box-shadow:
+                  0 0 0 6px rgba(37, 99, 235, 0.3),
+                  0 6px 16px rgba(37, 99, 235, 0.5);
               }
               input[type="range"]::-moz-range-thumb {
                 width: 24px;
@@ -365,12 +407,16 @@ export default function MissedCallCalculatorClient() {
                 background: #2563eb;
                 cursor: pointer;
                 border: none;
-                box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2), 0 4px 12px rgba(37, 99, 235, 0.4);
+                box-shadow:
+                  0 0 0 4px rgba(37, 99, 235, 0.2),
+                  0 4px 12px rgba(37, 99, 235, 0.4);
                 transition: all 0.2s;
               }
               input[type="range"]::-moz-range-thumb:hover {
                 transform: scale(1.1);
-                box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.3), 0 6px 16px rgba(37, 99, 235, 0.5);
+                box-shadow:
+                  0 0 0 6px rgba(37, 99, 235, 0.3),
+                  0 6px 16px rgba(37, 99, 235, 0.5);
               }
             `}</style>
           </motion.div>
@@ -385,16 +431,34 @@ export default function MissedCallCalculatorClient() {
           </h2>
           <div className="space-y-6">
             <div className="bg-white border border-slate-200 rounded-xl p-6">
-              <h3 className="font-semibold text-slate-900 mb-2">How do I calculate revenue lost from missed calls?</h3>
-              <p className="text-slate-600">Multiply your missed calls per month by your average lead value and your conversion rate. For example, if you miss 60 calls per month, each lead is worth $3,500, and you convert 30% of leads, you&apos;re losing $63,000 per month.</p>
+              <h3 className="font-semibold text-slate-900 mb-2">
+                How do I calculate revenue lost from missed calls?
+              </h3>
+              <p className="text-slate-600">
+                Multiply your missed calls per month by your average lead value and your conversion
+                rate. For example, if you miss 60 calls per month, each lead is worth $3,500, and
+                you convert 30% of leads, you&apos;re losing $63,000 per month.
+              </p>
             </div>
             <div className="bg-white border border-slate-200 rounded-xl p-6">
-              <h3 className="font-semibold text-slate-900 mb-2">What is the average missed call rate for small businesses?</h3>
-              <p className="text-slate-600">Most small businesses miss 30-40% of inbound calls. Home service businesses tend to miss more (40%+) because owners are on job sites, while office-based businesses miss around 25-30%.</p>
+              <h3 className="font-semibold text-slate-900 mb-2">
+                What is the average missed call rate for small businesses?
+              </h3>
+              <p className="text-slate-600">
+                Most small businesses miss 30-40% of inbound calls. Home service businesses tend to
+                miss more (40%+) because owners are on job sites, while office-based businesses miss
+                around 25-30%.
+              </p>
             </div>
             <div className="bg-white border border-slate-200 rounded-xl p-6">
-              <h3 className="font-semibold text-slate-900 mb-2">How can I reduce missed calls for my business?</h3>
-              <p className="text-slate-600">Options include hiring a receptionist, using an answering service, or implementing an AI voice agent. AI voice agents like Capture Client can answer 24/7 with 85%+ capture rates at a fraction of the cost.</p>
+              <h3 className="font-semibold text-slate-900 mb-2">
+                How can I reduce missed calls for my business?
+              </h3>
+              <p className="text-slate-600">
+                Options include hiring a receptionist, using an answering service, or implementing
+                an AI voice agent. AI voice agents like Capture Client can answer 24/7 with 85%+
+                capture rates at a fraction of the cost.
+              </p>
             </div>
           </div>
         </div>

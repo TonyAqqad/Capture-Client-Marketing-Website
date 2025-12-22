@@ -36,12 +36,15 @@ export function ScenarioBuilder() {
     setViewState("playing");
   }, []);
 
-  const handleDragEnd = useCallback((_event: any, info: { offset: { y: number }; velocity: { y: number } }) => {
-    // Dismiss if dragged down more than 100px or velocity is high
-    if (info.offset.y > 100 || info.velocity.y > 500) {
-      handleClose();
-    }
-  }, [handleClose]);
+  const handleDragEnd = useCallback(
+    (_event: any, info: { offset: { y: number }; velocity: { y: number } }) => {
+      // Dismiss if dragged down more than 100px or velocity is high
+      if (info.offset.y > 100 || info.velocity.y > 500) {
+        handleClose();
+      }
+    },
+    [handleClose]
+  );
 
   return (
     <div className="w-full max-w-6xl mx-auto">
@@ -74,19 +77,22 @@ export function ScenarioBuilder() {
                 onDragEnd={handleDragEnd}
                 // Mobile: slide up from bottom, Desktop: fade + scale from center
                 initial={{
-                  y: typeof window !== 'undefined' && window.innerWidth < 768 ? "100%" : 0,
-                  opacity: typeof window !== 'undefined' && window.innerWidth >= 768 ? 0 : 1,
-                  scale: typeof window !== 'undefined' && window.innerWidth >= 768 ? 0.95 : 1
+                  y: typeof window !== "undefined" && window.innerWidth < 768 ? "100%" : 0,
+                  opacity: typeof window !== "undefined" && window.innerWidth >= 768 ? 0 : 1,
+                  scale: typeof window !== "undefined" && window.innerWidth >= 768 ? 0.95 : 1,
                 }}
                 animate={{ y: 0, opacity: 1, scale: 1 }}
                 exit={{
-                  y: typeof window !== 'undefined' && window.innerWidth < 768 ? "100%" : 0,
-                  opacity: typeof window !== 'undefined' && window.innerWidth >= 768 ? 0 : 1,
-                  scale: typeof window !== 'undefined' && window.innerWidth >= 768 ? 0.95 : 1
+                  y: typeof window !== "undefined" && window.innerWidth < 768 ? "100%" : 0,
+                  opacity: typeof window !== "undefined" && window.innerWidth >= 768 ? 0 : 1,
+                  scale: typeof window !== "undefined" && window.innerWidth >= 768 ? 0.95 : 1,
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
                 // Disable drag on desktop
-                style={{ touchAction: typeof window !== 'undefined' && window.innerWidth >= 768 ? 'auto' : 'none' }}
+                style={{
+                  touchAction:
+                    typeof window !== "undefined" && window.innerWidth >= 768 ? "auto" : "none",
+                }}
               >
                 <div className="h-[90vh] md:h-auto md:max-h-[85vh] bg-white rounded-t-3xl md:rounded-2xl shadow-2xl shadow-slate-900/20 flex flex-col overflow-hidden">
                   {/* Drag Handle - Mobile only */}
@@ -108,11 +114,18 @@ export function ScenarioBuilder() {
                         </motion.button>
                       )}
                       <div className="min-w-0 flex-1">
-                        <h3 className="font-bold text-slate-900 truncate" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
-                          {viewState === "completed" ? "Conversation Complete" : selectedScenario.title}
+                        <h3
+                          className="font-bold text-slate-900 truncate"
+                          style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
+                        >
+                          {viewState === "completed"
+                            ? "Conversation Complete"
+                            : selectedScenario.title}
                         </h3>
                         <p className="text-sm text-slate-500 truncate">
-                          {viewState === "completed" ? "See what the AI captured" : selectedScenario.callerPersona}
+                          {viewState === "completed"
+                            ? "See what the AI captured"
+                            : selectedScenario.callerPersona}
                         </p>
                       </div>
                     </div>

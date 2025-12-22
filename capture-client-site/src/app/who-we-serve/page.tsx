@@ -1,45 +1,62 @@
-import { Metadata } from 'next';
-import { ArrowRight, PlayCircle, Calendar, DollarSign, Briefcase, Globe, ShieldCheck, Puzzle, Brain, Wrench, Building2, Stethoscope, UtensilsCrossed } from 'lucide-react';
-import { INDUSTRIES, getCategories } from '@/data/industries';
-import { IndustryCard } from '@/components/industries/IndustryCard';
-import { Button } from '@/components/ui/Button';
-import { generateWebPageSchema } from '@/lib/seo-config';
-import JsonLd from '@/components/seo/JsonLd';
-import { SITE_CONFIG } from '@/lib/seo-config';
+import { Metadata } from "next";
+import {
+  ArrowRight,
+  PlayCircle,
+  Calendar,
+  DollarSign,
+  Briefcase,
+  Globe,
+  ShieldCheck,
+  Puzzle,
+  Brain,
+  Wrench,
+  Building2,
+  Stethoscope,
+  UtensilsCrossed,
+} from "lucide-react";
+import { INDUSTRIES, getCategories } from "@/data/industries";
+import { IndustryCard } from "@/components/industries/IndustryCard";
+import { Button } from "@/components/ui/Button";
+import { generateWebPageSchema } from "@/lib/seo-config";
+import JsonLd from "@/components/seo/JsonLd";
+import { SITE_CONFIG } from "@/lib/seo-config";
 
 export const metadata: Metadata = {
-  title: 'Industries We Serve | AI Voice Agents | Capture Client',
-  description: 'Capture Client serves 12+ industries with AI voice agents, lead generation, and marketing automation. From legal to healthcare, real estate to restaurants - never miss a call again.',
+  title: "Industries We Serve | AI Voice Agents | Capture Client",
+  description:
+    "Capture Client serves 12+ industries with AI voice agents, lead generation, and marketing automation. From legal to healthcare, real estate to restaurants - never miss a call again.",
   keywords: [
-    'ai voice agents by industry',
-    'virtual receptionist for law firms',
-    'ai answering service healthcare',
-    'automated booking home services',
-    'real estate lead capture ai',
-    'restaurant reservation ai',
-    'property management ai',
-    'insurance quote ai',
+    "ai voice agents by industry",
+    "virtual receptionist for law firms",
+    "ai answering service healthcare",
+    "automated booking home services",
+    "real estate lead capture ai",
+    "restaurant reservation ai",
+    "property management ai",
+    "insurance quote ai",
   ],
   alternates: {
-    canonical: 'https://captureclient.com/who-we-serve',
+    canonical: "https://captureclient.com/who-we-serve",
   },
   openGraph: {
-    title: 'Industries We Serve | AI Voice Agents | Capture Client',
-    description: '12+ industries trust Capture Client for 24/7 AI voice agents, lead capture, and appointment booking.',
+    title: "Industries We Serve | AI Voice Agents | Capture Client",
+    description:
+      "12+ industries trust Capture Client for 24/7 AI voice agents, lead capture, and appointment booking.",
     images: [
       {
         url: `${SITE_CONFIG.url}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: 'Capture Client Industries',
+        alt: "Capture Client Industries",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Industries We Serve | AI Voice Agents | Capture Client',
-    description: '12+ industries trust Capture Client for 24/7 AI voice agents, lead capture, and appointment booking.',
-    images: ['https://captureclient.com/og-image.png'],
+    card: "summary_large_image",
+    title: "Industries We Serve | AI Voice Agents | Capture Client",
+    description:
+      "12+ industries trust Capture Client for 24/7 AI voice agents, lead capture, and appointment booking.",
+    images: ["https://captureclient.com/og-image.png"],
   },
 };
 
@@ -48,8 +65,9 @@ export default function WhoWeServePage() {
 
   // Generate schema
   const pageSchema = generateWebPageSchema({
-    title: 'Industries We Serve - Capture Client',
-    description: 'AI voice agents and lead generation for 12+ industries including legal, healthcare, home services, real estate, and more.',
+    title: "Industries We Serve - Capture Client",
+    description:
+      "AI voice agents and lead generation for 12+ industries including legal, healthcare, home services, real estate, and more.",
     url: `${SITE_CONFIG.url}/who-we-serve`,
   });
 
@@ -78,7 +96,7 @@ export default function WhoWeServePage() {
 
               {/* Headline */}
               <h1 className="font-heading text-5xl md:text-7xl font-bold text-slate-900 mb-6">
-                Your Industry.{' '}
+                Your Industry.{" "}
                 <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
                   Our Expertise.
                 </span>
@@ -86,8 +104,9 @@ export default function WhoWeServePage() {
 
               {/* Subheadline */}
               <p className="text-xl md:text-2xl text-slate-600 mb-8 leading-relaxed">
-                AI voice agents built for your industry's unique needs. From legal intake to emergency dispatch,
-                healthcare scheduling to restaurant reservations - we speak your language.
+                AI voice agents built for your industry's unique needs. From legal intake to
+                emergency dispatch, healthcare scheduling to restaurant reservations - we speak your
+                language.
               </p>
 
               {/* CTA */}
@@ -103,12 +122,7 @@ export default function WhoWeServePage() {
                     <ArrowRight className="w-5 h-5" />
                   </span>
                 </Button>
-                <Button
-                  variant="glass"
-                  size="lg"
-                  href="/demo"
-                  ariaLabel="Watch industry demo"
-                >
+                <Button variant="glass" size="lg" href="/demo" ariaLabel="Watch industry demo">
                   <span className="flex items-center gap-2">
                     Watch Industry Demos
                     <PlayCircle className="w-5 h-5" />
@@ -127,21 +141,22 @@ export default function WhoWeServePage() {
                 Solutions for Every Sector
               </h2>
               <p className="text-lg text-slate-600">
-                Whether you're managing a law firm, running a restaurant, or operating a home service business,
-                our AI adapts to your industry's specific workflows and terminology.
+                Whether you're managing a law firm, running a restaurant, or operating a home
+                service business, our AI adapts to your industry's specific workflows and
+                terminology.
               </p>
             </div>
 
             {/* Category Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 md:gap-6 max-w-5xl mx-auto mb-20">
               {categories.map((category) => {
-                const categoryCount = INDUSTRIES.filter(i => i.category === category).length;
-                const iconMap: Record<string, React.ComponentType<{className?: string}>> = {
-                  'Professional Services': Briefcase,
-                  'Home Services': Wrench,
-                  'Real Estate & Property': Building2,
-                  'Healthcare': Stethoscope,
-                  'Hospitality': UtensilsCrossed,
+                const categoryCount = INDUSTRIES.filter((i) => i.category === category).length;
+                const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+                  "Professional Services": Briefcase,
+                  "Home Services": Wrench,
+                  "Real Estate & Property": Building2,
+                  Healthcare: Stethoscope,
+                  Hospitality: UtensilsCrossed,
                 };
                 const IconComponent = iconMap[category] || Briefcase;
 
@@ -157,7 +172,7 @@ export default function WhoWeServePage() {
                       {category}
                     </h3>
                     <p className="text-sm text-slate-600">
-                      {categoryCount} {categoryCount === 1 ? 'industry' : 'industries'}
+                      {categoryCount} {categoryCount === 1 ? "industry" : "industries"}
                     </p>
                   </div>
                 );
@@ -183,13 +198,14 @@ export default function WhoWeServePage() {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-                  Why Industry-Specific{' '}
+                  Why Industry-Specific{" "}
                   <span className="bg-gradient-to-r from-blue-500 to-cyan-500 bg-clip-text text-transparent">
                     AI Matters
                   </span>
                 </h2>
                 <p className="text-xl text-slate-600">
-                  Generic answering services can't handle your industry's unique terminology, compliance needs, and workflows.
+                  Generic answering services can't handle your industry's unique terminology,
+                  compliance needs, and workflows.
                 </p>
               </div>
 
@@ -198,7 +214,8 @@ export default function WhoWeServePage() {
                   <Globe className="w-10 h-10 text-blue-500 mb-4" />
                   <h3 className="text-2xl font-bold text-slate-900 mb-3">Industry Vocabulary</h3>
                   <p className="text-slate-600 leading-relaxed">
-                    Legal conflict checking. HVAC diagnostics. Real estate MLS terms. Our AI speaks your industry's language naturally.
+                    Legal conflict checking. HVAC diagnostics. Real estate MLS terms. Our AI speaks
+                    your industry's language naturally.
                   </p>
                 </div>
 
@@ -206,7 +223,8 @@ export default function WhoWeServePage() {
                   <ShieldCheck className="w-10 h-10 text-blue-600 mb-4" />
                   <h3 className="text-2xl font-bold text-slate-900 mb-3">Compliance Ready</h3>
                   <p className="text-slate-600 leading-relaxed">
-                    HIPAA for healthcare. Attorney-client privilege for law. SOC-II across the board. Industry-specific security baked in.
+                    HIPAA for healthcare. Attorney-client privilege for law. SOC-II across the
+                    board. Industry-specific security baked in.
                   </p>
                 </div>
 
@@ -214,7 +232,8 @@ export default function WhoWeServePage() {
                   <Puzzle className="w-10 h-10 text-blue-600 mb-4" />
                   <h3 className="text-2xl font-bold text-slate-900 mb-3">Native Integrations</h3>
                   <p className="text-slate-600 leading-relaxed">
-                    Clio for legal. ServiceTitan for HVAC. Epic for healthcare. We integrate with the tools you already use.
+                    Clio for legal. ServiceTitan for HVAC. Epic for healthcare. We integrate with
+                    the tools you already use.
                   </p>
                 </div>
 
@@ -222,7 +241,8 @@ export default function WhoWeServePage() {
                   <Brain className="w-10 h-10 text-cyan-600 mb-4" />
                   <h3 className="text-2xl font-bold text-slate-900 mb-3">Smart Workflows</h3>
                   <p className="text-slate-600 leading-relaxed">
-                    Emergency triage for home services. Lead qualification for real estate. Symptom assessment for healthcare. Industry-tuned logic.
+                    Emergency triage for home services. Lead qualification for real estate. Symptom
+                    assessment for healthcare. Industry-tuned logic.
                   </p>
                 </div>
               </div>
@@ -257,12 +277,7 @@ export default function WhoWeServePage() {
                     <Calendar className="w-5 h-5" />
                   </span>
                 </Button>
-                <Button
-                  variant="glass"
-                  size="lg"
-                  href="/pricing"
-                  ariaLabel="View pricing"
-                >
+                <Button variant="glass" size="lg" href="/pricing" ariaLabel="View pricing">
                   <span className="flex items-center gap-2">
                     View Pricing
                     <DollarSign className="w-5 h-5" />

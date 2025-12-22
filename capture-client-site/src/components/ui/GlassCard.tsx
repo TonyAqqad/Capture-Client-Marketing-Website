@@ -16,12 +16,12 @@ export function GlassCard({
   className = "",
   variant = "default",
   hover = true,
-  interactive = true
+  interactive = true,
 }: GlassCardProps) {
   const variantClasses = {
     default: "bg-white/80 backdrop-blur-lg border border-slate-200",
     premium: "bg-white/90 backdrop-blur-xl border border-slate-200 shadow-lg",
-    subtle: "bg-slate-50/80 backdrop-blur-lg border border-slate-200"
+    subtle: "bg-slate-50/80 backdrop-blur-lg border border-slate-200",
   };
 
   const hoverClasses = hover
@@ -52,23 +52,22 @@ export function GlassCard({
           className="absolute inset-0 opacity-0 group-hover:opacity-100 pointer-events-none"
           initial={false}
           whileHover={{
-            backgroundPosition: ['0% 50%', '100% 50%']
+            backgroundPosition: ["0% 50%", "100% 50%"],
           }}
           transition={{
             duration: 1.5,
-            ease: "linear"
+            ease: "linear",
           }}
           style={{
-            background: 'linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%)',
-            backgroundSize: '200% 100%'
+            background:
+              "linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.1) 50%, transparent 100%)",
+            backgroundSize: "200% 100%",
           }}
         />
       )}
 
       {/* Content */}
-      <div className="relative z-10">
-        {children}
-      </div>
+      <div className="relative z-10">{children}</div>
 
       {/* Bottom glow effect */}
       {variant === "premium" && hover && (

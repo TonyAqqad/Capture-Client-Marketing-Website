@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useEffect, useRef, useState } from 'react';
-import { TrendingDown, Store, PhoneMissed, Building2, ArrowRight } from 'lucide-react';
+import { useEffect, useRef, useState } from "react";
+import { TrendingDown, Store, PhoneMissed, Building2, ArrowRight } from "lucide-react";
 
 interface LocalMarketStatsProps {
   city: string;

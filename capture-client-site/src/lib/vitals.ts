@@ -188,10 +188,7 @@ export function formatMetricValue(metricName: string, value: number): string {
 /**
  * Get metric recommendations
  */
-export function getMetricRecommendations(
-  metricName: string,
-  rating: string
-): string[] {
+export function getMetricRecommendations(metricName: string, rating: string): string[] {
   if (rating === "good") return ["Keep up the good work!"];
 
   const recommendations: Record<string, string[]> = {

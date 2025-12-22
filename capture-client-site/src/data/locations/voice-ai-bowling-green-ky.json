@@ -222,12 +222,6 @@
       "Richardsville",
       "Smiths Grove"
     ],
-    "nearby_cities": [
-      "Glasgow",
-      "Franklin",
-      "Scottsville",
-      "Alvaton",
-      "Woodburn"
-    ]
+    "nearby_cities": ["Glasgow", "Franklin", "Scottsville", "Alvaton", "Woodburn"]
   }
 }

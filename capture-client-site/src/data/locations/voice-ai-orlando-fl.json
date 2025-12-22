@@ -11,13 +11,7 @@
     "state": "Florida",
     "state_abbr": "FL",
     "slug": "orlando-fl",
-    "nearby_areas": [
-      "Winter Park",
-      "Kissimmee",
-      "Altamonte Springs",
-      "Lake Mary",
-      "Sanford"
-    ],
+    "nearby_areas": ["Winter Park", "Kissimmee", "Altamonte Springs", "Lake Mary", "Sanford"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -187,9 +181,6 @@
       "voice-ai-kissimmee-fl",
       "voice-ai-lake-mary-fl"
     ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "packages": ["starter-package", "growth-package"]
   }
 }

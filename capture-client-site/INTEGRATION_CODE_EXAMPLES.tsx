@@ -121,8 +121,8 @@ export default function IntegrationsPage() {
             Seamless Integrations
           </h1>
           <p className="text-lg lg:text-xl text-white/70 max-w-3xl mx-auto mb-8">
-            Connect Capture Client with your existing tools and workflows.
-            Start capturing more leads in minutes.
+            Connect Capture Client with your existing tools and workflows. Start capturing more
+            leads in minutes.
           </p>
         </div>
       </section>
@@ -134,19 +134,14 @@ export default function IntegrationsPage() {
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              All Integration Partners
-            </h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">All Integration Partners</h2>
             <p className="text-white/60 max-w-2xl mx-auto">
-              Click any integration to learn more about how Capture Client
-              works with your favorite tools.
+              Click any integration to learn more about how Capture Client works with your favorite
+              tools.
             </p>
           </div>
 
-          <IntegrationPartnersGrid
-            integrations={allIntegrations}
-            showDescription={true}
-          />
+          <IntegrationPartnersGrid integrations={allIntegrations} showDescription={true} />
         </div>
       </section>
 
@@ -154,16 +149,12 @@ export default function IntegrationsPage() {
       <section className="py-20 lg:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="glass-premium p-12 lg:p-16 rounded-3xl max-w-4xl mx-auto">
-            <h2 className="text-3xl lg:text-5xl font-bold mb-6">
-              Don't See Your Tool?
-            </h2>
+            <h2 className="text-3xl lg:text-5xl font-bold mb-6">Don't See Your Tool?</h2>
             <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
-              We're constantly adding new integrations. Let us know what you
-              need and we'll prioritize it.
+              We're constantly adding new integrations. Let us know what you need and we'll
+              prioritize it.
             </p>
-            <button className="btn-primary px-8 py-4 text-lg">
-              Request Integration
-            </button>
+            <button className="btn-primary px-8 py-4 text-lg">Request Integration</button>
           </div>
         </div>
       </section>
@@ -185,9 +176,7 @@ export default function AboutPage() {
       {/* About Hero */}
       <section className="py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-6xl font-extrabold mb-6">
-            About Capture Client
-          </h1>
+          <h1 className="text-4xl lg:text-6xl font-extrabold mb-6">About Capture Client</h1>
           <p className="text-xl text-white/70 max-w-3xl mx-auto">
             We're on a mission to help businesses never miss another lead.
           </p>
@@ -199,9 +188,8 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">Our Story</h2>
           <p className="text-lg text-white/80 leading-relaxed mb-6">
-            Founded in 2020, Capture Client was born from a simple observation:
-            businesses were losing thousands of dollars in missed calls and
-            unanswered messages...
+            Founded in 2020, Capture Client was born from a simple observation: businesses were
+            losing thousands of dollars in missed calls and unanswered messages...
           </p>
         </div>
       </section>
@@ -212,9 +200,7 @@ export default function AboutPage() {
       {/* Team Section */}
       <section className="py-16 lg:py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-center">
-            Our Team
-          </h2>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-center">Our Team</h2>
           {/* Team cards... */}
         </div>
       </section>
@@ -228,7 +214,7 @@ export default function AboutPage() {
 
 // File: src/app/integrations/page.tsx (Advanced)
 
-"use client";
+("use client");
 
 import { useRouter } from "next/navigation";
 import {
@@ -320,7 +306,7 @@ export default async function IntegrationsPage() {
 
 // File: src/app/integrations/page.tsx (With Filtering)
 
-"use client";
+("use client");
 
 import { useState } from "react";
 import {
@@ -333,10 +319,7 @@ export default function IntegrationsPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
   // Get unique categories
-  const categories = [
-    "All",
-    ...new Set(exampleIntegrations.map((i) => i.category)),
-  ];
+  const categories = ["All", ...new Set(exampleIntegrations.map((i) => i.category))];
 
   // Filter integrations
   const filteredIntegrations =

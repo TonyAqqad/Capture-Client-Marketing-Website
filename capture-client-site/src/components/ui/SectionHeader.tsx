@@ -27,18 +27,18 @@ export function SectionHeader({
   showDecorator = true,
   decoratorColor = "blue",
   className = "",
-  animate = true
+  animate = true,
 }: SectionHeaderProps) {
   const alignmentClasses = {
     left: "text-left items-start",
     center: "text-center items-center",
-    right: "text-right items-end"
+    right: "text-right items-end",
   };
 
   const decoratorColors = {
     blue: "bg-gradient-to-r from-transparent via-blue-500/60 to-transparent",
     cyan: "bg-gradient-to-r from-transparent via-accent/60 to-transparent",
-    primary: "bg-gradient-to-r from-transparent via-primary/60 to-transparent"
+    primary: "bg-gradient-to-r from-transparent via-primary/60 to-transparent",
   };
 
   const containerVariants = {
@@ -49,9 +49,9 @@ export function SectionHeader({
       transition: {
         duration: 0.6,
         ease: [0.25, 0.1, 0.25, 1] as const,
-        staggerChildren: 0.15
-      }
-    }
+        staggerChildren: 0.15,
+      },
+    },
   };
 
   const itemVariants = {
@@ -59,8 +59,8 @@ export function SectionHeader({
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const }
-    }
+      transition: { duration: 0.5, ease: [0.25, 0.1, 0.25, 1] as const },
+    },
   };
 
   const Container = animate ? motion.div : "div";
@@ -68,12 +68,16 @@ export function SectionHeader({
 
   return (
     <Container
-      className={cn("flex flex-col gap-4 max-w-4xl mx-auto mb-12 md:mb-16", alignmentClasses[alignment], className)}
+      className={cn(
+        "flex flex-col gap-4 max-w-4xl mx-auto mb-12 md:mb-16",
+        alignmentClasses[alignment],
+        className
+      )}
       {...(animate && {
         initial: "hidden",
         whileInView: "visible",
         viewport: { once: true, margin: "-100px" },
-        variants: containerVariants
+        variants: containerVariants,
       })}
     >
       {/* Overline text */}
@@ -89,10 +93,7 @@ export function SectionHeader({
       )}
 
       {/* Main heading */}
-      <Item
-        {...(animate && { variants: itemVariants })}
-        className="space-y-2"
-      >
+      <Item {...(animate && { variants: itemVariants })} className="space-y-2">
         <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
           {heading}
         </h2>

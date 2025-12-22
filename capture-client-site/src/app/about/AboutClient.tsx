@@ -42,7 +42,7 @@ interface StatCardProps {
 }
 
 function StatCard({ value, label, delay, isNumeric = false, suffix = "" }: StatCardProps) {
-  const numericValue = isNumeric ? parseInt(value.toString().replace(/\D/g, '')) : 0;
+  const numericValue = isNumeric ? parseInt(value.toString().replace(/\D/g, "")) : 0;
   const { count, startCounting } = useCounter(numericValue);
 
   return (
@@ -66,35 +66,38 @@ export default function AboutClient() {
   const services = [
     {
       title: "Voice AI Agents",
-      description: "Our AI voice agents answer every call, qualify leads based on your criteria, book appointments directly into your calendar, and transfer hot leads to your team in real-time."
+      description:
+        "Our AI voice agents answer every call, qualify leads based on your criteria, book appointments directly into your calendar, and transfer hot leads to your team in real-time.",
     },
     {
       title: "Google Ads Management",
-      description: "We create and manage ROI-focused Google Ads campaigns that put your business at the top of search results when customers are actively looking for your services."
+      description:
+        "We create and manage ROI-focused Google Ads campaigns that put your business at the top of search results when customers are actively looking for your services.",
     },
     {
       title: "Facebook Ads Lead Generation",
-      description: "Targeted Facebook and Instagram advertising campaigns designed to generate qualified leads for local service businesses."
-    }
+      description:
+        "Targeted Facebook and Instagram advertising campaigns designed to generate qualified leads for local service businesses.",
+    },
   ];
 
   const values = [
     {
       title: "No Long-Term Contracts",
-      description: "Month-to-month billing. Cancel anytime."
+      description: "Month-to-month billing. Cancel anytime.",
     },
     {
       title: "Transparent Pricing",
-      description: "No hidden fees. What you see is what you pay."
+      description: "No hidden fees. What you see is what you pay.",
     },
     {
       title: "Results-Focused",
-      description: "We only succeed when you capture more clients."
+      description: "We only succeed when you capture more clients.",
     },
     {
       title: "Expert Support",
-      description: "Real humans available to help you succeed."
-    }
+      description: "Real humans available to help you succeed.",
+    },
   ];
 
   return (
@@ -153,12 +156,18 @@ export default function AboutClient() {
             <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4 sm:mb-6">
               Our Mission
             </h2>
-            <p className="text-base sm:text-lg text-slate-700 leading-relaxed mb-4 sm:mb-6" style={{ lineHeight: '1.7' }}>
+            <p
+              className="text-base sm:text-lg text-slate-700 leading-relaxed mb-4 sm:mb-6"
+              style={{ lineHeight: "1.7" }}
+            >
               At Capture Client, we believe small businesses shouldn't have to choose between
               answering phones and serving customers. We're on a mission to automate lead capture
               and qualification so business owners can focus on what they do best.
             </p>
-            <p className="text-base sm:text-lg text-slate-700 leading-relaxed" style={{ lineHeight: '1.7' }}>
+            <p
+              className="text-base sm:text-lg text-slate-700 leading-relaxed"
+              style={{ lineHeight: "1.7" }}
+            >
               Our AI-powered voice agents work 24/7 to answer every call, qualify leads instantly,
               and book appointments automatically. Combined with strategic paid advertising on
               Google and Facebook, we help service-based businesses capture more clients without
@@ -197,7 +206,10 @@ export default function AboutClient() {
                   <h3 className="text-xl sm:text-2xl font-bold text-blue-600 mb-2 sm:mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-base sm:text-lg text-slate-700 leading-relaxed" style={{ lineHeight: '1.7' }}>
+                  <p
+                    className="text-base sm:text-lg text-slate-700 leading-relaxed"
+                    style={{ lineHeight: "1.7" }}
+                  >
                     {service.description}
                   </p>
                 </motion.div>

@@ -11,25 +11,29 @@ export const metadata: Metadata = {
     "marketing automation agency",
     "lead generation experts",
     "small business ai solutions",
-    "voice ai for business"
+    "voice ai for business",
   ],
   openGraph: {
     title: "About Capture Client | Voice AI & Marketing Automation",
-    description: "Meet the team behind Capture Client. We help small businesses capture more leads with AI-powered 24/7 voice agents and marketing automation.",
+    description:
+      "Meet the team behind Capture Client. We help small businesses capture more leads with AI-powered 24/7 voice agents and marketing automation.",
     url: "https://captureclient.com/about",
     siteName: "Capture Client",
     type: "website",
-    images: [{
-      url: "https://captureclient.com/og-image.png",
-      width: 1200,
-      height: 630,
-      alt: "Capture Client - AI Voice Agents & Marketing Automation",
-    }],
+    images: [
+      {
+        url: "https://captureclient.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Capture Client - AI Voice Agents & Marketing Automation",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "About Capture Client | Voice AI & Marketing Automation",
-    description: "Learn how Capture Client helps small businesses grow with AI voice agents and marketing automation.",
+    description:
+      "Learn how Capture Client helps small businesses grow with AI voice agents and marketing automation.",
     images: ["https://captureclient.com/og-image.png"],
   },
   alternates: {

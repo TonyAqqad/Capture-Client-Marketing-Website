@@ -23,7 +23,10 @@ export default function AnimatedStats() {
   const isInView = useInView(containerRef, { threshold: 0.5 });
 
   return (
-    <div ref={containerRef} className="mt-8 sm:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-6 lg:gap-8 max-w-3xl mx-auto px-4 sm:px-6">
+    <div
+      ref={containerRef}
+      className="mt-8 sm:mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-6 lg:gap-8 max-w-3xl mx-auto px-4 sm:px-6"
+    >
       {stats.map((stat, index) => (
         <StatCard key={stat.label} stat={stat} index={index} isInView={isInView} />
       ))}
@@ -91,9 +94,7 @@ function StatCard({ stat, index, isInView }: StatCardProps) {
         }}
       >
         <motion.p
-          className={`font-bold mb-2 ${
-            stat.color === "accent" ? "text-accent" : "text-primary"
-          }`}
+          className={`font-bold mb-2 ${stat.color === "accent" ? "text-accent" : "text-primary"}`}
         >
           <span className="text-3xl sm:text-3xl lg:text-4xl">{displayValue}</span>
           <span className="text-2xl sm:text-2xl lg:text-3xl">{stat.suffix}</span>

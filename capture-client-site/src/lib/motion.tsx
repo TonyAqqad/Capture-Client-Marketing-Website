@@ -28,7 +28,7 @@ export {
   useTransform,
   useSpring,
   useMotionValue,
-  useInView
+  useInView,
 } from "framer-motion";
 
 // Export types for use in other files

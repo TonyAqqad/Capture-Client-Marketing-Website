@@ -15,14 +15,11 @@ const integrationLogos = [
   { name: "Jobber", logo: "/images/integrations/jobber.svg" },
 ];
 
-function LogoItem({ logo, index }: { logo: typeof integrationLogos[0]; index: number }) {
+function LogoItem({ logo, index }: { logo: (typeof integrationLogos)[0]; index: number }) {
   const [imageError, setImageError] = useState(false);
 
   return (
-    <div
-      key={`${logo.name}-${index}`}
-      className="flex-shrink-0 group cursor-pointer"
-    >
+    <div key={`${logo.name}-${index}`} className="flex-shrink-0 group cursor-pointer">
       <div className="h-12 lg:h-14 w-28 lg:w-36 rounded-xl border border-slate-200 bg-white backdrop-blur-xl flex items-center justify-center gap-2 opacity-60 hover:opacity-100 hover:border-[#00C9FF]/30 transition-all duration-300 px-3">
         {!imageError ? (
           <Image
@@ -39,14 +36,14 @@ function LogoItem({ logo, index }: { logo: typeof integrationLogos[0]; index: nu
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#00C9FF]/20 to-[#4A69E2]/20 flex items-center justify-center">
               <span
                 className="text-xs text-[#00C9FF]"
-                style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}
+                style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 700 }}
               >
                 {logo.name.slice(0, 2).toUpperCase()}
               </span>
             </div>
             <span
               className="text-slate-600 text-sm hidden sm:block"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 500 }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 500 }}
             >
               {logo.name}
             </span>
@@ -63,7 +60,7 @@ export function ClientLogosCarousel() {
       <div className="container-custom mb-8">
         <p
           className="text-center text-xs sm:text-sm uppercase tracking-[0.25em] text-slate-600"
-          style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 500 }}
+          style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 500 }}
         >
           Trusted by Growing Businesses • Integrates With Your Favorite Tools
         </p>

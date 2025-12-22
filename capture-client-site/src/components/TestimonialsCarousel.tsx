@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { useRef, useState, useEffect } from 'react';
-import { motion, AnimatePresence } from '@/lib/motion';
-import { useInView } from '@/hooks/useInView';
-import { Testimonial } from '@/types/content';
-import { ChevronLeft, ChevronRight, Star, User } from 'lucide-react';
+import { useRef, useState, useEffect } from "react";
+import { motion, AnimatePresence } from "@/lib/motion";
+import { useInView } from "@/hooks/useInView";
+import { Testimonial } from "@/types/content";
+import { ChevronLeft, ChevronRight, Star, User } from "lucide-react";
 
 interface CarouselTestimonialExtended extends Testimonial {
   id: number;
@@ -13,24 +13,24 @@ interface CarouselTestimonialExtended extends Testimonial {
 const testimonials: CarouselTestimonialExtended[] = [
   {
     id: 1,
-    name: 'Sarah M.',
-    role: 'HVAC Business Owner',
+    name: "Sarah M.",
+    role: "HVAC Business Owner",
     quote:
       "Capture Client transformed our lead generation. We're capturing 3x more clients than before, and the AI handles everything while we focus on the work.",
     rating: 5,
   },
   {
     id: 2,
-    name: 'Mike T.',
-    role: 'Plumbing Company',
+    name: "Mike T.",
+    role: "Plumbing Company",
     quote:
       "The AI voice agent handles calls better than our old receptionist. It never sleeps, never misses a call, and our customers love how responsive we've become.",
     rating: 5,
   },
   {
     id: 3,
-    name: 'Jennifer L.',
-    role: 'Dental Practice',
+    name: "Jennifer L.",
+    role: "Dental Practice",
     quote:
       "Finally, everything in one place. Our marketing ROI has never been better. The dashboard shows exactly where every dollar is going and what's working.",
     rating: 5,
@@ -106,16 +106,13 @@ export default function TestimonialsCarousel() {
               animate="center"
               exit="exit"
               transition={{
-                x: { type: 'spring', stiffness: 300, damping: 30 },
+                x: { type: "spring", stiffness: 300, damping: 30 },
                 opacity: { duration: 0.3 },
                 scale: { duration: 0.3 },
               }}
               className="absolute inset-0"
             >
-              <TestimonialCard
-                testimonial={testimonials[currentIndex]}
-                isInView={isInView}
-              />
+              <TestimonialCard testimonial={testimonials[currentIndex]} isInView={isInView} />
             </motion.div>
           </AnimatePresence>
         </div>
@@ -147,14 +144,14 @@ export default function TestimonialsCarousel() {
               >
                 <div
                   className={`w-2 h-2 rounded-full transition-colors ${
-                    index === currentIndex ? 'bg-accent' : 'bg-surface-border'
+                    index === currentIndex ? "bg-accent" : "bg-surface-border"
                   }`}
                 />
                 {index === currentIndex && (
                   <motion.div
                     layoutId="activeIndicator"
                     className="absolute inset-0 rounded-full border-2 border-accent"
-                    transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
               </motion.button>
@@ -235,7 +232,7 @@ function TestimonialCard({ testimonial, isInView }: TestimonialCardProps) {
             transition={{
               delay: 0.3 + i * 0.1,
               duration: 0.5,
-              type: 'spring',
+              type: "spring",
             }}
           >
             <Star className="w-5 h-5 text-accent fill-accent" />
@@ -280,7 +277,7 @@ function TestimonialCard({ testimonial, isInView }: TestimonialCardProps) {
         transition={{
           duration: 4,
           repeat: Infinity,
-          repeatType: 'reverse',
+          repeatType: "reverse",
         }}
         className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-primary/5 rounded-2xl pointer-events-none"
       />

@@ -222,12 +222,6 @@
       "Whitesville",
       "Philpot"
     ],
-    "nearby_cities": [
-      "Henderson",
-      "Madisonville",
-      "Hawesville",
-      "Lewisport",
-      "Beaver Dam"
-    ]
+    "nearby_cities": ["Henderson", "Madisonville", "Hawesville", "Lewisport", "Beaver Dam"]
   }
 }

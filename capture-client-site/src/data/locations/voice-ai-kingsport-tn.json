@@ -10,18 +10,14 @@
     "state": "Tennessee",
     "state_abbr": "TN",
     "slug": "kingsport-tn",
-    "nearby_areas": [
-      "Knoxville"
-    ],
+    "nearby_areas": ["Knoxville"],
     "service_area_radius": "25 miles"
   },
   "seo": {
     "page_title": "Voice AI in Kingsport, TN | Capture Client",
     "meta_description": "Kingsport businesses automate calls. Call 865-346-6111!",
     "h1_heading": "Voice AI in Kingsport, Tennessee",
-    "keywords": [
-      "voice ai kingsport"
-    ],
+    "keywords": ["voice ai kingsport"],
     "canonical_url": "/voice-ai-kingsport-tn"
   },
   "hero": {
@@ -78,9 +74,7 @@
   ],
   "service_area": {
     "heading": "Serving Kingsport",
-    "areas_list": [
-      "Kingsport"
-    ]
+    "areas_list": ["Kingsport"]
   },
   "local_testimonials": [
     {
@@ -113,11 +107,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "voice-ai-knoxville-tn"
-    ],
-    "packages": [
-      "starter-package"
-    ]
+    "nearby_locations": ["voice-ai-knoxville-tn"],
+    "packages": ["starter-package"]
   }
 }

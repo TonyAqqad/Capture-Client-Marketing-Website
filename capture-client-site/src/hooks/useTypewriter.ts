@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef, useCallback } from "react";
 
 // ============================================================================
 // TYPE DEFINITIONS
@@ -7,16 +7,16 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 export interface TypewriterOptions {
   text: string;
   isActive: boolean;
-  speed?: number;           // Milliseconds per character (default: 45ms)
-  delay?: number;           // Initial delay before typing starts (default: 0ms)
-  onComplete?: () => void;  // Callback when typing completes
+  speed?: number; // Milliseconds per character (default: 45ms)
+  delay?: number; // Initial delay before typing starts (default: 0ms)
+  onComplete?: () => void; // Callback when typing completes
 }
 
 export interface TypewriterResult {
   displayText: string;
   isComplete: boolean;
-  progress: number;         // 0-100 percentage
-  reset: () => void;        // Manual reset function
+  progress: number; // 0-100 percentage
+  reset: () => void; // Manual reset function
 }
 
 // ============================================================================
@@ -24,16 +24,16 @@ export interface TypewriterResult {
 // ============================================================================
 
 export const TYPEWRITER_CONFIG = {
-  DEFAULT_SPEED: 45,        // Natural speaking pace (22 chars/sec)
-  FAST_SPEED: 30,           // Faster typing
-  SLOW_SPEED: 65,           // Slower, more dramatic
+  DEFAULT_SPEED: 45, // Natural speaking pace (22 chars/sec)
+  FAST_SPEED: 30, // Faster typing
+  SLOW_SPEED: 65, // Slower, more dramatic
   PAUSE_ON_PUNCTUATION: {
-    '.': 300,               // Longer pause for period
-    '!': 300,               // Longer pause for exclamation
-    '?': 300,               // Longer pause for question
-    ',': 150,               // Short pause for comma
-    ':': 200,               // Medium pause for colon
-    ';': 200,               // Medium pause for semicolon
+    ".": 300, // Longer pause for period
+    "!": 300, // Longer pause for exclamation
+    "?": 300, // Longer pause for question
+    ",": 150, // Short pause for comma
+    ":": 200, // Medium pause for colon
+    ";": 200, // Medium pause for semicolon
   },
 } as const;
 
@@ -48,7 +48,7 @@ export function useTypewriter({
   delay = 0,
   onComplete,
 }: TypewriterOptions): TypewriterResult {
-  const [displayText, setDisplayText] = useState('');
+  const [displayText, setDisplayText] = useState("");
   const [isComplete, setIsComplete] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -69,7 +69,7 @@ export function useTypewriter({
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
     }
-    setDisplayText('');
+    setDisplayText("");
     setCurrentIndex(0);
     setIsComplete(false);
   }, []);
@@ -114,9 +114,10 @@ export function useTypewriter({
         let nextDelay = speed;
 
         // Add pause if character is punctuation
-        const pauseTime = TYPEWRITER_CONFIG.PAUSE_ON_PUNCTUATION[
-          nextChar as keyof typeof TYPEWRITER_CONFIG.PAUSE_ON_PUNCTUATION
-        ];
+        const pauseTime =
+          TYPEWRITER_CONFIG.PAUSE_ON_PUNCTUATION[
+            nextChar as keyof typeof TYPEWRITER_CONFIG.PAUSE_ON_PUNCTUATION
+          ];
 
         if (pauseTime) {
           nextDelay += pauseTime;

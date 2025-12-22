@@ -16,7 +16,7 @@ import {
   Home,
   CalendarCheck,
   Users,
-  LucideIcon
+  LucideIcon,
 } from "lucide-react";
 
 interface UseCase {
@@ -32,7 +32,7 @@ const iconMap: Record<string, LucideIcon> = {
   nights_stay: Moon,
   home: Home,
   event_available: CalendarCheck,
-  groups: Users
+  groups: Users,
 };
 
 const useCases: UseCase[] = [
@@ -42,7 +42,7 @@ const useCases: UseCase[] = [
     solution: "AI answers immediately, qualifies budget ($400K-$500K), books showing for next day.",
     result: "Lead converted. Commission: $18,000",
     icon: "nights_stay",
-    time: "Response: 47 seconds"
+    time: "Response: 47 seconds",
   },
   {
     scenario: "Open House Follow-up",
@@ -50,7 +50,7 @@ const useCases: UseCase[] = [
     solution: "AI calls all 50 within 2 hours. Qualifies 12 serious buyers. Books 8 appointments.",
     result: "3 offers submitted within 2 weeks",
     icon: "home",
-    time: "100% contacted in 2 hours"
+    time: "100% contacted in 2 hours",
   },
   {
     scenario: "Showing Request",
@@ -58,7 +58,7 @@ const useCases: UseCase[] = [
     solution: "AI confirms availability, syncs with agent calendar, sends automated confirmation.",
     result: "Showing booked. Zero agent time spent",
     icon: "event_available",
-    time: "Scheduled: 1 minute"
+    time: "Scheduled: 1 minute",
   },
   {
     scenario: "Referral Inquiry",
@@ -66,8 +66,8 @@ const useCases: UseCase[] = [
     solution: "AI greets by name, references relationship, captures full details, routes to agent.",
     result: "Referral feels VIP. Relationship preserved",
     icon: "groups",
-    time: "Answered: First ring"
-  }
+    time: "Answered: First ring",
+  },
 ];
 
 export function RealEstateUseCases() {
@@ -78,7 +78,7 @@ export function RealEstateUseCases() {
     <section
       ref={containerRef}
       className="py-16 sm:py-20 lg:py-28 relative"
-      style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+      style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
     >
       {/* Background */}
       <div className="absolute inset-0 bg-white" />
@@ -94,15 +94,23 @@ export function RealEstateUseCases() {
         >
           <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200 mb-6">
             <Drama className="text-blue-600 w-5 h-5" />
-            <span className="text-sm text-blue-600 uppercase tracking-wide" style={{ fontWeight: 600 }}>
+            <span
+              className="text-sm text-blue-600 uppercase tracking-wide"
+              style={{ fontWeight: 600 }}
+            >
               Real Scenarios
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-6">
             <span style={{ fontWeight: 200 }}>See It In </span>
-            <span className="text-blue-600" style={{ fontWeight: 800 }}>Action</span>
+            <span className="text-blue-600" style={{ fontWeight: 800 }}>
+              Action
+            </span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" style={{ fontWeight: 300 }}>
+          <p
+            className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed"
+            style={{ fontWeight: 300 }}
+          >
             Real estate scenarios where AI voice agents turn missed opportunities into closed deals.
           </p>
         </motion.div>
@@ -151,10 +159,16 @@ export function RealEstateUseCases() {
                     <div className="flex items-start gap-3">
                       <AlertCircle className="text-red-600 w-5 h-5 flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-xs text-red-600 uppercase tracking-wider mb-1" style={{ fontWeight: 700 }}>
+                        <p
+                          className="text-xs text-red-600 uppercase tracking-wider mb-1"
+                          style={{ fontWeight: 700 }}
+                        >
                           Problem
                         </p>
-                        <p className="text-slate-700 text-sm leading-relaxed" style={{ fontWeight: 400 }}>
+                        <p
+                          className="text-slate-700 text-sm leading-relaxed"
+                          style={{ fontWeight: 400 }}
+                        >
                           {useCase.problem}
                         </p>
                       </div>
@@ -171,10 +185,16 @@ export function RealEstateUseCases() {
                     <div className="flex items-start gap-3">
                       <Bot className="text-blue-600 w-5 h-5 flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-xs text-blue-600 uppercase tracking-wider mb-1" style={{ fontWeight: 700 }}>
+                        <p
+                          className="text-xs text-blue-600 uppercase tracking-wider mb-1"
+                          style={{ fontWeight: 700 }}
+                        >
                           AI Solution
                         </p>
-                        <p className="text-slate-700 text-sm leading-relaxed" style={{ fontWeight: 400 }}>
+                        <p
+                          className="text-slate-700 text-sm leading-relaxed"
+                          style={{ fontWeight: 400 }}
+                        >
                           {useCase.solution}
                         </p>
                       </div>
@@ -191,10 +211,16 @@ export function RealEstateUseCases() {
                     <div className="flex items-start gap-3">
                       <CheckCircle className="text-green-600 w-5 h-5 flex-shrink-0 mt-0.5" />
                       <div>
-                        <p className="text-xs text-green-600 uppercase tracking-wider mb-1" style={{ fontWeight: 700 }}>
+                        <p
+                          className="text-xs text-green-600 uppercase tracking-wider mb-1"
+                          style={{ fontWeight: 700 }}
+                        >
                           Result
                         </p>
-                        <p className="text-slate-900 text-base leading-relaxed" style={{ fontWeight: 600 }}>
+                        <p
+                          className="text-slate-900 text-base leading-relaxed"
+                          style={{ fontWeight: 600 }}
+                        >
                           {useCase.result}
                         </p>
                       </div>
@@ -220,7 +246,9 @@ export function RealEstateUseCases() {
                 <p className="text-2xl text-slate-900" style={{ fontWeight: 700 }}>
                   Turn Every Lead Into <span className="text-blue-600">Revenue</span>
                 </p>
-                <p className="text-slate-600" style={{ fontWeight: 400 }}>No more missed opportunities</p>
+                <p className="text-slate-600" style={{ fontWeight: 400 }}>
+                  No more missed opportunities
+                </p>
               </div>
             </div>
           </div>

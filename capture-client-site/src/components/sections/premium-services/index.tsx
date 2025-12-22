@@ -26,17 +26,17 @@ export function PremiumServices() {
 
   useEffect(() => {
     const checkMobile = () => {
-      if (typeof window === 'undefined') return;
+      if (typeof window === "undefined") return;
       setIsMobile(window.innerWidth < 768);
     };
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end start"]
+    offset: ["start end", "end start"],
   });
 
   const floatY = useTransform(scrollYProgress, [0, 1], [0, -50]);
@@ -52,10 +52,7 @@ export function PremiumServices() {
           ============================================================ */}
       <div className="relative py-20 sm:py-28 lg:py-36 overflow-hidden">
         {/* Mesh gradient background with floating animation */}
-        <motion.div
-          style={{ y: floatY }}
-          className="absolute inset-0 opacity-40"
-        >
+        <motion.div style={{ y: floatY }} className="absolute inset-0 opacity-40">
           <div
             className="absolute inset-0"
             style={{
@@ -63,7 +60,7 @@ export function PremiumServices() {
                 radial-gradient(at 20% 30%, rgba(0, 201, 255, 0.12) 0px, transparent 50%),
                 radial-gradient(at 80% 70%, rgba(74, 105, 226, 0.1) 0px, transparent 50%),
                 radial-gradient(at 50% 50%, rgba(37, 99, 235, 0.08) 0px, transparent 50%)
-              `
+              `,
             }}
           />
         </motion.div>
@@ -72,8 +69,9 @@ export function PremiumServices() {
         <div
           className="absolute inset-0 opacity-[0.02]"
           style={{
-            backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 1px)',
-            backgroundSize: '80px 80px'
+            backgroundImage:
+              "linear-gradient(rgba(255, 255, 255, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.5) 1px, transparent 1px)",
+            backgroundSize: "80px 80px",
           }}
         />
 
@@ -91,7 +89,7 @@ export function PremiumServices() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-[#00C9FF] text-xs sm:text-sm tracking-[0.25em] uppercase mb-6 sm:mb-8"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 800 }}
             >
               The Real Problem
             </motion.p>
@@ -102,10 +100,18 @@ export function PremiumServices() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
               transition={{ duration: 0.8, delay: 0.3 }}
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-slate-900 leading-[1.08] mb-8 sm:mb-12"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
             >
               <span style={{ fontWeight: 200 }}>Your competitors are </span>
-              <span style={{ fontWeight: 800, background: 'linear-gradient(135deg, #00C9FF 0%, #4A69E2 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              <span
+                style={{
+                  fontWeight: 800,
+                  background: "linear-gradient(135deg, #00C9FF 0%, #4A69E2 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
                 capturing leads
               </span>
               <span style={{ fontWeight: 200 }}> while you sleep.</span>
@@ -119,12 +125,32 @@ export function PremiumServices() {
               className="flex flex-col sm:flex-row gap-8 sm:gap-16 mb-12 sm:mb-16"
             >
               <div className="flex items-baseline gap-3">
-                <span className="text-5xl sm:text-6xl lg:text-7xl text-[#ff4444]" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}>27%</span>
-                <span className="text-slate-600 text-sm sm:text-base max-w-[120px] leading-tight" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>of calls go unanswered</span>
+                <span
+                  className="text-5xl sm:text-6xl lg:text-7xl text-[#ff4444]"
+                  style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 800 }}
+                >
+                  27%
+                </span>
+                <span
+                  className="text-slate-600 text-sm sm:text-base max-w-[120px] leading-tight"
+                  style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 300 }}
+                >
+                  of calls go unanswered
+                </span>
               </div>
               <div className="flex items-baseline gap-3">
-                <span className="text-5xl sm:text-6xl lg:text-7xl text-[#ff4444]" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}>85%</span>
-                <span className="text-slate-600 text-sm sm:text-base max-w-[140px] leading-tight" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>never call back after voicemail</span>
+                <span
+                  className="text-5xl sm:text-6xl lg:text-7xl text-[#ff4444]"
+                  style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 800 }}
+                >
+                  85%
+                </span>
+                <span
+                  className="text-slate-600 text-sm sm:text-base max-w-[140px] leading-tight"
+                  style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 300 }}
+                >
+                  never call back after voicemail
+                </span>
               </div>
             </motion.div>
 
@@ -134,10 +160,14 @@ export function PremiumServices() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.6, delay: 0.7 }}
               className="text-xl sm:text-2xl text-slate-600 max-w-3xl leading-relaxed"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 300 }}
             >
-              Every missed call is revenue walking out the door. Every unanswered inquiry is a customer choosing your competitor.
-              <span className="text-slate-900" style={{ fontWeight: 600 }}> It doesn&apos;t have to be this way.</span>
+              Every missed call is revenue walking out the door. Every unanswered inquiry is a
+              customer choosing your competitor.
+              <span className="text-slate-900" style={{ fontWeight: 600 }}>
+                {" "}
+                It doesn&apos;t have to be this way.
+              </span>
             </motion.p>
           </motion.div>
         </div>
@@ -149,10 +179,7 @@ export function PremiumServices() {
       <div className="relative py-20 sm:py-28 lg:py-36 overflow-hidden">
         {/* Subtle mesh gradient */}
         <div className="absolute inset-0">
-          <motion.div
-            style={{ y: floatY }}
-            className="absolute inset-0 opacity-30"
-          >
+          <motion.div style={{ y: floatY }} className="absolute inset-0 opacity-30">
             <div
               className="absolute inset-0"
               style={{
@@ -160,7 +187,7 @@ export function PremiumServices() {
                   radial-gradient(at 40% 20%, rgba(0, 201, 255, 0.15) 0px, transparent 50%),
                   radial-gradient(at 80% 80%, rgba(74, 105, 226, 0.12) 0px, transparent 50%),
                   radial-gradient(at 20% 80%, rgba(37, 99, 235, 0.1) 0px, transparent 50%)
-                `
+                `,
               }}
             />
           </motion.div>
@@ -175,9 +202,17 @@ export function PremiumServices() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-center mb-16 sm:mb-20"
           >
-            <span className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-slate-200 backdrop-blur-sm" style={{ background: 'rgba(0, 201, 255, 0.08)' }}>
+            <span
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-slate-200 backdrop-blur-sm"
+              style={{ background: "rgba(0, 201, 255, 0.08)" }}
+            >
               <Zap className="w-4 h-4 text-[#00C9FF]" />
-              <span className="text-sm text-slate-900" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}>The Solution</span>
+              <span
+                className="text-sm text-slate-900"
+                style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 600 }}
+              >
+                The Solution
+              </span>
             </span>
           </motion.div>
 
@@ -209,10 +244,13 @@ export function PremiumServices() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.3 }}
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-200 mb-6"
-                        style={{ background: 'rgba(37, 99, 235, 0.08)' }}
+                        style={{ background: "rgba(37, 99, 235, 0.08)" }}
                       >
                         <span className="w-2 h-2 bg-[#2563EB] rounded-full animate-pulse" />
-                        <span className="text-xs uppercase tracking-wider text-[#2563EB]" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>
+                        <span
+                          className="text-xs uppercase tracking-wider text-[#2563EB]"
+                          style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 700 }}
+                        >
                           Core Technology
                         </span>
                       </motion.div>
@@ -223,7 +261,7 @@ export function PremiumServices() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                         className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-6 leading-tight"
-                        style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}
+                        style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 700 }}
                       >
                         Voice AI Agents
                       </motion.h3>
@@ -234,9 +272,10 @@ export function PremiumServices() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.5 }}
                         className="text-lg sm:text-xl text-slate-600 mb-8 leading-relaxed"
-                        style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}
+                        style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 300 }}
                       >
-                        AI-powered voice agents handle calls 24/7, qualify leads, book appointments, and answer questions - so you never miss an opportunity.
+                        AI-powered voice agents handle calls 24/7, qualify leads, book appointments,
+                        and answer questions - so you never miss an opportunity.
                       </motion.p>
 
                       {/* Impact metrics */}
@@ -248,8 +287,24 @@ export function PremiumServices() {
                           transition={{ duration: 0.5, delay: 0.6 }}
                           className="p-5 rounded-xl border border-slate-200 bg-slate-50"
                         >
-                          <div className="text-3xl sm:text-4xl text-[#00C9FF] mb-1" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>24/7</div>
-                          <div className="text-sm text-slate-600" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>Always available</div>
+                          <div
+                            className="text-3xl sm:text-4xl text-[#00C9FF] mb-1"
+                            style={{
+                              fontFamily: "var(--font-bricolage-grotesque)",
+                              fontWeight: 700,
+                            }}
+                          >
+                            24/7
+                          </div>
+                          <div
+                            className="text-sm text-slate-600"
+                            style={{
+                              fontFamily: "var(--font-bricolage-grotesque)",
+                              fontWeight: 300,
+                            }}
+                          >
+                            Always available
+                          </div>
                         </motion.div>
                         <motion.div
                           initial={{ opacity: 0, y: 20 }}
@@ -258,8 +313,24 @@ export function PremiumServices() {
                           transition={{ duration: 0.5, delay: 0.7 }}
                           className="p-5 rounded-xl border border-slate-200 bg-slate-50"
                         >
-                          <div className="text-3xl sm:text-4xl text-[#2563EB] mb-1" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>3 sec</div>
-                          <div className="text-sm text-slate-600" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>Avg response time</div>
+                          <div
+                            className="text-3xl sm:text-4xl text-[#2563EB] mb-1"
+                            style={{
+                              fontFamily: "var(--font-bricolage-grotesque)",
+                              fontWeight: 700,
+                            }}
+                          >
+                            3 sec
+                          </div>
+                          <div
+                            className="text-sm text-slate-600"
+                            style={{
+                              fontFamily: "var(--font-bricolage-grotesque)",
+                              fontWeight: 300,
+                            }}
+                          >
+                            Avg response time
+                          </div>
                         </motion.div>
                       </div>
 
@@ -269,7 +340,7 @@ export function PremiumServices() {
                           "Natural, human-like conversations",
                           "Automatic lead qualification",
                           "Instant appointment booking",
-                          "CRM integration included"
+                          "CRM integration included",
                         ].map((item, idx) => (
                           <motion.li
                             key={idx}
@@ -279,12 +350,33 @@ export function PremiumServices() {
                             transition={{ duration: 0.5, delay: 0.8 + idx * 0.1 }}
                             className="flex items-center gap-3 text-slate-900"
                           >
-                            <div className="w-6 h-6 rounded-full border border-slate-200 flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(0, 201, 255, 0.1)' }}>
-                              <svg className="w-3.5 h-3.5 text-[#00C9FF]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                            <div
+                              className="w-6 h-6 rounded-full border border-slate-200 flex items-center justify-center flex-shrink-0"
+                              style={{ background: "rgba(0, 201, 255, 0.1)" }}
+                            >
+                              <svg
+                                className="w-3.5 h-3.5 text-[#00C9FF]"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                              >
+                                <path
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                  strokeWidth={3}
+                                  d="M5 13l4 4L19 7"
+                                />
                               </svg>
                             </div>
-                            <span className="text-base sm:text-lg" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 400 }}>{item}</span>
+                            <span
+                              className="text-base sm:text-lg"
+                              style={{
+                                fontFamily: "var(--font-bricolage-grotesque)",
+                                fontWeight: 400,
+                              }}
+                            >
+                              {item}
+                            </span>
                           </motion.li>
                         ))}
                       </ul>
@@ -313,8 +405,10 @@ export function PremiumServices() {
                         <div
                           className="w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-3xl flex items-center justify-center relative"
                           style={{
-                            background: 'linear-gradient(135deg, rgba(0, 201, 255, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%)',
-                            boxShadow: '0 0 60px rgba(0, 201, 255, 0.2), 0 0 120px rgba(37, 99, 235, 0.1), inset 0 0 60px rgba(255,255,255,0.02)'
+                            background:
+                              "linear-gradient(135deg, rgba(0, 201, 255, 0.1) 0%, rgba(37, 99, 235, 0.1) 100%)",
+                            boxShadow:
+                              "0 0 60px rgba(0, 201, 255, 0.2), 0 0 120px rgba(37, 99, 235, 0.1), inset 0 0 60px rgba(255,255,255,0.02)",
                           }}
                         >
                           <VoiceAIIcon className="w-3/4 h-3/4" />
@@ -334,10 +428,7 @@ export function PremiumServices() {
           ============================================================ */}
       <div className="relative py-20 sm:py-28 lg:py-36 overflow-hidden">
         {/* Floating mesh background */}
-        <motion.div
-          style={{ y: floatY }}
-          className="absolute inset-0 opacity-25"
-        >
+        <motion.div style={{ y: floatY }} className="absolute inset-0 opacity-25">
           <div
             className="absolute inset-0"
             style={{
@@ -345,7 +436,7 @@ export function PremiumServices() {
                 radial-gradient(at 60% 40%, rgba(37, 99, 235, 0.12) 0px, transparent 50%),
                 radial-gradient(at 30% 70%, rgba(0, 201, 255, 0.1) 0px, transparent 50%),
                 radial-gradient(at 70% 80%, rgba(74, 105, 226, 0.08) 0px, transparent 50%)
-              `
+              `,
             }}
           />
         </motion.div>
@@ -359,14 +450,29 @@ export function PremiumServices() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="max-w-4xl mx-auto text-center mb-16 sm:mb-20"
           >
-            <h3 className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-6 leading-tight" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+            <h3
+              className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-6 leading-tight"
+              style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
+            >
               <span style={{ fontWeight: 300 }}>Complete the </span>
-              <span style={{ fontWeight: 800, background: 'linear-gradient(135deg, #2563EB 0%, #00C9FF 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+              <span
+                style={{
+                  fontWeight: 800,
+                  background: "linear-gradient(135deg, #2563EB 0%, #00C9FF 100%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
                 Growth Engine
               </span>
             </h3>
-            <p className="text-lg sm:text-xl text-slate-600" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>
-              Voice AI is just the beginning. Add targeted ads and unified lead management to build an unstoppable growth machine.
+            <p
+              className="text-lg sm:text-xl text-slate-600"
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 300 }}
+            >
+              Voice AI is just the beginning. Add targeted ads and unified lead management to build
+              an unstoppable growth machine.
             </p>
           </motion.div>
 
@@ -388,8 +494,9 @@ export function PremiumServices() {
                   <div
                     className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl flex items-center justify-center flex-shrink-0"
                     style={{
-                      background: 'linear-gradient(135deg, rgba(37, 99, 235, 0.15) 0%, rgba(37, 99, 235, 0.05) 100%)',
-                      boxShadow: '0 10px 40px rgba(37, 99, 235, 0.15)'
+                      background:
+                        "linear-gradient(135deg, rgba(37, 99, 235, 0.15) 0%, rgba(37, 99, 235, 0.05) 100%)",
+                      boxShadow: "0 10px 40px rgba(37, 99, 235, 0.15)",
                     }}
                   >
                     <GoogleAdsIcon className="w-3/4 h-3/4" />
@@ -398,24 +505,51 @@ export function PremiumServices() {
                   {/* Content */}
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
-                      <h4 className="text-2xl sm:text-3xl text-slate-900 group-hover:text-[#2563EB] transition-colors" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>
+                      <h4
+                        className="text-2xl sm:text-3xl text-slate-900 group-hover:text-[#2563EB] transition-colors"
+                        style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 700 }}
+                      >
                         Google Ads
                       </h4>
                       <TrendingUp className="w-5 h-5 text-[#2563EB] opacity-0 group-hover:opacity-100 transition-opacity" />
                     </div>
-                    <p className="text-slate-600 mb-6 leading-relaxed" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>
-                      Precision-targeted search campaigns that capture high-intent buyers actively searching for your services right now.
+                    <p
+                      className="text-slate-600 mb-6 leading-relaxed"
+                      style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 300 }}
+                    >
+                      Precision-targeted search campaigns that capture high-intent buyers actively
+                      searching for your services right now.
                     </p>
 
                     {/* Key metrics */}
                     <div className="flex flex-wrap gap-4">
                       <div className="px-4 py-2 rounded-lg border border-slate-200 bg-slate-50">
-                        <span className="text-[#2563EB]" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>4.2x</span>
-                        <span className="text-slate-600 text-sm ml-2" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>avg ROAS</span>
+                        <span
+                          className="text-[#2563EB]"
+                          style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 700 }}
+                        >
+                          4.2x
+                        </span>
+                        <span
+                          className="text-slate-600 text-sm ml-2"
+                          style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 300 }}
+                        >
+                          avg ROAS
+                        </span>
                       </div>
                       <div className="px-4 py-2 rounded-lg border border-slate-200 bg-slate-50">
-                        <span className="text-[#2563EB]" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>-40%</span>
-                        <span className="text-slate-600 text-sm ml-2" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>cost per lead</span>
+                        <span
+                          className="text-[#2563EB]"
+                          style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 700 }}
+                        >
+                          -40%
+                        </span>
+                        <span
+                          className="text-slate-600 text-sm ml-2"
+                          style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 300 }}
+                        >
+                          cost per lead
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -436,8 +570,9 @@ export function PremiumServices() {
                   <div
                     className="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl flex items-center justify-center flex-shrink-0"
                     style={{
-                      background: 'linear-gradient(135deg, rgba(0, 201, 255, 0.15) 0%, rgba(0, 201, 255, 0.05) 100%)',
-                      boxShadow: '0 10px 40px rgba(0, 201, 255, 0.15)'
+                      background:
+                        "linear-gradient(135deg, rgba(0, 201, 255, 0.15) 0%, rgba(0, 201, 255, 0.05) 100%)",
+                      boxShadow: "0 10px 40px rgba(0, 201, 255, 0.15)",
                     }}
                   >
                     <FacebookAdsIcon className="w-3/4 h-3/4" />
@@ -446,24 +581,51 @@ export function PremiumServices() {
                   {/* Content */}
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
-                      <h4 className="text-2xl sm:text-3xl text-slate-900 group-hover:text-[#00C9FF] transition-colors" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>
+                      <h4
+                        className="text-2xl sm:text-3xl text-slate-900 group-hover:text-[#00C9FF] transition-colors"
+                        style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 700 }}
+                      >
                         Facebook Ads
                       </h4>
                       <Users className="w-5 h-5 text-[#00C9FF] opacity-0 group-hover:opacity-100 transition-opacity" />
                     </div>
-                    <p className="text-slate-600 mb-6 leading-relaxed" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>
-                      Laser-focused social campaigns that reach your ideal customers based on demographics, interests, and behaviors.
+                    <p
+                      className="text-slate-600 mb-6 leading-relaxed"
+                      style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 300 }}
+                    >
+                      Laser-focused social campaigns that reach your ideal customers based on
+                      demographics, interests, and behaviors.
                     </p>
 
                     {/* Key metrics */}
                     <div className="flex flex-wrap gap-4">
                       <div className="px-4 py-2 rounded-lg border border-slate-200 bg-slate-50">
-                        <span className="text-[#00C9FF]" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>3.8x</span>
-                        <span className="text-slate-600 text-sm ml-2" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>avg ROAS</span>
+                        <span
+                          className="text-[#00C9FF]"
+                          style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 700 }}
+                        >
+                          3.8x
+                        </span>
+                        <span
+                          className="text-slate-600 text-sm ml-2"
+                          style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 300 }}
+                        >
+                          avg ROAS
+                        </span>
                       </div>
                       <div className="px-4 py-2 rounded-lg border border-slate-200 bg-slate-50">
-                        <span className="text-[#00C9FF]" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}>2.1M+</span>
-                        <span className="text-slate-600 text-sm ml-2" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}>reach potential</span>
+                        <span
+                          className="text-[#00C9FF]"
+                          style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 700 }}
+                        >
+                          2.1M+
+                        </span>
+                        <span
+                          className="text-slate-600 text-sm ml-2"
+                          style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 300 }}
+                        >
+                          reach potential
+                        </span>
                       </div>
                     </div>
                   </div>
@@ -483,8 +645,9 @@ export function PremiumServices() {
               <div
                 className="absolute inset-0 opacity-[0.015]"
                 style={{
-                  backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.5) 1px, transparent 0)',
-                  backgroundSize: '40px 40px'
+                  backgroundImage:
+                    "radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.5) 1px, transparent 0)",
+                  backgroundSize: "40px 40px",
                 }}
               />
 
@@ -502,9 +665,12 @@ export function PremiumServices() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.5, delay: 0.5 }}
                       className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-200 mb-6"
-                      style={{ background: 'rgba(37, 99, 235, 0.05)' }}
+                      style={{ background: "rgba(37, 99, 235, 0.05)" }}
                     >
-                      <span className="text-xs uppercase tracking-wider text-slate-600" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}>
+                      <span
+                        className="text-xs uppercase tracking-wider text-slate-600"
+                        style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 600 }}
+                      >
                         Everything Connected
                       </span>
                     </motion.div>
@@ -515,7 +681,7 @@ export function PremiumServices() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, delay: 0.6 }}
                       className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-6 leading-tight"
-                      style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}
+                      style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 700 }}
                     >
                       Complete Lead Generation System
                     </motion.h4>
@@ -526,9 +692,10 @@ export function PremiumServices() {
                       viewport={{ once: true }}
                       transition={{ duration: 0.6, delay: 0.7 }}
                       className="text-lg sm:text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl"
-                      style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}
+                      style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 300 }}
                     >
-                      Unified CRM, analytics dashboard, and marketing automation - track every lead from first contact to closed deal in one seamless platform.
+                      Unified CRM, analytics dashboard, and marketing automation - track every lead
+                      from first contact to closed deal in one seamless platform.
                     </motion.p>
 
                     {/* Feature grid */}
@@ -537,7 +704,7 @@ export function PremiumServices() {
                         { icon: "inbox", label: "Unified inbox & CRM" },
                         { icon: "chart", label: "Real-time analytics" },
                         { icon: "pipeline", label: "Pipeline management" },
-                        { icon: "tracking", label: "Performance tracking" }
+                        { icon: "tracking", label: "Performance tracking" },
                       ].map((feature, idx) => (
                         <motion.div
                           key={idx}
@@ -547,12 +714,33 @@ export function PremiumServices() {
                           transition={{ duration: 0.5, delay: 0.8 + idx * 0.1 }}
                           className="flex items-center gap-3 px-5 py-4 rounded-xl border border-slate-200 hover:border-[#2563EB]/20 transition-colors bg-slate-50"
                         >
-                          <div className="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center" style={{ background: 'rgba(37, 99, 235, 0.1)' }}>
-                            <svg className="w-5 h-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          <div
+                            className="w-10 h-10 rounded-lg border border-slate-200 flex items-center justify-center"
+                            style={{ background: "rgba(37, 99, 235, 0.1)" }}
+                          >
+                            <svg
+                              className="w-5 h-5 text-[#2563EB]"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M5 13l4 4L19 7"
+                              />
                             </svg>
                           </div>
-                          <span className="text-slate-900" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 500 }}>{feature.label}</span>
+                          <span
+                            className="text-slate-900"
+                            style={{
+                              fontFamily: "var(--font-bricolage-grotesque)",
+                              fontWeight: 500,
+                            }}
+                          >
+                            {feature.label}
+                          </span>
                         </motion.div>
                       ))}
                     </div>
@@ -570,8 +758,10 @@ export function PremiumServices() {
                       <div
                         className="w-48 h-48 sm:w-56 sm:h-56 lg:w-64 lg:h-64 rounded-3xl flex items-center justify-center"
                         style={{
-                          background: 'linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(0, 201, 255, 0.1) 100%)',
-                          boxShadow: '0 0 80px rgba(37, 99, 235, 0.15), 0 0 120px rgba(0, 201, 255, 0.1)'
+                          background:
+                            "linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(0, 201, 255, 0.1) 100%)",
+                          boxShadow:
+                            "0 0 80px rgba(37, 99, 235, 0.15), 0 0 120px rgba(0, 201, 255, 0.1)",
                         }}
                       >
                         <LeadGenIcon className="w-3/4 h-3/4" />
@@ -590,10 +780,7 @@ export function PremiumServices() {
           ============================================================ */}
       <div className="relative py-20 sm:py-28 lg:py-36 overflow-hidden">
         {/* Floating mesh gradient background */}
-        <motion.div
-          style={{ y: floatY }}
-          className="absolute inset-0 opacity-30"
-        >
+        <motion.div style={{ y: floatY }} className="absolute inset-0 opacity-30">
           <div
             className="absolute inset-0"
             style={{
@@ -601,7 +788,7 @@ export function PremiumServices() {
                 radial-gradient(at 50% 50%, rgba(0, 201, 255, 0.15) 0px, transparent 50%),
                 radial-gradient(at 30% 70%, rgba(37, 99, 235, 0.12) 0px, transparent 50%),
                 radial-gradient(at 70% 30%, rgba(74, 105, 226, 0.1) 0px, transparent 50%)
-              `
+              `,
             }}
           />
         </motion.div>
@@ -622,10 +809,18 @@ export function PremiumServices() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-6 leading-tight"
-                style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+                style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
               >
                 <span style={{ fontWeight: 300 }}>Ready to see it </span>
-                <span style={{ fontWeight: 800, background: 'linear-gradient(135deg, #2563EB 0%, #00C9FF 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>
+                <span
+                  style={{
+                    fontWeight: 800,
+                    background: "linear-gradient(135deg, #2563EB 0%, #00C9FF 100%)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                    backgroundClip: "text",
+                  }}
+                >
                   all work together?
                 </span>
               </motion.h3>
@@ -636,9 +831,10 @@ export function PremiumServices() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-lg sm:text-xl text-slate-600 mb-10 max-w-2xl mx-auto"
-                style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 300 }}
+                style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 300 }}
               >
-                Join businesses capturing every lead with AI voice agents, targeted ads, and unified lead management.
+                Join businesses capturing every lead with AI voice agents, targeted ads, and unified
+                lead management.
               </motion.p>
 
               {/* CTA buttons */}
@@ -653,7 +849,7 @@ export function PremiumServices() {
                   <Link
                     href="/contact"
                     className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white px-10 py-5 text-lg rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 inline-flex items-center gap-3 w-full sm:w-auto justify-center group"
-                    style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}
+                    style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 600 }}
                   >
                     Try Our AI Now
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -663,7 +859,7 @@ export function PremiumServices() {
                   <a
                     href="tel:865-346-6111"
                     className="bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 hover:border-slate-300 px-10 py-5 text-lg rounded-xl inline-flex items-center gap-3 w-full sm:w-auto justify-center group"
-                    style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 600 }}
+                    style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 600 }}
                   >
                     <Phone className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                     (865) 346-6111
@@ -678,23 +874,53 @@ export function PremiumServices() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.5 }}
                 className="flex flex-wrap items-center justify-center gap-6 text-sm text-slate-600"
-                style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 400 }}
+                style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 400 }}
               >
                 <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <svg
+                    className="w-5 h-5 text-[#2563EB]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
                   </svg>
                   <span>14-day free trial</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <svg
+                    className="w-5 h-5 text-[#2563EB]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
                   </svg>
                   <span>No credit card required</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  <svg
+                    className="w-5 h-5 text-[#2563EB]"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
                   </svg>
                   <span>Setup in 24 hours</span>
                 </div>

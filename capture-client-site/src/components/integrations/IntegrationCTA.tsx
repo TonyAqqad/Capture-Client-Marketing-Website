@@ -51,7 +51,7 @@ export function IntegrationCTA({ integrationName }: IntegrationCTAProps) {
                 style={{
                   backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
                                    linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-                  backgroundSize: '40px 40px'
+                  backgroundSize: "40px 40px",
                 }}
               />
             </div>
@@ -92,7 +92,8 @@ export function IntegrationCTA({ integrationName }: IntegrationCTAProps) {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto"
               >
-                Join growing businesses using Capture Client to automate calls, qualify leads, and book appointments 24/7. Set up your {integrationName} integration in minutes.
+                Join growing businesses using Capture Client to automate calls, qualify leads, and
+                book appointments 24/7. Set up your {integrationName} integration in minutes.
               </motion.p>
 
               {/* Buttons */}

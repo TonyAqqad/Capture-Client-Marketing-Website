@@ -11,19 +11,29 @@ import {
   Zap,
 } from "lucide-react";
 
-type Intent = "emergency" | "service_request" | "inquiry" | "schedule" | "pricing" | "complaint" | "general";
+type Intent =
+  | "emergency"
+  | "service_request"
+  | "inquiry"
+  | "schedule"
+  | "pricing"
+  | "complaint"
+  | "general";
 
 interface IntentBadgeProps {
   intent: Intent;
   animate?: boolean;
 }
 
-const INTENT_CONFIG: Record<Intent, {
-  icon: React.ElementType;
-  label: string;
-  color: string;
-  bgColor: string;
-}> = {
+const INTENT_CONFIG: Record<
+  Intent,
+  {
+    icon: React.ElementType;
+    label: string;
+    color: string;
+    bgColor: string;
+  }
+> = {
   emergency: {
     icon: AlertTriangle,
     label: "Emergency",
@@ -80,9 +90,7 @@ export function IntentBadge({ intent, animate = true }: IntentBadgeProps) {
       transition={{ type: "spring", stiffness: 200, damping: 15 }}
     >
       <Icon className={`w-4 h-4 ${config.color}`} />
-      <span className={`text-sm font-medium ${config.color}`}>
-        {config.label}
-      </span>
+      <span className={`text-sm font-medium ${config.color}`}>{config.label}</span>
     </motion.div>
   );
 }

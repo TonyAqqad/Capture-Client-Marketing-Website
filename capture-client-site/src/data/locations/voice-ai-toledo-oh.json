@@ -11,13 +11,7 @@
     "state": "Ohio",
     "state_abbr": "OH",
     "slug": "toledo-oh",
-    "nearby_areas": [
-      "Sylvania",
-      "Perrysburg",
-      "Maumee",
-      "Oregon",
-      "Bowling Green"
-    ],
+    "nearby_areas": ["Sylvania", "Perrysburg", "Maumee", "Oregon", "Bowling Green"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -182,14 +176,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "voice-ai-sylvania-oh",
-      "voice-ai-perrysburg-oh",
-      "voice-ai-maumee-oh"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "nearby_locations": ["voice-ai-sylvania-oh", "voice-ai-perrysburg-oh", "voice-ai-maumee-oh"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

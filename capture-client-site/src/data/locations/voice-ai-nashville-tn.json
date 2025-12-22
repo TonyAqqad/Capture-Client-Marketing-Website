@@ -11,21 +11,14 @@
     "state": "Tennessee",
     "state_abbr": "TN",
     "slug": "nashville-tn",
-    "nearby_areas": [
-      "Franklin",
-      "Murfreesboro",
-      "Brentwood"
-    ],
+    "nearby_areas": ["Franklin", "Murfreesboro", "Brentwood"],
     "service_area_radius": "35 miles"
   },
   "seo": {
     "page_title": "Voice AI Agency in Nashville, TN | Capture Client",
     "meta_description": "Nashville businesses automate calls with Voice AI. Never miss a lead in Music City. 24/7 AI receptionist. Call 865-346-6111!",
     "h1_heading": "Voice AI Services in Nashville, Tennessee",
-    "keywords": [
-      "voice ai nashville",
-      "ai receptionist nashville tn"
-    ],
+    "keywords": ["voice ai nashville", "ai receptionist nashville tn"],
     "canonical_url": "/voice-ai-nashville-tn"
   },
   "hero": {
@@ -102,13 +95,7 @@
   "service_area": {
     "heading": "Serving Nashville and Middle Tennessee",
     "description": "Voice AI throughout Nashville metro",
-    "areas_list": [
-      "Downtown Nashville",
-      "Green Hills",
-      "Franklin",
-      "Brentwood",
-      "Murfreesboro"
-    ]
+    "areas_list": ["Downtown Nashville", "Green Hills", "Franklin", "Brentwood", "Murfreesboro"]
   },
   "local_testimonials": [
     {
@@ -162,13 +149,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "voice-ai-franklin-tn",
-      "voice-ai-murfreesboro-tn"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "nearby_locations": ["voice-ai-franklin-tn", "voice-ai-murfreesboro-tn"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

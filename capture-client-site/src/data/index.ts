@@ -17,7 +17,7 @@ export {
   getAllCategoryIds,
   hasTheme,
   type CategoryTheme,
-} from './categoryThemes';
+} from "./categoryThemes";
 
 // Integrations
 export {
@@ -32,7 +32,7 @@ export {
   getIntegrationStats,
   type Integration,
   type IntegrationCategory,
-} from './integrations';
+} from "./integrations";
 
 // Industries
 export {
@@ -42,16 +42,10 @@ export {
   getCategories,
   searchIndustries,
   type Industry,
-} from './industries';
+} from "./industries";
 
 // Integration Logos
-export {
-  integrationLogos,
-  type IntegrationLogo,
-} from './integration-logos';
+export { integrationLogos, type IntegrationLogo } from "./integration-logos";
 
 // Demo Transcripts
-export {
-  demoTranscripts,
-  type DemoTranscript,
-} from './demo-transcripts';
+export { demoTranscripts, type DemoTranscript } from "./demo-transcripts";

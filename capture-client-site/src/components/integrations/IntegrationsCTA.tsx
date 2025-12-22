@@ -2,7 +2,18 @@
 
 import { motion } from "@/lib/motion";
 import Link from "next/link";
-import { PlusCircle, Rocket, ArrowRight, Code, CheckCircle2, Clock, Headphones, Timer, RefreshCw, Shield } from "lucide-react";
+import {
+  PlusCircle,
+  Rocket,
+  ArrowRight,
+  Code,
+  CheckCircle2,
+  Clock,
+  Headphones,
+  Timer,
+  RefreshCw,
+  Shield,
+} from "lucide-react";
 
 export function IntegrationsCTA() {
   return (
@@ -116,8 +127,8 @@ export function IntegrationsCTA() {
                 className="text-base sm:text-lg lg:text-xl text-slate-600 mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed"
               >
                 We can connect with virtually any tool via{" "}
-                <span className="text-blue-600 font-semibold">API or webhook</span>.
-                Our platform is built to integrate with your existing tech stack seamlessly.
+                <span className="text-blue-600 font-semibold">API or webhook</span>. Our platform is
+                built to integrate with your existing tech stack seamlessly.
                 <span className="block mt-2 text-sm sm:text-base">
                   Average custom integration delivery: 3-5 business days
                 </span>
@@ -135,13 +146,13 @@ export function IntegrationsCTA() {
                 <motion.div
                   whileHover={{
                     scale: 1.05,
-                    y: -4
+                    y: -4,
                   }}
                   whileTap={{ scale: 0.98 }}
                   transition={{
                     type: "spring",
                     stiffness: 400,
-                    damping: 20
+                    damping: 20,
                   }}
                   className="w-full sm:w-auto"
                 >
@@ -163,13 +174,13 @@ export function IntegrationsCTA() {
                 <motion.div
                   whileHover={{
                     scale: 1.03,
-                    y: -2
+                    y: -2,
                   }}
                   whileTap={{ scale: 0.98 }}
                   transition={{
                     type: "spring",
                     stiffness: 400,
-                    damping: 20
+                    damping: 20,
                   }}
                   className="w-full sm:w-auto"
                 >
@@ -226,7 +237,7 @@ export function IntegrationsCTA() {
               transition={{
                 type: "spring",
                 stiffness: 400,
-                damping: 20
+                damping: 20,
               }}
             >
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600/10 to-blue-600/5 border border-blue-600/20 mb-4 transition-all duration-300">
@@ -247,7 +258,7 @@ export function IntegrationsCTA() {
               transition={{
                 type: "spring",
                 stiffness: 400,
-                damping: 20
+                damping: 20,
               }}
             >
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-cyan-500/10 to-cyan-500/5 border border-cyan-500/20 mb-4 transition-all duration-300">
@@ -268,7 +279,7 @@ export function IntegrationsCTA() {
               transition={{
                 type: "spring",
                 stiffness: 400,
-                damping: 20
+                damping: 20,
               }}
             >
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-br from-blue-600/10 to-cyan-500/10 border border-blue-600/20 mb-4 transition-all duration-300">

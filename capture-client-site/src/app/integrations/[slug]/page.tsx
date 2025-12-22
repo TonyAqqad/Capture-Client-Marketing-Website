@@ -7,11 +7,7 @@ import { IntegrationBenefits } from "@/components/integrations/IntegrationBenefi
 import { IntegrationRelated } from "@/components/integrations/IntegrationRelated";
 import { IntegrationCTA } from "@/components/integrations/IntegrationCTA";
 import { ScrollToTop } from "@/components/integrations/ScrollToTop";
-import {
-  integrations,
-  integrationCategories,
-  getIntegrationBySlug,
-} from "@/data/integrations";
+import { integrations, integrationCategories, getIntegrationBySlug } from "@/data/integrations";
 
 interface IntegrationDetailPageProps {
   params: Promise<{
@@ -35,9 +31,7 @@ export const dynamicParams = false;
 /**
  * Generate dynamic SEO metadata for each integration
  */
-export async function generateMetadata({
-  params,
-}: IntegrationDetailPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: IntegrationDetailPageProps): Promise<Metadata> {
   const { slug } = await params;
   const integration = getIntegrationBySlug(slug);
 
@@ -105,9 +99,7 @@ export async function generateMetadata({
 /**
  * Integration Detail Page Component
  */
-export default async function IntegrationDetailPage({
-  params,
-}: IntegrationDetailPageProps) {
+export default async function IntegrationDetailPage({ params }: IntegrationDetailPageProps) {
   const { slug } = await params;
   const integration = getIntegrationBySlug(slug);
 
@@ -246,16 +238,27 @@ export default async function IntegrationDetailPage({
       {/* Related Integrations */}
       {serializedRelated.length > 0 && (
         <IntegrationRelated
-          integrations={serializedRelated.map((i: { id: string; name: string; slug: string; logoUrl: string; shortDescription: string; popular?: boolean; setupTime?: string; keyFeatures?: string[] }) => ({
-            id: i.id,
-            name: i.name,
-            slug: i.slug,
-            logoUrl: i.logoUrl,
-            shortDescription: i.shortDescription,
-            popular: i.popular,
-            setupTime: i.setupTime,
-            keyFeatures: i.keyFeatures,
-          }))}
+          integrations={serializedRelated.map(
+            (i: {
+              id: string;
+              name: string;
+              slug: string;
+              logoUrl: string;
+              shortDescription: string;
+              popular?: boolean;
+              setupTime?: string;
+              keyFeatures?: string[];
+            }) => ({
+              id: i.id,
+              name: i.name,
+              slug: i.slug,
+              logoUrl: i.logoUrl,
+              shortDescription: i.shortDescription,
+              popular: i.popular,
+              setupTime: i.setupTime,
+              keyFeatures: i.keyFeatures,
+            })
+          )}
           categoryName={serializedCategory?.name || serializedIntegration.category}
         />
       )}

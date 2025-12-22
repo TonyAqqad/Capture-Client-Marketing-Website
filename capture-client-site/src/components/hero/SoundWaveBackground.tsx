@@ -16,14 +16,49 @@ export function SoundWaveBackground({ className = "" }: SoundWaveBackgroundProps
   // Extended wave paths - very long to cover ultra-wide screens
   const waves = [
     // Primary waves - more pronounced
-    { d: "M -500 100 Q -200 60 50 100 T 350 100 T 650 100 T 950 100 T 1250 100 T 1550 100 T 1850 100", delay: 0, opacity: 0.12, strokeWidth: 2.5 },
-    { d: "M -500 140 Q -150 180 150 140 T 450 140 T 750 140 T 1050 140 T 1350 140 T 1650 140 T 1950 140", delay: 0.2, opacity: 0.08, strokeWidth: 2 },
-    { d: "M -500 180 Q -100 140 200 180 T 500 180 T 800 180 T 1100 180 T 1400 180 T 1700 180 T 2000 180", delay: 0.4, opacity: 0.15, strokeWidth: 3 },
-    { d: "M -500 220 Q -200 260 100 220 T 400 220 T 700 220 T 1000 220 T 1300 220 T 1600 220 T 1900 220", delay: 0.6, opacity: 0.10, strokeWidth: 2.5 },
-    { d: "M -500 260 Q -150 220 150 260 T 450 260 T 750 260 T 1050 260 T 1350 260 T 1650 260 T 1950 260", delay: 0.8, opacity: 0.06, strokeWidth: 2 },
+    {
+      d: "M -500 100 Q -200 60 50 100 T 350 100 T 650 100 T 950 100 T 1250 100 T 1550 100 T 1850 100",
+      delay: 0,
+      opacity: 0.12,
+      strokeWidth: 2.5,
+    },
+    {
+      d: "M -500 140 Q -150 180 150 140 T 450 140 T 750 140 T 1050 140 T 1350 140 T 1650 140 T 1950 140",
+      delay: 0.2,
+      opacity: 0.08,
+      strokeWidth: 2,
+    },
+    {
+      d: "M -500 180 Q -100 140 200 180 T 500 180 T 800 180 T 1100 180 T 1400 180 T 1700 180 T 2000 180",
+      delay: 0.4,
+      opacity: 0.15,
+      strokeWidth: 3,
+    },
+    {
+      d: "M -500 220 Q -200 260 100 220 T 400 220 T 700 220 T 1000 220 T 1300 220 T 1600 220 T 1900 220",
+      delay: 0.6,
+      opacity: 0.1,
+      strokeWidth: 2.5,
+    },
+    {
+      d: "M -500 260 Q -150 220 150 260 T 450 260 T 750 260 T 1050 260 T 1350 260 T 1650 260 T 1950 260",
+      delay: 0.8,
+      opacity: 0.06,
+      strokeWidth: 2,
+    },
     // Secondary subtle waves
-    { d: "M -500 130 Q -50 100 250 130 T 550 130 T 850 130 T 1150 130 T 1450 130 T 1750 130 T 2050 130", delay: 1.0, opacity: 0.05, strokeWidth: 1.5 },
-    { d: "M -500 200 Q -200 230 100 200 T 400 200 T 700 200 T 1000 200 T 1300 200 T 1600 200 T 1900 200", delay: 1.2, opacity: 0.07, strokeWidth: 1.5 },
+    {
+      d: "M -500 130 Q -50 100 250 130 T 550 130 T 850 130 T 1150 130 T 1450 130 T 1750 130 T 2050 130",
+      delay: 1.0,
+      opacity: 0.05,
+      strokeWidth: 1.5,
+    },
+    {
+      d: "M -500 200 Q -200 230 100 200 T 400 200 T 700 200 T 1000 200 T 1300 200 T 1600 200 T 1900 200",
+      delay: 1.2,
+      opacity: 0.07,
+      strokeWidth: 1.5,
+    },
   ];
 
   return (
@@ -33,7 +68,7 @@ export function SoundWaveBackground({ className = "" }: SoundWaveBackgroundProps
         viewBox="-200 0 1200 350"
         className="absolute w-[200%] h-full left-1/2 -translate-x-1/2"
         preserveAspectRatio="xMidYMid slice"
-        style={{ minWidth: '2000px' }}
+        style={{ minWidth: "2000px" }}
       >
         <defs>
           {/* Primary wave gradient with very smooth edge fading */}
@@ -140,7 +175,7 @@ export function SoundWaveBackground({ className = "" }: SoundWaveBackgroundProps
               rgba(8, 9, 10, 0.8) 95%,
               rgba(8, 9, 10, 1) 100%
             )
-          `
+          `,
         }}
       />
 
@@ -155,7 +190,7 @@ export function SoundWaveBackground({ className = "" }: SoundWaveBackgroundProps
               rgba(8, 9, 10, 0) 80%,
               rgba(8, 9, 10, 0.5) 100%
             )
-          `
+          `,
         }}
       />
     </div>

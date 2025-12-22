@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 /**
  * ScrollToTop component
@@ -10,6 +10,6 @@ export function ScrollToTop() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  
+
   return null;
 }

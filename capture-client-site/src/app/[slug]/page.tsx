@@ -65,51 +65,54 @@ export default async function NationalPage({ params }: { params: Promise<{ slug:
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
-    "name": page.seo.page_title.split('|')[0]?.trim() || page.keyword.primary_keyword,
-    "description": page.seo.meta_description,
-    "provider": {
+    name: page.seo.page_title.split("|")[0]?.trim() || page.keyword.primary_keyword,
+    description: page.seo.meta_description,
+    provider: {
       "@type": "Organization",
-      "name": "Capture Client",
-      "url": "https://captureclient.com"
+      name: "Capture Client",
+      url: "https://captureclient.com",
     },
-    "areaServed": {
+    areaServed: {
       "@type": "Country",
-      "name": "United States"
+      name: "United States",
     },
-    "url": `https://captureclient.com/${resolvedParams.slug}`
+    url: `https://captureclient.com/${resolvedParams.slug}`,
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    "itemListElement": [
+    itemListElement: [
       {
         "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://captureclient.com"
+        position: 1,
+        name: "Home",
+        item: "https://captureclient.com",
       },
       {
         "@type": "ListItem",
-        "position": 2,
-        "name": page.keyword.primary_keyword,
-        "item": `https://captureclient.com/${resolvedParams.slug}`
-      }
-    ]
+        position: 2,
+        name: page.keyword.primary_keyword,
+        item: `https://captureclient.com/${resolvedParams.slug}`,
+      },
+    ],
   };
 
-  const faqSchema = page.faq && page.faq.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": page.faq.map((item: FAQItem) => ({
-      "@type": "Question",
-      "name": item.question,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": item.answer
-      }
-    }))
-  } : null;
+  const faqSchema =
+    page.faq && page.faq.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: page.faq.map((item: FAQItem) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: item.answer,
+            },
+          })),
+        }
+      : null;
 
   const schemas = faqSchema
     ? [serviceSchema, breadcrumbSchema, faqSchema]
@@ -155,20 +158,16 @@ export default async function NationalPage({ params }: { params: Promise<{ slug:
       {page.intro && (
         <div className="container mx-auto px-8 lg:px-16 py-16">
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-gray-700 leading-relaxed">
-              {page.intro.paragraph}
-            </p>
+            <p className="text-lg text-gray-700 leading-relaxed">{page.intro.paragraph}</p>
           </div>
         </div>
       )}
 
       {/* Benefits Section */}
-      { page.benefits && page.benefits.length > 0 && (
+      {page.benefits && page.benefits.length > 0 && (
         <section className="py-16 px-8 lg:px-16 bg-gray-50">
           <div className="container mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">
-              Key Benefits
-            </h2>
+            <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">Key Benefits</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {page.benefits.map((benefit: Benefit, index: number) => {
                 const IconComponent = getIcon(benefit.icon || "check_circle");
@@ -180,9 +179,7 @@ export default async function NationalPage({ params }: { params: Promise<{ slug:
                     <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary text-2xl mb-4">
                       <IconComponent className="w-6 h-6" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      {benefit.title}
-                    </h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
                     <p className="text-gray-600">{benefit.description}</p>
                   </div>
                 );
@@ -193,12 +190,10 @@ export default async function NationalPage({ params }: { params: Promise<{ slug:
       )}
 
       {/* How It Works Section */}
-      { page.how_it_works && page.how_it_works.length > 0 && (
+      {page.how_it_works && page.how_it_works.length > 0 && (
         <section className="py-16 px-8 lg:px-16">
           <div className="container mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">
-              How It Works
-            </h2>
+            <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">How It Works</h2>
             <div className="max-w-3xl mx-auto space-y-8">
               {page.how_it_works.map((step: HowItWorksStep) => (
                 <div
@@ -209,9 +204,7 @@ export default async function NationalPage({ params }: { params: Promise<{ slug:
                     {step.step}
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">
-                      {step.title}
-                    </h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
                     <p className="text-gray-600">{step.description}</p>
                   </div>
                 </div>
@@ -222,7 +215,7 @@ export default async function NationalPage({ params }: { params: Promise<{ slug:
       )}
 
       {/* Industry Use Cases */}
-      { page.industry_use_cases && page.industry_use_cases.length > 0 && (
+      {page.industry_use_cases && page.industry_use_cases.length > 0 && (
         <section className="py-16 px-8 lg:px-16 bg-gray-50">
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">
@@ -230,10 +223,7 @@ export default async function NationalPage({ params }: { params: Promise<{ slug:
             </h2>
             <div className="space-y-6">
               {page.industry_use_cases.map((useCase: UseCase, index: number) => (
-                <div
-                  key={index}
-                  className="border border-gray-200 rounded-lg p-6 bg-white"
-                >
+                <div key={index} className="border border-gray-200 rounded-lg p-6 bg-white">
                   <h3 className="text-xl font-bold text-primary mb-2">{useCase.industry}</h3>
                   <p className="text-gray-700 mb-2">
                     <strong>Challenge:</strong> {useCase.challenge}
@@ -252,15 +242,13 @@ export default async function NationalPage({ params }: { params: Promise<{ slug:
       )}
 
       {/* Nationwide Coverage */}
-      { page.nationwide_coverage && (
+      {page.nationwide_coverage && (
         <section className="py-16 px-8 lg:px-16">
           <div className="container mx-auto max-w-4xl text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
               {page.nationwide_coverage.heading}
             </h2>
-            <p className="text-lg text-gray-600 mb-6">
-              {page.nationwide_coverage.description}
-            </p>
+            <p className="text-lg text-gray-600 mb-6">{page.nationwide_coverage.description}</p>
             {page.nationwide_coverage.regions_highlighted && (
               <div className="flex flex-wrap justify-center gap-3">
                 {page.nationwide_coverage.regions_highlighted.map(
@@ -280,7 +268,7 @@ export default async function NationalPage({ params }: { params: Promise<{ slug:
       )}
 
       {/* FAQ Section */}
-      { page.faq && page.faq.length > 0 && (
+      {page.faq && page.faq.length > 0 && (
         <section className="py-16 px-8 lg:px-16 bg-gray-50">
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-4xl font-bold text-gray-900 text-center mb-12">
@@ -288,10 +276,7 @@ export default async function NationalPage({ params }: { params: Promise<{ slug:
             </h2>
             <div className="space-y-4">
               {page.faq.map((item: FAQItem, index: number) => (
-                <details
-                  key={index}
-                  className="border border-gray-200 rounded-lg p-6 bg-white"
-                >
+                <details key={index} className="border border-gray-200 rounded-lg p-6 bg-white">
                   <summary className="font-bold text-gray-900 cursor-pointer">
                     {item.question}
                   </summary>

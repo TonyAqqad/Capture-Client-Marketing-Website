@@ -11,21 +11,14 @@
     "state_abbr": "GA",
     "state_full": "Georgia",
     "slug": "savannah-ga",
-    "nearby_areas": [
-      "Pooler",
-      "Richmond Hill",
-      "Port Wentworth"
-    ],
+    "nearby_areas": ["Pooler", "Richmond Hill", "Port Wentworth"],
     "service_area_radius": "25 miles"
   },
   "seo": {
     "page_title": "Voice AI Agency in Savannah, GA | Capture Client",
     "meta_description": "Voice AI for Savannah businesses in the Historic District, Pooler Parkway, and Tybee Island. AI receptionist for coastal Georgia tourism and services. Call 865-346-6111!",
     "h1_heading": "Voice AI Agency in Savannah, Georgia",
-    "keywords": [
-      "voice ai savannah",
-      "ai receptionist savannah ga"
-    ],
+    "keywords": ["voice ai savannah", "ai receptionist savannah ga"],
     "canonical_url": "/voice-ai-savannah-ga"
   },
   "hero": {
@@ -181,13 +174,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "augusta-ga",
-      "atlanta-ga"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "nearby_locations": ["augusta-ga", "atlanta-ga"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

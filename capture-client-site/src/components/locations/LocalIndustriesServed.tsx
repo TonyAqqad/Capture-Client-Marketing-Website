@@ -1,8 +1,21 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Briefcase, Check, Wrench, Gavel, Heart, Home, Building2, Phone, Users, Truck, Calendar, MapPin } from 'lucide-react';
-import { LucideIcon } from 'lucide-react';
+import { useState } from "react";
+import {
+  Briefcase,
+  Check,
+  Wrench,
+  Gavel,
+  Heart,
+  Home,
+  Building2,
+  Phone,
+  Users,
+  Truck,
+  Calendar,
+  MapPin,
+} from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
 interface Industry {
   name: string;
@@ -17,16 +30,16 @@ interface LocalIndustriesServedProps {
 
 // Icon mapping: Material Icons → Lucide React
 const iconMap: Record<string, LucideIcon> = {
-  'build': Wrench,
-  'gavel': Gavel,
-  'local_hospital': Heart,
-  'home': Home,
-  'business': Building2,
-  'phone': Phone,
-  'people': Users,
-  'local_shipping': Truck,
-  'event': Calendar,
-  'location_on': MapPin,
+  build: Wrench,
+  gavel: Gavel,
+  local_hospital: Heart,
+  home: Home,
+  business: Building2,
+  phone: Phone,
+  people: Users,
+  local_shipping: Truck,
+  event: Calendar,
+  location_on: MapPin,
 };
 
 export default function LocalIndustriesServed({
@@ -83,8 +96,8 @@ export default function LocalIndustriesServed({
                     group relative inline-flex items-center gap-3 px-6 py-4 rounded-xl font-bold text-sm transition-all duration-300
                     ${
                       activeTab === index
-                        ? 'bg-gradient-to-br from-cyan-50 to-blue-50 border-2 border-cyan-400 text-cyan-700 shadow-lg shadow-cyan-400/20'
-                        : 'bg-white/70 border border-slate-200 text-slate-600 hover:border-cyan-400/30 hover:text-cyan-600'
+                        ? "bg-gradient-to-br from-cyan-50 to-blue-50 border-2 border-cyan-400 text-cyan-700 shadow-lg shadow-cyan-400/20"
+                        : "bg-white/70 border border-slate-200 text-slate-600 hover:border-cyan-400/30 hover:text-cyan-600"
                     }
                   `}
                 >
@@ -131,7 +144,9 @@ export default function LocalIndustriesServed({
                       <div className="flex items-center justify-center w-6 h-6 rounded-full bg-green-500/20 border border-green-500/40 shrink-0 mt-0.5">
                         <Check className="w-3.5 h-3.5 text-green-400" />
                       </div>
-                      <span className="text-sm text-slate-600">24/7 availability for your {city} customers</span>
+                      <span className="text-sm text-slate-600">
+                        24/7 availability for your {city} customers
+                      </span>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="flex items-center justify-center w-6 h-6 rounded-full bg-green-500/20 border border-green-500/40 shrink-0 mt-0.5">
@@ -164,10 +179,7 @@ export default function LocalIndustriesServed({
             {popularIndustries.map((industry, index) => {
               const IconComponent = getIcon(industry.icon);
               return (
-                <div
-                  key={index}
-                  className="flex-shrink-0 w-[85vw] sm:w-[400px] snap-center"
-                >
+                <div key={index} className="flex-shrink-0 w-[85vw] sm:w-[400px] snap-center">
                   <div className="group relative h-full">
                     <div className="absolute -inset-px bg-gradient-to-br from-cyan-400/20 via-blue-500/10 to-cyan-400/20 rounded-2xl blur-xl opacity-50" />
                     <div className="relative h-full bg-white/80 backdrop-blur-xl border border-slate-200 rounded-2xl p-6">
@@ -182,9 +194,7 @@ export default function LocalIndustriesServed({
                       </div>
 
                       {/* Content */}
-                      <h3 className="text-xl font-black text-slate-900 mb-3">
-                        {industry.name}
-                      </h3>
+                      <h3 className="text-xl font-black text-slate-900 mb-3">{industry.name}</h3>
                       <p className="text-sm text-slate-600 leading-relaxed mb-4">
                         {industry.description}
                       </p>
@@ -220,10 +230,7 @@ export default function LocalIndustriesServed({
           {/* Scroll Indicator */}
           <div className="flex items-center justify-center gap-2 mt-4">
             {popularIndustries.map((_, index) => (
-              <div
-                key={index}
-                className="w-2 h-2 rounded-full bg-slate-300"
-              />
+              <div key={index} className="w-2 h-2 rounded-full bg-slate-300" />
             ))}
           </div>
         </div>

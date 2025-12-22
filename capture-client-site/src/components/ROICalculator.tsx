@@ -6,7 +6,13 @@ import { useInView } from "@/hooks/useInView";
 import { useCountUp } from "@/hooks/useCountUp";
 import { ArrowRight, TrendingUp, DollarSign, Calculator } from "lucide-react";
 import Link from "next/link";
-import { use3DTilt, cardShadow, perspectiveContainer, transform3D, depthSpring } from "@/lib/depth-utils";
+import {
+  use3DTilt,
+  cardShadow,
+  perspectiveContainer,
+  transform3D,
+  depthSpring,
+} from "@/lib/depth-utils";
 import { useIsMobile } from "@/lib/responsive";
 
 interface Industry {
@@ -72,19 +78,27 @@ export default function ROICalculator() {
   });
 
   return (
-    <div ref={containerRef} className="w-full max-w-6xl mx-auto" style={isMobile ? {} : perspectiveContainer}>
+    <div
+      ref={containerRef}
+      className="w-full max-w-6xl mx-auto"
+      style={isMobile ? {} : perspectiveContainer}
+    >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        style={isMobile ? {
-          boxShadow: isHovered ? cardShadow.hover : cardShadow.rest,
-        } : {
-          ...transform3D,
-          rotateX,
-          rotateY,
-          boxShadow: isHovered ? cardShadow.hover : cardShadow.rest,
-        }}
+        style={
+          isMobile
+            ? {
+                boxShadow: isHovered ? cardShadow.hover : cardShadow.rest,
+              }
+            : {
+                ...transform3D,
+                rotateX,
+                rotateY,
+                boxShadow: isHovered ? cardShadow.hover : cardShadow.rest,
+              }
+        }
         className="bg-white/70 backdrop-blur-xl border border-slate-200/60 p-8 sm:p-10 lg:p-12 rounded-3xl relative overflow-hidden"
         {...handlers}
       >
@@ -135,7 +149,8 @@ export default function ROICalculator() {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-lg text-slate-600 max-w-2xl mx-auto"
             >
-              See how much revenue you&apos;re losing to missed calls—and how much Capture Client can recover.
+              See how much revenue you&apos;re losing to missed calls—and how much Capture Client
+              can recover.
             </motion.p>
           </div>
 
@@ -150,14 +165,17 @@ export default function ROICalculator() {
             >
               {/* Industry Dropdown */}
               <div>
-                <label htmlFor="roi-industry" className="block text-sm font-semibold text-slate-900 mb-3">
+                <label
+                  htmlFor="roi-industry"
+                  className="block text-sm font-semibold text-slate-900 mb-3"
+                >
                   Your Industry
                 </label>
                 <select
                   id="roi-industry"
                   value={selectedIndustry.value}
                   onChange={(e) => {
-                    const industry = industries.find(i => i.value === e.target.value);
+                    const industry = industries.find((i) => i.value === e.target.value);
                     if (industry) setSelectedIndustry(industry);
                   }}
                   className="w-full px-5 py-4 rounded-xl bg-white border border-slate-200 text-slate-900 text-base font-medium focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all cursor-pointer"
@@ -180,7 +198,7 @@ export default function ROICalculator() {
                     ${jobValue.toLocaleString()}
                   </span>
                 </div>
-                <div style={{ touchAction: 'pan-y' }}>
+                <div style={{ touchAction: "pan-y" }}>
                   <input
                     id="roi-job-value"
                     type="range"
@@ -208,14 +226,17 @@ export default function ROICalculator() {
               {/* Missed Calls Slider */}
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <label htmlFor="roi-missed-calls" className="text-sm font-semibold text-slate-900">
+                  <label
+                    htmlFor="roi-missed-calls"
+                    className="text-sm font-semibold text-slate-900"
+                  >
                     Missed Calls Per Week
                   </label>
                   <span className="text-2xl font-bold text-blue-600" aria-live="polite">
                     {missedCalls}
                   </span>
                 </div>
-                <div style={{ touchAction: 'pan-y' }}>
+                <div style={{ touchAction: "pan-y" }}>
                   <input
                     id="roi-missed-calls"
                     type="range"
@@ -243,8 +264,8 @@ export default function ROICalculator() {
               {/* Assumption Note */}
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-4">
                 <p className="text-sm text-slate-600">
-                  <span className="font-semibold text-slate-900">Assumptions:</span> {conversionRate}% conversion rate,
-                  85% answer rate with Capture Client AI
+                  <span className="font-semibold text-slate-900">Assumptions:</span>{" "}
+                  {conversionRate}% conversion rate, 85% answer rate with Capture Client AI
                 </p>
               </div>
             </motion.div>
@@ -275,9 +296,7 @@ export default function ROICalculator() {
                 >
                   ${animatedMonthlyLost.toLocaleString()}
                 </p>
-                <p className="text-sm text-slate-600 mt-2">
-                  Revenue lost to missed calls
-                </p>
+                <p className="text-sm text-slate-600 mt-2">Revenue lost to missed calls</p>
               </motion.div>
 
               {/* Monthly Captured */}
@@ -299,9 +318,7 @@ export default function ROICalculator() {
                 >
                   ${animatedMonthlyCaptured.toLocaleString()}
                 </p>
-                <p className="text-sm text-slate-600 mt-2">
-                  Per month (85% answer rate)
-                </p>
+                <p className="text-sm text-slate-600 mt-2">Per month (85% answer rate)</p>
               </motion.div>
 
               {/* Annual Savings */}
@@ -323,9 +340,7 @@ export default function ROICalculator() {
                 >
                   ${Math.round(animatedAnnualSavings / 1000)}K
                 </p>
-                <p className="text-sm text-slate-600 mt-2">
-                  Total first-year projection
-                </p>
+                <p className="text-sm text-slate-600 mt-2">Total first-year projection</p>
               </motion.div>
             </motion.div>
           </div>
@@ -366,13 +381,17 @@ export default function ROICalculator() {
             border-radius: 50%;
             background: #2563eb;
             cursor: pointer;
-            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2), 0 4px 12px rgba(37, 99, 235, 0.4);
+            box-shadow:
+              0 0 0 4px rgba(37, 99, 235, 0.2),
+              0 4px 12px rgba(37, 99, 235, 0.4);
             transition: all 0.2s;
           }
 
           input[type="range"]::-webkit-slider-thumb:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.3), 0 6px 16px rgba(37, 99, 235, 0.5);
+            box-shadow:
+              0 0 0 6px rgba(37, 99, 235, 0.3),
+              0 6px 16px rgba(37, 99, 235, 0.5);
           }
 
           input[type="range"]::-moz-range-thumb {
@@ -382,13 +401,17 @@ export default function ROICalculator() {
             background: #2563eb;
             cursor: pointer;
             border: none;
-            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2), 0 4px 12px rgba(37, 99, 235, 0.4);
+            box-shadow:
+              0 0 0 4px rgba(37, 99, 235, 0.2),
+              0 4px 12px rgba(37, 99, 235, 0.4);
             transition: all 0.2s;
           }
 
           input[type="range"]::-moz-range-thumb:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.3), 0 6px 16px rgba(37, 99, 235, 0.5);
+            box-shadow:
+              0 0 0 6px rgba(37, 99, 235, 0.3),
+              0 6px 16px rgba(37, 99, 235, 0.5);
           }
         `}</style>
       </motion.div>

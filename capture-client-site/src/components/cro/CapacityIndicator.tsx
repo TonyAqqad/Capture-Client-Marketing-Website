@@ -49,7 +49,8 @@ export default function CapacityIndicator({
           <div className="flex flex-wrap items-center justify-center gap-2.5 text-center">
             <Clock className="w-5 h-5 text-blue-400/80" />
             <p className="text-sm md:text-base font-semibold text-slate-800">
-              <span className="text-blue-400">{spotsLeft} onboarding spots</span> available this month
+              <span className="text-blue-400">{spotsLeft} onboarding spots</span> available this
+              month
             </p>
           </div>
         </div>

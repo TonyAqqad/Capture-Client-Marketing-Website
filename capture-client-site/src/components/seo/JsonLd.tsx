@@ -15,7 +15,7 @@
  * - Next.js metadata best practices: https://nextjs.org/docs/app/building-your-application/optimizing/metadata
  */
 
-import Script from 'next/script';
+import Script from "next/script";
 
 interface JsonLdProps {
   schema: Record<string, unknown> | Array<Record<string, unknown>>;

@@ -15,7 +15,7 @@ import {
   Zap,
   Award,
   Shield,
-  PlayCircle
+  PlayCircle,
 } from "lucide-react";
 
 // Treatment type data
@@ -26,7 +26,7 @@ const TREATMENT_TYPES = [
     emoji: "💉",
     value: "$800-2K",
     scenario: "Botox/filler inquiry",
-    pain: "Client researching injectables calls at 7 PM. Front desk gone. They book at the med spa that answered."
+    pain: "Client researching injectables calls at 7 PM. Front desk gone. They book at the med spa that answered.",
   },
   {
     id: "laser",
@@ -34,7 +34,7 @@ const TREATMENT_TYPES = [
     emoji: "✨",
     value: "$2K-5K",
     scenario: "Laser skin inquiry",
-    pain: "High-value client wants laser resurfacing consultation. Weekend call. Lost to competitor with 24/7 answering."
+    pain: "High-value client wants laser resurfacing consultation. Weekend call. Lost to competitor with 24/7 answering.",
   },
   {
     id: "body",
@@ -42,7 +42,7 @@ const TREATMENT_TYPES = [
     emoji: "🏋️",
     value: "$3K-8K",
     scenario: "CoolSculpting consultation",
-    pain: "Motivated client calls about body contouring package. After hours. $5K treatment goes to competitor."
+    pain: "Motivated client calls about body contouring package. After hours. $5K treatment goes to competitor.",
   },
   {
     id: "skin",
@@ -50,8 +50,8 @@ const TREATMENT_TYPES = [
     emoji: "💆",
     value: "$150-500",
     scenario: "Facial booking request",
-    pain: "New client wants signature facial. Call during busy treatment hours. Staff can't answer. Lost first visit."
-  }
+    pain: "New client wants signature facial. Call during busy treatment hours. Staff can't answer. Lost first visit.",
+  },
 ];
 
 // Integration platforms
@@ -61,7 +61,7 @@ const INTEGRATIONS = [
   { name: "Zenoti", logo: "🧘" },
   { name: "Vagaro", logo: "💼" },
   { name: "Meevo", logo: "🎨" },
-  { name: "Phorest", logo: "🌿" }
+  { name: "Phorest", logo: "🌿" },
 ];
 
 // Testimonials
@@ -69,21 +69,24 @@ const TESTIMONIALS = [
   {
     name: "Dr. Alexandra Reed",
     business: "Luxe Med Spa - Beverly Hills",
-    quote: "Our AI receptionist captured a $12K facial package inquiry at 9 PM. That client has now spent $45K with us.",
-    revenue: "$45K LTV"
+    quote:
+      "Our AI receptionist captured a $12K facial package inquiry at 9 PM. That client has now spent $45K with us.",
+    revenue: "$45K LTV",
   },
   {
     name: "Jessica Williams",
     business: "Glow Aesthetics - Scottsdale",
-    quote: "CoolSculpting inquiries used to go to voicemail. Now AI books consultations 24/7. 40% increase in conversions.",
-    revenue: "+40%"
+    quote:
+      "CoolSculpting inquiries used to go to voicemail. Now AI books consultations 24/7. 40% increase in conversions.",
+    revenue: "+40%",
   },
   {
     name: "Dr. Michael Chen",
     business: "Elite Aesthetics - NYC",
-    quote: "Our clientele expects white-glove service. The AI delivers that experience even at midnight.",
-    revenue: "$250K/yr"
-  }
+    quote:
+      "Our clientele expects white-glove service. The AI delivers that experience even at midnight.",
+    revenue: "$250K/yr",
+  },
 ];
 
 export default function MedSpaClient() {
@@ -131,7 +134,7 @@ export default function MedSpaClient() {
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.2, 0.3, 0.2],
-            rotate: [0, 90, 0]
+            rotate: [0, 90, 0],
           }}
           transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         >
@@ -142,7 +145,7 @@ export default function MedSpaClient() {
           className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full opacity-15"
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.15, 0.25, 0.15]
+            opacity: [0.15, 0.25, 0.15],
           }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         >
@@ -166,7 +169,9 @@ export default function MedSpaClient() {
               >
                 <Sparkles className="w-5 h-5 text-blue-600" />
               </motion.div>
-              <span className="text-sm font-semibold text-blue-600">For Med Spas & Aesthetic Practices</span>
+              <span className="text-sm font-semibold text-blue-600">
+                For Med Spas & Aesthetic Practices
+              </span>
             </motion.div>
 
             {/* Main Headline */}
@@ -184,8 +189,8 @@ export default function MedSpaClient() {
                 transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
               >
                 ${moneyLost.toLocaleString()}/Year
-              </motion.span>
-              {" "}to Missed Consultations
+              </motion.span>{" "}
+              to Missed Consultations
             </motion.h1>
 
             {/* Subheadline */}
@@ -249,7 +254,7 @@ export default function MedSpaClient() {
               {[
                 { stat: "32%", label: "Call After Hours" },
                 { stat: "$4,200", label: "Avg Client LTV" },
-                { stat: "10x", label: "Phone Lead ROI" }
+                { stat: "10x", label: "Phone Lead ROI" },
               ].map((item, index) => (
                 <motion.div
                   key={index}
@@ -307,20 +312,20 @@ export default function MedSpaClient() {
                 icon: Phone,
                 title: "VIP Client Calls",
                 description: "$2,000 laser treatment inquiry at 7:30 PM",
-                color: "text-blue-600"
+                color: "text-blue-600",
               },
               {
                 icon: Clock,
                 title: "No Answer",
                 description: "Front desk closed. Call goes to voicemail.",
-                color: "text-red-600"
+                color: "text-red-600",
               },
               {
                 icon: TrendingUp,
                 title: "Books at Competitor",
                 description: "They call the next med spa. $4,200 lifetime value lost.",
-                color: "text-blue-600"
-              }
+                color: "text-blue-600",
+              },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -352,7 +357,8 @@ export default function MedSpaClient() {
           >
             <div className="bg-white/70 backdrop-blur-xl p-8 rounded-2xl inline-block border-2 border-blue-300 shadow-lg shadow-slate-200/50">
               <p className="text-2xl font-bold text-slate-900 mb-2">
-                <span className="text-blue-600">32%</span> of spa bookings occur after business hours
+                <span className="text-blue-600">32%</span> of spa bookings occur after business
+                hours
               </p>
               <p className="text-lg text-slate-600">
                 Average treatment value: <span className="text-blue-600 font-semibold">$1,500</span>
@@ -400,9 +406,10 @@ export default function MedSpaClient() {
                 whileHover={{
                   y: -3,
                   scale: 1.02,
-                  boxShadow: selectedTreatment === treatment.id
-                    ? "0 0 30px rgba(59, 130, 246, 0.4)"
-                    : "0 0 20px rgba(59, 130, 246, 0.2)"
+                  boxShadow:
+                    selectedTreatment === treatment.id
+                      ? "0 0 30px rgba(59, 130, 246, 0.4)"
+                      : "0 0 20px rgba(59, 130, 246, 0.2)",
                 }}
                 whileTap={{ scale: 0.98 }}
                 className={`px-6 py-4 rounded-xl font-semibold transition-all relative overflow-hidden ${
@@ -426,56 +433,60 @@ export default function MedSpaClient() {
 
           {/* Tab Content */}
           <AnimatePresence mode="wait">
-            {TREATMENT_TYPES.map((treatment) => (
-              selectedTreatment === treatment.id && (
-                <motion.div
-                  key={treatment.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -20 }}
-                  transition={{ duration: 0.3 }}
-                  className="bg-white/70 backdrop-blur-xl p-10 rounded-2xl border-2 border-blue-300 shadow-lg shadow-slate-200/50 max-w-4xl mx-auto"
-                >
-                  <div className="grid md:grid-cols-2 gap-8 items-center">
-                    <div>
-                      <div className="text-6xl mb-6">{treatment.emoji}</div>
-                      <h3 className="text-3xl font-bold text-slate-900 mb-4">{treatment.name}</h3>
-                      <div className="flex items-center gap-3 mb-6">
-                        <DollarSign className="w-6 h-6 text-blue-600" />
-                        <span className="text-2xl font-bold text-blue-600">{treatment.value}</span>
-                        <span className="text-slate-600">per treatment</span>
+            {TREATMENT_TYPES.map(
+              (treatment) =>
+                selectedTreatment === treatment.id && (
+                  <motion.div
+                    key={treatment.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -20 }}
+                    transition={{ duration: 0.3 }}
+                    className="bg-white/70 backdrop-blur-xl p-10 rounded-2xl border-2 border-blue-300 shadow-lg shadow-slate-200/50 max-w-4xl mx-auto"
+                  >
+                    <div className="grid md:grid-cols-2 gap-8 items-center">
+                      <div>
+                        <div className="text-6xl mb-6">{treatment.emoji}</div>
+                        <h3 className="text-3xl font-bold text-slate-900 mb-4">{treatment.name}</h3>
+                        <div className="flex items-center gap-3 mb-6">
+                          <DollarSign className="w-6 h-6 text-blue-600" />
+                          <span className="text-2xl font-bold text-blue-600">
+                            {treatment.value}
+                          </span>
+                          <span className="text-slate-600">per treatment</span>
+                        </div>
+                        <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                          Scenario:{" "}
+                          <span className="text-slate-900 font-semibold">{treatment.scenario}</span>
+                        </p>
                       </div>
-                      <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                        Scenario: <span className="text-slate-900 font-semibold">{treatment.scenario}</span>
-                      </p>
+                      <div className="bg-white/50 p-8 rounded-xl border-l-4 border-red-500">
+                        <div className="flex items-start gap-3 mb-4">
+                          <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
+                            <span className="text-red-600 font-bold">!</span>
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-red-600 mb-2">Without AI Concierge:</h4>
+                            <p className="text-slate-600 leading-relaxed">{treatment.pain}</p>
+                          </div>
+                        </div>
+                        <div className="flex items-start gap-3 mt-6 pt-6 border-t border-slate-200">
+                          <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
+                            <CheckCircle2 className="w-5 h-5 text-blue-600" />
+                          </div>
+                          <div>
+                            <h4 className="font-bold text-blue-600 mb-2">With AI Concierge:</h4>
+                            <p className="text-slate-600 leading-relaxed">
+                              AI answers elegantly, qualifies the client, books consultation into
+                              your calendar. You capture the high-value treatment.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div className="bg-white/50 p-8 rounded-xl border-l-4 border-red-500">
-                      <div className="flex items-start gap-3 mb-4">
-                        <div className="w-8 h-8 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0">
-                          <span className="text-red-600 font-bold">!</span>
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-red-600 mb-2">Without AI Concierge:</h4>
-                          <p className="text-slate-600 leading-relaxed">{treatment.pain}</p>
-                        </div>
-                      </div>
-                      <div className="flex items-start gap-3 mt-6 pt-6 border-t border-slate-200">
-                        <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0">
-                          <CheckCircle2 className="w-5 h-5 text-blue-600" />
-                        </div>
-                        <div>
-                          <h4 className="font-bold text-blue-600 mb-2">With AI Concierge:</h4>
-                          <p className="text-slate-600 leading-relaxed">
-                            AI answers elegantly, qualifies the client, books consultation into your calendar.
-                            You capture the high-value treatment.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              )
-            ))}
+                  </motion.div>
+                )
+            )}
           </AnimatePresence>
         </div>
       </section>
@@ -491,7 +502,9 @@ export default function MedSpaClient() {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 mb-6"
             >
               <Award className="w-5 h-5 text-blue-600" />
-              <span className="text-sm font-semibold text-blue-600">Luxury Practice Integration</span>
+              <span className="text-sm font-semibold text-blue-600">
+                Luxury Practice Integration
+              </span>
             </motion.div>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -523,7 +536,7 @@ export default function MedSpaClient() {
                 whileHover={{
                   y: -5,
                   scale: 1.08,
-                  boxShadow: "0 10px 25px rgba(148, 163, 184, 0.3)"
+                  boxShadow: "0 10px 25px rgba(148, 163, 184, 0.3)",
                 }}
                 className="bg-white/70 backdrop-blur-xl p-6 rounded-xl text-center transition-all cursor-default hover:border-blue-300 border border-slate-200 shadow-md shadow-slate-200/50"
               >
@@ -626,7 +639,9 @@ export default function MedSpaClient() {
                 />
                 <div className="flex justify-between mt-3">
                   <span className="text-slate-600 text-sm">$200</span>
-                  <span className="text-2xl font-bold text-blue-600">${avgTreatmentValue.toLocaleString()}</span>
+                  <span className="text-2xl font-bold text-blue-600">
+                    ${avgTreatmentValue.toLocaleString()}
+                  </span>
                   <span className="text-slate-600 text-sm">$3,000</span>
                 </div>
               </div>
@@ -647,7 +662,9 @@ export default function MedSpaClient() {
                     <p className="text-sm text-slate-600">Missed calls/month</p>
                   </div>
                   <div className="text-center">
-                    <p className="text-3xl font-bold text-cyan-600">${monthlyLostRevenue.toLocaleString()}</p>
+                    <p className="text-3xl font-bold text-cyan-600">
+                      ${monthlyLostRevenue.toLocaleString()}
+                    </p>
                     <p className="text-sm text-slate-600">Lost/month</p>
                   </div>
                 </div>
@@ -694,26 +711,26 @@ export default function MedSpaClient() {
                 step: "01",
                 icon: Phone,
                 title: "VIP Client Calls",
-                description: "Inquiry comes in—2 PM or 2 AM, doesn't matter"
+                description: "Inquiry comes in—2 PM or 2 AM, doesn't matter",
               },
               {
                 step: "02",
                 icon: Star,
                 title: "AI Concierge Answers",
-                description: "Elegant, professional greeting. Sounds like 5-star service."
+                description: "Elegant, professional greeting. Sounds like 5-star service.",
               },
               {
                 step: "03",
                 icon: Calendar,
                 title: "Books Consultation",
-                description: "AI qualifies client, checks availability, schedules in your system"
+                description: "AI qualifies client, checks availability, schedules in your system",
               },
               {
                 step: "04",
                 icon: TrendingUp,
                 title: "You Win the Client",
-                description: "They show up to consultation ready to book treatments"
-              }
+                description: "They show up to consultation ready to book treatments",
+              },
             ].map((item, index) => (
               <motion.div
                 key={index}
@@ -724,7 +741,7 @@ export default function MedSpaClient() {
                 whileHover={{
                   y: -8,
                   scale: 1.03,
-                  boxShadow: "0 10px 30px rgba(148, 163, 184, 0.3)"
+                  boxShadow: "0 10px 30px rgba(148, 163, 184, 0.3)",
                 }}
                 className="bg-white/70 backdrop-blur-xl p-8 rounded-2xl text-center relative cursor-default transition-all border border-slate-200 hover:border-blue-300 shadow-lg shadow-slate-200/50"
               >
@@ -740,7 +757,7 @@ export default function MedSpaClient() {
                   whileHover={{
                     scale: 1.15,
                     rotate: 10,
-                    boxShadow: "0 0 20px rgba(37, 99, 235, 0.4)"
+                    boxShadow: "0 0 20px rgba(37, 99, 235, 0.4)",
                   }}
                   transition={{ duration: 0.3 }}
                 >
@@ -790,7 +807,7 @@ export default function MedSpaClient() {
                 whileHover={{
                   y: -10,
                   scale: 1.02,
-                  boxShadow: "0 10px 30px rgba(148, 163, 184, 0.3)"
+                  boxShadow: "0 10px 30px rgba(148, 163, 184, 0.3)",
                 }}
                 className="bg-white/70 backdrop-blur-xl p-8 rounded-2xl border border-slate-200 hover:border-blue-300 transition-all cursor-default shadow-lg shadow-slate-200/50"
               >
@@ -803,9 +820,7 @@ export default function MedSpaClient() {
                 >
                   &ldquo;
                 </motion.div>
-                <p className="text-slate-900 mb-6 leading-relaxed text-lg">
-                  {testimonial.quote}
-                </p>
+                <p className="text-slate-900 mb-6 leading-relaxed text-lg">{testimonial.quote}</p>
                 <div className="flex items-center justify-between pt-6 border-t border-slate-200">
                   <div>
                     <p className="font-bold text-slate-900">{testimonial.name}</p>
@@ -860,7 +875,7 @@ export default function MedSpaClient() {
                     "Goes straight to voicemail",
                     "Client calls competitor next",
                     "You lose $4,200 lifetime value",
-                    "Miss 30% of all inquiries"
+                    "Miss 30% of all inquiries",
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <span className="text-red-600 mt-1">•</span>
@@ -889,7 +904,7 @@ export default function MedSpaClient() {
                     "AI answers with 5-star service",
                     "Books consultation instantly",
                     "Client becomes loyal to YOU",
-                    "Capture 100% of inquiries"
+                    "Capture 100% of inquiries",
                   ].map((item, index) => (
                     <li key={index} className="flex items-start gap-3">
                       <CheckCircle2 className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0" />
@@ -910,7 +925,7 @@ export default function MedSpaClient() {
           className="absolute inset-0"
           animate={{
             opacity: [0.2, 0.3, 0.2],
-            scale: [1, 1.1, 1]
+            scale: [1, 1.1, 1],
           }}
           transition={{ duration: 8, repeat: Infinity }}
         >
@@ -926,7 +941,9 @@ export default function MedSpaClient() {
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-blue-50 to-cyan-50 border border-blue-200 mb-8 shadow-lg shadow-slate-200/50"
             >
               <Shield className="w-5 h-5 text-blue-600" />
-              <span className="text-sm font-semibold text-blue-600">Exclusive: Only 3 Med Spas Onboarded Per Month</span>
+              <span className="text-sm font-semibold text-blue-600">
+                Exclusive: Only 3 Med Spas Onboarded Per Month
+              </span>
             </motion.div>
 
             <motion.h2
@@ -936,7 +953,9 @@ export default function MedSpaClient() {
               className="text-display-lg lg:text-hero font-display font-bold text-slate-900 mb-6"
             >
               Elevate Your Client Experience{" "}
-              <span className="text-gradient bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Tonight</span>
+              <span className="text-gradient bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                Tonight
+              </span>
             </motion.h2>
 
             <motion.p
@@ -946,8 +965,8 @@ export default function MedSpaClient() {
               transition={{ delay: 0.1 }}
               className="text-xl sm:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto"
             >
-              Every missed call is a VIP client lost to your competitor.
-              Join the elite med spas capturing 100% of inquiries.
+              Every missed call is a VIP client lost to your competitor. Join the elite med spas
+              capturing 100% of inquiries.
             </motion.p>
 
             <motion.div
@@ -961,7 +980,7 @@ export default function MedSpaClient() {
                 href="tel:865-346-6111"
                 className="bg-gradient-to-r from-blue-500 to-cyan-400 px-12 py-6 text-2xl font-bold rounded-xl inline-flex items-center gap-3 shadow-lg shadow-blue-500/50 w-full sm:w-auto relative overflow-hidden group text-white hover:shadow-xl hover:shadow-blue-500/60 transition-all"
                 whileHover={{
-                  scale: 1.05
+                  scale: 1.05,
                 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -974,21 +993,18 @@ export default function MedSpaClient() {
                 <motion.div
                   className="absolute inset-0 bg-gradient-to-r from-blue-400/0 via-blue-200/20 to-blue-400/0"
                   animate={{
-                    x: ["-100%", "100%"]
+                    x: ["-100%", "100%"],
                   }}
                   transition={{
                     duration: 3,
                     repeat: Infinity,
-                    ease: "linear"
+                    ease: "linear",
                   }}
                 />
                 <Phone className="w-7 h-7 relative z-10" />
                 <span className="relative z-10">Call 865-346-6111</span>
               </motion.a>
-              <motion.div
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
-              >
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
                 <Link
                   href="/demo"
                   className="bg-white/70 backdrop-blur-xl border border-slate-200 px-12 py-6 text-2xl font-semibold rounded-xl inline-flex items-center gap-3 transition-all w-full sm:w-auto text-slate-900 hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50"

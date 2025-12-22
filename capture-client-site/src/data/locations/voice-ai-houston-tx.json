@@ -11,13 +11,7 @@
     "state": "Texas",
     "state_abbr": "TX",
     "slug": "houston-tx",
-    "nearby_areas": [
-      "Sugar Land",
-      "Katy",
-      "The Woodlands",
-      "Pearland",
-      "Pasadena"
-    ],
+    "nearby_areas": ["Sugar Land", "Katy", "The Woodlands", "Pearland", "Pasadena"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -182,14 +176,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "voice-ai-sugar-land-tx",
-      "voice-ai-katy-tx",
-      "voice-ai-the-woodlands-tx"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "nearby_locations": ["voice-ai-sugar-land-tx", "voice-ai-katy-tx", "voice-ai-the-woodlands-tx"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

@@ -1,7 +1,23 @@
 "use client";
 
 import { motion } from "@/lib/motion";
-import { PhoneCall, Binary, MousePointerClick, RefreshCcw, CreditCard, Calendar, Dumbbell, Boxes, Cloud, Mail, TrendingUp, MessageSquare, ShieldCheck, Gauge, Headset } from "lucide-react";
+import {
+  PhoneCall,
+  Binary,
+  MousePointerClick,
+  RefreshCcw,
+  CreditCard,
+  Calendar,
+  Dumbbell,
+  Boxes,
+  Cloud,
+  Mail,
+  TrendingUp,
+  MessageSquare,
+  ShieldCheck,
+  Gauge,
+  Headset,
+} from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 interface Integration {
@@ -15,7 +31,12 @@ export default function AsSeenIn() {
   const technicalIntegrations: Integration[] = [
     { name: "Twilio", Icon: PhoneCall, category: "Voice & SMS API", color: "text-red-400" },
     { name: "Google APIs", Icon: Binary, category: "Analytics & Ads", color: "text-blue-400" },
-    { name: "Meta Business", Icon: MousePointerClick, category: "Facebook Ads", color: "text-blue-500" },
+    {
+      name: "Meta Business",
+      Icon: MousePointerClick,
+      category: "Facebook Ads",
+      color: "text-blue-500",
+    },
     { name: "Zapier", Icon: RefreshCcw, category: "Automation", color: "text-orange-400" },
     { name: "Stripe", Icon: CreditCard, category: "Payments", color: "text-blue-600" },
     { name: "Calendly", Icon: Calendar, category: "Scheduling", color: "text-cyan-400" },
@@ -26,7 +47,12 @@ export default function AsSeenIn() {
     { name: "HubSpot", Icon: Boxes, category: "CRM Platform", color: "text-orange-500" },
     { name: "Salesforce", Icon: Cloud, category: "Enterprise CRM", color: "text-blue-400" },
     { name: "Mailchimp", Icon: Mail, category: "Email Marketing", color: "text-yellow-400" },
-    { name: "GoHighLevel", Icon: TrendingUp, category: "Marketing Automation", color: "text-green-400" },
+    {
+      name: "GoHighLevel",
+      Icon: TrendingUp,
+      category: "Marketing Automation",
+      color: "text-green-400",
+    },
     { name: "Slack", Icon: MessageSquare, category: "Team Communication", color: "text-blue-600" },
   ];
 
@@ -141,7 +167,9 @@ export default function AsSeenIn() {
               <span className="text-xs sm:text-sm font-semibold text-slate-900 block">
                 Enterprise-Grade Security
               </span>
-              <span className="text-xs text-slate-500 hidden sm:block">SOC 2 Compliant Infrastructure</span>
+              <span className="text-xs text-slate-500 hidden sm:block">
+                SOC 2 Compliant Infrastructure
+              </span>
             </div>
           </motion.div>
 
@@ -173,7 +201,9 @@ export default function AsSeenIn() {
               <span className="text-xs sm:text-sm font-semibold text-slate-900 block">
                 24/7 Support
               </span>
-              <span className="text-xs text-slate-500 hidden sm:block">Expert assistance always available</span>
+              <span className="text-xs text-slate-500 hidden sm:block">
+                Expert assistance always available
+              </span>
             </div>
           </motion.div>
         </div>

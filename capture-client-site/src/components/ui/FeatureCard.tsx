@@ -18,23 +18,24 @@ export function FeatureCard({
   title,
   description,
   iconColor = "primary",
-  index = 0
+  index = 0,
 }: FeatureCardProps) {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => {
-      if (typeof window === 'undefined') return;
+      if (typeof window === "undefined") return;
       setIsMobile(window.innerWidth < 768);
     };
     checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  const iconColorClasses = iconColor === "primary"
-    ? "bg-primary/10 border-primary/20 text-primary group-hover:bg-primary/20"
-    : "bg-accent/10 border-accent/20 text-accent group-hover:bg-accent/20";
+  const iconColorClasses =
+    iconColor === "primary"
+      ? "bg-primary/10 border-primary/20 text-primary group-hover:bg-primary/20"
+      : "bg-accent/10 border-accent/20 text-accent group-hover:bg-accent/20";
 
   return (
     <motion.div
@@ -43,7 +44,7 @@ export function FeatureCard({
       transition={{
         duration: 0.5,
         delay: index * 0.1,
-        ease: [0.21, 0.47, 0.32, 0.98]
+        ease: [0.21, 0.47, 0.32, 0.98],
       }}
       viewport={{ once: true, margin: "0px" }} // Changed: removed negative margin
     >
@@ -76,12 +77,12 @@ export function FeatureCard({
                 className={`absolute inset-0 rounded-xl border-2 ${iconColor === "primary" ? "border-primary" : "border-accent"} opacity-0 group-hover:opacity-50`}
                 animate={{
                   scale: [1, 1.3],
-                  opacity: [0.5, 0]
+                  opacity: [0.5, 0],
                 }}
                 transition={{
                   duration: 1.5,
                   repeat: Infinity,
-                  repeatDelay: 0.5
+                  repeatDelay: 0.5,
                 }}
               />
             )}

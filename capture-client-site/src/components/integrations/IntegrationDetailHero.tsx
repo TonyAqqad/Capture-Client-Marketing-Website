@@ -19,7 +19,7 @@ import {
   BarChart,
   CreditCard,
   Layers,
-  type LucideIcon
+  type LucideIcon,
 } from "lucide-react";
 
 interface IntegrationDetailHeroProps {
@@ -58,7 +58,7 @@ export function IntegrationDetailHero({
     heart: Heart,
     building: Building,
     chart: BarChart,
-    'credit-card': CreditCard,
+    "credit-card": CreditCard,
     layers: Layers,
   };
 
@@ -107,18 +107,13 @@ export function IntegrationDetailHero({
             transition={{ duration: 0.5, delay: 0.1 }}
             className="flex items-center justify-center gap-2 text-sm text-slate-600 mb-6"
           >
-            <Link
-              href="/integrations"
-              className="hover:text-accent transition-colors"
-            >
+            <Link href="/integrations" className="hover:text-accent transition-colors">
               Integrations
             </Link>
             <ChevronRight className="w-3 h-3" />
             {categoryName && (
               <>
-                <span className="hover:text-accent transition-colors">
-                  {categoryName}
-                </span>
+                <span className="hover:text-accent transition-colors">{categoryName}</span>
                 <ChevronRight className="w-3 h-3" />
               </>
             )}
@@ -160,11 +155,7 @@ export function IntegrationDetailHero({
                 Set Up Integration
               </Button>
             </Link>
-            <a
-              href={url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href={url} target="_blank" rel="noopener noreferrer">
               <Button variant="glass" size="lg">
                 Visit {name}
               </Button>

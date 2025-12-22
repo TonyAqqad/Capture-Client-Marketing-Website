@@ -66,9 +66,7 @@ function StarRating({ rating }: { rating: number }) {
         <Star
           key={star}
           className={`w-4 h-4 ${
-            star <= rating
-              ? "fill-amber-400 text-amber-400"
-              : "fill-slate-200 text-slate-200"
+            star <= rating ? "fill-amber-400 text-amber-400" : "fill-slate-200 text-slate-200"
           }`}
         />
       ))}
@@ -97,7 +95,9 @@ function ReviewCard({ review, index }: { review: GoogleReview; index: number }) 
     >
       <div style={isMobile ? {} : perspectiveContainer}>
         <motion.div
-          style={isMobile ? {} : { ...transform3D, rotateX: cardTilt.rotateX, rotateY: cardTilt.rotateY }}
+          style={
+            isMobile ? {} : { ...transform3D, rotateX: cardTilt.rotateX, rotateY: cardTilt.rotateY }
+          }
           animate={{ boxShadow: cardTilt.isHovered ? cardShadow.hover : cardShadow.rest }}
           transition={{ duration: 0.3 }}
           {...cardTilt.handlers}
@@ -186,7 +186,8 @@ export function GoogleReviews({ data = fallbackData }: GoogleReviewsProps) {
         <div
           className="absolute top-0 left-1/4 w-[500px] h-[500px] opacity-20"
           style={{
-            background: "radial-gradient(circle at center, rgba(14, 165, 233, 0.08) 0%, transparent 60%)",
+            background:
+              "radial-gradient(circle at center, rgba(14, 165, 233, 0.08) 0%, transparent 60%)",
             filter: "blur(60px)",
           }}
         />
@@ -239,10 +240,7 @@ export function GoogleReviews({ data = fallbackData }: GoogleReviewsProps) {
             <div className="flex flex-col items-start gap-1">
               <div className="flex items-center gap-0.5">
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <Star
-                    key={star}
-                    className="w-6 h-6 fill-amber-400 text-amber-400"
-                  />
+                  <Star key={star} className="w-6 h-6 fill-amber-400 text-amber-400" />
                 ))}
               </div>
               <span

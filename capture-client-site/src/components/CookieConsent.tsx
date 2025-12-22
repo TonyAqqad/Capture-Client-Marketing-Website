@@ -150,8 +150,9 @@ export default function CookieConsent() {
                       We Value Your Privacy
                     </h3>
                     <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
-                      We use cookies to enhance your browsing experience, analyze site traffic, and personalize content.
-                      By clicking "Accept All", you consent to our use of cookies.{" "}
+                      We use cookies to enhance your browsing experience, analyze site traffic, and
+                      personalize content. By clicking "Accept All", you consent to our use of
+                      cookies.{" "}
                       <a
                         href="/privacy-policy"
                         className="text-cyan-600 hover:text-blue-600 transition-colors underline"
@@ -252,7 +253,8 @@ export default function CookieConsent() {
                     <div className="flex-1">
                       <h4 className="font-semibold text-slate-900 mb-1">Analytics</h4>
                       <p className="text-sm text-slate-600">
-                        Help us understand how visitors interact with our website (Google Analytics).
+                        Help us understand how visitors interact with our website (Google
+                        Analytics).
                       </p>
                     </div>
                     <button
@@ -277,7 +279,8 @@ export default function CookieConsent() {
                     <div className="flex-1">
                       <h4 className="font-semibold text-slate-900 mb-1">Marketing</h4>
                       <p className="text-sm text-slate-600">
-                        Used to track visitors across websites for advertising purposes (Facebook Pixel, etc.).
+                        Used to track visitors across websites for advertising purposes (Facebook
+                        Pixel, etc.).
                       </p>
                     </div>
                     <button

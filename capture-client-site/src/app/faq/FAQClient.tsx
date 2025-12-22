@@ -183,8 +183,8 @@ export default function FAQClient({ faqData }: FAQClientProps) {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="text-base sm:text-lg text-slate-600 mb-6 sm:mb-8 px-4"
             >
-              We&apos;re here to help! Reach out to our team and we&apos;ll get
-              back to you right away.
+              We&apos;re here to help! Reach out to our team and we&apos;ll get back to you right
+              away.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}

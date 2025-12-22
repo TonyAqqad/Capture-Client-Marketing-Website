@@ -11,13 +11,7 @@
     "state": "Florida",
     "state_abbr": "FL",
     "slug": "hialeah-fl",
-    "nearby_areas": [
-      "Miami Lakes",
-      "Miami Gardens",
-      "Opa-locka",
-      "Doral",
-      "Miramar"
-    ],
+    "nearby_areas": ["Miami Lakes", "Miami Gardens", "Opa-locka", "Doral", "Miramar"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -187,9 +181,6 @@
       "voice-ai-miami-gardens-fl",
       "voice-ai-doral-fl"
     ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "packages": ["starter-package", "growth-package"]
   }
 }

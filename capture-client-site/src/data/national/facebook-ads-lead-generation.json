@@ -11,18 +11,8 @@
     "keyword_slug": "facebook-ads-lead-generation"
   },
   "industry_focus": {
-    "industries": [
-      "Home Services",
-      "Legal",
-      "Healthcare",
-      "Real Estate",
-      "Automotive"
-    ],
-    "business_types": [
-      "Home Services companies",
-      "Legal companies",
-      "Healthcare companies"
-    ]
+    "industries": ["Home Services", "Legal", "Healthcare", "Real Estate", "Automotive"],
+    "business_types": ["Home Services companies", "Legal companies", "Healthcare companies"]
   },
   "seo": {
     "page_title": "Facebook Ads Lead Generation | Meta Ads Agency | Qualified Leads Daily",
@@ -127,13 +117,7 @@
   "nationwide_coverage": {
     "heading": "Serving Businesses Nationwide",
     "description": "We work with businesses across all 50 states from small local operations to multi-location enterprises.",
-    "regions_highlighted": [
-      "East Coast",
-      "West Coast",
-      "Midwest",
-      "South",
-      "Southwest"
-    ]
+    "regions_highlighted": ["East Coast", "West Coast", "Midwest", "South", "Southwest"]
   },
   "testimonials": [
     {
@@ -227,13 +211,7 @@
     "urgency_text": "Limited slots available for new clients"
   },
   "related_pages": {
-    "related_national_keywords": [
-      "voice-ai-small-business",
-      "lead-generation-agency"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "related_national_keywords": ["voice-ai-small-business", "lead-generation-agency"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

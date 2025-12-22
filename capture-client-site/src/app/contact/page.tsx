@@ -11,20 +11,23 @@ export const metadata: Metadata = {
     "free consultation call",
     "marketing automation quote",
     "voice ai pricing",
-    "lead generation inquiry"
+    "lead generation inquiry",
   ],
   openGraph: {
     title: "Contact Us | Free Consultation | Capture Client",
-    description: "Ready to stop missing calls? Contact Capture Client to try our AI voice agents. Call (865) 346-6111 or fill out our form.",
+    description:
+      "Ready to stop missing calls? Contact Capture Client to try our AI voice agents. Call (865) 346-6111 or fill out our form.",
     url: "https://captureclient.com/contact",
     siteName: "Capture Client",
     type: "website",
-    images: [{
-      url: "https://captureclient.com/og-image.png",
-      width: 1200,
-      height: 630,
-      alt: "Contact Capture Client",
-    }],
+    images: [
+      {
+        url: "https://captureclient.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Contact Capture Client",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -110,8 +113,7 @@ const localBusinessSchema = {
         itemOffered: {
           "@type": "Service",
           name: "Google Ads Management",
-          description:
-            "ROI-focused PPC campaigns that capture high-intent customers.",
+          description: "ROI-focused PPC campaigns that capture high-intent customers.",
         },
       },
       {
@@ -119,8 +121,7 @@ const localBusinessSchema = {
         itemOffered: {
           "@type": "Service",
           name: "Facebook Ads Management",
-          description:
-            "Targeted social advertising that generates qualified leads.",
+          description: "Targeted social advertising that generates qualified leads.",
         },
       },
     ],
@@ -163,10 +164,7 @@ export default function ContactPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([
-            localBusinessSchema,
-            contactPageSchema,
-          ]),
+          __html: JSON.stringify([localBusinessSchema, contactPageSchema]),
         }}
       />
       <ContactPageClient />

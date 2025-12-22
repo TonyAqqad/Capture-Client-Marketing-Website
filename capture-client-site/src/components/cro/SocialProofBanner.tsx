@@ -20,7 +20,7 @@ export default function SocialProofBanner() {
       transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
       className="border border-slate-200 bg-white rounded-2xl p-6 sm:p-8 shadow-sm"
       style={{
-        fontFamily: 'var(--font-bricolage-grotesque)'
+        fontFamily: "var(--font-bricolage-grotesque)",
       }}
     >
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
@@ -32,10 +32,7 @@ export default function SocialProofBanner() {
           >
             Growing businesses trust Capture Client
           </p>
-          <p
-            className="text-slate-600 text-sm sm:text-base"
-            style={{ fontWeight: 300 }}
-          >
+          <p className="text-slate-600 text-sm sm:text-base" style={{ fontWeight: 300 }}>
             From solo practitioners to 50-person teams
           </p>
         </div>
@@ -56,7 +53,7 @@ export default function SocialProofBanner() {
 function Stat({
   value,
   label,
-  className = ""
+  className = "",
 }: {
   value: string;
   label: string;
@@ -70,10 +67,7 @@ function Stat({
       >
         {value}
       </p>
-      <p
-        className="text-slate-600 text-xs sm:text-sm mt-0.5"
-        style={{ fontWeight: 300 }}
-      >
+      <p className="text-slate-600 text-xs sm:text-sm mt-0.5" style={{ fontWeight: 300 }}>
         {label}
       </p>
     </div>

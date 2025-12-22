@@ -261,7 +261,9 @@
   /* Reduce animation complexity */
   .animate-on-scroll {
     transform: translateY(5px) !important;
-    transition: opacity 0.3s ease-out, transform 0.3s ease-out !important;
+    transition:
+      opacity 0.3s ease-out,
+      transform 0.3s ease-out !important;
   }
 
   /* iOS Safari: Enable smooth momentum scrolling */
@@ -449,13 +451,21 @@
   }
 
   /* Text should wrap, not overflow - but NEVER hyphenate headings */
-  p, span, a, button {
+  p,
+  span,
+  a,
+  button {
     word-wrap: break-word;
     overflow-wrap: break-word;
   }
 
   /* Headings: NEVER hyphenate - scale down instead */
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     hyphens: none !important;
     -webkit-hyphens: none !important;
     word-break: normal;
@@ -591,15 +601,36 @@
     padding-bottom: 3rem !important;
   }
 
-  .mb-12 { margin-bottom: 2rem !important; }
-  .mb-16 { margin-bottom: 2.5rem !important; }
-  .mb-20 { margin-bottom: 3rem !important; }
-  .mt-12 { margin-top: 2rem !important; }
-  .mt-16 { margin-top: 2.5rem !important; }
-  .mt-20 { margin-top: 3rem !important; }
-  .py-12 { padding-top: 2rem !important; padding-bottom: 2rem !important; }
-  .py-16 { padding-top: 2.5rem !important; padding-bottom: 2.5rem !important; }
-  .py-20 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  .mb-12 {
+    margin-bottom: 2rem !important;
+  }
+  .mb-16 {
+    margin-bottom: 2.5rem !important;
+  }
+  .mb-20 {
+    margin-bottom: 3rem !important;
+  }
+  .mt-12 {
+    margin-top: 2rem !important;
+  }
+  .mt-16 {
+    margin-top: 2.5rem !important;
+  }
+  .mt-20 {
+    margin-top: 3rem !important;
+  }
+  .py-12 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  .py-16 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+  .py-20 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
 }
 
 /* =============================================================================
@@ -648,7 +679,17 @@
   }
 
   /* Ensure text rendering is optimized */
-  h1, h2, h3, h4, h5, h6, p, span, a, button, label {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  a,
+  button,
+  label {
     -webkit-font-smoothing: antialiased !important;
     -moz-osx-font-smoothing: grayscale !important;
     text-rendering: optimizeLegibility !important;

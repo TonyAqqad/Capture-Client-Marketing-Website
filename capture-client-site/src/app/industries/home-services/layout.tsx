@@ -89,11 +89,7 @@ const faqSchema = {
   ],
 };
 
-export default function HomeServicesLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function HomeServicesLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       {/* JSON-LD Structured Data */}

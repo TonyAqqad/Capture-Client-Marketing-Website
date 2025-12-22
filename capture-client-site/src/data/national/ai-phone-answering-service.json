@@ -11,28 +11,14 @@
     "keyword_slug": "ai-phone-answering-service"
   },
   "industry_focus": {
-    "industries": [
-      "Service Businesses",
-      "Healthcare",
-      "Legal",
-      "Real Estate",
-      "E-commerce"
-    ],
-    "business_types": [
-      "Service Businesses companies",
-      "Healthcare companies",
-      "Legal companies"
-    ]
+    "industries": ["Service Businesses", "Healthcare", "Legal", "Real Estate", "E-commerce"],
+    "business_types": ["Service Businesses companies", "Healthcare companies", "Legal companies"]
   },
   "seo": {
     "page_title": "AI Phone Answering Service | Better Than Call Centers",
     "meta_description": "AI phone answering service that sounds human costs less than traditional services and integrates with your CRM and calendar.",
     "h1_heading": "AI Phone Answering Service",
-    "keywords": [
-      "ai phone answering service",
-      "capture client",
-      "automation"
-    ]
+    "keywords": ["ai phone answering service", "capture client", "automation"]
   },
   "hero": {
     "headline": "Ditch The Call Center. Upgrade To AI.",
@@ -114,13 +100,7 @@
   "nationwide_coverage": {
     "heading": "Serving Businesses Nationwide",
     "description": "We work with businesses across all 50 states from small local operations to multi-location enterprises.",
-    "regions_highlighted": [
-      "East Coast",
-      "West Coast",
-      "Midwest",
-      "South",
-      "Southwest"
-    ]
+    "regions_highlighted": ["East Coast", "West Coast", "Midwest", "South", "Southwest"]
   },
   "testimonials": [
     {
@@ -198,13 +178,7 @@
     "urgency_text": "Limited slots available for new clients"
   },
   "related_pages": {
-    "related_national_keywords": [
-      "voice-ai-small-business",
-      "lead-generation-agency"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "related_national_keywords": ["voice-ai-small-business", "lead-generation-agency"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

@@ -28,18 +28,11 @@ export function TryAILiveCard({ className = "" }: TryAILiveCardProps) {
           </div>
 
           <div className="flex-1">
-            <h4 className="text-lg font-bold text-slate-900 mb-1">
-              Try Our AI Live!
-            </h4>
-            <p className="text-sm text-slate-600 mb-3">
-              Call now and experience it yourself
-            </p>
+            <h4 className="text-lg font-bold text-slate-900 mb-1">Try Our AI Live!</h4>
+            <p className="text-sm text-slate-600 mb-3">Call now and experience it yourself</p>
 
             {/* Phone Number - clickable */}
-            <a
-              href="tel:865-346-6111"
-              className="block group mb-3"
-            >
+            <a href="tel:865-346-6111" className="block group mb-3">
               <span className="text-xl font-bold text-[#00C9FF] group-hover:text-[#5FE3FF] transition-colors">
                 (865) 346-6111
               </span>

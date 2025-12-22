@@ -15,7 +15,7 @@ import {
   Shield,
   BadgeCheck,
   Star,
-  Sparkles
+  Sparkles,
 } from "lucide-react";
 
 // Practice Types Data
@@ -26,7 +26,7 @@ const PRACTICE_TYPES = [
     icon: "🦷",
     value: "$3,500 LTV",
     scenario: "Emergency toothache call at 7 PM",
-    pain: "Patient in severe pain calls after hours. Office closed. Voicemail picks up. They search Google and book with the first dentist who answers—your competitor down the street."
+    pain: "Patient in severe pain calls after hours. Office closed. Voicemail picks up. They search Google and book with the first dentist who answers—your competitor down the street.",
   },
   {
     id: "cosmetic",
@@ -34,7 +34,7 @@ const PRACTICE_TYPES = [
     icon: "✨",
     value: "$8,000+ LTV",
     scenario: "Veneer consultation inquiry on Saturday",
-    pain: "High-value prospect researching smile makeover calls on the weekend while comparing practices. You're off. They book a consultation with a competitor who has 24/7 booking."
+    pain: "High-value prospect researching smile makeover calls on the weekend while comparing practices. You're off. They book a consultation with a competitor who has 24/7 booking.",
   },
   {
     id: "ortho",
@@ -42,7 +42,7 @@ const PRACTICE_TYPES = [
     icon: "😁",
     value: "$6,000 LTV",
     scenario: "Parent inquiry about teen's braces",
-    pain: "Mom calls during lunch hour about her teenager's braces. Your front desk is at lunch. She doesn't leave a voicemail. She schedules with the orthodontist down the street who picked up."
+    pain: "Mom calls during lunch hour about her teenager's braces. Your front desk is at lunch. She doesn't leave a voicemail. She schedules with the orthodontist down the street who picked up.",
   },
   {
     id: "pediatric",
@@ -50,8 +50,8 @@ const PRACTICE_TYPES = [
     icon: "👶",
     value: "$2,500 LTV",
     scenario: "New parent scheduling first dental visit",
-    pain: "First-time parent calls about baby's first dental visit. No answer during your busiest hour. They find a kid-friendly dentist online who has instant chat booking. You lose a family patient for life."
-  }
+    pain: "First-time parent calls about baby's first dental visit. No answer during your busiest hour. They find a kid-friendly dentist online who has instant chat booking. You lose a family patient for life.",
+  },
 ];
 
 // Integration Platforms
@@ -60,7 +60,7 @@ const INTEGRATIONS = [
   { name: "Eaglesoft", logo: "https://logo.clearbit.com/eaglesoft.net" },
   { name: "Open Dental", logo: "https://logo.clearbit.com/opendental.com" },
   { name: "Curve Dental", logo: "https://logo.clearbit.com/curvedental.com" },
-  { name: "Dental Intelligence", logo: "https://logo.clearbit.com/dentalintel.com" }
+  { name: "Dental Intelligence", logo: "https://logo.clearbit.com/dentalintel.com" },
 ];
 
 // Testimonials
@@ -68,24 +68,27 @@ const TESTIMONIALS = [
   {
     name: "Dr. Sarah Mitchell",
     business: "Family Dentistry - Atlanta",
-    quote: "AI captured 47 new patients in the first month alone. Emergency calls at midnight now get answered and scheduled instantly. Game-changing.",
+    quote:
+      "AI captured 47 new patients in the first month alone. Emergency calls at midnight now get answered and scheduled instantly. Game-changing.",
     revenue: "$142K",
-    metric: "47 new patients/mo"
+    metric: "47 new patients/mo",
   },
   {
     name: "Dr. James Rodriguez",
     business: "Cosmetic Dental - Miami",
-    quote: "A Saturday call for veneers turned into an $18K smile makeover case. AI qualified the patient and scheduled the consultation while I was at my daughter's soccer game.",
+    quote:
+      "A Saturday call for veneers turned into an $18K smile makeover case. AI qualified the patient and scheduled the consultation while I was at my daughter's soccer game.",
     revenue: "$18K case",
-    metric: "Weekend bookings +89%"
+    metric: "Weekend bookings +89%",
   },
   {
     name: "Dr. Emily Chen",
     business: "Pediatric Dentistry - Seattle",
-    quote: "Parents call during our busiest hours when staff can't pick up. AI handles the overflow perfectly. We saw a 34% increase in new patient bookings within 60 days.",
+    quote:
+      "Parents call during our busiest hours when staff can't pick up. AI handles the overflow perfectly. We saw a 34% increase in new patient bookings within 60 days.",
     revenue: "$95K/yr",
-    metric: "+34% new patients"
-  }
+    metric: "+34% new patients",
+  },
 ];
 
 export default function DentalClient() {
@@ -110,7 +113,8 @@ export default function DentalClient() {
     return () => clearInterval(interval);
   }, []);
 
-  const selectedPracticeData = PRACTICE_TYPES.find(p => p.id === selectedPractice) || PRACTICE_TYPES[0];
+  const selectedPracticeData =
+    PRACTICE_TYPES.find((p) => p.id === selectedPractice) || PRACTICE_TYPES[0];
 
   return (
     <div className="min-h-screen bg-white">
@@ -127,12 +131,12 @@ export default function DentalClient() {
           className="absolute top-0 right-0 w-[800px] h-[800px] rounded-full opacity-20 pointer-events-none"
           animate={{
             scale: [1, 1.2, 1],
-            opacity: [0.2, 0.3, 0.2]
+            opacity: [0.2, 0.3, 0.2],
           }}
           transition={{
             duration: 12,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
         >
           <div className="w-full h-full bg-gradient-radial from-blue-200/60 via-cyan-100/30 to-transparent blur-3xl" />
@@ -212,7 +216,7 @@ export default function DentalClient() {
                 href="tel:865-346-6111"
                 whileHover={{
                   scale: 1.05,
-                  transition: { duration: 0.2 }
+                  transition: { duration: 0.2 },
                 }}
                 whileTap={{ scale: 0.98 }}
                 className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 transition-all w-full sm:w-auto"
@@ -285,9 +289,7 @@ export default function DentalClient() {
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Phone className="w-8 h-8 text-blue-600" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                Patient Calls
-              </h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Patient Calls</h3>
               <p className="text-slate-600 leading-relaxed">
                 Emergency at 8 PM. Cosmetic inquiry on Saturday. New patient during lunch rush.
               </p>
@@ -305,20 +307,14 @@ export default function DentalClient() {
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <AlertCircle className="w-8 h-8 text-red-600" />
               </div>
-              <h3 className="text-2xl font-bold text-red-600 mb-3">
-                No Answer
-              </h3>
+              <h3 className="text-2xl font-bold text-red-600 mb-3">No Answer</h3>
               <p className="text-slate-600 leading-relaxed mb-4">
                 <span className="text-3xl font-bold text-red-600 block mb-2">35%</span>
                 of calls go unanswered
               </p>
               <div className="bg-slate-50 border border-slate-200 p-4 rounded-xl">
-                <p className="text-sm text-slate-900 font-semibold">
-                  Lost per missed new patient:
-                </p>
-                <p className="text-2xl font-bold text-blue-600">
-                  $850-$1,300
-                </p>
+                <p className="text-sm text-slate-900 font-semibold">Lost per missed new patient:</p>
+                <p className="text-2xl font-bold text-blue-600">$850-$1,300</p>
               </div>
             </motion.div>
 
@@ -334,9 +330,7 @@ export default function DentalClient() {
               <div className="w-16 h-16 bg-cyan-100 rounded-full flex items-center justify-center mx-auto mb-6">
                 <TrendingUp className="w-8 h-8 text-cyan-600 rotate-180" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                Books With Competitor
-              </h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-3">Books With Competitor</h3>
               <p className="text-slate-600 leading-relaxed">
                 They Google "dentist near me who answers phone" and find someone else. Forever.
               </p>
@@ -437,9 +431,7 @@ export default function DentalClient() {
               <div className="mb-8">
                 <div className="inline-flex items-center gap-2 bg-slate-50 border border-slate-200 px-4 py-2 rounded-lg mb-4">
                   <Clock className="w-5 h-5 text-blue-600" />
-                  <span className="text-sm font-semibold text-slate-900">
-                    Real Scenario
-                  </span>
+                  <span className="text-sm font-semibold text-slate-900">Real Scenario</span>
                 </div>
                 <h4 className="text-xl font-bold text-slate-900 mb-3">
                   {selectedPracticeData.scenario}
@@ -452,20 +444,12 @@ export default function DentalClient() {
               <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 p-6 rounded-xl">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-slate-600 mb-1">
-                      Cost of One Missed Call
-                    </p>
-                    <p className="text-3xl font-bold text-blue-600">
-                      {selectedPracticeData.value}
-                    </p>
+                    <p className="text-sm text-slate-600 mb-1">Cost of One Missed Call</p>
+                    <p className="text-3xl font-bold text-blue-600">{selectedPracticeData.value}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-sm text-slate-600 mb-1">
-                      Annual Impact (at 35% miss rate)
-                    </p>
-                    <p className="text-3xl font-bold text-blue-600">
-                      $100K-$150K
-                    </p>
+                    <p className="text-sm text-slate-600 mb-1">Annual Impact (at 35% miss rate)</p>
+                    <p className="text-3xl font-bold text-blue-600">$100K-$150K</p>
                   </div>
                 </div>
               </div>
@@ -522,16 +506,14 @@ export default function DentalClient() {
                 whileHover={{
                   scale: 1.05,
                   y: -4,
-                  transition: { duration: 0.2 }
+                  transition: { duration: 0.2 },
                 }}
                 className="bg-white/70 backdrop-blur-xl border border-slate-200 p-6 rounded-xl text-center hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-blue-50 rounded-lg flex items-center justify-center mx-auto mb-3">
                   <Shield className="w-8 h-8 text-blue-600" />
                 </div>
-                <p className="text-sm font-semibold text-slate-900">
-                  {platform.name}
-                </p>
+                <p className="text-sm font-semibold text-slate-900">{platform.name}</p>
               </motion.div>
             ))}
           </div>
@@ -545,12 +527,10 @@ export default function DentalClient() {
             <div className="flex items-start gap-4">
               <CheckCircle2 className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
               <div>
-                <h4 className="text-xl font-bold text-slate-900 mb-2">
-                  Real-Time Two-Way Sync
-                </h4>
+                <h4 className="text-xl font-bold text-slate-900 mb-2">Real-Time Two-Way Sync</h4>
                 <p className="text-slate-600 leading-relaxed">
-                  AI books appointments that appear instantly in your practice management system.
-                  It sees your availability in real-time, so there's zero risk of double-booking.
+                  AI books appointments that appear instantly in your practice management system. It
+                  sees your availability in real-time, so there's zero risk of double-booking.
                 </p>
               </div>
             </div>
@@ -595,9 +575,7 @@ export default function DentalClient() {
                 <label className="text-lg font-semibold text-slate-900">
                   Monthly Patient Calls
                 </label>
-                <span className="text-2xl font-bold text-blue-600">
-                  {monthlyCalls}
-                </span>
+                <span className="text-2xl font-bold text-blue-600">{monthlyCalls}</span>
               </div>
               <input
                 type="range"
@@ -619,9 +597,7 @@ export default function DentalClient() {
                 <label className="text-lg font-semibold text-slate-900">
                   Average New Patient Value
                 </label>
-                <span className="text-2xl font-bold text-blue-600">
-                  ${avgPatientValue}
-                </span>
+                <span className="text-2xl font-bold text-blue-600">${avgPatientValue}</span>
               </div>
               <input
                 type="range"
@@ -642,28 +618,20 @@ export default function DentalClient() {
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 border border-blue-200 p-8 rounded-xl mb-8">
               <div className="grid md:grid-cols-3 gap-6 mb-6">
                 <div className="text-center">
-                  <p className="text-sm text-slate-600 mb-2">
-                    Missed Calls/Month
-                  </p>
+                  <p className="text-sm text-slate-600 mb-2">Missed Calls/Month</p>
                   <p className="text-3xl font-bold text-red-600">
                     {Math.round(monthlyCalls * 0.35)}
                   </p>
-                  <p className="text-xs text-slate-600 mt-1">
-                    (35% miss rate)
-                  </p>
+                  <p className="text-xs text-slate-600 mt-1">(35% miss rate)</p>
                 </div>
                 <div className="text-center">
-                  <p className="text-sm text-slate-600 mb-2">
-                    Monthly Lost Revenue
-                  </p>
+                  <p className="text-sm text-slate-600 mb-2">Monthly Lost Revenue</p>
                   <p className="text-3xl font-bold text-blue-600">
                     ${Math.round(lostRevenue / 12).toLocaleString()}
                   </p>
                 </div>
                 <div className="text-center">
-                  <p className="text-sm text-slate-600 mb-2">
-                    Annual Lost Revenue
-                  </p>
+                  <p className="text-sm text-slate-600 mb-2">Annual Lost Revenue</p>
                   <p className="text-3xl font-bold text-blue-600">
                     ${Math.round(lostRevenue).toLocaleString()}
                   </p>
@@ -672,10 +640,11 @@ export default function DentalClient() {
 
               <div className="border-t border-slate-200 pt-6">
                 <p className="text-center text-slate-600 mb-2">
-                  AI answering service cost: <span className="font-bold text-slate-900">$997/month</span>
+                  AI answering service cost:{" "}
+                  <span className="font-bold text-slate-900">$997/month</span>
                 </p>
                 <p className="text-center text-2xl font-bold text-blue-600">
-                  ROI: {Math.round((lostRevenue / 12) / 997)}x return on investment
+                  ROI: {Math.round(lostRevenue / 12 / 997)}x return on investment
                 </p>
               </div>
             </div>
@@ -686,7 +655,7 @@ export default function DentalClient() {
                 href="tel:865-346-6111"
                 whileHover={{
                   scale: 1.05,
-                  transition: { duration: 0.2 }
+                  transition: { duration: 0.2 },
                 }}
                 whileTap={{ scale: 0.98 }}
                 className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 transition-all"
@@ -730,26 +699,28 @@ export default function DentalClient() {
                 step: "1",
                 title: "Patient Calls Your Practice",
                 description: "Emergency, consultation, or routine cleaning—any time, day or night.",
-                icon: Phone
+                icon: Phone,
               },
               {
                 step: "2",
                 title: "AI Answers Professionally",
-                description: "Natural conversation. Understands dental terminology. Represents your practice perfectly.",
-                icon: CheckCircle2
+                description:
+                  "Natural conversation. Understands dental terminology. Represents your practice perfectly.",
+                icon: CheckCircle2,
               },
               {
                 step: "3",
                 title: "AI Books Appointment",
-                description: "Checks your real-time availability, schedules, sends confirmation. All automatic.",
-                icon: Calendar
+                description:
+                  "Checks your real-time availability, schedules, sends confirmation. All automatic.",
+                icon: Calendar,
               },
               {
                 step: "4",
                 title: "You Gain New Patients",
                 description: "They show up. You deliver care. No missed opportunities. Ever.",
-                icon: TrendingUp
-              }
+                icon: TrendingUp,
+              },
             ].map((item, index) => (
               <motion.div
                 key={item.step}
@@ -759,7 +730,7 @@ export default function DentalClient() {
                 transition={{ delay: index * 0.1, duration: 0.5 }}
                 whileHover={{
                   y: -8,
-                  transition: { duration: 0.3 }
+                  transition: { duration: 0.3 },
                 }}
                 className="bg-white/70 backdrop-blur-xl border border-slate-200 p-8 rounded-2xl text-center relative hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300"
               >
@@ -769,12 +740,8 @@ export default function DentalClient() {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6 mt-4">
                   <item.icon className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-slate-600 leading-relaxed">
-                  {item.description}
-                </p>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -817,7 +784,7 @@ export default function DentalClient() {
                 whileHover={{
                   y: -8,
                   scale: 1.02,
-                  transition: { duration: 0.3 }
+                  transition: { duration: 0.3 },
                 }}
                 className="bg-white/70 backdrop-blur-xl border border-slate-200 p-8 rounded-2xl hover:border-blue-300 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300"
               >
@@ -827,18 +794,14 @@ export default function DentalClient() {
                   ))}
                 </div>
                 <div className="text-blue-600 text-5xl mb-4">"</div>
-                <p className="text-slate-900 mb-6 leading-relaxed">
-                  {testimonial.quote}
-                </p>
+                <p className="text-slate-900 mb-6 leading-relaxed">{testimonial.quote}</p>
                 <div className="flex items-center justify-between pt-6 border-t border-slate-200">
                   <div>
                     <p className="font-bold text-slate-900">{testimonial.name}</p>
                     <p className="text-sm text-slate-600">{testimonial.business}</p>
                   </div>
                   <div className="text-right">
-                    <p className="text-2xl font-bold text-blue-600">
-                      {testimonial.revenue}
-                    </p>
+                    <p className="text-2xl font-bold text-blue-600">{testimonial.revenue}</p>
                     <p className="text-xs text-slate-600">{testimonial.metric}</p>
                   </div>
                 </div>
@@ -873,7 +836,7 @@ export default function DentalClient() {
               transition={{ duration: 0.6 }}
               whileHover={{
                 x: -4,
-                transition: { duration: 0.3 }
+                transition: { duration: 0.3 },
               }}
               className="bg-white/70 backdrop-blur-xl border-2 border-red-200 p-8 rounded-2xl hover:border-red-300 hover:shadow-lg hover:shadow-red-200/50 transition-all duration-300"
             >
@@ -885,14 +848,18 @@ export default function DentalClient() {
                   <div className="text-red-600 text-2xl">❌</div>
                   <div>
                     <p className="font-bold text-slate-900 mb-1">Calls go to voicemail</p>
-                    <p className="text-sm text-slate-600">35% of calls during busy hours, after hours, weekends</p>
+                    <p className="text-sm text-slate-600">
+                      35% of calls during busy hours, after hours, weekends
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="text-red-600 text-2xl">❌</div>
                   <div>
                     <p className="font-bold text-slate-900 mb-1">Patient books elsewhere</p>
-                    <p className="text-sm text-slate-600">Emergency patient finds competitor who answers</p>
+                    <p className="text-sm text-slate-600">
+                      Emergency patient finds competitor who answers
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -904,9 +871,7 @@ export default function DentalClient() {
                 </div>
               </div>
               <div className="mt-8 pt-6 border-t border-slate-200">
-                <p className="text-2xl font-bold text-red-600">
-                  -$100K-$150K/year
-                </p>
+                <p className="text-2xl font-bold text-red-600">-$100K-$150K/year</p>
                 <p className="text-sm text-slate-600">Lost revenue</p>
               </div>
             </motion.div>
@@ -919,7 +884,7 @@ export default function DentalClient() {
               transition={{ duration: 0.6 }}
               whileHover={{
                 x: 4,
-                transition: { duration: 0.3 }
+                transition: { duration: 0.3 },
               }}
               className="bg-white/70 backdrop-blur-xl border-2 border-blue-300 p-8 rounded-2xl hover:border-blue-400 hover:shadow-lg hover:shadow-slate-200/50 transition-all duration-300"
             >
@@ -931,28 +896,32 @@ export default function DentalClient() {
                   <div className="text-blue-600 text-2xl">✓</div>
                   <div>
                     <p className="font-bold text-slate-900 mb-1">AI answers every call</p>
-                    <p className="text-sm text-slate-600">24/7/365 - emergencies, weekends, holidays</p>
+                    <p className="text-sm text-slate-600">
+                      24/7/365 - emergencies, weekends, holidays
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="text-blue-600 text-2xl">✓</div>
                   <div>
                     <p className="font-bold text-slate-900 mb-1">Books appointment instantly</p>
-                    <p className="text-sm text-slate-600">Real-time scheduling, confirmation sent</p>
+                    <p className="text-sm text-slate-600">
+                      Real-time scheduling, confirmation sent
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="text-blue-600 text-2xl">✓</div>
                   <div>
-                    <p className="font-bold text-slate-900 mb-1">Patient becomes lifetime patient</p>
+                    <p className="font-bold text-slate-900 mb-1">
+                      Patient becomes lifetime patient
+                    </p>
                     <p className="text-sm text-slate-600">Plus family members and referrals</p>
                   </div>
                 </div>
               </div>
               <div className="mt-8 pt-6 border-t border-slate-200">
-                <p className="text-2xl font-bold text-blue-600">
-                  +$100K-$150K/year
-                </p>
+                <p className="text-2xl font-bold text-blue-600">+$100K-$150K/year</p>
                 <p className="text-sm text-slate-600">Recovered revenue</p>
               </div>
             </motion.div>
@@ -980,7 +949,9 @@ export default function DentalClient() {
               <Sparkles className="w-16 h-16 text-blue-600 mx-auto mb-6" />
               <h2 className="text-display-lg lg:text-hero-xl font-display font-bold text-slate-900 mb-6">
                 Start Booking More Patients{" "}
-                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Tonight</span>
+                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                  Tonight
+                </span>
               </h2>
               <p className="text-xl sm:text-2xl text-slate-600 mb-8 leading-relaxed">
                 Every hour you wait is another patient you'll never see.
@@ -997,7 +968,7 @@ export default function DentalClient() {
                 href="tel:865-346-6111"
                 whileHover={{
                   scale: 1.05,
-                  transition: { duration: 0.2 }
+                  transition: { duration: 0.2 },
                 }}
                 whileTap={{ scale: 0.98 }}
                 className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 text-white px-10 py-5 text-xl font-bold rounded-xl inline-flex items-center gap-3 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 transition-all w-full sm:w-auto"

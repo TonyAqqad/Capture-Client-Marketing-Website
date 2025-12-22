@@ -62,27 +62,29 @@ const caseStudiesData = [
     industry: "HVAC Services",
     company: "Elite Climate Solutions",
     location: "Knoxville, TN",
-    problem: "Missing 60% of inbound calls during peak season, losing $15K/month in potential revenue",
-    solution: "Implemented AI voice agents to handle all calls 24/7 with automatic lead qualification and booking",
+    problem:
+      "Missing 60% of inbound calls during peak season, losing $15K/month in potential revenue",
+    solution:
+      "Implemented AI voice agents to handle all calls 24/7 with automatic lead qualification and booking",
     results: [
       {
         metric: "Call Answer Rate",
         before: "40%",
         after: "100%",
-        improvement: "+150%"
+        improvement: "+150%",
       },
       {
         metric: "Monthly Revenue",
         before: "$45K",
         after: "$156K",
-        improvement: "+247%"
+        improvement: "+247%",
       },
       {
         metric: "Response Time",
         before: "2 hours",
         after: "< 2 min",
-        improvement: "60x faster"
-      }
+        improvement: "60x faster",
+      },
     ],
     duration: "6 months",
     roi: "612%",
@@ -93,26 +95,27 @@ const caseStudiesData = [
     company: "Bright Smile Dental",
     location: "Nashville, TN",
     problem: "Low marketing ROI with scattered tools and no clear visibility into what was working",
-    solution: "Unified platform with integrated ads, CRM, and analytics dashboard for complete visibility",
+    solution:
+      "Unified platform with integrated ads, CRM, and analytics dashboard for complete visibility",
     results: [
       {
         metric: "Marketing ROI",
         before: "180%",
         after: "612%",
-        improvement: "+340%"
+        improvement: "+340%",
       },
       {
         metric: "Cost Per Lead",
         before: "$127",
         after: "$38",
-        improvement: "-70%"
+        improvement: "-70%",
       },
       {
         metric: "New Patients",
         before: "12/mo",
         after: "47/mo",
-        improvement: "+292%"
-      }
+        improvement: "+292%",
+      },
     ],
     duration: "4 months",
     roi: "540%",
@@ -129,20 +132,20 @@ const caseStudiesData = [
         metric: "Response Time",
         before: "2 hours",
         after: "< 2 min",
-        improvement: "60x faster"
+        improvement: "60x faster",
       },
       {
         metric: "After-Hours Conversions",
         before: "5%",
         after: "42%",
-        improvement: "+740%"
+        improvement: "+740%",
       },
       {
         metric: "Customer Satisfaction",
         before: "3.8/5",
         after: "4.9/5",
-        improvement: "+29%"
-      }
+        improvement: "+29%",
+      },
     ],
     duration: "3 months",
     roi: "485%",
@@ -159,20 +162,20 @@ const caseStudiesData = [
         metric: "Consultation Bookings",
         before: "23/mo",
         after: "89/mo",
-        improvement: "+287%"
+        improvement: "+287%",
       },
       {
         metric: "Lead Response Time",
         before: "4 hours",
         after: "< 1 min",
-        improvement: "240x faster"
+        improvement: "240x faster",
       },
       {
         metric: "Case Conversion Rate",
         before: "12%",
         after: "34%",
-        improvement: "+183%"
-      }
+        improvement: "+183%",
+      },
     ],
     duration: "5 months",
     roi: "725%",
@@ -189,20 +192,20 @@ const caseStudiesData = [
         metric: "Storm Lead Capture",
         before: "34%",
         after: "96%",
-        improvement: "+182%"
+        improvement: "+182%",
       },
       {
         metric: "Project Volume",
         before: "8/mo",
         after: "31/mo",
-        improvement: "+288%"
+        improvement: "+288%",
       },
       {
         metric: "Average Project Value",
         before: "$8,500",
         after: "$12,400",
-        improvement: "+46%"
-      }
+        improvement: "+46%",
+      },
     ],
     duration: "4 months",
     roi: "890%",
@@ -219,20 +222,20 @@ const caseStudiesData = [
         metric: "No-Show Rate",
         before: "28%",
         after: "4%",
-        improvement: "-86%"
+        improvement: "-86%",
       },
       {
         metric: "Monthly Bookings",
         before: "156",
         after: "412",
-        improvement: "+164%"
+        improvement: "+164%",
       },
       {
         metric: "Revenue Per Client",
         before: "$285",
         after: "$487",
-        improvement: "+71%"
-      }
+        improvement: "+71%",
+      },
     ],
     duration: "6 months",
     roi: "635%",

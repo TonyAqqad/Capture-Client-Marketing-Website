@@ -49,10 +49,7 @@ interface CaseStudiesPageClientProps {
 }
 
 // Industry icons mapping
-const industryIcons: Record<
-  string,
-  React.ComponentType<{ className?: string }>
-> = {
+const industryIcons: Record<string, React.ComponentType<{ className?: string }>> = {
   "HVAC Services": Snowflake,
   "Dental Practice": Stethoscope,
   "Plumbing Company": Wrench,
@@ -61,9 +58,7 @@ const industryIcons: Record<
   "Medical Spa": Sparkles,
 };
 
-export default function CaseStudiesPageClient({
-  caseStudies,
-}: CaseStudiesPageClientProps) {
+export default function CaseStudiesPageClient({ caseStudies }: CaseStudiesPageClientProps) {
   const [selectedIndustry, setSelectedIndustry] = useState<string>("All");
   const [expandedCard, setExpandedCard] = useState<string | null>(null);
   const [sortBy, setSortBy] = useState<"roi" | "duration">("roi");
@@ -75,9 +70,7 @@ export default function CaseStudiesPageClient({
 
   // Extract unique industries
   const industries = useMemo(() => {
-    const unique = Array.from(
-      new Set(caseStudies.map((study) => study.industry))
-    );
+    const unique = Array.from(new Set(caseStudies.map((study) => study.industry)));
     return ["All", ...unique];
   }, [caseStudies]);
 
@@ -86,19 +79,14 @@ export default function CaseStudiesPageClient({
     let filtered = caseStudies;
 
     if (selectedIndustry !== "All") {
-      filtered = caseStudies.filter(
-        (study) => study.industry === selectedIndustry
-      );
+      filtered = caseStudies.filter((study) => study.industry === selectedIndustry);
     }
 
     return filtered.sort((a, b) => {
       if (sortBy === "roi") {
         return parseInt(b.roi) - parseInt(a.roi);
       } else {
-        return (
-          parseInt(a.duration.split(" ")[0]) -
-          parseInt(b.duration.split(" ")[0])
-        );
+        return parseInt(a.duration.split(" ")[0]) - parseInt(b.duration.split(" ")[0]);
       }
     });
   }, [caseStudies, selectedIndustry, sortBy]);
@@ -111,10 +99,7 @@ export default function CaseStudiesPageClient({
   return (
     <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-white">
       {/* ==================== HERO SECTION ==================== */}
-      <section
-        ref={heroRef}
-        className="relative overflow-hidden pt-24 pb-16 lg:pt-32 lg:pb-20"
-      >
+      <section ref={heroRef} className="relative overflow-hidden pt-24 pb-16 lg:pt-32 lg:pb-20">
         {/* Light premium background */}
         <div className="absolute inset-0 bg-white" />
 
@@ -145,9 +130,12 @@ export default function CaseStudiesPageClient({
             {/* Headline - extreme weight contrast */}
             <h1
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.05] mb-6"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
             >
-              <span className="text-slate-900 font-extralight block mb-2" style={{ fontWeight: 200 }}>
+              <span
+                className="text-slate-900 font-extralight block mb-2"
+                style={{ fontWeight: 200 }}
+              >
                 Results that speak
               </span>
               <span
@@ -174,7 +162,7 @@ export default function CaseStudiesPageClient({
             </p>
             <h2
               className="text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.1]"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
             >
               <span className="text-slate-900 font-extralight" style={{ fontWeight: 200 }}>
                 Explore{" "}
@@ -281,9 +269,7 @@ export default function CaseStudiesPageClient({
               >
                 <div className="bg-white p-12 rounded-2xl inline-block border border-slate-200">
                   <SearchX className="w-16 h-16 text-slate-400 mb-4 mx-auto" />
-                  <p className="text-lg text-slate-600">
-                    No case studies found for this filter
-                  </p>
+                  <p className="text-lg text-slate-600">No case studies found for this filter</p>
                 </div>
               </motion.div>
             )}
@@ -314,7 +300,7 @@ export default function CaseStudiesPageClient({
             {/* Headline */}
             <h2
               className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl tracking-tight leading-[1.1] mb-6"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
             >
               <span className="text-slate-900 font-extralight" style={{ fontWeight: 200 }}>
                 Want results{" "}
@@ -350,11 +336,7 @@ export default function CaseStudiesPageClient({
 
             {/* Trust badges */}
             <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-sm text-slate-600">
-              {[
-                "No contracts",
-                "No setup fees",
-                "48-hour setup",
-              ].map((text, idx) => (
+              {["No contracts", "No setup fees", "48-hour setup"].map((text, idx) => (
                 <motion.div
                   key={text}
                   initial={{ opacity: 0, y: 10 }}
@@ -397,7 +379,9 @@ function FeaturedCaseStudy({ study, isInView }: FeaturedCaseStudyProps) {
       <div className="absolute top-6 left-6 z-10">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 shadow-lg shadow-blue-600/25">
           <Target className="w-4 h-4 text-white" />
-          <span className="text-xs font-bold uppercase tracking-wider text-white">Featured Success</span>
+          <span className="text-xs font-bold uppercase tracking-wider text-white">
+            Featured Success
+          </span>
         </div>
       </div>
 
@@ -413,7 +397,7 @@ function FeaturedCaseStudy({ study, isInView }: FeaturedCaseStudyProps) {
           {/* Company */}
           <h2
             className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-3 tracking-tight"
-            style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}
+            style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 700 }}
           >
             {study.company}
           </h2>
@@ -429,9 +413,7 @@ function FeaturedCaseStudy({ study, isInView }: FeaturedCaseStudyProps) {
               <AlertCircle className="w-4 h-4" />
               The Challenge
             </p>
-            <p className="text-base text-slate-600 leading-relaxed">
-              {study.problem}
-            </p>
+            <p className="text-base text-slate-600 leading-relaxed">{study.problem}</p>
           </div>
 
           {/* Solution */}
@@ -440,9 +422,7 @@ function FeaturedCaseStudy({ study, isInView }: FeaturedCaseStudyProps) {
               <Lightbulb className="w-4 h-4" />
               The Solution
             </p>
-            <p className="text-base text-slate-600 leading-relaxed">
-              {study.solution}
-            </p>
+            <p className="text-base text-slate-600 leading-relaxed">{study.solution}</p>
           </div>
         </div>
 
@@ -461,7 +441,7 @@ function FeaturedCaseStudy({ study, isInView }: FeaturedCaseStudyProps) {
             <div className="flex items-baseline gap-2">
               <span
                 className="text-6xl sm:text-7xl font-extrabold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent"
-                style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
+                style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 800 }}
               >
                 {study.roi}
               </span>
@@ -495,8 +475,12 @@ function FeaturedCaseStudy({ study, isInView }: FeaturedCaseStudyProps) {
 
                 {/* Before/After values */}
                 <div className="flex items-center justify-between mt-2 text-xs">
-                  <span className="text-slate-500">Before: <span className="font-medium">{result.before}</span></span>
-                  <span className="text-blue-600">After: <span className="font-bold">{result.after}</span></span>
+                  <span className="text-slate-500">
+                    Before: <span className="font-medium">{result.before}</span>
+                  </span>
+                  <span className="text-blue-600">
+                    After: <span className="font-bold">{result.after}</span>
+                  </span>
                 </div>
               </motion.div>
             ))}
@@ -532,13 +516,7 @@ interface CaseStudyCardProps {
   onToggleExpand: () => void;
 }
 
-function CaseStudyCard({
-  study,
-  index,
-  isInView,
-  isExpanded,
-  onToggleExpand,
-}: CaseStudyCardProps) {
+function CaseStudyCard({ study, index, isInView, isExpanded, onToggleExpand }: CaseStudyCardProps) {
   const IconComponent = industryIcons[study.industry] || Building2;
 
   return (
@@ -559,7 +537,7 @@ function CaseStudyCard({
         {/* Company */}
         <h3
           className="text-2xl font-bold text-slate-900 mb-2 tracking-tight"
-          style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 700 }}
+          style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 700 }}
         >
           {study.company}
         </h3>
@@ -582,9 +560,7 @@ function CaseStudyCard({
             <AlertCircle className="w-4 h-4" />
             Challenge
           </p>
-          <p className="text-sm text-slate-600 leading-relaxed">
-            {study.problem}
-          </p>
+          <p className="text-sm text-slate-600 leading-relaxed">{study.problem}</p>
         </div>
 
         {/* Key metric highlight */}
@@ -617,7 +593,10 @@ function CaseStudyCard({
         {study.results.length > 1 && (
           <div className="mb-6 space-y-2">
             {study.results.slice(1, isExpanded ? undefined : 3).map((result, idx) => (
-              <div key={idx} className="flex items-center justify-between text-sm py-2 border-t border-slate-100">
+              <div
+                key={idx}
+                className="flex items-center justify-between text-sm py-2 border-t border-slate-100"
+              >
                 <span className="text-slate-600">{result.metric}</span>
                 <span className="font-semibold text-blue-600">{result.improvement}</span>
               </div>
@@ -640,9 +619,7 @@ function CaseStudyCard({
                   <Lightbulb className="w-4 h-4" />
                   Solution
                 </p>
-                <p className="text-sm text-slate-600 leading-relaxed">
-                  {study.solution}
-                </p>
+                <p className="text-sm text-slate-600 leading-relaxed">{study.solution}</p>
               </div>
             </motion.div>
           )}

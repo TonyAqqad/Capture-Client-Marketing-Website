@@ -15,7 +15,7 @@ import {
   Mountain,
   Building2,
   Home,
-  type LucideIcon
+  type LucideIcon,
 } from "lucide-react";
 
 interface CRMPlatform {
@@ -32,39 +32,39 @@ const crmPlatforms: CRMPlatform[] = [
     description: "Most popular real estate CRM with 200+ integrations",
     logo: "supervisor_account",
     features: ["Instant lead sync", "Auto-tagging", "Smart routing"],
-    popular: true
+    popular: true,
   },
   {
     name: "kvCORE / BoldTrail",
     description: "5x conversion rates with smart automation",
     logo: "rocket_launch",
     features: ["Behavior tracking", "Lead scoring", "Drip campaigns"],
-    popular: true
+    popular: true,
   },
   {
     name: "Sierra Interactive",
     description: "$499/mo platform with 90+ integrations",
     logo: "terrain",
-    features: ["IDX websites", "Market reports", "Text automation"]
+    features: ["IDX websites", "Market reports", "Text automation"],
   },
   {
     name: "BoomTown",
     description: "Enterprise-grade for top-producing teams",
     logo: "business",
-    features: ["Predictive AI", "Team management", "ROI tracking"]
+    features: ["Predictive AI", "Team management", "ROI tracking"],
   },
   {
     name: "Zillow Premier Agent",
     description: "Direct integration with Zillow leads",
     logo: "home_work",
-    features: ["Instant response", "Lead prioritization", "Call tracking"]
+    features: ["Instant response", "Lead prioritization", "Call tracking"],
   },
   {
     name: "Realtor.com",
     description: "Seamless connection to your listings",
     logo: "real_estate_agent",
-    features: ["Auto-sync", "Lead capture", "Performance analytics"]
-  }
+    features: ["Auto-sync", "Lead capture", "Performance analytics"],
+  },
 ];
 
 // Icon mapping for CRM logos
@@ -74,7 +74,7 @@ const iconMap: Record<string, LucideIcon> = {
   terrain: Mountain,
   business: Building2,
   home_work: Home,
-  real_estate_agent: Building2
+  real_estate_agent: Building2,
 };
 
 export function CRMIntegrations() {
@@ -85,7 +85,7 @@ export function CRMIntegrations() {
     <section
       ref={containerRef}
       className="py-16 sm:py-20 lg:py-28 relative overflow-hidden"
-      style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+      style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
     >
       {/* Background gradient */}
       <div className="absolute inset-0 bg-slate-50" />
@@ -101,15 +101,23 @@ export function CRMIntegrations() {
         >
           <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/70 backdrop-blur-xl border border-slate-200 mb-6">
             <RefreshCw className="text-blue-600 w-5 h-5" />
-            <span className="text-sm text-blue-600 uppercase tracking-wide" style={{ fontWeight: 600 }}>
+            <span
+              className="text-sm text-blue-600 uppercase tracking-wide"
+              style={{ fontWeight: 600 }}
+            >
               Seamless Integration
             </span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-6">
             <span style={{ fontWeight: 200 }}>Works With Your </span>
-            <span className="text-blue-600" style={{ fontWeight: 800 }}>Existing CRM</span>
+            <span className="text-blue-600" style={{ fontWeight: 800 }}>
+              Existing CRM
+            </span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed" style={{ fontWeight: 300 }}>
+          <p
+            className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed"
+            style={{ fontWeight: 300 }}
+          >
             Leads flow directly into your workflow. Automatic lead scoring. Zero manual entry.
           </p>
         </motion.div>
@@ -136,7 +144,10 @@ export function CRMIntegrations() {
                 {crm.popular && (
                   <div className="absolute top-4 right-4">
                     <div className="px-3 py-1 bg-blue-600 rounded-full">
-                      <span className="text-xs text-white uppercase tracking-wider" style={{ fontWeight: 700 }}>
+                      <span
+                        className="text-xs text-white uppercase tracking-wider"
+                        style={{ fontWeight: 700 }}
+                      >
                         Popular
                       </span>
                     </div>
@@ -152,24 +163,19 @@ export function CRMIntegrations() {
                 </div>
 
                 {/* Name */}
-                <h3 className="text-xl font-bold text-slate-900 mb-2">
-                  {crm.name}
-                </h3>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">{crm.name}</h3>
 
                 {/* Description */}
-                <p className="text-slate-600 text-sm mb-4 leading-relaxed">
-                  {crm.description}
-                </p>
+                <p className="text-slate-600 text-sm mb-4 leading-relaxed">{crm.description}</p>
 
                 {/* Features */}
                 <div className="space-y-2">
                   {crm.features.map((feature, fIndex) => (
-                    <div
-                      key={fIndex}
-                      className="flex items-center gap-2 text-sm"
-                    >
+                    <div key={fIndex} className="flex items-center gap-2 text-sm">
                       <CheckCircle className="text-blue-600 w-4 h-4" />
-                      <span className="text-slate-700" style={{ fontWeight: 400 }}>{feature}</span>
+                      <span className="text-slate-700" style={{ fontWeight: 400 }}>
+                        {feature}
+                      </span>
                     </div>
                   ))}
                 </div>

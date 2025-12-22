@@ -123,8 +123,10 @@ export default function HomeServicesClient() {
               className="text-display-lg lg:text-hero-xl font-display font-bold text-slate-900 mb-6 leading-tight"
             >
               Stop Losing{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">$69K/Year</span>
-              {" "}to Missed Calls
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                $69K/Year
+              </span>{" "}
+              to Missed Calls
             </motion.h1>
 
             {/* Subheadline */}
@@ -134,7 +136,8 @@ export default function HomeServicesClient() {
               transition={{ delay: 0.2 }}
               className="text-lg sm:text-xl lg:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed"
             >
-              AI Voice Agents That Capture Every Emergency Call, 24/7. Never miss a 3 AM burst pipe emergency or Saturday AC breakdown call again.
+              AI Voice Agents That Capture Every Emergency Call, 24/7. Never miss a 3 AM burst pipe
+              emergency or Saturday AC breakdown call again.
             </motion.p>
 
             {/* Money counter */}
@@ -185,7 +188,8 @@ export default function HomeServicesClient() {
               The $69K Problem Every Contractor Faces
             </h2>
             <p className="text-xl text-slate-600 leading-relaxed">
-              27% of contractor calls go unanswered. 85% of missed callers NEVER call back. They call your competitor instead.
+              27% of contractor calls go unanswered. 85% of missed callers NEVER call back. They
+              call your competitor instead.
             </p>
           </div>
 
@@ -280,7 +284,7 @@ export default function HomeServicesClient() {
 
           {/* Trade content */}
           <AnimatePresence mode="wait">
-            {TRADES.filter(t => t.id === activeTrade).map((trade) => (
+            {TRADES.filter((t) => t.id === activeTrade).map((trade) => (
               <motion.div
                 key={trade.id}
                 initial={{ opacity: 0, y: 20 }}
@@ -289,19 +293,21 @@ export default function HomeServicesClient() {
                 transition={{ duration: 0.3 }}
                 className="max-w-4xl mx-auto"
               >
-                <div className={`bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-8 sm:p-12 rounded-3xl bg-gradient-to-br ${trade.color}`}>
+                <div
+                  className={`bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-8 sm:p-12 rounded-3xl bg-gradient-to-br ${trade.color}`}
+                >
                   <div className="grid md:grid-cols-2 gap-8 items-center">
                     <div>
                       <div className="text-6xl mb-4">{trade.icon}</div>
                       <h3 className="text-3xl font-bold text-slate-900 mb-4">
                         {trade.name} Emergency: {trade.scenario}
                       </h3>
-                      <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                        {trade.pain}
-                      </p>
+                      <p className="text-lg text-slate-600 mb-6 leading-relaxed">{trade.pain}</p>
                       <div className="bg-white/50 backdrop-blur-xl border border-slate-200 p-6 rounded-xl">
                         <div className="text-sm text-slate-600 mb-2">Average Job Value</div>
-                        <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">{trade.value}</div>
+                        <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                          {trade.value}
+                        </div>
                       </div>
                     </div>
 
@@ -313,7 +319,9 @@ export default function HomeServicesClient() {
                           </div>
                           <div>
                             <h4 className="font-bold text-slate-900 mb-1">AI Answers in 2 Rings</h4>
-                            <p className="text-sm text-slate-600">Professional greeting, captures emergency details</p>
+                            <p className="text-sm text-slate-600">
+                              Professional greeting, captures emergency details
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -325,7 +333,9 @@ export default function HomeServicesClient() {
                           </div>
                           <div>
                             <h4 className="font-bold text-slate-900 mb-1">Qualifies Urgency</h4>
-                            <p className="text-sm text-slate-600">Emergency vs. scheduled appointment</p>
+                            <p className="text-sm text-slate-600">
+                              Emergency vs. scheduled appointment
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -337,7 +347,9 @@ export default function HomeServicesClient() {
                           </div>
                           <div>
                             <h4 className="font-bold text-slate-900 mb-1">Books Into Calendar</h4>
-                            <p className="text-sm text-slate-600">Syncs with ServiceTitan/Housecall Pro</p>
+                            <p className="text-sm text-slate-600">
+                              Syncs with ServiceTitan/Housecall Pro
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -401,7 +413,8 @@ export default function HomeServicesClient() {
 
           <div className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-8 rounded-2xl max-w-3xl mx-auto text-center">
             <p className="text-lg text-slate-700 mb-4">
-              <strong className="text-blue-600">Jobs booked directly into your schedule.</strong> Technician dispatched automatically. Zero manual data entry.
+              <strong className="text-blue-600">Jobs booked directly into your schedule.</strong>{" "}
+              Technician dispatched automatically. Zero manual data entry.
             </p>
           </div>
         </div>
@@ -468,7 +481,9 @@ export default function HomeServicesClient() {
                   />
                   <div className="flex justify-between mt-2">
                     <span className="text-slate-600">$200</span>
-                    <span className="text-2xl font-bold text-blue-600">${avgJobValue.toLocaleString()}</span>
+                    <span className="text-2xl font-bold text-blue-600">
+                      ${avgJobValue.toLocaleString()}
+                    </span>
                     <span className="text-slate-600">$5,000</span>
                   </div>
                 </div>
@@ -601,19 +616,22 @@ export default function HomeServicesClient() {
               {
                 name: "Mike Johnson",
                 trade: "HVAC Contractor - Nashville",
-                quote: "Captured 127 emergency calls in the first 90 days. That's $142K in revenue I would have lost.",
+                quote:
+                  "Captured 127 emergency calls in the first 90 days. That's $142K in revenue I would have lost.",
                 revenue: "$142K",
               },
               {
                 name: "Sarah Martinez",
                 trade: "Plumbing - Knoxville",
-                quote: "The AI answered a 2 AM burst pipe call. $1,800 job. Paid for itself 3 times over in one night.",
+                quote:
+                  "The AI answered a 2 AM burst pipe call. $1,800 job. Paid for itself 3 times over in one night.",
                 revenue: "$1,800",
               },
               {
                 name: "Tom Peterson",
                 trade: "Electrical - Chattanooga",
-                quote: "Storm season was insane. AI handled 200+ calls in 3 days. I couldn't have answered half of them.",
+                quote:
+                  "Storm season was insane. AI handled 200+ calls in 3 days. I couldn't have answered half of them.",
                 revenue: "$95K",
               },
             ].map((testimonial, index) => (
@@ -654,7 +672,8 @@ export default function HomeServicesClient() {
                 35-40% of Jobs Come After Hours
               </h2>
               <p className="text-xl text-slate-600">
-                Emergencies don&apos;t wait for business hours. Neither should your answering system.
+                Emergencies don&apos;t wait for business hours. Neither should your answering
+                system.
               </p>
             </div>
 
@@ -730,10 +749,13 @@ export default function HomeServicesClient() {
             >
               <h2 className="text-display-md lg:text-display-lg font-display font-bold text-slate-900 mb-6">
                 Start Capturing Emergency Calls{" "}
-                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Tonight</span>
+                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                  Tonight
+                </span>
               </h2>
               <p className="text-xl text-slate-600 mb-8 max-w-2xl mx-auto">
-                Stop losing $69K/year to missed calls. AI voice agents answer every call, qualify every lead, book every job.
+                Stop losing $69K/year to missed calls. AI voice agents answer every call, qualify
+                every lead, book every job.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
@@ -761,7 +783,8 @@ export default function HomeServicesClient() {
 
               <div className="bg-white/50 backdrop-blur-xl border border-slate-200 p-6 rounded-xl inline-block">
                 <p className="text-slate-600">
-                  <strong className="text-blue-600">Limited Spots:</strong> We only onboard 5 contractors per month to ensure quality.
+                  <strong className="text-blue-600">Limited Spots:</strong> We only onboard 5
+                  contractors per month to ensure quality.
                 </p>
               </div>
             </motion.div>

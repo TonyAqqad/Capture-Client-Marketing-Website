@@ -11,12 +11,7 @@
     "state_abbr": "VA",
     "state_full": "Virginia",
     "slug": "lynchburg-va",
-    "nearby_areas": [
-      "Forest",
-      "Madison Heights",
-      "Amherst",
-      "Bedford"
-    ],
+    "nearby_areas": ["Forest", "Madison Heights", "Amherst", "Bedford"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -203,19 +198,8 @@
     "urgency_text": "Limited spots available for Lynchburg businesses this month"
   },
   "related_pages": {
-    "other_services_in_location": [
-      "google-ads",
-      "facebook-ads"
-    ],
-    "nearby_locations": [
-      "roanoke",
-      "richmond",
-      "charlottesville"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package",
-      "enterprise-package"
-    ]
+    "other_services_in_location": ["google-ads", "facebook-ads"],
+    "nearby_locations": ["roanoke", "richmond", "charlottesville"],
+    "packages": ["starter-package", "growth-package", "enterprise-package"]
   }
 }

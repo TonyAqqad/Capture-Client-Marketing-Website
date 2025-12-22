@@ -15,63 +15,75 @@ interface IndustryIntegrationsProps {
 }
 
 // Category color mapping for theming
-const CATEGORY_COLORS: Record<string, { gradient: string; accent: string; accentDark: string; badgeBg: string; badgeBorder: string; textHover: string; glowFrom: string; glowTo: string }> = {
-  'Professional Services': {
-    gradient: 'from-blue-500/20 to-cyan-500/20',
-    accent: 'text-blue-400',
-    accentDark: 'text-blue-600',
-    badgeBg: 'bg-blue-400/20',
-    badgeBorder: 'border-blue-400/30',
-    textHover: 'group-hover:text-blue-400',
-    glowFrom: 'from-blue-400/0 group-hover:from-blue-400/20',
-    glowTo: 'to-cyan-600/0 group-hover:to-cyan-600/10',
+const CATEGORY_COLORS: Record<
+  string,
+  {
+    gradient: string;
+    accent: string;
+    accentDark: string;
+    badgeBg: string;
+    badgeBorder: string;
+    textHover: string;
+    glowFrom: string;
+    glowTo: string;
+  }
+> = {
+  "Professional Services": {
+    gradient: "from-blue-500/20 to-cyan-500/20",
+    accent: "text-blue-400",
+    accentDark: "text-blue-600",
+    badgeBg: "bg-blue-400/20",
+    badgeBorder: "border-blue-400/30",
+    textHover: "group-hover:text-blue-400",
+    glowFrom: "from-blue-400/0 group-hover:from-blue-400/20",
+    glowTo: "to-cyan-600/0 group-hover:to-cyan-600/10",
   },
-  'Home Services': {
-    gradient: 'from-accent-500/20 to-accent-600/20',
-    accent: 'text-accent-400',
-    accentDark: 'text-accent-300',
-    badgeBg: 'bg-accent-400/20',
-    badgeBorder: 'border-accent-400/30',
-    textHover: 'group-hover:text-accent-400',
-    glowFrom: 'from-accent-400/0 group-hover:from-accent-400/20',
-    glowTo: 'to-accent-600/0 group-hover:to-accent-600/10',
+  "Home Services": {
+    gradient: "from-accent-500/20 to-accent-600/20",
+    accent: "text-accent-400",
+    accentDark: "text-accent-300",
+    badgeBg: "bg-accent-400/20",
+    badgeBorder: "border-accent-400/30",
+    textHover: "group-hover:text-accent-400",
+    glowFrom: "from-accent-400/0 group-hover:from-accent-400/20",
+    glowTo: "to-accent-600/0 group-hover:to-accent-600/10",
   },
-  'Real Estate & Property': {
-    gradient: 'from-primary-500/20 to-primary-600/20',
-    accent: 'text-primary-400',
-    accentDark: 'text-primary-300',
-    badgeBg: 'bg-primary-400/20',
-    badgeBorder: 'border-primary-400/30',
-    textHover: 'group-hover:text-primary-400',
-    glowFrom: 'from-primary-400/0 group-hover:from-primary-400/20',
-    glowTo: 'to-primary-600/0 group-hover:to-primary-600/10',
+  "Real Estate & Property": {
+    gradient: "from-primary-500/20 to-primary-600/20",
+    accent: "text-primary-400",
+    accentDark: "text-primary-300",
+    badgeBg: "bg-primary-400/20",
+    badgeBorder: "border-primary-400/30",
+    textHover: "group-hover:text-primary-400",
+    glowFrom: "from-primary-400/0 group-hover:from-primary-400/20",
+    glowTo: "to-primary-600/0 group-hover:to-primary-600/10",
   },
-  'Healthcare': {
-    gradient: 'from-cyan-500/20 to-cyan-600/20',
-    accent: 'text-cyan-400',
-    accentDark: 'text-cyan-600',
-    badgeBg: 'bg-cyan-400/20',
-    badgeBorder: 'border-cyan-400/30',
-    textHover: 'group-hover:text-cyan-400',
-    glowFrom: 'from-cyan-400/0 group-hover:from-cyan-400/20',
-    glowTo: 'to-cyan-600/0 group-hover:to-cyan-600/10',
+  Healthcare: {
+    gradient: "from-cyan-500/20 to-cyan-600/20",
+    accent: "text-cyan-400",
+    accentDark: "text-cyan-600",
+    badgeBg: "bg-cyan-400/20",
+    badgeBorder: "border-cyan-400/30",
+    textHover: "group-hover:text-cyan-400",
+    glowFrom: "from-cyan-400/0 group-hover:from-cyan-400/20",
+    glowTo: "to-cyan-600/0 group-hover:to-cyan-600/10",
   },
-  'Hospitality': {
-    gradient: 'from-blue-500/20 to-cyan-600/20',
-    accent: 'text-blue-400',
-    accentDark: 'text-blue-600',
-    badgeBg: 'bg-blue-400/20',
-    badgeBorder: 'border-blue-400/30',
-    textHover: 'group-hover:text-blue-400',
-    glowFrom: 'from-blue-400/0 group-hover:from-blue-400/20',
-    glowTo: 'to-cyan-600/0 group-hover:to-cyan-600/10',
+  Hospitality: {
+    gradient: "from-blue-500/20 to-cyan-600/20",
+    accent: "text-blue-400",
+    accentDark: "text-blue-600",
+    badgeBg: "bg-blue-400/20",
+    badgeBorder: "border-blue-400/30",
+    textHover: "group-hover:text-blue-400",
+    glowFrom: "from-blue-400/0 group-hover:from-blue-400/20",
+    glowTo: "to-cyan-600/0 group-hover:to-cyan-600/10",
   },
 };
 
 export function IndustryIntegrations({ industry, maxDisplay = 6 }: IndustryIntegrationsProps) {
   // Get full integration data from slugs
   const integrations = industry.relatedIntegrations
-    .map(slug => getIntegrationBySlug(slug))
+    .map((slug) => getIntegrationBySlug(slug))
     .filter((integration): integration is Integration => integration !== undefined)
     .slice(0, maxDisplay);
 
@@ -79,7 +91,7 @@ export function IndustryIntegrations({ industry, maxDisplay = 6 }: IndustryInteg
     return null;
   }
 
-  const colors = CATEGORY_COLORS[industry.category] || CATEGORY_COLORS['Professional Services'];
+  const colors = CATEGORY_COLORS[industry.category] || CATEGORY_COLORS["Professional Services"];
 
   return (
     <section className="py-16 md:py-20 bg-gradient-to-b from-white to-slate-50">
@@ -88,13 +100,14 @@ export function IndustryIntegrations({ industry, maxDisplay = 6 }: IndustryInteg
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              Seamless{' '}
+              Seamless{" "}
               <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
                 Integrations
               </span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Connect with the tools you already use. Our AI voice agent integrates seamlessly with your existing {industry.category.toLowerCase()} software.
+              Connect with the tools you already use. Our AI voice agent integrates seamlessly with
+              your existing {industry.category.toLowerCase()} software.
             </p>
           </div>
 
@@ -109,10 +122,17 @@ export function IndustryIntegrations({ industry, maxDisplay = 6 }: IndustryInteg
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <Link href={`/integrations/${integration.slug}`}>
-                  <GlassCard variant="premium" hover={true} interactive={true} className="h-full group">
+                  <GlassCard
+                    variant="premium"
+                    hover={true}
+                    interactive={true}
+                    className="h-full group"
+                  >
                     <div className="p-6">
                       {/* Logo Container */}
-                      <div className={`relative w-full h-32 mb-6 rounded-xl bg-gradient-to-br ${colors.gradient} flex items-center justify-center overflow-hidden`}>
+                      <div
+                        className={`relative w-full h-32 mb-6 rounded-xl bg-gradient-to-br ${colors.gradient} flex items-center justify-center overflow-hidden`}
+                      >
                         {/* Logo */}
                         <div className="relative w-20 h-20 flex items-center justify-center">
                           <Image
@@ -125,12 +145,16 @@ export function IndustryIntegrations({ industry, maxDisplay = 6 }: IndustryInteg
                         </div>
 
                         {/* Hover glow effect */}
-                        <div className={`absolute inset-0 bg-gradient-to-br ${colors.glowFrom} ${colors.glowTo} transition-all duration-500`} />
+                        <div
+                          className={`absolute inset-0 bg-gradient-to-br ${colors.glowFrom} ${colors.glowTo} transition-all duration-500`}
+                        />
 
                         {/* Popular Badge */}
                         {integration.popular && (
                           <div className="absolute top-3 right-3">
-                            <span className={`px-3 py-1 rounded-full text-xs font-bold ${colors.badgeBg} ${colors.accent} border ${colors.badgeBorder} backdrop-blur-sm`}>
+                            <span
+                              className={`px-3 py-1 rounded-full text-xs font-bold ${colors.badgeBg} ${colors.accent} border ${colors.badgeBorder} backdrop-blur-sm`}
+                            >
                               Popular
                             </span>
                           </div>
@@ -138,14 +162,19 @@ export function IndustryIntegrations({ industry, maxDisplay = 6 }: IndustryInteg
                       </div>
 
                       {/* Integration Name */}
-                      <h3 className={`text-xl font-bold text-slate-900 mb-3 ${colors.textHover} transition-colors duration-300`}>
+                      <h3
+                        className={`text-xl font-bold text-slate-900 mb-3 ${colors.textHover} transition-colors duration-300`}
+                      >
                         {integration.name}
                       </h3>
 
                       {/* Category Badge */}
                       <div className="mb-4">
                         <span className="px-3 py-1 rounded-full text-xs font-semibold bg-white/70 text-slate-600 border border-slate-200">
-                          {integration.category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+                          {integration.category
+                            .split("-")
+                            .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                            .join(" ")}
                         </span>
                       </div>
 
@@ -158,16 +187,18 @@ export function IndustryIntegrations({ industry, maxDisplay = 6 }: IndustryInteg
                       <div className="space-y-2 mb-6 pt-4 border-t border-slate-200">
                         {integration.keyFeatures.slice(0, 3).map((feature, idx) => (
                           <div key={idx} className="flex items-start gap-2">
-                            <CheckCircle className={`w-4 h-4 ${colors.accent} flex-shrink-0 mt-0.5`} />
-                            <span className="text-sm text-slate-600 line-clamp-1">
-                              {feature}
-                            </span>
+                            <CheckCircle
+                              className={`w-4 h-4 ${colors.accent} flex-shrink-0 mt-0.5`}
+                            />
+                            <span className="text-sm text-slate-600 line-clamp-1">{feature}</span>
                           </div>
                         ))}
                       </div>
 
                       {/* CTA */}
-                      <div className={`flex items-center ${colors.accent} font-semibold group-hover:${colors.accentDark} transition-colors duration-300`}>
+                      <div
+                        className={`flex items-center ${colors.accent} font-semibold group-hover:${colors.accentDark} transition-colors duration-300`}
+                      >
                         <span>Learn More</span>
                         <motion.div
                           className="ml-2"
@@ -180,7 +211,9 @@ export function IndustryIntegrations({ industry, maxDisplay = 6 }: IndustryInteg
                     </div>
 
                     {/* Hover overlay effect */}
-                    <div className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${colors.glowFrom} ${colors.glowTo} transition-all duration-500 pointer-events-none`} />
+                    <div
+                      className={`absolute inset-0 rounded-2xl bg-gradient-to-br ${colors.glowFrom} ${colors.glowTo} transition-all duration-500 pointer-events-none`}
+                    />
                   </GlassCard>
                 </Link>
               </motion.div>

@@ -1,11 +1,13 @@
 # AI Voice Demo API - Quick Reference Card
 
 ## Endpoint
+
 ```
 POST /api/demo-response
 ```
 
 ## Request Body
+
 ```typescript
 {
   userMessage: string;          // Required
@@ -18,6 +20,7 @@ POST /api/demo-response
 ```
 
 ## Business Types
+
 - `plumbing` - Emergency repairs, installations
 - `dental` - Cleanings, cosmetic dentistry
 - `auto` - Oil changes, brake service
@@ -26,6 +29,7 @@ POST /api/demo-response
 - `general` - Professional services
 
 ## Response
+
 ```typescript
 {
   response: string;           // AI-generated response (under 50 words)
@@ -44,6 +48,7 @@ POST /api/demo-response
 ```
 
 ## Intents
+
 - `inquiry` - Service questions
 - `schedule` - Ready to book
 - `pricing` - Cost questions
@@ -51,16 +56,19 @@ POST /api/demo-response
 - `general` - Other conversations
 
 ## Lead Scores
+
 - **9-10**: Hot Lead (ready to convert)
 - **7-8**: Warm Lead (engaged)
 - **5-6**: Qualified Lead (interested)
 - **1-4**: Cold Lead (early stage)
 
 ## Rate Limits
+
 - 10 requests per minute per IP
 - HTTP 429 when exceeded
 
 ## Setup
+
 ```bash
 # 1. Install dependency
 npm install @anthropic-ai/sdk
@@ -73,6 +81,7 @@ npm run dev
 ```
 
 ## Quick Test
+
 ```bash
 curl -X POST http://localhost:3000/api/demo-response \
   -H "Content-Type: application/json" \
@@ -83,18 +92,19 @@ curl -X POST http://localhost:3000/api/demo-response \
 ```
 
 ## Usage in React
+
 ```typescript
-import type { DemoRequest, DemoResponse } from '@/types/demo';
+import type { DemoRequest, DemoResponse } from "@/types/demo";
 
 async function chat(message: string, businessType: BusinessType) {
-  const res = await fetch('/api/demo-response', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+  const res = await fetch("/api/demo-response", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       userMessage: message,
       businessType,
-      conversationHistory: []
-    } as DemoRequest)
+      conversationHistory: [],
+    } as DemoRequest),
   });
 
   const data: DemoResponse = await res.json();
@@ -103,21 +113,25 @@ async function chat(message: string, businessType: BusinessType) {
 ```
 
 ## Error Codes
+
 - **400**: Invalid request (missing required fields)
 - **429**: Rate limit exceeded
 - **200**: Success (even if Claude API fails - fallback used)
 
 ## Cost
+
 - ~$0.002 per request (0.2 cents)
 - ~$2 per 1000 requests
 
 ## Files
+
 - API: `src/app/api/demo-response/route.ts`
 - Types: `src/types/demo.ts`
 - Docs: `src/app/api/demo-response/README.md`
 - Tests: `src/app/api/demo-response/test.ts`
 
 ## Key Features
+
 - Claude 3.5 Sonnet integration
 - Business-specific contexts
 - Automatic lead qualification
@@ -130,6 +144,7 @@ async function chat(message: string, businessType: BusinessType) {
 ## Example Conversations
 
 ### Emergency (High Score)
+
 ```
 User: "I have a water leak emergency!"
 AI: "Oh no, a leak needs immediate attention. I can get someone out today.
@@ -140,6 +155,7 @@ CRM: { service: "leak repair", urgency: "high" }
 ```
 
 ### Pricing (Medium Score)
+
 ```
 User: "How much does a teeth cleaning cost?"
 AI: "New patient exams are $99, which includes X-rays and cleaning.
@@ -150,6 +166,7 @@ CRM: { service: "teeth cleaning" }
 ```
 
 ### Browsing (Low Score)
+
 ```
 User: "I'm just looking around"
 AI: "No problem! I'm here if you have any questions. What brings you in today?"
@@ -161,19 +178,23 @@ CRM: { urgency: "low" }
 ## Troubleshooting
 
 **No responses?**
+
 - Check API key in `.env.local`
 - Restart Next.js server
 - Check console for errors
 
 **Rate limited?**
+
 - Wait 60 seconds
 - Or clear IP from rate limit store
 
 **Slow responses?**
+
 - Normal: 1-2 seconds (Claude API)
 - Check network connectivity
 
 ## Production Tips
+
 1. Use Redis for rate limiting (not in-memory)
 2. Monitor API usage and costs
 3. Add request logging
@@ -181,6 +202,7 @@ CRM: { urgency: "low" }
 5. Add timeout handling (optional)
 
 ## Get Help
+
 - Full docs: `README.md`
 - API flow: `API_FLOW.md`
 - Test suite: `test.ts`

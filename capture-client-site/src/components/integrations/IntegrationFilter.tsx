@@ -22,7 +22,7 @@ export function IntegrationFilter({
           animate={{ opacity: 1, scale: 1 }}
           whileHover={{
             scale: 1.05,
-            y: -2
+            y: -2,
           }}
           whileTap={{ scale: 0.95 }}
           transition={{
@@ -30,7 +30,7 @@ export function IntegrationFilter({
             delay: index * 0.05,
             type: "spring",
             stiffness: 400,
-            damping: 25
+            damping: 25,
           }}
           onClick={() => onCategoryChange(category)}
           className={`
@@ -59,8 +59,7 @@ export function IntegrationFilter({
               layoutId="activeCategory"
               className="absolute inset-0 rounded-full"
               style={{
-                background:
-                  "linear-gradient(135deg, rgb(37, 99, 235) 0%, rgb(6, 182, 212) 100%)",
+                background: "linear-gradient(135deg, rgb(37, 99, 235) 0%, rgb(6, 182, 212) 100%)",
               }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             />

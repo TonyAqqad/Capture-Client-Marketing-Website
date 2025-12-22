@@ -10,18 +10,14 @@
     "state": "Tennessee",
     "state_abbr": "TN",
     "slug": "oak-ridge-tn",
-    "nearby_areas": [
-      "Knoxville"
-    ],
+    "nearby_areas": ["Knoxville"],
     "service_area_radius": "20 miles"
   },
   "seo": {
     "page_title": "Voice AI in Oak Ridge, TN | Capture Client",
     "meta_description": "Oak Ridge businesses automate calls with Voice AI. Call 865-346-6111!",
     "h1_heading": "Voice AI in Oak Ridge, Tennessee",
-    "keywords": [
-      "voice ai oak-ridge"
-    ],
+    "keywords": ["voice ai oak-ridge"],
     "canonical_url": "/voice-ai-oak-ridge-tn"
   },
   "hero": {
@@ -78,10 +74,7 @@
   ],
   "service_area": {
     "heading": "Serving Oak Ridge",
-    "areas_list": [
-      "Oak Ridge",
-      "Knoxville"
-    ]
+    "areas_list": ["Oak Ridge", "Knoxville"]
   },
   "local_testimonials": [
     {
@@ -114,11 +107,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "voice-ai-knoxville-tn"
-    ],
-    "packages": [
-      "starter-package"
-    ]
+    "nearby_locations": ["voice-ai-knoxville-tn"],
+    "packages": ["starter-package"]
   }
 }

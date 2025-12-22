@@ -14,7 +14,7 @@
  * Uses both userAgent and platform checks for reliability
  */
 export function isIOSDevice(): boolean {
-  if (typeof window === 'undefined' || typeof navigator === 'undefined') {
+  if (typeof window === "undefined" || typeof navigator === "undefined") {
     return false;
   }
 
@@ -26,9 +26,7 @@ export function isIOSDevice(): boolean {
   const isIOSPlatform = /iphone|ipad|ipod/.test(navigator.platform.toLowerCase());
 
   // Check for iPad in Desktop mode (iOS 13+)
-  const isIPadDesktopMode =
-    navigator.maxTouchPoints > 1 &&
-    /macintosh/.test(userAgent);
+  const isIPadDesktopMode = navigator.maxTouchPoints > 1 && /macintosh/.test(userAgent);
 
   return isIOSUserAgent || isIOSPlatform || isIPadDesktopMode;
 }
@@ -42,7 +40,7 @@ interface NavigatorWithMemory extends Navigator {
  * Detects if device is likely low-powered (iPhone SE, older models)
  */
 export function isLowPowerDevice(): boolean {
-  if (typeof window === 'undefined' || typeof navigator === 'undefined') {
+  if (typeof window === "undefined" || typeof navigator === "undefined") {
     return false;
   }
 
@@ -68,9 +66,9 @@ export function isLowPowerDevice(): boolean {
  * Checks if user has enabled reduced motion preference
  */
 export function prefersReducedMotion(): boolean {
-  if (typeof window === 'undefined') return false;
+  if (typeof window === "undefined") return false;
 
-  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
 // ============================================================================
@@ -143,7 +141,7 @@ export function getOptimalAnimationConfig(): AnimationConfig {
 
 // Framer Motion transition type
 interface MotionTransition {
-  type?: 'spring' | 'tween' | 'keyframes' | 'inertia';
+  type?: "spring" | "tween" | "keyframes" | "inertia";
   duration?: number;
   ease?: string | number[];
   stiffness?: number;
@@ -162,11 +160,11 @@ export function getIOSOptimizedTransition(
   if (!isIOS) return defaultTransition;
 
   // Convert spring animations to tween for iOS
-  if (defaultTransition.type === 'spring') {
+  if (defaultTransition.type === "spring") {
     return {
-      type: 'tween',
+      type: "tween",
       duration: 0.3,
-      ease: 'easeOut',
+      ease: "easeOut",
     };
   }
 
@@ -269,7 +267,7 @@ export function createIOSOptimizedObserver(
   const options: IntersectionObserverInit = {
     // INCREASED: Use larger root margin to trigger animations earlier
     // This gives the observer more time to fire before element is fully in view
-    rootMargin: isIOS ? '200px' : '150px',
+    rootMargin: isIOS ? "200px" : "150px",
     // INCREASED: Higher threshold (25%) so fast scroll doesn't miss elements
     // Previous 5% was too low - elements would scroll past before observer fired
     threshold: isIOS ? 0.25 : 0.2,
@@ -286,21 +284,16 @@ export function createIOSOptimizedObserver(
  * Returns safe will-change value for iOS
  * iOS allocates extra memory for will-change, so use sparingly
  */
-export function getIOSSafeWillChange(
-  properties: string[],
-  isIOS: boolean
-): string {
+export function getIOSSafeWillChange(properties: string[], isIOS: boolean): string {
   if (!isIOS) {
-    return properties.join(', ');
+    return properties.join(", ");
   }
 
   // On iOS, only use will-change for transform and opacity
   // Remove it immediately after animation completes
-  const safePropsiOS = properties.filter(prop =>
-    prop === 'transform' || prop === 'opacity'
-  );
+  const safePropsiOS = properties.filter((prop) => prop === "transform" || prop === "opacity");
 
-  return safePropsiOS.length > 0 ? safePropsiOS.join(', ') : 'auto';
+  return safePropsiOS.length > 0 ? safePropsiOS.join(", ") : "auto";
 }
 
 /**
@@ -311,14 +304,14 @@ export function getGPUAccelerationStyle(isIOS: boolean): React.CSSProperties {
   if (isIOS) {
     // Use translate3d(0,0,0) for GPU acceleration without will-change
     return {
-      transform: 'translate3d(0, 0, 0)',
-      backfaceVisibility: 'hidden',
+      transform: "translate3d(0, 0, 0)",
+      backfaceVisibility: "hidden",
       perspective: 1000,
     };
   }
 
   return {
-    willChange: 'transform',
+    willChange: "transform",
   };
 }
 
@@ -348,10 +341,7 @@ export function createSafeInterval(
  * Creates a visibility-aware interval (pauses when tab is hidden)
  * Critical for iOS battery life
  */
-export function createVisibilityAwareInterval(
-  callback: () => void,
-  delay: number
-): () => void {
+export function createVisibilityAwareInterval(callback: () => void, delay: number): () => void {
   let intervalId: NodeJS.Timeout | null = null;
   let isPaused = false;
 
@@ -382,13 +372,13 @@ export function createVisibilityAwareInterval(
     }
   };
 
-  document.addEventListener('visibilitychange', handleVisibilityChange);
+  document.addEventListener("visibilitychange", handleVisibilityChange);
   start();
 
   // Return cleanup function
   return () => {
     pause();
-    document.removeEventListener('visibilitychange', handleVisibilityChange);
+    document.removeEventListener("visibilitychange", handleVisibilityChange);
   };
 }
 
@@ -400,7 +390,7 @@ export function createVisibilityAwareInterval(
  * Logs performance warning if animation causes frame drops (iOS debug)
  */
 export function monitorFrameRate(componentName: string): () => void {
-  if (typeof window === 'undefined' || !isIOSDevice()) {
+  if (typeof window === "undefined" || !isIOSDevice()) {
     return () => {};
   }
 

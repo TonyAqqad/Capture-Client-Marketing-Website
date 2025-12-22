@@ -18,7 +18,7 @@ import {
   Target,
   ArrowRight,
   Star,
-  Sparkles
+  Sparkles,
 } from "lucide-react";
 
 // Studio types with detailed scenarios
@@ -30,7 +30,7 @@ const STUDIO_TYPES = [
     value: "$200/mo",
     scenario: "Adult trial inquiry",
     pain: "Adult wants to try BJJ. Calls during 6 PM class. Coach rolling on the mat. Lead signs up at competing gym.",
-    color: "from-blue-500 to-cyan-500"
+    color: "from-blue-500 to-cyan-500",
   },
   {
     id: "karate",
@@ -39,7 +39,7 @@ const STUDIO_TYPES = [
     value: "$150/mo",
     scenario: "Parent inquiry for child",
     pain: "Mom researching karate for her 8-year-old. Calls during kids class. No answer. She finds another dojo.",
-    color: "from-cyan-500 to-blue-600"
+    color: "from-cyan-500 to-blue-600",
   },
   {
     id: "mma",
@@ -48,7 +48,7 @@ const STUDIO_TYPES = [
     value: "$180/mo",
     scenario: "Evening class inquiry",
     pain: "Young professional wants MMA after work. 7 PM call. All trainers coaching. Lead joins competing gym.",
-    color: "from-purple-500 to-pink-600"
+    color: "from-purple-500 to-pink-600",
   },
   {
     id: "kids",
@@ -57,8 +57,8 @@ const STUDIO_TYPES = [
     value: "$175/mo",
     scenario: "After-school program",
     pain: "Parent wants after-school martial arts. Calls during their lunch (your peak kid class time). Lost enrollment.",
-    color: "from-orange-500 to-red-600"
-  }
+    color: "from-orange-500 to-red-600",
+  },
 ];
 
 // Integration platforms
@@ -67,7 +67,7 @@ const INTEGRATIONS = [
   { name: "Zen Planner", logo: "ZP" },
   { name: "Spark Membership", logo: "SM" },
   { name: "iClassPro", logo: "iC" },
-  { name: "PerfectMind", logo: "PM" }
+  { name: "PerfectMind", logo: "PM" },
 ];
 
 // Testimonials
@@ -75,24 +75,27 @@ const TESTIMONIALS = [
   {
     name: "Master David Kim",
     business: "Elite Taekwondo - Dallas",
-    quote: "AI answered 67 parent calls in the first month while I was teaching. That's 67 families I would have missed.",
+    quote:
+      "AI answered 67 parent calls in the first month while I was teaching. That's 67 families I would have missed.",
     revenue: "$12K MRR",
-    image: "DK"
+    image: "DK",
   },
   {
     name: "Coach Marcus Silva",
     business: "Brazilian Top Team - Houston",
-    quote: "Evening BJJ classes are packed. AI handles every call. 40% increase in adult enrollment.",
+    quote:
+      "Evening BJJ classes are packed. AI handles every call. 40% increase in adult enrollment.",
     revenue: "$8K/mo",
-    image: "MS"
+    image: "MS",
   },
   {
     name: "Sensei Jennifer Park",
     business: "Kids Karate Academy - Phoenix",
-    quote: "Parents love that we 'always answer.' They don't know it's AI. They just know we're professional.",
+    quote:
+      "Parents love that we 'always answer.' They don't know it's AI. They just know we're professional.",
     revenue: "$156K/yr",
-    image: "JP"
-  }
+    image: "JP",
+  },
 ];
 
 export default function MartialArtsClient() {
@@ -123,7 +126,7 @@ export default function MartialArtsClient() {
         setLostRevenue(targetRevenue);
         clearInterval(timer);
       } else {
-        setAnimatedRevenue(prev => Math.round(prev + increment));
+        setAnimatedRevenue((prev) => Math.round(prev + increment));
       }
     }, duration / steps);
 
@@ -132,7 +135,6 @@ export default function MartialArtsClient() {
 
   return (
     <div className="min-h-screen bg-white">
-
       {/* HERO SECTION */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Aurora Background */}
@@ -145,12 +147,12 @@ export default function MartialArtsClient() {
             scale: [1, 1.2, 1],
             opacity: [0.2, 0.3, 0.2],
             x: [0, 50, 0],
-            y: [0, 30, 0]
+            y: [0, 30, 0],
           }}
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
         >
           <div className="w-full h-full bg-gradient-radial from-blue-200/60 via-cyan-100/30 to-transparent blur-3xl" />
@@ -159,7 +161,6 @@ export default function MartialArtsClient() {
         {/* Content */}
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
           <div className="max-w-5xl mx-auto text-center">
-
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -188,8 +189,8 @@ export default function MartialArtsClient() {
                 transition={{ duration: 0.5, delay: 0.4, ease: "backOut" }}
               >
                 $48K/Year
-              </motion.span>
-              {" "}to Unanswered Parent Calls
+              </motion.span>{" "}
+              to Unanswered Parent Calls
             </motion.h1>
 
             {/* Subheadline */}
@@ -225,9 +226,7 @@ export default function MartialArtsClient() {
               >
                 ${animatedRevenue.toLocaleString()}
               </motion.div>
-              <div className="text-xs text-slate-600 mt-2">
-                From missed calls during class time
-              </div>
+              <div className="text-xs text-slate-600 mt-2">From missed calls during class time</div>
             </motion.div>
 
             {/* CTA Buttons */}
@@ -312,10 +311,15 @@ export default function MartialArtsClient() {
           >
             <h2 className="text-display-md font-display font-bold text-slate-900 mb-6">
               How Many Families Are You Losing{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">While You're on the Mat?</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                While You're on the Mat?
+              </span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Parents call during class. <span className="text-slate-900 font-semibold">70% of enrollments start with a phone call.</span>
+              Parents call during class.{" "}
+              <span className="text-slate-900 font-semibold">
+                70% of enrollments start with a phone call.
+              </span>
             </p>
           </motion.div>
 
@@ -326,23 +330,26 @@ export default function MartialArtsClient() {
                 step: "1",
                 icon: PhoneCall,
                 title: "Parent Calls During Class",
-                description: "Mom calls at 5 PM about karate for her 7-year-old. You're teaching 20 kids on the mat.",
-                color: "text-red-400"
+                description:
+                  "Mom calls at 5 PM about karate for her 7-year-old. You're teaching 20 kids on the mat.",
+                color: "text-red-400",
               },
               {
                 step: "2",
                 icon: MessageSquare,
                 title: "Voicemail or No Answer",
-                description: "Call goes to voicemail. Parent gets frustrated. She's comparing 3 studios right now.",
-                color: "text-orange-400"
+                description:
+                  "Call goes to voicemail. Parent gets frustrated. She's comparing 3 studios right now.",
+                color: "text-orange-400",
               },
               {
                 step: "3",
                 icon: TrendingUp,
                 title: "Child Enrolls Elsewhere",
-                description: "Competitor answered. They booked a trial. You lost $3,600 lifetime value.",
-                color: "text-blue-500"
-              }
+                description:
+                  "Competitor answered. They booked a trial. You lost $3,600 lifetime value.",
+                color: "text-blue-500",
+              },
             ].map((item, index) => (
               <motion.div
                 key={item.step}
@@ -365,12 +372,8 @@ export default function MartialArtsClient() {
                 <motion.div whileHover={{ scale: 1.1, rotate: 5 }} transition={{ duration: 0.3 }}>
                   <item.icon className={`w-12 h-12 ${item.color} mb-4`} />
                 </motion.div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-slate-600 leading-relaxed">
-                  {item.description}
-                </p>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -391,7 +394,9 @@ export default function MartialArtsClient() {
           >
             <h2 className="text-display-md font-display font-bold text-slate-900 mb-4">
               Built for Every{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Martial Arts Discipline</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                Martial Arts Discipline
+              </span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               See how AI saves enrollments across different martial arts programs
@@ -411,9 +416,10 @@ export default function MartialArtsClient() {
                 whileHover={{
                   scale: 1.05,
                   y: -2,
-                  boxShadow: selectedStudio.id === studio.id
-                    ? "0 10px 40px rgba(212, 175, 55, 0.5)"
-                    : "0 5px 20px rgba(255, 255, 255, 0.1)"
+                  boxShadow:
+                    selectedStudio.id === studio.id
+                      ? "0 10px 40px rgba(212, 175, 55, 0.5)"
+                      : "0 5px 20px rgba(255, 255, 255, 0.1)",
                 }}
                 whileTap={{ scale: 0.95 }}
                 className={`px-6 py-3 rounded-xl font-semibold transition-all ${
@@ -447,9 +453,7 @@ export default function MartialArtsClient() {
               <div className="flex items-start gap-6 mb-6">
                 <div className="text-6xl">{selectedStudio.icon}</div>
                 <div className="flex-1">
-                  <h3 className="text-3xl font-bold text-slate-900 mb-2">
-                    {selectedStudio.name}
-                  </h3>
+                  <h3 className="text-3xl font-bold text-slate-900 mb-2">{selectedStudio.name}</h3>
                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-200">
                     <DollarSign className="w-5 h-5 text-blue-600" />
                     <span className="text-blue-600 font-bold">{selectedStudio.value}</span>
@@ -462,9 +466,7 @@ export default function MartialArtsClient() {
                 <div className="text-sm font-semibold text-red-600 mb-2 uppercase">
                   {selectedStudio.scenario}
                 </div>
-                <p className="text-slate-900 leading-relaxed">
-                  {selectedStudio.pain}
-                </p>
+                <p className="text-slate-900 leading-relaxed">{selectedStudio.pain}</p>
               </div>
 
               <div className="bg-green-50 border-l-4 border-green-500 p-6 rounded-lg">
@@ -474,7 +476,10 @@ export default function MartialArtsClient() {
                 </div>
                 <p className="text-slate-900 leading-relaxed">
                   AI answers instantly. Parent feels heard. Trial class booked in 60 seconds.
-                  Student enrolls. <span className="font-bold text-blue-600">You capture the {selectedStudio.value} monthly revenue.</span>
+                  Student enrolls.{" "}
+                  <span className="font-bold text-blue-600">
+                    You capture the {selectedStudio.value} monthly revenue.
+                  </span>
                 </p>
               </div>
             </motion.div>
@@ -502,7 +507,9 @@ export default function MartialArtsClient() {
             </div>
             <h2 className="text-display-md font-display font-bold text-slate-900 mb-4">
               Syncs With Your{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Existing Software</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                Existing Software
+              </span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Trial classes and enrollments sync automatically to your member management system
@@ -566,7 +573,9 @@ export default function MartialArtsClient() {
           >
             <h2 className="text-display-md font-display font-bold text-slate-900 mb-4">
               Calculate Your{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Lost Revenue</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                Lost Revenue
+              </span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               See how much money missed calls cost your dojo
@@ -586,9 +595,7 @@ export default function MartialArtsClient() {
                 <label className="text-lg font-semibold text-slate-900">
                   Monthly Parent Inquiries
                 </label>
-                <span className="text-3xl font-bold text-blue-600">
-                  {monthlyInquiries}
-                </span>
+                <span className="text-3xl font-bold text-blue-600">{monthlyInquiries}</span>
               </div>
               <input
                 type="range"
@@ -610,9 +617,7 @@ export default function MartialArtsClient() {
                 <label className="text-lg font-semibold text-slate-900">
                   Average Monthly Tuition
                 </label>
-                <span className="text-3xl font-bold text-blue-600">
-                  ${membershipValue}
-                </span>
+                <span className="text-3xl font-bold text-blue-600">${membershipValue}</span>
               </div>
               <input
                 type="range"
@@ -647,16 +652,16 @@ export default function MartialArtsClient() {
               {[
                 {
                   value: Math.round(monthlyInquiries * 0.35),
-                  label: "Missed calls/month"
+                  label: "Missed calls/month",
                 },
                 {
                   value: Math.round(monthlyInquiries * 0.35 * 0.7),
-                  label: "Lost trials/month"
+                  label: "Lost trials/month",
                 },
                 {
                   value: `$${(membershipValue * 21).toLocaleString()}`,
-                  label: "Avg lifetime value"
-                }
+                  label: "Avg lifetime value",
+                },
               ].map((stat, index) => (
                 <motion.div
                   key={stat.label}
@@ -676,9 +681,7 @@ export default function MartialArtsClient() {
                   >
                     {stat.value}
                   </motion.div>
-                  <div className="text-sm text-slate-600">
-                    {stat.label}
-                  </div>
+                  <div className="text-sm text-slate-600">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -708,7 +711,9 @@ export default function MartialArtsClient() {
           >
             <h2 className="text-display-md font-display font-bold text-slate-900 mb-4">
               How It{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Works</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                Works
+              </span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               From missed call to new student in 4 simple steps
@@ -721,26 +726,30 @@ export default function MartialArtsClient() {
                 step: "1",
                 icon: PhoneCall,
                 title: "Parent/Student Calls",
-                description: "Inquiry comes in during peak class hours when you're teaching on the mat"
+                description:
+                  "Inquiry comes in during peak class hours when you're teaching on the mat",
               },
               {
                 step: "2",
                 icon: MessageSquare,
                 title: "AI Answers Like Your Best Staff",
-                description: "Professional, friendly AI answers questions about programs, belt systems, pricing, and schedule"
+                description:
+                  "Professional, friendly AI answers questions about programs, belt systems, pricing, and schedule",
               },
               {
                 step: "3",
                 icon: Calendar,
                 title: "AI Books Trial Class",
-                description: "AI schedules trial class instantly, syncs to your studio management software"
+                description:
+                  "AI schedules trial class instantly, syncs to your studio management software",
               },
               {
                 step: "4",
                 icon: Users,
                 title: "You Gain New Students",
-                description: "Family shows up for trial. You focus on teaching, not phone tag. Enrollment secured."
-              }
+                description:
+                  "Family shows up for trial. You focus on teaching, not phone tag. Enrollment secured.",
+              },
             ].map((item, index) => (
               <motion.div
                 key={item.step}
@@ -762,12 +771,8 @@ export default function MartialArtsClient() {
                 <motion.div whileHover={{ scale: 1.1, rotate: 5 }} transition={{ duration: 0.3 }}>
                   <item.icon className="w-12 h-12 text-blue-600 mb-4" />
                 </motion.div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-slate-600 leading-relaxed">
-                  {item.description}
-                </p>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">{item.title}</h3>
+                <p className="text-slate-600 leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -788,7 +793,9 @@ export default function MartialArtsClient() {
           >
             <h2 className="text-display-md font-display font-bold text-slate-900 mb-4">
               Martial Arts Studios{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Love Us</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                Love Us
+              </span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Real results from real instructors
@@ -828,9 +835,7 @@ export default function MartialArtsClient() {
                 >
                   "
                 </motion.div>
-                <p className="text-slate-900 mb-6 leading-relaxed">
-                  {testimonial.quote}
-                </p>
+                <p className="text-slate-900 mb-6 leading-relaxed">{testimonial.quote}</p>
 
                 <div className="flex items-center justify-between pt-6 border-t border-slate-200">
                   <div className="flex gap-1">
@@ -876,7 +881,9 @@ export default function MartialArtsClient() {
           >
             <h2 className="text-display-md font-display font-bold text-slate-900 mb-4">
               The Difference Is{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Night and Day</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                Night and Day
+              </span>
             </h2>
           </motion.div>
 
@@ -893,9 +900,7 @@ export default function MartialArtsClient() {
                 <div className="inline-block px-4 py-2 bg-red-100 rounded-full text-red-600 font-bold mb-4">
                   WITHOUT AI
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">
-                  Losing Students Daily
-                </h3>
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">Losing Students Daily</h3>
               </div>
 
               <ul className="space-y-4">
@@ -905,7 +910,7 @@ export default function MartialArtsClient() {
                   "Family enrolls at competing dojo",
                   "Lose $3,600 lifetime value per student",
                   "Stressed instructors juggling phones",
-                  "Inconsistent follow-up on leads"
+                  "Inconsistent follow-up on leads",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <div className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -929,9 +934,7 @@ export default function MartialArtsClient() {
                 <div className="inline-block px-4 py-2 bg-green-100 rounded-full text-green-600 font-bold mb-4">
                   WITH AI
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-2">
-                  Enrolling More Students
-                </h3>
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">Enrolling More Students</h3>
               </div>
 
               <ul className="space-y-4">
@@ -941,7 +944,7 @@ export default function MartialArtsClient() {
                   "Trial class booked instantly",
                   "Capture $3,600 lifetime value",
                   "Instructors focus on teaching",
-                  "100% consistent lead follow-up"
+                  "100% consistent lead follow-up",
                 ].map((item, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
@@ -979,7 +982,9 @@ export default function MartialArtsClient() {
             >
               <h2 className="text-display-lg lg:text-hero font-display font-bold text-slate-900 mb-6">
                 Start Enrolling More Students{" "}
-                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Tonight</span>
+                <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                  Tonight
+                </span>
               </h2>
               <p className="text-xl md:text-2xl text-slate-600 mb-10 max-w-2xl mx-auto">
                 Join 100+ martial arts studios capturing every parent inquiry with AI
@@ -1020,7 +1025,7 @@ export default function MartialArtsClient() {
               <motion.div
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-red-50 border border-red-200"
                 animate={{
-                  scale: [1, 1.02, 1]
+                  scale: [1, 1.02, 1],
                 }}
                 transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               >
@@ -1030,9 +1035,7 @@ export default function MartialArtsClient() {
                 >
                   <Clock className="w-5 h-5 text-red-600" />
                 </motion.div>
-                <span className="text-red-600 font-semibold">
-                  Limited to 8 studios per month
-                </span>
+                <span className="text-red-600 font-semibold">Limited to 8 studios per month</span>
               </motion.div>
             </motion.div>
           </motion.div>

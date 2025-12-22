@@ -65,10 +65,7 @@ export function useMobileOptimization(): MobileOptimizationConfig {
 }
 
 // Helper to get safe animation props for Framer Motion with iOS optimization
-export function getMobileAnimationProps(
-  isMobile: boolean,
-  isIOS: boolean = false
-) {
+export function getMobileAnimationProps(isMobile: boolean, isIOS: boolean = false) {
   if (isMobile) {
     return {
       initial: false,

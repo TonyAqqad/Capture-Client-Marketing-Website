@@ -2,7 +2,19 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
-import { X, Lightbulb, Rocket, TrendingUp, ShieldCheck, Clock, ArrowRight, Phone, BadgeCheck, Star, Shield } from "lucide-react";
+import {
+  X,
+  Lightbulb,
+  Rocket,
+  TrendingUp,
+  ShieldCheck,
+  Clock,
+  ArrowRight,
+  Phone,
+  BadgeCheck,
+  Star,
+  Shield,
+} from "lucide-react";
 
 export default function ExitIntentPopup() {
   const [isVisible, setIsVisible] = useState(false);
@@ -62,7 +74,7 @@ export default function ExitIntentPopup() {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
     exit: { opacity: 0 },
-    transition: { duration: 0.2 }
+    transition: { duration: 0.2 },
   };
 
   // Desktop animation (spring physics only on desktop)
@@ -70,7 +82,7 @@ export default function ExitIntentPopup() {
     initial: { opacity: 0, scale: 0.8, y: 20 },
     animate: { opacity: 1, scale: 1, y: 0 },
     exit: { opacity: 0, scale: 0.8, y: 20 },
-    transition: { type: "spring", duration: 0.5 }
+    transition: { type: "spring", duration: 0.5 },
   };
 
   // CRITICAL FIX #3: Conditional animations based on device
@@ -107,113 +119,121 @@ export default function ExitIntentPopup() {
               className="w-full max-w-2xl max-h-[90vh] overflow-y-auto relative"
               onClick={(e) => e.stopPropagation()}
             >
-            <div className="relative bg-white border border-slate-200 backdrop-blur-xl rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden">
-              {/* Close button - minimal glass */}
-              <button
-                onClick={handleClose}
-                className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-slate-50 border border-slate-200 hover:border-slate-300 hover:bg-slate-100 transition-all duration-300 backdrop-blur-sm active:scale-95"
-                aria-label="Close popup"
-              >
-                <X className="w-5 h-5 text-slate-400 hover:text-slate-600" />
-              </button>
+              <div className="relative bg-white border border-slate-200 backdrop-blur-xl rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden">
+                {/* Close button - minimal glass */}
+                <button
+                  onClick={handleClose}
+                  className="absolute top-4 right-4 z-10 w-10 h-10 flex items-center justify-center rounded-full bg-slate-50 border border-slate-200 hover:border-slate-300 hover:bg-slate-100 transition-all duration-300 backdrop-blur-sm active:scale-95"
+                  aria-label="Close popup"
+                >
+                  <X className="w-5 h-5 text-slate-400 hover:text-slate-600" />
+                </button>
 
-              {/* Content */}
-              <div className="p-6 sm:p-8 md:p-12">
-                {/* Icon - cyan gradient */}
-                <div className="flex justify-center mb-6">
-                  <div className="relative">
-                    <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-slate-200 flex items-center justify-center backdrop-blur-sm">
-                      <Lightbulb className="w-10 h-10 text-blue-600" />
+                {/* Content */}
+                <div className="p-6 sm:p-8 md:p-12">
+                  {/* Icon - cyan gradient */}
+                  <div className="flex justify-center mb-6">
+                    <div className="relative">
+                      <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 border border-slate-200 flex items-center justify-center backdrop-blur-sm">
+                        <Lightbulb className="w-10 h-10 text-blue-600" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Headline - Bricolage Grotesque with weight contrast */}
+                  <h3
+                    id="exit-popup-title"
+                    className="text-2xl sm:text-3xl md:text-4xl text-center mb-3 sm:mb-4"
+                    style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 800 }}
+                  >
+                    <span className="text-slate-400" style={{ fontWeight: 200 }}>
+                      Before You Go
+                    </span>
+                    <span className="text-slate-900">...</span>
+                  </h3>
+
+                  {/* Subheadline - value-focused */}
+                  <p className="text-base sm:text-lg text-center text-slate-600 mb-6 max-w-lg mx-auto">
+                    See how growing businesses are capturing{" "}
+                    <span className="text-blue-600 font-semibold">10x more leads</span> with
+                    AI-powered automation.
+                  </p>
+
+                  {/* Benefits list - glass styling */}
+                  <div className="space-y-3 mb-8 max-w-md mx-auto">
+                    {[
+                      { Icon: Rocket, text: "Get Started Now" },
+                      { Icon: TrendingUp, text: "Average 3x ROI in 90 days" },
+                      { Icon: ShieldCheck, text: "No long-term contract" },
+                    ].map((benefit, index) => (
+                      <motion.div
+                        key={index}
+                        initial={isMobile ? false : { opacity: 0, x: -20 }}
+                        animate={isMobile ? false : { opacity: 1, x: 0 }}
+                        transition={isMobile ? undefined : { delay: 0.2 + index * 0.1 }}
+                        className="flex items-center gap-3 text-slate-900"
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-blue-50 border border-slate-200 flex items-center justify-center flex-shrink-0">
+                          <benefit.Icon className="w-5 h-5 text-blue-600" />
+                        </div>
+                        <p className="text-sm font-semibold">{benefit.text}</p>
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  {/* Urgency element - subtle amber accent */}
+                  <div className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-xl p-4 mb-6 backdrop-blur-sm">
+                    <div className="flex items-center justify-center gap-2.5">
+                      <Clock className="w-5 h-5 text-amber-600" />
+                      <p className="text-sm font-semibold text-slate-900">
+                        <span className="text-amber-600">Limited spots</span> available for December
+                        onboarding
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* CTA Buttons - premium gradient styling */}
+                  <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                    <motion.button
+                      onClick={handleCTA}
+                      whileHover={isMobile ? undefined : { scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex-1 sm:flex-initial bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold px-6 sm:px-8 py-4 rounded-xl hover:shadow-[0_0_30px_rgba(37,99,235,0.3)] transition-all duration-300 flex items-center justify-center gap-2 min-h-[52px]"
+                    >
+                      <span className="text-sm sm:text-base">Try Our AI Now</span>
+                      <ArrowRight className="w-5 h-5" />
+                    </motion.button>
+
+                    <motion.a
+                      href="tel:865-346-6111"
+                      whileHover={isMobile ? undefined : { scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="flex-1 sm:flex-initial border border-slate-200 bg-slate-50 text-slate-900 font-bold px-6 sm:px-8 py-4 rounded-xl hover:bg-slate-100 hover:border-slate-300 transition-all duration-300 flex items-center justify-center gap-2 min-h-[52px] backdrop-blur-sm"
+                    >
+                      <Phone className="w-5 h-5 text-blue-600" />
+                      <span className="text-sm sm:text-base">Call Now</span>
+                    </motion.a>
+                  </div>
+
+                  {/* Trust badges - minimal styling */}
+                  <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 mt-6 pt-6 border-t border-slate-200">
+                    <div className="flex items-center gap-1.5">
+                      <BadgeCheck className="w-4 h-4 text-blue-600" />
+                      <span className="text-xs text-slate-600 whitespace-nowrap">500+ Clients</span>
+                    </div>
+                    <div className="hidden sm:block w-px h-4 bg-slate-200" />
+                    <div className="flex items-center gap-1.5">
+                      <Star className="w-4 h-4 text-blue-600 fill-blue-600" />
+                      <span className="text-xs text-slate-600 whitespace-nowrap">4.9/5 Rating</span>
+                    </div>
+                    <div className="hidden sm:block w-px h-4 bg-slate-200" />
+                    <div className="flex items-center gap-1.5">
+                      <Shield className="w-4 h-4 text-blue-600" />
+                      <span className="text-xs text-slate-600 whitespace-nowrap">100% Secure</span>
                     </div>
                   </div>
                 </div>
-
-                {/* Headline - Bricolage Grotesque with weight contrast */}
-                <h3 id="exit-popup-title" className="text-2xl sm:text-3xl md:text-4xl text-center mb-3 sm:mb-4" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}>
-                  <span className="text-slate-400" style={{ fontWeight: 200 }}>Before You Go</span>
-                  <span className="text-slate-900">...</span>
-                </h3>
-
-                {/* Subheadline - value-focused */}
-                <p className="text-base sm:text-lg text-center text-slate-600 mb-6 max-w-lg mx-auto">
-                  See how growing businesses are capturing{" "}
-                  <span className="text-blue-600 font-semibold">10x more leads</span> with AI-powered automation.
-                </p>
-
-                {/* Benefits list - glass styling */}
-                <div className="space-y-3 mb-8 max-w-md mx-auto">
-                  {[
-                    { Icon: Rocket, text: "Get Started Now" },
-                    { Icon: TrendingUp, text: "Average 3x ROI in 90 days" },
-                    { Icon: ShieldCheck, text: "No long-term contract" },
-                  ].map((benefit, index) => (
-                    <motion.div
-                      key={index}
-                      initial={isMobile ? false : { opacity: 0, x: -20 }}
-                      animate={isMobile ? false : { opacity: 1, x: 0 }}
-                      transition={isMobile ? undefined : { delay: 0.2 + index * 0.1 }}
-                      className="flex items-center gap-3 text-slate-900"
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-blue-50 border border-slate-200 flex items-center justify-center flex-shrink-0">
-                        <benefit.Icon className="w-5 h-5 text-blue-600" />
-                      </div>
-                      <p className="text-sm font-semibold">{benefit.text}</p>
-                    </motion.div>
-                  ))}
-                </div>
-
-                {/* Urgency element - subtle amber accent */}
-                <div className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-xl p-4 mb-6 backdrop-blur-sm">
-                  <div className="flex items-center justify-center gap-2.5">
-                    <Clock className="w-5 h-5 text-amber-600" />
-                    <p className="text-sm font-semibold text-slate-900">
-                      <span className="text-amber-600">Limited spots</span> available for December onboarding
-                    </p>
-                  </div>
-                </div>
-
-                {/* CTA Buttons - premium gradient styling */}
-                <div className="flex flex-col sm:flex-row gap-3 justify-center">
-                  <motion.button
-                    onClick={handleCTA}
-                    whileHover={isMobile ? undefined : { scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex-1 sm:flex-initial bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold px-6 sm:px-8 py-4 rounded-xl hover:shadow-[0_0_30px_rgba(37,99,235,0.3)] transition-all duration-300 flex items-center justify-center gap-2 min-h-[52px]"
-                  >
-                    <span className="text-sm sm:text-base">Try Our AI Now</span>
-                    <ArrowRight className="w-5 h-5" />
-                  </motion.button>
-
-                  <motion.a
-                    href="tel:865-346-6111"
-                    whileHover={isMobile ? undefined : { scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex-1 sm:flex-initial border border-slate-200 bg-slate-50 text-slate-900 font-bold px-6 sm:px-8 py-4 rounded-xl hover:bg-slate-100 hover:border-slate-300 transition-all duration-300 flex items-center justify-center gap-2 min-h-[52px] backdrop-blur-sm"
-                  >
-                    <Phone className="w-5 h-5 text-blue-600" />
-                    <span className="text-sm sm:text-base">Call Now</span>
-                  </motion.a>
-                </div>
-
-                {/* Trust badges - minimal styling */}
-                <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 mt-6 pt-6 border-t border-slate-200">
-                  <div className="flex items-center gap-1.5">
-                    <BadgeCheck className="w-4 h-4 text-blue-600" />
-                    <span className="text-xs text-slate-600 whitespace-nowrap">500+ Clients</span>
-                  </div>
-                  <div className="hidden sm:block w-px h-4 bg-slate-200" />
-                  <div className="flex items-center gap-1.5">
-                    <Star className="w-4 h-4 text-blue-600 fill-blue-600" />
-                    <span className="text-xs text-slate-600 whitespace-nowrap">4.9/5 Rating</span>
-                  </div>
-                  <div className="hidden sm:block w-px h-4 bg-slate-200" />
-                  <div className="flex items-center gap-1.5">
-                    <Shield className="w-4 h-4 text-blue-600" />
-                    <span className="text-xs text-slate-600 whitespace-nowrap">100% Secure</span>
-                  </div>
-                </div>
               </div>
-            </div>
             </motion.div>
           </motion.div>
         </>

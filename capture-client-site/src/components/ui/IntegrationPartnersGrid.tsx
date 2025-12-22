@@ -89,9 +89,7 @@ export function IntegrationPartnersGrid({
   className = "",
 }: IntegrationPartnersGridProps) {
   return (
-    <div
-      className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 ${className}`}
-    >
+    <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6 ${className}`}>
       {integrations.map((integration) => (
         <IntegrationCard
           key={integration.name}
@@ -113,11 +111,7 @@ interface IntegrationCardProps {
   showDescription?: boolean;
 }
 
-function IntegrationCard({
-  integration,
-  onClick,
-  showDescription = false,
-}: IntegrationCardProps) {
+function IntegrationCard({ integration, onClick, showDescription = false }: IntegrationCardProps) {
   const handleClick = () => {
     if (onClick) {
       onClick(integration);
@@ -142,11 +136,7 @@ function IntegrationCard({
       }}
       role={isInteractive ? "button" : "article"}
       tabIndex={isInteractive ? 0 : undefined}
-      aria-label={
-        isInteractive
-          ? `View ${integration.name} integration details`
-          : integration.name
-      }
+      aria-label={isInteractive ? `View ${integration.name} integration details` : integration.name}
       onKeyDown={
         isInteractive
           ? (e) => {
@@ -187,18 +177,14 @@ function IntegrationCard({
       </div>
 
       {/* Integration Name */}
-      <h4 className="font-semibold text-white mb-1 text-sm lg:text-base">
-        {integration.name}
-      </h4>
+      <h4 className="font-semibold text-white mb-1 text-sm lg:text-base">{integration.name}</h4>
 
       {/* Category Tag */}
       <p className="text-xs text-white/50 mb-2">{integration.category}</p>
 
       {/* Optional Description */}
       {showDescription && integration.description && (
-        <p className="text-xs text-white/40 leading-relaxed mt-2">
-          {integration.description}
-        </p>
+        <p className="text-xs text-white/40 leading-relaxed mt-2">{integration.description}</p>
       )}
     </motion.div>
   );

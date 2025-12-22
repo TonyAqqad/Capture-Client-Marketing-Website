@@ -67,16 +67,17 @@ export function MagneticButton({
 
     const checkMobile = () => {
       // Check for touch support OR small screen
-      const hasTouch = typeof window !== 'undefined' && ('ontouchstart' in window || navigator.maxTouchPoints > 0);
-      const isSmallScreen = typeof window !== 'undefined' && window.innerWidth < 1024;
+      const hasTouch =
+        typeof window !== "undefined" && ("ontouchstart" in window || navigator.maxTouchPoints > 0);
+      const isSmallScreen = typeof window !== "undefined" && window.innerWidth < 1024;
       setIsMobile(hasTouch || isSmallScreen);
     };
 
     checkMobile();
 
-    if (typeof window !== 'undefined') {
-      window.addEventListener('resize', checkMobile);
-      return () => window.removeEventListener('resize', checkMobile);
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", checkMobile);
+      return () => window.removeEventListener("resize", checkMobile);
     }
   }, []);
 
@@ -157,12 +158,7 @@ export function MagneticButton({
     lg: "px-8 py-4 text-lg rounded-2xl min-h-[52px]",
   };
 
-  const buttonClasses = clsx(
-    baseClasses,
-    variantClasses[variant],
-    sizeClasses[size],
-    className
-  );
+  const buttonClasses = clsx(baseClasses, variantClasses[variant], sizeClasses[size], className);
 
   // Content with shimmer effect
   const content = (
@@ -200,9 +196,7 @@ export function MagneticButton({
       ))}
 
       {/* Content */}
-      <span className="relative z-10 flex items-center gap-2">
-        {children}
-      </span>
+      <span className="relative z-10 flex items-center gap-2">{children}</span>
     </>
   );
 

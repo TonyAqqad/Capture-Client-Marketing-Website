@@ -11,18 +11,8 @@
     "keyword_slug": "automated-lead-generation"
   },
   "industry_focus": {
-    "industries": [
-      "Home Services",
-      "Healthcare",
-      "Legal",
-      "Financial Services",
-      "Education"
-    ],
-    "business_types": [
-      "Home Services companies",
-      "Healthcare companies",
-      "Legal companies"
-    ]
+    "industries": ["Home Services", "Healthcare", "Legal", "Financial Services", "Education"],
+    "business_types": ["Home Services companies", "Healthcare companies", "Legal companies"]
   },
   "seo": {
     "page_title": "Automated Lead Generation | 10x More Leads, 60% Less Work | AI + Ads",
@@ -127,13 +117,7 @@
   "nationwide_coverage": {
     "heading": "Serving Businesses Nationwide",
     "description": "We work with businesses across all 50 states from small local operations to multi-location enterprises.",
-    "regions_highlighted": [
-      "East Coast",
-      "West Coast",
-      "Midwest",
-      "South",
-      "Southwest"
-    ]
+    "regions_highlighted": ["East Coast", "West Coast", "Midwest", "South", "Southwest"]
   },
   "testimonials": [
     {
@@ -211,13 +195,7 @@
     "urgency_text": "Limited slots available for new clients"
   },
   "related_pages": {
-    "related_national_keywords": [
-      "voice-ai-small-business",
-      "lead-generation-agency"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "related_national_keywords": ["voice-ai-small-business", "lead-generation-agency"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

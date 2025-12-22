@@ -9,10 +9,8 @@ import {
   IntegrationLogo,
   IntegrationLogoGrid,
   IntegrationLogoMarquee,
-} from '@/components/IntegrationLogo';
-import {
-  getIntegrationsByCategory,
-} from '@/data/integration-logos';
+} from "@/components/IntegrationLogo";
+import { getIntegrationsByCategory } from "@/data/integration-logos";
 
 /**
  * EXAMPLE 1: Hero Section - "Integrates With Everything"
@@ -21,41 +19,32 @@ import {
  */
 export function IntegrationsHeroSection() {
   const topIntegrations = [
-    'zapier',
-    'hubspot',
-    'salesforce',
-    'calendly',
-    'slack',
-    'servicetitan',
-    'twilio',
-    'stripe',
-    'google-calendar',
-    'mailchimp',
-    'zoom',
-    'ringcentral',
+    "zapier",
+    "hubspot",
+    "salesforce",
+    "calendly",
+    "slack",
+    "servicetitan",
+    "twilio",
+    "stripe",
+    "google-calendar",
+    "mailchimp",
+    "zoom",
+    "ringcentral",
   ];
 
   return (
     <section className="py-24 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-5xl font-bold mb-4">
-          Integrates With Everything You Already Use
-        </h2>
+        <h2 className="text-5xl font-bold mb-4">Integrates With Everything You Already Use</h2>
         <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-          Capture Client seamlessly connects with your existing CRM, scheduling,
-          and communication tools—no complex setup required.
+          Capture Client seamlessly connects with your existing CRM, scheduling, and communication
+          tools—no complex setup required.
         </p>
 
-        <IntegrationLogoGrid
-          integrations={topIntegrations}
-          size="lg"
-          grayscale
-          className="mb-8"
-        />
+        <IntegrationLogoGrid integrations={topIntegrations} size="lg" grayscale className="mb-8" />
 
-        <p className="text-gray-500 mt-8">
-          Plus 5,000+ more integrations via Zapier
-        </p>
+        <p className="text-gray-500 mt-8">Plus 5,000+ more integrations via Zapier</p>
       </div>
     </section>
   );
@@ -68,26 +57,26 @@ export function IntegrationsHeroSection() {
  */
 export function IntegrationsBanner() {
   const allIntegrations = [
-    'zapier',
-    'hubspot',
-    'salesforce',
-    'calendly',
-    'slack',
-    'servicetitan',
-    'ringcentral',
-    'twilio',
-    'stripe',
-    'google-calendar',
-    'microsoft-teams',
-    'zoom',
-    'mailchimp',
-    'activecampaign',
-    'pipedrive',
-    'zoho',
-    'clio',
-    'housecall-pro',
-    'jobber',
-    'gohighlevel',
+    "zapier",
+    "hubspot",
+    "salesforce",
+    "calendly",
+    "slack",
+    "servicetitan",
+    "ringcentral",
+    "twilio",
+    "stripe",
+    "google-calendar",
+    "microsoft-teams",
+    "zoom",
+    "mailchimp",
+    "activecampaign",
+    "pipedrive",
+    "zoho",
+    "clio",
+    "housecall-pro",
+    "jobber",
+    "gohighlevel",
   ];
 
   return (
@@ -97,12 +86,7 @@ export function IntegrationsBanner() {
           Trusted Integrations
         </p>
       </div>
-      <IntegrationLogoMarquee
-        integrations={allIntegrations}
-        speed="normal"
-        size="md"
-        grayscale
-      />
+      <IntegrationLogoMarquee integrations={allIntegrations} speed="normal" size="md" grayscale />
     </section>
   );
 }
@@ -113,83 +97,51 @@ export function IntegrationsBanner() {
  * Perfect for dedicated integrations page
  */
 export function IntegrationsByCategory() {
-  const crmLogos = getIntegrationsByCategory('crm');
-  const commLogos = getIntegrationsByCategory('communication');
-  const fieldServiceLogos = getIntegrationsByCategory('fieldService');
-  const schedulingLogos = getIntegrationsByCategory('scheduling');
+  const crmLogos = getIntegrationsByCategory("crm");
+  const commLogos = getIntegrationsByCategory("communication");
+  const fieldServiceLogos = getIntegrationsByCategory("fieldService");
+  const schedulingLogos = getIntegrationsByCategory("scheduling");
 
   // Convert logo objects to keys
   const toKeys = (logos: Array<{ name: string }>) =>
     logos.map((l) =>
-      l.name.toLowerCase().replace(/\s+/g, '-').replace('google calendar', 'google-calendar')
+      l.name.toLowerCase().replace(/\s+/g, "-").replace("google calendar", "google-calendar")
     );
 
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-16">
-          Integrations Organized By Category
-        </h2>
+        <h2 className="text-4xl font-bold text-center mb-16">Integrations Organized By Category</h2>
 
         <div className="space-y-16">
           {/* CRM */}
           <div>
-            <h3 className="text-2xl font-bold mb-6 text-gray-900">
-              CRM Systems
-            </h3>
+            <h3 className="text-2xl font-bold mb-6 text-gray-900">CRM Systems</h3>
             <p className="text-gray-600 mb-8">
               Automatically sync leads to your favorite CRM platform
             </p>
-            <IntegrationLogoGrid
-              integrations={toKeys(crmLogos)}
-              size="lg"
-              grayscale
-            />
+            <IntegrationLogoGrid integrations={toKeys(crmLogos)} size="lg" grayscale />
           </div>
 
           {/* Communication */}
           <div>
-            <h3 className="text-2xl font-bold mb-6 text-gray-900">
-              Communication Platforms
-            </h3>
-            <p className="text-gray-600 mb-8">
-              Get instant notifications across all your channels
-            </p>
-            <IntegrationLogoGrid
-              integrations={toKeys(commLogos)}
-              size="lg"
-              grayscale
-            />
+            <h3 className="text-2xl font-bold mb-6 text-gray-900">Communication Platforms</h3>
+            <p className="text-gray-600 mb-8">Get instant notifications across all your channels</p>
+            <IntegrationLogoGrid integrations={toKeys(commLogos)} size="lg" grayscale />
           </div>
 
           {/* Field Service */}
           <div>
-            <h3 className="text-2xl font-bold mb-6 text-gray-900">
-              Field Service Management
-            </h3>
-            <p className="text-gray-600 mb-8">
-              Built specifically for home service businesses
-            </p>
-            <IntegrationLogoGrid
-              integrations={toKeys(fieldServiceLogos)}
-              size="lg"
-              grayscale
-            />
+            <h3 className="text-2xl font-bold mb-6 text-gray-900">Field Service Management</h3>
+            <p className="text-gray-600 mb-8">Built specifically for home service businesses</p>
+            <IntegrationLogoGrid integrations={toKeys(fieldServiceLogos)} size="lg" grayscale />
           </div>
 
           {/* Scheduling */}
           <div>
-            <h3 className="text-2xl font-bold mb-6 text-gray-900">
-              Scheduling Tools
-            </h3>
-            <p className="text-gray-600 mb-8">
-              Book appointments directly from AI voice calls
-            </p>
-            <IntegrationLogoGrid
-              integrations={toKeys(schedulingLogos)}
-              size="lg"
-              grayscale
-            />
+            <h3 className="text-2xl font-bold mb-6 text-gray-900">Scheduling Tools</h3>
+            <p className="text-gray-600 mb-8">Book appointments directly from AI voice calls</p>
+            <IntegrationLogoGrid integrations={toKeys(schedulingLogos)} size="lg" grayscale />
           </div>
         </div>
       </div>
@@ -205,46 +157,32 @@ export function IntegrationsByCategory() {
 export function FeaturedIntegrations() {
   const featured = [
     {
-      key: 'servicetitan',
-      title: 'ServiceTitan',
+      key: "servicetitan",
+      title: "ServiceTitan",
       description:
-        'Automatically create jobs, update customer records, and track revenue—all synced in real-time with ServiceTitan.',
-      benefits: [
-        'Auto-create jobs from calls',
-        'Real-time customer sync',
-        'Revenue tracking',
-      ],
+        "Automatically create jobs, update customer records, and track revenue—all synced in real-time with ServiceTitan.",
+      benefits: ["Auto-create jobs from calls", "Real-time customer sync", "Revenue tracking"],
     },
     {
-      key: 'hubspot',
-      title: 'HubSpot',
+      key: "hubspot",
+      title: "HubSpot",
       description:
-        'Every call becomes a contact. Capture Client logs all interactions in HubSpot automatically.',
-      benefits: [
-        'Auto-create contacts',
-        'Call logging & notes',
-        'Pipeline updates',
-      ],
+        "Every call becomes a contact. Capture Client logs all interactions in HubSpot automatically.",
+      benefits: ["Auto-create contacts", "Call logging & notes", "Pipeline updates"],
     },
     {
-      key: 'calendly',
-      title: 'Calendly',
+      key: "calendly",
+      title: "Calendly",
       description:
-        'Let AI book appointments directly into your Calendly calendar—no human intervention needed.',
-      benefits: [
-        'AI-powered booking',
-        'Calendar sync',
-        'Automatic reminders',
-      ],
+        "Let AI book appointments directly into your Calendly calendar—no human intervention needed.",
+      benefits: ["AI-powered booking", "Calendar sync", "Automatic reminders"],
     },
   ];
 
   return (
     <section className="py-24 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center mb-16">
-          Featured Integrations
-        </h2>
+        <h2 className="text-4xl font-bold text-center mb-16">Featured Integrations</h2>
 
         <div className="grid md:grid-cols-3 gap-8">
           {featured.map((integration) => (
@@ -254,17 +192,11 @@ export function FeaturedIntegrations() {
             >
               {/* Logo */}
               <div className="mb-6 flex justify-center">
-                <IntegrationLogo
-                  integration={integration.key}
-                  size="xl"
-                  grayscale={false}
-                />
+                <IntegrationLogo integration={integration.key} size="xl" grayscale={false} />
               </div>
 
               {/* Title */}
-              <h3 className="text-2xl font-bold mb-4 text-center">
-                {integration.title}
-              </h3>
+              <h3 className="text-2xl font-bold mb-4 text-center">{integration.title}</h3>
 
               {/* Description */}
               <p className="text-gray-600 mb-6">{integration.description}</p>
@@ -308,12 +240,12 @@ export function FeaturedIntegrations() {
  */
 export function IntegrationsFooter() {
   const popularIntegrations = [
-    'zapier',
-    'hubspot',
-    'salesforce',
-    'calendly',
-    'slack',
-    'servicetitan',
+    "zapier",
+    "hubspot",
+    "salesforce",
+    "calendly",
+    "slack",
+    "servicetitan",
   ];
 
   return (
@@ -321,12 +253,7 @@ export function IntegrationsFooter() {
       <p className="text-sm text-gray-500 text-center mb-4">Integrates With</p>
       <div className="flex items-center justify-center gap-8 flex-wrap">
         {popularIntegrations.map((integration) => (
-          <IntegrationLogo
-            key={integration}
-            integration={integration}
-            size="sm"
-            grayscale
-          />
+          <IntegrationLogo key={integration} integration={integration} size="sm" grayscale />
         ))}
       </div>
     </div>
@@ -337,21 +264,12 @@ export function IntegrationsFooter() {
  * EXAMPLE 6: CTA Section With Integration Proof
  */
 export function IntegrationCTA() {
-  const topIntegrations = [
-    'hubspot',
-    'salesforce',
-    'servicetitan',
-    'calendly',
-    'slack',
-    'stripe',
-  ];
+  const topIntegrations = ["hubspot", "salesforce", "servicetitan", "calendly", "slack", "stripe"];
 
   return (
     <section className="py-24 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
       <div className="container mx-auto px-4 text-center">
-        <h2 className="text-4xl font-bold mb-4">
-          Works With Your Existing Stack
-        </h2>
+        <h2 className="text-4xl font-bold mb-4">Works With Your Existing Stack</h2>
         <p className="text-xl mb-8 opacity-90">
           No need to change your workflow. Capture Client integrates seamlessly.
         </p>
@@ -363,11 +281,7 @@ export function IntegrationCTA() {
               key={integration}
               className="bg-white/10 backdrop-blur-sm rounded-xl p-4 hover:bg-white/20 transition-colors"
             >
-              <IntegrationLogo
-                integration={integration}
-                size="lg"
-                grayscale={false}
-              />
+              <IntegrationLogo integration={integration} size="lg" grayscale={false} />
             </div>
           ))}
         </div>
@@ -386,7 +300,7 @@ export function IntegrationCTA() {
  * For landing pages focused on one integration
  */
 export function SingleIntegrationHighlight({
-  integration = 'servicetitan',
+  integration = "servicetitan",
 }: {
   integration?: string;
 }) {

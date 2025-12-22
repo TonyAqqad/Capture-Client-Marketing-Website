@@ -11,18 +11,8 @@
     "keyword_slug": "facebook-ads-contractors"
   },
   "industry_focus": {
-    "industries": [
-      "General Contractors",
-      "Remodeling",
-      "Roofing",
-      "Concrete",
-      "Painting"
-    ],
-    "business_types": [
-      "General Contractors companies",
-      "Remodeling companies",
-      "Roofing companies"
-    ]
+    "industries": ["General Contractors", "Remodeling", "Roofing", "Concrete", "Painting"],
+    "business_types": ["General Contractors companies", "Remodeling companies", "Roofing companies"]
   },
   "seo": {
     "page_title": "Facebook Ads for Contractors | Meta Ads Agency | Generate Quality Leads Fast",
@@ -123,13 +113,7 @@
   "nationwide_coverage": {
     "heading": "Serving Businesses Nationwide",
     "description": "We work with businesses across all 50 states from small local operations to multi-location enterprises.",
-    "regions_highlighted": [
-      "East Coast",
-      "West Coast",
-      "Midwest",
-      "South",
-      "Southwest"
-    ]
+    "regions_highlighted": ["East Coast", "West Coast", "Midwest", "South", "Southwest"]
   },
   "testimonials": [
     {
@@ -207,13 +191,7 @@
     "urgency_text": "Limited slots available for new clients"
   },
   "related_pages": {
-    "related_national_keywords": [
-      "voice-ai-small-business",
-      "lead-generation-agency"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "related_national_keywords": ["voice-ai-small-business", "lead-generation-agency"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

@@ -11,7 +11,7 @@ interface UrgencyTimerProps {
 
 export default function UrgencyTimer({
   offer = "Start your AI trial in the next 24 hours and get a FREE strategy session ($500 value)",
-  className = ""
+  className = "",
 }: UrgencyTimerProps) {
   // Initialize with null to prevent hydration mismatch
   const [timeLeft, setTimeLeft] = useState<{
@@ -51,15 +51,12 @@ export default function UrgencyTimer({
     return (
       <div
         className={`border border-slate-200 bg-white backdrop-blur-xl rounded-2xl p-6 ${className}`}
-        style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+        style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
       >
         {/* Header */}
         <div className="flex items-center justify-center gap-2 mb-4">
           <Zap className="text-cyan-400 w-5 h-5" />
-          <h3
-            className="text-base sm:text-lg text-slate-900"
-            style={{ fontWeight: 600 }}
-          >
+          <h3 className="text-base sm:text-lg text-slate-900" style={{ fontWeight: 600 }}>
             Limited Time Offer
           </h3>
           <Zap className="text-cyan-400 w-5 h-5" />
@@ -95,10 +92,7 @@ export default function UrgencyTimer({
         </div>
 
         {/* Fine print */}
-        <p
-          className="text-xs text-center text-slate-600 mt-4 px-2"
-          style={{ fontWeight: 300 }}
-        >
+        <p className="text-xs text-center text-slate-600 mt-4 px-2" style={{ fontWeight: 300 }}>
           Offer resets daily at midnight EST. Limited to first 10 bookings.
         </p>
       </div>
@@ -111,15 +105,12 @@ export default function UrgencyTimer({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className={`border border-slate-200 bg-white backdrop-blur-xl rounded-2xl p-6 ${className}`}
-      style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+      style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
     >
       {/* Header - using CSS animation instead of Framer Motion for performance */}
       <div className="flex items-center justify-center gap-2 mb-4">
         <Zap className="text-cyan-400 w-5 h-5 animate-pulse" />
-        <h3
-          className="text-base sm:text-lg text-slate-900"
-          style={{ fontWeight: 600 }}
-        >
+        <h3 className="text-base sm:text-lg text-slate-900" style={{ fontWeight: 600 }}>
           Limited Time Offer
         </h3>
         <Zap className="text-cyan-400 w-5 h-5 animate-pulse" />
@@ -145,18 +136,12 @@ export default function UrgencyTimer({
               {String(timeLeft.hours).padStart(2, "0")}
             </p>
           </div>
-          <p
-            className="text-xs text-slate-600 mt-2 uppercase"
-            style={{ fontWeight: 500 }}
-          >
+          <p className="text-xs text-slate-600 mt-2 uppercase" style={{ fontWeight: 500 }}>
             Hours
           </p>
         </div>
 
-        <span
-          className="text-2xl sm:text-3xl text-cyan-400 mb-6"
-          style={{ fontWeight: 800 }}
-        >
+        <span className="text-2xl sm:text-3xl text-cyan-400 mb-6" style={{ fontWeight: 800 }}>
           :
         </span>
 
@@ -170,18 +155,12 @@ export default function UrgencyTimer({
               {String(timeLeft.minutes).padStart(2, "0")}
             </p>
           </div>
-          <p
-            className="text-xs text-slate-600 mt-2 uppercase"
-            style={{ fontWeight: 500 }}
-          >
+          <p className="text-xs text-slate-600 mt-2 uppercase" style={{ fontWeight: 500 }}>
             Minutes
           </p>
         </div>
 
-        <span
-          className="text-2xl sm:text-3xl text-cyan-400 mb-6"
-          style={{ fontWeight: 800 }}
-        >
+        <span className="text-2xl sm:text-3xl text-cyan-400 mb-6" style={{ fontWeight: 800 }}>
           :
         </span>
 
@@ -195,10 +174,7 @@ export default function UrgencyTimer({
               {String(timeLeft.seconds).padStart(2, "0")}
             </p>
           </div>
-          <p
-            className="text-xs text-slate-600 mt-2 uppercase"
-            style={{ fontWeight: 500 }}
-          >
+          <p className="text-xs text-slate-600 mt-2 uppercase" style={{ fontWeight: 500 }}>
             Seconds
           </p>
         </div>
@@ -217,10 +193,7 @@ export default function UrgencyTimer({
       </div>
 
       {/* Fine print */}
-      <p
-        className="text-xs text-center text-slate-600 mt-4 px-2"
-        style={{ fontWeight: 300 }}
-      >
+      <p className="text-xs text-center text-slate-600 mt-4 px-2" style={{ fontWeight: 300 }}>
         Offer resets daily at midnight EST. Limited to first 10 bookings.
       </p>
     </motion.div>

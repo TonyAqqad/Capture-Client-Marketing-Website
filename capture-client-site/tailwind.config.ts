@@ -99,13 +99,13 @@ const config: Config = {
       },
       fontWeight: {
         // $5M UPGRADE: Extreme weight contrasts for premium typography
-        'ultralight': '200',  // Bricolage Grotesque ultra-light
-        'light': '300',       // Inter light
-        'normal': '400',      // Standard weight
-        'medium': '500',      // Inter medium
-        'semibold': '600',    // Balanced emphasis
-        'bold': '700',        // Strong emphasis
-        'extrabold': '800',   // Bricolage Grotesque extra-bold - maximum impact
+        ultralight: "200", // Bricolage Grotesque ultra-light
+        light: "300", // Inter light
+        normal: "400", // Standard weight
+        medium: "500", // Inter medium
+        semibold: "600", // Balanced emphasis
+        bold: "700", // Strong emphasis
+        extrabold: "800", // Bricolage Grotesque extra-bold - maximum impact
       },
       borderRadius: {
         DEFAULT: "0.75rem",
@@ -135,10 +135,13 @@ const config: Config = {
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "gradient-primary": "linear-gradient(135deg, #4A69E2 0%, #00C9FF 100%)",
         "gradient-light": "linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%)",
-        "mesh-gradient": "radial-gradient(at 40% 20%, rgba(74, 105, 226, 0.15) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(0, 201, 255, 0.1) 0px, transparent 50%), radial-gradient(at 0% 50%, rgba(74, 105, 226, 0.1) 0px, transparent 50%)",
-        "mesh-premium": "radial-gradient(at 27% 37%, rgba(74, 105, 226, 0.2) 0px, transparent 50%), radial-gradient(at 97% 21%, rgba(0, 201, 255, 0.15) 0px, transparent 50%), radial-gradient(at 52% 99%, rgba(74, 105, 226, 0.12) 0px, transparent 50%), radial-gradient(at 10% 29%, rgba(0, 201, 255, 0.1) 0px, transparent 50%), radial-gradient(at 97% 96%, rgba(74, 105, 226, 0.08) 0px, transparent 50%)",
+        "mesh-gradient":
+          "radial-gradient(at 40% 20%, rgba(74, 105, 226, 0.15) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(0, 201, 255, 0.1) 0px, transparent 50%), radial-gradient(at 0% 50%, rgba(74, 105, 226, 0.1) 0px, transparent 50%)",
+        "mesh-premium":
+          "radial-gradient(at 27% 37%, rgba(74, 105, 226, 0.2) 0px, transparent 50%), radial-gradient(at 97% 21%, rgba(0, 201, 255, 0.15) 0px, transparent 50%), radial-gradient(at 52% 99%, rgba(74, 105, 226, 0.12) 0px, transparent 50%), radial-gradient(at 10% 29%, rgba(0, 201, 255, 0.1) 0px, transparent 50%), radial-gradient(at 97% 96%, rgba(74, 105, 226, 0.08) 0px, transparent 50%)",
         "gradient-angular": "linear-gradient(135deg, #4A69E2 0%, #00C9FF 50%, #4A69E2 100%)",
-        "noise": "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")",
+        noise:
+          "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E\")",
 
         // PREMIUM: Aurora gradient (existing - cyan/gold brand)
         "gradient-aurora": "linear-gradient(135deg, #00C9FF 0%, #4F46E5 50%, #8B5CF6 100%)",
@@ -163,7 +166,7 @@ const config: Config = {
         "slide-in-right": "slideInRight 0.5s ease-out forwards",
         orbit: "orbit 20s linear infinite",
         "gradient-shift": "gradientShift 8s ease infinite",
-        "shimmer": "shimmer 2s linear infinite",
+        shimmer: "shimmer 2s linear infinite",
         "rotate-slow": "rotateSlow 30s linear infinite",
         "scale-pulse": "scalePulse 3s ease-in-out infinite",
         "glow-pulse": "glowPulse 2s ease-in-out infinite",
@@ -235,157 +238,157 @@ const config: Config = {
         },
         glowPulse: {
           "0%, 100%": {
-            boxShadow: "0 0 20px rgba(0, 201, 255, 0.3), 0 0 40px rgba(0, 201, 255, 0.1)"
+            boxShadow: "0 0 20px rgba(0, 201, 255, 0.3), 0 0 40px rgba(0, 201, 255, 0.1)",
           },
           "50%": {
-            boxShadow: "0 0 30px rgba(0, 201, 255, 0.5), 0 0 60px rgba(0, 201, 255, 0.2)"
-          }
+            boxShadow: "0 0 30px rgba(0, 201, 255, 0.5), 0 0 60px rgba(0, 201, 255, 0.2)",
+          },
         },
         glassShimmer: {
           "0%": {
             backgroundPosition: "-200% center",
-            opacity: "0"
+            opacity: "0",
           },
           "50%": {
-            opacity: "0.5"
+            opacity: "0.5",
           },
           "100%": {
             backgroundPosition: "200% center",
-            opacity: "0"
-          }
+            opacity: "0",
+          },
         },
         bounceSubtle: {
           "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-5px)" }
+          "50%": { transform: "translateY(-5px)" },
         },
         // $5 MILLION UPGRADE: Premium cinematic keyframes
         textReveal: {
           "0%": {
             clipPath: "inset(100% 0 0 0)",
             transform: "translateY(20px)",
-            opacity: "0"
+            opacity: "0",
           },
           "100%": {
             clipPath: "inset(0% 0 0 0)",
             transform: "translateY(0)",
-            opacity: "1"
-          }
+            opacity: "1",
+          },
         },
         cinematicFade: {
           "0%": {
             opacity: "0",
             transform: "scale(0.98) translateY(10px)",
-            filter: "blur(4px)"
+            filter: "blur(4px)",
           },
           "100%": {
             opacity: "1",
             transform: "scale(1) translateY(0)",
-            filter: "blur(0)"
-          }
+            filter: "blur(0)",
+          },
         },
         cinematicScale: {
           "0%": {
             opacity: "0",
-            transform: "scale(0.9)"
+            transform: "scale(0.9)",
           },
           "100%": {
             opacity: "1",
-            transform: "scale(1)"
-          }
+            transform: "scale(1)",
+          },
         },
         magneticHover: {
           "0%": { transform: "translate(0, 0)" },
-          "100%": { transform: "translate(var(--magnetic-x, 0), var(--magnetic-y, 0))" }
+          "100%": { transform: "translate(var(--magnetic-x, 0), var(--magnetic-y, 0))" },
         },
         heroEntrance: {
           "0%": {
             opacity: "0",
             transform: "translateY(60px) scale(0.95)",
-            filter: "blur(10px)"
+            filter: "blur(10px)",
           },
           "50%": {
-            filter: "blur(2px)"
+            filter: "blur(2px)",
           },
           "100%": {
             opacity: "1",
             transform: "translateY(0) scale(1)",
-            filter: "blur(0)"
-          }
+            filter: "blur(0)",
+          },
         },
         staggerFade: {
           "0%": {
             opacity: "0",
-            transform: "translateY(20px)"
+            transform: "translateY(20px)",
           },
           "100%": {
             opacity: "1",
-            transform: "translateY(0)"
-          }
+            transform: "translateY(0)",
+          },
         },
         blurIn: {
           "0%": {
             opacity: "0",
-            filter: "blur(20px)"
+            filter: "blur(20px)",
           },
           "100%": {
             opacity: "1",
-            filter: "blur(0)"
-          }
+            filter: "blur(0)",
+          },
         },
         counterSpin: {
           "0%": { transform: "rotate(0deg)" },
-          "100%": { transform: "rotate(-360deg)" }
+          "100%": { transform: "rotate(-360deg)" },
         },
         // Aurora keyframes for flowing animated backgrounds
         aurora1: {
           "0%": {
             transform: "translate(0, 0) scale(1)",
-            opacity: "0.4"
+            opacity: "0.4",
           },
           "33%": {
             transform: "translate(30%, -20%) scale(1.1)",
-            opacity: "0.5"
+            opacity: "0.5",
           },
           "66%": {
             transform: "translate(-20%, 30%) scale(0.9)",
-            opacity: "0.35"
+            opacity: "0.35",
           },
           "100%": {
             transform: "translate(0, 0) scale(1)",
-            opacity: "0.4"
-          }
+            opacity: "0.4",
+          },
         },
         aurora2: {
           "0%": {
             transform: "translate(0, 0) scale(1) rotate(0deg)",
-            opacity: "0.4"
+            opacity: "0.4",
           },
           "33%": {
             transform: "translate(-30%, 20%) scale(1.15) rotate(120deg)",
-            opacity: "0.5"
+            opacity: "0.5",
           },
           "66%": {
             transform: "translate(20%, -25%) scale(0.95) rotate(240deg)",
-            opacity: "0.35"
+            opacity: "0.35",
           },
           "100%": {
             transform: "translate(0, 0) scale(1) rotate(360deg)",
-            opacity: "0.4"
-          }
+            opacity: "0.4",
+          },
         },
         aurora3: {
           "0%": {
             transform: "translate(0, 0) scale(1)",
-            opacity: "0.3"
+            opacity: "0.3",
           },
           "50%": {
             transform: "translate(25%, 25%) scale(1.2)",
-            opacity: "0.45"
+            opacity: "0.45",
           },
           "100%": {
             transform: "translate(0, 0) scale(1)",
-            opacity: "0.3"
-          }
+            opacity: "0.3",
+          },
         },
       },
       spacing: {
@@ -394,35 +397,35 @@ const config: Config = {
         "128": "32rem",
       },
       fontSize: {
-        'xs': ['0.875rem', { lineHeight: '1.5' }],
-        'sm': ['0.9375rem', { lineHeight: '1.5' }],
-        'base': ['1rem', { lineHeight: '1.6' }],
-        'lg': ['1.125rem', { lineHeight: '1.75' }],
-        'xl': ['1.25rem', { lineHeight: '1.75' }],
-        '2xl': ['1.5rem', { lineHeight: '2' }],
-        '3xl': ['1.875rem', { lineHeight: '2.25' }],
-        '4xl': ['2.25rem', { lineHeight: '2.5' }],
-        '5xl': ['3rem', { lineHeight: '1' }],
-        '6xl': ['3.75rem', { lineHeight: '1' }],
-        '7xl': ['4.5rem', { lineHeight: '1' }],
-        '8xl': ['6rem', { lineHeight: '1' }],
-        '9xl': ['8rem', { lineHeight: '1' }],
-        'small': ['0.875rem', { lineHeight: '1.5' }],
-        'caption': ['0.8125rem', { lineHeight: '1.4' }],
+        xs: ["0.875rem", { lineHeight: "1.5" }],
+        sm: ["0.9375rem", { lineHeight: "1.5" }],
+        base: ["1rem", { lineHeight: "1.6" }],
+        lg: ["1.125rem", { lineHeight: "1.75" }],
+        xl: ["1.25rem", { lineHeight: "1.75" }],
+        "2xl": ["1.5rem", { lineHeight: "2" }],
+        "3xl": ["1.875rem", { lineHeight: "2.25" }],
+        "4xl": ["2.25rem", { lineHeight: "2.5" }],
+        "5xl": ["3rem", { lineHeight: "1" }],
+        "6xl": ["3.75rem", { lineHeight: "1" }],
+        "7xl": ["4.5rem", { lineHeight: "1" }],
+        "8xl": ["6rem", { lineHeight: "1" }],
+        "9xl": ["8rem", { lineHeight: "1" }],
+        small: ["0.875rem", { lineHeight: "1.5" }],
+        caption: ["0.8125rem", { lineHeight: "1.4" }],
 
         // $10M FLUID TYPOGRAPHY - Premium scaling inspired by Stripe/Linear
         // Fluid hero sizes - dramatic scaling from mobile to desktop
-        'hero-sm': ['clamp(1.75rem, 4vw, 2.5rem)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        'hero-md': ['clamp(2rem, 5vw, 3rem)', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        'hero-lg': ['clamp(2.5rem, 6vw, 4rem)', { lineHeight: '1.1', letterSpacing: '-0.025em' }],
-        'hero-xl': ['clamp(3rem, 7vw, 5rem)', { lineHeight: '1.1', letterSpacing: '-0.03em' }],
-        'hero-2xl': ['clamp(3.5rem, 8vw, 6rem)', { lineHeight: '1.05', letterSpacing: '-0.03em' }],
+        "hero-sm": ["clamp(1.75rem, 4vw, 2.5rem)", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
+        "hero-md": ["clamp(2rem, 5vw, 3rem)", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
+        "hero-lg": ["clamp(2.5rem, 6vw, 4rem)", { lineHeight: "1.1", letterSpacing: "-0.025em" }],
+        "hero-xl": ["clamp(3rem, 7vw, 5rem)", { lineHeight: "1.1", letterSpacing: "-0.03em" }],
+        "hero-2xl": ["clamp(3.5rem, 8vw, 6rem)", { lineHeight: "1.05", letterSpacing: "-0.03em" }],
 
         // Fluid body sizes - smooth scaling for readability
-        'body-sm': ['clamp(0.875rem, 1vw, 1rem)', { lineHeight: '1.6' }],
-        'body-md': ['clamp(1rem, 1.25vw, 1.125rem)', { lineHeight: '1.6' }],
-        'body-lg': ['clamp(1.125rem, 1.5vw, 1.25rem)', { lineHeight: '1.7' }],
-        'body-xl': ['clamp(1.25rem, 2vw, 1.5rem)', { lineHeight: '1.7' }],
+        "body-sm": ["clamp(0.875rem, 1vw, 1rem)", { lineHeight: "1.6" }],
+        "body-md": ["clamp(1rem, 1.25vw, 1.125rem)", { lineHeight: "1.6" }],
+        "body-lg": ["clamp(1.125rem, 1.5vw, 1.25rem)", { lineHeight: "1.7" }],
+        "body-xl": ["clamp(1.25rem, 2vw, 1.5rem)", { lineHeight: "1.7" }],
       },
     },
   },

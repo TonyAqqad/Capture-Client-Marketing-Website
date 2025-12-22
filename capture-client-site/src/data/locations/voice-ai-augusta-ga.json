@@ -11,20 +11,14 @@
     "state_abbr": "GA",
     "state_full": "Georgia",
     "slug": "augusta-ga",
-    "nearby_areas": [
-      "Evans",
-      "Martinez",
-      "Grovetown"
-    ],
+    "nearby_areas": ["Evans", "Martinez", "Grovetown"],
     "service_area_radius": "25 miles"
   },
   "seo": {
     "page_title": "Voice AI Agency in Augusta, GA | Capture Client",
     "meta_description": "Voice AI for Augusta businesses near Augusta University, Fort Eisenhower, and the Cyber District. HIPAA-compliant AI for CSRA. Call 865-346-6111!",
     "h1_heading": "Voice AI Agency in Augusta, Georgia",
-    "keywords": [
-      "voice ai augusta ga"
-    ],
+    "keywords": ["voice ai augusta ga"],
     "canonical_url": "/voice-ai-augusta-ga"
   },
   "hero": {
@@ -101,13 +95,7 @@
   "service_area": {
     "heading": "Serving Augusta and CSRA",
     "description": "Voice AI throughout Central Savannah River Area, including Fort Eisenhower, Cyber District, and Washington Road corridor.",
-    "areas_list": [
-      "Augusta",
-      "Evans",
-      "Martinez",
-      "Grovetown",
-      "North Augusta"
-    ]
+    "areas_list": ["Augusta", "Evans", "Martinez", "Grovetown", "North Augusta"]
   },
   "testimonials": [
     {
@@ -174,13 +162,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "savannah-ga",
-      "athens-ga"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "nearby_locations": ["savannah-ga", "athens-ga"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

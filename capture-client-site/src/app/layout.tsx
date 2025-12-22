@@ -64,12 +64,12 @@ export const metadata: Metadata = getDefaultMetadata();
 
 // Viewport configuration for optimal mobile rendering with notch support
 export const viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1,
   maximumScale: 5,
   userScalable: true,
-  themeColor: '#0F172A',
-  viewportFit: 'cover', // CRITICAL: Support for iPhone X+ notch
+  themeColor: "#0F172A",
+  viewportFit: "cover", // CRITICAL: Support for iPhone X+ notch
 };
 
 export default function RootLayout({
@@ -100,7 +100,10 @@ export default function RootLayout({
           media="print"
         />
         <noscript>
-          <link href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap" rel="stylesheet" />
+          <link
+            href="https://fonts.googleapis.com/icon?family=Material+Icons&display=swap"
+            rel="stylesheet"
+          />
         </noscript>
 
         {/* Web App Manifest for PWA support */}
@@ -126,7 +129,7 @@ export default function RootLayout({
                 var link = document.querySelector('link[media="print"]');
                 if (link) link.media = 'all';
               })();
-            `
+            `,
           }}
         />
 
@@ -155,7 +158,9 @@ export default function RootLayout({
         {/* PERFORMANCE OPTIMIZATION: LazyMotion reduces framer-motion bundle by ~60KB */}
         <LazyMotionProvider>
           <Header />
-          <main id="main-content" className="min-h-screen">{children}</main>
+          <main id="main-content" className="min-h-screen">
+            {children}
+          </main>
           <Footer />
           <MobileCTABar />
           <CookieConsent />

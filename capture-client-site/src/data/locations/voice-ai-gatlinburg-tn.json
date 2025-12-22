@@ -10,18 +10,14 @@
     "state": "Tennessee",
     "state_abbr": "TN",
     "slug": "gatlinburg-tn",
-    "nearby_areas": [
-      "Knoxville"
-    ],
+    "nearby_areas": ["Knoxville"],
     "service_area_radius": "20 miles"
   },
   "seo": {
     "page_title": "Voice AI in Gatlinburg, TN | Capture Client",
     "meta_description": "Gatlinburg businesses automate calls with Voice AI. Call 865-346-6111!",
     "h1_heading": "Voice AI in Gatlinburg, Tennessee",
-    "keywords": [
-      "voice ai gatlinburg"
-    ],
+    "keywords": ["voice ai gatlinburg"],
     "canonical_url": "/voice-ai-gatlinburg-tn"
   },
   "hero": {
@@ -78,10 +74,7 @@
   ],
   "service_area": {
     "heading": "Serving Gatlinburg",
-    "areas_list": [
-      "Gatlinburg",
-      "Knoxville"
-    ]
+    "areas_list": ["Gatlinburg", "Knoxville"]
   },
   "local_testimonials": [
     {
@@ -114,11 +107,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "voice-ai-knoxville-tn"
-    ],
-    "packages": [
-      "starter-package"
-    ]
+    "nearby_locations": ["voice-ai-knoxville-tn"],
+    "packages": ["starter-package"]
   }
 }

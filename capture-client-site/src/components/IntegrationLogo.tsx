@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import Image from 'next/image';
-import { getIntegrationLogo, getIntegrationLogoUrl } from '@/data/integration-logos';
-import { cn } from '@/lib/utils';
+import { useState } from "react";
+import Image from "next/image";
+import { getIntegrationLogo, getIntegrationLogoUrl } from "@/data/integration-logos";
+import { cn } from "@/lib/utils";
 
 export interface IntegrationLogoProps {
   /**
@@ -18,7 +18,7 @@ export interface IntegrationLogoProps {
    * - lg: 64px
    * - xl: 96px
    */
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+  size?: "sm" | "md" | "lg" | "xl";
 
   /**
    * Custom width (overrides size preset)
@@ -75,7 +75,7 @@ const sizeMap = {
  */
 export function IntegrationLogo({
   integration,
-  size = 'md',
+  size = "md",
   width,
   height,
   className,
@@ -86,7 +86,8 @@ export function IntegrationLogo({
   const [hasError, setHasError] = useState(false);
 
   // Get dimensions
-  const logoSize = width && height ? { width, height } : { width: sizeMap[size], height: sizeMap[size] };
+  const logoSize =
+    width && height ? { width, height } : { width: sizeMap[size], height: sizeMap[size] };
 
   // Get logo data
   const logoData = getIntegrationLogo(integration);
@@ -107,10 +108,7 @@ export function IntegrationLogo({
 
   return (
     <div
-      className={cn(
-        'relative inline-flex items-center justify-center',
-        className
-      )}
+      className={cn("relative inline-flex items-center justify-center", className)}
       style={{
         width: logoSize.width,
         height: logoSize.height,
@@ -123,8 +121,9 @@ export function IntegrationLogo({
         height={logoSize.height}
         sizes={`${logoSize.width}px`}
         className={cn(
-          'object-contain',
-          grayscale && 'grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300'
+          "object-contain",
+          grayscale &&
+            "grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
         )}
         onError={() => setHasError(true)}
         priority={priority}
@@ -154,12 +153,7 @@ function InitialsFallback({
   const backgroundColor = getColorFromString(name);
 
   return (
-    <div
-      className={cn(
-        'relative inline-flex items-center gap-2',
-        className
-      )}
-    >
+    <div className={cn("relative inline-flex items-center gap-2", className)}>
       <div
         className="flex items-center justify-center rounded-lg font-semibold text-white"
         style={{
@@ -171,11 +165,7 @@ function InitialsFallback({
       >
         {initial}
       </div>
-      {showName && (
-        <span className="text-sm font-medium text-gray-700">
-          {name}
-        </span>
-      )}
+      {showName && <span className="text-sm font-medium text-gray-700">{name}</span>}
     </div>
   );
 }
@@ -185,14 +175,14 @@ function InitialsFallback({
  */
 function getColorFromString(str: string): string {
   const colors = [
-    '#3B82F6', // blue
-    '#10B981', // green
-    '#F59E0B', // amber
-    '#EF4444', // red
-    '#8B5CF6', // purple
-    '#EC4899', // pink
-    '#14B8A6', // teal
-    '#F97316', // orange
+    "#3B82F6", // blue
+    "#10B981", // green
+    "#F59E0B", // amber
+    "#EF4444", // red
+    "#8B5CF6", // purple
+    "#EC4899", // pink
+    "#14B8A6", // teal
+    "#F97316", // orange
   ];
 
   // Simple hash function
@@ -211,9 +201,9 @@ function getColorFromString(str: string): string {
  */
 function formatIntegrationName(key: string): string {
   return key
-    .split('-')
-    .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(' ');
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 }
 
 /**
@@ -232,19 +222,19 @@ function formatIntegrationName(key: string): string {
  */
 export function IntegrationLogoGrid({
   integrations,
-  size = 'md',
+  size = "md",
   grayscale = true,
   className,
 }: {
   integrations: string[];
-  size?: 'sm' | 'md' | 'lg' | 'xl';
+  size?: "sm" | "md" | "lg" | "xl";
   grayscale?: boolean;
   className?: string;
 }) {
   return (
     <div
       className={cn(
-        'grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 items-center justify-items-center',
+        "grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 items-center justify-items-center",
         className
       )}
     >
@@ -275,14 +265,14 @@ export function IntegrationLogoGrid({
  */
 export function IntegrationLogoMarquee({
   integrations,
-  size = 'md',
-  speed = 'normal',
+  size = "md",
+  speed = "normal",
   grayscale = true,
   className,
 }: {
   integrations: string[];
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  speed?: 'slow' | 'normal' | 'fast';
+  size?: "sm" | "md" | "lg" | "xl";
+  speed?: "slow" | "normal" | "fast";
   grayscale?: boolean;
   className?: string;
 }) {
@@ -298,7 +288,7 @@ export function IntegrationLogoMarquee({
   const allIntegrations = [...integrations, ...integrations];
 
   return (
-    <div className={cn('relative overflow-hidden', className)}>
+    <div className={cn("relative overflow-hidden", className)}>
       <div
         className="flex gap-12 items-center"
         style={{
@@ -307,11 +297,7 @@ export function IntegrationLogoMarquee({
       >
         {allIntegrations.map((integration, index) => (
           <div key={`${integration}-${index}`} className="flex-shrink-0">
-            <IntegrationLogo
-              integration={integration}
-              size={size}
-              grayscale={grayscale}
-            />
+            <IntegrationLogo integration={integration} size={size} grayscale={grayscale} />
           </div>
         ))}
       </div>

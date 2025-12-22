@@ -3,7 +3,8 @@ import MissedCallCalculatorClient from "./MissedCallCalculatorClient";
 
 export const metadata: Metadata = {
   title: "Missed Call Calculator | See Your Lost Revenue | Capture Client",
-  description: "Calculate exactly how much revenue your business loses from missed calls. Free calculator with industry benchmarks for martial arts, fitness, legal, and home services.",
+  description:
+    "Calculate exactly how much revenue your business loses from missed calls. Free calculator with industry benchmarks for martial arts, fitness, legal, and home services.",
   keywords: [
     "missed call calculator",
     "missed call cost calculator",
@@ -14,7 +15,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Missed Call Calculator | See Your Lost Revenue | Capture Client",
-    description: "Calculate exactly how much revenue your business loses from missed calls. Free calculator with industry benchmarks.",
+    description:
+      "Calculate exactly how much revenue your business loses from missed calls. Free calculator with industry benchmarks.",
     url: "https://captureclient.com/tools/missed-call-calculator",
     siteName: "Capture Client",
     type: "website",
@@ -61,7 +63,8 @@ const softwareApplicationSchema = {
     price: "0",
     priceCurrency: "USD",
   },
-  description: "Free calculator to estimate revenue lost from missed business calls, with industry-specific benchmarks.",
+  description:
+    "Free calculator to estimate revenue lost from missed business calls, with industry-specific benchmarks.",
   provider: {
     "@type": "Organization",
     name: "Capture Client",

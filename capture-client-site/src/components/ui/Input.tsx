@@ -4,7 +4,10 @@ import { motion } from "@/lib/motion";
 import { InputHTMLAttributes, useState } from "react";
 import { LucideIcon, AlertCircle } from "lucide-react";
 
-interface InputProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'onDrag' | 'onDragEnd' | 'onDragStart' | 'onAnimationStart'> {
+interface InputProps extends Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  "onDrag" | "onDragEnd" | "onDragStart" | "onAnimationStart"
+> {
   label?: string;
   error?: string;
   icon?: LucideIcon;
@@ -25,7 +28,8 @@ export function Input({
 
   const variantClasses = {
     default: "bg-slate-50 border-slate-200 focus:border-primary/50",
-    glass: "bg-white/80 backdrop-blur-xl border-slate-200 focus:border-accent/50 focus:bg-white/10 shadow-[0_4px_16px_rgba(0,0,0,0.1)]"
+    glass:
+      "bg-white/80 backdrop-blur-xl border-slate-200 focus:border-accent/50 focus:bg-white/10 shadow-[0_4px_16px_rgba(0,0,0,0.1)]",
   };
 
   const handleFocus = (e: React.FocusEvent<HTMLInputElement>) => {
@@ -51,25 +55,23 @@ export function Input({
       )}
 
       <div className="relative">
-        {icon && (() => {
-          const Icon = icon;
-          return (
-            <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
-              <Icon
-                className={`transition-colors duration-200 ${
-                  isFocused ? "text-accent" : "text-slate-500"
-                }`}
-                size={20}
-                aria-hidden="true"
-              />
-            </div>
-          );
-        })()}
+        {icon &&
+          (() => {
+            const Icon = icon;
+            return (
+              <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
+                <Icon
+                  className={`transition-colors duration-200 ${
+                    isFocused ? "text-accent" : "text-slate-500"
+                  }`}
+                  size={20}
+                  aria-hidden="true"
+                />
+              </div>
+            );
+          })()}
 
-        <motion.div
-          animate={{ scale: isFocused ? 1.01 : 1 }}
-          transition={{ duration: 0.2 }}
-        >
+        <motion.div animate={{ scale: isFocused ? 1.01 : 1 }} transition={{ duration: 0.2 }}>
           <input
             {...props}
             className={`w-full ${icon ? "pl-12" : "px-4"} pr-4 py-3.5 rounded-xl border-2 transition-all duration-300 text-slate-900 placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-accent/30 ${variantClasses[variant]} ${className} touch-target`}

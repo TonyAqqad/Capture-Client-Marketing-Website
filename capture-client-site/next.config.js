@@ -46,9 +46,12 @@ const nextConfig = {
   // CRITICAL: Compiler optimizations for faster builds and smaller bundles
   compiler: {
     // Remove console logs in production for smaller bundle
-    removeConsole: process.env.NODE_ENV === "production" ? {
-      exclude: ["error", "warn"],
-    } : false,
+    removeConsole:
+      process.env.NODE_ENV === "production"
+        ? {
+            exclude: ["error", "warn"],
+          }
+        : false,
   },
 
   // CRITICAL: Caching headers for static assets
@@ -119,14 +122,14 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/:path*',
+        source: "/:path*",
         has: [
           {
-            type: 'host',
-            value: 'www.captureclient.com',
+            type: "host",
+            value: "www.captureclient.com",
           },
         ],
-        destination: 'https://captureclient.com/:path*',
+        destination: "https://captureclient.com/:path*",
         permanent: true,
       },
     ];

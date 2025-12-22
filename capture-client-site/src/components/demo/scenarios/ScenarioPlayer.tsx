@@ -2,16 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
-import {
-  Play,
-  Pause,
-  RotateCcw,
-  Bot,
-  User,
-  Phone,
-  Signal,
-  Clock,
-} from "lucide-react";
+import { Play, Pause, RotateCcw, Bot, User, Phone, Signal, Clock } from "lucide-react";
 import type { Scenario, TranscriptMessage } from "./data/scenarios";
 
 // ============================================
@@ -165,9 +156,7 @@ export function ScenarioPlayer({ scenario, onComplete, autoPlay = true }: Scenar
               key={i}
               className="w-1 rounded-full bg-gradient-to-t from-blue-600 to-cyan-500"
               animate={{
-                height: isPlaying && !isComplete
-                  ? [4, 16 + Math.sin(i * 0.5) * 12, 4]
-                  : 4,
+                height: isPlaying && !isComplete ? [4, 16 + Math.sin(i * 0.5) * 12, 4] : 4,
                 opacity: isPlaying && !isComplete ? [0.4, 1, 0.4] : 0.3,
               }}
               transition={{
@@ -236,13 +225,12 @@ function MessageBubble({ message }: MessageBubbleProps) {
       className={`flex gap-3 ${isAI ? "" : "flex-row-reverse"}`}
     >
       {/* Avatar */}
-      <div className={`
+      <div
+        className={`
         flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center
-        ${isAI
-          ? "bg-gradient-to-br from-blue-600 to-cyan-500 shadow-md"
-          : "bg-slate-200"
-        }
-      `}>
+        ${isAI ? "bg-gradient-to-br from-blue-600 to-cyan-500 shadow-md" : "bg-slate-200"}
+      `}
+      >
         {isAI ? (
           <Bot className="w-5 h-5 text-white" />
         ) : (
@@ -252,20 +240,21 @@ function MessageBubble({ message }: MessageBubbleProps) {
 
       {/* Bubble */}
       <div className={`max-w-[75%] ${isAI ? "" : "text-right"}`}>
-        <div className={`
+        <div
+          className={`
           inline-block px-4 py-3 rounded-2xl
-          ${isAI
-            ? "bg-white border border-slate-200 rounded-tl-sm shadow-sm"
-            : "bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-tr-sm shadow-md"
+          ${
+            isAI
+              ? "bg-white border border-slate-200 rounded-tl-sm shadow-sm"
+              : "bg-gradient-to-r from-blue-600 to-cyan-500 text-white rounded-tr-sm shadow-md"
           }
-        `}>
+        `}
+        >
           <p className={`text-sm leading-relaxed ${isAI ? "text-slate-700" : "text-white"}`}>
             {message.text}
           </p>
         </div>
-        <p className="text-xs text-slate-400 mt-1 px-2">
-          {message.timestamp}
-        </p>
+        <p className="text-xs text-slate-400 mt-1 px-2">{message.timestamp}</p>
       </div>
     </motion.div>
   );

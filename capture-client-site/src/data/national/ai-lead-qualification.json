@@ -11,13 +11,7 @@
     "keyword_slug": "ai-lead-qualification"
   },
   "industry_focus": {
-    "industries": [
-      "B2B Services",
-      "SaaS",
-      "Professional Services",
-      "Consulting",
-      "Real Estate"
-    ],
+    "industries": ["B2B Services", "SaaS", "Professional Services", "Consulting", "Real Estate"],
     "business_types": [
       "B2B Services companies",
       "SaaS companies",
@@ -28,11 +22,7 @@
     "page_title": "AI Lead Qualification | Automate Your Sales Process",
     "meta_description": "AI lead qualification automates your sales process. Pre-qualify leads instantly score prospects and route hot leads to your sales team automatically.",
     "h1_heading": "AI Lead Qualification System",
-    "keywords": [
-      "ai lead qualification",
-      "capture client",
-      "automation"
-    ]
+    "keywords": ["ai lead qualification", "capture client", "automation"]
   },
   "hero": {
     "headline": "Stop Wasting Time On Unqualified Leads",
@@ -114,13 +104,7 @@
   "nationwide_coverage": {
     "heading": "Serving Businesses Nationwide",
     "description": "We work with businesses across all 50 states from small local operations to multi-location enterprises.",
-    "regions_highlighted": [
-      "East Coast",
-      "West Coast",
-      "Midwest",
-      "South",
-      "Southwest"
-    ]
+    "regions_highlighted": ["East Coast", "West Coast", "Midwest", "South", "Southwest"]
   },
   "testimonials": [
     {
@@ -198,13 +182,7 @@
     "urgency_text": "Limited slots available for new clients"
   },
   "related_pages": {
-    "related_national_keywords": [
-      "voice-ai-small-business",
-      "lead-generation-agency"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "related_national_keywords": ["voice-ai-small-business", "lead-generation-agency"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

@@ -74,7 +74,7 @@ export default async function BlogPage() {
   const posts = await getAllBlogPosts();
 
   // Map to the format expected by BlogContent
-  const blogPosts = posts.map(post => ({
+  const blogPosts = posts.map((post) => ({
     slug: post.slug,
     title: post.title,
     excerpt: post.excerpt,
@@ -86,8 +86,9 @@ export default async function BlogPage() {
 
   // Generate CollectionPage schema for blog index
   const pageSchema = generateWebPageSchema({
-    title: 'Blog - Capture Client',
-    description: 'Expert insights on AI voice agents, lead generation, Google Ads, Facebook Ads, and digital marketing strategies for small businesses.',
+    title: "Blog - Capture Client",
+    description:
+      "Expert insights on AI voice agents, lead generation, Google Ads, Facebook Ads, and digital marketing strategies for small businesses.",
     url: `${SITE_CONFIG.url}/blog`,
   });
 

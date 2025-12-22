@@ -13,10 +13,10 @@
  * - No sensitive data exposure in responses
  */
 
-import { NextResponse } from 'next/server';
-import { sendLeadNotification } from '@/lib/email';
-import fs from 'fs';
-import path from 'path';
+import { NextResponse } from "next/server";
+import { sendLeadNotification } from "@/lib/email";
+import fs from "fs";
+import path from "path";
 
 // Environment variables
 const GOHIGHLEVEL_WEBHOOK_URL = process.env.GOHIGHLEVEL_WEBHOOK_URL;
@@ -26,8 +26,8 @@ const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const MAX_PAYLOAD_SIZE = 10000; // 10KB
 
 // Fallback leads file path (for when GHL fails)
-const FALLBACK_LEADS_DIR = path.join(process.cwd(), 'data');
-const FALLBACK_LEADS_FILE = path.join(FALLBACK_LEADS_DIR, 'failed-leads.json');
+const FALLBACK_LEADS_DIR = path.join(process.cwd(), "data");
+const FALLBACK_LEADS_FILE = path.join(FALLBACK_LEADS_DIR, "failed-leads.json");
 
 // ==========================================
 // LOGGING UTILITIES
@@ -38,8 +38,8 @@ interface LogContext {
   source?: string;
   email?: string;
   phone?: string;
-  status: 'SUCCESS' | 'FAILURE' | 'WARNING' | 'FALLBACK';
-  integration?: 'GHL' | 'RESEND' | 'VALIDATION';
+  status: "SUCCESS" | "FAILURE" | "WARNING" | "FALLBACK";
+  integration?: "GHL" | "RESEND" | "VALIDATION";
   error?: string;
   details?: string;
 }
@@ -50,15 +50,20 @@ function logLead(context: LogContext): void {
     env: process.env.NODE_ENV,
   };
 
-  const prefix = context.status === 'FAILURE' ? '🚨' :
-                 context.status === 'WARNING' ? '⚠️' :
-                 context.status === 'FALLBACK' ? '💾' : '✅';
+  const prefix =
+    context.status === "FAILURE"
+      ? "🚨"
+      : context.status === "WARNING"
+        ? "⚠️"
+        : context.status === "FALLBACK"
+          ? "💾"
+          : "✅";
 
-  const message = `[submit-lead] ${prefix} ${context.status} | ${context.integration || 'GENERAL'} | ${context.source || 'unknown'} | ${context.email || context.phone || 'no-contact'}`;
+  const message = `[submit-lead] ${prefix} ${context.status} | ${context.integration || "GENERAL"} | ${context.source || "unknown"} | ${context.email || context.phone || "no-contact"}`;
 
-  if (context.status === 'FAILURE') {
+  if (context.status === "FAILURE") {
     console.error(message, JSON.stringify(logEntry, null, 2));
-  } else if (context.status === 'WARNING' || context.status === 'FALLBACK') {
+  } else if (context.status === "WARNING" || context.status === "FALLBACK") {
     console.warn(message, JSON.stringify(logEntry, null, 2));
   } else {
     console.log(message, JSON.stringify(logEntry, null, 2));
@@ -93,7 +98,7 @@ async function saveFailedLead(lead: LeadData): Promise<boolean> {
     // Load existing failed leads
     let failedLeads: LeadData[] = [];
     if (fs.existsSync(FALLBACK_LEADS_FILE)) {
-      const existing = fs.readFileSync(FALLBACK_LEADS_FILE, 'utf-8');
+      const existing = fs.readFileSync(FALLBACK_LEADS_FILE, "utf-8");
       failedLeads = JSON.parse(existing);
     }
 
@@ -108,13 +113,13 @@ async function saveFailedLead(lead: LeadData): Promise<boolean> {
       source: lead.source,
       email: lead.email,
       phone: lead.phone,
-      status: 'FALLBACK',
-      details: 'Lead saved to fallback file for manual processing',
+      status: "FALLBACK",
+      details: "Lead saved to fallback file for manual processing",
     });
 
     return true;
   } catch (error) {
-    console.error('[submit-lead] 🚨 CRITICAL: Failed to save lead to fallback file:', error);
+    console.error("[submit-lead] 🚨 CRITICAL: Failed to save lead to fallback file:", error);
     return false;
   }
 }
@@ -125,7 +130,7 @@ async function saveFailedLead(lead: LeadData): Promise<boolean> {
 
 export async function POST(request: Request) {
   const timestamp = new Date().toISOString();
-  const referer = request.headers.get('referer') || undefined;
+  const referer = request.headers.get("referer") || undefined;
 
   try {
     // ==========================================
@@ -133,21 +138,21 @@ export async function POST(request: Request) {
     // ==========================================
 
     const missingEnvVars: string[] = [];
-    if (!GOHIGHLEVEL_WEBHOOK_URL) missingEnvVars.push('GOHIGHLEVEL_WEBHOOK_URL');
+    if (!GOHIGHLEVEL_WEBHOOK_URL) missingEnvVars.push("GOHIGHLEVEL_WEBHOOK_URL");
 
     if (missingEnvVars.length > 0) {
       logLead({
         timestamp,
-        status: 'FAILURE',
-        integration: 'VALIDATION',
-        error: `Missing environment variables: ${missingEnvVars.join(', ')}`,
-        details: 'API cannot process leads without required configuration',
+        status: "FAILURE",
+        integration: "VALIDATION",
+        error: `Missing environment variables: ${missingEnvVars.join(", ")}`,
+        details: "API cannot process leads without required configuration",
       });
 
       // In production, this is a critical configuration error
-      if (process.env.NODE_ENV === 'production') {
+      if (process.env.NODE_ENV === "production") {
         return NextResponse.json(
-          { error: 'Service temporarily unavailable', code: 'CONFIG_ERROR' },
+          { error: "Service temporarily unavailable", code: "CONFIG_ERROR" },
           { status: 503 }
         );
       }
@@ -157,19 +162,16 @@ export async function POST(request: Request) {
     // PAYLOAD SIZE CHECK
     // ==========================================
 
-    const contentLength = request.headers.get('content-length');
+    const contentLength = request.headers.get("content-length");
     if (contentLength && parseInt(contentLength) > MAX_PAYLOAD_SIZE) {
       logLead({
         timestamp,
-        status: 'FAILURE',
-        integration: 'VALIDATION',
-        error: 'Payload too large',
+        status: "FAILURE",
+        integration: "VALIDATION",
+        error: "Payload too large",
         details: `Size: ${contentLength} bytes, Max: ${MAX_PAYLOAD_SIZE} bytes`,
       });
-      return NextResponse.json(
-        { error: 'Payload too large' },
-        { status: 413 }
-      );
+      return NextResponse.json({ error: "Payload too large" }, { status: 413 });
     }
 
     const body = await request.json();
@@ -182,15 +184,12 @@ export async function POST(request: Request) {
       logLead({
         timestamp,
         source: body.source,
-        status: 'FAILURE',
-        integration: 'VALIDATION',
-        error: 'Missing required contact info',
-        details: 'Neither email nor phone provided',
+        status: "FAILURE",
+        integration: "VALIDATION",
+        error: "Missing required contact info",
+        details: "Neither email nor phone provided",
       });
-      return NextResponse.json(
-        { error: 'Email or phone is required' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: "Email or phone is required" }, { status: 400 });
     }
 
     // ==========================================
@@ -198,8 +197,8 @@ export async function POST(request: Request) {
     // ==========================================
 
     const sanitizeString = (input: unknown): string => {
-      if (typeof input !== 'string') return '';
-      return input.replace(/\0/g, '').slice(0, 500);
+      if (typeof input !== "string") return "";
+      return input.replace(/\0/g, "").slice(0, 500);
     };
 
     const payload: LeadData = {
@@ -207,7 +206,7 @@ export async function POST(request: Request) {
       email: sanitizeString(body.email),
       phone: sanitizeString(body.phone),
       company: sanitizeString(body.company),
-      source: sanitizeString(body.source) || 'website',
+      source: sanitizeString(body.source) || "website",
       service: sanitizeString(body.service),
       message: sanitizeString(body.message),
       challenge: sanitizeString(body.challenge),
@@ -225,9 +224,9 @@ export async function POST(request: Request) {
     if (GOHIGHLEVEL_WEBHOOK_URL) {
       try {
         const ghlResponse = await fetch(GOHIGHLEVEL_WEBHOOK_URL, {
-          method: 'POST',
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify(payload),
         });
@@ -239,8 +238,8 @@ export async function POST(request: Request) {
             source: payload.source,
             email: payload.email,
             phone: payload.phone,
-            status: 'SUCCESS',
-            integration: 'GHL',
+            status: "SUCCESS",
+            integration: "GHL",
             details: `Status: ${ghlResponse.status}`,
           });
         } else {
@@ -250,23 +249,23 @@ export async function POST(request: Request) {
             source: payload.source,
             email: payload.email,
             phone: payload.phone,
-            status: 'FAILURE',
-            integration: 'GHL',
+            status: "FAILURE",
+            integration: "GHL",
             error: ghlError,
-            details: 'Lead will be saved to fallback',
+            details: "Lead will be saved to fallback",
           });
         }
       } catch (error) {
-        ghlError = error instanceof Error ? error.message : 'Unknown error';
+        ghlError = error instanceof Error ? error.message : "Unknown error";
         logLead({
           timestamp,
           source: payload.source,
           email: payload.email,
           phone: payload.phone,
-          status: 'FAILURE',
-          integration: 'GHL',
+          status: "FAILURE",
+          integration: "GHL",
           error: ghlError,
-          details: 'Network or fetch error - lead will be saved to fallback',
+          details: "Network or fetch error - lead will be saved to fallback",
         });
       }
     }
@@ -276,7 +275,7 @@ export async function POST(request: Request) {
     // ==========================================
 
     if (!ghlSuccess) {
-      payload.failureReason = ghlError || 'GHL webhook not configured';
+      payload.failureReason = ghlError || "GHL webhook not configured";
       await saveFailedLead(payload);
     }
 
@@ -302,20 +301,20 @@ export async function POST(request: Request) {
           source: payload.source,
           email: payload.email,
           phone: payload.phone,
-          status: 'WARNING',
-          integration: 'RESEND',
-          error: error instanceof Error ? error.message : 'Email send failed',
-          details: 'Email notification failed but lead was processed',
+          status: "WARNING",
+          integration: "RESEND",
+          error: error instanceof Error ? error.message : "Email send failed",
+          details: "Email notification failed but lead was processed",
         });
       });
     } else {
       logLead({
         timestamp,
         source: payload.source,
-        status: 'WARNING',
-        integration: 'RESEND',
-        error: 'RESEND_API_KEY not configured',
-        details: 'Email notifications disabled',
+        status: "WARNING",
+        integration: "RESEND",
+        error: "RESEND_API_KEY not configured",
+        details: "Email notifications disabled",
       });
     }
 
@@ -331,42 +330,41 @@ export async function POST(request: Request) {
     });
     addSecurityHeaders(response);
     return response;
-
   } catch (error) {
     // ==========================================
     // CRITICAL ERROR HANDLING
     // ==========================================
 
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+    const errorMessage = error instanceof Error ? error.message : "Unknown error";
 
     logLead({
       timestamp,
-      status: 'FAILURE',
+      status: "FAILURE",
       error: errorMessage,
-      details: 'Unhandled exception in lead submission',
+      details: "Unhandled exception in lead submission",
     });
 
     // Try to save whatever we have to fallback
     try {
       await saveFailedLead({
-        name: '',
-        email: '',
-        phone: '',
-        company: '',
-        source: 'error-recovery',
-        service: '',
-        message: '',
-        challenge: '',
+        name: "",
+        email: "",
+        phone: "",
+        company: "",
+        source: "error-recovery",
+        service: "",
+        message: "",
+        challenge: "",
         timestamp,
         referer,
         failureReason: `Unhandled error: ${errorMessage}`,
       });
     } catch {
-      console.error('[submit-lead] 🚨 CRITICAL: Could not save to fallback during error recovery');
+      console.error("[submit-lead] 🚨 CRITICAL: Could not save to fallback during error recovery");
     }
 
     const response = NextResponse.json(
-      { error: 'Failed to process lead submission', code: 'PROCESSING_ERROR' },
+      { error: "Failed to process lead submission", code: "PROCESSING_ERROR" },
       { status: 500 }
     );
     addSecurityHeaders(response);
@@ -379,10 +377,10 @@ export async function POST(request: Request) {
 // ==========================================
 
 function addSecurityHeaders(response: NextResponse): void {
-  response.headers.set('X-Frame-Options', 'DENY');
-  response.headers.set('X-Content-Type-Options', 'nosniff');
-  response.headers.set('X-XSS-Protection', '1; mode=block');
-  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  response.headers.set("X-Frame-Options", "DENY");
+  response.headers.set("X-Content-Type-Options", "nosniff");
+  response.headers.set("X-XSS-Protection", "1; mode=block");
+  response.headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
 }
 
 // ==========================================
@@ -403,7 +401,7 @@ export async function GET() {
   let pendingLeads = 0;
   try {
     if (fs.existsSync(FALLBACK_LEADS_FILE)) {
-      const leads = JSON.parse(fs.readFileSync(FALLBACK_LEADS_FILE, 'utf-8'));
+      const leads = JSON.parse(fs.readFileSync(FALLBACK_LEADS_FILE, "utf-8"));
       pendingLeads = leads.length;
     }
   } catch {

@@ -14,7 +14,7 @@ import {
   DollarSign,
   ArrowRight,
   Sparkles,
-  Target
+  Target,
 } from "lucide-react";
 
 const STUDIO_TYPES = [
@@ -25,7 +25,8 @@ const STUDIO_TYPES = [
     value: "$200/mo",
     scenario: "7 PM class inquiry",
     pain: "Prospect calls during evening class. Staff too busy coaching to answer. They sign up at the CrossFit box down the street instead.",
-    solution: "AI answers during WOD, qualifies lead, books intro session. Prospect shows up next day ready to join."
+    solution:
+      "AI answers during WOD, qualifies lead, books intro session. Prospect shows up next day ready to join.",
   },
   {
     id: "yoga",
@@ -34,7 +35,8 @@ const STUDIO_TYPES = [
     value: "$150/mo",
     scenario: "Early morning call",
     pain: "6 AM call about prenatal yoga. Studio opens at 9. Lead books with competitor who answered the phone.",
-    solution: "AI answers at 6 AM, discusses prenatal options, books trial class. Lead becomes unlimited member."
+    solution:
+      "AI answers at 6 AM, discusses prenatal options, books trial class. Lead becomes unlimited member.",
   },
   {
     id: "f45",
@@ -43,7 +45,8 @@ const STUDIO_TYPES = [
     value: "$250/mo",
     scenario: "Weekend trial request",
     pain: "Saturday 2 PM. Staff running class. Motivated lead lost to gym with 24/7 answering service.",
-    solution: "AI handles Saturday rush, books Monday trial, sends confirmation text. Lead converts to 6-month package."
+    solution:
+      "AI handles Saturday rush, books Monday trial, sends confirmation text. Lead converts to 6-month package.",
   },
   {
     id: "martial-arts",
@@ -52,8 +55,9 @@ const STUDIO_TYPES = [
     value: "$180/mo",
     scenario: "Parent inquiry",
     pain: "Mom calls during kids class. Instructor can't answer. She books at the dojo that picked up.",
-    solution: "AI chats with parent, explains kids program, books trial. Family joins with 2-year commitment."
-  }
+    solution:
+      "AI chats with parent, explains kids program, books trial. Family joins with 2-year commitment.",
+  },
 ];
 
 const INTEGRATIONS = [
@@ -62,7 +66,7 @@ const INTEGRATIONS = [
   { name: "TeamUp", logo: "TU" },
   { name: "ZenPlanner", logo: "ZP" },
   { name: "PushPress", logo: "PP" },
-  { name: "ClubReady", logo: "CR" }
+  { name: "ClubReady", logo: "CR" },
 ];
 
 const TESTIMONIALS = [
@@ -70,26 +74,29 @@ const TESTIMONIALS = [
     name: "Jake Thompson",
     business: "CrossFit Box Owner",
     location: "Austin, TX",
-    quote: "Captured 89 new members in 90 days. AI answered calls during WODs when we couldn't. Game changer.",
+    quote:
+      "Captured 89 new members in 90 days. AI answered calls during WODs when we couldn't. Game changer.",
     revenue: "$17K MRR",
-    metric: "+89 Members"
+    metric: "+89 Members",
   },
   {
     name: "Maria Santos",
     business: "Yoga Studio Owner",
     location: "Denver, CO",
-    quote: "6 AM inquiry converted to unlimited membership. AI handled it while I was in my own practice. Worth every penny.",
+    quote:
+      "6 AM inquiry converted to unlimited membership. AI handled it while I was in my own practice. Worth every penny.",
     revenue: "$1,800/yr",
-    metric: "+43% Conversions"
+    metric: "+43% Conversions",
   },
   {
     name: "Chris Park",
     business: "F45 Franchise Owner",
     location: "Nashville, TN",
-    quote: "Holiday season crushed us with calls. AI handled 200+ inquiries. Best investment we made this year.",
+    quote:
+      "Holiday season crushed us with calls. AI handled 200+ inquiries. Best investment we made this year.",
     revenue: "$42K",
-    metric: "200+ Leads"
-  }
+    metric: "200+ Leads",
+  },
 ];
 
 const HOW_IT_WORKS = [
@@ -97,26 +104,26 @@ const HOW_IT_WORKS = [
     step: 1,
     title: "Lead Calls Your Gym",
     description: "Prospect sees your ad, Google listing, or drives by. They call ready to join.",
-    icon: Phone
+    icon: Phone,
   },
   {
     step: 2,
     title: "AI Answers in 2 Rings",
     description: "No voicemail. No hold music. Professional conversation starts instantly, 24/7.",
-    icon: Zap
+    icon: Zap,
   },
   {
     step: 3,
     title: "AI Books Trial Class",
     description: "Qualifies interest, explains pricing, schedules intro session in your calendar.",
-    icon: Calendar
+    icon: Calendar,
   },
   {
     step: 4,
     title: "You Gain New Members",
     description: "Lead shows up pre-qualified. You close the deal. Revenue grows automatically.",
-    icon: TrendingUp
-  }
+    icon: TrendingUp,
+  },
 ];
 
 export default function FitnessClient() {
@@ -126,7 +133,7 @@ export default function FitnessClient() {
 
   // Calculate initial lost revenue to prevent $0 flash
   const calculateLostRevenue = (leads: number, value: number) => {
-    const missedLeads = leads * 0.30; // 30% miss rate
+    const missedLeads = leads * 0.3; // 30% miss rate
     const conversionRate = 0.25; // 25% of answered leads convert
     return Math.round(missedLeads * conversionRate * value * 12);
   };
@@ -162,7 +169,6 @@ export default function FitnessClient() {
 
   return (
     <div className="min-h-screen bg-white">
-
       {/* HERO SECTION */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Light Background */}
@@ -174,7 +180,7 @@ export default function FitnessClient() {
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.2, 0.4, 0.2],
-            rotate: [0, 90, 0]
+            rotate: [0, 90, 0],
           }}
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         >
@@ -184,7 +190,6 @@ export default function FitnessClient() {
         {/* Content */}
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
           <div className="max-w-5xl mx-auto text-center">
-
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -208,8 +213,8 @@ export default function FitnessClient() {
               Stop Losing{" "}
               <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
                 ${counter.toLocaleString()}/Year
-              </span>
-              {" "}to Missed Leads
+              </span>{" "}
+              to Missed Leads
             </motion.h1>
 
             {/* Subheadline */}
@@ -275,7 +280,6 @@ export default function FitnessClient() {
         <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white opacity-50" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
-
           {/* Section Header */}
           <div className="text-center mb-16">
             <motion.h2
@@ -313,7 +317,8 @@ export default function FitnessClient() {
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-4">Phone Rings</h3>
               <p className="text-slate-600 leading-relaxed">
-                Motivated prospect ready to join. They found you on Google, saw your ad, or drove by.
+                Motivated prospect ready to join. They found you on Google, saw your ad, or drove
+                by.
               </p>
             </motion.div>
 
@@ -376,7 +381,6 @@ export default function FitnessClient() {
         <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-white to-slate-50 opacity-50" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
-
           {/* Section Header */}
           <div className="text-center mb-16">
             <motion.div
@@ -387,7 +391,9 @@ export default function FitnessClient() {
               className="inline-flex items-center gap-2 bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 px-6 py-3 rounded-full mb-6"
             >
               <Target className="w-4 h-4 text-blue-600" />
-              <span className="text-sm font-semibold text-slate-900">Studio-Specific Solutions</span>
+              <span className="text-sm font-semibold text-slate-900">
+                Studio-Specific Solutions
+              </span>
             </motion.div>
 
             <motion.h2
@@ -446,7 +452,6 @@ export default function FitnessClient() {
               className="bg-white/70 backdrop-blur-xl border-2 border-blue-200 shadow-lg shadow-slate-200/50 p-10 rounded-2xl"
             >
               <div className="grid md:grid-cols-2 gap-12">
-
                 {/* Before (Problem) */}
                 <div>
                   <div className="flex items-center gap-3 mb-6">
@@ -464,7 +469,9 @@ export default function FitnessClient() {
                   <div className="bg-white/70 backdrop-blur-xl border-2 border-red-200 shadow-lg shadow-slate-200/50 p-6 rounded-xl">
                     <div className="flex items-center justify-between">
                       <span className="text-slate-600">Member Value Lost</span>
-                      <span className="text-2xl font-bold text-red-500">{selectedStudio.value}</span>
+                      <span className="text-2xl font-bold text-red-500">
+                        {selectedStudio.value}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -486,7 +493,9 @@ export default function FitnessClient() {
                   <div className="bg-white/70 backdrop-blur-xl border-2 border-blue-200 shadow-lg shadow-blue-200/50 p-6 rounded-xl">
                     <div className="flex items-center justify-between">
                       <span className="text-slate-600">Member Value Captured</span>
-                      <span className="text-2xl font-bold text-blue-600">{selectedStudio.value}</span>
+                      <span className="text-2xl font-bold text-blue-600">
+                        {selectedStudio.value}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -501,7 +510,6 @@ export default function FitnessClient() {
         <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white opacity-50" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
-
           <div className="text-center mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -567,8 +575,8 @@ export default function FitnessClient() {
               AI Books Trials Directly Into Your Calendar
             </h3>
             <p className="text-lg text-slate-600 leading-relaxed">
-              Lead calls at 10 PM on Sunday. AI schedules Monday intro session in Mindbody.
-              Sends confirmation text. You wake up to a new member booked and ready.
+              Lead calls at 10 PM on Sunday. AI schedules Monday intro session in Mindbody. Sends
+              confirmation text. You wake up to a new member booked and ready.
             </p>
           </motion.div>
         </div>
@@ -579,7 +587,6 @@ export default function FitnessClient() {
         <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-white to-slate-50 opacity-50" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
-
           <div className="text-center mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -610,7 +617,6 @@ export default function FitnessClient() {
             transition={{ duration: 0.5 }}
             className="bg-white/70 backdrop-blur-xl border border-slate-200 shadow-lg shadow-slate-200/50 p-10 rounded-2xl border-2 border-blue-200 max-w-4xl mx-auto"
           >
-
             {/* Slider 1: Monthly Leads */}
             <div className="mb-10">
               <div className="flex items-center justify-between mb-4">
@@ -619,8 +625,8 @@ export default function FitnessClient() {
                 </label>
                 <motion.span
                   key={monthlyLeads}
-                  initial={{ scale: 1.2, color: '#2563EB' }}
-                  animate={{ scale: 1, color: '#2563EB' }}
+                  initial={{ scale: 1.2, color: "#2563EB" }}
+                  animate={{ scale: 1, color: "#2563EB" }}
                   transition={{ duration: 0.3 }}
                   className="text-2xl font-bold text-blue-600"
                 >
@@ -646,8 +652,8 @@ export default function FitnessClient() {
                 </label>
                 <motion.span
                   key={membershipValue}
-                  initial={{ scale: 1.2, color: '#2563EB' }}
-                  animate={{ scale: 1, color: '#2563EB' }}
+                  initial={{ scale: 1.2, color: "#2563EB" }}
+                  animate={{ scale: 1, color: "#2563EB" }}
                   transition={{ duration: 0.3 }}
                   className="text-2xl font-bold text-blue-600"
                 >
@@ -684,7 +690,7 @@ export default function FitnessClient() {
                 ${lostRevenue.toLocaleString()}
               </motion.p>
               <p className="text-lg text-slate-600 mb-8">
-                Based on {Math.round(monthlyLeads * 0.30)} missed leads/month × 25% conversion rate
+                Based on {Math.round(monthlyLeads * 0.3)} missed leads/month × 25% conversion rate
               </p>
               <motion.a
                 href="tel:865-346-6111"
@@ -705,7 +711,6 @@ export default function FitnessClient() {
         <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white opacity-50" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
-
           <div className="text-center mb-16">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -768,7 +773,6 @@ export default function FitnessClient() {
         <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-white to-slate-50 opacity-50" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
-
           <div className="text-center mb-16">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -807,9 +811,7 @@ export default function FitnessClient() {
                 <div className="text-blue-600 text-6xl font-serif mb-4 leading-none">"</div>
 
                 {/* Quote */}
-                <p className="text-slate-900 mb-6 leading-relaxed text-lg">
-                  {testimonial.quote}
-                </p>
+                <p className="text-slate-900 mb-6 leading-relaxed text-lg">{testimonial.quote}</p>
 
                 {/* Author Info */}
                 <div className="flex items-center justify-between border-t border-slate-200 pt-6">
@@ -836,7 +838,6 @@ export default function FitnessClient() {
         <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-white opacity-50" />
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8">
-
           <div className="text-center mb-16">
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -850,7 +851,6 @@ export default function FitnessClient() {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-
             {/* Before */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -877,7 +877,9 @@ export default function FitnessClient() {
                   <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 mt-1">
                     <span className="text-red-500 text-xl">×</span>
                   </div>
-                  <span className="text-slate-600">Calls next gym. They answer. Signs up there.</span>
+                  <span className="text-slate-600">
+                    Calls next gym. They answer. Signs up there.
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 mt-1">
@@ -911,15 +913,21 @@ export default function FitnessClient() {
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-                  <span className="text-slate-900">AI answers in 2 rings at 8 PM. Professional greeting.</span>
+                  <span className="text-slate-900">
+                    AI answers in 2 rings at 8 PM. Professional greeting.
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-                  <span className="text-slate-900">Books trial class. Sends confirmation text instantly.</span>
+                  <span className="text-slate-900">
+                    Books trial class. Sends confirmation text instantly.
+                  </span>
                 </li>
                 <li className="flex items-start gap-3">
                   <CheckCircle2 className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" />
-                  <span className="text-slate-900">Prospect shows up pre-qualified. Converts to member.</span>
+                  <span className="text-slate-900">
+                    Prospect shows up pre-qualified. Converts to member.
+                  </span>
                 </li>
               </ul>
 
@@ -941,7 +949,7 @@ export default function FitnessClient() {
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-20"
           animate={{
             scale: [1, 1.3, 1],
-            opacity: [0.2, 0.4, 0.2]
+            opacity: [0.2, 0.4, 0.2],
           }}
           transition={{ duration: 8, repeat: Infinity }}
         >
@@ -949,7 +957,6 @@ export default function FitnessClient() {
         </motion.div>
 
         <div className="container-custom relative z-10 px-4 sm:px-6 lg:px-8 text-center">
-
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -959,12 +966,14 @@ export default function FitnessClient() {
           >
             <h2 className="text-display-lg lg:text-hero-xl font-display font-bold text-slate-900 mb-6">
               Start Converting Fitness Leads{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Tonight</span>
+              <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                Tonight
+              </span>
             </h2>
 
             <p className="text-xl sm:text-2xl text-slate-600 mb-12 max-w-3xl mx-auto">
-              Every hour you wait is another member lost to a competitor.
-              Get your AI voice agent live in 48 hours.
+              Every hour you wait is another member lost to a competitor. Get your AI voice agent
+              live in 48 hours.
             </p>
 
             {/* CTA Buttons */}
@@ -1002,19 +1011,27 @@ export default function FitnessClient() {
             {/* Trust Indicators */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 max-w-3xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2">500+</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2">
+                  500+
+                </div>
                 <p className="text-sm text-slate-600">Studios Served</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2">98%</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2">
+                  98%
+                </div>
                 <p className="text-sm text-slate-600">Answer Rate</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2">24/7</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2">
+                  24/7
+                </div>
                 <p className="text-sm text-slate-600">Coverage</p>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2">2 Rings</div>
+                <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2">
+                  2 Rings
+                </div>
                 <p className="text-sm text-slate-600">Avg Response</p>
               </div>
             </div>

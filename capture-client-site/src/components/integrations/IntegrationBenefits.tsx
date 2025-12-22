@@ -8,10 +8,7 @@ interface IntegrationBenefitsProps {
   benefits: string[];
 }
 
-export function IntegrationBenefits({
-  integrationName,
-  benefits,
-}: IntegrationBenefitsProps) {
+export function IntegrationBenefits({ integrationName, benefits }: IntegrationBenefitsProps) {
   return (
     <section className="relative py-16 sm:py-20 lg:py-24 overflow-hidden">
       {/* Background */}
@@ -58,9 +55,7 @@ export function IntegrationBenefits({
                 </div>
 
                 {/* Benefit Text */}
-                <p className="text-slate-900 font-medium leading-relaxed pt-0.5">
-                  {benefit}
-                </p>
+                <p className="text-slate-900 font-medium leading-relaxed pt-0.5">{benefit}</p>
               </div>
             </motion.div>
           ))}
@@ -85,9 +80,7 @@ export function IntegrationBenefits({
                 <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2">
                   {stat.value}
                 </div>
-                <div className="text-sm text-slate-600 font-medium">
-                  {stat.label}
-                </div>
+                <div className="text-sm text-slate-600 font-medium">{stat.label}</div>
               </div>
             ))}
           </div>

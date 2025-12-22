@@ -14,7 +14,6 @@ export function MobileHeroVisualLight() {
 
           {/* Screen */}
           <div className="relative bg-white rounded-[2rem] overflow-hidden min-h-[440px] p-6">
-
             {/* Call header with status */}
             <div className="flex items-center justify-between mb-8">
               <div className="flex items-center gap-2">
@@ -33,11 +32,17 @@ export function MobileHeroVisualLight() {
             <div className="relative flex justify-center mb-6">
               {/* Outer pulsing ring */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-32 h-32 rounded-full border-2 border-blue-400/30 pulse-ring" style={{ animationDelay: '0s' }} />
+                <div
+                  className="w-32 h-32 rounded-full border-2 border-blue-400/30 pulse-ring"
+                  style={{ animationDelay: "0s" }}
+                />
               </div>
               {/* Middle pulsing ring */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-28 h-28 rounded-full border-2 border-cyan-400/20 pulse-ring" style={{ animationDelay: '0.3s' }} />
+                <div
+                  className="w-28 h-28 rounded-full border-2 border-cyan-400/20 pulse-ring"
+                  style={{ animationDelay: "0.3s" }}
+                />
               </div>
               {/* Avatar */}
               <div className="relative z-10 w-24 h-24 rounded-full bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-500 flex items-center justify-center shadow-lg">
@@ -61,7 +66,8 @@ export function MobileHeroVisualLight() {
                   <div className="flex-1">
                     <p className="text-sm font-medium text-blue-600 mb-1">Capture AI</p>
                     <p className="text-sm text-slate-700 leading-relaxed">
-                      "Thanks for calling! I can help you schedule an appointment. What day works best for you?"
+                      "Thanks for calling! I can help you schedule an appointment. What day works
+                      best for you?"
                     </p>
                   </div>
                 </div>
@@ -76,7 +82,7 @@ export function MobileHeroVisualLight() {
                   className="waveform-bar w-1 rounded-full bg-gradient-to-t from-blue-600 to-cyan-500"
                   style={{
                     animationDelay: `${i * 0.1}s`,
-                    opacity: 0.3 + (Math.sin(i) * 0.3 + 0.3)
+                    opacity: 0.3 + (Math.sin(i) * 0.3 + 0.3),
                   }}
                 />
               ))}
@@ -88,9 +94,18 @@ export function MobileHeroVisualLight() {
                 <Zap className="w-4 h-4 text-blue-600" />
                 <span className="text-sm font-medium text-blue-600">AI Answering</span>
                 <div className="flex items-center gap-1">
-                  <div className="typing-dot w-1.5 h-1.5 rounded-full bg-blue-600" style={{ animationDelay: '0s' }} />
-                  <div className="typing-dot w-1.5 h-1.5 rounded-full bg-blue-600" style={{ animationDelay: '0.2s' }} />
-                  <div className="typing-dot w-1.5 h-1.5 rounded-full bg-blue-600" style={{ animationDelay: '0.4s' }} />
+                  <div
+                    className="typing-dot w-1.5 h-1.5 rounded-full bg-blue-600"
+                    style={{ animationDelay: "0s" }}
+                  />
+                  <div
+                    className="typing-dot w-1.5 h-1.5 rounded-full bg-blue-600"
+                    style={{ animationDelay: "0.2s" }}
+                  />
+                  <div
+                    className="typing-dot w-1.5 h-1.5 rounded-full bg-blue-600"
+                    style={{ animationDelay: "0.4s" }}
+                  />
                 </div>
               </div>
             </div>
@@ -116,7 +131,8 @@ export function MobileHeroVisualLight() {
           animation: pulse-ring 2s ease-in-out infinite;
         }
         @keyframes pulse-ring {
-          0%, 100% {
+          0%,
+          100% {
             opacity: 1;
             transform: scale(1);
           }
@@ -131,7 +147,8 @@ export function MobileHeroVisualLight() {
           animation: waveform 1.2s ease-in-out infinite;
         }
         @keyframes waveform {
-          0%, 100% {
+          0%,
+          100% {
             height: 8px;
           }
           50% {
@@ -144,7 +161,9 @@ export function MobileHeroVisualLight() {
           animation: dot-pulse 1.5s ease-in-out infinite;
         }
         @keyframes dot-pulse {
-          0%, 60%, 100% {
+          0%,
+          60%,
+          100% {
             opacity: 0.3;
             transform: scale(0.8);
           }

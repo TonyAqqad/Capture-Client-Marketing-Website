@@ -222,12 +222,6 @@
       "Hartland",
       "Palomar"
     ],
-    "nearby_cities": [
-      "Georgetown",
-      "Versailles",
-      "Richmond",
-      "Winchester",
-      "Nicholasville"
-    ]
+    "nearby_cities": ["Georgetown", "Versailles", "Richmond", "Winchester", "Nicholasville"]
   }
 }

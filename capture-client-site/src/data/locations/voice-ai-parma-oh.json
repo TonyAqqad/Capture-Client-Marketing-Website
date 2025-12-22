@@ -187,9 +187,6 @@
       "voice-ai-seven-hills-oh",
       "voice-ai-independence-oh"
     ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "packages": ["starter-package", "growth-package"]
   }
 }

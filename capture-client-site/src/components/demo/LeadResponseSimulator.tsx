@@ -22,7 +22,14 @@ import { CRMFieldsDisplay } from "./CRMFieldsDisplay";
 // ==================== TYPES ====================
 
 type BusinessType = "plumbing" | "dental" | "auto" | "hvac" | "law" | "general";
-type Intent = "emergency" | "service_request" | "inquiry" | "schedule" | "pricing" | "complaint" | "general";
+type Intent =
+  | "emergency"
+  | "service_request"
+  | "inquiry"
+  | "schedule"
+  | "pricing"
+  | "complaint"
+  | "general";
 
 interface ExtractedCRMData {
   name?: string;
@@ -102,10 +109,7 @@ const INDUSTRIES = [
     id: "general" as BusinessType,
     label: "Other",
     icon: Building2,
-    examples: [
-      "Do you offer 24/7 emergency service?",
-      "What are your hours and pricing?",
-    ],
+    examples: ["Do you offer 24/7 emergency service?", "What are your hours and pricing?"],
   },
 ];
 
@@ -145,7 +149,7 @@ function useTypewriter(text: string, speed: number = 25) {
 // ==================== MAIN COMPONENT ====================
 
 interface ConversationMessage {
-  role: 'user' | 'ai';
+  role: "user" | "ai";
   content: string;
   intent?: Intent;
   leadScore?: number;
@@ -165,9 +169,11 @@ export function LeadResponseSimulator({ personalization }: LeadResponseSimulator
   const selectedIndustryData = INDUSTRIES.find((i) => i.id === selectedIndustry)!;
 
   // Get the last AI message for typewriter effect
-  const lastAiMessage = conversationHistory.length > 0 && conversationHistory[conversationHistory.length - 1].role === 'ai'
-    ? conversationHistory[conversationHistory.length - 1]
-    : null;
+  const lastAiMessage =
+    conversationHistory.length > 0 &&
+    conversationHistory[conversationHistory.length - 1].role === "ai"
+      ? conversationHistory[conversationHistory.length - 1]
+      : null;
   const { displayedText, isComplete } = useTypewriter(lastAiMessage?.content || "", 20);
 
   // Close dropdown when clicking outside
@@ -186,13 +192,13 @@ export function LeadResponseSimulator({ personalization }: LeadResponseSimulator
     if (personalization?.industry) {
       const industryMap: Record<string, BusinessType> = {
         "Legal / Law Firms": "law",
-        "Plumbing": "plumbing",
-        "HVAC": "hvac",
+        Plumbing: "plumbing",
+        HVAC: "hvac",
         "Martial Arts / BJJ": "general",
         "Fitness / Gyms": "general",
-        "Roofing": "general",
+        Roofing: "general",
         "General Contracting": "general",
-        "Other": "general",
+        Other: "general",
       };
       const mappedIndustry = industryMap[personalization.industry] || "general";
       setSelectedIndustry(mappedIndustry);
@@ -212,7 +218,7 @@ export function LeadResponseSimulator({ personalization }: LeadResponseSimulator
     const userMessage = message.trim();
 
     // Add user message to conversation
-    setConversationHistory(prev => [...prev, { role: 'user', content: userMessage }]);
+    setConversationHistory((prev) => [...prev, { role: "user", content: userMessage }]);
     setMessage(""); // Clear input immediately
     setIsLoading(true);
     setError(null);
@@ -240,13 +246,16 @@ export function LeadResponseSimulator({ personalization }: LeadResponseSimulator
       const data: DemoResponse = await res.json();
 
       // Add AI response to conversation
-      setConversationHistory(prev => [...prev, {
-        role: 'ai',
-        content: data.response,
-        intent: data.intent,
-        leadScore: data.leadScore,
-        crmData: data.suggestedCrmFields,
-      }]);
+      setConversationHistory((prev) => [
+        ...prev,
+        {
+          role: "ai",
+          content: data.response,
+          intent: data.intent,
+          leadScore: data.leadScore,
+          crmData: data.suggestedCrmFields,
+        },
+      ]);
     } catch {
       setError("Something went wrong. Please try again.");
     } finally {
@@ -286,7 +295,10 @@ export function LeadResponseSimulator({ personalization }: LeadResponseSimulator
               </span>
             )}
             <div>
-              <h3 className="font-bold text-slate-900" style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}>
+              <h3
+                className="font-bold text-slate-900"
+                style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
+              >
                 Lead Response Simulator
               </h3>
               <p className="text-sm text-slate-500">
@@ -315,7 +327,9 @@ export function LeadResponseSimulator({ personalization }: LeadResponseSimulator
                   <selectedIndustryData.icon className="w-5 h-5 text-blue-600" />
                   <span className="font-medium text-slate-900">{selectedIndustryData.label}</span>
                 </div>
-                <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${showDropdown ? "rotate-180" : ""}`} />
+                <ChevronDown
+                  className={`w-4 h-4 text-slate-400 transition-transform ${showDropdown ? "rotate-180" : ""}`}
+                />
               </button>
 
               <AnimatePresence>
@@ -339,8 +353,12 @@ export function LeadResponseSimulator({ personalization }: LeadResponseSimulator
                           selectedIndustry === industry.id ? "bg-blue-50" : ""
                         }`}
                       >
-                        <industry.icon className={`w-5 h-5 ${selectedIndustry === industry.id ? "text-blue-600" : "text-slate-400"}`} />
-                        <span className={`font-medium ${selectedIndustry === industry.id ? "text-blue-600" : "text-slate-700"}`}>
+                        <industry.icon
+                          className={`w-5 h-5 ${selectedIndustry === industry.id ? "text-blue-600" : "text-slate-400"}`}
+                        />
+                        <span
+                          className={`font-medium ${selectedIndustry === industry.id ? "text-blue-600" : "text-slate-700"}`}
+                        >
                           {industry.label}
                         </span>
                       </button>
@@ -355,18 +373,18 @@ export function LeadResponseSimulator({ personalization }: LeadResponseSimulator
           {conversationHistory.length > 0 && (
             <div className="space-y-4 max-h-96 overflow-y-auto px-2">
               {conversationHistory.map((msg, idx) => {
-                const isLastAi = msg.role === 'ai' && idx === conversationHistory.length - 1;
+                const isLastAi = msg.role === "ai" && idx === conversationHistory.length - 1;
                 const textToShow = isLastAi ? displayedText : msg.content;
 
                 return (
                   <motion.div
                     key={idx}
-                    className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
+                    className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.2 }}
                   >
-                    {msg.role === 'user' ? (
+                    {msg.role === "user" ? (
                       <div className="max-w-[80%] px-4 py-3 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-md">
                         <p className="text-sm leading-relaxed">{msg.content}</p>
                       </div>
@@ -385,8 +403,15 @@ export function LeadResponseSimulator({ personalization }: LeadResponseSimulator
                         <div className="flex-1">
                           <div className="px-4 py-3 rounded-2xl bg-white border border-slate-200 shadow-sm">
                             <div className="flex items-center gap-2 mb-1">
-                              <span className="text-xs font-semibold text-blue-700">Capture AI</span>
-                              {msg.intent && <IntentBadge intent={msg.intent} animate={!isLastAi || isComplete} />}
+                              <span className="text-xs font-semibold text-blue-700">
+                                Capture AI
+                              </span>
+                              {msg.intent && (
+                                <IntentBadge
+                                  intent={msg.intent}
+                                  animate={!isLastAi || isComplete}
+                                />
+                              )}
                             </div>
                             <p className="text-sm text-slate-800 leading-relaxed">
                               &ldquo;{textToShow}&rdquo;
@@ -436,7 +461,7 @@ export function LeadResponseSimulator({ personalization }: LeadResponseSimulator
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               onKeyDown={(e) => {
-                if (e.key === 'Enter' && !e.shiftKey) {
+                if (e.key === "Enter" && !e.shiftKey) {
                   e.preventDefault();
                   handleSubmit();
                 }

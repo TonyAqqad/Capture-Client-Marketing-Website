@@ -249,7 +249,7 @@ export default function InteractiveAIDemo() {
         }, 500);
       }
     } catch (error) {
-      if (process.env.NODE_ENV === 'development') {
+      if (process.env.NODE_ENV === "development") {
         console.error("Demo API error:", error);
       }
       setIsError(true);
@@ -540,7 +540,7 @@ function CRMPanel({ crmData }: CRMPanelProps) {
     { label: "Intent", value: crmData.intent, icon: Target },
   ];
 
-  const filledCount = fields.filter(f => f.value).length;
+  const filledCount = fields.filter((f) => f.value).length;
   const captureProgress = filledCount / fields.length;
 
   return (
@@ -594,7 +594,9 @@ function CRMPanel({ crmData }: CRMPanelProps) {
         <div className="pt-4">
           <div className="flex items-center justify-between text-xs text-slate-500 mb-2">
             <span>Data captured</span>
-            <span>{filledCount}/{fields.length} fields</span>
+            <span>
+              {filledCount}/{fields.length} fields
+            </span>
           </div>
           <div className="h-1 bg-slate-100 rounded-full overflow-hidden">
             <motion.div
@@ -634,9 +636,7 @@ function CRMField({ field }: CRMFieldProps) {
       `}
     >
       <div className="flex items-center gap-2 mb-1">
-        <IconComponent
-          className={`w-3.5 h-3.5 ${filled ? "text-cyan-400" : "text-slate-600"}`}
-        />
+        <IconComponent className={`w-3.5 h-3.5 ${filled ? "text-cyan-400" : "text-slate-600"}`} />
         <span
           className={`text-xs font-medium uppercase tracking-wide ${
             filled ? "text-cyan-400" : "text-slate-600"

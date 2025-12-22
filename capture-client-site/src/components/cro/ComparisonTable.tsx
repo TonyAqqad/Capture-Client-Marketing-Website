@@ -23,13 +23,13 @@ export default function ComparisonTable() {
       <div className="text-center mb-6 sm:mb-10 px-4">
         <h3
           className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 mb-3 sm:mb-4"
-          style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
+          style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 800 }}
         >
           Why Choose <span className="text-gradient-blue-cyan">Capture Client</span>?
         </h3>
         <p
           className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto"
-          style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}
+          style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 200 }}
         >
           See how we stack up against traditional marketing agencies and scattered tools.
         </p>
@@ -42,7 +42,12 @@ export default function ComparisonTable() {
           <div className="p-4 bg-gradient-to-r from-[#00C9FF]/10 to-[#4A69E2]/10 border-b border-slate-200 text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] rounded-full">
               <Star className="w-5 h-5 text-white fill-white" />
-              <span className="text-sm font-bold text-white" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}>Capture Client Benefits</span>
+              <span
+                className="text-sm font-bold text-white"
+                style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 800 }}
+              >
+                Capture Client Benefits
+              </span>
             </div>
           </div>
 
@@ -63,11 +68,17 @@ export default function ComparisonTable() {
                   </div>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-semibold text-slate-900 leading-relaxed break-words" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}>
+                  <p
+                    className="text-sm font-semibold text-slate-900 leading-relaxed break-words"
+                    style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 200 }}
+                  >
                     {item.feature}
                   </p>
-                  {typeof item.captureClient === 'string' && (
-                    <p className="text-xs text-[#00C9FF] mt-1" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}>
+                  {typeof item.captureClient === "string" && (
+                    <p
+                      className="text-xs text-[#00C9FF] mt-1"
+                      style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 200 }}
+                    >
                       {item.captureClient}
                     </p>
                   )}
@@ -79,13 +90,16 @@ export default function ComparisonTable() {
           {/* Footer CTA */}
           <div className="p-4 bg-gradient-to-r from-[#00C9FF]/10 to-[#4A69E2]/10 border-t border-slate-200">
             <div className="text-center">
-              <p className="text-xs text-slate-600 mb-3" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}>
+              <p
+                className="text-xs text-slate-600 mb-3"
+                style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 200 }}
+              >
                 Get everything you need in one platform. No hidden fees. No surprises.
               </p>
               <a
                 href="#pricing"
                 className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] text-white font-bold px-6 py-3 rounded-xl hover:shadow-glow-lg transition-all duration-300 text-sm w-full min-h-[48px] touch-manipulation"
-                style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
+                style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 800 }}
               >
                 See Pricing
                 <MoveRight className="w-5 h-5" />
@@ -103,11 +117,19 @@ export default function ComparisonTable() {
           <div className="text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] rounded-full mb-2">
               <Star className="w-5 h-5 text-white fill-white" />
-              <span className="text-sm font-bold text-white whitespace-nowrap" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}>Capture Client</span>
+              <span
+                className="text-sm font-bold text-white whitespace-nowrap"
+                style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 800 }}
+              >
+                Capture Client
+              </span>
             </div>
           </div>
           <div className="text-center">
-            <p className="text-sm font-semibold text-slate-600 mb-2 whitespace-nowrap" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}>
+            <p
+              className="text-sm font-semibold text-slate-600 mb-2 whitespace-nowrap"
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 200 }}
+            >
               Traditional Agencies
             </p>
           </div>
@@ -127,7 +149,12 @@ export default function ComparisonTable() {
           >
             {/* Feature name */}
             <div className="col-span-1 flex items-center pr-2">
-              <p className="text-sm font-semibold text-slate-900 leading-tight break-words" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}>{item.feature}</p>
+              <p
+                className="text-sm font-semibold text-slate-900 leading-tight break-words"
+                style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 200 }}
+              >
+                {item.feature}
+              </p>
             </div>
 
             {/* Capture Client */}
@@ -142,7 +169,12 @@ export default function ComparisonTable() {
                 </div>
               ) : (
                 <div className="px-3 py-1.5 bg-[#00C9FF]/20 border border-[#00C9FF]/30 rounded-full">
-                  <span className="text-xs font-bold text-[#00C9FF] whitespace-nowrap" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}>{item.captureClient}</span>
+                  <span
+                    className="text-xs font-bold text-[#00C9FF] whitespace-nowrap"
+                    style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 800 }}
+                  >
+                    {item.captureClient}
+                  </span>
                 </div>
               )}
             </div>
@@ -159,7 +191,10 @@ export default function ComparisonTable() {
                 </div>
               ) : (
                 <div className="px-3 py-1.5 bg-[#4A69E2]/20 border border-[#4A69E2]/30 rounded-full">
-                  <span className="text-xs font-semibold text-[#4A69E2] whitespace-nowrap" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}>
+                  <span
+                    className="text-xs font-semibold text-[#4A69E2] whitespace-nowrap"
+                    style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 200 }}
+                  >
                     {item.competitors}
                   </span>
                 </div>
@@ -171,13 +206,16 @@ export default function ComparisonTable() {
         {/* Footer CTA */}
         <div className="p-6 bg-gradient-to-r from-[#00C9FF]/10 to-[#4A69E2]/10 border-t border-slate-200">
           <div className="text-center">
-            <p className="text-sm text-slate-600 mb-4" style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 200 }}>
+            <p
+              className="text-sm text-slate-600 mb-4"
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 200 }}
+            >
               Get everything you need in one platform. No hidden fees. No surprises.
             </p>
             <a
               href="#pricing"
               className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] text-white font-bold px-8 py-4 rounded-xl hover:shadow-glow-lg transition-all duration-300 text-base min-h-[56px] touch-manipulation"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)', fontWeight: 800 }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)", fontWeight: 800 }}
             >
               See Pricing
               <MoveRight className="w-6 h-6" />

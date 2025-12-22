@@ -1,11 +1,11 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef } from "react";
 
 // ============================================================================
 // TYPE DEFINITIONS
 // ============================================================================
 
-export type SimulationStage = 'setup' | 'simulation' | 'payoff';
-export type CallState = 'idle' | 'ringing' | 'connected';
+export type SimulationStage = "setup" | "simulation" | "payoff";
+export type CallState = "idle" | "ringing" | "connected";
 
 export interface CRMField {
   id: string;
@@ -36,17 +36,17 @@ export interface SimulationControls {
 
 export const SIMULATION_TIMING = {
   // Stage 2: Simulation timing
-  RING_DURATION: 2000,           // 0s-2s: Phone rings (orange)
-  CONNECT_AT: 2000,              // 2s: Phone connects (cyan)
-  TRANSCRIPT_START_AT: 2500,     // 2.5s: AI transcript starts typing
-  CRM_FIELD_1_AT: 4000,          // 4s: "Name" field populates
-  CRM_FIELD_2_AT: 6000,          // 6s: "Goal" field populates
-  CRM_FIELD_3_AT: 7500,          // 7.5s: "Status" field populates (urgent)
-  STAGE_3_TRANSITION_AT: 8000,   // 8s: Transition to Stage 3
+  RING_DURATION: 2000, // 0s-2s: Phone rings (orange)
+  CONNECT_AT: 2000, // 2s: Phone connects (cyan)
+  TRANSCRIPT_START_AT: 2500, // 2.5s: AI transcript starts typing
+  CRM_FIELD_1_AT: 4000, // 4s: "Name" field populates
+  CRM_FIELD_2_AT: 6000, // 6s: "Goal" field populates
+  CRM_FIELD_3_AT: 7500, // 7.5s: "Status" field populates (urgent)
+  STAGE_3_TRANSITION_AT: 8000, // 8s: Transition to Stage 3
 
   // Visual effect durations
-  FLASH_DURATION: 600,           // How long field flash lasts
-  FIELD_FADE_IN: 400,            // Fade-in animation for filled fields
+  FLASH_DURATION: 600, // How long field flash lasts
+  FIELD_FADE_IN: 400, // Fade-in animation for filled fields
 } as const;
 
 // ============================================================================
@@ -55,23 +55,23 @@ export const SIMULATION_TIMING = {
 
 const INITIAL_CRM_FIELDS: CRMField[] = [
   {
-    id: 'name',
-    label: 'Lead Name',
-    value: 'Sarah Mitchell',
+    id: "name",
+    label: "Lead Name",
+    value: "Sarah Mitchell",
     isFilled: false,
     isFlashing: false,
   },
   {
-    id: 'goal',
-    label: 'Business Goal',
-    value: 'Scale to 10 locations by 2026',
+    id: "goal",
+    label: "Business Goal",
+    value: "Scale to 10 locations by 2026",
     isFilled: false,
     isFlashing: false,
   },
   {
-    id: 'status',
-    label: 'Lead Status',
-    value: 'HOT LEAD - Follow up today',
+    id: "status",
+    label: "Lead Status",
+    value: "HOT LEAD - Follow up today",
     isFilled: false,
     isFlashing: false,
     isUrgent: true,
@@ -79,8 +79,8 @@ const INITIAL_CRM_FIELDS: CRMField[] = [
 ];
 
 const INITIAL_STATE: SimulationState = {
-  stage: 'setup',
-  callState: 'idle',
+  stage: "setup",
+  callState: "idle",
   isTyping: false,
   crmFields: INITIAL_CRM_FIELDS,
   transcriptComplete: false,
@@ -129,21 +129,21 @@ export function useSimulationState() {
     // Reset to clean state, then begin stage 2 (simulation)
     setState({
       ...INITIAL_STATE,
-      stage: 'simulation',
-      callState: 'ringing',
+      stage: "simulation",
+      callState: "ringing",
     });
 
     // ===== 2s: Phone connects, switch to cyan =====
     scheduleTimeout(() => {
-      setState(prev => ({
+      setState((prev) => ({
         ...prev,
-        callState: 'connected',
+        callState: "connected",
       }));
     }, SIMULATION_TIMING.CONNECT_AT);
 
     // ===== 2.5s: Start transcript typing =====
     scheduleTimeout(() => {
-      setState(prev => ({
+      setState((prev) => ({
         ...prev,
         isTyping: true,
       }));
@@ -151,7 +151,7 @@ export function useSimulationState() {
 
     // ===== 4s: CRM Field 1 (Name) populates =====
     scheduleTimeout(() => {
-      setState(prev => ({
+      setState((prev) => ({
         ...prev,
         crmFields: prev.crmFields.map((field, idx) =>
           idx === 0 ? { ...field, isFilled: true, isFlashing: true } : field
@@ -160,7 +160,7 @@ export function useSimulationState() {
 
       // Remove flash after duration
       scheduleTimeout(() => {
-        setState(prev => ({
+        setState((prev) => ({
           ...prev,
           crmFields: prev.crmFields.map((field, idx) =>
             idx === 0 ? { ...field, isFlashing: false } : field
@@ -171,7 +171,7 @@ export function useSimulationState() {
 
     // ===== 6s: CRM Field 2 (Goal) populates =====
     scheduleTimeout(() => {
-      setState(prev => ({
+      setState((prev) => ({
         ...prev,
         crmFields: prev.crmFields.map((field, idx) =>
           idx === 1 ? { ...field, isFilled: true, isFlashing: true } : field
@@ -180,7 +180,7 @@ export function useSimulationState() {
 
       // Remove flash after duration
       scheduleTimeout(() => {
-        setState(prev => ({
+        setState((prev) => ({
           ...prev,
           crmFields: prev.crmFields.map((field, idx) =>
             idx === 1 ? { ...field, isFlashing: false } : field
@@ -191,7 +191,7 @@ export function useSimulationState() {
 
     // ===== 7.5s: CRM Field 3 (Status - URGENT) populates =====
     scheduleTimeout(() => {
-      setState(prev => ({
+      setState((prev) => ({
         ...prev,
         crmFields: prev.crmFields.map((field, idx) =>
           idx === 2 ? { ...field, isFilled: true, isFlashing: true } : field
@@ -202,7 +202,7 @@ export function useSimulationState() {
 
       // Remove flash after duration
       scheduleTimeout(() => {
-        setState(prev => ({
+        setState((prev) => ({
           ...prev,
           crmFields: prev.crmFields.map((field, idx) =>
             idx === 2 ? { ...field, isFlashing: false } : field
@@ -213,9 +213,9 @@ export function useSimulationState() {
 
     // ===== 8s: Transition to Stage 3 (Payoff) =====
     scheduleTimeout(() => {
-      setState(prev => ({
+      setState((prev) => ({
         ...prev,
-        stage: 'payoff',
+        stage: "payoff",
       }));
     }, SIMULATION_TIMING.STAGE_3_TRANSITION_AT);
   }, [clearAllTimeouts, scheduleTimeout]);
@@ -228,9 +228,9 @@ export function useSimulationState() {
     clearAllTimeouts();
     setState({
       ...INITIAL_STATE,
-      stage: 'payoff',
-      callState: 'connected',
-      crmFields: INITIAL_CRM_FIELDS.map(field => ({
+      stage: "payoff",
+      callState: "connected",
+      crmFields: INITIAL_CRM_FIELDS.map((field) => ({
         ...field,
         isFilled: true,
         isFlashing: false,

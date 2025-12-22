@@ -22,14 +22,11 @@ interface IntegrationCardProps {
   featured?: boolean;
 }
 
-export function IntegrationCard({
-  integration,
-  featured = false,
-}: IntegrationCardProps) {
+export function IntegrationCard({ integration, featured = false }: IntegrationCardProps) {
   const [imageError, setImageError] = useState(false);
 
   // Support both field names for logo (logoUrl is primary, logo is fallback)
-  const logoSrc = integration.logoUrl || integration.logo || '';
+  const logoSrc = integration.logoUrl || integration.logo || "";
 
   // Support both field names for featured status (popular is primary, featured is fallback)
   const isFeatured = featured || integration.popular || integration.featured || false;
@@ -41,7 +38,7 @@ export function IntegrationCard({
         type: "spring",
         stiffness: 400,
         damping: 25,
-        mass: 0.5
+        mass: 0.5,
       }}
       className="group relative h-full touch-manipulation overflow-visible"
     >

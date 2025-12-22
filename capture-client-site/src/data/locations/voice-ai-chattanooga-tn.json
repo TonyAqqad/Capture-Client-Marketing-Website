@@ -11,12 +11,7 @@
     "slug": "chattanooga",
     "state_abbr": "TN",
     "state_full": "Tennessee",
-    "nearby_areas": [
-      "Cleveland",
-      "East Ridge",
-      "Red Bank",
-      "Signal Mountain"
-    ],
+    "nearby_areas": ["Cleveland", "East Ridge", "Red Bank", "Signal Mountain"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -115,12 +110,7 @@
       "Ooltewah",
       "Harrison"
     ],
-    "counties_served": [
-      "Hamilton County",
-      "Bradley County",
-      "Marion County",
-      "Sequatchie County"
-    ]
+    "counties_served": ["Hamilton County", "Bradley County", "Marion County", "Sequatchie County"]
   },
   "faq": [
     {
@@ -194,15 +184,7 @@
     "primary_location": "Knoxville, TN"
   },
   "related_pages": {
-    "services": [
-      "facebook-ads",
-      "google-ads",
-      "local-seo"
-    ],
-    "locations": [
-      "knoxville",
-      "nashville",
-      "cleveland"
-    ]
+    "services": ["facebook-ads", "google-ads", "local-seo"],
+    "locations": ["knoxville", "nashville", "cleveland"]
   }
 }

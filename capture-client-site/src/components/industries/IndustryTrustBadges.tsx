@@ -13,7 +13,7 @@ import {
   Award,
   CheckCircle,
   TrendingUp,
-  type LucideIcon
+  type LucideIcon,
 } from "lucide-react";
 
 export interface TrustBadge {
@@ -26,16 +26,16 @@ export interface TrustBadge {
 
 // Map Material Icons to Lucide icons
 const ICON_MAP: Record<string, LucideIcon> = {
-  'verified': BadgeCheck,
-  'shield': Shield,
-  'verified_user': ShieldCheck,
-  'star': Star,
-  'check_circle': CheckCircle,
-  'trending_up': TrendingUp,
-  'groups': Users,
-  'schedule': Clock,
-  'emoji_events': Award,
-  'workspace_premium': Award,
+  verified: BadgeCheck,
+  shield: Shield,
+  verified_user: ShieldCheck,
+  star: Star,
+  check_circle: CheckCircle,
+  trending_up: TrendingUp,
+  groups: Users,
+  schedule: Clock,
+  emoji_events: Award,
+  workspace_premium: Award,
 };
 
 interface IndustryTrustBadgesProps {
@@ -68,7 +68,7 @@ export function IndustryTrustBadges({
   industryName,
   rating = 4.9,
   reviewCount = 200,
-  className = ""
+  className = "",
 }: IndustryTrustBadgesProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -110,7 +110,7 @@ export function IndustryTrustBadges({
   }, [isInView, clientCount]);
 
   // Get badge icon color based on type
-  const getBadgeIconColor = (type: TrustBadge['type']) => {
+  const getBadgeIconColor = (type: TrustBadge["type"]) => {
     switch (type) {
       case "compliance":
         return "text-blue-400";
@@ -134,14 +134,16 @@ export function IndustryTrustBadges({
     const stars = [];
 
     for (let i = 0; i < fullStars; i++) {
-      stars.push(
-        <Star key={`full-${i}`} className="w-5 h-5 text-yellow-400 fill-yellow-400" />
-      );
+      stars.push(<Star key={`full-${i}`} className="w-5 h-5 text-yellow-400 fill-yellow-400" />);
     }
 
     if (hasHalfStar) {
       stars.push(
-        <Star key="half" className="w-5 h-5 text-yellow-400 fill-yellow-400" style={{ clipPath: 'inset(0 50% 0 0)' }} />
+        <Star
+          key="half"
+          className="w-5 h-5 text-yellow-400 fill-yellow-400"
+          style={{ clipPath: "inset(0 50% 0 0)" }}
+        />
       );
     }
 
@@ -239,20 +241,18 @@ export function IndustryTrustBadges({
                     <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       {(() => {
                         const IconComponent = ICON_MAP[badge.icon] || Shield;
-                        return <IconComponent className={`w-8 h-8 ${getBadgeIconColor(badge.type)}`} />;
+                        return (
+                          <IconComponent className={`w-8 h-8 ${getBadgeIconColor(badge.type)}`} />
+                        );
                       })()}
                     </div>
                   </div>
 
                   {/* Label */}
                   <div className="text-center">
-                    <div className="text-sm font-bold text-slate-900 mb-1">
-                      {badge.label}
-                    </div>
+                    <div className="text-sm font-bold text-slate-900 mb-1">{badge.label}</div>
                     {badge.value && (
-                      <div className="text-xs font-semibold text-blue-500">
-                        {badge.value}
-                      </div>
+                      <div className="text-xs font-semibold text-blue-500">{badge.value}</div>
                     )}
                     {badge.description && (
                       <div className="text-xs text-slate-600 mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -271,7 +271,7 @@ export function IndustryTrustBadges({
           </div>
 
           {/* Security Note (for compliance-heavy industries) */}
-          {badges.some(b => b.type === "compliance") && (
+          {badges.some((b) => b.type === "compliance") && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -285,7 +285,8 @@ export function IndustryTrustBadges({
                 </span>
               </div>
               <p className="text-sm text-slate-600 max-w-2xl mx-auto">
-                Your data is protected with bank-level encryption, regular security audits, and full compliance with industry regulations.
+                Your data is protected with bank-level encryption, regular security audits, and full
+                compliance with industry regulations.
               </p>
             </motion.div>
           )}

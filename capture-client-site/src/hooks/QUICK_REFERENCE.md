@@ -3,36 +3,36 @@
 ## Import
 
 ```typescript
-import { useInteractiveDemo } from '@/hooks/useInteractiveDemo';
+import { useInteractiveDemo } from "@/hooks/useInteractiveDemo";
 ```
 
 ## Basic Setup
 
 ```tsx
-const { state, controls } = useInteractiveDemo('plumbing');
+const { state, controls } = useInteractiveDemo("plumbing");
 ```
 
 ## State Properties
 
-| Property | Type | Description |
-|----------|------|-------------|
-| `state.businessType` | `BusinessType` | Current business type |
-| `state.conversationHistory` | `Message[]` | All messages |
-| `state.isLoading` | `boolean` | API call in progress |
-| `state.error` | `string \| null` | Error message |
-| `state.crmFields` | `CRMField[]` | CRM field states |
-| `state.leadScore` | `number` | Lead score (0-100) |
-| `state.isTyping` | `boolean` | AI typing animation active |
-| `state.currentAiResponse` | `string` | Partial AI response |
+| Property                    | Type             | Description                |
+| --------------------------- | ---------------- | -------------------------- |
+| `state.businessType`        | `BusinessType`   | Current business type      |
+| `state.conversationHistory` | `Message[]`      | All messages               |
+| `state.isLoading`           | `boolean`        | API call in progress       |
+| `state.error`               | `string \| null` | Error message              |
+| `state.crmFields`           | `CRMField[]`     | CRM field states           |
+| `state.leadScore`           | `number`         | Lead score (0-100)         |
+| `state.isTyping`            | `boolean`        | AI typing animation active |
+| `state.currentAiResponse`   | `string`         | Partial AI response        |
 
 ## Control Methods
 
-| Method | Parameters | Description |
-|--------|------------|-------------|
-| `controls.sendMessage()` | `message: string` | Send user message |
-| `controls.setBusinessType()` | `type: BusinessType` | Change business type |
-| `controls.resetDemo()` | - | Reset to initial state |
-| `controls.loadExampleConversation()` | `transcriptId: string` | Load example |
+| Method                               | Parameters             | Description            |
+| ------------------------------------ | ---------------------- | ---------------------- |
+| `controls.sendMessage()`             | `message: string`      | Send user message      |
+| `controls.setBusinessType()`         | `type: BusinessType`   | Change business type   |
+| `controls.resetDemo()`               | -                      | Reset to initial state |
+| `controls.loadExampleConversation()` | `transcriptId: string` | Load example           |
 
 ## Business Types
 
@@ -48,32 +48,34 @@ const { state, controls } = useInteractiveDemo('plumbing');
 ### Display Conversation
 
 ```tsx
-{state.conversationHistory.map((msg) => (
-  <div key={msg.id} className={msg.role === 'ai' ? 'ai' : 'user'}>
-    {msg.text}
-  </div>
-))}
+{
+  state.conversationHistory.map((msg) => (
+    <div key={msg.id} className={msg.role === "ai" ? "ai" : "user"}>
+      {msg.text}
+    </div>
+  ));
+}
 ```
 
 ### Show Typing Indicator
 
 ```tsx
-{state.isTyping && (
-  <div className="typing">
-    {state.currentAiResponse}
-  </div>
-)}
+{
+  state.isTyping && <div className="typing">{state.currentAiResponse}</div>;
+}
 ```
 
 ### Display CRM Fields
 
 ```tsx
-{state.crmFields.map((field) => (
-  <div key={field.id} className={field.isFlashing ? 'flash' : ''}>
-    <label>{field.label}</label>
-    <span>{field.isFilled ? field.value : 'Waiting...'}</span>
-  </div>
-))}
+{
+  state.crmFields.map((field) => (
+    <div key={field.id} className={field.isFlashing ? "flash" : ""}>
+      <label>{field.label}</label>
+      <span>{field.isFilled ? field.value : "Waiting..."}</span>
+    </div>
+  ));
+}
 ```
 
 ### Show Lead Score
@@ -88,23 +90,22 @@ const { state, controls } = useInteractiveDemo('plumbing');
 ### Send Message Button
 
 ```tsx
-<button
-  onClick={() => controls.sendMessage(input)}
-  disabled={state.isLoading || state.isTyping}
->
-  {state.isLoading ? 'Sending...' : 'Send'}
+<button onClick={() => controls.sendMessage(input)} disabled={state.isLoading || state.isTyping}>
+  {state.isLoading ? "Sending..." : "Send"}
 </button>
 ```
 
 ### Error Display
 
 ```tsx
-{state.error && (
-  <div className="error">
-    {state.error}
-    <button onClick={controls.resetDemo}>Reset</button>
-  </div>
-)}
+{
+  state.error && (
+    <div className="error">
+      {state.error}
+      <button onClick={controls.resetDemo}>Reset</button>
+    </div>
+  );
+}
 ```
 
 ### Business Type Selector
@@ -141,19 +142,19 @@ RETRY_DELAY_MS: 1000,          // 1 second between retries
 ## Complete Example
 
 ```tsx
-'use client';
+"use client";
 
-import { useInteractiveDemo } from '@/hooks/useInteractiveDemo';
-import { useState } from 'react';
+import { useInteractiveDemo } from "@/hooks/useInteractiveDemo";
+import { useState } from "react";
 
 export default function QuickDemo() {
-  const { state, controls } = useInteractiveDemo('plumbing');
-  const [input, setInput] = useState('');
+  const { state, controls } = useInteractiveDemo("plumbing");
+  const [input, setInput] = useState("");
 
   const handleSend = async () => {
     if (!input.trim()) return;
     await controls.sendMessage(input);
-    setInput('');
+    setInput("");
   };
 
   return (
@@ -165,9 +166,7 @@ export default function QuickDemo() {
             {msg.text}
           </div>
         ))}
-        {state.isTyping && (
-          <div className="ai typing">{state.currentAiResponse}</div>
-        )}
+        {state.isTyping && <div className="ai typing">{state.currentAiResponse}</div>}
       </div>
 
       {/* CRM */}
@@ -175,7 +174,7 @@ export default function QuickDemo() {
         <div>Score: {state.leadScore}/100</div>
         {state.crmFields.map((field) => (
           <div key={field.id}>
-            {field.label}: {field.value || 'N/A'}
+            {field.label}: {field.value || "N/A"}
           </div>
         ))}
       </div>
@@ -185,22 +184,17 @@ export default function QuickDemo() {
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          onKeyDown={(e) => e.key === 'Enter' && handleSend()}
+          onKeyDown={(e) => e.key === "Enter" && handleSend()}
           disabled={state.isLoading}
         />
-        <button
-          onClick={handleSend}
-          disabled={state.isLoading || !input.trim()}
-        >
+        <button onClick={handleSend} disabled={state.isLoading || !input.trim()}>
           Send
         </button>
         <button onClick={controls.resetDemo}>Reset</button>
       </div>
 
       {/* Error */}
-      {state.error && (
-        <div className="error">{state.error}</div>
-      )}
+      {state.error && <div className="error">{state.error}</div>}
     </div>
   );
 }

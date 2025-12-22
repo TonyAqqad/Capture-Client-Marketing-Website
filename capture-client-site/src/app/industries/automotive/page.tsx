@@ -7,7 +7,8 @@ const serviceSchema = {
   "@type": "Service",
   "@id": "https://captureclient.com/industries/automotive#service",
   name: "AI BDC for Car Dealerships",
-  description: "24/7 AI BDC agents for automotive dealerships. Handle sales inquiries, service appointments, and customer follow-ups. Integrates with DealerSocket, CDK, Reynolds & Reynolds.",
+  description:
+    "24/7 AI BDC agents for automotive dealerships. Handle sales inquiries, service appointments, and customer follow-ups. Integrates with DealerSocket, CDK, Reynolds & Reynolds.",
   provider: {
     "@type": "Organization",
     name: "Capture Client",
@@ -56,15 +57,26 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://captureclient.com" },
-    { "@type": "ListItem", position: 2, name: "Who We Serve", item: "https://captureclient.com/who-we-serve" },
-    { "@type": "ListItem", position: 3, name: "Automotive", item: "https://captureclient.com/industries/automotive" },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Who We Serve",
+      item: "https://captureclient.com/who-we-serve",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Automotive",
+      item: "https://captureclient.com/industries/automotive",
+    },
   ],
 };
 
 // SEO Metadata (Server Component)
 export const metadata: Metadata = {
   title: "AI BDC for Dealerships | Sales & Service | Capture Client",
-  description: "AI BDC agents for car dealerships. Stop losing $49K/year to missed calls. CDK & Reynolds integration. Sales leads + service appointments 24/7.",
+  description:
+    "AI BDC agents for car dealerships. Stop losing $49K/year to missed calls. CDK & Reynolds integration. Sales leads + service appointments 24/7.",
   keywords: [
     "AI BDC",
     "car dealership AI",
@@ -76,20 +88,23 @@ export const metadata: Metadata = {
     "Tekion",
     "service appointments",
     "sales leads automotive",
-    "missed calls dealership"
+    "missed calls dealership",
   ],
   openGraph: {
     title: "AI BDC for Dealerships | Sales & Service | Capture Client",
-    description: "Stop losing $49K/year to missed calls. AI BDC agents that integrate with your DMS for 24/7 sales and service.",
+    description:
+      "Stop losing $49K/year to missed calls. AI BDC agents that integrate with your DMS for 24/7 sales and service.",
     url: "https://captureclient.com/industries/automotive",
     siteName: "Capture Client",
     type: "website",
-    images: [{
-      url: "https://captureclient.com/og-image.png",
-      width: 1200,
-      height: 630,
-      alt: "Capture Client - AI BDC for Car Dealerships",
-    }],
+    images: [
+      {
+        url: "https://captureclient.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Capture Client - AI BDC for Car Dealerships",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

@@ -11,22 +11,14 @@
     "state": "GA",
     "state_full": "Georgia",
     "slug": "marietta-ga",
-    "nearby_areas": [
-      "Smyrna",
-      "Kennesaw",
-      "Powder Springs",
-      "Atlanta"
-    ],
+    "nearby_areas": ["Smyrna", "Kennesaw", "Powder Springs", "Atlanta"],
     "service_area_radius": "20 miles"
   },
   "seo": {
     "page_title": "Voice AI Agency in Marietta, GA | Capture Client",
     "meta_description": "Voice AI for Marietta businesses at the Square, East Cobb, and Town Center. Automate calls 24/7 across Cobb County. Call 865-346-6111!",
     "h1_heading": "Voice AI Agency in Marietta, Georgia",
-    "keywords": [
-      "voice ai marietta ga",
-      "ai receptionist marietta"
-    ],
+    "keywords": ["voice ai marietta ga", "ai receptionist marietta"],
     "canonical_url": "/voice-ai-marietta-ga"
   },
   "hero": {
@@ -108,14 +100,7 @@
   "service_area": {
     "heading": "Serving Marietta and Cobb County",
     "description": "Voice AI for Marietta metro area, including the Square, East Cobb, Kennesaw, and Town Center.",
-    "areas_list": [
-      "Marietta",
-      "Smyrna",
-      "Kennesaw",
-      "Powder Springs",
-      "Acworth",
-      "Austell"
-    ]
+    "areas_list": ["Marietta", "Smyrna", "Kennesaw", "Powder Springs", "Acworth", "Austell"]
   },
   "testimonials": [
     {
@@ -182,14 +167,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "atlanta-ga",
-      "alpharetta-ga",
-      "roswell-ga"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "nearby_locations": ["atlanta-ga", "alpharetta-ga", "roswell-ga"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

@@ -83,7 +83,7 @@ function StatCard({ stat, index }: { stat: Stat; index: number }) {
             initial={{ width: 0, opacity: 0 }}
             animate={{
               width: isHovered ? "60%" : 0,
-              opacity: isHovered ? 1 : 0
+              opacity: isHovered ? 1 : 0,
             }}
             transition={{ duration: 0.3 }}
           />
@@ -109,13 +109,15 @@ export function LightStats() {
             linear-gradient(rgba(15,23,42,0.02) 1px, transparent 1px),
             linear-gradient(90deg, rgba(15,23,42,0.02) 1px, transparent 1px)
           `,
-          backgroundSize: '40px 40px',
+          backgroundSize: "40px 40px",
         }}
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center divide-x-0 md:divide-x divide-slate-100">
-          {stats.map((stat, index) => <StatCard key={stat.label} stat={stat} index={index} />)}
+          {stats.map((stat, index) => (
+            <StatCard key={stat.label} stat={stat} index={index} />
+          ))}
         </div>
       </div>
     </section>

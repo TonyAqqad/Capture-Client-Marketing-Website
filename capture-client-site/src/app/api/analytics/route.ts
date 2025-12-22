@@ -108,20 +108,23 @@ export async function POST(request: NextRequest) {
     // ==========================================
     // OPTION 5: Alert System (for poor metrics)
     // ==========================================
-    if (enhancedRating === 'poor') {
+    if (enhancedRating === "poor") {
       // TODO: Send alert email/Slack notification
       console.error(`🚨 ALERT: Poor ${metric.name} detected: ${formattedValue}`);
     }
 
-    return NextResponse.json({
-      success: true,
-      summary,
-      received: {
-        metric: metric.name,
-        value: metric.value,
-        rating: enhancedRating,
+    return NextResponse.json(
+      {
+        success: true,
+        summary,
+        received: {
+          metric: metric.name,
+          value: metric.value,
+          rating: enhancedRating,
+        },
       },
-    }, { status: 200 });
+      { status: 200 }
+    );
   } catch (error) {
     console.error("[Analytics API] Error processing metric:", error);
     return NextResponse.json({ error: "Internal server error" }, { status: 500 });
@@ -133,16 +136,16 @@ export async function POST(request: NextRequest) {
  */
 function getStatusMessage(rating: string): string {
   switch (rating) {
-    case 'excellent':
-      return 'Exceeds target - excellent performance';
-    case 'good':
-      return 'Within good range - acceptable performance';
-    case 'needs-improvement':
-      return 'Needs improvement - optimization recommended';
-    case 'poor':
-      return 'Poor performance - immediate action required';
+    case "excellent":
+      return "Exceeds target - excellent performance";
+    case "good":
+      return "Within good range - acceptable performance";
+    case "needs-improvement":
+      return "Needs improvement - optimization recommended";
+    case "poor":
+      return "Poor performance - immediate action required";
     default:
-      return 'Unknown status';
+      return "Unknown status";
   }
 }
 
@@ -150,9 +153,14 @@ function getStatusMessage(rating: string): string {
  * Log metric to console with detailed analysis
  */
 function logMetricToConsole(metric: WebVitalMetric, summary: PerformanceSummary): void {
-  const emoji = summary.rating === 'excellent' ? '🚀' :
-                summary.rating === 'good' ? '✅' :
-                summary.rating === 'needs-improvement' ? '⚡' : '⚠️';
+  const emoji =
+    summary.rating === "excellent"
+      ? "🚀"
+      : summary.rating === "good"
+        ? "✅"
+        : summary.rating === "needs-improvement"
+          ? "⚡"
+          : "⚠️";
 
   console.log(`${emoji} [Analytics API] Web Vitals Report:`, {
     metric: summary.metric,
@@ -166,7 +174,7 @@ function logMetricToConsole(metric: WebVitalMetric, summary: PerformanceSummary)
   });
 
   // Additional context for poor metrics
-  if (summary.rating === 'poor') {
+  if (summary.rating === "poor") {
     console.error(`\n🚨 CRITICAL PERFORMANCE ISSUE:`, {
       metric: metric.name,
       value: summary.value,

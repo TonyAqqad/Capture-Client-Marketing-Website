@@ -1,4 +1,4 @@
-import { calculateLeadScore, getLeadPriority } from './email';
+import { calculateLeadScore, getLeadPriority } from "./email";
 
 interface LeadData {
   name: string;
@@ -24,25 +24,25 @@ export function getLeadNotificationEmailHtml(leadData: LeadData): string {
 
   // Format timestamp
   const timestamp = leadData.timestamp
-    ? new Date(leadData.timestamp).toLocaleString('en-US', {
-        dateStyle: 'full',
-        timeStyle: 'short',
+    ? new Date(leadData.timestamp).toLocaleString("en-US", {
+        dateStyle: "full",
+        timeStyle: "short",
       })
-    : 'Just now';
+    : "Just now";
 
   // Map challenge codes to readable labels
   const challengeLabels: Record<string, string> = {
-    'missing-calls': 'Missing too many customer calls',
-    'not-enough-leads': 'Not getting enough leads',
-    'poor-roi': 'Ad campaigns not profitable',
-    'no-system': 'No system to track leads',
-    'overwhelmed': 'Too much to manage manually',
-    'other': 'Something else',
+    "missing-calls": "Missing too many customer calls",
+    "not-enough-leads": "Not getting enough leads",
+    "poor-roi": "Ad campaigns not profitable",
+    "no-system": "No system to track leads",
+    overwhelmed: "Too much to manage manually",
+    other: "Something else",
   };
 
   const challengeText = leadData.challenge
     ? challengeLabels[leadData.challenge] || leadData.challenge
-    : 'Not specified';
+    : "Not specified";
 
   return `
 <!DOCTYPE html>
@@ -131,7 +131,7 @@ export function getLeadNotificationEmailHtml(leadData: LeadData): string {
                     </td>
                   </tr>
                   `
-                      : ''
+                      : ""
                   }
                   ${
                     leadData.company
@@ -145,7 +145,7 @@ export function getLeadNotificationEmailHtml(leadData: LeadData): string {
                     </td>
                   </tr>
                   `
-                      : ''
+                      : ""
                   }
                 </table>
               </div>
@@ -187,7 +187,7 @@ export function getLeadNotificationEmailHtml(leadData: LeadData): string {
                     </td>
                   </tr>
                   `
-                      : ''
+                      : ""
                   }
                   ${
                     leadData.pageUrl
@@ -203,7 +203,7 @@ export function getLeadNotificationEmailHtml(leadData: LeadData): string {
                     </td>
                   </tr>
                   `
-                      : ''
+                      : ""
                   }
                 </table>
               </div>
@@ -221,7 +221,7 @@ export function getLeadNotificationEmailHtml(leadData: LeadData): string {
                 </p>
               </div>
               `
-                  : ''
+                  : ""
               }
 
               <!-- Call to Action -->
@@ -272,22 +272,20 @@ export function getLeadNotificationPlainText(leadData: LeadData): string {
   const score = calculateLeadScore(leadData);
   const priority = getLeadPriority(score);
 
-  const timestamp = leadData.timestamp
-    ? new Date(leadData.timestamp).toLocaleString()
-    : 'Just now';
+  const timestamp = leadData.timestamp ? new Date(leadData.timestamp).toLocaleString() : "Just now";
 
   const challengeLabels: Record<string, string> = {
-    'missing-calls': 'Missing too many customer calls',
-    'not-enough-leads': 'Not getting enough leads',
-    'poor-roi': 'Ad campaigns not profitable',
-    'no-system': 'No system to track leads',
-    'overwhelmed': 'Too much to manage manually',
-    'other': 'Something else',
+    "missing-calls": "Missing too many customer calls",
+    "not-enough-leads": "Not getting enough leads",
+    "poor-roi": "Ad campaigns not profitable",
+    "no-system": "No system to track leads",
+    overwhelmed: "Too much to manage manually",
+    other: "Something else",
   };
 
   const challengeText = leadData.challenge
     ? challengeLabels[leadData.challenge] || leadData.challenge
-    : 'Not specified';
+    : "Not specified";
 
   return `
 ═══════════════════════════════════════
@@ -301,7 +299,7 @@ CONTACT INFORMATION
 ───────────────────────────────────────
 Name:     ${leadData.name}
 Phone:    ${leadData.phone}
-${leadData.email ? `Email:    ${leadData.email}\n` : ''}${leadData.company ? `Company:  ${leadData.company}\n` : ''}
+${leadData.email ? `Email:    ${leadData.email}\n` : ""}${leadData.company ? `Company:  ${leadData.company}\n` : ""}
 
 MAIN CHALLENGE
 ───────────────────────────────────────
@@ -310,8 +308,8 @@ ${challengeText}
 LEAD CONTEXT
 ───────────────────────────────────────
 Source:   ${leadData.source}
-${leadData.service ? `Service:  ${leadData.service}\n` : ''}${leadData.pageUrl ? `Page URL: ${leadData.pageUrl}\n` : ''}
-${leadData.message ? `\nMESSAGE\n───────────────────────────────────────\n${leadData.message}\n` : ''}
+${leadData.service ? `Service:  ${leadData.service}\n` : ""}${leadData.pageUrl ? `Page URL: ${leadData.pageUrl}\n` : ""}
+${leadData.message ? `\nMESSAGE\n───────────────────────────────────────\n${leadData.message}\n` : ""}
 ═══════════════════════════════════════
 
 Call ${leadData.name} now: ${leadData.phone}

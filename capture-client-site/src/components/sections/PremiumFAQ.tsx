@@ -4,7 +4,19 @@ import { useState, useRef } from "react";
 import { motion, AnimatePresence } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import type { FAQItem } from "@/types/content";
-import { Phone, PhoneCall, Headphones, Brain, Clock, LogOut, Calculator, Laptop, Shield, Code, ChevronDown } from "lucide-react";
+import {
+  Phone,
+  PhoneCall,
+  Headphones,
+  Brain,
+  Clock,
+  LogOut,
+  Calculator,
+  Laptop,
+  Shield,
+  Code,
+  ChevronDown,
+} from "lucide-react";
 
 // Extended FAQ interface for PremiumFAQ component with icon and category
 interface FAQ extends FAQItem {
@@ -18,57 +30,57 @@ const faqs: FAQ[] = [
     answer:
       "Not at all! Our AI uses cutting-edge natural language processing that sounds remarkably human. It understands context, speaks naturally with appropriate emotion, and even handles interruptions gracefully. Most callers don't realize they're speaking with AI until we tell them. You can listen to sample calls during your demo.",
     icon: Headphones,
-    category: "technical"
+    category: "technical",
   },
   {
     question: "What if the AI can't answer a specific question?",
     answer:
       "Great question! Our AI is trained on your business specifics, but if it encounters something unusual, it seamlessly transfers to your team with full context. You'll get a notification with the call transcript so you know exactly what was discussed. Plus, the AI learns from every interaction to handle similar questions next time.",
     icon: Brain,
-    category: "technical"
+    category: "technical",
   },
   {
     question: "How long does setup take?",
     answer:
       "We can have you up and running in as little as 48 hours. Our team handles the heavy lifting: we'll set up your AI agent, configure your ad campaigns, import your existing contacts to the CRM, and train you on the dashboard. Most clients are fully operational within a week with zero technical knowledge required.",
     icon: Clock,
-    category: "business"
+    category: "business",
   },
   {
     question: "What if I want to cancel?",
     answer:
       "Zero hassle. We offer month-to-month contracts with no long-term commitment required. If you decide to cancel, we'll help export all your data, and you'll keep full access until the end of your billing period. We're confident you'll see results quickly, but there's no pressure to stay if it's not working for you.",
     icon: LogOut,
-    category: "pricing"
+    category: "pricing",
   },
   {
     question: "Is this really worth the investment?",
     answer:
       "Let's do the math: if our system captures just 5 extra leads per month that convert at 20%, that's 1 new client. For most businesses, one new client pays for the entire system multiple times over. Plus, you're saving 20+ hours per month on manual tasks. Our average client sees 3x ROI within 90 days, and many see payback in the first month.",
     icon: Calculator,
-    category: "pricing"
+    category: "pricing",
   },
   {
     question: "Do I need technical knowledge to use this?",
     answer:
       "Absolutely not! Our platform is designed for busy business owners, not tech experts. Everything is visual and intuitive. We provide personalized training, video tutorials, and our support team is always one call away. If you can use a smartphone, you can use Capture Client. We handle all the technical complexity behind the scenes.",
     icon: Laptop,
-    category: "technical"
+    category: "technical",
   },
   {
     question: "How do you ensure data security and privacy?",
     answer:
       "Security is our top priority. We use enterprise-grade encryption, comply with GDPR and CCPA regulations, and undergo regular third-party security audits. Your data is stored in secure, redundant data centers with 99.99% uptime. We'll never sell your data or use it for anything other than providing you service. You own your data 100%.",
     icon: Shield,
-    category: "technical"
+    category: "technical",
   },
   {
     question: "Can I integrate with my existing tools?",
     answer:
       "Yes! Capture Client integrates with 1000+ popular business tools including Calendly, Stripe, QuickBooks, Zapier, and most major CRMs. If you have a specific integration need, let us know—we can usually set it up within days. Our goal is to work seamlessly with your existing workflow, not disrupt it.",
     icon: Code,
-    category: "technical"
-  }
+    category: "technical",
+  },
 ];
 
 export function PremiumFAQ() {
@@ -109,7 +121,7 @@ export function PremiumFAQ() {
         transition={{
           duration: 15,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: "easeInOut",
         }}
         style={{
           backgroundImage: `radial-gradient(ellipse 100% 100% at 30% 30%, #00C9FF15 0%, transparent 50%)`,
@@ -132,9 +144,11 @@ export function PremiumFAQ() {
             {/* Editorial headline - extreme weight contrast */}
             <h2
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl tracking-tight leading-[1.1] mb-6 md:mb-8"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
             >
-              <span className="text-slate-900 font-extralight" style={{ fontWeight: 200 }}>Got questions? </span>
+              <span className="text-slate-900 font-extralight" style={{ fontWeight: 200 }}>
+                Got questions?{" "}
+              </span>
               <span
                 className="font-extrabold bg-gradient-to-r from-[#00C9FF] to-[#4A69E2] bg-clip-text text-transparent"
                 style={{ fontWeight: 800 }}
@@ -187,7 +201,7 @@ export function PremiumFAQ() {
             </div>
             <h3
               className="text-xl sm:text-2xl font-bold text-slate-900 mb-2"
-              style={{ fontFamily: 'var(--font-bricolage-grotesque)' }}
+              style={{ fontFamily: "var(--font-bricolage-grotesque)" }}
             >
               Still have questions?
             </h3>
@@ -202,9 +216,7 @@ export function PremiumFAQ() {
             <PhoneCall className="w-5 h-5 group-hover:animate-pulse" />
             Call (865) 346-6111
           </a>
-          <p className="text-xs sm:text-sm text-slate-500 mt-3">
-            Monday-Friday, 9am-6pm EST
-          </p>
+          <p className="text-xs sm:text-sm text-slate-500 mt-3">Monday-Friday, 9am-6pm EST</p>
         </motion.div>
       </div>
     </section>

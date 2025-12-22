@@ -18,7 +18,7 @@ import {
   ClipboardList,
   GitBranch,
   CheckCircle2,
-  type LucideIcon
+  type LucideIcon,
 } from "lucide-react";
 
 interface IntegrationFeaturesProps {
@@ -56,21 +56,22 @@ const detectFeatureIcon = (featureText: string): LucideIcon => {
   const text = featureText.toLowerCase();
 
   // Mapping keywords to icon keys
-  if (text.includes('sync') || text.includes('synchron')) return iconMap.sync;
-  if (text.includes('automat') || text.includes('auto')) return iconMap.auto_awesome;
-  if (text.includes('real-time') || text.includes('instant')) return iconMap.bolt;
-  if (text.includes('secur') || text.includes('protect')) return iconMap.security;
-  if (text.includes('fast') || text.includes('speed') || text.includes('quick')) return iconMap.speed;
-  if (text.includes('data') || text.includes('analytics')) return iconMap.analytics;
-  if (text.includes('call') || text.includes('phone')) return iconMap.phone_in_talk;
-  if (text.includes('contact') || text.includes('lead')) return iconMap.contacts;
-  if (text.includes('schedule') || text.includes('calendar')) return iconMap.event;
-  if (text.includes('track') || text.includes('monitor')) return iconMap.visibility;
-  if (text.includes('integrat') || text.includes('connect')) return iconMap.link;
-  if (text.includes('notif') || text.includes('alert')) return iconMap.notifications_active;
-  if (text.includes('custom') || text.includes('config')) return iconMap.tune;
-  if (text.includes('report')) return iconMap.assessment;
-  if (text.includes('workflow')) return iconMap.account_tree;
+  if (text.includes("sync") || text.includes("synchron")) return iconMap.sync;
+  if (text.includes("automat") || text.includes("auto")) return iconMap.auto_awesome;
+  if (text.includes("real-time") || text.includes("instant")) return iconMap.bolt;
+  if (text.includes("secur") || text.includes("protect")) return iconMap.security;
+  if (text.includes("fast") || text.includes("speed") || text.includes("quick"))
+    return iconMap.speed;
+  if (text.includes("data") || text.includes("analytics")) return iconMap.analytics;
+  if (text.includes("call") || text.includes("phone")) return iconMap.phone_in_talk;
+  if (text.includes("contact") || text.includes("lead")) return iconMap.contacts;
+  if (text.includes("schedule") || text.includes("calendar")) return iconMap.event;
+  if (text.includes("track") || text.includes("monitor")) return iconMap.visibility;
+  if (text.includes("integrat") || text.includes("connect")) return iconMap.link;
+  if (text.includes("notif") || text.includes("alert")) return iconMap.notifications_active;
+  if (text.includes("custom") || text.includes("config")) return iconMap.tune;
+  if (text.includes("report")) return iconMap.assessment;
+  if (text.includes("workflow")) return iconMap.account_tree;
 
   // Default fallback
   return iconMap.check_circle;
@@ -118,7 +119,7 @@ export function IntegrationFeatures({ keyFeatures, integrationName }: Integratio
                 transition={{
                   duration: 0.5,
                   delay: index * 0.06,
-                  ease: [0.22, 1, 0.36, 1]
+                  ease: [0.22, 1, 0.36, 1],
                 }}
                 className="group"
               >
@@ -130,9 +131,7 @@ export function IntegrationFeatures({ keyFeatures, integrationName }: Integratio
                   </div>
 
                   {/* Feature Text */}
-                  <p className="text-slate-900 font-medium text-sm leading-relaxed">
-                    {feature}
-                  </p>
+                  <p className="text-slate-900 font-medium text-sm leading-relaxed">{feature}</p>
                 </div>
               </motion.div>
             );
@@ -148,7 +147,8 @@ export function IntegrationFeatures({ keyFeatures, integrationName }: Integratio
           className="mt-8 text-center"
         >
           <p className="text-sm text-slate-500">
-            <span className="font-semibold text-blue-600">{keyFeatures.length}</span> powerful features
+            <span className="font-semibold text-blue-600">{keyFeatures.length}</span> powerful
+            features
           </p>
         </motion.div>
       </div>

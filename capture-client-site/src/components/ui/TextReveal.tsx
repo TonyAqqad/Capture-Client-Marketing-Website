@@ -16,7 +16,7 @@ export function TextReveal({ children, delay = 0, className = "" }: TextRevealPr
         transition={{
           duration: 0.8,
           ease: [0.76, 0, 0.24, 1],
-          delay
+          delay,
         }}
         viewport={{ once: true, margin: "-50px" }}
         className={className}

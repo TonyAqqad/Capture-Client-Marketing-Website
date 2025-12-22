@@ -11,13 +11,7 @@
     "state_abbr": "VA",
     "state_full": "Virginia",
     "slug": "richmond-va",
-    "nearby_areas": [
-      "Henrico",
-      "Chesterfield",
-      "Mechanicsville",
-      "Glen Allen",
-      "Short Pump"
-    ],
+    "nearby_areas": ["Henrico", "Chesterfield", "Mechanicsville", "Glen Allen", "Short Pump"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -222,20 +216,8 @@
     "urgency_text": "Limited spots available for Richmond businesses this month"
   },
   "related_pages": {
-    "other_services_in_location": [
-      "google-ads",
-      "facebook-ads",
-      "local-seo"
-    ],
-    "nearby_locations": [
-      "virginia-beach-va",
-      "norfolk-va",
-      "chesapeake-va"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package",
-      "enterprise-package"
-    ]
+    "other_services_in_location": ["google-ads", "facebook-ads", "local-seo"],
+    "nearby_locations": ["virginia-beach-va", "norfolk-va", "chesapeake-va"],
+    "packages": ["starter-package", "growth-package", "enterprise-package"]
   }
 }

@@ -11,13 +11,7 @@
     "state": "Ohio",
     "state_abbr": "OH",
     "slug": "cincinnati-oh",
-    "nearby_areas": [
-      "Mason",
-      "West Chester",
-      "Blue Ash",
-      "Fairfield",
-      "Loveland"
-    ],
+    "nearby_areas": ["Mason", "West Chester", "Blue Ash", "Fairfield", "Loveland"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -182,14 +176,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "voice-ai-mason-oh",
-      "voice-ai-west-chester-oh",
-      "voice-ai-blue-ash-oh"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "nearby_locations": ["voice-ai-mason-oh", "voice-ai-west-chester-oh", "voice-ai-blue-ash-oh"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

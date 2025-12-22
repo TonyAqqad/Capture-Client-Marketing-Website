@@ -1,5 +1,5 @@
-import { useEffect, useState, RefObject } from 'react';
-import { createIOSOptimizedObserver, isIOSDevice } from '@/lib/ios-performance';
+import { useEffect, useState, RefObject } from "react";
+import { createIOSOptimizedObserver, isIOSDevice } from "@/lib/ios-performance";
 
 interface UseInViewOptions {
   threshold?: number;
@@ -25,21 +25,18 @@ export function useInView(
 
     // iOS OPTIMIZATION: Use createIOSOptimizedObserver for better iOS performance
     // This uses lower threshold and larger root margin on iOS
-    const observer = createIOSOptimizedObserver(
-      ([entry]) => {
-        const inView = entry.isIntersecting;
+    const observer = createIOSOptimizedObserver(([entry]) => {
+      const inView = entry.isIntersecting;
 
-        if (inView) {
-          setIsInView(true);
-          if (triggerOnce) {
-            observer.unobserve(element);
-          }
-        } else if (!triggerOnce) {
-          setIsInView(false);
+      if (inView) {
+        setIsInView(true);
+        if (triggerOnce) {
+          observer.unobserve(element);
         }
-      },
-      isIOS
-    );
+      } else if (!triggerOnce) {
+        setIsInView(false);
+      }
+    }, isIOS);
 
     observer.observe(element);
 

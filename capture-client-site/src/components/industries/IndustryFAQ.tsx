@@ -38,7 +38,8 @@ export function IndustryFAQ({ faqs, industryName, categoryColor = "accent" }: In
   };
 
   // Get static color classes based on category
-  const colorClasses = ACCENT_COLORS[categoryColor as keyof typeof ACCENT_COLORS] || ACCENT_COLORS.accent;
+  const colorClasses =
+    ACCENT_COLORS[categoryColor as keyof typeof ACCENT_COLORS] || ACCENT_COLORS.accent;
 
   return (
     <section className="py-16 md:py-20 bg-gradient-to-b from-white to-slate-50">
@@ -48,7 +49,9 @@ export function IndustryFAQ({ faqs, industryName, categoryColor = "accent" }: In
           <div className="text-center mb-16">
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-slate-900 mb-6">
               Frequently Asked{" "}
-              <span className={`bg-gradient-to-r ${colorClasses.gradient} bg-clip-text text-transparent`}>
+              <span
+                className={`bg-gradient-to-r ${colorClasses.gradient} bg-clip-text text-transparent`}
+              >
                 Questions
               </span>
             </h2>

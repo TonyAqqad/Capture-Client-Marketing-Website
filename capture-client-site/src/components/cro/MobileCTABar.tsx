@@ -75,13 +75,13 @@ export default function MobileCTABar({ phoneNumber = "865-346-6111" }: MobileCTA
             <div className="flex gap-3 max-w-screen-xl mx-auto">
               {/* Phone Button - Secondary action */}
               <a
-                href={`tel:${phoneNumber.replace(/\D/g, '')}`}
+                href={`tel:${phoneNumber.replace(/\D/g, "")}`}
                 className="flex-1 flex items-center justify-center gap-2 bg-white border border-slate-200 rounded-xl py-3 min-h-[48px] text-slate-700 font-semibold transition-all duration-300 active:scale-95 hover:bg-slate-50 hover:border-slate-300 touch-manipulation"
                 aria-label={`Call ${phoneNumber}`}
                 style={{
-                  touchAction: 'manipulation',
-                  WebkitTapHighlightColor: 'transparent',
-                  userSelect: 'none'
+                  touchAction: "manipulation",
+                  WebkitTapHighlightColor: "transparent",
+                  userSelect: "none",
                 }}
               >
                 <svg
@@ -107,9 +107,9 @@ export default function MobileCTABar({ phoneNumber = "865-346-6111" }: MobileCTA
                 className="flex-1 flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-xl py-3 min-h-[48px] text-white font-bold transition-all duration-300 active:scale-95 hover:from-blue-700 hover:to-cyan-600 shadow-lg shadow-blue-500/25 touch-manipulation"
                 aria-label="Try our AI with Capture Client"
                 style={{
-                  touchAction: 'manipulation',
-                  WebkitTapHighlightColor: 'transparent',
-                  userSelect: 'none'
+                  touchAction: "manipulation",
+                  WebkitTapHighlightColor: "transparent",
+                  userSelect: "none",
                 }}
               >
                 <span className="text-sm">Try Our AI Now</span>

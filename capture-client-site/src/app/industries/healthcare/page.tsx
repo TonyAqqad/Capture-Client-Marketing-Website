@@ -33,12 +33,14 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://captureclient.com/industries/healthcare",
     siteName: "Capture Client",
-    images: [{
-      url: "https://captureclient.com/og-image.png",
-      width: 1200,
-      height: 630,
-      alt: "Capture Client - AI Voice Agents for Healthcare",
-    }],
+    images: [
+      {
+        url: "https://captureclient.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Capture Client - AI Voice Agents for Healthcare",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -69,7 +71,8 @@ const serviceSchema = {
   "@type": "Service",
   "@id": "https://captureclient.com/industries/healthcare#service",
   name: "AI Voice Agents for Healthcare",
-  description: "HIPAA-compliant AI voice agents for medical practices, dental offices, and healthcare providers. Automate appointment scheduling, patient intake, and after-hours calls.",
+  description:
+    "HIPAA-compliant AI voice agents for medical practices, dental offices, and healthcare providers. Automate appointment scheduling, patient intake, and after-hours calls.",
   provider: {
     "@type": "Organization",
     name: "Capture Client",
@@ -118,8 +121,18 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://captureclient.com" },
-    { "@type": "ListItem", position: 2, name: "Who We Serve", item: "https://captureclient.com/who-we-serve" },
-    { "@type": "ListItem", position: 3, name: "Healthcare", item: "https://captureclient.com/industries/healthcare" },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Who We Serve",
+      item: "https://captureclient.com/who-we-serve",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Healthcare",
+      item: "https://captureclient.com/industries/healthcare",
+    },
   ],
 };
 

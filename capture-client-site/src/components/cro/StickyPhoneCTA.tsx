@@ -103,9 +103,7 @@ export default function StickyPhoneCTA() {
                         </motion.span>
                       )}
                     </AnimatePresence>
-                    {!isExpanded && (
-                      <span className="text-sm relative z-10">Call Now</span>
-                    )}
+                    {!isExpanded && <span className="text-sm relative z-10">Call Now</span>}
                   </motion.a>
 
                   {/* Try Our AI button - 48px minimum tap target */}

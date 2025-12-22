@@ -51,8 +51,19 @@
   "key_competitive_insights": {
     "voice_ai_gap": "NONE of the 18 agencies researched offer Voice AI or AI agents for small businesses - this is our KEY DIFFERENTIATOR",
     "pricing_transparency": "Only 1 of 18 agencies (Comrade) shows public pricing - transparent pricing is a competitive advantage",
-    "common_services": ["Facebook Ads", "Google Ads", "SEO", "Web Design", "Social Media Marketing"],
-    "missing_from_competitors": ["Voice AI", "24/7 AI Receptionist", "Automated Lead Qualification", "AI Call Handling"],
+    "common_services": [
+      "Facebook Ads",
+      "Google Ads",
+      "SEO",
+      "Web Design",
+      "Social Media Marketing"
+    ],
+    "missing_from_competitors": [
+      "Voice AI",
+      "24/7 AI Receptionist",
+      "Automated Lead Qualification",
+      "AI Call Handling"
+    ],
     "average_rating": "4.9 stars across all agencies",
     "bilingual_trend": "Miami/Houston agencies emphasize Spanish-speaking support"
   },

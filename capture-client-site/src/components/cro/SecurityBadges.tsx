@@ -1,7 +1,16 @@
 "use client";
 
 import { motion } from "@/lib/motion";
-import { Lock, ShieldCheck, Shield, Award, BadgeCheck, Trophy, CheckCircle2, Eye } from "lucide-react";
+import {
+  Lock,
+  ShieldCheck,
+  Shield,
+  Award,
+  BadgeCheck,
+  Trophy,
+  CheckCircle2,
+  Eye,
+} from "lucide-react";
 
 export default function SecurityBadges() {
   const badges = [
@@ -65,9 +74,7 @@ export default function SecurityBadges() {
               className={`${badge.bgColor} border ${badge.borderColor} rounded-xl p-4 text-center transition-all duration-300 hover:shadow-lg min-h-[120px] sm:min-h-[130px] flex flex-col items-center justify-center`}
             >
               <badge.Icon className={`${badge.color} w-8 h-8 mb-2`} />
-              <p className="text-sm font-bold text-slate-900 mb-1 leading-tight">
-                {badge.label}
-              </p>
+              <p className="text-sm font-bold text-slate-900 mb-1 leading-tight">{badge.label}</p>
               <p className="text-xs text-slate-500">{badge.description}</p>
             </motion.div>
           ))}
@@ -128,8 +135,7 @@ export default function SecurityBadges() {
           <Eye className="text-accent w-5 h-5" />
           <span className="text-center">
             We respect your privacy.{" "}
-            <span className="text-accent font-semibold">No spam, ever.</span> Unsubscribe
-            anytime.
+            <span className="text-accent font-semibold">No spam, ever.</span> Unsubscribe anytime.
           </span>
         </div>
       </div>

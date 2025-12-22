@@ -11,13 +11,7 @@
     "state": "North Carolina",
     "state_abbr": "NC",
     "slug": "raleigh-nc",
-    "nearby_areas": [
-      "Cary",
-      "Durham",
-      "Chapel Hill",
-      "Apex",
-      "Wake Forest"
-    ],
+    "nearby_areas": ["Cary", "Durham", "Chapel Hill", "Apex", "Wake Forest"],
     "service_area_radius": "30 miles"
   },
   "seo": {
@@ -208,14 +202,7 @@
     }
   },
   "related_pages": {
-    "nearby_locations": [
-      "voice-ai-cary-nc",
-      "voice-ai-durham-nc",
-      "voice-ai-chapel-hill-nc"
-    ],
-    "packages": [
-      "starter-package",
-      "growth-package"
-    ]
+    "nearby_locations": ["voice-ai-cary-nc", "voice-ai-durham-nc", "voice-ai-chapel-hill-nc"],
+    "packages": ["starter-package", "growth-package"]
   }
 }

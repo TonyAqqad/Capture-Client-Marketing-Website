@@ -5,7 +5,8 @@ import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Interactive AI Voice Demo | Capture Client",
-  description: "Experience AI that sounds human. Watch real conversations between our AI voice agent and customers. See how 24/7 AI answering can transform your business.",
+  description:
+    "Experience AI that sounds human. Watch real conversations between our AI voice agent and customers. See how 24/7 AI answering can transform your business.",
   keywords: [
     "voice ai demo",
     "ai receptionist demo",
@@ -16,11 +17,12 @@ export const metadata: Metadata = {
     "ai answering service demo",
     "virtual receptionist demo",
     "ai call handling",
-    "business phone ai demo"
+    "business phone ai demo",
   ],
   openGraph: {
     title: "Interactive AI Voice Demo | Capture Client",
-    description: "Experience AI that sounds human. Watch live simulations of AI handling calls for dental, HVAC, law, and real estate businesses. 100% AI-generated, no recordings.",
+    description:
+      "Experience AI that sounds human. Watch live simulations of AI handling calls for dental, HVAC, law, and real estate businesses. 100% AI-generated, no recordings.",
     url: "https://captureclient.com/demo",
     type: "website",
     images: [
@@ -35,7 +37,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Interactive AI Voice Demo | Capture Client",
-    description: "Watch AI handle calls for dental, HVAC, law & real estate businesses. Experience human-like conversations in real-time.",
+    description:
+      "Watch AI handle calls for dental, HVAC, law & real estate businesses. Experience human-like conversations in real-time.",
     images: ["https://captureclient.com/og-image.png"],
   },
   alternates: {
@@ -46,8 +49,9 @@ export const metadata: Metadata = {
 export default function DemoPage() {
   // Generate WebPage schema for demo page
   const pageSchema = generateWebPageSchema({
-    title: 'Interactive AI Voice Demo - Capture Client',
-    description: 'Experience AI that sounds human. Watch real conversations between our AI voice agent and customers. See how 24/7 AI answering can transform your business.',
+    title: "Interactive AI Voice Demo - Capture Client",
+    description:
+      "Experience AI that sounds human. Watch real conversations between our AI voice agent and customers. See how 24/7 AI answering can transform your business.",
     url: `${SITE_CONFIG.url}/demo`,
   });
 
