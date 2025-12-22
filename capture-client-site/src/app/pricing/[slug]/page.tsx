@@ -356,16 +356,40 @@ export default async function PackagePage({
               See how this package stacks up against our other offerings
             </p>
 
-            {/* Mobile: Show scroll hint */}
-            <div className="md:hidden text-center text-slate-600 text-sm mb-3">
-              ← Swipe to see all packages →
+            {/* Mobile: Stacked cards */}
+            <div className="lg:hidden space-y-4">
+              {pkg.comparison.compare_table.map((row: ComparisonRow, index: number) => (
+                <div
+                  key={index}
+                  className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm"
+                >
+                  <div className="text-slate-900 font-semibold text-base mb-4 pb-3 border-b border-slate-200">
+                    {row.feature}
+                  </div>
+                  <div className="grid grid-cols-3 gap-3 text-sm">
+                    <div className="text-center">
+                      <div className="text-slate-500 text-xs mb-1">Starter</div>
+                      <div className="text-slate-900 font-medium">{row.starter}</div>
+                    </div>
+                    <div className="text-center bg-cyan-50 rounded-lg py-2 px-1">
+                      <div className="text-cyan-600 text-xs mb-1 font-semibold">Growth</div>
+                      <div className="text-cyan-600 font-bold">{row.growth}</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-slate-500 text-xs mb-1">Enterprise</div>
+                      <div className="text-slate-900 font-medium">{row.enterprise}</div>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
 
-            <div className="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-thin scrollbar-thumb-cyan-500/20 scrollbar-track-transparent">
-              <table className="w-full min-w-[600px]">
+            {/* Desktop: Table view */}
+            <div className="hidden lg:block">
+              <table className="w-full">
                 <thead>
                   <tr className="border-b border-slate-200">
-                    <th className="text-left py-3 sm:py-4 px-3 sm:px-6 text-slate-600 font-semibold text-sm sm:text-base sticky left-0 bg-slate-50 backdrop-blur-sm z-10">
+                    <th className="text-left py-3 sm:py-4 px-3 sm:px-6 text-slate-600 font-semibold text-sm sm:text-base">
                       Feature
                     </th>
                     <th className="text-center py-3 sm:py-4 px-3 sm:px-6 text-slate-600 font-semibold text-sm sm:text-base">
@@ -387,7 +411,7 @@ export default async function PackagePage({
                       key={index}
                       className="border-b border-slate-200 hover:bg-white/50 transition-colors"
                     >
-                      <td className="py-3 sm:py-4 px-3 sm:px-6 text-slate-900 font-medium text-sm sm:text-base sticky left-0 bg-slate-50 backdrop-blur-sm z-10">
+                      <td className="py-3 sm:py-4 px-3 sm:px-6 text-slate-900 font-medium text-sm sm:text-base">
                         {row.feature}
                       </td>
                       <td className="py-3 sm:py-4 px-3 sm:px-6 text-center text-slate-600 text-sm sm:text-base">

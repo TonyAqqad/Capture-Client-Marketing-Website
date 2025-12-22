@@ -19,7 +19,7 @@ const CATEGORY_COLORS: Record<string, { gradient: string; accent: string; accent
   'Professional Services': {
     gradient: 'from-blue-500/20 to-cyan-500/20',
     accent: 'text-blue-400',
-    accentDark: 'text-blue-300',
+    accentDark: 'text-blue-600',
     badgeBg: 'bg-blue-400/20',
     badgeBorder: 'border-blue-400/30',
     textHover: 'group-hover:text-blue-400',
@@ -49,7 +49,7 @@ const CATEGORY_COLORS: Record<string, { gradient: string; accent: string; accent
   'Healthcare': {
     gradient: 'from-cyan-500/20 to-cyan-600/20',
     accent: 'text-cyan-400',
-    accentDark: 'text-cyan-300',
+    accentDark: 'text-cyan-600',
     badgeBg: 'bg-cyan-400/20',
     badgeBorder: 'border-cyan-400/30',
     textHover: 'group-hover:text-cyan-400',
@@ -59,7 +59,7 @@ const CATEGORY_COLORS: Record<string, { gradient: string; accent: string; accent
   'Hospitality': {
     gradient: 'from-blue-500/20 to-cyan-600/20',
     accent: 'text-blue-400',
-    accentDark: 'text-blue-300',
+    accentDark: 'text-blue-600',
     badgeBg: 'bg-blue-400/20',
     badgeBorder: 'border-blue-400/30',
     textHover: 'group-hover:text-blue-400',

@@ -513,7 +513,7 @@ function ChatMessage({ message, isLatest, typedText, isTyping }: ChatMessageProp
             <span className="inline-block w-0.5 h-4 bg-cyan-400 ml-0.5 animate-pulse" />
           )}
         </p>
-        <p className={`text-xs mt-1.5 ${isAI ? "text-slate-500" : "text-cyan-200"}`}>
+        <p className={`text-xs mt-1.5 ${isAI ? "text-slate-500" : "text-cyan-600"}`}>
           {message.timestamp.toLocaleTimeString([], {
             hour: "2-digit",
             minute: "2-digit",

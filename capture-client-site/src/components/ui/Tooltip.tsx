@@ -65,16 +65,16 @@ export function Tooltip({
             className={`absolute z-50 ${positionClasses[position]} pointer-events-none`}
           >
             {/* Glass tooltip */}
-            <div className="relative bg-gradient-to-br from-slate-900/95 via-slate-900/90 to-slate-900/95 backdrop-blur-xl border border-slate-700 px-3 py-1.5 rounded-lg shadow-[0_8px_32px_rgba(0,0,0,0.4)] whitespace-nowrap">
+            <div className="relative bg-white backdrop-blur-xl border border-slate-200 px-3 py-1.5 rounded-lg shadow-[0_8px_32px_rgba(0,0,0,0.15)] whitespace-nowrap">
               {/* Inner glow */}
-              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent" />
 
               {/* Content */}
-              <div className="relative text-xs font-medium text-white">{content}</div>
+              <div className="relative text-xs font-medium text-slate-900">{content}</div>
 
               {/* Arrow */}
               <div
-                className={`absolute w-2 h-2 bg-slate-900/95 backdrop-blur-xl border-t border-l border-slate-700 transform rotate-45 ${arrowClasses[position]}`}
+                className={`absolute w-2 h-2 bg-white backdrop-blur-xl border-t border-l border-slate-200 transform rotate-45 ${arrowClasses[position]}`}
               />
             </div>
           </motion.div>

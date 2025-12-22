@@ -393,13 +393,13 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
             <div className="text-center mb-8 sm:mb-12 max-w-3xl mx-auto">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cyan-400/10 border border-cyan-400/30 mb-6">
                 <Award className="text-cyan-400 w-4 h-4" />
-                <span className="text-xs font-bold text-cyan-300 uppercase tracking-wider">
+                <span className="text-xs font-bold text-cyan-600 uppercase tracking-wider">
                   Why Choose Us
                 </span>
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-900 mb-4">
                 Why{" "}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-cyan-400">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-cyan-600">
                   {location.location.city}
                 </span>{" "}
                 Businesses Choose Us
@@ -424,11 +424,11 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
                       <div className="relative mb-5">
                         <div className="absolute inset-0 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-xl blur-lg opacity-30 group-hover:opacity-60 transition-opacity" />
                         <div className="relative flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-400/20 via-cyan-500/10 to-blue-500/20 border border-cyan-400/30 group-hover:scale-110 transition-all duration-300">
-                          <IconComponent className="text-cyan-300 w-6 h-6" />
+                          <IconComponent className="text-cyan-600 w-6 h-6" />
                         </div>
                       </div>
                       <div className="relative z-10">
-                        <h3 className="text-lg sm:text-xl font-black text-slate-900 mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-300 group-hover:to-cyan-400 transition-all">
+                        <h3 className="text-lg sm:text-xl font-black text-slate-900 mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-500 group-hover:to-cyan-600 transition-all">
                           {benefit.title}
                         </h3>
                         <p className="text-sm sm:text-base text-slate-600 leading-relaxed">

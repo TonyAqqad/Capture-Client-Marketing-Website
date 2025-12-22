@@ -246,6 +246,20 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
+                  <button
+                    onClick={() => {
+                      window.dispatchEvent(new Event("reopenCookieSettings"));
+                    }}
+                    className="text-slate-600 hover:text-blue-600 text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
+                    style={{ fontWeight: 400 }}
+                  >
+                    <span className="w-1 h-1 rounded-full bg-blue-600 group-hover:bg-cyan-500 transition-colors duration-300" />
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">
+                      Cookie Settings
+                    </span>
+                  </button>
+                </li>
+                <li>
                   <Link
                     href="/faq"
                     className="text-slate-600 hover:text-blue-600 text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"

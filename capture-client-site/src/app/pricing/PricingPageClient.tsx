@@ -522,24 +522,76 @@ export default function PricingPageClient() {
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="md:hidden text-center text-slate-600 text-sm mb-3 flex items-center justify-center gap-2">
-              <MoveHorizontal className="w-5 h-5 text-blue-600 animate-pulse" />
-              <span>Swipe to see all features</span>
+            {/* Mobile: Stacked cards */}
+            <div className="lg:hidden space-y-4">
+              {(() => {
+                const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
+                  smart_toy: Bot,
+                  call: Phone,
+                  campaign: Megaphone,
+                  web: Globe,
+                  assessment: FileText,
+                  person: User,
+                  support_agent: Headphones
+                };
+
+                const features = [
+                  { feature: "AI Voice Agents", starter: "1 agent", growth: "2 agents", enterprise: "Unlimited", icon: "smart_toy" },
+                  { feature: "Monthly Calls", starter: "50 calls", growth: "Unlimited", enterprise: "Unlimited", icon: "call" },
+                  { feature: "Advertising Platforms", starter: "—", growth: "Google OR Facebook", enterprise: "Both + LinkedIn", icon: "campaign" },
+                  { feature: "Landing Pages", starter: "—", growth: "Optimization", enterprise: "Custom built", icon: "web" },
+                  { feature: "Reports", starter: "Monthly", growth: "Weekly", enterprise: "Real-time", icon: "assessment" },
+                  { feature: "Account Manager", starter: "—", growth: "—", enterprise: "Dedicated", icon: "person" },
+                  { feature: "Support", starter: "Email", growth: "Priority (4hr)", enterprise: "24/7", icon: "support_agent" }
+                ];
+
+                return features.map((row, i) => {
+                  const IconComponent = iconMap[row.icon];
+                  return (
+                    <motion.div
+                      key={i}
+                      className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.05 }}
+                    >
+                      <div className="flex items-center gap-3 mb-4 pb-3 border-b border-slate-200">
+                        <IconComponent className="w-5 h-5 text-blue-600" />
+                        <span className="text-slate-900 font-semibold text-base">{row.feature}</span>
+                      </div>
+                      <div className="grid grid-cols-3 gap-3 text-sm">
+                        <div className="text-center">
+                          <div className="text-slate-500 text-xs mb-1">Starter</div>
+                          <div className="text-slate-900 font-medium">{row.starter}</div>
+                        </div>
+                        <div className="text-center bg-blue-50 rounded-lg py-2 px-1">
+                          <div className="text-blue-600 text-xs mb-1 font-semibold">Growth</div>
+                          <div className="text-slate-900 font-bold">{row.growth}</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-slate-500 text-xs mb-1">Enterprise</div>
+                          <div className="text-slate-900 font-medium">{row.enterprise}</div>
+                        </div>
+                      </div>
+                    </motion.div>
+                  );
+                });
+              })()}
             </div>
 
-            {/* Mobile: Use touch-pan-x to enable horizontal swiping, ensure no parent clips */}
-            <div className="overflow-x-auto overscroll-x-contain touch-pan-x -mx-4 px-4 md:mx-0 md:px-0 scrollbar-thin scrollbar-thumb-blue-600/30 scrollbar-track-slate-100" style={{ WebkitOverflowScrolling: 'touch' }}>
-              <div className="min-w-[800px] md:min-w-full">
-                <div className="relative rounded-3xl overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white to-slate-50/95 backdrop-blur-2xl" />
-                  <div className="absolute inset-0 bg-mesh-premium opacity-10" />
+            {/* Desktop: Table view */}
+            <div className="hidden lg:block">
+              <div className="relative rounded-3xl overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-white/95 via-white to-slate-50/95 backdrop-blur-2xl" />
+                <div className="absolute inset-0 bg-mesh-premium opacity-10" />
 
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-600/20 via-cyan-500/20 to-blue-600/20 p-[1px]">
-                    <div className="absolute inset-[1px] rounded-3xl bg-gradient-to-br from-white/95 via-white to-slate-50" />
-                  </div>
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-blue-600/20 via-cyan-500/20 to-blue-600/20 p-[1px]">
+                  <div className="absolute inset-[1px] rounded-3xl bg-gradient-to-br from-white/95 via-white to-slate-50" />
+                </div>
 
-                  <div className="relative">
-                    <table className="w-full">
+                <div className="relative">
+                  <table className="w-full">
                       <thead>
                         <tr className="border-b border-slate-200">
                           <th className="text-left p-4 md:p-6 text-slate-600 font-semibold text-sm md:text-base sticky left-0 bg-gradient-to-r from-white/95 to-white/80 backdrop-blur-xl z-10">
@@ -584,30 +636,30 @@ export default function PricingPageClient() {
                           ].map((row, i) => {
                             const IconComponent = iconMap[row.icon];
                             return (
-                          <motion.tr
-                            key={i}
-                            className="border-b border-slate-200/50 hover:bg-slate-50/50 transition-all duration-300 group"
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: i * 0.05 }}
-                          >
-                            <td className="p-4 md:p-6 sticky left-0 bg-gradient-to-r from-white/95 to-white/80 backdrop-blur-xl z-10">
-                              <div className="flex items-center gap-3">
-                                <IconComponent className="w-5 h-5 text-blue-600/60 group-hover:text-blue-600 transition-colors" />
-                                <span className="text-slate-900 font-medium text-sm md:text-base">{row.feature}</span>
-                              </div>
-                            </td>
-                            <td className="p-4 md:p-6 text-center">
-                              <span className="text-slate-600 text-sm md:text-base">{row.starter}</span>
-                            </td>
-                            <td className="p-4 md:p-6 text-center bg-blue-600/5">
-                              <span className="text-slate-900 font-semibold text-sm md:text-base">{row.growth}</span>
-                            </td>
-                            <td className="p-4 md:p-6 text-center">
-                              <span className="text-slate-700 text-sm md:text-base">{row.enterprise}</span>
-                            </td>
-                          </motion.tr>
+                              <motion.tr
+                                key={i}
+                                className="border-b border-slate-200/50 hover:bg-slate-50/50 transition-all duration-300 group"
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: i * 0.05 }}
+                              >
+                                <td className="p-4 md:p-6 sticky left-0 bg-gradient-to-r from-white/95 to-white/80 backdrop-blur-xl z-10">
+                                  <div className="flex items-center gap-3">
+                                    <IconComponent className="w-5 h-5 text-blue-600/60 group-hover:text-blue-600 transition-colors" />
+                                    <span className="text-slate-900 font-medium text-sm md:text-base">{row.feature}</span>
+                                  </div>
+                                </td>
+                                <td className="p-4 md:p-6 text-center">
+                                  <span className="text-slate-600 text-sm md:text-base">{row.starter}</span>
+                                </td>
+                                <td className="p-4 md:p-6 text-center bg-blue-600/5">
+                                  <span className="text-slate-900 font-semibold text-sm md:text-base">{row.growth}</span>
+                                </td>
+                                <td className="p-4 md:p-6 text-center">
+                                  <span className="text-slate-700 text-sm md:text-base">{row.enterprise}</span>
+                                </td>
+                              </motion.tr>
                             );
                           });
                         })()}
@@ -616,8 +668,7 @@ export default function PricingPageClient() {
                   </div>
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
         )}
       </div>
 

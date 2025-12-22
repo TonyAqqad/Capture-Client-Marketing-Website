@@ -50,6 +50,19 @@ export default function CookieConsent() {
     }
   }, []);
 
+  // Listen for custom event to reopen cookie settings
+  useEffect(() => {
+    const handleReopenCookieSettings = () => {
+      setShowBanner(true);
+      setShowCustomize(true);
+    };
+
+    window.addEventListener("reopenCookieSettings", handleReopenCookieSettings);
+    return () => {
+      window.removeEventListener("reopenCookieSettings", handleReopenCookieSettings);
+    };
+  }, []);
+
   /**
    * Update Google Consent Mode v2
    * https://developers.google.com/tag-platform/security/guides/consent
