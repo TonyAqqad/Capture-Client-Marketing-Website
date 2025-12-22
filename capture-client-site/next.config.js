@@ -118,9 +118,10 @@ const nextConfig = {
   // Power optimizations for bundle size
   poweredByHeader: false,
 
-  // SEO: Redirect www to non-www (canonical domain)
+  // SEO: Redirect www to non-www (canonical domain) + industry consolidation
   async redirects() {
     return [
+      // www to non-www redirect
       {
         source: "/:path*",
         has: [
@@ -130,6 +131,63 @@ const nextConfig = {
           },
         ],
         destination: "https://captureclient.com/:path*",
+        permanent: true,
+      },
+      // Industry consolidation redirects (301 permanent)
+      // Consolidates /industries/* routes to /who-we-serve/* for SEO
+      {
+        source: "/industries",
+        destination: "/who-we-serve",
+        permanent: true,
+      },
+      {
+        source: "/industries/home-services",
+        destination: "/who-we-serve/home-services",
+        permanent: true,
+      },
+      {
+        source: "/industries/healthcare",
+        destination: "/who-we-serve/healthcare",
+        permanent: true,
+      },
+      {
+        source: "/industries/legal",
+        destination: "/who-we-serve/legal-law-firms",
+        permanent: true,
+      },
+      {
+        source: "/industries/real-estate",
+        destination: "/who-we-serve/real-estate",
+        permanent: true,
+      },
+      {
+        source: "/industries/automotive",
+        destination: "/who-we-serve/automotive",
+        permanent: true,
+      },
+      {
+        source: "/industries/restaurants",
+        destination: "/who-we-serve/restaurants",
+        permanent: true,
+      },
+      {
+        source: "/industries/fitness",
+        destination: "/who-we-serve/fitness",
+        permanent: true,
+      },
+      {
+        source: "/industries/martial-arts",
+        destination: "/who-we-serve/martial-arts",
+        permanent: true,
+      },
+      {
+        source: "/industries/dental",
+        destination: "/who-we-serve/dental",
+        permanent: true,
+      },
+      {
+        source: "/industries/med-spa",
+        destination: "/who-we-serve/med-spa",
         permanent: true,
       },
     ];

@@ -297,6 +297,25 @@ export const FAQIcon: React.FC<IconProps> = ({ className = "w-5 h-5" }) => (
   </svg>
 );
 
+export const MissedCallsIcon: React.FC<IconProps> = ({ className = "w-5 h-5" }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M5 4H9L11 9L8.5 10.5C9.571 12.671 11.329 14.429 13.5 15.5L15 13L20 15V19C20 19.552 19.552 20 19 20C10.163 20 3 12.837 3 4C3 3.448 3.448 3 4 3H5C5 3 5 4 5 4Z"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M15 3L21 9M21 3L15 9"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 // Icon mapping object
 export const navIcons: Record<string, React.FC<IconProps>> = {
   demo: DemoIcon,
@@ -320,5 +339,6 @@ export const navIcons: Record<string, React.FC<IconProps>> = {
   blog: BlogIcon,
   "case-studies": CaseStudiesIcon,
   "roi-calculator": ROICalculatorIcon,
+  "missed-calls": MissedCallsIcon,
   faq: FAQIcon,
 };

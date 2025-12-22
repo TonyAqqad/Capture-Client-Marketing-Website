@@ -134,59 +134,6 @@ export const navigationData: Record<string, NavSection> = {
       },
     ],
   },
-  industries: {
-    title: "Industries",
-    items: [
-      {
-        label: "Healthcare",
-        href: "/industries/healthcare",
-        description: "Patient scheduling & triage",
-        icon: "healthcare",
-      },
-      {
-        label: "Home Services",
-        href: "/industries/home-services",
-        description: "HVAC, plumbing & contractors",
-        icon: "home-services",
-      },
-      {
-        label: "Real Estate",
-        href: "/industries/real-estate",
-        description: "Property inquiries 24/7",
-        icon: "real-estate",
-      },
-      {
-        label: "Legal",
-        href: "/industries/legal",
-        description: "Client intake automation",
-        icon: "legal",
-      },
-      {
-        label: "Automotive",
-        href: "/industries/automotive",
-        description: "Service scheduling & sales",
-        icon: "automotive",
-      },
-      {
-        label: "Restaurants",
-        href: "/industries/restaurants",
-        description: "Reservations & takeout orders",
-        icon: "restaurants",
-      },
-      {
-        label: "Fitness & Gyms",
-        href: "/industries/fitness",
-        description: "Member management & bookings",
-        icon: "fitness",
-      },
-      {
-        label: "Martial Arts",
-        href: "/industries/martial-arts",
-        description: "Class scheduling & trials",
-        icon: "martial-arts",
-      },
-    ],
-  },
   resources: {
     title: "Resources",
     items: [
@@ -209,6 +156,12 @@ export const navigationData: Record<string, NavSection> = {
         icon: "roi-calculator",
       },
       {
+        label: "Missed Call Calculator",
+        href: "/tools/missed-call-calculator",
+        description: "See how much revenue you're losing",
+        icon: "missed-calls",
+      },
+      {
         label: "FAQ",
         href: "/faq",
         description: "Common questions answered",
@@ -222,6 +175,5 @@ export const navigationData: Record<string, NavSection> = {
 export const mobileNavSections = [
   navigationData.solutions,
   navigationData.whoWeServe,
-  navigationData.industries,
   navigationData.resources,
 ];
