@@ -296,3 +296,16 @@
   - **Agents deployed**: site-auditor (Desktop), site-auditor (Mobile), schema-builder, code-reviewer
   - **Benefits**: Parallel execution, independent context per agent, results aggregated without bloating main thread
   - **Lesson**: For site-wide audits, parallelize with specialized subagents rather than reading all files in main thread
+- **JSON-LD Schema Compliance Patterns** (2025-12-21): Critical schema.org compliance fixes:
+  - **Duplicate script IDs**: When using a reusable `<JsonLd>` component, add `idPrefix` prop based on schema content hash to prevent ID collisions when both layout and page render schemas
+  - **SearchAction validation**: Only include `potentialAction.SearchAction` if the target URL actually exists. No `/search` route = remove SearchAction
+  - **AggregateRating**: Never include ratings without verified review data. Google treats fake ratings as spam
+  - **GeoCoordinates**: Must use numeric `latitude`/`longitude` values, not address fields like `addressLocality`. If no lat/long data, omit `geo` entirely
+  - **Non-standard properties**: Use only schema.org vocabulary. `integrationWith` is NOT valid; use `isRelatedTo` for software relationships
+  - **Validation strategy**: After schema changes, validate with Google Rich Results Test before shipping
+- **Orchestration Docs Consistency Pattern** (2025-12-21): Keeping agent docs aligned:
+  - **Skill vs Command distinction**: Skills provide domain knowledge context; Commands are action-oriented workflows
+  - **Naming alignment**: When renaming skills/commands, update ALL references: CLAUDE.md, state.md, command files, skill files
+  - **Policy vs Enforcement**: Clarify when rules are "guidance" (ask before editing) vs "enforced" (settings.json deny rules)
+  - **Unused MCP configs**: Remove stale MCP configs (e.g., ccmem.json) rather than leaving them to confuse agents
+  - **Search pattern**: Use `grep -r "skill-name" .claude/` to find all references before renaming

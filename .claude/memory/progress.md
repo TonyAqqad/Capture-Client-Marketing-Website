@@ -7,9 +7,22 @@
 
 ## Recent (Dec 20-21, 2025)
 
+### JSON-LD SCHEMA COMPLIANCE + ORCHESTRATION CLEANUP (2025-12-21)
+- Schema compliance fixes (commit c252f77):
+  - JsonLd.tsx: Added idPrefix prop to prevent duplicate script IDs
+  - Homepage: Removed invalid SearchAction and unverified AggregateRating
+  - Locations: Removed invalid GeoCoordinates (no lat/long data available)
+  - Integrations: Changed non-standard `integrationWith` → valid `isRelatedTo`
+  - Added WebPage schemas to: blog, demo, privacy-policy, terms-of-service
+- Orchestration docs cleanup:
+  - Renamed skill `frontend-aesthetics` → `frontend-design` (match docs)
+  - Clarified `/mobile-frontend` is a command, not a skill
+  - Added note that protected files policy is guidance, not enforced
+  - Removed unused ccmem.json MCP config
+
 ### DEPLOYMENT READINESS AUDIT + SCHEMA ENHANCEMENTS (2025-12-21)
 - Comprehensive audit: 4 parallel subagents (Desktop UI, Mobile UI, Schema, Component)
-- Schema fixes: WebSite + SoftwareApplication (homepage), LocalBusiness (locations), pricing fix (integrations)
+- Schema additions: WebSite + SoftwareApplication (homepage), LocalBusiness (locations), pricing fix (integrations)
 - Documentation cleanup: 20 legacy files moved to docs/_archive/ (gitignored)
 - Agent guardrails: Created 05-ignore-paths.md to prevent confusion from archived docs
 - Build status: TypeScript clean, 230 pages generated successfully (commit 0f4ca1d)
