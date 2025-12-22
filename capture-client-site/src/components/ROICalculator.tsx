@@ -150,10 +150,11 @@ export default function ROICalculator() {
             >
               {/* Industry Dropdown */}
               <div>
-                <label className="block text-sm font-semibold text-slate-900 mb-3">
+                <label htmlFor="roi-industry" className="block text-sm font-semibold text-slate-900 mb-3">
                   Your Industry
                 </label>
                 <select
+                  id="roi-industry"
                   value={selectedIndustry.value}
                   onChange={(e) => {
                     const industry = industries.find(i => i.value === e.target.value);
@@ -172,21 +173,26 @@ export default function ROICalculator() {
               {/* Job Value Slider */}
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <label className="text-sm font-semibold text-slate-900">
+                  <label htmlFor="roi-job-value" className="text-sm font-semibold text-slate-900">
                     Average Job Value
                   </label>
-                  <span className="text-2xl font-bold text-blue-600">
+                  <span className="text-2xl font-bold text-blue-600" aria-live="polite">
                     ${jobValue.toLocaleString()}
                   </span>
                 </div>
                 <div style={{ touchAction: 'pan-y' }}>
                   <input
+                    id="roi-job-value"
                     type="range"
                     min="100"
                     max="10000"
                     step="100"
                     value={jobValue}
                     onChange={(e) => setJobValue(Number(e.target.value))}
+                    aria-valuemin={100}
+                    aria-valuemax={10000}
+                    aria-valuenow={jobValue}
+                    aria-valuetext={`$${jobValue.toLocaleString()}`}
                     className="w-full h-2 rounded-full appearance-none cursor-pointer"
                     style={{
                       background: `linear-gradient(to right, #2563eb 0%, #2563eb ${((jobValue - 100) / 9900) * 100}%, #e2e8f0 ${((jobValue - 100) / 9900) * 100}%, #e2e8f0 100%)`,
@@ -202,21 +208,26 @@ export default function ROICalculator() {
               {/* Missed Calls Slider */}
               <div>
                 <div className="flex items-center justify-between mb-3">
-                  <label className="text-sm font-semibold text-slate-900">
+                  <label htmlFor="roi-missed-calls" className="text-sm font-semibold text-slate-900">
                     Missed Calls Per Week
                   </label>
-                  <span className="text-2xl font-bold text-blue-600">
+                  <span className="text-2xl font-bold text-blue-600" aria-live="polite">
                     {missedCalls}
                   </span>
                 </div>
                 <div style={{ touchAction: 'pan-y' }}>
                   <input
+                    id="roi-missed-calls"
                     type="range"
                     min="1"
                     max="50"
                     step="1"
                     value={missedCalls}
                     onChange={(e) => setMissedCalls(Number(e.target.value))}
+                    aria-valuemin={1}
+                    aria-valuemax={50}
+                    aria-valuenow={missedCalls}
+                    aria-valuetext={`${missedCalls} missed calls per week`}
                     className="w-full h-2 rounded-full appearance-none cursor-pointer"
                     style={{
                       background: `linear-gradient(to right, #2563eb 0%, #2563eb ${((missedCalls - 1) / 49) * 100}%, #e2e8f0 ${((missedCalls - 1) / 49) * 100}%, #e2e8f0 100%)`,

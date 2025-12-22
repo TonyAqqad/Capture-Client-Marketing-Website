@@ -27,36 +27,33 @@ import {
 // ============================================
 
 // BODY FONT: Inter - Clean, readable, professional
-// $5M UPGRADE: Extended weights for refined hierarchy (Light 300 → Bold 700)
+// PERF: Reduced from 5 weights to 3 essential weights (40% fewer font files)
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  weight: ["300", "400", "500", "600", "700"], // Light to Bold range
+  weight: ["400", "500", "600"], // Regular, Medium, Semibold only
   display: "swap",
   preload: true,
   fallback: ["system-ui", "-apple-system", "sans-serif"],
 });
 
-// DISPLAY FONT: Bricolage Grotesque - Ultra-premium headlines
-// $5M UPGRADE: EXTREME weight contrasts (Ultra-light 200 → Extra-bold 800)
-// Creates dramatic visual impact: "STOP losing" (200) + "LEADS" (800)
+// DISPLAY FONT: Bricolage Grotesque - Premium headlines
+// PERF: Reduced from 5 weights to 3 essential weights
 const bricolageGrotesque = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-bricolage-grotesque",
-  weight: ["200", "400", "600", "700", "800"], // Ultra-light to Extra-bold
+  weight: ["400", "700", "800"], // Regular, Bold, Extrabold only
   display: "swap",
   preload: true,
   fallback: ["system-ui", "-apple-system", "sans-serif"],
 });
 
-// $5M UPGRADE: SERIF ACCENT FONT - Playfair Display
-// Premium serif for testimonials, quotes, and trust-building content
-// Creates visual sophistication and authority signaling
+// SERIF ACCENT FONT - Playfair Display (lazy loaded)
+// PERF: Reduced to 2 weights, no italic (saves ~4 font files)
 const playfairDisplay = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
-  weight: ["400", "500", "700"], // Regular, Medium, Bold for versatility
-  style: ["normal", "italic"], // Italic for elegant quotes
+  weight: ["400", "600"], // Regular and Semibold only
   display: "swap",
   preload: false, // Don't preload - only used in specific sections
   fallback: ["Georgia", "Times New Roman", "serif"],
@@ -139,11 +136,12 @@ export default function RootLayout({
         <ScrollDepthTracker />
 
         {/* LeadConnector Voice Agent - Persistent Corner Chat Widget */}
+        {/* PERF: lazyOnload defers 314KB until after page is interactive */}
         <Script
           src="https://widgets.leadconnectorhq.com/loader.js"
           data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
           data-widget-id="6910948b33e99217846251a9"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
 
         {/* Accessibility: Skip to main content link for keyboard navigation */}
