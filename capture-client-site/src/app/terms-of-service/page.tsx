@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { SITE_CONFIG, generateWebPageSchema } from "@/lib/seo-config";
+import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Terms of Service | Capture Client",
@@ -18,10 +20,19 @@ export const metadata: Metadata = {
 };
 
 export default function TermsOfServicePage() {
+  // Generate WebPage schema for terms of service
+  const pageSchema = generateWebPageSchema({
+    title: 'Terms of Service - Capture Client',
+    description: "Read Capture Client's terms of service to understand the rules and guidelines for using our platform and services.",
+    url: `${SITE_CONFIG.url}/terms-of-service`,
+  });
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="relative py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-16 bg-gradient-to-br from-white via-slate-50 to-blue-50">
+    <>
+      <JsonLd schema={pageSchema} />
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="relative py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-16 bg-gradient-to-br from-white via-slate-50 to-blue-50">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight">Terms of Service</h1>
           <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto px-4">Last Updated: January 2025</p>
@@ -487,6 +498,7 @@ export default function TermsOfServicePage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

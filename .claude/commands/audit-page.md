@@ -113,7 +113,7 @@ Differences: list them
 ## Related Tools
 - Use `component-finder` agent to check if custom components duplicate existing ones
 - Use `/check-palette` to scan for legacy colors
-- Use `/frontend-design` skill for desktop UI patterns
+- Use `/frontend-design` skill for UI/UX guardrails
 - Use `/mobile-frontend` command for mobile responsiveness
 
 ## Notes

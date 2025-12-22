@@ -1,9 +1,0 @@
-{
-  "mcpServers": {
-    "ccmem": {
-      "command": "npx",
-      "args": ["-y", "@adestefa/ccmem@latest"],
-      "description": "Project memory system for Claude Code"
-    }
-  }
-}

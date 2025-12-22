@@ -19,18 +19,22 @@ import Script from 'next/script';
 
 interface JsonLdProps {
   schema: Record<string, unknown> | Array<Record<string, unknown>>;
+  idPrefix?: string;
 }
 
-export default function JsonLd({ schema }: JsonLdProps) {
+export default function JsonLd({ schema, idPrefix }: JsonLdProps) {
   // Handle both single schema objects and arrays of schemas
   const schemaArray = Array.isArray(schema) ? schema : [schema];
+
+  // Generate unique prefix from schema content hash if not provided
+  const prefix = idPrefix ?? JSON.stringify(schema).slice(0, 8);
 
   return (
     <>
       {schemaArray.map((schemaItem, index) => (
         <Script
-          key={`jsonld-${index}`}
-          id={`jsonld-${index}`}
+          key={`${prefix}-jsonld-${index}`}
+          id={`${prefix}-jsonld-${index}`}
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(schemaItem, null, 0),
@@ -46,14 +50,17 @@ export default function JsonLd({ schema }: JsonLdProps) {
  * Alternative: Inline JSON-LD for immediate rendering
  * Use this for critical above-the-fold content
  */
-export function InlineJsonLd({ schema }: JsonLdProps) {
+export function InlineJsonLd({ schema, idPrefix }: JsonLdProps) {
   const schemaArray = Array.isArray(schema) ? schema : [schema];
+
+  // Generate unique prefix from schema content hash if not provided
+  const prefix = idPrefix ?? JSON.stringify(schema).slice(0, 8);
 
   return (
     <>
       {schemaArray.map((schemaItem, index) => (
         <script
-          key={`jsonld-inline-${index}`}
+          key={`${prefix}-jsonld-inline-${index}`}
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(schemaItem, null, 0),

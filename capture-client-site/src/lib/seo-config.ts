@@ -196,17 +196,9 @@ export function generateLocalBusinessSchema(locationData: LocationData) {
       ],
     },
 
-    // Geo coverage
-    geo: {
-      '@type': 'GeoCircle',
-      geoMidpoint: {
-        '@type': 'GeoCoordinates',
-        // Add specific coordinates if available
-        addressLocality: location.city,
-        addressRegion: location.state_abbr,
-      },
-      geoRadius: location.service_area_radius,
-    },
+    // NOTE: Geo coordinates removed - location data does not include lat/long
+    // GeoCoordinates requires numeric latitude/longitude values
+    // The areaServed property above is sufficient for local SEO
 
     // NOTE: Aggregate rating commented out until verifiable
     // aggregateRating: {

@@ -7,6 +7,13 @@
 
 ## Recent (Dec 20-21, 2025)
 
+### DEPLOYMENT READINESS AUDIT + SCHEMA ENHANCEMENTS (2025-12-21)
+- Comprehensive audit: 4 parallel subagents (Desktop UI, Mobile UI, Schema, Component)
+- Schema fixes: WebSite + SoftwareApplication (homepage), LocalBusiness (locations), pricing fix (integrations)
+- Documentation cleanup: 20 legacy files moved to docs/_archive/ (gitignored)
+- Agent guardrails: Created 05-ignore-paths.md to prevent confusion from archived docs
+- Build status: TypeScript clean, 230 pages generated successfully (commit 0f4ca1d)
+
 ### LEAD RESPONSE SIMULATOR ENHANCEMENTS (2025-12-21)
 - Conversation tracking with multi-turn chat UI (commit 81a4d8d)
 - Personalization sync between form and simulator

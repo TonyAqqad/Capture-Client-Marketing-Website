@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import DemoContent from "./DemoContent";
+import { SITE_CONFIG, generateWebPageSchema } from "@/lib/seo-config";
+import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Interactive AI Voice Demo | Capture Client",
@@ -42,5 +44,17 @@ export const metadata: Metadata = {
 };
 
 export default function DemoPage() {
-  return <DemoContent />;
+  // Generate WebPage schema for demo page
+  const pageSchema = generateWebPageSchema({
+    title: 'Interactive AI Voice Demo - Capture Client',
+    description: 'Experience AI that sounds human. Watch real conversations between our AI voice agent and customers. See how 24/7 AI answering can transform your business.',
+    url: `${SITE_CONFIG.url}/demo`,
+  });
+
+  return (
+    <>
+      <JsonLd schema={pageSchema} />
+      <DemoContent />
+    </>
+  );
 }

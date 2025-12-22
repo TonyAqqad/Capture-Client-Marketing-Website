@@ -32,8 +32,9 @@ Never use:
 ## Orchestration (2025-12-21)
 - **Agents**: code-searcher, site-auditor, batch-fixer, test-runner, memory-sync, component-finder, schema-builder, integration-auditor
 - **Commands**: audit-page, fix-page, new-page, quality-gate, sync-memory, check-palette, audit-integrations, mobile-frontend
-- **Skills**: `/frontend-design` (desktop UI), `/mobile-frontend` (responsive)
+- **Skills**: `/frontend-design` (UI/UX guardrails, light theme)
 - **Memory**: state.md (current), progress.md (recent), progress-archive.md (>7 days), component-inventory.md (80+ components)
+- **Archive**: `docs/_archive/` (legacy docs - DO NOT USE, see `.claude/rules/05-ignore-paths.md`)
 
 ## Known drift (don’t regress)
 - Some code/docs still contain legacy colors (`#00C9FF`, `#4A69E2`, `#D4AF37`). Don’t introduce new instances; converge toward the canonical palette above.

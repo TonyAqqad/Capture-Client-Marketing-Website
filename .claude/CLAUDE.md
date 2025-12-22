@@ -22,8 +22,7 @@ You're working on a large Next.js marketing site (230+ pages). Keep instructions
 - `/sync-memory` - Update memory at milestones
 
 ### Skills
-- `/frontend-design` - Desktop UI patterns and component design
-- `/mobile-frontend` - Mobile-first responsive optimization
+- `/frontend-design` - Project-specific UI/UX guardrails (light theme, typography, motion)
 
 ---
 
@@ -83,9 +82,12 @@ npm run format     # Prettier formatting
 ## Guardrails
 
 ### Protected Files (require explicit approval)
+These files are design-system foundations. Ask before modifying:
 - `capture-client-site/src/components/ui/**`
 - `capture-client-site/src/app/globals*.css`
 - `tailwind.config.ts`
+
+*Note: This is policy guidance, not mechanically enforced.*
 
 ### Component Reuse
 - **Always** use `component-finder` before creating new components

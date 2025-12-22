@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { SITE_CONFIG } from "@/lib/seo-config";
+import { SITE_CONFIG, generateWebPageSchema } from "@/lib/seo-config";
 import { getAllBlogPosts } from "@/lib/data";
 import BlogContent from "./BlogContent";
+import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Blog | Marketing Tips & AI Insights | Capture Client",
@@ -83,5 +84,17 @@ export default async function BlogPage() {
     featuredImage: post.featuredImage,
   }));
 
-  return <BlogContent posts={blogPosts} />;
+  // Generate CollectionPage schema for blog index
+  const pageSchema = generateWebPageSchema({
+    title: 'Blog - Capture Client',
+    description: 'Expert insights on AI voice agents, lead generation, Google Ads, Facebook Ads, and digital marketing strategies for small businesses.',
+    url: `${SITE_CONFIG.url}/blog`,
+  });
+
+  return (
+    <>
+      <JsonLd schema={pageSchema} />
+      <BlogContent posts={blogPosts} />
+    </>
+  );
 }

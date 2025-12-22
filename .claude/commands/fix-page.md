@@ -109,5 +109,5 @@ Offer to update:
 ## Related Tools
 - Use `component-finder` agent to find existing components before creating new ones
 - Use `/check-palette` to scan for legacy colors
-- Use `/frontend-design` skill for desktop UI patterns
+- Use `/frontend-design` skill for UI/UX guardrails
 - Use `/mobile-frontend` command for mobile responsiveness

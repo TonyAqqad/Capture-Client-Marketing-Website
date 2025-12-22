@@ -73,6 +73,6 @@ Create a new page at the specified route: $ARGUMENTS
 ## Related Tools
 - Use `component-finder` agent before creating any new components
 - Use `schema-builder` agent for JSON-LD structured data
-- Use `/frontend-design` skill for desktop UI patterns
+- Use `/frontend-design` skill for UI/UX guardrails
 - Use `/mobile-frontend` command for mobile optimization
 - For integration pages, see @.claude/memory/integration-patterns.md

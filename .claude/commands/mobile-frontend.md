@@ -128,6 +128,6 @@ Use Claude Code Chrome integration:
 ```
 
 ## Related
-- `/frontend-design` - Desktop UI patterns
+- `/frontend-design` - UI/UX guardrails (light theme, typography)
 - `/audit-page` - Full page audit
 - iOS performance: `capture-client-site/src/lib/ios-performance.ts`

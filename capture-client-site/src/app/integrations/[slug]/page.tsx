@@ -156,7 +156,7 @@ export default async function IntegrationDetailPage({
       description: "Included with Capture Client subscription",
     },
     featureList: integration.keyFeatures,
-    integrationWith: {
+    isRelatedTo: {
       "@type": "SoftwareApplication",
       name: integration.name,
       url: integration.url,

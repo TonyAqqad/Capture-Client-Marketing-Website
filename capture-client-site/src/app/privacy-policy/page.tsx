@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { SITE_CONFIG, generateWebPageSchema } from "@/lib/seo-config";
+import JsonLd from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | Capture Client",
@@ -18,10 +20,19 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPolicyPage() {
+  // Generate WebPage schema for privacy policy
+  const pageSchema = generateWebPageSchema({
+    title: 'Privacy Policy - Capture Client',
+    description: "Read Capture Client's privacy policy to understand how we collect, use, and protect your personal information.",
+    url: `${SITE_CONFIG.url}/privacy-policy`,
+  });
+
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Hero Section */}
-      <section className="relative py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-16 bg-gradient-to-br from-white via-slate-50 to-blue-50">
+    <>
+      <JsonLd schema={pageSchema} />
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */}
+        <section className="relative py-16 sm:py-20 md:py-24 px-4 sm:px-6 lg:px-16 bg-gradient-to-br from-white via-slate-50 to-blue-50">
         <div className="container mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 mb-4 sm:mb-6 leading-tight">Privacy Policy</h1>
           <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto px-4">Last Updated: January 2025</p>
@@ -417,6 +428,7 @@ export default function PrivacyPolicyPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

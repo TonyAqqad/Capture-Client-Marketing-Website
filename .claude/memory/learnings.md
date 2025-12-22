@@ -276,3 +276,23 @@
     - Fix text contrast: `text-black` → `text-white` on colored backgrounds (e.g., blue step badges)
   - **Validation**: Check all integration pages to ensure consistent light theme
   - **Lesson**: When migrating to light theme, audit all card/glass components for dark-specific styling, especially semantic tokens that may hide dark backgrounds
+- **Schema Discovery Pattern** (2025-12-21): Audit agents can miss existing schemas:
+  - **Problem**: Searching for `<script type="application/ld+json">` misses schemas rendered via helper functions
+  - **Real implementation**: Site uses `generateXXXSchema()` from `@/lib/seo-config` + `<JsonLd>` component
+  - **Verification strategy**: Check for:
+    1. Inline `<script>` tags with dangerouslySetInnerHTML
+    2. Helper function calls (e.g., `generateOrganizationSchema()`)
+    3. `<JsonLd schema={...}>` component usage in layout/pages
+  - **Example**: Homepage already had Organization + WebSite schemas via layout.tsx, but audit reported them as missing
+  - **Lesson**: Before claiming schemas are missing, verify all three implementation patterns
+- **Legacy Documentation Archiving Pattern** (2025-12-21): Preventing agent confusion:
+  - **Problem**: 20 outdated files (gold theme, dark mode, old phone) were misleading agents
+  - **Solution**: Move to `docs/_archive/` (gitignored) + create `.claude/rules/05-ignore-paths.md`
+  - **Files archived**: UI_DESIGN_SUMMARY.txt, PRICING_TRANSFORMATION_SUMMARY.md, navigation-README.md, patch files, QA scripts
+  - **Guardrails**: Explicit rule file tells agents to ignore archived content, documents correct patterns
+  - **Lesson**: When migrating design systems, actively archive outdated docs rather than letting them accumulate
+- **Parallel Audit Orchestration Pattern** (2025-12-21): Efficient site-wide audits:
+  - **Strategy**: Launch 4 specialized subagents simultaneously for comprehensive pre-deployment scan
+  - **Agents deployed**: site-auditor (Desktop), site-auditor (Mobile), schema-builder, code-reviewer
+  - **Benefits**: Parallel execution, independent context per agent, results aggregated without bloating main thread
+  - **Lesson**: For site-wide audits, parallelize with specialized subagents rather than reading all files in main thread

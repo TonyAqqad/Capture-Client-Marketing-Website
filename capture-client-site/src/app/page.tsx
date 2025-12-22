@@ -221,12 +221,7 @@ export default function HomePage() {
             "@type": "WebSite",
             name: "Capture Client",
             url: "https://captureclient.com",
-            description: "AI Voice Agents for Business - Never miss a lead again",
-            potentialAction: {
-              "@type": "SearchAction",
-              target: "https://captureclient.com/search?q={search_term_string}",
-              "query-input": "required name=search_term_string"
-            }
+            description: "AI Voice Agents for Business - Never miss a lead again"
           })
         }}
       />
@@ -245,11 +240,6 @@ export default function HomePage() {
               "@type": "Offer",
               price: "297",
               priceCurrency: "USD"
-            },
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "4.9",
-              reviewCount: "127"
             }
           })
         }}

@@ -1,5 +1,5 @@
 ---
-name: frontend-aesthetics
+name: frontend-design
 description: Project-specific UI/UX guardrails for Capture Client. Use whenever changing UI, layout, motion, or page sections.
 ---
 
