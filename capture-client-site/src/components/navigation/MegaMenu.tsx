@@ -71,7 +71,7 @@ export default function MegaMenu() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ${scrolledClass}`}
+      className={`fixed top-0 left-0 right-0 z-[100] transition-[background-color,box-shadow,border-color] duration-500 ${scrolledClass}`}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4">
         <div className="flex items-center justify-between relative z-[110]">
@@ -84,10 +84,14 @@ export default function MegaMenu() {
 
             {/* Desktop Logo */}
             <div className="hidden sm:block relative h-12 w-auto">
-              <img
+              <Image
                 src="/Capture-client-deskto-logo-latest-aligned-with-light.png"
                 alt="Capture Client"
+                width={180}
+                height={48}
+                sizes="(max-width: 640px) 0px, 180px"
                 className="h-12 w-auto object-contain transition-all group-hover:drop-shadow-[0_0_8px_rgba(0,201,255,0.3)] duration-500"
+                priority
               />
             </div>
 

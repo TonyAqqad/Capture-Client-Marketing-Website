@@ -44,19 +44,7 @@ function LightMeshBackground() {
     offset: ["start start", "end start"],
   });
 
-  // Different parallax speeds for depth layers
-  const y1 = useSpring(
-    useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [0, 150]),
-    springConfig
-  );
-  const y2 = useSpring(
-    useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [0, 250]),
-    springConfig
-  );
-  const y3 = useSpring(
-    useTransform(scrollYProgress, [0, 1], isMobile ? [0, 0] : [0, 100]),
-    springConfig
-  );
+  // Scale and opacity transforms only (no Y parallax to prevent CLS)
   const scale1 = useSpring(
     useTransform(scrollYProgress, [0, 0.5], isMobile ? [1, 1] : [1, 1.15]),
     springConfig
@@ -77,7 +65,6 @@ function LightMeshBackground() {
       <motion.div
         className="absolute -top-[20%] -right-[10%] w-[300px] sm:w-[500px] md:w-[700px] lg:w-[900px] h-[300px] sm:h-[500px] md:h-[700px] lg:h-[900px] will-change-transform"
         style={{
-          y: y1,
           scale: scale1,
           opacity: opacity1,
           background:
@@ -90,7 +77,6 @@ function LightMeshBackground() {
       <motion.div
         className="absolute -bottom-[20%] -left-[10%] w-[250px] sm:w-[400px] md:w-[600px] lg:w-[800px] h-[250px] sm:h-[400px] md:h-[600px] lg:h-[800px] will-change-transform"
         style={{
-          y: y2,
           scale: scale2,
           opacity: opacity2,
           background:
@@ -103,18 +89,16 @@ function LightMeshBackground() {
       <motion.div
         className="absolute top-[30%] right-[5%] w-[200px] sm:w-[300px] md:w-[400px] lg:w-[500px] h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px] will-change-transform"
         style={{
-          y: y3,
           background:
             "radial-gradient(circle at center, rgba(59, 130, 246, 0.05) 0%, transparent 60%)",
           filter: "blur(100px)",
         }}
       />
 
-      {/* Subtle grid overlay with parallax */}
-      <motion.div
+      {/* Subtle grid overlay (static to prevent CLS) */}
+      <div
         className="absolute inset-0 opacity-[0.015]"
         style={{
-          y: useTransform(scrollYProgress, [0, 1], [0, 50]),
           backgroundImage: `
             linear-gradient(rgba(15,23,42,0.04) 1px, transparent 1px),
             linear-gradient(90deg, rgba(15,23,42,0.04) 1px, transparent 1px)
@@ -198,12 +182,10 @@ export function LightHero() {
   const itemVariants = {
     hidden: {
       opacity: 0,
-      y: 30,
       filter: "blur(10px)",
     },
     visible: {
       opacity: 1,
-      y: 0,
       filter: "blur(0px)",
       transition: springTransition,
     },
@@ -262,8 +244,8 @@ export function LightHero() {
                 {/* Line 1 */}
                 <motion.span
                   className="block text-[2.25rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 tracking-tight mb-1.5"
-                  initial={{ opacity: 0, y: 40, filter: "blur(12px)" }}
-                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  initial={{ opacity: 0, filter: "blur(12px)" }}
+                  animate={{ opacity: 1, filter: "blur(0px)" }}
                   transition={{ ...springTransition, delay: 0.15 }}
                 >
                   Never lose another
@@ -272,8 +254,8 @@ export function LightHero() {
                 {/* Line 2 - gradient text with slight delay */}
                 <motion.span
                   className="block text-[2.25rem] leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl font-bold text-slate-900 tracking-tight mb-1.5"
-                  initial={{ opacity: 0, y: 40, filter: "blur(12px)" }}
-                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                  initial={{ opacity: 0, filter: "blur(12px)" }}
+                  animate={{ opacity: 1, filter: "blur(0px)" }}
                   transition={{ ...springTransition, delay: 0.25 }}
                   style={{
                     background: "linear-gradient(135deg, #2563EB 0%, #0EA5E9 100%)",
@@ -304,7 +286,7 @@ export function LightHero() {
                 <motion.div
                   className="w-full sm:w-auto"
                   whileHover={{
-                    y: -3,
+                    scale: 1.02,
                     transition: { type: "spring", stiffness: 400, damping: 25 },
                   }}
                   whileTap={{ scale: 0.98 }}
@@ -330,7 +312,7 @@ export function LightHero() {
                   href="tel:865-346-6111"
                   className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-base font-semibold text-slate-700 border border-slate-200/80 bg-white/80 backdrop-blur-sm hover:bg-white hover:border-blue-200 transition-all duration-300"
                   whileHover={{
-                    y: -3,
+                    scale: 1.02,
                     boxShadow: "0 15px 40px -15px rgba(37, 99, 235, 0.15)",
                     transition: { type: "spring", stiffness: 400, damping: 25 },
                   }}
@@ -349,7 +331,7 @@ export function LightHero() {
                 {/* Mobile: Single combined badge */}
                 <motion.div
                   className="flex sm:hidden items-center gap-2 px-4 py-2.5 min-h-[44px] rounded-full bg-white border border-slate-200 shadow-sm"
-                  whileHover={{ y: -2, boxShadow: "0 8px 25px -8px rgba(37, 99, 235, 0.15)" }}
+                  whileHover={{ scale: 1.02, boxShadow: "0 8px 25px -8px rgba(37, 99, 235, 0.15)" }}
                   transition={{ type: "spring", stiffness: 400, damping: 25 }}
                 >
                   <Star className="w-4 h-4 text-amber-500 fill-amber-500" />
@@ -362,7 +344,7 @@ export function LightHero() {
                 <motion.div
                   className="hidden sm:flex items-center gap-3 px-4 py-2.5 min-h-[44px] rounded-full bg-white border border-slate-200 shadow-sm touch-manipulation"
                   whileHover={{
-                    y: -2,
+                    scale: 1.02,
                     boxShadow: "0 8px 25px -8px rgba(37, 99, 235, 0.15)",
                     borderColor: "rgba(37, 99, 235, 0.2)",
                   }}
@@ -383,7 +365,7 @@ export function LightHero() {
                 <motion.div
                   className="hidden sm:flex items-center gap-2 px-4 py-2.5 min-h-[44px] rounded-full bg-white border border-slate-200 shadow-sm touch-manipulation"
                   whileHover={{
-                    y: -2,
+                    scale: 1.02,
                     boxShadow: "0 8px 25px -8px rgba(37, 99, 235, 0.15)",
                     borderColor: "rgba(37, 99, 235, 0.2)",
                   }}
@@ -399,7 +381,7 @@ export function LightHero() {
                 <motion.div
                   className="flex items-center gap-2 px-4 py-2.5 min-h-[44px] rounded-full bg-white border border-slate-200 shadow-sm touch-manipulation"
                   whileHover={{
-                    y: -2,
+                    scale: 1.02,
                     boxShadow: "0 8px 25px -8px rgba(37, 99, 235, 0.15)",
                     borderColor: "rgba(37, 99, 235, 0.2)",
                   }}
@@ -415,8 +397,8 @@ export function LightHero() {
               {/* Mobile-only Integration Strip - fills empty space with trust signals */}
               <motion.div
                 className="mt-10 lg:hidden"
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
                 transition={{ type: "spring", stiffness: 100, damping: 20, delay: 0.6 }}
               >
                 {/* Label */}

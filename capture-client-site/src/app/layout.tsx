@@ -82,7 +82,7 @@ export default function RootLayout({
   const websiteSchema = generateWebSiteSchema();
 
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" data-scroll-behavior="smooth">
       <head>
         {/* CRITICAL: Preconnect to Google Fonts for faster font loading */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -158,7 +158,7 @@ export default function RootLayout({
         {/* PERFORMANCE OPTIMIZATION: LazyMotion reduces framer-motion bundle by ~60KB */}
         <LazyMotionProvider>
           <Header />
-          <main id="main-content" className="min-h-screen">
+          <main id="main-content" className="min-h-screen pt-[72px]">
             {children}
           </main>
           <Footer />
