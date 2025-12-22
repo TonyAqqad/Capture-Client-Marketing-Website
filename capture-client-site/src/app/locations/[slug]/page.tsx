@@ -183,11 +183,33 @@ export default async function LocationPage({ params }: { params: Promise<{ slug:
     benefits: location.benefits?.map((b: Benefit) => ({ title: b.title, description: b.description })),
   });
 
+  // Generate LocalBusiness schema with address for local SEO
+  const localBusinessAddressSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: `Capture Client - ${location.location.city}`,
+    description: `AI Voice Agent services in ${location.location.city}, ${location.location.state}`,
+    telephone: "865-346-6111",
+    url: `${SITE_CONFIG.url}/locations/${location.page_id}`,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: location.location.city,
+      addressRegion: location.location.state_abbr,
+      addressCountry: "US"
+    },
+    areaServed: {
+      "@type": "City",
+      name: location.location.city
+    },
+    priceRange: "$$"
+  };
+
   // Combine all schemas (filter out nulls)
   const schemas = [
     localBusinessSchema,
     serviceSchema,
     locationServiceSchema,
+    localBusinessAddressSchema,
     breadcrumbSchema,
     webPageSchema,
     faqSchema,

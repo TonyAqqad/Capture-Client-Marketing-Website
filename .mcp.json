@@ -1,8 +1,8 @@
 {
   "mcpServers": {
     "brightdata": {
-      "command": "npx",
-      "args": ["@brightdata/mcp"]
+      "command": "cmd",
+      "args": ["/c", "npx", "@brightdata/mcp"]
     }
   }
 }

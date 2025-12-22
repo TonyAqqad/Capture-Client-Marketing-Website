@@ -1,6 +1,6 @@
 ---
 name: schema-builder
-model: sonnet
+model: opus
 description: Generate and validate JSON-LD structured data schemas for SEO.
 tools:
   - Read

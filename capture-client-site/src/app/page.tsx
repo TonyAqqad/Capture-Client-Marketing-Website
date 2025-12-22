@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
-import { generateSoftwareApplicationSchema } from "@/lib/seo-config";
 import { LightHero } from "@/components/sections/LightHero";
 import { LightStats } from "@/components/sections/LightStats";
 import { LightIntegrationCarousel } from "@/components/sections/LightIntegrationCarousel";
@@ -211,7 +210,51 @@ export default function HomePage() {
   return (
     <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-white">
       {/* JSON-LD Structured Data - Page-specific schemas only */}
-      {/* Organization and WebSite schemas are rendered globally in layout.tsx */}
+      {/* Organization schema is rendered globally in layout.tsx */}
+
+      {/* WebSite Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Capture Client",
+            url: "https://captureclient.com",
+            description: "AI Voice Agents for Business - Never miss a lead again",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: "https://captureclient.com/search?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          })
+        }}
+      />
+
+      {/* SoftwareApplication Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: "Capture Client AI Voice Agent",
+            applicationCategory: "BusinessApplication",
+            operatingSystem: "Web, iOS, Android",
+            offers: {
+              "@type": "Offer",
+              price: "297",
+              priceCurrency: "USD"
+            },
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "4.9",
+              reviewCount: "127"
+            }
+          })
+        }}
+      />
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
@@ -223,10 +266,6 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pricingSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(generateSoftwareApplicationSchema()) }}
       />
 
       {/* ==================== EXIT INTENT POPUP ==================== */}

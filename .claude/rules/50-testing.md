@@ -23,7 +23,7 @@ Hooks are configured in `.claude/settings.local.json`:
 Hook format example:
 ```json
 {
-  "matcher": { "tools": ["Bash"], "command_pattern": "git commit" },
+  "matcher": "Bash(git commit*)",
   "hooks": [{ "type": "command", "command": "node .claude/hooks/pre-commit-validator.js" }]
 }
 ```

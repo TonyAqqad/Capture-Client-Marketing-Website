@@ -151,8 +151,9 @@ export default async function IntegrationDetailPage({
     description: integration.description,
     offers: {
       "@type": "Offer",
-      price: "497",
+      price: "0",
       priceCurrency: "USD",
+      description: "Included with Capture Client subscription",
     },
     featureList: integration.keyFeatures,
     integrationWith: {
