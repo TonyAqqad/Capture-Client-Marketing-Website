@@ -3,7 +3,15 @@
 import { useState } from "react";
 import Link from "next/link";
 import { trackFormStart, trackFormSubmission, trackPhoneClick } from "@/lib/analytics";
-import { CheckCircle, Phone, Lock, ArrowRight, Rocket, ArrowLeft, Shield, Clock, Headset, ChevronDown } from "lucide-react";
+import { CheckCircle, Phone, Lock, ArrowRight, Rocket, ArrowLeft, Shield, Clock, Headset, ChevronDown, AlertCircle } from "lucide-react";
+import {
+  validateName,
+  validatePhone,
+  validateEmailOptional,
+  validateChallenge,
+  FormValidationErrors,
+  hasValidationErrors,
+} from "@/lib/form-validation";
 
 interface OptimizedLeadFormProps {
   source?: string;
@@ -24,6 +32,8 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formStarted, setFormStarted] = useState(false);
+  const [errors, setErrors] = useState<FormValidationErrors>({});
+  const [touched, setTouched] = useState<{ [key: string]: boolean }>({});
 
   // Track form start on first interaction
   const handleFormStart = () => {
@@ -33,8 +43,27 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
     }
   };
 
+  const handleBlur = (field: string) => {
+    setTouched({ ...touched, [field]: true });
+  };
+
   const handleStepOne = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Validate step 1 fields
+    const stepOneErrors: FormValidationErrors = {
+      name: validateName(formData.name) ?? undefined,
+      phone: validatePhone(formData.phone) ?? undefined,
+      email: validateEmailOptional(formData.email) ?? undefined,
+    };
+
+    setErrors(stepOneErrors);
+    setTouched({ name: true, phone: true, email: true });
+
+    if (hasValidationErrors(stepOneErrors)) {
+      return;
+    }
+
     // Track progression to step 2
     trackFormSubmission(`optimized_lead_form_step1_${source}`, {
       step: 1,
@@ -45,6 +74,15 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
 
   const handleFinalSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Validate challenge field
+    const challengeError = validateChallenge(formData.challenge);
+    if (challengeError) {
+      setErrors({ ...errors, challenge: challengeError });
+      setTouched({ ...touched, challenge: true });
+      return;
+    }
+
     setIsSubmitting(true);
 
     try {
@@ -165,21 +203,33 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                   onChange={(e) => {
                     handleFormStart();
                     setFormData({ ...formData, name: e.target.value });
+                    if (touched.name) {
+                      const error = validateName(e.target.value);
+                      setErrors({ ...errors, name: error ?? undefined });
+                    }
                   }}
-                  required
+                  onBlur={() => handleBlur("name")}
                   autoComplete="name"
-                  className="w-full min-h-[52px] px-5 py-4 text-base
+                  className={`w-full min-h-[52px] px-5 py-4 text-base
                              bg-white
-                             border-2 border-slate-200 rounded-xl
+                             border-2 rounded-xl
                              text-slate-900 placeholder-slate-400
                              transition-all duration-300
                              hover:border-slate-300
                              focus:outline-none focus:bg-white
-                             focus:border-blue-500 focus:ring-4 focus:ring-blue-100
-                             touch-manipulation"
+                             focus:ring-4 focus:ring-blue-100
+                             touch-manipulation
+                             ${errors.name && touched.name ? "border-red-400 focus:border-red-500" : "border-slate-200 focus:border-blue-500"}`}
                 />
-                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
+                <div className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent to-transparent transition-opacity duration-300
+                                ${errors.name && touched.name ? "via-red-500 opacity-100" : "via-blue-500 opacity-0 group-focus-within:opacity-100"}`} />
               </div>
+              {errors.name && touched.name && (
+                <div className="flex items-center gap-1.5 mt-2 text-sm text-red-600">
+                  <AlertCircle className="w-4 h-4" />
+                  <span>{errors.name}</span>
+                </div>
+              )}
             </div>
 
             {/* Phone field */}
@@ -197,22 +247,35 @@ export default function OptimizedLeadForm({ source = "general" }: OptimizedLeadF
                   inputMode="numeric"
                   placeholder="(865) 555-1234"
                   value={formData.phone}
-                  onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  required
+                  onChange={(e) => {
+                    setFormData({ ...formData, phone: e.target.value });
+                    if (touched.phone) {
+                      const error = validatePhone(e.target.value);
+                      setErrors({ ...errors, phone: error ?? undefined });
+                    }
+                  }}
+                  onBlur={() => handleBlur("phone")}
                   autoComplete="tel"
-                  minLength={10}
-                  className="w-full min-h-[52px] px-5 py-4 text-base
+                  className={`w-full min-h-[52px] px-5 py-4 text-base
                              bg-white
-                             border-2 border-slate-200 rounded-xl
+                             border-2 rounded-xl
                              text-slate-900 placeholder-slate-400
                              transition-all duration-300
                              hover:border-slate-300
                              focus:outline-none focus:bg-white
-                             focus:border-blue-500 focus:ring-4 focus:ring-blue-100
-                             touch-manipulation"
+                             focus:ring-4 focus:ring-blue-100
+                             touch-manipulation
+                             ${errors.phone && touched.phone ? "border-red-400 focus:border-red-500" : "border-slate-200 focus:border-blue-500"}`}
                 />
-                <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-0 group-focus-within:opacity-100 transition-opacity duration-300" />
+                <div className={`absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent to-transparent transition-opacity duration-300
+                                ${errors.phone && touched.phone ? "via-red-500 opacity-100" : "via-blue-500 opacity-0 group-focus-within:opacity-100"}`} />
               </div>
+              {errors.phone && touched.phone && (
+                <div className="flex items-center gap-1.5 mt-2 text-sm text-red-600">
+                  <AlertCircle className="w-4 h-4" />
+                  <span>{errors.phone}</span>
+                </div>
+              )}
             </div>
 
             {/* Email field (optional) */}

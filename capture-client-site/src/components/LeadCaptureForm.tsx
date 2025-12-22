@@ -5,16 +5,17 @@ import Link from "next/link";
 import { motion } from "@/lib/motion";
 import { CheckCircle, ChevronDown, ArrowRight, Phone, AlertCircle, Sparkles } from "lucide-react";
 import { trackFormStart, trackFormSubmission, trackPhoneClick } from "@/lib/analytics";
+import {
+  validateName,
+  validateEmail,
+  validatePhone,
+  validateService,
+  FormValidationErrors,
+  hasValidationErrors,
+} from "@/lib/form-validation";
 
 interface LeadCaptureFormProps {
   source?: string;
-}
-
-interface ValidationErrors {
-  name?: string;
-  email?: string;
-  phone?: string;
-  service?: string;
 }
 
 export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormProps) {
@@ -29,7 +30,7 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formStarted, setFormStarted] = useState(false);
-  const [errors, setErrors] = useState<ValidationErrors>({});
+  const [errors, setErrors] = useState<FormValidationErrors>({});
   const [touched, setTouched] = useState<{ [key: string]: boolean }>({});
 
   // Track form start on first interaction
@@ -40,37 +41,26 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
     }
   };
 
-  // Real-time validation
-  const validateField = (field: keyof ValidationErrors, value: string): string | undefined => {
+  // Real-time validation using shared utilities
+  const validateField = (field: keyof FormValidationErrors, value: string): string | null => {
     switch (field) {
       case "name":
-        if (!value.trim()) return "Please enter your name";
-        if (value.trim().length < 2) return "Name must be at least 2 characters";
-        return undefined;
-      case "email": {
-        if (!value.trim()) return "Please enter your email";
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(value)) return "Please enter a valid email address";
-        return undefined;
-      }
-      case "phone": {
-        if (!value.trim()) return "Please enter your phone number";
-        const phoneDigits = value.replace(/\D/g, "");
-        if (phoneDigits.length < 10) return "Please enter a valid phone number";
-        return undefined;
-      }
+        return validateName(value);
+      case "email":
+        return validateEmail(value);
+      case "phone":
+        return validatePhone(value);
       case "service":
-        if (!value) return "Please select a service";
-        return undefined;
+        return validateService(value);
       default:
-        return undefined;
+        return null;
     }
   };
 
-  const handleBlur = (field: keyof ValidationErrors) => {
+  const handleBlur = (field: keyof FormValidationErrors) => {
     setTouched({ ...touched, [field]: true });
-    const error = validateField(field, formData[field]);
-    setErrors({ ...errors, [field]: error });
+    const error = validateField(field, formData[field as keyof typeof formData] as string);
+    setErrors({ ...errors, [field]: error ?? undefined });
   };
 
   const handleFieldChange = (field: keyof typeof formData, value: string | boolean) => {
@@ -78,27 +68,27 @@ export default function LeadCaptureForm({ source = "general" }: LeadCaptureFormP
 
     // Clear error when user starts typing
     if (typeof value === "string" && touched[field]) {
-      const error = validateField(field as keyof ValidationErrors, value);
-      setErrors({ ...errors, [field]: error });
+      const error = validateField(field as keyof FormValidationErrors, value);
+      setErrors({ ...errors, [field]: error ?? undefined });
     }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Validate all fields
-    const newErrors: ValidationErrors = {
-      name: validateField("name", formData.name),
-      email: validateField("email", formData.email),
-      phone: validateField("phone", formData.phone),
-      service: validateField("service", formData.service),
+    // Validate all fields using shared validation
+    const newErrors: FormValidationErrors = {
+      name: validateName(formData.name) ?? undefined,
+      email: validateEmail(formData.email) ?? undefined,
+      phone: validatePhone(formData.phone) ?? undefined,
+      service: validateService(formData.service) ?? undefined,
     };
 
     setErrors(newErrors);
     setTouched({ name: true, email: true, phone: true, service: true });
 
     // Check if there are any errors
-    if (Object.values(newErrors).some((error) => error)) {
+    if (hasValidationErrors(newErrors)) {
       return;
     }
 

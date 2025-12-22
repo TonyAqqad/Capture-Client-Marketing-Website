@@ -5,214 +5,20 @@ import { motion, useScroll, useTransform } from "@/lib/motion";
 import { useInView } from "@/hooks/useInView";
 import Link from "next/link";
 import { ArrowRight, Phone, TrendingUp, Users, Zap } from "lucide-react";
+import { VoiceAIIcon, GoogleAdsIcon, FacebookAdsIcon, LeadGenIcon } from "./icons";
 
-// ============================================================================
-// CUSTOM SVG ICON COMPONENTS
-// ============================================================================
-
-function VoiceAIIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 120 120" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="M60 30C55 30 51 34 51 39V60C51 65 55 69 60 69C65 69 69 65 69 60V39C69 34 65 30 60 30Z"
-        fill="url(#voiceGradient)"
-        opacity="0.9"
-      />
-      <path
-        d="M45 57C45 57 45 60 45 63C45 73.5 52.5 82 62 83V90H54V96H66V96H66H78V90H70V83C79.5 82 87 73.5 87 63C87 60 87 57 87 57"
-        stroke="url(#voiceGradient)"
-        strokeWidth="3"
-        strokeLinecap="round"
-        opacity="0.8"
-      />
-      <motion.path
-        d="M30 60 Q35 50 40 60 T50 60"
-        stroke="#00C9FF"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        fill="none"
-        initial={{ pathLength: 0, opacity: 0 }}
-        animate={{ pathLength: 1, opacity: [0, 1, 0] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.path
-        d="M70 60 Q75 50 80 60 T90 60"
-        stroke="#2563EB"
-        strokeWidth="2.5"
-        strokeLinecap="round"
-        fill="none"
-        initial={{ pathLength: 0, opacity: 0 }}
-        animate={{ pathLength: 1, opacity: [0, 1, 0] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
-      />
-      <motion.path
-        d="M25 60 Q27 55 30 60"
-        stroke="#00C9FF"
-        strokeWidth="2"
-        strokeLinecap="round"
-        fill="none"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: [0, 0.7, 0] }}
-        transition={{ duration: 1.8, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-      />
-      <defs>
-        <linearGradient id="voiceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#00C9FF" />
-          <stop offset="100%" stopColor="#2563EB" />
-        </linearGradient>
-      </defs>
-    </svg>
-  );
-}
-
-function GoogleAdsIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 120 120" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-      <motion.rect
-        x="25" y="70" width="12" height="20"
-        fill="url(#googleGradient1)"
-        initial={{ height: 0, y: 90 }}
-        animate={{ height: 20, y: 70 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      />
-      <motion.rect
-        x="42" y="60" width="12" height="30"
-        fill="url(#googleGradient2)"
-        initial={{ height: 0, y: 90 }}
-        animate={{ height: 30, y: 60 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-      />
-      <motion.rect
-        x="59" y="45" width="12" height="45"
-        fill="url(#googleGradient3)"
-        initial={{ height: 0, y: 90 }}
-        animate={{ height: 45, y: 45 }}
-        transition={{ duration: 0.8, delay: 0.6 }}
-      />
-      <motion.rect
-        x="76" y="30" width="12" height="60"
-        fill="url(#googleGradient4)"
-        initial={{ height: 0, y: 90 }}
-        animate={{ height: 60, y: 30 }}
-        transition={{ duration: 0.8, delay: 0.8 }}
-      />
-      <motion.path
-        d="M31 85 L48 75 L65 60 L82 40"
-        stroke="#2563EB"
-        strokeWidth="3"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="none"
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: 1 }}
-        transition={{ duration: 1.5, delay: 1 }}
-      />
-      <motion.path
-        d="M82 40 L78 46 L86 44 Z"
-        fill="#2563EB"
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.3, delay: 2 }}
-      />
-      <defs>
-        <linearGradient id="googleGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#2563EB" stopOpacity="0.8" />
-          <stop offset="100%" stopColor="#2563EB" stopOpacity="0.3" />
-        </linearGradient>
-        <linearGradient id="googleGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#2563EB" stopOpacity="0.9" />
-          <stop offset="100%" stopColor="#2563EB" stopOpacity="0.4" />
-        </linearGradient>
-        <linearGradient id="googleGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#00C9FF" stopOpacity="0.9" />
-          <stop offset="100%" stopColor="#00C9FF" stopOpacity="0.4" />
-        </linearGradient>
-        <linearGradient id="googleGradient4" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#00C9FF" />
-          <stop offset="100%" stopColor="#00C9FF" stopOpacity="0.5" />
-        </linearGradient>
-      </defs>
-    </svg>
-  );
-}
-
-function FacebookAdsIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 120 120" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="60" cy="60" r="8" fill="#00C9FF" />
-      <motion.circle
-        cx="60" cy="60" r="20"
-        stroke="#00C9FF"
-        strokeWidth="2"
-        fill="none"
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 0.6 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      />
-      <motion.circle
-        cx="60" cy="60" r="32"
-        stroke="#2563EB"
-        strokeWidth="2"
-        fill="none"
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 0.5 }}
-        transition={{ duration: 0.6, delay: 0.4 }}
-      />
-      <motion.circle
-        cx="60" cy="60" r="44"
-        stroke="#00C9FF"
-        strokeWidth="2"
-        fill="none"
-        opacity="0.4"
-        initial={{ scale: 0, opacity: 0 }}
-        animate={{ scale: 1, opacity: 0.3 }}
-        transition={{ duration: 0.6, delay: 0.6 }}
-      />
-      <line x1="60" y1="10" x2="60" y2="50" stroke="#2563EB" strokeWidth="2" opacity="0.7" />
-      <line x1="60" y1="70" x2="60" y2="110" stroke="#2563EB" strokeWidth="2" opacity="0.7" />
-      <line x1="10" y1="60" x2="50" y2="60" stroke="#2563EB" strokeWidth="2" opacity="0.7" />
-      <line x1="70" y1="60" x2="110" y2="60" stroke="#2563EB" strokeWidth="2" opacity="0.7" />
-      <motion.circle cx="40" cy="40" r="3" fill="#00C9FF" initial={{ scale: 0 }} animate={{ scale: [0, 1.2, 1] }} transition={{ duration: 0.5, delay: 0.8 }} />
-      <motion.circle cx="80" cy="40" r="3" fill="#00C9FF" initial={{ scale: 0 }} animate={{ scale: [0, 1.2, 1] }} transition={{ duration: 0.5, delay: 1 }} />
-      <motion.circle cx="40" cy="80" r="3" fill="#2563EB" initial={{ scale: 0 }} animate={{ scale: [0, 1.2, 1] }} transition={{ duration: 0.5, delay: 1.2 }} />
-      <motion.circle cx="80" cy="80" r="3" fill="#2563EB" initial={{ scale: 0 }} animate={{ scale: [0, 1.2, 1] }} transition={{ duration: 0.5, delay: 1.4 }} />
-    </svg>
-  );
-}
-
-function LeadGenIcon({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 120 120" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M30 25 L90 25 L75 55 L45 55 Z" fill="url(#funnelGradient1)" opacity="0.8" />
-      <path d="M45 55 L75 55 L68 75 L52 75 Z" fill="url(#funnelGradient2)" opacity="0.9" />
-      <path d="M52 75 L68 75 L64 95 L56 95 Z" fill="url(#funnelGradient3)" />
-      <motion.circle cx="60" cy="30" r="2.5" fill="#00C9FF" initial={{ cy: 30, opacity: 1 }} animate={{ cy: 95, opacity: 0 }} transition={{ duration: 2, repeat: Infinity, ease: "easeIn", delay: 0 }} />
-      <motion.circle cx="50" cy="30" r="2.5" fill="#2563EB" initial={{ cy: 30, opacity: 1 }} animate={{ cy: 95, opacity: 0 }} transition={{ duration: 2.2, repeat: Infinity, ease: "easeIn", delay: 0.3 }} />
-      <motion.circle cx="70" cy="30" r="2.5" fill="#00C9FF" initial={{ cy: 30, opacity: 1 }} animate={{ cy: 95, opacity: 0 }} transition={{ duration: 2.4, repeat: Infinity, ease: "easeIn", delay: 0.6 }} />
-      <motion.circle cx="55" cy="30" r="2" fill="#2563EB" initial={{ cy: 30, opacity: 1 }} animate={{ cy: 95, opacity: 0 }} transition={{ duration: 2.1, repeat: Infinity, ease: "easeIn", delay: 0.9 }} />
-      <motion.circle cx="65" cy="30" r="2" fill="#00C9FF" initial={{ cy: 30, opacity: 1 }} animate={{ cy: 95, opacity: 0 }} transition={{ duration: 2.3, repeat: Infinity, ease: "easeIn", delay: 1.2 }} />
-      <defs>
-        <linearGradient id="funnelGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#00C9FF" stopOpacity="0.6" />
-          <stop offset="100%" stopColor="#00C9FF" stopOpacity="0.3" />
-        </linearGradient>
-        <linearGradient id="funnelGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#2563EB" stopOpacity="0.7" />
-          <stop offset="100%" stopColor="#2563EB" stopOpacity="0.4" />
-        </linearGradient>
-        <linearGradient id="funnelGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stopColor="#00C9FF" stopOpacity="0.9" />
-          <stop offset="100%" stopColor="#00C9FF" stopOpacity="0.6" />
-        </linearGradient>
-      </defs>
-    </svg>
-  );
-}
-
-// ============================================================================
-// MAIN COMPONENT
-// ============================================================================
-
+/**
+ * PremiumServices - Main services showcase section
+ *
+ * Structure (4 sections):
+ * 1. Problem Statement - Editorial opening with stats
+ * 2. Voice AI Hero - Core technology showcase
+ * 3. Services Grid - Google Ads, Facebook Ads, Lead Gen System
+ * 4. Final CTA - Call to action with trust signals
+ *
+ * Icons are extracted to ./icons/ for maintainability.
+ * Each section could be further extracted if this grows beyond 500 lines.
+ */
 export function PremiumServices() {
   const containerRef = useRef<HTMLElement>(null);
   const isInView = useInView(containerRef, { threshold: 0.1 });
@@ -900,3 +706,5 @@ export function PremiumServices() {
     </section>
   );
 }
+
+export default PremiumServices;
