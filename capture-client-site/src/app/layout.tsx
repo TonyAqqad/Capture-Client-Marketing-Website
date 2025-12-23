@@ -139,12 +139,12 @@ export default function RootLayout({
         <ScrollDepthTracker />
 
         {/* LeadConnector Voice Agent - Persistent Corner Chat Widget */}
-        {/* PERF: lazyOnload defers 314KB until after page is interactive */}
+        {/* Loads after page becomes interactive - demo agent for visitors */}
         <Script
           src="https://widgets.leadconnectorhq.com/loader.js"
           data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
           data-widget-id="6910948b33e99217846251a9"
-          strategy="lazyOnload"
+          strategy="afterInteractive"
         />
 
         {/* Accessibility: Skip to main content link for keyboard navigation */}
