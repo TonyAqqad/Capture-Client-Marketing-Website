@@ -108,8 +108,93 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Column 2: Services - spans 3 columns */}
-            <div className="lg:col-span-3">
+            {/* Column 2: Industries - spans 2 columns */}
+            <div className="lg:col-span-2">
+              <h3
+                className="text-slate-900 text-sm uppercase tracking-wider mb-6 relative inline-block"
+                style={{ fontWeight: 600 }}
+              >
+                Industries
+                <span className="absolute -bottom-2 left-0 w-12 h-px bg-gradient-to-r from-blue-600 to-cyan-500" />
+              </h3>
+              <ul className="space-y-3">
+                <li>
+                  <Link
+                    href="/who-we-serve/legal-law-firms"
+                    className="text-slate-600 hover:text-blue-600 text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
+                    style={{ fontWeight: 400 }}
+                  >
+                    <span className="w-1 h-1 rounded-full bg-blue-600 group-hover:bg-cyan-500 transition-colors duration-300" />
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">
+                      Legal
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/who-we-serve/fitness"
+                    className="text-slate-600 hover:text-blue-600 text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
+                    style={{ fontWeight: 400 }}
+                  >
+                    <span className="w-1 h-1 rounded-full bg-blue-600 group-hover:bg-cyan-500 transition-colors duration-300" />
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">
+                      Fitness & Gyms
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/who-we-serve/martial-arts"
+                    className="text-slate-600 hover:text-blue-600 text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
+                    style={{ fontWeight: 400 }}
+                  >
+                    <span className="w-1 h-1 rounded-full bg-blue-600 group-hover:bg-cyan-500 transition-colors duration-300" />
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">
+                      Martial Arts
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/who-we-serve/home-services"
+                    className="text-slate-600 hover:text-blue-600 text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
+                    style={{ fontWeight: 400 }}
+                  >
+                    <span className="w-1 h-1 rounded-full bg-blue-600 group-hover:bg-cyan-500 transition-colors duration-300" />
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">
+                      Home Services
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/who-we-serve/healthcare"
+                    className="text-slate-600 hover:text-blue-600 text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
+                    style={{ fontWeight: 400 }}
+                  >
+                    <span className="w-1 h-1 rounded-full bg-blue-600 group-hover:bg-cyan-500 transition-colors duration-300" />
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">
+                      Healthcare
+                    </span>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/who-we-serve"
+                    className="text-blue-600 hover:text-cyan-500 text-sm transition-all duration-300 inline-flex items-center gap-2 group relative min-h-[44px]"
+                    style={{ fontWeight: 500 }}
+                  >
+                    <span className="w-1 h-1 rounded-full bg-blue-600 group-hover:bg-cyan-500 transition-colors duration-300" />
+                    <span className="group-hover:translate-x-1 transition-transform duration-300">
+                      View All →
+                    </span>
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 3: Services - spans 2 columns */}
+            <div className="lg:col-span-2">
               <h3
                 className="text-slate-900 text-sm uppercase tracking-wider mb-6 relative inline-block"
                 style={{ fontWeight: 600 }}
@@ -169,8 +254,8 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Column 3: Company - spans 3 columns */}
-            <div className="lg:col-span-3">
+            {/* Column 4: Company - spans 2 columns */}
+            <div className="lg:col-span-2">
               <h3
                 className="text-slate-900 text-sm uppercase tracking-wider mb-6 relative inline-block"
                 style={{ fontWeight: 600 }}

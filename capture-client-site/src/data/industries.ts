@@ -1349,6 +1349,176 @@ export const INDUSTRIES: Industry[] = [
     relatedIntegrations: ["opentable", "resy", "toast", "square-restaurants"],
     ctaText: "Try Restaurant AI",
   },
+  {
+    id: "fitness",
+    name: "Fitness & Gyms",
+    slug: "fitness",
+    category: "Hospitality",
+    tagline: "Never Miss Another Member. AI Answers Every Call.",
+    description:
+      "AI-powered lead capture for gyms, CrossFit boxes, yoga studios, and fitness centers. Book trials 24/7, even during packed classes.",
+    heroImage: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070",
+    painPoints: [
+      "76% of fitness leads call outside business hours or during packed classes",
+      "Staff coaching classes can't answer phones - leads go to competitors",
+      "Front desk overwhelmed during peak hours, calls go unanswered",
+      "Missed calls cost $69K+ annually in lost membership revenue",
+      "Manual follow-up with leads takes hours away from training",
+    ],
+    solutions: [
+      {
+        title: "24/7 Lead Capture",
+        description:
+          "AI answers every call, even at 6 AM or during packed WODs. Qualifies leads and books trial classes instantly.",
+        icon: "fitness_center",
+      },
+      {
+        title: "Trial Class Booking",
+        description:
+          "AI handles scheduling, explains class options, and confirms appointments. Syncs directly to your calendar.",
+        icon: "event",
+      },
+      {
+        title: "Studio Software Integration",
+        description:
+          "Seamlessly integrates with Mindbody, Wodify, TeamUp, ZenPlanner, PushPress, and ClubReady.",
+        icon: "sync",
+      },
+      {
+        title: "Lead Qualification",
+        description:
+          "AI asks the right questions to identify serious prospects and prioritize high-value leads for follow-up.",
+        icon: "verified_user",
+      },
+    ],
+    keyFeatures: [
+      "Integration with Mindbody, Wodify, TeamUp, ZenPlanner",
+      "Class availability checking and booking",
+      "Membership pricing explanations",
+      "Trial class scheduling with calendar sync",
+      "Lead qualification and scoring",
+      "Automated confirmation texts",
+      "Peak hour call handling",
+      "Multi-location support",
+    ],
+    stats: [
+      { value: "76%", label: "Leads call outside business hours" },
+      { value: "$69K+", label: "Revenue recovered annually" },
+      { value: "2 rings", label: "Average answer time" },
+      { value: "89", label: "New members in 90 days" },
+    ],
+    testimonial: {
+      quote:
+        "Captured 89 new members in 90 days. AI answered calls during WODs when we couldn't. Game changer for our box.",
+      author: "Jake Thompson",
+      company: "CrossFit Austin",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200",
+    },
+    relatedIntegrations: ["mindbody", "wodify", "teamup", "zenplanner"],
+    ctaText: "Try Fitness AI",
+    faqs: [
+      {
+        question: "Can AI voice agents integrate with Mindbody and Wodify?",
+        answer:
+          "Yes! Our AI voice agents seamlessly integrate with Mindbody, Wodify, TeamUp, ZenPlanner, PushPress, and ClubReady. Class bookings and trial signups sync automatically to your scheduling software in real-time.",
+      },
+      {
+        question: "How many fitness leads do gyms lose to missed calls?",
+        answer:
+          "76% of fitness leads call outside business hours, and only 25% of gyms answer phones during business hours. This results in an average of $69,000+ lost annually in potential membership revenue from missed calls alone.",
+      },
+      {
+        question: "What types of fitness studios use AI voice agents?",
+        answer:
+          "CrossFit boxes, F45 franchises, yoga studios, martial arts academies, Pilates studios, boutique gyms, boot camps, and traditional fitness centers all use our AI to capture leads and book trials 24/7.",
+      },
+    ],
+  },
+  {
+    id: "martial-arts",
+    name: "Martial Arts Studios",
+    slug: "martial-arts",
+    category: "Hospitality",
+    tagline: "Answer Every Parent Call. Even During Class.",
+    description:
+      "AI-powered phone answering for BJJ academies, karate schools, and MMA gyms. Book trial classes 24/7 while you're teaching on the mat.",
+    heroImage: "https://images.unsplash.com/photo-1555597673-b21d5c935865?q=80&w=2070",
+    painPoints: [
+      "35% of parent inquiries missed during peak class hours",
+      "Instructors on the mat can't answer phones during training",
+      "Parents call during their lunch break - your busiest class time",
+      "Average student lifetime value of $3,000-$4,000 lost per missed call",
+      "Competing studios answer phones while you're teaching",
+    ],
+    solutions: [
+      {
+        title: "24/7 Parent Answering",
+        description:
+          "AI handles every parent and student call, even when all instructors are teaching on the mat.",
+        icon: "phone_in_talk",
+      },
+      {
+        title: "Trial Class Booking",
+        description:
+          "AI explains programs, discusses age-appropriate classes, and books trial sessions instantly.",
+        icon: "event",
+      },
+      {
+        title: "Studio Software Integration",
+        description:
+          "Seamlessly integrates with Kicksite, Zen Planner, Spark Membership, iClassPro, and PerfectMind.",
+        icon: "sync",
+      },
+      {
+        title: "Program Information",
+        description:
+          "AI answers questions about belt systems, age programs, schedules, and pricing with expert knowledge.",
+        icon: "info",
+      },
+    ],
+    keyFeatures: [
+      "Integration with Kicksite, Zen Planner, Spark Membership",
+      "Kids program explanations",
+      "Belt system and curriculum information",
+      "Trial class scheduling with calendar sync",
+      "Parent inquiry handling",
+      "After-school program details",
+      "Competition schedule information",
+      "Multi-location support",
+    ],
+    stats: [
+      { value: "35%", label: "Inquiries missed during class" },
+      { value: "$48K+", label: "Revenue recovered annually" },
+      { value: "67", label: "Parent calls answered in month 1" },
+      { value: "40%", label: "Increase in adult enrollment" },
+    ],
+    testimonial: {
+      quote:
+        "AI answered 67 parent calls in the first month while I was teaching. That's 67 families I would have missed.",
+      author: "Master David Kim",
+      company: "Elite Taekwondo Dallas",
+      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=200",
+    },
+    relatedIntegrations: ["kicksite", "zen-planner", "spark-membership", "iclasspro"],
+    ctaText: "Try Martial Arts AI",
+    faqs: [
+      {
+        question: "How does AI answering work for martial arts studios during class time?",
+        answer:
+          "Our AI receptionist answers every parent and student call 24/7, even when your instructors are teaching on the mat. The AI can answer questions about programs, pricing, schedule, and book trial classes instantly.",
+      },
+      {
+        question: "Does the AI integrate with martial arts studio management software?",
+        answer:
+          "Yes. We integrate seamlessly with Kicksite, Zen Planner, Spark Membership, iClassPro, and PerfectMind. Trial class bookings, student information, and enrollment data sync automatically.",
+      },
+      {
+        question: "Can parents tell they're speaking to an AI?",
+        answer:
+          "Most parents cannot tell. Our AI is trained specifically for martial arts studios with industry-specific knowledge about belt systems, age programs, trial classes, and enrollment processes.",
+      },
+    ],
+  },
 ];
 
 /**

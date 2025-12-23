@@ -316,6 +316,49 @@ export const MissedCallsIcon: React.FC<IconProps> = ({ className = "w-5 h-5" }) 
   </svg>
 );
 
+export const FitnessIcon: React.FC<IconProps> = ({ className = "w-5 h-5" }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M6.5 6.5L17.5 17.5M6.5 17.5L17.5 6.5M4 8V16M20 8V16M2 10V14M22 10V14"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const MartialArtsIcon: React.FC<IconProps> = ({ className = "w-5 h-5" }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M12 4C13.1046 4 14 4.89543 14 6C14 7.10457 13.1046 8 12 8C10.8954 8 10 7.10457 10 6C10 4.89543 10.8954 4 12 4Z"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M12 8V12M12 12L8 20M12 12L16 20M8 12H16"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export const ViewAllIcon: React.FC<IconProps> = ({ className = "w-5 h-5" }) => (
+  <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path
+      d="M4 6H20M4 12H20M4 18H20"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 // Icon mapping object
 export const navIcons: Record<string, React.FC<IconProps>> = {
   demo: DemoIcon,
@@ -341,4 +384,7 @@ export const navIcons: Record<string, React.FC<IconProps>> = {
   "roi-calculator": ROICalculatorIcon,
   "missed-calls": MissedCallsIcon,
   faq: FAQIcon,
+  fitness: FitnessIcon,
+  "martial-arts": MartialArtsIcon,
+  "view-all": ViewAllIcon,
 };

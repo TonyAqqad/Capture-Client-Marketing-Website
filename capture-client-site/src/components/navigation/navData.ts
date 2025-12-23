@@ -60,6 +60,7 @@ export const navigationData: Record<string, NavSection> = {
   whoWeServe: {
     title: "Who We Serve",
     items: [
+      // Top 3 Priority Industries
       {
         label: "Legal & Law Firms",
         href: "/who-we-serve/legal-law-firms",
@@ -67,70 +68,48 @@ export const navigationData: Record<string, NavSection> = {
         icon: "legal",
       },
       {
+        label: "Fitness & Gyms",
+        href: "/who-we-serve/fitness",
+        description: "Book trials 24/7, even during classes",
+        icon: "fitness",
+      },
+      {
+        label: "Martial Arts Studios",
+        href: "/who-we-serve/martial-arts",
+        description: "Answer parent calls while you teach",
+        icon: "martial-arts",
+      },
+      // Additional High-Value Industries
+      {
         label: "Home Services",
         href: "/who-we-serve/home-services",
         description: "HVAC, plumbing & contractor support",
         icon: "home-services",
       },
       {
-        label: "Real Estate Agents",
+        label: "Healthcare & Medical",
+        href: "/who-we-serve/healthcare",
+        description: "Patient scheduling & appointments",
+        icon: "healthcare",
+      },
+      {
+        label: "Real Estate",
         href: "/who-we-serve/real-estate",
         description: "Property inquiries & showings 24/7",
         icon: "real-estate",
       },
       {
-        label: "Healthcare & Medical",
-        href: "/who-we-serve/healthcare",
-        description: "Patient scheduling & appointment management",
-        icon: "healthcare",
-      },
-      {
-        label: "IT Services & MSPs",
-        href: "/who-we-serve/it-services",
-        description: "Tech support triage & ticket routing",
-        icon: "it-services",
-      },
-      {
-        label: "Automotive Services",
-        href: "/who-we-serve/automotive",
-        description: "Service appointments & sales inquiries",
-        icon: "automotive",
-      },
-      {
-        label: "Financial Services",
-        href: "/who-we-serve/financial-services",
-        description: "Client onboarding & appointment booking",
-        icon: "financial-services",
-      },
-      {
-        label: "Insurance Agencies",
-        href: "/who-we-serve/insurance",
-        description: "Quote requests & policy inquiries",
-        icon: "insurance",
-      },
-      {
-        label: "Property Management",
-        href: "/who-we-serve/property-management",
-        description: "Tenant requests & maintenance coordination",
-        icon: "property-management",
-      },
-      {
-        label: "Cleaning Services",
-        href: "/who-we-serve/cleaning-services",
-        description: "Booking & scheduling automation",
-        icon: "cleaning",
-      },
-      {
-        label: "Pest Control",
-        href: "/who-we-serve/pest-control",
-        description: "Emergency calls & service scheduling",
-        icon: "pest-control",
-      },
-      {
-        label: "Restaurants & Hospitality",
+        label: "Restaurants",
         href: "/who-we-serve/restaurants",
         description: "Reservations & takeout orders",
         icon: "restaurants",
+      },
+      // View All Link
+      {
+        label: "View All Industries",
+        href: "/who-we-serve",
+        description: "See all 14+ industries we serve",
+        icon: "view-all",
       },
     ],
   },
